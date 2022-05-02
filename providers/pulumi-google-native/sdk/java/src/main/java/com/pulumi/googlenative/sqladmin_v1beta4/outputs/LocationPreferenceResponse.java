@@ -20,7 +20,7 @@ public final class LocationPreferenceResponse {
      */
     private final String kind;
     /**
-     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
      * 
      */
     private final String secondaryZone;
@@ -57,7 +57,7 @@ public final class LocationPreferenceResponse {
         return this.kind;
     }
     /**
-     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.). Reserved for future use.
+     * @return The preferred Compute Engine zone for the secondary/failover (for example: us-central1-a, us-central1-b, etc.).
      * 
      */
     public String secondaryZone() {

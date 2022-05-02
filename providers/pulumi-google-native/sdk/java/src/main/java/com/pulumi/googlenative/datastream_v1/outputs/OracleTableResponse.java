@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class OracleTableResponse {
     /**
-     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * @return Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     private final List<OracleColumnResponse> oracleColumns;
@@ -31,7 +31,7 @@ public final class OracleTableResponse {
     }
 
     /**
-     * @return Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
+     * @return Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     public List<OracleColumnResponse> oracleColumns() {

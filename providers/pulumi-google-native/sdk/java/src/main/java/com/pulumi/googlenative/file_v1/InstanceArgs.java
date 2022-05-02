@@ -65,9 +65,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.fileShares);
     }
 
+    /**
+     * Required. The name of the instance to create. The name must be unique for the specified project and location.
+     * 
+     */
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Required. The name of the instance to create. The name must be unique for the specified project and location.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -252,11 +260,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return fileShares(List.of(fileShares));
         }
 
+        /**
+         * @param instanceId Required. The name of the instance to create. The name must be unique for the specified project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Required. The name of the instance to create. The name must be unique for the specified project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

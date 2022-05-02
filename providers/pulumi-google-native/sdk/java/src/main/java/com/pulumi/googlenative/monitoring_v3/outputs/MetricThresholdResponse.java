@@ -39,6 +39,11 @@ public final class MetricThresholdResponse {
      */
     private final String duration;
     /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    private final String evaluationMissingData;
+    /**
      * @return A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.
      * 
      */
@@ -61,6 +66,7 @@ public final class MetricThresholdResponse {
         @CustomType.Parameter("denominatorAggregations") List<AggregationResponse> denominatorAggregations,
         @CustomType.Parameter("denominatorFilter") String denominatorFilter,
         @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("evaluationMissingData") String evaluationMissingData,
         @CustomType.Parameter("filter") String filter,
         @CustomType.Parameter("thresholdValue") Double thresholdValue,
         @CustomType.Parameter("trigger") TriggerResponse trigger) {
@@ -69,6 +75,7 @@ public final class MetricThresholdResponse {
         this.denominatorAggregations = denominatorAggregations;
         this.denominatorFilter = denominatorFilter;
         this.duration = duration;
+        this.evaluationMissingData = evaluationMissingData;
         this.filter = filter;
         this.thresholdValue = thresholdValue;
         this.trigger = trigger;
@@ -110,6 +117,13 @@ public final class MetricThresholdResponse {
         return this.duration;
     }
     /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    public String evaluationMissingData() {
+        return this.evaluationMissingData;
+    }
+    /**
      * @return A filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies which time series should be compared with the threshold.The filter is similar to the one that is specified in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list) (that call is useful to verify the time series that will be retrieved / processed). The filter must specify the metric type and the resource type. Optionally, it can specify resource labels and metric labels. This field must not exceed 2048 Unicode characters in length.
      * 
      */
@@ -145,6 +159,7 @@ public final class MetricThresholdResponse {
         private List<AggregationResponse> denominatorAggregations;
         private String denominatorFilter;
         private String duration;
+        private String evaluationMissingData;
         private String filter;
         private Double thresholdValue;
         private TriggerResponse trigger;
@@ -160,6 +175,7 @@ public final class MetricThresholdResponse {
     	      this.denominatorAggregations = defaults.denominatorAggregations;
     	      this.denominatorFilter = defaults.denominatorFilter;
     	      this.duration = defaults.duration;
+    	      this.evaluationMissingData = defaults.evaluationMissingData;
     	      this.filter = defaults.filter;
     	      this.thresholdValue = defaults.thresholdValue;
     	      this.trigger = defaults.trigger;
@@ -191,6 +207,10 @@ public final class MetricThresholdResponse {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
+        public Builder evaluationMissingData(String evaluationMissingData) {
+            this.evaluationMissingData = Objects.requireNonNull(evaluationMissingData);
+            return this;
+        }
         public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
@@ -203,7 +223,7 @@ public final class MetricThresholdResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }        public MetricThresholdResponse build() {
-            return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
+            return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, evaluationMissingData, filter, thresholdValue, trigger);
         }
     }
 }

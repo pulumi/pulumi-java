@@ -65,23 +65,31 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     * Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
      */
     @Import(name="enableAutoReload")
     private @Nullable Output<Boolean> enableAutoReload;
 
     /**
-     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
      */
     public Optional<Output<Boolean>> enableAutoReload() {
         return Optional.ofNullable(this.enableAutoReload);
     }
 
+    /**
+     * Whether to import custom metadata from Google Cloud Storage. Only valid when the document source is Google Cloud Storage URI.
+     * 
+     */
     @Import(name="importGcsCustomMetadata")
     private @Nullable Output<String> importGcsCustomMetadata;
 
+    /**
+     * @return Whether to import custom metadata from Google Cloud Storage. Only valid when the document source is Google Cloud Storage URI.
+     * 
+     */
     public Optional<Output<String>> importGcsCustomMetadata() {
         return Optional.ofNullable(this.importGcsCustomMetadata);
     }
@@ -282,7 +290,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
          * 
          * @return builder
          * 
@@ -293,7 +301,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+         * @param enableAutoReload Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
          * 
          * @return builder
          * 
@@ -302,11 +310,23 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
             return enableAutoReload(Output.of(enableAutoReload));
         }
 
+        /**
+         * @param importGcsCustomMetadata Whether to import custom metadata from Google Cloud Storage. Only valid when the document source is Google Cloud Storage URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importGcsCustomMetadata(@Nullable Output<String> importGcsCustomMetadata) {
             $.importGcsCustomMetadata = importGcsCustomMetadata;
             return this;
         }
 
+        /**
+         * @param importGcsCustomMetadata Whether to import custom metadata from Google Cloud Storage. Only valid when the document source is Google Cloud Storage URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importGcsCustomMetadata(String importGcsCustomMetadata) {
             return importGcsCustomMetadata(Output.of(importGcsCustomMetadata));
         }

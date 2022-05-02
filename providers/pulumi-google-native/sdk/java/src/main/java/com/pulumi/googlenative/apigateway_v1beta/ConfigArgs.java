@@ -21,9 +21,17 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 
+    /**
+     * Required. Identifier to assign to the API Config. Must be unique within scope of the parent resource.
+     * 
+     */
     @Import(name="apiConfigId", required=true)
     private Output<String> apiConfigId;
 
+    /**
+     * @return Required. Identifier to assign to the API Config. Must be unique within scope of the parent resource.
+     * 
+     */
     public Output<String> apiConfigId() {
         return this.apiConfigId;
     }
@@ -188,11 +196,23 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiConfigId Required. Identifier to assign to the API Config. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigId(Output<String> apiConfigId) {
             $.apiConfigId = apiConfigId;
             return this;
         }
 
+        /**
+         * @param apiConfigId Required. Identifier to assign to the API Config. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiConfigId(String apiConfigId) {
             return apiConfigId(Output.of(apiConfigId));
         }

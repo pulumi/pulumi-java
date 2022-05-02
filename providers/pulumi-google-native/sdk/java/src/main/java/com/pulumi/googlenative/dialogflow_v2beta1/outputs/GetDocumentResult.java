@@ -29,7 +29,7 @@ public final class GetDocumentResult {
      */
     private final String displayName;
     /**
-     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
      */
     private final Boolean enableAutoReload;
@@ -63,6 +63,11 @@ public final class GetDocumentResult {
      * 
      */
     private final String rawContent;
+    /**
+     * @return The current state of the document.
+     * 
+     */
+    private final String state;
 
     @CustomType.Constructor
     private GetDocumentResult(
@@ -75,7 +80,8 @@ public final class GetDocumentResult {
         @CustomType.Parameter("metadata") Map<String,String> metadata,
         @CustomType.Parameter("mimeType") String mimeType,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("rawContent") String rawContent) {
+        @CustomType.Parameter("rawContent") String rawContent,
+        @CustomType.Parameter("state") String state) {
         this.content = content;
         this.contentUri = contentUri;
         this.displayName = displayName;
@@ -86,6 +92,7 @@ public final class GetDocumentResult {
         this.mimeType = mimeType;
         this.name = name;
         this.rawContent = rawContent;
+        this.state = state;
     }
 
     /**
@@ -110,7 +117,7 @@ public final class GetDocumentResult {
         return this.displayName;
     }
     /**
-     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     * @return Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don&#39;t try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
      * 
      */
     public Boolean enableAutoReload() {
@@ -158,6 +165,13 @@ public final class GetDocumentResult {
     public String rawContent() {
         return this.rawContent;
     }
+    /**
+     * @return The current state of the document.
+     * 
+     */
+    public String state() {
+        return this.state;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -178,6 +192,7 @@ public final class GetDocumentResult {
         private String mimeType;
         private String name;
         private String rawContent;
+        private String state;
 
         public Builder() {
     	      // Empty
@@ -195,6 +210,7 @@ public final class GetDocumentResult {
     	      this.mimeType = defaults.mimeType;
     	      this.name = defaults.name;
     	      this.rawContent = defaults.rawContent;
+    	      this.state = defaults.state;
         }
 
         public Builder content(String content) {
@@ -239,8 +255,12 @@ public final class GetDocumentResult {
         public Builder rawContent(String rawContent) {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
+        }
+        public Builder state(String state) {
+            this.state = Objects.requireNonNull(state);
+            return this;
         }        public GetDocumentResult build() {
-            return new GetDocumentResult(content, contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
+            return new GetDocumentResult(content, contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent, state);
         }
     }
 }

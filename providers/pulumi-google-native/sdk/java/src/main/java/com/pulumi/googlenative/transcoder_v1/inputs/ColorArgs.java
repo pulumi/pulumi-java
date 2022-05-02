@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Color preprocessing configuration.
+ * Color preprocessing configuration. **Note:** This configuration is not supported.
  * 
  */
 public final class ColorArgs extends com.pulumi.resources.ResourceArgs {

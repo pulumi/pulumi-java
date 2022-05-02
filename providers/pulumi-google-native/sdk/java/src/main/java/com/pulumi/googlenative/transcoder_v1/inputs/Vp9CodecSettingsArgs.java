@@ -37,14 +37,14 @@ public final class Vp9CodecSettingsArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+     * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
      * 
      */
     @Import(name="crfLevel")
     private @Nullable Output<Integer> crfLevel;
 
     /**
-     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+     * @return Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
      * 
      */
     public Optional<Output<Integer>> crfLevel() {
@@ -226,7 +226,7 @@ public final class Vp9CodecSettingsArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class Vp9CodecSettingsArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
+         * @param crfLevel Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. **Note:** This field is not supported.
          * 
          * @return builder
          * 

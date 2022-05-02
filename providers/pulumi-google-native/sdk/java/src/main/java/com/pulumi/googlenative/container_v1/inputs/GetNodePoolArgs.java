@@ -42,6 +42,20 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.project);
     }
 
+    @Import(name="projectId")
+    private @Nullable String projectId;
+
+    public Optional<String> projectId() {
+        return Optional.ofNullable(this.projectId);
+    }
+
+    @Import(name="zone")
+    private @Nullable String zone;
+
+    public Optional<String> zone() {
+        return Optional.ofNullable(this.zone);
+    }
+
     private GetNodePoolArgs() {}
 
     private GetNodePoolArgs(GetNodePoolArgs $) {
@@ -49,6 +63,8 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
         this.location = $.location;
         this.nodePoolId = $.nodePoolId;
         this.project = $.project;
+        this.projectId = $.projectId;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
@@ -86,6 +102,16 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
 
         public Builder project(@Nullable String project) {
             $.project = project;
+            return this;
+        }
+
+        public Builder projectId(@Nullable String projectId) {
+            $.projectId = projectId;
+            return this;
+        }
+
+        public Builder zone(@Nullable String zone) {
+            $.zone = zone;
             return this;
         }
 

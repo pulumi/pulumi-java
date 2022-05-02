@@ -16,6 +16,11 @@ public final class MonitoringQueryLanguageConditionResponse {
      */
     private final String duration;
     /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    private final String evaluationMissingData;
+    /**
      * @return Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.
      * 
      */
@@ -29,9 +34,11 @@ public final class MonitoringQueryLanguageConditionResponse {
     @CustomType.Constructor
     private MonitoringQueryLanguageConditionResponse(
         @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("evaluationMissingData") String evaluationMissingData,
         @CustomType.Parameter("query") String query,
         @CustomType.Parameter("trigger") TriggerResponse trigger) {
         this.duration = duration;
+        this.evaluationMissingData = evaluationMissingData;
         this.query = query;
         this.trigger = trigger;
     }
@@ -42,6 +49,13 @@ public final class MonitoringQueryLanguageConditionResponse {
      */
     public String duration() {
         return this.duration;
+    }
+    /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    public String evaluationMissingData() {
+        return this.evaluationMissingData;
     }
     /**
      * @return Monitoring Query Language (https://cloud.google.com/monitoring/mql) query that outputs a boolean stream.
@@ -68,6 +82,7 @@ public final class MonitoringQueryLanguageConditionResponse {
 
     public static final class Builder {
         private String duration;
+        private String evaluationMissingData;
         private String query;
         private TriggerResponse trigger;
 
@@ -78,12 +93,17 @@ public final class MonitoringQueryLanguageConditionResponse {
         public Builder(MonitoringQueryLanguageConditionResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.duration = defaults.duration;
+    	      this.evaluationMissingData = defaults.evaluationMissingData;
     	      this.query = defaults.query;
     	      this.trigger = defaults.trigger;
         }
 
         public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
+            return this;
+        }
+        public Builder evaluationMissingData(String evaluationMissingData) {
+            this.evaluationMissingData = Objects.requireNonNull(evaluationMissingData);
             return this;
         }
         public Builder query(String query) {
@@ -94,7 +114,7 @@ public final class MonitoringQueryLanguageConditionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }        public MonitoringQueryLanguageConditionResponse build() {
-            return new MonitoringQueryLanguageConditionResponse(duration, query, trigger);
+            return new MonitoringQueryLanguageConditionResponse(duration, evaluationMissingData, query, trigger);
         }
     }
 }

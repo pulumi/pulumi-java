@@ -85,14 +85,14 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
     }
 
     /**
-     * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+     * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by Dialogflow when the associated webhook is called. The tag is typically used by the webhook service to identify which fulfillment is being called, but it could be used for other purposes. This field is required if `webhook` is specified.
      * 
      */
     @Import(name="tag")
     private @Nullable Output<String> tag;
 
     /**
-     * @return The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+     * @return The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by Dialogflow when the associated webhook is called. The tag is typically used by the webhook service to identify which fulfillment is being called, but it could be used for other purposes. This field is required if `webhook` is specified.
      * 
      */
     public Optional<Output<String>> tag() {
@@ -258,7 +258,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
         }
 
         /**
-         * @param tag The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+         * @param tag The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by Dialogflow when the associated webhook is called. The tag is typically used by the webhook service to identify which fulfillment is being called, but it could be used for other purposes. This field is required if `webhook` is specified.
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends com.pul
         }
 
         /**
-         * @param tag The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
+         * @param tag The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by Dialogflow when the associated webhook is called. The tag is typically used by the webhook service to identify which fulfillment is being called, but it could be used for other purposes. This field is required if `webhook` is specified.
          * 
          * @return builder
          * 

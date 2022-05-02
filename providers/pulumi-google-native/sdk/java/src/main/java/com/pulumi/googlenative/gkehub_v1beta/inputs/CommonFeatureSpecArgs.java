@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.gkehub_v1beta.inputs.AnthosObservabilityFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1beta.inputs.AppDevExperienceFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1beta.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;
@@ -19,6 +20,21 @@ import javax.annotation.Nullable;
 public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CommonFeatureSpecArgs Empty = new CommonFeatureSpecArgs();
+
+    /**
+     * Anthos Observability spec
+     * 
+     */
+    @Import(name="anthosobservability")
+    private @Nullable Output<AnthosObservabilityFeatureSpecArgs> anthosobservability;
+
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    public Optional<Output<AnthosObservabilityFeatureSpecArgs>> anthosobservability() {
+        return Optional.ofNullable(this.anthosobservability);
+    }
 
     /**
      * Appdevexperience specific spec.
@@ -53,6 +69,7 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
     private CommonFeatureSpecArgs() {}
 
     private CommonFeatureSpecArgs(CommonFeatureSpecArgs $) {
+        this.anthosobservability = $.anthosobservability;
         this.appdevexperience = $.appdevexperience;
         this.multiclusteringress = $.multiclusteringress;
     }
@@ -73,6 +90,27 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
 
         public Builder(CommonFeatureSpecArgs defaults) {
             $ = new CommonFeatureSpecArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param anthosobservability Anthos Observability spec
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anthosobservability(@Nullable Output<AnthosObservabilityFeatureSpecArgs> anthosobservability) {
+            $.anthosobservability = anthosobservability;
+            return this;
+        }
+
+        /**
+         * @param anthosobservability Anthos Observability spec
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anthosobservability(AnthosObservabilityFeatureSpecArgs anthosobservability) {
+            return anthosobservability(Output.of(anthosobservability));
         }
 
         /**

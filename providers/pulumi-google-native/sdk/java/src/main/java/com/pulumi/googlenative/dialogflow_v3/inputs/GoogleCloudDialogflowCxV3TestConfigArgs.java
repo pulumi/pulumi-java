@@ -21,18 +21,33 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends com.pulumi.re
     public static final GoogleCloudDialogflowCxV3TestConfigArgs Empty = new GoogleCloudDialogflowCxV3TestConfigArgs();
 
     /**
-     * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
      * 
      */
     @Import(name="flow")
     private @Nullable Output<String> flow;
 
     /**
-     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * @return Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
      * 
      */
     public Optional<Output<String>> flow() {
         return Optional.ofNullable(this.flow);
+    }
+
+    /**
+     * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+     * 
+     */
+    @Import(name="page")
+    private @Nullable Output<String> page;
+
+    /**
+     * @return The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+     * 
+     */
+    public Optional<Output<String>> page() {
+        return Optional.ofNullable(this.page);
     }
 
     /**
@@ -54,6 +69,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends com.pulumi.re
 
     private GoogleCloudDialogflowCxV3TestConfigArgs(GoogleCloudDialogflowCxV3TestConfigArgs $) {
         this.flow = $.flow;
+        this.page = $.page;
         this.trackingParameters = $.trackingParameters;
     }
 
@@ -76,7 +92,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends com.pulumi.re
         }
 
         /**
-         * @param flow Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * @param flow Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
          * 
          * @return builder
          * 
@@ -87,13 +103,34 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends com.pulumi.re
         }
 
         /**
-         * @param flow Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+         * @param flow Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
          * 
          * @return builder
          * 
          */
         public Builder flow(String flow) {
             return flow(Output.of(flow));
+        }
+
+        /**
+         * @param page The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder page(@Nullable Output<String> page) {
+            $.page = page;
+            return this;
+        }
+
+        /**
+         * @param page The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder page(String page) {
+            return page(Output.of(page));
         }
 
         /**

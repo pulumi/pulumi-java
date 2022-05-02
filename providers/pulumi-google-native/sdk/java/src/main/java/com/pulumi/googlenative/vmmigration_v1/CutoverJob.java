@@ -53,6 +53,20 @@ public class CutoverJob extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
+     * The time the cutover job had finished.
+     * 
+     */
+    @Export(name="endTime", type=String.class, parameters={})
+    private Output<String> endTime;
+
+    /**
+     * @return The time the cutover job had finished.
+     * 
+     */
+    public Output<String> endTime() {
+        return this.endTime;
+    }
+    /**
      * Provides details for the errors that led to the Cutover Job&#39;s state.
      * 
      */

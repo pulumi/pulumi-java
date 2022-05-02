@@ -42,6 +42,20 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.project);
     }
 
+    @Import(name="projectId", required=true)
+    private String projectId;
+
+    public String projectId() {
+        return this.projectId;
+    }
+
+    @Import(name="zone", required=true)
+    private String zone;
+
+    public String zone() {
+        return this.zone;
+    }
+
     private GetNodePoolArgs() {}
 
     private GetNodePoolArgs(GetNodePoolArgs $) {
@@ -49,6 +63,8 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
         this.location = $.location;
         this.nodePoolId = $.nodePoolId;
         this.project = $.project;
+        this.projectId = $.projectId;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
@@ -89,10 +105,22 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder projectId(String projectId) {
+            $.projectId = projectId;
+            return this;
+        }
+
+        public Builder zone(String zone) {
+            $.zone = zone;
+            return this;
+        }
+
         public GetNodePoolArgs build() {
             $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
             $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
             $.nodePoolId = Objects.requireNonNull($.nodePoolId, "expected parameter 'nodePoolId' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
             return $;
         }
     }

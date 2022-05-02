@@ -209,6 +209,29 @@ public final class JobConfigurationQueryArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * [Deprecated] This property is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This property is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This property is deprecated. */
+    @Import(name="preserveNulls")
+    private @Nullable Output<Boolean> preserveNulls;
+
+    /**
+     * @return [Deprecated] This property is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This property is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This property is deprecated. */
+    public Optional<Output<Boolean>> preserveNulls() {
+        return Optional.ofNullable(this.preserveNulls);
+    }
+
+    /**
      * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
      * 
      */
@@ -388,6 +411,7 @@ public final class JobConfigurationQueryArgs extends com.pulumi.resources.Resour
         this.maximumBillingTier = $.maximumBillingTier;
         this.maximumBytesBilled = $.maximumBytesBilled;
         this.parameterMode = $.parameterMode;
+        this.preserveNulls = $.preserveNulls;
         this.priority = $.priority;
         this.query = $.query;
         this.queryParameters = $.queryParameters;
@@ -679,6 +703,35 @@ public final class JobConfigurationQueryArgs extends com.pulumi.resources.Resour
          */
         public Builder parameterMode(String parameterMode) {
             return parameterMode(Output.of(parameterMode));
+        }
+
+        /**
+         * @param preserveNulls [Deprecated] This property is deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] This property is deprecated.
+         * 
+         */
+        @Deprecated /* [Deprecated] This property is deprecated. */
+        public Builder preserveNulls(@Nullable Output<Boolean> preserveNulls) {
+            $.preserveNulls = preserveNulls;
+            return this;
+        }
+
+        /**
+         * @param preserveNulls [Deprecated] This property is deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] This property is deprecated.
+         * 
+         */
+        @Deprecated /* [Deprecated] This property is deprecated. */
+        public Builder preserveNulls(Boolean preserveNulls) {
+            return preserveNulls(Output.of(preserveNulls));
         }
 
         /**

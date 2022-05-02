@@ -12,6 +12,24 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionTargetHttpsProxyResult {
     /**
+     * @return [Deprecated] Use serverTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+    private final String authentication;
+    /**
+     * @return [Deprecated] Use authorizationPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+    private final String authorization;
+    /**
      * @return Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
      */
@@ -99,6 +117,8 @@ public final class GetRegionTargetHttpsProxyResult {
 
     @CustomType.Constructor
     private GetRegionTargetHttpsProxyResult(
+        @CustomType.Parameter("authentication") String authentication,
+        @CustomType.Parameter("authorization") String authorization,
         @CustomType.Parameter("authorizationPolicy") String authorizationPolicy,
         @CustomType.Parameter("certificateMap") String certificateMap,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
@@ -116,6 +136,8 @@ public final class GetRegionTargetHttpsProxyResult {
         @CustomType.Parameter("sslCertificates") List<String> sslCertificates,
         @CustomType.Parameter("sslPolicy") String sslPolicy,
         @CustomType.Parameter("urlMap") String urlMap) {
+        this.authentication = authentication;
+        this.authorization = authorization;
         this.authorizationPolicy = authorizationPolicy;
         this.certificateMap = certificateMap;
         this.creationTimestamp = creationTimestamp;
@@ -135,6 +157,28 @@ public final class GetRegionTargetHttpsProxyResult {
         this.urlMap = urlMap;
     }
 
+    /**
+     * @return [Deprecated] Use serverTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+    public String authentication() {
+        return this.authentication;
+    }
+    /**
+     * @return [Deprecated] Use authorizationPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+    public String authorization() {
+        return this.authorization;
+    }
     /**
      * @return Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
@@ -264,6 +308,8 @@ public final class GetRegionTargetHttpsProxyResult {
     }
 
     public static final class Builder {
+        private String authentication;
+        private String authorization;
         private String authorizationPolicy;
         private String certificateMap;
         private String creationTimestamp;
@@ -288,6 +334,8 @@ public final class GetRegionTargetHttpsProxyResult {
 
         public Builder(GetRegionTargetHttpsProxyResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.authentication = defaults.authentication;
+    	      this.authorization = defaults.authorization;
     	      this.authorizationPolicy = defaults.authorizationPolicy;
     	      this.certificateMap = defaults.certificateMap;
     	      this.creationTimestamp = defaults.creationTimestamp;
@@ -307,6 +355,14 @@ public final class GetRegionTargetHttpsProxyResult {
     	      this.urlMap = defaults.urlMap;
         }
 
+        public Builder authentication(String authentication) {
+            this.authentication = Objects.requireNonNull(authentication);
+            return this;
+        }
+        public Builder authorization(String authorization) {
+            this.authorization = Objects.requireNonNull(authorization);
+            return this;
+        }
         public Builder authorizationPolicy(String authorizationPolicy) {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
@@ -381,7 +437,7 @@ public final class GetRegionTargetHttpsProxyResult {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }        public GetRegionTargetHttpsProxyResult build() {
-            return new GetRegionTargetHttpsProxyResult(authorizationPolicy, certificateMap, creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, quicOverride, region, selfLink, selfLinkWithId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
+            return new GetRegionTargetHttpsProxyResult(authentication, authorization, authorizationPolicy, certificateMap, creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, quicOverride, region, selfLink, selfLinkWithId, serverTlsPolicy, sslCertificates, sslPolicy, urlMap);
         }
     }
 }

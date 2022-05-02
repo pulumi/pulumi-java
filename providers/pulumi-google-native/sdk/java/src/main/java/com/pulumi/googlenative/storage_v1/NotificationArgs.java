@@ -129,13 +129,6 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.payloadFormat);
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable Output<String> provisionalUserProject;
-
-    public Optional<Output<String>> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     /**
      * The canonical URL of this notification.
      * 
@@ -166,9 +159,17 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.topic);
     }
 
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -184,7 +185,6 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
         this.kind = $.kind;
         this.objectNamePrefix = $.objectNamePrefix;
         this.payloadFormat = $.payloadFormat;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.selfLink = $.selfLink;
         this.topic = $.topic;
         this.userProject = $.userProject;
@@ -374,15 +374,6 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             return payloadFormat(Output.of(payloadFormat));
         }
 
-        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
-            return this;
-        }
-
-        public Builder provisionalUserProject(String provisionalUserProject) {
-            return provisionalUserProject(Output.of(provisionalUserProject));
-        }
-
         /**
          * @param selfLink The canonical URL of this notification.
          * 
@@ -425,11 +416,23 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             return topic(Output.of(topic));
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

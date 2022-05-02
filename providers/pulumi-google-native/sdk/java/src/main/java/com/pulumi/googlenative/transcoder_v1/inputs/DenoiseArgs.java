@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Denoise preprocessing configuration.
+ * Denoise preprocessing configuration. **Note:** This configuration is not supported.
  * 
  */
 public final class DenoiseArgs extends com.pulumi.resources.ResourceArgs {

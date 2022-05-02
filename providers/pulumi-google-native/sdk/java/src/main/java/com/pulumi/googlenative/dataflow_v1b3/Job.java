@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dataflow_v1b3.JobArgs;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse;
+import com.pulumi.googlenative.dataflow_v1b3.outputs.JobExecutionInfoResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.PipelineDescriptionResponse;
 import com.pulumi.googlenative.dataflow_v1b3.outputs.StepResponse;
@@ -21,7 +22,7 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
- * Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
+ * Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not enter confidential information when you supply string values using the API.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
@@ -111,6 +112,24 @@ public class Job extends com.pulumi.resources.CustomResource {
      */
     public Output<EnvironmentResponse> environment() {
         return this.environment;
+    }
+    /**
+     * Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    @Export(name="executionInfo", type=JobExecutionInfoResponse.class, parameters={})
+    private Output<JobExecutionInfoResponse> executionInfo;
+
+    /**
+     * @return Deprecated.
+     * 
+     */
+    public Output<JobExecutionInfoResponse> executionInfo() {
+        return this.executionInfo;
     }
     /**
      * This field is populated by the Dataflow service to support filtering jobs by the metadata values provided here. Populated for ListJobs and all GetJob views SUMMARY and higher.

@@ -34,7 +34,7 @@ public final class GetSubnetworkResult {
      */
     private final Boolean enableFlowLogs;
     /**
-     * @return The range of external IPv6 addresses that are owned by this subnetwork.
+     * @return The external IPv6 address range that is assigned to this subnetwork.
      * 
      */
     private final String externalIpv6Prefix;
@@ -49,17 +49,22 @@ public final class GetSubnetworkResult {
      */
     private final String gatewayAddress;
     /**
+     * @return The internal IPv6 address range that is assigned to this subnetwork.
+     * 
+     */
+    private final String internalIpv6Prefix;
+    /**
      * @return The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be any range listed in the Valid ranges list. The range can be expanded after creation using expandIpCidrRange.
      * 
      */
     private final String ipCidrRange;
     /**
-     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
      * 
      */
     private final String ipv6AccessType;
     /**
-     * @return The range of internal IPv6 addresses that are owned by this subnetwork. Note this will be for private google access only eventually.
+     * @return This field is for internal use.
      * 
      */
     private final String ipv6CidrRange;
@@ -89,7 +94,7 @@ public final class GetSubnetworkResult {
      */
     private final Boolean privateIpGoogleAccess;
     /**
-     * @return The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This field can be both set at resource creation time and updated using patch.
+     * @return This field is for internal use. This field can be both set at resource creation time and updated using patch.
      * 
      */
     private final String privateIpv6GoogleAccess;
@@ -119,7 +124,7 @@ public final class GetSubnetworkResult {
      */
     private final String selfLink;
     /**
-     * @return The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. This field can be both set at resource creation time and updated using patch.
+     * @return The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4 addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6 addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation time and updated using patch.
      * 
      */
     private final String stackType;
@@ -138,6 +143,7 @@ public final class GetSubnetworkResult {
         @CustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
         @CustomType.Parameter("fingerprint") String fingerprint,
         @CustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @CustomType.Parameter("internalIpv6Prefix") String internalIpv6Prefix,
         @CustomType.Parameter("ipCidrRange") String ipCidrRange,
         @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
         @CustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
@@ -161,6 +167,7 @@ public final class GetSubnetworkResult {
         this.externalIpv6Prefix = externalIpv6Prefix;
         this.fingerprint = fingerprint;
         this.gatewayAddress = gatewayAddress;
+        this.internalIpv6Prefix = internalIpv6Prefix;
         this.ipCidrRange = ipCidrRange;
         this.ipv6AccessType = ipv6AccessType;
         this.ipv6CidrRange = ipv6CidrRange;
@@ -208,7 +215,7 @@ public final class GetSubnetworkResult {
         return this.enableFlowLogs;
     }
     /**
-     * @return The range of external IPv6 addresses that are owned by this subnetwork.
+     * @return The external IPv6 address range that is assigned to this subnetwork.
      * 
      */
     public String externalIpv6Prefix() {
@@ -229,6 +236,13 @@ public final class GetSubnetworkResult {
         return this.gatewayAddress;
     }
     /**
+     * @return The internal IPv6 address range that is assigned to this subnetwork.
+     * 
+     */
+    public String internalIpv6Prefix() {
+        return this.internalIpv6Prefix;
+    }
+    /**
      * @return The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be any range listed in the Valid ranges list. The range can be expanded after creation using expandIpCidrRange.
      * 
      */
@@ -236,14 +250,14 @@ public final class GetSubnetworkResult {
         return this.ipCidrRange;
     }
     /**
-     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
      * 
      */
     public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
     /**
-     * @return The range of internal IPv6 addresses that are owned by this subnetwork. Note this will be for private google access only eventually.
+     * @return This field is for internal use.
      * 
      */
     public String ipv6CidrRange() {
@@ -285,7 +299,7 @@ public final class GetSubnetworkResult {
         return this.privateIpGoogleAccess;
     }
     /**
-     * @return The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This field can be both set at resource creation time and updated using patch.
+     * @return This field is for internal use. This field can be both set at resource creation time and updated using patch.
      * 
      */
     public String privateIpv6GoogleAccess() {
@@ -327,7 +341,7 @@ public final class GetSubnetworkResult {
         return this.selfLink;
     }
     /**
-     * @return The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. This field can be both set at resource creation time and updated using patch.
+     * @return The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4 addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6 addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation time and updated using patch.
      * 
      */
     public String stackType() {
@@ -357,6 +371,7 @@ public final class GetSubnetworkResult {
         private String externalIpv6Prefix;
         private String fingerprint;
         private String gatewayAddress;
+        private String internalIpv6Prefix;
         private String ipCidrRange;
         private String ipv6AccessType;
         private String ipv6CidrRange;
@@ -387,6 +402,7 @@ public final class GetSubnetworkResult {
     	      this.externalIpv6Prefix = defaults.externalIpv6Prefix;
     	      this.fingerprint = defaults.fingerprint;
     	      this.gatewayAddress = defaults.gatewayAddress;
+    	      this.internalIpv6Prefix = defaults.internalIpv6Prefix;
     	      this.ipCidrRange = defaults.ipCidrRange;
     	      this.ipv6AccessType = defaults.ipv6AccessType;
     	      this.ipv6CidrRange = defaults.ipv6CidrRange;
@@ -431,6 +447,10 @@ public final class GetSubnetworkResult {
         }
         public Builder gatewayAddress(String gatewayAddress) {
             this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
+            return this;
+        }
+        public Builder internalIpv6Prefix(String internalIpv6Prefix) {
+            this.internalIpv6Prefix = Objects.requireNonNull(internalIpv6Prefix);
             return this;
         }
         public Builder ipCidrRange(String ipCidrRange) {
@@ -500,7 +520,7 @@ public final class GetSubnetworkResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }        public GetSubnetworkResult build() {
-            return new GetSubnetworkResult(allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, externalIpv6Prefix, fingerprint, gatewayAddress, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, purpose, region, role, secondaryIpRanges, selfLink, stackType, state);
+            return new GetSubnetworkResult(allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, externalIpv6Prefix, fingerprint, gatewayAddress, internalIpv6Prefix, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, purpose, region, role, secondaryIpRanges, selfLink, stackType, state);
         }
     }
 }

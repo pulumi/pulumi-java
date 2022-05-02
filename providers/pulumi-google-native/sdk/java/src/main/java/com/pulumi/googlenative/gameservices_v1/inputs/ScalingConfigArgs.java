@@ -23,14 +23,14 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final ScalingConfigArgs Empty = new ScalingConfigArgs();
 
     /**
-     * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
      * 
      */
     @Import(name="fleetAutoscalerSpec", required=true)
     private Output<String> fleetAutoscalerSpec;
 
     /**
-     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * @return Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
      * 
      */
     public Output<String> fleetAutoscalerSpec() {
@@ -38,14 +38,14 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the Scaling Config
+     * The name of the scaling config.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The name of the Scaling Config
+     * @return The name of the scaling config.
      * 
      */
     public Output<String> name() {
@@ -53,14 +53,14 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The schedules to which this Scaling Config applies.
+     * The schedules to which this scaling config applies.
      * 
      */
     @Import(name="schedules")
     private @Nullable Output<List<ScheduleArgs>> schedules;
 
     /**
-     * @return The schedules to which this Scaling Config applies.
+     * @return The schedules to which this scaling config applies.
      * 
      */
     public Optional<Output<List<ScheduleArgs>>> schedules() {
@@ -110,7 +110,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fleetAutoscalerSpec Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+         * @param fleetAutoscalerSpec Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fleetAutoscalerSpec Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+         * @param fleetAutoscalerSpec Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the Scaling Config
+         * @param name The name of the scaling config.
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the Scaling Config
+         * @param name The name of the scaling config.
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param schedules The schedules to which this Scaling Config applies.
+         * @param schedules The schedules to which this scaling config applies.
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param schedules The schedules to which this Scaling Config applies.
+         * @param schedules The schedules to which this scaling config applies.
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class ScalingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param schedules The schedules to which this Scaling Config applies.
+         * @param schedules The schedules to which this scaling config applies.
          * 
          * @return builder
          * 

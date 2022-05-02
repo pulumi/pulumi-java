@@ -17,10 +17,28 @@ public final class UpcomingMaintenanceResponse {
      */
     private final Boolean canReschedule;
     /**
+     * @return The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     * @deprecated
+     * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     */
+    @Deprecated /* [Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead. */
+    private final String date;
+    /**
      * @return The start time window of the maintenance disruption.
      * 
      */
     private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
+    /**
+     * @return The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     * @deprecated
+     * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     */
+    @Deprecated /* [Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead. */
+    private final String time;
     /**
      * @return Defines the type of maintenance.
      * 
@@ -30,10 +48,14 @@ public final class UpcomingMaintenanceResponse {
     @CustomType.Constructor
     private UpcomingMaintenanceResponse(
         @CustomType.Parameter("canReschedule") Boolean canReschedule,
+        @CustomType.Parameter("date") String date,
         @CustomType.Parameter("startTimeWindow") UpcomingMaintenanceTimeWindowResponse startTimeWindow,
+        @CustomType.Parameter("time") String time,
         @CustomType.Parameter("type") String type) {
         this.canReschedule = canReschedule;
+        this.date = date;
         this.startTimeWindow = startTimeWindow;
+        this.time = time;
         this.type = type;
     }
 
@@ -45,11 +67,33 @@ public final class UpcomingMaintenanceResponse {
         return this.canReschedule;
     }
     /**
+     * @return The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     * @deprecated
+     * [Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     */
+    @Deprecated /* [Output Only] The date when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead. */
+    public String date() {
+        return this.date;
+    }
+    /**
      * @return The start time window of the maintenance disruption.
      * 
      */
     public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
+    }
+    /**
+     * @return The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     * @deprecated
+     * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead.
+     * 
+     */
+    @Deprecated /* [Output Only] The time when the maintenance will take place. This value is in RFC3339 text format. DEPRECATED: Use start_time_window instead. */
+    public String time() {
+        return this.time;
     }
     /**
      * @return Defines the type of maintenance.
@@ -69,7 +113,9 @@ public final class UpcomingMaintenanceResponse {
 
     public static final class Builder {
         private Boolean canReschedule;
+        private String date;
         private UpcomingMaintenanceTimeWindowResponse startTimeWindow;
+        private String time;
         private String type;
 
         public Builder() {
@@ -79,7 +125,9 @@ public final class UpcomingMaintenanceResponse {
         public Builder(UpcomingMaintenanceResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.canReschedule = defaults.canReschedule;
+    	      this.date = defaults.date;
     	      this.startTimeWindow = defaults.startTimeWindow;
+    	      this.time = defaults.time;
     	      this.type = defaults.type;
         }
 
@@ -87,15 +135,23 @@ public final class UpcomingMaintenanceResponse {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
+        public Builder date(String date) {
+            this.date = Objects.requireNonNull(date);
+            return this;
+        }
         public Builder startTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
             this.startTimeWindow = Objects.requireNonNull(startTimeWindow);
+            return this;
+        }
+        public Builder time(String time) {
+            this.time = Objects.requireNonNull(time);
             return this;
         }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public UpcomingMaintenanceResponse build() {
-            return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
+            return new UpcomingMaintenanceResponse(canReschedule, date, startTimeWindow, time, type);
         }
     }
 }

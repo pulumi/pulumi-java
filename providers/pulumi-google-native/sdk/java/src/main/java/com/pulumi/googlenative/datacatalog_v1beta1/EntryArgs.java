@@ -87,9 +87,17 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
         return this.entryGroupId;
     }
 
+    /**
+     * Required. The id of the entry to create.
+     * 
+     */
     @Import(name="entryId", required=true)
     private Output<String> entryId;
 
+    /**
+     * @return Required. The id of the entry to create.
+     * 
+     */
     public Output<String> entryId() {
         return this.entryId;
     }
@@ -328,11 +336,23 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
             return entryGroupId(Output.of(entryGroupId));
         }
 
+        /**
+         * @param entryId Required. The id of the entry to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryId(Output<String> entryId) {
             $.entryId = entryId;
             return this;
         }
 
+        /**
+         * @param entryId Required. The id of the entry to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryId(String entryId) {
             return entryId(Output.of(entryId));
         }

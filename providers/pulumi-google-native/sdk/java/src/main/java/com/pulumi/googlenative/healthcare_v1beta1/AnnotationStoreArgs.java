@@ -16,9 +16,17 @@ public final class AnnotationStoreArgs extends com.pulumi.resources.ResourceArgs
 
     public static final AnnotationStoreArgs Empty = new AnnotationStoreArgs();
 
+    /**
+     * The ID of the Annotation store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     @Import(name="annotationStoreId")
     private @Nullable Output<String> annotationStoreId;
 
+    /**
+     * @return The ID of the Annotation store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+     * 
+     */
     public Optional<Output<String>> annotationStoreId() {
         return Optional.ofNullable(this.annotationStoreId);
     }
@@ -103,11 +111,23 @@ public final class AnnotationStoreArgs extends com.pulumi.resources.ResourceArgs
             $ = new AnnotationStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotationStoreId The ID of the Annotation store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationStoreId(@Nullable Output<String> annotationStoreId) {
             $.annotationStoreId = annotationStoreId;
             return this;
         }
 
+        /**
+         * @param annotationStoreId The ID of the Annotation store that is being created. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotationStoreId(String annotationStoreId) {
             return annotationStoreId(Output.of(annotationStoreId));
         }

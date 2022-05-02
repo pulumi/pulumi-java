@@ -22,14 +22,14 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
     public static final DestinationArgs Empty = new DestinationArgs();
 
     /**
-     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
      * 
      */
     @Import(name="cloudFunction")
     private @Nullable Output<String> cloudFunction;
 
     /**
-     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
      * 
      */
     public Optional<Output<String>> cloudFunction() {
@@ -66,12 +66,28 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.gke);
     }
 
+    /**
+     * The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+     * 
+     */
+    @Import(name="workflow")
+    private @Nullable Output<String> workflow;
+
+    /**
+     * @return The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+     * 
+     */
+    public Optional<Output<String>> workflow() {
+        return Optional.ofNullable(this.workflow);
+    }
+
     private DestinationArgs() {}
 
     private DestinationArgs(DestinationArgs $) {
         this.cloudFunction = $.cloudFunction;
         this.cloudRun = $.cloudRun;
         this.gke = $.gke;
+        this.workflow = $.workflow;
     }
 
     public static Builder builder() {
@@ -93,7 +109,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
          * 
          * @return builder
          * 
@@ -104,7 +120,7 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+         * @param cloudFunction The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
          * 
          * @return builder
          * 
@@ -153,6 +169,27 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder gke(GKEArgs gke) {
             return gke(Output.of(gke));
+        }
+
+        /**
+         * @param workflow The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflow(@Nullable Output<String> workflow) {
+            $.workflow = workflow;
+            return this;
+        }
+
+        /**
+         * @param workflow The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflow(String workflow) {
+            return workflow(Output.of(workflow));
         }
 
         public DestinationArgs build() {

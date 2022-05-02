@@ -5,6 +5,7 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -34,10 +35,26 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.cluster);
     }
 
+    /**
+     * Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+     * 
+     */
+    @Import(name="internalIp")
+    private @Nullable Output<Boolean> internalIp;
+
+    /**
+     * @return Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+     * 
+     */
+    public Optional<Output<Boolean>> internalIp() {
+        return Optional.ofNullable(this.internalIp);
+    }
+
     private GkeClusterArgs() {}
 
     private GkeClusterArgs(GkeClusterArgs $) {
         this.cluster = $.cluster;
+        this.internalIp = $.internalIp;
     }
 
     public static Builder builder() {
@@ -77,6 +94,27 @@ public final class GkeClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder cluster(String cluster) {
             return cluster(Output.of(cluster));
+        }
+
+        /**
+         * @param internalIp Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalIp(@Nullable Output<Boolean> internalIp) {
+            $.internalIp = internalIp;
+            return this;
+        }
+
+        /**
+         * @param internalIp Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder internalIp(Boolean internalIp) {
+            return internalIp(Output.of(internalIp));
         }
 
         public GkeClusterArgs build() {

@@ -72,6 +72,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.bootDiskType;
     }
     /**
+     * Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    @Export(name="canIpForward", type=Boolean.class, parameters={})
+    private Output<Boolean> canIpForward;
+
+    /**
+     * @return Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    public Output<Boolean> canIpForward() {
+        return this.canIpForward;
+    }
+    /**
      * Use a container image to start the notebook instance.
      * 
      */
@@ -98,6 +112,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> createTime() {
         return this.createTime;
+    }
+    /**
+     * Email address of entity that sent original CreateInstance request.
+     * 
+     */
+    @Export(name="creator", type=String.class, parameters={})
+    private Output<String> creator;
+
+    /**
+     * @return Email address of entity that sent original CreateInstance request.
+     * 
+     */
+    public Output<String> creator() {
+        return this.creator;
     }
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we&#39;ll automatically choose from official GPU drivers.

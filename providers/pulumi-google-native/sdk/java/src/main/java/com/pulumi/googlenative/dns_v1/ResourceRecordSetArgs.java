@@ -18,9 +18,17 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
 
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     @Import(name="clientOperationId")
     private @Nullable Output<String> clientOperationId;
 
+    /**
+     * @return For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
@@ -169,11 +177,23 @@ public final class ResourceRecordSetArgs extends com.pulumi.resources.ResourceAr
             $ = new ResourceRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }

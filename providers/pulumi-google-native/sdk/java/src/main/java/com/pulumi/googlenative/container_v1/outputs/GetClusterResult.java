@@ -12,6 +12,7 @@ import com.pulumi.googlenative.container_v1.outputs.ClusterAutoscalingResponse;
 import com.pulumi.googlenative.container_v1.outputs.ConfidentialNodesResponse;
 import com.pulumi.googlenative.container_v1.outputs.DatabaseEncryptionResponse;
 import com.pulumi.googlenative.container_v1.outputs.IPAllocationPolicyResponse;
+import com.pulumi.googlenative.container_v1.outputs.IdentityServiceConfigResponse;
 import com.pulumi.googlenative.container_v1.outputs.LegacyAbacResponse;
 import com.pulumi.googlenative.container_v1.outputs.LoggingConfigResponse;
 import com.pulumi.googlenative.container_v1.outputs.MaintenancePolicyResponse;
@@ -22,6 +23,8 @@ import com.pulumi.googlenative.container_v1.outputs.MeshCertificatesResponse;
 import com.pulumi.googlenative.container_v1.outputs.MonitoringConfigResponse;
 import com.pulumi.googlenative.container_v1.outputs.NetworkConfigResponse;
 import com.pulumi.googlenative.container_v1.outputs.NetworkPolicyResponse;
+import com.pulumi.googlenative.container_v1.outputs.NodeConfigResponse;
+import com.pulumi.googlenative.container_v1.outputs.NodePoolAutoConfigResponse;
 import com.pulumi.googlenative.container_v1.outputs.NodePoolDefaultsResponse;
 import com.pulumi.googlenative.container_v1.outputs.NodePoolResponse;
 import com.pulumi.googlenative.container_v1.outputs.NotificationConfigResponse;
@@ -77,7 +80,7 @@ public final class GetClusterResult {
      */
     private final List<StatusConditionResponse> conditions;
     /**
-     * @return Configuration of Confidential Nodes
+     * @return Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
      * 
      */
     private final ConfidentialNodesResponse confidentialNodes;
@@ -91,6 +94,15 @@ public final class GetClusterResult {
      * 
      */
     private final String currentMasterVersion;
+    /**
+     * @return [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     * @deprecated
+     * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     */
+    @Deprecated /* [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information. */
+    private final Integer currentNodeCount;
     /**
      * @return [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
@@ -132,10 +144,33 @@ public final class GetClusterResult {
      */
     private final String expireTime;
     /**
+     * @return Configuration for Identity Service component.
+     * 
+     */
+    private final IdentityServiceConfigResponse identityServiceConfig;
+    /**
      * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
      */
     private final String initialClusterVersion;
+    /**
+     * @return The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     * @deprecated
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+    private final Integer initialNodeCount;
+    /**
+     * @return Deprecated. Use node_pools.instance_group_urls.
+     * 
+     * @deprecated
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+    private final List<String> instanceGroupUrls;
     /**
      * @return Configuration for cluster IP allocation.
      * 
@@ -222,10 +257,24 @@ public final class GetClusterResult {
      */
     private final NetworkPolicyResponse networkPolicy;
     /**
+     * @return Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     * @deprecated
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+    private final NodeConfigResponse nodeConfig;
+    /**
      * @return [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
      * 
      */
     private final Integer nodeIpv4CidrSize;
+    /**
+     * @return Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    private final NodePoolAutoConfigResponse nodePoolAutoConfig;
     /**
      * @return Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
      * 
@@ -282,6 +331,15 @@ public final class GetClusterResult {
      */
     private final String status;
     /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available. */
+    private final String statusMessage;
+    /**
      * @return The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
      * 
      */
@@ -301,6 +359,15 @@ public final class GetClusterResult {
      * 
      */
     private final WorkloadIdentityConfigResponse workloadIdentityConfig;
+    /**
+     * @return [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     * @deprecated
+     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     */
+    @Deprecated /* [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead. */
+    private final String zone;
 
     @CustomType.Constructor
     private GetClusterResult(
@@ -314,6 +381,7 @@ public final class GetClusterResult {
         @CustomType.Parameter("confidentialNodes") ConfidentialNodesResponse confidentialNodes,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("currentMasterVersion") String currentMasterVersion,
+        @CustomType.Parameter("currentNodeCount") Integer currentNodeCount,
         @CustomType.Parameter("currentNodeVersion") String currentNodeVersion,
         @CustomType.Parameter("databaseEncryption") DatabaseEncryptionResponse databaseEncryption,
         @CustomType.Parameter("defaultMaxPodsConstraint") MaxPodsConstraintResponse defaultMaxPodsConstraint,
@@ -322,7 +390,10 @@ public final class GetClusterResult {
         @CustomType.Parameter("enableTpu") Boolean enableTpu,
         @CustomType.Parameter("endpoint") String endpoint,
         @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("identityServiceConfig") IdentityServiceConfigResponse identityServiceConfig,
         @CustomType.Parameter("initialClusterVersion") String initialClusterVersion,
+        @CustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @CustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
         @CustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
         @CustomType.Parameter("labelFingerprint") String labelFingerprint,
         @CustomType.Parameter("legacyAbac") LegacyAbacResponse legacyAbac,
@@ -340,7 +411,9 @@ public final class GetClusterResult {
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
         @CustomType.Parameter("networkPolicy") NetworkPolicyResponse networkPolicy,
+        @CustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
         @CustomType.Parameter("nodeIpv4CidrSize") Integer nodeIpv4CidrSize,
+        @CustomType.Parameter("nodePoolAutoConfig") NodePoolAutoConfigResponse nodePoolAutoConfig,
         @CustomType.Parameter("nodePoolDefaults") NodePoolDefaultsResponse nodePoolDefaults,
         @CustomType.Parameter("nodePools") List<NodePoolResponse> nodePools,
         @CustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
@@ -352,10 +425,12 @@ public final class GetClusterResult {
         @CustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
         @CustomType.Parameter("shieldedNodes") ShieldedNodesResponse shieldedNodes,
         @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
         @CustomType.Parameter("subnetwork") String subnetwork,
         @CustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
         @CustomType.Parameter("verticalPodAutoscaling") VerticalPodAutoscalingResponse verticalPodAutoscaling,
-        @CustomType.Parameter("workloadIdentityConfig") WorkloadIdentityConfigResponse workloadIdentityConfig) {
+        @CustomType.Parameter("workloadIdentityConfig") WorkloadIdentityConfigResponse workloadIdentityConfig,
+        @CustomType.Parameter("zone") String zone) {
         this.addonsConfig = addonsConfig;
         this.authenticatorGroupsConfig = authenticatorGroupsConfig;
         this.autopilot = autopilot;
@@ -366,6 +441,7 @@ public final class GetClusterResult {
         this.confidentialNodes = confidentialNodes;
         this.createTime = createTime;
         this.currentMasterVersion = currentMasterVersion;
+        this.currentNodeCount = currentNodeCount;
         this.currentNodeVersion = currentNodeVersion;
         this.databaseEncryption = databaseEncryption;
         this.defaultMaxPodsConstraint = defaultMaxPodsConstraint;
@@ -374,7 +450,10 @@ public final class GetClusterResult {
         this.enableTpu = enableTpu;
         this.endpoint = endpoint;
         this.expireTime = expireTime;
+        this.identityServiceConfig = identityServiceConfig;
         this.initialClusterVersion = initialClusterVersion;
+        this.initialNodeCount = initialNodeCount;
+        this.instanceGroupUrls = instanceGroupUrls;
         this.ipAllocationPolicy = ipAllocationPolicy;
         this.labelFingerprint = labelFingerprint;
         this.legacyAbac = legacyAbac;
@@ -392,7 +471,9 @@ public final class GetClusterResult {
         this.network = network;
         this.networkConfig = networkConfig;
         this.networkPolicy = networkPolicy;
+        this.nodeConfig = nodeConfig;
         this.nodeIpv4CidrSize = nodeIpv4CidrSize;
+        this.nodePoolAutoConfig = nodePoolAutoConfig;
         this.nodePoolDefaults = nodePoolDefaults;
         this.nodePools = nodePools;
         this.notificationConfig = notificationConfig;
@@ -404,10 +485,12 @@ public final class GetClusterResult {
         this.servicesIpv4Cidr = servicesIpv4Cidr;
         this.shieldedNodes = shieldedNodes;
         this.status = status;
+        this.statusMessage = statusMessage;
         this.subnetwork = subnetwork;
         this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
         this.verticalPodAutoscaling = verticalPodAutoscaling;
         this.workloadIdentityConfig = workloadIdentityConfig;
+        this.zone = zone;
     }
 
     /**
@@ -460,7 +543,7 @@ public final class GetClusterResult {
         return this.conditions;
     }
     /**
-     * @return Configuration of Confidential Nodes
+     * @return Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
      * 
      */
     public ConfidentialNodesResponse confidentialNodes() {
@@ -479,6 +562,17 @@ public final class GetClusterResult {
      */
     public String currentMasterVersion() {
         return this.currentMasterVersion;
+    }
+    /**
+     * @return [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     * @deprecated
+     * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     */
+    @Deprecated /* [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information. */
+    public Integer currentNodeCount() {
+        return this.currentNodeCount;
     }
     /**
      * @return [Output only] Deprecated, use [NodePools.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -537,11 +631,40 @@ public final class GetClusterResult {
         return this.expireTime;
     }
     /**
+     * @return Configuration for Identity Service component.
+     * 
+     */
+    public IdentityServiceConfigResponse identityServiceConfig() {
+        return this.identityServiceConfig;
+    }
+    /**
      * @return The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - &#34;latest&#34;: picks the highest valid Kubernetes version - &#34;1.X&#34;: picks the highest valid patch+gke.N patch in the 1.X version - &#34;1.X.Y&#34;: picks the highest valid gke.N patch in the 1.X.Y version - &#34;1.X.Y-gke.N&#34;: picks an explicit Kubernetes version - &#34;&#34;,&#34;-&#34;: picks the default Kubernetes version
      * 
      */
     public String initialClusterVersion() {
         return this.initialClusterVersion;
+    }
+    /**
+     * @return The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     * @deprecated
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+    public Integer initialNodeCount() {
+        return this.initialNodeCount;
+    }
+    /**
+     * @return Deprecated. Use node_pools.instance_group_urls.
+     * 
+     * @deprecated
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+    public List<String> instanceGroupUrls() {
+        return this.instanceGroupUrls;
     }
     /**
      * @return Configuration for cluster IP allocation.
@@ -663,11 +786,29 @@ public final class GetClusterResult {
         return this.networkPolicy;
     }
     /**
+     * @return Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     * @deprecated
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+    public NodeConfigResponse nodeConfig() {
+        return this.nodeConfig;
+    }
+    /**
      * @return [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
      * 
      */
     public Integer nodeIpv4CidrSize() {
         return this.nodeIpv4CidrSize;
+    }
+    /**
+     * @return Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    public NodePoolAutoConfigResponse nodePoolAutoConfig() {
+        return this.nodePoolAutoConfig;
     }
     /**
      * @return Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
@@ -747,6 +888,17 @@ public final class GetClusterResult {
         return this.status;
     }
     /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available. */
+    public String statusMessage() {
+        return this.statusMessage;
+    }
+    /**
      * @return The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected.
      * 
      */
@@ -774,6 +926,17 @@ public final class GetClusterResult {
     public WorkloadIdentityConfigResponse workloadIdentityConfig() {
         return this.workloadIdentityConfig;
     }
+    /**
+     * @return [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     * @deprecated
+     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     */
+    @Deprecated /* [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead. */
+    public String zone() {
+        return this.zone;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -794,6 +957,7 @@ public final class GetClusterResult {
         private ConfidentialNodesResponse confidentialNodes;
         private String createTime;
         private String currentMasterVersion;
+        private Integer currentNodeCount;
         private String currentNodeVersion;
         private DatabaseEncryptionResponse databaseEncryption;
         private MaxPodsConstraintResponse defaultMaxPodsConstraint;
@@ -802,7 +966,10 @@ public final class GetClusterResult {
         private Boolean enableTpu;
         private String endpoint;
         private String expireTime;
+        private IdentityServiceConfigResponse identityServiceConfig;
         private String initialClusterVersion;
+        private Integer initialNodeCount;
+        private List<String> instanceGroupUrls;
         private IPAllocationPolicyResponse ipAllocationPolicy;
         private String labelFingerprint;
         private LegacyAbacResponse legacyAbac;
@@ -820,7 +987,9 @@ public final class GetClusterResult {
         private String network;
         private NetworkConfigResponse networkConfig;
         private NetworkPolicyResponse networkPolicy;
+        private NodeConfigResponse nodeConfig;
         private Integer nodeIpv4CidrSize;
+        private NodePoolAutoConfigResponse nodePoolAutoConfig;
         private NodePoolDefaultsResponse nodePoolDefaults;
         private List<NodePoolResponse> nodePools;
         private NotificationConfigResponse notificationConfig;
@@ -832,10 +1001,12 @@ public final class GetClusterResult {
         private String servicesIpv4Cidr;
         private ShieldedNodesResponse shieldedNodes;
         private String status;
+        private String statusMessage;
         private String subnetwork;
         private String tpuIpv4CidrBlock;
         private VerticalPodAutoscalingResponse verticalPodAutoscaling;
         private WorkloadIdentityConfigResponse workloadIdentityConfig;
+        private String zone;
 
         public Builder() {
     	      // Empty
@@ -853,6 +1024,7 @@ public final class GetClusterResult {
     	      this.confidentialNodes = defaults.confidentialNodes;
     	      this.createTime = defaults.createTime;
     	      this.currentMasterVersion = defaults.currentMasterVersion;
+    	      this.currentNodeCount = defaults.currentNodeCount;
     	      this.currentNodeVersion = defaults.currentNodeVersion;
     	      this.databaseEncryption = defaults.databaseEncryption;
     	      this.defaultMaxPodsConstraint = defaults.defaultMaxPodsConstraint;
@@ -861,7 +1033,10 @@ public final class GetClusterResult {
     	      this.enableTpu = defaults.enableTpu;
     	      this.endpoint = defaults.endpoint;
     	      this.expireTime = defaults.expireTime;
+    	      this.identityServiceConfig = defaults.identityServiceConfig;
     	      this.initialClusterVersion = defaults.initialClusterVersion;
+    	      this.initialNodeCount = defaults.initialNodeCount;
+    	      this.instanceGroupUrls = defaults.instanceGroupUrls;
     	      this.ipAllocationPolicy = defaults.ipAllocationPolicy;
     	      this.labelFingerprint = defaults.labelFingerprint;
     	      this.legacyAbac = defaults.legacyAbac;
@@ -879,7 +1054,9 @@ public final class GetClusterResult {
     	      this.network = defaults.network;
     	      this.networkConfig = defaults.networkConfig;
     	      this.networkPolicy = defaults.networkPolicy;
+    	      this.nodeConfig = defaults.nodeConfig;
     	      this.nodeIpv4CidrSize = defaults.nodeIpv4CidrSize;
+    	      this.nodePoolAutoConfig = defaults.nodePoolAutoConfig;
     	      this.nodePoolDefaults = defaults.nodePoolDefaults;
     	      this.nodePools = defaults.nodePools;
     	      this.notificationConfig = defaults.notificationConfig;
@@ -891,10 +1068,12 @@ public final class GetClusterResult {
     	      this.servicesIpv4Cidr = defaults.servicesIpv4Cidr;
     	      this.shieldedNodes = defaults.shieldedNodes;
     	      this.status = defaults.status;
+    	      this.statusMessage = defaults.statusMessage;
     	      this.subnetwork = defaults.subnetwork;
     	      this.tpuIpv4CidrBlock = defaults.tpuIpv4CidrBlock;
     	      this.verticalPodAutoscaling = defaults.verticalPodAutoscaling;
     	      this.workloadIdentityConfig = defaults.workloadIdentityConfig;
+    	      this.zone = defaults.zone;
         }
 
         public Builder addonsConfig(AddonsConfigResponse addonsConfig) {
@@ -940,6 +1119,10 @@ public final class GetClusterResult {
             this.currentMasterVersion = Objects.requireNonNull(currentMasterVersion);
             return this;
         }
+        public Builder currentNodeCount(Integer currentNodeCount) {
+            this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
+            return this;
+        }
         public Builder currentNodeVersion(String currentNodeVersion) {
             this.currentNodeVersion = Objects.requireNonNull(currentNodeVersion);
             return this;
@@ -972,9 +1155,24 @@ public final class GetClusterResult {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
+        public Builder identityServiceConfig(IdentityServiceConfigResponse identityServiceConfig) {
+            this.identityServiceConfig = Objects.requireNonNull(identityServiceConfig);
+            return this;
+        }
         public Builder initialClusterVersion(String initialClusterVersion) {
             this.initialClusterVersion = Objects.requireNonNull(initialClusterVersion);
             return this;
+        }
+        public Builder initialNodeCount(Integer initialNodeCount) {
+            this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
+            return this;
+        }
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
+            this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
+            return this;
+        }
+        public Builder instanceGroupUrls(String... instanceGroupUrls) {
+            return instanceGroupUrls(List.of(instanceGroupUrls));
         }
         public Builder ipAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
             this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy);
@@ -1047,8 +1245,16 @@ public final class GetClusterResult {
             this.networkPolicy = Objects.requireNonNull(networkPolicy);
             return this;
         }
+        public Builder nodeConfig(NodeConfigResponse nodeConfig) {
+            this.nodeConfig = Objects.requireNonNull(nodeConfig);
+            return this;
+        }
         public Builder nodeIpv4CidrSize(Integer nodeIpv4CidrSize) {
             this.nodeIpv4CidrSize = Objects.requireNonNull(nodeIpv4CidrSize);
+            return this;
+        }
+        public Builder nodePoolAutoConfig(NodePoolAutoConfigResponse nodePoolAutoConfig) {
+            this.nodePoolAutoConfig = Objects.requireNonNull(nodePoolAutoConfig);
             return this;
         }
         public Builder nodePoolDefaults(NodePoolDefaultsResponse nodePoolDefaults) {
@@ -1098,6 +1304,10 @@ public final class GetClusterResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
+        public Builder statusMessage(String statusMessage) {
+            this.statusMessage = Objects.requireNonNull(statusMessage);
+            return this;
+        }
         public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
@@ -1113,8 +1323,12 @@ public final class GetClusterResult {
         public Builder workloadIdentityConfig(WorkloadIdentityConfigResponse workloadIdentityConfig) {
             this.workloadIdentityConfig = Objects.requireNonNull(workloadIdentityConfig);
             return this;
+        }
+        public Builder zone(String zone) {
+            this.zone = Objects.requireNonNull(zone);
+            return this;
         }        public GetClusterResult build() {
-            return new GetClusterResult(addonsConfig, authenticatorGroupsConfig, autopilot, autoscaling, binaryAuthorization, clusterIpv4Cidr, conditions, confidentialNodes, createTime, currentMasterVersion, currentNodeVersion, databaseEncryption, defaultMaxPodsConstraint, description, enableKubernetesAlpha, enableTpu, endpoint, expireTime, initialClusterVersion, ipAllocationPolicy, labelFingerprint, legacyAbac, location, locations, loggingConfig, loggingService, maintenancePolicy, masterAuth, masterAuthorizedNetworksConfig, meshCertificates, monitoringConfig, monitoringService, name, network, networkConfig, networkPolicy, nodeIpv4CidrSize, nodePoolDefaults, nodePools, notificationConfig, privateClusterConfig, releaseChannel, resourceLabels, resourceUsageExportConfig, selfLink, servicesIpv4Cidr, shieldedNodes, status, subnetwork, tpuIpv4CidrBlock, verticalPodAutoscaling, workloadIdentityConfig);
+            return new GetClusterResult(addonsConfig, authenticatorGroupsConfig, autopilot, autoscaling, binaryAuthorization, clusterIpv4Cidr, conditions, confidentialNodes, createTime, currentMasterVersion, currentNodeCount, currentNodeVersion, databaseEncryption, defaultMaxPodsConstraint, description, enableKubernetesAlpha, enableTpu, endpoint, expireTime, identityServiceConfig, initialClusterVersion, initialNodeCount, instanceGroupUrls, ipAllocationPolicy, labelFingerprint, legacyAbac, location, locations, loggingConfig, loggingService, maintenancePolicy, masterAuth, masterAuthorizedNetworksConfig, meshCertificates, monitoringConfig, monitoringService, name, network, networkConfig, networkPolicy, nodeConfig, nodeIpv4CidrSize, nodePoolAutoConfig, nodePoolDefaults, nodePools, notificationConfig, privateClusterConfig, releaseChannel, resourceLabels, resourceUsageExportConfig, selfLink, servicesIpv4Cidr, shieldedNodes, status, statusMessage, subnetwork, tpuIpv4CidrBlock, verticalPodAutoscaling, workloadIdentityConfig, zone);
         }
     }
 }

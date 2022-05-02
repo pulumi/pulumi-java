@@ -27,7 +27,7 @@ public final class GetMachineImageResult {
      */
     private final String description;
     /**
-     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process.
      * 
      */
     private final Boolean guestFlush;
@@ -155,7 +155,7 @@ public final class GetMachineImageResult {
         return this.description;
     }
     /**
-     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process.
      * 
      */
     public Boolean guestFlush() {

@@ -431,6 +431,24 @@ public class Job extends com.pulumi.resources.CustomResource {
     public Output<String> title() {
         return this.title;
     }
+    /**
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     * @deprecated
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+    @Export(name="visibility", type=String.class, parameters={})
+    private Output<String> visibility;
+
+    /**
+     * @return Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    public Output<String> visibility() {
+        return this.visibility;
+    }
 
     /**
      *

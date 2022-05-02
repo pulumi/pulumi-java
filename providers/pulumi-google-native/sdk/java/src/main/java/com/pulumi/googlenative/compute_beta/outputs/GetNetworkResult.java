@@ -30,10 +30,29 @@ public final class GetNetworkResult {
      */
     private final String description;
     /**
+     * @return Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+     * 
+     */
+    private final Boolean enableUlaInternalIpv6;
+    /**
      * @return The gateway address for default routing out of the network, selected by GCP.
      * 
      */
     private final String gatewayIPv4;
+    /**
+     * @return When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+     * 
+     */
+    private final String internalIpv6Range;
+    /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    private final String ipv4Range;
     /**
      * @return Type of the resource. Always compute#network for networks.
      * 
@@ -50,6 +69,11 @@ public final class GetNetworkResult {
      */
     private final String name;
     /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
+    private final String networkFirewallPolicyEnforcementOrder;
+    /**
      * @return A list of network peerings for the resource.
      * 
      */
@@ -65,6 +89,11 @@ public final class GetNetworkResult {
      */
     private final String selfLink;
     /**
+     * @return Server-defined URL for this resource with the resource id.
+     * 
+     */
+    private final String selfLinkWithId;
+    /**
      * @return Server-defined fully-qualified URLs for all subnetworks in this VPC network.
      * 
      */
@@ -75,24 +104,34 @@ public final class GetNetworkResult {
         @CustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableUlaInternalIpv6") Boolean enableUlaInternalIpv6,
         @CustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @CustomType.Parameter("internalIpv6Range") String internalIpv6Range,
+        @CustomType.Parameter("ipv4Range") String ipv4Range,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("mtu") Integer mtu,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkFirewallPolicyEnforcementOrder") String networkFirewallPolicyEnforcementOrder,
         @CustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
         @CustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
         @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
         @CustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
+        this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
         this.gatewayIPv4 = gatewayIPv4;
+        this.internalIpv6Range = internalIpv6Range;
+        this.ipv4Range = ipv4Range;
         this.kind = kind;
         this.mtu = mtu;
         this.name = name;
+        this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
         this.peerings = peerings;
         this.routingConfig = routingConfig;
         this.selfLink = selfLink;
+        this.selfLinkWithId = selfLinkWithId;
         this.subnetworks = subnetworks;
     }
 
@@ -118,11 +157,36 @@ public final class GetNetworkResult {
         return this.description;
     }
     /**
+     * @return Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+     * 
+     */
+    public Boolean enableUlaInternalIpv6() {
+        return this.enableUlaInternalIpv6;
+    }
+    /**
      * @return The gateway address for default routing out of the network, selected by GCP.
      * 
      */
     public String gatewayIPv4() {
         return this.gatewayIPv4;
+    }
+    /**
+     * @return When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+     * 
+     */
+    public String internalIpv6Range() {
+        return this.internalIpv6Range;
+    }
+    /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    public String ipv4Range() {
+        return this.ipv4Range;
     }
     /**
      * @return Type of the resource. Always compute#network for networks.
@@ -146,6 +210,13 @@ public final class GetNetworkResult {
         return this.name;
     }
     /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
+    public String networkFirewallPolicyEnforcementOrder() {
+        return this.networkFirewallPolicyEnforcementOrder;
+    }
+    /**
      * @return A list of network peerings for the resource.
      * 
      */
@@ -167,6 +238,13 @@ public final class GetNetworkResult {
         return this.selfLink;
     }
     /**
+     * @return Server-defined URL for this resource with the resource id.
+     * 
+     */
+    public String selfLinkWithId() {
+        return this.selfLinkWithId;
+    }
+    /**
      * @return Server-defined fully-qualified URLs for all subnetworks in this VPC network.
      * 
      */
@@ -186,13 +264,18 @@ public final class GetNetworkResult {
         private Boolean autoCreateSubnetworks;
         private String creationTimestamp;
         private String description;
+        private Boolean enableUlaInternalIpv6;
         private String gatewayIPv4;
+        private String internalIpv6Range;
+        private String ipv4Range;
         private String kind;
         private Integer mtu;
         private String name;
+        private String networkFirewallPolicyEnforcementOrder;
         private List<NetworkPeeringResponse> peerings;
         private NetworkRoutingConfigResponse routingConfig;
         private String selfLink;
+        private String selfLinkWithId;
         private List<String> subnetworks;
 
         public Builder() {
@@ -204,13 +287,18 @@ public final class GetNetworkResult {
     	      this.autoCreateSubnetworks = defaults.autoCreateSubnetworks;
     	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.description = defaults.description;
+    	      this.enableUlaInternalIpv6 = defaults.enableUlaInternalIpv6;
     	      this.gatewayIPv4 = defaults.gatewayIPv4;
+    	      this.internalIpv6Range = defaults.internalIpv6Range;
+    	      this.ipv4Range = defaults.ipv4Range;
     	      this.kind = defaults.kind;
     	      this.mtu = defaults.mtu;
     	      this.name = defaults.name;
+    	      this.networkFirewallPolicyEnforcementOrder = defaults.networkFirewallPolicyEnforcementOrder;
     	      this.peerings = defaults.peerings;
     	      this.routingConfig = defaults.routingConfig;
     	      this.selfLink = defaults.selfLink;
+    	      this.selfLinkWithId = defaults.selfLinkWithId;
     	      this.subnetworks = defaults.subnetworks;
         }
 
@@ -226,8 +314,20 @@ public final class GetNetworkResult {
             this.description = Objects.requireNonNull(description);
             return this;
         }
+        public Builder enableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
+            this.enableUlaInternalIpv6 = Objects.requireNonNull(enableUlaInternalIpv6);
+            return this;
+        }
         public Builder gatewayIPv4(String gatewayIPv4) {
             this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
+            return this;
+        }
+        public Builder internalIpv6Range(String internalIpv6Range) {
+            this.internalIpv6Range = Objects.requireNonNull(internalIpv6Range);
+            return this;
+        }
+        public Builder ipv4Range(String ipv4Range) {
+            this.ipv4Range = Objects.requireNonNull(ipv4Range);
             return this;
         }
         public Builder kind(String kind) {
@@ -240,6 +340,10 @@ public final class GetNetworkResult {
         }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
+            return this;
+        }
+        public Builder networkFirewallPolicyEnforcementOrder(String networkFirewallPolicyEnforcementOrder) {
+            this.networkFirewallPolicyEnforcementOrder = Objects.requireNonNull(networkFirewallPolicyEnforcementOrder);
             return this;
         }
         public Builder peerings(List<NetworkPeeringResponse> peerings) {
@@ -257,6 +361,10 @@ public final class GetNetworkResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
+        public Builder selfLinkWithId(String selfLinkWithId) {
+            this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
+            return this;
+        }
         public Builder subnetworks(List<String> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
@@ -264,7 +372,7 @@ public final class GetNetworkResult {
         public Builder subnetworks(String... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }        public GetNetworkResult build() {
-            return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, gatewayIPv4, kind, mtu, name, peerings, routingConfig, selfLink, subnetworks);
+            return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, enableUlaInternalIpv6, gatewayIPv4, internalIpv6Range, ipv4Range, kind, mtu, name, networkFirewallPolicyEnforcementOrder, peerings, routingConfig, selfLink, selfLinkWithId, subnetworks);
         }
     }
 }

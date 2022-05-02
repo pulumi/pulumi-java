@@ -6,10 +6,16 @@ package com.pulumi.googlenative.dataflow_v1b3.outputs;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class SdkHarnessContainerImageResponse {
+    /**
+     * @return The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+     * 
+     */
+    private final List<String> capabilities;
     /**
      * @return A docker container image that resides in Google Container Registry.
      * 
@@ -28,14 +34,23 @@ public final class SdkHarnessContainerImageResponse {
 
     @CustomType.Constructor
     private SdkHarnessContainerImageResponse(
+        @CustomType.Parameter("capabilities") List<String> capabilities,
         @CustomType.Parameter("containerImage") String containerImage,
         @CustomType.Parameter("environmentId") String environmentId,
         @CustomType.Parameter("useSingleCorePerContainer") Boolean useSingleCorePerContainer) {
+        this.capabilities = capabilities;
         this.containerImage = containerImage;
         this.environmentId = environmentId;
         this.useSingleCorePerContainer = useSingleCorePerContainer;
     }
 
+    /**
+     * @return The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+     * 
+     */
+    public List<String> capabilities() {
+        return this.capabilities;
+    }
     /**
      * @return A docker container image that resides in Google Container Registry.
      * 
@@ -67,6 +82,7 @@ public final class SdkHarnessContainerImageResponse {
     }
 
     public static final class Builder {
+        private List<String> capabilities;
         private String containerImage;
         private String environmentId;
         private Boolean useSingleCorePerContainer;
@@ -77,11 +93,19 @@ public final class SdkHarnessContainerImageResponse {
 
         public Builder(SdkHarnessContainerImageResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.capabilities = defaults.capabilities;
     	      this.containerImage = defaults.containerImage;
     	      this.environmentId = defaults.environmentId;
     	      this.useSingleCorePerContainer = defaults.useSingleCorePerContainer;
         }
 
+        public Builder capabilities(List<String> capabilities) {
+            this.capabilities = Objects.requireNonNull(capabilities);
+            return this;
+        }
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
+        }
         public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
@@ -94,7 +118,7 @@ public final class SdkHarnessContainerImageResponse {
             this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
             return this;
         }        public SdkHarnessContainerImageResponse build() {
-            return new SdkHarnessContainerImageResponse(containerImage, environmentId, useSingleCorePerContainer);
+            return new SdkHarnessContainerImageResponse(capabilities, containerImage, environmentId, useSingleCorePerContainer);
         }
     }
 }

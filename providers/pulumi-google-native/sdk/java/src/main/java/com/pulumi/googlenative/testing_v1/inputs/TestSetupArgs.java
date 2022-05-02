@@ -9,6 +9,7 @@ import com.pulumi.googlenative.testing_v1.inputs.AccountArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ApkArgs;
 import com.pulumi.googlenative.testing_v1.inputs.DeviceFileArgs;
 import com.pulumi.googlenative.testing_v1.inputs.EnvironmentVariableArgs;
+import com.pulumi.googlenative.testing_v1.inputs.SystraceSetupArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -130,6 +131,29 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.networkProfile);
     }
 
+    /**
+     * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     * @deprecated
+     * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     */
+    @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+    @Import(name="systrace")
+    private @Nullable Output<SystraceSetupArgs> systrace;
+
+    /**
+     * @return Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     * @deprecated
+     * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+     * 
+     */
+    @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+    public Optional<Output<SystraceSetupArgs>> systrace() {
+        return Optional.ofNullable(this.systrace);
+    }
+
     private TestSetupArgs() {}
 
     private TestSetupArgs(TestSetupArgs $) {
@@ -140,6 +164,7 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
         this.environmentVariables = $.environmentVariables;
         this.filesToPush = $.filesToPush;
         this.networkProfile = $.networkProfile;
+        this.systrace = $.systrace;
     }
 
     public static Builder builder() {
@@ -345,6 +370,35 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder networkProfile(String networkProfile) {
             return networkProfile(Output.of(networkProfile));
+        }
+
+        /**
+         * @param systrace Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+         * 
+         */
+        @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+        public Builder systrace(@Nullable Output<SystraceSetupArgs> systrace) {
+            $.systrace = systrace;
+            return this;
+        }
+
+        /**
+         * @param systrace Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.
+         * 
+         */
+        @Deprecated /* Deprecated: Systrace uses Python 2 which has been sunset 2020-01-01. Support of Systrace may stop at any time, at which point no Systrace file will be provided in the results. Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run. */
+        public Builder systrace(SystraceSetupArgs systrace) {
+            return systrace(Output.of(systrace));
         }
 
         public TestSetupArgs build() {

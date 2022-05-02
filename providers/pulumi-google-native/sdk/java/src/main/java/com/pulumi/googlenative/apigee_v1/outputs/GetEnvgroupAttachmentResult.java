@@ -20,6 +20,11 @@ public final class GetEnvgroupAttachmentResult {
      */
     private final String environment;
     /**
+     * @return ID of the environment group.
+     * 
+     */
+    private final String environmentGroupId;
+    /**
      * @return ID of the environment group attachment.
      * 
      */
@@ -29,9 +34,11 @@ public final class GetEnvgroupAttachmentResult {
     private GetEnvgroupAttachmentResult(
         @CustomType.Parameter("createdAt") String createdAt,
         @CustomType.Parameter("environment") String environment,
+        @CustomType.Parameter("environmentGroupId") String environmentGroupId,
         @CustomType.Parameter("name") String name) {
         this.createdAt = createdAt;
         this.environment = environment;
+        this.environmentGroupId = environmentGroupId;
         this.name = name;
     }
 
@@ -48,6 +55,13 @@ public final class GetEnvgroupAttachmentResult {
      */
     public String environment() {
         return this.environment;
+    }
+    /**
+     * @return ID of the environment group.
+     * 
+     */
+    public String environmentGroupId() {
+        return this.environmentGroupId;
     }
     /**
      * @return ID of the environment group attachment.
@@ -68,6 +82,7 @@ public final class GetEnvgroupAttachmentResult {
     public static final class Builder {
         private String createdAt;
         private String environment;
+        private String environmentGroupId;
         private String name;
 
         public Builder() {
@@ -78,6 +93,7 @@ public final class GetEnvgroupAttachmentResult {
     	      Objects.requireNonNull(defaults);
     	      this.createdAt = defaults.createdAt;
     	      this.environment = defaults.environment;
+    	      this.environmentGroupId = defaults.environmentGroupId;
     	      this.name = defaults.name;
         }
 
@@ -89,11 +105,15 @@ public final class GetEnvgroupAttachmentResult {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
+        public Builder environmentGroupId(String environmentGroupId) {
+            this.environmentGroupId = Objects.requireNonNull(environmentGroupId);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }        public GetEnvgroupAttachmentResult build() {
-            return new GetEnvgroupAttachmentResult(createdAt, environment, name);
+            return new GetEnvgroupAttachmentResult(createdAt, environment, environmentGroupId, name);
         }
     }
 }

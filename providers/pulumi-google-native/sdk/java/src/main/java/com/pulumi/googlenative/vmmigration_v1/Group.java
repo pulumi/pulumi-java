@@ -14,6 +14,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new Group in a given project and location.
+ * Auto-naming is currently not supported for this resource.
  * 
  */
 @ResourceType(type="google-native:vmmigration/v1:Group")

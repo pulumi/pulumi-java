@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,6 +20,21 @@ import javax.annotation.Nullable;
 public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final SdkHarnessContainerImageArgs Empty = new SdkHarnessContainerImageArgs();
+
+    /**
+     * The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+     * 
+     */
+    @Import(name="capabilities")
+    private @Nullable Output<List<String>> capabilities;
+
+    /**
+     * @return The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+     * 
+     */
+    public Optional<Output<List<String>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
+    }
 
     /**
      * A docker container image that resides in Google Container Registry.
@@ -68,6 +84,7 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
     private SdkHarnessContainerImageArgs() {}
 
     private SdkHarnessContainerImageArgs(SdkHarnessContainerImageArgs $) {
+        this.capabilities = $.capabilities;
         this.containerImage = $.containerImage;
         this.environmentId = $.environmentId;
         this.useSingleCorePerContainer = $.useSingleCorePerContainer;
@@ -89,6 +106,37 @@ public final class SdkHarnessContainerImageArgs extends com.pulumi.resources.Res
 
         public Builder(SdkHarnessContainerImageArgs defaults) {
             $ = new SdkHarnessContainerImageArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param capabilities The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capabilities(@Nullable Output<List<String>> capabilities) {
+            $.capabilities = capabilities;
+            return this;
+        }
+
+        /**
+         * @param capabilities The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capabilities(List<String> capabilities) {
+            return capabilities(Output.of(capabilities));
+        }
+
+        /**
+         * @param capabilities The set of capabilities enumerated in the above Environment proto. See also https://github.com/apache/beam/blob/master/model/pipeline/src/main/proto/beam_runner_api.proto
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capabilities(String... capabilities) {
+            return capabilities(List.of(capabilities));
         }
 
         /**

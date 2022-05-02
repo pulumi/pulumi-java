@@ -21,7 +21,7 @@ public final class GetRealmResult {
      */
     private final String description;
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     private final String etag;
@@ -31,12 +31,12 @@ public final class GetRealmResult {
      */
     private final Map<String,String> labels;
     /**
-     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
      * 
      */
     private final String name;
     /**
-     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
      * 
      */
     private final String timeZone;
@@ -79,7 +79,7 @@ public final class GetRealmResult {
         return this.description;
     }
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public String etag() {
@@ -93,14 +93,14 @@ public final class GetRealmResult {
         return this.labels;
     }
     /**
-     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     * @return The resource name of the realm, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}`. For example, `projects/my-project/locations/global/realms/my-realm`.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     * @return Time zone where all policies targeting this realm are evaluated. The value of this field must be from the [IANA time zone database](https://www.iana.org/time-zones).
      * 
      */
     public String timeZone() {

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Details about files that caused a compliance check to fail.
+ * Details about files that caused a compliance check to fail. display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;.
  * 
  */
 public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArgs {
@@ -35,14 +35,14 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+     * Empty if `display_command` is set.
      * 
      */
     @Import(name="path")
     private @Nullable Output<String> path;
 
     /**
-     * @return display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+     * @return Empty if `display_command` is set.
      * 
      */
     public Optional<Output<String>> path() {
@@ -112,7 +112,7 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param path display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+         * @param path Empty if `display_command` is set.
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param path display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using &#39;path&#39;. Empty if `display_command` is set.
+         * @param path Empty if `display_command` is set.
          * 
          * @return builder
          * 

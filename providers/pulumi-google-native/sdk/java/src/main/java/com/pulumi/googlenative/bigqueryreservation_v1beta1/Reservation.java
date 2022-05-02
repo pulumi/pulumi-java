@@ -20,6 +20,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:bigqueryreservation/v1beta1:Reservation")
 public class Reservation extends com.pulumi.resources.CustomResource {
     /**
+     * Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    @Export(name="concurrency", type=String.class, parameters={})
+    private Output<String> concurrency;
+
+    /**
+     * @return Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.
+     * 
+     */
+    public Output<String> concurrency() {
+        return this.concurrency;
+    }
+    /**
      * Creation time of the reservation.
      * 
      */
@@ -48,14 +62,28 @@ public class Reservation extends com.pulumi.resources.CustomResource {
         return this.ignoreIdleSlots;
     }
     /**
-     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    @Export(name="multiRegionAuxiliary", type=Boolean.class, parameters={})
+    private Output<Boolean> multiRegionAuxiliary;
+
+    /**
+     * @return Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization&#39;s default region.
+     * 
+     */
+    public Output<Boolean> multiRegionAuxiliary() {
+        return this.multiRegionAuxiliary;
+    }
+    /**
+     * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
+     * @return The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`. For the reservation id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public Output<String> name() {

@@ -22,6 +22,11 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceResult {
     /**
+     * @return List all maintenance versions applicable on the instance
+     * 
+     */
+    private final List<String> availableMaintenanceVersions;
+    /**
      * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
@@ -62,6 +67,15 @@ public final class GetInstanceResult {
      */
     private final DiskEncryptionStatusResponse diskEncryptionStatus;
     /**
+     * @return This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+    private final String etag;
+    /**
      * @return The name and status of the failover replica.
      * 
      */
@@ -82,10 +96,24 @@ public final class GetInstanceResult {
      */
     private final List<IpMappingResponse> ipAddresses;
     /**
+     * @return The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     * @deprecated
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+    private final String ipv6Address;
+    /**
      * @return This is always `sql#instance`.
      * 
      */
     private final String kind;
+    /**
+     * @return The current software version on the instance.
+     * 
+     */
+    private final String maintenanceVersion;
     /**
      * @return The name of the instance which will act as primary in the replication setup.
      * 
@@ -147,7 +175,7 @@ public final class GetInstanceResult {
      */
     private final SqlScheduledMaintenanceResponse scheduledMaintenance;
     /**
-     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     private final String secondaryGceZone;
@@ -184,6 +212,7 @@ public final class GetInstanceResult {
 
     @CustomType.Constructor
     private GetInstanceResult(
+        @CustomType.Parameter("availableMaintenanceVersions") List<String> availableMaintenanceVersions,
         @CustomType.Parameter("backendType") String backendType,
         @CustomType.Parameter("connectionName") String connectionName,
         @CustomType.Parameter("createTime") String createTime,
@@ -192,11 +221,14 @@ public final class GetInstanceResult {
         @CustomType.Parameter("databaseVersion") String databaseVersion,
         @CustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
         @CustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @CustomType.Parameter("etag") String etag,
         @CustomType.Parameter("failoverReplica") InstanceFailoverReplicaResponse failoverReplica,
         @CustomType.Parameter("gceZone") String gceZone,
         @CustomType.Parameter("instanceType") String instanceType,
         @CustomType.Parameter("ipAddresses") List<IpMappingResponse> ipAddresses,
+        @CustomType.Parameter("ipv6Address") String ipv6Address,
         @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("maintenanceVersion") String maintenanceVersion,
         @CustomType.Parameter("masterInstanceName") String masterInstanceName,
         @CustomType.Parameter("maxDiskSize") String maxDiskSize,
         @CustomType.Parameter("name") String name,
@@ -216,6 +248,7 @@ public final class GetInstanceResult {
         @CustomType.Parameter("settings") SettingsResponse settings,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("suspensionReason") List<String> suspensionReason) {
+        this.availableMaintenanceVersions = availableMaintenanceVersions;
         this.backendType = backendType;
         this.connectionName = connectionName;
         this.createTime = createTime;
@@ -224,11 +257,14 @@ public final class GetInstanceResult {
         this.databaseVersion = databaseVersion;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
         this.diskEncryptionStatus = diskEncryptionStatus;
+        this.etag = etag;
         this.failoverReplica = failoverReplica;
         this.gceZone = gceZone;
         this.instanceType = instanceType;
         this.ipAddresses = ipAddresses;
+        this.ipv6Address = ipv6Address;
         this.kind = kind;
+        this.maintenanceVersion = maintenanceVersion;
         this.masterInstanceName = masterInstanceName;
         this.maxDiskSize = maxDiskSize;
         this.name = name;
@@ -250,6 +286,13 @@ public final class GetInstanceResult {
         this.suspensionReason = suspensionReason;
     }
 
+    /**
+     * @return List all maintenance versions applicable on the instance
+     * 
+     */
+    public List<String> availableMaintenanceVersions() {
+        return this.availableMaintenanceVersions;
+    }
     /**
      * @return The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
@@ -307,6 +350,17 @@ public final class GetInstanceResult {
         return this.diskEncryptionStatus;
     }
     /**
+     * @return This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+    public String etag() {
+        return this.etag;
+    }
+    /**
      * @return The name and status of the failover replica.
      * 
      */
@@ -335,11 +389,29 @@ public final class GetInstanceResult {
         return this.ipAddresses;
     }
     /**
+     * @return The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     * @deprecated
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+    public String ipv6Address() {
+        return this.ipv6Address;
+    }
+    /**
      * @return This is always `sql#instance`.
      * 
      */
     public String kind() {
         return this.kind;
+    }
+    /**
+     * @return The current software version on the instance.
+     * 
+     */
+    public String maintenanceVersion() {
+        return this.maintenanceVersion;
     }
     /**
      * @return The name of the instance which will act as primary in the replication setup.
@@ -426,7 +498,7 @@ public final class GetInstanceResult {
         return this.scheduledMaintenance;
     }
     /**
-     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     public String secondaryGceZone() {
@@ -484,6 +556,7 @@ public final class GetInstanceResult {
     }
 
     public static final class Builder {
+        private List<String> availableMaintenanceVersions;
         private String backendType;
         private String connectionName;
         private String createTime;
@@ -492,11 +565,14 @@ public final class GetInstanceResult {
         private String databaseVersion;
         private DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
         private DiskEncryptionStatusResponse diskEncryptionStatus;
+        private String etag;
         private InstanceFailoverReplicaResponse failoverReplica;
         private String gceZone;
         private String instanceType;
         private List<IpMappingResponse> ipAddresses;
+        private String ipv6Address;
         private String kind;
+        private String maintenanceVersion;
         private String masterInstanceName;
         private String maxDiskSize;
         private String name;
@@ -523,6 +599,7 @@ public final class GetInstanceResult {
 
         public Builder(GetInstanceResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.availableMaintenanceVersions = defaults.availableMaintenanceVersions;
     	      this.backendType = defaults.backendType;
     	      this.connectionName = defaults.connectionName;
     	      this.createTime = defaults.createTime;
@@ -531,11 +608,14 @@ public final class GetInstanceResult {
     	      this.databaseVersion = defaults.databaseVersion;
     	      this.diskEncryptionConfiguration = defaults.diskEncryptionConfiguration;
     	      this.diskEncryptionStatus = defaults.diskEncryptionStatus;
+    	      this.etag = defaults.etag;
     	      this.failoverReplica = defaults.failoverReplica;
     	      this.gceZone = defaults.gceZone;
     	      this.instanceType = defaults.instanceType;
     	      this.ipAddresses = defaults.ipAddresses;
+    	      this.ipv6Address = defaults.ipv6Address;
     	      this.kind = defaults.kind;
+    	      this.maintenanceVersion = defaults.maintenanceVersion;
     	      this.masterInstanceName = defaults.masterInstanceName;
     	      this.maxDiskSize = defaults.maxDiskSize;
     	      this.name = defaults.name;
@@ -557,6 +637,13 @@ public final class GetInstanceResult {
     	      this.suspensionReason = defaults.suspensionReason;
         }
 
+        public Builder availableMaintenanceVersions(List<String> availableMaintenanceVersions) {
+            this.availableMaintenanceVersions = Objects.requireNonNull(availableMaintenanceVersions);
+            return this;
+        }
+        public Builder availableMaintenanceVersions(String... availableMaintenanceVersions) {
+            return availableMaintenanceVersions(List.of(availableMaintenanceVersions));
+        }
         public Builder backendType(String backendType) {
             this.backendType = Objects.requireNonNull(backendType);
             return this;
@@ -589,6 +676,10 @@ public final class GetInstanceResult {
             this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
             return this;
         }
+        public Builder etag(String etag) {
+            this.etag = Objects.requireNonNull(etag);
+            return this;
+        }
         public Builder failoverReplica(InstanceFailoverReplicaResponse failoverReplica) {
             this.failoverReplica = Objects.requireNonNull(failoverReplica);
             return this;
@@ -608,8 +699,16 @@ public final class GetInstanceResult {
         public Builder ipAddresses(IpMappingResponse... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+        public Builder ipv6Address(String ipv6Address) {
+            this.ipv6Address = Objects.requireNonNull(ipv6Address);
+            return this;
+        }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
+            return this;
+        }
+        public Builder maintenanceVersion(String maintenanceVersion) {
+            this.maintenanceVersion = Objects.requireNonNull(maintenanceVersion);
             return this;
         }
         public Builder masterInstanceName(String masterInstanceName) {
@@ -694,7 +793,7 @@ public final class GetInstanceResult {
         public Builder suspensionReason(String... suspensionReason) {
             return suspensionReason(List.of(suspensionReason));
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(backendType, connectionName, createTime, currentDiskSize, databaseInstalledVersion, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, failoverReplica, gceZone, instanceType, ipAddresses, kind, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
+            return new GetInstanceResult(availableMaintenanceVersions, backendType, connectionName, createTime, currentDiskSize, databaseInstalledVersion, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, etag, failoverReplica, gceZone, instanceType, ipAddresses, ipv6Address, kind, maintenanceVersion, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
         }
     }
 }

@@ -65,12 +65,28 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.cpuManagerPolicy);
     }
 
+    /**
+     * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+     * 
+     */
+    @Import(name="podPidsLimit")
+    private @Nullable Output<String> podPidsLimit;
+
+    /**
+     * @return Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+     * 
+     */
+    public Optional<Output<String>> podPidsLimit() {
+        return Optional.ofNullable(this.podPidsLimit);
+    }
+
     private NodeKubeletConfigArgs() {}
 
     private NodeKubeletConfigArgs(NodeKubeletConfigArgs $) {
         this.cpuCfsQuota = $.cpuCfsQuota;
         this.cpuCfsQuotaPeriod = $.cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = $.cpuManagerPolicy;
+        this.podPidsLimit = $.podPidsLimit;
     }
 
     public static Builder builder() {
@@ -152,6 +168,27 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             return cpuManagerPolicy(Output.of(cpuManagerPolicy));
+        }
+
+        /**
+         * @param podPidsLimit Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder podPidsLimit(@Nullable Output<String> podPidsLimit) {
+            $.podPidsLimit = podPidsLimit;
+            return this;
+        }
+
+        /**
+         * @param podPidsLimit Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder podPidsLimit(String podPidsLimit) {
+            return podPidsLimit(Output.of(podPidsLimit));
         }
 
         public NodeKubeletConfigArgs build() {

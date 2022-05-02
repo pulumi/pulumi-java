@@ -132,6 +132,21 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    @Import(name="locked")
+    private @Nullable Output<Boolean> locked;
+
+    /**
+     * @return Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    public Optional<Output<Boolean>> locked() {
+        return Optional.ofNullable(this.locked);
+    }
+
+    /**
      * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */
@@ -239,6 +254,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
         this.enableSpellCorrection = $.enableSpellCorrection;
         this.enableStackdriverLogging = $.enableStackdriverLogging;
         this.location = $.location;
+        this.locked = $.locked;
         this.name = $.name;
         this.project = $.project;
         this.securitySettings = $.securitySettings;
@@ -420,6 +436,27 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder location(String location) {
             return location(Output.of(location));
+        }
+
+        /**
+         * @param locked Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locked(@Nullable Output<Boolean> locked) {
+            $.locked = locked;
+            return this;
+        }
+
+        /**
+         * @param locked Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locked(Boolean locked) {
+            return locked(Output.of(locked));
         }
 
         /**

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyInventoryFilterArgs;
+import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyOSFilterArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -37,6 +38,29 @@ public final class OSPolicyResourceGroupArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+    @Import(name="osFilter")
+    private @Nullable Output<OSPolicyOSFilterArgs> osFilter;
+
+    /**
+     * @return Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+    public Optional<Output<OSPolicyOSFilterArgs>> osFilter() {
+        return Optional.ofNullable(this.osFilter);
+    }
+
+    /**
      * List of resources configured for this resource group. The resources are executed in the exact order specified here.
      * 
      */
@@ -55,6 +79,7 @@ public final class OSPolicyResourceGroupArgs extends com.pulumi.resources.Resour
 
     private OSPolicyResourceGroupArgs(OSPolicyResourceGroupArgs $) {
         this.inventoryFilters = $.inventoryFilters;
+        this.osFilter = $.osFilter;
         this.resources = $.resources;
     }
 
@@ -105,6 +130,35 @@ public final class OSPolicyResourceGroupArgs extends com.pulumi.resources.Resour
          */
         public Builder inventoryFilters(OSPolicyInventoryFilterArgs... inventoryFilters) {
             return inventoryFilters(List.of(inventoryFilters));
+        }
+
+        /**
+         * @param osFilter Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+         * 
+         */
+        @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+        public Builder osFilter(@Nullable Output<OSPolicyOSFilterArgs> osFilter) {
+            $.osFilter = osFilter;
+            return this;
+        }
+
+        /**
+         * @param osFilter Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+         * 
+         */
+        @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+        public Builder osFilter(OSPolicyOSFilterArgs osFilter) {
+            return osFilter(Output.of(osFilter));
         }
 
         /**

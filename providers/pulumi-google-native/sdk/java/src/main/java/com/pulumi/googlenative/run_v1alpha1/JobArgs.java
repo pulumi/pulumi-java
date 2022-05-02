@@ -6,7 +6,6 @@ package com.pulumi.googlenative.run_v1alpha1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1alpha1.inputs.JobSpecArgs;
-import com.pulumi.googlenative.run_v1alpha1.inputs.JobStatusArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -85,21 +84,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.spec);
     }
 
-    /**
-     * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<JobStatusArgs> status;
-
-    /**
-     * @return Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-     * 
-     */
-    public Optional<Output<JobStatusArgs>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
     private JobArgs() {}
 
     private JobArgs(JobArgs $) {
@@ -108,7 +92,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         this.metadata = $.metadata;
         this.namespaceId = $.namespaceId;
         this.spec = $.spec;
-        this.status = $.status;
     }
 
     public static Builder builder() {
@@ -220,27 +203,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder spec(JobSpecArgs spec) {
             return spec(Output.of(spec));
-        }
-
-        /**
-         * @param status Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<JobStatusArgs> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(JobStatusArgs status) {
-            return status(Output.of(status));
         }
 
         public JobArgs build() {

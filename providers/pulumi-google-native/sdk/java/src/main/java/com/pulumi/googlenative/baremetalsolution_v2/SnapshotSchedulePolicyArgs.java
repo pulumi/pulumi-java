@@ -5,6 +5,7 @@ package com.pulumi.googlenative.baremetalsolution_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.baremetalsolution_v2.enums.SnapshotSchedulePolicyState;
 import com.pulumi.googlenative.baremetalsolution_v2.inputs.ScheduleArgs;
 import java.lang.String;
 import java.util.List;
@@ -92,11 +93,34 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.schedules);
     }
 
+    /**
+     * Required. Snapshot policy ID
+     * 
+     */
     @Import(name="snapshotSchedulePolicyId", required=true)
     private Output<String> snapshotSchedulePolicyId;
 
+    /**
+     * @return Required. Snapshot policy ID
+     * 
+     */
     public Output<String> snapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
+    }
+
+    /**
+     * The state of the snapshot schedule policy.
+     * 
+     */
+    @Import(name="state")
+    private @Nullable Output<SnapshotSchedulePolicyState> state;
+
+    /**
+     * @return The state of the snapshot schedule policy.
+     * 
+     */
+    public Optional<Output<SnapshotSchedulePolicyState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     private SnapshotSchedulePolicyArgs() {}
@@ -109,6 +133,7 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
         this.project = $.project;
         this.schedules = $.schedules;
         this.snapshotSchedulePolicyId = $.snapshotSchedulePolicyId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
@@ -241,13 +266,46 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
             return schedules(List.of(schedules));
         }
 
+        /**
+         * @param snapshotSchedulePolicyId Required. Snapshot policy ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicyId(Output<String> snapshotSchedulePolicyId) {
             $.snapshotSchedulePolicyId = snapshotSchedulePolicyId;
             return this;
         }
 
+        /**
+         * @param snapshotSchedulePolicyId Required. Snapshot policy ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
             return snapshotSchedulePolicyId(Output.of(snapshotSchedulePolicyId));
+        }
+
+        /**
+         * @param state The state of the snapshot schedule policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(@Nullable Output<SnapshotSchedulePolicyState> state) {
+            $.state = state;
+            return this;
+        }
+
+        /**
+         * @param state The state of the snapshot schedule policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(SnapshotSchedulePolicyState state) {
+            return state(Output.of(state));
         }
 
         public SnapshotSchedulePolicyArgs build() {

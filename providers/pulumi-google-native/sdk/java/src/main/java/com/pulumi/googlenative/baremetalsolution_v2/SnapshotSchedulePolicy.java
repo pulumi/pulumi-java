@@ -78,6 +78,20 @@ public class SnapshotSchedulePolicy extends com.pulumi.resources.CustomResource 
     public Output<List<ScheduleResponse>> schedules() {
         return this.schedules;
     }
+    /**
+     * The state of the snapshot schedule policy.
+     * 
+     */
+    @Export(name="state", type=String.class, parameters={})
+    private Output<String> state;
+
+    /**
+     * @return The state of the snapshot schedule policy.
+     * 
+     */
+    public Output<String> state() {
+        return this.state;
+    }
 
     /**
      *

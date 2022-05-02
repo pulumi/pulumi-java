@@ -19,6 +19,52 @@ public final class RegionTargetHttpsProxyArgs extends com.pulumi.resources.Resou
     public static final RegionTargetHttpsProxyArgs Empty = new RegionTargetHttpsProxyArgs();
 
     /**
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+    @Import(name="authentication")
+    private @Nullable Output<String> authentication;
+
+    /**
+     * @return [Deprecated] Use serverTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
+    }
+
+    /**
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+    @Import(name="authorization")
+    private @Nullable Output<String> authorization;
+
+    /**
+     * @return [Deprecated] Use authorizationPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+    public Optional<Output<String>> authorization() {
+        return Optional.ofNullable(this.authorization);
+    }
+
+    /**
      * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
      */
@@ -137,9 +183,17 @@ public final class RegionTargetHttpsProxyArgs extends com.pulumi.resources.Resou
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -207,6 +261,8 @@ public final class RegionTargetHttpsProxyArgs extends com.pulumi.resources.Resou
     private RegionTargetHttpsProxyArgs() {}
 
     private RegionTargetHttpsProxyArgs(RegionTargetHttpsProxyArgs $) {
+        this.authentication = $.authentication;
+        this.authorization = $.authorization;
         this.authorizationPolicy = $.authorizationPolicy;
         this.certificateMap = $.certificateMap;
         this.description = $.description;
@@ -239,6 +295,64 @@ public final class RegionTargetHttpsProxyArgs extends com.pulumi.resources.Resou
 
         public Builder(RegionTargetHttpsProxyArgs defaults) {
             $ = new RegionTargetHttpsProxyArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param authentication [Deprecated] Use serverTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use serverTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+        public Builder authentication(@Nullable Output<String> authentication) {
+            $.authentication = authentication;
+            return this;
+        }
+
+        /**
+         * @param authentication [Deprecated] Use serverTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use serverTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
+        }
+
+        /**
+         * @param authorization [Deprecated] Use authorizationPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use authorizationPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+        public Builder authorization(@Nullable Output<String> authorization) {
+            $.authorization = authorization;
+            return this;
+        }
+
+        /**
+         * @param authorization [Deprecated] Use authorizationPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use authorizationPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+        public Builder authorization(String authorization) {
+            return authorization(Output.of(authorization));
         }
 
         /**
@@ -416,11 +530,23 @@ public final class RegionTargetHttpsProxyArgs extends com.pulumi.resources.Resou
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

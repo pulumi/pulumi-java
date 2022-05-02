@@ -51,9 +51,17 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.configVariables);
     }
 
+    /**
+     * Required. Identifier to assign to the Connection. Must be unique within scope of the parent resource.
+     * 
+     */
     @Import(name="connectionId", required=true)
     private Output<String> connectionId;
 
+    /**
+     * @return Required. Identifier to assign to the Connection. Must be unique within scope of the parent resource.
+     * 
+     */
     public Output<String> connectionId() {
         return this.connectionId;
     }
@@ -248,11 +256,23 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             return configVariables(List.of(configVariables));
         }
 
+        /**
+         * @param connectionId Required. Identifier to assign to the Connection. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(Output<String> connectionId) {
             $.connectionId = connectionId;
             return this;
         }
 
+        /**
+         * @param connectionId Required. Identifier to assign to the Connection. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionId(String connectionId) {
             return connectionId(Output.of(connectionId));
         }

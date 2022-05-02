@@ -25,15 +25,22 @@ public final class NodeKubeletConfigResponse {
      * 
      */
     private final String cpuManagerPolicy;
+    /**
+     * @return Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+     * 
+     */
+    private final String podPidsLimit;
 
     @CustomType.Constructor
     private NodeKubeletConfigResponse(
         @CustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
         @CustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
-        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
+        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy,
+        @CustomType.Parameter("podPidsLimit") String podPidsLimit) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;
+        this.podPidsLimit = podPidsLimit;
     }
 
     /**
@@ -57,6 +64,13 @@ public final class NodeKubeletConfigResponse {
     public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
+    /**
+     * @return Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-limits Controls the maximum number of processes allowed to run in a pod. The value must be greater than or equal to 1024 and less than 4194304.
+     * 
+     */
+    public String podPidsLimit() {
+        return this.podPidsLimit;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -70,6 +84,7 @@ public final class NodeKubeletConfigResponse {
         private Boolean cpuCfsQuota;
         private String cpuCfsQuotaPeriod;
         private String cpuManagerPolicy;
+        private String podPidsLimit;
 
         public Builder() {
     	      // Empty
@@ -80,6 +95,7 @@ public final class NodeKubeletConfigResponse {
     	      this.cpuCfsQuota = defaults.cpuCfsQuota;
     	      this.cpuCfsQuotaPeriod = defaults.cpuCfsQuotaPeriod;
     	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
+    	      this.podPidsLimit = defaults.podPidsLimit;
         }
 
         public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
@@ -93,8 +109,12 @@ public final class NodeKubeletConfigResponse {
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
+        }
+        public Builder podPidsLimit(String podPidsLimit) {
+            this.podPidsLimit = Objects.requireNonNull(podPidsLimit);
+            return this;
         }        public NodeKubeletConfigResponse build() {
-            return new NodeKubeletConfigResponse(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
+            return new NodeKubeletConfigResponse(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, podPidsLimit);
         }
     }
 }

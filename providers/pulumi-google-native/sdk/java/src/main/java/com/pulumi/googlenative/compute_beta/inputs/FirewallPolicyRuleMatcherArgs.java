@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_beta.inputs.FirewallPolicyRuleMatcherLayer4ConfigArgs;
+import com.pulumi.googlenative.compute_beta.inputs.FirewallPolicyRuleSecureTagArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,6 +35,36 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      */
     public Optional<Output<List<String>>> destIpRanges() {
         return Optional.ofNullable(this.destIpRanges);
+    }
+
+    /**
+     * Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+     * 
+     */
+    @Import(name="destRegionCodes")
+    private @Nullable Output<List<String>> destRegionCodes;
+
+    /**
+     * @return Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+     * 
+     */
+    public Optional<Output<List<String>>> destRegionCodes() {
+        return Optional.ofNullable(this.destRegionCodes);
+    }
+
+    /**
+     * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    @Import(name="destThreatIntelligences")
+    private @Nullable Output<List<String>> destThreatIntelligences;
+
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    public Optional<Output<List<String>>> destThreatIntelligences() {
+        return Optional.ofNullable(this.destThreatIntelligences);
     }
 
     /**
@@ -66,12 +97,62 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
         return Optional.ofNullable(this.srcIpRanges);
     }
 
+    /**
+     * Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+     * 
+     */
+    @Import(name="srcRegionCodes")
+    private @Nullable Output<List<String>> srcRegionCodes;
+
+    /**
+     * @return Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+     * 
+     */
+    public Optional<Output<List<String>>> srcRegionCodes() {
+        return Optional.ofNullable(this.srcRegionCodes);
+    }
+
+    /**
+     * List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    @Import(name="srcSecureTags")
+    private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
+
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    public Optional<Output<List<FirewallPolicyRuleSecureTagArgs>>> srcSecureTags() {
+        return Optional.ofNullable(this.srcSecureTags);
+    }
+
+    /**
+     * Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    @Import(name="srcThreatIntelligences")
+    private @Nullable Output<List<String>> srcThreatIntelligences;
+
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    public Optional<Output<List<String>>> srcThreatIntelligences() {
+        return Optional.ofNullable(this.srcThreatIntelligences);
+    }
+
     private FirewallPolicyRuleMatcherArgs() {}
 
     private FirewallPolicyRuleMatcherArgs(FirewallPolicyRuleMatcherArgs $) {
         this.destIpRanges = $.destIpRanges;
+        this.destRegionCodes = $.destRegionCodes;
+        this.destThreatIntelligences = $.destThreatIntelligences;
         this.layer4Configs = $.layer4Configs;
         this.srcIpRanges = $.srcIpRanges;
+        this.srcRegionCodes = $.srcRegionCodes;
+        this.srcSecureTags = $.srcSecureTags;
+        this.srcThreatIntelligences = $.srcThreatIntelligences;
     }
 
     public static Builder builder() {
@@ -121,6 +202,68 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
          */
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
+        }
+
+        /**
+         * @param destRegionCodes Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destRegionCodes(@Nullable Output<List<String>> destRegionCodes) {
+            $.destRegionCodes = destRegionCodes;
+            return this;
+        }
+
+        /**
+         * @param destRegionCodes Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destRegionCodes(List<String> destRegionCodes) {
+            return destRegionCodes(Output.of(destRegionCodes));
+        }
+
+        /**
+         * @param destRegionCodes Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destRegionCodes(String... destRegionCodes) {
+            return destRegionCodes(List.of(destRegionCodes));
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(@Nullable Output<List<String>> destThreatIntelligences) {
+            $.destThreatIntelligences = destThreatIntelligences;
+            return this;
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(List<String> destThreatIntelligences) {
+            return destThreatIntelligences(Output.of(destThreatIntelligences));
+        }
+
+        /**
+         * @param destThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destThreatIntelligences(String... destThreatIntelligences) {
+            return destThreatIntelligences(List.of(destThreatIntelligences));
         }
 
         /**
@@ -183,6 +326,99 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
          */
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
+        }
+
+        /**
+         * @param srcRegionCodes Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcRegionCodes(@Nullable Output<List<String>> srcRegionCodes) {
+            $.srcRegionCodes = srcRegionCodes;
+            return this;
+        }
+
+        /**
+         * @param srcRegionCodes Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcRegionCodes(List<String> srcRegionCodes) {
+            return srcRegionCodes(Output.of(srcRegionCodes));
+        }
+
+        /**
+         * @param srcRegionCodes Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcRegionCodes(String... srcRegionCodes) {
+            return srcRegionCodes(List.of(srcRegionCodes));
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(@Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
+            $.srcSecureTags = srcSecureTags;
+            return this;
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
+            return srcSecureTags(Output.of(srcSecureTags));
+        }
+
+        /**
+         * @param srcSecureTags List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcSecureTags(FirewallPolicyRuleSecureTagArgs... srcSecureTags) {
+            return srcSecureTags(List.of(srcSecureTags));
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(@Nullable Output<List<String>> srcThreatIntelligences) {
+            $.srcThreatIntelligences = srcThreatIntelligences;
+            return this;
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(List<String> srcThreatIntelligences) {
+            return srcThreatIntelligences(Output.of(srcThreatIntelligences));
+        }
+
+        /**
+         * @param srcThreatIntelligences Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder srcThreatIntelligences(String... srcThreatIntelligences) {
+            return srcThreatIntelligences(List.of(srcThreatIntelligences));
         }
 
         public FirewallPolicyRuleMatcherArgs build() {

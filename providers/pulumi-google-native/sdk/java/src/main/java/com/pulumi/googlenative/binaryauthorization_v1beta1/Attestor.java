@@ -34,6 +34,20 @@ public class Attestor extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
+     * Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    @Export(name="etag", type=String.class, parameters={})
+    private Output<String> etag;
+
+    /**
+     * @return Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    public Output<String> etag() {
+        return this.etag;
+    }
+    /**
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */

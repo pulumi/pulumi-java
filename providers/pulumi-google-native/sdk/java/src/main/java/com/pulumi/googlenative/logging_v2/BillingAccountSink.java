@@ -149,6 +149,24 @@ public class BillingAccountSink extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * Deprecated. This field is unused.
+     * 
+     * @deprecated
+     * Deprecated. This field is unused.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is unused. */
+    @Export(name="outputVersionFormat", type=String.class, parameters={})
+    private Output<String> outputVersionFormat;
+
+    /**
+     * @return Deprecated. This field is unused.
+     * 
+     */
+    public Output<String> outputVersionFormat() {
+        return this.outputVersionFormat;
+    }
+    /**
      * The last update timestamp of the sink.This field may not be present for older sinks.
      * 
      */

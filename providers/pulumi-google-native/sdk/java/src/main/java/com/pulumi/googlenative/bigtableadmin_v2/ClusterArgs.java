@@ -34,9 +34,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.clusterConfig);
     }
 
+    /**
+     * Required. The ID to be used when referring to the new cluster within its instance, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
+     * 
+     */
     @Import(name="clusterId", required=true)
     private Output<String> clusterId;
 
+    /**
+     * @return Required. The ID to be used when referring to the new cluster within its instance, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
+     * 
+     */
     public Output<String> clusterId() {
         return this.clusterId;
     }
@@ -183,11 +191,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return clusterConfig(Output.of(clusterConfig));
         }
 
+        /**
+         * @param clusterId Required. The ID to be used when referring to the new cluster within its instance, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId Required. The ID to be used when referring to the new cluster within its instance, e.g., just `mycluster` rather than `projects/myproject/instances/myinstance/clusters/mycluster`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }

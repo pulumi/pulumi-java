@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleMatcherResponse;
+import com.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -54,6 +55,11 @@ public final class FirewallPolicyRuleResponse {
      */
     private final Integer priority;
     /**
+     * @return An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    private final String ruleName;
+    /**
      * @return Calculation of the complexity of a single firewall policy rule.
      * 
      */
@@ -63,6 +69,11 @@ public final class FirewallPolicyRuleResponse {
      * 
      */
     private final List<String> targetResources;
+    /**
+     * @return A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.
+     * 
+     */
+    private final List<FirewallPolicyRuleSecureTagResponse> targetSecureTags;
     /**
      * @return A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
@@ -79,8 +90,10 @@ public final class FirewallPolicyRuleResponse {
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
         @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleName") String ruleName,
         @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
         @CustomType.Parameter("targetResources") List<String> targetResources,
+        @CustomType.Parameter("targetSecureTags") List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
         @CustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
@@ -90,8 +103,10 @@ public final class FirewallPolicyRuleResponse {
         this.kind = kind;
         this.match = match;
         this.priority = priority;
+        this.ruleName = ruleName;
         this.ruleTupleCount = ruleTupleCount;
         this.targetResources = targetResources;
+        this.targetSecureTags = targetSecureTags;
         this.targetServiceAccounts = targetServiceAccounts;
     }
 
@@ -152,6 +167,13 @@ public final class FirewallPolicyRuleResponse {
         return this.priority;
     }
     /**
+     * @return An optional name for the rule. This field is not a unique identifier and can be updated.
+     * 
+     */
+    public String ruleName() {
+        return this.ruleName;
+    }
+    /**
      * @return Calculation of the complexity of a single firewall policy rule.
      * 
      */
@@ -164,6 +186,13 @@ public final class FirewallPolicyRuleResponse {
      */
     public List<String> targetResources() {
         return this.targetResources;
+    }
+    /**
+     * @return A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.
+     * 
+     */
+    public List<FirewallPolicyRuleSecureTagResponse> targetSecureTags() {
+        return this.targetSecureTags;
     }
     /**
      * @return A list of service accounts indicating the sets of instances that are applied with this rule.
@@ -190,8 +219,10 @@ public final class FirewallPolicyRuleResponse {
         private String kind;
         private FirewallPolicyRuleMatcherResponse match;
         private Integer priority;
+        private String ruleName;
         private Integer ruleTupleCount;
         private List<String> targetResources;
+        private List<FirewallPolicyRuleSecureTagResponse> targetSecureTags;
         private List<String> targetServiceAccounts;
 
         public Builder() {
@@ -208,8 +239,10 @@ public final class FirewallPolicyRuleResponse {
     	      this.kind = defaults.kind;
     	      this.match = defaults.match;
     	      this.priority = defaults.priority;
+    	      this.ruleName = defaults.ruleName;
     	      this.ruleTupleCount = defaults.ruleTupleCount;
     	      this.targetResources = defaults.targetResources;
+    	      this.targetSecureTags = defaults.targetSecureTags;
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
@@ -245,6 +278,10 @@ public final class FirewallPolicyRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
+        public Builder ruleName(String ruleName) {
+            this.ruleName = Objects.requireNonNull(ruleName);
+            return this;
+        }
         public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
@@ -256,6 +293,13 @@ public final class FirewallPolicyRuleResponse {
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+        public Builder targetSecureTags(List<FirewallPolicyRuleSecureTagResponse> targetSecureTags) {
+            this.targetSecureTags = Objects.requireNonNull(targetSecureTags);
+            return this;
+        }
+        public Builder targetSecureTags(FirewallPolicyRuleSecureTagResponse... targetSecureTags) {
+            return targetSecureTags(List.of(targetSecureTags));
+        }
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
@@ -263,7 +307,7 @@ public final class FirewallPolicyRuleResponse {
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }        public FirewallPolicyRuleResponse build() {
-            return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetServiceAccounts);
+            return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleName, ruleTupleCount, targetResources, targetSecureTags, targetServiceAccounts);
         }
     }
 }

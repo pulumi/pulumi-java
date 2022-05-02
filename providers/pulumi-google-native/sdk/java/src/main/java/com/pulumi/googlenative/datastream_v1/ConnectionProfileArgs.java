@@ -22,9 +22,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 
+    /**
+     * Required. The connection profile identifier.
+     * 
+     */
     @Import(name="connectionProfileId", required=true)
     private Output<String> connectionProfileId;
 
+    /**
+     * @return Required. The connection profile identifier.
+     * 
+     */
     public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
@@ -44,9 +52,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         return this.displayName;
     }
 
+    /**
+     * Optional. Create the connection profile without validating it.
+     * 
+     */
     @Import(name="force")
     private @Nullable Output<String> force;
 
+    /**
+     * @return Optional. Create the connection profile without validating it.
+     * 
+     */
     public Optional<Output<String>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -155,9 +171,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -177,9 +201,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.staticServiceIpConnectivity);
     }
 
+    /**
+     * Optional. Only validate the connection profile, but don&#39;t create any resources. The default is false.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Optional. Only validate the connection profile, but don&#39;t create any resources. The default is false.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -221,11 +253,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             $ = new ConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionProfileId Required. The connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProfileId(Output<String> connectionProfileId) {
             $.connectionProfileId = connectionProfileId;
             return this;
         }
 
+        /**
+         * @param connectionProfileId Required. The connection profile identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProfileId(String connectionProfileId) {
             return connectionProfileId(Output.of(connectionProfileId));
         }
@@ -251,11 +295,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param force Optional. Create the connection profile without validating it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<String> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force Optional. Create the connection profile without validating it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(String force) {
             return force(Output.of(force));
         }
@@ -404,11 +460,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -434,11 +502,23 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
             return staticServiceIpConnectivity(Output.of(staticServiceIpConnectivity));
         }
 
+        /**
+         * @param validateOnly Optional. Only validate the connection profile, but don&#39;t create any resources. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Optional. Only validate the connection profile, but don&#39;t create any resources. The default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

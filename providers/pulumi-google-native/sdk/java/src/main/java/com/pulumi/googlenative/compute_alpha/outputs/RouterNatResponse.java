@@ -27,6 +27,11 @@ public final class RouterNatResponse {
     private final Boolean enableDynamicPortAllocation;
     private final Boolean enableEndpointIndependentMapping;
     /**
+     * @return List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+     * 
+     */
+    private final List<String> endpointTypes;
+    /**
      * @return Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
@@ -107,6 +112,7 @@ public final class RouterNatResponse {
         @CustomType.Parameter("drainNatIps") List<String> drainNatIps,
         @CustomType.Parameter("enableDynamicPortAllocation") Boolean enableDynamicPortAllocation,
         @CustomType.Parameter("enableEndpointIndependentMapping") Boolean enableEndpointIndependentMapping,
+        @CustomType.Parameter("endpointTypes") List<String> endpointTypes,
         @CustomType.Parameter("icmpIdleTimeoutSec") Integer icmpIdleTimeoutSec,
         @CustomType.Parameter("logConfig") RouterNatLogConfigResponse logConfig,
         @CustomType.Parameter("maxPortsPerVm") Integer maxPortsPerVm,
@@ -125,6 +131,7 @@ public final class RouterNatResponse {
         this.drainNatIps = drainNatIps;
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
+        this.endpointTypes = endpointTypes;
         this.icmpIdleTimeoutSec = icmpIdleTimeoutSec;
         this.logConfig = logConfig;
         this.maxPortsPerVm = maxPortsPerVm;
@@ -158,6 +165,13 @@ public final class RouterNatResponse {
     }
     public Boolean enableEndpointIndependentMapping() {
         return this.enableEndpointIndependentMapping;
+    }
+    /**
+     * @return List of Natted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+     * 
+     */
+    public List<String> endpointTypes() {
+        return this.endpointTypes;
     }
     /**
      * @return Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
@@ -277,6 +291,7 @@ public final class RouterNatResponse {
         private List<String> drainNatIps;
         private Boolean enableDynamicPortAllocation;
         private Boolean enableEndpointIndependentMapping;
+        private List<String> endpointTypes;
         private Integer icmpIdleTimeoutSec;
         private RouterNatLogConfigResponse logConfig;
         private Integer maxPortsPerVm;
@@ -302,6 +317,7 @@ public final class RouterNatResponse {
     	      this.drainNatIps = defaults.drainNatIps;
     	      this.enableDynamicPortAllocation = defaults.enableDynamicPortAllocation;
     	      this.enableEndpointIndependentMapping = defaults.enableEndpointIndependentMapping;
+    	      this.endpointTypes = defaults.endpointTypes;
     	      this.icmpIdleTimeoutSec = defaults.icmpIdleTimeoutSec;
     	      this.logConfig = defaults.logConfig;
     	      this.maxPortsPerVm = defaults.maxPortsPerVm;
@@ -333,6 +349,13 @@ public final class RouterNatResponse {
         public Builder enableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping);
             return this;
+        }
+        public Builder endpointTypes(List<String> endpointTypes) {
+            this.endpointTypes = Objects.requireNonNull(endpointTypes);
+            return this;
+        }
+        public Builder endpointTypes(String... endpointTypes) {
+            return endpointTypes(List.of(endpointTypes));
         }
         public Builder icmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec);
@@ -403,7 +426,7 @@ public final class RouterNatResponse {
             this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
             return this;
         }        public RouterNatResponse build() {
-            return new RouterNatResponse(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, type, udpIdleTimeoutSec);
+            return new RouterNatResponse(drainNatIps, enableDynamicPortAllocation, enableEndpointIndependentMapping, endpointTypes, icmpIdleTimeoutSec, logConfig, maxPortsPerVm, minPortsPerVm, name, natIpAllocateOption, natIps, rules, sourceSubnetworkIpRangesToNat, subnetworks, tcpEstablishedIdleTimeoutSec, tcpTimeWaitTimeoutSec, tcpTransitoryIdleTimeoutSec, type, udpIdleTimeoutSec);
         }
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.toolresults_v1beta3.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.toolresults_v1beta3.outputs.AnyResponse;
+import com.pulumi.googlenative.toolresults_v1beta3.outputs.StackTraceResponse;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,6 +27,15 @@ public final class TestIssueResponse {
      */
     private final String severity;
     /**
+     * @return Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     * @deprecated
+     * Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+    private final StackTraceResponse stackTrace;
+    /**
      * @return Type of issue. Required.
      * 
      */
@@ -41,11 +51,13 @@ public final class TestIssueResponse {
         @CustomType.Parameter("category") String category,
         @CustomType.Parameter("errorMessage") String errorMessage,
         @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("stackTrace") StackTraceResponse stackTrace,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("warning") AnyResponse warning) {
         this.category = category;
         this.errorMessage = errorMessage;
         this.severity = severity;
+        this.stackTrace = stackTrace;
         this.type = type;
         this.warning = warning;
     }
@@ -70,6 +82,17 @@ public final class TestIssueResponse {
      */
     public String severity() {
         return this.severity;
+    }
+    /**
+     * @return Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     * @deprecated
+     * Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+    public StackTraceResponse stackTrace() {
+        return this.stackTrace;
     }
     /**
      * @return Type of issue. Required.
@@ -98,6 +121,7 @@ public final class TestIssueResponse {
         private String category;
         private String errorMessage;
         private String severity;
+        private StackTraceResponse stackTrace;
         private String type;
         private AnyResponse warning;
 
@@ -110,6 +134,7 @@ public final class TestIssueResponse {
     	      this.category = defaults.category;
     	      this.errorMessage = defaults.errorMessage;
     	      this.severity = defaults.severity;
+    	      this.stackTrace = defaults.stackTrace;
     	      this.type = defaults.type;
     	      this.warning = defaults.warning;
         }
@@ -126,6 +151,10 @@ public final class TestIssueResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
+        public Builder stackTrace(StackTraceResponse stackTrace) {
+            this.stackTrace = Objects.requireNonNull(stackTrace);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
@@ -134,7 +163,7 @@ public final class TestIssueResponse {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }        public TestIssueResponse build() {
-            return new TestIssueResponse(category, errorMessage, severity, type, warning);
+            return new TestIssueResponse(category, errorMessage, severity, stackTrace, type, warning);
         }
     }
 }

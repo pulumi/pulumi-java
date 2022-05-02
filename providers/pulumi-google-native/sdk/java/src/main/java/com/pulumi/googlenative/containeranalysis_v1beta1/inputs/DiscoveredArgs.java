@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveredAnalysisStatus;
 import com.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveredContinuousAnalysis;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.StatusArgs;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -66,12 +67,36 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.continuousAnalysis);
     }
 
+    /**
+     * The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     * @deprecated
+     * The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     */
+    @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+    @Import(name="lastAnalysisTime")
+    private @Nullable Output<String> lastAnalysisTime;
+
+    /**
+     * @return The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     * @deprecated
+     * The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     */
+    @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+    public Optional<Output<String>> lastAnalysisTime() {
+        return Optional.ofNullable(this.lastAnalysisTime);
+    }
+
     private DiscoveredArgs() {}
 
     private DiscoveredArgs(DiscoveredArgs $) {
         this.analysisStatus = $.analysisStatus;
         this.analysisStatusError = $.analysisStatusError;
         this.continuousAnalysis = $.continuousAnalysis;
+        this.lastAnalysisTime = $.lastAnalysisTime;
     }
 
     public static Builder builder() {
@@ -153,6 +178,35 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder continuousAnalysis(DiscoveredContinuousAnalysis continuousAnalysis) {
             return continuousAnalysis(Output.of(continuousAnalysis));
+        }
+
+        /**
+         * @param lastAnalysisTime The last time continuous analysis was done for this resource. Deprecated, do not use.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The last time continuous analysis was done for this resource. Deprecated, do not use.
+         * 
+         */
+        @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+        public Builder lastAnalysisTime(@Nullable Output<String> lastAnalysisTime) {
+            $.lastAnalysisTime = lastAnalysisTime;
+            return this;
+        }
+
+        /**
+         * @param lastAnalysisTime The last time continuous analysis was done for this resource. Deprecated, do not use.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The last time continuous analysis was done for this resource. Deprecated, do not use.
+         * 
+         */
+        @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+        public Builder lastAnalysisTime(String lastAnalysisTime) {
+            return lastAnalysisTime(Output.of(lastAnalysisTime));
         }
 
         public DiscoveredArgs build() {

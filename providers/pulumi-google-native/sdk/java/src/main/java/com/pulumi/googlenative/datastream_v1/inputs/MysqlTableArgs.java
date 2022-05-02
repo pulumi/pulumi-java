@@ -22,14 +22,14 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
     public static final MysqlTableArgs Empty = new MysqlTableArgs();
 
     /**
-     * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     @Import(name="mysqlColumns")
     private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
     /**
-     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * @return MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     public Optional<Output<List<MysqlColumnArgs>>> mysqlColumns() {
@@ -77,7 +77,7 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 
@@ -88,7 +88,7 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+         * @param mysqlColumns MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
          * 
          * @return builder
          * 

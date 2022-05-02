@@ -37,10 +37,20 @@ public final class GetBackupResult {
      */
     private final String expireTime;
     /**
+     * @return The max allowed expiration time of the backup, with microseconds granularity. A backup&#39;s expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup, CopyBackup. When updating or copying an existing backup, the expiration time specified must be less than `Backup.max_expire_time`.
+     * 
+     */
+    private final String maxExpireTime;
+    /**
      * @return Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
      * 
      */
     private final String name;
+    /**
+     * @return The names of the destination backups being created by copying this source backup. The backup names are of the form `projects//instances//backups/`. Referencing backups may exist in different instances. The existence of any referencing backup prevents the backup from being deleted. When the copy operation is done (either successfully completed or cancelled or the destination backup is deleted), the reference to the backup is removed.
+     * 
+     */
+    private final List<String> referencingBackups;
     /**
      * @return The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
      * 
@@ -69,7 +79,9 @@ public final class GetBackupResult {
         @CustomType.Parameter("databaseDialect") String databaseDialect,
         @CustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
         @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("maxExpireTime") String maxExpireTime,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("referencingBackups") List<String> referencingBackups,
         @CustomType.Parameter("referencingDatabases") List<String> referencingDatabases,
         @CustomType.Parameter("sizeBytes") String sizeBytes,
         @CustomType.Parameter("state") String state,
@@ -79,7 +91,9 @@ public final class GetBackupResult {
         this.databaseDialect = databaseDialect;
         this.encryptionInfo = encryptionInfo;
         this.expireTime = expireTime;
+        this.maxExpireTime = maxExpireTime;
         this.name = name;
+        this.referencingBackups = referencingBackups;
         this.referencingDatabases = referencingDatabases;
         this.sizeBytes = sizeBytes;
         this.state = state;
@@ -122,11 +136,25 @@ public final class GetBackupResult {
         return this.expireTime;
     }
     /**
+     * @return The max allowed expiration time of the backup, with microseconds granularity. A backup&#39;s expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup, CopyBackup. When updating or copying an existing backup, the expiration time specified must be less than `Backup.max_expire_time`.
+     * 
+     */
+    public String maxExpireTime() {
+        return this.maxExpireTime;
+    }
+    /**
      * @return Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The names of the destination backups being created by copying this source backup. The backup names are of the form `projects//instances//backups/`. Referencing backups may exist in different instances. The existence of any referencing backup prevents the backup from being deleted. When the copy operation is done (either successfully completed or cancelled or the destination backup is deleted), the reference to the backup is removed.
+     * 
+     */
+    public List<String> referencingBackups() {
+        return this.referencingBackups;
     }
     /**
      * @return The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
@@ -171,7 +199,9 @@ public final class GetBackupResult {
         private String databaseDialect;
         private EncryptionInfoResponse encryptionInfo;
         private String expireTime;
+        private String maxExpireTime;
         private String name;
+        private List<String> referencingBackups;
         private List<String> referencingDatabases;
         private String sizeBytes;
         private String state;
@@ -188,7 +218,9 @@ public final class GetBackupResult {
     	      this.databaseDialect = defaults.databaseDialect;
     	      this.encryptionInfo = defaults.encryptionInfo;
     	      this.expireTime = defaults.expireTime;
+    	      this.maxExpireTime = defaults.maxExpireTime;
     	      this.name = defaults.name;
+    	      this.referencingBackups = defaults.referencingBackups;
     	      this.referencingDatabases = defaults.referencingDatabases;
     	      this.sizeBytes = defaults.sizeBytes;
     	      this.state = defaults.state;
@@ -215,9 +247,20 @@ public final class GetBackupResult {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
+        public Builder maxExpireTime(String maxExpireTime) {
+            this.maxExpireTime = Objects.requireNonNull(maxExpireTime);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
+        }
+        public Builder referencingBackups(List<String> referencingBackups) {
+            this.referencingBackups = Objects.requireNonNull(referencingBackups);
+            return this;
+        }
+        public Builder referencingBackups(String... referencingBackups) {
+            return referencingBackups(List.of(referencingBackups));
         }
         public Builder referencingDatabases(List<String> referencingDatabases) {
             this.referencingDatabases = Objects.requireNonNull(referencingDatabases);
@@ -238,7 +281,7 @@ public final class GetBackupResult {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }        public GetBackupResult build() {
-            return new GetBackupResult(createTime, database, databaseDialect, encryptionInfo, expireTime, name, referencingDatabases, sizeBytes, state, versionTime);
+            return new GetBackupResult(createTime, database, databaseDialect, encryptionInfo, expireTime, maxExpireTime, name, referencingBackups, referencingDatabases, sizeBytes, state, versionTime);
         }
     }
 }

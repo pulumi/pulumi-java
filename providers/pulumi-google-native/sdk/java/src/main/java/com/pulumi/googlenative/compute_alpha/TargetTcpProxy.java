@@ -104,6 +104,20 @@ public class TargetTcpProxy extends com.pulumi.resources.CustomResource {
         return this.proxyHeader;
     }
     /**
+     * URL of the region where the regional TCP proxy resides. This field is not applicable to global TCP proxy.
+     * 
+     */
+    @Export(name="region", type=String.class, parameters={})
+    private Output<String> region;
+
+    /**
+     * @return URL of the region where the regional TCP proxy resides. This field is not applicable to global TCP proxy.
+     * 
+     */
+    public Output<String> region() {
+        return this.region;
+    }
+    /**
      * Server-defined URL for the resource.
      * 
      */

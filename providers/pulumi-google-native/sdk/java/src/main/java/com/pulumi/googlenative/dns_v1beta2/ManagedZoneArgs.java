@@ -14,7 +14,6 @@ import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityCo
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneReverseLookupConfigArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneServiceDirectoryConfigArgs;
 import java.lang.String;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,9 +24,17 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     @Import(name="clientOperationId")
     private @Nullable Output<String> clientOperationId;
 
+    /**
+     * @return For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
@@ -114,21 +121,6 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.forwardingConfig);
     }
 
-    /**
-     * Unique identifier for the resource; defined by the server (output only)
-     * 
-     */
-    @Import(name="id")
-    private @Nullable Output<String> id;
-
-    /**
-     * @return Unique identifier for the resource; defined by the server (output only)
-     * 
-     */
-    public Optional<Output<String>> id() {
-        return Optional.ofNullable(this.id);
-    }
-
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
@@ -179,21 +171,6 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> nameServerSet() {
         return Optional.ofNullable(this.nameServerSet);
-    }
-
-    /**
-     * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
-     * 
-     */
-    @Import(name="nameServers")
-    private @Nullable Output<List<String>> nameServers;
-
-    /**
-     * @return Delegate your managed_zone to these virtual name servers; defined by the server (output only)
-     * 
-     */
-    public Optional<Output<List<String>>> nameServers() {
-        return Optional.ofNullable(this.nameServers);
     }
 
     /**
@@ -288,12 +265,10 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
         this.dnsName = $.dnsName;
         this.dnssecConfig = $.dnssecConfig;
         this.forwardingConfig = $.forwardingConfig;
-        this.id = $.id;
         this.kind = $.kind;
         this.labels = $.labels;
         this.name = $.name;
         this.nameServerSet = $.nameServerSet;
-        this.nameServers = $.nameServers;
         this.peeringConfig = $.peeringConfig;
         this.privateVisibilityConfig = $.privateVisibilityConfig;
         this.project = $.project;
@@ -320,11 +295,23 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManagedZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }
@@ -443,27 +430,6 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
             return forwardingConfig(Output.of(forwardingConfig));
         }
 
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(@Nullable Output<String> id) {
-            $.id = id;
-            return this;
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(String id) {
-            return id(Output.of(id));
-        }
-
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
@@ -534,37 +500,6 @@ public final class ManagedZoneArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder nameServerSet(String nameServerSet) {
             return nameServerSet(Output.of(nameServerSet));
-        }
-
-        /**
-         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server (output only)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder nameServers(@Nullable Output<List<String>> nameServers) {
-            $.nameServers = nameServers;
-            return this;
-        }
-
-        /**
-         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server (output only)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder nameServers(List<String> nameServers) {
-            return nameServers(Output.of(nameServers));
-        }
-
-        /**
-         * @param nameServers Delegate your managed_zone to these virtual name servers; defined by the server (output only)
-         * 
-         * @return builder
-         * 
-         */
-        public Builder nameServers(String... nameServers) {
-            return nameServers(List.of(nameServers));
         }
 
         /**

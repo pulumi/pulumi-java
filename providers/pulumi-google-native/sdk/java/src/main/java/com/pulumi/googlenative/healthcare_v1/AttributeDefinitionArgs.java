@@ -32,9 +32,17 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
         return this.allowedValues;
     }
 
+    /**
+     * Required. The ID of the Attribute definition to create. The string must match the following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+     * 
+     */
     @Import(name="attributeDefinitionId", required=true)
     private Output<String> attributeDefinitionId;
 
+    /**
+     * @return Required. The ID of the Attribute definition to create. The string must match the following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+     * 
+     */
     public Output<String> attributeDefinitionId() {
         return this.attributeDefinitionId;
     }
@@ -207,11 +215,23 @@ public final class AttributeDefinitionArgs extends com.pulumi.resources.Resource
             return allowedValues(List.of(allowedValues));
         }
 
+        /**
+         * @param attributeDefinitionId Required. The ID of the Attribute definition to create. The string must match the following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeDefinitionId(Output<String> attributeDefinitionId) {
             $.attributeDefinitionId = attributeDefinitionId;
             return this;
         }
 
+        /**
+         * @param attributeDefinitionId Required. The ID of the Attribute definition to create. The string must match the following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeDefinitionId(String attributeDefinitionId) {
             return attributeDefinitionId(Output.of(attributeDefinitionId));
         }

@@ -18,9 +18,17 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * Sets the policy to use for creating new resources.
+     * 
+     */
     @Import(name="createPolicy")
     private @Nullable Output<String> createPolicy;
 
+    /**
+     * @return Sets the policy to use for creating new resources.
+     * 
+     */
     public Optional<Output<String>> createPolicy() {
         return Optional.ofNullable(this.createPolicy);
     }
@@ -77,9 +85,17 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * If set to true, creates a deployment and creates &#34;shell&#34; resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the `update()` method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
+     * 
+     */
     @Import(name="preview")
     private @Nullable Output<String> preview;
 
+    /**
+     * @return If set to true, creates a deployment and creates &#34;shell&#34; resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the `update()` method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
+     * 
+     */
     public Optional<Output<String>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -137,11 +153,23 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createPolicy Sets the policy to use for creating new resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createPolicy(@Nullable Output<String> createPolicy) {
             $.createPolicy = createPolicy;
             return this;
         }
 
+        /**
+         * @param createPolicy Sets the policy to use for creating new resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createPolicy(String createPolicy) {
             return createPolicy(Output.of(createPolicy));
         }
@@ -228,11 +256,23 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param preview If set to true, creates a deployment and creates &#34;shell&#34; resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the `update()` method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<String> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview If set to true, creates a deployment and creates &#34;shell&#34; resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the `update()` method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(String preview) {
             return preview(Output.of(preview));
         }

@@ -80,6 +80,15 @@ public final class GetRatePlanResult {
      */
     private final String name;
     /**
+     * @return DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     * @deprecated
+     * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     */
+    @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+    private final String paymentFundingModel;
+    /**
      * @return Details of the revenue sharing model.
      * 
      */
@@ -120,6 +129,7 @@ public final class GetRatePlanResult {
         @CustomType.Parameter("fixedRecurringFee") GoogleTypeMoneyResponse fixedRecurringFee,
         @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("paymentFundingModel") String paymentFundingModel,
         @CustomType.Parameter("revenueShareRates") List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
         @CustomType.Parameter("revenueShareType") String revenueShareType,
         @CustomType.Parameter("setupFee") GoogleTypeMoneyResponse setupFee,
@@ -138,6 +148,7 @@ public final class GetRatePlanResult {
         this.fixedRecurringFee = fixedRecurringFee;
         this.lastModifiedAt = lastModifiedAt;
         this.name = name;
+        this.paymentFundingModel = paymentFundingModel;
         this.revenueShareRates = revenueShareRates;
         this.revenueShareType = revenueShareType;
         this.setupFee = setupFee;
@@ -237,6 +248,17 @@ public final class GetRatePlanResult {
         return this.name;
     }
     /**
+     * @return DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     * @deprecated
+     * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     */
+    @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+    public String paymentFundingModel() {
+        return this.paymentFundingModel;
+    }
+    /**
      * @return Details of the revenue sharing model.
      * 
      */
@@ -294,6 +316,7 @@ public final class GetRatePlanResult {
         private GoogleTypeMoneyResponse fixedRecurringFee;
         private String lastModifiedAt;
         private String name;
+        private String paymentFundingModel;
         private List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates;
         private String revenueShareType;
         private GoogleTypeMoneyResponse setupFee;
@@ -319,6 +342,7 @@ public final class GetRatePlanResult {
     	      this.fixedRecurringFee = defaults.fixedRecurringFee;
     	      this.lastModifiedAt = defaults.lastModifiedAt;
     	      this.name = defaults.name;
+    	      this.paymentFundingModel = defaults.paymentFundingModel;
     	      this.revenueShareRates = defaults.revenueShareRates;
     	      this.revenueShareType = defaults.revenueShareType;
     	      this.setupFee = defaults.setupFee;
@@ -381,6 +405,10 @@ public final class GetRatePlanResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder paymentFundingModel(String paymentFundingModel) {
+            this.paymentFundingModel = Objects.requireNonNull(paymentFundingModel);
+            return this;
+        }
         public Builder revenueShareRates(List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates) {
             this.revenueShareRates = Objects.requireNonNull(revenueShareRates);
             return this;
@@ -404,7 +432,7 @@ public final class GetRatePlanResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }        public GetRatePlanResult build() {
-            return new GetRatePlanResult(apiproduct, billingPeriod, consumptionPricingRates, consumptionPricingType, createdAt, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, lastModifiedAt, name, revenueShareRates, revenueShareType, setupFee, startTime, state);
+            return new GetRatePlanResult(apiproduct, billingPeriod, consumptionPricingRates, consumptionPricingType, createdAt, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, lastModifiedAt, name, paymentFundingModel, revenueShareRates, revenueShareType, setupFee, startTime, state);
         }
     }
 }

@@ -33,6 +33,15 @@ public final class UrlMapTestResponse {
      */
     private final Integer expectedRedirectResponseCode;
     /**
+     * @return The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     * @deprecated
+     * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     */
+    @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+    private final String expectedUrlRedirect;
+    /**
      * @return HTTP headers for this request. If headers contains a host header, then host must also match the header value.
      * 
      */
@@ -59,6 +68,7 @@ public final class UrlMapTestResponse {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("expectedOutputUrl") String expectedOutputUrl,
         @CustomType.Parameter("expectedRedirectResponseCode") Integer expectedRedirectResponseCode,
+        @CustomType.Parameter("expectedUrlRedirect") String expectedUrlRedirect,
         @CustomType.Parameter("headers") List<UrlMapTestHeaderResponse> headers,
         @CustomType.Parameter("host") String host,
         @CustomType.Parameter("path") String path,
@@ -67,6 +77,7 @@ public final class UrlMapTestResponse {
         this.description = description;
         this.expectedOutputUrl = expectedOutputUrl;
         this.expectedRedirectResponseCode = expectedRedirectResponseCode;
+        this.expectedUrlRedirect = expectedUrlRedirect;
         this.headers = headers;
         this.host = host;
         this.path = path;
@@ -100,6 +111,17 @@ public final class UrlMapTestResponse {
      */
     public Integer expectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode;
+    }
+    /**
+     * @return The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     * @deprecated
+     * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     */
+    @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+    public String expectedUrlRedirect() {
+        return this.expectedUrlRedirect;
     }
     /**
      * @return HTTP headers for this request. If headers contains a host header, then host must also match the header value.
@@ -143,6 +165,7 @@ public final class UrlMapTestResponse {
         private String description;
         private String expectedOutputUrl;
         private Integer expectedRedirectResponseCode;
+        private String expectedUrlRedirect;
         private List<UrlMapTestHeaderResponse> headers;
         private String host;
         private String path;
@@ -158,6 +181,7 @@ public final class UrlMapTestResponse {
     	      this.description = defaults.description;
     	      this.expectedOutputUrl = defaults.expectedOutputUrl;
     	      this.expectedRedirectResponseCode = defaults.expectedRedirectResponseCode;
+    	      this.expectedUrlRedirect = defaults.expectedUrlRedirect;
     	      this.headers = defaults.headers;
     	      this.host = defaults.host;
     	      this.path = defaults.path;
@@ -180,6 +204,10 @@ public final class UrlMapTestResponse {
             this.expectedRedirectResponseCode = Objects.requireNonNull(expectedRedirectResponseCode);
             return this;
         }
+        public Builder expectedUrlRedirect(String expectedUrlRedirect) {
+            this.expectedUrlRedirect = Objects.requireNonNull(expectedUrlRedirect);
+            return this;
+        }
         public Builder headers(List<UrlMapTestHeaderResponse> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
@@ -199,7 +227,7 @@ public final class UrlMapTestResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }        public UrlMapTestResponse build() {
-            return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
+            return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, expectedUrlRedirect, headers, host, path, service);
         }
     }
 }

@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.clouddeploy_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,10 +15,18 @@ public final class GkeClusterResponse {
      * 
      */
     private final String cluster;
+    /**
+     * @return Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+     * 
+     */
+    private final Boolean internalIp;
 
     @CustomType.Constructor
-    private GkeClusterResponse(@CustomType.Parameter("cluster") String cluster) {
+    private GkeClusterResponse(
+        @CustomType.Parameter("cluster") String cluster,
+        @CustomType.Parameter("internalIp") Boolean internalIp) {
         this.cluster = cluster;
+        this.internalIp = internalIp;
     }
 
     /**
@@ -26,6 +35,13 @@ public final class GkeClusterResponse {
      */
     public String cluster() {
         return this.cluster;
+    }
+    /**
+     * @return Optional. If true, `cluster` is accessed using the private IP address of the control plane endpoint. Otherwise, the default IP address of the control plane endpoint is used. The default IP address is the private IP address for clusters with private control-plane endpoints and the public IP address otherwise. Only specify this option when `cluster` is a [private GKE cluster](https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept).
+     * 
+     */
+    public Boolean internalIp() {
+        return this.internalIp;
     }
 
     public static Builder builder() {
@@ -38,6 +54,7 @@ public final class GkeClusterResponse {
 
     public static final class Builder {
         private String cluster;
+        private Boolean internalIp;
 
         public Builder() {
     	      // Empty
@@ -46,13 +63,18 @@ public final class GkeClusterResponse {
         public Builder(GkeClusterResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cluster = defaults.cluster;
+    	      this.internalIp = defaults.internalIp;
         }
 
         public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
+        }
+        public Builder internalIp(Boolean internalIp) {
+            this.internalIp = Objects.requireNonNull(internalIp);
+            return this;
         }        public GkeClusterResponse build() {
-            return new GkeClusterResponse(cluster);
+            return new GkeClusterResponse(cluster, internalIp);
         }
     }
 }

@@ -15,7 +15,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      */
     private final String displayName;
     /**
-     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
      * 
      */
     private final String resourceId;
@@ -43,7 +43,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
         return this.displayName;
     }
     /**
-     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail.
+     * @return Resource identifier. For a project this represents project_id. If the project is already taken, the workload creation will fail. For KeyRing, this represents the keyring_id. For a folder, don&#39;t set this value as folder_id is assigned by Google.
      * 
      */
     public String resourceId() {

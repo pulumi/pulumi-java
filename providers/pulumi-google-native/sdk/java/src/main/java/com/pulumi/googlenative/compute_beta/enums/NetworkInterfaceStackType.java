@@ -23,8 +23,7 @@ import java.util.StringJoiner;
          * The network interface will be assigned IPv4 address.
          * 
          */
-        Ipv4Only("IPV4_ONLY"),
-        UnspecifiedStackType("UNSPECIFIED_STACK_TYPE");
+        Ipv4Only("IPV4_ONLY");
 
         private final String value;
 

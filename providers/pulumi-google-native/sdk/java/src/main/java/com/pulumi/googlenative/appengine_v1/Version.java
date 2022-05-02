@@ -53,6 +53,20 @@ public class Version extends com.pulumi.resources.CustomResource {
         return this.apiConfig;
     }
     /**
+     * app_engine_apis allows second generation runtimes to access the App Engine APIs.
+     * 
+     */
+    @Export(name="appEngineApis", type=Boolean.class, parameters={})
+    private Output<Boolean> appEngineApis;
+
+    /**
+     * @return app_engine_apis allows second generation runtimes to access the App Engine APIs.
+     * 
+     */
+    public Output<Boolean> appEngineApis() {
+        return this.appEngineApis;
+    }
+    /**
      * Automatic scaling is based on request rate, response latencies, and other application metrics. Instances are dynamically created and destroyed as needed in order to handle traffic.
      * 
      */
@@ -555,6 +569,24 @@ public class Version extends com.pulumi.resources.CustomResource {
      */
     public Output<VpcAccessConnectorResponse> vpcAccessConnector() {
         return this.vpcAccessConnector;
+    }
+    /**
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     * @deprecated
+     * The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    @Deprecated /* The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated. */
+    @Export(name="zones", type=List.class, parameters={String.class})
+    private Output<List<String>> zones;
+
+    /**
+     * @return The Google Compute Engine zones that are supported by this version in the App Engine flexible environment. Deprecated.
+     * 
+     */
+    public Output<List<String>> zones() {
+        return this.zones;
     }
 
     /**

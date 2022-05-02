@@ -50,9 +50,17 @@ public class FutureReservation extends com.pulumi.resources.CustomResource {
     public Output<String> description() {
         return this.description;
     }
+    /**
+     * Type of the resource. Always compute#futureReservation for future reservations.
+     * 
+     */
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Type of the resource. Always compute#futureReservation for future reservations.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }

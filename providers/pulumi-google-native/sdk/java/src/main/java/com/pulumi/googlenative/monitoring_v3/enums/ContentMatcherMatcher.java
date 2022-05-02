@@ -30,7 +30,7 @@ import java.util.StringJoiner;
          */
         NotContainsString("NOT_CONTAINS_STRING"),
         /**
-         * Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.
+         * Selects regular-expression matching. The match succeeds if the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.
          * 
          */
         MatchesRegex("MATCHES_REGEX"),

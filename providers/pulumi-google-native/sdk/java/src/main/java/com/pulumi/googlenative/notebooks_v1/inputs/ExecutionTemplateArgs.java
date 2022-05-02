@@ -6,6 +6,7 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.notebooks_v1.enums.ExecutionTemplateJobType;
+import com.pulumi.googlenative.notebooks_v1.enums.ExecutionTemplateScaleTier;
 import com.pulumi.googlenative.notebooks_v1.inputs.DataprocParametersArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.SchedulerAcceleratorConfigArgs;
 import com.pulumi.googlenative.notebooks_v1.inputs.VertexAIParametersArgs;
@@ -190,6 +191,29 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     * @deprecated
+     * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     */
+    @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+    @Import(name="scaleTier", required=true)
+    private Output<ExecutionTemplateScaleTier> scaleTier;
+
+    /**
+     * @return Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     * @deprecated
+     * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     */
+    @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+    public Output<ExecutionTemplateScaleTier> scaleTier() {
+        return this.scaleTier;
+    }
+
+    /**
      * The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
      * 
      */
@@ -202,6 +226,21 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<String>> serviceAccount() {
         return Optional.ofNullable(this.serviceAccount);
+    }
+
+    /**
+     * The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+     * 
+     */
+    @Import(name="tensorboard")
+    private @Nullable Output<String> tensorboard;
+
+    /**
+     * @return The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+     * 
+     */
+    public Optional<Output<String>> tensorboard() {
+        return Optional.ofNullable(this.tensorboard);
     }
 
     /**
@@ -233,7 +272,9 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
         this.outputNotebookFolder = $.outputNotebookFolder;
         this.parameters = $.parameters;
         this.paramsYamlFile = $.paramsYamlFile;
+        this.scaleTier = $.scaleTier;
         this.serviceAccount = $.serviceAccount;
+        this.tensorboard = $.tensorboard;
         this.vertexAiParameters = $.vertexAiParameters;
     }
 
@@ -487,6 +528,35 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
+         * @param scaleTier Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+         * 
+         */
+        @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+        public Builder scaleTier(Output<ExecutionTemplateScaleTier> scaleTier) {
+            $.scaleTier = scaleTier;
+            return this;
+        }
+
+        /**
+         * @param scaleTier Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+         * 
+         */
+        @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+        public Builder scaleTier(ExecutionTemplateScaleTier scaleTier) {
+            return scaleTier(Output.of(scaleTier));
+        }
+
+        /**
          * @param serviceAccount The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
          * 
          * @return builder
@@ -505,6 +575,27 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder serviceAccount(String serviceAccount) {
             return serviceAccount(Output.of(serviceAccount));
+        }
+
+        /**
+         * @param tensorboard The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tensorboard(@Nullable Output<String> tensorboard) {
+            $.tensorboard = tensorboard;
+            return this;
+        }
+
+        /**
+         * @param tensorboard The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tensorboard(String tensorboard) {
+            return tensorboard(Output.of(tensorboard));
         }
 
         /**
@@ -529,6 +620,7 @@ public final class ExecutionTemplateArgs extends com.pulumi.resources.ResourceAr
         }
 
         public ExecutionTemplateArgs build() {
+            $.scaleTier = Objects.requireNonNull($.scaleTier, "expected parameter 'scaleTier' to be non-null");
             return $;
         }
     }

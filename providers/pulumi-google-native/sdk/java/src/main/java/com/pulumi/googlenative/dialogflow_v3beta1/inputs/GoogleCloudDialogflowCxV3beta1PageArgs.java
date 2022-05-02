@@ -25,14 +25,14 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
     public static final GoogleCloudDialogflowCxV3beta1PageArgs Empty = new GoogleCloudDialogflowCxV3beta1PageArgs();
 
     /**
-     * The human-readable name of the page, unique within the agent.
+     * The human-readable name of the page, unique within the flow.
      * 
      */
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
     /**
-     * @return The human-readable name of the page, unique within the agent.
+     * @return The human-readable name of the page, unique within the flow.
      * 
      */
     public Output<String> displayName() {
@@ -160,7 +160,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
         }
 
         /**
-         * @param displayName The human-readable name of the page, unique within the agent.
+         * @param displayName The human-readable name of the page, unique within the flow.
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends com.pulumi.res
         }
 
         /**
-         * @param displayName The human-readable name of the page, unique within the agent.
+         * @param displayName The human-readable name of the page, unique within the flow.
          * 
          * @return builder
          * 

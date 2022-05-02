@@ -136,6 +136,20 @@ public class Device extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
+     * Unique identifier for the device.
+     * 
+     */
+    @Export(name="deviceId", type=String.class, parameters={})
+    private Output<String> deviceId;
+
+    /**
+     * @return Unique identifier for the device.
+     * 
+     */
+    public Output<String> deviceId() {
+        return this.deviceId;
+    }
+    /**
      * Type of device.
      * 
      */

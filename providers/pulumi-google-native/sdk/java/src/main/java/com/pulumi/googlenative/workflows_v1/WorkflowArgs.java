@@ -105,9 +105,17 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.sourceContents);
     }
 
+    /**
+     * Required. The ID of the workflow to be created. It has to fulfill the following requirements: * Must contain only letters, numbers, underscores and hyphens. * Must start with a letter. * Must be between 1-64 characters. * Must end with a number or a letter. * Must be unique within the customer project and location.
+     * 
+     */
     @Import(name="workflowId", required=true)
     private Output<String> workflowId;
 
+    /**
+     * @return Required. The ID of the workflow to be created. It has to fulfill the following requirements: * Must contain only letters, numbers, underscores and hyphens. * Must start with a letter. * Must be between 1-64 characters. * Must end with a number or a letter. * Must be unique within the customer project and location.
+     * 
+     */
     public Output<String> workflowId() {
         return this.workflowId;
     }
@@ -266,11 +274,23 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
             return sourceContents(Output.of(sourceContents));
         }
 
+        /**
+         * @param workflowId Required. The ID of the workflow to be created. It has to fulfill the following requirements: * Must contain only letters, numbers, underscores and hyphens. * Must start with a letter. * Must be between 1-64 characters. * Must end with a number or a letter. * Must be unique within the customer project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowId(Output<String> workflowId) {
             $.workflowId = workflowId;
             return this;
         }
 
+        /**
+         * @param workflowId Required. The ID of the workflow to be created. It has to fulfill the following requirements: * Must contain only letters, numbers, underscores and hyphens. * Must start with a letter. * Must be between 1-64 characters. * Must end with a number or a letter. * Must be unique within the customer project and location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowId(String workflowId) {
             return workflowId(Output.of(workflowId));
         }

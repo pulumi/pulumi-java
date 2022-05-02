@@ -16,9 +16,17 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
+    /**
+     * Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following requirements: * Length of 128 characters or less. * Not start with the string `goog`. * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+     * 
+     */
     @Import(name="agentPoolId", required=true)
     private Output<String> agentPoolId;
 
+    /**
+     * @return Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following requirements: * Length of 128 characters or less. * Not start with the string `goog`. * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+     * 
+     */
     public Output<String> agentPoolId() {
         return this.agentPoolId;
     }
@@ -103,11 +111,23 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentPoolId Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following requirements: * Length of 128 characters or less. * Not start with the string `goog`. * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolId(Output<String> agentPoolId) {
             $.agentPoolId = agentPoolId;
             return this;
         }
 
+        /**
+         * @param agentPoolId Required. The ID of the agent pool to create. The `agent_pool_id` must meet the following requirements: * Length of 128 characters or less. * Not start with the string `goog`. * Start with a lowercase ASCII character, followed by: * Zero or more: lowercase Latin alphabet characters, numerals, hyphens (`-`), periods (`.`), underscores (`_`), or tildes (`~`). * One or more numerals or lowercase ASCII characters. As expressed by the regular expression: `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolId(String agentPoolId) {
             return agentPoolId(Output.of(agentPoolId));
         }

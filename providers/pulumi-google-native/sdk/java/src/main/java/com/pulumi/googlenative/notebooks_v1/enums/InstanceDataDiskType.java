@@ -33,7 +33,12 @@ import java.util.StringJoiner;
          * Balanced persistent disk type.
          * 
          */
-        PdBalanced("PD_BALANCED");
+        PdBalanced("PD_BALANCED"),
+        /**
+         * Extreme persistent disk type.
+         * 
+         */
+        PdExtreme("PD_EXTREME");
 
         private final String value;
 

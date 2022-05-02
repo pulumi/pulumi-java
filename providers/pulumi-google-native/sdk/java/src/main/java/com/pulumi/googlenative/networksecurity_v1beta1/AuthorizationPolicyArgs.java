@@ -34,9 +34,17 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
         return this.action;
     }
 
+    /**
+     * Required. Short name of the AuthorizationPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;authz_policy&#34;.
+     * 
+     */
     @Import(name="authorizationPolicyId", required=true)
     private Output<String> authorizationPolicyId;
 
+    /**
+     * @return Required. Short name of the AuthorizationPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;authz_policy&#34;.
+     * 
+     */
     public Output<String> authorizationPolicyId() {
         return this.authorizationPolicyId;
     }
@@ -167,11 +175,23 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
             return action(Output.of(action));
         }
 
+        /**
+         * @param authorizationPolicyId Required. Short name of the AuthorizationPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;authz_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicyId(Output<String> authorizationPolicyId) {
             $.authorizationPolicyId = authorizationPolicyId;
             return this;
         }
 
+        /**
+         * @param authorizationPolicyId Required. Short name of the AuthorizationPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;authz_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationPolicyId(String authorizationPolicyId) {
             return authorizationPolicyId(Output.of(authorizationPolicyId));
         }

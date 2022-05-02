@@ -5,6 +5,7 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.storagetransfer_v1.enums.TransferOptionsOverwriteWhen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.MetadataOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -51,14 +52,14 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Represents the selected metadata options for a transfer job.
+     * Represents the selected metadata options for a transfer job. This feature is in Preview.
      * 
      */
     @Import(name="metadataOptions")
     private @Nullable Output<MetadataOptionsArgs> metadataOptions;
 
     /**
-     * @return Represents the selected metadata options for a transfer job.
+     * @return Represents the selected metadata options for a transfer job. This feature is in Preview.
      * 
      */
     public Optional<Output<MetadataOptionsArgs>> metadataOptions() {
@@ -80,6 +81,21 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }
 
+    /**
+     * When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+     * 
+     */
+    @Import(name="overwriteWhen")
+    private @Nullable Output<TransferOptionsOverwriteWhen> overwriteWhen;
+
+    /**
+     * @return When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+     * 
+     */
+    public Optional<Output<TransferOptionsOverwriteWhen>> overwriteWhen() {
+        return Optional.ofNullable(this.overwriteWhen);
+    }
+
     private TransferOptionsArgs() {}
 
     private TransferOptionsArgs(TransferOptionsArgs $) {
@@ -87,6 +103,7 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
         this.deleteObjectsUniqueInSink = $.deleteObjectsUniqueInSink;
         this.metadataOptions = $.metadataOptions;
         this.overwriteObjectsAlreadyExistingInSink = $.overwriteObjectsAlreadyExistingInSink;
+        this.overwriteWhen = $.overwriteWhen;
     }
 
     public static Builder builder() {
@@ -150,7 +167,7 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param metadataOptions Represents the selected metadata options for a transfer job.
+         * @param metadataOptions Represents the selected metadata options for a transfer job. This feature is in Preview.
          * 
          * @return builder
          * 
@@ -161,7 +178,7 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param metadataOptions Represents the selected metadata options for a transfer job.
+         * @param metadataOptions Represents the selected metadata options for a transfer job. This feature is in Preview.
          * 
          * @return builder
          * 
@@ -189,6 +206,27 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             return overwriteObjectsAlreadyExistingInSink(Output.of(overwriteObjectsAlreadyExistingInSink));
+        }
+
+        /**
+         * @param overwriteWhen When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder overwriteWhen(@Nullable Output<TransferOptionsOverwriteWhen> overwriteWhen) {
+            $.overwriteWhen = overwriteWhen;
+            return this;
+        }
+
+        /**
+         * @param overwriteWhen When to overwrite objects that already exist in the sink. If not set overwrite behavior is determined by overwrite_objects_already_existing_in_sink.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder overwriteWhen(TransferOptionsOverwriteWhen overwriteWhen) {
+            return overwriteWhen(Output.of(overwriteWhen));
         }
 
         public TransferOptionsArgs build() {

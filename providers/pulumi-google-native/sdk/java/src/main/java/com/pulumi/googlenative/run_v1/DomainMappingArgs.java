@@ -6,7 +6,6 @@ package com.pulumi.googlenative.run_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
-import com.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
 import com.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -33,9 +32,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.apiVersion);
     }
 
+    /**
+     * Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all`
+     * 
+     */
     @Import(name="dryRun")
     private @Nullable Output<String> dryRun;
 
+    /**
+     * @return Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all`
+     * 
+     */
     public Optional<Output<String>> dryRun() {
         return Optional.ofNullable(this.dryRun);
     }
@@ -99,21 +106,6 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.spec);
     }
 
-    /**
-     * The current status of the DomainMapping.
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<DomainMappingStatusArgs> status;
-
-    /**
-     * @return The current status of the DomainMapping.
-     * 
-     */
-    public Optional<Output<DomainMappingStatusArgs>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
     private DomainMappingArgs() {}
 
     private DomainMappingArgs(DomainMappingArgs $) {
@@ -124,7 +116,6 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
         this.metadata = $.metadata;
         this.project = $.project;
         this.spec = $.spec;
-        this.status = $.status;
     }
 
     public static Builder builder() {
@@ -166,11 +157,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param dryRun Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all`
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(@Nullable Output<String> dryRun) {
             $.dryRun = dryRun;
             return this;
         }
 
+        /**
+         * @param dryRun Indicates that the server should validate the request and populate default values without persisting the request. Supported values: `all`
+         * 
+         * @return builder
+         * 
+         */
         public Builder dryRun(String dryRun) {
             return dryRun(Output.of(dryRun));
         }
@@ -254,27 +257,6 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder spec(DomainMappingSpecArgs spec) {
             return spec(Output.of(spec));
-        }
-
-        /**
-         * @param status The current status of the DomainMapping.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<DomainMappingStatusArgs> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status The current status of the DomainMapping.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(DomainMappingStatusArgs status) {
-            return status(Output.of(status));
         }
 
         public DomainMappingArgs build() {

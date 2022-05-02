@@ -293,6 +293,24 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.privateInstance;
     }
     /**
+     * Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     * @deprecated
+     * Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     */
+    @Deprecated /* Output only. Deprecated. Use tenant_project_id instead to extract the tenant project ID. */
+    @Export(name="serviceAccount", type=String.class, parameters={})
+    private Output<String> serviceAccount;
+
+    /**
+     * @return Deprecated. Use tenant_project_id instead to extract the tenant project ID.
+     * 
+     */
+    public Output<String> serviceAccount() {
+        return this.serviceAccount;
+    }
+    /**
      * Endpoint on which the Data Fusion UI is accessible.
      * 
      */

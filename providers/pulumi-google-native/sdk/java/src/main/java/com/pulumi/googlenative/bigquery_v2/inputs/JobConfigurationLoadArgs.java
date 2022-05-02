@@ -283,6 +283,21 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+     * 
+     */
+    @Import(name="preserveAsciiControlCharacters")
+    private @Nullable Output<Boolean> preserveAsciiControlCharacters;
+
+    /**
+     * @return [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+     * 
+     */
+    public Optional<Output<Boolean>> preserveAsciiControlCharacters() {
+        return Optional.ofNullable(this.preserveAsciiControlCharacters);
+    }
+
+    /**
      * If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
      */
@@ -340,6 +355,52 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
      */
     public Optional<Output<TableSchemaArgs>> schema() {
         return Optional.ofNullable(this.schema);
+    }
+
+    /**
+     * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     * @deprecated
+     * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     */
+    @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+    @Import(name="schemaInline")
+    private @Nullable Output<String> schemaInline;
+
+    /**
+     * @return [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     * @deprecated
+     * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     */
+    @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+    public Optional<Output<String>> schemaInline() {
+        return Optional.ofNullable(this.schemaInline);
+    }
+
+    /**
+     * [Deprecated] The format of the schemaInline property.
+     * 
+     * @deprecated
+     * [Deprecated] The format of the schemaInline property.
+     * 
+     */
+    @Deprecated /* [Deprecated] The format of the schemaInline property. */
+    @Import(name="schemaInlineFormat")
+    private @Nullable Output<String> schemaInlineFormat;
+
+    /**
+     * @return [Deprecated] The format of the schemaInline property.
+     * 
+     * @deprecated
+     * [Deprecated] The format of the schemaInline property.
+     * 
+     */
+    @Deprecated /* [Deprecated] The format of the schemaInline property. */
+    public Optional<Output<String>> schemaInlineFormat() {
+        return Optional.ofNullable(this.schemaInlineFormat);
     }
 
     /**
@@ -467,10 +528,13 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
         this.maxBadRecords = $.maxBadRecords;
         this.nullMarker = $.nullMarker;
         this.parquetOptions = $.parquetOptions;
+        this.preserveAsciiControlCharacters = $.preserveAsciiControlCharacters;
         this.projectionFields = $.projectionFields;
         this.quote = $.quote;
         this.rangePartitioning = $.rangePartitioning;
         this.schema = $.schema;
+        this.schemaInline = $.schemaInline;
+        this.schemaInlineFormat = $.schemaInlineFormat;
         this.schemaUpdateOptions = $.schemaUpdateOptions;
         this.skipLeadingRows = $.skipLeadingRows;
         this.sourceFormat = $.sourceFormat;
@@ -866,6 +930,27 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
         }
 
         /**
+         * @param preserveAsciiControlCharacters [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserveAsciiControlCharacters(@Nullable Output<Boolean> preserveAsciiControlCharacters) {
+            $.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
+            return this;
+        }
+
+        /**
+         * @param preserveAsciiControlCharacters [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserveAsciiControlCharacters(Boolean preserveAsciiControlCharacters) {
+            return preserveAsciiControlCharacters(Output.of(preserveAsciiControlCharacters));
+        }
+
+        /**
          * @param projectionFields If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
          * 
          * @return builder
@@ -957,6 +1042,64 @@ public final class JobConfigurationLoadArgs extends com.pulumi.resources.Resourc
          */
         public Builder schema(TableSchemaArgs schema) {
             return schema(Output.of(schema));
+        }
+
+        /**
+         * @param schemaInline [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+         * 
+         */
+        @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+        public Builder schemaInline(@Nullable Output<String> schemaInline) {
+            $.schemaInline = schemaInline;
+            return this;
+        }
+
+        /**
+         * @param schemaInline [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+         * 
+         */
+        @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+        public Builder schemaInline(String schemaInline) {
+            return schemaInline(Output.of(schemaInline));
+        }
+
+        /**
+         * @param schemaInlineFormat [Deprecated] The format of the schemaInline property.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] The format of the schemaInline property.
+         * 
+         */
+        @Deprecated /* [Deprecated] The format of the schemaInline property. */
+        public Builder schemaInlineFormat(@Nullable Output<String> schemaInlineFormat) {
+            $.schemaInlineFormat = schemaInlineFormat;
+            return this;
+        }
+
+        /**
+         * @param schemaInlineFormat [Deprecated] The format of the schemaInline property.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] The format of the schemaInline property.
+         * 
+         */
+        @Deprecated /* [Deprecated] The format of the schemaInline property. */
+        public Builder schemaInlineFormat(String schemaInlineFormat) {
+            return schemaInlineFormat(Output.of(schemaInlineFormat));
         }
 
         /**

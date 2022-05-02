@@ -30,17 +30,28 @@ public final class PackageIssueResponse {
      * 
      */
     private final String packageType;
+    /**
+     * @return Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     * @deprecated
+     * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     */
+    @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+    private final String severityName;
 
     @CustomType.Constructor
     private PackageIssueResponse(
         @CustomType.Parameter("affectedLocation") VulnerabilityLocationResponse affectedLocation,
         @CustomType.Parameter("effectiveSeverity") String effectiveSeverity,
         @CustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
-        @CustomType.Parameter("packageType") String packageType) {
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("severityName") String severityName) {
         this.affectedLocation = affectedLocation;
         this.effectiveSeverity = effectiveSeverity;
         this.fixedLocation = fixedLocation;
         this.packageType = packageType;
+        this.severityName = severityName;
     }
 
     /**
@@ -71,6 +82,17 @@ public final class PackageIssueResponse {
     public String packageType() {
         return this.packageType;
     }
+    /**
+     * @return Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     * @deprecated
+     * Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability.
+     * 
+     */
+    @Deprecated /* Deprecated, use Details.effective_severity instead The severity (e.g., distro assigned severity) for this vulnerability. */
+    public String severityName() {
+        return this.severityName;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -85,6 +107,7 @@ public final class PackageIssueResponse {
         private String effectiveSeverity;
         private VulnerabilityLocationResponse fixedLocation;
         private String packageType;
+        private String severityName;
 
         public Builder() {
     	      // Empty
@@ -96,6 +119,7 @@ public final class PackageIssueResponse {
     	      this.effectiveSeverity = defaults.effectiveSeverity;
     	      this.fixedLocation = defaults.fixedLocation;
     	      this.packageType = defaults.packageType;
+    	      this.severityName = defaults.severityName;
         }
 
         public Builder affectedLocation(VulnerabilityLocationResponse affectedLocation) {
@@ -113,8 +137,12 @@ public final class PackageIssueResponse {
         public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
+        }
+        public Builder severityName(String severityName) {
+            this.severityName = Objects.requireNonNull(severityName);
+            return this;
         }        public PackageIssueResponse build() {
-            return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType);
+            return new PackageIssueResponse(affectedLocation, effectiveSeverity, fixedLocation, packageType, severityName);
         }
     }
 }

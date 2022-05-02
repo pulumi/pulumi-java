@@ -60,6 +60,16 @@ import java.util.StringJoiner;
          */
         Routine("ROUTINE"),
         /**
+         * A Dataplex lake.
+         * 
+         */
+        Lake("LAKE"),
+        /**
+         * A Dataplex zone.
+         * 
+         */
+        Zone("ZONE"),
+        /**
          * A service, for example, a Dataproc Metastore service.
          * 
          */

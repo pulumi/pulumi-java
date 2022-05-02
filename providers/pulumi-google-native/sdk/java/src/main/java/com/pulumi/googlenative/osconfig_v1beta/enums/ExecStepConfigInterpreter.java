@@ -15,17 +15,22 @@ import java.util.StringJoiner;
     @EnumType
     public enum ExecStepConfigInterpreter {
         /**
-         * Invalid for a Windows ExecStepConfig. For a Linux ExecStepConfig, the interpreter will be parsed from the shebang line of the script if unspecified.
+         * If the interpreter is not specified, the value defaults to `NONE`.
          * 
          */
         InterpreterUnspecified("INTERPRETER_UNSPECIFIED"),
         /**
-         * Indicates that the script is run with `/bin/sh` on Linux and `cmd` on Windows.
+         * Indicates that the file is run as follows on each operating system: + For Linux VMs, the file is ran as an executable and the interpreter might be parsed from the [shebang line](&lt;https://wikipedia.org/wiki/Shebang_(Unix)&gt;) of the file. + For Windows VM, this value is not supported.
+         * 
+         */
+        None("NONE"),
+        /**
+         * Indicates that the file is run with `/bin/sh` on Linux and `cmd` on Windows.
          * 
          */
         Shell("SHELL"),
         /**
-         * Indicates that the file is run with PowerShell flags `-NonInteractive`, `-NoProfile`, and `-ExecutionPolicy Bypass`.
+         * Indicates that the file is run with PowerShell.
          * 
          */
         Powershell("POWERSHELL");

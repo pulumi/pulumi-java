@@ -20,14 +20,14 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final FleetConfigArgs Empty = new FleetConfigArgs();
 
     /**
-     * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
      * 
      */
     @Import(name="fleetSpec")
     private @Nullable Output<String> fleetSpec;
 
     /**
-     * @return Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     * @return Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
      * 
      */
     public Optional<Output<String>> fleetSpec() {
@@ -75,7 +75,7 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fleetSpec Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * @param fleetSpec Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fleetSpec Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+         * @param fleetSpec Agones fleet spec (see [example spec](https://agones.dev/site/docs/reference/fleet/)).
          * 
          * @return builder
          * 

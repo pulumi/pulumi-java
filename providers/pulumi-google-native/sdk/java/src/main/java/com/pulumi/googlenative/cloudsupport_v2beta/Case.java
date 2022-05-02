@@ -137,6 +137,24 @@ public class Case extends com.pulumi.resources.CustomResource {
         return this.priority;
     }
     /**
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     * @deprecated
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+    @Export(name="severity", type=String.class, parameters={})
+    private Output<String> severity;
+
+    /**
+     * @return The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    public Output<String> severity() {
+        return this.severity;
+    }
+    /**
      * The current status of the support case.
      * 
      */

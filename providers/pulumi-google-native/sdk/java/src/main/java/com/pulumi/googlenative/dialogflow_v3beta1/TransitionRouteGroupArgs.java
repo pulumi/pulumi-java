@@ -25,14 +25,14 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
     /**
-     * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * @return The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     public Output<String> displayName() {
@@ -46,9 +46,17 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
         return this.flowId;
     }
 
+    /**
+     * The language of the following fields in `TransitionRouteGroup`: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return The language of the following fields in `TransitionRouteGroup`: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -138,7 +146,7 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param displayName The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+         * @param displayName The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
          * 
          * @return builder
          * 
@@ -149,7 +157,7 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param displayName The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+         * @param displayName The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
          * 
          * @return builder
          * 
@@ -167,11 +175,23 @@ public final class TransitionRouteGroupArgs extends com.pulumi.resources.Resourc
             return flowId(Output.of(flowId));
         }
 
+        /**
+         * @param languageCode The language of the following fields in `TransitionRouteGroup`: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode The language of the following fields in `TransitionRouteGroup`: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }

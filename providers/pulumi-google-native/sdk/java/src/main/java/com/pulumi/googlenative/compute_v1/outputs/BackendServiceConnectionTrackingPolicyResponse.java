@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.compute_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,11 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
      * 
      */
     private final String connectionPersistenceOnUnhealthyBackends;
+    /**
+     * @return Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+     * 
+     */
+    private final Boolean enableStrongAffinity;
     /**
      * @return Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e. Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not available publicly.
      * 
@@ -29,9 +35,11 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
     @CustomType.Constructor
     private BackendServiceConnectionTrackingPolicyResponse(
         @CustomType.Parameter("connectionPersistenceOnUnhealthyBackends") String connectionPersistenceOnUnhealthyBackends,
+        @CustomType.Parameter("enableStrongAffinity") Boolean enableStrongAffinity,
         @CustomType.Parameter("idleTimeoutSec") Integer idleTimeoutSec,
         @CustomType.Parameter("trackingMode") String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+        this.enableStrongAffinity = enableStrongAffinity;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;
     }
@@ -42,6 +50,13 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
      */
     public String connectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends;
+    }
+    /**
+     * @return Enable Strong Session Affinity for Network Load Balancing. This option is not available publicly.
+     * 
+     */
+    public Boolean enableStrongAffinity() {
+        return this.enableStrongAffinity;
     }
     /**
      * @return Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in seconds). For Internal TCP/UDP Load Balancing: - The minimum (default) is 10 minutes and the maximum is 16 hours. - It can be set only if Connection Tracking is less than 5-tuple (i.e. Session Affinity is CLIENT_IP_NO_DESTINATION, CLIENT_IP or CLIENT_IP_PROTO, and Tracking Mode is PER_SESSION). For Network Load Balancer the default is 60 seconds. This option is not available publicly.
@@ -68,6 +83,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
 
     public static final class Builder {
         private String connectionPersistenceOnUnhealthyBackends;
+        private Boolean enableStrongAffinity;
         private Integer idleTimeoutSec;
         private String trackingMode;
 
@@ -78,12 +94,17 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
         public Builder(BackendServiceConnectionTrackingPolicyResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.connectionPersistenceOnUnhealthyBackends = defaults.connectionPersistenceOnUnhealthyBackends;
+    	      this.enableStrongAffinity = defaults.enableStrongAffinity;
     	      this.idleTimeoutSec = defaults.idleTimeoutSec;
     	      this.trackingMode = defaults.trackingMode;
         }
 
         public Builder connectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
+            return this;
+        }
+        public Builder enableStrongAffinity(Boolean enableStrongAffinity) {
+            this.enableStrongAffinity = Objects.requireNonNull(enableStrongAffinity);
             return this;
         }
         public Builder idleTimeoutSec(Integer idleTimeoutSec) {
@@ -94,7 +115,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }        public BackendServiceConnectionTrackingPolicyResponse build() {
-            return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
+            return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }
     }
 }

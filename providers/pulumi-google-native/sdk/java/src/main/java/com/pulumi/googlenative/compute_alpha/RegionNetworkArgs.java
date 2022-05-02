@@ -80,6 +80,29 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    @Import(name="ipv4Range")
+    private @Nullable Output<String> ipv4Range;
+
+    /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    public Optional<Output<String>> ipv4Range() {
+        return Optional.ofNullable(this.ipv4Range);
+    }
+
+    /**
      * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
      * 
      */
@@ -109,9 +132,17 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     @Import(name="networkFirewallPolicyEnforcementOrder")
     private @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
+    /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     public Optional<Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder>> networkFirewallPolicyEnforcementOrder() {
         return Optional.ofNullable(this.networkFirewallPolicyEnforcementOrder);
     }
@@ -130,9 +161,17 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -159,6 +198,7 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.enableUlaInternalIpv6 = $.enableUlaInternalIpv6;
         this.internalIpv6Range = $.internalIpv6Range;
+        this.ipv4Range = $.ipv4Range;
         this.mtu = $.mtu;
         this.name = $.name;
         this.networkFirewallPolicyEnforcementOrder = $.networkFirewallPolicyEnforcementOrder;
@@ -271,6 +311,35 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param ipv4Range Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+        public Builder ipv4Range(@Nullable Output<String> ipv4Range) {
+            $.ipv4Range = ipv4Range;
+            return this;
+        }
+
+        /**
+         * @param ipv4Range Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+        public Builder ipv4Range(String ipv4Range) {
+            return ipv4Range(Output.of(ipv4Range));
+        }
+
+        /**
          * @param mtu Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
          * 
          * @return builder
@@ -312,11 +381,23 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkFirewallPolicyEnforcementOrder The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
             $.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
             return this;
         }
 
+        /**
+         * @param networkFirewallPolicyEnforcementOrder The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkFirewallPolicyEnforcementOrder(RegionNetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
             return networkFirewallPolicyEnforcementOrder(Output.of(networkFirewallPolicyEnforcementOrder));
         }
@@ -339,11 +420,23 @@ public final class RegionNetworkArgs extends com.pulumi.resources.ResourceArgs {
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

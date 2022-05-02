@@ -123,9 +123,17 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.serverCertificate);
     }
 
+    /**
+     * Required. Short name of the ServerTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;server_mtls_policy&#34;.
+     * 
+     */
     @Import(name="serverTlsPolicyId", required=true)
     private Output<String> serverTlsPolicyId;
 
+    /**
+     * @return Required. Short name of the ServerTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;server_mtls_policy&#34;.
+     * 
+     */
     public Output<String> serverTlsPolicyId() {
         return this.serverTlsPolicyId;
     }
@@ -306,11 +314,23 @@ public final class ServerTlsPolicyArgs extends com.pulumi.resources.ResourceArgs
             return serverCertificate(Output.of(serverCertificate));
         }
 
+        /**
+         * @param serverTlsPolicyId Required. Short name of the ServerTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;server_mtls_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverTlsPolicyId(Output<String> serverTlsPolicyId) {
             $.serverTlsPolicyId = serverTlsPolicyId;
             return this;
         }
 
+        /**
+         * @param serverTlsPolicyId Required. Short name of the ServerTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. &#34;server_mtls_policy&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverTlsPolicyId(String serverTlsPolicyId) {
             return serverTlsPolicyId(Output.of(serverTlsPolicyId));
         }

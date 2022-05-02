@@ -22,14 +22,14 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
     public static final MuxStreamArgs Empty = new MuxStreamArgs();
 
     /**
-     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt` See also: [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
      * 
      */
     @Import(name="container")
     private @Nullable Output<String> container;
 
     /**
-     * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+     * @return The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt` See also: [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
      * 
      */
     public Optional<Output<String>> container() {
@@ -125,7 +125,7 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt` See also: [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class MuxStreamArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
+         * @param container The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt` See also: [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
          * 
          * @return builder
          * 

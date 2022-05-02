@@ -6,6 +6,7 @@ package com.pulumi.googlenative.spanner_v1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -17,10 +18,24 @@ public final class GetInstanceResult {
      */
     private final String config;
     /**
+     * @return The time at which the instance was created.
+     * 
+     */
+    private final String createTime;
+    /**
      * @return The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
      * 
      */
     private final String displayName;
+    /**
+     * @return Deprecated. This field is not populated.
+     * 
+     * @deprecated
+     * Deprecated. This field is not populated.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is not populated. */
+    private final List<String> endpointUris;
     /**
      * @return Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
      * 
@@ -46,23 +61,34 @@ public final class GetInstanceResult {
      * 
      */
     private final String state;
+    /**
+     * @return The time at which the instance was most recently updated.
+     * 
+     */
+    private final String updateTime;
 
     @CustomType.Constructor
     private GetInstanceResult(
         @CustomType.Parameter("config") String config,
+        @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("endpointUris") List<String> endpointUris,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("nodeCount") Integer nodeCount,
         @CustomType.Parameter("processingUnits") Integer processingUnits,
-        @CustomType.Parameter("state") String state) {
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.config = config;
+        this.createTime = createTime;
         this.displayName = displayName;
+        this.endpointUris = endpointUris;
         this.labels = labels;
         this.name = name;
         this.nodeCount = nodeCount;
         this.processingUnits = processingUnits;
         this.state = state;
+        this.updateTime = updateTime;
     }
 
     /**
@@ -73,11 +99,29 @@ public final class GetInstanceResult {
         return this.config;
     }
     /**
+     * @return The time at which the instance was created.
+     * 
+     */
+    public String createTime() {
+        return this.createTime;
+    }
+    /**
      * @return The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
      * 
      */
     public String displayName() {
         return this.displayName;
+    }
+    /**
+     * @return Deprecated. This field is not populated.
+     * 
+     * @deprecated
+     * Deprecated. This field is not populated.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is not populated. */
+    public List<String> endpointUris() {
+        return this.endpointUris;
     }
     /**
      * @return Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
@@ -114,6 +158,13 @@ public final class GetInstanceResult {
     public String state() {
         return this.state;
     }
+    /**
+     * @return The time at which the instance was most recently updated.
+     * 
+     */
+    public String updateTime() {
+        return this.updateTime;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -125,12 +176,15 @@ public final class GetInstanceResult {
 
     public static final class Builder {
         private String config;
+        private String createTime;
         private String displayName;
+        private List<String> endpointUris;
         private Map<String,String> labels;
         private String name;
         private Integer nodeCount;
         private Integer processingUnits;
         private String state;
+        private String updateTime;
 
         public Builder() {
     	      // Empty
@@ -139,21 +193,35 @@ public final class GetInstanceResult {
         public Builder(GetInstanceResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.config = defaults.config;
+    	      this.createTime = defaults.createTime;
     	      this.displayName = defaults.displayName;
+    	      this.endpointUris = defaults.endpointUris;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
     	      this.nodeCount = defaults.nodeCount;
     	      this.processingUnits = defaults.processingUnits;
     	      this.state = defaults.state;
+    	      this.updateTime = defaults.updateTime;
         }
 
         public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
+        public Builder createTime(String createTime) {
+            this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
+        }
+        public Builder endpointUris(List<String> endpointUris) {
+            this.endpointUris = Objects.requireNonNull(endpointUris);
+            return this;
+        }
+        public Builder endpointUris(String... endpointUris) {
+            return endpointUris(List.of(endpointUris));
         }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
@@ -174,8 +242,12 @@ public final class GetInstanceResult {
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
+        }
+        public Builder updateTime(String updateTime) {
+            this.updateTime = Objects.requireNonNull(updateTime);
+            return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(config, displayName, labels, name, nodeCount, processingUnits, state);
+            return new GetInstanceResult(config, createTime, displayName, endpointUris, labels, name, nodeCount, processingUnits, state, updateTime);
         }
     }
 }

@@ -32,6 +32,11 @@ public final class GetSubscriptionResult {
      */
     private final Boolean detached;
     /**
+     * @return If true, Pub/Sub provides the following guarantees for the delivery of a message with a given value of `message_id` on this subscription: * The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires. * An acknowledged message will not be resent to a subscriber. Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct `message_id` values.
+     * 
+     */
+    private final Boolean enableExactlyOnceDelivery;
+    /**
      * @return If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
      * 
      */
@@ -97,6 +102,7 @@ public final class GetSubscriptionResult {
         @CustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
         @CustomType.Parameter("deadLetterPolicy") DeadLetterPolicyResponse deadLetterPolicy,
         @CustomType.Parameter("detached") Boolean detached,
+        @CustomType.Parameter("enableExactlyOnceDelivery") Boolean enableExactlyOnceDelivery,
         @CustomType.Parameter("enableMessageOrdering") Boolean enableMessageOrdering,
         @CustomType.Parameter("expirationPolicy") ExpirationPolicyResponse expirationPolicy,
         @CustomType.Parameter("filter") String filter,
@@ -112,6 +118,7 @@ public final class GetSubscriptionResult {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.deadLetterPolicy = deadLetterPolicy;
         this.detached = detached;
+        this.enableExactlyOnceDelivery = enableExactlyOnceDelivery;
         this.enableMessageOrdering = enableMessageOrdering;
         this.expirationPolicy = expirationPolicy;
         this.filter = filter;
@@ -146,6 +153,13 @@ public final class GetSubscriptionResult {
      */
     public Boolean detached() {
         return this.detached;
+    }
+    /**
+     * @return If true, Pub/Sub provides the following guarantees for the delivery of a message with a given value of `message_id` on this subscription: * The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires. * An acknowledged message will not be resent to a subscriber. Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct `message_id` values.
+     * 
+     */
+    public Boolean enableExactlyOnceDelivery() {
+        return this.enableExactlyOnceDelivery;
     }
     /**
      * @return If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
@@ -244,6 +258,7 @@ public final class GetSubscriptionResult {
         private Integer ackDeadlineSeconds;
         private DeadLetterPolicyResponse deadLetterPolicy;
         private Boolean detached;
+        private Boolean enableExactlyOnceDelivery;
         private Boolean enableMessageOrdering;
         private ExpirationPolicyResponse expirationPolicy;
         private String filter;
@@ -266,6 +281,7 @@ public final class GetSubscriptionResult {
     	      this.ackDeadlineSeconds = defaults.ackDeadlineSeconds;
     	      this.deadLetterPolicy = defaults.deadLetterPolicy;
     	      this.detached = defaults.detached;
+    	      this.enableExactlyOnceDelivery = defaults.enableExactlyOnceDelivery;
     	      this.enableMessageOrdering = defaults.enableMessageOrdering;
     	      this.expirationPolicy = defaults.expirationPolicy;
     	      this.filter = defaults.filter;
@@ -290,6 +306,10 @@ public final class GetSubscriptionResult {
         }
         public Builder detached(Boolean detached) {
             this.detached = Objects.requireNonNull(detached);
+            return this;
+        }
+        public Builder enableExactlyOnceDelivery(Boolean enableExactlyOnceDelivery) {
+            this.enableExactlyOnceDelivery = Objects.requireNonNull(enableExactlyOnceDelivery);
             return this;
         }
         public Builder enableMessageOrdering(Boolean enableMessageOrdering) {
@@ -340,7 +360,7 @@ public final class GetSubscriptionResult {
             this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
             return this;
         }        public GetSubscriptionResult build() {
-            return new GetSubscriptionResult(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, pushConfig, retainAckedMessages, retryPolicy, state, topic, topicMessageRetentionDuration);
+            return new GetSubscriptionResult(ackDeadlineSeconds, deadLetterPolicy, detached, enableExactlyOnceDelivery, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, pushConfig, retainAckedMessages, retryPolicy, state, topic, topicMessageRetentionDuration);
         }
     }
 }

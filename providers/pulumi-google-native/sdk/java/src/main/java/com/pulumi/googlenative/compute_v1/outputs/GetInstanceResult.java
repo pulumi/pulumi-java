@@ -10,6 +10,7 @@ import com.pulumi.googlenative.compute_v1.outputs.AttachedDiskResponse;
 import com.pulumi.googlenative.compute_v1.outputs.ConfidentialInstanceConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import com.pulumi.googlenative.compute_v1.outputs.DisplayDeviceResponse;
+import com.pulumi.googlenative.compute_v1.outputs.InstanceParamsResponse;
 import com.pulumi.googlenative.compute_v1.outputs.MetadataResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkInterfaceResponse;
 import com.pulumi.googlenative.compute_v1.outputs.NetworkPerformanceConfigResponse;
@@ -140,6 +141,11 @@ public final class GetInstanceResult {
     private final List<NetworkInterfaceResponse> networkInterfaces;
     private final NetworkPerformanceConfigResponse networkPerformanceConfig;
     /**
+     * @return Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    private final InstanceParamsResponse params;
+    /**
      * @return The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
      * 
      */
@@ -238,6 +244,7 @@ public final class GetInstanceResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
         @CustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @CustomType.Parameter("params") InstanceParamsResponse params,
         @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
         @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
         @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
@@ -278,6 +285,7 @@ public final class GetInstanceResult {
         this.name = name;
         this.networkInterfaces = networkInterfaces;
         this.networkPerformanceConfig = networkPerformanceConfig;
+        this.params = params;
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         this.reservationAffinity = reservationAffinity;
         this.resourcePolicies = resourcePolicies;
@@ -457,6 +465,13 @@ public final class GetInstanceResult {
         return this.networkPerformanceConfig;
     }
     /**
+     * @return Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
+     * 
+     */
+    public InstanceParamsResponse params() {
+        return this.params;
+    }
+    /**
      * @return The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
      * 
      */
@@ -594,6 +609,7 @@ public final class GetInstanceResult {
         private String name;
         private List<NetworkInterfaceResponse> networkInterfaces;
         private NetworkPerformanceConfigResponse networkPerformanceConfig;
+        private InstanceParamsResponse params;
         private String privateIpv6GoogleAccess;
         private ReservationAffinityResponse reservationAffinity;
         private List<String> resourcePolicies;
@@ -641,6 +657,7 @@ public final class GetInstanceResult {
     	      this.name = defaults.name;
     	      this.networkInterfaces = defaults.networkInterfaces;
     	      this.networkPerformanceConfig = defaults.networkPerformanceConfig;
+    	      this.params = defaults.params;
     	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
     	      this.reservationAffinity = defaults.reservationAffinity;
     	      this.resourcePolicies = defaults.resourcePolicies;
@@ -764,6 +781,10 @@ public final class GetInstanceResult {
             this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
             return this;
         }
+        public Builder params(InstanceParamsResponse params) {
+            this.params = Objects.requireNonNull(params);
+            return this;
+        }
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
@@ -834,7 +855,7 @@ public final class GetInstanceResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, cpuPlatform, creationTimestamp, deletionProtection, description, disks, displayDevice, fingerprint, guestAccelerators, hostname, kind, labelFingerprint, labels, lastStartTimestamp, lastStopTimestamp, lastSuspendedTimestamp, machineType, metadata, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, privateIpv6GoogleAccess, reservationAffinity, resourcePolicies, satisfiesPzs, scheduling, selfLink, serviceAccounts, shieldedInstanceConfig, shieldedInstanceIntegrityPolicy, sourceMachineImage, sourceMachineImageEncryptionKey, startRestricted, status, statusMessage, tags, zone);
+            return new GetInstanceResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, cpuPlatform, creationTimestamp, deletionProtection, description, disks, displayDevice, fingerprint, guestAccelerators, hostname, kind, labelFingerprint, labels, lastStartTimestamp, lastStopTimestamp, lastSuspendedTimestamp, machineType, metadata, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, params, privateIpv6GoogleAccess, reservationAffinity, resourcePolicies, satisfiesPzs, scheduling, selfLink, serviceAccounts, shieldedInstanceConfig, shieldedInstanceIntegrityPolicy, sourceMachineImage, sourceMachineImageEncryptionKey, startRestricted, status, statusMessage, tags, zone);
         }
     }
 }

@@ -17,6 +17,11 @@ import java.util.Objects;
 @CustomType
 public final class AttachedDiskResponse {
     /**
+     * @return The architecture of the attached disk. Valid values are ARM64 or X86_64.
+     * 
+     */
+    private final String architecture;
+    /**
      * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
      */
@@ -114,6 +119,7 @@ public final class AttachedDiskResponse {
 
     @CustomType.Constructor
     private AttachedDiskResponse(
+        @CustomType.Parameter("architecture") String architecture,
         @CustomType.Parameter("autoDelete") Boolean autoDelete,
         @CustomType.Parameter("boot") Boolean boot,
         @CustomType.Parameter("deviceName") String deviceName,
@@ -133,6 +139,7 @@ public final class AttachedDiskResponse {
         @CustomType.Parameter("source") String source,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("userLicenses") List<String> userLicenses) {
+        this.architecture = architecture;
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -154,6 +161,13 @@ public final class AttachedDiskResponse {
         this.userLicenses = userLicenses;
     }
 
+    /**
+     * @return The architecture of the attached disk. Valid values are ARM64 or X86_64.
+     * 
+     */
+    public String architecture() {
+        return this.architecture;
+    }
     /**
      * @return Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
@@ -297,6 +311,7 @@ public final class AttachedDiskResponse {
     }
 
     public static final class Builder {
+        private String architecture;
         private Boolean autoDelete;
         private Boolean boot;
         private String deviceName;
@@ -323,6 +338,7 @@ public final class AttachedDiskResponse {
 
         public Builder(AttachedDiskResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.architecture = defaults.architecture;
     	      this.autoDelete = defaults.autoDelete;
     	      this.boot = defaults.boot;
     	      this.deviceName = defaults.deviceName;
@@ -344,6 +360,10 @@ public final class AttachedDiskResponse {
     	      this.userLicenses = defaults.userLicenses;
         }
 
+        public Builder architecture(String architecture) {
+            this.architecture = Objects.requireNonNull(architecture);
+            return this;
+        }
         public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
@@ -429,7 +449,7 @@ public final class AttachedDiskResponse {
         public Builder userLicenses(String... userLicenses) {
             return userLicenses(List.of(userLicenses));
         }        public AttachedDiskResponse build() {
-            return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, index, initializeParams, interface_, kind, licenses, locked, mode, savedState, shieldedInstanceInitialState, source, type, userLicenses);
+            return new AttachedDiskResponse(architecture, autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, index, initializeParams, interface_, kind, licenses, locked, mode, savedState, shieldedInstanceInitialState, source, type, userLicenses);
         }
     }
 }

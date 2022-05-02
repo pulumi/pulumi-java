@@ -6,6 +6,7 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
+import com.pulumi.googlenative.monitoring_v1.inputs.CollapsibleGroupArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.ScorecardArgs;
@@ -54,6 +55,21 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<EmptyArgs>> blank() {
         return Optional.ofNullable(this.blank);
+    }
+
+    /**
+     * A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+     * 
+     */
+    @Import(name="collapsibleGroup")
+    private @Nullable Output<CollapsibleGroupArgs> collapsibleGroup;
+
+    /**
+     * @return A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+     * 
+     */
+    public Optional<Output<CollapsibleGroupArgs>> collapsibleGroup() {
+        return Optional.ofNullable(this.collapsibleGroup);
     }
 
     /**
@@ -151,6 +167,7 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
     private WidgetArgs(WidgetArgs $) {
         this.alertChart = $.alertChart;
         this.blank = $.blank;
+        this.collapsibleGroup = $.collapsibleGroup;
         this.logsPanel = $.logsPanel;
         this.scorecard = $.scorecard;
         this.text = $.text;
@@ -217,6 +234,27 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder blank(EmptyArgs blank) {
             return blank(Output.of(blank));
+        }
+
+        /**
+         * @param collapsibleGroup A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder collapsibleGroup(@Nullable Output<CollapsibleGroupArgs> collapsibleGroup) {
+            $.collapsibleGroup = collapsibleGroup;
+            return this;
+        }
+
+        /**
+         * @param collapsibleGroup A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder collapsibleGroup(CollapsibleGroupArgs collapsibleGroup) {
+            return collapsibleGroup(Output.of(collapsibleGroup));
         }
 
         /**

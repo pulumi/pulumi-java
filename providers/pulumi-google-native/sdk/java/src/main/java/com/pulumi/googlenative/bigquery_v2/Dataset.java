@@ -229,6 +229,20 @@ public class Dataset extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
+     * [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    @Export(name="maxTimeTravelHours", type=String.class, parameters={})
+    private Output<String> maxTimeTravelHours;
+
+    /**
+     * @return [Optional] Number of hours for the max time travel for all tables in the dataset.
+     * 
+     */
+    public Output<String> maxTimeTravelHours() {
+        return this.maxTimeTravelHours;
+    }
+    /**
      * Reserved for future use.
      * 
      */

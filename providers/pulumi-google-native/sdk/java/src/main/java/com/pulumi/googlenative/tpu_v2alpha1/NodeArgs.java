@@ -26,15 +26,15 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * The type of hardware accelerators associated with this node.
      * 
      */
-    @Import(name="acceleratorType", required=true)
-    private Output<String> acceleratorType;
+    @Import(name="acceleratorType")
+    private @Nullable Output<String> acceleratorType;
 
     /**
      * @return The type of hardware accelerators associated with this node.
      * 
      */
-    public Output<String> acceleratorType() {
-        return this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
     /**
@@ -149,9 +149,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.networkConfig);
     }
 
+    /**
+     * The unqualified resource name.
+     * 
+     */
     @Import(name="nodeId")
     private @Nullable Output<String> nodeId;
 
+    /**
+     * @return The unqualified resource name.
+     * 
+     */
     public Optional<Output<String>> nodeId() {
         return Optional.ofNullable(this.nodeId);
     }
@@ -161,6 +169,21 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
+    }
+
+    /**
+     * Idempotent request UUID.
+     * 
+     */
+    @Import(name="requestId")
+    private @Nullable Output<String> requestId;
+
+    /**
+     * @return Idempotent request UUID.
+     * 
+     */
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -237,6 +260,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         this.networkConfig = $.networkConfig;
         this.nodeId = $.nodeId;
         this.project = $.project;
+        this.requestId = $.requestId;
         this.runtimeVersion = $.runtimeVersion;
         this.schedulingConfig = $.schedulingConfig;
         this.serviceAccount = $.serviceAccount;
@@ -267,7 +291,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder acceleratorType(Output<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
             $.acceleratorType = acceleratorType;
             return this;
         }
@@ -448,11 +472,23 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
             return networkConfig(Output.of(networkConfig));
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(@Nullable Output<String> nodeId) {
             $.nodeId = nodeId;
             return this;
         }
 
+        /**
+         * @param nodeId The unqualified resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeId(String nodeId) {
             return nodeId(Output.of(nodeId));
         }
@@ -464,6 +500,27 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder project(String project) {
             return project(Output.of(project));
+        }
+
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestId(@Nullable Output<String> requestId) {
+            $.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * @param requestId Idempotent request UUID.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
 
         /**
@@ -561,7 +618,6 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public NodeArgs build() {
-            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
             $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
             return $;
         }

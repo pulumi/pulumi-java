@@ -49,9 +49,17 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.callMetadata);
     }
 
+    /**
+     * A unique ID for the new conversation. This ID will become the final component of the conversation&#39;s resource name. If no ID is specified, a server-generated ID will be used. This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`
+     * 
+     */
     @Import(name="conversationId")
     private @Nullable Output<String> conversationId;
 
+    /**
+     * @return A unique ID for the new conversation. This ID will become the final component of the conversation&#39;s resource name. If no ID is specified, a server-generated ID will be used. This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`
+     * 
+     */
     public Optional<Output<String>> conversationId() {
         return Optional.ofNullable(this.conversationId);
     }
@@ -284,11 +292,23 @@ public final class ConversationArgs extends com.pulumi.resources.ResourceArgs {
             return callMetadata(Output.of(callMetadata));
         }
 
+        /**
+         * @param conversationId A unique ID for the new conversation. This ID will become the final component of the conversation&#39;s resource name. If no ID is specified, a server-generated ID will be used. This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationId(@Nullable Output<String> conversationId) {
             $.conversationId = conversationId;
             return this;
         }
 
+        /**
+         * @param conversationId A unique ID for the new conversation. This ID will become the final component of the conversation&#39;s resource name. If no ID is specified, a server-generated ID will be used. This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`
+         * 
+         * @return builder
+         * 
+         */
         public Builder conversationId(String conversationId) {
             return conversationId(Output.of(conversationId));
         }

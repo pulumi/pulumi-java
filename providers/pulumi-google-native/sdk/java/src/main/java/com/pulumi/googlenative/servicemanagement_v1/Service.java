@@ -34,14 +34,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.producerProjectId;
     }
     /**
-     * The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
-     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     public Output<String> serviceName() {

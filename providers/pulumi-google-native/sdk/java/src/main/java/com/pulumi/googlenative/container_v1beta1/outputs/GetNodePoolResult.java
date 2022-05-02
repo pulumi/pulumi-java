@@ -90,6 +90,15 @@ public final class GetNodePoolResult {
      */
     private final String status;
     /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available. */
+    private final String statusMessage;
+    /**
      * @return Upgrade settings control disruption and speed of the upgrade.
      * 
      */
@@ -116,6 +125,7 @@ public final class GetNodePoolResult {
         @CustomType.Parameter("podIpv4CidrSize") Integer podIpv4CidrSize,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
         @CustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings,
         @CustomType.Parameter("version") String version) {
         this.autoscaling = autoscaling;
@@ -132,6 +142,7 @@ public final class GetNodePoolResult {
         this.podIpv4CidrSize = podIpv4CidrSize;
         this.selfLink = selfLink;
         this.status = status;
+        this.statusMessage = statusMessage;
         this.upgradeSettings = upgradeSettings;
         this.version = version;
     }
@@ -235,6 +246,17 @@ public final class GetNodePoolResult {
         return this.status;
     }
     /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available. */
+    public String statusMessage() {
+        return this.statusMessage;
+    }
+    /**
      * @return Upgrade settings control disruption and speed of the upgrade.
      * 
      */
@@ -272,6 +294,7 @@ public final class GetNodePoolResult {
         private Integer podIpv4CidrSize;
         private String selfLink;
         private String status;
+        private String statusMessage;
         private UpgradeSettingsResponse upgradeSettings;
         private String version;
 
@@ -295,6 +318,7 @@ public final class GetNodePoolResult {
     	      this.podIpv4CidrSize = defaults.podIpv4CidrSize;
     	      this.selfLink = defaults.selfLink;
     	      this.status = defaults.status;
+    	      this.statusMessage = defaults.statusMessage;
     	      this.upgradeSettings = defaults.upgradeSettings;
     	      this.version = defaults.version;
         }
@@ -364,6 +388,10 @@ public final class GetNodePoolResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
+        public Builder statusMessage(String statusMessage) {
+            this.statusMessage = Objects.requireNonNull(statusMessage);
+            return this;
+        }
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
@@ -372,7 +400,7 @@ public final class GetNodePoolResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public GetNodePoolResult build() {
-            return new GetNodePoolResult(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
+            return new GetNodePoolResult(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, statusMessage, upgradeSettings, version);
         }
     }
 }

@@ -76,9 +76,17 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. User-defined unique ID of this schedule.
+     * 
+     */
     @Import(name="scheduleId", required=true)
     private Output<String> scheduleId;
 
+    /**
+     * @return Required. User-defined unique ID of this schedule.
+     * 
+     */
     public Output<String> scheduleId() {
         return this.scheduleId;
     }
@@ -217,11 +225,23 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param scheduleId Required. User-defined unique ID of this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleId(Output<String> scheduleId) {
             $.scheduleId = scheduleId;
             return this;
         }
 
+        /**
+         * @param scheduleId Required. User-defined unique ID of this schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleId(String scheduleId) {
             return scheduleId(Output.of(scheduleId));
         }

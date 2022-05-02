@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.TrafficPercentStrategyArgs;
 import java.lang.String;
@@ -31,6 +30,21 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
+    }
+
+    /**
+     * The user who created the Rollout. Readonly.
+     * 
+     */
+    @Import(name="createdBy")
+    private @Nullable Output<String> createdBy;
+
+    /**
+     * @return The user who created the Rollout. Readonly.
+     * 
+     */
+    public Optional<Output<String>> createdBy() {
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -79,21 +93,6 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<RolloutStatus> status;
-
-    /**
-     * @return The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-     * 
-     */
-    public Optional<Output<RolloutStatus>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
-    /**
      * Google Service Control selects service configurations based on traffic percentage.
      * 
      */
@@ -112,10 +111,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
 
     private RolloutArgs(RolloutArgs $) {
         this.createTime = $.createTime;
+        this.createdBy = $.createdBy;
         this.deleteServiceStrategy = $.deleteServiceStrategy;
         this.rolloutId = $.rolloutId;
         this.serviceName = $.serviceName;
-        this.status = $.status;
         this.trafficPercentStrategy = $.trafficPercentStrategy;
     }
 
@@ -156,6 +155,27 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
+        }
+
+        /**
+         * @param createdBy The user who created the Rollout. Readonly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createdBy(@Nullable Output<String> createdBy) {
+            $.createdBy = createdBy;
+            return this;
+        }
+
+        /**
+         * @param createdBy The user who created the Rollout. Readonly.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createdBy(String createdBy) {
+            return createdBy(Output.of(createdBy));
         }
 
         /**
@@ -219,27 +239,6 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
-        }
-
-        /**
-         * @param status The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<RolloutStatus> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(RolloutStatus status) {
-            return status(Output.of(status));
         }
 
         /**

@@ -12,6 +12,15 @@ import java.util.Objects;
 @CustomType
 public final class GetLicenseResult {
     /**
+     * @return Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     * @deprecated
+     * [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     */
+    @Deprecated /* [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee. */
+    private final Boolean chargesUseFee;
+    /**
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
@@ -55,6 +64,7 @@ public final class GetLicenseResult {
 
     @CustomType.Constructor
     private GetLicenseResult(
+        @CustomType.Parameter("chargesUseFee") Boolean chargesUseFee,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("kind") String kind,
@@ -64,6 +74,7 @@ public final class GetLicenseResult {
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
         @CustomType.Parameter("transferable") Boolean transferable) {
+        this.chargesUseFee = chargesUseFee;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;
@@ -75,6 +86,17 @@ public final class GetLicenseResult {
         this.transferable = transferable;
     }
 
+    /**
+     * @return Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     * @deprecated
+     * [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     */
+    @Deprecated /* [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee. */
+    public Boolean chargesUseFee() {
+        return this.chargesUseFee;
+    }
     /**
      * @return Creation timestamp in RFC3339 text format.
      * 
@@ -144,6 +166,7 @@ public final class GetLicenseResult {
     }
 
     public static final class Builder {
+        private Boolean chargesUseFee;
         private String creationTimestamp;
         private String description;
         private String kind;
@@ -160,6 +183,7 @@ public final class GetLicenseResult {
 
         public Builder(GetLicenseResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.chargesUseFee = defaults.chargesUseFee;
     	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.description = defaults.description;
     	      this.kind = defaults.kind;
@@ -171,6 +195,10 @@ public final class GetLicenseResult {
     	      this.transferable = defaults.transferable;
         }
 
+        public Builder chargesUseFee(Boolean chargesUseFee) {
+            this.chargesUseFee = Objects.requireNonNull(chargesUseFee);
+            return this;
+        }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
@@ -207,7 +235,7 @@ public final class GetLicenseResult {
             this.transferable = Objects.requireNonNull(transferable);
             return this;
         }        public GetLicenseResult build() {
-            return new GetLicenseResult(creationTimestamp, description, kind, licenseCode, name, resourceRequirements, selfLink, selfLinkWithId, transferable);
+            return new GetLicenseResult(chargesUseFee, creationTimestamp, description, kind, licenseCode, name, resourceRequirements, selfLink, selfLinkWithId, transferable);
         }
     }
 }

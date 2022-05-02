@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class OutputResponse {
     /**
-     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
      * 
      */
     private final String uri;
@@ -21,7 +21,7 @@ public final class OutputResponse {
     }
 
     /**
-     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+     * @return URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty, the value is populated from `Job.output_uri`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
      * 
      */
     public String uri() {

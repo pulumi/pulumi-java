@@ -11,6 +11,7 @@ import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1Big
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BusinessContextArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1DatabaseTableSpecArgs;
+import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1FilesetSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1GcsFilesetSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1RoutineSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1SchemaArgs;
@@ -57,14 +58,14 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Business Context of the entry.
+     * Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     @Import(name="businessContext")
     private @Nullable Output<GoogleCloudDatacatalogV1BusinessContextArgs> businessContext;
 
     /**
-     * @return Business Context of the entry.
+     * @return Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     public Optional<Output<GoogleCloudDatacatalogV1BusinessContextArgs>> businessContext() {
@@ -138,11 +139,34 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
         return this.entryGroupId;
     }
 
+    /**
+     * Required. The ID of the entry to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores (_). The maximum size is 64 bytes when encoded in UTF-8.
+     * 
+     */
     @Import(name="entryId", required=true)
     private Output<String> entryId;
 
+    /**
+     * @return Required. The ID of the entry to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores (_). The maximum size is 64 bytes when encoded in UTF-8.
+     * 
+     */
     public Output<String> entryId() {
         return this.entryId;
+    }
+
+    /**
+     * Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    @Import(name="filesetSpec")
+    private @Nullable Output<GoogleCloudDatacatalogV1FilesetSpecArgs> filesetSpec;
+
+    /**
+     * @return Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    public Optional<Output<GoogleCloudDatacatalogV1FilesetSpecArgs>> filesetSpec() {
+        return Optional.ofNullable(this.filesetSpec);
     }
 
     /**
@@ -321,6 +345,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
         this.displayName = $.displayName;
         this.entryGroupId = $.entryGroupId;
         this.entryId = $.entryId;
+        this.filesetSpec = $.filesetSpec;
         this.fullyQualifiedName = $.fullyQualifiedName;
         this.gcsFilesetSpec = $.gcsFilesetSpec;
         this.labels = $.labels;
@@ -396,7 +421,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param businessContext Business Context of the entry.
+         * @param businessContext Business Context of the entry. Not supported for BigQuery datasets
          * 
          * @return builder
          * 
@@ -407,7 +432,7 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param businessContext Business Context of the entry.
+         * @param businessContext Business Context of the entry. Not supported for BigQuery datasets
          * 
          * @return builder
          * 
@@ -509,13 +534,46 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
             return entryGroupId(Output.of(entryGroupId));
         }
 
+        /**
+         * @param entryId Required. The ID of the entry to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores (_). The maximum size is 64 bytes when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryId(Output<String> entryId) {
             $.entryId = entryId;
             return this;
         }
 
+        /**
+         * @param entryId Required. The ID of the entry to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores (_). The maximum size is 64 bytes when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryId(String entryId) {
             return entryId(Output.of(entryId));
+        }
+
+        /**
+         * @param filesetSpec Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filesetSpec(@Nullable Output<GoogleCloudDatacatalogV1FilesetSpecArgs> filesetSpec) {
+            $.filesetSpec = filesetSpec;
+            return this;
+        }
+
+        /**
+         * @param filesetSpec Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filesetSpec(GoogleCloudDatacatalogV1FilesetSpecArgs filesetSpec) {
+            return filesetSpec(Output.of(filesetSpec));
         }
 
         /**

@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.orgpolicy_v2.FolderPolicyArgs;
+import com.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2AlternatePolicySpecResponse;
 import com.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -20,6 +21,24 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:orgpolicy/v2:FolderPolicy")
 public class FolderPolicy extends com.pulumi.resources.CustomResource {
+    /**
+     * Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    @Export(name="alternate", type=GoogleCloudOrgpolicyV2AlternatePolicySpecResponse.class, parameters={})
+    private Output<GoogleCloudOrgpolicyV2AlternatePolicySpecResponse> alternate;
+
+    /**
+     * @return Deprecated.
+     * 
+     */
+    public Output<GoogleCloudOrgpolicyV2AlternatePolicySpecResponse> alternate() {
+        return this.alternate;
+    }
     /**
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 

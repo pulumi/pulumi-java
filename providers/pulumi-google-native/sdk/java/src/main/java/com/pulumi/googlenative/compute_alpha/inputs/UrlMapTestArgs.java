@@ -83,6 +83,29 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     * @deprecated
+     * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     */
+    @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+    @Import(name="expectedUrlRedirect")
+    private @Nullable Output<String> expectedUrlRedirect;
+
+    /**
+     * @return The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     * @deprecated
+     * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+     * 
+     */
+    @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+    public Optional<Output<String>> expectedUrlRedirect() {
+        return Optional.ofNullable(this.expectedUrlRedirect);
+    }
+
+    /**
      * HTTP headers for this request. If headers contains a host header, then host must also match the header value.
      * 
      */
@@ -149,6 +172,7 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.expectedOutputUrl = $.expectedOutputUrl;
         this.expectedRedirectResponseCode = $.expectedRedirectResponseCode;
+        this.expectedUrlRedirect = $.expectedUrlRedirect;
         this.headers = $.headers;
         this.host = $.host;
         this.path = $.path;
@@ -255,6 +279,35 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder expectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
             return expectedRedirectResponseCode(Output.of(expectedRedirectResponseCode));
+        }
+
+        /**
+         * @param expectedUrlRedirect The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+         * 
+         */
+        @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+        public Builder expectedUrlRedirect(@Nullable Output<String> expectedUrlRedirect) {
+            $.expectedUrlRedirect = expectedUrlRedirect;
+            return this;
+        }
+
+        /**
+         * @param expectedUrlRedirect The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead.
+         * 
+         */
+        @Deprecated /* The expected URL that should be redirected to for the host and path being tested. [Deprecated] This field is deprecated. Use expected_output_url instead. */
+        public Builder expectedUrlRedirect(String expectedUrlRedirect) {
+            return expectedUrlRedirect(Output.of(expectedUrlRedirect));
         }
 
         /**

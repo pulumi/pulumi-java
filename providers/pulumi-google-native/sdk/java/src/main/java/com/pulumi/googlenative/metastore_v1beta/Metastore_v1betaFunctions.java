@@ -11,10 +11,14 @@ import com.pulumi.googlenative.metastore_v1beta.inputs.GetBackupArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.GetMetadataImportArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.GetServiceArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.GetServiceBackupIamPolicyArgs;
+import com.pulumi.googlenative.metastore_v1beta.inputs.GetServiceDatabaseIamPolicyArgs;
+import com.pulumi.googlenative.metastore_v1beta.inputs.GetServiceDatabaseTableIamPolicyArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.GetServiceIamPolicyArgs;
 import com.pulumi.googlenative.metastore_v1beta.outputs.GetBackupResult;
 import com.pulumi.googlenative.metastore_v1beta.outputs.GetMetadataImportResult;
 import com.pulumi.googlenative.metastore_v1beta.outputs.GetServiceBackupIamPolicyResult;
+import com.pulumi.googlenative.metastore_v1beta.outputs.GetServiceDatabaseIamPolicyResult;
+import com.pulumi.googlenative.metastore_v1beta.outputs.GetServiceDatabaseTableIamPolicyResult;
 import com.pulumi.googlenative.metastore_v1beta.outputs.GetServiceIamPolicyResult;
 import com.pulumi.googlenative.metastore_v1beta.outputs.GetServiceResult;
 import java.util.concurrent.CompletableFuture;
@@ -59,6 +63,26 @@ public final class Metastore_v1betaFunctions {
     }
     public static CompletableFuture<GetServiceBackupIamPolicyResult> getServiceBackupIamPolicy(GetServiceBackupIamPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:metastore/v1beta:getServiceBackupIamPolicy", TypeShape.of(GetServiceBackupIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetServiceDatabaseIamPolicyResult> getServiceDatabaseIamPolicy(GetServiceDatabaseIamPolicyArgs args) {
+        return getServiceDatabaseIamPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetServiceDatabaseIamPolicyResult> getServiceDatabaseIamPolicy(GetServiceDatabaseIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:metastore/v1beta:getServiceDatabaseIamPolicy", TypeShape.of(GetServiceDatabaseIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
+    public static CompletableFuture<GetServiceDatabaseTableIamPolicyResult> getServiceDatabaseTableIamPolicy(GetServiceDatabaseTableIamPolicyArgs args) {
+        return getServiceDatabaseTableIamPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetServiceDatabaseTableIamPolicyResult> getServiceDatabaseTableIamPolicy(GetServiceDatabaseTableIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:metastore/v1beta:getServiceDatabaseTableIamPolicy", TypeShape.of(GetServiceDatabaseTableIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.

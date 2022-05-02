@@ -30,7 +30,6 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new `Occurrence`. Use this method to create `Occurrences` for a resource.
- * Auto-naming is currently not supported for this resource.
  * 
  */
 @ResourceType(type="google-native:containeranalysis/v1alpha1:Occurrence")

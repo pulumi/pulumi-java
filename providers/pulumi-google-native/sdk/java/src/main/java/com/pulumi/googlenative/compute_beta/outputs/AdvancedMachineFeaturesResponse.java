@@ -25,15 +25,22 @@ public final class AdvancedMachineFeaturesResponse {
      * 
      */
     private final Integer threadsPerCore;
+    /**
+     * @return The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+     * 
+     */
+    private final Integer visibleCoreCount;
 
     @CustomType.Constructor
     private AdvancedMachineFeaturesResponse(
         @CustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
         @CustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
-        @CustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
+        @CustomType.Parameter("threadsPerCore") Integer threadsPerCore,
+        @CustomType.Parameter("visibleCoreCount") Integer visibleCoreCount) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.threadsPerCore = threadsPerCore;
+        this.visibleCoreCount = visibleCoreCount;
     }
 
     /**
@@ -57,6 +64,13 @@ public final class AdvancedMachineFeaturesResponse {
     public Integer threadsPerCore() {
         return this.threadsPerCore;
     }
+    /**
+     * @return The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+     * 
+     */
+    public Integer visibleCoreCount() {
+        return this.visibleCoreCount;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -70,6 +84,7 @@ public final class AdvancedMachineFeaturesResponse {
         private Boolean enableNestedVirtualization;
         private Boolean enableUefiNetworking;
         private Integer threadsPerCore;
+        private Integer visibleCoreCount;
 
         public Builder() {
     	      // Empty
@@ -80,6 +95,7 @@ public final class AdvancedMachineFeaturesResponse {
     	      this.enableNestedVirtualization = defaults.enableNestedVirtualization;
     	      this.enableUefiNetworking = defaults.enableUefiNetworking;
     	      this.threadsPerCore = defaults.threadsPerCore;
+    	      this.visibleCoreCount = defaults.visibleCoreCount;
         }
 
         public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
@@ -93,8 +109,12 @@ public final class AdvancedMachineFeaturesResponse {
         public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
+        }
+        public Builder visibleCoreCount(Integer visibleCoreCount) {
+            this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
+            return this;
         }        public AdvancedMachineFeaturesResponse build() {
-            return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);
+            return new AdvancedMachineFeaturesResponse(enableNestedVirtualization, enableUefiNetworking, threadsPerCore, visibleCoreCount);
         }
     }
 }

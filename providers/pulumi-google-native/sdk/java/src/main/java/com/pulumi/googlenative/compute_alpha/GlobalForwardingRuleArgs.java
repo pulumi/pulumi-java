@@ -251,6 +251,21 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+     * 
+     */
+    @Import(name="noAutomateDnsZone")
+    private @Nullable Output<Boolean> noAutomateDnsZone;
+
+    /**
+     * @return This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+     * 
+     */
+    public Optional<Output<Boolean>> noAutomateDnsZone() {
+        return Optional.ofNullable(this.noAutomateDnsZone);
+    }
+
+    /**
      * This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?
      * 
      */
@@ -294,9 +309,17 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
         return Optional.ofNullable(this.pscConnectionStatus);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -386,6 +409,7 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
         this.name = $.name;
         this.network = $.network;
         this.networkTier = $.networkTier;
+        this.noAutomateDnsZone = $.noAutomateDnsZone;
         this.portRange = $.portRange;
         this.ports = $.ports;
         this.project = $.project;
@@ -742,6 +766,27 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
         }
 
         /**
+         * @param noAutomateDnsZone This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder noAutomateDnsZone(@Nullable Output<Boolean> noAutomateDnsZone) {
+            $.noAutomateDnsZone = noAutomateDnsZone;
+            return this;
+        }
+
+        /**
+         * @param noAutomateDnsZone This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder noAutomateDnsZone(Boolean noAutomateDnsZone) {
+            return noAutomateDnsZone(Output.of(noAutomateDnsZone));
+        }
+
+        /**
          * @param portRange This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?
          * 
          * @return builder
@@ -811,11 +856,23 @@ public final class GlobalForwardingRuleArgs extends com.pulumi.resources.Resourc
             return pscConnectionStatus(Output.of(pscConnectionStatus));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

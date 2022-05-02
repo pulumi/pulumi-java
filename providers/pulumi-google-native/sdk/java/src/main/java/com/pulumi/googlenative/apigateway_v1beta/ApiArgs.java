@@ -16,9 +16,17 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
+    /**
+     * Required. Identifier to assign to the API. Must be unique within scope of the parent resource.
+     * 
+     */
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return Required. Identifier to assign to the API. Must be unique within scope of the parent resource.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -111,11 +119,23 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId Required. Identifier to assign to the API. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId Required. Identifier to assign to the API. Must be unique within scope of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }

@@ -25,7 +25,7 @@ public final class GetInterconnectAttachmentResult {
      */
     private final String bandwidth;
     /**
-     * @return Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * @return This field is not available.
      * 
      */
     private final List<String> candidateIpv6Subnets;
@@ -45,7 +45,7 @@ public final class GetInterconnectAttachmentResult {
      */
     private final String cloudRouterIpv6Address;
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     private final String cloudRouterIpv6InterfaceId;
@@ -65,12 +65,12 @@ public final class GetInterconnectAttachmentResult {
      */
     private final String customerRouterIpv6Address;
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     private final String customerRouterIpv6InterfaceId;
     /**
-     * @return [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
+     * @return Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
      * 
      */
     private final Integer dataplaneVersion;
@@ -89,6 +89,15 @@ public final class GetInterconnectAttachmentResult {
      * 
      */
     private final String encryption;
+    /**
+     * @return Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     * @deprecated
+     * [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     */
+    @Deprecated /* [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used. */
+    private final String googleReferenceId;
     /**
      * @return URL of the underlying Interconnect object that this attachment&#39;s traffic will traverse through.
      * 
@@ -197,6 +206,7 @@ public final class GetInterconnectAttachmentResult {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("edgeAvailabilityDomain") String edgeAvailabilityDomain,
         @CustomType.Parameter("encryption") String encryption,
+        @CustomType.Parameter("googleReferenceId") String googleReferenceId,
         @CustomType.Parameter("interconnect") String interconnect,
         @CustomType.Parameter("ipsecInternalAddresses") List<String> ipsecInternalAddresses,
         @CustomType.Parameter("kind") String kind,
@@ -230,6 +240,7 @@ public final class GetInterconnectAttachmentResult {
         this.description = description;
         this.edgeAvailabilityDomain = edgeAvailabilityDomain;
         this.encryption = encryption;
+        this.googleReferenceId = googleReferenceId;
         this.interconnect = interconnect;
         this.ipsecInternalAddresses = ipsecInternalAddresses;
         this.kind = kind;
@@ -265,7 +276,7 @@ public final class GetInterconnectAttachmentResult {
         return this.bandwidth;
     }
     /**
-     * @return Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * @return This field is not available.
      * 
      */
     public List<String> candidateIpv6Subnets() {
@@ -293,7 +304,7 @@ public final class GetInterconnectAttachmentResult {
         return this.cloudRouterIpv6Address;
     }
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public String cloudRouterIpv6InterfaceId() {
@@ -321,14 +332,14 @@ public final class GetInterconnectAttachmentResult {
         return this.customerRouterIpv6Address;
     }
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public String customerRouterIpv6InterfaceId() {
         return this.customerRouterIpv6InterfaceId;
     }
     /**
-     * @return [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
+     * @return Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
      * 
      */
     public Integer dataplaneVersion() {
@@ -354,6 +365,17 @@ public final class GetInterconnectAttachmentResult {
      */
     public String encryption() {
         return this.encryption;
+    }
+    /**
+     * @return Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     * @deprecated
+     * [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+     * 
+     */
+    @Deprecated /* [Output Only] Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used. */
+    public String googleReferenceId() {
+        return this.googleReferenceId;
     }
     /**
      * @return URL of the underlying Interconnect object that this attachment&#39;s traffic will traverse through.
@@ -506,6 +528,7 @@ public final class GetInterconnectAttachmentResult {
         private String description;
         private String edgeAvailabilityDomain;
         private String encryption;
+        private String googleReferenceId;
         private String interconnect;
         private List<String> ipsecInternalAddresses;
         private String kind;
@@ -546,6 +569,7 @@ public final class GetInterconnectAttachmentResult {
     	      this.description = defaults.description;
     	      this.edgeAvailabilityDomain = defaults.edgeAvailabilityDomain;
     	      this.encryption = defaults.encryption;
+    	      this.googleReferenceId = defaults.googleReferenceId;
     	      this.interconnect = defaults.interconnect;
     	      this.ipsecInternalAddresses = defaults.ipsecInternalAddresses;
     	      this.kind = defaults.kind;
@@ -632,6 +656,10 @@ public final class GetInterconnectAttachmentResult {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
+        public Builder googleReferenceId(String googleReferenceId) {
+            this.googleReferenceId = Objects.requireNonNull(googleReferenceId);
+            return this;
+        }
         public Builder interconnect(String interconnect) {
             this.interconnect = Objects.requireNonNull(interconnect);
             return this;
@@ -707,7 +735,7 @@ public final class GetInterconnectAttachmentResult {
             this.vlanTag8021q = Objects.requireNonNull(vlanTag8021q);
             return this;
         }        public GetInterconnectAttachmentResult build() {
-            return new GetInterconnectAttachmentResult(adminEnabled, bandwidth, candidateIpv6Subnets, candidateSubnets, cloudRouterIpAddress, cloudRouterIpv6Address, cloudRouterIpv6InterfaceId, creationTimestamp, customerRouterIpAddress, customerRouterIpv6Address, customerRouterIpv6InterfaceId, dataplaneVersion, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, kind, mtu, name, operationalStatus, pairingKey, partnerAsn, partnerMetadata, privateInterconnectInfo, region, router, satisfiesPzs, selfLink, stackType, state, type, vlanTag8021q);
+            return new GetInterconnectAttachmentResult(adminEnabled, bandwidth, candidateIpv6Subnets, candidateSubnets, cloudRouterIpAddress, cloudRouterIpv6Address, cloudRouterIpv6InterfaceId, creationTimestamp, customerRouterIpAddress, customerRouterIpv6Address, customerRouterIpv6InterfaceId, dataplaneVersion, description, edgeAvailabilityDomain, encryption, googleReferenceId, interconnect, ipsecInternalAddresses, kind, mtu, name, operationalStatus, pairingKey, partnerAsn, partnerMetadata, privateInterconnectInfo, region, router, satisfiesPzs, selfLink, stackType, state, type, vlanTag8021q);
         }
     }
 }

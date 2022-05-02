@@ -30,7 +30,7 @@ public final class EnvironmentConfigResponse {
      */
     private final String dagGcsPrefix;
     /**
-     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
      * 
      */
     private final DatabaseConfigResponse databaseConfig;
@@ -137,7 +137,7 @@ public final class EnvironmentConfigResponse {
         return this.dagGcsPrefix;
     }
     /**
-     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     * @return Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
      * 
      */
     public DatabaseConfigResponse databaseConfig() {

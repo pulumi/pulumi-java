@@ -92,9 +92,17 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.retentionConfig);
     }
 
+    /**
+     * Required. The ID to use for the topic, which will become the final component of the topic&#39;s name. This value is structured like: `my-topic-name`.
+     * 
+     */
     @Import(name="topicId", required=true)
     private Output<String> topicId;
 
+    /**
+     * @return Required. The ID to use for the topic, which will become the final component of the topic&#39;s name. This value is structured like: `my-topic-name`.
+     * 
+     */
     public Output<String> topicId() {
         return this.topicId;
     }
@@ -231,11 +239,23 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             return retentionConfig(Output.of(retentionConfig));
         }
 
+        /**
+         * @param topicId Required. The ID to use for the topic, which will become the final component of the topic&#39;s name. This value is structured like: `my-topic-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicId(Output<String> topicId) {
             $.topicId = topicId;
             return this;
         }
 
+        /**
+         * @param topicId Required. The ID to use for the topic, which will become the final component of the topic&#39;s name. This value is structured like: `my-topic-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicId(String topicId) {
             return topicId(Output.of(topicId));
         }

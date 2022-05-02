@@ -19,9 +19,17 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 
+    /**
+     * Required. The ID of the game server config resource to create.
+     * 
+     */
     @Import(name="configId", required=true)
     private Output<String> configId;
 
+    /**
+     * @return Required. The ID of the game server config resource to create.
+     * 
+     */
     public Output<String> configId() {
         return this.configId;
     }
@@ -86,14 +94,14 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+     * The resource name of the game server config, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/configs/{configId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+     * @return The resource name of the game server config, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/configs/{configId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
     public Optional<Output<String>> name() {
@@ -154,11 +162,23 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configId Required. The ID of the game server config resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId Required. The ID of the game server config resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }
@@ -255,7 +275,7 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/configs/{configId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
          * 
          * @return builder
          * 
@@ -266,7 +286,7 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
+         * @param name The resource name of the game server config, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}/configs/{configId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
          * 
          * @return builder
          * 

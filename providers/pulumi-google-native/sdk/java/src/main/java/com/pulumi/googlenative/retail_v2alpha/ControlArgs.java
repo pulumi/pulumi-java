@@ -26,9 +26,17 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
         return this.catalogId;
     }
 
+    /**
+     * Required. The ID to use for the Control, which will become the final component of the Control&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+     * 
+     */
     @Import(name="controlId", required=true)
     private Output<String> controlId;
 
+    /**
+     * @return Required. The ID to use for the Control, which will become the final component of the Control&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+     * 
+     */
     public Output<String> controlId() {
         return this.controlId;
     }
@@ -108,14 +116,14 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+     * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment. If no solution type is provided at creation time, will default to SOLUTION_TYPE_SEARCH.
      * 
      */
     @Import(name="solutionTypes", required=true)
     private Output<List<ControlSolutionTypesItem>> solutionTypes;
 
     /**
-     * @return Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+     * @return Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment. If no solution type is provided at creation time, will default to SOLUTION_TYPE_SEARCH.
      * 
      */
     public Output<List<ControlSolutionTypesItem>> solutionTypes() {
@@ -163,11 +171,23 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
             return catalogId(Output.of(catalogId));
         }
 
+        /**
+         * @param controlId Required. The ID to use for the Control, which will become the final component of the Control&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlId(Output<String> controlId) {
             $.controlId = controlId;
             return this;
         }
 
+        /**
+         * @param controlId Required. The ID to use for the Control, which will become the final component of the Control&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlId(String controlId) {
             return controlId(Output.of(controlId));
         }
@@ -275,7 +295,7 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment. If no solution type is provided at creation time, will default to SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -286,7 +306,7 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment. If no solution type is provided at creation time, will default to SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -296,7 +316,7 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
+         * @param solutionTypes Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment. If no solution type is provided at creation time, will default to SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
