@@ -34,7 +34,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends com.
 
     /**
      * The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
      * 
      */
     @Import(name="networkTier")
@@ -42,7 +42,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends com.
 
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
      * 
      */
     public Optional<Output<String>> networkTier() {
@@ -107,7 +107,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends com.
 
         /**
          * @param networkTier The service-level to be provided for IPv6 traffic when the
-         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfigArgs extends com.
 
         /**
          * @param networkTier The service-level to be provided for IPv6 traffic when the
-         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
          * 
          * @return builder
          * 

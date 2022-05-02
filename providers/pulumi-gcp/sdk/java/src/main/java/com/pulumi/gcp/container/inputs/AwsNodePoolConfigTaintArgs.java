@@ -14,14 +14,14 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     public static final AwsNodePoolConfigTaintArgs Empty = new AwsNodePoolConfigTaintArgs();
 
     /**
-     * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+     * The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
      */
     @Import(name="effect", required=true)
     private Output<String> effect;
 
     /**
-     * @return Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+     * @return The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
      */
     public Output<String> effect() {
@@ -29,14 +29,14 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. Key for the taint.
+     * Key for the taint.
      * 
      */
     @Import(name="key", required=true)
     private Output<String> key;
 
     /**
-     * @return Required. Key for the taint.
+     * @return Key for the taint.
      * 
      */
     public Output<String> key() {
@@ -44,14 +44,14 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Required. Value for the taint.
+     * Value for the taint.
      * 
      */
     @Import(name="value", required=true)
     private Output<String> value;
 
     /**
-     * @return Required. Value for the taint.
+     * @return Value for the taint.
      * 
      */
     public Output<String> value() {
@@ -85,7 +85,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param effect Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+         * @param effect The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param effect Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
+         * @param effect The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
          * 
          * @return builder
          * 
@@ -106,7 +106,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param key Required. Key for the taint.
+         * @param key Key for the taint.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param key Required. Key for the taint.
+         * @param key Key for the taint.
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param value Required. Value for the taint.
+         * @param value Value for the taint.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class AwsNodePoolConfigTaintArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param value Required. Value for the taint.
+         * @param value Value for the taint.
          * 
          * @return builder
          * 

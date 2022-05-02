@@ -11,11 +11,14 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.cloudfunctions.FunctionArgs;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionState;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionEventTrigger;
+import com.pulumi.gcp.cloudfunctions.outputs.FunctionSecretEnvironmentVariable;
+import com.pulumi.gcp.cloudfunctions.outputs.FunctionSecretVolume;
 import com.pulumi.gcp.cloudfunctions.outputs.FunctionSourceRepository;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -261,6 +264,34 @@ public class Function extends com.pulumi.resources.CustomResource {
      */
     public Output<String> runtime() {
         return this.runtime;
+    }
+    /**
+     * Secret environment variables configuration. Structure is documented below.
+     * 
+     */
+    @Export(name="secretEnvironmentVariables", type=List.class, parameters={FunctionSecretEnvironmentVariable.class})
+    private Output</* @Nullable */ List<FunctionSecretEnvironmentVariable>> secretEnvironmentVariables;
+
+    /**
+     * @return Secret environment variables configuration. Structure is documented below.
+     * 
+     */
+    public Output<Optional<List<FunctionSecretEnvironmentVariable>>> secretEnvironmentVariables() {
+        return Codegen.optional(this.secretEnvironmentVariables);
+    }
+    /**
+     * Secret volumes configuration. Structure is documented below.
+     * 
+     */
+    @Export(name="secretVolumes", type=List.class, parameters={FunctionSecretVolume.class})
+    private Output</* @Nullable */ List<FunctionSecretVolume>> secretVolumes;
+
+    /**
+     * @return Secret volumes configuration. Structure is documented below.
+     * 
+     */
+    public Output<Optional<List<FunctionSecretVolume>>> secretVolumes() {
+        return Codegen.optional(this.secretVolumes);
     }
     /**
      * If provided, the self-provided service account to run the function with.

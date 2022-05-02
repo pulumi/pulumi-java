@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigEphemeralStorageConfig;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigGcfsConfig;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigGuestAccelerator;
+import com.pulumi.gcp.container.outputs.GetClusterNodeConfigGvnic;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigKubeletConfig;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigLinuxNodeConfig;
 import com.pulumi.gcp.container.outputs.GetClusterNodeConfigSandboxConfig;
@@ -28,6 +29,7 @@ public final class GetClusterNodeConfig {
     private final List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
     private final List<GetClusterNodeConfigGcfsConfig> gcfsConfigs;
     private final List<GetClusterNodeConfigGuestAccelerator> guestAccelerators;
+    private final List<GetClusterNodeConfigGvnic> gvnics;
     private final String imageType;
     private final List<GetClusterNodeConfigKubeletConfig> kubeletConfigs;
     private final Map<String,String> labels;
@@ -55,6 +57,7 @@ public final class GetClusterNodeConfig {
         @CustomType.Parameter("ephemeralStorageConfigs") List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs,
         @CustomType.Parameter("gcfsConfigs") List<GetClusterNodeConfigGcfsConfig> gcfsConfigs,
         @CustomType.Parameter("guestAccelerators") List<GetClusterNodeConfigGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("gvnics") List<GetClusterNodeConfigGvnic> gvnics,
         @CustomType.Parameter("imageType") String imageType,
         @CustomType.Parameter("kubeletConfigs") List<GetClusterNodeConfigKubeletConfig> kubeletConfigs,
         @CustomType.Parameter("labels") Map<String,String> labels,
@@ -79,6 +82,7 @@ public final class GetClusterNodeConfig {
         this.ephemeralStorageConfigs = ephemeralStorageConfigs;
         this.gcfsConfigs = gcfsConfigs;
         this.guestAccelerators = guestAccelerators;
+        this.gvnics = gvnics;
         this.imageType = imageType;
         this.kubeletConfigs = kubeletConfigs;
         this.labels = labels;
@@ -116,6 +120,9 @@ public final class GetClusterNodeConfig {
     }
     public List<GetClusterNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
+    }
+    public List<GetClusterNodeConfigGvnic> gvnics() {
+        return this.gvnics;
     }
     public String imageType() {
         return this.imageType;
@@ -187,6 +194,7 @@ public final class GetClusterNodeConfig {
         private List<GetClusterNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
         private List<GetClusterNodeConfigGcfsConfig> gcfsConfigs;
         private List<GetClusterNodeConfigGuestAccelerator> guestAccelerators;
+        private List<GetClusterNodeConfigGvnic> gvnics;
         private String imageType;
         private List<GetClusterNodeConfigKubeletConfig> kubeletConfigs;
         private Map<String,String> labels;
@@ -218,6 +226,7 @@ public final class GetClusterNodeConfig {
     	      this.ephemeralStorageConfigs = defaults.ephemeralStorageConfigs;
     	      this.gcfsConfigs = defaults.gcfsConfigs;
     	      this.guestAccelerators = defaults.guestAccelerators;
+    	      this.gvnics = defaults.gvnics;
     	      this.imageType = defaults.imageType;
     	      this.kubeletConfigs = defaults.kubeletConfigs;
     	      this.labels = defaults.labels;
@@ -270,6 +279,13 @@ public final class GetClusterNodeConfig {
         }
         public Builder guestAccelerators(GetClusterNodeConfigGuestAccelerator... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+        public Builder gvnics(List<GetClusterNodeConfigGvnic> gvnics) {
+            this.gvnics = Objects.requireNonNull(gvnics);
+            return this;
+        }
+        public Builder gvnics(GetClusterNodeConfigGvnic... gvnics) {
+            return gvnics(List.of(gvnics));
         }
         public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
@@ -367,7 +383,7 @@ public final class GetClusterNodeConfig {
         public Builder workloadMetadataConfigs(GetClusterNodeConfigWorkloadMetadataConfig... workloadMetadataConfigs) {
             return workloadMetadataConfigs(List.of(workloadMetadataConfigs));
         }        public GetClusterNodeConfig build() {
-            return new GetClusterNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
+            return new GetClusterNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, gvnics, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
         }
     }
 }

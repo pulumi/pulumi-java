@@ -20,6 +20,7 @@ public final class InstanceFromMachineImageScheduling {
     private final @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities;
     private final @Nullable String onHostMaintenance;
     private final @Nullable Boolean preemptible;
+    private final @Nullable String provisioningModel;
 
     @CustomType.Constructor
     private InstanceFromMachineImageScheduling(
@@ -27,12 +28,14 @@ public final class InstanceFromMachineImageScheduling {
         @CustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
         @CustomType.Parameter("nodeAffinities") @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities,
         @CustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
-        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
+        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @CustomType.Parameter("provisioningModel") @Nullable String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;
         this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     public Optional<Boolean> automaticRestart() {
@@ -50,6 +53,9 @@ public final class InstanceFromMachineImageScheduling {
     public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
+    public Optional<String> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -65,6 +71,7 @@ public final class InstanceFromMachineImageScheduling {
         private @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities;
         private @Nullable String onHostMaintenance;
         private @Nullable Boolean preemptible;
+        private @Nullable String provisioningModel;
 
         public Builder() {
     	      // Empty
@@ -77,6 +84,7 @@ public final class InstanceFromMachineImageScheduling {
     	      this.nodeAffinities = defaults.nodeAffinities;
     	      this.onHostMaintenance = defaults.onHostMaintenance;
     	      this.preemptible = defaults.preemptible;
+    	      this.provisioningModel = defaults.provisioningModel;
         }
 
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
@@ -101,8 +109,12 @@ public final class InstanceFromMachineImageScheduling {
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
+        }
+        public Builder provisioningModel(@Nullable String provisioningModel) {
+            this.provisioningModel = provisioningModel;
+            return this;
         }        public InstanceFromMachineImageScheduling build() {
-            return new InstanceFromMachineImageScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+            return new InstanceFromMachineImageScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }
     }
 }

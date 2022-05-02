@@ -60,14 +60,14 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.annotations);
     }
     /**
-     * Required. Autoscaler configuration for this node pool.
+     * Autoscaler configuration for this node pool.
      * 
      */
     @Export(name="autoscaling", type=AzureNodePoolAutoscaling.class, parameters={})
     private Output<AzureNodePoolAutoscaling> autoscaling;
 
     /**
-     * @return Required. Autoscaler configuration for this node pool.
+     * @return Autoscaler configuration for this node pool.
      * 
      */
     public Output<AzureNodePoolAutoscaling> autoscaling() {
@@ -102,14 +102,14 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
         return this.cluster;
     }
     /**
-     * Required. The node configuration of the node pool.
+     * The node configuration of the node pool.
      * 
      */
     @Export(name="config", type=AzureNodePoolConfig.class, parameters={})
     private Output<AzureNodePoolConfig> config;
 
     /**
-     * @return Required. The node configuration of the node pool.
+     * @return The node configuration of the node pool.
      * 
      */
     public Output<AzureNodePoolConfig> config() {
@@ -160,14 +160,14 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     @Export(name="maxPodsConstraint", type=AzureNodePoolMaxPodsConstraint.class, parameters={})
     private Output<AzureNodePoolMaxPodsConstraint> maxPodsConstraint;
 
     /**
-     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     public Output<AzureNodePoolMaxPodsConstraint> maxPodsConstraint() {
@@ -232,14 +232,14 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
-     * @return Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * @return The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     public Output<String> subnetId() {
@@ -274,14 +274,14 @@ public class AzureNodePool extends com.pulumi.resources.CustomResource {
         return this.updateTime;
     }
     /**
-     * Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * @return The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
     public Output<String> version() {

@@ -40,9 +40,17 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.cors);
     }
 
+    /**
+     * Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+     * 
+     */
     @Import(name="defaultEventBasedHold")
     private @Nullable Output<Boolean> defaultEventBasedHold;
 
+    /**
+     * @return Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+     * 
+     */
     public Optional<Output<Boolean>> defaultEventBasedHold() {
         return Optional.ofNullable(this.defaultEventBasedHold);
     }
@@ -381,11 +389,23 @@ public final class BucketState extends com.pulumi.resources.ResourceArgs {
             return cors(List.of(cors));
         }
 
+        /**
+         * @param defaultEventBasedHold Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEventBasedHold(@Nullable Output<Boolean> defaultEventBasedHold) {
             $.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
+        /**
+         * @param defaultEventBasedHold Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             return defaultEventBasedHold(Output.of(defaultEventBasedHold));
         }

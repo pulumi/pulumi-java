@@ -14,14 +14,14 @@ public final class AzureNodePoolConfigSshConfigArgs extends com.pulumi.resources
     public static final AzureNodePoolConfigSshConfigArgs Empty = new AzureNodePoolConfigSshConfigArgs();
 
     /**
-     * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
      * 
      */
     @Import(name="authorizedKey", required=true)
     private Output<String> authorizedKey;
 
     /**
-     * @return Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+     * @return The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
      * 
      */
     public Output<String> authorizedKey() {
@@ -53,7 +53,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param authorizedKey Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+         * @param authorizedKey The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
          * 
          * @return builder
          * 
@@ -64,7 +64,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param authorizedKey Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
+         * @param authorizedKey The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
          * 
          * @return builder
          * 

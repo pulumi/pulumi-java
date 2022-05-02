@@ -5,6 +5,7 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.dataproc.inputs.MetastoreServiceEncryptionConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceMaintenanceWindowArgs;
 import java.lang.Integer;
@@ -32,6 +33,25 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<String>> artifactGcsUri() {
         return Optional.ofNullable(this.artifactGcsUri);
+    }
+
+    /**
+     * Information used to configure the Dataproc Metastore service to encrypt
+     * customer data at rest.
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="encryptionConfig")
+    private @Nullable Output<MetastoreServiceEncryptionConfigArgs> encryptionConfig;
+
+    /**
+     * @return Information used to configure the Dataproc Metastore service to encrypt
+     * customer data at rest.
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<MetastoreServiceEncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -251,6 +271,7 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
 
     private MetastoreServiceState(MetastoreServiceState $) {
         this.artifactGcsUri = $.artifactGcsUri;
+        this.encryptionConfig = $.encryptionConfig;
         this.endpointUri = $.endpointUri;
         this.hiveMetastoreConfig = $.hiveMetastoreConfig;
         this.labels = $.labels;
@@ -303,6 +324,31 @@ public final class MetastoreServiceState extends com.pulumi.resources.ResourceAr
          */
         public Builder artifactGcsUri(String artifactGcsUri) {
             return artifactGcsUri(Output.of(artifactGcsUri));
+        }
+
+        /**
+         * @param encryptionConfig Information used to configure the Dataproc Metastore service to encrypt
+         * customer data at rest.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptionConfig(@Nullable Output<MetastoreServiceEncryptionConfigArgs> encryptionConfig) {
+            $.encryptionConfig = encryptionConfig;
+            return this;
+        }
+
+        /**
+         * @param encryptionConfig Information used to configure the Dataproc Metastore service to encrypt
+         * customer data at rest.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptionConfig(MetastoreServiceEncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
 
         /**

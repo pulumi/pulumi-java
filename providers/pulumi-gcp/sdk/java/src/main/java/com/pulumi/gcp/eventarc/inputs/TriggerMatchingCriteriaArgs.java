@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.ResourceArgs {
@@ -29,6 +31,21 @@ public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.Reso
     }
 
     /**
+     * Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+     * 
+     */
+    @Import(name="operator")
+    private @Nullable Output<String> operator;
+
+    /**
+     * @return Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+     * 
+     */
+    public Optional<Output<String>> operator() {
+        return Optional.ofNullable(this.operator);
+    }
+
+    /**
      * Required. The value for the attribute.
      * 
      */
@@ -47,6 +64,7 @@ public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.Reso
 
     private TriggerMatchingCriteriaArgs(TriggerMatchingCriteriaArgs $) {
         this.attribute = $.attribute;
+        this.operator = $.operator;
         this.value = $.value;
     }
 
@@ -87,6 +105,27 @@ public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.Reso
          */
         public Builder attribute(String attribute) {
             return attribute(Output.of(attribute));
+        }
+
+        /**
+         * @param operator Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operator(@Nullable Output<String> operator) {
+            $.operator = operator;
+            return this;
+        }
+
+        /**
+         * @param operator Optional. The operator used for matching the events with the value of the filter. If not specified, only events that have an exact key-value pair specified in the filter are matched. The only allowed value is `match-path-pattern`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operator(String operator) {
+            return operator(Output.of(operator));
         }
 
         /**

@@ -20,7 +20,7 @@ public final class AzureNodePoolConfig {
      */
     private final @Nullable AzureNodePoolConfigRootVolume rootVolume;
     /**
-     * @return Required. SSH configuration for how to access the node pool machines.
+     * @return SSH configuration for how to access the node pool machines.
      * 
      */
     private final AzureNodePoolConfigSshConfig sshConfig;
@@ -55,7 +55,7 @@ public final class AzureNodePoolConfig {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
-     * @return Required. SSH configuration for how to access the node pool machines.
+     * @return SSH configuration for how to access the node pool machines.
      * 
      */
     public AzureNodePoolConfigSshConfig sshConfig() {

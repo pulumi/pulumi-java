@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleEndDateArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleStartDateArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleStartTimeOfDayArgs;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,6 +17,21 @@ import javax.annotation.Nullable;
 public final class TransferJobScheduleArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final TransferJobScheduleArgs Empty = new TransferJobScheduleArgs();
+
+    /**
+     * Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
+    @Import(name="repeatInterval")
+    private @Nullable Output<String> repeatInterval;
+
+    /**
+     * @return Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+     * 
+     */
+    public Optional<Output<String>> repeatInterval() {
+        return Optional.ofNullable(this.repeatInterval);
+    }
 
     /**
      * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
@@ -65,6 +81,7 @@ public final class TransferJobScheduleArgs extends com.pulumi.resources.Resource
     private TransferJobScheduleArgs() {}
 
     private TransferJobScheduleArgs(TransferJobScheduleArgs $) {
+        this.repeatInterval = $.repeatInterval;
         this.scheduleEndDate = $.scheduleEndDate;
         this.scheduleStartDate = $.scheduleStartDate;
         this.startTimeOfDay = $.startTimeOfDay;
@@ -86,6 +103,27 @@ public final class TransferJobScheduleArgs extends com.pulumi.resources.Resource
 
         public Builder(TransferJobScheduleArgs defaults) {
             $ = new TransferJobScheduleArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param repeatInterval Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repeatInterval(@Nullable Output<String> repeatInterval) {
+            $.repeatInterval = repeatInterval;
+            return this;
+        }
+
+        /**
+         * @param repeatInterval Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder repeatInterval(String repeatInterval) {
+            return repeatInterval(Output.of(repeatInterval));
         }
 
         /**

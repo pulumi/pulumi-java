@@ -5,6 +5,7 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.bigquery.inputs.DatasetAccessDatasetArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,23 @@ import javax.annotation.Nullable;
 public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DatasetAccessArgs Empty = new DatasetAccessArgs();
+
+    /**
+     * The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="dataset")
+    private @Nullable Output<DatasetAccessDatasetArgs> dataset;
+
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<DatasetAccessDatasetArgs>> dataset() {
+        return Optional.ofNullable(this.dataset);
+    }
 
     /**
      * A domain to grant access to. Any users signed in with the
@@ -131,6 +149,7 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
     private DatasetAccessArgs() {}
 
     private DatasetAccessArgs(DatasetAccessArgs $) {
+        this.dataset = $.dataset;
         this.domain = $.domain;
         this.groupByEmail = $.groupByEmail;
         this.role = $.role;
@@ -155,6 +174,29 @@ public final class DatasetAccessArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(DatasetAccessArgs defaults) {
             $ = new DatasetAccessArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param dataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataset(@Nullable Output<DatasetAccessDatasetArgs> dataset) {
+            $.dataset = dataset;
+            return this;
+        }
+
+        /**
+         * @param dataset The dataset this entry applies to
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataset(DatasetAccessDatasetArgs dataset) {
+            return dataset(Output.of(dataset));
         }
 
         /**

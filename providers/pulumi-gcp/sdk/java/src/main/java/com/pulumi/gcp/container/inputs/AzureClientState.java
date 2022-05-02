@@ -16,14 +16,14 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
     public static final AzureClientState Empty = new AzureClientState();
 
     /**
-     * Required. The Azure Active Directory Application ID.
+     * The Azure Active Directory Application ID.
      * 
      */
     @Import(name="applicationId")
     private @Nullable Output<String> applicationId;
 
     /**
-     * @return Required. The Azure Active Directory Application ID.
+     * @return The Azure Active Directory Application ID.
      * 
      */
     public Optional<Output<String>> applicationId() {
@@ -106,14 +106,14 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The Azure Active Directory Tenant ID.
+     * The Azure Active Directory Tenant ID.
      * 
      */
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
     /**
-     * @return Required. The Azure Active Directory Tenant ID.
+     * @return The Azure Active Directory Tenant ID.
      * 
      */
     public Optional<Output<String>> tenantId() {
@@ -167,7 +167,7 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param applicationId Required. The Azure Active Directory Application ID.
+         * @param applicationId The Azure Active Directory Application ID.
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param applicationId Required. The Azure Active Directory Application ID.
+         * @param applicationId The Azure Active Directory Application ID.
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tenantId Required. The Azure Active Directory Tenant ID.
+         * @param tenantId The Azure Active Directory Tenant ID.
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class AzureClientState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tenantId Required. The Azure Active Directory Tenant ID.
+         * @param tenantId The Azure Active Directory Tenant ID.
          * 
          * @return builder
          * 

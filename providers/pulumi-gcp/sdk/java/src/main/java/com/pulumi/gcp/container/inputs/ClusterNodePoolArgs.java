@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.inputs.ClusterNodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNetworkConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolNodeConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterNodePoolPlacementPolicyArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodePoolUpgradeSettingsArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -174,6 +175,13 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.nodeLocations);
     }
 
+    @Import(name="placementPolicy")
+    private @Nullable Output<ClusterNodePoolPlacementPolicyArgs> placementPolicy;
+
+    public Optional<Output<ClusterNodePoolPlacementPolicyArgs>> placementPolicy() {
+        return Optional.ofNullable(this.placementPolicy);
+    }
+
     @Import(name="upgradeSettings")
     private @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
 
@@ -203,6 +211,7 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
         this.nodeConfig = $.nodeConfig;
         this.nodeCount = $.nodeCount;
         this.nodeLocations = $.nodeLocations;
+        this.placementPolicy = $.placementPolicy;
         this.upgradeSettings = $.upgradeSettings;
         this.version = $.version;
     }
@@ -440,6 +449,15 @@ public final class ClusterNodePoolArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
+        }
+
+        public Builder placementPolicy(@Nullable Output<ClusterNodePoolPlacementPolicyArgs> placementPolicy) {
+            $.placementPolicy = placementPolicy;
+            return this;
+        }
+
+        public Builder placementPolicy(ClusterNodePoolPlacementPolicyArgs placementPolicy) {
+            return placementPolicy(Output.of(placementPolicy));
         }
 
         public Builder upgradeSettings(@Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings) {

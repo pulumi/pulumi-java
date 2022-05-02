@@ -36,14 +36,14 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. Autoscaler configuration for this node pool.
+     * Autoscaler configuration for this node pool.
      * 
      */
     @Import(name="autoscaling")
     private @Nullable Output<AzureNodePoolAutoscalingArgs> autoscaling;
 
     /**
-     * @return Required. Autoscaler configuration for this node pool.
+     * @return Autoscaler configuration for this node pool.
      * 
      */
     public Optional<Output<AzureNodePoolAutoscalingArgs>> autoscaling() {
@@ -81,14 +81,14 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. The node configuration of the node pool.
+     * The node configuration of the node pool.
      * 
      */
     @Import(name="config")
     private @Nullable Output<AzureNodePoolConfigArgs> config;
 
     /**
-     * @return Required. The node configuration of the node pool.
+     * @return The node configuration of the node pool.
      * 
      */
     public Optional<Output<AzureNodePoolConfigArgs>> config() {
@@ -143,14 +143,14 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     @Import(name="maxPodsConstraint")
     private @Nullable Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     /**
-     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     public Optional<Output<AzureNodePoolMaxPodsConstraintArgs>> maxPodsConstraint() {
@@ -220,14 +220,14 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
     /**
-     * @return Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+     * @return The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
      * 
      */
     public Optional<Output<String>> subnetId() {
@@ -265,14 +265,14 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
     @Import(name="version")
     private @Nullable Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+     * @return The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
     public Optional<Output<String>> version() {
@@ -341,7 +341,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * @param autoscaling Autoscaler configuration for this node pool.
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * @param autoscaling Autoscaler configuration for this node pool.
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param config Required. The node configuration of the node pool.
+         * @param config The node configuration of the node pool.
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param config Required. The node configuration of the node pool.
+         * @param config The node configuration of the node pool.
          * 
          * @return builder
          * 
@@ -490,7 +490,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * @param maxPodsConstraint The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
          * 
          * @return builder
          * 
@@ -501,7 +501,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * @param maxPodsConstraint The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
          * 
          * @return builder
          * 
@@ -597,7 +597,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param subnetId Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * @param subnetId The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
          * 
          * @return builder
          * 
@@ -608,7 +608,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param subnetId Required. The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
+         * @param subnetId The ARM ID of the subnet where the node pool VMs run. Make sure it&#39;s a subnet under the virtual network in the cluster configuration.
          * 
          * @return builder
          * 
@@ -660,7 +660,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param version Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+         * @param version The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
          * 
          * @return builder
          * 
@@ -671,7 +671,7 @@ public final class AzureNodePoolState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param version Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
+         * @param version The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
          * 
          * @return builder
          * 

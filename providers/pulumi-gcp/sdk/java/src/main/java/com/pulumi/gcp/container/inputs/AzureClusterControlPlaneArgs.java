@@ -99,14 +99,14 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Required. SSH configuration for how to access the underlying control plane machines.
+     * SSH configuration for how to access the underlying control plane machines.
      * 
      */
     @Import(name="sshConfig", required=true)
     private Output<AzureClusterControlPlaneSshConfigArgs> sshConfig;
 
     /**
-     * @return Required. SSH configuration for how to access the underlying control plane machines.
+     * @return SSH configuration for how to access the underlying control plane machines.
      * 
      */
     public Output<AzureClusterControlPlaneSshConfigArgs> sshConfig() {
@@ -144,14 +144,14 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
      */
     @Import(name="version", required=true)
     private Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
      */
     public Output<String> version() {
@@ -322,7 +322,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param sshConfig Required. SSH configuration for how to access the underlying control plane machines.
+         * @param sshConfig SSH configuration for how to access the underlying control plane machines.
          * 
          * @return builder
          * 
@@ -333,7 +333,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param sshConfig Required. SSH configuration for how to access the underlying control plane machines.
+         * @param sshConfig SSH configuration for how to access the underlying control plane machines.
          * 
          * @return builder
          * 
@@ -385,7 +385,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+         * @param version The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
          * 
          * @return builder
          * 
@@ -396,7 +396,7 @@ public final class AzureClusterControlPlaneArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+         * @param version The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
          * 
          * @return builder
          * 

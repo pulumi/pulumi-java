@@ -69,16 +69,16 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * If `project` is not provided, the provider project is used.
      * 
      */
-    @Import(name="project", required=true)
-    private String project;
+    @Import(name="project")
+    private @Nullable String project;
 
     /**
      * @return The ID of the project in which the resource belongs.
      * If `project` is not provided, the provider project is used.
      * 
      */
-    public String project() {
-        return this.project;
+    public Optional<String> project() {
+        return Optional.ofNullable(this.project);
     }
 
     private GetInstanceTemplateArgs() {}
@@ -150,13 +150,12 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
          * @return builder
          * 
          */
-        public Builder project(String project) {
+        public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
         public GetInstanceTemplateArgs build() {
-            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
             return $;
         }
     }

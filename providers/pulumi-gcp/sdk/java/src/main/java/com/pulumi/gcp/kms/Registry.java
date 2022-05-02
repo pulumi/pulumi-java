@@ -20,6 +20,36 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * A Google Cloud IoT Core device registry.
+ * 
+ * To get more information about DeviceRegistry, see:
+ * 
+ * * [API documentation](https://cloud.google.com/iot/docs/reference/cloudiot/rest/)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/iot/docs/)
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * DeviceRegistry can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:kms/registry:Registry default {{project}}/locations/{{region}}/registries/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:kms/registry:Registry default {{project}}/{{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:kms/registry:Registry default {{region}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:kms/registry:Registry default {{name}}
+ * ```
+ * 
  * @deprecated
  * gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry
  * 
@@ -29,6 +59,7 @@ import javax.annotation.Nullable;
 public class Registry extends com.pulumi.resources.CustomResource {
     /**
      * List of public key certificates to authenticate devices.
+     * The structure is documented below.
      * 
      */
     @Export(name="credentials", type=List.class, parameters={RegistryCredential.class})
@@ -36,20 +67,25 @@ public class Registry extends com.pulumi.resources.CustomResource {
 
     /**
      * @return List of public key certificates to authenticate devices.
+     * The structure is documented below.
      * 
      */
     public Output<Optional<List<RegistryCredential>>> credentials() {
         return Codegen.optional(this.credentials);
     }
     /**
-     * List of configurations for event notifications, such as PubSub topics to publish device events to.
+     * List of configurations for event notifications, such as PubSub topics
+     * to publish device events to.
+     * Structure is documented below.
      * 
      */
     @Export(name="eventNotificationConfigs", type=List.class, parameters={RegistryEventNotificationConfigItem.class})
     private Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs;
 
     /**
-     * @return List of configurations for event notifications, such as PubSub topics to publish device events to.
+     * @return List of configurations for event notifications, such as PubSub topics
+     * to publish device events to.
+     * Structure is documented below.
      * 
      */
     public Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs() {
@@ -57,6 +93,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
     }
     /**
      * Activate or deactivate HTTP.
+     * The structure is documented below.
      * 
      */
     @Export(name="httpConfig", type=Map.class, parameters={String.class, Object.class})
@@ -64,26 +101,33 @@ public class Registry extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Activate or deactivate HTTP.
+     * The structure is documented below.
      * 
      */
     public Output<Map<String,Object>> httpConfig() {
         return this.httpConfig;
     }
     /**
-     * The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-     * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-     * &#34;DEBUG&#34;]
+     * The default logging verbosity for activity from devices in this
+     * registry. Specifies which events should be written to logs. For
+     * example, if the LogLevel is ERROR, only events that terminate in
+     * errors will be logged. LogLevel is inclusive; enabling INFO logging
+     * will also enable ERROR logging.
+     * Default value is `NONE`.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
     @Export(name="logLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> logLevel;
 
     /**
-     * @return The default logging verbosity for activity from devices in this registry. Specifies which events should be written to
-     * logs. For example, if the LogLevel is ERROR, only events that terminate in errors will be logged. LogLevel is inclusive;
-     * enabling INFO logging will also enable ERROR logging. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ERROR&#34;, &#34;INFO&#34;,
-     * &#34;DEBUG&#34;]
+     * @return The default logging verbosity for activity from devices in this
+     * registry. Specifies which events should be written to logs. For
+     * example, if the LogLevel is ERROR, only events that terminate in
+     * errors will be logged. LogLevel is inclusive; enabling INFO logging
+     * will also enable ERROR logging.
+     * Default value is `NONE`.
+     * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
     public Output<Optional<String>> logLevel() {
@@ -91,6 +135,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
     }
     /**
      * Activate or deactivate MQTT.
+     * The structure is documented below.
      * 
      */
     @Export(name="mqttConfig", type=Map.class, parameters={String.class, Object.class})
@@ -98,6 +143,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Activate or deactivate MQTT.
+     * The structure is documented below.
      * 
      */
     public Output<Map<String,Object>> mqttConfig() {
@@ -117,21 +163,33 @@ public class Registry extends com.pulumi.resources.CustomResource {
     public Output<String> name() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
     /**
-     * The region in which the created registry should reside. If it is not provided, the provider region is used.
+     * The region in which the created registry should reside.
+     * If it is not provided, the provider region is used.
      * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
-     * @return The region in which the created registry should reside. If it is not provided, the provider region is used.
+     * @return The region in which the created registry should reside.
+     * If it is not provided, the provider region is used.
      * 
      */
     public Output<String> region() {
@@ -139,6 +197,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
     }
     /**
      * A PubSub topic to publish device state updates.
+     * The structure is documented below.
      * 
      */
     @Export(name="stateNotificationConfig", type=Map.class, parameters={String.class, Object.class})
@@ -146,6 +205,7 @@ public class Registry extends com.pulumi.resources.CustomResource {
 
     /**
      * @return A PubSub topic to publish device state updates.
+     * The structure is documented below.
      * 
      */
     public Output<Optional<Map<String,Object>>> stateNotificationConfig() {

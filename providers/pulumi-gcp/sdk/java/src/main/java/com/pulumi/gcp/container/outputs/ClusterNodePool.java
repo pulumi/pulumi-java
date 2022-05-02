@@ -8,6 +8,7 @@ import com.pulumi.gcp.container.outputs.ClusterNodePoolAutoscaling;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolManagement;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNetworkConfig;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolNodeConfig;
+import com.pulumi.gcp.container.outputs.ClusterNodePoolPlacementPolicy;
 import com.pulumi.gcp.container.outputs.ClusterNodePoolUpgradeSettings;
 import java.lang.Integer;
 import java.lang.String;
@@ -64,6 +65,7 @@ public final class ClusterNodePool {
      * 
      */
     private final @Nullable List<String> nodeLocations;
+    private final @Nullable ClusterNodePoolPlacementPolicy placementPolicy;
     private final @Nullable ClusterNodePoolUpgradeSettings upgradeSettings;
     private final @Nullable String version;
 
@@ -81,6 +83,7 @@ public final class ClusterNodePool {
         @CustomType.Parameter("nodeConfig") @Nullable ClusterNodePoolNodeConfig nodeConfig,
         @CustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
         @CustomType.Parameter("nodeLocations") @Nullable List<String> nodeLocations,
+        @CustomType.Parameter("placementPolicy") @Nullable ClusterNodePoolPlacementPolicy placementPolicy,
         @CustomType.Parameter("upgradeSettings") @Nullable ClusterNodePoolUpgradeSettings upgradeSettings,
         @CustomType.Parameter("version") @Nullable String version) {
         this.autoscaling = autoscaling;
@@ -95,6 +98,7 @@ public final class ClusterNodePool {
         this.nodeConfig = nodeConfig;
         this.nodeCount = nodeCount;
         this.nodeLocations = nodeLocations;
+        this.placementPolicy = placementPolicy;
         this.upgradeSettings = upgradeSettings;
         this.version = version;
     }
@@ -169,6 +173,9 @@ public final class ClusterNodePool {
     public List<String> nodeLocations() {
         return this.nodeLocations == null ? List.of() : this.nodeLocations;
     }
+    public Optional<ClusterNodePoolPlacementPolicy> placementPolicy() {
+        return Optional.ofNullable(this.placementPolicy);
+    }
     public Optional<ClusterNodePoolUpgradeSettings> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
@@ -197,6 +204,7 @@ public final class ClusterNodePool {
         private @Nullable ClusterNodePoolNodeConfig nodeConfig;
         private @Nullable Integer nodeCount;
         private @Nullable List<String> nodeLocations;
+        private @Nullable ClusterNodePoolPlacementPolicy placementPolicy;
         private @Nullable ClusterNodePoolUpgradeSettings upgradeSettings;
         private @Nullable String version;
 
@@ -218,6 +226,7 @@ public final class ClusterNodePool {
     	      this.nodeConfig = defaults.nodeConfig;
     	      this.nodeCount = defaults.nodeCount;
     	      this.nodeLocations = defaults.nodeLocations;
+    	      this.placementPolicy = defaults.placementPolicy;
     	      this.upgradeSettings = defaults.upgradeSettings;
     	      this.version = defaults.version;
         }
@@ -279,6 +288,10 @@ public final class ClusterNodePool {
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
+        public Builder placementPolicy(@Nullable ClusterNodePoolPlacementPolicy placementPolicy) {
+            this.placementPolicy = placementPolicy;
+            return this;
+        }
         public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettings upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
@@ -287,7 +300,7 @@ public final class ClusterNodePool {
             this.version = version;
             return this;
         }        public ClusterNodePool build() {
-            return new ClusterNodePool(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, upgradeSettings, version);
+            return new ClusterNodePool(autoscaling, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, management, maxPodsPerNode, name, namePrefix, networkConfig, nodeConfig, nodeCount, nodeLocations, placementPolicy, upgradeSettings, version);
         }
     }
 }

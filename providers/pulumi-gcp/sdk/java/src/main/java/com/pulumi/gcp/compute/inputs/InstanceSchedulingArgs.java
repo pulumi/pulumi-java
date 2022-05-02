@@ -114,6 +114,27 @@ public final class InstanceSchedulingArgs extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.preemptible);
     }
 
+    /**
+     * Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+     * `preemptible` should be `true` and `auto_restart` should be
+     * `false`. For more info about
+     * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+     * 
+     */
+    @Import(name="provisioningModel")
+    private @Nullable Output<String> provisioningModel;
+
+    /**
+     * @return Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+     * `preemptible` should be `true` and `auto_restart` should be
+     * `false`. For more info about
+     * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+     * 
+     */
+    public Optional<Output<String>> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
+    }
+
     private InstanceSchedulingArgs() {}
 
     private InstanceSchedulingArgs(InstanceSchedulingArgs $) {
@@ -122,6 +143,7 @@ public final class InstanceSchedulingArgs extends com.pulumi.resources.ResourceA
         this.nodeAffinities = $.nodeAffinities;
         this.onHostMaintenance = $.onHostMaintenance;
         this.preemptible = $.preemptible;
+        this.provisioningModel = $.provisioningModel;
     }
 
     public static Builder builder() {
@@ -279,6 +301,33 @@ public final class InstanceSchedulingArgs extends com.pulumi.resources.ResourceA
          */
         public Builder preemptible(Boolean preemptible) {
             return preemptible(Output.of(preemptible));
+        }
+
+        /**
+         * @param provisioningModel Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+         * `preemptible` should be `true` and `auto_restart` should be
+         * `false`. For more info about
+         * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningModel(@Nullable Output<String> provisioningModel) {
+            $.provisioningModel = provisioningModel;
+            return this;
+        }
+
+        /**
+         * @param provisioningModel Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+         * `preemptible` should be `true` and `auto_restart` should be
+         * `false`. For more info about
+         * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningModel(String provisioningModel) {
+            return provisioningModel(Output.of(provisioningModel));
         }
 
         public InstanceSchedulingArgs build() {

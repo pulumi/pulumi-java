@@ -30,9 +30,21 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends com.pulumi.res
         return Optional.ofNullable(this.gpuPartitionSize);
     }
 
+    /**
+     * The type of the policy. Supports a single value: COMPACT.
+     * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+     * physical proximity in order to reduce network latency between nodes.
+     * 
+     */
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the policy. Supports a single value: COMPACT.
+     * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+     * physical proximity in order to reduce network latency between nodes.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -81,11 +93,27 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends com.pulumi.res
             return gpuPartitionSize(Output.of(gpuPartitionSize));
         }
 
+        /**
+         * @param type The type of the policy. Supports a single value: COMPACT.
+         * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+         * physical proximity in order to reduce network latency between nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the policy. Supports a single value: COMPACT.
+         * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+         * physical proximity in order to reduce network latency between nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

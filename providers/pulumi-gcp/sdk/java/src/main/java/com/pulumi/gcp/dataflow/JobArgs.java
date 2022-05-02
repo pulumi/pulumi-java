@@ -85,7 +85,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     @Import(name="labels")
@@ -96,7 +95,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     public Optional<Output<Map<String,Object>>> labels() {
@@ -239,6 +237,25 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    @Import(name="skipWaitOnJobTermination")
+    private @Nullable Output<Boolean> skipWaitOnJobTermination;
+
+    /**
+     * @return If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    public Optional<Output<Boolean>> skipWaitOnJobTermination() {
+        return Optional.ofNullable(this.skipWaitOnJobTermination);
+    }
+
+    /**
      * The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
      * 
      */
@@ -285,7 +302,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     @Import(name="transformNameMapping")
@@ -293,7 +309,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     public Optional<Output<Map<String,Object>>> transformNameMapping() {
@@ -332,6 +347,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.region = $.region;
         this.serviceAccountEmail = $.serviceAccountEmail;
+        this.skipWaitOnJobTermination = $.skipWaitOnJobTermination;
         this.subnetwork = $.subnetwork;
         this.tempGcsLocation = $.tempGcsLocation;
         this.templateGcsPath = $.templateGcsPath;
@@ -456,7 +472,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
          * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
          * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-         * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
          * 
          * @return builder
          * 
@@ -471,7 +486,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
          * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
          * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-         * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
          * 
          * @return builder
          * 
@@ -670,6 +684,31 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param skipWaitOnJobTermination If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+         * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+         * different, e.g. by embedding a release ID or by using a random_id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipWaitOnJobTermination(@Nullable Output<Boolean> skipWaitOnJobTermination) {
+            $.skipWaitOnJobTermination = skipWaitOnJobTermination;
+            return this;
+        }
+
+        /**
+         * @param skipWaitOnJobTermination If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+         * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+         * different, e.g. by embedding a release ID or by using a random_id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipWaitOnJobTermination(Boolean skipWaitOnJobTermination) {
+            return skipWaitOnJobTermination(Output.of(skipWaitOnJobTermination));
+        }
+
+        /**
          * @param subnetwork The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
          * 
          * @return builder
@@ -734,7 +773,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param transformNameMapping Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-         * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
          * 
          * @return builder
          * 
@@ -746,7 +784,6 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param transformNameMapping Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-         * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
          * 
          * @return builder
          * 

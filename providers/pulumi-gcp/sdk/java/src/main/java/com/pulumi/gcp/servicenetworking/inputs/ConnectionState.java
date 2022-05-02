@@ -31,9 +31,17 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.network);
     }
 
+    /**
+     * (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+     * 
+     */
     @Import(name="peering")
     private @Nullable Output<String> peering;
 
+    /**
+     * @return (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+     * 
+     */
     public Optional<Output<String>> peering() {
         return Optional.ofNullable(this.peering);
     }
@@ -124,11 +132,23 @@ public final class ConnectionState extends com.pulumi.resources.ResourceArgs {
             return network(Output.of(network));
         }
 
+        /**
+         * @param peering (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peering(@Nullable Output<String> peering) {
             $.peering = peering;
             return this;
         }
 
+        /**
+         * @param peering (Computed) The name of the VPC Network Peering connection that was created by the service producer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peering(String peering) {
             return peering(Output.of(peering));
         }

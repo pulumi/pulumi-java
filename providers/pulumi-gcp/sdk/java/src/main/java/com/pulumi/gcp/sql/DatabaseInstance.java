@@ -42,15 +42,15 @@ import javax.annotation.Nullable;
  * Database instances can be imported using one of any of these accepted formats
  * 
  * ```sh
- *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master projects/{{project}}/instances/{{name}}
+ *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance main projects/{{project}}/instances/{{name}}
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{project}}/{{name}}
+ *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance main {{project}}/{{name}}
  * ```
  * 
  * ```sh
- *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{name}}
+ *  $ pulumi import gcp:sql/databaseInstance:DatabaseInstance main {{name}}
  * ```
  * 
  *  config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn&#39;t sufficient to know that your config could reproduce the imported resource.
@@ -261,24 +261,16 @@ public class DatabaseInstance extends com.pulumi.resources.CustomResource {
         return this.publicIpAddress;
     }
     /**
-     * The region the instance will sit in. Note, Cloud SQL is not
-     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-     * make sure you understand this.
+     * The region the instance will sit in. If a region is not provided in the resource definition,
+     * the provider region will be used instead.
      * 
      */
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
-     * @return The region the instance will sit in. Note, Cloud SQL is not
-     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-     * make sure you understand this.
+     * @return The region the instance will sit in. If a region is not provided in the resource definition,
+     * the provider region will be used instead.
      * 
      */
     public Output<String> region() {

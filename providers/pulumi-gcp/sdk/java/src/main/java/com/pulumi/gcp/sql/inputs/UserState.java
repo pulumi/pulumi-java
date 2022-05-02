@@ -89,7 +89,8 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The password for the user. Can be updated. For Postgres
-     * instances this is a Required field.
+     * instances this is a Required field, unless type is set to either CLOUD_IAM_USER
+     * or CLOUD_IAM_SERVICE_ACCOUNT.
      * 
      */
     @Import(name="password")
@@ -97,7 +98,8 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The password for the user. Can be updated. For Postgres
-     * instances this is a Required field.
+     * instances this is a Required field, unless type is set to either CLOUD_IAM_USER
+     * or CLOUD_IAM_SERVICE_ACCOUNT.
      * 
      */
     public Optional<Output<String>> password() {
@@ -268,7 +270,8 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param password The password for the user. Can be updated. For Postgres
-         * instances this is a Required field.
+         * instances this is a Required field, unless type is set to either CLOUD_IAM_USER
+         * or CLOUD_IAM_SERVICE_ACCOUNT.
          * 
          * @return builder
          * 
@@ -280,7 +283,8 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param password The password for the user. Can be updated. For Postgres
-         * instances this is a Required field.
+         * instances this is a Required field, unless type is set to either CLOUD_IAM_USER
+         * or CLOUD_IAM_SERVICE_ACCOUNT.
          * 
          * @return builder
          * 

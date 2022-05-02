@@ -33,6 +33,11 @@ public final class GetInstanceScheduling {
      * 
      */
     private final Boolean preemptible;
+    /**
+     * @return (Beta) Describe the type of preemptible VM.
+     * 
+     */
+    private final String provisioningModel;
 
     @CustomType.Constructor
     private GetInstanceScheduling(
@@ -40,12 +45,14 @@ public final class GetInstanceScheduling {
         @CustomType.Parameter("minNodeCpus") Integer minNodeCpus,
         @CustomType.Parameter("nodeAffinities") List<GetInstanceSchedulingNodeAffinity> nodeAffinities,
         @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @CustomType.Parameter("preemptible") Boolean preemptible) {
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("provisioningModel") String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;
         this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     /**
@@ -78,6 +85,13 @@ public final class GetInstanceScheduling {
     public Boolean preemptible() {
         return this.preemptible;
     }
+    /**
+     * @return (Beta) Describe the type of preemptible VM.
+     * 
+     */
+    public String provisioningModel() {
+        return this.provisioningModel;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -93,6 +107,7 @@ public final class GetInstanceScheduling {
         private List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
         private String onHostMaintenance;
         private Boolean preemptible;
+        private String provisioningModel;
 
         public Builder() {
     	      // Empty
@@ -105,6 +120,7 @@ public final class GetInstanceScheduling {
     	      this.nodeAffinities = defaults.nodeAffinities;
     	      this.onHostMaintenance = defaults.onHostMaintenance;
     	      this.preemptible = defaults.preemptible;
+    	      this.provisioningModel = defaults.provisioningModel;
         }
 
         public Builder automaticRestart(Boolean automaticRestart) {
@@ -129,8 +145,12 @@ public final class GetInstanceScheduling {
         public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
+        }
+        public Builder provisioningModel(String provisioningModel) {
+            this.provisioningModel = Objects.requireNonNull(provisioningModel);
+            return this;
         }        public GetInstanceScheduling build() {
-            return new GetInstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+            return new GetInstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }
     }
 }

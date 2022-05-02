@@ -34,7 +34,7 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
 
     /**
      * The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
      * 
      */
     @Import(name="networkTier")
@@ -42,7 +42,7 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
 
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
      * 
      */
     public Optional<Output<String>> networkTier() {
@@ -117,7 +117,7 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
 
         /**
          * @param networkTier The service-level to be provided for IPv6 traffic when the
-         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class InstanceNetworkInterfaceAccessConfigArgs extends com.pulumi.r
 
         /**
          * @param networkTier The service-level to be provided for IPv6 traffic when the
-         * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+         * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
          * 
          * @return builder
          * 

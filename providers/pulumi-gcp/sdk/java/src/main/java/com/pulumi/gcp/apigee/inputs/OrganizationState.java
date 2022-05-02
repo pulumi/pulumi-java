@@ -50,6 +50,21 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    @Import(name="billingType")
+    private @Nullable Output<String> billingType;
+
+    /**
+     * @return Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    public Optional<Output<String>> billingType() {
+        return Optional.ofNullable(this.billingType);
+    }
+
+    /**
      * Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when &#39;RuntimeType&#39;
      * is CLOUD. A base64-encoded string.
      * 
@@ -188,6 +203,7 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
     private OrganizationState(OrganizationState $) {
         this.analyticsRegion = $.analyticsRegion;
         this.authorizedNetwork = $.authorizedNetwork;
+        this.billingType = $.billingType;
         this.caCertificate = $.caCertificate;
         this.description = $.description;
         this.displayName = $.displayName;
@@ -260,6 +276,27 @@ public final class OrganizationState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder authorizedNetwork(String authorizedNetwork) {
             return authorizedNetwork(Output.of(authorizedNetwork));
+        }
+
+        /**
+         * @param billingType Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingType(@Nullable Output<String> billingType) {
+            $.billingType = billingType;
+            return this;
+        }
+
+        /**
+         * @param billingType Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingType(String billingType) {
+            return billingType(Output.of(billingType));
         }
 
         /**
