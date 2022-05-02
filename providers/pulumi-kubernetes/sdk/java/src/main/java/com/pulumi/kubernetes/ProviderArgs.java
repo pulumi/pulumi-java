@@ -50,6 +50,31 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
+     * This feature is in developer preview, and is disabled by default.
+     * 
+     * This config can be specified in the following ways using this precedence:
+     * 1. This `enableConfigMapMutable` parameter.
+     * 2. The `PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE` environment variable.
+     * 
+     */
+    @Import(name="enableConfigMapMutable", json=true)
+    private @Nullable Output<Boolean> enableConfigMapMutable;
+
+    /**
+     * @return BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
+     * This feature is in developer preview, and is disabled by default.
+     * 
+     * This config can be specified in the following ways using this precedence:
+     * 1. This `enableConfigMapMutable` parameter.
+     * 2. The `PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE` environment variable.
+     * 
+     */
+    public Optional<Output<Boolean>> enableConfigMapMutable() {
+        return Optional.ofNullable(this.enableConfigMapMutable);
+    }
+
+    /**
      * BETA FEATURE - If present and set to true, enable server-side diff calculations.
      * This feature is in developer preview, and is disabled by default.
      * 
@@ -217,6 +242,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     private ProviderArgs(ProviderArgs $) {
         this.cluster = $.cluster;
         this.context = $.context;
+        this.enableConfigMapMutable = $.enableConfigMapMutable;
         this.enableDryRun = $.enableDryRun;
         this.enableReplaceCRD = $.enableReplaceCRD;
         this.helmReleaseSettings = $.helmReleaseSettings;
@@ -286,6 +312,37 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder context(String context) {
             return context(Output.of(context));
+        }
+
+        /**
+         * @param enableConfigMapMutable BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * This config can be specified in the following ways using this precedence:
+         * 1. This `enableConfigMapMutable` parameter.
+         * 2. The `PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableConfigMapMutable(@Nullable Output<Boolean> enableConfigMapMutable) {
+            $.enableConfigMapMutable = enableConfigMapMutable;
+            return this;
+        }
+
+        /**
+         * @param enableConfigMapMutable BETA FEATURE - If present and set to true, allow ConfigMaps to be mutated.
+         * This feature is in developer preview, and is disabled by default.
+         * 
+         * This config can be specified in the following ways using this precedence:
+         * 1. This `enableConfigMapMutable` parameter.
+         * 2. The `PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableConfigMapMutable(Boolean enableConfigMapMutable) {
+            return enableConfigMapMutable(Output.of(enableConfigMapMutable));
         }
 
         /**
@@ -506,6 +563,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ProviderArgs build() {
+            $.enableConfigMapMutable = Codegen.booleanProp("enableConfigMapMutable").output().arg($.enableConfigMapMutable).env("PULUMI_K8S_ENABLE_CONFIGMAP_MUTABLE").getNullable();
             $.enableDryRun = Codegen.booleanProp("enableDryRun").output().arg($.enableDryRun).env("PULUMI_K8S_ENABLE_DRY_RUN").getNullable();
             $.enableReplaceCRD = Codegen.booleanProp("enableReplaceCRD").output().arg($.enableReplaceCRD).env("PULUMI_K8S_ENABLE_REPLACE_CRD").getNullable();
             $.kubeconfig = Codegen.stringProp("kubeconfig").output().arg($.kubeconfig).env("KUBECONFIG").getNullable();
