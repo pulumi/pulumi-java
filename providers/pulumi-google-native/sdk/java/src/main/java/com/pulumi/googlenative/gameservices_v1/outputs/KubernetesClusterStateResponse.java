@@ -30,7 +30,7 @@ public final class KubernetesClusterStateResponse {
      */
     private final String kubernetesVersionInstalled;
     /**
-     * @return The cloud provider type reported by the first node&#39;s providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+     * @return The cloud provider type reported by the first node&#39;s `providerID` in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
      * 
      */
     private final String provider;
@@ -85,7 +85,7 @@ public final class KubernetesClusterStateResponse {
         return this.kubernetesVersionInstalled;
     }
     /**
-     * @return The cloud provider type reported by the first node&#39;s providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+     * @return The cloud provider type reported by the first node&#39;s `providerID` in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
      * 
      */
     public String provider() {

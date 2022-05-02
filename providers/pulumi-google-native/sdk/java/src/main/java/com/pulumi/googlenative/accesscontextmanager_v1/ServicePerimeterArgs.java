@@ -86,21 +86,6 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<ServicePerimeterConfigArgs> status;
-
-    /**
-     * @return Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
-     * 
-     */
-    public Optional<Output<ServicePerimeterConfigArgs>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
-    /**
      * Human readable title. Must be unique within the Policy.
      * 
      */
@@ -138,7 +123,6 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
         this.name = $.name;
         this.perimeterType = $.perimeterType;
         this.spec = $.spec;
-        this.status = $.status;
         this.title = $.title;
         this.useExplicitDryRunSpec = $.useExplicitDryRunSpec;
     }
@@ -252,27 +236,6 @@ public final class ServicePerimeterArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder spec(ServicePerimeterConfigArgs spec) {
             return spec(Output.of(spec));
-        }
-
-        /**
-         * @param status Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<ServicePerimeterConfigArgs> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status Current ServicePerimeter configuration. Specifies sets of resources, restricted services and access levels that determine perimeter content and boundaries.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(ServicePerimeterConfigArgs status) {
-            return status(Output.of(status));
         }
 
         /**

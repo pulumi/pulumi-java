@@ -40,7 +40,10 @@ import com.pulumi.googlenative.compute_v1.inputs.GetLicenseIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetMachineImageArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetMachineImageIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetNetworkArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetNetworkEdgeSecurityServiceArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetNetworkEndpointGroupArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetNetworkFirewallPolicyArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetNetworkFirewallPolicyIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetNodeGroupArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetNodeGroupIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetNodeTemplateArgs;
@@ -57,7 +60,10 @@ import com.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionHealthCheckServiceArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionInstanceGroupManagerArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionNetworkEndpointGroupArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetRegionNetworkFirewallPolicyArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetRegionNetworkFirewallPolicyIamPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionNotificationEndpointArgs;
+import com.pulumi.googlenative.compute_v1.inputs.GetRegionSecurityPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionSslCertificateArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpProxyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.GetRegionTargetHttpsProxyArgs;
@@ -120,7 +126,10 @@ import com.pulumi.googlenative.compute_v1.outputs.GetLicenseIamPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetLicenseResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetMachineImageIamPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetMachineImageResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetNetworkEdgeSecurityServiceResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetNetworkEndpointGroupResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetNetworkFirewallPolicyIamPolicyResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetNetworkFirewallPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetNetworkResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetNodeGroupIamPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetNodeGroupResult;
@@ -138,7 +147,10 @@ import com.pulumi.googlenative.compute_v1.outputs.GetRegionHealthCheckResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionHealthCheckServiceResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionInstanceGroupManagerResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionNetworkEndpointGroupResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetRegionNetworkFirewallPolicyIamPolicyResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetRegionNetworkFirewallPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionNotificationEndpointResult;
+import com.pulumi.googlenative.compute_v1.outputs.GetRegionSecurityPolicyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionSslCertificateResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionTargetHttpProxyResult;
 import com.pulumi.googlenative.compute_v1.outputs.GetRegionTargetHttpsProxyResult;
@@ -503,6 +515,16 @@ public final class Compute_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetwork", TypeShape.of(GetNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Gets a specified NetworkEdgeSecurityService.
+     * 
+     */
+    public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> getNetworkEdgeSecurityService(GetNetworkEdgeSecurityServiceArgs args) {
+        return getNetworkEdgeSecurityService(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> getNetworkEdgeSecurityService(GetNetworkEdgeSecurityServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkEdgeSecurityService", TypeShape.of(GetNetworkEdgeSecurityServiceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
      * 
      */
@@ -511,6 +533,26 @@ public final class Compute_v1Functions {
     }
     public static CompletableFuture<GetNetworkEndpointGroupResult> getNetworkEndpointGroup(GetNetworkEndpointGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkEndpointGroup", TypeShape.of(GetNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified network firewall policy.
+     * 
+     */
+    public static CompletableFuture<GetNetworkFirewallPolicyResult> getNetworkFirewallPolicy(GetNetworkFirewallPolicyArgs args) {
+        return getNetworkFirewallPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetNetworkFirewallPolicyResult> getNetworkFirewallPolicy(GetNetworkFirewallPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkFirewallPolicy", TypeShape.of(GetNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetNetworkFirewallPolicyIamPolicyResult> getNetworkFirewallPolicyIamPolicy(GetNetworkFirewallPolicyIamPolicyArgs args) {
+        return getNetworkFirewallPolicyIamPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetNetworkFirewallPolicyIamPolicyResult> getNetworkFirewallPolicyIamPolicy(GetNetworkFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getNetworkFirewallPolicyIamPolicy", TypeShape.of(GetNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the &#34;nodes&#34; field should not be used. Use nodeGroups.listNodes instead.
@@ -673,6 +715,26 @@ public final class Compute_v1Functions {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNetworkEndpointGroup", TypeShape.of(GetRegionNetworkEndpointGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Returns the specified network firewall policy.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> getRegionNetworkFirewallPolicy(GetRegionNetworkFirewallPolicyArgs args) {
+        return getRegionNetworkFirewallPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> getRegionNetworkFirewallPolicy(GetRegionNetworkFirewallPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNetworkFirewallPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyIamPolicyResult> getRegionNetworkFirewallPolicyIamPolicy(GetRegionNetworkFirewallPolicyIamPolicyArgs args) {
+        return getRegionNetworkFirewallPolicyIamPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyIamPolicyResult> getRegionNetworkFirewallPolicyIamPolicy(GetRegionNetworkFirewallPolicyIamPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNetworkFirewallPolicyIamPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyIamPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Returns the specified NotificationEndpoint resource in the given region.
      * 
      */
@@ -681,6 +743,16 @@ public final class Compute_v1Functions {
     }
     public static CompletableFuture<GetRegionNotificationEndpointResult> getRegionNotificationEndpoint(GetRegionNotificationEndpointArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionNotificationEndpoint", TypeShape.of(GetRegionNotificationEndpointResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
+     * 
+     */
+    public static CompletableFuture<GetRegionSecurityPolicyResult> getRegionSecurityPolicy(GetRegionSecurityPolicyArgs args) {
+        return getRegionSecurityPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRegionSecurityPolicyResult> getRegionSecurityPolicy(GetRegionSecurityPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionSecurityPolicy", TypeShape.of(GetRegionSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.

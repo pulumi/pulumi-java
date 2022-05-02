@@ -38,6 +38,20 @@ public class Rollout extends com.pulumi.resources.CustomResource {
         return this.createTime;
     }
     /**
+     * The user who created the Rollout. Readonly.
+     * 
+     */
+    @Export(name="createdBy", type=String.class, parameters={})
+    private Output<String> createdBy;
+
+    /**
+     * @return The user who created the Rollout. Readonly.
+     * 
+     */
+    public Output<String> createdBy() {
+        return this.createdBy;
+    }
+    /**
      * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
      * 
      */

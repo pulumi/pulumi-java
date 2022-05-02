@@ -45,9 +45,17 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Required. The ID of the entry group to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and must start with a letter or underscore. The maximum size is 64 bytes when encoded in UTF-8.
+     * 
+     */
     @Import(name="entryGroupId", required=true)
     private Output<String> entryGroupId;
 
+    /**
+     * @return Required. The ID of the entry group to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and must start with a letter or underscore. The maximum size is 64 bytes when encoded in UTF-8.
+     * 
+     */
     public Output<String> entryGroupId() {
         return this.entryGroupId;
     }
@@ -152,11 +160,23 @@ public final class EntryGroupArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entryGroupId Required. The ID of the entry group to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and must start with a letter or underscore. The maximum size is 64 bytes when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryGroupId(Output<String> entryGroupId) {
             $.entryGroupId = entryGroupId;
             return this;
         }
 
+        /**
+         * @param entryGroupId Required. The ID of the entry group to create. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and must start with a letter or underscore. The maximum size is 64 bytes when encoded in UTF-8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryGroupId(String entryGroupId) {
             return entryGroupId(Output.of(entryGroupId));
         }

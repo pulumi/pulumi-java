@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_alpha.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -14,10 +15,18 @@ public final class ResourceStatusSchedulingResponse {
      * 
      */
     private final Integer availabilityDomain;
+    /**
+     * @return Time in future when the instance will be terminated in RFC3339 text format.
+     * 
+     */
+    private final String terminationTimestamp;
 
     @CustomType.Constructor
-    private ResourceStatusSchedulingResponse(@CustomType.Parameter("availabilityDomain") Integer availabilityDomain) {
+    private ResourceStatusSchedulingResponse(
+        @CustomType.Parameter("availabilityDomain") Integer availabilityDomain,
+        @CustomType.Parameter("terminationTimestamp") String terminationTimestamp) {
         this.availabilityDomain = availabilityDomain;
+        this.terminationTimestamp = terminationTimestamp;
     }
 
     /**
@@ -26,6 +35,13 @@ public final class ResourceStatusSchedulingResponse {
      */
     public Integer availabilityDomain() {
         return this.availabilityDomain;
+    }
+    /**
+     * @return Time in future when the instance will be terminated in RFC3339 text format.
+     * 
+     */
+    public String terminationTimestamp() {
+        return this.terminationTimestamp;
     }
 
     public static Builder builder() {
@@ -38,6 +54,7 @@ public final class ResourceStatusSchedulingResponse {
 
     public static final class Builder {
         private Integer availabilityDomain;
+        private String terminationTimestamp;
 
         public Builder() {
     	      // Empty
@@ -46,13 +63,18 @@ public final class ResourceStatusSchedulingResponse {
         public Builder(ResourceStatusSchedulingResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.availabilityDomain = defaults.availabilityDomain;
+    	      this.terminationTimestamp = defaults.terminationTimestamp;
         }
 
         public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
+        }
+        public Builder terminationTimestamp(String terminationTimestamp) {
+            this.terminationTimestamp = Objects.requireNonNull(terminationTimestamp);
+            return this;
         }        public ResourceStatusSchedulingResponse build() {
-            return new ResourceStatusSchedulingResponse(availabilityDomain);
+            return new ResourceStatusSchedulingResponse(availabilityDomain, terminationTimestamp);
         }
     }
 }

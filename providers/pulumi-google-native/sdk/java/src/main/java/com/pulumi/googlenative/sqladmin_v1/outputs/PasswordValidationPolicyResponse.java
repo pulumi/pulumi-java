@@ -22,6 +22,11 @@ public final class PasswordValidationPolicyResponse {
      */
     private final Boolean disallowUsernameSubstring;
     /**
+     * @return Whether the password policy is enabled or not.
+     * 
+     */
+    private final Boolean enablePasswordPolicy;
+    /**
      * @return Minimum number of characters allowed.
      * 
      */
@@ -41,11 +46,13 @@ public final class PasswordValidationPolicyResponse {
     private PasswordValidationPolicyResponse(
         @CustomType.Parameter("complexity") String complexity,
         @CustomType.Parameter("disallowUsernameSubstring") Boolean disallowUsernameSubstring,
+        @CustomType.Parameter("enablePasswordPolicy") Boolean enablePasswordPolicy,
         @CustomType.Parameter("minLength") Integer minLength,
         @CustomType.Parameter("passwordChangeInterval") String passwordChangeInterval,
         @CustomType.Parameter("reuseInterval") Integer reuseInterval) {
         this.complexity = complexity;
         this.disallowUsernameSubstring = disallowUsernameSubstring;
+        this.enablePasswordPolicy = enablePasswordPolicy;
         this.minLength = minLength;
         this.passwordChangeInterval = passwordChangeInterval;
         this.reuseInterval = reuseInterval;
@@ -64,6 +71,13 @@ public final class PasswordValidationPolicyResponse {
      */
     public Boolean disallowUsernameSubstring() {
         return this.disallowUsernameSubstring;
+    }
+    /**
+     * @return Whether the password policy is enabled or not.
+     * 
+     */
+    public Boolean enablePasswordPolicy() {
+        return this.enablePasswordPolicy;
     }
     /**
      * @return Minimum number of characters allowed.
@@ -98,6 +112,7 @@ public final class PasswordValidationPolicyResponse {
     public static final class Builder {
         private String complexity;
         private Boolean disallowUsernameSubstring;
+        private Boolean enablePasswordPolicy;
         private Integer minLength;
         private String passwordChangeInterval;
         private Integer reuseInterval;
@@ -110,6 +125,7 @@ public final class PasswordValidationPolicyResponse {
     	      Objects.requireNonNull(defaults);
     	      this.complexity = defaults.complexity;
     	      this.disallowUsernameSubstring = defaults.disallowUsernameSubstring;
+    	      this.enablePasswordPolicy = defaults.enablePasswordPolicy;
     	      this.minLength = defaults.minLength;
     	      this.passwordChangeInterval = defaults.passwordChangeInterval;
     	      this.reuseInterval = defaults.reuseInterval;
@@ -121,6 +137,10 @@ public final class PasswordValidationPolicyResponse {
         }
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
+            return this;
+        }
+        public Builder enablePasswordPolicy(Boolean enablePasswordPolicy) {
+            this.enablePasswordPolicy = Objects.requireNonNull(enablePasswordPolicy);
             return this;
         }
         public Builder minLength(Integer minLength) {
@@ -135,7 +155,7 @@ public final class PasswordValidationPolicyResponse {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }        public PasswordValidationPolicyResponse build() {
-            return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
+            return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, enablePasswordPolicy, minLength, passwordChangeInterval, reuseInterval);
         }
     }
 }

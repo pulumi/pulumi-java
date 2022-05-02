@@ -54,14 +54,14 @@ public class MachineImage extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process.
      * 
      */
     @Export(name="guestFlush", type=Boolean.class, parameters={})
     private Output<Boolean> guestFlush;
 
     /**
-     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process.
      * 
      */
     public Output<Boolean> guestFlush() {

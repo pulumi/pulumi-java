@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigqueryreservation_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.bigqueryreservation_v1.outputs.StatusResponse;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,12 @@ public final class GetCapacityCommitmentResult {
      */
     private final StatusResponse failureStatus;
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * @return Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    private final Boolean multiRegionAuxiliary;
+    /**
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     private final String name;
@@ -56,6 +62,7 @@ public final class GetCapacityCommitmentResult {
         @CustomType.Parameter("commitmentEndTime") String commitmentEndTime,
         @CustomType.Parameter("commitmentStartTime") String commitmentStartTime,
         @CustomType.Parameter("failureStatus") StatusResponse failureStatus,
+        @CustomType.Parameter("multiRegionAuxiliary") Boolean multiRegionAuxiliary,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("plan") String plan,
         @CustomType.Parameter("renewalPlan") String renewalPlan,
@@ -64,6 +71,7 @@ public final class GetCapacityCommitmentResult {
         this.commitmentEndTime = commitmentEndTime;
         this.commitmentStartTime = commitmentStartTime;
         this.failureStatus = failureStatus;
+        this.multiRegionAuxiliary = multiRegionAuxiliary;
         this.name = name;
         this.plan = plan;
         this.renewalPlan = renewalPlan;
@@ -93,7 +101,14 @@ public final class GetCapacityCommitmentResult {
         return this.failureStatus;
     }
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * @return Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    public Boolean multiRegionAuxiliary() {
+        return this.multiRegionAuxiliary;
+    }
+    /**
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public String name() {
@@ -140,6 +155,7 @@ public final class GetCapacityCommitmentResult {
         private String commitmentEndTime;
         private String commitmentStartTime;
         private StatusResponse failureStatus;
+        private Boolean multiRegionAuxiliary;
         private String name;
         private String plan;
         private String renewalPlan;
@@ -155,6 +171,7 @@ public final class GetCapacityCommitmentResult {
     	      this.commitmentEndTime = defaults.commitmentEndTime;
     	      this.commitmentStartTime = defaults.commitmentStartTime;
     	      this.failureStatus = defaults.failureStatus;
+    	      this.multiRegionAuxiliary = defaults.multiRegionAuxiliary;
     	      this.name = defaults.name;
     	      this.plan = defaults.plan;
     	      this.renewalPlan = defaults.renewalPlan;
@@ -172,6 +189,10 @@ public final class GetCapacityCommitmentResult {
         }
         public Builder failureStatus(StatusResponse failureStatus) {
             this.failureStatus = Objects.requireNonNull(failureStatus);
+            return this;
+        }
+        public Builder multiRegionAuxiliary(Boolean multiRegionAuxiliary) {
+            this.multiRegionAuxiliary = Objects.requireNonNull(multiRegionAuxiliary);
             return this;
         }
         public Builder name(String name) {
@@ -194,7 +215,7 @@ public final class GetCapacityCommitmentResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }        public GetCapacityCommitmentResult build() {
-            return new GetCapacityCommitmentResult(commitmentEndTime, commitmentStartTime, failureStatus, name, plan, renewalPlan, slotCount, state);
+            return new GetCapacityCommitmentResult(commitmentEndTime, commitmentStartTime, failureStatus, multiRegionAuxiliary, name, plan, renewalPlan, slotCount, state);
         }
     }
 }

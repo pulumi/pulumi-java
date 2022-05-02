@@ -4,7 +4,9 @@
 package com.pulumi.googlenative.memcache_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.memcache_v1.outputs.GoogleCloudMemcacheV1MaintenancePolicyResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.InstanceMessageResponse;
+import com.pulumi.googlenative.memcache_v1.outputs.MaintenanceScheduleResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.NodeConfigResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.NodeResponse;
@@ -46,6 +48,16 @@ public final class GetInstanceResult {
      * 
      */
     private final Map<String,String> labels;
+    /**
+     * @return The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    private final GoogleCloudMemcacheV1MaintenancePolicyResponse maintenancePolicy;
+    /**
+     * @return Published maintenance schedule.
+     * 
+     */
+    private final MaintenanceScheduleResponse maintenanceSchedule;
     /**
      * @return The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
      * 
@@ -105,6 +117,8 @@ public final class GetInstanceResult {
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("instanceMessages") List<InstanceMessageResponse> instanceMessages,
         @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("maintenancePolicy") GoogleCloudMemcacheV1MaintenancePolicyResponse maintenancePolicy,
+        @CustomType.Parameter("maintenanceSchedule") MaintenanceScheduleResponse maintenanceSchedule,
         @CustomType.Parameter("memcacheFullVersion") String memcacheFullVersion,
         @CustomType.Parameter("memcacheNodes") List<NodeResponse> memcacheNodes,
         @CustomType.Parameter("memcacheVersion") String memcacheVersion,
@@ -121,6 +135,8 @@ public final class GetInstanceResult {
         this.displayName = displayName;
         this.instanceMessages = instanceMessages;
         this.labels = labels;
+        this.maintenancePolicy = maintenancePolicy;
+        this.maintenanceSchedule = maintenanceSchedule;
         this.memcacheFullVersion = memcacheFullVersion;
         this.memcacheNodes = memcacheNodes;
         this.memcacheVersion = memcacheVersion;
@@ -174,6 +190,20 @@ public final class GetInstanceResult {
      */
     public Map<String,String> labels() {
         return this.labels;
+    }
+    /**
+     * @return The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    public GoogleCloudMemcacheV1MaintenancePolicyResponse maintenancePolicy() {
+        return this.maintenancePolicy;
+    }
+    /**
+     * @return Published maintenance schedule.
+     * 
+     */
+    public MaintenanceScheduleResponse maintenanceSchedule() {
+        return this.maintenanceSchedule;
     }
     /**
      * @return The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.
@@ -261,6 +291,8 @@ public final class GetInstanceResult {
         private String displayName;
         private List<InstanceMessageResponse> instanceMessages;
         private Map<String,String> labels;
+        private GoogleCloudMemcacheV1MaintenancePolicyResponse maintenancePolicy;
+        private MaintenanceScheduleResponse maintenanceSchedule;
         private String memcacheFullVersion;
         private List<NodeResponse> memcacheNodes;
         private String memcacheVersion;
@@ -284,6 +316,8 @@ public final class GetInstanceResult {
     	      this.displayName = defaults.displayName;
     	      this.instanceMessages = defaults.instanceMessages;
     	      this.labels = defaults.labels;
+    	      this.maintenancePolicy = defaults.maintenancePolicy;
+    	      this.maintenanceSchedule = defaults.maintenanceSchedule;
     	      this.memcacheFullVersion = defaults.memcacheFullVersion;
     	      this.memcacheNodes = defaults.memcacheNodes;
     	      this.memcacheVersion = defaults.memcacheVersion;
@@ -321,6 +355,14 @@ public final class GetInstanceResult {
         }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
+            return this;
+        }
+        public Builder maintenancePolicy(GoogleCloudMemcacheV1MaintenancePolicyResponse maintenancePolicy) {
+            this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
+            return this;
+        }
+        public Builder maintenanceSchedule(MaintenanceScheduleResponse maintenanceSchedule) {
+            this.maintenanceSchedule = Objects.requireNonNull(maintenanceSchedule);
             return this;
         }
         public Builder memcacheFullVersion(String memcacheFullVersion) {
@@ -369,7 +411,7 @@ public final class GetInstanceResult {
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(authorizedNetwork, createTime, discoveryEndpoint, displayName, instanceMessages, labels, memcacheFullVersion, memcacheNodes, memcacheVersion, name, nodeConfig, nodeCount, parameters, state, updateTime, zones);
+            return new GetInstanceResult(authorizedNetwork, createTime, discoveryEndpoint, displayName, instanceMessages, labels, maintenancePolicy, maintenanceSchedule, memcacheFullVersion, memcacheNodes, memcacheVersion, name, nodeConfig, nodeCount, parameters, state, updateTime, zones);
         }
     }
 }

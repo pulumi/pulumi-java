@@ -41,15 +41,15 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    @Import(name="rulesetName")
-    private @Nullable Output<String> rulesetName;
+    @Import(name="rulesetName", required=true)
+    private Output<String> rulesetName;
 
     /**
      * @return Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    public Optional<Output<String>> rulesetName() {
-        return Optional.ofNullable(this.rulesetName);
+    public Output<String> rulesetName() {
+        return this.rulesetName;
     }
 
     private ReleaseArgs() {}
@@ -114,7 +114,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder rulesetName(@Nullable Output<String> rulesetName) {
+        public Builder rulesetName(Output<String> rulesetName) {
             $.rulesetName = rulesetName;
             return this;
         }
@@ -130,6 +130,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ReleaseArgs build() {
+            $.rulesetName = Objects.requireNonNull($.rulesetName, "expected parameter 'rulesetName' to be non-null");
             return $;
         }
     }

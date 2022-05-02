@@ -56,14 +56,14 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
      * 
      */
     @Import(name="phraseSetId", required=true)
     private Output<String> phraseSetId;
 
     /**
-     * @return The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     * @return The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
      * 
      */
     public Output<String> phraseSetId() {
@@ -173,7 +173,7 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class PhraseSetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+         * @param phraseSetId The ID to use for the phrase set, which will become the final component of the phrase set&#39;s resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
          * 
          * @return builder
          * 

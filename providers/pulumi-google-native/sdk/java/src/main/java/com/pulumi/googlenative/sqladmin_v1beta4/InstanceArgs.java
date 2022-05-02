@@ -33,6 +33,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     public static final InstanceArgs Empty = new InstanceArgs();
 
     /**
+     * List all maintenance versions applicable on the instance
+     * 
+     */
+    @Import(name="availableMaintenanceVersions")
+    private @Nullable Output<List<String>> availableMaintenanceVersions;
+
+    /**
+     * @return List all maintenance versions applicable on the instance
+     * 
+     */
+    public Optional<Output<List<String>>> availableMaintenanceVersions() {
+        return Optional.ofNullable(this.availableMaintenanceVersions);
+    }
+
+    /**
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
@@ -123,6 +138,29 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+    @Import(name="etag")
+    private @Nullable Output<String> etag;
+
+    /**
+     * @return This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
+    }
+
+    /**
      * The name and status of the failover replica.
      * 
      */
@@ -183,6 +221,29 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     * @deprecated
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+    @Import(name="ipv6Address")
+    private @Nullable Output<String> ipv6Address;
+
+    /**
+     * @return The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     * @deprecated
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+    public Optional<Output<String>> ipv6Address() {
+        return Optional.ofNullable(this.ipv6Address);
+    }
+
+    /**
      * This is always `sql#instance`.
      * 
      */
@@ -195,6 +256,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
+    }
+
+    /**
+     * The current software version on the instance.
+     * 
+     */
+    @Import(name="maintenanceVersion")
+    private @Nullable Output<String> maintenanceVersion;
+
+    /**
+     * @return The current software version on the instance.
+     * 
+     */
+    public Optional<Output<String>> maintenanceVersion() {
+        return Optional.ofNullable(this.maintenanceVersion);
     }
 
     /**
@@ -378,14 +454,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     @Import(name="secondaryGceZone")
     private @Nullable Output<String> secondaryGceZone;
 
     /**
-     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     public Optional<Output<String>> secondaryGceZone() {
@@ -485,17 +561,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     private InstanceArgs() {}
 
     private InstanceArgs(InstanceArgs $) {
+        this.availableMaintenanceVersions = $.availableMaintenanceVersions;
         this.backendType = $.backendType;
         this.connectionName = $.connectionName;
         this.currentDiskSize = $.currentDiskSize;
         this.databaseVersion = $.databaseVersion;
         this.diskEncryptionConfiguration = $.diskEncryptionConfiguration;
         this.diskEncryptionStatus = $.diskEncryptionStatus;
+        this.etag = $.etag;
         this.failoverReplica = $.failoverReplica;
         this.gceZone = $.gceZone;
         this.instanceType = $.instanceType;
         this.ipAddresses = $.ipAddresses;
+        this.ipv6Address = $.ipv6Address;
         this.kind = $.kind;
+        this.maintenanceVersion = $.maintenanceVersion;
         this.masterInstanceName = $.masterInstanceName;
         this.maxDiskSize = $.maxDiskSize;
         this.name = $.name;
@@ -533,6 +613,37 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(InstanceArgs defaults) {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param availableMaintenanceVersions List all maintenance versions applicable on the instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availableMaintenanceVersions(@Nullable Output<List<String>> availableMaintenanceVersions) {
+            $.availableMaintenanceVersions = availableMaintenanceVersions;
+            return this;
+        }
+
+        /**
+         * @param availableMaintenanceVersions List all maintenance versions applicable on the instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availableMaintenanceVersions(List<String> availableMaintenanceVersions) {
+            return availableMaintenanceVersions(Output.of(availableMaintenanceVersions));
+        }
+
+        /**
+         * @param availableMaintenanceVersions List all maintenance versions applicable on the instance
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availableMaintenanceVersions(String... availableMaintenanceVersions) {
+            return availableMaintenanceVersions(List.of(availableMaintenanceVersions));
         }
 
         /**
@@ -662,6 +773,35 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param etag This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+         * 
+         */
+        @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+        public Builder etag(@Nullable Output<String> etag) {
+            $.etag = etag;
+            return this;
+        }
+
+        /**
+         * @param etag This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+         * 
+         */
+        @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
+        }
+
+        /**
          * @param failoverReplica The name and status of the failover replica.
          * 
          * @return builder
@@ -756,6 +896,35 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param ipv6Address The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+         * 
+         */
+        @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
+            $.ipv6Address = ipv6Address;
+            return this;
+        }
+
+        /**
+         * @param ipv6Address The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+         * 
+         */
+        @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+        public Builder ipv6Address(String ipv6Address) {
+            return ipv6Address(Output.of(ipv6Address));
+        }
+
+        /**
          * @param kind This is always `sql#instance`.
          * 
          * @return builder
@@ -774,6 +943,27 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
+        }
+
+        /**
+         * @param maintenanceVersion The current software version on the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceVersion(@Nullable Output<String> maintenanceVersion) {
+            $.maintenanceVersion = maintenanceVersion;
+            return this;
+        }
+
+        /**
+         * @param maintenanceVersion The current software version on the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenanceVersion(String maintenanceVersion) {
+            return maintenanceVersion(Output.of(maintenanceVersion));
         }
 
         /**
@@ -1039,7 +1229,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
          * 
          * @return builder
          * 
@@ -1050,7 +1240,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+         * @param secondaryGceZone The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
          * 
          * @return builder
          * 

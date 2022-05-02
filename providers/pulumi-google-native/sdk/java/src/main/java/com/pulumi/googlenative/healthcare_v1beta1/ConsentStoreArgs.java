@@ -17,9 +17,17 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ConsentStoreArgs Empty = new ConsentStoreArgs();
 
+    /**
+     * Required. The ID of the consent store to create. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+     * 
+     */
     @Import(name="consentStoreId", required=true)
     private Output<String> consentStoreId;
 
+    /**
+     * @return Required. The ID of the consent store to create. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+     * 
+     */
     public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
@@ -136,11 +144,23 @@ public final class ConsentStoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConsentStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consentStoreId Required. The ID of the consent store to create. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(Output<String> consentStoreId) {
             $.consentStoreId = consentStoreId;
             return this;
         }
 
+        /**
+         * @param consentStoreId Required. The ID of the consent store to create. The string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentStoreId(String consentStoreId) {
             return consentStoreId(Output.of(consentStoreId));
         }

@@ -8,6 +8,7 @@ import com.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import com.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import com.pulumi.googlenative.testing_v1.outputs.RoboDirectiveResponse;
 import com.pulumi.googlenative.testing_v1.outputs.RoboStartingIntentResponse;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,6 +36,16 @@ public final class AndroidRoboTestResponse {
      */
     private final String appPackageId;
     /**
+     * @return The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+     * 
+     */
+    private final Integer maxDepth;
+    /**
+     * @return The max number of steps Robo can execute. Default is no limit.
+     * 
+     */
+    private final Integer maxSteps;
+    /**
      * @return A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
      * 
      */
@@ -61,6 +72,8 @@ public final class AndroidRoboTestResponse {
         @CustomType.Parameter("appBundle") AppBundleResponse appBundle,
         @CustomType.Parameter("appInitialActivity") String appInitialActivity,
         @CustomType.Parameter("appPackageId") String appPackageId,
+        @CustomType.Parameter("maxDepth") Integer maxDepth,
+        @CustomType.Parameter("maxSteps") Integer maxSteps,
         @CustomType.Parameter("roboDirectives") List<RoboDirectiveResponse> roboDirectives,
         @CustomType.Parameter("roboMode") String roboMode,
         @CustomType.Parameter("roboScript") FileReferenceResponse roboScript,
@@ -69,6 +82,8 @@ public final class AndroidRoboTestResponse {
         this.appBundle = appBundle;
         this.appInitialActivity = appInitialActivity;
         this.appPackageId = appPackageId;
+        this.maxDepth = maxDepth;
+        this.maxSteps = maxSteps;
         this.roboDirectives = roboDirectives;
         this.roboMode = roboMode;
         this.roboScript = roboScript;
@@ -102,6 +117,20 @@ public final class AndroidRoboTestResponse {
      */
     public String appPackageId() {
         return this.appPackageId;
+    }
+    /**
+     * @return The max depth of the traversal stack Robo can explore. Needs to be at least 2 to make Robo explore the app beyond the first activity. Default is 50.
+     * 
+     */
+    public Integer maxDepth() {
+        return this.maxDepth;
+    }
+    /**
+     * @return The max number of steps Robo can execute. Default is no limit.
+     * 
+     */
+    public Integer maxSteps() {
+        return this.maxSteps;
     }
     /**
      * @return A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.
@@ -145,6 +174,8 @@ public final class AndroidRoboTestResponse {
         private AppBundleResponse appBundle;
         private String appInitialActivity;
         private String appPackageId;
+        private Integer maxDepth;
+        private Integer maxSteps;
         private List<RoboDirectiveResponse> roboDirectives;
         private String roboMode;
         private FileReferenceResponse roboScript;
@@ -160,6 +191,8 @@ public final class AndroidRoboTestResponse {
     	      this.appBundle = defaults.appBundle;
     	      this.appInitialActivity = defaults.appInitialActivity;
     	      this.appPackageId = defaults.appPackageId;
+    	      this.maxDepth = defaults.maxDepth;
+    	      this.maxSteps = defaults.maxSteps;
     	      this.roboDirectives = defaults.roboDirectives;
     	      this.roboMode = defaults.roboMode;
     	      this.roboScript = defaults.roboScript;
@@ -180,6 +213,14 @@ public final class AndroidRoboTestResponse {
         }
         public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
+            return this;
+        }
+        public Builder maxDepth(Integer maxDepth) {
+            this.maxDepth = Objects.requireNonNull(maxDepth);
+            return this;
+        }
+        public Builder maxSteps(Integer maxSteps) {
+            this.maxSteps = Objects.requireNonNull(maxSteps);
             return this;
         }
         public Builder roboDirectives(List<RoboDirectiveResponse> roboDirectives) {
@@ -204,7 +245,7 @@ public final class AndroidRoboTestResponse {
         public Builder startingIntents(RoboStartingIntentResponse... startingIntents) {
             return startingIntents(List.of(startingIntents));
         }        public AndroidRoboTestResponse build() {
-            return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
+            return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, maxDepth, maxSteps, roboDirectives, roboMode, roboScript, startingIntents);
         }
     }
 }

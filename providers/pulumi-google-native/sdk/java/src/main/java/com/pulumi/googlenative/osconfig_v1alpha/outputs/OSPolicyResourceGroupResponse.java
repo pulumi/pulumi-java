@@ -5,6 +5,7 @@ package com.pulumi.googlenative.osconfig_v1alpha.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyInventoryFilterResponse;
+import com.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyOSFilterResponse;
 import com.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceResponse;
 import java.util.List;
 import java.util.Objects;
@@ -17,6 +18,15 @@ public final class OSPolicyResourceGroupResponse {
      */
     private final List<OSPolicyInventoryFilterResponse> inventoryFilters;
     /**
+     * @return Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+    private final OSPolicyOSFilterResponse osFilter;
+    /**
      * @return List of resources configured for this resource group. The resources are executed in the exact order specified here.
      * 
      */
@@ -25,8 +35,10 @@ public final class OSPolicyResourceGroupResponse {
     @CustomType.Constructor
     private OSPolicyResourceGroupResponse(
         @CustomType.Parameter("inventoryFilters") List<OSPolicyInventoryFilterResponse> inventoryFilters,
+        @CustomType.Parameter("osFilter") OSPolicyOSFilterResponse osFilter,
         @CustomType.Parameter("resources") List<OSPolicyResourceResponse> resources) {
         this.inventoryFilters = inventoryFilters;
+        this.osFilter = osFilter;
         this.resources = resources;
     }
 
@@ -36,6 +48,17 @@ public final class OSPolicyResourceGroupResponse {
      */
     public List<OSPolicyInventoryFilterResponse> inventoryFilters() {
         return this.inventoryFilters;
+    }
+    /**
+     * @return Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventory_filters` field instead. Used to specify the OS filter for a resource group */
+    public OSPolicyOSFilterResponse osFilter() {
+        return this.osFilter;
     }
     /**
      * @return List of resources configured for this resource group. The resources are executed in the exact order specified here.
@@ -55,6 +78,7 @@ public final class OSPolicyResourceGroupResponse {
 
     public static final class Builder {
         private List<OSPolicyInventoryFilterResponse> inventoryFilters;
+        private OSPolicyOSFilterResponse osFilter;
         private List<OSPolicyResourceResponse> resources;
 
         public Builder() {
@@ -64,6 +88,7 @@ public final class OSPolicyResourceGroupResponse {
         public Builder(OSPolicyResourceGroupResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.inventoryFilters = defaults.inventoryFilters;
+    	      this.osFilter = defaults.osFilter;
     	      this.resources = defaults.resources;
         }
 
@@ -74,6 +99,10 @@ public final class OSPolicyResourceGroupResponse {
         public Builder inventoryFilters(OSPolicyInventoryFilterResponse... inventoryFilters) {
             return inventoryFilters(List.of(inventoryFilters));
         }
+        public Builder osFilter(OSPolicyOSFilterResponse osFilter) {
+            this.osFilter = Objects.requireNonNull(osFilter);
+            return this;
+        }
         public Builder resources(List<OSPolicyResourceResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
@@ -81,7 +110,7 @@ public final class OSPolicyResourceGroupResponse {
         public Builder resources(OSPolicyResourceResponse... resources) {
             return resources(List.of(resources));
         }        public OSPolicyResourceGroupResponse build() {
-            return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
+            return new OSPolicyResourceGroupResponse(inventoryFilters, osFilter, resources);
         }
     }
 }

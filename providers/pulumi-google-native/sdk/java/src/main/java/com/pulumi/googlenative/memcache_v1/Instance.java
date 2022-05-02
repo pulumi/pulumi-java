@@ -9,7 +9,9 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.memcache_v1.InstanceArgs;
+import com.pulumi.googlenative.memcache_v1.outputs.GoogleCloudMemcacheV1MaintenancePolicyResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.InstanceMessageResponse;
+import com.pulumi.googlenative.memcache_v1.outputs.MaintenanceScheduleResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.NodeConfigResponse;
 import com.pulumi.googlenative.memcache_v1.outputs.NodeResponse;
@@ -108,6 +110,34 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<Map<String,String>> labels() {
         return this.labels;
+    }
+    /**
+     * The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    @Export(name="maintenancePolicy", type=GoogleCloudMemcacheV1MaintenancePolicyResponse.class, parameters={})
+    private Output<GoogleCloudMemcacheV1MaintenancePolicyResponse> maintenancePolicy;
+
+    /**
+     * @return The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    public Output<GoogleCloudMemcacheV1MaintenancePolicyResponse> maintenancePolicy() {
+        return this.maintenancePolicy;
+    }
+    /**
+     * Published maintenance schedule.
+     * 
+     */
+    @Export(name="maintenanceSchedule", type=MaintenanceScheduleResponse.class, parameters={})
+    private Output<MaintenanceScheduleResponse> maintenanceSchedule;
+
+    /**
+     * @return Published maintenance schedule.
+     * 
+     */
+    public Output<MaintenanceScheduleResponse> maintenanceSchedule() {
+        return this.maintenanceSchedule;
     }
     /**
      * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be &#34;memcached-1.5.16&#34;.

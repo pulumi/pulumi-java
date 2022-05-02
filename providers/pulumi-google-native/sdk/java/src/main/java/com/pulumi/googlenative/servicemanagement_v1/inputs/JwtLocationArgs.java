@@ -20,6 +20,21 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
     public static final JwtLocationArgs Empty = new JwtLocationArgs();
 
     /**
+     * Specifies cookie name to extract JWT token.
+     * 
+     */
+    @Import(name="cookie")
+    private @Nullable Output<String> cookie;
+
+    /**
+     * @return Specifies cookie name to extract JWT token.
+     * 
+     */
+    public Optional<Output<String>> cookie() {
+        return Optional.ofNullable(this.cookie);
+    }
+
+    /**
      * Specifies HTTP header name to extract JWT token.
      * 
      */
@@ -67,6 +82,7 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
     private JwtLocationArgs() {}
 
     private JwtLocationArgs(JwtLocationArgs $) {
+        this.cookie = $.cookie;
         this.header = $.header;
         this.query = $.query;
         this.valuePrefix = $.valuePrefix;
@@ -88,6 +104,27 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(JwtLocationArgs defaults) {
             $ = new JwtLocationArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param cookie Specifies cookie name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cookie(@Nullable Output<String> cookie) {
+            $.cookie = cookie;
+            return this;
+        }
+
+        /**
+         * @param cookie Specifies cookie name to extract JWT token.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cookie(String cookie) {
+            return cookie(Output.of(cookie));
         }
 
         /**

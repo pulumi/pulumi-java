@@ -45,7 +45,7 @@ public final class GetProcessorResult {
      */
     private final String state;
     /**
-     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * @return The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     private final String type;
@@ -120,7 +120,7 @@ public final class GetProcessorResult {
         return this.state;
     }
     /**
-     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * @return The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     public String type() {

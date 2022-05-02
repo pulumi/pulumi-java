@@ -75,9 +75,17 @@ public final class WorkloadIdentityPoolArgs extends com.pulumi.resources.Resourc
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The ID to use for the pool, which becomes the final component of the resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may not be specified.
+     * 
+     */
     @Import(name="workloadIdentityPoolId", required=true)
     private Output<String> workloadIdentityPoolId;
 
+    /**
+     * @return Required. The ID to use for the pool, which becomes the final component of the resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may not be specified.
+     * 
+     */
     public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
@@ -192,11 +200,23 @@ public final class WorkloadIdentityPoolArgs extends com.pulumi.resources.Resourc
             return project(Output.of(project));
         }
 
+        /**
+         * @param workloadIdentityPoolId Required. The ID to use for the pool, which becomes the final component of the resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
             $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
+        /**
+         * @param workloadIdentityPoolId Required. The ID to use for the pool, which becomes the final component of the resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is reserved for use by Google, and may not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
         }

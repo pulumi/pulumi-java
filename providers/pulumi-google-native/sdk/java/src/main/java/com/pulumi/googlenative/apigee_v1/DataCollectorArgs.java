@@ -16,9 +16,17 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DataCollectorArgs Empty = new DataCollectorArgs();
 
+    /**
+     * ID of the data collector. Overrides any ID in the data collector resource. Must be a string beginning with `dc_` that contains only letters, numbers, and underscores.
+     * 
+     */
     @Import(name="dataCollectorId")
     private @Nullable Output<String> dataCollectorId;
 
+    /**
+     * @return ID of the data collector. Overrides any ID in the data collector resource. Must be a string beginning with `dc_` that contains only letters, numbers, and underscores.
+     * 
+     */
     public Optional<Output<String>> dataCollectorId() {
         return Optional.ofNullable(this.dataCollectorId);
     }
@@ -103,11 +111,23 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataCollectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataCollectorId ID of the data collector. Overrides any ID in the data collector resource. Must be a string beginning with `dc_` that contains only letters, numbers, and underscores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectorId(@Nullable Output<String> dataCollectorId) {
             $.dataCollectorId = dataCollectorId;
             return this;
         }
 
+        /**
+         * @param dataCollectorId ID of the data collector. Overrides any ID in the data collector resource. Must be a string beginning with `dc_` that contains only letters, numbers, and underscores.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataCollectorId(String dataCollectorId) {
             return dataCollectorId(Output.of(dataCollectorId));
         }

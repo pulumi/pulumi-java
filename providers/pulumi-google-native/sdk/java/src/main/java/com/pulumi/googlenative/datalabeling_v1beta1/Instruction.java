@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datalabeling_v1beta1.InstructionArgs;
+import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1CsvInstructionResponse;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
 import java.lang.String;
 import java.util.List;
@@ -48,6 +49,24 @@ public class Instruction extends com.pulumi.resources.CustomResource {
      */
     public Output<String> createTime() {
         return this.createTime;
+    }
+    /**
+     * Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     * @deprecated
+     * Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     */
+    @Deprecated /* Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data. */
+    @Export(name="csvInstruction", type=GoogleCloudDatalabelingV1beta1CsvInstructionResponse.class, parameters={})
+    private Output<GoogleCloudDatalabelingV1beta1CsvInstructionResponse> csvInstruction;
+
+    /**
+     * @return Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     */
+    public Output<GoogleCloudDatalabelingV1beta1CsvInstructionResponse> csvInstruction() {
+        return this.csvInstruction;
     }
     /**
      * The data type of this instruction.

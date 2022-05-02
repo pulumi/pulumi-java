@@ -60,16 +60,32 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * If true, the newly created subscription will only receive messages published after the subscription was created. Otherwise, the entire message backlog will be received on the subscription. Defaults to false.
+     * 
+     */
     @Import(name="skipBacklog")
     private @Nullable Output<String> skipBacklog;
 
+    /**
+     * @return If true, the newly created subscription will only receive messages published after the subscription was created. Otherwise, the entire message backlog will be received on the subscription. Defaults to false.
+     * 
+     */
     public Optional<Output<String>> skipBacklog() {
         return Optional.ofNullable(this.skipBacklog);
     }
 
+    /**
+     * Required. The ID to use for the subscription, which will become the final component of the subscription&#39;s name. This value is structured like: `my-sub-name`.
+     * 
+     */
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Required. The ID to use for the subscription, which will become the final component of the subscription&#39;s name. This value is structured like: `my-sub-name`.
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -179,20 +195,44 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param skipBacklog If true, the newly created subscription will only receive messages published after the subscription was created. Otherwise, the entire message backlog will be received on the subscription. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipBacklog(@Nullable Output<String> skipBacklog) {
             $.skipBacklog = skipBacklog;
             return this;
         }
 
+        /**
+         * @param skipBacklog If true, the newly created subscription will only receive messages published after the subscription was created. Otherwise, the entire message backlog will be received on the subscription. Defaults to false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipBacklog(String skipBacklog) {
             return skipBacklog(Output.of(skipBacklog));
         }
 
+        /**
+         * @param subscriptionId Required. The ID to use for the subscription, which will become the final component of the subscription&#39;s name. This value is structured like: `my-sub-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Required. The ID to use for the subscription, which will become the final component of the subscription&#39;s name. This value is structured like: `my-sub-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

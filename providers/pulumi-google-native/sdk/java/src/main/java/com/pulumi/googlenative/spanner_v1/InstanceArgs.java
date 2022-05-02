@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,6 +46,29 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Output<String> displayName() {
         return this.displayName;
+    }
+
+    /**
+     * Deprecated. This field is not populated.
+     * 
+     * @deprecated
+     * Deprecated. This field is not populated.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is not populated. */
+    @Import(name="endpointUris")
+    private @Nullable Output<List<String>> endpointUris;
+
+    /**
+     * @return Deprecated. This field is not populated.
+     * 
+     * @deprecated
+     * Deprecated. This field is not populated.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is not populated. */
+    public Optional<Output<List<String>>> endpointUris() {
+        return Optional.ofNullable(this.endpointUris);
     }
 
     /**
@@ -134,6 +158,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     private InstanceArgs(InstanceArgs $) {
         this.config = $.config;
         this.displayName = $.displayName;
+        this.endpointUris = $.endpointUris;
         this.instanceId = $.instanceId;
         this.labels = $.labels;
         this.name = $.name;
@@ -200,6 +225,49 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param endpointUris Deprecated. This field is not populated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field is not populated.
+         * 
+         */
+        @Deprecated /* Deprecated. This field is not populated. */
+        public Builder endpointUris(@Nullable Output<List<String>> endpointUris) {
+            $.endpointUris = endpointUris;
+            return this;
+        }
+
+        /**
+         * @param endpointUris Deprecated. This field is not populated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field is not populated.
+         * 
+         */
+        @Deprecated /* Deprecated. This field is not populated. */
+        public Builder endpointUris(List<String> endpointUris) {
+            return endpointUris(Output.of(endpointUris));
+        }
+
+        /**
+         * @param endpointUris Deprecated. This field is not populated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field is not populated.
+         * 
+         */
+        @Deprecated /* Deprecated. This field is not populated. */
+        public Builder endpointUris(String... endpointUris) {
+            return endpointUris(List.of(endpointUris));
         }
 
         /**

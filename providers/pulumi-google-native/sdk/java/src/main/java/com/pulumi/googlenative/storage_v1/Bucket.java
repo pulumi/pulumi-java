@@ -13,7 +13,6 @@ import com.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketAutoclassResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketBillingResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketCorsItemResponse;
-import com.pulumi.googlenative.storage_v1.outputs.BucketCustomPlacementConfigResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketEncryptionResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketLifecycleResponse;
@@ -90,20 +89,6 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      */
     public Output<List<BucketCorsItemResponse>> cors() {
         return this.cors;
-    }
-    /**
-     * The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    @Export(name="customPlacementConfig", type=BucketCustomPlacementConfigResponse.class, parameters={})
-    private Output<BucketCustomPlacementConfigResponse> customPlacementConfig;
-
-    /**
-     * @return The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    public Output<BucketCustomPlacementConfigResponse> customPlacementConfig() {
-        return this.customPlacementConfig;
     }
     /**
      * The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.

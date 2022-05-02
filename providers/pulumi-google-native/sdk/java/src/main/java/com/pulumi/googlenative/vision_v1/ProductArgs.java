@@ -84,9 +84,17 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.productCategory);
     }
 
+    /**
+     * A user-supplied resource id for this Product. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     @Import(name="productId")
     private @Nullable Output<String> productId;
 
+    /**
+     * @return A user-supplied resource id for this Product. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     public Optional<Output<String>> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -237,11 +245,23 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             return productCategory(Output.of(productCategory));
         }
 
+        /**
+         * @param productId A user-supplied resource id for this Product. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(@Nullable Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId A user-supplied resource id for this Product. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }

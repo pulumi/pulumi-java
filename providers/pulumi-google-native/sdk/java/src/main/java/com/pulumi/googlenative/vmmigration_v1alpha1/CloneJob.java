@@ -11,11 +11,13 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vmmigration_v1alpha1.CloneJobArgs;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.TargetVMDetailsResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
  * Initiates a Clone of a specific migrating VM.
+ * Auto-naming is currently not supported for this resource.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 
@@ -35,6 +37,24 @@ public class CloneJob extends com.pulumi.resources.CustomResource {
      */
     public Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
+    }
+    /**
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead. */
+    @Export(name="computeEngineVmDetails", type=TargetVMDetailsResponse.class, parameters={})
+    private Output<TargetVMDetailsResponse> computeEngineVmDetails;
+
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    public Output<TargetVMDetailsResponse> computeEngineVmDetails() {
+        return this.computeEngineVmDetails;
     }
     /**
      * The time the clone job was created (as an API call, not when it was actually created in the target).
@@ -105,6 +125,24 @@ public class CloneJob extends com.pulumi.resources.CustomResource {
      */
     public Output<String> stateTime() {
         return this.stateTime;
+    }
+    /**
+     * Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     * @deprecated
+     * Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    @Deprecated /* Output only. Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead. */
+    @Export(name="targetDetails", type=TargetVMDetailsResponse.class, parameters={})
+    private Output<TargetVMDetailsResponse> targetDetails;
+
+    /**
+     * @return Details of the VM to create as the target of this clone job. Deprecated: Use compute_engine_target_details instead.
+     * 
+     */
+    public Output<TargetVMDetailsResponse> targetDetails() {
+        return this.targetDetails;
     }
 
     /**

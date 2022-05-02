@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_beta.NodeGroupArgs;
 import com.pulumi.googlenative.compute_beta.outputs.NodeGroupAutoscalingPolicyResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NodeGroupMaintenanceWindowResponse;
+import com.pulumi.googlenative.compute_beta.outputs.ShareSettingsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -158,6 +159,20 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      */
     public Output<String> selfLink() {
         return this.selfLink;
+    }
+    /**
+     * Share-settings for the node group
+     * 
+     */
+    @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
+    private Output<ShareSettingsResponse> shareSettings;
+
+    /**
+     * @return Share-settings for the node group
+     * 
+     */
+    public Output<ShareSettingsResponse> shareSettings() {
+        return this.shareSettings;
     }
     /**
      * The total number of nodes in the node group.

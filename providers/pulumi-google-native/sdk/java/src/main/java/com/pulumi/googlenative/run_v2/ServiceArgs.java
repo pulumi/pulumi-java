@@ -7,9 +7,9 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.run_v2.enums.ServiceIngress;
 import com.pulumi.googlenative.run_v2.enums.ServiceLaunchStage;
-import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2BinaryAuthorizationArgs;
-import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionTemplateArgs;
-import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2TrafficTargetArgs;
+import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunV2BinaryAuthorizationArgs;
+import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunV2RevisionTemplateArgs;
+import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunV2TrafficTargetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,14 +23,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     /**
-     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     @Import(name="annotations")
     private @Nullable Output<Map<String,String>> annotations;
 
     /**
-     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     public Optional<Output<Map<String,String>>> annotations() {
@@ -42,13 +42,13 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryAuthorization")
-    private @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
+    private @Nullable Output<GoogleCloudRunV2BinaryAuthorizationArgs> binaryAuthorization;
 
     /**
      * @return Settings for the Binary Authorization feature.
      * 
      */
-    public Optional<Output<GoogleCloudRunOpV2BinaryAuthorizationArgs>> binaryAuthorization() {
+    public Optional<Output<GoogleCloudRunV2BinaryAuthorizationArgs>> binaryAuthorization() {
         return Optional.ofNullable(this.binaryAuthorization);
     }
 
@@ -83,14 +83,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User-provided description of the Service.
+     * User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return User-provided description of the Service.
+     * @return User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     public Optional<Output<String>> description() {
@@ -128,14 +128,14 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     @Import(name="launchStage")
     private @Nullable Output<ServiceLaunchStage> launchStage;
 
     /**
-     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     public Optional<Output<ServiceLaunchStage>> launchStage() {
@@ -171,9 +171,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The unique identifier for the Service. The name of the service becomes {parent}/services/{service_id}.
+     * 
+     */
     @Import(name="serviceId", required=true)
     private Output<String> serviceId;
 
+    /**
+     * @return Required. The unique identifier for the Service. The name of the service becomes {parent}/services/{service_id}.
+     * 
+     */
     public Output<String> serviceId() {
         return this.serviceId;
     }
@@ -183,13 +191,13 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template", required=true)
-    private Output<GoogleCloudRunOpV2RevisionTemplateArgs> template;
+    private Output<GoogleCloudRunV2RevisionTemplateArgs> template;
 
     /**
      * @return The template used to create revisions for this Service.
      * 
      */
-    public Output<GoogleCloudRunOpV2RevisionTemplateArgs> template() {
+    public Output<GoogleCloudRunV2RevisionTemplateArgs> template() {
         return this.template;
     }
 
@@ -198,19 +206,27 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="traffic")
-    private @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
+    private @Nullable Output<List<GoogleCloudRunV2TrafficTargetArgs>> traffic;
 
     /**
      * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    public Optional<Output<List<GoogleCloudRunOpV2TrafficTargetArgs>>> traffic() {
+    public Optional<Output<List<GoogleCloudRunV2TrafficTargetArgs>>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
 
+    /**
+     * Indicates that the request should be validated and default values populated, without persisting the request or creating any resources.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Indicates that the request should be validated and default values populated, without persisting the request or creating any resources.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -254,7 +270,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
          * 
          * @return builder
          * 
@@ -265,7 +281,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+         * @param annotations Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
          * 
          * @return builder
          * 
@@ -280,7 +296,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
+        public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunV2BinaryAuthorizationArgs> binaryAuthorization) {
             $.binaryAuthorization = binaryAuthorization;
             return this;
         }
@@ -291,7 +307,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder binaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
+        public Builder binaryAuthorization(GoogleCloudRunV2BinaryAuthorizationArgs binaryAuthorization) {
             return binaryAuthorization(Output.of(binaryAuthorization));
         }
 
@@ -338,7 +354,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description User-provided description of the Service.
+         * @param description User-provided description of the Service. This field currently has a 512-character limit.
          * 
          * @return builder
          * 
@@ -349,7 +365,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description User-provided description of the Service.
+         * @param description User-provided description of the Service. This field currently has a 512-character limit.
          * 
          * @return builder
          * 
@@ -401,7 +417,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
          * 
          * @return builder
          * 
@@ -412,7 +428,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+         * @param launchStage The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
          * 
          * @return builder
          * 
@@ -460,11 +476,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param serviceId Required. The unique identifier for the Service. The name of the service becomes {parent}/services/{service_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId Required. The unique identifier for the Service. The name of the service becomes {parent}/services/{service_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }
@@ -475,7 +503,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder template(Output<GoogleCloudRunOpV2RevisionTemplateArgs> template) {
+        public Builder template(Output<GoogleCloudRunV2RevisionTemplateArgs> template) {
             $.template = template;
             return this;
         }
@@ -486,7 +514,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder template(GoogleCloudRunOpV2RevisionTemplateArgs template) {
+        public Builder template(GoogleCloudRunV2RevisionTemplateArgs template) {
             return template(Output.of(template));
         }
 
@@ -496,7 +524,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffic(@Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic) {
+        public Builder traffic(@Nullable Output<List<GoogleCloudRunV2TrafficTargetArgs>> traffic) {
             $.traffic = traffic;
             return this;
         }
@@ -507,7 +535,7 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffic(List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
+        public Builder traffic(List<GoogleCloudRunV2TrafficTargetArgs> traffic) {
             return traffic(Output.of(traffic));
         }
 
@@ -517,15 +545,27 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder traffic(GoogleCloudRunOpV2TrafficTargetArgs... traffic) {
+        public Builder traffic(GoogleCloudRunV2TrafficTargetArgs... traffic) {
             return traffic(List.of(traffic));
         }
 
+        /**
+         * @param validateOnly Indicates that the request should be validated and default values populated, without persisting the request or creating any resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Indicates that the request should be validated and default values populated, without persisting the request or creating any resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

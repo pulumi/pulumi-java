@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentLabelSetArgs;
 import java.lang.Boolean;
+import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,6 +83,29 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
         return Optional.ofNullable(this.inventories);
     }
 
+    /**
+     * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+    @Import(name="osShortNames")
+    private @Nullable Output<List<String>> osShortNames;
+
+    /**
+     * @return Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     * @deprecated
+     * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+     * 
+     */
+    @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+    public Optional<Output<List<String>>> osShortNames() {
+        return Optional.ofNullable(this.osShortNames);
+    }
+
     private OSPolicyAssignmentInstanceFilterArgs() {}
 
     private OSPolicyAssignmentInstanceFilterArgs(OSPolicyAssignmentInstanceFilterArgs $) {
@@ -89,6 +113,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
         this.exclusionLabels = $.exclusionLabels;
         this.inclusionLabels = $.inclusionLabels;
         this.inventories = $.inventories;
+        this.osShortNames = $.osShortNames;
     }
 
     public static Builder builder() {
@@ -221,6 +246,49 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
          */
         public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryArgs... inventories) {
             return inventories(List.of(inventories));
+        }
+
+        /**
+         * @param osShortNames Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         */
+        @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+        public Builder osShortNames(@Nullable Output<List<String>> osShortNames) {
+            $.osShortNames = osShortNames;
+            return this;
+        }
+
+        /**
+         * @param osShortNames Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         */
+        @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+        public Builder osShortNames(List<String> osShortNames) {
+            return osShortNames(Output.of(osShortNames));
+        }
+
+        /**
+         * @param osShortNames Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Use the `inventories` field instead. A VM is selected if it&#39;s OS short name matches with any of the values provided in this list.
+         * 
+         */
+        @Deprecated /* Deprecated. Use the `inventories` field instead. A VM is selected if it's OS short name matches with any of the values provided in this list. */
+        public Builder osShortNames(String... osShortNames) {
+            return osShortNames(List.of(osShortNames));
         }
 
         public OSPolicyAssignmentInstanceFilterArgs build() {

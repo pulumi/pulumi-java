@@ -15,7 +15,7 @@ public final class ScheduleResponse {
      */
     private final String cronJobDuration;
     /**
-     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. The cron spec specifies the local time as defined by the realm.
      * 
      */
     private final String cronSpec;
@@ -50,7 +50,7 @@ public final class ScheduleResponse {
         return this.cronJobDuration;
     }
     /**
-     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
+     * @return The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. The cron spec specifies the local time as defined by the realm.
      * 
      */
     public String cronSpec() {

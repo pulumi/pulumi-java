@@ -13,17 +13,17 @@ import java.util.Objects;
 @CustomType
 public final class ScalingConfigResponse {
     /**
-     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * @return Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
      * 
      */
     private final String fleetAutoscalerSpec;
     /**
-     * @return The name of the Scaling Config
+     * @return The name of the scaling config.
      * 
      */
     private final String name;
     /**
-     * @return The schedules to which this Scaling Config applies.
+     * @return The schedules to which this scaling config applies.
      * 
      */
     private final List<ScheduleResponse> schedules;
@@ -46,21 +46,21 @@ public final class ScalingConfigResponse {
     }
 
     /**
-     * @return Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     * @return Agones fleet autoscaler spec (see [example spec](https://agones.dev/site/docs/reference/fleetautoscaler/)).
      * 
      */
     public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
     }
     /**
-     * @return The name of the Scaling Config
+     * @return The name of the scaling config.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The schedules to which this Scaling Config applies.
+     * @return The schedules to which this scaling config applies.
      * 
      */
     public List<ScheduleResponse> schedules() {

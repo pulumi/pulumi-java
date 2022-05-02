@@ -65,12 +65,28 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
         return Optional.ofNullable(this.threadsPerCore);
     }
 
+    /**
+     * The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+     * 
+     */
+    @Import(name="visibleCoreCount")
+    private @Nullable Output<Integer> visibleCoreCount;
+
+    /**
+     * @return The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+     * 
+     */
+    public Optional<Output<Integer>> visibleCoreCount() {
+        return Optional.ofNullable(this.visibleCoreCount);
+    }
+
     private AdvancedMachineFeaturesArgs() {}
 
     private AdvancedMachineFeaturesArgs(AdvancedMachineFeaturesArgs $) {
         this.enableNestedVirtualization = $.enableNestedVirtualization;
         this.enableUefiNetworking = $.enableUefiNetworking;
         this.threadsPerCore = $.threadsPerCore;
+        this.visibleCoreCount = $.visibleCoreCount;
     }
 
     public static Builder builder() {
@@ -152,6 +168,27 @@ public final class AdvancedMachineFeaturesArgs extends com.pulumi.resources.Reso
          */
         public Builder threadsPerCore(Integer threadsPerCore) {
             return threadsPerCore(Output.of(threadsPerCore));
+        }
+
+        /**
+         * @param visibleCoreCount The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder visibleCoreCount(@Nullable Output<Integer> visibleCoreCount) {
+            $.visibleCoreCount = visibleCoreCount;
+            return this;
+        }
+
+        /**
+         * @param visibleCoreCount The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance&#39;s nominal CPU count and the underlying platform&#39;s SMT width.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder visibleCoreCount(Integer visibleCoreCount) {
+            return visibleCoreCount(Output.of(visibleCoreCount));
         }
 
         public AdvancedMachineFeaturesArgs build() {

@@ -248,6 +248,24 @@ public class TransferConfig extends com.pulumi.resources.CustomResource {
     public Output<String> updateTime() {
         return this.updateTime;
     }
+    /**
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     * @deprecated
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+    @Export(name="userId", type=String.class, parameters={})
+    private Output<String> userId;
+
+    /**
+     * @return Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    public Output<String> userId() {
+        return this.userId;
+    }
 
     /**
      *

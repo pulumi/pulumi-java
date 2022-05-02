@@ -16,6 +16,15 @@ public final class ArtifactResponse {
      */
     private final String checksum;
     /**
+     * @return Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.
+     * 
+     * @deprecated
+     * Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.
+     * 
+     */
+    @Deprecated /* Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto. */
+    private final String name;
+    /**
      * @return Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
      * 
      */
@@ -24,8 +33,10 @@ public final class ArtifactResponse {
     @CustomType.Constructor
     private ArtifactResponse(
         @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("name") String name,
         @CustomType.Parameter("names") List<String> names) {
         this.checksum = checksum;
+        this.name = name;
         this.names = names;
     }
 
@@ -35,6 +46,17 @@ public final class ArtifactResponse {
      */
     public String checksum() {
         return this.checksum;
+    }
+    /**
+     * @return Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.
+     * 
+     * @deprecated
+     * Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto.
+     * 
+     */
+    @Deprecated /* Name of the artifact. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. This field is deprecated in favor of the plural `names` field; it continues to exist here to allow existing BuildProvenance serialized to json in google.devtools.containeranalysis.v1alpha1.BuildDetails.provenance_bytes to deserialize back into proto. */
+    public String name() {
+        return this.name;
     }
     /**
      * @return Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
@@ -54,6 +76,7 @@ public final class ArtifactResponse {
 
     public static final class Builder {
         private String checksum;
+        private String name;
         private List<String> names;
 
         public Builder() {
@@ -63,11 +86,16 @@ public final class ArtifactResponse {
         public Builder(ArtifactResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.checksum = defaults.checksum;
+    	      this.name = defaults.name;
     	      this.names = defaults.names;
         }
 
         public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
+            return this;
+        }
+        public Builder name(String name) {
+            this.name = Objects.requireNonNull(name);
             return this;
         }
         public Builder names(List<String> names) {
@@ -77,7 +105,7 @@ public final class ArtifactResponse {
         public Builder names(String... names) {
             return names(List.of(names));
         }        public ArtifactResponse build() {
-            return new ArtifactResponse(checksum, names);
+            return new ArtifactResponse(checksum, name, names);
         }
     }
 }

@@ -92,9 +92,17 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.workerConfig);
     }
 
+    /**
+     * Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     @Import(name="workerPoolId", required=true)
     private Output<String> workerPoolId;
 
+    /**
+     * @return Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+     * 
+     */
     public Output<String> workerPoolId() {
         return this.workerPoolId;
     }
@@ -231,11 +239,23 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
             return workerConfig(Output.of(workerConfig));
         }
 
+        /**
+         * @param workerPoolId Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPoolId(Output<String> workerPoolId) {
             $.workerPoolId = workerPoolId;
             return this;
         }
 
+        /**
+         * @param workerPoolId Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workerPoolId(String workerPoolId) {
             return workerPoolId(Output.of(workerPoolId));
         }

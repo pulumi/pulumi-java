@@ -48,6 +48,24 @@ public class Database extends com.pulumi.resources.CustomResource {
         return this.collation;
     }
     /**
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. */
+    @Export(name="etag", type=String.class, parameters={})
+    private Output<String> etag;
+
+    /**
+     * @return This field is deprecated and will be removed from a future version of the API.
+     * 
+     */
+    public Output<String> etag() {
+        return this.etag;
+    }
+    /**
      * The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */

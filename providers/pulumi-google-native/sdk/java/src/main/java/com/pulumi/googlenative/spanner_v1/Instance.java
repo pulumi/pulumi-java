@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.spanner_v1.InstanceArgs;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
@@ -35,6 +36,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.config;
     }
     /**
+     * The time at which the instance was created.
+     * 
+     */
+    @Export(name="createTime", type=String.class, parameters={})
+    private Output<String> createTime;
+
+    /**
+     * @return The time at which the instance was created.
+     * 
+     */
+    public Output<String> createTime() {
+        return this.createTime;
+    }
+    /**
      * The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.
      * 
      */
@@ -47,6 +62,24 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> displayName() {
         return this.displayName;
+    }
+    /**
+     * Deprecated. This field is not populated.
+     * 
+     * @deprecated
+     * Deprecated. This field is not populated.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is not populated. */
+    @Export(name="endpointUris", type=List.class, parameters={String.class})
+    private Output<List<String>> endpointUris;
+
+    /**
+     * @return Deprecated. This field is not populated.
+     * 
+     */
+    public Output<List<String>> endpointUris() {
+        return this.endpointUris;
     }
     /**
      * Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer&#39;s organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.). * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `a-z{0,62}`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `[a-z0-9_-]{0,63}`. * No more than 64 labels can be associated with a given resource. See https://goo.gl/xmQnxf for more information on and examples of labels. If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn&#39;t rely upon specific characters being disallowed. For example, representing labels as the string: name + &#34;_&#34; + value would prove problematic if we were to allow &#34;_&#34; in a future release.
@@ -117,6 +150,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> state() {
         return this.state;
+    }
+    /**
+     * The time at which the instance was most recently updated.
+     * 
+     */
+    @Export(name="updateTime", type=String.class, parameters={})
+    private Output<String> updateTime;
+
+    /**
+     * @return The time at which the instance was most recently updated.
+     * 
+     */
+    public Output<String> updateTime() {
+        return this.updateTime;
     }
 
     /**

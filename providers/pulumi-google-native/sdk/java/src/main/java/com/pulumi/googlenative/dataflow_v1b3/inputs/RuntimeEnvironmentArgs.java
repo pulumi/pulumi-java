@@ -160,14 +160,14 @@ public final class RuntimeEnvironmentArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The initial number of Google Compute Engine instnaces for the job.
+     * The initial number of Google Compute Engine instances for the job.
      * 
      */
     @Import(name="numWorkers")
     private @Nullable Output<Integer> numWorkers;
 
     /**
-     * @return The initial number of Google Compute Engine instnaces for the job.
+     * @return The initial number of Google Compute Engine instances for the job.
      * 
      */
     public Optional<Output<Integer>> numWorkers() {
@@ -503,7 +503,7 @@ public final class RuntimeEnvironmentArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param numWorkers The initial number of Google Compute Engine instnaces for the job.
+         * @param numWorkers The initial number of Google Compute Engine instances for the job.
          * 
          * @return builder
          * 
@@ -514,7 +514,7 @@ public final class RuntimeEnvironmentArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param numWorkers The initial number of Google Compute Engine instnaces for the job.
+         * @param numWorkers The initial number of Google Compute Engine instances for the job.
          * 
          * @return builder
          * 

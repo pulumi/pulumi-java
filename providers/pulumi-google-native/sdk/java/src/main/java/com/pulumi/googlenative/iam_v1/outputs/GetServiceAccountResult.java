@@ -31,6 +31,15 @@ public final class GetServiceAccountResult {
      */
     private final String email;
     /**
+     * @return Deprecated. Do not use.
+     * 
+     * @deprecated
+     * Deprecated. Do not use.
+     * 
+     */
+    @Deprecated /* Deprecated. Do not use. */
+    private final String etag;
+    /**
      * @return The resource name of the service account. Use one of the following formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character, because it can cause response messages to contain misleading error codes. For example, if you try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
      * 
      */
@@ -57,6 +66,7 @@ public final class GetServiceAccountResult {
         @CustomType.Parameter("disabled") Boolean disabled,
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("etag") String etag,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("oauth2ClientId") String oauth2ClientId,
         @CustomType.Parameter("project") String project,
@@ -65,6 +75,7 @@ public final class GetServiceAccountResult {
         this.disabled = disabled;
         this.displayName = displayName;
         this.email = email;
+        this.etag = etag;
         this.name = name;
         this.oauth2ClientId = oauth2ClientId;
         this.project = project;
@@ -98,6 +109,17 @@ public final class GetServiceAccountResult {
      */
     public String email() {
         return this.email;
+    }
+    /**
+     * @return Deprecated. Do not use.
+     * 
+     * @deprecated
+     * Deprecated. Do not use.
+     * 
+     */
+    @Deprecated /* Deprecated. Do not use. */
+    public String etag() {
+        return this.etag;
     }
     /**
      * @return The resource name of the service account. Use one of the following formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character, because it can cause response messages to contain misleading error codes. For example, if you try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
@@ -141,6 +163,7 @@ public final class GetServiceAccountResult {
         private Boolean disabled;
         private String displayName;
         private String email;
+        private String etag;
         private String name;
         private String oauth2ClientId;
         private String project;
@@ -156,6 +179,7 @@ public final class GetServiceAccountResult {
     	      this.disabled = defaults.disabled;
     	      this.displayName = defaults.displayName;
     	      this.email = defaults.email;
+    	      this.etag = defaults.etag;
     	      this.name = defaults.name;
     	      this.oauth2ClientId = defaults.oauth2ClientId;
     	      this.project = defaults.project;
@@ -178,6 +202,10 @@ public final class GetServiceAccountResult {
             this.email = Objects.requireNonNull(email);
             return this;
         }
+        public Builder etag(String etag) {
+            this.etag = Objects.requireNonNull(etag);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -194,7 +222,7 @@ public final class GetServiceAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }        public GetServiceAccountResult build() {
-            return new GetServiceAccountResult(description, disabled, displayName, email, name, oauth2ClientId, project, uniqueId);
+            return new GetServiceAccountResult(description, disabled, displayName, email, etag, name, oauth2ClientId, project, uniqueId);
         }
     }
 }

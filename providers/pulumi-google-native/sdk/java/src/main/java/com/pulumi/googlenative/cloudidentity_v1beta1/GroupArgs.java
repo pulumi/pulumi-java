@@ -95,9 +95,17 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         return this.groupKey;
     }
 
+    /**
+     * Required. The initial configuration option for the `Group`.
+     * 
+     */
     @Import(name="initialGroupConfig", required=true)
     private Output<String> initialGroupConfig;
 
+    /**
+     * @return Required. The initial configuration option for the `Group`.
+     * 
+     */
     public Output<String> initialGroupConfig() {
         return this.initialGroupConfig;
     }
@@ -294,11 +302,23 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return groupKey(Output.of(groupKey));
         }
 
+        /**
+         * @param initialGroupConfig Required. The initial configuration option for the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialGroupConfig(Output<String> initialGroupConfig) {
             $.initialGroupConfig = initialGroupConfig;
             return this;
         }
 
+        /**
+         * @param initialGroupConfig Required. The initial configuration option for the `Group`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialGroupConfig(String initialGroupConfig) {
             return initialGroupConfig(Output.of(initialGroupConfig));
         }

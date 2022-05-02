@@ -51,6 +51,15 @@ public final class GetFirewallResult {
      */
     private final Boolean disabled;
     /**
+     * @return Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging. */
+    private final Boolean enableLogging;
+    /**
      * @return Type of the resource. Always compute#firewall for firewall rules.
      * 
      */
@@ -120,6 +129,7 @@ public final class GetFirewallResult {
         @CustomType.Parameter("destinationRanges") List<String> destinationRanges,
         @CustomType.Parameter("direction") String direction,
         @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("logConfig") FirewallLogConfigResponse logConfig,
         @CustomType.Parameter("name") String name,
@@ -139,6 +149,7 @@ public final class GetFirewallResult {
         this.destinationRanges = destinationRanges;
         this.direction = direction;
         this.disabled = disabled;
+        this.enableLogging = enableLogging;
         this.kind = kind;
         this.logConfig = logConfig;
         this.name = name;
@@ -201,6 +212,17 @@ public final class GetFirewallResult {
      */
     public Boolean disabled() {
         return this.disabled;
+    }
+    /**
+     * @return Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging. */
+    public Boolean enableLogging() {
+        return this.enableLogging;
     }
     /**
      * @return Type of the resource. Always compute#firewall for firewall rules.
@@ -303,6 +325,7 @@ public final class GetFirewallResult {
         private List<String> destinationRanges;
         private String direction;
         private Boolean disabled;
+        private Boolean enableLogging;
         private String kind;
         private FirewallLogConfigResponse logConfig;
         private String name;
@@ -329,6 +352,7 @@ public final class GetFirewallResult {
     	      this.destinationRanges = defaults.destinationRanges;
     	      this.direction = defaults.direction;
     	      this.disabled = defaults.disabled;
+    	      this.enableLogging = defaults.enableLogging;
     	      this.kind = defaults.kind;
     	      this.logConfig = defaults.logConfig;
     	      this.name = defaults.name;
@@ -378,6 +402,10 @@ public final class GetFirewallResult {
         }
         public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
+            return this;
+        }
+        public Builder enableLogging(Boolean enableLogging) {
+            this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
         public Builder kind(String kind) {
@@ -443,7 +471,7 @@ public final class GetFirewallResult {
         public Builder targetTags(String... targetTags) {
             return targetTags(List.of(targetTags));
         }        public GetFirewallResult build() {
-            return new GetFirewallResult(allowed, creationTimestamp, denied, description, destinationRanges, direction, disabled, kind, logConfig, name, network, priority, selfLink, selfLinkWithId, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
+            return new GetFirewallResult(allowed, creationTimestamp, denied, description, destinationRanges, direction, disabled, enableLogging, kind, logConfig, name, network, priority, selfLink, selfLinkWithId, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
         }
     }
 }

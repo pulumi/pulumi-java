@@ -95,6 +95,15 @@ public final class GetTransferConfigResult {
      * 
      */
     private final String updateTime;
+    /**
+     * @return Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     * @deprecated
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+    private final String userId;
 
     @CustomType.Constructor
     private GetTransferConfigResult(
@@ -113,7 +122,8 @@ public final class GetTransferConfigResult {
         @CustomType.Parameter("schedule") String schedule,
         @CustomType.Parameter("scheduleOptions") ScheduleOptionsResponse scheduleOptions,
         @CustomType.Parameter("state") String state,
-        @CustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("userId") String userId) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = dataSourceId;
         this.datasetRegion = datasetRegion;
@@ -130,6 +140,7 @@ public final class GetTransferConfigResult {
         this.scheduleOptions = scheduleOptions;
         this.state = state;
         this.updateTime = updateTime;
+        this.userId = userId;
     }
 
     /**
@@ -244,6 +255,17 @@ public final class GetTransferConfigResult {
     public String updateTime() {
         return this.updateTime;
     }
+    /**
+     * @return Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     * @deprecated
+     * Deprecated. Unique ID of the user on whose behalf transfer is done.
+     * 
+     */
+    @Deprecated /* Deprecated. Unique ID of the user on whose behalf transfer is done. */
+    public String userId() {
+        return this.userId;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -270,6 +292,7 @@ public final class GetTransferConfigResult {
         private ScheduleOptionsResponse scheduleOptions;
         private String state;
         private String updateTime;
+        private String userId;
 
         public Builder() {
     	      // Empty
@@ -293,6 +316,7 @@ public final class GetTransferConfigResult {
     	      this.scheduleOptions = defaults.scheduleOptions;
     	      this.state = defaults.state;
     	      this.updateTime = defaults.updateTime;
+    	      this.userId = defaults.userId;
         }
 
         public Builder dataRefreshWindowDays(Integer dataRefreshWindowDays) {
@@ -358,8 +382,12 @@ public final class GetTransferConfigResult {
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
+        }
+        public Builder userId(String userId) {
+            this.userId = Objects.requireNonNull(userId);
+            return this;
         }        public GetTransferConfigResult build() {
-            return new GetTransferConfigResult(dataRefreshWindowDays, dataSourceId, datasetRegion, destinationDatasetId, disabled, displayName, emailPreferences, name, nextRunTime, notificationPubsubTopic, ownerInfo, params, schedule, scheduleOptions, state, updateTime);
+            return new GetTransferConfigResult(dataRefreshWindowDays, dataSourceId, datasetRegion, destinationDatasetId, disabled, displayName, emailPreferences, name, nextRunTime, notificationPubsubTopic, ownerInfo, params, schedule, scheduleOptions, state, updateTime, userId);
         }
     }
 }

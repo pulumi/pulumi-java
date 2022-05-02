@@ -74,6 +74,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    @Import(name="canIpForward")
+    private @Nullable Output<Boolean> canIpForward;
+
+    /**
+     * @return Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+     * 
+     */
+    public Optional<Output<Boolean>> canIpForward() {
+        return Optional.ofNullable(this.canIpForward);
+    }
+
+    /**
      * Use a container image to start the notebook instance.
      * 
      */
@@ -163,9 +178,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.installGpuDriver);
     }
 
+    /**
+     * Required. User-defined unique ID of this instance.
+     * 
+     */
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Required. User-defined unique ID of this instance.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -475,6 +498,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         this.acceleratorConfig = $.acceleratorConfig;
         this.bootDiskSizeGb = $.bootDiskSizeGb;
         this.bootDiskType = $.bootDiskType;
+        this.canIpForward = $.canIpForward;
         this.containerImage = $.containerImage;
         this.customGpuDriverPath = $.customGpuDriverPath;
         this.dataDiskSizeGb = $.dataDiskSizeGb;
@@ -584,6 +608,27 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder bootDiskType(InstanceBootDiskType bootDiskType) {
             return bootDiskType(Output.of(bootDiskType));
+        }
+
+        /**
+         * @param canIpForward Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
+            $.canIpForward = canIpForward;
+            return this;
+        }
+
+        /**
+         * @param canIpForward Optional. Flag to enable ip forwarding or not, default false/off. https://cloud.google.com/vpc/docs/using-routes#canipforward
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canIpForward(Boolean canIpForward) {
+            return canIpForward(Output.of(canIpForward));
         }
 
         /**
@@ -712,11 +757,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return installGpuDriver(Output.of(installGpuDriver));
         }
 
+        /**
+         * @param instanceId Required. User-defined unique ID of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Required. User-defined unique ID of this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

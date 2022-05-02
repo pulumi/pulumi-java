@@ -28,6 +28,15 @@ public final class GcsDestinationConfigResponse {
      */
     private final Integer fileRotationMb;
     /**
+     * @return File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     * @deprecated
+     * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     */
+    @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+    private final String gcsFileFormat;
+    /**
      * @return JSON file format configuration.
      * 
      */
@@ -43,11 +52,13 @@ public final class GcsDestinationConfigResponse {
         @CustomType.Parameter("avroFileFormat") AvroFileFormatResponse avroFileFormat,
         @CustomType.Parameter("fileRotationInterval") String fileRotationInterval,
         @CustomType.Parameter("fileRotationMb") Integer fileRotationMb,
+        @CustomType.Parameter("gcsFileFormat") String gcsFileFormat,
         @CustomType.Parameter("jsonFileFormat") JsonFileFormatResponse jsonFileFormat,
         @CustomType.Parameter("path") String path) {
         this.avroFileFormat = avroFileFormat;
         this.fileRotationInterval = fileRotationInterval;
         this.fileRotationMb = fileRotationMb;
+        this.gcsFileFormat = gcsFileFormat;
         this.jsonFileFormat = jsonFileFormat;
         this.path = path;
     }
@@ -72,6 +83,17 @@ public final class GcsDestinationConfigResponse {
      */
     public Integer fileRotationMb() {
         return this.fileRotationMb;
+    }
+    /**
+     * @return File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     * @deprecated
+     * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     */
+    @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+    public String gcsFileFormat() {
+        return this.gcsFileFormat;
     }
     /**
      * @return JSON file format configuration.
@@ -100,6 +122,7 @@ public final class GcsDestinationConfigResponse {
         private AvroFileFormatResponse avroFileFormat;
         private String fileRotationInterval;
         private Integer fileRotationMb;
+        private String gcsFileFormat;
         private JsonFileFormatResponse jsonFileFormat;
         private String path;
 
@@ -112,6 +135,7 @@ public final class GcsDestinationConfigResponse {
     	      this.avroFileFormat = defaults.avroFileFormat;
     	      this.fileRotationInterval = defaults.fileRotationInterval;
     	      this.fileRotationMb = defaults.fileRotationMb;
+    	      this.gcsFileFormat = defaults.gcsFileFormat;
     	      this.jsonFileFormat = defaults.jsonFileFormat;
     	      this.path = defaults.path;
         }
@@ -128,6 +152,10 @@ public final class GcsDestinationConfigResponse {
             this.fileRotationMb = Objects.requireNonNull(fileRotationMb);
             return this;
         }
+        public Builder gcsFileFormat(String gcsFileFormat) {
+            this.gcsFileFormat = Objects.requireNonNull(gcsFileFormat);
+            return this;
+        }
         public Builder jsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
             this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat);
             return this;
@@ -136,7 +164,7 @@ public final class GcsDestinationConfigResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }        public GcsDestinationConfigResponse build() {
-            return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
+            return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, gcsFileFormat, jsonFileFormat, path);
         }
     }
 }

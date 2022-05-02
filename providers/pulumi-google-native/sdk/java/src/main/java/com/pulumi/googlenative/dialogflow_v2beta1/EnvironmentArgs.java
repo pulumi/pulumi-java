@@ -47,9 +47,17 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.description);
     }
 
+    /**
+     * Required. The unique id of the new environment.
+     * 
+     */
     @Import(name="environmentId", required=true)
     private Output<String> environmentId;
 
+    /**
+     * @return Required. The unique id of the new environment.
+     * 
+     */
     public Output<String> environmentId() {
         return this.environmentId;
     }
@@ -170,11 +178,23 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentId Required. The unique id of the new environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId Required. The unique id of the new environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }

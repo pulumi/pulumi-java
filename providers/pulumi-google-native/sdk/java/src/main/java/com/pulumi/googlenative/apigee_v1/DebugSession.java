@@ -36,6 +36,20 @@ public class DebugSession extends com.pulumi.resources.CustomResource {
         return this.count;
     }
     /**
+     * The first transaction creation timestamp, recorded by UAP.
+     * 
+     */
+    @Export(name="createTime", type=String.class, parameters={})
+    private Output<String> createTime;
+
+    /**
+     * @return The first transaction creation timestamp, recorded by UAP.
+     * 
+     */
+    public Output<String> createTime() {
+        return this.createTime;
+    }
+    /**
      * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
      * 
      */

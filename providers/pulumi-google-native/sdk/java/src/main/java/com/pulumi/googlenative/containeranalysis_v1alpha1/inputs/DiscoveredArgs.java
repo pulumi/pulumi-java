@@ -53,6 +53,21 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    @Import(name="archiveTime")
+    private @Nullable Output<String> archiveTime;
+
+    /**
+     * @return The time occurrences related to this discovery occurrence were archived.
+     * 
+     */
+    public Optional<Output<String>> archiveTime() {
+        return Optional.ofNullable(this.archiveTime);
+    }
+
+    /**
      * Whether the resource is continuously analyzed.
      * 
      */
@@ -82,13 +97,30 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.cpe);
     }
 
+    /**
+     * The last time this resource was scanned.
+     * 
+     */
+    @Import(name="lastScanTime")
+    private @Nullable Output<String> lastScanTime;
+
+    /**
+     * @return The last time this resource was scanned.
+     * 
+     */
+    public Optional<Output<String>> lastScanTime() {
+        return Optional.ofNullable(this.lastScanTime);
+    }
+
     private DiscoveredArgs() {}
 
     private DiscoveredArgs(DiscoveredArgs $) {
         this.analysisStatus = $.analysisStatus;
         this.analysisStatusError = $.analysisStatusError;
+        this.archiveTime = $.archiveTime;
         this.continuousAnalysis = $.continuousAnalysis;
         this.cpe = $.cpe;
+        this.lastScanTime = $.lastScanTime;
     }
 
     public static Builder builder() {
@@ -152,6 +184,27 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param archiveTime The time occurrences related to this discovery occurrence were archived.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder archiveTime(@Nullable Output<String> archiveTime) {
+            $.archiveTime = archiveTime;
+            return this;
+        }
+
+        /**
+         * @param archiveTime The time occurrences related to this discovery occurrence were archived.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder archiveTime(String archiveTime) {
+            return archiveTime(Output.of(archiveTime));
+        }
+
+        /**
          * @param continuousAnalysis Whether the resource is continuously analyzed.
          * 
          * @return builder
@@ -191,6 +244,27 @@ public final class DiscoveredArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder cpe(String cpe) {
             return cpe(Output.of(cpe));
+        }
+
+        /**
+         * @param lastScanTime The last time this resource was scanned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lastScanTime(@Nullable Output<String> lastScanTime) {
+            $.lastScanTime = lastScanTime;
+            return this;
+        }
+
+        /**
+         * @param lastScanTime The last time this resource was scanned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lastScanTime(String lastScanTime) {
+            return lastScanTime(Output.of(lastScanTime));
         }
 
         public DiscoveredArgs build() {

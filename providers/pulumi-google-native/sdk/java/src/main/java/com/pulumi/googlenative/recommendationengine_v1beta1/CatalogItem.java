@@ -80,6 +80,24 @@ public class CatalogItem extends com.pulumi.resources.CustomResource {
         return this.itemGroupId;
     }
     /**
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     * @deprecated
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+    @Export(name="languageCode", type=String.class, parameters={})
+    private Output<String> languageCode;
+
+    /**
+     * @return Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    public Output<String> languageCode() {
+        return this.languageCode;
+    }
+    /**
      * Optional. Metadata specific to retail products.
      * 
      */

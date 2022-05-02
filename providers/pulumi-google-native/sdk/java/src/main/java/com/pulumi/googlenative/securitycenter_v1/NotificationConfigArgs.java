@@ -16,9 +16,17 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
+    /**
+     * Required. Unique identifier provided by the client within the parent scope. It must be between 1 and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+     * 
+     */
     @Import(name="configId", required=true)
     private Output<String> configId;
 
+    /**
+     * @return Required. Unique identifier provided by the client within the parent scope. It must be between 1 and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+     * 
+     */
     public Output<String> configId() {
         return this.configId;
     }
@@ -119,11 +127,23 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
             $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configId Required. Unique identifier provided by the client within the parent scope. It must be between 1 and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(Output<String> configId) {
             $.configId = configId;
             return this;
         }
 
+        /**
+         * @param configId Required. Unique identifier provided by the client within the parent scope. It must be between 1 and 128 characters, and contains alphanumeric characters, underscores or hyphens only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configId(String configId) {
             return configId(Output.of(configId));
         }

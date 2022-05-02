@@ -38,6 +38,11 @@ public final class GetGlobalAddressResult {
      */
     private final String ipVersion;
     /**
+     * @return The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    private final String ipv6EndpointType;
+    /**
      * @return Type of the resource. Always compute#address for addresses.
      * 
      */
@@ -115,6 +120,7 @@ public final class GetGlobalAddressResult {
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("ipVersion") String ipVersion,
+        @CustomType.Parameter("ipv6EndpointType") String ipv6EndpointType,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("labelFingerprint") String labelFingerprint,
         @CustomType.Parameter("labels") Map<String,String> labels,
@@ -134,6 +140,7 @@ public final class GetGlobalAddressResult {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.ipVersion = ipVersion;
+        this.ipv6EndpointType = ipv6EndpointType;
         this.kind = kind;
         this.labelFingerprint = labelFingerprint;
         this.labels = labels;
@@ -184,6 +191,13 @@ public final class GetGlobalAddressResult {
      */
     public String ipVersion() {
         return this.ipVersion;
+    }
+    /**
+     * @return The endpoint type of this address, which should be VM. This is used for deciding which endpoint this address will be assigned to during the IPv6 external IP address reservation.
+     * 
+     */
+    public String ipv6EndpointType() {
+        return this.ipv6EndpointType;
     }
     /**
      * @return Type of the resource. Always compute#address for addresses.
@@ -298,6 +312,7 @@ public final class GetGlobalAddressResult {
         private String creationTimestamp;
         private String description;
         private String ipVersion;
+        private String ipv6EndpointType;
         private String kind;
         private String labelFingerprint;
         private Map<String,String> labels;
@@ -324,6 +339,7 @@ public final class GetGlobalAddressResult {
     	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.description = defaults.description;
     	      this.ipVersion = defaults.ipVersion;
+    	      this.ipv6EndpointType = defaults.ipv6EndpointType;
     	      this.kind = defaults.kind;
     	      this.labelFingerprint = defaults.labelFingerprint;
     	      this.labels = defaults.labels;
@@ -358,6 +374,10 @@ public final class GetGlobalAddressResult {
         }
         public Builder ipVersion(String ipVersion) {
             this.ipVersion = Objects.requireNonNull(ipVersion);
+            return this;
+        }
+        public Builder ipv6EndpointType(String ipv6EndpointType) {
+            this.ipv6EndpointType = Objects.requireNonNull(ipv6EndpointType);
             return this;
         }
         public Builder kind(String kind) {
@@ -419,7 +439,7 @@ public final class GetGlobalAddressResult {
         public Builder users(String... users) {
             return users(List.of(users));
         }        public GetGlobalAddressResult build() {
-            return new GetGlobalAddressResult(address, addressType, creationTimestamp, description, ipVersion, kind, labelFingerprint, labels, name, network, networkTier, prefixLength, purpose, region, selfLink, selfLinkWithId, status, subnetwork, users);
+            return new GetGlobalAddressResult(address, addressType, creationTimestamp, description, ipVersion, ipv6EndpointType, kind, labelFingerprint, labels, name, network, networkTier, prefixLength, purpose, region, selfLink, selfLinkWithId, status, subnetwork, users);
         }
     }
 }

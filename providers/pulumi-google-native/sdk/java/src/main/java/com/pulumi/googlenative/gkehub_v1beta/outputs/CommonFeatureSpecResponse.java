@@ -4,12 +4,18 @@
 package com.pulumi.googlenative.gkehub_v1beta.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.gkehub_v1beta.outputs.AnthosObservabilityFeatureSpecResponse;
 import com.pulumi.googlenative.gkehub_v1beta.outputs.AppDevExperienceFeatureSpecResponse;
 import com.pulumi.googlenative.gkehub_v1beta.outputs.MultiClusterIngressFeatureSpecResponse;
 import java.util.Objects;
 
 @CustomType
 public final class CommonFeatureSpecResponse {
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    private final AnthosObservabilityFeatureSpecResponse anthosobservability;
     /**
      * @return Appdevexperience specific spec.
      * 
@@ -23,12 +29,21 @@ public final class CommonFeatureSpecResponse {
 
     @CustomType.Constructor
     private CommonFeatureSpecResponse(
+        @CustomType.Parameter("anthosobservability") AnthosObservabilityFeatureSpecResponse anthosobservability,
         @CustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
         @CustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        this.anthosobservability = anthosobservability;
         this.appdevexperience = appdevexperience;
         this.multiclusteringress = multiclusteringress;
     }
 
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    public AnthosObservabilityFeatureSpecResponse anthosobservability() {
+        return this.anthosobservability;
+    }
     /**
      * @return Appdevexperience specific spec.
      * 
@@ -53,6 +68,7 @@ public final class CommonFeatureSpecResponse {
     }
 
     public static final class Builder {
+        private AnthosObservabilityFeatureSpecResponse anthosobservability;
         private AppDevExperienceFeatureSpecResponse appdevexperience;
         private MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
@@ -62,10 +78,15 @@ public final class CommonFeatureSpecResponse {
 
         public Builder(CommonFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.anthosobservability = defaults.anthosobservability;
     	      this.appdevexperience = defaults.appdevexperience;
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
+        public Builder anthosobservability(AnthosObservabilityFeatureSpecResponse anthosobservability) {
+            this.anthosobservability = Objects.requireNonNull(anthosobservability);
+            return this;
+        }
         public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
@@ -74,7 +95,7 @@ public final class CommonFeatureSpecResponse {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }        public CommonFeatureSpecResponse build() {
-            return new CommonFeatureSpecResponse(appdevexperience, multiclusteringress);
+            return new CommonFeatureSpecResponse(anthosobservability, appdevexperience, multiclusteringress);
         }
     }
 }

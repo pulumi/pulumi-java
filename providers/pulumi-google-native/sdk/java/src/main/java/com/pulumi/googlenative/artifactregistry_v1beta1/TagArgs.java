@@ -58,9 +58,17 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
         return this.repositoryId;
     }
 
+    /**
+     * The tag id to use for this repository.
+     * 
+     */
     @Import(name="tagId")
     private @Nullable Output<String> tagId;
 
+    /**
+     * @return The tag id to use for this repository.
+     * 
+     */
     public Optional<Output<String>> tagId() {
         return Optional.ofNullable(this.tagId);
     }
@@ -167,11 +175,23 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
             return repositoryId(Output.of(repositoryId));
         }
 
+        /**
+         * @param tagId The tag id to use for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagId(@Nullable Output<String> tagId) {
             $.tagId = tagId;
             return this;
         }
 
+        /**
+         * @param tagId The tag id to use for this repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagId(String tagId) {
             return tagId(Output.of(tagId));
         }

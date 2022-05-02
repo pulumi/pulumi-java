@@ -17,9 +17,17 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
+    /**
+     * Required. The ID to use for this connector.
+     * 
+     */
     @Import(name="connectorId", required=true)
     private Output<String> connectorId;
 
+    /**
+     * @return Required. The ID to use for this connector.
+     * 
+     */
     public Output<String> connectorId() {
         return this.connectorId;
     }
@@ -208,11 +216,23 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorId Required. The ID to use for this connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorId(Output<String> connectorId) {
             $.connectorId = connectorId;
             return this;
         }
 
+        /**
+         * @param connectorId Required. The ID to use for this connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorId(String connectorId) {
             return connectorId(Output.of(connectorId));
         }

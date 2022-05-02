@@ -22,14 +22,14 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final SourceConfigArgs Empty = new SourceConfigArgs();
 
     /**
-     * MySQL data source configuration
+     * MySQL data source configuration.
      * 
      */
     @Import(name="mysqlSourceConfig")
     private @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
     /**
-     * @return MySQL data source configuration
+     * @return MySQL data source configuration.
      * 
      */
     public Optional<Output<MysqlSourceConfigArgs>> mysqlSourceConfig() {
@@ -37,14 +37,14 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Oracle data source configuration
+     * Oracle data source configuration.
      * 
      */
     @Import(name="oracleSourceConfig")
     private @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
     /**
-     * @return Oracle data source configuration
+     * @return Oracle data source configuration.
      * 
      */
     public Optional<Output<OracleSourceConfigArgs>> oracleSourceConfig() {
@@ -93,7 +93,7 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mysqlSourceConfig MySQL data source configuration
+         * @param mysqlSourceConfig MySQL data source configuration.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mysqlSourceConfig MySQL data source configuration
+         * @param mysqlSourceConfig MySQL data source configuration.
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param oracleSourceConfig Oracle data source configuration
+         * @param oracleSourceConfig Oracle data source configuration.
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param oracleSourceConfig Oracle data source configuration
+         * @param oracleSourceConfig Oracle data source configuration.
          * 
          * @return builder
          * 

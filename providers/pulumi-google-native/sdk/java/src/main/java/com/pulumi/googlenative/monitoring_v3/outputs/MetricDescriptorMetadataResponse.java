@@ -15,6 +15,15 @@ public final class MetricDescriptorMetadataResponse {
      */
     private final String ingestDelay;
     /**
+     * @return Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     * @deprecated
+     * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     */
+    @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+    private final String launchStage;
+    /**
      * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
      * 
      */
@@ -23,8 +32,10 @@ public final class MetricDescriptorMetadataResponse {
     @CustomType.Constructor
     private MetricDescriptorMetadataResponse(
         @CustomType.Parameter("ingestDelay") String ingestDelay,
+        @CustomType.Parameter("launchStage") String launchStage,
         @CustomType.Parameter("samplePeriod") String samplePeriod) {
         this.ingestDelay = ingestDelay;
+        this.launchStage = launchStage;
         this.samplePeriod = samplePeriod;
     }
 
@@ -34,6 +45,17 @@ public final class MetricDescriptorMetadataResponse {
      */
     public String ingestDelay() {
         return this.ingestDelay;
+    }
+    /**
+     * @return Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     * @deprecated
+     * Deprecated. Must use the MetricDescriptor.launch_stage instead.
+     * 
+     */
+    @Deprecated /* Deprecated. Must use the MetricDescriptor.launch_stage instead. */
+    public String launchStage() {
+        return this.launchStage;
     }
     /**
      * @return The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
@@ -53,6 +75,7 @@ public final class MetricDescriptorMetadataResponse {
 
     public static final class Builder {
         private String ingestDelay;
+        private String launchStage;
         private String samplePeriod;
 
         public Builder() {
@@ -62,6 +85,7 @@ public final class MetricDescriptorMetadataResponse {
         public Builder(MetricDescriptorMetadataResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.ingestDelay = defaults.ingestDelay;
+    	      this.launchStage = defaults.launchStage;
     	      this.samplePeriod = defaults.samplePeriod;
         }
 
@@ -69,11 +93,15 @@ public final class MetricDescriptorMetadataResponse {
             this.ingestDelay = Objects.requireNonNull(ingestDelay);
             return this;
         }
+        public Builder launchStage(String launchStage) {
+            this.launchStage = Objects.requireNonNull(launchStage);
+            return this;
+        }
         public Builder samplePeriod(String samplePeriod) {
             this.samplePeriod = Objects.requireNonNull(samplePeriod);
             return this;
         }        public MetricDescriptorMetadataResponse build() {
-            return new MetricDescriptorMetadataResponse(ingestDelay, samplePeriod);
+            return new MetricDescriptorMetadataResponse(ingestDelay, launchStage, samplePeriod);
         }
     }
 }

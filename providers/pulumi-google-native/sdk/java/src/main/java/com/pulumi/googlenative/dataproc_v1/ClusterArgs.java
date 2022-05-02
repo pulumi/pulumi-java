@@ -17,9 +17,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Optional. Failure action when primary worker creation fails.
+     * 
+     */
     @Import(name="actionOnFailedPrimaryWorkers")
     private @Nullable Output<String> actionOnFailedPrimaryWorkers;
 
+    /**
+     * @return Optional. Failure action when primary worker creation fails.
+     * 
+     */
     public Optional<Output<String>> actionOnFailedPrimaryWorkers() {
         return Optional.ofNullable(this.actionOnFailedPrimaryWorkers);
     }
@@ -91,9 +99,17 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first google.longrunning.Operation created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first google.longrunning.Operation created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -128,11 +144,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionOnFailedPrimaryWorkers Optional. Failure action when primary worker creation fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionOnFailedPrimaryWorkers(@Nullable Output<String> actionOnFailedPrimaryWorkers) {
             $.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
             return this;
         }
 
+        /**
+         * @param actionOnFailedPrimaryWorkers Optional. Failure action when primary worker creation fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionOnFailedPrimaryWorkers(String actionOnFailedPrimaryWorkers) {
             return actionOnFailedPrimaryWorkers(Output.of(actionOnFailedPrimaryWorkers));
         }
@@ -230,11 +258,23 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first google.longrunning.Operation created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. A unique ID used to identify the request. If the server receives two CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s with the same id, then the second request will be ignored and the first google.longrunning.Operation created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

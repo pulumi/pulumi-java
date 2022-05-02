@@ -23,6 +23,29 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     public static final DiskArgs Empty = new DiskArgs();
 
     /**
+     * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     * @deprecated
+     * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     */
+    @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+    @Import(name="autoDelete")
+    private @Nullable Output<Boolean> autoDelete;
+
+    /**
+     * @return Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     * @deprecated
+     * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+     * 
+     */
+    @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+    public Optional<Output<Boolean>> autoDelete() {
+        return Optional.ofNullable(this.autoDelete);
+    }
+
+    /**
      * Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
      * 
      */
@@ -115,6 +138,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     private DiskArgs() {}
 
     private DiskArgs(DiskArgs $) {
+        this.autoDelete = $.autoDelete;
         this.mountPoint = $.mountPoint;
         this.name = $.name;
         this.readOnly = $.readOnly;
@@ -139,6 +163,35 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(DiskArgs defaults) {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param autoDelete Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+         * 
+         */
+        @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+        public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
+            $.autoDelete = autoDelete;
+            return this;
+        }
+
+        /**
+         * @param autoDelete Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to.
+         * 
+         */
+        @Deprecated /* Deprecated. Disks created by the Pipelines API will be deleted at the end of the pipeline run, regardless of what this field is set to. */
+        public Builder autoDelete(Boolean autoDelete) {
+            return autoDelete(Output.of(autoDelete));
         }
 
         /**

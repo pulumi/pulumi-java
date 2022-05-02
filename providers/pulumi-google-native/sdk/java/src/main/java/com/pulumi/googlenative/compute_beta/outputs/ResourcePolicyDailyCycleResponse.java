@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class ResourcePolicyDailyCycleResponse {
     /**
-     * @return Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * @return Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
      * 
      */
     private final Integer daysInCycle;
@@ -37,7 +37,7 @@ public final class ResourcePolicyDailyCycleResponse {
     }
 
     /**
-     * @return Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     * @return Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
      * 
      */
     public Integer daysInCycle() {

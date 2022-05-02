@@ -9,7 +9,9 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vmmigration_v1alpha1.DatacenterConnectorArgs;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.AvailableUpdatesResponse;
 import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
+import com.pulumi.googlenative.vmmigration_v1alpha1.outputs.UpgradeStatusResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,6 +22,48 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:vmmigration/v1alpha1:DatacenterConnector")
 public class DatacenterConnector extends com.pulumi.resources.CustomResource {
+    /**
+     * Appliance OVA version. This is the OVA which is manually installed by the user and contains the infrastructure for the automatically updatable components on the appliance.
+     * 
+     */
+    @Export(name="applianceInfrastructureVersion", type=String.class, parameters={})
+    private Output<String> applianceInfrastructureVersion;
+
+    /**
+     * @return Appliance OVA version. This is the OVA which is manually installed by the user and contains the infrastructure for the automatically updatable components on the appliance.
+     * 
+     */
+    public Output<String> applianceInfrastructureVersion() {
+        return this.applianceInfrastructureVersion;
+    }
+    /**
+     * Appliance last installed update bundle version. This is the version of the automatically updatable components on the appliance.
+     * 
+     */
+    @Export(name="applianceSoftwareVersion", type=String.class, parameters={})
+    private Output<String> applianceSoftwareVersion;
+
+    /**
+     * @return Appliance last installed update bundle version. This is the version of the automatically updatable components on the appliance.
+     * 
+     */
+    public Output<String> applianceSoftwareVersion() {
+        return this.applianceSoftwareVersion;
+    }
+    /**
+     * The available versions for updating this appliance.
+     * 
+     */
+    @Export(name="availableVersions", type=AvailableUpdatesResponse.class, parameters={})
+    private Output<AvailableUpdatesResponse> availableVersions;
+
+    /**
+     * @return The available versions for updating this appliance.
+     * 
+     */
+    public Output<AvailableUpdatesResponse> availableVersions() {
+        return this.availableVersions;
+    }
     /**
      * The communication channel between the datacenter connector and GCP.
      * 
@@ -145,6 +189,20 @@ public class DatacenterConnector extends com.pulumi.resources.CustomResource {
      */
     public Output<String> updateTime() {
         return this.updateTime;
+    }
+    /**
+     * The status of the current / last upgradeAppliance operation.
+     * 
+     */
+    @Export(name="upgradeStatus", type=UpgradeStatusResponse.class, parameters={})
+    private Output<UpgradeStatusResponse> upgradeStatus;
+
+    /**
+     * @return The status of the current / last upgradeAppliance operation.
+     * 
+     */
+    public Output<UpgradeStatusResponse> upgradeStatus() {
+        return this.upgradeStatus;
     }
     /**
      * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.

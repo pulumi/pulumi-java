@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.networkconnectivity_v1alpha1.HubArgs;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
@@ -74,6 +75,24 @@ public class Hub extends com.pulumi.resources.CustomResource {
      */
     public Output<String> name() {
         return this.name;
+    }
+    /**
+     * A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     * @deprecated
+     * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     */
+    @Deprecated /* Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead. */
+    @Export(name="spokes", type=List.class, parameters={String.class})
+    private Output<List<String>> spokes;
+
+    /**
+     * @return A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     */
+    public Output<List<String>> spokes() {
+        return this.spokes;
     }
     /**
      * The current lifecycle state of this Hub.

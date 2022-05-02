@@ -4,11 +4,17 @@
 package com.pulumi.googlenative.datacatalog_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DataplexTableSpecResponse;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
+    /**
+     * @return Fields specific to a Dataplex table and present only in the Dataplex table entries.
+     * 
+     */
+    private final GoogleCloudDatacatalogV1DataplexTableSpecResponse dataplexTable;
     /**
      * @return Type of this table.
      * 
@@ -16,10 +22,20 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
     private final String type;
 
     @CustomType.Constructor
-    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(@CustomType.Parameter("type") String type) {
+    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(
+        @CustomType.Parameter("dataplexTable") GoogleCloudDatacatalogV1DataplexTableSpecResponse dataplexTable,
+        @CustomType.Parameter("type") String type) {
+        this.dataplexTable = dataplexTable;
         this.type = type;
     }
 
+    /**
+     * @return Fields specific to a Dataplex table and present only in the Dataplex table entries.
+     * 
+     */
+    public GoogleCloudDatacatalogV1DataplexTableSpecResponse dataplexTable() {
+        return this.dataplexTable;
+    }
     /**
      * @return Type of this table.
      * 
@@ -37,6 +53,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
     }
 
     public static final class Builder {
+        private GoogleCloudDatacatalogV1DataplexTableSpecResponse dataplexTable;
         private String type;
 
         public Builder() {
@@ -45,14 +62,19 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
 
         public Builder(GoogleCloudDatacatalogV1DatabaseTableSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.dataplexTable = defaults.dataplexTable;
     	      this.type = defaults.type;
         }
 
+        public Builder dataplexTable(GoogleCloudDatacatalogV1DataplexTableSpecResponse dataplexTable) {
+            this.dataplexTable = Objects.requireNonNull(dataplexTable);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GoogleCloudDatacatalogV1DatabaseTableSpecResponse build() {
-            return new GoogleCloudDatacatalogV1DatabaseTableSpecResponse(type);
+            return new GoogleCloudDatacatalogV1DatabaseTableSpecResponse(dataplexTable, type);
         }
     }
 }

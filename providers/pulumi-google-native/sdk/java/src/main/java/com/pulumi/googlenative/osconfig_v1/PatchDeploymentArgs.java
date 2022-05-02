@@ -110,9 +110,17 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.patchConfig);
     }
 
+    /**
+     * Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     @Import(name="patchDeploymentId", required=true)
     private Output<String> patchDeploymentId;
 
+    /**
+     * @return Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
     }
@@ -313,11 +321,23 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
             return patchConfig(Output.of(patchConfig));
         }
 
+        /**
+         * @param patchDeploymentId Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchDeploymentId(Output<String> patchDeploymentId) {
             $.patchDeploymentId = patchDeploymentId;
             return this;
         }
 
+        /**
+         * @param patchDeploymentId Required. A name for the patch deployment in the project. When creating a name the following rules apply: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchDeploymentId(String patchDeploymentId) {
             return patchDeploymentId(Output.of(patchDeploymentId));
         }

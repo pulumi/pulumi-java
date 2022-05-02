@@ -148,6 +148,20 @@ public class Document extends com.pulumi.resources.CustomResource {
     public Output<String> rawContent() {
         return this.rawContent;
     }
+    /**
+     * The current state of the document.
+     * 
+     */
+    @Export(name="state", type=String.class, parameters={})
+    private Output<String> state;
+
+    /**
+     * @return The current state of the document.
+     * 
+     */
+    public Output<String> state() {
+        return this.state;
+    }
 
     /**
      *

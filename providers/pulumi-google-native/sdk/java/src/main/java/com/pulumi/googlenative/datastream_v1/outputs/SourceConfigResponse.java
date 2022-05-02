@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class SourceConfigResponse {
     /**
-     * @return MySQL data source configuration
+     * @return MySQL data source configuration.
      * 
      */
     private final MysqlSourceConfigResponse mysqlSourceConfig;
     /**
-     * @return Oracle data source configuration
+     * @return Oracle data source configuration.
      * 
      */
     private final OracleSourceConfigResponse oracleSourceConfig;
@@ -38,14 +38,14 @@ public final class SourceConfigResponse {
     }
 
     /**
-     * @return MySQL data source configuration
+     * @return MySQL data source configuration.
      * 
      */
     public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
     /**
-     * @return Oracle data source configuration
+     * @return Oracle data source configuration.
      * 
      */
     public OracleSourceConfigResponse oracleSourceConfig() {

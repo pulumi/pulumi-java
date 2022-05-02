@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.datamigration_v1.MigrationJobArgs;
 import com.pulumi.googlenative.datamigration_v1.outputs.DatabaseTypeResponse;
+import com.pulumi.googlenative.datamigration_v1.outputs.DumpFlagsResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.ReverseSshConnectivityResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.StaticIpConnectivityResponse;
 import com.pulumi.googlenative.datamigration_v1.outputs.StatusResponse;
@@ -81,14 +82,28 @@ public class MigrationJob extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    @Export(name="dumpFlags", type=DumpFlagsResponse.class, parameters={})
+    private Output<DumpFlagsResponse> dumpFlags;
+
+    /**
+     * @return The initial dump flags. This field and the &#34;dump_path&#34; field are mutually exclusive.
+     * 
+     */
+    public Output<DumpFlagsResponse> dumpFlags() {
+        return this.dumpFlags;
+    }
+    /**
+     * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     @Export(name="dumpPath", type=String.class, parameters={})
     private Output<String> dumpPath;
 
     /**
-     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
+     * @return The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]). This field and the &#34;dump_flags&#34; field are mutually exclusive.
      * 
      */
     public Output<String> dumpPath() {

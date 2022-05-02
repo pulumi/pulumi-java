@@ -44,7 +44,7 @@ public final class GetSnapshotResult {
      */
     private final String downloadBytes;
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     private final Boolean guestFlush;
@@ -236,7 +236,7 @@ public final class GetSnapshotResult {
         return this.downloadBytes;
     }
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     public Boolean guestFlush() {

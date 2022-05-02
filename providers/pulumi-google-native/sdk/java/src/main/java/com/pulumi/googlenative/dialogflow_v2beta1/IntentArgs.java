@@ -114,9 +114,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.inputContextNames);
     }
 
+    /**
+     * Optional. The resource view to apply to the returned intent.
+     * 
+     */
     @Import(name="intentView")
     private @Nullable Output<String> intentView;
 
+    /**
+     * @return Optional. The resource view to apply to the returned intent.
+     * 
+     */
     public Optional<Output<String>> intentView() {
         return Optional.ofNullable(this.intentView);
     }
@@ -136,9 +144,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.isFallback);
     }
 
+    /**
+     * Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -193,6 +209,29 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<Boolean>> mlDisabled() {
         return Optional.ofNullable(this.mlDisabled);
+    }
+
+    /**
+     * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     * @deprecated
+     * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     */
+    @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+    @Import(name="mlEnabled")
+    private @Nullable Output<Boolean> mlEnabled;
+
+    /**
+     * @return Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     * @deprecated
+     * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+     * 
+     */
+    @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+    public Optional<Output<Boolean>> mlEnabled() {
+        return Optional.ofNullable(this.mlEnabled);
     }
 
     /**
@@ -338,6 +377,7 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         this.location = $.location;
         this.messages = $.messages;
         this.mlDisabled = $.mlDisabled;
+        this.mlEnabled = $.mlEnabled;
         this.name = $.name;
         this.outputContexts = $.outputContexts;
         this.parameters = $.parameters;
@@ -523,11 +563,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return inputContextNames(List.of(inputContextNames));
         }
 
+        /**
+         * @param intentView Optional. The resource view to apply to the returned intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentView(@Nullable Output<String> intentView) {
             $.intentView = intentView;
             return this;
         }
 
+        /**
+         * @param intentView Optional. The resource view to apply to the returned intent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentView(String intentView) {
             return intentView(Output.of(intentView));
         }
@@ -553,11 +605,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return isFallback(Output.of(isFallback));
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }
@@ -642,6 +706,35 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder mlDisabled(Boolean mlDisabled) {
             return mlDisabled(Output.of(mlDisabled));
+        }
+
+        /**
+         * @param mlEnabled Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+         * 
+         */
+        @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+        public Builder mlEnabled(@Nullable Output<Boolean> mlEnabled) {
+            $.mlEnabled = mlEnabled;
+            return this;
+        }
+
+        /**
+         * @param mlEnabled Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false.
+         * 
+         */
+        @Deprecated /* Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled` setting is set to false, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or false, then the default value is determined as follows: - Before April 15th, 2018 the default is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is: ml_enabled = true / ml_disabled = false. */
+        public Builder mlEnabled(Boolean mlEnabled) {
+            return mlEnabled(Output.of(mlEnabled));
         }
 
         /**

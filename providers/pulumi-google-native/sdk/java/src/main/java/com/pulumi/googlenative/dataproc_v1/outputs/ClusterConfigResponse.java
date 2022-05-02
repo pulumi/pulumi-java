@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dataproc_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.dataproc_v1.outputs.AutoscalingConfigResponse;
+import com.pulumi.googlenative.dataproc_v1.outputs.DataprocMetricConfigResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.EncryptionConfigResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.EndpointConfigResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.GceClusterConfigResponse;
@@ -31,6 +32,11 @@ public final class ClusterConfigResponse {
      * 
      */
     private final String configBucket;
+    /**
+     * @return Optional. The configuration(s) for a dataproc metric(s).
+     * 
+     */
+    private final DataprocMetricConfigResponse dataprocMetricConfig;
     /**
      * @return Optional. Encryption settings for the cluster.
      * 
@@ -101,6 +107,7 @@ public final class ClusterConfigResponse {
     private ClusterConfigResponse(
         @CustomType.Parameter("autoscalingConfig") AutoscalingConfigResponse autoscalingConfig,
         @CustomType.Parameter("configBucket") String configBucket,
+        @CustomType.Parameter("dataprocMetricConfig") DataprocMetricConfigResponse dataprocMetricConfig,
         @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
         @CustomType.Parameter("endpointConfig") EndpointConfigResponse endpointConfig,
         @CustomType.Parameter("gceClusterConfig") GceClusterConfigResponse gceClusterConfig,
@@ -116,6 +123,7 @@ public final class ClusterConfigResponse {
         @CustomType.Parameter("workerConfig") InstanceGroupConfigResponse workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.configBucket = configBucket;
+        this.dataprocMetricConfig = dataprocMetricConfig;
         this.encryptionConfig = encryptionConfig;
         this.endpointConfig = endpointConfig;
         this.gceClusterConfig = gceClusterConfig;
@@ -144,6 +152,13 @@ public final class ClusterConfigResponse {
      */
     public String configBucket() {
         return this.configBucket;
+    }
+    /**
+     * @return Optional. The configuration(s) for a dataproc metric(s).
+     * 
+     */
+    public DataprocMetricConfigResponse dataprocMetricConfig() {
+        return this.dataprocMetricConfig;
     }
     /**
      * @return Optional. Encryption settings for the cluster.
@@ -248,6 +263,7 @@ public final class ClusterConfigResponse {
     public static final class Builder {
         private AutoscalingConfigResponse autoscalingConfig;
         private String configBucket;
+        private DataprocMetricConfigResponse dataprocMetricConfig;
         private EncryptionConfigResponse encryptionConfig;
         private EndpointConfigResponse endpointConfig;
         private GceClusterConfigResponse gceClusterConfig;
@@ -270,6 +286,7 @@ public final class ClusterConfigResponse {
     	      Objects.requireNonNull(defaults);
     	      this.autoscalingConfig = defaults.autoscalingConfig;
     	      this.configBucket = defaults.configBucket;
+    	      this.dataprocMetricConfig = defaults.dataprocMetricConfig;
     	      this.encryptionConfig = defaults.encryptionConfig;
     	      this.endpointConfig = defaults.endpointConfig;
     	      this.gceClusterConfig = defaults.gceClusterConfig;
@@ -291,6 +308,10 @@ public final class ClusterConfigResponse {
         }
         public Builder configBucket(String configBucket) {
             this.configBucket = Objects.requireNonNull(configBucket);
+            return this;
+        }
+        public Builder dataprocMetricConfig(DataprocMetricConfigResponse dataprocMetricConfig) {
+            this.dataprocMetricConfig = Objects.requireNonNull(dataprocMetricConfig);
             return this;
         }
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
@@ -348,7 +369,7 @@ public final class ClusterConfigResponse {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }        public ClusterConfigResponse build() {
-            return new ClusterConfigResponse(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
+            return new ClusterConfigResponse(autoscalingConfig, configBucket, dataprocMetricConfig, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
         }
     }
 }

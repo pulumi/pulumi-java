@@ -9,11 +9,11 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.run_v2.ServiceArgs;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetStatusResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2BinaryAuthorizationResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2ConditionResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2RevisionTemplateResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2TrafficTargetResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2TrafficTargetStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,14 +27,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:run/v2:Service")
 public class Service extends com.pulumi.resources.CustomResource {
     /**
-     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
-     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     public Output<Map<String,String>> annotations() {
@@ -44,14 +44,14 @@ public class Service extends com.pulumi.resources.CustomResource {
      * Settings for the Binary Authorization feature.
      * 
      */
-    @Export(name="binaryAuthorization", type=GoogleCloudRunOpV2BinaryAuthorizationResponse.class, parameters={})
-    private Output<GoogleCloudRunOpV2BinaryAuthorizationResponse> binaryAuthorization;
+    @Export(name="binaryAuthorization", type=GoogleCloudRunV2BinaryAuthorizationResponse.class, parameters={})
+    private Output<GoogleCloudRunV2BinaryAuthorizationResponse> binaryAuthorization;
 
     /**
      * @return Settings for the Binary Authorization feature.
      * 
      */
-    public Output<GoogleCloudRunOpV2BinaryAuthorizationResponse> binaryAuthorization() {
+    public Output<GoogleCloudRunV2BinaryAuthorizationResponse> binaryAuthorization() {
         return this.binaryAuthorization;
     }
     /**
@@ -86,14 +86,14 @@ public class Service extends com.pulumi.resources.CustomResource {
      * The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @Export(name="conditions", type=List.class, parameters={GoogleCloudRunOpV2ConditionResponse.class})
-    private Output<List<GoogleCloudRunOpV2ConditionResponse>> conditions;
+    @Export(name="conditions", type=List.class, parameters={GoogleCloudRunV2ConditionResponse.class})
+    private Output<List<GoogleCloudRunV2ConditionResponse>> conditions;
 
     /**
      * @return The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2ConditionResponse>> conditions() {
+    public Output<List<GoogleCloudRunV2ConditionResponse>> conditions() {
         return this.conditions;
     }
     /**
@@ -139,14 +139,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.deleteTime;
     }
     /**
-     * User-provided description of the Service.
+     * User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
-     * @return User-provided description of the Service.
+     * @return User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     public Output<String> description() {
@@ -265,14 +265,14 @@ public class Service extends com.pulumi.resources.CustomResource {
         return this.latestReadyRevision;
     }
     /**
-     * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     @Export(name="launchStage", type=String.class, parameters={})
     private Output<String> launchStage;
 
     /**
-     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     public Output<String> launchStage() {
@@ -324,56 +324,56 @@ public class Service extends com.pulumi.resources.CustomResource {
      * The template used to create revisions for this Service.
      * 
      */
-    @Export(name="template", type=GoogleCloudRunOpV2RevisionTemplateResponse.class, parameters={})
-    private Output<GoogleCloudRunOpV2RevisionTemplateResponse> template;
+    @Export(name="template", type=GoogleCloudRunV2RevisionTemplateResponse.class, parameters={})
+    private Output<GoogleCloudRunV2RevisionTemplateResponse> template;
 
     /**
      * @return The template used to create revisions for this Service.
      * 
      */
-    public Output<GoogleCloudRunOpV2RevisionTemplateResponse> template() {
+    public Output<GoogleCloudRunV2RevisionTemplateResponse> template() {
         return this.template;
     }
     /**
      * The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @Export(name="terminalCondition", type=GoogleCloudRunOpV2ConditionResponse.class, parameters={})
-    private Output<GoogleCloudRunOpV2ConditionResponse> terminalCondition;
+    @Export(name="terminalCondition", type=GoogleCloudRunV2ConditionResponse.class, parameters={})
+    private Output<GoogleCloudRunV2ConditionResponse> terminalCondition;
 
     /**
      * @return The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<GoogleCloudRunOpV2ConditionResponse> terminalCondition() {
+    public Output<GoogleCloudRunV2ConditionResponse> terminalCondition() {
         return this.terminalCondition;
     }
     /**
      * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    @Export(name="traffic", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetResponse.class})
-    private Output<List<GoogleCloudRunOpV2TrafficTargetResponse>> traffic;
+    @Export(name="traffic", type=List.class, parameters={GoogleCloudRunV2TrafficTargetResponse.class})
+    private Output<List<GoogleCloudRunV2TrafficTargetResponse>> traffic;
 
     /**
      * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2TrafficTargetResponse>> traffic() {
+    public Output<List<GoogleCloudRunV2TrafficTargetResponse>> traffic() {
         return this.traffic;
     }
     /**
      * Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @Export(name="trafficStatuses", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetStatusResponse.class})
-    private Output<List<GoogleCloudRunOpV2TrafficTargetStatusResponse>> trafficStatuses;
+    @Export(name="trafficStatuses", type=List.class, parameters={GoogleCloudRunV2TrafficTargetStatusResponse.class})
+    private Output<List<GoogleCloudRunV2TrafficTargetStatusResponse>> trafficStatuses;
 
     /**
      * @return Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2TrafficTargetStatusResponse>> trafficStatuses() {
+    public Output<List<GoogleCloudRunV2TrafficTargetStatusResponse>> trafficStatuses() {
         return this.trafficStatuses;
     }
     /**

@@ -252,9 +252,17 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. ID of the project for which to configure automatic builds.
+     * 
+     */
     @Import(name="projectId", required=true)
     private Output<String> projectId;
 
+    /**
+     * @return Required. ID of the project for which to configure automatic builds.
+     * 
+     */
     public Output<String> projectId() {
         return this.projectId;
     }
@@ -759,11 +767,23 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param projectId Required. ID of the project for which to configure automatic builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId Required. ID of the project for which to configure automatic builds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

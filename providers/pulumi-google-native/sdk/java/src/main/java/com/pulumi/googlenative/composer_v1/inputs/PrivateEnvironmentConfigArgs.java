@@ -22,6 +22,21 @@ public final class PrivateEnvironmentConfigArgs extends com.pulumi.resources.Res
     public static final PrivateEnvironmentConfigArgs Empty = new PrivateEnvironmentConfigArgs();
 
     /**
+     * Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+     * 
+     */
+    @Import(name="cloudComposerConnectionSubnetwork")
+    private @Nullable Output<String> cloudComposerConnectionSubnetwork;
+
+    /**
+     * @return Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+     * 
+     */
+    public Optional<Output<String>> cloudComposerConnectionSubnetwork() {
+        return Optional.ofNullable(this.cloudComposerConnectionSubnetwork);
+    }
+
+    /**
      * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
@@ -99,6 +114,7 @@ public final class PrivateEnvironmentConfigArgs extends com.pulumi.resources.Res
     private PrivateEnvironmentConfigArgs() {}
 
     private PrivateEnvironmentConfigArgs(PrivateEnvironmentConfigArgs $) {
+        this.cloudComposerConnectionSubnetwork = $.cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = $.cloudComposerNetworkIpv4CidrBlock;
         this.cloudSqlIpv4CidrBlock = $.cloudSqlIpv4CidrBlock;
         this.enablePrivateEnvironment = $.enablePrivateEnvironment;
@@ -122,6 +138,27 @@ public final class PrivateEnvironmentConfigArgs extends com.pulumi.resources.Res
 
         public Builder(PrivateEnvironmentConfigArgs defaults) {
             $ = new PrivateEnvironmentConfigArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param cloudComposerConnectionSubnetwork Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudComposerConnectionSubnetwork(@Nullable Output<String> cloudComposerConnectionSubnetwork) {
+            $.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
+            return this;
+        }
+
+        /**
+         * @param cloudComposerConnectionSubnetwork Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
+            return cloudComposerConnectionSubnetwork(Output.of(cloudComposerConnectionSubnetwork));
         }
 
         /**

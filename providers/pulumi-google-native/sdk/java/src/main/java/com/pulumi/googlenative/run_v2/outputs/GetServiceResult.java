@@ -4,11 +4,11 @@
 package com.pulumi.googlenative.run_v2.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetResponse;
-import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2TrafficTargetStatusResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2BinaryAuthorizationResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2ConditionResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2RevisionTemplateResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2TrafficTargetResponse;
+import com.pulumi.googlenative.run_v2.outputs.GoogleCloudRunV2TrafficTargetStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceResult {
     /**
-     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     private final Map<String,String> annotations;
@@ -26,7 +26,7 @@ public final class GetServiceResult {
      * @return Settings for the Binary Authorization feature.
      * 
      */
-    private final GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization;
+    private final GoogleCloudRunV2BinaryAuthorizationResponse binaryAuthorization;
     /**
      * @return Arbitrary identifier for the API client.
      * 
@@ -41,7 +41,7 @@ public final class GetServiceResult {
      * @return The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    private final List<GoogleCloudRunOpV2ConditionResponse> conditions;
+    private final List<GoogleCloudRunV2ConditionResponse> conditions;
     /**
      * @return The creation time.
      * 
@@ -58,7 +58,7 @@ public final class GetServiceResult {
      */
     private final String deleteTime;
     /**
-     * @return User-provided description of the Service.
+     * @return User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     private final String description;
@@ -103,7 +103,7 @@ public final class GetServiceResult {
      */
     private final String latestReadyRevision;
     /**
-     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     private final String launchStage;
@@ -126,22 +126,22 @@ public final class GetServiceResult {
      * @return The template used to create revisions for this Service.
      * 
      */
-    private final GoogleCloudRunOpV2RevisionTemplateResponse template;
+    private final GoogleCloudRunV2RevisionTemplateResponse template;
     /**
      * @return The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    private final GoogleCloudRunOpV2ConditionResponse terminalCondition;
+    private final GoogleCloudRunV2ConditionResponse terminalCondition;
     /**
      * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    private final List<GoogleCloudRunOpV2TrafficTargetResponse> traffic;
+    private final List<GoogleCloudRunV2TrafficTargetResponse> traffic;
     /**
      * @return Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    private final List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses;
+    private final List<GoogleCloudRunV2TrafficTargetStatusResponse> trafficStatuses;
     /**
      * @return Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
      * 
@@ -161,10 +161,10 @@ public final class GetServiceResult {
     @CustomType.Constructor
     private GetServiceResult(
         @CustomType.Parameter("annotations") Map<String,String> annotations,
-        @CustomType.Parameter("binaryAuthorization") GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization,
+        @CustomType.Parameter("binaryAuthorization") GoogleCloudRunV2BinaryAuthorizationResponse binaryAuthorization,
         @CustomType.Parameter("client") String client,
         @CustomType.Parameter("clientVersion") String clientVersion,
-        @CustomType.Parameter("conditions") List<GoogleCloudRunOpV2ConditionResponse> conditions,
+        @CustomType.Parameter("conditions") List<GoogleCloudRunV2ConditionResponse> conditions,
         @CustomType.Parameter("createTime") String createTime,
         @CustomType.Parameter("creator") String creator,
         @CustomType.Parameter("deleteTime") String deleteTime,
@@ -181,10 +181,10 @@ public final class GetServiceResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("observedGeneration") String observedGeneration,
         @CustomType.Parameter("reconciling") Boolean reconciling,
-        @CustomType.Parameter("template") GoogleCloudRunOpV2RevisionTemplateResponse template,
-        @CustomType.Parameter("terminalCondition") GoogleCloudRunOpV2ConditionResponse terminalCondition,
-        @CustomType.Parameter("traffic") List<GoogleCloudRunOpV2TrafficTargetResponse> traffic,
-        @CustomType.Parameter("trafficStatuses") List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses,
+        @CustomType.Parameter("template") GoogleCloudRunV2RevisionTemplateResponse template,
+        @CustomType.Parameter("terminalCondition") GoogleCloudRunV2ConditionResponse terminalCondition,
+        @CustomType.Parameter("traffic") List<GoogleCloudRunV2TrafficTargetResponse> traffic,
+        @CustomType.Parameter("trafficStatuses") List<GoogleCloudRunV2TrafficTargetStatusResponse> trafficStatuses,
         @CustomType.Parameter("uid") String uid,
         @CustomType.Parameter("updateTime") String updateTime,
         @CustomType.Parameter("uri") String uri) {
@@ -219,7 +219,7 @@ public final class GetServiceResult {
     }
 
     /**
-     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
+     * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
      * 
      */
     public Map<String,String> annotations() {
@@ -229,7 +229,7 @@ public final class GetServiceResult {
      * @return Settings for the Binary Authorization feature.
      * 
      */
-    public GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization() {
+    public GoogleCloudRunV2BinaryAuthorizationResponse binaryAuthorization() {
         return this.binaryAuthorization;
     }
     /**
@@ -250,7 +250,7 @@ public final class GetServiceResult {
      * @return The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public List<GoogleCloudRunOpV2ConditionResponse> conditions() {
+    public List<GoogleCloudRunV2ConditionResponse> conditions() {
         return this.conditions;
     }
     /**
@@ -275,7 +275,7 @@ public final class GetServiceResult {
         return this.deleteTime;
     }
     /**
-     * @return User-provided description of the Service.
+     * @return User-provided description of the Service. This field currently has a 512-character limit.
      * 
      */
     public String description() {
@@ -338,7 +338,7 @@ public final class GetServiceResult {
         return this.latestReadyRevision;
     }
     /**
-     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+     * @return The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
     public String launchStage() {
@@ -369,28 +369,28 @@ public final class GetServiceResult {
      * @return The template used to create revisions for this Service.
      * 
      */
-    public GoogleCloudRunOpV2RevisionTemplateResponse template() {
+    public GoogleCloudRunV2RevisionTemplateResponse template() {
         return this.template;
     }
     /**
      * @return The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public GoogleCloudRunOpV2ConditionResponse terminalCondition() {
+    public GoogleCloudRunV2ConditionResponse terminalCondition() {
         return this.terminalCondition;
     }
     /**
      * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    public List<GoogleCloudRunOpV2TrafficTargetResponse> traffic() {
+    public List<GoogleCloudRunV2TrafficTargetResponse> traffic() {
         return this.traffic;
     }
     /**
      * @return Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses() {
+    public List<GoogleCloudRunV2TrafficTargetStatusResponse> trafficStatuses() {
         return this.trafficStatuses;
     }
     /**
@@ -425,10 +425,10 @@ public final class GetServiceResult {
 
     public static final class Builder {
         private Map<String,String> annotations;
-        private GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization;
+        private GoogleCloudRunV2BinaryAuthorizationResponse binaryAuthorization;
         private String client;
         private String clientVersion;
-        private List<GoogleCloudRunOpV2ConditionResponse> conditions;
+        private List<GoogleCloudRunV2ConditionResponse> conditions;
         private String createTime;
         private String creator;
         private String deleteTime;
@@ -445,10 +445,10 @@ public final class GetServiceResult {
         private String name;
         private String observedGeneration;
         private Boolean reconciling;
-        private GoogleCloudRunOpV2RevisionTemplateResponse template;
-        private GoogleCloudRunOpV2ConditionResponse terminalCondition;
-        private List<GoogleCloudRunOpV2TrafficTargetResponse> traffic;
-        private List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses;
+        private GoogleCloudRunV2RevisionTemplateResponse template;
+        private GoogleCloudRunV2ConditionResponse terminalCondition;
+        private List<GoogleCloudRunV2TrafficTargetResponse> traffic;
+        private List<GoogleCloudRunV2TrafficTargetStatusResponse> trafficStatuses;
         private String uid;
         private String updateTime;
         private String uri;
@@ -493,7 +493,7 @@ public final class GetServiceResult {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
-        public Builder binaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization) {
+        public Builder binaryAuthorization(GoogleCloudRunV2BinaryAuthorizationResponse binaryAuthorization) {
             this.binaryAuthorization = Objects.requireNonNull(binaryAuthorization);
             return this;
         }
@@ -505,11 +505,11 @@ public final class GetServiceResult {
             this.clientVersion = Objects.requireNonNull(clientVersion);
             return this;
         }
-        public Builder conditions(List<GoogleCloudRunOpV2ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunV2ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-        public Builder conditions(GoogleCloudRunOpV2ConditionResponse... conditions) {
+        public Builder conditions(GoogleCloudRunV2ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
         public Builder createTime(String createTime) {
@@ -576,26 +576,26 @@ public final class GetServiceResult {
             this.reconciling = Objects.requireNonNull(reconciling);
             return this;
         }
-        public Builder template(GoogleCloudRunOpV2RevisionTemplateResponse template) {
+        public Builder template(GoogleCloudRunV2RevisionTemplateResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-        public Builder terminalCondition(GoogleCloudRunOpV2ConditionResponse terminalCondition) {
+        public Builder terminalCondition(GoogleCloudRunV2ConditionResponse terminalCondition) {
             this.terminalCondition = Objects.requireNonNull(terminalCondition);
             return this;
         }
-        public Builder traffic(List<GoogleCloudRunOpV2TrafficTargetResponse> traffic) {
+        public Builder traffic(List<GoogleCloudRunV2TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-        public Builder traffic(GoogleCloudRunOpV2TrafficTargetResponse... traffic) {
+        public Builder traffic(GoogleCloudRunV2TrafficTargetResponse... traffic) {
             return traffic(List.of(traffic));
         }
-        public Builder trafficStatuses(List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses) {
+        public Builder trafficStatuses(List<GoogleCloudRunV2TrafficTargetStatusResponse> trafficStatuses) {
             this.trafficStatuses = Objects.requireNonNull(trafficStatuses);
             return this;
         }
-        public Builder trafficStatuses(GoogleCloudRunOpV2TrafficTargetStatusResponse... trafficStatuses) {
+        public Builder trafficStatuses(GoogleCloudRunV2TrafficTargetStatusResponse... trafficStatuses) {
             return trafficStatuses(List.of(trafficStatuses));
         }
         public Builder uid(String uid) {

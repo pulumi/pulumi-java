@@ -69,10 +69,24 @@ public final class ExecutionTemplateResponse {
      */
     private final String paramsYamlFile;
     /**
+     * @return Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     * @deprecated
+     * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     */
+    @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+    private final String scaleTier;
+    /**
      * @return The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
      * 
      */
     private final String serviceAccount;
+    /**
+     * @return The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+     * 
+     */
+    private final String tensorboard;
     /**
      * @return Parameters used in Vertex AI JobType executions.
      * 
@@ -92,7 +106,9 @@ public final class ExecutionTemplateResponse {
         @CustomType.Parameter("outputNotebookFolder") String outputNotebookFolder,
         @CustomType.Parameter("parameters") String parameters,
         @CustomType.Parameter("paramsYamlFile") String paramsYamlFile,
+        @CustomType.Parameter("scaleTier") String scaleTier,
         @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("tensorboard") String tensorboard,
         @CustomType.Parameter("vertexAiParameters") VertexAIParametersResponse vertexAiParameters) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImageUri = containerImageUri;
@@ -105,7 +121,9 @@ public final class ExecutionTemplateResponse {
         this.outputNotebookFolder = outputNotebookFolder;
         this.parameters = parameters;
         this.paramsYamlFile = paramsYamlFile;
+        this.scaleTier = scaleTier;
         this.serviceAccount = serviceAccount;
+        this.tensorboard = tensorboard;
         this.vertexAiParameters = vertexAiParameters;
     }
 
@@ -187,11 +205,29 @@ public final class ExecutionTemplateResponse {
         return this.paramsYamlFile;
     }
     /**
+     * @return Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     * @deprecated
+     * Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported.
+     * 
+     */
+    @Deprecated /* Required. Scale tier of the hardware used for notebook execution. DEPRECATED Will be discontinued. As right now only CUSTOM is supported. */
+    public String scaleTier() {
+        return this.scaleTier;
+    }
+    /**
      * @return The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
      * 
      */
     public String serviceAccount() {
         return this.serviceAccount;
+    }
+    /**
+     * @return The name of a Vertex AI [Tensorboard] resource to which this execution will upload Tensorboard logs. Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
+     * 
+     */
+    public String tensorboard() {
+        return this.tensorboard;
     }
     /**
      * @return Parameters used in Vertex AI JobType executions.
@@ -221,7 +257,9 @@ public final class ExecutionTemplateResponse {
         private String outputNotebookFolder;
         private String parameters;
         private String paramsYamlFile;
+        private String scaleTier;
         private String serviceAccount;
+        private String tensorboard;
         private VertexAIParametersResponse vertexAiParameters;
 
         public Builder() {
@@ -241,7 +279,9 @@ public final class ExecutionTemplateResponse {
     	      this.outputNotebookFolder = defaults.outputNotebookFolder;
     	      this.parameters = defaults.parameters;
     	      this.paramsYamlFile = defaults.paramsYamlFile;
+    	      this.scaleTier = defaults.scaleTier;
     	      this.serviceAccount = defaults.serviceAccount;
+    	      this.tensorboard = defaults.tensorboard;
     	      this.vertexAiParameters = defaults.vertexAiParameters;
         }
 
@@ -289,15 +329,23 @@ public final class ExecutionTemplateResponse {
             this.paramsYamlFile = Objects.requireNonNull(paramsYamlFile);
             return this;
         }
+        public Builder scaleTier(String scaleTier) {
+            this.scaleTier = Objects.requireNonNull(scaleTier);
+            return this;
+        }
         public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            return this;
+        }
+        public Builder tensorboard(String tensorboard) {
+            this.tensorboard = Objects.requireNonNull(tensorboard);
             return this;
         }
         public Builder vertexAiParameters(VertexAIParametersResponse vertexAiParameters) {
             this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
             return this;
         }        public ExecutionTemplateResponse build() {
-            return new ExecutionTemplateResponse(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
+            return new ExecutionTemplateResponse(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, scaleTier, serviceAccount, tensorboard, vertexAiParameters);
         }
     }
 }

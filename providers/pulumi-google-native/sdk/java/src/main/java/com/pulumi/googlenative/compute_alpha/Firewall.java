@@ -123,6 +123,24 @@ public class Firewall extends com.pulumi.resources.CustomResource {
         return this.disabled;
     }
     /**
+     * Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging. */
+    @Export(name="enableLogging", type=Boolean.class, parameters={})
+    private Output<Boolean> enableLogging;
+
+    /**
+     * @return Deprecated in favor of enable in LogConfig. This field denotes whether to enable logging for a particular firewall rule. If logging is enabled, logs will be exported t Cloud Logging.
+     * 
+     */
+    public Output<Boolean> enableLogging() {
+        return this.enableLogging;
+    }
+    /**
      * Type of the resource. Always compute#firewall for firewall rules.
      * 
      */

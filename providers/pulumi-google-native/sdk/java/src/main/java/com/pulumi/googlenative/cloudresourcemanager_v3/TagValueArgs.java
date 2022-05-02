@@ -90,9 +90,17 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
         return this.shortName;
     }
 
+    /**
+     * Optional. Set as true to perform the validations necessary for creating the resource, but not actually perform the action.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Optional. Set as true to perform the validations necessary for creating the resource, but not actually perform the action.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -231,11 +239,23 @@ public final class TagValueArgs extends com.pulumi.resources.ResourceArgs {
             return shortName(Output.of(shortName));
         }
 
+        /**
+         * @param validateOnly Optional. Set as true to perform the validations necessary for creating the resource, but not actually perform the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Optional. Set as true to perform the validations necessary for creating the resource, but not actually perform the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
+import com.pulumi.googlenative.monitoring_v1.inputs.StatisticalTimeSeriesFilterArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -81,6 +82,29 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.secondaryAggregation);
     }
 
+    /**
+     * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     * @deprecated
+     * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     */
+    @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+    @Import(name="statisticalTimeSeriesFilter")
+    private @Nullable Output<StatisticalTimeSeriesFilterArgs> statisticalTimeSeriesFilter;
+
+    /**
+     * @return Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     * @deprecated
+     * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     */
+    @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+    public Optional<Output<StatisticalTimeSeriesFilterArgs>> statisticalTimeSeriesFilter() {
+        return Optional.ofNullable(this.statisticalTimeSeriesFilter);
+    }
+
     private TimeSeriesFilterArgs() {}
 
     private TimeSeriesFilterArgs(TimeSeriesFilterArgs $) {
@@ -88,6 +112,7 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
         this.filter = $.filter;
         this.pickTimeSeriesFilter = $.pickTimeSeriesFilter;
         this.secondaryAggregation = $.secondaryAggregation;
+        this.statisticalTimeSeriesFilter = $.statisticalTimeSeriesFilter;
     }
 
     public static Builder builder() {
@@ -190,6 +215,35 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder secondaryAggregation(AggregationArgs secondaryAggregation) {
             return secondaryAggregation(Output.of(secondaryAggregation));
+        }
+
+        /**
+         * @param statisticalTimeSeriesFilter Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+         * 
+         */
+        @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+        public Builder statisticalTimeSeriesFilter(@Nullable Output<StatisticalTimeSeriesFilterArgs> statisticalTimeSeriesFilter) {
+            $.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
+            return this;
+        }
+
+        /**
+         * @param statisticalTimeSeriesFilter Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+         * 
+         */
+        @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+        public Builder statisticalTimeSeriesFilter(StatisticalTimeSeriesFilterArgs statisticalTimeSeriesFilter) {
+            return statisticalTimeSeriesFilter(Output.of(statisticalTimeSeriesFilter));
         }
 
         public TimeSeriesFilterArgs build() {

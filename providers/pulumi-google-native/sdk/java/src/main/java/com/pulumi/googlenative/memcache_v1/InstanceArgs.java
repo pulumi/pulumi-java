@@ -6,6 +6,7 @@ package com.pulumi.googlenative.memcache_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.memcache_v1.enums.InstanceMemcacheVersion;
+import com.pulumi.googlenative.memcache_v1.inputs.GoogleCloudMemcacheV1MaintenancePolicyArgs;
 import com.pulumi.googlenative.memcache_v1.inputs.InstanceMessageArgs;
 import com.pulumi.googlenative.memcache_v1.inputs.MemcacheParametersArgs;
 import com.pulumi.googlenative.memcache_v1.inputs.NodeConfigArgs;
@@ -52,9 +53,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Required. The logical name of the Memcached instance in the user project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user project / location. If any of the above are not met, the API raises an invalid argument error.
+     * 
+     */
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Required. The logical name of the Memcached instance in the user project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user project / location. If any of the above are not met, the API raises an invalid argument error.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -94,6 +103,21 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    /**
+     * The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    @Import(name="maintenancePolicy")
+    private @Nullable Output<GoogleCloudMemcacheV1MaintenancePolicyArgs> maintenancePolicy;
+
+    /**
+     * @return The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+     * 
+     */
+    public Optional<Output<GoogleCloudMemcacheV1MaintenancePolicyArgs>> maintenancePolicy() {
+        return Optional.ofNullable(this.maintenancePolicy);
     }
 
     /**
@@ -202,6 +226,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         this.instanceMessages = $.instanceMessages;
         this.labels = $.labels;
         this.location = $.location;
+        this.maintenancePolicy = $.maintenancePolicy;
         this.memcacheVersion = $.memcacheVersion;
         this.name = $.name;
         this.nodeConfig = $.nodeConfig;
@@ -271,11 +296,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param instanceId Required. The logical name of the Memcached instance in the user project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user project / location. If any of the above are not met, the API raises an invalid argument error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Required. The logical name of the Memcached instance in the user project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user project / location. If any of the above are not met, the API raises an invalid argument error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
@@ -339,6 +376,27 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder location(String location) {
             return location(Output.of(location));
+        }
+
+        /**
+         * @param maintenancePolicy The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenancePolicy(@Nullable Output<GoogleCloudMemcacheV1MaintenancePolicyArgs> maintenancePolicy) {
+            $.maintenancePolicy = maintenancePolicy;
+            return this;
+        }
+
+        /**
+         * @param maintenancePolicy The maintenance policy for the instance. If not provided, the maintenance event will be performed based on Memorystore internal rollout schedule.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maintenancePolicy(GoogleCloudMemcacheV1MaintenancePolicyArgs maintenancePolicy) {
+            return maintenancePolicy(Output.of(maintenancePolicy));
         }
 
         /**

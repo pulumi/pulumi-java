@@ -11,6 +11,15 @@ import java.util.Objects;
 @CustomType
 public final class SecuritySettingsResponse {
     /**
+     * @return [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    private final String authentication;
+    /**
      * @return Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service&#39;s backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
      * 
      */
@@ -23,12 +32,25 @@ public final class SecuritySettingsResponse {
 
     @CustomType.Constructor
     private SecuritySettingsResponse(
+        @CustomType.Parameter("authentication") String authentication,
         @CustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
         @CustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
+        this.authentication = authentication;
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }
 
+    /**
+     * @return [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    public String authentication() {
+        return this.authentication;
+    }
     /**
      * @return Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service&#39;s backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
      * 
@@ -53,6 +75,7 @@ public final class SecuritySettingsResponse {
     }
 
     public static final class Builder {
+        private String authentication;
         private String clientTlsPolicy;
         private List<String> subjectAltNames;
 
@@ -62,10 +85,15 @@ public final class SecuritySettingsResponse {
 
         public Builder(SecuritySettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.authentication = defaults.authentication;
     	      this.clientTlsPolicy = defaults.clientTlsPolicy;
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
+        public Builder authentication(String authentication) {
+            this.authentication = Objects.requireNonNull(authentication);
+            return this;
+        }
         public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
@@ -77,7 +105,7 @@ public final class SecuritySettingsResponse {
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }        public SecuritySettingsResponse build() {
-            return new SecuritySettingsResponse(clientTlsPolicy, subjectAltNames);
+            return new SecuritySettingsResponse(authentication, clientTlsPolicy, subjectAltNames);
         }
     }
 }

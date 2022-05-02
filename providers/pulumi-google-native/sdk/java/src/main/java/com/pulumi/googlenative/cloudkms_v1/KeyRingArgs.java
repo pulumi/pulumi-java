@@ -15,11 +15,19 @@ public final class KeyRingArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final KeyRingArgs Empty = new KeyRingArgs();
 
-    @Import(name="keyRingId", required=true)
-    private Output<String> keyRingId;
+    /**
+     * Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    @Import(name="keyRingId")
+    private @Nullable Output<String> keyRingId;
 
-    public Output<String> keyRingId() {
-        return this.keyRingId;
+    /**
+     * @return Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
+    public Optional<Output<String>> keyRingId() {
+        return Optional.ofNullable(this.keyRingId);
     }
 
     @Import(name="location")
@@ -62,11 +70,23 @@ public final class KeyRingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyRingArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder keyRingId(Output<String> keyRingId) {
+        /**
+         * @param keyRingId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyRingId(@Nullable Output<String> keyRingId) {
             $.keyRingId = keyRingId;
             return this;
         }
 
+        /**
+         * @param keyRingId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRingId(String keyRingId) {
             return keyRingId(Output.of(keyRingId));
         }
@@ -90,7 +110,6 @@ public final class KeyRingArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public KeyRingArgs build() {
-            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
             return $;
         }
     }

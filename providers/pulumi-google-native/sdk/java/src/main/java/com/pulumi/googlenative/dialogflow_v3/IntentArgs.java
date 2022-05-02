@@ -88,9 +88,17 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.labels);
     }
 
+    /**
+     * The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -297,11 +305,23 @@ public final class IntentArgs extends com.pulumi.resources.ResourceArgs {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param languageCode The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not specified, the agent&#39;s default language is used. [Many languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note: languages must be enabled in the agent before they can be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }

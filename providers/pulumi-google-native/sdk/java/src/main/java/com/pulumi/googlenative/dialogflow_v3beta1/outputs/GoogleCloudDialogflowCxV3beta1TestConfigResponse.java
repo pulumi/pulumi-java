@@ -11,10 +11,15 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     /**
-     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * @return Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
      * 
      */
     private final String flow;
+    /**
+     * @return The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+     * 
+     */
+    private final String page;
     /**
      * @return Session parameters to be compared when calculating differences.
      * 
@@ -24,17 +29,26 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1TestConfigResponse(
         @CustomType.Parameter("flow") String flow,
+        @CustomType.Parameter("page") String page,
         @CustomType.Parameter("trackingParameters") List<String> trackingParameters) {
         this.flow = flow;
+        this.page = page;
         this.trackingParameters = trackingParameters;
     }
 
     /**
-     * @return Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+     * @return Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
      * 
      */
     public String flow() {
         return this.flow;
+    }
+    /**
+     * @return The page to start the test case with. Format: `projects//locations//agents//flows//pages/`. Only one of `flow` and `page` should be set to indicate the starting point of the test case. If both are set, `page` takes precedence over `flow`. If neither is set, the test case will start with start page on the default start flow.
+     * 
+     */
+    public String page() {
+        return this.page;
     }
     /**
      * @return Session parameters to be compared when calculating differences.
@@ -54,6 +68,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
 
     public static final class Builder {
         private String flow;
+        private String page;
         private List<String> trackingParameters;
 
         public Builder() {
@@ -63,11 +78,16 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
         public Builder(GoogleCloudDialogflowCxV3beta1TestConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.flow = defaults.flow;
+    	      this.page = defaults.page;
     	      this.trackingParameters = defaults.trackingParameters;
         }
 
         public Builder flow(String flow) {
             this.flow = Objects.requireNonNull(flow);
+            return this;
+        }
+        public Builder page(String page) {
+            this.page = Objects.requireNonNull(page);
             return this;
         }
         public Builder trackingParameters(List<String> trackingParameters) {
@@ -77,7 +97,7 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
         public Builder trackingParameters(String... trackingParameters) {
             return trackingParameters(List.of(trackingParameters));
         }        public GoogleCloudDialogflowCxV3beta1TestConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, trackingParameters);
+            return new GoogleCloudDialogflowCxV3beta1TestConfigResponse(flow, page, trackingParameters);
         }
     }
 }

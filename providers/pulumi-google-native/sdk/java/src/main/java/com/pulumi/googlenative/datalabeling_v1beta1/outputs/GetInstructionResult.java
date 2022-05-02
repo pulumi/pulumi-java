@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1CsvInstructionResponse;
 import com.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
 import java.lang.String;
 import java.util.List;
@@ -21,6 +22,15 @@ public final class GetInstructionResult {
      * 
      */
     private final String createTime;
+    /**
+     * @return Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     * @deprecated
+     * Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     */
+    @Deprecated /* Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data. */
+    private final GoogleCloudDatalabelingV1beta1CsvInstructionResponse csvInstruction;
     /**
      * @return The data type of this instruction.
      * 
@@ -56,6 +66,7 @@ public final class GetInstructionResult {
     private GetInstructionResult(
         @CustomType.Parameter("blockingResources") List<String> blockingResources,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("csvInstruction") GoogleCloudDatalabelingV1beta1CsvInstructionResponse csvInstruction,
         @CustomType.Parameter("dataType") String dataType,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("displayName") String displayName,
@@ -64,6 +75,7 @@ public final class GetInstructionResult {
         @CustomType.Parameter("updateTime") String updateTime) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
+        this.csvInstruction = csvInstruction;
         this.dataType = dataType;
         this.description = description;
         this.displayName = displayName;
@@ -85,6 +97,17 @@ public final class GetInstructionResult {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     * @deprecated
+     * Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data.
+     * 
+     */
+    @Deprecated /* Deprecated: this instruction format is not supported any more. Instruction from a CSV file, such as for classification task. The CSV file should have exact two columns, in the following format: * The first column is labeled data, such as an image reference, text. * The second column is comma separated labels associated with data. */
+    public GoogleCloudDatalabelingV1beta1CsvInstructionResponse csvInstruction() {
+        return this.csvInstruction;
     }
     /**
      * @return The data type of this instruction.
@@ -140,6 +163,7 @@ public final class GetInstructionResult {
     public static final class Builder {
         private List<String> blockingResources;
         private String createTime;
+        private GoogleCloudDatalabelingV1beta1CsvInstructionResponse csvInstruction;
         private String dataType;
         private String description;
         private String displayName;
@@ -155,6 +179,7 @@ public final class GetInstructionResult {
     	      Objects.requireNonNull(defaults);
     	      this.blockingResources = defaults.blockingResources;
     	      this.createTime = defaults.createTime;
+    	      this.csvInstruction = defaults.csvInstruction;
     	      this.dataType = defaults.dataType;
     	      this.description = defaults.description;
     	      this.displayName = defaults.displayName;
@@ -172,6 +197,10 @@ public final class GetInstructionResult {
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder csvInstruction(GoogleCloudDatalabelingV1beta1CsvInstructionResponse csvInstruction) {
+            this.csvInstruction = Objects.requireNonNull(csvInstruction);
             return this;
         }
         public Builder dataType(String dataType) {
@@ -198,7 +227,7 @@ public final class GetInstructionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetInstructionResult build() {
-            return new GetInstructionResult(blockingResources, createTime, dataType, description, displayName, name, pdfInstruction, updateTime);
+            return new GetInstructionResult(blockingResources, createTime, csvInstruction, dataType, description, displayName, name, pdfInstruction, updateTime);
         }
     }
 }

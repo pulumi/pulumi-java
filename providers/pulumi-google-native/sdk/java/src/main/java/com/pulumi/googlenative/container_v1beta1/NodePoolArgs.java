@@ -40,9 +40,25 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.autoscaling);
     }
 
+    /**
+     * Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field. */
     @Import(name="clusterId", required=true)
     private Output<String> clusterId;
 
+    /**
+     * @return Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field. */
     public Output<String> clusterId() {
         return this.clusterId;
     }
@@ -204,9 +220,25 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.placementPolicy);
     }
 
+    /**
+     * Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field. */
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field. */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -241,6 +273,29 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.version);
     }
 
+    /**
+     * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+    @Import(name="zone")
+    private @Nullable Output<String> zone;
+
+    /**
+     * @return Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     * @deprecated
+     * Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+     * 
+     */
+    @Deprecated /* Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
+    }
+
     private NodePoolArgs() {}
 
     private NodePoolArgs(NodePoolArgs $) {
@@ -260,6 +315,7 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.upgradeSettings = $.upgradeSettings;
         this.version = $.version;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
@@ -301,11 +357,31 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
             return autoscaling(Output.of(autoscaling));
         }
 
+        /**
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field. */
         public Builder clusterId(Output<String> clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent field. */
         public Builder clusterId(String clusterId) {
             return clusterId(Output.of(clusterId));
         }
@@ -549,11 +625,31 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
             return placementPolicy(Output.of(placementPolicy));
         }
 
+        /**
+         * @param project Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field. */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The Google Developers Console [project ID or project number](https://developers.google.com/console/help/new/#projectnumber). This field has been deprecated and replaced by the parent field. */
         public Builder project(String project) {
             return project(Output.of(project));
         }
@@ -598,6 +694,35 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder version(String version) {
             return version(Output.of(version));
+        }
+
+        /**
+         * @param zone Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+        public Builder zone(@Nullable Output<String> zone) {
+            $.zone = zone;
+            return this;
+        }
+
+        /**
+         * @param zone Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field.
+         * 
+         */
+        @Deprecated /* Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the parent field. */
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
         }
 
         public NodePoolArgs build() {

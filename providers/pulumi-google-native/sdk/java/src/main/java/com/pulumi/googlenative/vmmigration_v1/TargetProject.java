@@ -14,6 +14,7 @@ import javax.annotation.Nullable;
 
 /**
  * Creates a new TargetProject in a given project. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
+ * Auto-naming is currently not supported for this resource.
  * 
  */
 @ResourceType(type="google-native:vmmigration/v1:TargetProject")

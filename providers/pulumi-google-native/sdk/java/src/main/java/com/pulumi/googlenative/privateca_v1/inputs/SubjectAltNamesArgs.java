@@ -22,14 +22,14 @@ public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs
     public static final SubjectAltNamesArgs Empty = new SubjectAltNamesArgs();
 
     /**
-     * Contains additional subject alternative name values.
+     * Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
      * 
      */
     @Import(name="customSans")
     private @Nullable Output<List<X509ExtensionArgs>> customSans;
 
     /**
-     * @return Contains additional subject alternative name values.
+     * @return Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
      * 
      */
     public Optional<Output<List<X509ExtensionArgs>>> customSans() {
@@ -125,7 +125,7 @@ public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param customSans Contains additional subject alternative name values.
+         * @param customSans Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param customSans Contains additional subject alternative name values.
+         * @param customSans Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class SubjectAltNamesArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param customSans Contains additional subject alternative name values.
+         * @param customSans Contains additional subject alternative name values. For each custom_san, the `value` field must contain an ASN.1 encoded UTF8String.
          * 
          * @return builder
          * 

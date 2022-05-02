@@ -5,6 +5,7 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2InspectConfigContentOptionsItem;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2InspectConfigMinLikelihood;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CustomInfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FindingLimitsArgs;
@@ -24,6 +25,29 @@ import javax.annotation.Nullable;
 public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2InspectConfigArgs Empty = new GooglePrivacyDlpV2InspectConfigArgs();
+
+    /**
+     * Deprecated and unused.
+     * 
+     * @deprecated
+     * Deprecated and unused.
+     * 
+     */
+    @Deprecated /* Deprecated and unused. */
+    @Import(name="contentOptions")
+    private @Nullable Output<List<GooglePrivacyDlpV2InspectConfigContentOptionsItem>> contentOptions;
+
+    /**
+     * @return Deprecated and unused.
+     * 
+     * @deprecated
+     * Deprecated and unused.
+     * 
+     */
+    @Deprecated /* Deprecated and unused. */
+    public Optional<Output<List<GooglePrivacyDlpV2InspectConfigContentOptionsItem>>> contentOptions() {
+        return Optional.ofNullable(this.contentOptions);
+    }
 
     /**
      * CustomInfoTypes provided by the user. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
@@ -133,6 +157,7 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
     private GooglePrivacyDlpV2InspectConfigArgs() {}
 
     private GooglePrivacyDlpV2InspectConfigArgs(GooglePrivacyDlpV2InspectConfigArgs $) {
+        this.contentOptions = $.contentOptions;
         this.customInfoTypes = $.customInfoTypes;
         this.excludeInfoTypes = $.excludeInfoTypes;
         this.includeQuote = $.includeQuote;
@@ -158,6 +183,49 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
 
         public Builder(GooglePrivacyDlpV2InspectConfigArgs defaults) {
             $ = new GooglePrivacyDlpV2InspectConfigArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param contentOptions Deprecated and unused.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated and unused.
+         * 
+         */
+        @Deprecated /* Deprecated and unused. */
+        public Builder contentOptions(@Nullable Output<List<GooglePrivacyDlpV2InspectConfigContentOptionsItem>> contentOptions) {
+            $.contentOptions = contentOptions;
+            return this;
+        }
+
+        /**
+         * @param contentOptions Deprecated and unused.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated and unused.
+         * 
+         */
+        @Deprecated /* Deprecated and unused. */
+        public Builder contentOptions(List<GooglePrivacyDlpV2InspectConfigContentOptionsItem> contentOptions) {
+            return contentOptions(Output.of(contentOptions));
+        }
+
+        /**
+         * @param contentOptions Deprecated and unused.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated and unused.
+         * 
+         */
+        @Deprecated /* Deprecated and unused. */
+        public Builder contentOptions(GooglePrivacyDlpV2InspectConfigContentOptionsItem... contentOptions) {
+            return contentOptions(List.of(contentOptions));
         }
 
         /**

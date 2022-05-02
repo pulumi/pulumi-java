@@ -17,9 +17,17 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AliasArgs Empty = new AliasArgs();
 
+    /**
+     * Alias for the key/certificate pair. Values must match the regular expression `[\w\s-.]{1,255}`. This must be provided for all formats except `selfsignedcert`; self-signed certs may specify the alias in either this parameter or the JSON body.
+     * 
+     */
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return Alias for the key/certificate pair. Values must match the regular expression `[\w\s-.]{1,255}`. This must be provided for all formats except `selfsignedcert`; self-signed certs may specify the alias in either this parameter or the JSON body.
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -76,23 +84,47 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.extensions);
     }
 
+    /**
+     * Required. Format of the data. Valid values include: `selfsignedcert`, `keycertfile`, or `pkcs12`
+     * 
+     */
     @Import(name="format", required=true)
     private Output<String> format;
 
+    /**
+     * @return Required. Format of the data. Valid values include: `selfsignedcert`, `keycertfile`, or `pkcs12`
+     * 
+     */
     public Output<String> format() {
         return this.format;
     }
 
+    /**
+     * Flag that specifies whether to ignore expiry validation. If set to `true`, no expiry validation will be performed.
+     * 
+     */
     @Import(name="ignoreExpiryValidation")
     private @Nullable Output<String> ignoreExpiryValidation;
 
+    /**
+     * @return Flag that specifies whether to ignore expiry validation. If set to `true`, no expiry validation will be performed.
+     * 
+     */
     public Optional<Output<String>> ignoreExpiryValidation() {
         return Optional.ofNullable(this.ignoreExpiryValidation);
     }
 
+    /**
+     * Flag that specifies whether to ignore newline validation. If set to `true`, no error is thrown when the file contains a certificate chain with no newline between each certificate. Defaults to `false`.
+     * 
+     */
     @Import(name="ignoreNewlineValidation")
     private @Nullable Output<String> ignoreNewlineValidation;
 
+    /**
+     * @return Flag that specifies whether to ignore newline validation. If set to `true`, no error is thrown when the file contains a certificate chain with no newline between each certificate. Defaults to `false`.
+     * 
+     */
     public Optional<Output<String>> ignoreNewlineValidation() {
         return Optional.ofNullable(this.ignoreNewlineValidation);
     }
@@ -111,6 +143,21 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * DEPRECATED: For improved security, specify the password in the request body instead of using the query parameter. To specify the password in the request body, set `Content-type: multipart/form-data` part with name `password`. Password for the private key file, if required.
+     * 
+     */
+    @Import(name="password")
+    private @Nullable Output<String> password;
+
+    /**
+     * @return DEPRECATED: For improved security, specify the password in the request body instead of using the query parameter. To specify the password in the request body, set `Content-type: multipart/form-data` part with name `password`. Password for the private key file, if required.
+     * 
+     */
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
+    }
+
     private AliasArgs() {}
 
     private AliasArgs(AliasArgs $) {
@@ -124,6 +171,7 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
         this.ignoreNewlineValidation = $.ignoreNewlineValidation;
         this.keystoreId = $.keystoreId;
         this.organizationId = $.organizationId;
+        this.password = $.password;
     }
 
     public static Builder builder() {
@@ -144,11 +192,23 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias Alias for the key/certificate pair. Values must match the regular expression `[\w\s-.]{1,255}`. This must be provided for all formats except `selfsignedcert`; self-signed certs may specify the alias in either this parameter or the JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias Alias for the key/certificate pair. Values must match the regular expression `[\w\s-.]{1,255}`. This must be provided for all formats except `selfsignedcert`; self-signed certs may specify the alias in either this parameter or the JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
@@ -235,29 +295,65 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param format Required. Format of the data. Valid values include: `selfsignedcert`, `keycertfile`, or `pkcs12`
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Required. Format of the data. Valid values include: `selfsignedcert`, `keycertfile`, or `pkcs12`
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param ignoreExpiryValidation Flag that specifies whether to ignore expiry validation. If set to `true`, no expiry validation will be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreExpiryValidation(@Nullable Output<String> ignoreExpiryValidation) {
             $.ignoreExpiryValidation = ignoreExpiryValidation;
             return this;
         }
 
+        /**
+         * @param ignoreExpiryValidation Flag that specifies whether to ignore expiry validation. If set to `true`, no expiry validation will be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreExpiryValidation(String ignoreExpiryValidation) {
             return ignoreExpiryValidation(Output.of(ignoreExpiryValidation));
         }
 
+        /**
+         * @param ignoreNewlineValidation Flag that specifies whether to ignore newline validation. If set to `true`, no error is thrown when the file contains a certificate chain with no newline between each certificate. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreNewlineValidation(@Nullable Output<String> ignoreNewlineValidation) {
             $.ignoreNewlineValidation = ignoreNewlineValidation;
             return this;
         }
 
+        /**
+         * @param ignoreNewlineValidation Flag that specifies whether to ignore newline validation. If set to `true`, no error is thrown when the file contains a certificate chain with no newline between each certificate. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreNewlineValidation(String ignoreNewlineValidation) {
             return ignoreNewlineValidation(Output.of(ignoreNewlineValidation));
         }
@@ -278,6 +374,27 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
+        }
+
+        /**
+         * @param password DEPRECATED: For improved security, specify the password in the request body instead of using the query parameter. To specify the password in the request body, set `Content-type: multipart/form-data` part with name `password`. Password for the private key file, if required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(@Nullable Output<String> password) {
+            $.password = password;
+            return this;
+        }
+
+        /**
+         * @param password DEPRECATED: For improved security, specify the password in the request body instead of using the query parameter. To specify the password in the request body, set `Content-type: multipart/form-data` part with name `password`. Password for the private key file, if required.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
 
         public AliasArgs build() {

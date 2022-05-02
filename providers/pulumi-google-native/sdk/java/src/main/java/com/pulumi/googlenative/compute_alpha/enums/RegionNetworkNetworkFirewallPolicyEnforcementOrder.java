@@ -8,6 +8,10 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+    /**
+     * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     @EnumType
     public enum RegionNetworkNetworkFirewallPolicyEnforcementOrder {
         AfterClassicFirewall("AFTER_CLASSIC_FIREWALL"),

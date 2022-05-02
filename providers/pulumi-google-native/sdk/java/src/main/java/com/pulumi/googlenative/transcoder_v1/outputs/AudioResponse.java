@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AudioResponse {
     /**
-     * @return Enable boosting high frequency components. The default is `false`.
+     * @return Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     private final Boolean highBoost;
     /**
-     * @return Enable boosting low frequency components. The default is `false`.
+     * @return Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     private final Boolean lowBoost;
@@ -37,14 +37,14 @@ public final class AudioResponse {
     }
 
     /**
-     * @return Enable boosting high frequency components. The default is `false`.
+     * @return Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     public Boolean highBoost() {
         return this.highBoost;
     }
     /**
-     * @return Enable boosting low frequency components. The default is `false`.
+     * @return Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     public Boolean lowBoost() {

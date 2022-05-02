@@ -19,9 +19,17 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
 
     public static final CertificateTemplateArgs Empty = new CertificateTemplateArgs();
 
+    /**
+     * Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     @Import(name="certificateTemplateId", required=true)
     private Output<String> certificateTemplateId;
 
+    /**
+     * @return Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     public Output<String> certificateTemplateId() {
         return this.certificateTemplateId;
     }
@@ -115,9 +123,17 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -154,11 +170,23 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
             $ = new CertificateTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateTemplateId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTemplateId(Output<String> certificateTemplateId) {
             $.certificateTemplateId = certificateTemplateId;
             return this;
         }
 
+        /**
+         * @param certificateTemplateId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateTemplateId(String certificateTemplateId) {
             return certificateTemplateId(Output.of(certificateTemplateId));
         }
@@ -286,11 +314,23 @@ public final class CertificateTemplateArgs extends com.pulumi.resources.Resource
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

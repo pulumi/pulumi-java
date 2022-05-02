@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.compute_alpha.DiskArgs;
 import com.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
+import com.pulumi.googlenative.compute_alpha.outputs.DiskAsyncReplicationResponse;
+import com.pulumi.googlenative.compute_alpha.outputs.DiskResourceStatusResponse;
 import com.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,6 +38,34 @@ public class Disk extends com.pulumi.resources.CustomResource {
      */
     public Output<String> architecture() {
         return this.architecture;
+    }
+    /**
+     * Disk asynchronously replicated into this disk.
+     * 
+     */
+    @Export(name="asyncPrimaryDisk", type=DiskAsyncReplicationResponse.class, parameters={})
+    private Output<DiskAsyncReplicationResponse> asyncPrimaryDisk;
+
+    /**
+     * @return Disk asynchronously replicated into this disk.
+     * 
+     */
+    public Output<DiskAsyncReplicationResponse> asyncPrimaryDisk() {
+        return this.asyncPrimaryDisk;
+    }
+    /**
+     * A list of disks this disk is asynchronously replicated to.
+     * 
+     */
+    @Export(name="asyncSecondaryDisks", type=Map.class, parameters={String.class, String.class})
+    private Output<Map<String,String>> asyncSecondaryDisks;
+
+    /**
+     * @return A list of disks this disk is asynchronously replicated to.
+     * 
+     */
+    public Output<Map<String,String>> asyncSecondaryDisks() {
+        return this.asyncSecondaryDisks;
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -106,6 +136,24 @@ public class Disk extends com.pulumi.resources.CustomResource {
      */
     public Output<List<GuestOsFeatureResponse>> guestOsFeatures() {
         return this.guestOsFeatures;
+    }
+    /**
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    @Export(name="interface", type=String.class, parameters={})
+    private Output<String> interface_;
+
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    public Output<String> interface_() {
+        return this.interface_;
     }
     /**
      * Type of the resource. Always compute#disk for disks.
@@ -346,6 +394,20 @@ public class Disk extends com.pulumi.resources.CustomResource {
         return this.resourcePolicies;
     }
     /**
+     * Status information for the disk resource.
+     * 
+     */
+    @Export(name="resourceStatus", type=DiskResourceStatusResponse.class, parameters={})
+    private Output<DiskResourceStatusResponse> resourceStatus;
+
+    /**
+     * @return Status information for the disk resource.
+     * 
+     */
+    public Output<DiskResourceStatusResponse> resourceStatus() {
+        return this.resourceStatus;
+    }
+    /**
      * Reserved for future use.
      * 
      */
@@ -400,6 +462,34 @@ public class Disk extends com.pulumi.resources.CustomResource {
      */
     public Output<String> sizeGb() {
         return this.sizeGb;
+    }
+    /**
+     * URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    @Export(name="sourceConsistencyGroupPolicy", type=String.class, parameters={})
+    private Output<String> sourceConsistencyGroupPolicy;
+
+    /**
+     * @return URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    public Output<String> sourceConsistencyGroupPolicy() {
+        return this.sourceConsistencyGroupPolicy;
+    }
+    /**
+     * ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    @Export(name="sourceConsistencyGroupPolicyId", type=String.class, parameters={})
+    private Output<String> sourceConsistencyGroupPolicyId;
+
+    /**
+     * @return ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group.
+     * 
+     */
+    public Output<String> sourceConsistencyGroupPolicyId() {
+        return this.sourceConsistencyGroupPolicyId;
     }
     /**
      * The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
@@ -568,6 +658,24 @@ public class Disk extends com.pulumi.resources.CustomResource {
      */
     public Output<String> status() {
         return this.status;
+    }
+    /**
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    @Export(name="storageType", type=String.class, parameters={})
+    private Output<String> storageType;
+
+    /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    public Output<String> storageType() {
+        return this.storageType;
     }
     /**
      * URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.

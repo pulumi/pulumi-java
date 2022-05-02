@@ -26,7 +26,7 @@ public final class GetRepositoryResult {
      */
     private final String format;
     /**
-     * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * @return The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
     private final String kmsKeyName;
@@ -41,6 +41,11 @@ public final class GetRepositoryResult {
      */
     private final String name;
     /**
+     * @return The size, in bytes, of all artifact storage in this repository. Repositories that are generally available or in public preview use this to calculate storage costs.
+     * 
+     */
+    private final String sizeBytes;
+    /**
      * @return The time when the repository was last updated.
      * 
      */
@@ -54,6 +59,7 @@ public final class GetRepositoryResult {
         @CustomType.Parameter("kmsKeyName") String kmsKeyName,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sizeBytes") String sizeBytes,
         @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
@@ -61,6 +67,7 @@ public final class GetRepositoryResult {
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;
         this.name = name;
+        this.sizeBytes = sizeBytes;
         this.updateTime = updateTime;
     }
 
@@ -86,7 +93,7 @@ public final class GetRepositoryResult {
         return this.format;
     }
     /**
-     * @return The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+     * @return The Cloud KMS resource name of the customer managed encryption key that&#39;s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
     public String kmsKeyName() {
@@ -105,6 +112,13 @@ public final class GetRepositoryResult {
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The size, in bytes, of all artifact storage in this repository. Repositories that are generally available or in public preview use this to calculate storage costs.
+     * 
+     */
+    public String sizeBytes() {
+        return this.sizeBytes;
     }
     /**
      * @return The time when the repository was last updated.
@@ -129,6 +143,7 @@ public final class GetRepositoryResult {
         private String kmsKeyName;
         private Map<String,String> labels;
         private String name;
+        private String sizeBytes;
         private String updateTime;
 
         public Builder() {
@@ -143,6 +158,7 @@ public final class GetRepositoryResult {
     	      this.kmsKeyName = defaults.kmsKeyName;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
+    	      this.sizeBytes = defaults.sizeBytes;
     	      this.updateTime = defaults.updateTime;
         }
 
@@ -170,11 +186,15 @@ public final class GetRepositoryResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder sizeBytes(String sizeBytes) {
+            this.sizeBytes = Objects.requireNonNull(sizeBytes);
+            return this;
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetRepositoryResult build() {
-            return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, name, updateTime);
+            return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, name, sizeBytes, updateTime);
         }
     }
 }

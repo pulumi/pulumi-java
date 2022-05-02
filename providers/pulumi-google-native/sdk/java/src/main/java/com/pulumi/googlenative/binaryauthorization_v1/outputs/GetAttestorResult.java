@@ -16,6 +16,11 @@ public final class GetAttestorResult {
      */
     private final String description;
     /**
+     * @return Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    private final String etag;
+    /**
      * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */
@@ -34,10 +39,12 @@ public final class GetAttestorResult {
     @CustomType.Constructor
     private GetAttestorResult(
         @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("updateTime") String updateTime,
         @CustomType.Parameter("userOwnedGrafeasNote") UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
         this.description = description;
+        this.etag = etag;
         this.name = name;
         this.updateTime = updateTime;
         this.userOwnedGrafeasNote = userOwnedGrafeasNote;
@@ -49,6 +56,13 @@ public final class GetAttestorResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    public String etag() {
+        return this.etag;
     }
     /**
      * @return The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
@@ -82,6 +96,7 @@ public final class GetAttestorResult {
 
     public static final class Builder {
         private String description;
+        private String etag;
         private String name;
         private String updateTime;
         private UserOwnedGrafeasNoteResponse userOwnedGrafeasNote;
@@ -93,6 +108,7 @@ public final class GetAttestorResult {
         public Builder(GetAttestorResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.etag = defaults.etag;
     	      this.name = defaults.name;
     	      this.updateTime = defaults.updateTime;
     	      this.userOwnedGrafeasNote = defaults.userOwnedGrafeasNote;
@@ -100,6 +116,10 @@ public final class GetAttestorResult {
 
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
+            return this;
+        }
+        public Builder etag(String etag) {
+            this.etag = Objects.requireNonNull(etag);
             return this;
         }
         public Builder name(String name) {
@@ -114,7 +134,7 @@ public final class GetAttestorResult {
             this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
             return this;
         }        public GetAttestorResult build() {
-            return new GetAttestorResult(description, name, updateTime, userOwnedGrafeasNote);
+            return new GetAttestorResult(description, etag, name, updateTime, userOwnedGrafeasNote);
         }
     }
 }

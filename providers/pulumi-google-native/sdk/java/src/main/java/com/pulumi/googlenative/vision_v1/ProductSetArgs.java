@@ -52,9 +52,17 @@ public final class ProductSetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * A user-supplied resource id for this ProductSet. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     @Import(name="productSetId")
     private @Nullable Output<String> productSetId;
 
+    /**
+     * @return A user-supplied resource id for this ProductSet. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     public Optional<Output<String>> productSetId() {
         return Optional.ofNullable(this.productSetId);
     }
@@ -145,11 +153,23 @@ public final class ProductSetArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param productSetId A user-supplied resource id for this ProductSet. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productSetId(@Nullable Output<String> productSetId) {
             $.productSetId = productSetId;
             return this;
         }
 
+        /**
+         * @param productSetId A user-supplied resource id for this ProductSet. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productSetId(String productSetId) {
             return productSetId(Output.of(productSetId));
         }

@@ -11,6 +11,7 @@ import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.apikeys_v2.KeyArgs;
 import com.pulumi.googlenative.apikeys_v2.outputs.V2RestrictionsResponse;
 import java.lang.String;
+import java.util.Map;
 import javax.annotation.Nullable;
 
 /**
@@ -20,6 +21,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:apikeys/v2:Key")
 public class Key extends com.pulumi.resources.CustomResource {
+    /**
+     * Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
+    private Output<Map<String,String>> annotations;
+
+    /**
+     * @return Annotations is an unstructured key-value map stored with a policy that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+     * 
+     */
+    public Output<Map<String,String>> annotations() {
+        return this.annotations;
+    }
     /**
      * A timestamp identifying the time this key was originally created.
      * 

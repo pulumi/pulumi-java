@@ -44,9 +44,17 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Required. The ID to use for the reservation, which will become the final component of the reservation&#39;s name. This value is structured like: `my-reservation-name`.
+     * 
+     */
     @Import(name="reservationId", required=true)
     private Output<String> reservationId;
 
+    /**
+     * @return Required. The ID to use for the reservation, which will become the final component of the reservation&#39;s name. This value is structured like: `my-reservation-name`.
+     * 
+     */
     public Output<String> reservationId() {
         return this.reservationId;
     }
@@ -133,11 +141,23 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param reservationId Required. The ID to use for the reservation, which will become the final component of the reservation&#39;s name. This value is structured like: `my-reservation-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationId(Output<String> reservationId) {
             $.reservationId = reservationId;
             return this;
         }
 
+        /**
+         * @param reservationId Required. The ID to use for the reservation, which will become the final component of the reservation&#39;s name. This value is structured like: `my-reservation-name`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservationId(String reservationId) {
             return reservationId(Output.of(reservationId));
         }

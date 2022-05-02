@@ -38,9 +38,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+     * 
+     */
     @Import(name="overrideStrategy")
     private @Nullable Output<String> overrideStrategy;
 
+    /**
+     * @return Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+     * 
+     */
     public Optional<Output<String>> overrideStrategy() {
         return Optional.ofNullable(this.overrideStrategy);
     }
@@ -117,11 +125,23 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
             return id(Output.of(id));
         }
 
+        /**
+         * @param overrideStrategy Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
             $.overrideStrategy = overrideStrategy;
             return this;
         }
 
+        /**
+         * @param overrideStrategy Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideStrategy(String overrideStrategy) {
             return overrideStrategy(Output.of(overrideStrategy));
         }

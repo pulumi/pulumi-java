@@ -48,23 +48,31 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * ETag of the resource.
+     * Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Required. The ID of the game server cluster resource to create.
+     * 
+     */
     @Import(name="gameServerClusterId", required=true)
     private Output<String> gameServerClusterId;
 
+    /**
+     * @return Required. The ID of the game server cluster resource to create.
+     * 
+     */
     public Output<String> gameServerClusterId() {
         return this.gameServerClusterId;
     }
@@ -92,14 +100,14 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+     * @return The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
      * 
      */
     public Optional<Output<String>> name() {
@@ -195,7 +203,7 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -206,7 +214,7 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param etag ETag of the resource.
+         * @param etag Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
          * 
          * @return builder
          * 
@@ -215,11 +223,23 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param gameServerClusterId Required. The ID of the game server cluster resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerClusterId(Output<String> gameServerClusterId) {
             $.gameServerClusterId = gameServerClusterId;
             return this;
         }
 
+        /**
+         * @param gameServerClusterId Required. The ID of the game server cluster resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameServerClusterId(String gameServerClusterId) {
             return gameServerClusterId(Output.of(gameServerClusterId));
         }
@@ -255,7 +275,7 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
          * 
          * @return builder
          * 
@@ -266,7 +286,7 @@ public final class GameServerClusterArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
+         * @param name The resource name of the game server cluster, in the following form: `projects/{project}/locations/{locationId}/realms/{realmId}/gameServerClusters/{gameServerClusterId}`. For example, `projects/my-project/locations/global/realms/zanzibar/gameServerClusters/my-gke-cluster`.
          * 
          * @return builder
          * 

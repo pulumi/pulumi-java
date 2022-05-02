@@ -36,6 +36,15 @@ public final class GetRegionHealthCheckServiceResult {
      */
     private final String healthStatusAggregationPolicy;
     /**
+     * @return This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     * @deprecated
+     * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     */
+    @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+    private final String healthStatusAggregationStrategy;
+    /**
      * @return [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
      * 
      */
@@ -78,6 +87,7 @@ public final class GetRegionHealthCheckServiceResult {
         @CustomType.Parameter("fingerprint") String fingerprint,
         @CustomType.Parameter("healthChecks") List<String> healthChecks,
         @CustomType.Parameter("healthStatusAggregationPolicy") String healthStatusAggregationPolicy,
+        @CustomType.Parameter("healthStatusAggregationStrategy") String healthStatusAggregationStrategy,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("networkEndpointGroups") List<String> networkEndpointGroups,
@@ -90,6 +100,7 @@ public final class GetRegionHealthCheckServiceResult {
         this.fingerprint = fingerprint;
         this.healthChecks = healthChecks;
         this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
+        this.healthStatusAggregationStrategy = healthStatusAggregationStrategy;
         this.kind = kind;
         this.name = name;
         this.networkEndpointGroups = networkEndpointGroups;
@@ -133,6 +144,17 @@ public final class GetRegionHealthCheckServiceResult {
      */
     public String healthStatusAggregationPolicy() {
         return this.healthStatusAggregationPolicy;
+    }
+    /**
+     * @return This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     * @deprecated
+     * This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend&#39;s health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend&#39;s are healthy, the HealthState of the health check service is HEALTHY. .
+     * 
+     */
+    @Deprecated /* This field is deprecated. Use health_status_aggregation_policy instead. Policy for how the results from multiple health checks for the same endpoint are aggregated. - NO_AGGREGATION. An EndpointHealth message is returned for each backend in the health check service. - AND. If any backend's health check reports UNHEALTHY, then UNHEALTHY is the HealthState of the entire health check service. If all backend's are healthy, the HealthState of the health check service is HEALTHY. . */
+    public String healthStatusAggregationStrategy() {
+        return this.healthStatusAggregationStrategy;
     }
     /**
      * @return [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
@@ -198,6 +220,7 @@ public final class GetRegionHealthCheckServiceResult {
         private String fingerprint;
         private List<String> healthChecks;
         private String healthStatusAggregationPolicy;
+        private String healthStatusAggregationStrategy;
         private String kind;
         private String name;
         private List<String> networkEndpointGroups;
@@ -217,6 +240,7 @@ public final class GetRegionHealthCheckServiceResult {
     	      this.fingerprint = defaults.fingerprint;
     	      this.healthChecks = defaults.healthChecks;
     	      this.healthStatusAggregationPolicy = defaults.healthStatusAggregationPolicy;
+    	      this.healthStatusAggregationStrategy = defaults.healthStatusAggregationStrategy;
     	      this.kind = defaults.kind;
     	      this.name = defaults.name;
     	      this.networkEndpointGroups = defaults.networkEndpointGroups;
@@ -247,6 +271,10 @@ public final class GetRegionHealthCheckServiceResult {
         }
         public Builder healthStatusAggregationPolicy(String healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = Objects.requireNonNull(healthStatusAggregationPolicy);
+            return this;
+        }
+        public Builder healthStatusAggregationStrategy(String healthStatusAggregationStrategy) {
+            this.healthStatusAggregationStrategy = Objects.requireNonNull(healthStatusAggregationStrategy);
             return this;
         }
         public Builder kind(String kind) {
@@ -283,7 +311,7 @@ public final class GetRegionHealthCheckServiceResult {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }        public GetRegionHealthCheckServiceResult build() {
-            return new GetRegionHealthCheckServiceResult(creationTimestamp, description, fingerprint, healthChecks, healthStatusAggregationPolicy, kind, name, networkEndpointGroups, notificationEndpoints, region, selfLink, selfLinkWithId);
+            return new GetRegionHealthCheckServiceResult(creationTimestamp, description, fingerprint, healthChecks, healthStatusAggregationPolicy, healthStatusAggregationStrategy, kind, name, networkEndpointGroups, notificationEndpoints, region, selfLink, selfLinkWithId);
         }
     }
 }

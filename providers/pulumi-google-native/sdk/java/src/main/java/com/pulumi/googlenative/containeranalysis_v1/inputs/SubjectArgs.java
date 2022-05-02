@@ -17,14 +17,14 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     /**
-     * &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * `&#34;&#34;: &#34;&#34;` Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
      */
     @Import(name="digest")
     private @Nullable Output<Map<String,String>> digest;
 
     /**
-     * @return &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+     * @return `&#34;&#34;: &#34;&#34;` Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
      * 
      */
     public Optional<Output<Map<String,String>>> digest() {
@@ -64,7 +64,7 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param digest &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * @param digest `&#34;&#34;: &#34;&#34;` Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
          * 
          * @return builder
          * 
@@ -75,7 +75,7 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param digest &#34;&#34;: &#34;&#34; Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
+         * @param digest `&#34;&#34;: &#34;&#34;` Algorithms can be e.g. sha256, sha512 See https://github.com/in-toto/attestation/blob/main/spec/field_types.md#DigestSet
          * 
          * @return builder
          * 

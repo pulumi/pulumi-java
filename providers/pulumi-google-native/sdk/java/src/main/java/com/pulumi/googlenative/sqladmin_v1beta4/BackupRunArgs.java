@@ -6,7 +6,6 @@ package com.pulumi.googlenative.sqladmin_v1beta4;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunBackupKind;
-import com.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunStatus;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.BackupRunType;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.DiskEncryptionConfigurationArgs;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.DiskEncryptionStatusArgs;
@@ -224,21 +223,6 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The status of this run.
-     * 
-     */
-    @Import(name="status")
-    private @Nullable Output<BackupRunStatus> status;
-
-    /**
-     * @return The status of this run.
-     * 
-     */
-    public Optional<Output<BackupRunStatus>> status() {
-        return Optional.ofNullable(this.status);
-    }
-
-    /**
      * The type of this run; can be either &#34;AUTOMATED&#34; or &#34;ON_DEMAND&#34;. This field defaults to &#34;ON_DEMAND&#34; and is ignored, when specified for insert requests.
      * 
      */
@@ -285,7 +269,6 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.selfLink = $.selfLink;
         this.startTime = $.startTime;
-        this.status = $.status;
         this.type = $.type;
         this.windowStartTime = $.windowStartTime;
     }
@@ -588,27 +571,6 @@ public final class BackupRunArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
-        }
-
-        /**
-         * @param status The status of this run.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(@Nullable Output<BackupRunStatus> status) {
-            $.status = status;
-            return this;
-        }
-
-        /**
-         * @param status The status of this run.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder status(BackupRunStatus status) {
-            return status(Output.of(status));
         }
 
         /**

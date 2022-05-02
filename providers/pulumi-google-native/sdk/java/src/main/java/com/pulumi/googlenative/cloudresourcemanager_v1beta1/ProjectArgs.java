@@ -123,9 +123,17 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.projectNumber);
     }
 
+    /**
+     * A now unused experiment opt-out option.
+     * 
+     */
     @Import(name="useLegacyStack")
     private @Nullable Output<String> useLegacyStack;
 
+    /**
+     * @return A now unused experiment opt-out option.
+     * 
+     */
     public Optional<Output<String>> useLegacyStack() {
         return Optional.ofNullable(this.useLegacyStack);
     }
@@ -308,11 +316,23 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             return projectNumber(Output.of(projectNumber));
         }
 
+        /**
+         * @param useLegacyStack A now unused experiment opt-out option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLegacyStack(@Nullable Output<String> useLegacyStack) {
             $.useLegacyStack = useLegacyStack;
             return this;
         }
 
+        /**
+         * @param useLegacyStack A now unused experiment opt-out option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLegacyStack(String useLegacyStack) {
             return useLegacyStack(Output.of(useLegacyStack));
         }

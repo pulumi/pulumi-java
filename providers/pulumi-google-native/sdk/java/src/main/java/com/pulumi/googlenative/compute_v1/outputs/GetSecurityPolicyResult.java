@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_v1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
+import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyDdosProtectionConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRecaptchaOptionsConfigResponse;
 import com.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRuleResponse;
 import java.lang.String;
@@ -21,6 +22,7 @@ public final class GetSecurityPolicyResult {
      * 
      */
     private final String creationTimestamp;
+    private final SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig;
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
@@ -43,6 +45,11 @@ public final class GetSecurityPolicyResult {
     private final String name;
     private final SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig;
     /**
+     * @return URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    private final String region;
+    /**
      * @return A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
      * 
      */
@@ -53,7 +60,7 @@ public final class GetSecurityPolicyResult {
      */
     private final String selfLink;
     /**
-     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * @return The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     private final String type;
@@ -63,22 +70,26 @@ public final class GetSecurityPolicyResult {
         @CustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
         @CustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
         @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("ddosProtectionConfig") SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("fingerprint") String fingerprint,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @CustomType.Parameter("region") String region,
         @CustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.creationTimestamp = creationTimestamp;
+        this.ddosProtectionConfig = ddosProtectionConfig;
         this.description = description;
         this.fingerprint = fingerprint;
         this.kind = kind;
         this.name = name;
         this.recaptchaOptionsConfig = recaptchaOptionsConfig;
+        this.region = region;
         this.rules = rules;
         this.selfLink = selfLink;
         this.type = type;
@@ -96,6 +107,9 @@ public final class GetSecurityPolicyResult {
      */
     public String creationTimestamp() {
         return this.creationTimestamp;
+    }
+    public SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig() {
+        return this.ddosProtectionConfig;
     }
     /**
      * @return An optional description of this resource. Provide this property when you create the resource.
@@ -129,6 +143,13 @@ public final class GetSecurityPolicyResult {
         return this.recaptchaOptionsConfig;
     }
     /**
+     * @return URL of the region where the regional security policy resides. This field is not applicable to global security policies.
+     * 
+     */
+    public String region() {
+        return this.region;
+    }
+    /**
      * @return A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added.
      * 
      */
@@ -143,7 +164,7 @@ public final class GetSecurityPolicyResult {
         return this.selfLink;
     }
     /**
-     * @return The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache.
+     * @return The type indicates the intended use of the security policy. - CLOUD_ARMOR: Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. - CLOUD_ARMOR_EDGE: Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google&#39;s cache. - CLOUD_ARMOR_INTERNAL_SERVICE: Cloud Armor internal service policies can be configured to filter HTTP requests targeting services managed by Traffic Director in a service mesh. They filter requests before the request is served from the application. This field can be set only at resource creation time.
      * 
      */
     public String type() {
@@ -162,11 +183,13 @@ public final class GetSecurityPolicyResult {
         private SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig;
         private SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig;
         private String creationTimestamp;
+        private SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig;
         private String description;
         private String fingerprint;
         private String kind;
         private String name;
         private SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig;
+        private String region;
         private List<SecurityPolicyRuleResponse> rules;
         private String selfLink;
         private String type;
@@ -180,11 +203,13 @@ public final class GetSecurityPolicyResult {
     	      this.adaptiveProtectionConfig = defaults.adaptiveProtectionConfig;
     	      this.advancedOptionsConfig = defaults.advancedOptionsConfig;
     	      this.creationTimestamp = defaults.creationTimestamp;
+    	      this.ddosProtectionConfig = defaults.ddosProtectionConfig;
     	      this.description = defaults.description;
     	      this.fingerprint = defaults.fingerprint;
     	      this.kind = defaults.kind;
     	      this.name = defaults.name;
     	      this.recaptchaOptionsConfig = defaults.recaptchaOptionsConfig;
+    	      this.region = defaults.region;
     	      this.rules = defaults.rules;
     	      this.selfLink = defaults.selfLink;
     	      this.type = defaults.type;
@@ -200,6 +225,10 @@ public final class GetSecurityPolicyResult {
         }
         public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
+            return this;
+        }
+        public Builder ddosProtectionConfig(SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig) {
+            this.ddosProtectionConfig = Objects.requireNonNull(ddosProtectionConfig);
             return this;
         }
         public Builder description(String description) {
@@ -222,6 +251,10 @@ public final class GetSecurityPolicyResult {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
+        public Builder region(String region) {
+            this.region = Objects.requireNonNull(region);
+            return this;
+        }
         public Builder rules(List<SecurityPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
@@ -237,7 +270,7 @@ public final class GetSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetSecurityPolicyResult build() {
-            return new GetSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, creationTimestamp, description, fingerprint, kind, name, recaptchaOptionsConfig, rules, selfLink, type);
+            return new GetSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, creationTimestamp, ddosProtectionConfig, description, fingerprint, kind, name, recaptchaOptionsConfig, region, rules, selfLink, type);
         }
     }
 }

@@ -31,6 +31,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:sqladmin/v1beta4:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
+     * List all maintenance versions applicable on the instance
+     * 
+     */
+    @Export(name="availableMaintenanceVersions", type=List.class, parameters={String.class})
+    private Output<List<String>> availableMaintenanceVersions;
+
+    /**
+     * @return List all maintenance versions applicable on the instance
+     * 
+     */
+    public Output<List<String>> availableMaintenanceVersions() {
+        return this.availableMaintenanceVersions;
+    }
+    /**
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
@@ -143,6 +157,24 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.diskEncryptionStatus;
     }
     /**
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     * @deprecated
+     * This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    @Deprecated /* This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead. */
+    @Export(name="etag", type=String.class, parameters={})
+    private Output<String> etag;
+
+    /**
+     * @return This field is deprecated and will be removed from a future version of the API. Use the `settings.settingsVersion` field instead.
+     * 
+     */
+    public Output<String> etag() {
+        return this.etag;
+    }
+    /**
      * The name and status of the failover replica.
      * 
      */
@@ -199,6 +231,24 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.ipAddresses;
     }
     /**
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     * @deprecated
+     * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    @Deprecated /* The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances. */
+    @Export(name="ipv6Address", type=String.class, parameters={})
+    private Output<String> ipv6Address;
+
+    /**
+     * @return The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to First Generation instances.
+     * 
+     */
+    public Output<String> ipv6Address() {
+        return this.ipv6Address;
+    }
+    /**
      * This is always `sql#instance`.
      * 
      */
@@ -211,6 +261,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> kind() {
         return this.kind;
+    }
+    /**
+     * The current software version on the instance.
+     * 
+     */
+    @Export(name="maintenanceVersion", type=String.class, parameters={})
+    private Output<String> maintenanceVersion;
+
+    /**
+     * @return The current software version on the instance.
+     * 
+     */
+    public Output<String> maintenanceVersion() {
+        return this.maintenanceVersion;
     }
     /**
      * The name of the instance which will act as primary in the replication setup.
@@ -381,14 +445,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.scheduledMaintenance;
     }
     /**
-     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     @Export(name="secondaryGceZone", type=String.class, parameters={})
     private Output<String> secondaryGceZone;
 
     /**
-     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     * @return The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone.
      * 
      */
     public Output<String> secondaryGceZone() {

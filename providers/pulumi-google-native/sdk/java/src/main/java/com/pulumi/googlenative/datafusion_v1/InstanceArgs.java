@@ -158,9 +158,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.enableStackdriverMonitoring);
     }
 
+    /**
+     * Required. The name of the instance to create.
+     * 
+     */
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Required. The name of the instance to create.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -535,11 +543,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return enableStackdriverMonitoring(Output.of(enableStackdriverMonitoring));
         }
 
+        /**
+         * @param instanceId Required. The name of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Required. The name of the instance to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

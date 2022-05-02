@@ -118,14 +118,14 @@ public class Processor extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
-     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * @return The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     public Output<String> type() {

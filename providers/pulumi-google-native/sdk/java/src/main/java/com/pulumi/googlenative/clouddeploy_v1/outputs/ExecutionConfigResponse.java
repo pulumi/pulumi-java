@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class ExecutionConfigResponse {
     /**
-     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * @return Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
      * 
      */
     private final String artifactStorage;
@@ -28,7 +28,7 @@ public final class ExecutionConfigResponse {
      */
     private final PrivatePoolResponse privatePool;
     /**
-     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
      * 
      */
     private final String serviceAccount;
@@ -60,7 +60,7 @@ public final class ExecutionConfigResponse {
     }
 
     /**
-     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * @return Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
      * 
      */
     public String artifactStorage() {
@@ -81,7 +81,7 @@ public final class ExecutionConfigResponse {
         return this.privatePool;
     }
     /**
-     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
      * 
      */
     public String serviceAccount() {

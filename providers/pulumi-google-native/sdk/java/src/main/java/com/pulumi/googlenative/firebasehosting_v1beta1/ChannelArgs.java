@@ -17,9 +17,17 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
+    /**
+     * Required. Immutable. A unique ID within the site that identifies the channel.
+     * 
+     */
     @Import(name="channelId", required=true)
     private Output<String> channelId;
 
+    /**
+     * @return Required. Immutable. A unique ID within the site that identifies the channel.
+     * 
+     */
     public Output<String> channelId() {
         return this.channelId;
     }
@@ -144,11 +152,23 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelId Required. Immutable. A unique ID within the site that identifies the channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelId(Output<String> channelId) {
             $.channelId = channelId;
             return this;
         }
 
+        /**
+         * @param channelId Required. Immutable. A unique ID within the site that identifies the channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelId(String channelId) {
             return channelId(Output.of(channelId));
         }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsArchitecture;
+import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsInterface;
 import com.pulumi.googlenative.compute_alpha.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GuestOsFeatureArgs;
@@ -114,6 +115,29 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
      */
     public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
         return Optional.ofNullable(this.guestOsFeatures);
+    }
+
+    /**
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    @Import(name="interface")
+    private @Nullable Output<AttachedDiskInitializeParamsInterface> interface_;
+
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    public Optional<Output<AttachedDiskInitializeParamsInterface>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -320,6 +344,7 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
         this.diskSizeGb = $.diskSizeGb;
         this.diskType = $.diskType;
         this.guestOsFeatures = $.guestOsFeatures;
+        this.interface_ = $.interface_;
         this.labels = $.labels;
         this.licenseCodes = $.licenseCodes;
         this.licenses = $.licenses;
@@ -487,6 +512,35 @@ public final class AttachedDiskInitializeParamsArgs extends com.pulumi.resources
          */
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
+        }
+
+        /**
+         * @param interface_ [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         */
+        @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+        public Builder interface_(@Nullable Output<AttachedDiskInitializeParamsInterface> interface_) {
+            $.interface_ = interface_;
+            return this;
+        }
+
+        /**
+         * @param interface_ [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         */
+        @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+        public Builder interface_(AttachedDiskInitializeParamsInterface interface_) {
+            return interface_(Output.of(interface_));
         }
 
         /**

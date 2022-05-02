@@ -31,9 +31,17 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.config);
     }
 
+    /**
+     * Required. The ID to use for the job template, which will become the final component of the job template&#39;s resource name. This value should be 4-63 characters, and valid characters must match the regular expression `a-zA-Z*`.
+     * 
+     */
     @Import(name="jobTemplateId", required=true)
     private Output<String> jobTemplateId;
 
+    /**
+     * @return Required. The ID to use for the job template, which will become the final component of the job template&#39;s resource name. This value should be 4-63 characters, and valid characters must match the regular expression `a-zA-Z*`.
+     * 
+     */
     public Output<String> jobTemplateId() {
         return this.jobTemplateId;
     }
@@ -116,11 +124,23 @@ public final class JobTemplateArgs extends com.pulumi.resources.ResourceArgs {
             return config(Output.of(config));
         }
 
+        /**
+         * @param jobTemplateId Required. The ID to use for the job template, which will become the final component of the job template&#39;s resource name. This value should be 4-63 characters, and valid characters must match the regular expression `a-zA-Z*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTemplateId(Output<String> jobTemplateId) {
             $.jobTemplateId = jobTemplateId;
             return this;
         }
 
+        /**
+         * @param jobTemplateId Required. The ID to use for the job template, which will become the final component of the job template&#39;s resource name. This value should be 4-63 characters, and valid characters must match the regular expression `a-zA-Z*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTemplateId(String jobTemplateId) {
             return jobTemplateId(Output.of(jobTemplateId));
         }

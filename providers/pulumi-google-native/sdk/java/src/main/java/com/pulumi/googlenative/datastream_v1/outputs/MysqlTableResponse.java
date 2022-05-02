@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class MysqlTableResponse {
     /**
-     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * @return MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     private final List<MysqlColumnResponse> mysqlColumns;
@@ -31,7 +31,7 @@ public final class MysqlTableResponse {
     }
 
     /**
-     * @return MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
+     * @return MySQL columns in the database. When unspecified as part of include/exclude objects, includes/excludes everything.
      * 
      */
     public List<MysqlColumnResponse> mysqlColumns() {

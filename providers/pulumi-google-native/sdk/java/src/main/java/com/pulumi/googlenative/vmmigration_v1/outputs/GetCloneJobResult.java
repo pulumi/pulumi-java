@@ -22,6 +22,11 @@ public final class GetCloneJobResult {
      */
     private final String createTime;
     /**
+     * @return The time the clone job was ended.
+     * 
+     */
+    private final String endTime;
+    /**
      * @return Provides details for the errors that led to the Clone Job&#39;s state.
      * 
      */
@@ -46,12 +51,14 @@ public final class GetCloneJobResult {
     private GetCloneJobResult(
         @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
         @CustomType.Parameter("error") StatusResponse error,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
+        this.endTime = endTime;
         this.error = error;
         this.name = name;
         this.state = state;
@@ -71,6 +78,13 @@ public final class GetCloneJobResult {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return The time the clone job was ended.
+     * 
+     */
+    public String endTime() {
+        return this.endTime;
     }
     /**
      * @return Provides details for the errors that led to the Clone Job&#39;s state.
@@ -112,6 +126,7 @@ public final class GetCloneJobResult {
     public static final class Builder {
         private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
         private String createTime;
+        private String endTime;
         private StatusResponse error;
         private String name;
         private String state;
@@ -125,6 +140,7 @@ public final class GetCloneJobResult {
     	      Objects.requireNonNull(defaults);
     	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
     	      this.createTime = defaults.createTime;
+    	      this.endTime = defaults.endTime;
     	      this.error = defaults.error;
     	      this.name = defaults.name;
     	      this.state = defaults.state;
@@ -137,6 +153,10 @@ public final class GetCloneJobResult {
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder endTime(String endTime) {
+            this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
         public Builder error(StatusResponse error) {
@@ -155,7 +175,7 @@ public final class GetCloneJobResult {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }        public GetCloneJobResult build() {
-            return new GetCloneJobResult(computeEngineTargetDetails, createTime, error, name, state, stateTime);
+            return new GetCloneJobResult(computeEngineTargetDetails, createTime, endTime, error, name, state, stateTime);
         }
     }
 }

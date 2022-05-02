@@ -5,6 +5,7 @@ package com.pulumi.googlenative.orgpolicy_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2AlternatePolicySpecArgs;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,29 @@ import javax.annotation.Nullable;
 public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final OrganizationPolicyArgs Empty = new OrganizationPolicyArgs();
+
+    /**
+     * Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    @Import(name="alternate")
+    private @Nullable Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs> alternate;
+
+    /**
+     * @return Deprecated.
+     * 
+     * @deprecated
+     * Deprecated.
+     * 
+     */
+    @Deprecated /* Deprecated. */
+    public Optional<Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs>> alternate() {
+        return Optional.ofNullable(this.alternate);
+    }
 
     /**
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
@@ -56,6 +80,7 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
     private OrganizationPolicyArgs() {}
 
     private OrganizationPolicyArgs(OrganizationPolicyArgs $) {
+        this.alternate = $.alternate;
         this.name = $.name;
         this.organizationId = $.organizationId;
         this.spec = $.spec;
@@ -77,6 +102,35 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
 
         public Builder(OrganizationPolicyArgs defaults) {
             $ = new OrganizationPolicyArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param alternate Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder alternate(@Nullable Output<GoogleCloudOrgpolicyV2AlternatePolicySpecArgs> alternate) {
+            $.alternate = alternate;
+            return this;
+        }
+
+        /**
+         * @param alternate Deprecated.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated.
+         * 
+         */
+        @Deprecated /* Deprecated. */
+        public Builder alternate(GoogleCloudOrgpolicyV2AlternatePolicySpecArgs alternate) {
+            return alternate(Output.of(alternate));
         }
 
         /**

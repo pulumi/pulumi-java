@@ -62,6 +62,11 @@ public final class NetworkPeeringResponse {
      */
     private final Integer peerMtu;
     /**
+     * @return Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY.
+     * 
+     */
+    private final String stackType;
+    /**
      * @return State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
@@ -84,6 +89,7 @@ public final class NetworkPeeringResponse {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("peerMtu") Integer peerMtu,
+        @CustomType.Parameter("stackType") String stackType,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("stateDetails") String stateDetails) {
         this.advertisePeerSubnetsViaRouters = advertisePeerSubnetsViaRouters;
@@ -96,6 +102,7 @@ public final class NetworkPeeringResponse {
         this.name = name;
         this.network = network;
         this.peerMtu = peerMtu;
+        this.stackType = stackType;
         this.state = state;
         this.stateDetails = stateDetails;
     }
@@ -171,6 +178,13 @@ public final class NetworkPeeringResponse {
         return this.peerMtu;
     }
     /**
+     * @return Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY.
+     * 
+     */
+    public String stackType() {
+        return this.stackType;
+    }
+    /**
      * @return State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there&#39;s a matching configuration in the peer network.
      * 
      */
@@ -204,6 +218,7 @@ public final class NetworkPeeringResponse {
         private String name;
         private String network;
         private Integer peerMtu;
+        private String stackType;
         private String state;
         private String stateDetails;
 
@@ -223,6 +238,7 @@ public final class NetworkPeeringResponse {
     	      this.name = defaults.name;
     	      this.network = defaults.network;
     	      this.peerMtu = defaults.peerMtu;
+    	      this.stackType = defaults.stackType;
     	      this.state = defaults.state;
     	      this.stateDetails = defaults.stateDetails;
         }
@@ -267,6 +283,10 @@ public final class NetworkPeeringResponse {
             this.peerMtu = Objects.requireNonNull(peerMtu);
             return this;
         }
+        public Builder stackType(String stackType) {
+            this.stackType = Objects.requireNonNull(stackType);
+            return this;
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
@@ -275,7 +295,7 @@ public final class NetworkPeeringResponse {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }        public NetworkPeeringResponse build() {
-            return new NetworkPeeringResponse(advertisePeerSubnetsViaRouters, autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, state, stateDetails);
+            return new NetworkPeeringResponse(advertisePeerSubnetsViaRouters, autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, stackType, state, stateDetails);
         }
     }
 }

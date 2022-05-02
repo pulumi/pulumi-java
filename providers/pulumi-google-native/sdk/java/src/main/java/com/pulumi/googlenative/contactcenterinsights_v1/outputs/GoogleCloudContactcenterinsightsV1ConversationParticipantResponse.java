@@ -10,6 +10,15 @@ import java.util.Objects;
 @CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResponse {
     /**
+     * @return Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * 
+     * @deprecated
+     * Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * 
+     */
+    @Deprecated /* Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant} */
+    private final String dialogflowParticipant;
+    /**
      * @return The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
      */
@@ -32,16 +41,29 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
 
     @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(
+        @CustomType.Parameter("dialogflowParticipant") String dialogflowParticipant,
         @CustomType.Parameter("dialogflowParticipantName") String dialogflowParticipantName,
         @CustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
         @CustomType.Parameter("role") String role,
         @CustomType.Parameter("userId") String userId) {
+        this.dialogflowParticipant = dialogflowParticipant;
         this.dialogflowParticipantName = dialogflowParticipantName;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         this.role = role;
         this.userId = userId;
     }
 
+    /**
+     * @return Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * 
+     * @deprecated
+     * Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     * 
+     */
+    @Deprecated /* Deprecated. Use `dialogflow_participant_name` instead. The name of the Dialogflow participant. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant} */
+    public String dialogflowParticipant() {
+        return this.dialogflowParticipant;
+    }
     /**
      * @return The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
@@ -80,6 +102,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     }
 
     public static final class Builder {
+        private String dialogflowParticipant;
         private String dialogflowParticipantName;
         private String obfuscatedExternalUserId;
         private String role;
@@ -91,12 +114,17 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.dialogflowParticipant = defaults.dialogflowParticipant;
     	      this.dialogflowParticipantName = defaults.dialogflowParticipantName;
     	      this.obfuscatedExternalUserId = defaults.obfuscatedExternalUserId;
     	      this.role = defaults.role;
     	      this.userId = defaults.userId;
         }
 
+        public Builder dialogflowParticipant(String dialogflowParticipant) {
+            this.dialogflowParticipant = Objects.requireNonNull(dialogflowParticipant);
+            return this;
+        }
         public Builder dialogflowParticipantName(String dialogflowParticipantName) {
             this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
             return this;
@@ -113,7 +141,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
             this.userId = Objects.requireNonNull(userId);
             return this;
         }        public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
+            return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipant, dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
         }
     }
 }

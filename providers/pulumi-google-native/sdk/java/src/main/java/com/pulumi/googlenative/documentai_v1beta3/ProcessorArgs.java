@@ -90,14 +90,14 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+     * @return The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
      * 
      */
     public Optional<Output<String>> type() {
@@ -237,7 +237,7 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+         * @param type The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
+         * @param type The processor type, e.g., OCR_PROCESSOR, INVOICE_PROCESSOR, etc. To get a list of processors types, see FetchProcessorTypes.
          * 
          * @return builder
          * 

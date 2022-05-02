@@ -25,9 +25,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
         return this.caPoolId;
     }
 
+    /**
+     * Optional. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+     * 
+     */
     @Import(name="certificateId")
     private @Nullable Output<String> certificateId;
 
+    /**
+     * @return Optional. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+     * 
+     */
     public Optional<Output<String>> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -62,9 +70,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.config);
     }
 
+    /**
+     * Optional. The resource ID of the CertificateAuthority that should issue the certificate. This optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the service. For example, to issue a Certificate from a Certificate Authority with resource name &#34;projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca&#34;, you can set the parent to &#34;projects/my-project/locations/us-central1/caPools/my-pool&#34; and the issuing_certificate_authority_id to &#34;my-ca&#34;.
+     * 
+     */
     @Import(name="issuingCertificateAuthorityId")
     private @Nullable Output<String> issuingCertificateAuthorityId;
 
+    /**
+     * @return Optional. The resource ID of the CertificateAuthority that should issue the certificate. This optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the service. For example, to issue a Certificate from a Certificate Authority with resource name &#34;projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca&#34;, you can set the parent to &#34;projects/my-project/locations/us-central1/caPools/my-pool&#34; and the issuing_certificate_authority_id to &#34;my-ca&#34;.
+     * 
+     */
     public Optional<Output<String>> issuingCertificateAuthorityId() {
         return Optional.ofNullable(this.issuingCertificateAuthorityId);
     }
@@ -128,9 +144,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -150,9 +174,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.subjectMode);
     }
 
+    /**
+     * Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool&#39;s tier, and the returned Certificate will not contain the pem_certificate field.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool&#39;s tier, and the returned Certificate will not contain the pem_certificate field.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -202,11 +234,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return caPoolId(Output.of(caPoolId));
         }
 
+        /**
+         * @param certificateId Optional. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(@Nullable Output<String> certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param certificateId Optional. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             return certificateId(Output.of(certificateId));
         }
@@ -253,11 +297,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return config(Output.of(config));
         }
 
+        /**
+         * @param issuingCertificateAuthorityId Optional. The resource ID of the CertificateAuthority that should issue the certificate. This optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the service. For example, to issue a Certificate from a Certificate Authority with resource name &#34;projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca&#34;, you can set the parent to &#34;projects/my-project/locations/us-central1/caPools/my-pool&#34; and the issuing_certificate_authority_id to &#34;my-ca&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuingCertificateAuthorityId(@Nullable Output<String> issuingCertificateAuthorityId) {
             $.issuingCertificateAuthorityId = issuingCertificateAuthorityId;
             return this;
         }
 
+        /**
+         * @param issuingCertificateAuthorityId Optional. The resource ID of the CertificateAuthority that should issue the certificate. This optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the service. For example, to issue a Certificate from a Certificate Authority with resource name &#34;projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca&#34;, you can set the parent to &#34;projects/my-project/locations/us-central1/caPools/my-pool&#34; and the issuing_certificate_authority_id to &#34;my-ca&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuingCertificateAuthorityId(String issuingCertificateAuthorityId) {
             return issuingCertificateAuthorityId(Output.of(issuingCertificateAuthorityId));
         }
@@ -343,11 +399,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -373,11 +441,23 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
             return subjectMode(Output.of(subjectMode));
         }
 
+        /**
+         * @param validateOnly Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool&#39;s tier, and the returned Certificate will not contain the pem_certificate field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool&#39;s tier, and the returned Certificate will not contain the pem_certificate field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

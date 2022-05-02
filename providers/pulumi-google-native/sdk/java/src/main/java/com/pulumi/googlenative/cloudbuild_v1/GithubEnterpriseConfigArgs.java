@@ -46,9 +46,17 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character
+     * 
+     */
     @Import(name="gheConfigId")
     private @Nullable Output<String> gheConfigId;
 
+    /**
+     * @return Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character
+     * 
+     */
     public Optional<Output<String>> gheConfigId() {
         return Optional.ofNullable(this.gheConfigId);
     }
@@ -112,9 +120,17 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * ID of the project.
+     * 
+     */
     @Import(name="projectId")
     private @Nullable Output<String> projectId;
 
+    /**
+     * @return ID of the project.
+     * 
+     */
     public Optional<Output<String>> projectId() {
         return Optional.ofNullable(this.projectId);
     }
@@ -241,11 +257,23 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param gheConfigId Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character
+         * 
+         * @return builder
+         * 
+         */
         public Builder gheConfigId(@Nullable Output<String> gheConfigId) {
             $.gheConfigId = gheConfigId;
             return this;
         }
 
+        /**
+         * @param gheConfigId Optional. The ID to use for the GithubEnterpriseConfig, which will become the final component of the GithubEnterpriseConfig’s resource name. ghe_config_id must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character
+         * 
+         * @return builder
+         * 
+         */
         public Builder gheConfigId(String gheConfigId) {
             return gheConfigId(Output.of(gheConfigId));
         }
@@ -331,11 +359,23 @@ public final class GithubEnterpriseConfigArgs extends com.pulumi.resources.Resou
             return project(Output.of(project));
         }
 
+        /**
+         * @param projectId ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(@Nullable Output<String> projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param projectId ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             return projectId(Output.of(projectId));
         }

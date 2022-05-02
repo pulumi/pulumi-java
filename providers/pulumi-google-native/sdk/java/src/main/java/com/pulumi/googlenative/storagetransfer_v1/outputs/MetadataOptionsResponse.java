@@ -15,7 +15,7 @@ public final class MetadataOptionsResponse {
      */
     private final String acl;
     /**
-     * @return Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     private final String gid;
@@ -25,7 +25,7 @@ public final class MetadataOptionsResponse {
      */
     private final String kmsKey;
     /**
-     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     private final String mode;
@@ -35,7 +35,7 @@ public final class MetadataOptionsResponse {
      */
     private final String storageClass;
     /**
-     * @return Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * @return Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     private final String symlink;
@@ -45,7 +45,12 @@ public final class MetadataOptionsResponse {
      */
     private final String temporaryHold;
     /**
-     * @return Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+     * 
+     */
+    private final String timeCreated;
+    /**
+     * @return Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     private final String uid;
@@ -59,6 +64,7 @@ public final class MetadataOptionsResponse {
         @CustomType.Parameter("storageClass") String storageClass,
         @CustomType.Parameter("symlink") String symlink,
         @CustomType.Parameter("temporaryHold") String temporaryHold,
+        @CustomType.Parameter("timeCreated") String timeCreated,
         @CustomType.Parameter("uid") String uid) {
         this.acl = acl;
         this.gid = gid;
@@ -67,6 +73,7 @@ public final class MetadataOptionsResponse {
         this.storageClass = storageClass;
         this.symlink = symlink;
         this.temporaryHold = temporaryHold;
+        this.timeCreated = timeCreated;
         this.uid = uid;
     }
 
@@ -78,7 +85,7 @@ public final class MetadataOptionsResponse {
         return this.acl;
     }
     /**
-     * @return Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public String gid() {
@@ -92,7 +99,7 @@ public final class MetadataOptionsResponse {
         return this.kmsKey;
     }
     /**
-     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public String mode() {
@@ -106,7 +113,7 @@ public final class MetadataOptionsResponse {
         return this.storageClass;
     }
     /**
-     * @return Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * @return Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public String symlink() {
@@ -120,7 +127,14 @@ public final class MetadataOptionsResponse {
         return this.temporaryHold;
     }
     /**
-     * @return Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+     * 
+     */
+    public String timeCreated() {
+        return this.timeCreated;
+    }
+    /**
+     * @return Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public String uid() {
@@ -143,6 +157,7 @@ public final class MetadataOptionsResponse {
         private String storageClass;
         private String symlink;
         private String temporaryHold;
+        private String timeCreated;
         private String uid;
 
         public Builder() {
@@ -158,6 +173,7 @@ public final class MetadataOptionsResponse {
     	      this.storageClass = defaults.storageClass;
     	      this.symlink = defaults.symlink;
     	      this.temporaryHold = defaults.temporaryHold;
+    	      this.timeCreated = defaults.timeCreated;
     	      this.uid = defaults.uid;
         }
 
@@ -189,11 +205,15 @@ public final class MetadataOptionsResponse {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
+        public Builder timeCreated(String timeCreated) {
+            this.timeCreated = Objects.requireNonNull(timeCreated);
+            return this;
+        }
         public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }        public MetadataOptionsResponse build() {
-            return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
+            return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, timeCreated, uid);
         }
     }
 }

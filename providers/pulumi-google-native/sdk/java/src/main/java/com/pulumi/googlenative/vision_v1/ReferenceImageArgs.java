@@ -68,9 +68,17 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A user-supplied resource id for the ReferenceImage to be added. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     @Import(name="referenceImageId")
     private @Nullable Output<String> referenceImageId;
 
+    /**
+     * @return A user-supplied resource id for the ReferenceImage to be added. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+     * 
+     */
     public Optional<Output<String>> referenceImageId() {
         return Optional.ofNullable(this.referenceImageId);
     }
@@ -199,11 +207,23 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
             return project(Output.of(project));
         }
 
+        /**
+         * @param referenceImageId A user-supplied resource id for the ReferenceImage to be added. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceImageId(@Nullable Output<String> referenceImageId) {
             $.referenceImageId = referenceImageId;
             return this;
         }
 
+        /**
+         * @param referenceImageId A user-supplied resource id for the ReferenceImage to be added. If set, the server will attempt to use this value as the resource id. If it is already in use, an error is returned with code ALREADY_EXISTS. Must be at most 128 characters long. It cannot contain the character `/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceImageId(String referenceImageId) {
             return referenceImageId(Output.of(referenceImageId));
         }

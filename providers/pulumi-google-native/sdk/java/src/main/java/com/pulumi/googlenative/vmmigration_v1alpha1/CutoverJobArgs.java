@@ -15,9 +15,17 @@ public final class CutoverJobArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CutoverJobArgs Empty = new CutoverJobArgs();
 
+    /**
+     * Required. The cutover job identifier.
+     * 
+     */
     @Import(name="cutoverJobId", required=true)
     private Output<String> cutoverJobId;
 
+    /**
+     * @return Required. The cutover job identifier.
+     * 
+     */
     public Output<String> cutoverJobId() {
         return this.cutoverJobId;
     }
@@ -43,9 +51,17 @@ public final class CutoverJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -86,11 +102,23 @@ public final class CutoverJobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CutoverJobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cutoverJobId Required. The cutover job identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cutoverJobId(Output<String> cutoverJobId) {
             $.cutoverJobId = cutoverJobId;
             return this;
         }
 
+        /**
+         * @param cutoverJobId Required. The cutover job identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cutoverJobId(String cutoverJobId) {
             return cutoverJobId(Output.of(cutoverJobId));
         }
@@ -122,11 +150,23 @@ public final class CutoverJobArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

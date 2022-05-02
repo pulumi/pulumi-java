@@ -107,6 +107,11 @@ public final class JobConfigurationLoadResponse {
      */
     private final ParquetOptionsResponse parquetOptions;
     /**
+     * @return [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+     * 
+     */
+    private final Boolean preserveAsciiControlCharacters;
+    /**
      * @return If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
      */
@@ -126,6 +131,24 @@ public final class JobConfigurationLoadResponse {
      * 
      */
     private final TableSchemaResponse schema;
+    /**
+     * @return [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     * @deprecated
+     * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     */
+    @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+    private final String schemaInline;
+    /**
+     * @return [Deprecated] The format of the schemaInline property.
+     * 
+     * @deprecated
+     * [Deprecated] The format of the schemaInline property.
+     * 
+     */
+    @Deprecated /* [Deprecated] The format of the schemaInline property. */
+    private final String schemaInlineFormat;
     /**
      * @return Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
@@ -181,10 +204,13 @@ public final class JobConfigurationLoadResponse {
         @CustomType.Parameter("maxBadRecords") Integer maxBadRecords,
         @CustomType.Parameter("nullMarker") String nullMarker,
         @CustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @CustomType.Parameter("preserveAsciiControlCharacters") Boolean preserveAsciiControlCharacters,
         @CustomType.Parameter("projectionFields") List<String> projectionFields,
         @CustomType.Parameter("quote") String quote,
         @CustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
         @CustomType.Parameter("schema") TableSchemaResponse schema,
+        @CustomType.Parameter("schemaInline") String schemaInline,
+        @CustomType.Parameter("schemaInlineFormat") String schemaInlineFormat,
         @CustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
         @CustomType.Parameter("skipLeadingRows") Integer skipLeadingRows,
         @CustomType.Parameter("sourceFormat") String sourceFormat,
@@ -209,10 +235,13 @@ public final class JobConfigurationLoadResponse {
         this.maxBadRecords = maxBadRecords;
         this.nullMarker = nullMarker;
         this.parquetOptions = parquetOptions;
+        this.preserveAsciiControlCharacters = preserveAsciiControlCharacters;
         this.projectionFields = projectionFields;
         this.quote = quote;
         this.rangePartitioning = rangePartitioning;
         this.schema = schema;
+        this.schemaInline = schemaInline;
+        this.schemaInlineFormat = schemaInlineFormat;
         this.schemaUpdateOptions = schemaUpdateOptions;
         this.skipLeadingRows = skipLeadingRows;
         this.sourceFormat = sourceFormat;
@@ -342,6 +371,13 @@ public final class JobConfigurationLoadResponse {
         return this.parquetOptions;
     }
     /**
+     * @return [Optional] Preserves the embedded ASCII control characters (the first 32 characters in the ASCII-table, from &#39;\x00&#39; to &#39;\x1F&#39;) when loading from CSV. Only applicable to CSV, ignored for other formats.
+     * 
+     */
+    public Boolean preserveAsciiControlCharacters() {
+        return this.preserveAsciiControlCharacters;
+    }
+    /**
      * @return If sourceFormat is set to &#34;DATASTORE_BACKUP&#34;, indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn&#39;t found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
      */
@@ -368,6 +404,28 @@ public final class JobConfigurationLoadResponse {
      */
     public TableSchemaResponse schema() {
         return this.schema;
+    }
+    /**
+     * @return [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     * @deprecated
+     * [Deprecated] The inline schema. For CSV schemas, specify as &#34;Field1:Type1[,Field2:Type2]*&#34;. For example, &#34;foo:STRING, bar:INTEGER, baz:FLOAT&#34;.
+     * 
+     */
+    @Deprecated /* [Deprecated] The inline schema. For CSV schemas, specify as ""Field1:Type1[,Field2:Type2]*"". For example, ""foo:STRING, bar:INTEGER, baz:FLOAT"". */
+    public String schemaInline() {
+        return this.schemaInline;
+    }
+    /**
+     * @return [Deprecated] The format of the schemaInline property.
+     * 
+     * @deprecated
+     * [Deprecated] The format of the schemaInline property.
+     * 
+     */
+    @Deprecated /* [Deprecated] The format of the schemaInline property. */
+    public String schemaInlineFormat() {
+        return this.schemaInlineFormat;
     }
     /**
      * @return Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
@@ -445,10 +503,13 @@ public final class JobConfigurationLoadResponse {
         private Integer maxBadRecords;
         private String nullMarker;
         private ParquetOptionsResponse parquetOptions;
+        private Boolean preserveAsciiControlCharacters;
         private List<String> projectionFields;
         private String quote;
         private RangePartitioningResponse rangePartitioning;
         private TableSchemaResponse schema;
+        private String schemaInline;
+        private String schemaInlineFormat;
         private List<String> schemaUpdateOptions;
         private Integer skipLeadingRows;
         private String sourceFormat;
@@ -480,10 +541,13 @@ public final class JobConfigurationLoadResponse {
     	      this.maxBadRecords = defaults.maxBadRecords;
     	      this.nullMarker = defaults.nullMarker;
     	      this.parquetOptions = defaults.parquetOptions;
+    	      this.preserveAsciiControlCharacters = defaults.preserveAsciiControlCharacters;
     	      this.projectionFields = defaults.projectionFields;
     	      this.quote = defaults.quote;
     	      this.rangePartitioning = defaults.rangePartitioning;
     	      this.schema = defaults.schema;
+    	      this.schemaInline = defaults.schemaInline;
+    	      this.schemaInlineFormat = defaults.schemaInlineFormat;
     	      this.schemaUpdateOptions = defaults.schemaUpdateOptions;
     	      this.skipLeadingRows = defaults.skipLeadingRows;
     	      this.sourceFormat = defaults.sourceFormat;
@@ -564,6 +628,10 @@ public final class JobConfigurationLoadResponse {
             this.parquetOptions = Objects.requireNonNull(parquetOptions);
             return this;
         }
+        public Builder preserveAsciiControlCharacters(Boolean preserveAsciiControlCharacters) {
+            this.preserveAsciiControlCharacters = Objects.requireNonNull(preserveAsciiControlCharacters);
+            return this;
+        }
         public Builder projectionFields(List<String> projectionFields) {
             this.projectionFields = Objects.requireNonNull(projectionFields);
             return this;
@@ -581,6 +649,14 @@ public final class JobConfigurationLoadResponse {
         }
         public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
+            return this;
+        }
+        public Builder schemaInline(String schemaInline) {
+            this.schemaInline = Objects.requireNonNull(schemaInline);
+            return this;
+        }
+        public Builder schemaInlineFormat(String schemaInlineFormat) {
+            this.schemaInlineFormat = Objects.requireNonNull(schemaInlineFormat);
             return this;
         }
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
@@ -617,7 +693,7 @@ public final class JobConfigurationLoadResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }        public JobConfigurationLoadResponse build() {
-            return new JobConfigurationLoadResponse(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
+            return new JobConfigurationLoadResponse(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, preserveAsciiControlCharacters, projectionFields, quote, rangePartitioning, schema, schemaInline, schemaInlineFormat, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
         }
     }
 }

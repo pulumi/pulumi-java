@@ -124,6 +124,24 @@ public class Node extends com.pulumi.resources.CustomResource {
         return this.healthDescription;
     }
     /**
+     * DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances. */
+    @Export(name="ipAddress", type=String.class, parameters={})
+    private Output<String> ipAddress;
+
+    /**
+     * @return DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    public Output<String> ipAddress() {
+        return this.ipAddress;
+    }
+    /**
      * Resource labels to represent user-provided metadata.
      * 
      */
@@ -178,6 +196,24 @@ public class Node extends com.pulumi.resources.CustomResource {
      */
     public Output<List<NetworkEndpointResponse>> networkEndpoints() {
         return this.networkEndpoints;
+    }
+    /**
+     * DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances. */
+    @Export(name="port", type=String.class, parameters={})
+    private Output<String> port;
+
+    /**
+     * @return DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    public Output<String> port() {
+        return this.port;
     }
     /**
      * The scheduling options for this node.

@@ -36,6 +36,29 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+    @Import(name="clusterIpv4Cidr")
+    private @Nullable Output<String> clusterIpv4Cidr;
+
+    /**
+     * @return This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use cluster_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+    public Optional<Output<String>> clusterIpv4Cidr() {
+        return Optional.ofNullable(this.clusterIpv4Cidr);
+    }
+
+    /**
      * The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
@@ -81,6 +104,29 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+    @Import(name="nodeIpv4Cidr")
+    private @Nullable Output<String> nodeIpv4Cidr;
+
+    /**
+     * @return This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use node_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+    public Optional<Output<String>> nodeIpv4Cidr() {
+        return Optional.ofNullable(this.nodeIpv4Cidr);
+    }
+
+    /**
      * The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
@@ -93,6 +139,29 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      */
     public Optional<Output<String>> nodeIpv4CidrBlock() {
         return Optional.ofNullable(this.nodeIpv4CidrBlock);
+    }
+
+    /**
+     * This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+    @Import(name="servicesIpv4Cidr")
+    private @Nullable Output<String> servicesIpv4Cidr;
+
+    /**
+     * @return This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     * @deprecated
+     * This field is deprecated, use services_ipv4_cidr_block.
+     * 
+     */
+    @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+    public Optional<Output<String>> servicesIpv4Cidr() {
+        return Optional.ofNullable(this.servicesIpv4Cidr);
     }
 
     /**
@@ -141,6 +210,29 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+     * 
+     * @deprecated
+     * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+     * 
+     */
+    @Deprecated /* The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead. */
+    @Import(name="tpuIpv4CidrBlock")
+    private @Nullable Output<String> tpuIpv4CidrBlock;
+
+    /**
+     * @return The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+     * 
+     * @deprecated
+     * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+     * 
+     */
+    @Deprecated /* The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead. */
+    public Optional<Output<String>> tpuIpv4CidrBlock() {
+        return Optional.ofNullable(this.tpuIpv4CidrBlock);
+    }
+
+    /**
      * Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
      * 
      */
@@ -174,13 +266,17 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
 
     private IPAllocationPolicyArgs(IPAllocationPolicyArgs $) {
         this.allowRouteOverlap = $.allowRouteOverlap;
+        this.clusterIpv4Cidr = $.clusterIpv4Cidr;
         this.clusterIpv4CidrBlock = $.clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = $.clusterSecondaryRangeName;
         this.createSubnetwork = $.createSubnetwork;
+        this.nodeIpv4Cidr = $.nodeIpv4Cidr;
         this.nodeIpv4CidrBlock = $.nodeIpv4CidrBlock;
+        this.servicesIpv4Cidr = $.servicesIpv4Cidr;
         this.servicesIpv4CidrBlock = $.servicesIpv4CidrBlock;
         this.servicesSecondaryRangeName = $.servicesSecondaryRangeName;
         this.subnetworkName = $.subnetworkName;
+        this.tpuIpv4CidrBlock = $.tpuIpv4CidrBlock;
         this.useIpAliases = $.useIpAliases;
         this.useRoutes = $.useRoutes;
     }
@@ -222,6 +318,35 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
          */
         public Builder allowRouteOverlap(Boolean allowRouteOverlap) {
             return allowRouteOverlap(Output.of(allowRouteOverlap));
+        }
+
+        /**
+         * @param clusterIpv4Cidr This field is deprecated, use cluster_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use cluster_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+        public Builder clusterIpv4Cidr(@Nullable Output<String> clusterIpv4Cidr) {
+            $.clusterIpv4Cidr = clusterIpv4Cidr;
+            return this;
+        }
+
+        /**
+         * @param clusterIpv4Cidr This field is deprecated, use cluster_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use cluster_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use cluster_ipv4_cidr_block. */
+        public Builder clusterIpv4Cidr(String clusterIpv4Cidr) {
+            return clusterIpv4Cidr(Output.of(clusterIpv4Cidr));
         }
 
         /**
@@ -288,6 +413,35 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
+         * @param nodeIpv4Cidr This field is deprecated, use node_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use node_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+        public Builder nodeIpv4Cidr(@Nullable Output<String> nodeIpv4Cidr) {
+            $.nodeIpv4Cidr = nodeIpv4Cidr;
+            return this;
+        }
+
+        /**
+         * @param nodeIpv4Cidr This field is deprecated, use node_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use node_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use node_ipv4_cidr_block. */
+        public Builder nodeIpv4Cidr(String nodeIpv4Cidr) {
+            return nodeIpv4Cidr(Output.of(nodeIpv4Cidr));
+        }
+
+        /**
          * @param nodeIpv4CidrBlock The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
          * 
          * @return builder
@@ -306,6 +460,35 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
          */
         public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             return nodeIpv4CidrBlock(Output.of(nodeIpv4CidrBlock));
+        }
+
+        /**
+         * @param servicesIpv4Cidr This field is deprecated, use services_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use services_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+        public Builder servicesIpv4Cidr(@Nullable Output<String> servicesIpv4Cidr) {
+            $.servicesIpv4Cidr = servicesIpv4Cidr;
+            return this;
+        }
+
+        /**
+         * @param servicesIpv4Cidr This field is deprecated, use services_ipv4_cidr_block.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is deprecated, use services_ipv4_cidr_block.
+         * 
+         */
+        @Deprecated /* This field is deprecated, use services_ipv4_cidr_block. */
+        public Builder servicesIpv4Cidr(String servicesIpv4Cidr) {
+            return servicesIpv4Cidr(Output.of(servicesIpv4Cidr));
         }
 
         /**
@@ -369,6 +552,35 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
          */
         public Builder subnetworkName(String subnetworkName) {
             return subnetworkName(Output.of(subnetworkName));
+        }
+
+        /**
+         * @param tpuIpv4CidrBlock The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+         * 
+         */
+        @Deprecated /* The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead. */
+        public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
+            $.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+            return this;
+        }
+
+        /**
+         * @param tpuIpv4CidrBlock The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead.
+         * 
+         */
+        @Deprecated /* The IP address range of the Cloud TPUs in this cluster. If unspecified, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. If unspecified, the range will use the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use. This field is deprecated, use cluster.tpu_config.ipv4_cidr_block instead. */
+        public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
+            return tpuIpv4CidrBlock(Output.of(tpuIpv4CidrBlock));
         }
 
         /**

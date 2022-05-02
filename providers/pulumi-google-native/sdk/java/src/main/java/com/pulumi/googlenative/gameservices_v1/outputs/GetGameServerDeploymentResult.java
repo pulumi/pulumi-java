@@ -16,12 +16,12 @@ public final class GetGameServerDeploymentResult {
      */
     private final String createTime;
     /**
-     * @return Human readable description of the game server delpoyment.
+     * @return Human readable description of the game server deployment.
      * 
      */
     private final String description;
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     private final String etag;
@@ -31,7 +31,7 @@ public final class GetGameServerDeploymentResult {
      */
     private final Map<String,String> labels;
     /**
-     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     private final String name;
@@ -65,14 +65,14 @@ public final class GetGameServerDeploymentResult {
         return this.createTime;
     }
     /**
-     * @return Human readable description of the game server delpoyment.
+     * @return Human readable description of the game server deployment.
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return ETag of the resource.
+     * @return Used to perform consistent read-modify-write updates. If not set, a blind &#34;overwrite&#34; update happens.
      * 
      */
     public String etag() {
@@ -86,7 +86,7 @@ public final class GetGameServerDeploymentResult {
         return this.labels;
     }
     /**
-     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
+     * @return The resource name of the game server deployment, in the following form: `projects/{project}/locations/{locationId}/gameServerDeployments/{deploymentId}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
      */
     public String name() {

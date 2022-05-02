@@ -161,6 +161,15 @@ public final class GetJobResult {
      * 
      */
     private final String title;
+    /**
+     * @return Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     * @deprecated
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+    private final String visibility;
 
     @CustomType.Constructor
     private GetJobResult(
@@ -192,7 +201,8 @@ public final class GetJobResult {
         @CustomType.Parameter("qualifications") String qualifications,
         @CustomType.Parameter("requisitionId") String requisitionId,
         @CustomType.Parameter("responsibilities") String responsibilities,
-        @CustomType.Parameter("title") String title) {
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("visibility") String visibility) {
         this.addresses = addresses;
         this.applicationInfo = applicationInfo;
         this.company = company;
@@ -222,6 +232,7 @@ public final class GetJobResult {
         this.requisitionId = requisitionId;
         this.responsibilities = responsibilities;
         this.title = title;
+        this.visibility = visibility;
     }
 
     /**
@@ -427,6 +438,17 @@ public final class GetJobResult {
     public String title() {
         return this.title;
     }
+    /**
+     * @return Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     * @deprecated
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+    public String visibility() {
+        return this.visibility;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -466,6 +488,7 @@ public final class GetJobResult {
         private String requisitionId;
         private String responsibilities;
         private String title;
+        private String visibility;
 
         public Builder() {
     	      // Empty
@@ -502,6 +525,7 @@ public final class GetJobResult {
     	      this.requisitionId = defaults.requisitionId;
     	      this.responsibilities = defaults.responsibilities;
     	      this.title = defaults.title;
+    	      this.visibility = defaults.visibility;
         }
 
         public Builder addresses(List<String> addresses) {
@@ -631,8 +655,12 @@ public final class GetJobResult {
         public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
+        }
+        public Builder visibility(String visibility) {
+            this.visibility = Objects.requireNonNull(visibility);
+            return this;
         }        public GetJobResult build() {
-            return new GetJobResult(addresses, applicationInfo, company, companyDisplayName, compensationInfo, customAttributes, degreeTypes, department, derivedInfo, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingCreateTime, postingExpireTime, postingPublishTime, postingRegion, postingUpdateTime, processingOptions, promotionValue, qualifications, requisitionId, responsibilities, title);
+            return new GetJobResult(addresses, applicationInfo, company, companyDisplayName, compensationInfo, customAttributes, degreeTypes, department, derivedInfo, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingCreateTime, postingExpireTime, postingPublishTime, postingRegion, postingUpdateTime, processingOptions, promotionValue, qualifications, requisitionId, responsibilities, title, visibility);
         }
     }
 }

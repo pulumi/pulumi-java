@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.datastream_v1alpha1.enums.GcsDestinationConfigGcsFileFormat;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.AvroFileFormatArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.JsonFileFormatArgs;
 import java.lang.Integer;
@@ -68,6 +69,29 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     * @deprecated
+     * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     */
+    @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+    @Import(name="gcsFileFormat")
+    private @Nullable Output<GcsDestinationConfigGcsFileFormat> gcsFileFormat;
+
+    /**
+     * @return File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     * @deprecated
+     * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+     * 
+     */
+    @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+    public Optional<Output<GcsDestinationConfigGcsFileFormat>> gcsFileFormat() {
+        return Optional.ofNullable(this.gcsFileFormat);
+    }
+
+    /**
      * JSON file format configuration.
      * 
      */
@@ -103,6 +127,7 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
         this.avroFileFormat = $.avroFileFormat;
         this.fileRotationInterval = $.fileRotationInterval;
         this.fileRotationMb = $.fileRotationMb;
+        this.gcsFileFormat = $.gcsFileFormat;
         this.jsonFileFormat = $.jsonFileFormat;
         this.path = $.path;
     }
@@ -186,6 +211,35 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
          */
         public Builder fileRotationMb(Integer fileRotationMb) {
             return fileRotationMb(Output.of(fileRotationMb));
+        }
+
+        /**
+         * @param gcsFileFormat File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+         * 
+         */
+        @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+        public Builder gcsFileFormat(@Nullable Output<GcsDestinationConfigGcsFileFormat> gcsFileFormat) {
+            $.gcsFileFormat = gcsFileFormat;
+            return this;
+        }
+
+        /**
+         * @param gcsFileFormat File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * File format that data should be written in. Deprecated field (b/169501737) - use file_format instead.
+         * 
+         */
+        @Deprecated /* File format that data should be written in. Deprecated field (b/169501737) - use file_format instead. */
+        public Builder gcsFileFormat(GcsDestinationConfigGcsFileFormat gcsFileFormat) {
+            return gcsFileFormat(Output.of(gcsFileFormat));
         }
 
         /**

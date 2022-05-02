@@ -248,30 +248,62 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * Makes the operation conditional on whether the object&#39;s current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+     * 
+     */
     @Import(name="ifGenerationMatch")
     private @Nullable Output<String> ifGenerationMatch;
 
+    /**
+     * @return Makes the operation conditional on whether the object&#39;s current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+     * 
+     */
     public Optional<Output<String>> ifGenerationMatch() {
         return Optional.ofNullable(this.ifGenerationMatch);
     }
 
+    /**
+     * Makes the operation conditional on whether the object&#39;s current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+     * 
+     */
     @Import(name="ifGenerationNotMatch")
     private @Nullable Output<String> ifGenerationNotMatch;
 
+    /**
+     * @return Makes the operation conditional on whether the object&#39;s current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+     * 
+     */
     public Optional<Output<String>> ifGenerationNotMatch() {
         return Optional.ofNullable(this.ifGenerationNotMatch);
     }
 
+    /**
+     * Makes the operation conditional on whether the object&#39;s current metageneration matches the given value.
+     * 
+     */
     @Import(name="ifMetagenerationMatch")
     private @Nullable Output<String> ifMetagenerationMatch;
 
+    /**
+     * @return Makes the operation conditional on whether the object&#39;s current metageneration matches the given value.
+     * 
+     */
     public Optional<Output<String>> ifMetagenerationMatch() {
         return Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
+    /**
+     * Makes the operation conditional on whether the object&#39;s current metageneration does not match the given value.
+     * 
+     */
     @Import(name="ifMetagenerationNotMatch")
     private @Nullable Output<String> ifMetagenerationNotMatch;
 
+    /**
+     * @return Makes the operation conditional on whether the object&#39;s current metageneration does not match the given value.
+     * 
+     */
     public Optional<Output<String>> ifMetagenerationNotMatch() {
         return Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
@@ -396,25 +428,34 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.owner);
     }
 
+    /**
+     * Apply a predefined set of access controls to this object.
+     * 
+     */
     @Import(name="predefinedAcl")
     private @Nullable Output<String> predefinedAcl;
 
+    /**
+     * @return Apply a predefined set of access controls to this object.
+     * 
+     */
     public Optional<Output<String>> predefinedAcl() {
         return Optional.ofNullable(this.predefinedAcl);
     }
 
+    /**
+     * Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+     * 
+     */
     @Import(name="projection")
     private @Nullable Output<String> projection;
 
+    /**
+     * @return Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+     * 
+     */
     public Optional<Output<String>> projection() {
         return Optional.ofNullable(this.projection);
-    }
-
-    @Import(name="provisionalUserProject")
-    private @Nullable Output<String> provisionalUserProject;
-
-    public Optional<Output<String>> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -559,9 +600,17 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.updated);
     }
 
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -598,7 +647,6 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
         this.owner = $.owner;
         this.predefinedAcl = $.predefinedAcl;
         this.projection = $.projection;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.retentionExpirationTime = $.retentionExpirationTime;
         this.selfLink = $.selfLink;
         this.size = $.size;
@@ -955,38 +1003,86 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ifGenerationMatch Makes the operation conditional on whether the object&#39;s current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifGenerationMatch(@Nullable Output<String> ifGenerationMatch) {
             $.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
 
+        /**
+         * @param ifGenerationMatch Makes the operation conditional on whether the object&#39;s current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifGenerationMatch(String ifGenerationMatch) {
             return ifGenerationMatch(Output.of(ifGenerationMatch));
         }
 
+        /**
+         * @param ifGenerationNotMatch Makes the operation conditional on whether the object&#39;s current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifGenerationNotMatch(@Nullable Output<String> ifGenerationNotMatch) {
             $.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
 
+        /**
+         * @param ifGenerationNotMatch Makes the operation conditional on whether the object&#39;s current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifGenerationNotMatch(String ifGenerationNotMatch) {
             return ifGenerationNotMatch(Output.of(ifGenerationNotMatch));
         }
 
+        /**
+         * @param ifMetagenerationMatch Makes the operation conditional on whether the object&#39;s current metageneration matches the given value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifMetagenerationMatch(@Nullable Output<String> ifMetagenerationMatch) {
             $.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
+        /**
+         * @param ifMetagenerationMatch Makes the operation conditional on whether the object&#39;s current metageneration matches the given value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifMetagenerationMatch(String ifMetagenerationMatch) {
             return ifMetagenerationMatch(Output.of(ifMetagenerationMatch));
         }
 
+        /**
+         * @param ifMetagenerationNotMatch Makes the operation conditional on whether the object&#39;s current metageneration does not match the given value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifMetagenerationNotMatch(@Nullable Output<String> ifMetagenerationNotMatch) {
             $.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
+        /**
+         * @param ifMetagenerationNotMatch Makes the operation conditional on whether the object&#39;s current metageneration does not match the given value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ifMetagenerationNotMatch(String ifMetagenerationNotMatch) {
             return ifMetagenerationNotMatch(Output.of(ifMetagenerationNotMatch));
         }
@@ -1159,31 +1255,46 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param predefinedAcl Apply a predefined set of access controls to this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             $.predefinedAcl = predefinedAcl;
             return this;
         }
 
+        /**
+         * @param predefinedAcl Apply a predefined set of access controls to this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedAcl(String predefinedAcl) {
             return predefinedAcl(Output.of(predefinedAcl));
         }
 
+        /**
+         * @param projection Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projection(@Nullable Output<String> projection) {
             $.projection = projection;
             return this;
         }
 
+        /**
+         * @param projection Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projection(String projection) {
             return projection(Output.of(projection));
-        }
-
-        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
-            return this;
-        }
-
-        public Builder provisionalUserProject(String provisionalUserProject) {
-            return provisionalUserProject(Output.of(provisionalUserProject));
         }
 
         /**
@@ -1384,11 +1495,23 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return updated(Output.of(updated));
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

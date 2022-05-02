@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.monitoring_v1.outputs.AlertChartResponse;
+import com.pulumi.googlenative.monitoring_v1.outputs.CollapsibleGroupResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.EmptyResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.LogsPanelResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.ScorecardResponse;
@@ -26,6 +27,11 @@ public final class WidgetResponse {
      * 
      */
     private final EmptyResponse blank;
+    /**
+     * @return A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+     * 
+     */
+    private final CollapsibleGroupResponse collapsibleGroup;
     /**
      * @return A widget that shows a stream of logs.
      * 
@@ -61,6 +67,7 @@ public final class WidgetResponse {
     private WidgetResponse(
         @CustomType.Parameter("alertChart") AlertChartResponse alertChart,
         @CustomType.Parameter("blank") EmptyResponse blank,
+        @CustomType.Parameter("collapsibleGroup") CollapsibleGroupResponse collapsibleGroup,
         @CustomType.Parameter("logsPanel") LogsPanelResponse logsPanel,
         @CustomType.Parameter("scorecard") ScorecardResponse scorecard,
         @CustomType.Parameter("text") TextResponse text,
@@ -69,6 +76,7 @@ public final class WidgetResponse {
         @CustomType.Parameter("xyChart") XyChartResponse xyChart) {
         this.alertChart = alertChart;
         this.blank = blank;
+        this.collapsibleGroup = collapsibleGroup;
         this.logsPanel = logsPanel;
         this.scorecard = scorecard;
         this.text = text;
@@ -90,6 +98,13 @@ public final class WidgetResponse {
      */
     public EmptyResponse blank() {
         return this.blank;
+    }
+    /**
+     * @return A widget that groups the other widgets. All widgets that are within the area spanned by the grouping widget are considered member widgets.
+     * 
+     */
+    public CollapsibleGroupResponse collapsibleGroup() {
+        return this.collapsibleGroup;
     }
     /**
      * @return A widget that shows a stream of logs.
@@ -145,6 +160,7 @@ public final class WidgetResponse {
     public static final class Builder {
         private AlertChartResponse alertChart;
         private EmptyResponse blank;
+        private CollapsibleGroupResponse collapsibleGroup;
         private LogsPanelResponse logsPanel;
         private ScorecardResponse scorecard;
         private TextResponse text;
@@ -160,6 +176,7 @@ public final class WidgetResponse {
     	      Objects.requireNonNull(defaults);
     	      this.alertChart = defaults.alertChart;
     	      this.blank = defaults.blank;
+    	      this.collapsibleGroup = defaults.collapsibleGroup;
     	      this.logsPanel = defaults.logsPanel;
     	      this.scorecard = defaults.scorecard;
     	      this.text = defaults.text;
@@ -174,6 +191,10 @@ public final class WidgetResponse {
         }
         public Builder blank(EmptyResponse blank) {
             this.blank = Objects.requireNonNull(blank);
+            return this;
+        }
+        public Builder collapsibleGroup(CollapsibleGroupResponse collapsibleGroup) {
+            this.collapsibleGroup = Objects.requireNonNull(collapsibleGroup);
             return this;
         }
         public Builder logsPanel(LogsPanelResponse logsPanel) {
@@ -200,7 +221,7 @@ public final class WidgetResponse {
             this.xyChart = Objects.requireNonNull(xyChart);
             return this;
         }        public WidgetResponse build() {
-            return new WidgetResponse(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
+            return new WidgetResponse(alertChart, blank, collapsibleGroup, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }
     }
 }

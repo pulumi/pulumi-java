@@ -48,6 +48,11 @@ public final class GetFunctionResult {
      */
     private final String description;
     /**
+     * @return Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * 
+     */
+    private final String dockerRegistry;
+    /**
      * @return User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
      * 
      */
@@ -186,6 +191,7 @@ public final class GetFunctionResult {
         @CustomType.Parameter("buildName") String buildName,
         @CustomType.Parameter("buildWorkerPool") String buildWorkerPool,
         @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dockerRegistry") String dockerRegistry,
         @CustomType.Parameter("dockerRepository") String dockerRepository,
         @CustomType.Parameter("entryPoint") String entryPoint,
         @CustomType.Parameter("environmentVariables") Map<String,String> environmentVariables,
@@ -218,6 +224,7 @@ public final class GetFunctionResult {
         this.buildName = buildName;
         this.buildWorkerPool = buildWorkerPool;
         this.description = description;
+        this.dockerRegistry = dockerRegistry;
         this.dockerRepository = dockerRepository;
         this.entryPoint = entryPoint;
         this.environmentVariables = environmentVariables;
@@ -287,6 +294,13 @@ public final class GetFunctionResult {
      */
     public String description() {
         return this.description;
+    }
+    /**
+     * @return Docker Registry to use for this deployment. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * 
+     */
+    public String dockerRegistry() {
+        return this.dockerRegistry;
     }
     /**
      * @return User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named &#39;gcf-artifacts&#39; for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be &#39;DOCKER&#39;.
@@ -486,6 +500,7 @@ public final class GetFunctionResult {
         private String buildName;
         private String buildWorkerPool;
         private String description;
+        private String dockerRegistry;
         private String dockerRepository;
         private String entryPoint;
         private Map<String,String> environmentVariables;
@@ -525,6 +540,7 @@ public final class GetFunctionResult {
     	      this.buildName = defaults.buildName;
     	      this.buildWorkerPool = defaults.buildWorkerPool;
     	      this.description = defaults.description;
+    	      this.dockerRegistry = defaults.dockerRegistry;
     	      this.dockerRepository = defaults.dockerRepository;
     	      this.entryPoint = defaults.entryPoint;
     	      this.environmentVariables = defaults.environmentVariables;
@@ -575,6 +591,10 @@ public final class GetFunctionResult {
         }
         public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
+            return this;
+        }
+        public Builder dockerRegistry(String dockerRegistry) {
+            this.dockerRegistry = Objects.requireNonNull(dockerRegistry);
             return this;
         }
         public Builder dockerRepository(String dockerRepository) {
@@ -687,7 +707,7 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }        public GetFunctionResult build() {
-            return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, buildId, buildName, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, maxInstances, minInstances, name, network, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, status, timeout, updateTime, versionId, vpcConnector, vpcConnectorEgressSettings);
+            return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, buildId, buildName, buildWorkerPool, description, dockerRegistry, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, maxInstances, minInstances, name, network, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, status, timeout, updateTime, versionId, vpcConnector, vpcConnectorEgressSettings);
         }
     }
 }

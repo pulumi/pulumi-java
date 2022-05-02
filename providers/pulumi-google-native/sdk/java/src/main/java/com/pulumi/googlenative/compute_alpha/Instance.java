@@ -230,14 +230,14 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.instanceEncryptionKey;
     }
     /**
-     * KeyRevocationActionType of the instance.
+     * KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     @Export(name="keyRevocationActionType", type=String.class, parameters={})
     private Output<String> keyRevocationActionType;
 
     /**
-     * @return KeyRevocationActionType of the instance.
+     * @return KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     public Output<String> keyRevocationActionType() {

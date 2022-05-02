@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentPlan;
 import com.pulumi.googlenative.bigqueryreservation_v1.enums.CapacityCommitmentRenewalPlan;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,16 +18,32 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
 
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
+    /**
+     * The optional capacity commitment ID. Capacity commitment name will be generated automatically if this field is empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split or merged.
+     * 
+     */
     @Import(name="capacityCommitmentId")
     private @Nullable Output<String> capacityCommitmentId;
 
+    /**
+     * @return The optional capacity commitment ID. Capacity commitment name will be generated automatically if this field is empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split or merged.
+     * 
+     */
     public Optional<Output<String>> capacityCommitmentId() {
         return Optional.ofNullable(this.capacityCommitmentId);
     }
 
+    /**
+     * If true, fail the request if another project in the organization has a capacity commitment.
+     * 
+     */
     @Import(name="enforceSingleAdminProjectPerOrg")
     private @Nullable Output<String> enforceSingleAdminProjectPerOrg;
 
+    /**
+     * @return If true, fail the request if another project in the organization has a capacity commitment.
+     * 
+     */
     public Optional<Output<String>> enforceSingleAdminProjectPerOrg() {
         return Optional.ofNullable(this.enforceSingleAdminProjectPerOrg);
     }
@@ -36,6 +53,21 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
 
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
+    }
+
+    /**
+     * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    @Import(name="multiRegionAuxiliary")
+    private @Nullable Output<Boolean> multiRegionAuxiliary;
+
+    /**
+     * @return Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    public Optional<Output<Boolean>> multiRegionAuxiliary() {
+        return Optional.ofNullable(this.multiRegionAuxiliary);
     }
 
     /**
@@ -96,6 +128,7 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
         this.capacityCommitmentId = $.capacityCommitmentId;
         this.enforceSingleAdminProjectPerOrg = $.enforceSingleAdminProjectPerOrg;
         this.location = $.location;
+        this.multiRegionAuxiliary = $.multiRegionAuxiliary;
         this.plan = $.plan;
         this.project = $.project;
         this.renewalPlan = $.renewalPlan;
@@ -120,20 +153,44 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
             $ = new CapacityCommitmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityCommitmentId The optional capacity commitment ID. Capacity commitment name will be generated automatically if this field is empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split or merged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityCommitmentId(@Nullable Output<String> capacityCommitmentId) {
             $.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
 
+        /**
+         * @param capacityCommitmentId The optional capacity commitment ID. Capacity commitment name will be generated automatically if this field is empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split or merged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityCommitmentId(String capacityCommitmentId) {
             return capacityCommitmentId(Output.of(capacityCommitmentId));
         }
 
+        /**
+         * @param enforceSingleAdminProjectPerOrg If true, fail the request if another project in the organization has a capacity commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceSingleAdminProjectPerOrg(@Nullable Output<String> enforceSingleAdminProjectPerOrg) {
             $.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
             return this;
         }
 
+        /**
+         * @param enforceSingleAdminProjectPerOrg If true, fail the request if another project in the organization has a capacity commitment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforceSingleAdminProjectPerOrg(String enforceSingleAdminProjectPerOrg) {
             return enforceSingleAdminProjectPerOrg(Output.of(enforceSingleAdminProjectPerOrg));
         }
@@ -145,6 +202,27 @@ public final class CapacityCommitmentArgs extends com.pulumi.resources.ResourceA
 
         public Builder location(String location) {
             return location(Output.of(location));
+        }
+
+        /**
+         * @param multiRegionAuxiliary Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiRegionAuxiliary(@Nullable Output<Boolean> multiRegionAuxiliary) {
+            $.multiRegionAuxiliary = multiRegionAuxiliary;
+            return this;
+        }
+
+        /**
+         * @param multiRegionAuxiliary Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder multiRegionAuxiliary(Boolean multiRegionAuxiliary) {
+            return multiRegionAuxiliary(Output.of(multiRegionAuxiliary));
         }
 
         /**

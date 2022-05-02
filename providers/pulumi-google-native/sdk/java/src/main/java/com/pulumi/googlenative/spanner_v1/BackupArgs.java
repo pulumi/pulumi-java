@@ -15,9 +15,17 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
+    /**
+     * Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full backup name of the form `projects//instances//backups/`.
+     * 
+     */
     @Import(name="backupId", required=true)
     private Output<String> backupId;
 
+    /**
+     * @return Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full backup name of the form `projects//instances//backups/`.
+     * 
+     */
     public Output<String> backupId() {
         return this.backupId;
     }
@@ -37,16 +45,32 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.database);
     }
 
+    /**
+     * Required. The encryption type of the backup.
+     * 
+     */
     @Import(name="encryptionConfigEncryptionType", required=true)
     private Output<String> encryptionConfigEncryptionType;
 
+    /**
+     * @return Required. The encryption type of the backup.
+     * 
+     */
     public Output<String> encryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
+    /**
+     * Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+     * 
+     */
     @Import(name="encryptionConfigKmsKeyName")
     private @Nullable Output<String> encryptionConfigKmsKeyName;
 
+    /**
+     * @return Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+     * 
+     */
     public Optional<Output<String>> encryptionConfigKmsKeyName() {
         return Optional.ofNullable(this.encryptionConfigKmsKeyName);
     }
@@ -142,11 +166,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupId Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full backup name of the form `projects//instances//backups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupId Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full backup name of the form `projects//instances//backups/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(String backupId) {
             return backupId(Output.of(backupId));
         }
@@ -172,20 +208,44 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             return database(Output.of(database));
         }
 
+        /**
+         * @param encryptionConfigEncryptionType Required. The encryption type of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigEncryptionType(Output<String> encryptionConfigEncryptionType) {
             $.encryptionConfigEncryptionType = encryptionConfigEncryptionType;
             return this;
         }
 
+        /**
+         * @param encryptionConfigEncryptionType Required. The encryption type of the backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
             return encryptionConfigEncryptionType(Output.of(encryptionConfigEncryptionType));
         }
 
+        /**
+         * @param encryptionConfigKmsKeyName Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigKmsKeyName(@Nullable Output<String> encryptionConfigKmsKeyName) {
             $.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
             return this;
         }
 
+        /**
+         * @param encryptionConfigKmsKeyName Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects//locations//keyRings//cryptoKeys/`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfigKmsKeyName(String encryptionConfigKmsKeyName) {
             return encryptionConfigKmsKeyName(Output.of(encryptionConfigKmsKeyName));
         }

@@ -101,9 +101,17 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
         return this.osPolicies;
     }
 
+    /**
+     * Required. The logical name of the OS policy assignment in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     @Import(name="osPolicyAssignmentId", required=true)
     private Output<String> osPolicyAssignmentId;
 
+    /**
+     * @return Required. The logical name of the OS policy assignment in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+     * 
+     */
     public Output<String> osPolicyAssignmentId() {
         return this.osPolicyAssignmentId;
     }
@@ -286,11 +294,23 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
             return osPolicies(List.of(osPolicies));
         }
 
+        /**
+         * @param osPolicyAssignmentId Required. The logical name of the OS policy assignment in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicyAssignmentId(Output<String> osPolicyAssignmentId) {
             $.osPolicyAssignmentId = osPolicyAssignmentId;
             return this;
         }
 
+        /**
+         * @param osPolicyAssignmentId Required. The logical name of the OS policy assignment in the project with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
             return osPolicyAssignmentId(Output.of(osPolicyAssignmentId));
         }

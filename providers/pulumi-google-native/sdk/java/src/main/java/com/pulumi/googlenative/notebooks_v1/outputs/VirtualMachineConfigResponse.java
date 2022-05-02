@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.notebooks_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.notebooks_v1.outputs.BootImageResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.EncryptionConfigResponse;
 import com.pulumi.googlenative.notebooks_v1.outputs.LocalDiskResponse;
@@ -22,6 +23,11 @@ public final class VirtualMachineConfigResponse {
      * 
      */
     private final RuntimeAcceleratorConfigResponse acceleratorConfig;
+    /**
+     * @return Optional. Boot image metadata used for runtime upgradeability.
+     * 
+     */
+    private final BootImageResponse bootImage;
     /**
      * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
      * 
@@ -73,6 +79,11 @@ public final class VirtualMachineConfigResponse {
      */
     private final String nicType;
     /**
+     * @return Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+     * 
+     */
+    private final String reservedIpRange;
+    /**
      * @return Optional. Shielded VM Instance configuration settings.
      * 
      */
@@ -96,6 +107,7 @@ public final class VirtualMachineConfigResponse {
     @CustomType.Constructor
     private VirtualMachineConfigResponse(
         @CustomType.Parameter("acceleratorConfig") RuntimeAcceleratorConfigResponse acceleratorConfig,
+        @CustomType.Parameter("bootImage") BootImageResponse bootImage,
         @CustomType.Parameter("containerImages") List<ContainerImageResponse> containerImages,
         @CustomType.Parameter("dataDisk") LocalDiskResponse dataDisk,
         @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
@@ -106,11 +118,13 @@ public final class VirtualMachineConfigResponse {
         @CustomType.Parameter("metadata") Map<String,String> metadata,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("reservedIpRange") String reservedIpRange,
         @CustomType.Parameter("shieldedInstanceConfig") RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
         @CustomType.Parameter("subnet") String subnet,
         @CustomType.Parameter("tags") List<String> tags,
         @CustomType.Parameter("zone") String zone) {
         this.acceleratorConfig = acceleratorConfig;
+        this.bootImage = bootImage;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;
         this.encryptionConfig = encryptionConfig;
@@ -121,6 +135,7 @@ public final class VirtualMachineConfigResponse {
         this.metadata = metadata;
         this.network = network;
         this.nicType = nicType;
+        this.reservedIpRange = reservedIpRange;
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         this.subnet = subnet;
         this.tags = tags;
@@ -133,6 +148,13 @@ public final class VirtualMachineConfigResponse {
      */
     public RuntimeAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
+    }
+    /**
+     * @return Optional. Boot image metadata used for runtime upgradeability.
+     * 
+     */
+    public BootImageResponse bootImage() {
+        return this.bootImage;
     }
     /**
      * @return Optional. Use a list of container images to use as Kernels in the notebook instance.
@@ -205,6 +227,13 @@ public final class VirtualMachineConfigResponse {
         return this.nicType;
     }
     /**
+     * @return Optional. Reserved IP Range name is used for VPC Peering. The subnetwork allocation will use the range *name* if it&#39;s assigned. Example: managed-notebooks-range-c PEERING_RANGE_NAME_3=managed-notebooks-range-c gcloud compute addresses create $PEERING_RANGE_NAME_3 \ --global \ --prefix-length=24 \ --description=&#34;Google Cloud Managed Notebooks Range 24 c&#34; \ --network=$NETWORK \ --addresses=192.168.0.0 \ --purpose=VPC_PEERING Field value will be: `managed-notebooks-range-c`
+     * 
+     */
+    public String reservedIpRange() {
+        return this.reservedIpRange;
+    }
+    /**
      * @return Optional. Shielded VM Instance configuration settings.
      * 
      */
@@ -243,6 +272,7 @@ public final class VirtualMachineConfigResponse {
 
     public static final class Builder {
         private RuntimeAcceleratorConfigResponse acceleratorConfig;
+        private BootImageResponse bootImage;
         private List<ContainerImageResponse> containerImages;
         private LocalDiskResponse dataDisk;
         private EncryptionConfigResponse encryptionConfig;
@@ -253,6 +283,7 @@ public final class VirtualMachineConfigResponse {
         private Map<String,String> metadata;
         private String network;
         private String nicType;
+        private String reservedIpRange;
         private RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
         private String subnet;
         private List<String> tags;
@@ -265,6 +296,7 @@ public final class VirtualMachineConfigResponse {
         public Builder(VirtualMachineConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.acceleratorConfig = defaults.acceleratorConfig;
+    	      this.bootImage = defaults.bootImage;
     	      this.containerImages = defaults.containerImages;
     	      this.dataDisk = defaults.dataDisk;
     	      this.encryptionConfig = defaults.encryptionConfig;
@@ -275,6 +307,7 @@ public final class VirtualMachineConfigResponse {
     	      this.metadata = defaults.metadata;
     	      this.network = defaults.network;
     	      this.nicType = defaults.nicType;
+    	      this.reservedIpRange = defaults.reservedIpRange;
     	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
     	      this.subnet = defaults.subnet;
     	      this.tags = defaults.tags;
@@ -283,6 +316,10 @@ public final class VirtualMachineConfigResponse {
 
         public Builder acceleratorConfig(RuntimeAcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
+            return this;
+        }
+        public Builder bootImage(BootImageResponse bootImage) {
+            this.bootImage = Objects.requireNonNull(bootImage);
             return this;
         }
         public Builder containerImages(List<ContainerImageResponse> containerImages) {
@@ -328,6 +365,10 @@ public final class VirtualMachineConfigResponse {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
+        public Builder reservedIpRange(String reservedIpRange) {
+            this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
+            return this;
+        }
         public Builder shieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
@@ -347,7 +388,7 @@ public final class VirtualMachineConfigResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public VirtualMachineConfigResponse build() {
-            return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
+            return new VirtualMachineConfigResponse(acceleratorConfig, bootImage, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, reservedIpRange, shieldedInstanceConfig, subnet, tags, zone);
         }
     }
 }
