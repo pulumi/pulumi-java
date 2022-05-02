@@ -35,14 +35,16 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
     /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     public Optional<Output<Map<String,Object>>> keepers() {
@@ -50,14 +52,18 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+     * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some
+     * elements will be excluded from the result. If more items are requested, items will be repeated in the result but not
+     * more frequently than the number of items in the input list.
      * 
      */
     @Import(name="resultCount")
     private @Nullable Output<Integer> resultCount;
 
     /**
-     * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+     * @return The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some
+     * elements will be excluded from the result. If more items are requested, items will be repeated in the result but not
+     * more frequently than the number of items in the input list.
      * 
      */
     public Optional<Output<Integer>> resultCount() {
@@ -80,14 +86,18 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+     * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+     * list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+     * different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
      * 
      */
     @Import(name="seed")
     private @Nullable Output<String> seed;
 
     /**
-     * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+     * @return Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+     * list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+     * different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
      * 
      */
     public Optional<Output<String>> seed() {
@@ -154,7 +164,8 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -165,7 +176,8 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -175,7 +187,9 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some
+         * elements will be excluded from the result. If more items are requested, items will be repeated in the result but not
+         * more frequently than the number of items in the input list.
          * 
          * @return builder
          * 
@@ -186,7 +200,9 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
+         * @param resultCount The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some
+         * elements will be excluded from the result. If more items are requested, items will be repeated in the result but not
+         * more frequently than the number of items in the input list.
          * 
          * @return builder
          * 
@@ -227,7 +243,9 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+         * list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+         * different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
          * 
          * @return builder
          * 
@@ -238,7 +256,9 @@ public final class RandomShuffleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
+         * @param seed Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+         * list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+         * different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
          * 
          * @return builder
          * 
