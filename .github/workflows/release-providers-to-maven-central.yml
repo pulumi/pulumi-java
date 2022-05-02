@@ -50,16 +50,18 @@ jobs:
       fail-fast: false
       matrix:
         provider:
-        - random
-        - azure-native
-        - azuread
-        - google-native
-        - gcp
         - aws
         - aws-native
         - awsx
-        - kubernetes
+        - azure-native
+        - azuread
         - docker
+        - eks
+        - gcp
+        - google-native
+        - kubernetes
+        - oci
+        - random
     steps:
       - uses: actions/checkout@v2
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
