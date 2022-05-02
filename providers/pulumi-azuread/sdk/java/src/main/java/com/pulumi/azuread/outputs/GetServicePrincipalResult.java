@@ -18,142 +18,142 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalResult {
     /**
-     * Whether or not the service principal account is enabled.
+     * @return Whether or not the service principal account is enabled.
      * 
      */
     private final Boolean accountEnabled;
     /**
-     * A list of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+     * @return A list of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
      * 
      */
     private final List<String> alternativeNames;
     /**
-     * Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
+     * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
      * 
      */
     private final Boolean appRoleAssignmentRequired;
     /**
-     * A mapping of app role values to app role IDs, as published by the associated application, intended to be useful when referencing app roles in other resources in your configuration.
+     * @return A mapping of app role values to app role IDs, as published by the associated application, intended to be useful when referencing app roles in other resources in your configuration.
      * 
      */
     private final Map<String,String> appRoleIds;
     /**
-     * A list of app roles published by the associated application, as documented below. For more information [official documentation](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+     * @return A list of app roles published by the associated application, as documented below. For more information [official documentation](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
      * 
      */
     private final List<GetServicePrincipalAppRole> appRoles;
     /**
-     * The application ID (client ID) of the application associated with this service principal.
+     * @return The application ID (client ID) of the application associated with this service principal.
      * 
      */
     private final String applicationId;
     /**
-     * The tenant ID where the associated application is registered.
+     * @return The tenant ID where the associated application is registered.
      * 
      */
     private final String applicationTenantId;
     /**
-     * Permission help text that appears in the admin app assignment and consent experiences.
+     * @return Permission help text that appears in the admin app assignment and consent experiences.
      * 
      */
     private final String description;
     /**
-     * Display name for the permission that appears in the admin consent and app assignment experiences.
+     * @return Display name for the permission that appears in the admin consent and app assignment experiences.
      * 
      */
     private final String displayName;
     private final List<GetServicePrincipalFeatureTag> featureTags;
     /**
-     * A `features` block as described below.
+     * @return A `features` block as described below.
      * 
-     * @Deprecated
+     * @deprecated
      * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
      * 
      */
-        @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
+    @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
     private final List<GetServicePrincipalFeature> features;
     /**
-     * Home page or landing page of the associated application.
+     * @return Home page or landing page of the associated application.
      * 
      */
     private final String homepageUrl;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
      */
     private final String loginUrl;
     /**
-     * The URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
      * 
      */
     private final String logoutUrl;
     /**
-     * A free text field to capture information about the service principal, typically used for operational purposes.
+     * @return A free text field to capture information about the service principal, typically used for operational purposes.
      * 
      */
     private final String notes;
     /**
-     * A list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+     * @return A list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
      * 
      */
     private final List<String> notificationEmailAddresses;
     /**
-     * A mapping of OAuth2.0 permission scope values to scope IDs, as exposed by the associated application, intended to be useful when referencing permission scopes in other resources in your configuration.
+     * @return A mapping of OAuth2.0 permission scope values to scope IDs, as exposed by the associated application, intended to be useful when referencing permission scopes in other resources in your configuration.
      * 
      */
     private final Map<String,String> oauth2PermissionScopeIds;
     /**
-     * A collection of OAuth 2.0 delegated permissions exposed by the associated application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
+     * @return A collection of OAuth 2.0 delegated permissions exposed by the associated application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
      * 
      */
     private final List<GetServicePrincipalOauth2PermissionScope> oauth2PermissionScopes;
     /**
-     * The object ID of the service principal.
+     * @return The object ID of the service principal.
      * 
      */
     private final String objectId;
     /**
-     * The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
      */
     private final String preferredSingleSignOnMode;
     /**
-     * A list of URLs where user tokens are sent for sign-in with the associated application, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent for the associated application.
+     * @return A list of URLs where user tokens are sent for sign-in with the associated application, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent for the associated application.
      * 
      */
     private final List<String> redirectUris;
     /**
-     * The URL where the service exposes SAML metadata for federation.
+     * @return The URL where the service exposes SAML metadata for federation.
      * 
      */
     private final String samlMetadataUrl;
     /**
-     * A `saml_single_sign_on` block as documented below.
+     * @return A `saml_single_sign_on` block as documented below.
      * 
      */
     private final List<GetServicePrincipalSamlSingleSignOn> samlSingleSignOns;
     /**
-     * A list of identifier URI(s), copied over from the associated application.
+     * @return A list of identifier URI(s), copied over from the associated application.
      * 
      */
     private final List<String> servicePrincipalNames;
     /**
-     * The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
      */
     private final String signInAudience;
     /**
-     * A list of tags applied to the service principal.
+     * @return A list of tags applied to the service principal.
      * 
      */
     private final List<String> tags;
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
      * 
      */
     private final String type;
@@ -219,65 +219,65 @@ public final class GetServicePrincipalResult {
     }
 
     /**
-     * Whether or not the service principal account is enabled.
+     * @return Whether or not the service principal account is enabled.
      * 
-    */
+     */
     public Boolean accountEnabled() {
         return this.accountEnabled;
     }
     /**
-     * A list of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+     * @return A list of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
      * 
-    */
+     */
     public List<String> alternativeNames() {
         return this.alternativeNames;
     }
     /**
-     * Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
+     * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
      * 
-    */
+     */
     public Boolean appRoleAssignmentRequired() {
         return this.appRoleAssignmentRequired;
     }
     /**
-     * A mapping of app role values to app role IDs, as published by the associated application, intended to be useful when referencing app roles in other resources in your configuration.
+     * @return A mapping of app role values to app role IDs, as published by the associated application, intended to be useful when referencing app roles in other resources in your configuration.
      * 
-    */
+     */
     public Map<String,String> appRoleIds() {
         return this.appRoleIds;
     }
     /**
-     * A list of app roles published by the associated application, as documented below. For more information [official documentation](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+     * @return A list of app roles published by the associated application, as documented below. For more information [official documentation](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
      * 
-    */
+     */
     public List<GetServicePrincipalAppRole> appRoles() {
         return this.appRoles;
     }
     /**
-     * The application ID (client ID) of the application associated with this service principal.
+     * @return The application ID (client ID) of the application associated with this service principal.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * The tenant ID where the associated application is registered.
+     * @return The tenant ID where the associated application is registered.
      * 
-    */
+     */
     public String applicationTenantId() {
         return this.applicationTenantId;
     }
     /**
-     * Permission help text that appears in the admin app assignment and consent experiences.
+     * @return Permission help text that appears in the admin app assignment and consent experiences.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name for the permission that appears in the admin consent and app assignment experiences.
+     * @return Display name for the permission that appears in the admin consent and app assignment experiences.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -285,132 +285,132 @@ public final class GetServicePrincipalResult {
         return this.featureTags;
     }
     /**
-     * A `features` block as described below.
+     * @return A `features` block as described below.
      * 
-     * @Deprecated
+     * @deprecated
      * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
      * 
-    */
+     */
     @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
     public List<GetServicePrincipalFeature> features() {
         return this.features;
     }
     /**
-     * Home page or landing page of the associated application.
+     * @return Home page or landing page of the associated application.
      * 
-    */
+     */
     public String homepageUrl() {
         return this.homepageUrl;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
-    */
+     */
     public String loginUrl() {
         return this.loginUrl;
     }
     /**
-     * The URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
      * 
-    */
+     */
     public String logoutUrl() {
         return this.logoutUrl;
     }
     /**
-     * A free text field to capture information about the service principal, typically used for operational purposes.
+     * @return A free text field to capture information about the service principal, typically used for operational purposes.
      * 
-    */
+     */
     public String notes() {
         return this.notes;
     }
     /**
-     * A list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+     * @return A list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
      * 
-    */
+     */
     public List<String> notificationEmailAddresses() {
         return this.notificationEmailAddresses;
     }
     /**
-     * A mapping of OAuth2.0 permission scope values to scope IDs, as exposed by the associated application, intended to be useful when referencing permission scopes in other resources in your configuration.
+     * @return A mapping of OAuth2.0 permission scope values to scope IDs, as exposed by the associated application, intended to be useful when referencing permission scopes in other resources in your configuration.
      * 
-    */
+     */
     public Map<String,String> oauth2PermissionScopeIds() {
         return this.oauth2PermissionScopeIds;
     }
     /**
-     * A collection of OAuth 2.0 delegated permissions exposed by the associated application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
+     * @return A collection of OAuth 2.0 delegated permissions exposed by the associated application. Each permission is covered by an `oauth2_permission_scopes` block as documented below.
      * 
-    */
+     */
     public List<GetServicePrincipalOauth2PermissionScope> oauth2PermissionScopes() {
         return this.oauth2PermissionScopes;
     }
     /**
-     * The object ID of the service principal.
+     * @return The object ID of the service principal.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
-    */
+     */
     public String preferredSingleSignOnMode() {
         return this.preferredSingleSignOnMode;
     }
     /**
-     * A list of URLs where user tokens are sent for sign-in with the associated application, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent for the associated application.
+     * @return A list of URLs where user tokens are sent for sign-in with the associated application, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent for the associated application.
      * 
-    */
+     */
     public List<String> redirectUris() {
         return this.redirectUris;
     }
     /**
-     * The URL where the service exposes SAML metadata for federation.
+     * @return The URL where the service exposes SAML metadata for federation.
      * 
-    */
+     */
     public String samlMetadataUrl() {
         return this.samlMetadataUrl;
     }
     /**
-     * A `saml_single_sign_on` block as documented below.
+     * @return A `saml_single_sign_on` block as documented below.
      * 
-    */
+     */
     public List<GetServicePrincipalSamlSingleSignOn> samlSingleSignOns() {
         return this.samlSingleSignOns;
     }
     /**
-     * A list of identifier URI(s), copied over from the associated application.
+     * @return A list of identifier URI(s), copied over from the associated application.
      * 
-    */
+     */
     public List<String> servicePrincipalNames() {
         return this.servicePrincipalNames;
     }
     /**
-     * The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
-    */
+     */
     public String signInAudience() {
         return this.signInAudience;
     }
     /**
-     * A list of tags applied to the service principal.
+     * @return A list of tags applied to the service principal.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

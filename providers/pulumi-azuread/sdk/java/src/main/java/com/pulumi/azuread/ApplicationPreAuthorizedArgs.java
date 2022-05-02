@@ -5,7 +5,6 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,8 +19,12 @@ public final class ApplicationPreAuthorizedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="applicationObjectId", required=true)
-      private final Output<String> applicationObjectId;
+    private Output<String> applicationObjectId;
 
+    /**
+     * @return The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+     * 
+     */
     public Output<String> applicationObjectId() {
         return this.applicationObjectId;
     }
@@ -31,8 +34,12 @@ public final class ApplicationPreAuthorizedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="authorizedAppId", required=true)
-      private final Output<String> authorizedAppId;
+    private Output<String> authorizedAppId;
 
+    /**
+     * @return The application ID of the pre-authorized application
+     * 
+     */
     public Output<String> authorizedAppId() {
         return this.authorizedAppId;
     }
@@ -42,79 +49,121 @@ public final class ApplicationPreAuthorizedArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="permissionIds", required=true)
-      private final Output<List<String>> permissionIds;
+    private Output<List<String>> permissionIds;
 
+    /**
+     * @return A set of permission scope IDs required by the authorized application.
+     * 
+     */
     public Output<List<String>> permissionIds() {
         return this.permissionIds;
     }
 
-    public ApplicationPreAuthorizedArgs(
-        Output<String> applicationObjectId,
-        Output<String> authorizedAppId,
-        Output<List<String>> permissionIds) {
-        this.applicationObjectId = Objects.requireNonNull(applicationObjectId, "expected parameter 'applicationObjectId' to be non-null");
-        this.authorizedAppId = Objects.requireNonNull(authorizedAppId, "expected parameter 'authorizedAppId' to be non-null");
-        this.permissionIds = Objects.requireNonNull(permissionIds, "expected parameter 'permissionIds' to be non-null");
-    }
+    private ApplicationPreAuthorizedArgs() {}
 
-    private ApplicationPreAuthorizedArgs() {
-        this.applicationObjectId = Codegen.empty();
-        this.authorizedAppId = Codegen.empty();
-        this.permissionIds = Codegen.empty();
+    private ApplicationPreAuthorizedArgs(ApplicationPreAuthorizedArgs $) {
+        this.applicationObjectId = $.applicationObjectId;
+        this.authorizedAppId = $.authorizedAppId;
+        this.permissionIds = $.permissionIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPreAuthorizedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationObjectId;
-        private Output<String> authorizedAppId;
-        private Output<List<String>> permissionIds;
+        private ApplicationPreAuthorizedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPreAuthorizedArgs();
         }
 
         public Builder(ApplicationPreAuthorizedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationObjectId = defaults.applicationObjectId;
-    	      this.authorizedAppId = defaults.authorizedAppId;
-    	      this.permissionIds = defaults.permissionIds;
+            $ = new ApplicationPreAuthorizedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationObjectId The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(Output<String> applicationObjectId) {
-            this.applicationObjectId = Objects.requireNonNull(applicationObjectId);
+            $.applicationObjectId = applicationObjectId;
             return this;
         }
+
+        /**
+         * @param applicationObjectId The object ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(String applicationObjectId) {
-            this.applicationObjectId = Output.of(Objects.requireNonNull(applicationObjectId));
-            return this;
+            return applicationObjectId(Output.of(applicationObjectId));
         }
+
+        /**
+         * @param authorizedAppId The application ID of the pre-authorized application
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAppId(Output<String> authorizedAppId) {
-            this.authorizedAppId = Objects.requireNonNull(authorizedAppId);
+            $.authorizedAppId = authorizedAppId;
             return this;
         }
+
+        /**
+         * @param authorizedAppId The application ID of the pre-authorized application
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizedAppId(String authorizedAppId) {
-            this.authorizedAppId = Output.of(Objects.requireNonNull(authorizedAppId));
-            return this;
+            return authorizedAppId(Output.of(authorizedAppId));
         }
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionIds(Output<List<String>> permissionIds) {
-            this.permissionIds = Objects.requireNonNull(permissionIds);
+            $.permissionIds = permissionIds;
             return this;
         }
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionIds(List<String> permissionIds) {
-            this.permissionIds = Output.of(Objects.requireNonNull(permissionIds));
-            return this;
+            return permissionIds(Output.of(permissionIds));
         }
+
+        /**
+         * @param permissionIds A set of permission scope IDs required by the authorized application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionIds(String... permissionIds) {
             return permissionIds(List.of(permissionIds));
-        }        public ApplicationPreAuthorizedArgs build() {
-            return new ApplicationPreAuthorizedArgs(applicationObjectId, authorizedAppId, permissionIds);
+        }
+
+        public ApplicationPreAuthorizedArgs build() {
+            $.applicationObjectId = Objects.requireNonNull($.applicationObjectId, "expected parameter 'applicationObjectId' to be non-null");
+            $.authorizedAppId = Objects.requireNonNull($.authorizedAppId, "expected parameter 'authorizedAppId' to be non-null");
+            $.permissionIds = Objects.requireNonNull($.permissionIds, "expected parameter 'permissionIds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,14 +3,14 @@
 
 package com.pulumi.azuread.inputs;
 
-import com.pulumi.azuread.inputs.CustomDirectoryRolePermissionGetArgs;
+import com.pulumi.azuread.inputs.CustomDirectoryRolePermissionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return The description of the custom directory role.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +38,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The display name of the custom directory role.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -45,10 +53,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    /**
+     * @return Indicates whether the role is enabled for assignment.
+     * 
+     */
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -56,10 +68,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    /**
+     * @return The object ID of the custom directory role.
+     * 
+     */
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -67,10 +83,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<CustomDirectoryRolePermissionGetArgs>> permissions;
+    private @Nullable Output<List<CustomDirectoryRolePermissionArgs>> permissions;
 
-    public Output<List<CustomDirectoryRolePermissionGetArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    /**
+     * @return A collection of `permissions` blocks as documented below.
+     * 
+     */
+    public Optional<Output<List<CustomDirectoryRolePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -78,10 +98,14 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    /**
+     * @return Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
@@ -89,131 +113,206 @@ public final class CustomDirectoryRoleState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    /**
+     * @return - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+     * 
+     */
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public CustomDirectoryRoleState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> objectId,
-        @Nullable Output<List<CustomDirectoryRolePermissionGetArgs>> permissions,
-        @Nullable Output<String> templateId,
-        @Nullable Output<String> version) {
-        this.description = description;
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.objectId = objectId;
-        this.permissions = permissions;
-        this.templateId = templateId;
-        this.version = version;
-    }
+    private CustomDirectoryRoleState() {}
 
-    private CustomDirectoryRoleState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.version = Codegen.empty();
+    private CustomDirectoryRoleState(CustomDirectoryRoleState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.objectId = $.objectId;
+        this.permissions = $.permissions;
+        this.templateId = $.templateId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDirectoryRoleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<List<CustomDirectoryRolePermissionGetArgs>> permissions;
-        private @Nullable Output<String> templateId;
-        private @Nullable Output<String> version;
+        private CustomDirectoryRoleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDirectoryRoleState();
         }
 
         public Builder(CustomDirectoryRoleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.objectId = defaults.objectId;
-    	      this.permissions = defaults.permissions;
-    	      this.templateId = defaults.templateId;
-    	      this.version = defaults.version;
+            $ = new CustomDirectoryRoleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description The description of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName The display name of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName The display name of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param enabled Indicates whether the role is enabled for assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        /**
+         * @param enabled Indicates whether the role is enabled for assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param objectId The object ID of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
+
+        /**
+         * @param objectId The object ID of the custom directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
+        }
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(@Nullable Output<List<CustomDirectoryRolePermissionArgs>> permissions) {
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable Output<List<CustomDirectoryRolePermissionGetArgs>> permissions) {
-            this.permissions = permissions;
-            return this;
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(List<CustomDirectoryRolePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
-        public Builder permissions(@Nullable List<CustomDirectoryRolePermissionGetArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
-        }
-        public Builder permissions(CustomDirectoryRolePermissionGetArgs... permissions) {
+
+        /**
+         * @param permissions A collection of `permissions` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder permissions(CustomDirectoryRolePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
+        /**
+         * @param templateId Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        /**
+         * @param templateId Custom template identifier that is typically used if one needs an identifier to be the same across different directories. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
+        /**
+         * @param version - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public CustomDirectoryRoleState build() {
-            return new CustomDirectoryRoleState(description, displayName, enabled, objectId, permissions, templateId, version);
+
+        /**
+         * @param version - The version of the role definition. This can be any arbitrary string between 1-128 characters.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public CustomDirectoryRoleState build() {
+            return $;
         }
     }
+
 }

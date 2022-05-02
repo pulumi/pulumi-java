@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ConditionalAccessPolicyConditionsLocationsArgs extends com.pu
      * 
      */
     @Import(name="excludedLocations")
-      private final @Nullable Output<List<String>> excludedLocations;
+    private @Nullable Output<List<String>> excludedLocations;
 
-    public Output<List<String>> excludedLocations() {
-        return this.excludedLocations == null ? Codegen.empty() : this.excludedLocations;
+    /**
+     * @return A list of location IDs excluded from scope of policy.
+     * 
+     */
+    public Optional<Output<List<String>>> excludedLocations() {
+        return Optional.ofNullable(this.excludedLocations);
     }
 
     /**
@@ -32,69 +36,107 @@ public final class ConditionalAccessPolicyConditionsLocationsArgs extends com.pu
      * 
      */
     @Import(name="includedLocations", required=true)
-      private final Output<List<String>> includedLocations;
+    private Output<List<String>> includedLocations;
 
+    /**
+     * @return A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+     * 
+     */
     public Output<List<String>> includedLocations() {
         return this.includedLocations;
     }
 
-    public ConditionalAccessPolicyConditionsLocationsArgs(
-        @Nullable Output<List<String>> excludedLocations,
-        Output<List<String>> includedLocations) {
-        this.excludedLocations = excludedLocations;
-        this.includedLocations = Objects.requireNonNull(includedLocations, "expected parameter 'includedLocations' to be non-null");
-    }
+    private ConditionalAccessPolicyConditionsLocationsArgs() {}
 
-    private ConditionalAccessPolicyConditionsLocationsArgs() {
-        this.excludedLocations = Codegen.empty();
-        this.includedLocations = Codegen.empty();
+    private ConditionalAccessPolicyConditionsLocationsArgs(ConditionalAccessPolicyConditionsLocationsArgs $) {
+        this.excludedLocations = $.excludedLocations;
+        this.includedLocations = $.includedLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsLocationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedLocations;
-        private Output<List<String>> includedLocations;
+        private ConditionalAccessPolicyConditionsLocationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsLocationsArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsLocationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedLocations = defaults.excludedLocations;
-    	      this.includedLocations = defaults.includedLocations;
+            $ = new ConditionalAccessPolicyConditionsLocationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedLocations A list of location IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedLocations(@Nullable Output<List<String>> excludedLocations) {
-            this.excludedLocations = excludedLocations;
+            $.excludedLocations = excludedLocations;
             return this;
         }
-        public Builder excludedLocations(@Nullable List<String> excludedLocations) {
-            this.excludedLocations = Codegen.ofNullable(excludedLocations);
-            return this;
+
+        /**
+         * @param excludedLocations A list of location IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedLocations(List<String> excludedLocations) {
+            return excludedLocations(Output.of(excludedLocations));
         }
+
+        /**
+         * @param excludedLocations A list of location IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedLocations(String... excludedLocations) {
             return excludedLocations(List.of(excludedLocations));
         }
+
+        /**
+         * @param includedLocations A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedLocations(Output<List<String>> includedLocations) {
-            this.includedLocations = Objects.requireNonNull(includedLocations);
+            $.includedLocations = includedLocations;
             return this;
         }
+
+        /**
+         * @param includedLocations A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedLocations(List<String> includedLocations) {
-            this.includedLocations = Output.of(Objects.requireNonNull(includedLocations));
-            return this;
+            return includedLocations(Output.of(includedLocations));
         }
+
+        /**
+         * @param includedLocations A list of location IDs in scope of policy unless explicitly excluded. Can also be set to `All`, or `AllTrusted`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedLocations(String... includedLocations) {
             return includedLocations(List.of(includedLocations));
-        }        public ConditionalAccessPolicyConditionsLocationsArgs build() {
-            return new ConditionalAccessPolicyConditionsLocationsArgs(excludedLocations, includedLocations);
+        }
+
+        public ConditionalAccessPolicyConditionsLocationsArgs build() {
+            $.includedLocations = Objects.requireNonNull($.includedLocations, "expected parameter 'includedLocations' to be non-null");
+            return $;
         }
     }
+
 }

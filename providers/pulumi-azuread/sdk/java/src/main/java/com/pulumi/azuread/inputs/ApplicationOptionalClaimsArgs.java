@@ -8,9 +8,9 @@ import com.pulumi.azuread.inputs.ApplicationOptionalClaimsIdTokenArgs;
 import com.pulumi.azuread.inputs.ApplicationOptionalClaimsSaml2TokenArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,14 @@ public final class ApplicationOptionalClaimsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accessTokens")
-      private final @Nullable Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens;
+    private @Nullable Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens;
 
-    public Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens() {
-        return this.accessTokens == null ? Codegen.empty() : this.accessTokens;
+    /**
+     * @return One or more `access_token` blocks as documented below.
+     * 
+     */
+    public Optional<Output<List<ApplicationOptionalClaimsAccessTokenArgs>>> accessTokens() {
+        return Optional.ofNullable(this.accessTokens);
     }
 
     /**
@@ -34,10 +38,14 @@ public final class ApplicationOptionalClaimsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="idTokens")
-      private final @Nullable Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens;
+    private @Nullable Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens;
 
-    public Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens() {
-        return this.idTokens == null ? Codegen.empty() : this.idTokens;
+    /**
+     * @return One or more `id_token` blocks as documented below.
+     * 
+     */
+    public Optional<Output<List<ApplicationOptionalClaimsIdTokenArgs>>> idTokens() {
+        return Optional.ofNullable(this.idTokens);
     }
 
     /**
@@ -45,85 +53,138 @@ public final class ApplicationOptionalClaimsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="saml2Tokens")
-      private final @Nullable Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens;
+    private @Nullable Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens;
 
-    public Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens() {
-        return this.saml2Tokens == null ? Codegen.empty() : this.saml2Tokens;
+    /**
+     * @return One or more `saml2_token` blocks as documented below.
+     * 
+     */
+    public Optional<Output<List<ApplicationOptionalClaimsSaml2TokenArgs>>> saml2Tokens() {
+        return Optional.ofNullable(this.saml2Tokens);
     }
 
-    public ApplicationOptionalClaimsArgs(
-        @Nullable Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens,
-        @Nullable Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens,
-        @Nullable Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens) {
-        this.accessTokens = accessTokens;
-        this.idTokens = idTokens;
-        this.saml2Tokens = saml2Tokens;
-    }
+    private ApplicationOptionalClaimsArgs() {}
 
-    private ApplicationOptionalClaimsArgs() {
-        this.accessTokens = Codegen.empty();
-        this.idTokens = Codegen.empty();
-        this.saml2Tokens = Codegen.empty();
+    private ApplicationOptionalClaimsArgs(ApplicationOptionalClaimsArgs $) {
+        this.accessTokens = $.accessTokens;
+        this.idTokens = $.idTokens;
+        this.saml2Tokens = $.saml2Tokens;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationOptionalClaimsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens;
-        private @Nullable Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens;
-        private @Nullable Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens;
+        private ApplicationOptionalClaimsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationOptionalClaimsArgs();
         }
 
         public Builder(ApplicationOptionalClaimsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTokens = defaults.accessTokens;
-    	      this.idTokens = defaults.idTokens;
-    	      this.saml2Tokens = defaults.saml2Tokens;
+            $ = new ApplicationOptionalClaimsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTokens One or more `access_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokens(@Nullable Output<List<ApplicationOptionalClaimsAccessTokenArgs>> accessTokens) {
-            this.accessTokens = accessTokens;
+            $.accessTokens = accessTokens;
             return this;
         }
-        public Builder accessTokens(@Nullable List<ApplicationOptionalClaimsAccessTokenArgs> accessTokens) {
-            this.accessTokens = Codegen.ofNullable(accessTokens);
-            return this;
+
+        /**
+         * @param accessTokens One or more `access_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accessTokens(List<ApplicationOptionalClaimsAccessTokenArgs> accessTokens) {
+            return accessTokens(Output.of(accessTokens));
         }
+
+        /**
+         * @param accessTokens One or more `access_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokens(ApplicationOptionalClaimsAccessTokenArgs... accessTokens) {
             return accessTokens(List.of(accessTokens));
         }
+
+        /**
+         * @param idTokens One or more `id_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idTokens(@Nullable Output<List<ApplicationOptionalClaimsIdTokenArgs>> idTokens) {
-            this.idTokens = idTokens;
+            $.idTokens = idTokens;
             return this;
         }
-        public Builder idTokens(@Nullable List<ApplicationOptionalClaimsIdTokenArgs> idTokens) {
-            this.idTokens = Codegen.ofNullable(idTokens);
-            return this;
+
+        /**
+         * @param idTokens One or more `id_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder idTokens(List<ApplicationOptionalClaimsIdTokenArgs> idTokens) {
+            return idTokens(Output.of(idTokens));
         }
+
+        /**
+         * @param idTokens One or more `id_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idTokens(ApplicationOptionalClaimsIdTokenArgs... idTokens) {
             return idTokens(List.of(idTokens));
         }
+
+        /**
+         * @param saml2Tokens One or more `saml2_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saml2Tokens(@Nullable Output<List<ApplicationOptionalClaimsSaml2TokenArgs>> saml2Tokens) {
-            this.saml2Tokens = saml2Tokens;
+            $.saml2Tokens = saml2Tokens;
             return this;
         }
-        public Builder saml2Tokens(@Nullable List<ApplicationOptionalClaimsSaml2TokenArgs> saml2Tokens) {
-            this.saml2Tokens = Codegen.ofNullable(saml2Tokens);
-            return this;
+
+        /**
+         * @param saml2Tokens One or more `saml2_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder saml2Tokens(List<ApplicationOptionalClaimsSaml2TokenArgs> saml2Tokens) {
+            return saml2Tokens(Output.of(saml2Tokens));
         }
+
+        /**
+         * @param saml2Tokens One or more `saml2_token` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saml2Tokens(ApplicationOptionalClaimsSaml2TokenArgs... saml2Tokens) {
             return saml2Tokens(List.of(saml2Tokens));
-        }        public ApplicationOptionalClaimsArgs build() {
-            return new ApplicationOptionalClaimsArgs(accessTokens, idTokens, saml2Tokens);
+        }
+
+        public ApplicationOptionalClaimsArgs build() {
+            return $;
         }
     }
+
 }

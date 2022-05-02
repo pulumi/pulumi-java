@@ -5,7 +5,6 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,8 +18,12 @@ public final class ServicePrincipalClaimsMappingPolicyAssignmentArgs extends com
      * 
      */
     @Import(name="claimsMappingPolicyId", required=true)
-      private final Output<String> claimsMappingPolicyId;
+    private Output<String> claimsMappingPolicyId;
 
+    /**
+     * @return The ID of the claims mapping policy to assign.
+     * 
+     */
     public Output<String> claimsMappingPolicyId() {
         return this.claimsMappingPolicyId;
     }
@@ -30,63 +33,88 @@ public final class ServicePrincipalClaimsMappingPolicyAssignmentArgs extends com
      * 
      */
     @Import(name="servicePrincipalId", required=true)
-      private final Output<String> servicePrincipalId;
+    private Output<String> servicePrincipalId;
 
+    /**
+     * @return The object ID of the service principal for the policy assignment.
+     * 
+     */
     public Output<String> servicePrincipalId() {
         return this.servicePrincipalId;
     }
 
-    public ServicePrincipalClaimsMappingPolicyAssignmentArgs(
-        Output<String> claimsMappingPolicyId,
-        Output<String> servicePrincipalId) {
-        this.claimsMappingPolicyId = Objects.requireNonNull(claimsMappingPolicyId, "expected parameter 'claimsMappingPolicyId' to be non-null");
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
-    }
+    private ServicePrincipalClaimsMappingPolicyAssignmentArgs() {}
 
-    private ServicePrincipalClaimsMappingPolicyAssignmentArgs() {
-        this.claimsMappingPolicyId = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
+    private ServicePrincipalClaimsMappingPolicyAssignmentArgs(ServicePrincipalClaimsMappingPolicyAssignmentArgs $) {
+        this.claimsMappingPolicyId = $.claimsMappingPolicyId;
+        this.servicePrincipalId = $.servicePrincipalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalClaimsMappingPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> claimsMappingPolicyId;
-        private Output<String> servicePrincipalId;
+        private ServicePrincipalClaimsMappingPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalClaimsMappingPolicyAssignmentArgs();
         }
 
         public Builder(ServicePrincipalClaimsMappingPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimsMappingPolicyId = defaults.claimsMappingPolicyId;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
+            $ = new ServicePrincipalClaimsMappingPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimsMappingPolicyId The ID of the claims mapping policy to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimsMappingPolicyId(Output<String> claimsMappingPolicyId) {
-            this.claimsMappingPolicyId = Objects.requireNonNull(claimsMappingPolicyId);
+            $.claimsMappingPolicyId = claimsMappingPolicyId;
             return this;
         }
+
+        /**
+         * @param claimsMappingPolicyId The ID of the claims mapping policy to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimsMappingPolicyId(String claimsMappingPolicyId) {
-            this.claimsMappingPolicyId = Output.of(Objects.requireNonNull(claimsMappingPolicyId));
-            return this;
+            return claimsMappingPolicyId(Output.of(claimsMappingPolicyId));
         }
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for the policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Output<String> servicePrincipalId) {
-            this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for the policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(String servicePrincipalId) {
-            this.servicePrincipalId = Output.of(Objects.requireNonNull(servicePrincipalId));
-            return this;
-        }        public ServicePrincipalClaimsMappingPolicyAssignmentArgs build() {
-            return new ServicePrincipalClaimsMappingPolicyAssignmentArgs(claimsMappingPolicyId, servicePrincipalId);
+            return servicePrincipalId(Output.of(servicePrincipalId));
+        }
+
+        public ServicePrincipalClaimsMappingPolicyAssignmentArgs build() {
+            $.claimsMappingPolicyId = Objects.requireNonNull($.claimsMappingPolicyId, "expected parameter 'claimsMappingPolicyId' to be non-null");
+            $.servicePrincipalId = Objects.requireNonNull($.servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
+            return $;
         }
     }
+
 }

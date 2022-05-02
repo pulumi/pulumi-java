@@ -5,7 +5,6 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,8 +18,12 @@ public final class ApplicationRequiredResourceAccessResourceAccessArgs extends c
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
+    /**
+     * @return The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -30,63 +33,88 @@ public final class ApplicationRequiredResourceAccessResourceAccessArgs extends c
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
+    /**
+     * @return Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
 
-    public ApplicationRequiredResourceAccessResourceAccessArgs(
-        Output<String> id,
-        Output<String> type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationRequiredResourceAccessResourceAccessArgs() {}
 
-    private ApplicationRequiredResourceAccessResourceAccessArgs() {
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private ApplicationRequiredResourceAccessResourceAccessArgs(ApplicationRequiredResourceAccessResourceAccessArgs $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationRequiredResourceAccessResourceAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> type;
+        private ApplicationRequiredResourceAccessResourceAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationRequiredResourceAccessResourceAccessArgs();
         }
 
         public Builder(ApplicationRequiredResourceAccessResourceAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new ApplicationRequiredResourceAccessResourceAccessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
+        /**
+         * @param id The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
+        /**
+         * @param type Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
+        /**
+         * @param type Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ApplicationRequiredResourceAccessResourceAccessArgs build() {
-            return new ApplicationRequiredResourceAccessResourceAccessArgs(id, type);
+            return type(Output.of(type));
+        }
+
+        public ApplicationRequiredResourceAccessResourceAccessArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

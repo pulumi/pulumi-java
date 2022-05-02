@@ -21,147 +21,147 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * An `api` block as documented below.
+     * @return An `api` block as documented below.
      * 
      */
     private final List<GetApplicationApi> apis;
     /**
-     * A mapping of app role values to app role IDs, intended to be useful when referencing app roles in other resources in your configuration.
+     * @return A mapping of app role values to app role IDs, intended to be useful when referencing app roles in other resources in your configuration.
      * 
      */
     private final Map<String,String> appRoleIds;
     /**
-     * A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+     * @return A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
      * 
      */
     private final List<GetApplicationAppRole> appRoles;
     /**
-     * The Application ID (also called Client ID).
+     * @return The Application ID (also called Client ID).
      * 
      */
     private final String applicationId;
     /**
-     * Specifies whether this application supports device authentication without a user.
+     * @return Specifies whether this application supports device authentication without a user.
      * 
      */
     private final Boolean deviceOnlyAuthEnabled;
     /**
-     * Whether Microsoft has disabled the registered application. If the application is disabled, this will be a string indicating the status/reason, e.g. `DisabledDueToViolationOfServicesAgreement`
+     * @return Whether Microsoft has disabled the registered application. If the application is disabled, this will be a string indicating the status/reason, e.g. `DisabledDueToViolationOfServicesAgreement`
      * 
      */
     private final String disabledByMicrosoft;
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
      */
     private final String displayName;
     /**
-     * The fallback application type as public client, such as an installed application running on a mobile device.
+     * @return The fallback application type as public client, such as an installed application running on a mobile device.
      * 
      */
     private final Boolean fallbackPublicClientEnabled;
     /**
-     * A `features` block as described below.
+     * @return A `features` block as described below.
      * 
      */
     private final List<GetApplicationFeatureTag> featureTags;
     /**
-     * The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
+     * @return The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
      * 
      */
     private final List<String> groupMembershipClaims;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+     * @return A list of user-defined URI(s) that uniquely identify a Web application within it&#39;s Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
      * 
      */
     private final List<String> identifierUris;
     /**
-     * CDN URL to the application's logo.
+     * @return CDN URL to the application&#39;s logo.
      * 
      */
     private final String logoUrl;
     /**
-     * URL of the application's marketing page.
+     * @return URL of the application&#39;s marketing page.
      * 
      */
     private final String marketingUrl;
     /**
-     * A mapping of OAuth2.0 permission scope values to scope IDs, intended to be useful when referencing permission scopes in other resources in your configuration.
+     * @return A mapping of OAuth2.0 permission scope values to scope IDs, intended to be useful when referencing permission scopes in other resources in your configuration.
      * 
      */
     private final Map<String,String> oauth2PermissionScopeIds;
     /**
-     * Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. When `false`, only GET requests are allowed.
+     * @return Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. When `false`, only GET requests are allowed.
      * 
      */
     private final Boolean oauth2PostResponseRequired;
     /**
-     * The application's object ID.
+     * @return The application&#39;s object ID.
      * 
      */
     private final String objectId;
     /**
-     * An `optional_claims` block as documented below.
+     * @return An `optional_claims` block as documented below.
      * 
      */
     private final List<GetApplicationOptionalClaim> optionalClaims;
     /**
-     * A list of object IDs of principals that are assigned ownership of the application.
+     * @return A list of object IDs of principals that are assigned ownership of the application.
      * 
      */
     private final List<String> owners;
     /**
-     * URL of the application's privacy statement.
+     * @return URL of the application&#39;s privacy statement.
      * 
      */
     private final String privacyStatementUrl;
     /**
-     * A `public_client` block as documented below.
+     * @return A `public_client` block as documented below.
      * 
      */
     private final List<GetApplicationPublicClient> publicClients;
     /**
-     * The verified publisher domain for the application.
+     * @return The verified publisher domain for the application.
      * 
      */
     private final String publisherDomain;
     /**
-     * A collection of `required_resource_access` blocks as documented below.
+     * @return A collection of `required_resource_access` blocks as documented below.
      * 
      */
     private final List<GetApplicationRequiredResourceAccess> requiredResourceAccesses;
     /**
-     * The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
      */
     private final String signInAudience;
     /**
-     * A `single_page_application` block as documented below.
+     * @return A `single_page_application` block as documented below.
      * 
      */
     private final List<GetApplicationSinglePageApplication> singlePageApplications;
     /**
-     * URL of the application's support page.
+     * @return URL of the application&#39;s support page.
      * 
      */
     private final String supportUrl;
     /**
-     * A list of tags applied to the application.
+     * @return A list of tags applied to the application.
      * 
      */
     private final List<String> tags;
     /**
-     * URL of the application's terms of service statement.
+     * @return URL of the application&#39;s terms of service statement.
      * 
      */
     private final String termsOfServiceUrl;
     /**
-     * A `web` block as documented below.
+     * @return A `web` block as documented below.
      * 
      */
     private final List<GetApplicationWeb> webs;
@@ -229,205 +229,205 @@ public final class GetApplicationResult {
     }
 
     /**
-     * An `api` block as documented below.
+     * @return An `api` block as documented below.
      * 
-    */
+     */
     public List<GetApplicationApi> apis() {
         return this.apis;
     }
     /**
-     * A mapping of app role values to app role IDs, intended to be useful when referencing app roles in other resources in your configuration.
+     * @return A mapping of app role values to app role IDs, intended to be useful when referencing app roles in other resources in your configuration.
      * 
-    */
+     */
     public Map<String,String> appRoleIds() {
         return this.appRoleIds;
     }
     /**
-     * A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+     * @return A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
      * 
-    */
+     */
     public List<GetApplicationAppRole> appRoles() {
         return this.appRoles;
     }
     /**
-     * The Application ID (also called Client ID).
+     * @return The Application ID (also called Client ID).
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * Specifies whether this application supports device authentication without a user.
+     * @return Specifies whether this application supports device authentication without a user.
      * 
-    */
+     */
     public Boolean deviceOnlyAuthEnabled() {
         return this.deviceOnlyAuthEnabled;
     }
     /**
-     * Whether Microsoft has disabled the registered application. If the application is disabled, this will be a string indicating the status/reason, e.g. `DisabledDueToViolationOfServicesAgreement`
+     * @return Whether Microsoft has disabled the registered application. If the application is disabled, this will be a string indicating the status/reason, e.g. `DisabledDueToViolationOfServicesAgreement`
      * 
-    */
+     */
     public String disabledByMicrosoft() {
         return this.disabledByMicrosoft;
     }
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The fallback application type as public client, such as an installed application running on a mobile device.
+     * @return The fallback application type as public client, such as an installed application running on a mobile device.
      * 
-    */
+     */
     public Boolean fallbackPublicClientEnabled() {
         return this.fallbackPublicClientEnabled;
     }
     /**
-     * A `features` block as described below.
+     * @return A `features` block as described below.
      * 
-    */
+     */
     public List<GetApplicationFeatureTag> featureTags() {
         return this.featureTags;
     }
     /**
-     * The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
+     * @return The `groups` claim issued in a user or OAuth 2.0 access token that the app expects.
      * 
-    */
+     */
     public List<String> groupMembershipClaims() {
         return this.groupMembershipClaims;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+     * @return A list of user-defined URI(s) that uniquely identify a Web application within it&#39;s Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
      * 
-    */
+     */
     public List<String> identifierUris() {
         return this.identifierUris;
     }
     /**
-     * CDN URL to the application's logo.
+     * @return CDN URL to the application&#39;s logo.
      * 
-    */
+     */
     public String logoUrl() {
         return this.logoUrl;
     }
     /**
-     * URL of the application's marketing page.
+     * @return URL of the application&#39;s marketing page.
      * 
-    */
+     */
     public String marketingUrl() {
         return this.marketingUrl;
     }
     /**
-     * A mapping of OAuth2.0 permission scope values to scope IDs, intended to be useful when referencing permission scopes in other resources in your configuration.
+     * @return A mapping of OAuth2.0 permission scope values to scope IDs, intended to be useful when referencing permission scopes in other resources in your configuration.
      * 
-    */
+     */
     public Map<String,String> oauth2PermissionScopeIds() {
         return this.oauth2PermissionScopeIds;
     }
     /**
-     * Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. When `false`, only GET requests are allowed.
+     * @return Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. When `false`, only GET requests are allowed.
      * 
-    */
+     */
     public Boolean oauth2PostResponseRequired() {
         return this.oauth2PostResponseRequired;
     }
     /**
-     * The application's object ID.
+     * @return The application&#39;s object ID.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * An `optional_claims` block as documented below.
+     * @return An `optional_claims` block as documented below.
      * 
-    */
+     */
     public List<GetApplicationOptionalClaim> optionalClaims() {
         return this.optionalClaims;
     }
     /**
-     * A list of object IDs of principals that are assigned ownership of the application.
+     * @return A list of object IDs of principals that are assigned ownership of the application.
      * 
-    */
+     */
     public List<String> owners() {
         return this.owners;
     }
     /**
-     * URL of the application's privacy statement.
+     * @return URL of the application&#39;s privacy statement.
      * 
-    */
+     */
     public String privacyStatementUrl() {
         return this.privacyStatementUrl;
     }
     /**
-     * A `public_client` block as documented below.
+     * @return A `public_client` block as documented below.
      * 
-    */
+     */
     public List<GetApplicationPublicClient> publicClients() {
         return this.publicClients;
     }
     /**
-     * The verified publisher domain for the application.
+     * @return The verified publisher domain for the application.
      * 
-    */
+     */
     public String publisherDomain() {
         return this.publisherDomain;
     }
     /**
-     * A collection of `required_resource_access` blocks as documented below.
+     * @return A collection of `required_resource_access` blocks as documented below.
      * 
-    */
+     */
     public List<GetApplicationRequiredResourceAccess> requiredResourceAccesses() {
         return this.requiredResourceAccesses;
     }
     /**
-     * The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the current application. One of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
-    */
+     */
     public String signInAudience() {
         return this.signInAudience;
     }
     /**
-     * A `single_page_application` block as documented below.
+     * @return A `single_page_application` block as documented below.
      * 
-    */
+     */
     public List<GetApplicationSinglePageApplication> singlePageApplications() {
         return this.singlePageApplications;
     }
     /**
-     * URL of the application's support page.
+     * @return URL of the application&#39;s support page.
      * 
-    */
+     */
     public String supportUrl() {
         return this.supportUrl;
     }
     /**
-     * A list of tags applied to the application.
+     * @return A list of tags applied to the application.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * URL of the application's terms of service statement.
+     * @return URL of the application&#39;s terms of service statement.
      * 
-    */
+     */
     public String termsOfServiceUrl() {
         return this.termsOfServiceUrl;
     }
     /**
-     * A `web` block as documented below.
+     * @return A `web` block as documented below.
      * 
-    */
+     */
     public List<GetApplicationWeb> webs() {
         return this.webs;
     }

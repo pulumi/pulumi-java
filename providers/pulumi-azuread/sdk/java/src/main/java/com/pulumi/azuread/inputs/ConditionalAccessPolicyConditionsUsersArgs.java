@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="excludedGroups")
-      private final @Nullable Output<List<String>> excludedGroups;
+    private @Nullable Output<List<String>> excludedGroups;
 
-    public Output<List<String>> excludedGroups() {
-        return this.excludedGroups == null ? Codegen.empty() : this.excludedGroups;
+    /**
+     * @return A list of group IDs excluded from scope of policy.
+     * 
+     */
+    public Optional<Output<List<String>>> excludedGroups() {
+        return Optional.ofNullable(this.excludedGroups);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="excludedRoles")
-      private final @Nullable Output<List<String>> excludedRoles;
+    private @Nullable Output<List<String>> excludedRoles;
 
-    public Output<List<String>> excludedRoles() {
-        return this.excludedRoles == null ? Codegen.empty() : this.excludedRoles;
+    /**
+     * @return A list of role IDs excluded from scope of policy.
+     * 
+     */
+    public Optional<Output<List<String>>> excludedRoles() {
+        return Optional.ofNullable(this.excludedRoles);
     }
 
     /**
@@ -43,10 +51,14 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="excludedUsers")
-      private final @Nullable Output<List<String>> excludedUsers;
+    private @Nullable Output<List<String>> excludedUsers;
 
-    public Output<List<String>> excludedUsers() {
-        return this.excludedUsers == null ? Codegen.empty() : this.excludedUsers;
+    /**
+     * @return A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+     * 
+     */
+    public Optional<Output<List<String>>> excludedUsers() {
+        return Optional.ofNullable(this.excludedUsers);
     }
 
     /**
@@ -54,10 +66,14 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="includedGroups")
-      private final @Nullable Output<List<String>> includedGroups;
+    private @Nullable Output<List<String>> includedGroups;
 
-    public Output<List<String>> includedGroups() {
-        return this.includedGroups == null ? Codegen.empty() : this.includedGroups;
+    /**
+     * @return A list of group IDs in scope of policy unless explicitly excluded.
+     * 
+     */
+    public Optional<Output<List<String>>> includedGroups() {
+        return Optional.ofNullable(this.includedGroups);
     }
 
     /**
@@ -65,10 +81,14 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="includedRoles")
-      private final @Nullable Output<List<String>> includedRoles;
+    private @Nullable Output<List<String>> includedRoles;
 
-    public Output<List<String>> includedRoles() {
-        return this.includedRoles == null ? Codegen.empty() : this.includedRoles;
+    /**
+     * @return A list of role IDs in scope of policy unless explicitly excluded.
+     * 
+     */
+    public Optional<Output<List<String>>> includedRoles() {
+        return Optional.ofNullable(this.includedRoles);
     }
 
     /**
@@ -76,133 +96,234 @@ public final class ConditionalAccessPolicyConditionsUsersArgs extends com.pulumi
      * 
      */
     @Import(name="includedUsers")
-      private final @Nullable Output<List<String>> includedUsers;
+    private @Nullable Output<List<String>> includedUsers;
 
-    public Output<List<String>> includedUsers() {
-        return this.includedUsers == null ? Codegen.empty() : this.includedUsers;
+    /**
+     * @return A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+     * 
+     */
+    public Optional<Output<List<String>>> includedUsers() {
+        return Optional.ofNullable(this.includedUsers);
     }
 
-    public ConditionalAccessPolicyConditionsUsersArgs(
-        @Nullable Output<List<String>> excludedGroups,
-        @Nullable Output<List<String>> excludedRoles,
-        @Nullable Output<List<String>> excludedUsers,
-        @Nullable Output<List<String>> includedGroups,
-        @Nullable Output<List<String>> includedRoles,
-        @Nullable Output<List<String>> includedUsers) {
-        this.excludedGroups = excludedGroups;
-        this.excludedRoles = excludedRoles;
-        this.excludedUsers = excludedUsers;
-        this.includedGroups = includedGroups;
-        this.includedRoles = includedRoles;
-        this.includedUsers = includedUsers;
-    }
+    private ConditionalAccessPolicyConditionsUsersArgs() {}
 
-    private ConditionalAccessPolicyConditionsUsersArgs() {
-        this.excludedGroups = Codegen.empty();
-        this.excludedRoles = Codegen.empty();
-        this.excludedUsers = Codegen.empty();
-        this.includedGroups = Codegen.empty();
-        this.includedRoles = Codegen.empty();
-        this.includedUsers = Codegen.empty();
+    private ConditionalAccessPolicyConditionsUsersArgs(ConditionalAccessPolicyConditionsUsersArgs $) {
+        this.excludedGroups = $.excludedGroups;
+        this.excludedRoles = $.excludedRoles;
+        this.excludedUsers = $.excludedUsers;
+        this.includedGroups = $.includedGroups;
+        this.includedRoles = $.includedRoles;
+        this.includedUsers = $.includedUsers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsUsersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedGroups;
-        private @Nullable Output<List<String>> excludedRoles;
-        private @Nullable Output<List<String>> excludedUsers;
-        private @Nullable Output<List<String>> includedGroups;
-        private @Nullable Output<List<String>> includedRoles;
-        private @Nullable Output<List<String>> includedUsers;
+        private ConditionalAccessPolicyConditionsUsersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsUsersArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsUsersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedGroups = defaults.excludedGroups;
-    	      this.excludedRoles = defaults.excludedRoles;
-    	      this.excludedUsers = defaults.excludedUsers;
-    	      this.includedGroups = defaults.includedGroups;
-    	      this.includedRoles = defaults.includedRoles;
-    	      this.includedUsers = defaults.includedUsers;
+            $ = new ConditionalAccessPolicyConditionsUsersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedGroups A list of group IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedGroups(@Nullable Output<List<String>> excludedGroups) {
-            this.excludedGroups = excludedGroups;
+            $.excludedGroups = excludedGroups;
             return this;
         }
-        public Builder excludedGroups(@Nullable List<String> excludedGroups) {
-            this.excludedGroups = Codegen.ofNullable(excludedGroups);
-            return this;
+
+        /**
+         * @param excludedGroups A list of group IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedGroups(List<String> excludedGroups) {
+            return excludedGroups(Output.of(excludedGroups));
         }
+
+        /**
+         * @param excludedGroups A list of group IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedGroups(String... excludedGroups) {
             return excludedGroups(List.of(excludedGroups));
         }
+
+        /**
+         * @param excludedRoles A list of role IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRoles(@Nullable Output<List<String>> excludedRoles) {
-            this.excludedRoles = excludedRoles;
+            $.excludedRoles = excludedRoles;
             return this;
         }
-        public Builder excludedRoles(@Nullable List<String> excludedRoles) {
-            this.excludedRoles = Codegen.ofNullable(excludedRoles);
-            return this;
+
+        /**
+         * @param excludedRoles A list of role IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedRoles(List<String> excludedRoles) {
+            return excludedRoles(Output.of(excludedRoles));
         }
+
+        /**
+         * @param excludedRoles A list of role IDs excluded from scope of policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedRoles(String... excludedRoles) {
             return excludedRoles(List.of(excludedRoles));
         }
+
+        /**
+         * @param excludedUsers A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedUsers(@Nullable Output<List<String>> excludedUsers) {
-            this.excludedUsers = excludedUsers;
+            $.excludedUsers = excludedUsers;
             return this;
         }
-        public Builder excludedUsers(@Nullable List<String> excludedUsers) {
-            this.excludedUsers = Codegen.ofNullable(excludedUsers);
-            return this;
+
+        /**
+         * @param excludedUsers A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedUsers(List<String> excludedUsers) {
+            return excludedUsers(Output.of(excludedUsers));
         }
+
+        /**
+         * @param excludedUsers A list of user IDs excluded from scope of policy and/or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedUsers(String... excludedUsers) {
             return excludedUsers(List.of(excludedUsers));
         }
+
+        /**
+         * @param includedGroups A list of group IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedGroups(@Nullable Output<List<String>> includedGroups) {
-            this.includedGroups = includedGroups;
+            $.includedGroups = includedGroups;
             return this;
         }
-        public Builder includedGroups(@Nullable List<String> includedGroups) {
-            this.includedGroups = Codegen.ofNullable(includedGroups);
-            return this;
+
+        /**
+         * @param includedGroups A list of group IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedGroups(List<String> includedGroups) {
+            return includedGroups(Output.of(includedGroups));
         }
+
+        /**
+         * @param includedGroups A list of group IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedGroups(String... includedGroups) {
             return includedGroups(List.of(includedGroups));
         }
+
+        /**
+         * @param includedRoles A list of role IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedRoles(@Nullable Output<List<String>> includedRoles) {
-            this.includedRoles = includedRoles;
+            $.includedRoles = includedRoles;
             return this;
         }
-        public Builder includedRoles(@Nullable List<String> includedRoles) {
-            this.includedRoles = Codegen.ofNullable(includedRoles);
-            return this;
+
+        /**
+         * @param includedRoles A list of role IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedRoles(List<String> includedRoles) {
+            return includedRoles(Output.of(includedRoles));
         }
+
+        /**
+         * @param includedRoles A list of role IDs in scope of policy unless explicitly excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedRoles(String... includedRoles) {
             return includedRoles(List.of(includedRoles));
         }
+
+        /**
+         * @param includedUsers A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUsers(@Nullable Output<List<String>> includedUsers) {
-            this.includedUsers = includedUsers;
+            $.includedUsers = includedUsers;
             return this;
         }
-        public Builder includedUsers(@Nullable List<String> includedUsers) {
-            this.includedUsers = Codegen.ofNullable(includedUsers);
-            return this;
+
+        /**
+         * @param includedUsers A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedUsers(List<String> includedUsers) {
+            return includedUsers(Output.of(includedUsers));
         }
+
+        /**
+         * @param includedUsers A list of user IDs in scope of policy unless explicitly excluded, or `None` or `All` or `GuestsOrExternalUsers`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUsers(String... includedUsers) {
             return includedUsers(List.of(includedUsers));
-        }        public ConditionalAccessPolicyConditionsUsersArgs build() {
-            return new ConditionalAccessPolicyConditionsUsersArgs(excludedGroups, excludedRoles, excludedUsers, includedGroups, includedRoles, includedUsers);
+        }
+
+        public ConditionalAccessPolicyConditionsUsersArgs build() {
+            return $;
         }
     }
+
 }

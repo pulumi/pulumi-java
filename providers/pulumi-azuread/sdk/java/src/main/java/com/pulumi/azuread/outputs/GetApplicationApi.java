@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationApi {
     /**
-     * A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+     * @return A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
      * 
      */
     private final List<String> knownClientApplications;
     /**
-     * Allows an application to use claims mapping without specifying a custom signing key.
+     * @return Allows an application to use claims mapping without specifying a custom signing key.
      * 
      */
     private final Boolean mappedClaimsEnabled;
     /**
-     * One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+     * @return One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
      * 
      */
     private final List<GetApplicationApiOauth2PermissionScope> oauth2PermissionScopes;
     /**
-     * The access token version expected by this resource. Possible values are `1` or `2`.
+     * @return The access token version expected by this resource. Possible values are `1` or `2`.
      * 
      */
     private final Integer requestedAccessTokenVersion;
@@ -47,30 +47,30 @@ public final class GetApplicationApi {
     }
 
     /**
-     * A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+     * @return A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
      * 
-    */
+     */
     public List<String> knownClientApplications() {
         return this.knownClientApplications;
     }
     /**
-     * Allows an application to use claims mapping without specifying a custom signing key.
+     * @return Allows an application to use claims mapping without specifying a custom signing key.
      * 
-    */
+     */
     public Boolean mappedClaimsEnabled() {
         return this.mappedClaimsEnabled;
     }
     /**
-     * One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+     * @return One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
      * 
-    */
+     */
     public List<GetApplicationApiOauth2PermissionScope> oauth2PermissionScopes() {
         return this.oauth2PermissionScopes;
     }
     /**
-     * The access token version expected by this resource. Possible values are `1` or `2`.
+     * @return The access token version expected by this resource. Possible values are `1` or `2`.
      * 
-    */
+     */
     public Integer requestedAccessTokenVersion() {
         return this.requestedAccessTokenVersion;
     }

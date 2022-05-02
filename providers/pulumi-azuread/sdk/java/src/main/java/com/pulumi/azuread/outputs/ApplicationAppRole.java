@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationAppRole {
     /**
-     * Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+     * @return Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
      * 
      */
     private final List<String> allowedMemberTypes;
     /**
-     * Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+     * @return Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
      * 
      */
     private final String description;
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
      */
     private final String displayName;
     /**
-     * Determines if the app role is enabled. Defaults to `true`.
+     * @return Determines if the app role is enabled. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The unique identifier of the app role. Must be a valid UUID.
+     * @return The unique identifier of the app role. Must be a valid UUID.
      * 
      */
     private final String id;
     /**
-     * The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+     * @return The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
      * 
      */
     private final @Nullable String value;
@@ -61,44 +61,44 @@ public final class ApplicationAppRole {
     }
 
     /**
-     * Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
+     * @return Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in a standalone scenario) by setting to `Application`, or to both.
      * 
-    */
+     */
     public List<String> allowedMemberTypes() {
         return this.allowedMemberTypes;
     }
     /**
-     * Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+     * @return Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Determines if the app role is enabled. Defaults to `true`.
+     * @return Determines if the app role is enabled. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The unique identifier of the app role. Must be a valid UUID.
+     * @return The unique identifier of the app role. Must be a valid UUID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+     * @return The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

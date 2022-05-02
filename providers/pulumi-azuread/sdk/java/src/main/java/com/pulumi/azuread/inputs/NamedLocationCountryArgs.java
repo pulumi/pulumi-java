@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,77 +22,112 @@ public final class NamedLocationCountryArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="countriesAndRegions", required=true)
-      private final Output<List<String>> countriesAndRegions;
+    private Output<List<String>> countriesAndRegions;
 
+    /**
+     * @return List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * 
+     */
     public Output<List<String>> countriesAndRegions() {
         return this.countriesAndRegions;
     }
 
     /**
-     * Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to `false`.
+     * Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
      * 
      */
     @Import(name="includeUnknownCountriesAndRegions")
-      private final @Nullable Output<Boolean> includeUnknownCountriesAndRegions;
+    private @Nullable Output<Boolean> includeUnknownCountriesAndRegions;
 
-    public Output<Boolean> includeUnknownCountriesAndRegions() {
-        return this.includeUnknownCountriesAndRegions == null ? Codegen.empty() : this.includeUnknownCountriesAndRegions;
+    /**
+     * @return Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> includeUnknownCountriesAndRegions() {
+        return Optional.ofNullable(this.includeUnknownCountriesAndRegions);
     }
 
-    public NamedLocationCountryArgs(
-        Output<List<String>> countriesAndRegions,
-        @Nullable Output<Boolean> includeUnknownCountriesAndRegions) {
-        this.countriesAndRegions = Objects.requireNonNull(countriesAndRegions, "expected parameter 'countriesAndRegions' to be non-null");
-        this.includeUnknownCountriesAndRegions = includeUnknownCountriesAndRegions;
-    }
+    private NamedLocationCountryArgs() {}
 
-    private NamedLocationCountryArgs() {
-        this.countriesAndRegions = Codegen.empty();
-        this.includeUnknownCountriesAndRegions = Codegen.empty();
+    private NamedLocationCountryArgs(NamedLocationCountryArgs $) {
+        this.countriesAndRegions = $.countriesAndRegions;
+        this.includeUnknownCountriesAndRegions = $.includeUnknownCountriesAndRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedLocationCountryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> countriesAndRegions;
-        private @Nullable Output<Boolean> includeUnknownCountriesAndRegions;
+        private NamedLocationCountryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedLocationCountryArgs();
         }
 
         public Builder(NamedLocationCountryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countriesAndRegions = defaults.countriesAndRegions;
-    	      this.includeUnknownCountriesAndRegions = defaults.includeUnknownCountriesAndRegions;
+            $ = new NamedLocationCountryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countriesAndRegions(Output<List<String>> countriesAndRegions) {
-            this.countriesAndRegions = Objects.requireNonNull(countriesAndRegions);
+            $.countriesAndRegions = countriesAndRegions;
             return this;
         }
+
+        /**
+         * @param countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countriesAndRegions(List<String> countriesAndRegions) {
-            this.countriesAndRegions = Output.of(Objects.requireNonNull(countriesAndRegions));
-            return this;
+            return countriesAndRegions(Output.of(countriesAndRegions));
         }
+
+        /**
+         * @param countriesAndRegions List of countries and/or regions in two-letter format specified by ISO 3166-2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countriesAndRegions(String... countriesAndRegions) {
             return countriesAndRegions(List.of(countriesAndRegions));
         }
+
+        /**
+         * @param includeUnknownCountriesAndRegions Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeUnknownCountriesAndRegions(@Nullable Output<Boolean> includeUnknownCountriesAndRegions) {
-            this.includeUnknownCountriesAndRegions = includeUnknownCountriesAndRegions;
+            $.includeUnknownCountriesAndRegions = includeUnknownCountriesAndRegions;
             return this;
         }
-        public Builder includeUnknownCountriesAndRegions(@Nullable Boolean includeUnknownCountriesAndRegions) {
-            this.includeUnknownCountriesAndRegions = Codegen.ofNullable(includeUnknownCountriesAndRegions);
-            return this;
-        }        public NamedLocationCountryArgs build() {
-            return new NamedLocationCountryArgs(countriesAndRegions, includeUnknownCountriesAndRegions);
+
+        /**
+         * @param includeUnknownCountriesAndRegions Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeUnknownCountriesAndRegions(Boolean includeUnknownCountriesAndRegions) {
+            return includeUnknownCountriesAndRegions(Output.of(includeUnknownCountriesAndRegions));
+        }
+
+        public NamedLocationCountryArgs build() {
+            $.countriesAndRegions = Objects.requireNonNull($.countriesAndRegions, "expected parameter 'countriesAndRegions' to be non-null");
+            return $;
         }
     }
+
 }

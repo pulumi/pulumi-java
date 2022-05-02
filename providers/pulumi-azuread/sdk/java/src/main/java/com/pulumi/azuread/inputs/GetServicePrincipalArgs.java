@@ -19,10 +19,14 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
+    /**
+     * @return The application ID (client ID) of the application associated with this service principal.
+     * 
+     */
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -30,10 +34,14 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
+    /**
+     * @return The display name of the application associated with this service principal.
+     * 
+     */
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -41,64 +49,78 @@ public final class GetServicePrincipalArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
+    /**
+     * @return The object ID of the service principal.
+     * 
+     */
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
-    public GetServicePrincipalArgs(
-        @Nullable String applicationId,
-        @Nullable String displayName,
-        @Nullable String objectId) {
-        this.applicationId = applicationId;
-        this.displayName = displayName;
-        this.objectId = objectId;
-    }
+    private GetServicePrincipalArgs() {}
 
-    private GetServicePrincipalArgs() {
-        this.applicationId = null;
-        this.displayName = null;
-        this.objectId = null;
+    private GetServicePrincipalArgs(GetServicePrincipalArgs $) {
+        this.applicationId = $.applicationId;
+        this.displayName = $.displayName;
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServicePrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String displayName;
-        private @Nullable String objectId;
+        private GetServicePrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServicePrincipalArgs();
         }
 
         public Builder(GetServicePrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.displayName = defaults.displayName;
-    	      this.objectId = defaults.objectId;
+            $ = new GetServicePrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The application ID (client ID) of the application associated with this service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
+        /**
+         * @param displayName The display name of the application associated with this service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param objectId The object ID of the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
-        }        public GetServicePrincipalArgs build() {
-            return new GetServicePrincipalArgs(applicationId, displayName, objectId);
+        }
+
+        public GetServicePrincipalArgs build() {
+            return $;
         }
     }
+
 }

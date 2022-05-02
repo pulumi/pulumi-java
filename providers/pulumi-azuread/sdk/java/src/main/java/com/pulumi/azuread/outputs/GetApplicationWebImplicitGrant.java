@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationWebImplicitGrant {
     /**
-     * Whether this web application can request an access token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an access token using OAuth 2.0 implicit flow.
      * 
      */
     private final Boolean accessTokenIssuanceEnabled;
     /**
-     * Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an ID token using OAuth 2.0 implicit flow.
      * 
      */
     private final Boolean idTokenIssuanceEnabled;
@@ -29,16 +29,16 @@ public final class GetApplicationWebImplicitGrant {
     }
 
     /**
-     * Whether this web application can request an access token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an access token using OAuth 2.0 implicit flow.
      * 
-    */
+     */
     public Boolean accessTokenIssuanceEnabled() {
         return this.accessTokenIssuanceEnabled;
     }
     /**
-     * Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an ID token using OAuth 2.0 implicit flow.
      * 
-    */
+     */
     public Boolean idTokenIssuanceEnabled() {
         return this.idTokenIssuanceEnabled;
     }

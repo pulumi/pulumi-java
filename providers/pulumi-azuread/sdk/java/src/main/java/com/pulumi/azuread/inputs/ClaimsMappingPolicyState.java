@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ClaimsMappingPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="definitions")
-      private final @Nullable Output<List<String>> definitions;
+    private @Nullable Output<List<String>> definitions;
 
-    public Output<List<String>> definitions() {
-        return this.definitions == null ? Codegen.empty() : this.definitions;
+    /**
+     * @return A string collection containing a JSON string that defines the rules and settings for this policy
+     * 
+     */
+    public Optional<Output<List<String>>> definitions() {
+        return Optional.ofNullable(this.definitions);
     }
 
     /**
@@ -32,66 +36,96 @@ public final class ClaimsMappingPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The display name for this Claims Mapping Policy.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public ClaimsMappingPolicyState(
-        @Nullable Output<List<String>> definitions,
-        @Nullable Output<String> displayName) {
-        this.definitions = definitions;
-        this.displayName = displayName;
-    }
+    private ClaimsMappingPolicyState() {}
 
-    private ClaimsMappingPolicyState() {
-        this.definitions = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private ClaimsMappingPolicyState(ClaimsMappingPolicyState $) {
+        this.definitions = $.definitions;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClaimsMappingPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> definitions;
-        private @Nullable Output<String> displayName;
+        private ClaimsMappingPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClaimsMappingPolicyState();
         }
 
         public Builder(ClaimsMappingPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definitions = defaults.definitions;
-    	      this.displayName = defaults.displayName;
+            $ = new ClaimsMappingPolicyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitions(@Nullable Output<List<String>> definitions) {
-            this.definitions = definitions;
+            $.definitions = definitions;
             return this;
         }
-        public Builder definitions(@Nullable List<String> definitions) {
-            this.definitions = Codegen.ofNullable(definitions);
-            return this;
+
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
+        public Builder definitions(List<String> definitions) {
+            return definitions(Output.of(definitions));
         }
+
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitions(String... definitions) {
             return definitions(List.of(definitions));
         }
+
+        /**
+         * @param displayName The display name for this Claims Mapping Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public ClaimsMappingPolicyState build() {
-            return new ClaimsMappingPolicyState(definitions, displayName);
+
+        /**
+         * @param displayName The display name for this Claims Mapping Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public ClaimsMappingPolicyState build() {
+            return $;
         }
     }
+
 }

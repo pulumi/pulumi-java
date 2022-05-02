@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalSamlSingleSignOn {
     /**
-     * The relative URI the service provider would redirect to after completion of the single sign-on flow.
+     * @return The relative URI the service provider would redirect to after completion of the single sign-on flow.
      * 
      */
     private final String relayState;
@@ -21,9 +21,9 @@ public final class GetServicePrincipalSamlSingleSignOn {
     }
 
     /**
-     * The relative URI the service provider would redirect to after completion of the single sign-on flow.
+     * @return The relative URI the service provider would redirect to after completion of the single sign-on flow.
      * 
-    */
+     */
     public String relayState() {
         return this.relayState;
     }

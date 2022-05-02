@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return A display name for the password.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    /**
+     * @return The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -43,10 +51,14 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endDateRelative")
-      private final @Nullable Output<String> endDateRelative;
+    private @Nullable Output<String> endDateRelative;
 
-    public Output<String> endDateRelative() {
-        return this.endDateRelative == null ? Codegen.empty() : this.endDateRelative;
+    /**
+     * @return A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> endDateRelative() {
+        return Optional.ofNullable(this.endDateRelative);
     }
 
     /**
@@ -54,10 +66,14 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    /**
+     * @return A UUID used to uniquely identify this password credential.
+     * 
+     */
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -65,10 +81,14 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rotateWhenChanged")
-      private final @Nullable Output<Map<String,String>> rotateWhenChanged;
+    private @Nullable Output<Map<String,String>> rotateWhenChanged;
 
-    public Output<Map<String,String>> rotateWhenChanged() {
-        return this.rotateWhenChanged == null ? Codegen.empty() : this.rotateWhenChanged;
+    /**
+     * @return A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> rotateWhenChanged() {
+        return Optional.ofNullable(this.rotateWhenChanged);
     }
 
     /**
@@ -76,21 +96,29 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Output<String> servicePrincipalId;
+    private @Nullable Output<String> servicePrincipalId;
 
-    public Output<String> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
+    /**
+     * @return The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> servicePrincipalId() {
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
-     * The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
+     * The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    /**
+     * @return The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -98,141 +126,218 @@ public final class ServicePrincipalPasswordState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    /**
+     * @return The password for this service principal, which is generated by Azure Active Directory.
+     * 
+     */
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ServicePrincipalPasswordState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> endDateRelative,
-        @Nullable Output<String> keyId,
-        @Nullable Output<Map<String,String>> rotateWhenChanged,
-        @Nullable Output<String> servicePrincipalId,
-        @Nullable Output<String> startDate,
-        @Nullable Output<String> value) {
-        this.displayName = displayName;
-        this.endDate = endDate;
-        this.endDateRelative = endDateRelative;
-        this.keyId = keyId;
-        this.rotateWhenChanged = rotateWhenChanged;
-        this.servicePrincipalId = servicePrincipalId;
-        this.startDate = startDate;
-        this.value = value;
-    }
+    private ServicePrincipalPasswordState() {}
 
-    private ServicePrincipalPasswordState() {
-        this.displayName = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.endDateRelative = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.rotateWhenChanged = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.value = Codegen.empty();
+    private ServicePrincipalPasswordState(ServicePrincipalPasswordState $) {
+        this.displayName = $.displayName;
+        this.endDate = $.endDate;
+        this.endDateRelative = $.endDateRelative;
+        this.keyId = $.keyId;
+        this.rotateWhenChanged = $.rotateWhenChanged;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.startDate = $.startDate;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalPasswordState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> endDateRelative;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<Map<String,String>> rotateWhenChanged;
-        private @Nullable Output<String> servicePrincipalId;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<String> value;
+        private ServicePrincipalPasswordState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalPasswordState();
         }
 
         public Builder(ServicePrincipalPasswordState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.endDate = defaults.endDate;
-    	      this.endDateRelative = defaults.endDateRelative;
-    	      this.keyId = defaults.keyId;
-    	      this.rotateWhenChanged = defaults.rotateWhenChanged;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.startDate = defaults.startDate;
-    	      this.value = defaults.value;
+            $ = new ServicePrincipalPasswordState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName A display name for the password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName A display name for the password.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param endDate The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        /**
+         * @param endDate The end date until which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
+        /**
+         * @param endDateRelative A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDateRelative(@Nullable Output<String> endDateRelative) {
-            this.endDateRelative = endDateRelative;
+            $.endDateRelative = endDateRelative;
             return this;
         }
-        public Builder endDateRelative(@Nullable String endDateRelative) {
-            this.endDateRelative = Codegen.ofNullable(endDateRelative);
-            return this;
+
+        /**
+         * @param endDateRelative A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endDateRelative(String endDateRelative) {
+            return endDateRelative(Output.of(endDateRelative));
         }
+
+        /**
+         * @param keyId A UUID used to uniquely identify this password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        /**
+         * @param keyId A UUID used to uniquely identify this password credential.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
+        /**
+         * @param rotateWhenChanged A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotateWhenChanged(@Nullable Output<Map<String,String>> rotateWhenChanged) {
-            this.rotateWhenChanged = rotateWhenChanged;
+            $.rotateWhenChanged = rotateWhenChanged;
             return this;
         }
-        public Builder rotateWhenChanged(@Nullable Map<String,String> rotateWhenChanged) {
-            this.rotateWhenChanged = Codegen.ofNullable(rotateWhenChanged);
-            return this;
+
+        /**
+         * @param rotateWhenChanged A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rotateWhenChanged(Map<String,String> rotateWhenChanged) {
+            return rotateWhenChanged(Output.of(rotateWhenChanged));
         }
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<String> servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
-        public Builder servicePrincipalId(@Nullable String servicePrincipalId) {
-            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
-            return this;
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder servicePrincipalId(String servicePrincipalId) {
+            return servicePrincipalId(Output.of(servicePrincipalId));
         }
+
+        /**
+         * @param startDate The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        /**
+         * @param startDate The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
+        /**
+         * @param value The password for this service principal, which is generated by Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ServicePrincipalPasswordState build() {
-            return new ServicePrincipalPasswordState(displayName, endDate, endDateRelative, keyId, rotateWhenChanged, servicePrincipalId, startDate, value);
+
+        /**
+         * @param value The password for this service principal, which is generated by Azure Active Directory.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ServicePrincipalPasswordState build() {
+            return $;
         }
     }
+
 }

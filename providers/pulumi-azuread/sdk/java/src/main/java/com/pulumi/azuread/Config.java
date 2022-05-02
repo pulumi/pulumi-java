@@ -49,7 +49,7 @@ public final class Config {
         return Codegen.stringProp("clientSecret").config(config).get();
     }
 /**
- * Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
+ * Disable the Terraform Partner ID, which is used if a custom `partner_id` isn&#39;t specified
  * 
  */
     public Optional<Boolean> disableTerraformPartnerId() {

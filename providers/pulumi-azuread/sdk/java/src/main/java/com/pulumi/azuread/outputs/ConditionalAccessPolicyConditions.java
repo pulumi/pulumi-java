@@ -18,42 +18,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicyConditions {
     /**
-     * An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
+     * @return An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
      * 
      */
     private final ConditionalAccessPolicyConditionsApplications applications;
     /**
-     * A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+     * @return A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
      * 
      */
     private final List<String> clientAppTypes;
     /**
-     * A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
+     * @return A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
      * 
      */
     private final @Nullable ConditionalAccessPolicyConditionsDevices devices;
     /**
-     * A `locations` block as documented below, which specifies locations included in and excluded from the policy.
+     * @return A `locations` block as documented below, which specifies locations included in and excluded from the policy.
      * 
      */
-    private final ConditionalAccessPolicyConditionsLocations locations;
+    private final @Nullable ConditionalAccessPolicyConditionsLocations locations;
     /**
-     * A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+     * @return A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
      * 
      */
-    private final ConditionalAccessPolicyConditionsPlatforms platforms;
+    private final @Nullable ConditionalAccessPolicyConditionsPlatforms platforms;
     /**
-     * A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * @return A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
      * 
      */
     private final @Nullable List<String> signInRiskLevels;
     /**
-     * A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * @return A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
      * 
      */
     private final @Nullable List<String> userRiskLevels;
     /**
-     * A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
+     * @return A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
      * 
      */
     private final ConditionalAccessPolicyConditionsUsers users;
@@ -63,8 +63,8 @@ public final class ConditionalAccessPolicyConditions {
         @CustomType.Parameter("applications") ConditionalAccessPolicyConditionsApplications applications,
         @CustomType.Parameter("clientAppTypes") List<String> clientAppTypes,
         @CustomType.Parameter("devices") @Nullable ConditionalAccessPolicyConditionsDevices devices,
-        @CustomType.Parameter("locations") ConditionalAccessPolicyConditionsLocations locations,
-        @CustomType.Parameter("platforms") ConditionalAccessPolicyConditionsPlatforms platforms,
+        @CustomType.Parameter("locations") @Nullable ConditionalAccessPolicyConditionsLocations locations,
+        @CustomType.Parameter("platforms") @Nullable ConditionalAccessPolicyConditionsPlatforms platforms,
         @CustomType.Parameter("signInRiskLevels") @Nullable List<String> signInRiskLevels,
         @CustomType.Parameter("userRiskLevels") @Nullable List<String> userRiskLevels,
         @CustomType.Parameter("users") ConditionalAccessPolicyConditionsUsers users) {
@@ -79,58 +79,58 @@ public final class ConditionalAccessPolicyConditions {
     }
 
     /**
-     * An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
+     * @return An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
      * 
-    */
+     */
     public ConditionalAccessPolicyConditionsApplications applications() {
         return this.applications;
     }
     /**
-     * A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+     * @return A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
      * 
-    */
+     */
     public List<String> clientAppTypes() {
         return this.clientAppTypes;
     }
     /**
-     * A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
+     * @return A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
      * 
-    */
+     */
     public Optional<ConditionalAccessPolicyConditionsDevices> devices() {
         return Optional.ofNullable(this.devices);
     }
     /**
-     * A `locations` block as documented below, which specifies locations included in and excluded from the policy.
+     * @return A `locations` block as documented below, which specifies locations included in and excluded from the policy.
      * 
-    */
-    public ConditionalAccessPolicyConditionsLocations locations() {
-        return this.locations;
+     */
+    public Optional<ConditionalAccessPolicyConditionsLocations> locations() {
+        return Optional.ofNullable(this.locations);
     }
     /**
-     * A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+     * @return A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
      * 
-    */
-    public ConditionalAccessPolicyConditionsPlatforms platforms() {
-        return this.platforms;
+     */
+    public Optional<ConditionalAccessPolicyConditionsPlatforms> platforms() {
+        return Optional.ofNullable(this.platforms);
     }
     /**
-     * A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * @return A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
      * 
-    */
+     */
     public List<String> signInRiskLevels() {
         return this.signInRiskLevels == null ? List.of() : this.signInRiskLevels;
     }
     /**
-     * A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * @return A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
      * 
-    */
+     */
     public List<String> userRiskLevels() {
         return this.userRiskLevels == null ? List.of() : this.userRiskLevels;
     }
     /**
-     * A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
+     * @return A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
      * 
-    */
+     */
     public ConditionalAccessPolicyConditionsUsers users() {
         return this.users;
     }
@@ -147,8 +147,8 @@ public final class ConditionalAccessPolicyConditions {
         private ConditionalAccessPolicyConditionsApplications applications;
         private List<String> clientAppTypes;
         private @Nullable ConditionalAccessPolicyConditionsDevices devices;
-        private ConditionalAccessPolicyConditionsLocations locations;
-        private ConditionalAccessPolicyConditionsPlatforms platforms;
+        private @Nullable ConditionalAccessPolicyConditionsLocations locations;
+        private @Nullable ConditionalAccessPolicyConditionsPlatforms platforms;
         private @Nullable List<String> signInRiskLevels;
         private @Nullable List<String> userRiskLevels;
         private ConditionalAccessPolicyConditionsUsers users;
@@ -184,12 +184,12 @@ public final class ConditionalAccessPolicyConditions {
             this.devices = devices;
             return this;
         }
-        public Builder locations(ConditionalAccessPolicyConditionsLocations locations) {
-            this.locations = Objects.requireNonNull(locations);
+        public Builder locations(@Nullable ConditionalAccessPolicyConditionsLocations locations) {
+            this.locations = locations;
             return this;
         }
-        public Builder platforms(ConditionalAccessPolicyConditionsPlatforms platforms) {
-            this.platforms = Objects.requireNonNull(platforms);
+        public Builder platforms(@Nullable ConditionalAccessPolicyConditionsPlatforms platforms) {
+            this.platforms = platforms;
             return this;
         }
         public Builder signInRiskLevels(@Nullable List<String> signInRiskLevels) {

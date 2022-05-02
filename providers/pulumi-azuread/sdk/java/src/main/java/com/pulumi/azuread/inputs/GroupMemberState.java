@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class GroupMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupObjectId")
-      private final @Nullable Output<String> groupObjectId;
+    private @Nullable Output<String> groupObjectId;
 
-    public Output<String> groupObjectId() {
-        return this.groupObjectId == null ? Codegen.empty() : this.groupObjectId;
+    /**
+     * @return The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> groupObjectId() {
+        return Optional.ofNullable(this.groupObjectId);
     }
 
     /**
@@ -31,63 +35,86 @@ public final class GroupMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberObjectId")
-      private final @Nullable Output<String> memberObjectId;
+    private @Nullable Output<String> memberObjectId;
 
-    public Output<String> memberObjectId() {
-        return this.memberObjectId == null ? Codegen.empty() : this.memberObjectId;
+    /**
+     * @return The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> memberObjectId() {
+        return Optional.ofNullable(this.memberObjectId);
     }
 
-    public GroupMemberState(
-        @Nullable Output<String> groupObjectId,
-        @Nullable Output<String> memberObjectId) {
-        this.groupObjectId = groupObjectId;
-        this.memberObjectId = memberObjectId;
-    }
+    private GroupMemberState() {}
 
-    private GroupMemberState() {
-        this.groupObjectId = Codegen.empty();
-        this.memberObjectId = Codegen.empty();
+    private GroupMemberState(GroupMemberState $) {
+        this.groupObjectId = $.groupObjectId;
+        this.memberObjectId = $.memberObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupObjectId;
-        private @Nullable Output<String> memberObjectId;
+        private GroupMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMemberState();
         }
 
         public Builder(GroupMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupObjectId = defaults.groupObjectId;
-    	      this.memberObjectId = defaults.memberObjectId;
+            $ = new GroupMemberState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupObjectId The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupObjectId(@Nullable Output<String> groupObjectId) {
-            this.groupObjectId = groupObjectId;
+            $.groupObjectId = groupObjectId;
             return this;
         }
-        public Builder groupObjectId(@Nullable String groupObjectId) {
-            this.groupObjectId = Codegen.ofNullable(groupObjectId);
-            return this;
+
+        /**
+         * @param groupObjectId The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupObjectId(String groupObjectId) {
+            return groupObjectId(Output.of(groupObjectId));
         }
+
+        /**
+         * @param memberObjectId The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberObjectId(@Nullable Output<String> memberObjectId) {
-            this.memberObjectId = memberObjectId;
+            $.memberObjectId = memberObjectId;
             return this;
         }
-        public Builder memberObjectId(@Nullable String memberObjectId) {
-            this.memberObjectId = Codegen.ofNullable(memberObjectId);
-            return this;
-        }        public GroupMemberState build() {
-            return new GroupMemberState(groupObjectId, memberObjectId);
+
+        /**
+         * @param memberObjectId The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder memberObjectId(String memberObjectId) {
+            return memberObjectId(Output.of(memberObjectId));
+        }
+
+        public GroupMemberState build() {
+            return $;
         }
     }
+
 }

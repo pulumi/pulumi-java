@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetClientConfigResult {
     /**
-     * The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+     * @return The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
      * 
      */
     private final String clientId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * The object ID of the authenticated principal.
+     * @return The object ID of the authenticated principal.
      * 
      */
     private final String objectId;
     /**
-     * The tenant ID of the authenticated principal.
+     * @return The tenant ID of the authenticated principal.
      * 
      */
     private final String tenantId;
@@ -43,30 +43,30 @@ public final class GetClientConfigResult {
     }
 
     /**
-     * The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
+     * @return The client ID (application ID) linked to the authenticated principal, or the application used for delegated authentication.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The object ID of the authenticated principal.
+     * @return The object ID of the authenticated principal.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The tenant ID of the authenticated principal.
+     * @return The tenant ID of the authenticated principal.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

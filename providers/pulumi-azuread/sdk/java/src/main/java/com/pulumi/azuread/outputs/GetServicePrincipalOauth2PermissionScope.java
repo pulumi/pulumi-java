@@ -11,42 +11,42 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalOauth2PermissionScope {
     /**
-     * Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
      * 
      */
     private final String adminConsentDescription;
     /**
-     * Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
      * 
      */
     private final String adminConsentDisplayName;
     /**
-     * Determines if the permission scope is enabled.
+     * @return Determines if the permission scope is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
      */
     private final String id;
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
      * 
      */
     private final String type;
     /**
-     * Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+     * @return Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
      * 
      */
     private final String userConsentDescription;
     /**
-     * Display name for the delegated permission that appears in the end user consent experience.
+     * @return Display name for the delegated permission that appears in the end user consent experience.
      * 
      */
     private final String userConsentDisplayName;
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
      */
     private final String value;
@@ -72,58 +72,58 @@ public final class GetServicePrincipalOauth2PermissionScope {
     }
 
     /**
-     * Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
      * 
-    */
+     */
     public String adminConsentDescription() {
         return this.adminConsentDescription;
     }
     /**
-     * Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
      * 
-    */
+     */
     public String adminConsentDisplayName() {
         return this.adminConsentDisplayName;
     }
     /**
-     * Determines if the permission scope is enabled.
+     * @return Determines if the permission scope is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Possible values are `User` or `Admin`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+     * @return Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
      * 
-    */
+     */
     public String userConsentDescription() {
         return this.userConsentDescription;
     }
     /**
-     * Display name for the delegated permission that appears in the end user consent experience.
+     * @return Display name for the delegated permission that appears in the end user consent experience.
      * 
-    */
+     */
     public String userConsentDisplayName() {
         return this.userConsentDisplayName;
     }
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

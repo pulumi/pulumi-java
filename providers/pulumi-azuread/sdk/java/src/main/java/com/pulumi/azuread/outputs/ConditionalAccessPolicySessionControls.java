@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicySessionControls {
     /**
-     * Whether or not application enforced restrictions are enabled. Defaults to `false`.
+     * @return Whether or not application enforced restrictions are enabled. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean applicationEnforcedRestrictionsEnabled;
     /**
-     * Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
+     * @return Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
      * 
      */
     private final @Nullable String cloudAppSecurityPolicy;
     /**
-     * Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
+     * @return Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
      * 
      */
     private final @Nullable String persistentBrowserMode;
     /**
-     * Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * @return Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
      * 
      */
     private final @Nullable Integer signInFrequency;
     /**
-     * The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * @return The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
      * 
      */
     private final @Nullable String signInFrequencyPeriod;
@@ -54,37 +54,37 @@ public final class ConditionalAccessPolicySessionControls {
     }
 
     /**
-     * Whether or not application enforced restrictions are enabled. Defaults to `false`.
+     * @return Whether or not application enforced restrictions are enabled. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> applicationEnforcedRestrictionsEnabled() {
         return Optional.ofNullable(this.applicationEnforcedRestrictionsEnabled);
     }
     /**
-     * Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
+     * @return Enables cloud app security and specifies the cloud app security policy to use. Possible values are: `blockDownloads`, `mcasConfigured`, `monitorOnly` or `unknownFutureValue`.
      * 
-    */
+     */
     public Optional<String> cloudAppSecurityPolicy() {
         return Optional.ofNullable(this.cloudAppSecurityPolicy);
     }
     /**
-     * Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
+     * @return Session control to define whether to persist cookies or not. Possible values are: `always` or `never`.
      * 
-    */
+     */
     public Optional<String> persistentBrowserMode() {
         return Optional.ofNullable(this.persistentBrowserMode);
     }
     /**
-     * Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * @return Number of days or hours to enforce sign-in frequency. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
      * 
-    */
+     */
     public Optional<Integer> signInFrequency() {
         return Optional.ofNullable(this.signInFrequency);
     }
     /**
-     * The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
+     * @return The time period to enforce sign-in frequency. Possible values are: `hours` or `days`. Required when `sign_in_frequency_period` is specified. Due to an API issue, removing this property forces a new resource to be created.
      * 
-    */
+     */
     public Optional<String> signInFrequencyPeriod() {
         return Optional.ofNullable(this.signInFrequencyPeriod);
     }

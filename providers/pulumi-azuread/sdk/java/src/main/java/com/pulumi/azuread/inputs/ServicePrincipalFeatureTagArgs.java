@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class ServicePrincipalFeatureTagArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="customSingleSignOn")
-      private final @Nullable Output<Boolean> customSingleSignOn;
+    private @Nullable Output<Boolean> customSingleSignOn;
 
-    public Output<Boolean> customSingleSignOn() {
-        return this.customSingleSignOn == null ? Codegen.empty() : this.customSingleSignOn;
+    /**
+     * @return Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> customSingleSignOn() {
+        return Optional.ofNullable(this.customSingleSignOn);
     }
 
     /**
@@ -31,10 +35,14 @@ public final class ServicePrincipalFeatureTagArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enterprise")
-      private final @Nullable Output<Boolean> enterprise;
+    private @Nullable Output<Boolean> enterprise;
 
-    public Output<Boolean> enterprise() {
-        return this.enterprise == null ? Codegen.empty() : this.enterprise;
+    /**
+     * @return Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> enterprise() {
+        return Optional.ofNullable(this.enterprise);
     }
 
     /**
@@ -42,10 +50,14 @@ public final class ServicePrincipalFeatureTagArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="gallery")
-      private final @Nullable Output<Boolean> gallery;
+    private @Nullable Output<Boolean> gallery;
 
-    public Output<Boolean> gallery() {
-        return this.gallery == null ? Codegen.empty() : this.gallery;
+    /**
+     * @return Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> gallery() {
+        return Optional.ofNullable(this.gallery);
     }
 
     /**
@@ -53,89 +65,130 @@ public final class ServicePrincipalFeatureTagArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="hide")
-      private final @Nullable Output<Boolean> hide;
+    private @Nullable Output<Boolean> hide;
 
-    public Output<Boolean> hide() {
-        return this.hide == null ? Codegen.empty() : this.hide;
+    /**
+     * @return Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> hide() {
+        return Optional.ofNullable(this.hide);
     }
 
-    public ServicePrincipalFeatureTagArgs(
-        @Nullable Output<Boolean> customSingleSignOn,
-        @Nullable Output<Boolean> enterprise,
-        @Nullable Output<Boolean> gallery,
-        @Nullable Output<Boolean> hide) {
-        this.customSingleSignOn = customSingleSignOn;
-        this.enterprise = enterprise;
-        this.gallery = gallery;
-        this.hide = hide;
-    }
+    private ServicePrincipalFeatureTagArgs() {}
 
-    private ServicePrincipalFeatureTagArgs() {
-        this.customSingleSignOn = Codegen.empty();
-        this.enterprise = Codegen.empty();
-        this.gallery = Codegen.empty();
-        this.hide = Codegen.empty();
+    private ServicePrincipalFeatureTagArgs(ServicePrincipalFeatureTagArgs $) {
+        this.customSingleSignOn = $.customSingleSignOn;
+        this.enterprise = $.enterprise;
+        this.gallery = $.gallery;
+        this.hide = $.hide;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalFeatureTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> customSingleSignOn;
-        private @Nullable Output<Boolean> enterprise;
-        private @Nullable Output<Boolean> gallery;
-        private @Nullable Output<Boolean> hide;
+        private ServicePrincipalFeatureTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalFeatureTagArgs();
         }
 
         public Builder(ServicePrincipalFeatureTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSingleSignOn = defaults.customSingleSignOn;
-    	      this.enterprise = defaults.enterprise;
-    	      this.gallery = defaults.gallery;
-    	      this.hide = defaults.hide;
+            $ = new ServicePrincipalFeatureTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customSingleSignOn Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSingleSignOn(@Nullable Output<Boolean> customSingleSignOn) {
-            this.customSingleSignOn = customSingleSignOn;
+            $.customSingleSignOn = customSingleSignOn;
             return this;
         }
-        public Builder customSingleSignOn(@Nullable Boolean customSingleSignOn) {
-            this.customSingleSignOn = Codegen.ofNullable(customSingleSignOn);
-            return this;
+
+        /**
+         * @param customSingleSignOn Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customSingleSignOn(Boolean customSingleSignOn) {
+            return customSingleSignOn(Output.of(customSingleSignOn));
         }
+
+        /**
+         * @param enterprise Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enterprise(@Nullable Output<Boolean> enterprise) {
-            this.enterprise = enterprise;
+            $.enterprise = enterprise;
             return this;
         }
-        public Builder enterprise(@Nullable Boolean enterprise) {
-            this.enterprise = Codegen.ofNullable(enterprise);
-            return this;
+
+        /**
+         * @param enterprise Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enterprise(Boolean enterprise) {
+            return enterprise(Output.of(enterprise));
         }
+
+        /**
+         * @param gallery Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gallery(@Nullable Output<Boolean> gallery) {
-            this.gallery = gallery;
+            $.gallery = gallery;
             return this;
         }
-        public Builder gallery(@Nullable Boolean gallery) {
-            this.gallery = Codegen.ofNullable(gallery);
-            return this;
+
+        /**
+         * @param gallery Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gallery(Boolean gallery) {
+            return gallery(Output.of(gallery));
         }
+
+        /**
+         * @param hide Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hide(@Nullable Output<Boolean> hide) {
-            this.hide = hide;
+            $.hide = hide;
             return this;
         }
-        public Builder hide(@Nullable Boolean hide) {
-            this.hide = Codegen.ofNullable(hide);
-            return this;
-        }        public ServicePrincipalFeatureTagArgs build() {
-            return new ServicePrincipalFeatureTagArgs(customSingleSignOn, enterprise, gallery, hide);
+
+        /**
+         * @param hide Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hide(Boolean hide) {
+            return hide(Output.of(hide));
+        }
+
+        public ServicePrincipalFeatureTagArgs build() {
+            return $;
         }
     }
+
 }

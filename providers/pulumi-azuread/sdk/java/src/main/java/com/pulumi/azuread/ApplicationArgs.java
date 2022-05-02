@@ -13,11 +13,11 @@ import com.pulumi.azuread.inputs.ApplicationSinglePageApplicationArgs;
 import com.pulumi.azuread.inputs.ApplicationWebArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="api")
-      private final @Nullable Output<ApplicationApiArgs> api;
+    private @Nullable Output<ApplicationApiArgs> api;
 
-    public Output<ApplicationApiArgs> api() {
-        return this.api == null ? Codegen.empty() : this.api;
+    /**
+     * @return An `api` block as documented below, which configures API related settings for this application.
+     * 
+     */
+    public Optional<Output<ApplicationApiArgs>> api() {
+        return Optional.ofNullable(this.api);
     }
 
     /**
@@ -41,10 +45,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appRoles")
-      private final @Nullable Output<List<ApplicationAppRoleArgs>> appRoles;
+    private @Nullable Output<List<ApplicationAppRoleArgs>> appRoles;
 
-    public Output<List<ApplicationAppRoleArgs>> appRoles() {
-        return this.appRoles == null ? Codegen.empty() : this.appRoles;
+    /**
+     * @return A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+     * 
+     */
+    public Optional<Output<List<ApplicationAppRoleArgs>>> appRoles() {
+        return Optional.ofNullable(this.appRoles);
     }
 
     /**
@@ -52,10 +60,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceOnlyAuthEnabled")
-      private final @Nullable Output<Boolean> deviceOnlyAuthEnabled;
+    private @Nullable Output<Boolean> deviceOnlyAuthEnabled;
 
-    public Output<Boolean> deviceOnlyAuthEnabled() {
-        return this.deviceOnlyAuthEnabled == null ? Codegen.empty() : this.deviceOnlyAuthEnabled;
+    /**
+     * @return Specifies whether this application supports device authentication without a user. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> deviceOnlyAuthEnabled() {
+        return Optional.ofNullable(this.deviceOnlyAuthEnabled);
     }
 
     /**
@@ -63,21 +75,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return The display name for the application.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
 
     /**
-     * Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+     * Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
      * 
      */
     @Import(name="fallbackPublicClientEnabled")
-      private final @Nullable Output<Boolean> fallbackPublicClientEnabled;
+    private @Nullable Output<Boolean> fallbackPublicClientEnabled;
 
-    public Output<Boolean> fallbackPublicClientEnabled() {
-        return this.fallbackPublicClientEnabled == null ? Codegen.empty() : this.fallbackPublicClientEnabled;
+    /**
+     * @return Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> fallbackPublicClientEnabled() {
+        return Optional.ofNullable(this.fallbackPublicClientEnabled);
     }
 
     /**
@@ -85,10 +105,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureTags")
-      private final @Nullable Output<List<ApplicationFeatureTagArgs>> featureTags;
+    private @Nullable Output<List<ApplicationFeatureTagArgs>> featureTags;
 
-    public Output<List<ApplicationFeatureTagArgs>> featureTags() {
-        return this.featureTags == null ? Codegen.empty() : this.featureTags;
+    /**
+     * @return A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+     * 
+     */
+    public Optional<Output<List<ApplicationFeatureTagArgs>>> featureTags() {
+        return Optional.ofNullable(this.featureTags);
     }
 
     /**
@@ -96,10 +120,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupMembershipClaims")
-      private final @Nullable Output<List<String>> groupMembershipClaims;
+    private @Nullable Output<List<String>> groupMembershipClaims;
 
-    public Output<List<String>> groupMembershipClaims() {
-        return this.groupMembershipClaims == null ? Codegen.empty() : this.groupMembershipClaims;
+    /**
+     * @return Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
+     * 
+     */
+    public Optional<Output<List<String>>> groupMembershipClaims() {
+        return Optional.ofNullable(this.groupMembershipClaims);
     }
 
     /**
@@ -107,10 +135,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifierUris")
-      private final @Nullable Output<List<String>> identifierUris;
+    private @Nullable Output<List<String>> identifierUris;
 
-    public Output<List<String>> identifierUris() {
-        return this.identifierUris == null ? Codegen.empty() : this.identifierUris;
+    /**
+     * @return A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+     * 
+     */
+    public Optional<Output<List<String>>> identifierUris() {
+        return Optional.ofNullable(this.identifierUris);
     }
 
     /**
@@ -118,21 +150,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logoImage")
-      private final @Nullable Output<String> logoImage;
+    private @Nullable Output<String> logoImage;
 
-    public Output<String> logoImage() {
-        return this.logoImage == null ? Codegen.empty() : this.logoImage;
+    /**
+     * @return A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+     * 
+     */
+    public Optional<Output<String>> logoImage() {
+        return Optional.ofNullable(this.logoImage);
     }
 
     /**
-     * URL of the application's marketing page.
+     * URL of the application&#39;s marketing page.
      * 
      */
     @Import(name="marketingUrl")
-      private final @Nullable Output<String> marketingUrl;
+    private @Nullable Output<String> marketingUrl;
 
-    public Output<String> marketingUrl() {
-        return this.marketingUrl == null ? Codegen.empty() : this.marketingUrl;
+    /**
+     * @return URL of the application&#39;s marketing page.
+     * 
+     */
+    public Optional<Output<String>> marketingUrl() {
+        return Optional.ofNullable(this.marketingUrl);
     }
 
     /**
@@ -140,10 +180,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oauth2PostResponseRequired")
-      private final @Nullable Output<Boolean> oauth2PostResponseRequired;
+    private @Nullable Output<Boolean> oauth2PostResponseRequired;
 
-    public Output<Boolean> oauth2PostResponseRequired() {
-        return this.oauth2PostResponseRequired == null ? Codegen.empty() : this.oauth2PostResponseRequired;
+    /**
+     * @return Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. Defaults to `false`, which specifies that only GET requests are allowed.
+     * 
+     */
+    public Optional<Output<Boolean>> oauth2PostResponseRequired() {
+        return Optional.ofNullable(this.oauth2PostResponseRequired);
     }
 
     /**
@@ -151,10 +195,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optionalClaims")
-      private final @Nullable Output<ApplicationOptionalClaimsArgs> optionalClaims;
+    private @Nullable Output<ApplicationOptionalClaimsArgs> optionalClaims;
 
-    public Output<ApplicationOptionalClaimsArgs> optionalClaims() {
-        return this.optionalClaims == null ? Codegen.empty() : this.optionalClaims;
+    /**
+     * @return An `optional_claims` block as documented below.
+     * 
+     */
+    public Optional<Output<ApplicationOptionalClaimsArgs>> optionalClaims() {
+        return Optional.ofNullable(this.optionalClaims);
     }
 
     /**
@@ -162,10 +210,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owners")
-      private final @Nullable Output<List<String>> owners;
+    private @Nullable Output<List<String>> owners;
 
-    public Output<List<String>> owners() {
-        return this.owners == null ? Codegen.empty() : this.owners;
+    /**
+     * @return A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
+     * 
+     */
+    public Optional<Output<List<String>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -173,21 +225,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preventDuplicateNames")
-      private final @Nullable Output<Boolean> preventDuplicateNames;
+    private @Nullable Output<Boolean> preventDuplicateNames;
 
-    public Output<Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames == null ? Codegen.empty() : this.preventDuplicateNames;
+    /**
+     * @return If `true`, will return an error if an existing application is found with the same name. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> preventDuplicateNames() {
+        return Optional.ofNullable(this.preventDuplicateNames);
     }
 
     /**
-     * URL of the application's privacy statement.
+     * URL of the application&#39;s privacy statement.
      * 
      */
     @Import(name="privacyStatementUrl")
-      private final @Nullable Output<String> privacyStatementUrl;
+    private @Nullable Output<String> privacyStatementUrl;
 
-    public Output<String> privacyStatementUrl() {
-        return this.privacyStatementUrl == null ? Codegen.empty() : this.privacyStatementUrl;
+    /**
+     * @return URL of the application&#39;s privacy statement.
+     * 
+     */
+    public Optional<Output<String>> privacyStatementUrl() {
+        return Optional.ofNullable(this.privacyStatementUrl);
     }
 
     /**
@@ -195,10 +255,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicClient")
-      private final @Nullable Output<ApplicationPublicClientArgs> publicClient;
+    private @Nullable Output<ApplicationPublicClientArgs> publicClient;
 
-    public Output<ApplicationPublicClientArgs> publicClient() {
-        return this.publicClient == null ? Codegen.empty() : this.publicClient;
+    /**
+     * @return A `public_client` block as documented below, which configures non-web app or non-web API application settings, for example mobile or other public clients such as an installed application running on a desktop device.
+     * 
+     */
+    public Optional<Output<ApplicationPublicClientArgs>> publicClient() {
+        return Optional.ofNullable(this.publicClient);
     }
 
     /**
@@ -206,10 +270,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiredResourceAccesses")
-      private final @Nullable Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses;
+    private @Nullable Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses;
 
-    public Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses() {
-        return this.requiredResourceAccesses == null ? Codegen.empty() : this.requiredResourceAccesses;
+    /**
+     * @return A collection of `required_resource_access` blocks as documented below.
+     * 
+     */
+    public Optional<Output<List<ApplicationRequiredResourceAccessArgs>>> requiredResourceAccesses() {
+        return Optional.ofNullable(this.requiredResourceAccesses);
     }
 
     /**
@@ -217,10 +285,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signInAudience")
-      private final @Nullable Output<String> signInAudience;
+    private @Nullable Output<String> signInAudience;
 
-    public Output<String> signInAudience() {
-        return this.signInAudience == null ? Codegen.empty() : this.signInAudience;
+    /**
+     * @return The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`. Defaults to `AzureADMyOrg`.
+     * 
+     */
+    public Optional<Output<String>> signInAudience() {
+        return Optional.ofNullable(this.signInAudience);
     }
 
     /**
@@ -228,21 +300,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singlePageApplication")
-      private final @Nullable Output<ApplicationSinglePageApplicationArgs> singlePageApplication;
+    private @Nullable Output<ApplicationSinglePageApplicationArgs> singlePageApplication;
 
-    public Output<ApplicationSinglePageApplicationArgs> singlePageApplication() {
-        return this.singlePageApplication == null ? Codegen.empty() : this.singlePageApplication;
+    /**
+     * @return A `single_page_application` block as documented below, which configures single-page application (SPA) related settings for this application.
+     * 
+     */
+    public Optional<Output<ApplicationSinglePageApplicationArgs>> singlePageApplication() {
+        return Optional.ofNullable(this.singlePageApplication);
     }
 
     /**
-     * URL of the application's support page.
+     * URL of the application&#39;s support page.
      * 
      */
     @Import(name="supportUrl")
-      private final @Nullable Output<String> supportUrl;
+    private @Nullable Output<String> supportUrl;
 
-    public Output<String> supportUrl() {
-        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
+    /**
+     * @return URL of the application&#39;s support page.
+     * 
+     */
+    public Optional<Output<String>> supportUrl() {
+        return Optional.ofNullable(this.supportUrl);
     }
 
     /**
@@ -250,10 +330,14 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    /**
+     * @return A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+     * 
+     */
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -261,21 +345,29 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    /**
+     * @return Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
-     * URL of the application's terms of service statement.
+     * URL of the application&#39;s terms of service statement.
      * 
      */
     @Import(name="termsOfServiceUrl")
-      private final @Nullable Output<String> termsOfServiceUrl;
+    private @Nullable Output<String> termsOfServiceUrl;
 
-    public Output<String> termsOfServiceUrl() {
-        return this.termsOfServiceUrl == null ? Codegen.empty() : this.termsOfServiceUrl;
+    /**
+     * @return URL of the application&#39;s terms of service statement.
+     * 
+     */
+    public Optional<Output<String>> termsOfServiceUrl() {
+        return Optional.ofNullable(this.termsOfServiceUrl);
     }
 
     /**
@@ -283,370 +375,641 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="web")
-      private final @Nullable Output<ApplicationWebArgs> web;
+    private @Nullable Output<ApplicationWebArgs> web;
 
-    public Output<ApplicationWebArgs> web() {
-        return this.web == null ? Codegen.empty() : this.web;
+    /**
+     * @return A `web` block as documented below, which configures web related settings for this application.
+     * 
+     */
+    public Optional<Output<ApplicationWebArgs>> web() {
+        return Optional.ofNullable(this.web);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<ApplicationApiArgs> api,
-        @Nullable Output<List<ApplicationAppRoleArgs>> appRoles,
-        @Nullable Output<Boolean> deviceOnlyAuthEnabled,
-        Output<String> displayName,
-        @Nullable Output<Boolean> fallbackPublicClientEnabled,
-        @Nullable Output<List<ApplicationFeatureTagArgs>> featureTags,
-        @Nullable Output<List<String>> groupMembershipClaims,
-        @Nullable Output<List<String>> identifierUris,
-        @Nullable Output<String> logoImage,
-        @Nullable Output<String> marketingUrl,
-        @Nullable Output<Boolean> oauth2PostResponseRequired,
-        @Nullable Output<ApplicationOptionalClaimsArgs> optionalClaims,
-        @Nullable Output<List<String>> owners,
-        @Nullable Output<Boolean> preventDuplicateNames,
-        @Nullable Output<String> privacyStatementUrl,
-        @Nullable Output<ApplicationPublicClientArgs> publicClient,
-        @Nullable Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses,
-        @Nullable Output<String> signInAudience,
-        @Nullable Output<ApplicationSinglePageApplicationArgs> singlePageApplication,
-        @Nullable Output<String> supportUrl,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> templateId,
-        @Nullable Output<String> termsOfServiceUrl,
-        @Nullable Output<ApplicationWebArgs> web) {
-        this.api = api;
-        this.appRoles = appRoles;
-        this.deviceOnlyAuthEnabled = deviceOnlyAuthEnabled;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.fallbackPublicClientEnabled = fallbackPublicClientEnabled;
-        this.featureTags = featureTags;
-        this.groupMembershipClaims = groupMembershipClaims;
-        this.identifierUris = identifierUris;
-        this.logoImage = logoImage;
-        this.marketingUrl = marketingUrl;
-        this.oauth2PostResponseRequired = oauth2PostResponseRequired;
-        this.optionalClaims = optionalClaims;
-        this.owners = owners;
-        this.preventDuplicateNames = preventDuplicateNames;
-        this.privacyStatementUrl = privacyStatementUrl;
-        this.publicClient = publicClient;
-        this.requiredResourceAccesses = requiredResourceAccesses;
-        this.signInAudience = signInAudience;
-        this.singlePageApplication = singlePageApplication;
-        this.supportUrl = supportUrl;
-        this.tags = tags;
-        this.templateId = templateId;
-        this.termsOfServiceUrl = termsOfServiceUrl;
-        this.web = web;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.api = Codegen.empty();
-        this.appRoles = Codegen.empty();
-        this.deviceOnlyAuthEnabled = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.fallbackPublicClientEnabled = Codegen.empty();
-        this.featureTags = Codegen.empty();
-        this.groupMembershipClaims = Codegen.empty();
-        this.identifierUris = Codegen.empty();
-        this.logoImage = Codegen.empty();
-        this.marketingUrl = Codegen.empty();
-        this.oauth2PostResponseRequired = Codegen.empty();
-        this.optionalClaims = Codegen.empty();
-        this.owners = Codegen.empty();
-        this.preventDuplicateNames = Codegen.empty();
-        this.privacyStatementUrl = Codegen.empty();
-        this.publicClient = Codegen.empty();
-        this.requiredResourceAccesses = Codegen.empty();
-        this.signInAudience = Codegen.empty();
-        this.singlePageApplication = Codegen.empty();
-        this.supportUrl = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.termsOfServiceUrl = Codegen.empty();
-        this.web = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.api = $.api;
+        this.appRoles = $.appRoles;
+        this.deviceOnlyAuthEnabled = $.deviceOnlyAuthEnabled;
+        this.displayName = $.displayName;
+        this.fallbackPublicClientEnabled = $.fallbackPublicClientEnabled;
+        this.featureTags = $.featureTags;
+        this.groupMembershipClaims = $.groupMembershipClaims;
+        this.identifierUris = $.identifierUris;
+        this.logoImage = $.logoImage;
+        this.marketingUrl = $.marketingUrl;
+        this.oauth2PostResponseRequired = $.oauth2PostResponseRequired;
+        this.optionalClaims = $.optionalClaims;
+        this.owners = $.owners;
+        this.preventDuplicateNames = $.preventDuplicateNames;
+        this.privacyStatementUrl = $.privacyStatementUrl;
+        this.publicClient = $.publicClient;
+        this.requiredResourceAccesses = $.requiredResourceAccesses;
+        this.signInAudience = $.signInAudience;
+        this.singlePageApplication = $.singlePageApplication;
+        this.supportUrl = $.supportUrl;
+        this.tags = $.tags;
+        this.templateId = $.templateId;
+        this.termsOfServiceUrl = $.termsOfServiceUrl;
+        this.web = $.web;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApiArgs> api;
-        private @Nullable Output<List<ApplicationAppRoleArgs>> appRoles;
-        private @Nullable Output<Boolean> deviceOnlyAuthEnabled;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> fallbackPublicClientEnabled;
-        private @Nullable Output<List<ApplicationFeatureTagArgs>> featureTags;
-        private @Nullable Output<List<String>> groupMembershipClaims;
-        private @Nullable Output<List<String>> identifierUris;
-        private @Nullable Output<String> logoImage;
-        private @Nullable Output<String> marketingUrl;
-        private @Nullable Output<Boolean> oauth2PostResponseRequired;
-        private @Nullable Output<ApplicationOptionalClaimsArgs> optionalClaims;
-        private @Nullable Output<List<String>> owners;
-        private @Nullable Output<Boolean> preventDuplicateNames;
-        private @Nullable Output<String> privacyStatementUrl;
-        private @Nullable Output<ApplicationPublicClientArgs> publicClient;
-        private @Nullable Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses;
-        private @Nullable Output<String> signInAudience;
-        private @Nullable Output<ApplicationSinglePageApplicationArgs> singlePageApplication;
-        private @Nullable Output<String> supportUrl;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> templateId;
-        private @Nullable Output<String> termsOfServiceUrl;
-        private @Nullable Output<ApplicationWebArgs> web;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.appRoles = defaults.appRoles;
-    	      this.deviceOnlyAuthEnabled = defaults.deviceOnlyAuthEnabled;
-    	      this.displayName = defaults.displayName;
-    	      this.fallbackPublicClientEnabled = defaults.fallbackPublicClientEnabled;
-    	      this.featureTags = defaults.featureTags;
-    	      this.groupMembershipClaims = defaults.groupMembershipClaims;
-    	      this.identifierUris = defaults.identifierUris;
-    	      this.logoImage = defaults.logoImage;
-    	      this.marketingUrl = defaults.marketingUrl;
-    	      this.oauth2PostResponseRequired = defaults.oauth2PostResponseRequired;
-    	      this.optionalClaims = defaults.optionalClaims;
-    	      this.owners = defaults.owners;
-    	      this.preventDuplicateNames = defaults.preventDuplicateNames;
-    	      this.privacyStatementUrl = defaults.privacyStatementUrl;
-    	      this.publicClient = defaults.publicClient;
-    	      this.requiredResourceAccesses = defaults.requiredResourceAccesses;
-    	      this.signInAudience = defaults.signInAudience;
-    	      this.singlePageApplication = defaults.singlePageApplication;
-    	      this.supportUrl = defaults.supportUrl;
-    	      this.tags = defaults.tags;
-    	      this.templateId = defaults.templateId;
-    	      this.termsOfServiceUrl = defaults.termsOfServiceUrl;
-    	      this.web = defaults.web;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param api An `api` block as documented below, which configures API related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder api(@Nullable Output<ApplicationApiArgs> api) {
-            this.api = api;
+            $.api = api;
             return this;
         }
-        public Builder api(@Nullable ApplicationApiArgs api) {
-            this.api = Codegen.ofNullable(api);
-            return this;
+
+        /**
+         * @param api An `api` block as documented below, which configures API related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder api(ApplicationApiArgs api) {
+            return api(Output.of(api));
         }
+
+        /**
+         * @param appRoles A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoles(@Nullable Output<List<ApplicationAppRoleArgs>> appRoles) {
-            this.appRoles = appRoles;
+            $.appRoles = appRoles;
             return this;
         }
-        public Builder appRoles(@Nullable List<ApplicationAppRoleArgs> appRoles) {
-            this.appRoles = Codegen.ofNullable(appRoles);
-            return this;
+
+        /**
+         * @param appRoles A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appRoles(List<ApplicationAppRoleArgs> appRoles) {
+            return appRoles(Output.of(appRoles));
         }
+
+        /**
+         * @param appRoles A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoles(ApplicationAppRoleArgs... appRoles) {
             return appRoles(List.of(appRoles));
         }
+
+        /**
+         * @param deviceOnlyAuthEnabled Specifies whether this application supports device authentication without a user. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceOnlyAuthEnabled(@Nullable Output<Boolean> deviceOnlyAuthEnabled) {
-            this.deviceOnlyAuthEnabled = deviceOnlyAuthEnabled;
+            $.deviceOnlyAuthEnabled = deviceOnlyAuthEnabled;
             return this;
         }
-        public Builder deviceOnlyAuthEnabled(@Nullable Boolean deviceOnlyAuthEnabled) {
-            this.deviceOnlyAuthEnabled = Codegen.ofNullable(deviceOnlyAuthEnabled);
-            return this;
+
+        /**
+         * @param deviceOnlyAuthEnabled Specifies whether this application supports device authentication without a user. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deviceOnlyAuthEnabled(Boolean deviceOnlyAuthEnabled) {
+            return deviceOnlyAuthEnabled(Output.of(deviceOnlyAuthEnabled));
         }
+
+        /**
+         * @param displayName The display name for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName The display name for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param fallbackPublicClientEnabled Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fallbackPublicClientEnabled(@Nullable Output<Boolean> fallbackPublicClientEnabled) {
-            this.fallbackPublicClientEnabled = fallbackPublicClientEnabled;
+            $.fallbackPublicClientEnabled = fallbackPublicClientEnabled;
             return this;
         }
-        public Builder fallbackPublicClientEnabled(@Nullable Boolean fallbackPublicClientEnabled) {
-            this.fallbackPublicClientEnabled = Codegen.ofNullable(fallbackPublicClientEnabled);
-            return this;
+
+        /**
+         * @param fallbackPublicClientEnabled Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder fallbackPublicClientEnabled(Boolean fallbackPublicClientEnabled) {
+            return fallbackPublicClientEnabled(Output.of(fallbackPublicClientEnabled));
         }
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureTags(@Nullable Output<List<ApplicationFeatureTagArgs>> featureTags) {
-            this.featureTags = featureTags;
+            $.featureTags = featureTags;
             return this;
         }
-        public Builder featureTags(@Nullable List<ApplicationFeatureTagArgs> featureTags) {
-            this.featureTags = Codegen.ofNullable(featureTags);
-            return this;
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureTags(List<ApplicationFeatureTagArgs> featureTags) {
+            return featureTags(Output.of(featureTags));
         }
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureTags(ApplicationFeatureTagArgs... featureTags) {
             return featureTags(List.of(featureTags));
         }
+
+        /**
+         * @param groupMembershipClaims Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembershipClaims(@Nullable Output<List<String>> groupMembershipClaims) {
-            this.groupMembershipClaims = groupMembershipClaims;
+            $.groupMembershipClaims = groupMembershipClaims;
             return this;
         }
-        public Builder groupMembershipClaims(@Nullable List<String> groupMembershipClaims) {
-            this.groupMembershipClaims = Codegen.ofNullable(groupMembershipClaims);
-            return this;
+
+        /**
+         * @param groupMembershipClaims Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupMembershipClaims(List<String> groupMembershipClaims) {
+            return groupMembershipClaims(Output.of(groupMembershipClaims));
         }
+
+        /**
+         * @param groupMembershipClaims Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembershipClaims(String... groupMembershipClaims) {
             return groupMembershipClaims(List.of(groupMembershipClaims));
         }
+
+        /**
+         * @param identifierUris A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifierUris(@Nullable Output<List<String>> identifierUris) {
-            this.identifierUris = identifierUris;
+            $.identifierUris = identifierUris;
             return this;
         }
-        public Builder identifierUris(@Nullable List<String> identifierUris) {
-            this.identifierUris = Codegen.ofNullable(identifierUris);
-            return this;
+
+        /**
+         * @param identifierUris A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder identifierUris(List<String> identifierUris) {
+            return identifierUris(Output.of(identifierUris));
         }
+
+        /**
+         * @param identifierUris A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifierUris(String... identifierUris) {
             return identifierUris(List.of(identifierUris));
         }
+
+        /**
+         * @param logoImage A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logoImage(@Nullable Output<String> logoImage) {
-            this.logoImage = logoImage;
+            $.logoImage = logoImage;
             return this;
         }
-        public Builder logoImage(@Nullable String logoImage) {
-            this.logoImage = Codegen.ofNullable(logoImage);
-            return this;
+
+        /**
+         * @param logoImage A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logoImage(String logoImage) {
+            return logoImage(Output.of(logoImage));
         }
+
+        /**
+         * @param marketingUrl URL of the application&#39;s marketing page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketingUrl(@Nullable Output<String> marketingUrl) {
-            this.marketingUrl = marketingUrl;
+            $.marketingUrl = marketingUrl;
             return this;
         }
-        public Builder marketingUrl(@Nullable String marketingUrl) {
-            this.marketingUrl = Codegen.ofNullable(marketingUrl);
-            return this;
+
+        /**
+         * @param marketingUrl URL of the application&#39;s marketing page.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder marketingUrl(String marketingUrl) {
+            return marketingUrl(Output.of(marketingUrl));
         }
+
+        /**
+         * @param oauth2PostResponseRequired Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. Defaults to `false`, which specifies that only GET requests are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2PostResponseRequired(@Nullable Output<Boolean> oauth2PostResponseRequired) {
-            this.oauth2PostResponseRequired = oauth2PostResponseRequired;
+            $.oauth2PostResponseRequired = oauth2PostResponseRequired;
             return this;
         }
-        public Builder oauth2PostResponseRequired(@Nullable Boolean oauth2PostResponseRequired) {
-            this.oauth2PostResponseRequired = Codegen.ofNullable(oauth2PostResponseRequired);
-            return this;
+
+        /**
+         * @param oauth2PostResponseRequired Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. Defaults to `false`, which specifies that only GET requests are allowed.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder oauth2PostResponseRequired(Boolean oauth2PostResponseRequired) {
+            return oauth2PostResponseRequired(Output.of(oauth2PostResponseRequired));
         }
+
+        /**
+         * @param optionalClaims An `optional_claims` block as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optionalClaims(@Nullable Output<ApplicationOptionalClaimsArgs> optionalClaims) {
-            this.optionalClaims = optionalClaims;
+            $.optionalClaims = optionalClaims;
             return this;
         }
-        public Builder optionalClaims(@Nullable ApplicationOptionalClaimsArgs optionalClaims) {
-            this.optionalClaims = Codegen.ofNullable(optionalClaims);
-            return this;
+
+        /**
+         * @param optionalClaims An `optional_claims` block as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder optionalClaims(ApplicationOptionalClaimsArgs optionalClaims) {
+            return optionalClaims(Output.of(optionalClaims));
         }
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable Output<List<String>> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
-        public Builder owners(@Nullable List<String> owners) {
-            this.owners = Codegen.ofNullable(owners);
-            return this;
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owners(List<String> owners) {
+            return owners(Output.of(owners));
         }
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing application is found with the same name. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preventDuplicateNames(@Nullable Output<Boolean> preventDuplicateNames) {
-            this.preventDuplicateNames = preventDuplicateNames;
+            $.preventDuplicateNames = preventDuplicateNames;
             return this;
         }
-        public Builder preventDuplicateNames(@Nullable Boolean preventDuplicateNames) {
-            this.preventDuplicateNames = Codegen.ofNullable(preventDuplicateNames);
-            return this;
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing application is found with the same name. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preventDuplicateNames(Boolean preventDuplicateNames) {
+            return preventDuplicateNames(Output.of(preventDuplicateNames));
         }
+
+        /**
+         * @param privacyStatementUrl URL of the application&#39;s privacy statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacyStatementUrl(@Nullable Output<String> privacyStatementUrl) {
-            this.privacyStatementUrl = privacyStatementUrl;
+            $.privacyStatementUrl = privacyStatementUrl;
             return this;
         }
-        public Builder privacyStatementUrl(@Nullable String privacyStatementUrl) {
-            this.privacyStatementUrl = Codegen.ofNullable(privacyStatementUrl);
-            return this;
+
+        /**
+         * @param privacyStatementUrl URL of the application&#39;s privacy statement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privacyStatementUrl(String privacyStatementUrl) {
+            return privacyStatementUrl(Output.of(privacyStatementUrl));
         }
+
+        /**
+         * @param publicClient A `public_client` block as documented below, which configures non-web app or non-web API application settings, for example mobile or other public clients such as an installed application running on a desktop device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicClient(@Nullable Output<ApplicationPublicClientArgs> publicClient) {
-            this.publicClient = publicClient;
+            $.publicClient = publicClient;
             return this;
         }
-        public Builder publicClient(@Nullable ApplicationPublicClientArgs publicClient) {
-            this.publicClient = Codegen.ofNullable(publicClient);
-            return this;
+
+        /**
+         * @param publicClient A `public_client` block as documented below, which configures non-web app or non-web API application settings, for example mobile or other public clients such as an installed application running on a desktop device.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder publicClient(ApplicationPublicClientArgs publicClient) {
+            return publicClient(Output.of(publicClient));
         }
+
+        /**
+         * @param requiredResourceAccesses A collection of `required_resource_access` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredResourceAccesses(@Nullable Output<List<ApplicationRequiredResourceAccessArgs>> requiredResourceAccesses) {
-            this.requiredResourceAccesses = requiredResourceAccesses;
+            $.requiredResourceAccesses = requiredResourceAccesses;
             return this;
         }
-        public Builder requiredResourceAccesses(@Nullable List<ApplicationRequiredResourceAccessArgs> requiredResourceAccesses) {
-            this.requiredResourceAccesses = Codegen.ofNullable(requiredResourceAccesses);
-            return this;
+
+        /**
+         * @param requiredResourceAccesses A collection of `required_resource_access` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requiredResourceAccesses(List<ApplicationRequiredResourceAccessArgs> requiredResourceAccesses) {
+            return requiredResourceAccesses(Output.of(requiredResourceAccesses));
         }
+
+        /**
+         * @param requiredResourceAccesses A collection of `required_resource_access` blocks as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredResourceAccesses(ApplicationRequiredResourceAccessArgs... requiredResourceAccesses) {
             return requiredResourceAccesses(List.of(requiredResourceAccesses));
         }
+
+        /**
+         * @param signInAudience The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`. Defaults to `AzureADMyOrg`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signInAudience(@Nullable Output<String> signInAudience) {
-            this.signInAudience = signInAudience;
+            $.signInAudience = signInAudience;
             return this;
         }
-        public Builder signInAudience(@Nullable String signInAudience) {
-            this.signInAudience = Codegen.ofNullable(signInAudience);
-            return this;
+
+        /**
+         * @param signInAudience The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`. Defaults to `AzureADMyOrg`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signInAudience(String signInAudience) {
+            return signInAudience(Output.of(signInAudience));
         }
+
+        /**
+         * @param singlePageApplication A `single_page_application` block as documented below, which configures single-page application (SPA) related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singlePageApplication(@Nullable Output<ApplicationSinglePageApplicationArgs> singlePageApplication) {
-            this.singlePageApplication = singlePageApplication;
+            $.singlePageApplication = singlePageApplication;
             return this;
         }
-        public Builder singlePageApplication(@Nullable ApplicationSinglePageApplicationArgs singlePageApplication) {
-            this.singlePageApplication = Codegen.ofNullable(singlePageApplication);
-            return this;
+
+        /**
+         * @param singlePageApplication A `single_page_application` block as documented below, which configures single-page application (SPA) related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder singlePageApplication(ApplicationSinglePageApplicationArgs singlePageApplication) {
+            return singlePageApplication(Output.of(singlePageApplication));
         }
+
+        /**
+         * @param supportUrl URL of the application&#39;s support page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
-            this.supportUrl = supportUrl;
+            $.supportUrl = supportUrl;
             return this;
         }
-        public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Codegen.ofNullable(supportUrl);
-            return this;
+
+        /**
+         * @param supportUrl URL of the application&#39;s support page.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder supportUrl(String supportUrl) {
+            return supportUrl(Output.of(supportUrl));
         }
+
+        /**
+         * @param tags A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        /**
+         * @param tags A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
+        /**
+         * @param tags A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
+        /**
+         * @param templateId Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        /**
+         * @param templateId Unique ID for a templated application in the Azure AD App Gallery, from which to create the application. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
+        /**
+         * @param termsOfServiceUrl URL of the application&#39;s terms of service statement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder termsOfServiceUrl(@Nullable Output<String> termsOfServiceUrl) {
-            this.termsOfServiceUrl = termsOfServiceUrl;
+            $.termsOfServiceUrl = termsOfServiceUrl;
             return this;
         }
-        public Builder termsOfServiceUrl(@Nullable String termsOfServiceUrl) {
-            this.termsOfServiceUrl = Codegen.ofNullable(termsOfServiceUrl);
-            return this;
+
+        /**
+         * @param termsOfServiceUrl URL of the application&#39;s terms of service statement.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder termsOfServiceUrl(String termsOfServiceUrl) {
+            return termsOfServiceUrl(Output.of(termsOfServiceUrl));
         }
+
+        /**
+         * @param web A `web` block as documented below, which configures web related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder web(@Nullable Output<ApplicationWebArgs> web) {
-            this.web = web;
+            $.web = web;
             return this;
         }
-        public Builder web(@Nullable ApplicationWebArgs web) {
-            this.web = Codegen.ofNullable(web);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(api, appRoles, deviceOnlyAuthEnabled, displayName, fallbackPublicClientEnabled, featureTags, groupMembershipClaims, identifierUris, logoImage, marketingUrl, oauth2PostResponseRequired, optionalClaims, owners, preventDuplicateNames, privacyStatementUrl, publicClient, requiredResourceAccesses, signInAudience, singlePageApplication, supportUrl, tags, templateId, termsOfServiceUrl, web);
+
+        /**
+         * @param web A `web` block as documented below, which configures web related settings for this application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder web(ApplicationWebArgs web) {
+            return web(Output.of(web));
+        }
+
+        public ApplicationArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

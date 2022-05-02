@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConditionalAccessPolicyConditionsApplications {
     /**
-     * A list of application IDs explicitly excluded from the policy.
+     * @return A list of application IDs explicitly excluded from the policy.
      * 
      */
     private final @Nullable List<String> excludedApplications;
     /**
-     * A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`.
+     * @return A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
      * 
      */
-    private final List<String> includedApplications;
+    private final @Nullable List<String> includedApplications;
     /**
-     * A list of user actions to include. Supported values are `urn:user:registersecurityinfo` and `urn:user:registerdevice`.
+     * @return A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
      * 
      */
     private final @Nullable List<String> includedUserActions;
@@ -30,7 +30,7 @@ public final class ConditionalAccessPolicyConditionsApplications {
     @CustomType.Constructor
     private ConditionalAccessPolicyConditionsApplications(
         @CustomType.Parameter("excludedApplications") @Nullable List<String> excludedApplications,
-        @CustomType.Parameter("includedApplications") List<String> includedApplications,
+        @CustomType.Parameter("includedApplications") @Nullable List<String> includedApplications,
         @CustomType.Parameter("includedUserActions") @Nullable List<String> includedUserActions) {
         this.excludedApplications = excludedApplications;
         this.includedApplications = includedApplications;
@@ -38,23 +38,23 @@ public final class ConditionalAccessPolicyConditionsApplications {
     }
 
     /**
-     * A list of application IDs explicitly excluded from the policy.
+     * @return A list of application IDs explicitly excluded from the policy.
      * 
-    */
+     */
     public List<String> excludedApplications() {
         return this.excludedApplications == null ? List.of() : this.excludedApplications;
     }
     /**
-     * A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`.
+     * @return A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
      * 
-    */
+     */
     public List<String> includedApplications() {
-        return this.includedApplications;
+        return this.includedApplications == null ? List.of() : this.includedApplications;
     }
     /**
-     * A list of user actions to include. Supported values are `urn:user:registersecurityinfo` and `urn:user:registerdevice`.
+     * @return A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
      * 
-    */
+     */
     public List<String> includedUserActions() {
         return this.includedUserActions == null ? List.of() : this.includedUserActions;
     }
@@ -69,7 +69,7 @@ public final class ConditionalAccessPolicyConditionsApplications {
 
     public static final class Builder {
         private @Nullable List<String> excludedApplications;
-        private List<String> includedApplications;
+        private @Nullable List<String> includedApplications;
         private @Nullable List<String> includedUserActions;
 
         public Builder() {
@@ -90,8 +90,8 @@ public final class ConditionalAccessPolicyConditionsApplications {
         public Builder excludedApplications(String... excludedApplications) {
             return excludedApplications(List.of(excludedApplications));
         }
-        public Builder includedApplications(List<String> includedApplications) {
-            this.includedApplications = Objects.requireNonNull(includedApplications);
+        public Builder includedApplications(@Nullable List<String> includedApplications) {
+            this.includedApplications = includedApplications;
             return this;
         }
         public Builder includedApplications(String... includedApplications) {

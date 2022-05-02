@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="adminConsentDescription")
-      private final @Nullable Output<String> adminConsentDescription;
+    private @Nullable Output<String> adminConsentDescription;
 
-    public Output<String> adminConsentDescription() {
-        return this.adminConsentDescription == null ? Codegen.empty() : this.adminConsentDescription;
+    /**
+     * @return Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+     * 
+     */
+    public Optional<Output<String>> adminConsentDescription() {
+        return Optional.ofNullable(this.adminConsentDescription);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="adminConsentDisplayName")
-      private final @Nullable Output<String> adminConsentDisplayName;
+    private @Nullable Output<String> adminConsentDisplayName;
 
-    public Output<String> adminConsentDisplayName() {
-        return this.adminConsentDisplayName == null ? Codegen.empty() : this.adminConsentDisplayName;
+    /**
+     * @return Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+     * 
+     */
+    public Optional<Output<String>> adminConsentDisplayName() {
+        return Optional.ofNullable(this.adminConsentDisplayName);
     }
 
     /**
@@ -43,10 +51,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    /**
+     * @return Determines if the permission scope is enabled. Defaults to `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -54,8 +66,12 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
+    /**
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -65,10 +81,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    /**
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -76,10 +96,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="userConsentDescription")
-      private final @Nullable Output<String> userConsentDescription;
+    private @Nullable Output<String> userConsentDescription;
 
-    public Output<String> userConsentDescription() {
-        return this.userConsentDescription == null ? Codegen.empty() : this.userConsentDescription;
+    /**
+     * @return Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+     * 
+     */
+    public Optional<Output<String>> userConsentDescription() {
+        return Optional.ofNullable(this.userConsentDescription);
     }
 
     /**
@@ -87,10 +111,14 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="userConsentDisplayName")
-      private final @Nullable Output<String> userConsentDisplayName;
+    private @Nullable Output<String> userConsentDisplayName;
 
-    public Output<String> userConsentDisplayName() {
-        return this.userConsentDisplayName == null ? Codegen.empty() : this.userConsentDisplayName;
+    /**
+     * @return Display name for the delegated permission that appears in the end user consent experience.
+     * 
+     */
+    public Optional<Output<String>> userConsentDisplayName() {
+        return Optional.ofNullable(this.userConsentDisplayName);
     }
 
     /**
@@ -98,141 +126,219 @@ public final class ApplicationApiOauth2PermissionScopeArgs extends com.pulumi.re
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    /**
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * 
+     */
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApplicationApiOauth2PermissionScopeArgs(
-        @Nullable Output<String> adminConsentDescription,
-        @Nullable Output<String> adminConsentDisplayName,
-        @Nullable Output<Boolean> enabled,
-        Output<String> id,
-        @Nullable Output<String> type,
-        @Nullable Output<String> userConsentDescription,
-        @Nullable Output<String> userConsentDisplayName,
-        @Nullable Output<String> value) {
-        this.adminConsentDescription = adminConsentDescription;
-        this.adminConsentDisplayName = adminConsentDisplayName;
-        this.enabled = enabled;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = type;
-        this.userConsentDescription = userConsentDescription;
-        this.userConsentDisplayName = userConsentDisplayName;
-        this.value = value;
-    }
+    private ApplicationApiOauth2PermissionScopeArgs() {}
 
-    private ApplicationApiOauth2PermissionScopeArgs() {
-        this.adminConsentDescription = Codegen.empty();
-        this.adminConsentDisplayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userConsentDescription = Codegen.empty();
-        this.userConsentDisplayName = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApplicationApiOauth2PermissionScopeArgs(ApplicationApiOauth2PermissionScopeArgs $) {
+        this.adminConsentDescription = $.adminConsentDescription;
+        this.adminConsentDisplayName = $.adminConsentDisplayName;
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.type = $.type;
+        this.userConsentDescription = $.userConsentDescription;
+        this.userConsentDisplayName = $.userConsentDisplayName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApiOauth2PermissionScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminConsentDescription;
-        private @Nullable Output<String> adminConsentDisplayName;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> id;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> userConsentDescription;
-        private @Nullable Output<String> userConsentDisplayName;
-        private @Nullable Output<String> value;
+        private ApplicationApiOauth2PermissionScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApiOauth2PermissionScopeArgs();
         }
 
         public Builder(ApplicationApiOauth2PermissionScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminConsentDescription = defaults.adminConsentDescription;
-    	      this.adminConsentDisplayName = defaults.adminConsentDisplayName;
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
-    	      this.userConsentDescription = defaults.userConsentDescription;
-    	      this.userConsentDisplayName = defaults.userConsentDisplayName;
-    	      this.value = defaults.value;
+            $ = new ApplicationApiOauth2PermissionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminConsentDescription Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminConsentDescription(@Nullable Output<String> adminConsentDescription) {
-            this.adminConsentDescription = adminConsentDescription;
+            $.adminConsentDescription = adminConsentDescription;
             return this;
         }
-        public Builder adminConsentDescription(@Nullable String adminConsentDescription) {
-            this.adminConsentDescription = Codegen.ofNullable(adminConsentDescription);
-            return this;
+
+        /**
+         * @param adminConsentDescription Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adminConsentDescription(String adminConsentDescription) {
+            return adminConsentDescription(Output.of(adminConsentDescription));
         }
+
+        /**
+         * @param adminConsentDisplayName Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminConsentDisplayName(@Nullable Output<String> adminConsentDisplayName) {
-            this.adminConsentDisplayName = adminConsentDisplayName;
+            $.adminConsentDisplayName = adminConsentDisplayName;
             return this;
         }
-        public Builder adminConsentDisplayName(@Nullable String adminConsentDisplayName) {
-            this.adminConsentDisplayName = Codegen.ofNullable(adminConsentDisplayName);
-            return this;
+
+        /**
+         * @param adminConsentDisplayName Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder adminConsentDisplayName(String adminConsentDisplayName) {
+            return adminConsentDisplayName(Output.of(adminConsentDisplayName));
         }
+
+        /**
+         * @param enabled Determines if the permission scope is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        /**
+         * @param enabled Determines if the permission scope is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param id The unique identifier of the delegated permission. Must be a valid UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
+        /**
+         * @param id The unique identifier of the delegated permission. Must be a valid UUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
+        /**
+         * @param type Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        /**
+         * @param type Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
+        /**
+         * @param userConsentDescription Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConsentDescription(@Nullable Output<String> userConsentDescription) {
-            this.userConsentDescription = userConsentDescription;
+            $.userConsentDescription = userConsentDescription;
             return this;
         }
-        public Builder userConsentDescription(@Nullable String userConsentDescription) {
-            this.userConsentDescription = Codegen.ofNullable(userConsentDescription);
-            return this;
+
+        /**
+         * @param userConsentDescription Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userConsentDescription(String userConsentDescription) {
+            return userConsentDescription(Output.of(userConsentDescription));
         }
+
+        /**
+         * @param userConsentDisplayName Display name for the delegated permission that appears in the end user consent experience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConsentDisplayName(@Nullable Output<String> userConsentDisplayName) {
-            this.userConsentDisplayName = userConsentDisplayName;
+            $.userConsentDisplayName = userConsentDisplayName;
             return this;
         }
-        public Builder userConsentDisplayName(@Nullable String userConsentDisplayName) {
-            this.userConsentDisplayName = Codegen.ofNullable(userConsentDisplayName);
-            return this;
+
+        /**
+         * @param userConsentDisplayName Display name for the delegated permission that appears in the end user consent experience.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userConsentDisplayName(String userConsentDisplayName) {
+            return userConsentDisplayName(Output.of(userConsentDisplayName));
         }
+
+        /**
+         * @param value The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApplicationApiOauth2PermissionScopeArgs build() {
-            return new ApplicationApiOauth2PermissionScopeArgs(adminConsentDescription, adminConsentDisplayName, enabled, id, type, userConsentDescription, userConsentDisplayName, value);
+
+        /**
+         * @param value The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApplicationApiOauth2PermissionScopeArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }
