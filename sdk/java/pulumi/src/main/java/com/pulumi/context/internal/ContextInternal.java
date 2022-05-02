@@ -1,5 +1,6 @@
 package com.pulumi.context.internal;
 
+import com.google.common.collect.ImmutableMap;
 import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.context.LoggingContext;
@@ -8,9 +9,7 @@ import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-
 import java.util.Map;
-import java.util.Objects;
 
 import static com.pulumi.core.internal.Objects.require;
 import static java.util.Objects.requireNonNull;
@@ -24,7 +23,7 @@ public class ContextInternal implements Context {
     private final LoggingContextInternal logging;
     private final ConfigContextInternal config;
     private final OutputContextInternal outputs;
-    private final ExportsInternal exports;
+    private final ImmutableMap.Builder<String, Output<?>> exports;
 
     public ContextInternal(
             String projectName,
@@ -32,14 +31,14 @@ public class ContextInternal implements Context {
             LoggingContextInternal logging,
             ConfigContextInternal config,
             OutputContextInternal outputs,
-            ExportsInternal exports
+            Map<String, Output<?>> exports
     ) {
         this.projectName = require(Strings::isNonEmptyOrNull, projectName, () -> "expected a project name, got empty string or null");
         this.stackName = require(Strings::isNonEmptyOrNull, stackName, () -> "expected a stack name, got empty string or null");
         this.logging = requireNonNull(logging);
         this.config = requireNonNull(config);
         this.outputs = requireNonNull(outputs);
-        this.exports = requireNonNull(exports);
+        this.exports = ImmutableMap.<String, Output<?>>builder().putAll(requireNonNull(exports));
     }
 
     @Override
@@ -63,8 +62,11 @@ public class ContextInternal implements Context {
     }
 
     @Override
-    public void export(String name, Output<?> output) {
-        this.exports.export(name, output);
+    public Context export(String name, Output<?> output) {
+        requireNonNull(name, "The 'name' of an 'export' cannot be 'null'");
+        requireNonNull(output, "The 'output' of an 'export' cannot be 'null'");
+        this.exports.put(name, output);
+        return this;
     }
 
     @Override
@@ -77,7 +79,7 @@ public class ContextInternal implements Context {
         return config.config(name);
     }
 
-    public Map<String, Output<?>> getExports() {
-        return exports.exports();
+    public Map<String, Output<?>> exports() {
+        return this.exports.build();
     }
 }

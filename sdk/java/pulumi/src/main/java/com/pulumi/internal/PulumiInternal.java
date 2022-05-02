@@ -5,9 +5,9 @@ import com.pulumi.Context;
 import com.pulumi.Pulumi;
 import com.pulumi.context.internal.ConfigContextInternal;
 import com.pulumi.context.internal.ContextInternal;
-import com.pulumi.context.internal.ExportsInternal;
 import com.pulumi.context.internal.LoggingContextInternal;
 import com.pulumi.context.internal.OutputContextInternal;
+import com.pulumi.core.Output;
 import com.pulumi.core.internal.OutputFactory;
 import com.pulumi.core.internal.annotations.InternalUse;
 import com.pulumi.deployment.Deployment;
@@ -15,6 +15,7 @@ import com.pulumi.deployment.internal.DeploymentImpl;
 import com.pulumi.deployment.internal.Runner;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -46,7 +47,7 @@ public class PulumiInternal implements Pulumi {
         var logging = new LoggingContextInternal(log);
         var outputFactory = new OutputFactory(runner);
         var outputs = new OutputContextInternal(outputFactory);
-        var exports = new ExportsInternal();
+        var exports = Map.<String, Output<?>>of();
 
         var ctx = new ContextInternal(projectName, stackName, logging, config, outputs, exports);
         return new PulumiInternal(runner, ctx);
@@ -57,8 +58,10 @@ public class PulumiInternal implements Pulumi {
         return runner.runAsyncFuture(
                 () -> CompletableFuture.supplyAsync(
                         () -> {
-                            stack.accept(stackContext);
-                            return stackContext.getExports();
+                            // before user code was executed
+                            stack.accept(stackContext); // MUST run before accessing mutable variables
+                            // after user code was executed
+                            return stackContext.exports();
                         }
                 )
         );
