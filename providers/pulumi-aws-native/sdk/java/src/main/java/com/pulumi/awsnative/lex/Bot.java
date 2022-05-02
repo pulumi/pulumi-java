@@ -8,6 +8,7 @@ import com.pulumi.awsnative.lex.BotArgs;
 import com.pulumi.awsnative.lex.outputs.BotLocale;
 import com.pulumi.awsnative.lex.outputs.BotS3Location;
 import com.pulumi.awsnative.lex.outputs.BotTag;
+import com.pulumi.awsnative.lex.outputs.BotTestBotAliasSettings;
 import com.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -22,8 +23,6 @@ import javax.annotation.Nullable;
 
 /**
  * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
- * 
- * ## Example Usage
  * 
  */
 @ResourceType(type="aws-native:lex:Bot")
@@ -127,6 +126,12 @@ public class Bot extends com.pulumi.resources.CustomResource {
 
     public Output<String> roleArn() {
         return this.roleArn;
+    }
+    @Export(name="testBotAliasSettings", type=BotTestBotAliasSettings.class, parameters={})
+    private Output</* @Nullable */ BotTestBotAliasSettings> testBotAliasSettings;
+
+    public Output<Optional<BotTestBotAliasSettings>> testBotAliasSettings() {
+        return Codegen.optional(this.testBotAliasSettings);
     }
     /**
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.

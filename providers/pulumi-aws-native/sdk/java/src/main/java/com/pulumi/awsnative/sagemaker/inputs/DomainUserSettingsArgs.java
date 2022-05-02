@@ -5,6 +5,7 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.awsnative.sagemaker.inputs.DomainJupyterServerAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainKernelGatewayAppSettingsArgs;
+import com.pulumi.awsnative.sagemaker.inputs.DomainRStudioServerProAppSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainSharingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -68,6 +69,13 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
 
+    @Import(name="rStudioServerProAppSettings")
+    private @Nullable Output<DomainRStudioServerProAppSettingsArgs> rStudioServerProAppSettings;
+
+    public Optional<Output<DomainRStudioServerProAppSettingsArgs>> rStudioServerProAppSettings() {
+        return Optional.ofNullable(this.rStudioServerProAppSettings);
+    }
+
     /**
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
@@ -104,6 +112,7 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
         this.executionRole = $.executionRole;
         this.jupyterServerAppSettings = $.jupyterServerAppSettings;
         this.kernelGatewayAppSettings = $.kernelGatewayAppSettings;
+        this.rStudioServerProAppSettings = $.rStudioServerProAppSettings;
         this.securityGroups = $.securityGroups;
         this.sharingSettings = $.sharingSettings;
     }
@@ -187,6 +196,15 @@ public final class DomainUserSettingsArgs extends com.pulumi.resources.ResourceA
          */
         public Builder kernelGatewayAppSettings(DomainKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
             return kernelGatewayAppSettings(Output.of(kernelGatewayAppSettings));
+        }
+
+        public Builder rStudioServerProAppSettings(@Nullable Output<DomainRStudioServerProAppSettingsArgs> rStudioServerProAppSettings) {
+            $.rStudioServerProAppSettings = rStudioServerProAppSettings;
+            return this;
+        }
+
+        public Builder rStudioServerProAppSettings(DomainRStudioServerProAppSettingsArgs rStudioServerProAppSettings) {
+            return rStudioServerProAppSettings(Output.of(rStudioServerProAppSettings));
         }
 
         /**

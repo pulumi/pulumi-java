@@ -37,6 +37,21 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
     }
 
     /**
+     * Specifies which file to use as input to the workflow step.
+     * 
+     */
+    @Import(name="sourceFileLocation")
+    private @Nullable Output<String> sourceFileLocation;
+
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<Output<String>> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
+    }
+
+    /**
      * Array that contains from 1 to 10 key/value pairs.
      * 
      */
@@ -55,6 +70,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
 
     private WorkflowStepTagStepDetailsPropertiesArgs(WorkflowStepTagStepDetailsPropertiesArgs $) {
         this.name = $.name;
+        this.sourceFileLocation = $.sourceFileLocation;
         this.tags = $.tags;
     }
 
@@ -95,6 +111,27 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param sourceFileLocation Specifies which file to use as input to the workflow step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceFileLocation(@Nullable Output<String> sourceFileLocation) {
+            $.sourceFileLocation = sourceFileLocation;
+            return this;
+        }
+
+        /**
+         * @param sourceFileLocation Specifies which file to use as input to the workflow step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceFileLocation(String sourceFileLocation) {
+            return sourceFileLocation(Output.of(sourceFileLocation));
         }
 
         /**

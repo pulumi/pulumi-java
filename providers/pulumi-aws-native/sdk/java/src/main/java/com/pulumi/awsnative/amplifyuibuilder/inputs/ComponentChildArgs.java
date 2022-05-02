@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.inputs;
 
+import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentEventsArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -31,6 +32,13 @@ public final class ComponentChildArgs extends com.pulumi.resources.ResourceArgs 
         return this.componentType;
     }
 
+    @Import(name="events")
+    private @Nullable Output<ComponentEventsArgs> events;
+
+    public Optional<Output<ComponentEventsArgs>> events() {
+        return Optional.ofNullable(this.events);
+    }
+
     @Import(name="name", required=true)
     private Output<String> name;
 
@@ -50,6 +58,7 @@ public final class ComponentChildArgs extends com.pulumi.resources.ResourceArgs 
     private ComponentChildArgs(ComponentChildArgs $) {
         this.children = $.children;
         this.componentType = $.componentType;
+        this.events = $.events;
         this.name = $.name;
         this.properties = $.properties;
     }
@@ -92,6 +101,15 @@ public final class ComponentChildArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder componentType(String componentType) {
             return componentType(Output.of(componentType));
+        }
+
+        public Builder events(@Nullable Output<ComponentEventsArgs> events) {
+            $.events = events;
+            return this;
+        }
+
+        public Builder events(ComponentEventsArgs events) {
+            return events(Output.of(events));
         }
 
         public Builder name(Output<String> name) {

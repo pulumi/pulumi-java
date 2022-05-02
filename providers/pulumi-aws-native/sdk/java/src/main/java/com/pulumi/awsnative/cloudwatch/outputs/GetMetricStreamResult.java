@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.cloudwatch.outputs;
 
 import com.pulumi.awsnative.cloudwatch.outputs.MetricStreamFilter;
+import com.pulumi.awsnative.cloudwatch.outputs.MetricStreamStatisticsConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -58,6 +59,11 @@ public final class GetMetricStreamResult {
      * 
      */
     private final @Nullable String state;
+    /**
+     * @return By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    private final @Nullable List<MetricStreamStatisticsConfiguration> statisticsConfigurations;
 
     @CustomType.Constructor
     private GetMetricStreamResult(
@@ -69,7 +75,8 @@ public final class GetMetricStreamResult {
         @CustomType.Parameter("lastUpdateDate") @Nullable String lastUpdateDate,
         @CustomType.Parameter("outputFormat") @Nullable String outputFormat,
         @CustomType.Parameter("roleArn") @Nullable String roleArn,
-        @CustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("statisticsConfigurations") @Nullable List<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.excludeFilters = excludeFilters;
@@ -79,6 +86,7 @@ public final class GetMetricStreamResult {
         this.outputFormat = outputFormat;
         this.roleArn = roleArn;
         this.state = state;
+        this.statisticsConfigurations = statisticsConfigurations;
     }
 
     /**
@@ -144,6 +152,13 @@ public final class GetMetricStreamResult {
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
+    /**
+     * @return By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    public List<MetricStreamStatisticsConfiguration> statisticsConfigurations() {
+        return this.statisticsConfigurations == null ? List.of() : this.statisticsConfigurations;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -163,6 +178,7 @@ public final class GetMetricStreamResult {
         private @Nullable String outputFormat;
         private @Nullable String roleArn;
         private @Nullable String state;
+        private @Nullable List<MetricStreamStatisticsConfiguration> statisticsConfigurations;
 
         public Builder() {
     	      // Empty
@@ -179,6 +195,7 @@ public final class GetMetricStreamResult {
     	      this.outputFormat = defaults.outputFormat;
     	      this.roleArn = defaults.roleArn;
     	      this.state = defaults.state;
+    	      this.statisticsConfigurations = defaults.statisticsConfigurations;
         }
 
         public Builder arn(@Nullable String arn) {
@@ -222,8 +239,15 @@ public final class GetMetricStreamResult {
         public Builder state(@Nullable String state) {
             this.state = state;
             return this;
+        }
+        public Builder statisticsConfigurations(@Nullable List<MetricStreamStatisticsConfiguration> statisticsConfigurations) {
+            this.statisticsConfigurations = statisticsConfigurations;
+            return this;
+        }
+        public Builder statisticsConfigurations(MetricStreamStatisticsConfiguration... statisticsConfigurations) {
+            return statisticsConfigurations(List.of(statisticsConfigurations));
         }        public GetMetricStreamResult build() {
-            return new GetMetricStreamResult(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, outputFormat, roleArn, state);
+            return new GetMetricStreamResult(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, outputFormat, roleArn, state, statisticsConfigurations);
         }
     }
 }

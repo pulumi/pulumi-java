@@ -8,24 +8,26 @@ import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DatasetRetentionPeriodArgs Empty = new DatasetRetentionPeriodArgs();
 
-    @Import(name="numberOfDays", required=true)
-    private Output<Integer> numberOfDays;
+    @Import(name="numberOfDays")
+    private @Nullable Output<Integer> numberOfDays;
 
-    public Output<Integer> numberOfDays() {
-        return this.numberOfDays;
+    public Optional<Output<Integer>> numberOfDays() {
+        return Optional.ofNullable(this.numberOfDays);
     }
 
-    @Import(name="unlimited", required=true)
-    private Output<Boolean> unlimited;
+    @Import(name="unlimited")
+    private @Nullable Output<Boolean> unlimited;
 
-    public Output<Boolean> unlimited() {
-        return this.unlimited;
+    public Optional<Output<Boolean>> unlimited() {
+        return Optional.ofNullable(this.unlimited);
     }
 
     private DatasetRetentionPeriodArgs() {}
@@ -53,7 +55,7 @@ public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.Resou
             $ = new DatasetRetentionPeriodArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder numberOfDays(Output<Integer> numberOfDays) {
+        public Builder numberOfDays(@Nullable Output<Integer> numberOfDays) {
             $.numberOfDays = numberOfDays;
             return this;
         }
@@ -62,7 +64,7 @@ public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.Resou
             return numberOfDays(Output.of(numberOfDays));
         }
 
-        public Builder unlimited(Output<Boolean> unlimited) {
+        public Builder unlimited(@Nullable Output<Boolean> unlimited) {
             $.unlimited = unlimited;
             return this;
         }
@@ -72,8 +74,6 @@ public final class DatasetRetentionPeriodArgs extends com.pulumi.resources.Resou
         }
 
         public DatasetRetentionPeriodArgs build() {
-            $.numberOfDays = Objects.requireNonNull($.numberOfDays, "expected parameter 'numberOfDays' to be non-null");
-            $.unlimited = Objects.requireNonNull($.unlimited, "expected parameter 'unlimited' to be non-null");
             return $;
         }
     }

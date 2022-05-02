@@ -7,9 +7,11 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.events.inputs.GetApiDestinationArgs;
 import com.pulumi.awsnative.events.inputs.GetArchiveArgs;
 import com.pulumi.awsnative.events.inputs.GetConnectionArgs;
+import com.pulumi.awsnative.events.inputs.GetEndpointArgs;
 import com.pulumi.awsnative.events.outputs.GetApiDestinationResult;
 import com.pulumi.awsnative.events.outputs.GetArchiveResult;
 import com.pulumi.awsnative.events.outputs.GetConnectionResult;
+import com.pulumi.awsnative.events.outputs.GetEndpointResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -45,5 +47,15 @@ public final class EventsFunctions {
     }
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getConnection", TypeShape.of(GetConnectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Events::Endpoint.
+     * 
+     */
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args) {
+        return getEndpoint(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEndpointResult> getEndpoint(GetEndpointArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:events:getEndpoint", TypeShape.of(GetEndpointResult.class), args, Utilities.withVersion(options));
     }
 }

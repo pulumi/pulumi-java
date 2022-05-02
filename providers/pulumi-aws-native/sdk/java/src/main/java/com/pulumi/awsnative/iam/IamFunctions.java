@@ -4,11 +4,13 @@
 package com.pulumi.awsnative.iam;
 
 import com.pulumi.awsnative.Utilities;
+import com.pulumi.awsnative.iam.inputs.GetInstanceProfileArgs;
 import com.pulumi.awsnative.iam.inputs.GetOIDCProviderArgs;
 import com.pulumi.awsnative.iam.inputs.GetRoleArgs;
 import com.pulumi.awsnative.iam.inputs.GetSAMLProviderArgs;
 import com.pulumi.awsnative.iam.inputs.GetServerCertificateArgs;
 import com.pulumi.awsnative.iam.inputs.GetVirtualMFADeviceArgs;
+import com.pulumi.awsnative.iam.outputs.GetInstanceProfileResult;
 import com.pulumi.awsnative.iam.outputs.GetOIDCProviderResult;
 import com.pulumi.awsnative.iam.outputs.GetRoleResult;
 import com.pulumi.awsnative.iam.outputs.GetSAMLProviderResult;
@@ -20,6 +22,16 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class IamFunctions {
+    /**
+     * Resource Type definition for AWS::IAM::InstanceProfile
+     * 
+     */
+    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
+        return getInstanceProfile(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:iam:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Resource Type definition for AWS::IAM::OIDCProvider
      * 

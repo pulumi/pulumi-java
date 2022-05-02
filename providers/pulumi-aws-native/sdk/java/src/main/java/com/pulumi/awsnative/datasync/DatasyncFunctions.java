@@ -6,6 +6,8 @@ package com.pulumi.awsnative.datasync;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.datasync.inputs.GetAgentArgs;
 import com.pulumi.awsnative.datasync.inputs.GetLocationEFSArgs;
+import com.pulumi.awsnative.datasync.inputs.GetLocationFSxLustreArgs;
+import com.pulumi.awsnative.datasync.inputs.GetLocationFSxOpenZFSArgs;
 import com.pulumi.awsnative.datasync.inputs.GetLocationFSxWindowsArgs;
 import com.pulumi.awsnative.datasync.inputs.GetLocationHDFSArgs;
 import com.pulumi.awsnative.datasync.inputs.GetLocationNFSArgs;
@@ -15,6 +17,8 @@ import com.pulumi.awsnative.datasync.inputs.GetLocationSMBArgs;
 import com.pulumi.awsnative.datasync.inputs.GetTaskArgs;
 import com.pulumi.awsnative.datasync.outputs.GetAgentResult;
 import com.pulumi.awsnative.datasync.outputs.GetLocationEFSResult;
+import com.pulumi.awsnative.datasync.outputs.GetLocationFSxLustreResult;
+import com.pulumi.awsnative.datasync.outputs.GetLocationFSxOpenZFSResult;
 import com.pulumi.awsnative.datasync.outputs.GetLocationFSxWindowsResult;
 import com.pulumi.awsnative.datasync.outputs.GetLocationHDFSResult;
 import com.pulumi.awsnative.datasync.outputs.GetLocationNFSResult;
@@ -47,6 +51,26 @@ public final class DatasyncFunctions {
     }
     public static CompletableFuture<GetLocationEFSResult> getLocationEFS(GetLocationEFSArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationEFS", TypeShape.of(GetLocationEFSResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationFSxLustre.
+     * 
+     */
+    public static CompletableFuture<GetLocationFSxLustreResult> getLocationFSxLustre(GetLocationFSxLustreArgs args) {
+        return getLocationFSxLustre(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetLocationFSxLustreResult> getLocationFSxLustre(GetLocationFSxLustreArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxLustre", TypeShape.of(GetLocationFSxLustreResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationFSxOpenZFS.
+     * 
+     */
+    public static CompletableFuture<GetLocationFSxOpenZFSResult> getLocationFSxOpenZFS(GetLocationFSxOpenZFSArgs args) {
+        return getLocationFSxOpenZFS(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetLocationFSxOpenZFSResult> getLocationFSxOpenZFS(GetLocationFSxOpenZFSArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationFSxOpenZFS", TypeShape.of(GetLocationFSxOpenZFSResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::DataSync::LocationFSxWindows.

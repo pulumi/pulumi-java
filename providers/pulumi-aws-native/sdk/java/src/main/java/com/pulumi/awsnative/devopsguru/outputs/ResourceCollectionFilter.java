@@ -4,7 +4,9 @@
 package com.pulumi.awsnative.devopsguru.outputs;
 
 import com.pulumi.awsnative.devopsguru.outputs.ResourceCollectionCloudFormationCollectionFilter;
+import com.pulumi.awsnative.devopsguru.outputs.ResourceCollectionTagCollection;
 import com.pulumi.core.annotations.CustomType;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,14 +14,21 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceCollectionFilter {
     private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
+    private final @Nullable List<ResourceCollectionTagCollection> tags;
 
     @CustomType.Constructor
-    private ResourceCollectionFilter(@CustomType.Parameter("cloudFormation") @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
+    private ResourceCollectionFilter(
+        @CustomType.Parameter("cloudFormation") @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation,
+        @CustomType.Parameter("tags") @Nullable List<ResourceCollectionTagCollection> tags) {
         this.cloudFormation = cloudFormation;
+        this.tags = tags;
     }
 
     public Optional<ResourceCollectionCloudFormationCollectionFilter> cloudFormation() {
         return Optional.ofNullable(this.cloudFormation);
+    }
+    public List<ResourceCollectionTagCollection> tags() {
+        return this.tags == null ? List.of() : this.tags;
     }
 
     public static Builder builder() {
@@ -32,6 +41,7 @@ public final class ResourceCollectionFilter {
 
     public static final class Builder {
         private @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
+        private @Nullable List<ResourceCollectionTagCollection> tags;
 
         public Builder() {
     	      // Empty
@@ -40,13 +50,21 @@ public final class ResourceCollectionFilter {
         public Builder(ResourceCollectionFilter defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cloudFormation = defaults.cloudFormation;
+    	      this.tags = defaults.tags;
         }
 
         public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
+        }
+        public Builder tags(@Nullable List<ResourceCollectionTagCollection> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public Builder tags(ResourceCollectionTagCollection... tags) {
+            return tags(List.of(tags));
         }        public ResourceCollectionFilter build() {
-            return new ResourceCollectionFilter(cloudFormation);
+            return new ResourceCollectionFilter(cloudFormation, tags);
         }
     }
 }

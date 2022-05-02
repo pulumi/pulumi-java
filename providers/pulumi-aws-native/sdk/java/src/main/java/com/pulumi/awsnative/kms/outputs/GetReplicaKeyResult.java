@@ -17,18 +17,18 @@ import javax.annotation.Nullable;
 public final class GetReplicaKeyResult {
     private final @Nullable String arn;
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     private final @Nullable String description;
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     private final @Nullable Boolean enabled;
     private final @Nullable String keyId;
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     private final @Nullable Object keyPolicy;
@@ -58,14 +58,14 @@ public final class GetReplicaKeyResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     public Optional<Boolean> enabled() {
@@ -75,7 +75,7 @@ public final class GetReplicaKeyResult {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     public Optional<Object> keyPolicy() {

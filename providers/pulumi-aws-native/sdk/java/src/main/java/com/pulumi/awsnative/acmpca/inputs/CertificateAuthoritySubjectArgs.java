@@ -3,9 +3,11 @@
 
 package com.pulumi.awsnative.acmpca.inputs;
 
+import com.pulumi.awsnative.acmpca.inputs.CertificateAuthorityCustomAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -31,6 +33,13 @@ public final class CertificateAuthoritySubjectArgs extends com.pulumi.resources.
 
     public Optional<Output<String>> country() {
         return Optional.ofNullable(this.country);
+    }
+
+    @Import(name="customAttributes")
+    private @Nullable Output<List<CertificateAuthorityCustomAttributeArgs>> customAttributes;
+
+    public Optional<Output<List<CertificateAuthorityCustomAttributeArgs>>> customAttributes() {
+        return Optional.ofNullable(this.customAttributes);
     }
 
     @Import(name="distinguishedNameQualifier")
@@ -122,6 +131,7 @@ public final class CertificateAuthoritySubjectArgs extends com.pulumi.resources.
     private CertificateAuthoritySubjectArgs(CertificateAuthoritySubjectArgs $) {
         this.commonName = $.commonName;
         this.country = $.country;
+        this.customAttributes = $.customAttributes;
         this.distinguishedNameQualifier = $.distinguishedNameQualifier;
         this.generationQualifier = $.generationQualifier;
         this.givenName = $.givenName;
@@ -170,6 +180,19 @@ public final class CertificateAuthoritySubjectArgs extends com.pulumi.resources.
 
         public Builder country(String country) {
             return country(Output.of(country));
+        }
+
+        public Builder customAttributes(@Nullable Output<List<CertificateAuthorityCustomAttributeArgs>> customAttributes) {
+            $.customAttributes = customAttributes;
+            return this;
+        }
+
+        public Builder customAttributes(List<CertificateAuthorityCustomAttributeArgs> customAttributes) {
+            return customAttributes(Output.of(customAttributes));
+        }
+
+        public Builder customAttributes(CertificateAuthorityCustomAttributeArgs... customAttributes) {
+            return customAttributes(List.of(customAttributes));
         }
 
         public Builder distinguishedNameQualifier(@Nullable Output<String> distinguishedNameQualifier) {

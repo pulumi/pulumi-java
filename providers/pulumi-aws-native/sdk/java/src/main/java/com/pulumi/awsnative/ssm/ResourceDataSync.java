@@ -18,6 +18,8 @@ import javax.annotation.Nullable;
 /**
  * Resource Type definition for AWS::SSM::ResourceDataSync
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="aws-native:ssm:ResourceDataSync")
 public class ResourceDataSync extends com.pulumi.resources.CustomResource {
@@ -88,7 +90,7 @@ public class ResourceDataSync extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ResourceDataSync(String name, @Nullable ResourceDataSyncArgs args) {
+    public ResourceDataSync(String name, ResourceDataSyncArgs args) {
         this(name, args, null);
     }
     /**
@@ -97,7 +99,7 @@ public class ResourceDataSync extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ResourceDataSync(String name, @Nullable ResourceDataSyncArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ResourceDataSync(String name, ResourceDataSyncArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ssm:ResourceDataSync", name, args == null ? ResourceDataSyncArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

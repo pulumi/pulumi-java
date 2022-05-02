@@ -16,10 +16,18 @@ public final class WorkflowStepDeleteStepDetailsProperties {
      * 
      */
     private final @Nullable String name;
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    private final @Nullable String sourceFileLocation;
 
     @CustomType.Constructor
-    private WorkflowStepDeleteStepDetailsProperties(@CustomType.Parameter("name") @Nullable String name) {
+    private WorkflowStepDeleteStepDetailsProperties(
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceFileLocation") @Nullable String sourceFileLocation) {
         this.name = name;
+        this.sourceFileLocation = sourceFileLocation;
     }
 
     /**
@@ -28,6 +36,13 @@ public final class WorkflowStepDeleteStepDetailsProperties {
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<String> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
     }
 
     public static Builder builder() {
@@ -40,6 +55,7 @@ public final class WorkflowStepDeleteStepDetailsProperties {
 
     public static final class Builder {
         private @Nullable String name;
+        private @Nullable String sourceFileLocation;
 
         public Builder() {
     	      // Empty
@@ -48,13 +64,18 @@ public final class WorkflowStepDeleteStepDetailsProperties {
         public Builder(WorkflowStepDeleteStepDetailsProperties defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.name = defaults.name;
+    	      this.sourceFileLocation = defaults.sourceFileLocation;
         }
 
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
+        }
+        public Builder sourceFileLocation(@Nullable String sourceFileLocation) {
+            this.sourceFileLocation = sourceFileLocation;
+            return this;
         }        public WorkflowStepDeleteStepDetailsProperties build() {
-            return new WorkflowStepDeleteStepDetailsProperties(name);
+            return new WorkflowStepDeleteStepDetailsProperties(name, sourceFileLocation);
         }
     }
 }

@@ -175,7 +175,7 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Repository(String name, @Nullable RepositoryArgs args) {
+    public Repository(String name, RepositoryArgs args) {
         this(name, args, null);
     }
     /**
@@ -184,7 +184,7 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Repository(String name, @Nullable RepositoryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Repository(String name, RepositoryArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:codeartifact:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

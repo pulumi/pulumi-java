@@ -8,6 +8,7 @@ import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisComponent
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisPacketHeader;
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
+import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTransitGatewayRouteTableRoute;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,6 +27,8 @@ public final class NetworkInsightsAnalysisPathComponent {
     private final @Nullable Integer sequenceNumber;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
+    private final @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway;
+    private final @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
     @CustomType.Constructor
@@ -40,6 +43,8 @@ public final class NetworkInsightsAnalysisPathComponent {
         @CustomType.Parameter("sequenceNumber") @Nullable Integer sequenceNumber,
         @CustomType.Parameter("sourceVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
         @CustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
+        @CustomType.Parameter("transitGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway,
+        @CustomType.Parameter("transitGatewayRouteTableRoute") @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute,
         @CustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
         this.aclRule = aclRule;
         this.component = component;
@@ -51,6 +56,8 @@ public final class NetworkInsightsAnalysisPathComponent {
         this.sequenceNumber = sequenceNumber;
         this.sourceVpc = sourceVpc;
         this.subnet = subnet;
+        this.transitGateway = transitGateway;
+        this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
         this.vpc = vpc;
     }
 
@@ -84,6 +91,12 @@ public final class NetworkInsightsAnalysisPathComponent {
     public Optional<NetworkInsightsAnalysisAnalysisComponent> subnet() {
         return Optional.ofNullable(this.subnet);
     }
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> transitGateway() {
+        return Optional.ofNullable(this.transitGateway);
+    }
+    public Optional<NetworkInsightsAnalysisTransitGatewayRouteTableRoute> transitGatewayRouteTableRoute() {
+        return Optional.ofNullable(this.transitGatewayRouteTableRoute);
+    }
     public Optional<NetworkInsightsAnalysisAnalysisComponent> vpc() {
         return Optional.ofNullable(this.vpc);
     }
@@ -107,6 +120,8 @@ public final class NetworkInsightsAnalysisPathComponent {
         private @Nullable Integer sequenceNumber;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
+        private @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway;
+        private @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
         public Builder() {
@@ -125,6 +140,8 @@ public final class NetworkInsightsAnalysisPathComponent {
     	      this.sequenceNumber = defaults.sequenceNumber;
     	      this.sourceVpc = defaults.sourceVpc;
     	      this.subnet = defaults.subnet;
+    	      this.transitGateway = defaults.transitGateway;
+    	      this.transitGatewayRouteTableRoute = defaults.transitGatewayRouteTableRoute;
     	      this.vpc = defaults.vpc;
         }
 
@@ -168,11 +185,19 @@ public final class NetworkInsightsAnalysisPathComponent {
             this.subnet = subnet;
             return this;
         }
+        public Builder transitGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway) {
+            this.transitGateway = transitGateway;
+            return this;
+        }
+        public Builder transitGatewayRouteTableRoute(@Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+            this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
+            return this;
+        }
         public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
             this.vpc = vpc;
             return this;
         }        public NetworkInsightsAnalysisPathComponent build() {
-            return new NetworkInsightsAnalysisPathComponent(aclRule, component, destinationVpc, inboundHeader, outboundHeader, routeTableRoute, securityGroupRule, sequenceNumber, sourceVpc, subnet, vpc);
+            return new NetworkInsightsAnalysisPathComponent(aclRule, component, destinationVpc, inboundHeader, outboundHeader, routeTableRoute, securityGroupRule, sequenceNumber, sourceVpc, subnet, transitGateway, transitGatewayRouteTableRoute, vpc);
         }
     }
 }

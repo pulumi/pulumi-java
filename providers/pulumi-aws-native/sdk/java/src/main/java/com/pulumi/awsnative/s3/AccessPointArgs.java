@@ -35,6 +35,21 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
      * The Access Point Policy you want to apply to this access point.
      * 
      */
@@ -90,6 +105,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
 
     private AccessPointArgs(AccessPointArgs $) {
         this.bucket = $.bucket;
+        this.name = $.name;
         this.policy = $.policy;
         this.policyStatus = $.policyStatus;
         this.publicAccessBlockConfiguration = $.publicAccessBlockConfiguration;
@@ -133,6 +149,27 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
+        }
+
+        /**
+         * @param name The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name you want to assign to this Access Point. If you don&#39;t specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         /**

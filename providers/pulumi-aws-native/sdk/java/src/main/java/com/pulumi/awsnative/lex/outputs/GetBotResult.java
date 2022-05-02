@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lex.outputs;
 
+import com.pulumi.awsnative.lex.outputs.BotTestBotAliasSettings;
 import com.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
@@ -28,6 +29,7 @@ public final class GetBotResult {
     private final @Nullable Integer idleSessionTTLInSeconds;
     private final @Nullable String name;
     private final @Nullable String roleArn;
+    private final @Nullable BotTestBotAliasSettings testBotAliasSettings;
 
     @CustomType.Constructor
     private GetBotResult(
@@ -37,7 +39,8 @@ public final class GetBotResult {
         @CustomType.Parameter("id") @Nullable String id,
         @CustomType.Parameter("idleSessionTTLInSeconds") @Nullable Integer idleSessionTTLInSeconds,
         @CustomType.Parameter("name") @Nullable String name,
-        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("testBotAliasSettings") @Nullable BotTestBotAliasSettings testBotAliasSettings) {
         this.arn = arn;
         this.dataPrivacy = dataPrivacy;
         this.description = description;
@@ -45,6 +48,7 @@ public final class GetBotResult {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         this.name = name;
         this.roleArn = roleArn;
+        this.testBotAliasSettings = testBotAliasSettings;
     }
 
     public Optional<String> arn() {
@@ -76,6 +80,9 @@ public final class GetBotResult {
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
     }
+    public Optional<BotTestBotAliasSettings> testBotAliasSettings() {
+        return Optional.ofNullable(this.testBotAliasSettings);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -93,6 +100,7 @@ public final class GetBotResult {
         private @Nullable Integer idleSessionTTLInSeconds;
         private @Nullable String name;
         private @Nullable String roleArn;
+        private @Nullable BotTestBotAliasSettings testBotAliasSettings;
 
         public Builder() {
     	      // Empty
@@ -107,6 +115,7 @@ public final class GetBotResult {
     	      this.idleSessionTTLInSeconds = defaults.idleSessionTTLInSeconds;
     	      this.name = defaults.name;
     	      this.roleArn = defaults.roleArn;
+    	      this.testBotAliasSettings = defaults.testBotAliasSettings;
         }
 
         public Builder arn(@Nullable String arn) {
@@ -136,8 +145,12 @@ public final class GetBotResult {
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
+        }
+        public Builder testBotAliasSettings(@Nullable BotTestBotAliasSettings testBotAliasSettings) {
+            this.testBotAliasSettings = testBotAliasSettings;
+            return this;
         }        public GetBotResult build() {
-            return new GetBotResult(arn, dataPrivacy, description, id, idleSessionTTLInSeconds, name, roleArn);
+            return new GetBotResult(arn, dataPrivacy, description, id, idleSessionTTLInSeconds, name, roleArn, testBotAliasSettings);
         }
     }
 }

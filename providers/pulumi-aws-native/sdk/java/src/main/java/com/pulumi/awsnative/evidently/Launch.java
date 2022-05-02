@@ -5,6 +5,7 @@ package com.pulumi.awsnative.evidently;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.evidently.LaunchArgs;
+import com.pulumi.awsnative.evidently.outputs.LaunchExecutionStatusObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchGroupObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
@@ -35,6 +36,20 @@ public class Launch extends com.pulumi.resources.CustomResource {
 
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
+    }
+    /**
+     * Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    @Export(name="executionStatus", type=LaunchExecutionStatusObject.class, parameters={})
+    private Output</* @Nullable */ LaunchExecutionStatusObject> executionStatus;
+
+    /**
+     * @return Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    public Output<Optional<LaunchExecutionStatusObject>> executionStatus() {
+        return Codegen.optional(this.executionStatus);
     }
     @Export(name="groups", type=List.class, parameters={LaunchGroupObject.class})
     private Output<List<LaunchGroupObject>> groups;

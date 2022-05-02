@@ -4,9 +4,11 @@
 package com.pulumi.awsnative.ecr;
 
 import com.pulumi.awsnative.Utilities;
+import com.pulumi.awsnative.ecr.inputs.GetPullThroughCacheRuleArgs;
 import com.pulumi.awsnative.ecr.inputs.GetRegistryPolicyArgs;
 import com.pulumi.awsnative.ecr.inputs.GetReplicationConfigurationArgs;
 import com.pulumi.awsnative.ecr.inputs.GetRepositoryArgs;
+import com.pulumi.awsnative.ecr.outputs.GetPullThroughCacheRuleResult;
 import com.pulumi.awsnative.ecr.outputs.GetRegistryPolicyResult;
 import com.pulumi.awsnative.ecr.outputs.GetReplicationConfigurationResult;
 import com.pulumi.awsnative.ecr.outputs.GetRepositoryResult;
@@ -16,6 +18,16 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class EcrFunctions {
+    /**
+     * The AWS::ECR::PullThroughCacheRule resource configures the upstream registry configuration details for an Amazon Elastic Container Registry (Amazon Private ECR) pull-through cache.
+     * 
+     */
+    public static CompletableFuture<GetPullThroughCacheRuleResult> getPullThroughCacheRule(GetPullThroughCacheRuleArgs args) {
+        return getPullThroughCacheRule(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetPullThroughCacheRuleResult> getPullThroughCacheRule(GetPullThroughCacheRuleArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ecr:getPullThroughCacheRule", TypeShape.of(GetPullThroughCacheRuleResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * The AWS::ECR::RegistryPolicy is used to specify permissions for another AWS account and is used when configuring cross-account replication. For more information, see Registry permissions in the Amazon Elastic Container Registry User Guide: https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html
      * 

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot.outputs;
 import com.pulumi.awsnative.iot.outputs.TopicRuleTimestreamDimension;
 import com.pulumi.awsnative.iot.outputs.TopicRuleTimestreamTimestamp;
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +14,6 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TopicRuleTimestreamAction {
-    private final @Nullable Boolean batchMode;
     private final String databaseName;
     private final List<TopicRuleTimestreamDimension> dimensions;
     private final String roleArn;
@@ -24,13 +22,11 @@ public final class TopicRuleTimestreamAction {
 
     @CustomType.Constructor
     private TopicRuleTimestreamAction(
-        @CustomType.Parameter("batchMode") @Nullable Boolean batchMode,
         @CustomType.Parameter("databaseName") String databaseName,
         @CustomType.Parameter("dimensions") List<TopicRuleTimestreamDimension> dimensions,
         @CustomType.Parameter("roleArn") String roleArn,
         @CustomType.Parameter("tableName") String tableName,
         @CustomType.Parameter("timestamp") @Nullable TopicRuleTimestreamTimestamp timestamp) {
-        this.batchMode = batchMode;
         this.databaseName = databaseName;
         this.dimensions = dimensions;
         this.roleArn = roleArn;
@@ -38,9 +34,6 @@ public final class TopicRuleTimestreamAction {
         this.timestamp = timestamp;
     }
 
-    public Optional<Boolean> batchMode() {
-        return Optional.ofNullable(this.batchMode);
-    }
     public String databaseName() {
         return this.databaseName;
     }
@@ -66,7 +59,6 @@ public final class TopicRuleTimestreamAction {
     }
 
     public static final class Builder {
-        private @Nullable Boolean batchMode;
         private String databaseName;
         private List<TopicRuleTimestreamDimension> dimensions;
         private String roleArn;
@@ -79,7 +71,6 @@ public final class TopicRuleTimestreamAction {
 
         public Builder(TopicRuleTimestreamAction defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.batchMode = defaults.batchMode;
     	      this.databaseName = defaults.databaseName;
     	      this.dimensions = defaults.dimensions;
     	      this.roleArn = defaults.roleArn;
@@ -87,10 +78,6 @@ public final class TopicRuleTimestreamAction {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = batchMode;
-            return this;
-        }
         public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
@@ -114,7 +101,7 @@ public final class TopicRuleTimestreamAction {
             this.timestamp = timestamp;
             return this;
         }        public TopicRuleTimestreamAction build() {
-            return new TopicRuleTimestreamAction(batchMode, databaseName, dimensions, roleArn, tableName, timestamp);
+            return new TopicRuleTimestreamAction(databaseName, dimensions, roleArn, tableName, timestamp);
         }
     }
 }

@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.fis;
 
 import com.pulumi.awsnative.fis.inputs.ExperimentTemplateActionMapArgs;
+import com.pulumi.awsnative.fis.inputs.ExperimentTemplateLogConfigurationArgs;
 import com.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import com.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
 import com.pulumi.core.Output;
@@ -32,6 +33,13 @@ public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceA
 
     public Output<String> description() {
         return this.description;
+    }
+
+    @Import(name="logConfiguration")
+    private @Nullable Output<ExperimentTemplateLogConfigurationArgs> logConfiguration;
+
+    public Optional<Output<ExperimentTemplateLogConfigurationArgs>> logConfiguration() {
+        return Optional.ofNullable(this.logConfiguration);
     }
 
     @Import(name="roleArn", required=true)
@@ -67,6 +75,7 @@ public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceA
     private ExperimentTemplateArgs(ExperimentTemplateArgs $) {
         this.actions = $.actions;
         this.description = $.description;
+        this.logConfiguration = $.logConfiguration;
         this.roleArn = $.roleArn;
         this.stopConditions = $.stopConditions;
         this.tags = $.tags;
@@ -107,6 +116,15 @@ public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceA
 
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        public Builder logConfiguration(@Nullable Output<ExperimentTemplateLogConfigurationArgs> logConfiguration) {
+            $.logConfiguration = logConfiguration;
+            return this;
+        }
+
+        public Builder logConfiguration(ExperimentTemplateLogConfigurationArgs logConfiguration) {
+            return logConfiguration(Output.of(logConfiguration));
         }
 
         public Builder roleArn(Output<String> roleArn) {

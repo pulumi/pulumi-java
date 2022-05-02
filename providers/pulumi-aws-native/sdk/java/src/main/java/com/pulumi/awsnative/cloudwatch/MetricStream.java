@@ -6,6 +6,7 @@ package com.pulumi.awsnative.cloudwatch;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.cloudwatch.MetricStreamArgs;
 import com.pulumi.awsnative.cloudwatch.outputs.MetricStreamFilter;
+import com.pulumi.awsnative.cloudwatch.outputs.MetricStreamStatisticsConfiguration;
 import com.pulumi.awsnative.cloudwatch.outputs.MetricStreamTag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -163,6 +164,20 @@ public class MetricStream extends com.pulumi.resources.CustomResource {
      */
     public Output<String> state() {
         return this.state;
+    }
+    /**
+     * By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    @Export(name="statisticsConfigurations", type=List.class, parameters={MetricStreamStatisticsConfiguration.class})
+    private Output</* @Nullable */ List<MetricStreamStatisticsConfiguration>> statisticsConfigurations;
+
+    /**
+     * @return By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each metric that is streamed. You can use this parameter to have the metric stream also send additional statistics in the stream. This array can have up to 100 members.
+     * 
+     */
+    public Output<Optional<List<MetricStreamStatisticsConfiguration>>> statisticsConfigurations() {
+        return Codegen.optional(this.statisticsConfigurations);
     }
     /**
      * A set of tags to assign to the delivery stream.

@@ -5,6 +5,7 @@ package com.pulumi.awsnative.kendra;
 
 import com.pulumi.awsnative.kendra.enums.DataSourceType;
 import com.pulumi.awsnative.kendra.inputs.DataSourceConfigurationArgs;
+import com.pulumi.awsnative.kendra.inputs.DataSourceCustomDocumentEnrichmentConfigurationArgs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -18,6 +19,13 @@ import javax.annotation.Nullable;
 public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
+
+    @Import(name="customDocumentEnrichmentConfiguration")
+    private @Nullable Output<DataSourceCustomDocumentEnrichmentConfigurationArgs> customDocumentEnrichmentConfiguration;
+
+    public Optional<Output<DataSourceCustomDocumentEnrichmentConfigurationArgs>> customDocumentEnrichmentConfiguration() {
+        return Optional.ofNullable(this.customDocumentEnrichmentConfiguration);
+    }
 
     @Import(name="dataSourceConfiguration")
     private @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
@@ -86,6 +94,7 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     private DataSourceArgs() {}
 
     private DataSourceArgs(DataSourceArgs $) {
+        this.customDocumentEnrichmentConfiguration = $.customDocumentEnrichmentConfiguration;
         this.dataSourceConfiguration = $.dataSourceConfiguration;
         this.description = $.description;
         this.indexId = $.indexId;
@@ -112,6 +121,15 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(DataSourceArgs defaults) {
             $ = new DataSourceArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder customDocumentEnrichmentConfiguration(@Nullable Output<DataSourceCustomDocumentEnrichmentConfigurationArgs> customDocumentEnrichmentConfiguration) {
+            $.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
+            return this;
+        }
+
+        public Builder customDocumentEnrichmentConfiguration(DataSourceCustomDocumentEnrichmentConfigurationArgs customDocumentEnrichmentConfiguration) {
+            return customDocumentEnrichmentConfiguration(Output.of(customDocumentEnrichmentConfiguration));
         }
 
         public Builder dataSourceConfiguration(@Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration) {

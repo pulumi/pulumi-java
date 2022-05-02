@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.lex.outputs;
 
 import com.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
+import com.pulumi.awsnative.lex.outputs.BotAdvancedRecognitionSetting;
 import com.pulumi.awsnative.lex.outputs.BotSlotValueRegexFilter;
 import com.pulumi.core.annotations.CustomType;
 import java.util.Objects;
@@ -12,17 +13,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BotSlotValueSelectionSetting {
+    private final @Nullable BotAdvancedRecognitionSetting advancedRecognitionSetting;
     private final @Nullable BotSlotValueRegexFilter regexFilter;
     private final BotSlotValueResolutionStrategy resolutionStrategy;
 
     @CustomType.Constructor
     private BotSlotValueSelectionSetting(
+        @CustomType.Parameter("advancedRecognitionSetting") @Nullable BotAdvancedRecognitionSetting advancedRecognitionSetting,
         @CustomType.Parameter("regexFilter") @Nullable BotSlotValueRegexFilter regexFilter,
         @CustomType.Parameter("resolutionStrategy") BotSlotValueResolutionStrategy resolutionStrategy) {
+        this.advancedRecognitionSetting = advancedRecognitionSetting;
         this.regexFilter = regexFilter;
         this.resolutionStrategy = resolutionStrategy;
     }
 
+    public Optional<BotAdvancedRecognitionSetting> advancedRecognitionSetting() {
+        return Optional.ofNullable(this.advancedRecognitionSetting);
+    }
     public Optional<BotSlotValueRegexFilter> regexFilter() {
         return Optional.ofNullable(this.regexFilter);
     }
@@ -39,6 +46,7 @@ public final class BotSlotValueSelectionSetting {
     }
 
     public static final class Builder {
+        private @Nullable BotAdvancedRecognitionSetting advancedRecognitionSetting;
         private @Nullable BotSlotValueRegexFilter regexFilter;
         private BotSlotValueResolutionStrategy resolutionStrategy;
 
@@ -48,10 +56,15 @@ public final class BotSlotValueSelectionSetting {
 
         public Builder(BotSlotValueSelectionSetting defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.advancedRecognitionSetting = defaults.advancedRecognitionSetting;
     	      this.regexFilter = defaults.regexFilter;
     	      this.resolutionStrategy = defaults.resolutionStrategy;
         }
 
+        public Builder advancedRecognitionSetting(@Nullable BotAdvancedRecognitionSetting advancedRecognitionSetting) {
+            this.advancedRecognitionSetting = advancedRecognitionSetting;
+            return this;
+        }
         public Builder regexFilter(@Nullable BotSlotValueRegexFilter regexFilter) {
             this.regexFilter = regexFilter;
             return this;
@@ -60,7 +73,7 @@ public final class BotSlotValueSelectionSetting {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
         }        public BotSlotValueSelectionSetting build() {
-            return new BotSlotValueSelectionSetting(regexFilter, resolutionStrategy);
+            return new BotSlotValueSelectionSetting(advancedRecognitionSetting, regexFilter, resolutionStrategy);
         }
     }
 }

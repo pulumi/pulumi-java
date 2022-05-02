@@ -42,6 +42,12 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> authorizerName() {
         return Codegen.optional(this.authorizerName);
     }
+    @Export(name="enableCachingForHttp", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> enableCachingForHttp;
+
+    public Output<Optional<Boolean>> enableCachingForHttp() {
+        return Codegen.optional(this.enableCachingForHttp);
+    }
     @Export(name="signingDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> signingDisabled;
 

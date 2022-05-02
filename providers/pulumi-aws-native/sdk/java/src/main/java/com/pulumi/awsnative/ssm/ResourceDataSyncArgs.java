@@ -59,6 +59,13 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.syncFormat);
     }
 
+    @Import(name="syncName", required=true)
+    private Output<String> syncName;
+
+    public Output<String> syncName() {
+        return this.syncName;
+    }
+
     @Import(name="syncSource")
     private @Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource;
 
@@ -82,6 +89,7 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
         this.kMSKeyArn = $.kMSKeyArn;
         this.s3Destination = $.s3Destination;
         this.syncFormat = $.syncFormat;
+        this.syncName = $.syncName;
         this.syncSource = $.syncSource;
         this.syncType = $.syncType;
     }
@@ -158,6 +166,15 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
             return syncFormat(Output.of(syncFormat));
         }
 
+        public Builder syncName(Output<String> syncName) {
+            $.syncName = syncName;
+            return this;
+        }
+
+        public Builder syncName(String syncName) {
+            return syncName(Output.of(syncName));
+        }
+
         public Builder syncSource(@Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource) {
             $.syncSource = syncSource;
             return this;
@@ -177,6 +194,7 @@ public final class ResourceDataSyncArgs extends com.pulumi.resources.ResourceArg
         }
 
         public ResourceDataSyncArgs build() {
+            $.syncName = Objects.requireNonNull($.syncName, "expected parameter 'syncName' to be non-null");
             return $;
         }
     }

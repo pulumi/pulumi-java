@@ -17,7 +17,8 @@ import java.util.StringJoiner;
         Csv("CSV"),
         Json("JSON"),
         Parquet("PARQUET"),
-        Excel("EXCEL");
+        Excel("EXCEL"),
+        Orc("ORC");
 
         private final String value;
 

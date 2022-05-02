@@ -36,6 +36,21 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
     }
 
     /**
+     * Specifies which file to use as input to the workflow step.
+     * 
+     */
+    @Import(name="sourceFileLocation")
+    private @Nullable Output<String> sourceFileLocation;
+
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<Output<String>> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
+    }
+
+    /**
      * The ARN for the lambda function that is being called.
      * 
      */
@@ -69,6 +84,7 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
 
     private WorkflowStepCustomStepDetailsPropertiesArgs(WorkflowStepCustomStepDetailsPropertiesArgs $) {
         this.name = $.name;
+        this.sourceFileLocation = $.sourceFileLocation;
         this.target = $.target;
         this.timeoutSeconds = $.timeoutSeconds;
     }
@@ -110,6 +126,27 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param sourceFileLocation Specifies which file to use as input to the workflow step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceFileLocation(@Nullable Output<String> sourceFileLocation) {
+            $.sourceFileLocation = sourceFileLocation;
+            return this;
+        }
+
+        /**
+         * @param sourceFileLocation Specifies which file to use as input to the workflow step.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceFileLocation(String sourceFileLocation) {
+            return sourceFileLocation(Output.of(sourceFileLocation));
         }
 
         /**

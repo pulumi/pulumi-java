@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -27,14 +28,14 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
-    private Output<String> cidrBlock;
+    private Output</* @Nullable */ String> cidrBlock;
 
     /**
      * @return The primary IPv4 CIDR block for the VPC.
      * 
      */
-    public Output<String> cidrBlock() {
-        return this.cidrBlock;
+    public Output<Optional<String>> cidrBlock() {
+        return Codegen.optional(this.cidrBlock);
     }
     /**
      * A list of IPv4 CIDR block association IDs for the VPC.
@@ -133,6 +134,34 @@ public class VPC extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.instanceTenancy);
     }
     /**
+     * The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+     * 
+     */
+    @Export(name="ipv4IpamPoolId", type=String.class, parameters={})
+    private Output</* @Nullable */ String> ipv4IpamPoolId;
+
+    /**
+     * @return The ID of an IPv4 IPAM pool you want to use for allocating this VPC&#39;s CIDR
+     * 
+     */
+    public Output<Optional<String>> ipv4IpamPoolId() {
+        return Codegen.optional(this.ipv4IpamPoolId);
+    }
+    /**
+     * The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+     * 
+     */
+    @Export(name="ipv4NetmaskLength", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> ipv4NetmaskLength;
+
+    /**
+     * @return The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager (IPAM) pool
+     * 
+     */
+    public Output<Optional<Integer>> ipv4NetmaskLength() {
+        return Codegen.optional(this.ipv4NetmaskLength);
+    }
+    /**
      * A list of IPv6 CIDR blocks that are associated with the VPC.
      * 
      */
@@ -187,7 +216,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VPC(String name, VPCArgs args) {
+    public VPC(String name, @Nullable VPCArgs args) {
         this(name, args, null);
     }
     /**
@@ -196,7 +225,7 @@ public class VPC extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VPC(String name, VPCArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public VPC(String name, @Nullable VPCArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:VPC", name, args == null ? VPCArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

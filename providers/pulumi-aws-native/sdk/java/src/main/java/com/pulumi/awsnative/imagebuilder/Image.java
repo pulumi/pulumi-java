@@ -121,6 +121,20 @@ public class Image extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.imageTestsConfiguration);
     }
     /**
+     * URI for containers created in current Region with default ECR image tag
+     * 
+     */
+    @Export(name="imageUri", type=String.class, parameters={})
+    private Output<String> imageUri;
+
+    /**
+     * @return URI for containers created in current Region with default ECR image tag
+     * 
+     */
+    public Output<String> imageUri() {
+        return this.imageUri;
+    }
+    /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */

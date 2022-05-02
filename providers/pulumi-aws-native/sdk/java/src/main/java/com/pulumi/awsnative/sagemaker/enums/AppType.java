@@ -15,7 +15,10 @@ import java.util.StringJoiner;
     @EnumType
     public enum AppType {
         JupyterServer("JupyterServer"),
-        KernelGateway("KernelGateway");
+        KernelGateway("KernelGateway"),
+        RStudioServerPro("RStudioServerPro"),
+        RSessionGateway("RSessionGateway"),
+        Canvas("Canvas");
 
         private final String value;
 

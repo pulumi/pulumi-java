@@ -15,7 +15,8 @@ import java.util.StringJoiner;
     @EnumType
     public enum OriginEndpointDashPackageProfile {
         None("NONE"),
-        Hbbtv15("HBBTV_1_5");
+        Hbbtv15("HBBTV_1_5"),
+        Hybridcast("HYBRIDCAST");
 
         private final String value;
 

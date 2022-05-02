@@ -19,38 +19,38 @@ import javax.annotation.Nullable;
 public final class GetKeyResult {
     private final @Nullable String arn;
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     private final @Nullable String description;
     /**
-     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * @return Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
      * 
      */
     private final @Nullable Boolean enableKeyRotation;
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     private final @Nullable Boolean enabled;
     private final @Nullable String keyId;
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     private final @Nullable Object keyPolicy;
     /**
-     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * @return Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
      * 
      */
     private final @Nullable KeySpec keySpec;
     /**
-     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
      * 
      */
     private final @Nullable KeyUsage keyUsage;
     /**
-     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
      * 
      */
     private final @Nullable Boolean multiRegion;
@@ -88,21 +88,21 @@ public final class GetKeyResult {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * @return Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
      * 
      */
     public Optional<Boolean> enableKeyRotation() {
         return Optional.ofNullable(this.enableKeyRotation);
     }
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     public Optional<Boolean> enabled() {
@@ -112,28 +112,28 @@ public final class GetKeyResult {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     public Optional<Object> keyPolicy() {
         return Optional.ofNullable(this.keyPolicy);
     }
     /**
-     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * @return Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
      * 
      */
     public Optional<KeySpec> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
     /**
-     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
      * 
      */
     public Optional<KeyUsage> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
     /**
-     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
      * 
      */
     public Optional<Boolean> multiRegion() {

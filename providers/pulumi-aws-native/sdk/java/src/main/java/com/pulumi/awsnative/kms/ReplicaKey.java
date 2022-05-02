@@ -19,7 +19,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * The AWS::KMS::ReplicaKey resource specifies a multi-region replica customer master key (CMK) in AWS Key Management Service (AWS KMS).
+ * The AWS::KMS::ReplicaKey resource specifies a multi-region replica AWS KMS key in AWS Key Management Service (AWS KMS).
  * 
  */
 @ResourceType(type="aws-native:kms:ReplicaKey")
@@ -31,28 +31,28 @@ public class ReplicaKey extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     public Output<Optional<Boolean>> enabled() {
@@ -65,42 +65,42 @@ public class ReplicaKey extends com.pulumi.resources.CustomResource {
         return this.keyId;
     }
     /**
-     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     @Export(name="keyPolicy", type=Object.class, parameters={})
     private Output<Object> keyPolicy;
 
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
     /**
-     * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     @Export(name="pendingWindowInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pendingWindowInDays;
 
     /**
-     * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * @return Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     public Output<Optional<Integer>> pendingWindowInDays() {
         return Codegen.optional(this.pendingWindowInDays);
     }
     /**
-     * Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
     @Export(name="primaryKeyArn", type=String.class, parameters={})
     private Output<String> primaryKeyArn;
 
     /**
-     * @return Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * @return Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
     public Output<String> primaryKeyArn() {

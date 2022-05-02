@@ -6,20 +6,18 @@ package com.pulumi.awsnative.lex.outputs;
 import com.pulumi.awsnative.lex.outputs.BotAliasCloudWatchLogGroupLogDestination;
 import com.pulumi.core.annotations.CustomType;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class BotAliasTextLogDestination {
-    private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
+    private final BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
     @CustomType.Constructor
-    private BotAliasTextLogDestination(@CustomType.Parameter("cloudWatch") @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
+    private BotAliasTextLogDestination(@CustomType.Parameter("cloudWatch") BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
         this.cloudWatch = cloudWatch;
     }
 
-    public Optional<BotAliasCloudWatchLogGroupLogDestination> cloudWatch() {
-        return Optional.ofNullable(this.cloudWatch);
+    public BotAliasCloudWatchLogGroupLogDestination cloudWatch() {
+        return this.cloudWatch;
     }
 
     public static Builder builder() {
@@ -31,7 +29,7 @@ public final class BotAliasTextLogDestination {
     }
 
     public static final class Builder {
-        private @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
+        private BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
         public Builder() {
     	      // Empty
@@ -42,8 +40,8 @@ public final class BotAliasTextLogDestination {
     	      this.cloudWatch = defaults.cloudWatch;
         }
 
-        public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
-            this.cloudWatch = cloudWatch;
+        public Builder cloudWatch(BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
+            this.cloudWatch = Objects.requireNonNull(cloudWatch);
             return this;
         }        public BotAliasTextLogDestination build() {
             return new BotAliasTextLogDestination(cloudWatch);

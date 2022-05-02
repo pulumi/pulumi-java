@@ -21,14 +21,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final ReplicaKeyArgs Empty = new ReplicaKeyArgs();
 
     /**
-     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     public Optional<Output<String>> description() {
@@ -36,14 +36,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -51,14 +51,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     @Import(name="keyPolicy", required=true)
     private Output<Object> keyPolicy;
 
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     public Output<Object> keyPolicy() {
@@ -66,14 +66,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     @Import(name="pendingWindowInDays")
     private @Nullable Output<Integer> pendingWindowInDays;
 
     /**
-     * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * @return Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     public Optional<Output<Integer>> pendingWindowInDays() {
@@ -81,14 +81,14 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
     @Import(name="primaryKeyArn", required=true)
     private Output<String> primaryKeyArn;
 
     /**
-     * @return Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+     * @return Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
     public Output<String> primaryKeyArn() {
@@ -140,7 +140,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * @param description A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * @param description A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * @param enabled Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * @param enabled Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * @param keyPolicy The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * @param keyPolicy The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param primaryKeyArn Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+         * @param primaryKeyArn Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class ReplicaKeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param primaryKeyArn Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
+         * @param primaryKeyArn Identifies the primary AWS KMS key to create a replica of. Specify the Amazon Resource Name (ARN) of the AWS KMS key. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
          * 
          * @return builder
          * 
