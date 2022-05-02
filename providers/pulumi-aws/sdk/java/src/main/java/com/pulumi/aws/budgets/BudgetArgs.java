@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.budgets;
 
+import com.pulumi.aws.budgets.inputs.BudgetCostFilterArgs;
 import com.pulumi.aws.budgets.inputs.BudgetCostTypesArgs;
 import com.pulumi.aws.budgets.inputs.BudgetNotificationArgs;
 import com.pulumi.core.Output;
@@ -52,15 +53,38 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Map of CostFilters key/value pairs to apply to the budget.
      * 
+     * @deprecated
+     * Use the attribute &#34;cost_filter&#34; instead.
+     * 
      */
-    @Import(name="costFilters")
-    private @Nullable Output<Map<String,String>> costFilters;
+    @Deprecated /* Use the attribute ""cost_filter"" instead. */
+    @Import(name="costFilterLegacy")
+    private @Nullable Output<Map<String,String>> costFilterLegacy;
 
     /**
      * @return Map of CostFilters key/value pairs to apply to the budget.
      * 
+     * @deprecated
+     * Use the attribute &#34;cost_filter&#34; instead.
+     * 
      */
-    public Optional<Output<Map<String,String>>> costFilters() {
+    @Deprecated /* Use the attribute ""cost_filter"" instead. */
+    public Optional<Output<Map<String,String>>> costFilterLegacy() {
+        return Optional.ofNullable(this.costFilterLegacy);
+    }
+
+    /**
+     * A list of CostFilter name/values pair to apply to budget.
+     * 
+     */
+    @Import(name="costFilters")
+    private @Nullable Output<List<BudgetCostFilterArgs>> costFilters;
+
+    /**
+     * @return A list of CostFilter name/values pair to apply to budget.
+     * 
+     */
+    public Optional<Output<List<BudgetCostFilterArgs>>> costFilters() {
         return Optional.ofNullable(this.costFilters);
     }
 
@@ -204,6 +228,7 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
     private BudgetArgs(BudgetArgs $) {
         this.accountId = $.accountId;
         this.budgetType = $.budgetType;
+        this.costFilterLegacy = $.costFilterLegacy;
         this.costFilters = $.costFilters;
         this.costTypes = $.costTypes;
         this.limitAmount = $.limitAmount;
@@ -277,24 +302,63 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param costFilters Map of CostFilters key/value pairs to apply to the budget.
+         * @param costFilterLegacy Map of CostFilters key/value pairs to apply to the budget.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the attribute &#34;cost_filter&#34; instead.
+         * 
+         */
+        @Deprecated /* Use the attribute ""cost_filter"" instead. */
+        public Builder costFilterLegacy(@Nullable Output<Map<String,String>> costFilterLegacy) {
+            $.costFilterLegacy = costFilterLegacy;
+            return this;
+        }
+
+        /**
+         * @param costFilterLegacy Map of CostFilters key/value pairs to apply to the budget.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use the attribute &#34;cost_filter&#34; instead.
+         * 
+         */
+        @Deprecated /* Use the attribute ""cost_filter"" instead. */
+        public Builder costFilterLegacy(Map<String,String> costFilterLegacy) {
+            return costFilterLegacy(Output.of(costFilterLegacy));
+        }
+
+        /**
+         * @param costFilters A list of CostFilter name/values pair to apply to budget.
          * 
          * @return builder
          * 
          */
-        public Builder costFilters(@Nullable Output<Map<String,String>> costFilters) {
+        public Builder costFilters(@Nullable Output<List<BudgetCostFilterArgs>> costFilters) {
             $.costFilters = costFilters;
             return this;
         }
 
         /**
-         * @param costFilters Map of CostFilters key/value pairs to apply to the budget.
+         * @param costFilters A list of CostFilter name/values pair to apply to budget.
          * 
          * @return builder
          * 
          */
-        public Builder costFilters(Map<String,String> costFilters) {
+        public Builder costFilters(List<BudgetCostFilterArgs> costFilters) {
             return costFilters(Output.of(costFilters));
+        }
+
+        /**
+         * @param costFilters A list of CostFilter name/values pair to apply to budget.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder costFilters(BudgetCostFilterArgs... costFilters) {
+            return costFilters(List.of(costFilters));
         }
 
         /**

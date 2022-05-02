@@ -65,14 +65,14 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Availability Zones in which the service is available.
+     * A set of Availability Zones in which the service is available.
      * 
      */
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
     /**
-     * @return The Availability Zones in which the service is available.
+     * @return A set of Availability Zones in which the service is available.
      * 
      */
     public Optional<Output<List<String>>> availabilityZones() {
@@ -80,14 +80,14 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The DNS names for the service.
+     * A set of DNS names for the service.
      * 
      */
     @Import(name="baseEndpointDnsNames")
     private @Nullable Output<List<String>> baseEndpointDnsNames;
 
     /**
-     * @return The DNS names for the service.
+     * @return A set of DNS names for the service.
      * 
      */
     public Optional<Output<List<String>>> baseEndpointDnsNames() {
@@ -356,7 +356,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param availabilityZones The Availability Zones in which the service is available.
+         * @param availabilityZones A set of Availability Zones in which the service is available.
          * 
          * @return builder
          * 
@@ -367,7 +367,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param availabilityZones The Availability Zones in which the service is available.
+         * @param availabilityZones A set of Availability Zones in which the service is available.
          * 
          * @return builder
          * 
@@ -377,7 +377,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param availabilityZones The Availability Zones in which the service is available.
+         * @param availabilityZones A set of Availability Zones in which the service is available.
          * 
          * @return builder
          * 
@@ -387,7 +387,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param baseEndpointDnsNames The DNS names for the service.
+         * @param baseEndpointDnsNames A set of DNS names for the service.
          * 
          * @return builder
          * 
@@ -398,7 +398,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param baseEndpointDnsNames The DNS names for the service.
+         * @param baseEndpointDnsNames A set of DNS names for the service.
          * 
          * @return builder
          * 
@@ -408,7 +408,7 @@ public final class VpcEndpointServiceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param baseEndpointDnsNames The DNS names for the service.
+         * @param baseEndpointDnsNames A set of DNS names for the service.
          * 
          * @return builder
          * 

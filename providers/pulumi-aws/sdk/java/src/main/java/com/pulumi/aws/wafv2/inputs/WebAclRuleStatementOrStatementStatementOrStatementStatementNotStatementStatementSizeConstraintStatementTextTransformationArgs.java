@@ -15,14 +15,14 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     public static final WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs Empty = new WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatementSizeConstraintStatementTextTransformationArgs();
 
     /**
-     * The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
+     * Relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
      * 
      */
     @Import(name="priority", required=true)
     private Output<Integer> priority;
 
     /**
-     * @return The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
+     * @return Relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
      * 
      */
     public Output<Integer> priority() {
@@ -30,14 +30,14 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
     }
 
     /**
-     * The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
+     * Transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
      * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
-     * @return The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
+     * @return Transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
      * 
      */
     public Output<String> type() {
@@ -70,7 +70,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
         }
 
         /**
-         * @param priority The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
+         * @param priority Relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
         }
 
         /**
-         * @param priority The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
+         * @param priority Relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
          * 
          * @return builder
          * 
@@ -91,7 +91,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
         }
 
         /**
-         * @param type The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
+         * @param type Transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
         }
 
         /**
-         * @param type The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
+         * @param type Transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
          * 
          * @return builder
          * 

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainRetentionPolicy {
     /**
-     * @return The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
+     * @return The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Valid values are `Retain` or `Delete`.  Default value is `Retain`.
      * 
      */
     private final @Nullable String homeEfsFileSystem;
@@ -23,7 +23,7 @@ public final class DomainRetentionPolicy {
     }
 
     /**
-     * @return The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
+     * @return The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Valid values are `Retain` or `Delete`.  Default value is `Retain`.
      * 
      */
     public Optional<String> homeEfsFileSystem() {

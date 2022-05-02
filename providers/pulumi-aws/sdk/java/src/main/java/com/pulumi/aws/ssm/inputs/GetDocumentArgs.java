@@ -15,14 +15,14 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
     /**
-     * Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+     * Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
      * 
      */
     @Import(name="documentFormat")
     private @Nullable String documentFormat;
 
     /**
-     * @return Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+     * @return Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
      * 
      */
     public Optional<String> documentFormat() {
@@ -86,7 +86,7 @@ public final class GetDocumentArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param documentFormat Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
+         * @param documentFormat Returns the document in the specified format. The document format can be either `JSON`, `YAML` and `TEXT`. JSON is the default format.
          * 
          * @return builder
          * 

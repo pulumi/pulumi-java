@@ -35,6 +35,34 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ssm/maintenanceWindowTask:MaintenanceWindowTask")
 public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
     /**
+     * The ARN of the maintenance window task.
+     * 
+     */
+    @Export(name="arn", type=String.class, parameters={})
+    private Output<String> arn;
+
+    /**
+     * @return The ARN of the maintenance window task.
+     * 
+     */
+    public Output<String> arn() {
+        return this.arn;
+    }
+    /**
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    @Export(name="cutoffBehavior", type=String.class, parameters={})
+    private Output</* @Nullable */ String> cutoffBehavior;
+
+    /**
+     * @return Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    public Output<Optional<String>> cutoffBehavior() {
+        return Codegen.optional(this.cutoffBehavior);
+    }
+    /**
      * The description of the maintenance window task.
      * 
      */
@@ -187,6 +215,20 @@ public class MaintenanceWindowTask extends com.pulumi.resources.CustomResource {
      */
     public Output<String> windowId() {
         return this.windowId;
+    }
+    /**
+     * The ID of the maintenance window task.
+     * 
+     */
+    @Export(name="windowTaskId", type=String.class, parameters={})
+    private Output<String> windowTaskId;
+
+    /**
+     * @return The ID of the maintenance window task.
+     * 
+     */
+    public Output<String> windowTaskId() {
+        return this.windowTaskId;
     }
 
     /**

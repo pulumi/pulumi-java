@@ -16,14 +16,14 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
     public static final AmiLaunchPermissionState Empty = new AmiLaunchPermissionState();
 
     /**
-     * An AWS Account ID to add launch permissions.
+     * The AWS account ID for the launch permission.
      * 
      */
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
     /**
-     * @return An AWS Account ID to add launch permissions.
+     * @return The AWS account ID for the launch permission.
      * 
      */
     public Optional<Output<String>> accountId() {
@@ -31,25 +31,73 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * A region-unique name for the AMI.
+     * The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    @Import(name="group")
+    private @Nullable Output<String> group;
+
+    /**
+     * @return The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
+    }
+
+    /**
+     * The ID of the AMI.
      * 
      */
     @Import(name="imageId")
     private @Nullable Output<String> imageId;
 
     /**
-     * @return A region-unique name for the AMI.
+     * @return The ID of the AMI.
      * 
      */
     public Optional<Output<String>> imageId() {
         return Optional.ofNullable(this.imageId);
     }
 
+    /**
+     * The ARN of an organization for the launch permission.
+     * 
+     */
+    @Import(name="organizationArn")
+    private @Nullable Output<String> organizationArn;
+
+    /**
+     * @return The ARN of an organization for the launch permission.
+     * 
+     */
+    public Optional<Output<String>> organizationArn() {
+        return Optional.ofNullable(this.organizationArn);
+    }
+
+    /**
+     * The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    @Import(name="organizationalUnitArn")
+    private @Nullable Output<String> organizationalUnitArn;
+
+    /**
+     * @return The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    public Optional<Output<String>> organizationalUnitArn() {
+        return Optional.ofNullable(this.organizationalUnitArn);
+    }
+
     private AmiLaunchPermissionState() {}
 
     private AmiLaunchPermissionState(AmiLaunchPermissionState $) {
         this.accountId = $.accountId;
+        this.group = $.group;
         this.imageId = $.imageId;
+        this.organizationArn = $.organizationArn;
+        this.organizationalUnitArn = $.organizationalUnitArn;
     }
 
     public static Builder builder() {
@@ -71,7 +119,7 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param accountId An AWS Account ID to add launch permissions.
+         * @param accountId The AWS account ID for the launch permission.
          * 
          * @return builder
          * 
@@ -82,7 +130,7 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param accountId An AWS Account ID to add launch permissions.
+         * @param accountId The AWS account ID for the launch permission.
          * 
          * @return builder
          * 
@@ -92,7 +140,28 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param imageId A region-unique name for the AMI.
+         * @param group The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder group(@Nullable Output<String> group) {
+            $.group = group;
+            return this;
+        }
+
+        /**
+         * @param group The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder group(String group) {
+            return group(Output.of(group));
+        }
+
+        /**
+         * @param imageId The ID of the AMI.
          * 
          * @return builder
          * 
@@ -103,13 +172,55 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param imageId A region-unique name for the AMI.
+         * @param imageId The ID of the AMI.
          * 
          * @return builder
          * 
          */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
+        }
+
+        /**
+         * @param organizationArn The ARN of an organization for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArn(@Nullable Output<String> organizationArn) {
+            $.organizationArn = organizationArn;
+            return this;
+        }
+
+        /**
+         * @param organizationArn The ARN of an organization for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArn(String organizationArn) {
+            return organizationArn(Output.of(organizationArn));
+        }
+
+        /**
+         * @param organizationalUnitArn The ARN of an organizational unit for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArn(@Nullable Output<String> organizationalUnitArn) {
+            $.organizationalUnitArn = organizationalUnitArn;
+            return this;
+        }
+
+        /**
+         * @param organizationalUnitArn The ARN of an organizational unit for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArn(String organizationalUnitArn) {
+            return organizationalUnitArn(Output.of(organizationalUnitArn));
         }
 
         public AmiLaunchPermissionState build() {

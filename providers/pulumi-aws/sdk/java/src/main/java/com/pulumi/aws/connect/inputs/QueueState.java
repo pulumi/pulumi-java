@@ -154,6 +154,13 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.quickConnectIds);
     }
 
+    @Import(name="quickConnectIdsAssociateds")
+    private @Nullable Output<List<String>> quickConnectIdsAssociateds;
+
+    public Optional<Output<List<String>>> quickConnectIdsAssociateds() {
+        return Optional.ofNullable(this.quickConnectIdsAssociateds);
+    }
+
     /**
      * Specifies the description of the Queue. Valid values are `ENABLED`, `DISABLED`.
      * 
@@ -211,6 +218,7 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
         this.outboundCallerConfig = $.outboundCallerConfig;
         this.queueId = $.queueId;
         this.quickConnectIds = $.quickConnectIds;
+        this.quickConnectIdsAssociateds = $.quickConnectIdsAssociateds;
         this.status = $.status;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
@@ -431,6 +439,19 @@ public final class QueueState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder quickConnectIds(String... quickConnectIds) {
             return quickConnectIds(List.of(quickConnectIds));
+        }
+
+        public Builder quickConnectIdsAssociateds(@Nullable Output<List<String>> quickConnectIdsAssociateds) {
+            $.quickConnectIdsAssociateds = quickConnectIdsAssociateds;
+            return this;
+        }
+
+        public Builder quickConnectIdsAssociateds(List<String> quickConnectIdsAssociateds) {
+            return quickConnectIdsAssociateds(Output.of(quickConnectIdsAssociateds));
+        }
+
+        public Builder quickConnectIdsAssociateds(String... quickConnectIdsAssociateds) {
+            return quickConnectIdsAssociateds(List.of(quickConnectIdsAssociateds));
         }
 
         /**

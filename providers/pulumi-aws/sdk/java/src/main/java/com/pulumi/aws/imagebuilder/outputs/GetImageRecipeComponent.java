@@ -3,8 +3,10 @@
 
 package com.pulumi.aws.imagebuilder.outputs;
 
+import com.pulumi.aws.imagebuilder.outputs.GetImageRecipeComponentParameter;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -14,10 +16,18 @@ public final class GetImageRecipeComponent {
      * 
      */
     private final String componentArn;
+    /**
+     * @return Set of parameters that are used to configure the component.
+     * 
+     */
+    private final List<GetImageRecipeComponentParameter> parameters;
 
     @CustomType.Constructor
-    private GetImageRecipeComponent(@CustomType.Parameter("componentArn") String componentArn) {
+    private GetImageRecipeComponent(
+        @CustomType.Parameter("componentArn") String componentArn,
+        @CustomType.Parameter("parameters") List<GetImageRecipeComponentParameter> parameters) {
         this.componentArn = componentArn;
+        this.parameters = parameters;
     }
 
     /**
@@ -26,6 +36,13 @@ public final class GetImageRecipeComponent {
      */
     public String componentArn() {
         return this.componentArn;
+    }
+    /**
+     * @return Set of parameters that are used to configure the component.
+     * 
+     */
+    public List<GetImageRecipeComponentParameter> parameters() {
+        return this.parameters;
     }
 
     public static Builder builder() {
@@ -38,6 +55,7 @@ public final class GetImageRecipeComponent {
 
     public static final class Builder {
         private String componentArn;
+        private List<GetImageRecipeComponentParameter> parameters;
 
         public Builder() {
     	      // Empty
@@ -46,13 +64,21 @@ public final class GetImageRecipeComponent {
         public Builder(GetImageRecipeComponent defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.componentArn = defaults.componentArn;
+    	      this.parameters = defaults.parameters;
         }
 
         public Builder componentArn(String componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
+        }
+        public Builder parameters(List<GetImageRecipeComponentParameter> parameters) {
+            this.parameters = Objects.requireNonNull(parameters);
+            return this;
+        }
+        public Builder parameters(GetImageRecipeComponentParameter... parameters) {
+            return parameters(List.of(parameters));
         }        public GetImageRecipeComponent build() {
-            return new GetImageRecipeComponent(componentArn);
+            return new GetImageRecipeComponent(componentArn, parameters);
         }
     }
 }

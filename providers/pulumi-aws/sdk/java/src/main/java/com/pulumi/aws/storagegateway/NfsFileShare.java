@@ -64,6 +64,20 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.auditDestinationArn);
     }
     /**
+     * The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+     * 
+     */
+    @Export(name="bucketRegion", type=String.class, parameters={})
+    private Output</* @Nullable */ String> bucketRegion;
+
+    /**
+     * @return The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+     * 
+     */
+    public Output<Optional<String>> bucketRegion() {
+        return Codegen.optional(this.bucketRegion);
+    }
+    /**
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
@@ -232,14 +246,14 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.notificationPolicy);
     }
     /**
-     * Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     @Export(name="objectAcl", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectAcl;
 
     /**
-     * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * @return Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     public Output<Optional<String>> objectAcl() {
@@ -342,6 +356,20 @@ public class NfsFileShare extends com.pulumi.resources.CustomResource {
      */
     public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
+    }
+    /**
+     * The DNS name of the VPC endpoint for S3 PrivateLink.
+     * 
+     */
+    @Export(name="vpcEndpointDnsName", type=String.class, parameters={})
+    private Output</* @Nullable */ String> vpcEndpointDnsName;
+
+    /**
+     * @return The DNS name of the VPC endpoint for S3 PrivateLink.
+     * 
+     */
+    public Output<Optional<String>> vpcEndpointDnsName() {
+        return Codegen.optional(this.vpcEndpointDnsName);
     }
 
     /**

@@ -15,6 +15,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws:codecommit/trigger:Trigger")
 public class Trigger extends com.pulumi.resources.CustomResource {
     /**

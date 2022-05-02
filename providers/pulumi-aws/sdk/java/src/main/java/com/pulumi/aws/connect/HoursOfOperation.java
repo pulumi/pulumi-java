@@ -35,6 +35,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:connect/hoursOfOperation:HoursOfOperation")
 public class HoursOfOperation extends com.pulumi.resources.CustomResource {
     /**
+     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    @Export(name="arn", type=String.class, parameters={})
+    private Output<String> arn;
+
+    /**
+     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     */
+    public Output<String> arn() {
+        return this.arn;
+    }
+    /**
      * One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
@@ -63,14 +77,18 @@ public class HoursOfOperation extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * The Amazon Resource Name (ARN) of the Hours of Operation.
+     * (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
+     * 
+     * @deprecated
+     * use &#39;arn&#39; attribute instead
      * 
      */
+    @Deprecated /* use 'arn' attribute instead */
     @Export(name="hoursOfOperationArn", type=String.class, parameters={})
     private Output<String> hoursOfOperationArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the Hours of Operation.
+     * @return (**Deprecated**) The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
      */
     public Output<String> hoursOfOperationArn() {

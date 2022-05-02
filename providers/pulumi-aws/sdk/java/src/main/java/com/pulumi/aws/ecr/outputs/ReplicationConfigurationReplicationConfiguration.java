@@ -5,6 +5,7 @@ package com.pulumi.aws.ecr.outputs;
 
 import com.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfigurationRule;
 import com.pulumi.core.annotations.CustomType;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -13,19 +14,19 @@ public final class ReplicationConfigurationReplicationConfiguration {
      * @return The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
      * 
      */
-    private final ReplicationConfigurationReplicationConfigurationRule rule;
+    private final List<ReplicationConfigurationReplicationConfigurationRule> rules;
 
     @CustomType.Constructor
-    private ReplicationConfigurationReplicationConfiguration(@CustomType.Parameter("rule") ReplicationConfigurationReplicationConfigurationRule rule) {
-        this.rule = rule;
+    private ReplicationConfigurationReplicationConfiguration(@CustomType.Parameter("rules") List<ReplicationConfigurationReplicationConfigurationRule> rules) {
+        this.rules = rules;
     }
 
     /**
      * @return The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
      * 
      */
-    public ReplicationConfigurationReplicationConfigurationRule rule() {
-        return this.rule;
+    public List<ReplicationConfigurationReplicationConfigurationRule> rules() {
+        return this.rules;
     }
 
     public static Builder builder() {
@@ -37,7 +38,7 @@ public final class ReplicationConfigurationReplicationConfiguration {
     }
 
     public static final class Builder {
-        private ReplicationConfigurationReplicationConfigurationRule rule;
+        private List<ReplicationConfigurationReplicationConfigurationRule> rules;
 
         public Builder() {
     	      // Empty
@@ -45,14 +46,17 @@ public final class ReplicationConfigurationReplicationConfiguration {
 
         public Builder(ReplicationConfigurationReplicationConfiguration defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.rule = defaults.rule;
+    	      this.rules = defaults.rules;
         }
 
-        public Builder rule(ReplicationConfigurationReplicationConfigurationRule rule) {
-            this.rule = Objects.requireNonNull(rule);
+        public Builder rules(List<ReplicationConfigurationReplicationConfigurationRule> rules) {
+            this.rules = Objects.requireNonNull(rules);
             return this;
+        }
+        public Builder rules(ReplicationConfigurationReplicationConfigurationRule... rules) {
+            return rules(List.of(rules));
         }        public ReplicationConfigurationReplicationConfiguration build() {
-            return new ReplicationConfigurationReplicationConfiguration(rule);
+            return new ReplicationConfigurationReplicationConfiguration(rules);
         }
     }
 }

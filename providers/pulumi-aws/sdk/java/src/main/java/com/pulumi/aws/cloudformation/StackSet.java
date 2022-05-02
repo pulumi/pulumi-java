@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cloudformation.StackSetArgs;
 import com.pulumi.aws.cloudformation.inputs.StackSetState;
 import com.pulumi.aws.cloudformation.outputs.StackSetAutoDeployment;
+import com.pulumi.aws.cloudformation.outputs.StackSetOperationPreferences;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -80,6 +81,20 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.autoDeployment);
     }
     /**
+     * Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    @Export(name="callAs", type=String.class, parameters={})
+    private Output</* @Nullable */ String> callAs;
+
+    /**
+     * @return Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    public Output<Optional<String>> callAs() {
+        return Codegen.optional(this.callAs);
+    }
+    /**
      * A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
      * 
      */
@@ -136,6 +151,20 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * Preferences for how AWS CloudFormation performs a stack set update.
+     * 
+     */
+    @Export(name="operationPreferences", type=StackSetOperationPreferences.class, parameters={})
+    private Output</* @Nullable */ StackSetOperationPreferences> operationPreferences;
+
+    /**
+     * @return Preferences for how AWS CloudFormation performs a stack set update.
+     * 
+     */
+    public Output<Optional<StackSetOperationPreferences>> operationPreferences() {
+        return Codegen.optional(this.operationPreferences);
+    }
+    /**
      * Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
      * 
      */
@@ -178,14 +207,14 @@ public class StackSet extends com.pulumi.resources.CustomResource {
         return this.stackSetId;
     }
     /**
-     * Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

@@ -7,12 +7,15 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.ec2clientvpn.EndpointArgs;
 import com.pulumi.aws.ec2clientvpn.inputs.EndpointState;
 import com.pulumi.aws.ec2clientvpn.outputs.EndpointAuthenticationOption;
+import com.pulumi.aws.ec2clientvpn.outputs.EndpointClientConnectOptions;
+import com.pulumi.aws.ec2clientvpn.outputs.EndpointClientLoginBannerOptions;
 import com.pulumi.aws.ec2clientvpn.outputs.EndpointConnectionLogOptions;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +25,8 @@ import javax.annotation.Nullable;
 /**
  * Provides an AWS Client VPN endpoint for OpenVPN clients. For more information on usage, please see the
  * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
+ * 
+ * &gt; **NOTE on Client VPN endpoint target network security groups:** this provider provides both a standalone Client VPN endpoint network association resource with a (deprecated) `security_groups` argument and a Client VPN endpoint resource with a `security_group_ids` argument. Do not specify security groups in both resources. Doing so will cause a conflict and will overwrite the target network security group association.
  * 
  * ## Example Usage
  * 
@@ -77,6 +82,34 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      */
     public Output<String> clientCidrBlock() {
         return this.clientCidrBlock;
+    }
+    /**
+     * The options for managing connection authorization for new client connections.
+     * 
+     */
+    @Export(name="clientConnectOptions", type=EndpointClientConnectOptions.class, parameters={})
+    private Output<EndpointClientConnectOptions> clientConnectOptions;
+
+    /**
+     * @return The options for managing connection authorization for new client connections.
+     * 
+     */
+    public Output<EndpointClientConnectOptions> clientConnectOptions() {
+        return this.clientConnectOptions;
+    }
+    /**
+     * Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+     * 
+     */
+    @Export(name="clientLoginBannerOptions", type=EndpointClientLoginBannerOptions.class, parameters={})
+    private Output<EndpointClientLoginBannerOptions> clientLoginBannerOptions;
+
+    /**
+     * @return Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+     * 
+     */
+    public Output<EndpointClientLoginBannerOptions> clientLoginBannerOptions() {
+        return this.clientLoginBannerOptions;
     }
     /**
      * Information about the client connection logging options.
@@ -135,6 +168,20 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.dnsServers);
     }
     /**
+     * The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+     * 
+     */
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
+    private Output<List<String>> securityGroupIds;
+
+    /**
+     * @return The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+     * 
+     */
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds;
+    }
+    /**
      * Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
      * 
      */
@@ -163,6 +210,20 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return this.serverCertificateArn;
     }
     /**
+     * The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+     * 
+     */
+    @Export(name="sessionTimeoutHours", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> sessionTimeoutHours;
+
+    /**
+     * @return The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+     * 
+     */
+    public Output<Optional<Integer>> sessionTimeoutHours() {
+        return Codegen.optional(this.sessionTimeoutHours);
+    }
+    /**
      * Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
      * 
      */
@@ -177,14 +238,18 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.splitTunnel);
     }
     /**
-     * The current state of the Client VPN endpoint.
+     * **Deprecated** The current state of the Client VPN endpoint.
+     * 
+     * @deprecated
+     * This attribute has been deprecated.
      * 
      */
+    @Deprecated /* This attribute has been deprecated. */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return The current state of the Client VPN endpoint.
+     * @return **Deprecated** The current state of the Client VPN endpoint.
      * 
      */
     public Output<String> status() {
@@ -231,6 +296,34 @@ public class Endpoint extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> transportProtocol() {
         return Codegen.optional(this.transportProtocol);
+    }
+    /**
+     * The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+     * 
+     */
+    @Export(name="vpcId", type=String.class, parameters={})
+    private Output<String> vpcId;
+
+    /**
+     * @return The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+     * 
+     */
+    public Output<String> vpcId() {
+        return this.vpcId;
+    }
+    /**
+     * The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+     * 
+     */
+    @Export(name="vpnPort", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> vpnPort;
+
+    /**
+     * @return The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+     * 
+     */
+    public Output<Optional<Integer>> vpnPort() {
+        return Codegen.optional(this.vpnPort);
     }
 
     /**

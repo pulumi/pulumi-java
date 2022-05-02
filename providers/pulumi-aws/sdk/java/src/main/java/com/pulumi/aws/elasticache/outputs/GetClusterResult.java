@@ -4,6 +4,7 @@
 package com.pulumi.aws.elasticache.outputs;
 
 import com.pulumi.aws.elasticache.outputs.GetClusterCacheNode;
+import com.pulumi.aws.elasticache.outputs.GetClusterLogDeliveryConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
@@ -51,6 +52,11 @@ public final class GetClusterResult {
      * 
      */
     private final String id;
+    /**
+     * @return Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log) delivery settings.
+     * 
+     */
+    private final List<GetClusterLogDeliveryConfiguration> logDeliveryConfigurations;
     /**
      * @return Specifies the weekly time range for when maintenance
      * on the cache cluster is performed.
@@ -133,6 +139,7 @@ public final class GetClusterResult {
         @CustomType.Parameter("engine") String engine,
         @CustomType.Parameter("engineVersion") String engineVersion,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logDeliveryConfigurations") List<GetClusterLogDeliveryConfiguration> logDeliveryConfigurations,
         @CustomType.Parameter("maintenanceWindow") String maintenanceWindow,
         @CustomType.Parameter("nodeType") String nodeType,
         @CustomType.Parameter("notificationTopicArn") String notificationTopicArn,
@@ -155,6 +162,7 @@ public final class GetClusterResult {
         this.engine = engine;
         this.engineVersion = engineVersion;
         this.id = id;
+        this.logDeliveryConfigurations = logDeliveryConfigurations;
         this.maintenanceWindow = maintenanceWindow;
         this.nodeType = nodeType;
         this.notificationTopicArn = notificationTopicArn;
@@ -225,6 +233,13 @@ public final class GetClusterResult {
      */
     public String id() {
         return this.id;
+    }
+    /**
+     * @return Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log) delivery settings.
+     * 
+     */
+    public List<GetClusterLogDeliveryConfiguration> logDeliveryConfigurations() {
+        return this.logDeliveryConfigurations;
     }
     /**
      * @return Specifies the weekly time range for when maintenance
@@ -341,6 +356,7 @@ public final class GetClusterResult {
         private String engine;
         private String engineVersion;
         private String id;
+        private List<GetClusterLogDeliveryConfiguration> logDeliveryConfigurations;
         private String maintenanceWindow;
         private String nodeType;
         private String notificationTopicArn;
@@ -370,6 +386,7 @@ public final class GetClusterResult {
     	      this.engine = defaults.engine;
     	      this.engineVersion = defaults.engineVersion;
     	      this.id = defaults.id;
+    	      this.logDeliveryConfigurations = defaults.logDeliveryConfigurations;
     	      this.maintenanceWindow = defaults.maintenanceWindow;
     	      this.nodeType = defaults.nodeType;
     	      this.notificationTopicArn = defaults.notificationTopicArn;
@@ -423,6 +440,13 @@ public final class GetClusterResult {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
+        }
+        public Builder logDeliveryConfigurations(List<GetClusterLogDeliveryConfiguration> logDeliveryConfigurations) {
+            this.logDeliveryConfigurations = Objects.requireNonNull(logDeliveryConfigurations);
+            return this;
+        }
+        public Builder logDeliveryConfigurations(GetClusterLogDeliveryConfiguration... logDeliveryConfigurations) {
+            return logDeliveryConfigurations(List.of(logDeliveryConfigurations));
         }
         public Builder maintenanceWindow(String maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
@@ -482,7 +506,7 @@ public final class GetClusterResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }        public GetClusterResult build() {
-            return new GetClusterResult(arn, availabilityZone, cacheNodes, clusterAddress, clusterId, configurationEndpoint, engine, engineVersion, id, maintenanceWindow, nodeType, notificationTopicArn, numCacheNodes, parameterGroupName, port, replicationGroupId, securityGroupIds, securityGroupNames, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags);
+            return new GetClusterResult(arn, availabilityZone, cacheNodes, clusterAddress, clusterId, configurationEndpoint, engine, engineVersion, id, logDeliveryConfigurations, maintenanceWindow, nodeType, notificationTopicArn, numCacheNodes, parameterGroupName, port, replicationGroupId, securityGroupIds, securityGroupNames, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags);
         }
     }
 }

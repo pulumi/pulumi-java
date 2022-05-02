@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class AmiLaunchPermissionArgs extends com.pulumi.resources.ResourceArgs {
@@ -14,40 +16,88 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
     public static final AmiLaunchPermissionArgs Empty = new AmiLaunchPermissionArgs();
 
     /**
-     * An AWS Account ID to add launch permissions.
+     * The AWS account ID for the launch permission.
      * 
      */
-    @Import(name="accountId", required=true)
-    private Output<String> accountId;
+    @Import(name="accountId")
+    private @Nullable Output<String> accountId;
 
     /**
-     * @return An AWS Account ID to add launch permissions.
+     * @return The AWS account ID for the launch permission.
      * 
      */
-    public Output<String> accountId() {
-        return this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
-     * A region-unique name for the AMI.
+     * The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    @Import(name="group")
+    private @Nullable Output<String> group;
+
+    /**
+     * @return The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
+    }
+
+    /**
+     * The ID of the AMI.
      * 
      */
     @Import(name="imageId", required=true)
     private Output<String> imageId;
 
     /**
-     * @return A region-unique name for the AMI.
+     * @return The ID of the AMI.
      * 
      */
     public Output<String> imageId() {
         return this.imageId;
     }
 
+    /**
+     * The ARN of an organization for the launch permission.
+     * 
+     */
+    @Import(name="organizationArn")
+    private @Nullable Output<String> organizationArn;
+
+    /**
+     * @return The ARN of an organization for the launch permission.
+     * 
+     */
+    public Optional<Output<String>> organizationArn() {
+        return Optional.ofNullable(this.organizationArn);
+    }
+
+    /**
+     * The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    @Import(name="organizationalUnitArn")
+    private @Nullable Output<String> organizationalUnitArn;
+
+    /**
+     * @return The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    public Optional<Output<String>> organizationalUnitArn() {
+        return Optional.ofNullable(this.organizationalUnitArn);
+    }
+
     private AmiLaunchPermissionArgs() {}
 
     private AmiLaunchPermissionArgs(AmiLaunchPermissionArgs $) {
         this.accountId = $.accountId;
+        this.group = $.group;
         this.imageId = $.imageId;
+        this.organizationArn = $.organizationArn;
+        this.organizationalUnitArn = $.organizationalUnitArn;
     }
 
     public static Builder builder() {
@@ -69,18 +119,18 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param accountId An AWS Account ID to add launch permissions.
+         * @param accountId The AWS account ID for the launch permission.
          * 
          * @return builder
          * 
          */
-        public Builder accountId(Output<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
         /**
-         * @param accountId An AWS Account ID to add launch permissions.
+         * @param accountId The AWS account ID for the launch permission.
          * 
          * @return builder
          * 
@@ -90,7 +140,28 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param imageId A region-unique name for the AMI.
+         * @param group The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder group(@Nullable Output<String> group) {
+            $.group = group;
+            return this;
+        }
+
+        /**
+         * @param group The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder group(String group) {
+            return group(Output.of(group));
+        }
+
+        /**
+         * @param imageId The ID of the AMI.
          * 
          * @return builder
          * 
@@ -101,7 +172,7 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param imageId A region-unique name for the AMI.
+         * @param imageId The ID of the AMI.
          * 
          * @return builder
          * 
@@ -110,8 +181,49 @@ public final class AmiLaunchPermissionArgs extends com.pulumi.resources.Resource
             return imageId(Output.of(imageId));
         }
 
+        /**
+         * @param organizationArn The ARN of an organization for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArn(@Nullable Output<String> organizationArn) {
+            $.organizationArn = organizationArn;
+            return this;
+        }
+
+        /**
+         * @param organizationArn The ARN of an organization for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArn(String organizationArn) {
+            return organizationArn(Output.of(organizationArn));
+        }
+
+        /**
+         * @param organizationalUnitArn The ARN of an organizational unit for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArn(@Nullable Output<String> organizationalUnitArn) {
+            $.organizationalUnitArn = organizationalUnitArn;
+            return this;
+        }
+
+        /**
+         * @param organizationalUnitArn The ARN of an organizational unit for the launch permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArn(String organizationalUnitArn) {
+            return organizationalUnitArn(Output.of(organizationalUnitArn));
+        }
+
         public AmiLaunchPermissionArgs build() {
-            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
             $.imageId = Objects.requireNonNull($.imageId, "expected parameter 'imageId' to be non-null");
             return $;
         }

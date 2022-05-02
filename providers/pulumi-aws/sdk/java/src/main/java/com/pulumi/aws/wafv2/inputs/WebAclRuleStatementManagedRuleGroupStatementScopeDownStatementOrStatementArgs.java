@@ -15,14 +15,14 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     public static final WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementArgs Empty = new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementArgs();
 
     /**
-     * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+     * Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs>> statements;
 
     /**
-     * @return The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs>> statements() {
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * @param statements Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * @param statements Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -75,7 +75,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+         * @param statements Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
          * 
          * @return builder
          * 

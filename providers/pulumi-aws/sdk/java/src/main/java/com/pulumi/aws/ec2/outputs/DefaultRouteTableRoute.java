@@ -17,6 +17,11 @@ public final class DefaultRouteTableRoute {
      */
     private final @Nullable String cidrBlock;
     /**
+     * @return The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    private final @Nullable String coreNetworkArn;
+    /**
      * @return The ID of a managed prefix list destination of the route.
      * 
      */
@@ -70,6 +75,7 @@ public final class DefaultRouteTableRoute {
     @CustomType.Constructor
     private DefaultRouteTableRoute(
         @CustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @CustomType.Parameter("coreNetworkArn") @Nullable String coreNetworkArn,
         @CustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
         @CustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
         @CustomType.Parameter("gatewayId") @Nullable String gatewayId,
@@ -81,6 +87,7 @@ public final class DefaultRouteTableRoute {
         @CustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
         @CustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.cidrBlock = cidrBlock;
+        this.coreNetworkArn = coreNetworkArn;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyGatewayId = egressOnlyGatewayId;
         this.gatewayId = gatewayId;
@@ -99,6 +106,13 @@ public final class DefaultRouteTableRoute {
      */
     public Optional<String> cidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
+    }
+    /**
+     * @return The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    public Optional<String> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
     }
     /**
      * @return The ID of a managed prefix list destination of the route.
@@ -181,6 +195,7 @@ public final class DefaultRouteTableRoute {
 
     public static final class Builder {
         private @Nullable String cidrBlock;
+        private @Nullable String coreNetworkArn;
         private @Nullable String destinationPrefixListId;
         private @Nullable String egressOnlyGatewayId;
         private @Nullable String gatewayId;
@@ -199,6 +214,7 @@ public final class DefaultRouteTableRoute {
         public Builder(DefaultRouteTableRoute defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cidrBlock = defaults.cidrBlock;
+    	      this.coreNetworkArn = defaults.coreNetworkArn;
     	      this.destinationPrefixListId = defaults.destinationPrefixListId;
     	      this.egressOnlyGatewayId = defaults.egressOnlyGatewayId;
     	      this.gatewayId = defaults.gatewayId;
@@ -213,6 +229,10 @@ public final class DefaultRouteTableRoute {
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
+            return this;
+        }
+        public Builder coreNetworkArn(@Nullable String coreNetworkArn) {
+            this.coreNetworkArn = coreNetworkArn;
             return this;
         }
         public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
@@ -255,7 +275,7 @@ public final class DefaultRouteTableRoute {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }        public DefaultRouteTableRoute build() {
-            return new DefaultRouteTableRoute(cidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
+            return new DefaultRouteTableRoute(cidrBlock, coreNetworkArn, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
         }
     }
 }

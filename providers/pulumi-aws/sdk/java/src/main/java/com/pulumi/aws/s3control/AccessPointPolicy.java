@@ -15,6 +15,8 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * Access Point policies can be imported using the `access_point_arn`, e.g.

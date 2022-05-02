@@ -17,29 +17,6 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     public static final GlobalReplicationGroupState Empty = new GlobalReplicationGroupState();
 
     /**
-     * (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-     * 
-     * @deprecated
-     * Use engine_version_actual instead
-     * 
-     */
-    @Deprecated /* Use engine_version_actual instead */
-    @Import(name="actualEngineVersion")
-    private @Nullable Output<String> actualEngineVersion;
-
-    /**
-     * @return (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-     * 
-     * @deprecated
-     * Use engine_version_actual instead
-     * 
-     */
-    @Deprecated /* Use engine_version_actual instead */
-    public Optional<Output<String>> actualEngineVersion() {
-        return Optional.ofNullable(this.actualEngineVersion);
-    }
-
-    /**
      * The ARN of the ElastiCache Global Replication Group.
      * 
      */
@@ -222,7 +199,6 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
     private GlobalReplicationGroupState() {}
 
     private GlobalReplicationGroupState(GlobalReplicationGroupState $) {
-        this.actualEngineVersion = $.actualEngineVersion;
         this.arn = $.arn;
         this.atRestEncryptionEnabled = $.atRestEncryptionEnabled;
         this.authTokenEnabled = $.authTokenEnabled;
@@ -253,35 +229,6 @@ public final class GlobalReplicationGroupState extends com.pulumi.resources.Reso
 
         public Builder(GlobalReplicationGroupState defaults) {
             $ = new GlobalReplicationGroupState(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param actualEngineVersion (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-         * 
-         * @return builder
-         * 
-         * @deprecated
-         * Use engine_version_actual instead
-         * 
-         */
-        @Deprecated /* Use engine_version_actual instead */
-        public Builder actualEngineVersion(@Nullable Output<String> actualEngineVersion) {
-            $.actualEngineVersion = actualEngineVersion;
-            return this;
-        }
-
-        /**
-         * @param actualEngineVersion (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-         * 
-         * @return builder
-         * 
-         * @deprecated
-         * Use engine_version_actual instead
-         * 
-         */
-        @Deprecated /* Use engine_version_actual instead */
-        public Builder actualEngineVersion(String actualEngineVersion) {
-            return actualEngineVersion(Output.of(actualEngineVersion));
         }
 
         /**

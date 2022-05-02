@@ -20,6 +20,36 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
     public static final MaintenanceWindowTaskState Empty = new MaintenanceWindowTaskState();
 
     /**
+     * The ARN of the maintenance window task.
+     * 
+     */
+    @Import(name="arn")
+    private @Nullable Output<String> arn;
+
+    /**
+     * @return The ARN of the maintenance window task.
+     * 
+     */
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
+    }
+
+    /**
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    @Import(name="cutoffBehavior")
+    private @Nullable Output<String> cutoffBehavior;
+
+    /**
+     * @return Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    public Optional<Output<String>> cutoffBehavior() {
+        return Optional.ofNullable(this.cutoffBehavior);
+    }
+
+    /**
      * The description of the maintenance window task.
      * 
      */
@@ -184,9 +214,26 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.windowId);
     }
 
+    /**
+     * The ID of the maintenance window task.
+     * 
+     */
+    @Import(name="windowTaskId")
+    private @Nullable Output<String> windowTaskId;
+
+    /**
+     * @return The ID of the maintenance window task.
+     * 
+     */
+    public Optional<Output<String>> windowTaskId() {
+        return Optional.ofNullable(this.windowTaskId);
+    }
+
     private MaintenanceWindowTaskState() {}
 
     private MaintenanceWindowTaskState(MaintenanceWindowTaskState $) {
+        this.arn = $.arn;
+        this.cutoffBehavior = $.cutoffBehavior;
         this.description = $.description;
         this.maxConcurrency = $.maxConcurrency;
         this.maxErrors = $.maxErrors;
@@ -198,6 +245,7 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
         this.taskInvocationParameters = $.taskInvocationParameters;
         this.taskType = $.taskType;
         this.windowId = $.windowId;
+        this.windowTaskId = $.windowTaskId;
     }
 
     public static Builder builder() {
@@ -216,6 +264,48 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
 
         public Builder(MaintenanceWindowTaskState defaults) {
             $ = new MaintenanceWindowTaskState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param arn The ARN of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable Output<String> arn) {
+            $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The ARN of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
+        }
+
+        /**
+         * @param cutoffBehavior Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cutoffBehavior(@Nullable Output<String> cutoffBehavior) {
+            $.cutoffBehavior = cutoffBehavior;
+            return this;
+        }
+
+        /**
+         * @param cutoffBehavior Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cutoffBehavior(String cutoffBehavior) {
+            return cutoffBehavior(Output.of(cutoffBehavior));
         }
 
         /**
@@ -457,6 +547,27 @@ public final class MaintenanceWindowTaskState extends com.pulumi.resources.Resou
          */
         public Builder windowId(String windowId) {
             return windowId(Output.of(windowId));
+        }
+
+        /**
+         * @param windowTaskId The ID of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder windowTaskId(@Nullable Output<String> windowTaskId) {
+            $.windowTaskId = windowTaskId;
+            return this;
+        }
+
+        /**
+         * @param windowTaskId The ID of the maintenance window task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder windowTaskId(String windowTaskId) {
+            return windowTaskId(Output.of(windowTaskId));
         }
 
         public MaintenanceWindowTaskState build() {

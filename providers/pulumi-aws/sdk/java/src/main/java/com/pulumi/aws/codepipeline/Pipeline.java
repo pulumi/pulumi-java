@@ -52,15 +52,15 @@ public class Pipeline extends com.pulumi.resources.CustomResource {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @Export(name="artifactStore", type=PipelineArtifactStore.class, parameters={})
-    private Output<PipelineArtifactStore> artifactStore;
+    @Export(name="artifactStores", type=List.class, parameters={PipelineArtifactStore.class})
+    private Output<List<PipelineArtifactStore>> artifactStores;
 
     /**
      * @return One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    public Output<PipelineArtifactStore> artifactStore() {
-        return this.artifactStore;
+    public Output<List<PipelineArtifactStore>> artifactStores() {
+        return this.artifactStores;
     }
     /**
      * The name of the pipeline.

@@ -67,14 +67,14 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     }
 
     /**
-     * Filter that identifies subset of objects to which the replication rule applies documented below.
+     * Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
      * 
      */
     @Import(name="filter")
     private @Nullable Output<BucketReplicationConfigRuleFilterArgs> filter;
 
     /**
-     * @return Filter that identifies subset of objects to which the replication rule applies documented below.
+     * @return Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
      * 
      */
     public Optional<Output<BucketReplicationConfigRuleFilterArgs>> filter() {
@@ -97,16 +97,24 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
     }
 
     /**
-     * Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
+     * 
+     * @deprecated
+     * Use filter instead
      * 
      */
+    @Deprecated /* Use filter instead */
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
     /**
-     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+     * @return Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
+     * 
+     * @deprecated
+     * Use filter instead
      * 
      */
+    @Deprecated /* Use filter instead */
     public Optional<Output<String>> prefix() {
         return Optional.ofNullable(this.prefix);
     }
@@ -252,7 +260,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param filter Filter that identifies subset of objects to which the replication rule applies documented below.
+         * @param filter Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
          * 
          * @return builder
          * 
@@ -263,7 +271,7 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param filter Filter that identifies subset of objects to which the replication rule applies documented below.
+         * @param filter Filter that identifies subset of objects to which the replication rule applies documented below. If not specified, the `rule` will default to using `prefix`.
          * 
          * @return builder
          * 
@@ -294,22 +302,30 @@ public final class BucketReplicationConfigRuleArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param prefix Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+         * @param prefix Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use filter instead
+         * 
          */
+        @Deprecated /* Use filter instead */
         public Builder prefix(@Nullable Output<String> prefix) {
             $.prefix = prefix;
             return this;
         }
 
         /**
-         * @param prefix Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
+         * @param prefix Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length. Defaults to an empty string (`&#34;&#34;`) if `filter` is not specified.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use filter instead
+         * 
          */
+        @Deprecated /* Use filter instead */
         public Builder prefix(String prefix) {
             return prefix(Output.of(prefix));
         }

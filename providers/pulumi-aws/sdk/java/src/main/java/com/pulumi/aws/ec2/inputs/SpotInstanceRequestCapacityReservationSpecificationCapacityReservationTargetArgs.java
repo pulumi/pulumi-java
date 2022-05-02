@@ -30,10 +30,26 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
         return Optional.ofNullable(this.capacityReservationId);
     }
 
+    /**
+     * The ARN of the Capacity Reservation resource group in which to run the instance.
+     * 
+     */
+    @Import(name="capacityReservationResourceGroupArn")
+    private @Nullable Output<String> capacityReservationResourceGroupArn;
+
+    /**
+     * @return The ARN of the Capacity Reservation resource group in which to run the instance.
+     * 
+     */
+    public Optional<Output<String>> capacityReservationResourceGroupArn() {
+        return Optional.ofNullable(this.capacityReservationResourceGroupArn);
+    }
+
     private SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs() {}
 
     private SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs(SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs $) {
         this.capacityReservationId = $.capacityReservationId;
+        this.capacityReservationResourceGroupArn = $.capacityReservationResourceGroupArn;
     }
 
     public static Builder builder() {
@@ -73,6 +89,27 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
          */
         public Builder capacityReservationId(String capacityReservationId) {
             return capacityReservationId(Output.of(capacityReservationId));
+        }
+
+        /**
+         * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource group in which to run the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationResourceGroupArn(@Nullable Output<String> capacityReservationResourceGroupArn) {
+            $.capacityReservationResourceGroupArn = capacityReservationResourceGroupArn;
+            return this;
+        }
+
+        /**
+         * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource group in which to run the instance.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder capacityReservationResourceGroupArn(String capacityReservationResourceGroupArn) {
+            return capacityReservationResourceGroupArn(Output.of(capacityReservationResourceGroupArn));
         }
 
         public SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetArgs build() {

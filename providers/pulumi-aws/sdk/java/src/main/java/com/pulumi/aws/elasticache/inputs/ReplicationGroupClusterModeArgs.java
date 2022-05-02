@@ -18,14 +18,22 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
     /**
      * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
+     * @deprecated
+     * Use root-level num_node_groups instead
+     * 
      */
+    @Deprecated /* Use root-level num_node_groups instead */
     @Import(name="numNodeGroups")
     private @Nullable Output<Integer> numNodeGroups;
 
     /**
      * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
+     * @deprecated
+     * Use root-level num_node_groups instead
+     * 
      */
+    @Deprecated /* Use root-level num_node_groups instead */
     public Optional<Output<Integer>> numNodeGroups() {
         return Optional.ofNullable(this.numNodeGroups);
     }
@@ -33,16 +41,24 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
     /**
      * Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
+     * @deprecated
+     * Use root-level replicas_per_node_group instead
+     * 
      */
-    @Import(name="replicasPerNodeGroup", required=true)
-    private Output<Integer> replicasPerNodeGroup;
+    @Deprecated /* Use root-level replicas_per_node_group instead */
+    @Import(name="replicasPerNodeGroup")
+    private @Nullable Output<Integer> replicasPerNodeGroup;
 
     /**
      * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
+     * @deprecated
+     * Use root-level replicas_per_node_group instead
+     * 
      */
-    public Output<Integer> replicasPerNodeGroup() {
-        return this.replicasPerNodeGroup;
+    @Deprecated /* Use root-level replicas_per_node_group instead */
+    public Optional<Output<Integer>> replicasPerNodeGroup() {
+        return Optional.ofNullable(this.replicasPerNodeGroup);
     }
 
     private ReplicationGroupClusterModeArgs() {}
@@ -75,7 +91,11 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use root-level num_node_groups instead
+         * 
          */
+        @Deprecated /* Use root-level num_node_groups instead */
         public Builder numNodeGroups(@Nullable Output<Integer> numNodeGroups) {
             $.numNodeGroups = numNodeGroups;
             return this;
@@ -86,7 +106,11 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use root-level num_node_groups instead
+         * 
          */
+        @Deprecated /* Use root-level num_node_groups instead */
         public Builder numNodeGroups(Integer numNodeGroups) {
             return numNodeGroups(Output.of(numNodeGroups));
         }
@@ -96,8 +120,12 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use root-level replicas_per_node_group instead
+         * 
          */
-        public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {
+        @Deprecated /* Use root-level replicas_per_node_group instead */
+        public Builder replicasPerNodeGroup(@Nullable Output<Integer> replicasPerNodeGroup) {
             $.replicasPerNodeGroup = replicasPerNodeGroup;
             return this;
         }
@@ -107,13 +135,16 @@ public final class ReplicationGroupClusterModeArgs extends com.pulumi.resources.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use root-level replicas_per_node_group instead
+         * 
          */
+        @Deprecated /* Use root-level replicas_per_node_group instead */
         public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
             return replicasPerNodeGroup(Output.of(replicasPerNodeGroup));
         }
 
         public ReplicationGroupClusterModeArgs build() {
-            $.replicasPerNodeGroup = Objects.requireNonNull($.replicasPerNodeGroup, "expected parameter 'replicasPerNodeGroup' to be non-null");
             return $;
         }
     }

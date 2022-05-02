@@ -15,14 +15,14 @@ public final class WebAclRuleStatementNotStatementArgs extends com.pulumi.resour
     public static final WebAclRuleStatementNotStatementArgs Empty = new WebAclRuleStatementNotStatementArgs();
 
     /**
-     * The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementNotStatementStatementArgs>> statements;
 
     /**
-     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * @return Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     public Output<List<WebAclRuleStatementNotStatementStatementArgs>> statements() {
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementNotStatementArgs extends com.pulumi.resour
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class WebAclRuleStatementNotStatementArgs extends com.pulumi.resour
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -75,7 +75,7 @@ public final class WebAclRuleStatementNotStatementArgs extends com.pulumi.resour
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 

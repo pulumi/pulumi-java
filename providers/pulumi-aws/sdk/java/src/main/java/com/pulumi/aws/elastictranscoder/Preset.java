@@ -70,14 +70,14 @@ public class Preset extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="audioCodecOptions", type=PresetAudioCodecOptions.class, parameters={})
-    private Output</* @Nullable */ PresetAudioCodecOptions> audioCodecOptions;
+    private Output<PresetAudioCodecOptions> audioCodecOptions;
 
     /**
      * @return Codec options for the audio parameters (documented below)
      * 
      */
-    public Output<Optional<PresetAudioCodecOptions>> audioCodecOptions() {
-        return Codegen.optional(this.audioCodecOptions);
+    public Output<PresetAudioCodecOptions> audioCodecOptions() {
+        return this.audioCodecOptions;
     }
     /**
      * The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.

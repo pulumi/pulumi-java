@@ -52,14 +52,36 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The certificate data, in PEM format.
+     * The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    @Export(name="caPem", type=String.class, parameters={})
+    private Output</* @Nullable */ String> caPem;
+
+    /**
+     * @return The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    public Output<Optional<String>> caPem() {
+        return Codegen.optional(this.caPem);
+    }
+    /**
+     * The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
      * 
      */
     @Export(name="certificatePem", type=String.class, parameters={})
     private Output<String> certificatePem;
 
     /**
-     * @return The certificate data, in PEM format.
+     * @return The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
      * 
      */
     public Output<String> certificatePem() {
@@ -88,28 +110,28 @@ public class Certificate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.csr);
     }
     /**
-     * When no CSR is provided, the private key.
+     * When neither CSR nor certificate is provided, the private key.
      * 
      */
     @Export(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
     /**
-     * @return When no CSR is provided, the private key.
+     * @return When neither CSR nor certificate is provided, the private key.
      * 
      */
     public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
-     * When no CSR is provided, the public key.
+     * When neither CSR nor certificate is provided, the public key.
      * 
      */
     @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
-     * @return When no CSR is provided, the public key.
+     * @return When neither CSR nor certificate is provided, the public key.
      * 
      */
     public Output<String> publicKey() {

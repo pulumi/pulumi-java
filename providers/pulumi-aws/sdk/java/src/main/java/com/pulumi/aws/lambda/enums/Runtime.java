@@ -16,6 +16,7 @@ import java.util.StringJoiner;
     public enum Runtime {
         DotnetCore2d1("dotnetcore2.1"),
         DotnetCore3d1("dotnetcore3.1"),
+        Dotnet6("dotnet6"),
         Go1dx("go1.x"),
         Java8("java8"),
         Java8AL2("java8.al2"),

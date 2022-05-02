@@ -14,14 +14,14 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
     public static final WebAclRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs Empty = new WebAclRuleStatementAndStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs();
 
     /**
-     * The name of the query header to inspect. This setting must be provided as lower case characters.
+     * Name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return Name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
     public Output<String> name() {
@@ -53,7 +53,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
         }
 
         /**
-         * @param name The name of the query header to inspect. This setting must be provided as lower case characters.
+         * @param name Name of the query header to inspect. This setting must be provided as lower case characters.
          * 
          * @return builder
          * 
@@ -64,7 +64,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
         }
 
         /**
-         * @param name The name of the query header to inspect. This setting must be provided as lower case characters.
+         * @param name Name of the query header to inspect. This setting must be provided as lower case characters.
          * 
          * @return builder
          * 

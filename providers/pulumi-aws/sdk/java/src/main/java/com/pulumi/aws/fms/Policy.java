@@ -57,6 +57,20 @@ public class Policy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.deleteAllPolicyResources);
     }
     /**
+     * If true, Firewall Manager will automatically remove protections from resources that leave the policy scope. Defaults to `false`. More information can be found here [AWS Firewall Manager policy contents](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_Policy.html)
+     * 
+     */
+    @Export(name="deleteUnusedFmManagedResources", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> deleteUnusedFmManagedResources;
+
+    /**
+     * @return If true, Firewall Manager will automatically remove protections from resources that leave the policy scope. Defaults to `false`. More information can be found here [AWS Firewall Manager policy contents](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_Policy.html)
+     * 
+     */
+    public Output<Optional<Boolean>> deleteUnusedFmManagedResources() {
+        return Codegen.optional(this.deleteUnusedFmManagedResources);
+    }
+    /**
      * A map of lists of accounts and OU&#39;s to exclude from the policy.
      * 
      */
@@ -195,6 +209,34 @@ public class Policy extends com.pulumi.resources.CustomResource {
      */
     public Output<PolicySecurityServicePolicyData> securityServicePolicyData() {
         return this.securityServicePolicyData;
+    }
+    /**
+     * Key-value mapping of resource tags. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
+    private Output</* @Nullable */ Map<String,String>> tags;
+
+    /**
+     * @return Key-value mapping of resource tags. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
+     * 
+     */
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
+    }
+    /**
+     * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    private Output<Map<String,String>> tagsAll;
+
+    /**
+     * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
+     * 
+     */
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll;
     }
 
     /**

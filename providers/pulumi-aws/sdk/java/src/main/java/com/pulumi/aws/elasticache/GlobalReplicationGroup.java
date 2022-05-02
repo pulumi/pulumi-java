@@ -32,24 +32,6 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:elasticache/globalReplicationGroup:GlobalReplicationGroup")
 public class GlobalReplicationGroup extends com.pulumi.resources.CustomResource {
     /**
-     * (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-     * 
-     * @deprecated
-     * Use engine_version_actual instead
-     * 
-     */
-    @Deprecated /* Use engine_version_actual instead */
-    @Export(name="actualEngineVersion", type=String.class, parameters={})
-    private Output<String> actualEngineVersion;
-
-    /**
-     * @return (**DEPRECATED** use `engine_version_actual` instead) The full version number of the cache engine running on the members of this global replication group.
-     * 
-     */
-    public Output<String> actualEngineVersion() {
-        return this.actualEngineVersion;
-    }
-    /**
      * The ARN of the ElastiCache Global Replication Group.
      * 
      */

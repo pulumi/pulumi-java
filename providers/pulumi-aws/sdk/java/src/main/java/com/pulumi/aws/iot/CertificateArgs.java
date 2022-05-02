@@ -32,6 +32,44 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    @Import(name="caPem")
+    private @Nullable Output<String> caPem;
+
+    /**
+     * @return The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    public Optional<Output<String>> caPem() {
+        return Optional.ofNullable(this.caPem);
+    }
+
+    /**
+     * The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
+     * 
+     */
+    @Import(name="certificatePem")
+    private @Nullable Output<String> certificatePem;
+
+    /**
+     * @return The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
+     * 
+     */
+    public Optional<Output<String>> certificatePem() {
+        return Optional.ofNullable(this.certificatePem);
+    }
+
+    /**
      * The certificate signing request. Review
      * [CreateCertificateFromCsr](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html)
      * for more information on generating a certificate from a certificate signing request (CSR).
@@ -58,6 +96,8 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
 
     private CertificateArgs(CertificateArgs $) {
         this.active = $.active;
+        this.caPem = $.caPem;
+        this.certificatePem = $.certificatePem;
         this.csr = $.csr;
     }
 
@@ -98,6 +138,56 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder active(Boolean active) {
             return active(Output.of(active));
+        }
+
+        /**
+         * @param caPem The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caPem(@Nullable Output<String> caPem) {
+            $.caPem = caPem;
+            return this;
+        }
+
+        /**
+         * @param caPem The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caPem(String caPem) {
+            return caPem(Output.of(caPem));
+        }
+
+        /**
+         * @param certificatePem The certificate to be registered. If `ca_pem` is unspecified, review
+         * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+         * If `ca_pem` is specified, review
+         * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+         * for more information on registering a certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificatePem(@Nullable Output<String> certificatePem) {
+            $.certificatePem = certificatePem;
+            return this;
+        }
+
+        /**
+         * @param certificatePem The certificate to be registered. If `ca_pem` is unspecified, review
+         * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+         * If `ca_pem` is specified, review
+         * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+         * for more information on registering a certificate.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificatePem(String certificatePem) {
+            return certificatePem(Output.of(certificatePem));
         }
 
         /**

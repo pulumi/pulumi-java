@@ -6,19 +6,25 @@ package com.pulumi.aws.imagebuilder;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.imagebuilder.inputs.GetComponentArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetComponentsArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipeArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetContainerRecipesArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImagePipelineArgs;
+import com.pulumi.aws.imagebuilder.inputs.GetImagePipelinesArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageRecipeArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetImageRecipesArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationArgs;
 import com.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsArgs;
 import com.pulumi.aws.imagebuilder.outputs.GetComponentResult;
 import com.pulumi.aws.imagebuilder.outputs.GetComponentsResult;
+import com.pulumi.aws.imagebuilder.outputs.GetContainerRecipeResult;
+import com.pulumi.aws.imagebuilder.outputs.GetContainerRecipesResult;
 import com.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationResult;
 import com.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationsResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImagePipelineResult;
+import com.pulumi.aws.imagebuilder.outputs.GetImagePipelinesResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImageRecipeResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImageRecipesResult;
 import com.pulumi.aws.imagebuilder.outputs.GetImageResult;
@@ -56,6 +62,33 @@ public final class ImagebuilderFunctions {
     }
     public static CompletableFuture<GetComponentsResult> getComponents(GetComponentsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponents:getComponents", TypeShape.of(GetComponentsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about an Image builder Container Recipe.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args) {
+        return getContainerRecipe(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetContainerRecipeResult> getContainerRecipe(GetContainerRecipeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipe:getContainerRecipe", TypeShape.of(GetContainerRecipeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Container Recipes matching the specified criteria.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes() {
+        return getContainerRecipes(GetContainerRecipesArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args) {
+        return getContainerRecipes(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetContainerRecipesResult> getContainerRecipes(GetContainerRecipesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getContainerRecipes:getContainerRecipes", TypeShape.of(GetContainerRecipesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Distribution Configuration.
@@ -107,6 +140,21 @@ public final class ImagebuilderFunctions {
     }
     public static CompletableFuture<GetImagePipelineResult> getImagePipeline(GetImagePipelineArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipeline:getImagePipeline", TypeShape.of(GetImagePipelineResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Image Pipelines matching the specified criteria.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines() {
+        return getImagePipelines(GetImagePipelinesArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args) {
+        return getImagePipelines(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetImagePipelinesResult> getImagePipelines(GetImagePipelinesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:imagebuilder/getImagePipelines:getImagePipelines", TypeShape.of(GetImagePipelinesResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about an Image Builder Image Recipe.

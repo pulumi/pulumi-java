@@ -15,8 +15,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides an IAM group.
- * 
  * ## Example Usage
  * 
  * ## Import

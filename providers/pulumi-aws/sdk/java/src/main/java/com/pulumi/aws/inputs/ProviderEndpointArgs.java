@@ -50,6 +50,13 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.alexaforbusiness);
     }
 
+    @Import(name="amg")
+    private @Nullable Output<String> amg;
+
+    public Optional<Output<String>> amg() {
+        return Optional.ofNullable(this.amg);
+    }
+
     @Import(name="amp")
     private @Nullable Output<String> amp;
 
@@ -351,11 +358,25 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.cloudwatchevents);
     }
 
+    @Import(name="cloudwatchevidently")
+    private @Nullable Output<String> cloudwatchevidently;
+
+    public Optional<Output<String>> cloudwatchevidently() {
+        return Optional.ofNullable(this.cloudwatchevidently);
+    }
+
     @Import(name="cloudwatchlogs")
     private @Nullable Output<String> cloudwatchlogs;
 
     public Optional<Output<String>> cloudwatchlogs() {
         return Optional.ofNullable(this.cloudwatchlogs);
+    }
+
+    @Import(name="cloudwatchrum")
+    private @Nullable Output<String> cloudwatchrum;
+
+    public Optional<Output<String>> cloudwatchrum() {
+        return Optional.ofNullable(this.cloudwatchrum);
     }
 
     @Import(name="codeartifact")
@@ -890,6 +911,13 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.gluedatabrew);
     }
 
+    @Import(name="grafana")
+    private @Nullable Output<String> grafana;
+
+    public Optional<Output<String>> grafana() {
+        return Optional.ofNullable(this.grafana);
+    }
+
     @Import(name="greengrass")
     private @Nullable Output<String> greengrass;
 
@@ -1093,6 +1121,13 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.kendra);
     }
 
+    @Import(name="keyspaces")
+    private @Nullable Output<String> keyspaces;
+
+    public Optional<Output<String>> keyspaces() {
+        return Optional.ofNullable(this.keyspaces);
+    }
+
     @Import(name="kinesis")
     private @Nullable Output<String> kinesis;
 
@@ -1282,6 +1317,13 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.managedblockchain);
     }
 
+    @Import(name="managedgrafana")
+    private @Nullable Output<String> managedgrafana;
+
+    public Optional<Output<String>> managedgrafana() {
+        return Optional.ofNullable(this.managedgrafana);
+    }
+
     @Import(name="marketplacecatalog")
     private @Nullable Output<String> marketplacecatalog;
 
@@ -1462,6 +1504,20 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
 
     public Optional<Output<String>> nimblestudio() {
         return Optional.ofNullable(this.nimblestudio);
+    }
+
+    @Import(name="opensearch")
+    private @Nullable Output<String> opensearch;
+
+    public Optional<Output<String>> opensearch() {
+        return Optional.ofNullable(this.opensearch);
+    }
+
+    @Import(name="opensearchservice")
+    private @Nullable Output<String> opensearchservice;
+
+    public Optional<Output<String>> opensearchservice() {
+        return Optional.ofNullable(this.opensearchservice);
     }
 
     @Import(name="opsworks")
@@ -2130,6 +2186,7 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.acm = $.acm;
         this.acmpca = $.acmpca;
         this.alexaforbusiness = $.alexaforbusiness;
+        this.amg = $.amg;
         this.amp = $.amp;
         this.amplify = $.amplify;
         this.amplifybackend = $.amplifybackend;
@@ -2173,7 +2230,9 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.cloudtrail = $.cloudtrail;
         this.cloudwatch = $.cloudwatch;
         this.cloudwatchevents = $.cloudwatchevents;
+        this.cloudwatchevidently = $.cloudwatchevidently;
         this.cloudwatchlogs = $.cloudwatchlogs;
+        this.cloudwatchrum = $.cloudwatchrum;
         this.codeartifact = $.codeartifact;
         this.codebuild = $.codebuild;
         this.codecommit = $.codecommit;
@@ -2250,6 +2309,7 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.globalaccelerator = $.globalaccelerator;
         this.glue = $.glue;
         this.gluedatabrew = $.gluedatabrew;
+        this.grafana = $.grafana;
         this.greengrass = $.greengrass;
         this.greengrassv2 = $.greengrassv2;
         this.groundstation = $.groundstation;
@@ -2279,6 +2339,7 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.kafka = $.kafka;
         this.kafkaconnect = $.kafkaconnect;
         this.kendra = $.kendra;
+        this.keyspaces = $.keyspaces;
         this.kinesis = $.kinesis;
         this.kinesisanalytics = $.kinesisanalytics;
         this.kinesisanalyticsv2 = $.kinesisanalyticsv2;
@@ -2306,6 +2367,7 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.macie = $.macie;
         this.macie2 = $.macie2;
         this.managedblockchain = $.managedblockchain;
+        this.managedgrafana = $.managedgrafana;
         this.marketplacecatalog = $.marketplacecatalog;
         this.marketplacecommerceanalytics = $.marketplacecommerceanalytics;
         this.marketplaceentitlement = $.marketplaceentitlement;
@@ -2332,6 +2394,8 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
         this.networkfirewall = $.networkfirewall;
         this.networkmanager = $.networkmanager;
         this.nimblestudio = $.nimblestudio;
+        this.opensearch = $.opensearch;
+        this.opensearchservice = $.opensearchservice;
         this.opsworks = $.opsworks;
         this.opsworkscm = $.opsworkscm;
         this.organizations = $.organizations;
@@ -2489,6 +2553,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
 
         public Builder alexaforbusiness(String alexaforbusiness) {
             return alexaforbusiness(Output.of(alexaforbusiness));
+        }
+
+        public Builder amg(@Nullable Output<String> amg) {
+            $.amg = amg;
+            return this;
+        }
+
+        public Builder amg(String amg) {
+            return amg(Output.of(amg));
         }
 
         public Builder amp(@Nullable Output<String> amp) {
@@ -2878,6 +2951,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
             return cloudwatchevents(Output.of(cloudwatchevents));
         }
 
+        public Builder cloudwatchevidently(@Nullable Output<String> cloudwatchevidently) {
+            $.cloudwatchevidently = cloudwatchevidently;
+            return this;
+        }
+
+        public Builder cloudwatchevidently(String cloudwatchevidently) {
+            return cloudwatchevidently(Output.of(cloudwatchevidently));
+        }
+
         public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
             $.cloudwatchlogs = cloudwatchlogs;
             return this;
@@ -2885,6 +2967,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
 
         public Builder cloudwatchlogs(String cloudwatchlogs) {
             return cloudwatchlogs(Output.of(cloudwatchlogs));
+        }
+
+        public Builder cloudwatchrum(@Nullable Output<String> cloudwatchrum) {
+            $.cloudwatchrum = cloudwatchrum;
+            return this;
+        }
+
+        public Builder cloudwatchrum(String cloudwatchrum) {
+            return cloudwatchrum(Output.of(cloudwatchrum));
         }
 
         public Builder codeartifact(@Nullable Output<String> codeartifact) {
@@ -3571,6 +3662,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
             return gluedatabrew(Output.of(gluedatabrew));
         }
 
+        public Builder grafana(@Nullable Output<String> grafana) {
+            $.grafana = grafana;
+            return this;
+        }
+
+        public Builder grafana(String grafana) {
+            return grafana(Output.of(grafana));
+        }
+
         public Builder greengrass(@Nullable Output<String> greengrass) {
             $.greengrass = greengrass;
             return this;
@@ -3832,6 +3932,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
             return kendra(Output.of(kendra));
         }
 
+        public Builder keyspaces(@Nullable Output<String> keyspaces) {
+            $.keyspaces = keyspaces;
+            return this;
+        }
+
+        public Builder keyspaces(String keyspaces) {
+            return keyspaces(Output.of(keyspaces));
+        }
+
         public Builder kinesis(@Nullable Output<String> kinesis) {
             $.kinesis = kinesis;
             return this;
@@ -4075,6 +4184,15 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
             return managedblockchain(Output.of(managedblockchain));
         }
 
+        public Builder managedgrafana(@Nullable Output<String> managedgrafana) {
+            $.managedgrafana = managedgrafana;
+            return this;
+        }
+
+        public Builder managedgrafana(String managedgrafana) {
+            return managedgrafana(Output.of(managedgrafana));
+        }
+
         public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
             $.marketplacecatalog = marketplacecatalog;
             return this;
@@ -4307,6 +4425,24 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
 
         public Builder nimblestudio(String nimblestudio) {
             return nimblestudio(Output.of(nimblestudio));
+        }
+
+        public Builder opensearch(@Nullable Output<String> opensearch) {
+            $.opensearch = opensearch;
+            return this;
+        }
+
+        public Builder opensearch(String opensearch) {
+            return opensearch(Output.of(opensearch));
+        }
+
+        public Builder opensearchservice(@Nullable Output<String> opensearchservice) {
+            $.opensearchservice = opensearchservice;
+            return this;
+        }
+
+        public Builder opensearchservice(String opensearchservice) {
+            return opensearchservice(Output.of(opensearchservice));
         }
 
         public Builder opsworks(@Nullable Output<String> opsworks) {

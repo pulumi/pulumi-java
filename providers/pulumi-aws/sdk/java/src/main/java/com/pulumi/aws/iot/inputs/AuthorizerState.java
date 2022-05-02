@@ -48,6 +48,21 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Specifies whether the HTTP caching is enabled or not. Default: `false`.
+     * 
+     */
+    @Import(name="enableCachingForHttp")
+    private @Nullable Output<Boolean> enableCachingForHttp;
+
+    /**
+     * @return Specifies whether the HTTP caching is enabled or not. Default: `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> enableCachingForHttp() {
+        return Optional.ofNullable(this.enableCachingForHttp);
+    }
+
+    /**
      * The name of the authorizer.
      * 
      */
@@ -127,6 +142,7 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
     private AuthorizerState(AuthorizerState $) {
         this.arn = $.arn;
         this.authorizerFunctionArn = $.authorizerFunctionArn;
+        this.enableCachingForHttp = $.enableCachingForHttp;
         this.name = $.name;
         this.signingDisabled = $.signingDisabled;
         this.status = $.status;
@@ -192,6 +208,27 @@ public final class AuthorizerState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder authorizerFunctionArn(String authorizerFunctionArn) {
             return authorizerFunctionArn(Output.of(authorizerFunctionArn));
+        }
+
+        /**
+         * @param enableCachingForHttp Specifies whether the HTTP caching is enabled or not. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableCachingForHttp(@Nullable Output<Boolean> enableCachingForHttp) {
+            $.enableCachingForHttp = enableCachingForHttp;
+            return this;
+        }
+
+        /**
+         * @param enableCachingForHttp Specifies whether the HTTP caching is enabled or not. Default: `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableCachingForHttp(Boolean enableCachingForHttp) {
+            return enableCachingForHttp(Output.of(enableCachingForHttp));
         }
 
         /**

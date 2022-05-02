@@ -31,14 +31,14 @@ public final class SigningJobSignedObjectS3Args extends com.pulumi.resources.Res
     }
 
     /**
-     * Key name of the bucket object that contains your unsigned code.
+     * Key name of the object that contains your unsigned code.
      * 
      */
     @Import(name="key")
     private @Nullable Output<String> key;
 
     /**
-     * @return Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the object that contains your unsigned code.
      * 
      */
     public Optional<Output<String>> key() {
@@ -92,7 +92,7 @@ public final class SigningJobSignedObjectS3Args extends com.pulumi.resources.Res
         }
 
         /**
-         * @param key Key name of the bucket object that contains your unsigned code.
+         * @param key Key name of the object that contains your unsigned code.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class SigningJobSignedObjectS3Args extends com.pulumi.resources.Res
         }
 
         /**
-         * @param key Key name of the bucket object that contains your unsigned code.
+         * @param key Key name of the object that contains your unsigned code.
          * 
          * @return builder
          * 

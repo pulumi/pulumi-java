@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.xray.inputs;
 
+import com.pulumi.aws.xray.inputs.GroupInsightsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -62,6 +63,21 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Configuration options for enabling insights.
+     * 
+     */
+    @Import(name="insightsConfiguration")
+    private @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
+
+    /**
+     * @return Configuration options for enabling insights.
+     * 
+     */
+    public Optional<Output<GroupInsightsConfigurationArgs>> insightsConfiguration() {
+        return Optional.ofNullable(this.insightsConfiguration);
+    }
+
+    /**
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
@@ -97,6 +113,7 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
         this.arn = $.arn;
         this.filterExpression = $.filterExpression;
         this.groupName = $.groupName;
+        this.insightsConfiguration = $.insightsConfiguration;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
     }
@@ -180,6 +197,27 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
+        }
+
+        /**
+         * @param insightsConfiguration Configuration options for enabling insights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder insightsConfiguration(@Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration) {
+            $.insightsConfiguration = insightsConfiguration;
+            return this;
+        }
+
+        /**
+         * @param insightsConfiguration Configuration options for enabling insights.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder insightsConfiguration(GroupInsightsConfigurationArgs insightsConfiguration) {
+            return insightsConfiguration(Output.of(insightsConfiguration));
         }
 
         /**

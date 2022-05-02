@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
  * Cognito User Pool Domains can be imported using the `domain`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main &lt;domain&gt;
+ *  $ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main auth.example.org
  * ```
  * 
  */
@@ -73,14 +73,14 @@ public class UserPoolDomain extends com.pulumi.resources.CustomResource {
         return this.cloudfrontDistributionArn;
     }
     /**
-     * The domain string.
+     * For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
      * 
      */
     @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
-     * @return The domain string.
+     * @return For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
      * 
      */
     public Output<String> domain() {

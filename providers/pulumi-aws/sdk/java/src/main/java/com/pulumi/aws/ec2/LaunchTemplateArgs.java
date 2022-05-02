@@ -18,6 +18,7 @@ import com.pulumi.aws.ec2.inputs.LaunchTemplateMetadataOptionsArgs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateMonitoringArgs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateNetworkInterfaceArgs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplatePlacementArgs;
+import com.pulumi.aws.ec2.inputs.LaunchTemplatePrivateDnsNameOptionsArgs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -379,17 +380,9 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.monitoring);
     }
 
-    /**
-     * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-     * 
-     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
-    /**
-     * @return The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-     * 
-     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -442,6 +435,21 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+     * 
+     */
+    @Import(name="privateDnsNameOptions")
+    private @Nullable Output<LaunchTemplatePrivateDnsNameOptionsArgs> privateDnsNameOptions;
+
+    /**
+     * @return The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+     * 
+     */
+    public Optional<Output<LaunchTemplatePrivateDnsNameOptionsArgs>> privateDnsNameOptions() {
+        return Optional.ofNullable(this.privateDnsNameOptions);
+    }
+
+    /**
      * The ID of the RAM disk.
      * 
      */
@@ -489,14 +497,14 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -519,14 +527,14 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The Base64-encoded user data to provide when launching the instance.
+     * The base64-encoded user data to provide when launching the instance.
      * 
      */
     @Import(name="userData")
     private @Nullable Output<String> userData;
 
     /**
-     * @return The Base64-encoded user data to provide when launching the instance.
+     * @return The base64-encoded user data to provide when launching the instance.
      * 
      */
     public Optional<Output<String>> userData() {
@@ -577,6 +585,7 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         this.namePrefix = $.namePrefix;
         this.networkInterfaces = $.networkInterfaces;
         this.placement = $.placement;
+        this.privateDnsNameOptions = $.privateDnsNameOptions;
         this.ramDiskId = $.ramDiskId;
         this.securityGroupNames = $.securityGroupNames;
         this.tagSpecifications = $.tagSpecifications;
@@ -1112,23 +1121,11 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
             return monitoring(Output.of(monitoring));
         }
 
-        /**
-         * @param name The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-         * 
-         * @return builder
-         * 
-         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
-        /**
-         * @param name The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-         * 
-         * @return builder
-         * 
-         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -1207,6 +1204,27 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder placement(LaunchTemplatePlacementArgs placement) {
             return placement(Output.of(placement));
+        }
+
+        /**
+         * @param privateDnsNameOptions The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateDnsNameOptions(@Nullable Output<LaunchTemplatePrivateDnsNameOptionsArgs> privateDnsNameOptions) {
+            $.privateDnsNameOptions = privateDnsNameOptions;
+            return this;
+        }
+
+        /**
+         * @param privateDnsNameOptions The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder privateDnsNameOptions(LaunchTemplatePrivateDnsNameOptionsArgs privateDnsNameOptions) {
+            return privateDnsNameOptions(Output.of(privateDnsNameOptions));
         }
 
         /**
@@ -1296,7 +1314,7 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tags A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -1307,7 +1325,7 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param tags A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -1338,7 +1356,7 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param userData The Base64-encoded user data to provide when launching the instance.
+         * @param userData The base64-encoded user data to provide when launching the instance.
          * 
          * @return builder
          * 
@@ -1349,7 +1367,7 @@ public final class LaunchTemplateArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param userData The Base64-encoded user data to provide when launching the instance.
+         * @param userData The base64-encoded user data to provide when launching the instance.
          * 
          * @return builder
          * 

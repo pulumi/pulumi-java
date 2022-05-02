@@ -34,14 +34,14 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementO
     }
 
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     @Import(name="fieldToMatch")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs> fieldToMatch;
 
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchArgs>> fieldToMatch() {
@@ -111,7 +111,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementO
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementO
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 

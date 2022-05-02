@@ -21,7 +21,7 @@ public final class GetNetworkAclsResult {
      */
     private final String id;
     /**
-     * @return A list of all the network ACL ids found. This data source will fail if none are found.
+     * @return A list of all the network ACL ids found.
      * 
      */
     private final List<String> ids;
@@ -53,7 +53,7 @@ public final class GetNetworkAclsResult {
         return this.id;
     }
     /**
-     * @return A list of all the network ACL ids found. This data source will fail if none are found.
+     * @return A list of all the network ACL ids found.
      * 
      */
     public List<String> ids() {

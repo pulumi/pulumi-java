@@ -53,6 +53,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:rds/cluster:Cluster")
 public class Cluster extends com.pulumi.resources.CustomResource {
     /**
+     * The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster. (This setting is required to create a Multi-AZ DB cluster).
+     * 
+     */
+    @Export(name="allocatedStorage", type=Integer.class, parameters={})
+    private Output<Integer> allocatedStorage;
+
+    /**
+     * @return The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster. (This setting is required to create a Multi-AZ DB cluster).
+     * 
+     */
+    public Output<Integer> allocatedStorage() {
+        return this.allocatedStorage;
+    }
+    /**
      * Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
      * 
      */
@@ -221,6 +235,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.databaseName;
     }
     /**
+     * The compute and memory capacity of each DB instance in the Multi-AZ DB cluster, for example db.m6g.xlarge. Not all DB instance classes are available in all AWS Regions, or for all database engines. For the full list of DB instance classes and availability for your engine, see [DB instance class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in the Amazon RDS User Guide. (This setting is required to create a Multi-AZ DB cluster).
+     * 
+     */
+    @Export(name="dbClusterInstanceClass", type=String.class, parameters={})
+    private Output</* @Nullable */ String> dbClusterInstanceClass;
+
+    /**
+     * @return The compute and memory capacity of each DB instance in the Multi-AZ DB cluster, for example db.m6g.xlarge. Not all DB instance classes are available in all AWS Regions, or for all database engines. For the full list of DB instance classes and availability for your engine, see [DB instance class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in the Amazon RDS User Guide. (This setting is required to create a Multi-AZ DB cluster).
+     * 
+     */
+    public Output<Optional<String>> dbClusterInstanceClass() {
+        return Codegen.optional(this.dbClusterInstanceClass);
+    }
+    /**
      * A cluster parameter group to associate with the cluster.
      * 
      */
@@ -333,14 +361,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.endpoint;
     }
     /**
-     * The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+     * The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`, `mysql`, `postgres`. (Note that `mysql` and `postgres` are Multi-AZ RDS clusters).
      * 
      */
     @Export(name="engine", type=String.class, parameters={})
     private Output</* @Nullable */ String> engine;
 
     /**
-     * @return The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
+     * @return The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`, `mysql`, `postgres`. (Note that `mysql` and `postgres` are Multi-AZ RDS clusters).
      * 
      */
     public Output<Optional<String>> engine() {
@@ -361,14 +389,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.engineMode);
     }
     /**
-     * The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
     /**
-     * @return The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * @return The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     public Output<String> engineVersion() {
@@ -457,6 +485,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<List<String>> iamRoles() {
         return this.iamRoles;
+    }
+    /**
+     * The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB instance in the Multi-AZ DB cluster. For information about valid Iops values, see [Amazon RDS Provisioned IOPS storage to improve performance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the Amazon RDS User Guide. (This setting is required to create a Multi-AZ DB cluster). Must be a multiple between .5 and 50 of the storage amount for the DB cluster.
+     * 
+     */
+    @Export(name="iops", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> iops;
+
+    /**
+     * @return The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB instance in the Multi-AZ DB cluster. For information about valid Iops values, see [Amazon RDS Provisioned IOPS storage to improve performance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the Amazon RDS User Guide. (This setting is required to create a Multi-AZ DB cluster). Must be a multiple between .5 and 50 of the storage amount for the DB cluster.
+     * 
+     */
+    public Output<Optional<Integer>> iops() {
+        return Codegen.optional(this.iops);
     }
     /**
      * The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
@@ -649,28 +691,42 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.sourceRegion);
     }
     /**
-     * Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
+     * Specifies whether the DB cluster is encrypted
      * 
      */
     @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output<Boolean> storageEncrypted;
 
     /**
-     * @return Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
+     * @return Specifies whether the DB cluster is encrypted
      * 
      */
     public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
-     * A map of tags to assign to the DB cluster.
+     * Specifies the storage type to be associated with the DB cluster. (This setting is required to create a Multi-AZ DB cluster). Valid values: `io1`, Default: `io1`.
+     * 
+     */
+    @Export(name="storageType", type=String.class, parameters={})
+    private Output</* @Nullable */ String> storageType;
+
+    /**
+     * @return Specifies the storage type to be associated with the DB cluster. (This setting is required to create a Multi-AZ DB cluster). Valid values: `io1`, Default: `io1`.
+     * 
+     */
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
+    }
+    /**
+     * A map of tags to assign to the DB cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the DB cluster.
+     * @return A map of tags to assign to the DB cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

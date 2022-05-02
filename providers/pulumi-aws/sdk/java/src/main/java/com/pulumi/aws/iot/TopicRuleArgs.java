@@ -4,6 +4,7 @@
 package com.pulumi.aws.iot;
 
 import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchAlarmArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchLogArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleCloudwatchMetricArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleDynamodbArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleDynamodbv2Args;
@@ -39,6 +40,13 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<TopicRuleCloudwatchAlarmArgs>> cloudwatchAlarm() {
         return Optional.ofNullable(this.cloudwatchAlarm);
+    }
+
+    @Import(name="cloudwatchLogs")
+    private @Nullable Output<List<TopicRuleCloudwatchLogArgs>> cloudwatchLogs;
+
+    public Optional<Output<List<TopicRuleCloudwatchLogArgs>>> cloudwatchLogs() {
+        return Optional.ofNullable(this.cloudwatchLogs);
     }
 
     @Import(name="cloudwatchMetric")
@@ -100,14 +108,14 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+     * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
     @Import(name="errorAction")
     private @Nullable Output<TopicRuleErrorActionArgs> errorAction;
 
     /**
-     * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+     * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
     public Optional<Output<TopicRuleErrorActionArgs>> errorAction() {
@@ -230,14 +238,14 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -248,6 +256,7 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
 
     private TopicRuleArgs(TopicRuleArgs $) {
         this.cloudwatchAlarm = $.cloudwatchAlarm;
+        this.cloudwatchLogs = $.cloudwatchLogs;
         this.cloudwatchMetric = $.cloudwatchMetric;
         this.description = $.description;
         this.dynamodb = $.dynamodb;
@@ -296,6 +305,19 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder cloudwatchAlarm(TopicRuleCloudwatchAlarmArgs cloudwatchAlarm) {
             return cloudwatchAlarm(Output.of(cloudwatchAlarm));
+        }
+
+        public Builder cloudwatchLogs(@Nullable Output<List<TopicRuleCloudwatchLogArgs>> cloudwatchLogs) {
+            $.cloudwatchLogs = cloudwatchLogs;
+            return this;
+        }
+
+        public Builder cloudwatchLogs(List<TopicRuleCloudwatchLogArgs> cloudwatchLogs) {
+            return cloudwatchLogs(Output.of(cloudwatchLogs));
+        }
+
+        public Builder cloudwatchLogs(TopicRuleCloudwatchLogArgs... cloudwatchLogs) {
+            return cloudwatchLogs(List.of(cloudwatchLogs));
         }
 
         public Builder cloudwatchMetric(@Nullable Output<TopicRuleCloudwatchMetricArgs> cloudwatchMetric) {
@@ -381,7 +403,7 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param errorAction Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+         * @param errorAction Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
          * 
          * @return builder
          * 
@@ -392,7 +414,7 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param errorAction Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+         * @param errorAction Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
          * 
          * @return builder
          * 
@@ -567,7 +589,7 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -578,7 +600,7 @@ public final class TopicRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

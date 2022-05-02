@@ -36,6 +36,21 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+     * 
+     */
+    @Import(name="bucketRegion")
+    private @Nullable Output<String> bucketRegion;
+
+    /**
+     * @return The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+     * 
+     */
+    public Optional<Output<String>> bucketRegion() {
+        return Optional.ofNullable(this.bucketRegion);
+    }
+
+    /**
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
@@ -201,14 +216,14 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     @Import(name="objectAcl")
     private @Nullable Output<String> objectAcl;
 
     /**
-     * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * @return Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     public Optional<Output<String>> objectAcl() {
@@ -290,10 +305,26 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.tags);
     }
 
+    /**
+     * The DNS name of the VPC endpoint for S3 PrivateLink.
+     * 
+     */
+    @Import(name="vpcEndpointDnsName")
+    private @Nullable Output<String> vpcEndpointDnsName;
+
+    /**
+     * @return The DNS name of the VPC endpoint for S3 PrivateLink.
+     * 
+     */
+    public Optional<Output<String>> vpcEndpointDnsName() {
+        return Optional.ofNullable(this.vpcEndpointDnsName);
+    }
+
     private NfsFileShareArgs() {}
 
     private NfsFileShareArgs(NfsFileShareArgs $) {
         this.auditDestinationArn = $.auditDestinationArn;
+        this.bucketRegion = $.bucketRegion;
         this.cacheAttributes = $.cacheAttributes;
         this.clientLists = $.clientLists;
         this.defaultStorageClass = $.defaultStorageClass;
@@ -311,6 +342,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
         this.roleArn = $.roleArn;
         this.squash = $.squash;
         this.tags = $.tags;
+        this.vpcEndpointDnsName = $.vpcEndpointDnsName;
     }
 
     public static Builder builder() {
@@ -350,6 +382,27 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder auditDestinationArn(String auditDestinationArn) {
             return auditDestinationArn(Output.of(auditDestinationArn));
+        }
+
+        /**
+         * @param bucketRegion The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
+            $.bucketRegion = bucketRegion;
+            return this;
+        }
+
+        /**
+         * @param bucketRegion The region of the S3 bucket used by the file share. Required when specifying `vpc_endpoint_dns_name`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bucketRegion(String bucketRegion) {
+            return bucketRegion(Output.of(bucketRegion));
         }
 
         /**
@@ -594,7 +647,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objectAcl Access Control List permission for S3 bucket objects. Defaults to `private`.
+         * @param objectAcl Access Control List permission for S3 objects. Defaults to `private`.
          * 
          * @return builder
          * 
@@ -605,7 +658,7 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objectAcl Access Control List permission for S3 bucket objects. Defaults to `private`.
+         * @param objectAcl Access Control List permission for S3 objects. Defaults to `private`.
          * 
          * @return builder
          * 
@@ -717,6 +770,27 @@ public final class NfsFileShareArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
+        }
+
+        /**
+         * @param vpcEndpointDnsName The DNS name of the VPC endpoint for S3 PrivateLink.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcEndpointDnsName(@Nullable Output<String> vpcEndpointDnsName) {
+            $.vpcEndpointDnsName = vpcEndpointDnsName;
+            return this;
+        }
+
+        /**
+         * @param vpcEndpointDnsName The DNS name of the VPC endpoint for S3 PrivateLink.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcEndpointDnsName(String vpcEndpointDnsName) {
+            return vpcEndpointDnsName(Output.of(vpcEndpointDnsName));
         }
 
         public NfsFileShareArgs build() {

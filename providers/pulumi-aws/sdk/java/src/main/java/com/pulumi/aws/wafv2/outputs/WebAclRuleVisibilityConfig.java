@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleVisibilityConfig {
     /**
-     * @return A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+     * @return Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
      * 
      */
     private final Boolean cloudwatchMetricsEnabled;
@@ -21,7 +21,7 @@ public final class WebAclRuleVisibilityConfig {
      */
     private final String metricName;
     /**
-     * @return A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+     * @return Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
      * 
      */
     private final Boolean sampledRequestsEnabled;
@@ -37,7 +37,7 @@ public final class WebAclRuleVisibilityConfig {
     }
 
     /**
-     * @return A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
+     * @return Whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
      * 
      */
     public Boolean cloudwatchMetricsEnabled() {
@@ -51,7 +51,7 @@ public final class WebAclRuleVisibilityConfig {
         return this.metricName;
     }
     /**
-     * @return A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
+     * @return Whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
      * 
      */
     public Boolean sampledRequestsEnabled() {

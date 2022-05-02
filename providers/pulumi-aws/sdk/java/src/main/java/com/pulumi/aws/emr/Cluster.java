@@ -55,29 +55,21 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:emr/cluster:Cluster")
 public class Cluster extends com.pulumi.resources.CustomResource {
-    /**
-     * JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-     * 
-     */
     @Export(name="additionalInfo", type=String.class, parameters={})
     private Output</* @Nullable */ String> additionalInfo;
 
-    /**
-     * @return JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-     * 
-     */
     public Output<Optional<String>> additionalInfo() {
         return Codegen.optional(this.additionalInfo);
     }
     /**
-     * List of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive.
+     * A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster. For a list of applications available for each Amazon EMR release version, see the [Amazon EMR Release Guide](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
      * 
      */
     @Export(name="applications", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> applications;
 
     /**
-     * @return List of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive.
+     * @return A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster. For a list of applications available for each Amazon EMR release version, see the [Amazon EMR Release Guide](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-components.html).
      * 
      */
     public Output<Optional<List<String>>> applications() {

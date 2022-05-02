@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.iot.TopicRuleArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleState;
 import com.pulumi.aws.iot.outputs.TopicRuleCloudwatchAlarm;
+import com.pulumi.aws.iot.outputs.TopicRuleCloudwatchLog;
 import com.pulumi.aws.iot.outputs.TopicRuleCloudwatchMetric;
 import com.pulumi.aws.iot.outputs.TopicRuleDynamodb;
 import com.pulumi.aws.iot.outputs.TopicRuleDynamodbv2;
@@ -67,6 +68,12 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
     public Output<Optional<TopicRuleCloudwatchAlarm>> cloudwatchAlarm() {
         return Codegen.optional(this.cloudwatchAlarm);
     }
+    @Export(name="cloudwatchLogs", type=List.class, parameters={TopicRuleCloudwatchLog.class})
+    private Output</* @Nullable */ List<TopicRuleCloudwatchLog>> cloudwatchLogs;
+
+    public Output<Optional<List<TopicRuleCloudwatchLog>>> cloudwatchLogs() {
+        return Codegen.optional(this.cloudwatchLogs);
+    }
     @Export(name="cloudwatchMetric", type=TopicRuleCloudwatchMetric.class, parameters={})
     private Output</* @Nullable */ TopicRuleCloudwatchMetric> cloudwatchMetric;
 
@@ -120,14 +127,14 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
         return this.enabled;
     }
     /**
-     * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+     * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
     @Export(name="errorAction", type=TopicRuleErrorAction.class, parameters={})
     private Output</* @Nullable */ TopicRuleErrorAction> errorAction;
 
     /**
-     * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
+     * @return Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_logs`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
     public Output<Optional<TopicRuleErrorAction>> errorAction() {
@@ -236,14 +243,14 @@ public class TopicRule extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.stepFunctions);
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

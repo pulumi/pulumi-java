@@ -76,14 +76,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The namespace. Currently, you should set this to `default`.
+     * The Amazon Quicksight namespace to create the user in. Defaults to `default`.
      * 
      */
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
     /**
-     * @return The namespace. Currently, you should set this to `default`.
+     * @return The Amazon Quicksight namespace to create the user in. Defaults to `default`.
      * 
      */
     public Optional<Output<String>> namespace() {
@@ -251,7 +251,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param namespace The namespace. Currently, you should set this to `default`.
+         * @param namespace The Amazon Quicksight namespace to create the user in. Defaults to `default`.
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param namespace The namespace. Currently, you should set this to `default`.
+         * @param namespace The Amazon Quicksight namespace to create the user in. Defaults to `default`.
          * 
          * @return builder
          * 

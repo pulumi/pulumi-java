@@ -97,14 +97,14 @@ public class User extends com.pulumi.resources.CustomResource {
         return this.identityType;
     }
     /**
-     * The namespace. Currently, you should set this to `default`.
+     * The Amazon Quicksight namespace to create the user in. Defaults to `default`.
      * 
      */
     @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
-     * @return The namespace. Currently, you should set this to `default`.
+     * @return The Amazon Quicksight namespace to create the user in. Defaults to `default`.
      * 
      */
     public Output<Optional<String>> namespace() {

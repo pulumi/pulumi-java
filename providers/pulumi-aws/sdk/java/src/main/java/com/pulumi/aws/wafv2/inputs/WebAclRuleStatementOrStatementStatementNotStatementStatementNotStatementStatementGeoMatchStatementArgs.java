@@ -18,14 +18,14 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     public static final WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs Empty = new WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs();
 
     /**
-     * An array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+     * Array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
      * 
      */
     @Import(name="countryCodes", required=true)
     private Output<List<String>> countryCodes;
 
     /**
-     * @return An array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+     * @return Array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
      * 
      */
     public Output<List<String>> countryCodes() {
@@ -33,14 +33,14 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     }
 
     /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
+     * Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
      * 
      */
     @Import(name="forwardedIpConfig")
     private @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
 
     /**
-     * @return The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
+     * @return Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs>> forwardedIpConfig() {
@@ -73,7 +73,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
         }
 
         /**
-         * @param countryCodes An array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+         * @param countryCodes Array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
         }
 
         /**
-         * @param countryCodes An array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+         * @param countryCodes Array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
         }
 
         /**
-         * @param countryCodes An array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
+         * @param countryCodes Array of two-character country codes, for example, [ &#34;US&#34;, &#34;CN&#34; ], from the alpha-2 country ISO codes of the `ISO 3166` international standard. See the [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchStatement.html) for valid values.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
         }
 
         /**
-         * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
+         * @param forwardedIpConfig Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
         }
 
         /**
-         * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
+         * @param forwardedIpConfig Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. See Forwarded IP Config below for details.
          * 
          * @return builder
          * 

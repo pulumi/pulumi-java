@@ -81,14 +81,16 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
+     * The ID of one or more security groups to associate with the network interface. Applicable for endpoints of type `Interface`.
+     * If no security groups are specified, the VPC&#39;s [default security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup) is associated with the endpoint.
      * 
      */
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
     /**
-     * @return The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
+     * @return The ID of one or more security groups to associate with the network interface. Applicable for endpoints of type `Interface`.
+     * If no security groups are specified, the VPC&#39;s [default security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup) is associated with the endpoint.
      * 
      */
     public Optional<Output<List<String>>> securityGroupIds() {
@@ -126,14 +128,14 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -300,7 +302,8 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
+         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Applicable for endpoints of type `Interface`.
+         * If no security groups are specified, the VPC&#39;s [default security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup) is associated with the endpoint.
          * 
          * @return builder
          * 
@@ -311,7 +314,8 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
+         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Applicable for endpoints of type `Interface`.
+         * If no security groups are specified, the VPC&#39;s [default security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup) is associated with the endpoint.
          * 
          * @return builder
          * 
@@ -321,7 +325,8 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
+         * @param securityGroupIds The ID of one or more security groups to associate with the network interface. Applicable for endpoints of type `Interface`.
+         * If no security groups are specified, the VPC&#39;s [default security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup) is associated with the endpoint.
          * 
          * @return builder
          * 
@@ -383,7 +388,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -394,7 +399,7 @@ public final class VpcEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

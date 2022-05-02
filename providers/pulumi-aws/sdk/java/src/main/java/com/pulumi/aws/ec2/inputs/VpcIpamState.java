@@ -6,6 +6,7 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,6 +33,21 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
+    }
+
+    /**
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+     * 
+     */
+    @Import(name="cascade")
+    private @Nullable Output<Boolean> cascade;
+
+    /**
+     * @return Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+     * 
+     */
+    public Optional<Output<Boolean>> cascade() {
+        return Optional.ofNullable(this.cascade);
     }
 
     /**
@@ -145,6 +161,7 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
 
     private VpcIpamState(VpcIpamState $) {
         this.arn = $.arn;
+        this.cascade = $.cascade;
         this.description = $.description;
         this.operatingRegions = $.operatingRegions;
         this.privateDefaultScopeId = $.privateDefaultScopeId;
@@ -191,6 +208,27 @@ public final class VpcIpamState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
+        }
+
+        /**
+         * @param cascade Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cascade(@Nullable Output<Boolean> cascade) {
+            $.cascade = cascade;
+            return this;
+        }
+
+        /**
+         * @param cascade Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cascade(Boolean cascade) {
+            return cascade(Output.of(cascade));
         }
 
         /**

@@ -20,7 +20,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
      */
     private final String arn;
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch;
@@ -48,7 +48,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
         return this.arn;
     }
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementRegexPatternSetReferenceStatementFieldToMatch> fieldToMatch() {

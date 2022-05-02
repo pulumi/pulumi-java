@@ -4,6 +4,7 @@
 package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionCloudwatchAlarmArgs;
+import com.pulumi.aws.iot.inputs.TopicRuleErrorActionCloudwatchLogsArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionCloudwatchMetricArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbArgs;
 import com.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbv2Args;
@@ -34,6 +35,13 @@ public final class TopicRuleErrorActionArgs extends com.pulumi.resources.Resourc
 
     public Optional<Output<TopicRuleErrorActionCloudwatchAlarmArgs>> cloudwatchAlarm() {
         return Optional.ofNullable(this.cloudwatchAlarm);
+    }
+
+    @Import(name="cloudwatchLogs")
+    private @Nullable Output<TopicRuleErrorActionCloudwatchLogsArgs> cloudwatchLogs;
+
+    public Optional<Output<TopicRuleErrorActionCloudwatchLogsArgs>> cloudwatchLogs() {
+        return Optional.ofNullable(this.cloudwatchLogs);
     }
 
     @Import(name="cloudwatchMetric")
@@ -138,6 +146,7 @@ public final class TopicRuleErrorActionArgs extends com.pulumi.resources.Resourc
 
     private TopicRuleErrorActionArgs(TopicRuleErrorActionArgs $) {
         this.cloudwatchAlarm = $.cloudwatchAlarm;
+        this.cloudwatchLogs = $.cloudwatchLogs;
         this.cloudwatchMetric = $.cloudwatchMetric;
         this.dynamodb = $.dynamodb;
         this.dynamodbv2 = $.dynamodbv2;
@@ -179,6 +188,15 @@ public final class TopicRuleErrorActionArgs extends com.pulumi.resources.Resourc
 
         public Builder cloudwatchAlarm(TopicRuleErrorActionCloudwatchAlarmArgs cloudwatchAlarm) {
             return cloudwatchAlarm(Output.of(cloudwatchAlarm));
+        }
+
+        public Builder cloudwatchLogs(@Nullable Output<TopicRuleErrorActionCloudwatchLogsArgs> cloudwatchLogs) {
+            $.cloudwatchLogs = cloudwatchLogs;
+            return this;
+        }
+
+        public Builder cloudwatchLogs(TopicRuleErrorActionCloudwatchLogsArgs cloudwatchLogs) {
+            return cloudwatchLogs(Output.of(cloudwatchLogs));
         }
 
         public Builder cloudwatchMetric(@Nullable Output<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric) {

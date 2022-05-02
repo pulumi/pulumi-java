@@ -46,6 +46,21 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    @Import(name="coreNetworkArn")
+    private @Nullable Output<String> coreNetworkArn;
+
+    /**
+     * @return The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    public Optional<Output<String>> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
+    }
+
+    /**
      * The ID of a managed prefix list destination of the route.
      * 
      */
@@ -93,14 +108,22 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
     /**
      * Identifier of an EC2 instance.
      * 
+     * @deprecated
+     * Use network_interface_id instead
+     * 
      */
+    @Deprecated /* Use network_interface_id instead */
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
     /**
      * @return Identifier of an EC2 instance.
      * 
+     * @deprecated
+     * Use network_interface_id instead
+     * 
      */
+    @Deprecated /* Use network_interface_id instead */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -215,6 +238,7 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
     private RouteTableRouteArgs(RouteTableRouteArgs $) {
         this.carrierGatewayId = $.carrierGatewayId;
         this.cidrBlock = $.cidrBlock;
+        this.coreNetworkArn = $.coreNetworkArn;
         this.destinationPrefixListId = $.destinationPrefixListId;
         this.egressOnlyGatewayId = $.egressOnlyGatewayId;
         this.gatewayId = $.gatewayId;
@@ -289,6 +313,27 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
+         * @param coreNetworkArn The Amazon Resource Name (ARN) of a core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(@Nullable Output<String> coreNetworkArn) {
+            $.coreNetworkArn = coreNetworkArn;
+            return this;
+        }
+
+        /**
+         * @param coreNetworkArn The Amazon Resource Name (ARN) of a core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(String coreNetworkArn) {
+            return coreNetworkArn(Output.of(coreNetworkArn));
+        }
+
+        /**
          * @param destinationPrefixListId The ID of a managed prefix list destination of the route.
          * 
          * @return builder
@@ -356,7 +401,11 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use network_interface_id instead
+         * 
          */
+        @Deprecated /* Use network_interface_id instead */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
@@ -367,7 +416,11 @@ public final class RouteTableRouteArgs extends com.pulumi.resources.ResourceArgs
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use network_interface_id instead
+         * 
          */
+        @Deprecated /* Use network_interface_id instead */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

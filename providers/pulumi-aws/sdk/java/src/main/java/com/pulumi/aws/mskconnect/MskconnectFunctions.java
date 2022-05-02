@@ -4,8 +4,10 @@
 package com.pulumi.aws.mskconnect;
 
 import com.pulumi.aws.Utilities;
+import com.pulumi.aws.mskconnect.inputs.GetConnectorArgs;
 import com.pulumi.aws.mskconnect.inputs.GetCustomPluginArgs;
 import com.pulumi.aws.mskconnect.inputs.GetWorkerConfigurationArgs;
+import com.pulumi.aws.mskconnect.outputs.GetConnectorResult;
 import com.pulumi.aws.mskconnect.outputs.GetCustomPluginResult;
 import com.pulumi.aws.mskconnect.outputs.GetWorkerConfigurationResult;
 import com.pulumi.core.TypeShape;
@@ -14,6 +16,18 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class MskconnectFunctions {
+    /**
+     * Get information on an Amazon MSK Connect Connector.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
+        return getConnector(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:mskconnect/getConnector:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Get information on an Amazon MSK Connect custom plugin.
      * 

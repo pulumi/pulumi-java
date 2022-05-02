@@ -4,17 +4,22 @@
 package com.pulumi.aws.ec2.outputs;
 
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateBlockDeviceMapping;
+import com.pulumi.aws.ec2.outputs.GetLaunchTemplateCapacityReservationSpecification;
+import com.pulumi.aws.ec2.outputs.GetLaunchTemplateCpuOption;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateCreditSpecification;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateElasticGpuSpecification;
+import com.pulumi.aws.ec2.outputs.GetLaunchTemplateElasticInferenceAccelerator;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateEnclaveOption;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateFilter;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateHibernationOption;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateIamInstanceProfile;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateInstanceMarketOption;
+import com.pulumi.aws.ec2.outputs.GetLaunchTemplateLicenseSpecification;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateMetadataOption;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateMonitoring;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateNetworkInterface;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplatePlacement;
+import com.pulumi.aws.ec2.outputs.GetLaunchTemplatePrivateDnsNameOption;
 import com.pulumi.aws.ec2.outputs.GetLaunchTemplateTagSpecification;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -23,177 +28,64 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLaunchTemplateResult {
-    /**
-     * @return Amazon Resource Name (ARN) of the launch template.
-     * 
-     */
     private final String arn;
-    /**
-     * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
-     * 
-     */
     private final List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings;
-    /**
-     * @return Customize the credit specification of the instance. See Credit
-     * Specification below for more details.
-     * 
-     */
+    private final List<GetLaunchTemplateCapacityReservationSpecification> capacityReservationSpecifications;
+    private final List<GetLaunchTemplateCpuOption> cpuOptions;
     private final List<GetLaunchTemplateCreditSpecification> creditSpecifications;
-    /**
-     * @return The default version of the launch template.
-     * 
-     */
     private final Integer defaultVersion;
-    /**
-     * @return Description of the launch template.
-     * 
-     */
     private final String description;
-    /**
-     * @return If `true`, enables [EC2 Instance
-     * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-     * 
-     */
     private final Boolean disableApiTermination;
-    /**
-     * @return If `true`, the launched EC2 instance will be EBS-optimized.
-     * 
-     */
     private final String ebsOptimized;
-    /**
-     * @return The elastic GPU to attach to the instance. See Elastic GPU
-     * below for more details.
-     * 
-     */
     private final List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications;
-    /**
-     * @return The enclave options of the Instance.
-     * 
-     */
+    private final List<GetLaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators;
     private final List<GetLaunchTemplateEnclaveOption> enclaveOptions;
     private final @Nullable List<GetLaunchTemplateFilter> filters;
-    /**
-     * @return The hibernation options for the instance.
-     * 
-     */
     private final List<GetLaunchTemplateHibernationOption> hibernationOptions;
-    /**
-     * @return The IAM Instance Profile to launch the instance with. See Instance Profile
-     * below for more details.
-     * 
-     */
     private final List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles;
     /**
      * @return The ID of the launch template.
      * 
      */
     private final String id;
-    /**
-     * @return The AMI from which to launch the instance.
-     * 
-     */
     private final String imageId;
-    /**
-     * @return Shutdown behavior for the instance. Can be `stop` or `terminate`.
-     * (Default: `stop`).
-     * 
-     */
     private final String instanceInitiatedShutdownBehavior;
-    /**
-     * @return The market (purchasing) option for the instance.
-     * below for details.
-     * 
-     */
     private final List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions;
-    /**
-     * @return The type of the instance.
-     * 
-     */
     private final String instanceType;
-    /**
-     * @return The kernel ID.
-     * 
-     */
     private final String kernelId;
-    /**
-     * @return The key name to use for the instance.
-     * 
-     */
     private final String keyName;
-    /**
-     * @return The latest version of the launch template.
-     * 
-     */
     private final Integer latestVersion;
-    /**
-     * @return The metadata options for the instance.
-     * 
-     */
+    private final List<GetLaunchTemplateLicenseSpecification> licenseSpecifications;
     private final List<GetLaunchTemplateMetadataOption> metadataOptions;
-    /**
-     * @return The monitoring option for the instance.
-     * 
-     */
     private final List<GetLaunchTemplateMonitoring> monitorings;
-    private final @Nullable String name;
-    /**
-     * @return Customize network interfaces to be attached at instance boot time. See Network
-     * Interfaces below for more details.
-     * 
-     */
+    private final String name;
     private final List<GetLaunchTemplateNetworkInterface> networkInterfaces;
-    /**
-     * @return The placement of the instance.
-     * 
-     */
     private final List<GetLaunchTemplatePlacement> placements;
-    /**
-     * @return The ID of the RAM disk.
-     * 
-     */
+    private final List<GetLaunchTemplatePrivateDnsNameOption> privateDnsNameOptions;
     private final String ramDiskId;
-    /**
-     * @return A list of security group names to associate with. If you are creating Instances in a VPC, use
-     * `vpc_security_group_ids` instead.
-     * 
-     */
     private final List<String> securityGroupNames;
-    /**
-     * @return The tags to apply to the resources during launch.
-     * 
-     */
     private final List<GetLaunchTemplateTagSpecification> tagSpecifications;
-    /**
-     * @return (Optional) A map of tags to assign to the launch template.
-     * 
-     */
     private final Map<String,String> tags;
-    /**
-     * @return The Base64-encoded user data to provide when launching the instance.
-     * 
-     */
     private final String userData;
-    /**
-     * @return A list of security group IDs to associate with.
-     * 
-     */
     private final List<String> vpcSecurityGroupIds;
 
     @CustomType.Constructor
     private GetLaunchTemplateResult(
         @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("blockDeviceMappings") List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("capacityReservationSpecifications") List<GetLaunchTemplateCapacityReservationSpecification> capacityReservationSpecifications,
+        @CustomType.Parameter("cpuOptions") List<GetLaunchTemplateCpuOption> cpuOptions,
         @CustomType.Parameter("creditSpecifications") List<GetLaunchTemplateCreditSpecification> creditSpecifications,
         @CustomType.Parameter("defaultVersion") Integer defaultVersion,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("disableApiTermination") Boolean disableApiTermination,
         @CustomType.Parameter("ebsOptimized") String ebsOptimized,
         @CustomType.Parameter("elasticGpuSpecifications") List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications,
+        @CustomType.Parameter("elasticInferenceAccelerators") List<GetLaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators,
         @CustomType.Parameter("enclaveOptions") List<GetLaunchTemplateEnclaveOption> enclaveOptions,
         @CustomType.Parameter("filters") @Nullable List<GetLaunchTemplateFilter> filters,
         @CustomType.Parameter("hibernationOptions") List<GetLaunchTemplateHibernationOption> hibernationOptions,
@@ -206,11 +98,13 @@ public final class GetLaunchTemplateResult {
         @CustomType.Parameter("kernelId") String kernelId,
         @CustomType.Parameter("keyName") String keyName,
         @CustomType.Parameter("latestVersion") Integer latestVersion,
+        @CustomType.Parameter("licenseSpecifications") List<GetLaunchTemplateLicenseSpecification> licenseSpecifications,
         @CustomType.Parameter("metadataOptions") List<GetLaunchTemplateMetadataOption> metadataOptions,
         @CustomType.Parameter("monitorings") List<GetLaunchTemplateMonitoring> monitorings,
-        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("name") String name,
         @CustomType.Parameter("networkInterfaces") List<GetLaunchTemplateNetworkInterface> networkInterfaces,
         @CustomType.Parameter("placements") List<GetLaunchTemplatePlacement> placements,
+        @CustomType.Parameter("privateDnsNameOptions") List<GetLaunchTemplatePrivateDnsNameOption> privateDnsNameOptions,
         @CustomType.Parameter("ramDiskId") String ramDiskId,
         @CustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
         @CustomType.Parameter("tagSpecifications") List<GetLaunchTemplateTagSpecification> tagSpecifications,
@@ -219,12 +113,15 @@ public final class GetLaunchTemplateResult {
         @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
+        this.capacityReservationSpecifications = capacityReservationSpecifications;
+        this.cpuOptions = cpuOptions;
         this.creditSpecifications = creditSpecifications;
         this.defaultVersion = defaultVersion;
         this.description = description;
         this.disableApiTermination = disableApiTermination;
         this.ebsOptimized = ebsOptimized;
         this.elasticGpuSpecifications = elasticGpuSpecifications;
+        this.elasticInferenceAccelerators = elasticInferenceAccelerators;
         this.enclaveOptions = enclaveOptions;
         this.filters = filters;
         this.hibernationOptions = hibernationOptions;
@@ -237,11 +134,13 @@ public final class GetLaunchTemplateResult {
         this.kernelId = kernelId;
         this.keyName = keyName;
         this.latestVersion = latestVersion;
+        this.licenseSpecifications = licenseSpecifications;
         this.metadataOptions = metadataOptions;
         this.monitorings = monitorings;
         this.name = name;
         this.networkInterfaces = networkInterfaces;
         this.placements = placements;
+        this.privateDnsNameOptions = privateDnsNameOptions;
         this.ramDiskId = ramDiskId;
         this.securityGroupNames = securityGroupNames;
         this.tagSpecifications = tagSpecifications;
@@ -250,87 +149,48 @@ public final class GetLaunchTemplateResult {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
     }
 
-    /**
-     * @return Amazon Resource Name (ARN) of the launch template.
-     * 
-     */
     public String arn() {
         return this.arn;
     }
-    /**
-     * @return Specify volumes to attach to the instance besides the volumes specified by the AMI.
-     * 
-     */
     public List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
     }
-    /**
-     * @return Customize the credit specification of the instance. See Credit
-     * Specification below for more details.
-     * 
-     */
+    public List<GetLaunchTemplateCapacityReservationSpecification> capacityReservationSpecifications() {
+        return this.capacityReservationSpecifications;
+    }
+    public List<GetLaunchTemplateCpuOption> cpuOptions() {
+        return this.cpuOptions;
+    }
     public List<GetLaunchTemplateCreditSpecification> creditSpecifications() {
         return this.creditSpecifications;
     }
-    /**
-     * @return The default version of the launch template.
-     * 
-     */
     public Integer defaultVersion() {
         return this.defaultVersion;
     }
-    /**
-     * @return Description of the launch template.
-     * 
-     */
     public String description() {
         return this.description;
     }
-    /**
-     * @return If `true`, enables [EC2 Instance
-     * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-     * 
-     */
     public Boolean disableApiTermination() {
         return this.disableApiTermination;
     }
-    /**
-     * @return If `true`, the launched EC2 instance will be EBS-optimized.
-     * 
-     */
     public String ebsOptimized() {
         return this.ebsOptimized;
     }
-    /**
-     * @return The elastic GPU to attach to the instance. See Elastic GPU
-     * below for more details.
-     * 
-     */
     public List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications() {
         return this.elasticGpuSpecifications;
     }
-    /**
-     * @return The enclave options of the Instance.
-     * 
-     */
+    public List<GetLaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators() {
+        return this.elasticInferenceAccelerators;
+    }
     public List<GetLaunchTemplateEnclaveOption> enclaveOptions() {
         return this.enclaveOptions;
     }
     public List<GetLaunchTemplateFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    /**
-     * @return The hibernation options for the instance.
-     * 
-     */
     public List<GetLaunchTemplateHibernationOption> hibernationOptions() {
         return this.hibernationOptions;
     }
-    /**
-     * @return The IAM Instance Profile to launch the instance with. See Instance Profile
-     * below for more details.
-     * 
-     */
     public List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles() {
         return this.iamInstanceProfiles;
     }
@@ -341,129 +201,63 @@ public final class GetLaunchTemplateResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return The AMI from which to launch the instance.
-     * 
-     */
     public String imageId() {
         return this.imageId;
     }
-    /**
-     * @return Shutdown behavior for the instance. Can be `stop` or `terminate`.
-     * (Default: `stop`).
-     * 
-     */
     public String instanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior;
     }
-    /**
-     * @return The market (purchasing) option for the instance.
-     * below for details.
-     * 
-     */
     public List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions() {
         return this.instanceMarketOptions;
     }
-    /**
-     * @return The type of the instance.
-     * 
-     */
     public String instanceType() {
         return this.instanceType;
     }
-    /**
-     * @return The kernel ID.
-     * 
-     */
     public String kernelId() {
         return this.kernelId;
     }
-    /**
-     * @return The key name to use for the instance.
-     * 
-     */
     public String keyName() {
         return this.keyName;
     }
-    /**
-     * @return The latest version of the launch template.
-     * 
-     */
     public Integer latestVersion() {
         return this.latestVersion;
     }
-    /**
-     * @return The metadata options for the instance.
-     * 
-     */
+    public List<GetLaunchTemplateLicenseSpecification> licenseSpecifications() {
+        return this.licenseSpecifications;
+    }
     public List<GetLaunchTemplateMetadataOption> metadataOptions() {
         return this.metadataOptions;
     }
-    /**
-     * @return The monitoring option for the instance.
-     * 
-     */
     public List<GetLaunchTemplateMonitoring> monitorings() {
         return this.monitorings;
     }
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
-    /**
-     * @return Customize network interfaces to be attached at instance boot time. See Network
-     * Interfaces below for more details.
-     * 
-     */
     public List<GetLaunchTemplateNetworkInterface> networkInterfaces() {
         return this.networkInterfaces;
     }
-    /**
-     * @return The placement of the instance.
-     * 
-     */
     public List<GetLaunchTemplatePlacement> placements() {
         return this.placements;
     }
-    /**
-     * @return The ID of the RAM disk.
-     * 
-     */
+    public List<GetLaunchTemplatePrivateDnsNameOption> privateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
     public String ramDiskId() {
         return this.ramDiskId;
     }
-    /**
-     * @return A list of security group names to associate with. If you are creating Instances in a VPC, use
-     * `vpc_security_group_ids` instead.
-     * 
-     */
     public List<String> securityGroupNames() {
         return this.securityGroupNames;
     }
-    /**
-     * @return The tags to apply to the resources during launch.
-     * 
-     */
     public List<GetLaunchTemplateTagSpecification> tagSpecifications() {
         return this.tagSpecifications;
     }
-    /**
-     * @return (Optional) A map of tags to assign to the launch template.
-     * 
-     */
     public Map<String,String> tags() {
         return this.tags;
     }
-    /**
-     * @return The Base64-encoded user data to provide when launching the instance.
-     * 
-     */
     public String userData() {
         return this.userData;
     }
-    /**
-     * @return A list of security group IDs to associate with.
-     * 
-     */
     public List<String> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
@@ -479,12 +273,15 @@ public final class GetLaunchTemplateResult {
     public static final class Builder {
         private String arn;
         private List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings;
+        private List<GetLaunchTemplateCapacityReservationSpecification> capacityReservationSpecifications;
+        private List<GetLaunchTemplateCpuOption> cpuOptions;
         private List<GetLaunchTemplateCreditSpecification> creditSpecifications;
         private Integer defaultVersion;
         private String description;
         private Boolean disableApiTermination;
         private String ebsOptimized;
         private List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications;
+        private List<GetLaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators;
         private List<GetLaunchTemplateEnclaveOption> enclaveOptions;
         private @Nullable List<GetLaunchTemplateFilter> filters;
         private List<GetLaunchTemplateHibernationOption> hibernationOptions;
@@ -497,11 +294,13 @@ public final class GetLaunchTemplateResult {
         private String kernelId;
         private String keyName;
         private Integer latestVersion;
+        private List<GetLaunchTemplateLicenseSpecification> licenseSpecifications;
         private List<GetLaunchTemplateMetadataOption> metadataOptions;
         private List<GetLaunchTemplateMonitoring> monitorings;
-        private @Nullable String name;
+        private String name;
         private List<GetLaunchTemplateNetworkInterface> networkInterfaces;
         private List<GetLaunchTemplatePlacement> placements;
+        private List<GetLaunchTemplatePrivateDnsNameOption> privateDnsNameOptions;
         private String ramDiskId;
         private List<String> securityGroupNames;
         private List<GetLaunchTemplateTagSpecification> tagSpecifications;
@@ -517,12 +316,15 @@ public final class GetLaunchTemplateResult {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
     	      this.blockDeviceMappings = defaults.blockDeviceMappings;
+    	      this.capacityReservationSpecifications = defaults.capacityReservationSpecifications;
+    	      this.cpuOptions = defaults.cpuOptions;
     	      this.creditSpecifications = defaults.creditSpecifications;
     	      this.defaultVersion = defaults.defaultVersion;
     	      this.description = defaults.description;
     	      this.disableApiTermination = defaults.disableApiTermination;
     	      this.ebsOptimized = defaults.ebsOptimized;
     	      this.elasticGpuSpecifications = defaults.elasticGpuSpecifications;
+    	      this.elasticInferenceAccelerators = defaults.elasticInferenceAccelerators;
     	      this.enclaveOptions = defaults.enclaveOptions;
     	      this.filters = defaults.filters;
     	      this.hibernationOptions = defaults.hibernationOptions;
@@ -535,11 +337,13 @@ public final class GetLaunchTemplateResult {
     	      this.kernelId = defaults.kernelId;
     	      this.keyName = defaults.keyName;
     	      this.latestVersion = defaults.latestVersion;
+    	      this.licenseSpecifications = defaults.licenseSpecifications;
     	      this.metadataOptions = defaults.metadataOptions;
     	      this.monitorings = defaults.monitorings;
     	      this.name = defaults.name;
     	      this.networkInterfaces = defaults.networkInterfaces;
     	      this.placements = defaults.placements;
+    	      this.privateDnsNameOptions = defaults.privateDnsNameOptions;
     	      this.ramDiskId = defaults.ramDiskId;
     	      this.securityGroupNames = defaults.securityGroupNames;
     	      this.tagSpecifications = defaults.tagSpecifications;
@@ -558,6 +362,20 @@ public final class GetLaunchTemplateResult {
         }
         public Builder blockDeviceMappings(GetLaunchTemplateBlockDeviceMapping... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
+        public Builder capacityReservationSpecifications(List<GetLaunchTemplateCapacityReservationSpecification> capacityReservationSpecifications) {
+            this.capacityReservationSpecifications = Objects.requireNonNull(capacityReservationSpecifications);
+            return this;
+        }
+        public Builder capacityReservationSpecifications(GetLaunchTemplateCapacityReservationSpecification... capacityReservationSpecifications) {
+            return capacityReservationSpecifications(List.of(capacityReservationSpecifications));
+        }
+        public Builder cpuOptions(List<GetLaunchTemplateCpuOption> cpuOptions) {
+            this.cpuOptions = Objects.requireNonNull(cpuOptions);
+            return this;
+        }
+        public Builder cpuOptions(GetLaunchTemplateCpuOption... cpuOptions) {
+            return cpuOptions(List.of(cpuOptions));
         }
         public Builder creditSpecifications(List<GetLaunchTemplateCreditSpecification> creditSpecifications) {
             this.creditSpecifications = Objects.requireNonNull(creditSpecifications);
@@ -588,6 +406,13 @@ public final class GetLaunchTemplateResult {
         }
         public Builder elasticGpuSpecifications(GetLaunchTemplateElasticGpuSpecification... elasticGpuSpecifications) {
             return elasticGpuSpecifications(List.of(elasticGpuSpecifications));
+        }
+        public Builder elasticInferenceAccelerators(List<GetLaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerators) {
+            this.elasticInferenceAccelerators = Objects.requireNonNull(elasticInferenceAccelerators);
+            return this;
+        }
+        public Builder elasticInferenceAccelerators(GetLaunchTemplateElasticInferenceAccelerator... elasticInferenceAccelerators) {
+            return elasticInferenceAccelerators(List.of(elasticInferenceAccelerators));
         }
         public Builder enclaveOptions(List<GetLaunchTemplateEnclaveOption> enclaveOptions) {
             this.enclaveOptions = Objects.requireNonNull(enclaveOptions);
@@ -652,6 +477,13 @@ public final class GetLaunchTemplateResult {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
+        public Builder licenseSpecifications(List<GetLaunchTemplateLicenseSpecification> licenseSpecifications) {
+            this.licenseSpecifications = Objects.requireNonNull(licenseSpecifications);
+            return this;
+        }
+        public Builder licenseSpecifications(GetLaunchTemplateLicenseSpecification... licenseSpecifications) {
+            return licenseSpecifications(List.of(licenseSpecifications));
+        }
         public Builder metadataOptions(List<GetLaunchTemplateMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
@@ -666,8 +498,8 @@ public final class GetLaunchTemplateResult {
         public Builder monitorings(GetLaunchTemplateMonitoring... monitorings) {
             return monitorings(List.of(monitorings));
         }
-        public Builder name(@Nullable String name) {
-            this.name = name;
+        public Builder name(String name) {
+            this.name = Objects.requireNonNull(name);
             return this;
         }
         public Builder networkInterfaces(List<GetLaunchTemplateNetworkInterface> networkInterfaces) {
@@ -683,6 +515,13 @@ public final class GetLaunchTemplateResult {
         }
         public Builder placements(GetLaunchTemplatePlacement... placements) {
             return placements(List.of(placements));
+        }
+        public Builder privateDnsNameOptions(List<GetLaunchTemplatePrivateDnsNameOption> privateDnsNameOptions) {
+            this.privateDnsNameOptions = Objects.requireNonNull(privateDnsNameOptions);
+            return this;
+        }
+        public Builder privateDnsNameOptions(GetLaunchTemplatePrivateDnsNameOption... privateDnsNameOptions) {
+            return privateDnsNameOptions(List.of(privateDnsNameOptions));
         }
         public Builder ramDiskId(String ramDiskId) {
             this.ramDiskId = Objects.requireNonNull(ramDiskId);
@@ -717,7 +556,7 @@ public final class GetLaunchTemplateResult {
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }        public GetLaunchTemplateResult build() {
-            return new GetLaunchTemplateResult(arn, blockDeviceMappings, creditSpecifications, defaultVersion, description, disableApiTermination, ebsOptimized, elasticGpuSpecifications, enclaveOptions, filters, hibernationOptions, iamInstanceProfiles, id, imageId, instanceInitiatedShutdownBehavior, instanceMarketOptions, instanceType, kernelId, keyName, latestVersion, metadataOptions, monitorings, name, networkInterfaces, placements, ramDiskId, securityGroupNames, tagSpecifications, tags, userData, vpcSecurityGroupIds);
+            return new GetLaunchTemplateResult(arn, blockDeviceMappings, capacityReservationSpecifications, cpuOptions, creditSpecifications, defaultVersion, description, disableApiTermination, ebsOptimized, elasticGpuSpecifications, elasticInferenceAccelerators, enclaveOptions, filters, hibernationOptions, iamInstanceProfiles, id, imageId, instanceInitiatedShutdownBehavior, instanceMarketOptions, instanceType, kernelId, keyName, latestVersion, licenseSpecifications, metadataOptions, monitorings, name, networkInterfaces, placements, privateDnsNameOptions, ramDiskId, securityGroupNames, tagSpecifications, tags, userData, vpcSecurityGroupIds);
         }
     }
 }

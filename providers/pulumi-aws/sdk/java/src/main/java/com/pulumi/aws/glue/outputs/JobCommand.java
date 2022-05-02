@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobCommand {
     /**
-     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
      */
     private final @Nullable String name;
@@ -38,7 +38,7 @@ public final class JobCommand {
     }
 
     /**
-     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
      */
     public Optional<String> name() {

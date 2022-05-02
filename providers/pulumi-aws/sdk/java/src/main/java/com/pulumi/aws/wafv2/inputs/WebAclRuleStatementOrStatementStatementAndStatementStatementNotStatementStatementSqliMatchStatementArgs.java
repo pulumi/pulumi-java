@@ -18,14 +18,14 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
     public static final WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs Empty = new WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementSqliMatchStatementArgs();
 
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     @Import(name="fieldToMatch")
     private @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs>> fieldToMatch() {
@@ -73,7 +73,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 

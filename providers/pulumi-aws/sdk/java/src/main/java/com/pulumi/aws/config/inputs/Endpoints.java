@@ -16,6 +16,7 @@ public final class Endpoints {
     private @Nullable String acm;
     private @Nullable String acmpca;
     private @Nullable String alexaforbusiness;
+    private @Nullable String amg;
     private @Nullable String amp;
     private @Nullable String amplify;
     private @Nullable String amplifybackend;
@@ -59,7 +60,9 @@ public final class Endpoints {
     private @Nullable String cloudtrail;
     private @Nullable String cloudwatch;
     private @Nullable String cloudwatchevents;
+    private @Nullable String cloudwatchevidently;
     private @Nullable String cloudwatchlogs;
+    private @Nullable String cloudwatchrum;
     private @Nullable String codeartifact;
     private @Nullable String codebuild;
     private @Nullable String codecommit;
@@ -136,6 +139,7 @@ public final class Endpoints {
     private @Nullable String globalaccelerator;
     private @Nullable String glue;
     private @Nullable String gluedatabrew;
+    private @Nullable String grafana;
     private @Nullable String greengrass;
     private @Nullable String greengrassv2;
     private @Nullable String groundstation;
@@ -165,6 +169,7 @@ public final class Endpoints {
     private @Nullable String kafka;
     private @Nullable String kafkaconnect;
     private @Nullable String kendra;
+    private @Nullable String keyspaces;
     private @Nullable String kinesis;
     private @Nullable String kinesisanalytics;
     private @Nullable String kinesisanalyticsv2;
@@ -192,6 +197,7 @@ public final class Endpoints {
     private @Nullable String macie;
     private @Nullable String macie2;
     private @Nullable String managedblockchain;
+    private @Nullable String managedgrafana;
     private @Nullable String marketplacecatalog;
     private @Nullable String marketplacecommerceanalytics;
     private @Nullable String marketplaceentitlement;
@@ -218,6 +224,8 @@ public final class Endpoints {
     private @Nullable String networkfirewall;
     private @Nullable String networkmanager;
     private @Nullable String nimblestudio;
+    private @Nullable String opensearch;
+    private @Nullable String opensearchservice;
     private @Nullable String opsworks;
     private @Nullable String opsworkscm;
     private @Nullable String organizations;
@@ -321,6 +329,7 @@ public final class Endpoints {
         this.acm = null;
         this.acmpca = null;
         this.alexaforbusiness = null;
+        this.amg = null;
         this.amp = null;
         this.amplify = null;
         this.amplifybackend = null;
@@ -364,7 +373,9 @@ public final class Endpoints {
         this.cloudtrail = null;
         this.cloudwatch = null;
         this.cloudwatchevents = null;
+        this.cloudwatchevidently = null;
         this.cloudwatchlogs = null;
+        this.cloudwatchrum = null;
         this.codeartifact = null;
         this.codebuild = null;
         this.codecommit = null;
@@ -441,6 +452,7 @@ public final class Endpoints {
         this.globalaccelerator = null;
         this.glue = null;
         this.gluedatabrew = null;
+        this.grafana = null;
         this.greengrass = null;
         this.greengrassv2 = null;
         this.groundstation = null;
@@ -470,6 +482,7 @@ public final class Endpoints {
         this.kafka = null;
         this.kafkaconnect = null;
         this.kendra = null;
+        this.keyspaces = null;
         this.kinesis = null;
         this.kinesisanalytics = null;
         this.kinesisanalyticsv2 = null;
@@ -497,6 +510,7 @@ public final class Endpoints {
         this.macie = null;
         this.macie2 = null;
         this.managedblockchain = null;
+        this.managedgrafana = null;
         this.marketplacecatalog = null;
         this.marketplacecommerceanalytics = null;
         this.marketplaceentitlement = null;
@@ -523,6 +537,8 @@ public final class Endpoints {
         this.networkfirewall = null;
         this.networkmanager = null;
         this.nimblestudio = null;
+        this.opensearch = null;
+        this.opensearchservice = null;
         this.opsworks = null;
         this.opsworkscm = null;
         this.organizations = null;
@@ -632,6 +648,9 @@ public final class Endpoints {
     }
     public Optional<String> alexaforbusiness() {
         return Optional.ofNullable(this.alexaforbusiness);
+    }
+    public Optional<String> amg() {
+        return Optional.ofNullable(this.amg);
     }
     public Optional<String> amp() {
         return Optional.ofNullable(this.amp);
@@ -762,8 +781,14 @@ public final class Endpoints {
     public Optional<String> cloudwatchevents() {
         return Optional.ofNullable(this.cloudwatchevents);
     }
+    public Optional<String> cloudwatchevidently() {
+        return Optional.ofNullable(this.cloudwatchevidently);
+    }
     public Optional<String> cloudwatchlogs() {
         return Optional.ofNullable(this.cloudwatchlogs);
+    }
+    public Optional<String> cloudwatchrum() {
+        return Optional.ofNullable(this.cloudwatchrum);
     }
     public Optional<String> codeartifact() {
         return Optional.ofNullable(this.codeartifact);
@@ -993,6 +1018,9 @@ public final class Endpoints {
     public Optional<String> gluedatabrew() {
         return Optional.ofNullable(this.gluedatabrew);
     }
+    public Optional<String> grafana() {
+        return Optional.ofNullable(this.grafana);
+    }
     public Optional<String> greengrass() {
         return Optional.ofNullable(this.greengrass);
     }
@@ -1080,6 +1108,9 @@ public final class Endpoints {
     public Optional<String> kendra() {
         return Optional.ofNullable(this.kendra);
     }
+    public Optional<String> keyspaces() {
+        return Optional.ofNullable(this.keyspaces);
+    }
     public Optional<String> kinesis() {
         return Optional.ofNullable(this.kinesis);
     }
@@ -1161,6 +1192,9 @@ public final class Endpoints {
     public Optional<String> managedblockchain() {
         return Optional.ofNullable(this.managedblockchain);
     }
+    public Optional<String> managedgrafana() {
+        return Optional.ofNullable(this.managedgrafana);
+    }
     public Optional<String> marketplacecatalog() {
         return Optional.ofNullable(this.marketplacecatalog);
     }
@@ -1238,6 +1272,12 @@ public final class Endpoints {
     }
     public Optional<String> nimblestudio() {
         return Optional.ofNullable(this.nimblestudio);
+    }
+    public Optional<String> opensearch() {
+        return Optional.ofNullable(this.opensearch);
+    }
+    public Optional<String> opensearchservice() {
+        return Optional.ofNullable(this.opensearchservice);
     }
     public Optional<String> opsworks() {
         return Optional.ofNullable(this.opsworks);
@@ -1536,6 +1576,7 @@ public final class Endpoints {
         private @Nullable String acm;
         private @Nullable String acmpca;
         private @Nullable String alexaforbusiness;
+        private @Nullable String amg;
         private @Nullable String amp;
         private @Nullable String amplify;
         private @Nullable String amplifybackend;
@@ -1579,7 +1620,9 @@ public final class Endpoints {
         private @Nullable String cloudtrail;
         private @Nullable String cloudwatch;
         private @Nullable String cloudwatchevents;
+        private @Nullable String cloudwatchevidently;
         private @Nullable String cloudwatchlogs;
+        private @Nullable String cloudwatchrum;
         private @Nullable String codeartifact;
         private @Nullable String codebuild;
         private @Nullable String codecommit;
@@ -1656,6 +1699,7 @@ public final class Endpoints {
         private @Nullable String globalaccelerator;
         private @Nullable String glue;
         private @Nullable String gluedatabrew;
+        private @Nullable String grafana;
         private @Nullable String greengrass;
         private @Nullable String greengrassv2;
         private @Nullable String groundstation;
@@ -1685,6 +1729,7 @@ public final class Endpoints {
         private @Nullable String kafka;
         private @Nullable String kafkaconnect;
         private @Nullable String kendra;
+        private @Nullable String keyspaces;
         private @Nullable String kinesis;
         private @Nullable String kinesisanalytics;
         private @Nullable String kinesisanalyticsv2;
@@ -1712,6 +1757,7 @@ public final class Endpoints {
         private @Nullable String macie;
         private @Nullable String macie2;
         private @Nullable String managedblockchain;
+        private @Nullable String managedgrafana;
         private @Nullable String marketplacecatalog;
         private @Nullable String marketplacecommerceanalytics;
         private @Nullable String marketplaceentitlement;
@@ -1738,6 +1784,8 @@ public final class Endpoints {
         private @Nullable String networkfirewall;
         private @Nullable String networkmanager;
         private @Nullable String nimblestudio;
+        private @Nullable String opensearch;
+        private @Nullable String opensearchservice;
         private @Nullable String opsworks;
         private @Nullable String opsworkscm;
         private @Nullable String organizations;
@@ -1844,6 +1892,7 @@ public final class Endpoints {
     	      this.acm = defaults.acm;
     	      this.acmpca = defaults.acmpca;
     	      this.alexaforbusiness = defaults.alexaforbusiness;
+    	      this.amg = defaults.amg;
     	      this.amp = defaults.amp;
     	      this.amplify = defaults.amplify;
     	      this.amplifybackend = defaults.amplifybackend;
@@ -1887,7 +1936,9 @@ public final class Endpoints {
     	      this.cloudtrail = defaults.cloudtrail;
     	      this.cloudwatch = defaults.cloudwatch;
     	      this.cloudwatchevents = defaults.cloudwatchevents;
+    	      this.cloudwatchevidently = defaults.cloudwatchevidently;
     	      this.cloudwatchlogs = defaults.cloudwatchlogs;
+    	      this.cloudwatchrum = defaults.cloudwatchrum;
     	      this.codeartifact = defaults.codeartifact;
     	      this.codebuild = defaults.codebuild;
     	      this.codecommit = defaults.codecommit;
@@ -1964,6 +2015,7 @@ public final class Endpoints {
     	      this.globalaccelerator = defaults.globalaccelerator;
     	      this.glue = defaults.glue;
     	      this.gluedatabrew = defaults.gluedatabrew;
+    	      this.grafana = defaults.grafana;
     	      this.greengrass = defaults.greengrass;
     	      this.greengrassv2 = defaults.greengrassv2;
     	      this.groundstation = defaults.groundstation;
@@ -1993,6 +2045,7 @@ public final class Endpoints {
     	      this.kafka = defaults.kafka;
     	      this.kafkaconnect = defaults.kafkaconnect;
     	      this.kendra = defaults.kendra;
+    	      this.keyspaces = defaults.keyspaces;
     	      this.kinesis = defaults.kinesis;
     	      this.kinesisanalytics = defaults.kinesisanalytics;
     	      this.kinesisanalyticsv2 = defaults.kinesisanalyticsv2;
@@ -2020,6 +2073,7 @@ public final class Endpoints {
     	      this.macie = defaults.macie;
     	      this.macie2 = defaults.macie2;
     	      this.managedblockchain = defaults.managedblockchain;
+    	      this.managedgrafana = defaults.managedgrafana;
     	      this.marketplacecatalog = defaults.marketplacecatalog;
     	      this.marketplacecommerceanalytics = defaults.marketplacecommerceanalytics;
     	      this.marketplaceentitlement = defaults.marketplaceentitlement;
@@ -2046,6 +2100,8 @@ public final class Endpoints {
     	      this.networkfirewall = defaults.networkfirewall;
     	      this.networkmanager = defaults.networkmanager;
     	      this.nimblestudio = defaults.nimblestudio;
+    	      this.opensearch = defaults.opensearch;
+    	      this.opensearchservice = defaults.opensearchservice;
     	      this.opsworks = defaults.opsworks;
     	      this.opsworkscm = defaults.opsworkscm;
     	      this.organizations = defaults.organizations;
@@ -2160,6 +2216,10 @@ public final class Endpoints {
         }
         public Builder alexaforbusiness(@Nullable String alexaforbusiness) {
             this.alexaforbusiness = alexaforbusiness;
+            return this;
+        }
+        public Builder amg(@Nullable String amg) {
+            this.amg = amg;
             return this;
         }
         public Builder amp(@Nullable String amp) {
@@ -2334,8 +2394,16 @@ public final class Endpoints {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
+        public Builder cloudwatchevidently(@Nullable String cloudwatchevidently) {
+            this.cloudwatchevidently = cloudwatchevidently;
+            return this;
+        }
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
+            return this;
+        }
+        public Builder cloudwatchrum(@Nullable String cloudwatchrum) {
+            this.cloudwatchrum = cloudwatchrum;
             return this;
         }
         public Builder codeartifact(@Nullable String codeartifact) {
@@ -2642,6 +2710,10 @@ public final class Endpoints {
             this.gluedatabrew = gluedatabrew;
             return this;
         }
+        public Builder grafana(@Nullable String grafana) {
+            this.grafana = grafana;
+            return this;
+        }
         public Builder greengrass(@Nullable String greengrass) {
             this.greengrass = greengrass;
             return this;
@@ -2758,6 +2830,10 @@ public final class Endpoints {
             this.kendra = kendra;
             return this;
         }
+        public Builder keyspaces(@Nullable String keyspaces) {
+            this.keyspaces = keyspaces;
+            return this;
+        }
         public Builder kinesis(@Nullable String kinesis) {
             this.kinesis = kinesis;
             return this;
@@ -2866,6 +2942,10 @@ public final class Endpoints {
             this.managedblockchain = managedblockchain;
             return this;
         }
+        public Builder managedgrafana(@Nullable String managedgrafana) {
+            this.managedgrafana = managedgrafana;
+            return this;
+        }
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
@@ -2968,6 +3048,14 @@ public final class Endpoints {
         }
         public Builder nimblestudio(@Nullable String nimblestudio) {
             this.nimblestudio = nimblestudio;
+            return this;
+        }
+        public Builder opensearch(@Nullable String opensearch) {
+            this.opensearch = opensearch;
+            return this;
+        }
+        public Builder opensearchservice(@Nullable String opensearchservice) {
+            this.opensearchservice = opensearchservice;
             return this;
         }
         public Builder opsworks(@Nullable String opsworks) {
@@ -3353,6 +3441,7 @@ public final class Endpoints {
             built.acm = acm;
             built.acmpca = acmpca;
             built.alexaforbusiness = alexaforbusiness;
+            built.amg = amg;
             built.amp = amp;
             built.amplify = amplify;
             built.amplifybackend = amplifybackend;
@@ -3396,7 +3485,9 @@ public final class Endpoints {
             built.cloudtrail = cloudtrail;
             built.cloudwatch = cloudwatch;
             built.cloudwatchevents = cloudwatchevents;
+            built.cloudwatchevidently = cloudwatchevidently;
             built.cloudwatchlogs = cloudwatchlogs;
+            built.cloudwatchrum = cloudwatchrum;
             built.codeartifact = codeartifact;
             built.codebuild = codebuild;
             built.codecommit = codecommit;
@@ -3473,6 +3564,7 @@ public final class Endpoints {
             built.globalaccelerator = globalaccelerator;
             built.glue = glue;
             built.gluedatabrew = gluedatabrew;
+            built.grafana = grafana;
             built.greengrass = greengrass;
             built.greengrassv2 = greengrassv2;
             built.groundstation = groundstation;
@@ -3502,6 +3594,7 @@ public final class Endpoints {
             built.kafka = kafka;
             built.kafkaconnect = kafkaconnect;
             built.kendra = kendra;
+            built.keyspaces = keyspaces;
             built.kinesis = kinesis;
             built.kinesisanalytics = kinesisanalytics;
             built.kinesisanalyticsv2 = kinesisanalyticsv2;
@@ -3529,6 +3622,7 @@ public final class Endpoints {
             built.macie = macie;
             built.macie2 = macie2;
             built.managedblockchain = managedblockchain;
+            built.managedgrafana = managedgrafana;
             built.marketplacecatalog = marketplacecatalog;
             built.marketplacecommerceanalytics = marketplacecommerceanalytics;
             built.marketplaceentitlement = marketplaceentitlement;
@@ -3555,6 +3649,8 @@ public final class Endpoints {
             built.networkfirewall = networkfirewall;
             built.networkmanager = networkmanager;
             built.nimblestudio = nimblestudio;
+            built.opensearch = opensearch;
+            built.opensearchservice = opensearchservice;
             built.opsworks = opsworks;
             built.opsworkscm = opsworkscm;
             built.organizations = organizations;

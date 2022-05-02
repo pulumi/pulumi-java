@@ -49,14 +49,14 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
      * 
      */
     @Import(name="engineVersion")
     private @Nullable Output<WorkgroupConfigurationEngineVersionArgs> engineVersion;
 
     /**
-     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
      * 
      */
     public Optional<Output<WorkgroupConfigurationEngineVersionArgs>> engineVersion() {
@@ -94,14 +94,14 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Configuration block with result settings. Documented below.
+     * Configuration block with result settings. See Result Configuration below.
      * 
      */
     @Import(name="resultConfiguration")
     private @Nullable Output<WorkgroupConfigurationResultConfigurationArgs> resultConfiguration;
 
     /**
-     * @return Configuration block with result settings. Documented below.
+     * @return Configuration block with result settings. See Result Configuration below.
      * 
      */
     public Optional<Output<WorkgroupConfigurationResultConfigurationArgs>> resultConfiguration() {
@@ -180,7 +180,7 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+         * @param engineVersion Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
          * 
          * @return builder
          * 
@@ -243,7 +243,7 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param resultConfiguration Configuration block with result settings. Documented below.
+         * @param resultConfiguration Configuration block with result settings. See Result Configuration below.
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class WorkgroupConfigurationArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param resultConfiguration Configuration block with result settings. Documented below.
+         * @param resultConfiguration Configuration block with result settings. See Result Configuration below.
          * 
          * @return builder
          * 

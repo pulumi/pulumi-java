@@ -10,6 +10,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -36,14 +37,14 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="cdcStartPosition", type=String.class, parameters={})
-    private Output</* @Nullable */ String> cdcStartPosition;
+    private Output<String> cdcStartPosition;
 
     /**
      * @return Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
      * 
      */
-    public Output<Optional<String>> cdcStartPosition() {
-        return Codegen.optional(this.cdcStartPosition);
+    public Output<String> cdcStartPosition() {
+        return this.cdcStartPosition;
     }
     /**
      * The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
@@ -142,6 +143,34 @@ public class ReplicationTask extends com.pulumi.resources.CustomResource {
      */
     public Output<String> sourceEndpointArn() {
         return this.sourceEndpointArn;
+    }
+    /**
+     * Whether to run or stop the replication task.
+     * 
+     */
+    @Export(name="startReplicationTask", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> startReplicationTask;
+
+    /**
+     * @return Whether to run or stop the replication task.
+     * 
+     */
+    public Output<Optional<Boolean>> startReplicationTask() {
+        return Codegen.optional(this.startReplicationTask);
+    }
+    /**
+     * Replication Task status.
+     * 
+     */
+    @Export(name="status", type=String.class, parameters={})
+    private Output<String> status;
+
+    /**
+     * @return Replication Task status.
+     * 
+     */
+    public Output<String> status() {
+        return this.status;
     }
     /**
      * An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)

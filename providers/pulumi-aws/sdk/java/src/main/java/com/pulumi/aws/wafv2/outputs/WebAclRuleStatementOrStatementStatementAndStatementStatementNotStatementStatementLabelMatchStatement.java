@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementLabelMatchStatement {
     /**
-     * @return The string to match against.
+     * @return String to match against.
      * 
      */
     private final String key;
@@ -29,7 +29,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
     }
 
     /**
-     * @return The string to match against.
+     * @return String to match against.
      * 
      */
     public String key() {

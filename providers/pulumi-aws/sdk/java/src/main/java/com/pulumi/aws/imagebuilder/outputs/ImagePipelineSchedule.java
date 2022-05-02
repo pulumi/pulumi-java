@@ -21,13 +21,20 @@ public final class ImagePipelineSchedule {
      * 
      */
     private final String scheduleExpression;
+    /**
+     * @return The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+     * 
+     */
+    private final @Nullable String timezone;
 
     @CustomType.Constructor
     private ImagePipelineSchedule(
         @CustomType.Parameter("pipelineExecutionStartCondition") @Nullable String pipelineExecutionStartCondition,
-        @CustomType.Parameter("scheduleExpression") String scheduleExpression) {
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @CustomType.Parameter("timezone") @Nullable String timezone) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
+        this.timezone = timezone;
     }
 
     /**
@@ -44,6 +51,13 @@ public final class ImagePipelineSchedule {
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
+    /**
+     * @return The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+     * 
+     */
+    public Optional<String> timezone() {
+        return Optional.ofNullable(this.timezone);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -56,6 +70,7 @@ public final class ImagePipelineSchedule {
     public static final class Builder {
         private @Nullable String pipelineExecutionStartCondition;
         private String scheduleExpression;
+        private @Nullable String timezone;
 
         public Builder() {
     	      // Empty
@@ -65,6 +80,7 @@ public final class ImagePipelineSchedule {
     	      Objects.requireNonNull(defaults);
     	      this.pipelineExecutionStartCondition = defaults.pipelineExecutionStartCondition;
     	      this.scheduleExpression = defaults.scheduleExpression;
+    	      this.timezone = defaults.timezone;
         }
 
         public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
@@ -74,8 +90,12 @@ public final class ImagePipelineSchedule {
         public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
+        }
+        public Builder timezone(@Nullable String timezone) {
+            this.timezone = timezone;
+            return this;
         }        public ImagePipelineSchedule build() {
-            return new ImagePipelineSchedule(pipelineExecutionStartCondition, scheduleExpression);
+            return new ImagePipelineSchedule(pipelineExecutionStartCondition, scheduleExpression, timezone);
         }
     }
 }

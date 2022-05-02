@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
+import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -29,6 +31,21 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
      */
     public Optional<Output<Boolean>> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
+    }
+
+    /**
+     * Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+     * 
+     */
+    @Import(name="environmentVariables")
+    private @Nullable Output<Map<String,String>> environmentVariables;
+
+    /**
+     * @return Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -65,6 +82,7 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
 
     private CanaryRunConfigArgs(CanaryRunConfigArgs $) {
         this.activeTracing = $.activeTracing;
+        this.environmentVariables = $.environmentVariables;
         this.memoryInMb = $.memoryInMb;
         this.timeoutInSeconds = $.timeoutInSeconds;
     }
@@ -106,6 +124,27 @@ public final class CanaryRunConfigArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder activeTracing(Boolean activeTracing) {
             return activeTracing(Output.of(activeTracing));
+        }
+
+        /**
+         * @param environmentVariables Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
+            $.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * @param environmentVariables Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environmentVariables(Map<String,String> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
 
         /**

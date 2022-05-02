@@ -64,14 +64,14 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     @Import(name="maximumExecutionFrequency")
     private @Nullable Output<String> maximumExecutionFrequency;
 
     /**
-     * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * @return The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     public Optional<Output<String>> maximumExecutionFrequency() {
@@ -109,14 +109,14 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Scope defines which resources can trigger an evaluation for the rule as documented below.
+     * Scope defines which resources can trigger an evaluation for the rule. See Source Below.
      * 
      */
     @Import(name="scope")
     private @Nullable Output<RuleScopeArgs> scope;
 
     /**
-     * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
+     * @return Scope defines which resources can trigger an evaluation for the rule. See Source Below.
      * 
      */
     public Optional<Output<RuleScopeArgs>> scope() {
@@ -124,14 +124,14 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+     * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
      * 
      */
     @Import(name="source")
     private @Nullable Output<RuleSourceArgs> source;
 
     /**
-     * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+     * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
      * 
      */
     public Optional<Output<RuleSourceArgs>> source() {
@@ -139,14 +139,14 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -265,7 +265,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
          * 
          * @return builder
          * 
@@ -328,7 +328,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scope Scope defines which resources can trigger an evaluation for the rule as documented below.
+         * @param scope Scope defines which resources can trigger an evaluation for the rule. See Source Below.
          * 
          * @return builder
          * 
@@ -339,7 +339,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scope Scope defines which resources can trigger an evaluation for the rule as documented below.
+         * @param scope Scope defines which resources can trigger an evaluation for the rule. See Source Below.
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
          * 
          * @return builder
          * 
@@ -360,7 +360,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
+         * @param source Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources. See Scope Below.
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -381,7 +381,7 @@ public final class RuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

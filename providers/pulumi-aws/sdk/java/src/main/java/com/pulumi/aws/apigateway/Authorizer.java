@@ -33,6 +33,20 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:apigateway/authorizer:Authorizer")
 public class Authorizer extends com.pulumi.resources.CustomResource {
     /**
+     * Amazon Resource Name (ARN) of the API Gateway Authorizer
+     * 
+     */
+    @Export(name="arn", type=String.class, parameters={})
+    private Output<String> arn;
+
+    /**
+     * @return Amazon Resource Name (ARN) of the API Gateway Authorizer
+     * 
+     */
+    public Output<String> arn() {
+        return this.arn;
+    }
+    /**
      * The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
      * 
      */

@@ -4,6 +4,8 @@
 package com.pulumi.aws.imagebuilder.outputs;
 
 import com.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationDistributionAmiDistributionConfiguration;
+import com.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationDistributionContainerDistributionConfiguration;
+import com.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationDistributionLaunchTemplateConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -16,6 +18,16 @@ public final class GetDistributionConfigurationDistribution {
      * 
      */
     private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
+    /**
+     * @return Nested list of container distribution configurations.
+     * 
+     */
+    private final List<GetDistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfigurations;
+    /**
+     * @return Nested list of launch template configurations.
+     * 
+     */
+    private final List<GetDistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations;
     /**
      * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
@@ -30,9 +42,13 @@ public final class GetDistributionConfigurationDistribution {
     @CustomType.Constructor
     private GetDistributionConfigurationDistribution(
         @CustomType.Parameter("amiDistributionConfigurations") List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
+        @CustomType.Parameter("containerDistributionConfigurations") List<GetDistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfigurations,
+        @CustomType.Parameter("launchTemplateConfigurations") List<GetDistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations,
         @CustomType.Parameter("licenseConfigurationArns") List<String> licenseConfigurationArns,
         @CustomType.Parameter("region") String region) {
         this.amiDistributionConfigurations = amiDistributionConfigurations;
+        this.containerDistributionConfigurations = containerDistributionConfigurations;
+        this.launchTemplateConfigurations = launchTemplateConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
         this.region = region;
     }
@@ -43,6 +59,20 @@ public final class GetDistributionConfigurationDistribution {
      */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations() {
         return this.amiDistributionConfigurations;
+    }
+    /**
+     * @return Nested list of container distribution configurations.
+     * 
+     */
+    public List<GetDistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfigurations() {
+        return this.containerDistributionConfigurations;
+    }
+    /**
+     * @return Nested list of launch template configurations.
+     * 
+     */
+    public List<GetDistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations() {
+        return this.launchTemplateConfigurations;
     }
     /**
      * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
@@ -69,6 +99,8 @@ public final class GetDistributionConfigurationDistribution {
 
     public static final class Builder {
         private List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
+        private List<GetDistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfigurations;
+        private List<GetDistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations;
         private List<String> licenseConfigurationArns;
         private String region;
 
@@ -79,6 +111,8 @@ public final class GetDistributionConfigurationDistribution {
         public Builder(GetDistributionConfigurationDistribution defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.amiDistributionConfigurations = defaults.amiDistributionConfigurations;
+    	      this.containerDistributionConfigurations = defaults.containerDistributionConfigurations;
+    	      this.launchTemplateConfigurations = defaults.launchTemplateConfigurations;
     	      this.licenseConfigurationArns = defaults.licenseConfigurationArns;
     	      this.region = defaults.region;
         }
@@ -89,6 +123,20 @@ public final class GetDistributionConfigurationDistribution {
         }
         public Builder amiDistributionConfigurations(GetDistributionConfigurationDistributionAmiDistributionConfiguration... amiDistributionConfigurations) {
             return amiDistributionConfigurations(List.of(amiDistributionConfigurations));
+        }
+        public Builder containerDistributionConfigurations(List<GetDistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfigurations) {
+            this.containerDistributionConfigurations = Objects.requireNonNull(containerDistributionConfigurations);
+            return this;
+        }
+        public Builder containerDistributionConfigurations(GetDistributionConfigurationDistributionContainerDistributionConfiguration... containerDistributionConfigurations) {
+            return containerDistributionConfigurations(List.of(containerDistributionConfigurations));
+        }
+        public Builder launchTemplateConfigurations(List<GetDistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations) {
+            this.launchTemplateConfigurations = Objects.requireNonNull(launchTemplateConfigurations);
+            return this;
+        }
+        public Builder launchTemplateConfigurations(GetDistributionConfigurationDistributionLaunchTemplateConfiguration... launchTemplateConfigurations) {
+            return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
         }
         public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
@@ -101,7 +149,7 @@ public final class GetDistributionConfigurationDistribution {
             this.region = Objects.requireNonNull(region);
             return this;
         }        public GetDistributionConfigurationDistribution build() {
-            return new GetDistributionConfigurationDistribution(amiDistributionConfigurations, licenseConfigurationArns, region);
+            return new GetDistributionConfigurationDistribution(amiDistributionConfigurations, containerDistributionConfigurations, launchTemplateConfigurations, licenseConfigurationArns, region);
         }
     }
 }

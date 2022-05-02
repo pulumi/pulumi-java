@@ -25,7 +25,7 @@ public final class WorkgroupConfiguration {
      */
     private final @Nullable Boolean enforceWorkgroupConfiguration;
     /**
-     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
      * 
      */
     private final @Nullable WorkgroupConfigurationEngineVersion engineVersion;
@@ -40,7 +40,7 @@ public final class WorkgroupConfiguration {
      */
     private final @Nullable Boolean requesterPaysEnabled;
     /**
-     * @return Configuration block with result settings. Documented below.
+     * @return Configuration block with result settings. See Result Configuration below.
      * 
      */
     private final @Nullable WorkgroupConfigurationResultConfiguration resultConfiguration;
@@ -76,7 +76,7 @@ public final class WorkgroupConfiguration {
         return Optional.ofNullable(this.enforceWorkgroupConfiguration);
     }
     /**
-     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
+     * @return Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). See Engine Version below.
      * 
      */
     public Optional<WorkgroupConfigurationEngineVersion> engineVersion() {
@@ -97,7 +97,7 @@ public final class WorkgroupConfiguration {
         return Optional.ofNullable(this.requesterPaysEnabled);
     }
     /**
-     * @return Configuration block with result settings. Documented below.
+     * @return Configuration block with result settings. See Result Configuration below.
      * 
      */
     public Optional<WorkgroupConfigurationResultConfiguration> resultConfiguration() {

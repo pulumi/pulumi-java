@@ -16,14 +16,14 @@ public final class JobCommandArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobCommandArgs Empty = new JobCommandArgs();
 
     /**
-     * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+     * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+     * @return The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
      */
     public Optional<Output<String>> name() {
@@ -87,7 +87,7 @@ public final class JobCommandArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+         * @param name The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class JobCommandArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
+         * @param name The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, or `gluestreaming` for Streaming Job Type. `max_capacity` needs to be set if `pythonshell` is chosen.
          * 
          * @return builder
          * 

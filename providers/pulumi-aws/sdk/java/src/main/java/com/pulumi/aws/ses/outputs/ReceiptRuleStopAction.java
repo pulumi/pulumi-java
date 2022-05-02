@@ -18,7 +18,7 @@ public final class ReceiptRuleStopAction {
      */
     private final Integer position;
     /**
-     * @return The scope to apply
+     * @return The scope to apply. The only acceptable value is `RuleSet`.
      * 
      */
     private final String scope;
@@ -46,7 +46,7 @@ public final class ReceiptRuleStopAction {
         return this.position;
     }
     /**
-     * @return The scope to apply
+     * @return The scope to apply. The only acceptable value is `RuleSet`.
      * 
      */
     public String scope() {

@@ -20,6 +20,10 @@ import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
+/**
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws:lakeformation/permissions:Permissions")
 public class Permissions extends com.pulumi.resources.CustomResource {
     /**

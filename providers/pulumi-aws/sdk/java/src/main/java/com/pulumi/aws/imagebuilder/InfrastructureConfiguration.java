@@ -6,6 +6,7 @@ package com.pulumi.aws.imagebuilder;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.imagebuilder.InfrastructureConfigurationArgs;
 import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationState;
+import com.pulumi.aws.imagebuilder.outputs.InfrastructureConfigurationInstanceMetadataOptions;
 import com.pulumi.aws.imagebuilder.outputs.InfrastructureConfigurationLogging;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -89,6 +90,20 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
+    }
+    /**
+     * Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+     * 
+     */
+    @Export(name="instanceMetadataOptions", type=InfrastructureConfigurationInstanceMetadataOptions.class, parameters={})
+    private Output</* @Nullable */ InfrastructureConfigurationInstanceMetadataOptions> instanceMetadataOptions;
+
+    /**
+     * @return Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+     * 
+     */
+    public Output<Optional<InfrastructureConfigurationInstanceMetadataOptions>> instanceMetadataOptions() {
+        return Codegen.optional(this.instanceMetadataOptions);
     }
     /**
      * Name of IAM Instance Profile.

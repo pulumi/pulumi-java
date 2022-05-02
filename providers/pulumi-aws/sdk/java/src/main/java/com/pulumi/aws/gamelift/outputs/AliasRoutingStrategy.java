@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AliasRoutingStrategy {
     /**
-     * @return ID of the Gamelift Fleet to point the alias to.
+     * @return ID of the GameLift Fleet to point the alias to.
      * 
      */
     private final @Nullable String fleetId;
@@ -38,7 +38,7 @@ public final class AliasRoutingStrategy {
     }
 
     /**
-     * @return ID of the Gamelift Fleet to point the alias to.
+     * @return ID of the GameLift Fleet to point the alias to.
      * 
      */
     public Optional<String> fleetId() {

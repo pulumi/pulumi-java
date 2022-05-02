@@ -31,6 +31,21 @@ public final class DefaultRouteTableRouteArgs extends com.pulumi.resources.Resou
     }
 
     /**
+     * The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    @Import(name="coreNetworkArn")
+    private @Nullable Output<String> coreNetworkArn;
+
+    /**
+     * @return The Amazon Resource Name (ARN) of a core network.
+     * 
+     */
+    public Optional<Output<String>> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
+    }
+
+    /**
      * The ID of a managed prefix list destination of the route.
      * 
      */
@@ -184,6 +199,7 @@ public final class DefaultRouteTableRouteArgs extends com.pulumi.resources.Resou
 
     private DefaultRouteTableRouteArgs(DefaultRouteTableRouteArgs $) {
         this.cidrBlock = $.cidrBlock;
+        this.coreNetworkArn = $.coreNetworkArn;
         this.destinationPrefixListId = $.destinationPrefixListId;
         this.egressOnlyGatewayId = $.egressOnlyGatewayId;
         this.gatewayId = $.gatewayId;
@@ -233,6 +249,27 @@ public final class DefaultRouteTableRouteArgs extends com.pulumi.resources.Resou
          */
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
+        }
+
+        /**
+         * @param coreNetworkArn The Amazon Resource Name (ARN) of a core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(@Nullable Output<String> coreNetworkArn) {
+            $.coreNetworkArn = coreNetworkArn;
+            return this;
+        }
+
+        /**
+         * @param coreNetworkArn The Amazon Resource Name (ARN) of a core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(String coreNetworkArn) {
+            return coreNetworkArn(Output.of(coreNetworkArn));
         }
 
         /**

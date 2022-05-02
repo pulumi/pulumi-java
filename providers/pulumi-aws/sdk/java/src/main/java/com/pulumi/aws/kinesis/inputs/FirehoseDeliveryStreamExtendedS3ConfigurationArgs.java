@@ -113,9 +113,17 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationArgs extends com
         return Optional.ofNullable(this.dataFormatConversionConfiguration);
     }
 
+    /**
+     * The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+     * 
+     */
     @Import(name="dynamicPartitioningConfiguration")
     private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration;
 
+    /**
+     * @return The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+     * 
+     */
     public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs>> dynamicPartitioningConfiguration() {
         return Optional.ofNullable(this.dynamicPartitioningConfiguration);
     }
@@ -392,11 +400,23 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationArgs extends com
             return dataFormatConversionConfiguration(Output.of(dataFormatConversionConfiguration));
         }
 
+        /**
+         * @param dynamicPartitioningConfiguration The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicPartitioningConfiguration(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration) {
             $.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
 
+        /**
+         * @param dynamicPartitioningConfiguration The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicPartitioningConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationArgs dynamicPartitioningConfiguration) {
             return dynamicPartitioningConfiguration(Output.of(dynamicPartitioningConfiguration));
         }

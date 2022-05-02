@@ -4,6 +4,7 @@
 package com.pulumi.aws.apigateway;
 
 import com.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
+import com.pulumi.aws.apigateway.inputs.StageCanarySettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -19,14 +20,14 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     public static final StageArgs Empty = new StageArgs();
 
     /**
-     * Enables access logs for the API stage. Detailed below.
+     * Enables access logs for the API stage. See Access Log Settings below.
      * 
      */
     @Import(name="accessLogSettings")
     private @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
     /**
-     * @return Enables access logs for the API stage. Detailed below.
+     * @return Enables access logs for the API stage. See Access Log Settings below.
      * 
      */
     public Optional<Output<StageAccessLogSettingsArgs>> accessLogSettings() {
@@ -64,6 +65,21 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Configuration settings of a canary deployment. See Canary Settings below.
+     * 
+     */
+    @Import(name="canarySettings")
+    private @Nullable Output<StageCanarySettingsArgs> canarySettings;
+
+    /**
+     * @return Configuration settings of a canary deployment. See Canary Settings below.
+     * 
+     */
+    public Optional<Output<StageCanarySettingsArgs>> canarySettings() {
+        return Optional.ofNullable(this.canarySettings);
+    }
+
+    /**
      * The identifier of a client certificate for the stage.
      * 
      */
@@ -94,14 +110,14 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The description of the stage
+     * The description of the stage.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The description of the stage
+     * @return The description of the stage.
      * 
      */
     public Optional<Output<String>> description() {
@@ -204,6 +220,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         this.accessLogSettings = $.accessLogSettings;
         this.cacheClusterEnabled = $.cacheClusterEnabled;
         this.cacheClusterSize = $.cacheClusterSize;
+        this.canarySettings = $.canarySettings;
         this.clientCertificateId = $.clientCertificateId;
         this.deployment = $.deployment;
         this.description = $.description;
@@ -234,7 +251,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param accessLogSettings Enables access logs for the API stage. Detailed below.
+         * @param accessLogSettings Enables access logs for the API stage. See Access Log Settings below.
          * 
          * @return builder
          * 
@@ -245,7 +262,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param accessLogSettings Enables access logs for the API stage. Detailed below.
+         * @param accessLogSettings Enables access logs for the API stage. See Access Log Settings below.
          * 
          * @return builder
          * 
@@ -297,6 +314,27 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param canarySettings Configuration settings of a canary deployment. See Canary Settings below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canarySettings(@Nullable Output<StageCanarySettingsArgs> canarySettings) {
+            $.canarySettings = canarySettings;
+            return this;
+        }
+
+        /**
+         * @param canarySettings Configuration settings of a canary deployment. See Canary Settings below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder canarySettings(StageCanarySettingsArgs canarySettings) {
+            return canarySettings(Output.of(canarySettings));
+        }
+
+        /**
          * @param clientCertificateId The identifier of a client certificate for the stage.
          * 
          * @return builder
@@ -339,7 +377,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The description of the stage
+         * @param description The description of the stage.
          * 
          * @return builder
          * 
@@ -350,7 +388,7 @@ public final class StageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The description of the stage
+         * @param description The description of the stage.
          * 
          * @return builder
          * 

@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * API Gateway VPC Link can be imported using the `id`, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:apigateway/vpcLink:VpcLink example &lt;vpc_link_id&gt;
+ *  $ pulumi import aws:apigateway/vpcLink:VpcLink example 12345abcde
  * ```
  * 
  */

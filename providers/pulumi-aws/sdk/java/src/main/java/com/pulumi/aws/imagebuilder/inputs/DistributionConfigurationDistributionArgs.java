@@ -5,6 +5,7 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationArgs;
 import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationArgs;
+import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionLaunchTemplateConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -49,6 +50,21 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     }
 
     /**
+     * Set of launch template configuration settings that apply to image distribution. Detailed below.
+     * 
+     */
+    @Import(name="launchTemplateConfigurations")
+    private @Nullable Output<List<DistributionConfigurationDistributionLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
+
+    /**
+     * @return Set of launch template configuration settings that apply to image distribution. Detailed below.
+     * 
+     */
+    public Optional<Output<List<DistributionConfigurationDistributionLaunchTemplateConfigurationArgs>>> launchTemplateConfigurations() {
+        return Optional.ofNullable(this.launchTemplateConfigurations);
+    }
+
+    /**
      * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
      */
@@ -83,6 +99,7 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
     private DistributionConfigurationDistributionArgs(DistributionConfigurationDistributionArgs $) {
         this.amiDistributionConfiguration = $.amiDistributionConfiguration;
         this.containerDistributionConfiguration = $.containerDistributionConfiguration;
+        this.launchTemplateConfigurations = $.launchTemplateConfigurations;
         this.licenseConfigurationArns = $.licenseConfigurationArns;
         this.region = $.region;
     }
@@ -145,6 +162,37 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
          */
         public Builder containerDistributionConfiguration(DistributionConfigurationDistributionContainerDistributionConfigurationArgs containerDistributionConfiguration) {
             return containerDistributionConfiguration(Output.of(containerDistributionConfiguration));
+        }
+
+        /**
+         * @param launchTemplateConfigurations Set of launch template configuration settings that apply to image distribution. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder launchTemplateConfigurations(@Nullable Output<List<DistributionConfigurationDistributionLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
+            $.launchTemplateConfigurations = launchTemplateConfigurations;
+            return this;
+        }
+
+        /**
+         * @param launchTemplateConfigurations Set of launch template configuration settings that apply to image distribution. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder launchTemplateConfigurations(List<DistributionConfigurationDistributionLaunchTemplateConfigurationArgs> launchTemplateConfigurations) {
+            return launchTemplateConfigurations(Output.of(launchTemplateConfigurations));
+        }
+
+        /**
+         * @param launchTemplateConfigurations Set of launch template configuration settings that apply to image distribution. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder launchTemplateConfigurations(DistributionConfigurationDistributionLaunchTemplateConfigurationArgs... launchTemplateConfigurations) {
+            return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
         }
 
         /**

@@ -31,16 +31,14 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * JSON representation of a map of attribute name/value pairs, one for each attribute.
-     * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+     * JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
     @Import(name="item", required=true)
     private Output<String> item;
 
     /**
-     * @return JSON representation of a map of attribute name/value pairs, one for each attribute.
-     * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+     * @return JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
     public Output<String> item() {
@@ -63,14 +61,14 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the table to contain the item.
+     * Name of the table to contain the item.
      * 
      */
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
     /**
-     * @return The name of the table to contain the item.
+     * @return Name of the table to contain the item.
      * 
      */
     public Output<String> tableName() {
@@ -126,8 +124,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param item JSON representation of a map of attribute name/value pairs, one for each attribute.
-         * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+         * @param item JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
          * 
          * @return builder
          * 
@@ -138,8 +135,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param item JSON representation of a map of attribute name/value pairs, one for each attribute.
-         * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
+         * @param item JSON representation of a map of attribute name/value pairs, one for each attribute. Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
          * 
          * @return builder
          * 
@@ -170,7 +166,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tableName The name of the table to contain the item.
+         * @param tableName Name of the table to contain the item.
          * 
          * @return builder
          * 
@@ -181,7 +177,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tableName The name of the table to contain the item.
+         * @param tableName Name of the table to contain the item.
          * 
          * @return builder
          * 

@@ -48,6 +48,10 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
      * 
      */
     private final @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration dataFormatConversionConfiguration;
+    /**
+     * @return The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+     * 
+     */
     private final @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration dynamicPartitioningConfiguration;
     /**
      * @return Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
@@ -161,6 +165,10 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration> dataFormatConversionConfiguration() {
         return Optional.ofNullable(this.dataFormatConversionConfiguration);
     }
+    /**
+     * @return The configuration for dynamic partitioning. See Dynamic Partitioning Configuration below for more details.
+     * 
+     */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration> dynamicPartitioningConfiguration() {
         return Optional.ofNullable(this.dynamicPartitioningConfiguration);
     }

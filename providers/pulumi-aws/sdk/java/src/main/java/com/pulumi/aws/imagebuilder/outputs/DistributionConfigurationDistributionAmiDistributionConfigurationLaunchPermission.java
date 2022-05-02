@@ -12,6 +12,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
+     * @return Set of AWS Organization ARNs to assign.
+     * 
+     */
+    private final @Nullable List<String> organizationArns;
+    /**
+     * @return Set of AWS Organizational Unit ARNs to assign.
+     * 
+     */
+    private final @Nullable List<String> organizationalUnitArns;
+    /**
      * @return Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
      */
@@ -24,12 +34,30 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
     @CustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
+        @CustomType.Parameter("organizationArns") @Nullable List<String> organizationArns,
+        @CustomType.Parameter("organizationalUnitArns") @Nullable List<String> organizationalUnitArns,
         @CustomType.Parameter("userGroups") @Nullable List<String> userGroups,
         @CustomType.Parameter("userIds") @Nullable List<String> userIds) {
+        this.organizationArns = organizationArns;
+        this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;
         this.userIds = userIds;
     }
 
+    /**
+     * @return Set of AWS Organization ARNs to assign.
+     * 
+     */
+    public List<String> organizationArns() {
+        return this.organizationArns == null ? List.of() : this.organizationArns;
+    }
+    /**
+     * @return Set of AWS Organizational Unit ARNs to assign.
+     * 
+     */
+    public List<String> organizationalUnitArns() {
+        return this.organizationalUnitArns == null ? List.of() : this.organizationalUnitArns;
+    }
     /**
      * @return Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
@@ -54,6 +82,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     public static final class Builder {
+        private @Nullable List<String> organizationArns;
+        private @Nullable List<String> organizationalUnitArns;
         private @Nullable List<String> userGroups;
         private @Nullable List<String> userIds;
 
@@ -63,10 +93,26 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.organizationArns = defaults.organizationArns;
+    	      this.organizationalUnitArns = defaults.organizationalUnitArns;
     	      this.userGroups = defaults.userGroups;
     	      this.userIds = defaults.userIds;
         }
 
+        public Builder organizationArns(@Nullable List<String> organizationArns) {
+            this.organizationArns = organizationArns;
+            return this;
+        }
+        public Builder organizationArns(String... organizationArns) {
+            return organizationArns(List.of(organizationArns));
+        }
+        public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
+            this.organizationalUnitArns = organizationalUnitArns;
+            return this;
+        }
+        public Builder organizationalUnitArns(String... organizationalUnitArns) {
+            return organizationalUnitArns(List.of(organizationalUnitArns));
+        }
         public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = userGroups;
             return this;
@@ -81,7 +127,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }        public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(userGroups, userIds);
+            return new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(organizationArns, organizationalUnitArns, userGroups, userIds);
         }
     }
 }

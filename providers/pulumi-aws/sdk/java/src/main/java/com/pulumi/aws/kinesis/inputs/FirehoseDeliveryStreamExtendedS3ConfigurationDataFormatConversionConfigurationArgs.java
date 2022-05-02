@@ -19,14 +19,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     public static final FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs Empty = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationArgs();
 
     /**
-     * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+     * Enables or disables [dynamic partitioning](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html). Defaults to `false`.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+     * @return Enables or disables [dynamic partitioning](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html). Defaults to `false`.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -106,7 +106,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
         }
 
         /**
-         * @param enabled Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+         * @param enabled Enables or disables [dynamic partitioning](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html). Defaults to `false`.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
         }
 
         /**
-         * @param enabled Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+         * @param enabled Enables or disables [dynamic partitioning](https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html). Defaults to `false`.
          * 
          * @return builder
          * 
