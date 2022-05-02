@@ -34,14 +34,16 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     @Import(name="keepers")
     private @Nullable Output<Map<String,Object>> keepers;
 
     /**
-     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+     * documentation](../index.html) for more information.
      * 
      */
     public Optional<Output<Map<String,Object>>> keepers() {
@@ -49,14 +51,16 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     @Import(name="prefix")
     private @Nullable Output<String> prefix;
 
     /**
-     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+     * URL-safe or base64 encoded.
      * 
      */
     public Optional<Output<String>> prefix() {
@@ -111,7 +115,8 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -122,7 +127,8 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+         * @param keepers Arbitrary map of values that, when changed, will trigger recreation of resource. See [the main provider
+         * documentation](../index.html) for more information.
          * 
          * @return builder
          * 
@@ -132,7 +138,8 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+         * URL-safe or base64 encoded.
          * 
          * @return builder
          * 
@@ -143,7 +150,8 @@ public final class RandomIdArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+         * @param prefix Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be
+         * URL-safe or base64 encoded.
          * 
          * @return builder
          * 
