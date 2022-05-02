@@ -260,7 +260,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.Fgen(w, "        Pulumi.run(App::stack);\n")
 	g.Fgen(w, "    }\n")
 	g.genNewline(w)
-	g.Fprint(w, "    public static Exports stack(Context ctx) {\n")
+	g.Fprint(w, "    public static void stack(Context ctx) {\n")
 	if containConfigVariables(nodes) {
 		g.Fprint(w, "        final var config = Config.of();\n")
 	}
@@ -270,7 +270,6 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
 		g.genIndent(w)
-		g.Fprintf(w, "%sreturn ctx.exports();\n", g.Indent)
 		g.Fprintf(w, "%s}\n", g.Indent)
 	})
 	g.Fprint(w, "}\n")

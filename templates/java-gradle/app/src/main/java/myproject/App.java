@@ -7,7 +7,6 @@ public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
             ctx.export("exampleOutput", Output.of("example"));
-            return ctx.exports();
         });
     }
 }

@@ -11,7 +11,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         final var vpc = Output.of(Ec2Functions.getVpc(GetVpcArgs.builder()
             .default_(true)
             .build()));
@@ -116,6 +116,5 @@ public class App {
             .build());
 
         ctx.export("url", webLoadBalancer.getDnsName());
-        return ctx.exports();
-    }
+        }
 }

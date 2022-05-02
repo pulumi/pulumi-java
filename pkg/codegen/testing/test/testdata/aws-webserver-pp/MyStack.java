@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var securityGroup = new SecurityGroup("securityGroup", SecurityGroupArgs.builder()        
             .ingress(SecurityGroupIngress.builder()
                 .protocol("tcp")
@@ -43,6 +43,5 @@ nohup python -m SimpleHTTPServer 80 &
 
         ctx.export("publicIp", server.getPublicIp());
         ctx.export("publicHostName", server.getPublicDns());
-        return ctx.exports();
-    }
+        }
 }

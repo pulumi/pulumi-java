@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         final var config = Config.of();
         final var storageAccountNameParam = config.get("storageAccountNameParam");
         final var resourceGroupNameParam = config.get("resourceGroupNameParam");
@@ -31,6 +31,5 @@ public class App {
             .build());
 
         ctx.export("storageAccountNameOut", storageAccountResource.getName());
-        return ctx.exports();
-    }
+        }
 }

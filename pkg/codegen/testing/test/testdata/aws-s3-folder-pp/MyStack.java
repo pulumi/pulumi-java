@@ -13,7 +13,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var siteBucket = new Bucket("siteBucket", BucketArgs.builder()        
             .website(BucketWebsite.builder()
                 .indexDocument("index.html")
@@ -47,6 +47,5 @@ public class App {
 
         ctx.export("bucketName", siteBucket.getBucket());
         ctx.export("websiteUrl", siteBucket.getWebsiteEndpoint());
-        return ctx.exports();
-    }
+        }
 }

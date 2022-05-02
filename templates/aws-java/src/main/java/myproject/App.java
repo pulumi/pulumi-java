@@ -9,7 +9,6 @@ public class App {
         Pulumi.run(ctx -> {
             var bucket = new Bucket("my-bucket");
             ctx.export("bucketName", bucket.bucket());
-            return ctx.exports();
         });
     }
 }

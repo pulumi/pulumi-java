@@ -1,7 +1,6 @@
 package webserver;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.Instance;
@@ -22,7 +21,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
                 .filters(GetAmiFilter.builder()
                         .name("name")
@@ -62,6 +61,5 @@ public class App {
 
         ctx.export("publicIp", server.publicIp());
         ctx.export("publicHostName", server.publicDns());
-        return ctx.exports();
     }
 }
