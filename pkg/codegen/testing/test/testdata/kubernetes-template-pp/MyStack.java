@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var argocd_serverDeployment = new Deployment("argocd_serverDeployment", DeploymentArgs.builder()        
             .apiVersion("apps/v1")
             .kind("Deployment")
@@ -32,6 +32,5 @@ public class App {
                 .build())
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

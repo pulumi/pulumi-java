@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var pulumi_kubernetes_operatorDeployment = new Deployment("pulumi_kubernetes_operatorDeployment", DeploymentArgs.builder()        
             .apiVersion("apps/v1")
             .kind("Deployment")
@@ -172,6 +172,5 @@ public class App {
                 .build())
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

@@ -12,7 +12,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var eksVpc = new Vpc("eksVpc", VpcArgs.builder()        
             .cidrBlock("10.100.0.0/16")
             .instanceTenancy("default")
@@ -209,6 +209,5 @@ public class App {
                     )))
                 ));
         }));
-        return ctx.exports();
-    }
+        }
 }

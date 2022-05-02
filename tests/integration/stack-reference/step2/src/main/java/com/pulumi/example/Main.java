@@ -33,7 +33,6 @@ public class Main {
                 throw new RuntimeException("Expected to get error trying to read secret from stack reference.");
             }
             ctx.export("gotExpectedError", Output.of(gotExpectedError));
-            return ctx.exports();
         });
     }
 }

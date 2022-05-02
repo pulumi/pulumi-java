@@ -1,7 +1,6 @@
 package staticwebsite;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.asset.FileAsset;
 import com.pulumi.azurenative.cdn.Endpoint;
@@ -28,7 +27,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("storageaccount",
@@ -92,6 +91,5 @@ public class App {
         // CDN endpoint to the website.
         // Allow it some time after the deployment to get ready.
         ctx.export("cdnEndpoint", Output.format("https://%s", endpoint.hostName()));
-        return ctx.exports();
     }
 }

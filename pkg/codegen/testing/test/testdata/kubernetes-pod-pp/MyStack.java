@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var bar = new Pod("bar", PodArgs.builder()        
             .apiVersion("v1")
             .kind("Pod")
@@ -32,6 +32,5 @@ public class App {
                 .build())
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

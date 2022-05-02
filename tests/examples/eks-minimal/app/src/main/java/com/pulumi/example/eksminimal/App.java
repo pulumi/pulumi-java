@@ -1,7 +1,6 @@
 package com.pulumi.example.eksminimal;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.inputs.GetSubnetIdsArgs;
@@ -18,7 +17,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         var vpcIdOutput = Output.of(
                 Ec2Functions.getVpc(
                         GetVpcArgs.builder().default_(true).build()
@@ -48,6 +47,5 @@ public class App {
                 .build());
 
         ctx.export("kubeconfig", cluster.kubeconfig());
-        return ctx.exports();
     }
 }
