@@ -1,96 +1,152 @@
-# pulumi-java
+**Pulumi Java SDK** lets you leverage the full power of [Pulumi Infrastructure as Code Platform](https://pulumi.com) using the Java programming language. Java support is currently in **Public Preview**.
 
-Pulumi Java SDK
 
-## Repo Structure
+Simply write Java code in your favorite editor and Pulumi
+automatically provisions and manages your AWS, Azure, Google Cloud
+Platform, and/or Kubernetes resources, using an infrastructure-as-code
+approach. Use standard language features like loops, functions,
+classes, and IDE features like refactorig and package management that
+you already know and love.
 
-There are no long-term plans to merge Java SDK, language provider, and
-codegen into `pulumi/pulumi`, instead it will continue evolving in
-this repo.
+For example, create three web servers:
 
-When going public, the release cadence of the Java SDK and language
-provider may be tied to that of the other SDKs like Node, Python, .NET
-and Go that live in `pulumi/pulumi`. Its TBD how that will be
-accomplished technically but options include Git submodules and
-stitching releases via cross-repo GitHub Actions.
+```java
+package myinfra;
 
-The dependency loop between `pulumi/pulumi` and `pulumi/java` should be
-avoided in favor of `pulumi/java` build-depending on `pulumi/pulumi`.
-Layers of indirection similar to plugin acquisition will need to be
-introduced in places where `pulumi/pulumi` currently build-depends on
-`pulumi/java`, for example:
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.enums.InstanceType;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 
-- `pkg/cmd/pulumi/import.go`: import command support needs
-  java.GenerateProgram; instead figure out dynamic loading of program
-  generators
+import java.util.List;
 
-- `pkg/cmd/pulumi/new.go`: new command needs java.Build to support
-  dispatching the right build commands for a java project; instead
-  figure out dynamic dispatch of builders per language
-
-## Install local dependencies
-
-### Using privately released dependencies
-
-You will need:
-- a GitHub username
-- access grant to read `pulumi/pulumi-java` repository
-- a [Personal Access Token](https://github.com/settings/tokens) with `repo` scope
-
-Set `GITHUB_TOKEN` environment variables to your GitHub Personal Access Token, e.g.:
-```shell
-export GITHUB_TOKEN=<my github personal access token>
+public final class Infra {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            final var sg = new SecurityGroup("web-sg", SecurityGroupArgs.builder()
+                    .ingress(SecurityGroupIngressArgs.builder()
+                            .protocol("tcp")
+                            .fromPort(80)
+                            .toPort(80)
+                            .cidrBlocks("0.0.0.0/0")
+                            .build())
+                    .build());
+            for (var i = 0; i < 3; i++) {
+                new Instance(String.format("web-%d", i), InstanceArgs.builder()
+                        .ami("ami-7172b611")
+                        .instanceType(InstanceType.T2_Micro)
+                        .securityGroups(sg.name().applyValue(List::of))
+                        .userData(String.join("\n",
+                                "#!/bin/bash",
+                                "echo \"Hello, World!\" > index.html",
+                                "nohup python -m SimpleHTTPServer 80 &"))
+                        .build());
+            }
+        });
+    }
+}
 ```
 
-Install the `java` language plugin:
-```shell
-pulumi plugin install language java
+
+## Welcome
+
+* **[Get Started with Pulumi using Java](#getting-started)**: Deploy a simple application in AWS, Azure, Google Cloud or Kubernetes using Pulumi to describe the desired infrastructure using Java.
+
+* **[Examples](https://github.com/pulumi/examples)**: Browse Java examples across many clouds and scenarios including containers, serverless, and infrastructure.
+
+* **[Docs](https://www.pulumi.com/docs/)**: Learn about Pulumi concepts, follow user-guides, and consult the reference documentation. Java examples are included.
+
+* **[Community Slack](https://slack.pulumi.com/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=welcome-slack)**: Join us in Pulumi Community Slack. All conversations and questions are welcome.
+
+* **[GitHub Discussions](https://github.com/pulumi/pulumi/discussions)**: Ask questions or share what you are building with Pulumi.
+
+
+## <a name="getting-started"></a>Getting Started
+
+The following steps demonstrate how to declare your first cloud
+resources in a Pulumi Java, and deploy them to AWS, in minutes:
+
+1. **Install Pulumi**:
+
+    To install the latest Pulumi release, run the following (see full
+    [installation instructions](https://www.pulumi.com/docs/reference/install/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-install) for additional installation options):
+
+    ```bash
+    $ curl -fsSL https://get.pulumi.com/ | sh
+    ```
+
+2. **Create a Project**:
+
+    After installing, you can get started with the `pulumi new` command:
+
+    ```bash
+    $ mkdir pulumi-java-demo && cd pulumi-java-demo
+    $ pulumi new aws-java
+    ```
+
+    The `new` command offers templates, including Java templates, for
+    all clouds. Run it without an argument and it'll prompt you with
+    available projects.
+
+3. **Deploy to the Cloud**:
+
+    Run `pulumi up` to get your code to the cloud:
+
+    ```bash
+    $ pulumi up
+    ```
+
+    This makes all cloud resources declared in your code. Simply make
+    edits to your project, and subsequent `pulumi up`s will compute
+    the minimal diff to deploy your changes.
+
+4. **Use Your Program**:
+
+    Now that your code is deployed, you can interact with it. In the
+    above example, we can find the name of the newly provisioned S3
+    bucket:
+
+    ```bash
+    $ pulumi stack output bucketName
+    ```
+
+To learn more, head over to [pulumi.com](https://pulumi.com/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-home) for much more information, including
+[tutorials](https://www.pulumi.com/docs/reference/tutorials/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-tutorials), [examples](https://github.com/pulumi/examples), and
+details of the core Pulumi CLI and [programming model concepts](https://www.pulumi.com/docs/reference/concepts/?utm_campaign=pulumi-pulumi-github-repo&utm_source=github.com&utm_medium=getting-started-learn-more-concepts).
+
+
+## Requirements
+
+JDK 11 or higher is required.
+
+Apache Maven is the recommended build tool. Gradle Build Tool is also
+supported. Pulumi will recognize Maven and Gradle programs and
+automatically recompile them without any further configuration. The
+supported versions are:
+
+- Apache Maven 3.8.4
+- Gradle Build Tool 7.4
+
+Other build tools are supported via the `runtime.options.binary`
+configuration option that can point to a pre-built jar in
+`Pulumi.yaml`:
+
+```
+name: myproject
+runtime:
+  name: java
+  options:
+    binary: target/myproject-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-To access pre-release GitHub Packages see: [doc/packages.md]
-
-### Building dependencies locally
-```shell
-make submodule_update # downloads pulumi/pulumi for protobuf definitions
-make install_sdk # installs com.pulumi:pulumi into ~/.m2 maven repo
-make providers_all # installs all com.pulumi:pulumi-* providers into ~/.m2 maven repo
-make bin/pulumi-language-java # builds bin/pulumi-language-java language host
-export PATH="${PATH}:${PWD}/bin" # add bin/pulumi-language-java to PATH
-```
-
-## Adding Examples
-
-- Copy `tests/examples/eks-minimal` to `tests/examples/your-example`.
-- Update `rootProject.name` in `settings.gradle`.
-- Update `name` in `Pulumi.yaml`.
-- Update `mainClass` in `app/build.gradle`.
-- Reference any providers your example needs in `dependencies` section of `app/build.gradle`.
-  - build and install the required provider, using something like `make provider.aws.install`, required for `implementation 'com.pulumi:aws:4.37.3'`
-- Edit sources in `app/src/main`.
-
-To run the example:
-
-```shell
-cd ~/pulumi-java
-make bin/pulumi-language-java
-export PATH=$PWD/bin:$PATH
-
-# For every provider you need:
-make provider.azure-native.install # installs into ~/.m2 maven repo
-pulumi plugin install resource azure-native 1.56.0
-
-# Now it should work:
-cd tests/examples/your-example
-pulumi preview
-```
-
-Once it is working you can add it to `java_examples_test.go` to run
-under `ProgramTest` framework, and write some assert in Go against the
-expected stack outputs.
 
 
-## Git History
+## Contributing
 
-This repo adapts code from `VirtusLab/pulumi` fork of `pulumi/pulumi`
-starting with the `jvm-lang-codegen-rewrite` branch. The upstream
-history is preserved so that updates can be merged via Git.
+Visit
+[CONTRIBUTING.md](https://github.com/pulumi/pulumi-java/blob/master/CONTRIBUTING.md)
+for information on building Pulumi Java support from source or
+contributing improvements.
