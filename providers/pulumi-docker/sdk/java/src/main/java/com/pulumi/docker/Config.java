@@ -51,4 +51,11 @@ public final class Config {
     public Optional<List<RegistryAuth>> registryAuth() {
         return Codegen.objectProp("registryAuth", TypeShape.<List<RegistryAuth>>builder(List.class).addParameter(RegistryAuth.class).build()).config(config).get();
     }
+/**
+ * Additional SSH option flags to be appended when using `ssh://` protocol
+ * 
+ */
+    public Optional<List<String>> sshOpts() {
+        return Codegen.objectProp("sshOpts", TypeShape.<List<String>>builder(List.class).addParameter(String.class).build()).config(config).get();
+    }
 }
