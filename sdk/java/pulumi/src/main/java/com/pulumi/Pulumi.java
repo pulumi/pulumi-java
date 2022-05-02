@@ -4,7 +4,6 @@ import com.pulumi.internal.PulumiInternal;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
-import java.util.function.Function;
 
 /**
  * Pulumi program entrypoint.
@@ -21,6 +20,7 @@ public interface Pulumi {
      * Run a Pulumi stack callback and wait for result.
      * <br>
      * In case of an error terminates the process with {@link System#exit(int)}
+     *
      * @param stack the stack to run in Pulumi runtime
      * @see #runAsync(Consumer)
      */
@@ -30,6 +30,7 @@ public interface Pulumi {
 
     /**
      * Run a Pulumi stack callback asynchronously.
+     *
      * @param stack the stack to run in Pulumi runtime
      * @return a future exit code from Pulumi runtime after running the stack
      * @see #run(Consumer)
