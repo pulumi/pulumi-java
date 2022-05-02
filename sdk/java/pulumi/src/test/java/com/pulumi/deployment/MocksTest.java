@@ -1,7 +1,6 @@
 package com.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
-import io.grpc.Status;
 import com.pulumi.core.Output;
 import com.pulumi.core.OutputTests;
 import com.pulumi.core.Tuples;
@@ -20,6 +19,7 @@ import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.InvokeArgs;
 import com.pulumi.resources.ResourceArgs;
 import com.pulumi.resources.Stack;
+import io.grpc.Status;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -59,8 +59,24 @@ public class MocksTest {
                 .findFirst();
         assertThat(instance).isPresent();
 
-        var ip = OutputTests.waitFor(instance.get().publicIp).getValueNullable();
-        assertThat(ip).isEqualTo("203.0.113.12");
+        var ip = OutputTests.waitFor(instance.get().publicIp);
+        assertThat(ip.getValueNullable()).isEqualTo("203.0.113.12");
+        assertThat(ip.isKnown()).isTrue();
+        assertThat(ip.isSecret()).isFalse();
+        assertThat(ip.getResources()).contains(instance.get()).hasSize(1);
+
+        var id = OutputTests.waitFor(instance.get().getId());
+        assertThat(id.getValueNullable()).isEqualTo("i-1234567890abcdef0");
+        assertThat(id.isKnown()).isTrue();
+        assertThat(id.isSecret()).isFalse();
+        assertThat(id.getResources()).contains(instance.get()).hasSize(1);
+
+        var urn = OutputTests.waitFor(instance.get().getUrn());
+        assertThat(urn.getValueNullable()).isEqualTo("urn:pulumi:stack::project::pulumi:pulumi:Stack$aws:ec2" +
+                "/instance:Instance::instance");
+        assertThat(urn.isKnown()).isTrue();
+        assertThat(urn.isSecret()).isFalse();
+        assertThat(urn.getResources()).contains(instance.get()).hasSize(1);
     }
 
     @Test

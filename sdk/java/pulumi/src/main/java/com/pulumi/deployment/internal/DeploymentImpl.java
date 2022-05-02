@@ -1136,12 +1136,14 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 resource.getResourceType(), resource.getResourceName(), urn, id, remote
                         );
 
-                        lazy.urn().completeOrThrow(Output.of(urn));
+                        lazy.urn().completeOrThrow(new OutputInternal(
+                                OutputData.of(urn).withDependency(resource)));
+
                         if (resource instanceof CustomResource) {
                             var isKnown = isNonEmptyOrNull(id);
                             lazy.id().orElseThrow().completeOrThrow(isKnown
-                                    ? Output.of(id)
-                                    : new OutputInternal<>(OutputData.unknown()));
+                                    ? new OutputInternal(OutputData.of(id).withDependency(resource))
+                                    : new OutputInternal(OutputData.<String>unknown().withDependency(resource)));
                         }
 
                         // Go through all our output fields and lookup a corresponding value in the response
