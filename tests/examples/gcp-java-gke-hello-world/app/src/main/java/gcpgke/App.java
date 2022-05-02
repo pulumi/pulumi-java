@@ -1,7 +1,6 @@
 package gcpgke;
 
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.Pulumi;
 import com.pulumi.core.Output;
 import com.pulumi.gcp.container.Cluster;
@@ -40,7 +39,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    private static Exports stack(Context ctx) {
+    private static void stack(Context ctx) {
         final String name = "helloworld";
 
         final var masterVersion = ctx.config().get("masterVersion").orElse(
@@ -212,7 +211,5 @@ public class App {
         ctx.export("servicePublicIP", service.status()
                 .applyValue(s -> s.orElseThrow().loadBalancer().orElseThrow())
                 .applyValue(status -> status.ingress().get(0).ip().orElseThrow()));
-
-        return ctx.exports();
     }
 }

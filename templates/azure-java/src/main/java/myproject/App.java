@@ -30,7 +30,6 @@ public class App {
                     storageAccount.name());
 
             ctx.export("primaryStorageKey", primaryStorageKey);
-            return ctx.exports();
         });
     }
 

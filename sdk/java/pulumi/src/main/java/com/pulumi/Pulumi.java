@@ -3,7 +3,7 @@ package com.pulumi;
 import com.pulumi.internal.PulumiInternal;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
+import java.util.function.Consumer;
 
 /**
  * Pulumi program entrypoint.
@@ -20,20 +20,22 @@ public interface Pulumi {
      * Run a Pulumi stack callback and wait for result.
      * <br>
      * In case of an error terminates the process with {@link System#exit(int)}
+     *
      * @param stack the stack to run in Pulumi runtime
-     * @see #runAsync(Function)
+     * @see #runAsync(Consumer)
      */
-    static void run(Function<Context, Exports> stack) {
+    static void run(Consumer<Context> stack) {
         System.exit(runAsync(stack).join());
     }
 
     /**
      * Run a Pulumi stack callback asynchronously.
+     *
      * @param stack the stack to run in Pulumi runtime
      * @return a future exit code from Pulumi runtime after running the stack
-     * @see #run(Function)
+     * @see #run(Consumer)
      */
-    static CompletableFuture<Integer> runAsync(Function<Context, Exports> stack) {
+    static CompletableFuture<Integer> runAsync(Consumer<Context> stack) {
         var pulumi = PulumiInternal.fromEnvironment();
         return pulumi.runAsync(stack);
     }

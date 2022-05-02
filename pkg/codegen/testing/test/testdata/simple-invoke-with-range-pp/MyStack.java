@@ -11,7 +11,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         final var zones = Output.of(AwsFunctions.getAvailabilityZones());
 
         final var vpcSubnet = zones.apply(getAvailabilityZonesResult -> {
@@ -31,6 +31,5 @@ public class App {
             return resources;
         });
 
-        return ctx.exports();
-    }
+        }
 }

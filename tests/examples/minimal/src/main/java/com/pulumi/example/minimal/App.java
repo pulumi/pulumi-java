@@ -11,7 +11,6 @@ public class App {
             var secret = config.require("secret");
             log.info("Hello, %s!%n", name);
             log.info("Psst, %s%n", secret);
-            return ctx.exports();
         });
     }
 }

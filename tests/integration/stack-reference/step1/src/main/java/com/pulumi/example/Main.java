@@ -32,7 +32,6 @@ public class Main {
             }
 
             ctx.export("val2", Output.ofSecret(List.of("a", "b")));
-            return ctx.exports();
         });
     }
 }

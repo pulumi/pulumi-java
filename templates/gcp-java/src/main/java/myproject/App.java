@@ -13,7 +13,6 @@ public class App {
                                     .location("US")
                                     .build());
             ctx.export("bucketName", bucket.url());
-            return ctx.exports();
         });
     }
 }

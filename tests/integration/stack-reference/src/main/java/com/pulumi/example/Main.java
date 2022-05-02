@@ -23,7 +23,6 @@ public class Main {
             new StackReference(slug);
 
             ctx.export("val", Output.of(List.of("a", "b")));
-            return ctx.exports();
         });
     }
 }

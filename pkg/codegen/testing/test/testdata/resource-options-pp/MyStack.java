@@ -10,13 +10,12 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var provider = new Provider("provider", ProviderArgs.builder()        
             .region("us-west-2")
             .build());
 
         var bucket1 = new Bucket("bucket1");
 
-        return ctx.exports();
-    }
+        }
 }
