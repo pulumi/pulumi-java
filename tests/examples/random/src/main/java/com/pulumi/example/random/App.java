@@ -66,9 +66,6 @@ public class App {
             ctx.export("randomTuple", Output.tuple(randomString, randomUuid)
                     .applyValue(t -> t.t1 + t.t2));
             ctx.export("randomAll", Output.all(randomString, randomUuid));
-
-            return ctx.exports();
-
         });
     }
 }
