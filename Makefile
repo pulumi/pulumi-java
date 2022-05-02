@@ -35,9 +35,11 @@ build_sdk::
 ensure_sdk::
 	cd sdk/java && make ensure
 
-providers_generate_all: provider.random.generate provider.aws.generate provider.aws-native.generate provider.docker.generate provider.kubernetes.generate provider.azure-native.generate provider.google-native.generate provider.gcp.generate provider.eks.generate provider.awsx.generate
+providers_generate_all::
+	./scripts/providers-generate-all.sh
 
-providers_all: provider.random.install provider.aws.install provider.aws-native.install provider.docker.install provider.kubernetes.install provider.azure-native.install provider.google-native.install provider.gcp.install provider.eks.install provider.awsx.install
+providers_all::
+	./scripts/providers-install-all.sh
 
 # Example: make provider.random.build
 provider.%.build:	provider.%.generate
