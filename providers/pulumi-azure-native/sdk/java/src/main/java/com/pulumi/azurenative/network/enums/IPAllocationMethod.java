@@ -9,17 +9,17 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Private IP address allocation method.
+     * The private IP address allocation method.
      * 
      */
     @EnumType
-    public enum IpAllocationMethod {
+    public enum IPAllocationMethod {
         Static("Static"),
         Dynamic("Dynamic");
 
         private final String value;
 
-        IpAllocationMethod(String value) {
+        IPAllocationMethod(String value) {
             this.value = Objects.requireNonNull(value);
         }
 
@@ -30,7 +30,7 @@ import java.util.StringJoiner;
 
         @Override
         public String toString() {
-            return new StringJoiner(", ", "IpAllocationMethod[", "]")
+            return new StringJoiner(", ", "IPAllocationMethod[", "]")
                 .add("value='" + this.value + "'")
                 .toString();
         }
