@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigEphemeralStorageConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGcfsConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGuestAcceleratorArgs;
+import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGvnicArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigKubeletConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigLinuxNodeConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigSandboxConfigArgs;
@@ -68,6 +69,13 @@ public final class NodePoolNodeConfigArgs extends com.pulumi.resources.ResourceA
 
     public Optional<Output<List<NodePoolNodeConfigGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
+    }
+
+    @Import(name="gvnic")
+    private @Nullable Output<NodePoolNodeConfigGvnicArgs> gvnic;
+
+    public Optional<Output<NodePoolNodeConfigGvnicArgs>> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
 
     @Import(name="imageType")
@@ -205,6 +213,7 @@ public final class NodePoolNodeConfigArgs extends com.pulumi.resources.ResourceA
         this.ephemeralStorageConfig = $.ephemeralStorageConfig;
         this.gcfsConfig = $.gcfsConfig;
         this.guestAccelerators = $.guestAccelerators;
+        this.gvnic = $.gvnic;
         this.imageType = $.imageType;
         this.kubeletConfig = $.kubeletConfig;
         this.labels = $.labels;
@@ -299,6 +308,15 @@ public final class NodePoolNodeConfigArgs extends com.pulumi.resources.ResourceA
 
         public Builder guestAccelerators(NodePoolNodeConfigGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+
+        public Builder gvnic(@Nullable Output<NodePoolNodeConfigGvnicArgs> gvnic) {
+            $.gvnic = gvnic;
+            return this;
+        }
+
+        public Builder gvnic(NodePoolNodeConfigGvnicArgs gvnic) {
+            return gvnic(Output.of(gvnic));
         }
 
         public Builder imageType(@Nullable Output<String> imageType) {

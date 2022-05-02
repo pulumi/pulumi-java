@@ -32,6 +32,9 @@ public final class Config {
     public Optional<String> apigeeCustomEndpoint() {
         return Codegen.stringProp("apigeeCustomEndpoint").config(config).get();
     }
+    public Optional<String> apikeysCustomEndpoint() {
+        return Codegen.stringProp("apikeysCustomEndpoint").config(config).get();
+    }
     public Optional<String> appEngineCustomEndpoint() {
         return Codegen.stringProp("appEngineCustomEndpoint").config(config).get();
     }
@@ -100,6 +103,9 @@ public final class Config {
     }
     public Optional<String> cloudTasksCustomEndpoint() {
         return Codegen.stringProp("cloudTasksCustomEndpoint").config(config).get();
+    }
+    public Optional<String> cloudfunctions2CustomEndpoint() {
+        return Codegen.stringProp("cloudfunctions2CustomEndpoint").config(config).get();
     }
     public Optional<String> composerCustomEndpoint() {
         return Codegen.stringProp("composerCustomEndpoint").config(config).get();
@@ -170,6 +176,9 @@ public final class Config {
     public Optional<String> firebaseCustomEndpoint() {
         return Codegen.stringProp("firebaseCustomEndpoint").config(config).get();
     }
+    public Optional<String> firebaserulesCustomEndpoint() {
+        return Codegen.stringProp("firebaserulesCustomEndpoint").config(config).get();
+    }
     public Optional<String> firestoreCustomEndpoint() {
         return Codegen.stringProp("firestoreCustomEndpoint").config(config).get();
     }
@@ -187,6 +196,9 @@ public final class Config {
     }
     public Optional<String> healthcareCustomEndpoint() {
         return Codegen.stringProp("healthcareCustomEndpoint").config(config).get();
+    }
+    public Optional<String> iam2CustomEndpoint() {
+        return Codegen.stringProp("iam2CustomEndpoint").config(config).get();
     }
     public Optional<String> iamBetaCustomEndpoint() {
         return Codegen.stringProp("iamBetaCustomEndpoint").config(config).get();

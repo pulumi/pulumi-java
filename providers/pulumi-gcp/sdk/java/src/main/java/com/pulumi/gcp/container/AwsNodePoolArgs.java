@@ -35,14 +35,14 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Autoscaler configuration for this node pool.
+     * Autoscaler configuration for this node pool.
      * 
      */
     @Import(name="autoscaling", required=true)
     private Output<AwsNodePoolAutoscalingArgs> autoscaling;
 
     /**
-     * @return Required. Autoscaler configuration for this node pool.
+     * @return Autoscaler configuration for this node pool.
      * 
      */
     public Output<AwsNodePoolAutoscalingArgs> autoscaling() {
@@ -65,14 +65,14 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The configuration of the node pool.
+     * The configuration of the node pool.
      * 
      */
     @Import(name="config", required=true)
     private Output<AwsNodePoolConfigArgs> config;
 
     /**
-     * @return Required. The configuration of the node pool.
+     * @return The configuration of the node pool.
      * 
      */
     public Output<AwsNodePoolConfigArgs> config() {
@@ -95,14 +95,14 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     @Import(name="maxPodsConstraint", required=true)
     private Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     /**
-     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     public Output<AwsNodePoolMaxPodsConstraintArgs> maxPodsConstraint() {
@@ -140,14 +140,14 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The subnet where the node pool node run.
+     * The subnet where the node pool node run.
      * 
      */
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
     /**
-     * @return Required. The subnet where the node pool node run.
+     * @return The subnet where the node pool node run.
      * 
      */
     public Output<String> subnetId() {
@@ -155,14 +155,14 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
      * 
      */
     @Import(name="version", required=true)
     private Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * @return The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
      * 
      */
     public Output<String> version() {
@@ -224,7 +224,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * @param autoscaling Autoscaler configuration for this node pool.
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param autoscaling Required. Autoscaler configuration for this node pool.
+         * @param autoscaling Autoscaler configuration for this node pool.
          * 
          * @return builder
          * 
@@ -266,7 +266,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param config Required. The configuration of the node pool.
+         * @param config The configuration of the node pool.
          * 
          * @return builder
          * 
@@ -277,7 +277,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param config Required. The configuration of the node pool.
+         * @param config The configuration of the node pool.
          * 
          * @return builder
          * 
@@ -308,7 +308,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * @param maxPodsConstraint The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
          * 
          * @return builder
          * 
@@ -319,7 +319,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param maxPodsConstraint Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+         * @param maxPodsConstraint The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subnetId Required. The subnet where the node pool node run.
+         * @param subnetId The subnet where the node pool node run.
          * 
          * @return builder
          * 
@@ -382,7 +382,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subnetId Required. The subnet where the node pool node run.
+         * @param subnetId The subnet where the node pool node run.
          * 
          * @return builder
          * 
@@ -392,7 +392,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+         * @param version The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class AwsNodePoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param version Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+         * @param version The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
          * 
          * @return builder
          * 

@@ -16,16 +16,32 @@ public final class IamAuditConfigAuditLogConfigArgs extends com.pulumi.resources
 
     public static final IamAuditConfigAuditLogConfigArgs Empty = new IamAuditConfigAuditLogConfigArgs();
 
+    /**
+     * Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+     * 
+     */
     @Import(name="exemptedMembers")
     private @Nullable Output<List<String>> exemptedMembers;
 
+    /**
+     * @return Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+     * 
+     */
     public Optional<Output<List<String>>> exemptedMembers() {
         return Optional.ofNullable(this.exemptedMembers);
     }
 
+    /**
+     * Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+     * 
+     */
     @Import(name="logType", required=true)
     private Output<String> logType;
 
+    /**
+     * @return Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+     * 
+     */
     public Output<String> logType() {
         return this.logType;
     }
@@ -55,24 +71,54 @@ public final class IamAuditConfigAuditLogConfigArgs extends com.pulumi.resources
             $ = new IamAuditConfigAuditLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exemptedMembers Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             $.exemptedMembers = exemptedMembers;
             return this;
         }
 
+        /**
+         * @param exemptedMembers Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(List<String> exemptedMembers) {
             return exemptedMembers(Output.of(exemptedMembers));
         }
 
+        /**
+         * @param exemptedMembers Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
 
+        /**
+         * @param logType Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(Output<String> logType) {
             $.logType = logType;
             return this;
         }
 
+        /**
+         * @param logType Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logType(String logType) {
             return logType(Output.of(logType));
         }

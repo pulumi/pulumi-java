@@ -14,6 +14,7 @@ import com.pulumi.gcp.folder.outputs.AccessApprovalSettingsEnrolledService;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,6 +41,38 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:folder/accessApprovalSettings:AccessApprovalSettings")
 public class AccessApprovalSettings extends com.pulumi.resources.CustomResource {
+    /**
+     * The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    @Export(name="activeKeyVersion", type=String.class, parameters={})
+    private Output</* @Nullable */ String> activeKeyVersion;
+
+    /**
+     * @return The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    public Output<Optional<String>> activeKeyVersion() {
+        return Codegen.optional(this.activeKeyVersion);
+    }
+    /**
+     * If the field is true, that indicates that an ancestor of this Folder has set active_key_version.
+     * 
+     */
+    @Export(name="ancestorHasActiveKeyVersion", type=Boolean.class, parameters={})
+    private Output<Boolean> ancestorHasActiveKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that an ancestor of this Folder has set active_key_version.
+     * 
+     */
+    public Output<Boolean> ancestorHasActiveKeyVersion() {
+        return this.ancestorHasActiveKeyVersion;
+    }
     /**
      * If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
      * of the Folder.
@@ -91,6 +124,26 @@ public class AccessApprovalSettings extends com.pulumi.resources.CustomResource 
      */
     public Output<String> folderId() {
         return this.folderId;
+    }
+    /**
+     * If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Folder (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+     * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+     * top-down.
+     * 
+     */
+    @Export(name="invalidKeyVersion", type=Boolean.class, parameters={})
+    private Output<Boolean> invalidKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Folder (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+     * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+     * top-down.
+     * 
+     */
+    public Output<Boolean> invalidKeyVersion() {
+        return this.invalidKeyVersion;
     }
     /**
      * The resource name of the settings. Format is &#34;folders/{folder_id}/accessApprovalSettings&#34;

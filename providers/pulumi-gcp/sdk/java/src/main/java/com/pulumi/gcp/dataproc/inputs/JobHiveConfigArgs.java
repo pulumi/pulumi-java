@@ -19,14 +19,14 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobHiveConfigArgs Empty = new JobHiveConfigArgs();
 
     /**
-     * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
      */
     @Import(name="continueOnFailure")
     private @Nullable Output<Boolean> continueOnFailure;
 
     /**
-     * @return Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+     * @return Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
      */
     public Optional<Output<Boolean>> continueOnFailure() {
@@ -49,14 +49,14 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
     /**
-     * @return A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+     * @return A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
      * 
      */
     public Optional<Output<Map<String,String>>> properties() {
@@ -142,7 +142,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param continueOnFailure Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+         * @param continueOnFailure Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param continueOnFailure Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
+         * @param continueOnFailure Whether to continue executing queries if a query fails. Setting to true can be useful when executing independent parallel queries. Defaults to false.
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * @param properties A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class JobHiveConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties A mapping of property names to values, used to configure Spark SQL&#39;s SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
+         * @param properties A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI.
          * 
          * @return builder
          * 

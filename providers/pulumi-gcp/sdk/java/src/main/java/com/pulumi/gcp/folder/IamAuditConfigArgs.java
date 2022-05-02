@@ -16,36 +16,44 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
     public static final IamAuditConfigArgs Empty = new IamAuditConfigArgs();
 
     /**
-     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     @Import(name="auditLogConfigs", required=true)
     private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     /**
-     * @return The configuration for logging of each type of permission. This can be specified multiple times.
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     public Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @Import(name="folder", required=true)
     private Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Output<String> folder() {
         return this.folder;
     }
 
     /**
-     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     @Import(name="service", required=true)
     private Output<String> service;
 
     /**
-     * @return Service which will be enabled for audit logging. The special value allServices covers all services.
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     public Output<String> service() {
@@ -79,7 +87,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -90,7 +98,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -100,7 +108,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -109,17 +117,29 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
             return auditLogConfigs(List.of(auditLogConfigs));
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
 
         /**
-         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
          * 
          * @return builder
          * 
@@ -130,7 +150,7 @@ public final class IamAuditConfigArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
          * 
          * @return builder
          * 

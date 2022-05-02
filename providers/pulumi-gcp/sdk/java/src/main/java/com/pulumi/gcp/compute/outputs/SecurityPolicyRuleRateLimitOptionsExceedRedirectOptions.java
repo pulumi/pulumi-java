@@ -11,7 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
+    /**
+     * @return External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+     * 
+     */
     private final @Nullable String target;
+    /**
+     * @return Type of redirect action.
+     * 
+     */
     private final String type;
 
     @CustomType.Constructor
@@ -22,9 +30,17 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
         this.type = type;
     }
 
+    /**
+     * @return External redirection target when &#34;EXTERNAL_302&#34; is set in &#39;type&#39;.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
+    /**
+     * @return Type of redirect action.
+     * 
+     */
     public String type() {
         return this.type;
     }

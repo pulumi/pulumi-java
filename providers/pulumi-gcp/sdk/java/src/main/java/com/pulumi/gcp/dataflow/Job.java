@@ -20,19 +20,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
- * the official documentation for
- * [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
- * 
- * ## Example Usage
- * ## Note on &#34;destroy&#34; / &#34;apply&#34;
- * 
- * There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.
- * 
- * The Dataflow resource is considered &#39;existing&#39; while it is in a nonterminal state.  If it reaches a terminal state (e.g. &#39;FAILED&#39;, &#39;COMPLETE&#39;, &#39;CANCELLED&#39;), it will be recreated on the next &#39;apply&#39;.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.
- * 
- * A Dataflow job which is &#39;destroyed&#39; may be &#34;cancelled&#34; or &#34;drained&#34;.  If &#34;cancelled&#34;, the job terminates - any data written remains where it is, but no new data will be processed.  If &#34;drained&#34;, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is &#34;drain&#34;. When `on_delete` is set to `&#34;drain&#34;` in the configuration, you may experience a long wait for your `pulumi destroy` to complete.
- * 
  * ## Import
  * 
  * This resource does not support import.
@@ -115,7 +102,6 @@ public class Job extends com.pulumi.resources.CustomResource {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     @Export(name="labels", type=Map.class, parameters={String.class, Object.class})
@@ -126,7 +112,6 @@ public class Job extends com.pulumi.resources.CustomResource {
      * specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
      * **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
      * Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-     * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
     public Output<Optional<Map<String,Object>>> labels() {
@@ -259,6 +244,24 @@ public class Job extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.serviceAccountEmail);
     }
     /**
+     * If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    @Export(name="skipWaitOnJobTermination", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> skipWaitOnJobTermination;
+
+    /**
+     * @return If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    public Output<Optional<Boolean>> skipWaitOnJobTermination() {
+        return Codegen.optional(this.skipWaitOnJobTermination);
+    }
+    /**
      * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
      * 
      */
@@ -316,7 +319,6 @@ public class Job extends com.pulumi.resources.CustomResource {
     }
     /**
      * Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     @Export(name="transformNameMapping", type=Map.class, parameters={String.class, Object.class})
@@ -324,7 +326,6 @@ public class Job extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-     * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
     public Output<Optional<Map<String,Object>>> transformNameMapping() {

@@ -8,6 +8,7 @@ import com.pulumi.gcp.container.outputs.GetClusterNodePoolAutoscaling;
 import com.pulumi.gcp.container.outputs.GetClusterNodePoolManagement;
 import com.pulumi.gcp.container.outputs.GetClusterNodePoolNetworkConfig;
 import com.pulumi.gcp.container.outputs.GetClusterNodePoolNodeConfig;
+import com.pulumi.gcp.container.outputs.GetClusterNodePoolPlacementPolicy;
 import com.pulumi.gcp.container.outputs.GetClusterNodePoolUpgradeSetting;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,6 +33,7 @@ public final class GetClusterNodePool {
     private final List<GetClusterNodePoolNodeConfig> nodeConfigs;
     private final Integer nodeCount;
     private final List<String> nodeLocations;
+    private final List<GetClusterNodePoolPlacementPolicy> placementPolicies;
     private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
     private final String version;
 
@@ -49,6 +51,7 @@ public final class GetClusterNodePool {
         @CustomType.Parameter("nodeConfigs") List<GetClusterNodePoolNodeConfig> nodeConfigs,
         @CustomType.Parameter("nodeCount") Integer nodeCount,
         @CustomType.Parameter("nodeLocations") List<String> nodeLocations,
+        @CustomType.Parameter("placementPolicies") List<GetClusterNodePoolPlacementPolicy> placementPolicies,
         @CustomType.Parameter("upgradeSettings") List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
         @CustomType.Parameter("version") String version) {
         this.autoscalings = autoscalings;
@@ -63,6 +66,7 @@ public final class GetClusterNodePool {
         this.nodeConfigs = nodeConfigs;
         this.nodeCount = nodeCount;
         this.nodeLocations = nodeLocations;
+        this.placementPolicies = placementPolicies;
         this.upgradeSettings = upgradeSettings;
         this.version = version;
     }
@@ -107,6 +111,9 @@ public final class GetClusterNodePool {
     public List<String> nodeLocations() {
         return this.nodeLocations;
     }
+    public List<GetClusterNodePoolPlacementPolicy> placementPolicies() {
+        return this.placementPolicies;
+    }
     public List<GetClusterNodePoolUpgradeSetting> upgradeSettings() {
         return this.upgradeSettings;
     }
@@ -135,6 +142,7 @@ public final class GetClusterNodePool {
         private List<GetClusterNodePoolNodeConfig> nodeConfigs;
         private Integer nodeCount;
         private List<String> nodeLocations;
+        private List<GetClusterNodePoolPlacementPolicy> placementPolicies;
         private List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
         private String version;
 
@@ -156,6 +164,7 @@ public final class GetClusterNodePool {
     	      this.nodeConfigs = defaults.nodeConfigs;
     	      this.nodeCount = defaults.nodeCount;
     	      this.nodeLocations = defaults.nodeLocations;
+    	      this.placementPolicies = defaults.placementPolicies;
     	      this.upgradeSettings = defaults.upgradeSettings;
     	      this.version = defaults.version;
         }
@@ -229,6 +238,13 @@ public final class GetClusterNodePool {
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
         }
+        public Builder placementPolicies(List<GetClusterNodePoolPlacementPolicy> placementPolicies) {
+            this.placementPolicies = Objects.requireNonNull(placementPolicies);
+            return this;
+        }
+        public Builder placementPolicies(GetClusterNodePoolPlacementPolicy... placementPolicies) {
+            return placementPolicies(List.of(placementPolicies));
+        }
         public Builder upgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
@@ -240,7 +256,7 @@ public final class GetClusterNodePool {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public GetClusterNodePool build() {
-            return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, upgradeSettings, version);
+            return new GetClusterNodePool(autoscalings, initialNodeCount, instanceGroupUrls, managedInstanceGroupUrls, managements, maxPodsPerNode, name, namePrefix, networkConfigs, nodeConfigs, nodeCount, nodeLocations, placementPolicies, upgradeSettings, version);
         }
     }
 }

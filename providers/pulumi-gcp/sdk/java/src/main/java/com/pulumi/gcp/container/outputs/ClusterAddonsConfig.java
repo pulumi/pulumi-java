@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.outputs.ClusterAddonsConfigConfigConnectorConfig
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigDnsCacheConfig;
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigGcePersistentDiskCsiDriverConfig;
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigGcpFilestoreCsiDriverConfig;
+import com.pulumi.gcp.container.outputs.ClusterAddonsConfigGkeBackupAgentConfig;
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigHorizontalPodAutoscaling;
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigHttpLoadBalancing;
 import com.pulumi.gcp.container.outputs.ClusterAddonsConfigIstioConfig;
@@ -47,10 +48,16 @@ public final class ClusterAddonsConfig {
     /**
      * @return The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
-     * It is disbaled by default; set `enabled = true` to enable.
+     * It is disabled by default; set `enabled = true` to enable.
      * 
      */
     private final @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
+    /**
+     * @return ).
+     * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
+    private final @Nullable ClusterAddonsConfigGkeBackupAgentConfig gkeBackupAgentConfig;
     /**
      * @return The status of the Horizontal Pod Autoscaling
      * addon, which increases or decreases the number of replica pods a replication controller
@@ -97,6 +104,7 @@ public final class ClusterAddonsConfig {
         @CustomType.Parameter("dnsCacheConfig") @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
         @CustomType.Parameter("gcePersistentDiskCsiDriverConfig") @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
         @CustomType.Parameter("gcpFilestoreCsiDriverConfig") @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
+        @CustomType.Parameter("gkeBackupAgentConfig") @Nullable ClusterAddonsConfigGkeBackupAgentConfig gkeBackupAgentConfig,
         @CustomType.Parameter("horizontalPodAutoscaling") @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
         @CustomType.Parameter("httpLoadBalancing") @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
         @CustomType.Parameter("istioConfig") @Nullable ClusterAddonsConfigIstioConfig istioConfig,
@@ -107,6 +115,7 @@ public final class ClusterAddonsConfig {
         this.dnsCacheConfig = dnsCacheConfig;
         this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
         this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
+        this.gkeBackupAgentConfig = gkeBackupAgentConfig;
         this.horizontalPodAutoscaling = horizontalPodAutoscaling;
         this.httpLoadBalancing = httpLoadBalancing;
         this.istioConfig = istioConfig;
@@ -149,11 +158,19 @@ public final class ClusterAddonsConfig {
     /**
      * @return The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
-     * It is disbaled by default; set `enabled = true` to enable.
+     * It is disabled by default; set `enabled = true` to enable.
      * 
      */
     public Optional<ClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
+    }
+    /**
+     * @return ).
+     * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
+    public Optional<ClusterAddonsConfigGkeBackupAgentConfig> gkeBackupAgentConfig() {
+        return Optional.ofNullable(this.gkeBackupAgentConfig);
     }
     /**
      * @return The status of the Horizontal Pod Autoscaling
@@ -218,6 +235,7 @@ public final class ClusterAddonsConfig {
         private @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig;
         private @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig;
         private @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig;
+        private @Nullable ClusterAddonsConfigGkeBackupAgentConfig gkeBackupAgentConfig;
         private @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling;
         private @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing;
         private @Nullable ClusterAddonsConfigIstioConfig istioConfig;
@@ -235,6 +253,7 @@ public final class ClusterAddonsConfig {
     	      this.dnsCacheConfig = defaults.dnsCacheConfig;
     	      this.gcePersistentDiskCsiDriverConfig = defaults.gcePersistentDiskCsiDriverConfig;
     	      this.gcpFilestoreCsiDriverConfig = defaults.gcpFilestoreCsiDriverConfig;
+    	      this.gkeBackupAgentConfig = defaults.gkeBackupAgentConfig;
     	      this.horizontalPodAutoscaling = defaults.horizontalPodAutoscaling;
     	      this.httpLoadBalancing = defaults.httpLoadBalancing;
     	      this.istioConfig = defaults.istioConfig;
@@ -262,6 +281,10 @@ public final class ClusterAddonsConfig {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
+        public Builder gkeBackupAgentConfig(@Nullable ClusterAddonsConfigGkeBackupAgentConfig gkeBackupAgentConfig) {
+            this.gkeBackupAgentConfig = gkeBackupAgentConfig;
+            return this;
+        }
         public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
@@ -282,7 +305,7 @@ public final class ClusterAddonsConfig {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }        public ClusterAddonsConfig build() {
-            return new ClusterAddonsConfig(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
+            return new ClusterAddonsConfig(cloudrunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, gkeBackupAgentConfig, horizontalPodAutoscaling, httpLoadBalancing, istioConfig, kalmConfig, networkPolicyConfig);
         }
     }
 }

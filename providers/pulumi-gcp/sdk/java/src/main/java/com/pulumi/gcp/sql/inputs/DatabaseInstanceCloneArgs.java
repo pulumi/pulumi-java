@@ -16,6 +16,21 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
     public static final DatabaseInstanceCloneArgs Empty = new DatabaseInstanceCloneArgs();
 
     /**
+     * The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
+    @Import(name="allocatedIpRange")
+    private @Nullable Output<String> allocatedIpRange;
+
+    /**
+     * @return The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+     * 
+     */
+    public Optional<Output<String>> allocatedIpRange() {
+        return Optional.ofNullable(this.allocatedIpRange);
+    }
+
+    /**
      * The timestamp of the point in time that should be restored.
      * 
      */
@@ -48,6 +63,7 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
     private DatabaseInstanceCloneArgs() {}
 
     private DatabaseInstanceCloneArgs(DatabaseInstanceCloneArgs $) {
+        this.allocatedIpRange = $.allocatedIpRange;
         this.pointInTime = $.pointInTime;
         this.sourceInstanceName = $.sourceInstanceName;
     }
@@ -68,6 +84,27 @@ public final class DatabaseInstanceCloneArgs extends com.pulumi.resources.Resour
 
         public Builder(DatabaseInstanceCloneArgs defaults) {
             $ = new DatabaseInstanceCloneArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param allocatedIpRange The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allocatedIpRange(@Nullable Output<String> allocatedIpRange) {
+            $.allocatedIpRange = allocatedIpRange;
+            return this;
+        }
+
+        /**
+         * @param allocatedIpRange The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allocatedIpRange(String allocatedIpRange) {
+            return allocatedIpRange(Output.of(allocatedIpRange));
         }
 
         /**

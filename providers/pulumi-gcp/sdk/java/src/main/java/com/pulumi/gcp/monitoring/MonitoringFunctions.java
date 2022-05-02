@@ -146,6 +146,9 @@ public final class MonitoringFunctions {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getNotificationChannel:getNotificationChannel", TypeShape.of(GetNotificationChannelResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
+     * 
+     * ## Example Usage
      * 
      * @deprecated
      * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion

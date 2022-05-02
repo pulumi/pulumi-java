@@ -34,6 +34,21 @@ public final class GCPolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+     * 
+     */
+    @Import(name="gcRules")
+    private @Nullable Output<String> gcRules;
+
+    /**
+     * @return Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+     * 
+     */
+    public Optional<Output<String>> gcRules() {
+        return Optional.ofNullable(this.gcRules);
+    }
+
+    /**
      * The name of the Bigtable instance.
      * 
      */
@@ -127,6 +142,7 @@ public final class GCPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     private GCPolicyArgs(GCPolicyArgs $) {
         this.columnFamily = $.columnFamily;
+        this.gcRules = $.gcRules;
         this.instanceName = $.instanceName;
         this.maxAge = $.maxAge;
         this.maxVersions = $.maxVersions;
@@ -172,6 +188,27 @@ public final class GCPolicyArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder columnFamily(String columnFamily) {
             return columnFamily(Output.of(columnFamily));
+        }
+
+        /**
+         * @param gcRules Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gcRules(@Nullable Output<String> gcRules) {
+            $.gcRules = gcRules;
+            return this;
+        }
+
+        /**
+         * @param gcRules Serialized JSON object to represent a more complex GC policy. Conflicts with `mode`, `max_age` and `max_version`. Conflicts with `mode`, `max_age` and `max_version`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gcRules(String gcRules) {
+            return gcRules(Output.of(gcRules));
         }
 
         /**

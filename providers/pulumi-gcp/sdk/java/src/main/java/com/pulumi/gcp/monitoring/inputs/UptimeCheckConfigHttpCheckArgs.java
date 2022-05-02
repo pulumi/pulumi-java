@@ -99,14 +99,14 @@ public final class UptimeCheckConfigHttpCheckArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+     * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
      * 
      */
     @Import(name="path")
     private @Nullable Output<String> path;
 
     /**
-     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
      * 
      */
     public Optional<Output<String>> path() {
@@ -320,7 +320,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param path The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+         * @param path The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class UptimeCheckConfigHttpCheckArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param path The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+         * @param path The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
          * 
          * @return builder
          * 

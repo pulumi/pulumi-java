@@ -9,6 +9,7 @@ import com.pulumi.gcp.dataproc.inputs.JobHadoopConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobHiveConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobPigConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobPlacementArgs;
+import com.pulumi.gcp.dataproc.inputs.JobPrestoConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobPysparkConfigArgs;
 import com.pulumi.gcp.dataproc.inputs.JobReferenceArgs;
 import com.pulumi.gcp.dataproc.inputs.JobSchedulingArgs;
@@ -118,6 +119,21 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Output<JobPlacementArgs> placement() {
         return this.placement;
+    }
+
+    /**
+     * The config of presto job
+     * 
+     */
+    @Import(name="prestoConfig")
+    private @Nullable Output<JobPrestoConfigArgs> prestoConfig;
+
+    /**
+     * @return The config of presto job
+     * 
+     */
+    public Optional<Output<JobPrestoConfigArgs>> prestoConfig() {
+        return Optional.ofNullable(this.prestoConfig);
     }
 
     /**
@@ -238,6 +254,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         this.labels = $.labels;
         this.pigConfig = $.pigConfig;
         this.placement = $.placement;
+        this.prestoConfig = $.prestoConfig;
         this.project = $.project;
         this.pysparkConfig = $.pysparkConfig;
         this.reference = $.reference;
@@ -393,6 +410,27 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder placement(JobPlacementArgs placement) {
             return placement(Output.of(placement));
+        }
+
+        /**
+         * @param prestoConfig The config of presto job
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prestoConfig(@Nullable Output<JobPrestoConfigArgs> prestoConfig) {
+            $.prestoConfig = prestoConfig;
+            return this;
+        }
+
+        /**
+         * @param prestoConfig The config of presto job
+         * 
+         * @return builder
+         * 
+         */
+        public Builder prestoConfig(JobPrestoConfigArgs prestoConfig) {
+            return prestoConfig(Output.of(prestoConfig));
         }
 
         /**

@@ -5,6 +5,7 @@ package com.pulumi.gcp.artifactregistry;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.gcp.artifactregistry.inputs.RepositoryMavenConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -122,6 +123,27 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * MavenRepositoryConfig is maven related repository details.
+     * Provides additional configuration details for repositories of the maven
+     * format type.
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="mavenConfig")
+    private @Nullable Output<RepositoryMavenConfigArgs> mavenConfig;
+
+    /**
+     * @return MavenRepositoryConfig is maven related repository details.
+     * Provides additional configuration details for repositories of the maven
+     * format type.
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<RepositoryMavenConfigArgs>> mavenConfig() {
+        return Optional.ofNullable(this.mavenConfig);
+    }
+
+    /**
      * The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
@@ -163,6 +185,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
         this.kmsKeyName = $.kmsKeyName;
         this.labels = $.labels;
         this.location = $.location;
+        this.mavenConfig = $.mavenConfig;
         this.project = $.project;
         this.repositoryId = $.repositoryId;
     }
@@ -318,6 +341,33 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder location(String location) {
             return location(Output.of(location));
+        }
+
+        /**
+         * @param mavenConfig MavenRepositoryConfig is maven related repository details.
+         * Provides additional configuration details for repositories of the maven
+         * format type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mavenConfig(@Nullable Output<RepositoryMavenConfigArgs> mavenConfig) {
+            $.mavenConfig = mavenConfig;
+            return this;
+        }
+
+        /**
+         * @param mavenConfig MavenRepositoryConfig is maven related repository details.
+         * Provides additional configuration details for repositories of the maven
+         * format type.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mavenConfig(RepositoryMavenConfigArgs mavenConfig) {
+            return mavenConfig(Output.of(mavenConfig));
         }
 
         /**

@@ -50,6 +50,21 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    @Import(name="billingType")
+    private @Nullable Output<String> billingType;
+
+    /**
+     * @return Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+     * 
+     */
+    public Optional<Output<String>> billingType() {
+        return Optional.ofNullable(this.billingType);
+    }
+
+    /**
      * Description of the Apigee organization.
      * 
      */
@@ -139,6 +154,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     private OrganizationArgs(OrganizationArgs $) {
         this.analyticsRegion = $.analyticsRegion;
         this.authorizedNetwork = $.authorizedNetwork;
+        this.billingType = $.billingType;
         this.description = $.description;
         this.displayName = $.displayName;
         this.projectId = $.projectId;
@@ -208,6 +224,27 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder authorizedNetwork(String authorizedNetwork) {
             return authorizedNetwork(Output.of(authorizedNetwork));
+        }
+
+        /**
+         * @param billingType Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingType(@Nullable Output<String> billingType) {
+            $.billingType = billingType;
+            return this;
+        }
+
+        /**
+         * @param billingType Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder billingType(String billingType) {
+            return billingType(Output.of(billingType));
         }
 
         /**

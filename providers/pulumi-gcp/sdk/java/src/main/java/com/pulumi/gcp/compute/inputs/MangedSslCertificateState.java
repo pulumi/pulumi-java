@@ -79,16 +79,18 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-     * of &#39;MANAGED&#39; in &#39;type&#39;).
+     * Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
      * 
      */
     @Import(name="managed")
     private @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
     /**
-     * @return Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-     * of &#39;MANAGED&#39; in &#39;type&#39;).
+     * @return Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
      * 
      */
     public Optional<Output<MangedSslCertificateManagedArgs>> managed() {
@@ -96,38 +98,60 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-     * namespace as the managed SSL certificates.
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-     * namespace as the managed SSL certificates.
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
      * 
      */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -148,16 +172,20 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-     * Possible values: [&#34;MANAGED&#34;]
+     * Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-     * Possible values: [&#34;MANAGED&#34;]
+     * @return Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -282,8 +310,9 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param managed Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-         * of &#39;MANAGED&#39; in &#39;type&#39;).
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
          * 
          * @return builder
          * 
@@ -294,8 +323,9 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param managed Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-         * of &#39;MANAGED&#39; in &#39;type&#39;).
+         * @param managed Properties relevant to a managed certificate.  These will be used if the
+         * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+         * Structure is documented below.
          * 
          * @return builder
          * 
@@ -305,11 +335,13 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-         * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-         * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-         * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-         * namespace as the managed SSL certificates.
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
          * 
          * @return builder
          * 
@@ -320,11 +352,13 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param name Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-         * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-         * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-         * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-         * namespace as the managed SSL certificates.
+         * @param name Name of the resource. Provided by the client when the resource is
+         * created. The name must be 1-63 characters long, and comply with
+         * RFC1035. Specifically, the name must be 1-63 characters long and match
+         * the regular expression `a-z?` which means the
+         * first character must be a lowercase letter, and all following
+         * characters must be a dash, lowercase letter, or digit, except the last
+         * character, which cannot be a dash.
          * 
          * @return builder
          * 
@@ -333,20 +367,46 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
@@ -383,8 +443,10 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param type Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-         * Possible values: [&#34;MANAGED&#34;]
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
          * 
          * @return builder
          * 
@@ -395,8 +457,10 @@ public final class MangedSslCertificateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param type Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-         * Possible values: [&#34;MANAGED&#34;]
+         * @param type Enum field whose value is always `MANAGED` - used to signal to the API
+         * which type this is.
+         * Default value is `MANAGED`.
+         * Possible values are `MANAGED`.
          * 
          * @return builder
          * 

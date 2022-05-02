@@ -10,6 +10,7 @@ import com.pulumi.gcp.container.inputs.ClusterAddonsConfigConfigConnectorConfigA
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigDnsCacheConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs;
+import com.pulumi.gcp.container.inputs.ClusterAddonsConfigGkeBackupAgentConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigHorizontalPodAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigHttpLoadBalancingArgs;
 import com.pulumi.gcp.container.inputs.ClusterAddonsConfigIstioConfigArgs;
@@ -95,7 +96,7 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     /**
      * The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
-     * It is disbaled by default; set `enabled = true` to enable.
+     * It is disabled by default; set `enabled = true` to enable.
      * 
      */
     @Import(name="gcpFilestoreCsiDriverConfig")
@@ -104,11 +105,28 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     /**
      * @return The status of the Filestore CSI driver addon,
      * which allows the usage of filestore instance as volumes.
-     * It is disbaled by default; set `enabled = true` to enable.
+     * It is disabled by default; set `enabled = true` to enable.
      * 
      */
     public Optional<Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs>> gcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
+    }
+
+    /**
+     * ).
+     * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
+    @Import(name="gkeBackupAgentConfig")
+    private @Nullable Output<ClusterAddonsConfigGkeBackupAgentConfigArgs> gkeBackupAgentConfig;
+
+    /**
+     * @return ).
+     * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
+    public Optional<Output<ClusterAddonsConfigGkeBackupAgentConfigArgs>> gkeBackupAgentConfig() {
+        return Optional.ofNullable(this.gkeBackupAgentConfig);
     }
 
     /**
@@ -220,6 +238,7 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
         this.dnsCacheConfig = $.dnsCacheConfig;
         this.gcePersistentDiskCsiDriverConfig = $.gcePersistentDiskCsiDriverConfig;
         this.gcpFilestoreCsiDriverConfig = $.gcpFilestoreCsiDriverConfig;
+        this.gkeBackupAgentConfig = $.gkeBackupAgentConfig;
         this.horizontalPodAutoscaling = $.horizontalPodAutoscaling;
         this.httpLoadBalancing = $.httpLoadBalancing;
         this.istioConfig = $.istioConfig;
@@ -340,7 +359,7 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
         /**
          * @param gcpFilestoreCsiDriverConfig The status of the Filestore CSI driver addon,
          * which allows the usage of filestore instance as volumes.
-         * It is disbaled by default; set `enabled = true` to enable.
+         * It is disabled by default; set `enabled = true` to enable.
          * 
          * @return builder
          * 
@@ -353,13 +372,36 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
         /**
          * @param gcpFilestoreCsiDriverConfig The status of the Filestore CSI driver addon,
          * which allows the usage of filestore instance as volumes.
-         * It is disbaled by default; set `enabled = true` to enable.
+         * It is disabled by default; set `enabled = true` to enable.
          * 
          * @return builder
          * 
          */
         public Builder gcpFilestoreCsiDriverConfig(ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
             return gcpFilestoreCsiDriverConfig(Output.of(gcpFilestoreCsiDriverConfig));
+        }
+
+        /**
+         * @param gkeBackupAgentConfig ).
+         * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gkeBackupAgentConfig(@Nullable Output<ClusterAddonsConfigGkeBackupAgentConfigArgs> gkeBackupAgentConfig) {
+            $.gkeBackupAgentConfig = gkeBackupAgentConfig;
+            return this;
+        }
+
+        /**
+         * @param gkeBackupAgentConfig ).
+         * The status of the Backup for GKE agent addon. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gkeBackupAgentConfig(ClusterAddonsConfigGkeBackupAgentConfigArgs gkeBackupAgentConfig) {
+            return gkeBackupAgentConfig(Output.of(gkeBackupAgentConfig));
         }
 
         /**

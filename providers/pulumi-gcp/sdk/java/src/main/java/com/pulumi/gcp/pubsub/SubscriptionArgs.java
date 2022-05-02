@@ -95,6 +95,31 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * If `true`, Pub/Sub provides the following guarantees for the delivery
+     * of a message with a given value of messageId on this Subscriptions&#39;:
+     * - The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires.
+     * - An acknowledged message will not be resent to a subscriber.
+     *   Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery`
+     *   is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
+     * 
+     */
+    @Import(name="enableExactlyOnceDelivery")
+    private @Nullable Output<Boolean> enableExactlyOnceDelivery;
+
+    /**
+     * @return If `true`, Pub/Sub provides the following guarantees for the delivery
+     * of a message with a given value of messageId on this Subscriptions&#39;:
+     * - The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires.
+     * - An acknowledged message will not be resent to a subscriber.
+     *   Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery`
+     *   is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
+     * 
+     */
+    public Optional<Output<Boolean>> enableExactlyOnceDelivery() {
+        return Optional.ofNullable(this.enableExactlyOnceDelivery);
+    }
+
+    /**
      * If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
      * the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
      * may be delivered in any order.
@@ -181,7 +206,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * How long to retain unacknowledged messages in the subscription&#39;s
      * backlog, from the moment a message is published. If
-     * retainAckedMessages is true, then this also configures the retention
+     * retain_acked_messages is true, then this also configures the retention
      * of acknowledged messages, and thus configures how far back in time a
      * subscriptions.seek can be done. Defaults to 7 days. Cannot be more
      * than 7 days (`&#34;604800s&#34;`) or less than 10 minutes (`&#34;600s&#34;`).
@@ -195,7 +220,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * @return How long to retain unacknowledged messages in the subscription&#39;s
      * backlog, from the moment a message is published. If
-     * retainAckedMessages is true, then this also configures the retention
+     * retain_acked_messages is true, then this also configures the retention
      * of acknowledged messages, and thus configures how far back in time a
      * subscriptions.seek can be done. Defaults to 7 days. Cannot be more
      * than 7 days (`&#34;604800s&#34;`) or less than 10 minutes (`&#34;600s&#34;`).
@@ -322,6 +347,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     private SubscriptionArgs(SubscriptionArgs $) {
         this.ackDeadlineSeconds = $.ackDeadlineSeconds;
         this.deadLetterPolicy = $.deadLetterPolicy;
+        this.enableExactlyOnceDelivery = $.enableExactlyOnceDelivery;
         this.enableMessageOrdering = $.enableMessageOrdering;
         this.expirationPolicy = $.expirationPolicy;
         this.filter = $.filter;
@@ -438,6 +464,37 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param enableExactlyOnceDelivery If `true`, Pub/Sub provides the following guarantees for the delivery
+         * of a message with a given value of messageId on this Subscriptions&#39;:
+         * - The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires.
+         * - An acknowledged message will not be resent to a subscriber.
+         *   Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery`
+         *   is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableExactlyOnceDelivery(@Nullable Output<Boolean> enableExactlyOnceDelivery) {
+            $.enableExactlyOnceDelivery = enableExactlyOnceDelivery;
+            return this;
+        }
+
+        /**
+         * @param enableExactlyOnceDelivery If `true`, Pub/Sub provides the following guarantees for the delivery
+         * of a message with a given value of messageId on this Subscriptions&#39;:
+         * - The message sent to a subscriber is guaranteed not to be resent before the message&#39;s acknowledgement deadline expires.
+         * - An acknowledged message will not be resent to a subscriber.
+         *   Note that subscribers may still receive multiple copies of a message when `enable_exactly_once_delivery`
+         *   is true if the message was published multiple times by a publisher client. These copies are considered distinct by Pub/Sub and have distinct messageId values
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableExactlyOnceDelivery(Boolean enableExactlyOnceDelivery) {
+            return enableExactlyOnceDelivery(Output.of(enableExactlyOnceDelivery));
+        }
+
+        /**
          * @param enableMessageOrdering If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
          * the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
          * may be delivered in any order.
@@ -548,7 +605,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param messageRetentionDuration How long to retain unacknowledged messages in the subscription&#39;s
          * backlog, from the moment a message is published. If
-         * retainAckedMessages is true, then this also configures the retention
+         * retain_acked_messages is true, then this also configures the retention
          * of acknowledged messages, and thus configures how far back in time a
          * subscriptions.seek can be done. Defaults to 7 days. Cannot be more
          * than 7 days (`&#34;604800s&#34;`) or less than 10 minutes (`&#34;600s&#34;`).
@@ -566,7 +623,7 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param messageRetentionDuration How long to retain unacknowledged messages in the subscription&#39;s
          * backlog, from the moment a message is published. If
-         * retainAckedMessages is true, then this also configures the retention
+         * retain_acked_messages is true, then this also configures the retention
          * of acknowledged messages, and thus configures how far back in time a
          * subscriptions.seek can be done. Defaults to 7 days. Cannot be more
          * than 7 days (`&#34;604800s&#34;`) or less than 10 minutes (`&#34;600s&#34;`).

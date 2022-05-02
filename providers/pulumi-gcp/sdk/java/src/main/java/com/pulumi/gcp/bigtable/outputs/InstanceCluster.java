@@ -4,6 +4,7 @@
 package com.pulumi.gcp.bigtable.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.gcp.bigtable.outputs.InstanceClusterAutoscalingConfig;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,12 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceCluster {
     /**
+     * @return Autoscaling config for the cluster, contains the following arguments:
+     * 
+     */
+    private final @Nullable InstanceClusterAutoscalingConfig autoscalingConfig;
+    /**
      * @return The ID of the Cloud Bigtable cluster.
      * 
      */
     private final String clusterId;
     /**
-     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster.
      * 
      */
     private final @Nullable String kmsKeyName;
@@ -45,11 +51,13 @@ public final class InstanceCluster {
 
     @CustomType.Constructor
     private InstanceCluster(
+        @CustomType.Parameter("autoscalingConfig") @Nullable InstanceClusterAutoscalingConfig autoscalingConfig,
         @CustomType.Parameter("clusterId") String clusterId,
         @CustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
         @CustomType.Parameter("numNodes") @Nullable Integer numNodes,
         @CustomType.Parameter("storageType") @Nullable String storageType,
         @CustomType.Parameter("zone") @Nullable String zone) {
+        this.autoscalingConfig = autoscalingConfig;
         this.clusterId = clusterId;
         this.kmsKeyName = kmsKeyName;
         this.numNodes = numNodes;
@@ -58,6 +66,13 @@ public final class InstanceCluster {
     }
 
     /**
+     * @return Autoscaling config for the cluster, contains the following arguments:
+     * 
+     */
+    public Optional<InstanceClusterAutoscalingConfig> autoscalingConfig() {
+        return Optional.ofNullable(this.autoscalingConfig);
+    }
+    /**
      * @return The ID of the Cloud Bigtable cluster.
      * 
      */
@@ -65,7 +80,7 @@ public final class InstanceCluster {
         return this.clusterId;
     }
     /**
-     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
+     * @return Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster.
      * 
      */
     public Optional<String> kmsKeyName() {
@@ -107,6 +122,7 @@ public final class InstanceCluster {
     }
 
     public static final class Builder {
+        private @Nullable InstanceClusterAutoscalingConfig autoscalingConfig;
         private String clusterId;
         private @Nullable String kmsKeyName;
         private @Nullable Integer numNodes;
@@ -119,6 +135,7 @@ public final class InstanceCluster {
 
         public Builder(InstanceCluster defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.autoscalingConfig = defaults.autoscalingConfig;
     	      this.clusterId = defaults.clusterId;
     	      this.kmsKeyName = defaults.kmsKeyName;
     	      this.numNodes = defaults.numNodes;
@@ -126,6 +143,10 @@ public final class InstanceCluster {
     	      this.zone = defaults.zone;
         }
 
+        public Builder autoscalingConfig(@Nullable InstanceClusterAutoscalingConfig autoscalingConfig) {
+            this.autoscalingConfig = autoscalingConfig;
+            return this;
+        }
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
@@ -146,7 +167,7 @@ public final class InstanceCluster {
             this.zone = zone;
             return this;
         }        public InstanceCluster build() {
-            return new InstanceCluster(clusterId, kmsKeyName, numNodes, storageType, zone);
+            return new InstanceCluster(autoscalingConfig, clusterId, kmsKeyName, numNodes, storageType, zone);
         }
     }
 }

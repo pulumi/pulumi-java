@@ -21,27 +21,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsClusterControlPlane {
     /**
-     * @return Required. Authentication configuration for management of AWS resources.
+     * @return Authentication configuration for management of AWS resources.
      * 
      */
     private final AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication;
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * @return The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
      */
     private final AwsClusterControlPlaneConfigEncryption configEncryption;
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * @return The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
      */
     private final AwsClusterControlPlaneDatabaseEncryption databaseEncryption;
     /**
-     * @return Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * @return The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
      */
     private final String iamInstanceProfile;
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     private final @Nullable String instanceType;
@@ -71,7 +71,7 @@ public final class AwsClusterControlPlane {
      */
     private final @Nullable AwsClusterControlPlaneSshConfig sshConfig;
     /**
-     * @return Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * @return The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
      */
     private final List<String> subnetIds;
@@ -81,7 +81,7 @@ public final class AwsClusterControlPlane {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
      */
     private final String version;
@@ -117,35 +117,35 @@ public final class AwsClusterControlPlane {
     }
 
     /**
-     * @return Required. Authentication configuration for management of AWS resources.
+     * @return Authentication configuration for management of AWS resources.
      * 
      */
     public AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication() {
         return this.awsServicesAuthentication;
     }
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
+     * @return The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
      */
     public AwsClusterControlPlaneConfigEncryption configEncryption() {
         return this.configEncryption;
     }
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
+     * @return The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
      */
     public AwsClusterControlPlaneDatabaseEncryption databaseEncryption() {
         return this.databaseEncryption;
     }
     /**
-     * @return Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
+     * @return The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
      */
     public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     public Optional<String> instanceType() {
@@ -187,7 +187,7 @@ public final class AwsClusterControlPlane {
         return Optional.ofNullable(this.sshConfig);
     }
     /**
-     * @return Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
+     * @return The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
      */
     public List<String> subnetIds() {
@@ -201,7 +201,7 @@ public final class AwsClusterControlPlane {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
      */
     public String version() {

@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.accesscontextmanager.AccessPolicyArgs;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessPolicyState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,6 +89,22 @@ public class AccessPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<String> parent() {
         return this.parent;
+    }
+    /**
+     * Folder or project on which this policy is applicable.
+     * Format: folders/{{folder_id}} or projects/{{project_id}}
+     * 
+     */
+    @Export(name="scopes", type=String.class, parameters={})
+    private Output</* @Nullable */ String> scopes;
+
+    /**
+     * @return Folder or project on which this policy is applicable.
+     * Format: folders/{{folder_id}} or projects/{{project_id}}
+     * 
+     */
+    public Output<Optional<String>> scopes() {
+        return Codegen.optional(this.scopes);
     }
     /**
      * Human readable title. Does not affect behavior.

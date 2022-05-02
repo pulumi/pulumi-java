@@ -99,6 +99,21 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.rules);
     }
 
+    /**
+     * Type of redirect action.
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<String> type;
+
+    /**
+     * @return Type of redirect action.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     private SecurityPolicyArgs() {}
 
     private SecurityPolicyArgs(SecurityPolicyArgs $) {
@@ -107,6 +122,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         this.name = $.name;
         this.project = $.project;
         this.rules = $.rules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
@@ -248,6 +264,27 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
+        }
+
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type Type of redirect action.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         public SecurityPolicyArgs build() {

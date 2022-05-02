@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunArgs;
+import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupServerlessDeploymentArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +21,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -29,7 +30,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -39,7 +40,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -48,7 +49,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -58,7 +59,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -67,7 +68,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
     /**
      * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-     * Only one of cloud_run, app_engine or cloud_function may be set.
+     * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
      * Structure is documented below.
      * 
      */
@@ -185,6 +186,23 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
         return Optional.ofNullable(this.selfLink);
     }
 
+    /**
+     * Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+     * serverlessDeployment may be set.
+     * 
+     */
+    @Import(name="serverlessDeployment")
+    private @Nullable Output<RegionNetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
+
+    /**
+     * @return Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+     * serverlessDeployment may be set.
+     * 
+     */
+    public Optional<Output<RegionNetworkEndpointGroupServerlessDeploymentArgs>> serverlessDeployment() {
+        return Optional.ofNullable(this.serverlessDeployment);
+    }
+
     private RegionNetworkEndpointGroupState() {}
 
     private RegionNetworkEndpointGroupState(RegionNetworkEndpointGroupState $) {
@@ -197,6 +215,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
         this.project = $.project;
         this.region = $.region;
         this.selfLink = $.selfLink;
+        this.serverlessDeployment = $.serverlessDeployment;
     }
 
     public static Builder builder() {
@@ -219,7 +238,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param appEngine Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -232,7 +251,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param appEngine Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -244,7 +263,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param cloudFunction Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -257,7 +276,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param cloudFunction Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -269,7 +288,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param cloudRun Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -282,7 +301,7 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
 
         /**
          * @param cloudRun Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-         * Only one of cloud_run, app_engine or cloud_function may be set.
+         * Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set.
          * Structure is documented below.
          * 
          * @return builder
@@ -436,6 +455,29 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
          */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
+        }
+
+        /**
+         * @param serverlessDeployment Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+         * serverlessDeployment may be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverlessDeployment(@Nullable Output<RegionNetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment) {
+            $.serverlessDeployment = serverlessDeployment;
+            return this;
+        }
+
+        /**
+         * @param serverlessDeployment Only valid when networkEndpointType is &#34;SERVERLESS&#34;. Only one of cloudRun, appEngine, cloudFunction or
+         * serverlessDeployment may be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serverlessDeployment(RegionNetworkEndpointGroupServerlessDeploymentArgs serverlessDeployment) {
+            return serverlessDeployment(Output.of(serverlessDeployment));
         }
 
         public RegionNetworkEndpointGroupState build() {

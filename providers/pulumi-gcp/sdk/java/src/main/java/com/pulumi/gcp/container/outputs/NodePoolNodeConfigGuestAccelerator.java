@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 public final class NodePoolNodeConfigGuestAccelerator {
     private final Integer count;
     private final @Nullable String gpuPartitionSize;
+    /**
+     * @return The type of the policy. Supports a single value: COMPACT.
+     * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+     * physical proximity in order to reduce network latency between nodes.
+     * 
+     */
     private final String type;
 
     @CustomType.Constructor
@@ -32,6 +38,12 @@ public final class NodePoolNodeConfigGuestAccelerator {
     public Optional<String> gpuPartitionSize() {
         return Optional.ofNullable(this.gpuPartitionSize);
     }
+    /**
+     * @return The type of the policy. Supports a single value: COMPACT.
+     * Specifying COMPACT placement policy type places node pool&#39;s nodes in a closer
+     * physical proximity in order to reduce network latency between nodes.
+     * 
+     */
     public String type() {
         return this.type;
     }

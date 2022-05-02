@@ -14,9 +14,19 @@ public final class MangedSslCertificateManagedArgs extends com.pulumi.resources.
 
     public static final MangedSslCertificateManagedArgs Empty = new MangedSslCertificateManagedArgs();
 
+    /**
+     * Domains for which a managed SSL certificate will be valid.  Currently,
+     * there can be up to 100 domains in this list.
+     * 
+     */
     @Import(name="domains", required=true)
     private Output<List<String>> domains;
 
+    /**
+     * @return Domains for which a managed SSL certificate will be valid.  Currently,
+     * there can be up to 100 domains in this list.
+     * 
+     */
     public Output<List<String>> domains() {
         return this.domains;
     }
@@ -45,15 +55,36 @@ public final class MangedSslCertificateManagedArgs extends com.pulumi.resources.
             $ = new MangedSslCertificateManagedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domains Domains for which a managed SSL certificate will be valid.  Currently,
+         * there can be up to 100 domains in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(Output<List<String>> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains Domains for which a managed SSL certificate will be valid.  Currently,
+         * there can be up to 100 domains in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(List<String> domains) {
             return domains(Output.of(domains));
         }
 
+        /**
+         * @param domains Domains for which a managed SSL certificate will be valid.  Currently,
+         * there can be up to 100 domains in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }

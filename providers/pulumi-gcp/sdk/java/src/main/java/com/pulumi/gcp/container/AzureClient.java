@@ -40,14 +40,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="gcp:container/azureClient:AzureClient")
 public class AzureClient extends com.pulumi.resources.CustomResource {
     /**
-     * Required. The Azure Active Directory Application ID.
+     * The Azure Active Directory Application ID.
      * 
      */
     @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
-     * @return Required. The Azure Active Directory Application ID.
+     * @return The Azure Active Directory Application ID.
      * 
      */
     public Output<String> applicationId() {
@@ -124,14 +124,14 @@ public class AzureClient extends com.pulumi.resources.CustomResource {
         return this.project;
     }
     /**
-     * Required. The Azure Active Directory Tenant ID.
+     * The Azure Active Directory Tenant ID.
      * 
      */
     @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
-     * @return Required. The Azure Active Directory Tenant ID.
+     * @return The Azure Active Directory Tenant ID.
      * 
      */
     public Output<String> tenantId() {

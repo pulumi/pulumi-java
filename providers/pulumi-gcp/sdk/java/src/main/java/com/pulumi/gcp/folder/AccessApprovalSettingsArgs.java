@@ -18,6 +18,25 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
     public static final AccessApprovalSettingsArgs Empty = new AccessApprovalSettingsArgs();
 
     /**
+     * The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    @Import(name="activeKeyVersion")
+    private @Nullable Output<String> activeKeyVersion;
+
+    /**
+     * @return The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    public Optional<Output<String>> activeKeyVersion() {
+        return Optional.ofNullable(this.activeKeyVersion);
+    }
+
+    /**
      * A list of Google Cloud Services for which the given resource has Access Approval enrolled.
      * Access requests for the resource given by name against any of these services contained here will be required
      * to have explicit approval. Enrollment can only be done on an all or nothing basis.
@@ -77,6 +96,7 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
     private AccessApprovalSettingsArgs() {}
 
     private AccessApprovalSettingsArgs(AccessApprovalSettingsArgs $) {
+        this.activeKeyVersion = $.activeKeyVersion;
         this.enrolledServices = $.enrolledServices;
         this.folderId = $.folderId;
         this.notificationEmails = $.notificationEmails;
@@ -98,6 +118,31 @@ public final class AccessApprovalSettingsArgs extends com.pulumi.resources.Resou
 
         public Builder(AccessApprovalSettingsArgs defaults) {
             $ = new AccessApprovalSettingsArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(@Nullable Output<String> activeKeyVersion) {
+            $.activeKeyVersion = activeKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(String activeKeyVersion) {
+            return activeKeyVersion(Output.of(activeKeyVersion));
         }
 
         /**

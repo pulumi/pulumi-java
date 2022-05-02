@@ -111,6 +111,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.fileShares;
     }
     /**
+     * KMS key name used for data encryption.
+     * 
+     */
+    @Export(name="kmsKeyName", type=String.class, parameters={})
+    private Output</* @Nullable */ String> kmsKeyName;
+
+    /**
+     * @return KMS key name used for data encryption.
+     * 
+     */
+    public Output<Optional<String>> kmsKeyName() {
+        return Codegen.optional(this.kmsKeyName);
+    }
+    /**
      * Resource labels to represent user-provided metadata.
      * 
      */
@@ -188,7 +202,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
     }
     /**
      * The service tier of the instance.
-     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
      * 
      */
     @Export(name="tier", type=String.class, parameters={})
@@ -196,7 +210,7 @@ public class Instance extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The service tier of the instance.
-     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
      * 
      */
     public Output<String> tier() {

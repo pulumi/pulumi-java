@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
     /**
      * @return If true, requests to different hosts will be cached separately.
-     * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+     * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
     private final @Nullable Boolean excludeHost;
@@ -41,6 +41,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable Boolean includeProtocol;
     /**
+     * @return Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+     * Cookie names:
+     * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+     * - are case sensitive
+     * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+     *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     *   You may specify up to three cookie names.
+     * 
+     */
+    private final @Nullable List<String> includedCookieNames;
+    /**
      * @return Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
      * - Header names must be valid HTTP RFC 7230 header field values.
      * - Header field names are case insensitive
@@ -62,19 +73,21 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         @CustomType.Parameter("excludeQueryString") @Nullable Boolean excludeQueryString,
         @CustomType.Parameter("excludedQueryParameters") @Nullable List<String> excludedQueryParameters,
         @CustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @CustomType.Parameter("includedCookieNames") @Nullable List<String> includedCookieNames,
         @CustomType.Parameter("includedHeaderNames") @Nullable List<String> includedHeaderNames,
         @CustomType.Parameter("includedQueryParameters") @Nullable List<String> includedQueryParameters) {
         this.excludeHost = excludeHost;
         this.excludeQueryString = excludeQueryString;
         this.excludedQueryParameters = excludedQueryParameters;
         this.includeProtocol = includeProtocol;
+        this.includedCookieNames = includedCookieNames;
         this.includedHeaderNames = includedHeaderNames;
         this.includedQueryParameters = includedQueryParameters;
     }
 
     /**
      * @return If true, requests to different hosts will be cached separately.
-     * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
+     * Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
     public Optional<Boolean> excludeHost() {
@@ -106,6 +119,19 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     public Optional<Boolean> includeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
+    }
+    /**
+     * @return Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
+     * Cookie names:
+     * - must be valid RFC 6265 &#34;cookie-name&#34; tokens
+     * - are case sensitive
+     * - cannot start with &#34;Edge-Cache-&#34; (case insensitive)
+     *   Note that specifying several cookies, and/or cookies that have a large range of values (e.g., per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
+     *   You may specify up to three cookie names.
+     * 
+     */
+    public List<String> includedCookieNames() {
+        return this.includedCookieNames == null ? List.of() : this.includedCookieNames;
     }
     /**
      * @return Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
@@ -140,6 +166,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         private @Nullable Boolean excludeQueryString;
         private @Nullable List<String> excludedQueryParameters;
         private @Nullable Boolean includeProtocol;
+        private @Nullable List<String> includedCookieNames;
         private @Nullable List<String> includedHeaderNames;
         private @Nullable List<String> includedQueryParameters;
 
@@ -153,6 +180,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     	      this.excludeQueryString = defaults.excludeQueryString;
     	      this.excludedQueryParameters = defaults.excludedQueryParameters;
     	      this.includeProtocol = defaults.includeProtocol;
+    	      this.includedCookieNames = defaults.includedCookieNames;
     	      this.includedHeaderNames = defaults.includedHeaderNames;
     	      this.includedQueryParameters = defaults.includedQueryParameters;
         }
@@ -176,6 +204,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
             this.includeProtocol = includeProtocol;
             return this;
         }
+        public Builder includedCookieNames(@Nullable List<String> includedCookieNames) {
+            this.includedCookieNames = includedCookieNames;
+            return this;
+        }
+        public Builder includedCookieNames(String... includedCookieNames) {
+            return includedCookieNames(List.of(includedCookieNames));
+        }
         public Builder includedHeaderNames(@Nullable List<String> includedHeaderNames) {
             this.includedHeaderNames = includedHeaderNames;
             return this;
@@ -190,7 +225,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
         public Builder includedQueryParameters(String... includedQueryParameters) {
             return includedQueryParameters(List.of(includedQueryParameters));
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedHeaderNames, includedQueryParameters);
+            return new EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(excludeHost, excludeQueryString, excludedQueryParameters, includeProtocol, includedCookieNames, includedHeaderNames, includedQueryParameters);
         }
     }
 }

@@ -11,6 +11,7 @@ import com.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStep;
 import com.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigWindowsUpdate;
 import com.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigYum;
 import com.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigZypper;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,6 +31,11 @@ public final class PatchDeploymentPatchConfig {
      * 
      */
     private final @Nullable PatchDeploymentPatchConfigGoo goo;
+    /**
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
+     * 
+     */
+    private final @Nullable Boolean migInstancesAllowed;
     /**
      * @return The ExecStep to run after the patch update.
      * Structure is documented below.
@@ -71,6 +77,7 @@ public final class PatchDeploymentPatchConfig {
     private PatchDeploymentPatchConfig(
         @CustomType.Parameter("apt") @Nullable PatchDeploymentPatchConfigApt apt,
         @CustomType.Parameter("goo") @Nullable PatchDeploymentPatchConfigGoo goo,
+        @CustomType.Parameter("migInstancesAllowed") @Nullable Boolean migInstancesAllowed,
         @CustomType.Parameter("postStep") @Nullable PatchDeploymentPatchConfigPostStep postStep,
         @CustomType.Parameter("preStep") @Nullable PatchDeploymentPatchConfigPreStep preStep,
         @CustomType.Parameter("rebootConfig") @Nullable String rebootConfig,
@@ -79,6 +86,7 @@ public final class PatchDeploymentPatchConfig {
         @CustomType.Parameter("zypper") @Nullable PatchDeploymentPatchConfigZypper zypper) {
         this.apt = apt;
         this.goo = goo;
+        this.migInstancesAllowed = migInstancesAllowed;
         this.postStep = postStep;
         this.preStep = preStep;
         this.rebootConfig = rebootConfig;
@@ -102,6 +110,13 @@ public final class PatchDeploymentPatchConfig {
      */
     public Optional<PatchDeploymentPatchConfigGoo> goo() {
         return Optional.ofNullable(this.goo);
+    }
+    /**
+     * @return Allows the patch job to run on Managed instance groups (MIGs).
+     * 
+     */
+    public Optional<Boolean> migInstancesAllowed() {
+        return Optional.ofNullable(this.migInstancesAllowed);
     }
     /**
      * @return The ExecStep to run after the patch update.
@@ -163,6 +178,7 @@ public final class PatchDeploymentPatchConfig {
     public static final class Builder {
         private @Nullable PatchDeploymentPatchConfigApt apt;
         private @Nullable PatchDeploymentPatchConfigGoo goo;
+        private @Nullable Boolean migInstancesAllowed;
         private @Nullable PatchDeploymentPatchConfigPostStep postStep;
         private @Nullable PatchDeploymentPatchConfigPreStep preStep;
         private @Nullable String rebootConfig;
@@ -178,6 +194,7 @@ public final class PatchDeploymentPatchConfig {
     	      Objects.requireNonNull(defaults);
     	      this.apt = defaults.apt;
     	      this.goo = defaults.goo;
+    	      this.migInstancesAllowed = defaults.migInstancesAllowed;
     	      this.postStep = defaults.postStep;
     	      this.preStep = defaults.preStep;
     	      this.rebootConfig = defaults.rebootConfig;
@@ -192,6 +209,10 @@ public final class PatchDeploymentPatchConfig {
         }
         public Builder goo(@Nullable PatchDeploymentPatchConfigGoo goo) {
             this.goo = goo;
+            return this;
+        }
+        public Builder migInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
+            this.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
         public Builder postStep(@Nullable PatchDeploymentPatchConfigPostStep postStep) {
@@ -218,7 +239,7 @@ public final class PatchDeploymentPatchConfig {
             this.zypper = zypper;
             return this;
         }        public PatchDeploymentPatchConfig build() {
-            return new PatchDeploymentPatchConfig(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
+            return new PatchDeploymentPatchConfig(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }
     }
 }

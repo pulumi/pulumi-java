@@ -16,9 +16,19 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final IAMMemberArgs Empty = new IAMMemberArgs();
 
+    /**
+     * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     @Import(name="condition")
     private @Nullable Output<IAMMemberConditionArgs> condition;
 
+    /**
+     * @return An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<IAMMemberConditionArgs>> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -31,23 +41,39 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The numeric ID of the organization in which you want to manage the audit logging config.
+     * The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+     * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+     * will not be inferred from the provider.
      * 
      */
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
     /**
-     * @return The numeric ID of the organization in which you want to manage the audit logging config.
+     * @return The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+     * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+     * will not be inferred from the provider.
      * 
      */
     public Output<String> orgId() {
         return this.orgId;
     }
 
+    /**
+     * The role that should be applied. Only one
+     * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `organizations/{{org_id}}/roles/{{role_id}}`.
+     * 
+     */
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `organizations/{{org_id}}/roles/{{role_id}}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -79,11 +105,25 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable Output<IAMMemberConditionArgs> condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param condition An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(IAMMemberConditionArgs condition) {
             return condition(Output.of(condition));
         }
@@ -98,7 +138,9 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * @param orgId The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+         * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+         * will not be inferred from the provider.
          * 
          * @return builder
          * 
@@ -109,7 +151,9 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param orgId The numeric ID of the organization in which you want to manage the audit logging config.
+         * @param orgId The organization ID. If not specified for `gcp.organizations.IAMBinding`, `gcp.organizations.IAMMember`, or `gcp.organizations.IamAuditConfig`, uses the ID of the organization configured with the provider.
+         * Required for `gcp.organizations.IAMPolicy` - you must explicitly set the organization, and it
+         * will not be inferred from the provider.
          * 
          * @return builder
          * 
@@ -118,11 +162,27 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `organizations/{{org_id}}/roles/{{role_id}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.organizations.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `organizations/{{org_id}}/roles/{{role_id}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

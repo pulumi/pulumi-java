@@ -34,14 +34,14 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Required. SSH configuration for how to access the node pool machines.
+     * SSH configuration for how to access the node pool machines.
      * 
      */
     @Import(name="sshConfig", required=true)
     private Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
 
     /**
-     * @return Required. SSH configuration for how to access the node pool machines.
+     * @return SSH configuration for how to access the node pool machines.
      * 
      */
     public Output<AzureNodePoolConfigSshConfigArgs> sshConfig() {
@@ -127,7 +127,7 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sshConfig Required. SSH configuration for how to access the node pool machines.
+         * @param sshConfig SSH configuration for how to access the node pool machines.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sshConfig Required. SSH configuration for how to access the node pool machines.
+         * @param sshConfig SSH configuration for how to access the node pool machines.
          * 
          * @return builder
          * 

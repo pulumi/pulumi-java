@@ -61,6 +61,13 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.apigeeCustomEndpoint);
     }
 
+    @Import(name="apikeysCustomEndpoint")
+    private @Nullable Output<String> apikeysCustomEndpoint;
+
+    public Optional<Output<String>> apikeysCustomEndpoint() {
+        return Optional.ofNullable(this.apikeysCustomEndpoint);
+    }
+
     @Import(name="appEngineCustomEndpoint")
     private @Nullable Output<String> appEngineCustomEndpoint;
 
@@ -220,6 +227,13 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> cloudTasksCustomEndpoint() {
         return Optional.ofNullable(this.cloudTasksCustomEndpoint);
+    }
+
+    @Import(name="cloudfunctions2CustomEndpoint")
+    private @Nullable Output<String> cloudfunctions2CustomEndpoint;
+
+    public Optional<Output<String>> cloudfunctions2CustomEndpoint() {
+        return Optional.ofNullable(this.cloudfunctions2CustomEndpoint);
     }
 
     @Import(name="composerCustomEndpoint")
@@ -383,6 +397,13 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.firebaseCustomEndpoint);
     }
 
+    @Import(name="firebaserulesCustomEndpoint")
+    private @Nullable Output<String> firebaserulesCustomEndpoint;
+
+    public Optional<Output<String>> firebaserulesCustomEndpoint() {
+        return Optional.ofNullable(this.firebaserulesCustomEndpoint);
+    }
+
     @Import(name="firestoreCustomEndpoint")
     private @Nullable Output<String> firestoreCustomEndpoint;
 
@@ -423,6 +444,13 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> healthcareCustomEndpoint() {
         return Optional.ofNullable(this.healthcareCustomEndpoint);
+    }
+
+    @Import(name="iam2CustomEndpoint")
+    private @Nullable Output<String> iam2CustomEndpoint;
+
+    public Optional<Output<String>> iam2CustomEndpoint() {
+        return Optional.ofNullable(this.iam2CustomEndpoint);
     }
 
     @Import(name="iamBetaCustomEndpoint")
@@ -798,6 +826,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.activeDirectoryCustomEndpoint = $.activeDirectoryCustomEndpoint;
         this.apiGatewayCustomEndpoint = $.apiGatewayCustomEndpoint;
         this.apigeeCustomEndpoint = $.apigeeCustomEndpoint;
+        this.apikeysCustomEndpoint = $.apikeysCustomEndpoint;
         this.appEngineCustomEndpoint = $.appEngineCustomEndpoint;
         this.artifactRegistryCustomEndpoint = $.artifactRegistryCustomEndpoint;
         this.assuredWorkloadsCustomEndpoint = $.assuredWorkloadsCustomEndpoint;
@@ -821,6 +850,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.cloudRunCustomEndpoint = $.cloudRunCustomEndpoint;
         this.cloudSchedulerCustomEndpoint = $.cloudSchedulerCustomEndpoint;
         this.cloudTasksCustomEndpoint = $.cloudTasksCustomEndpoint;
+        this.cloudfunctions2CustomEndpoint = $.cloudfunctions2CustomEndpoint;
         this.composerCustomEndpoint = $.composerCustomEndpoint;
         this.computeCustomEndpoint = $.computeCustomEndpoint;
         this.containerAnalysisCustomEndpoint = $.containerAnalysisCustomEndpoint;
@@ -844,12 +874,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.eventarcCustomEndpoint = $.eventarcCustomEndpoint;
         this.filestoreCustomEndpoint = $.filestoreCustomEndpoint;
         this.firebaseCustomEndpoint = $.firebaseCustomEndpoint;
+        this.firebaserulesCustomEndpoint = $.firebaserulesCustomEndpoint;
         this.firestoreCustomEndpoint = $.firestoreCustomEndpoint;
         this.gameServicesCustomEndpoint = $.gameServicesCustomEndpoint;
         this.gkeHubCustomEndpoint = $.gkeHubCustomEndpoint;
         this.gkehubFeatureCustomEndpoint = $.gkehubFeatureCustomEndpoint;
         this.googlePartnerName = $.googlePartnerName;
         this.healthcareCustomEndpoint = $.healthcareCustomEndpoint;
+        this.iam2CustomEndpoint = $.iam2CustomEndpoint;
         this.iamBetaCustomEndpoint = $.iamBetaCustomEndpoint;
         this.iamCredentialsCustomEndpoint = $.iamCredentialsCustomEndpoint;
         this.iamCustomEndpoint = $.iamCustomEndpoint;
@@ -974,6 +1006,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder apigeeCustomEndpoint(String apigeeCustomEndpoint) {
             return apigeeCustomEndpoint(Output.of(apigeeCustomEndpoint));
+        }
+
+        public Builder apikeysCustomEndpoint(@Nullable Output<String> apikeysCustomEndpoint) {
+            $.apikeysCustomEndpoint = apikeysCustomEndpoint;
+            return this;
+        }
+
+        public Builder apikeysCustomEndpoint(String apikeysCustomEndpoint) {
+            return apikeysCustomEndpoint(Output.of(apikeysCustomEndpoint));
         }
 
         public Builder appEngineCustomEndpoint(@Nullable Output<String> appEngineCustomEndpoint) {
@@ -1183,6 +1224,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             return cloudTasksCustomEndpoint(Output.of(cloudTasksCustomEndpoint));
         }
 
+        public Builder cloudfunctions2CustomEndpoint(@Nullable Output<String> cloudfunctions2CustomEndpoint) {
+            $.cloudfunctions2CustomEndpoint = cloudfunctions2CustomEndpoint;
+            return this;
+        }
+
+        public Builder cloudfunctions2CustomEndpoint(String cloudfunctions2CustomEndpoint) {
+            return cloudfunctions2CustomEndpoint(Output.of(cloudfunctions2CustomEndpoint));
+        }
+
         public Builder composerCustomEndpoint(@Nullable Output<String> composerCustomEndpoint) {
             $.composerCustomEndpoint = composerCustomEndpoint;
             return this;
@@ -1390,6 +1440,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             return firebaseCustomEndpoint(Output.of(firebaseCustomEndpoint));
         }
 
+        public Builder firebaserulesCustomEndpoint(@Nullable Output<String> firebaserulesCustomEndpoint) {
+            $.firebaserulesCustomEndpoint = firebaserulesCustomEndpoint;
+            return this;
+        }
+
+        public Builder firebaserulesCustomEndpoint(String firebaserulesCustomEndpoint) {
+            return firebaserulesCustomEndpoint(Output.of(firebaserulesCustomEndpoint));
+        }
+
         public Builder firestoreCustomEndpoint(@Nullable Output<String> firestoreCustomEndpoint) {
             $.firestoreCustomEndpoint = firestoreCustomEndpoint;
             return this;
@@ -1442,6 +1501,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder healthcareCustomEndpoint(String healthcareCustomEndpoint) {
             return healthcareCustomEndpoint(Output.of(healthcareCustomEndpoint));
+        }
+
+        public Builder iam2CustomEndpoint(@Nullable Output<String> iam2CustomEndpoint) {
+            $.iam2CustomEndpoint = iam2CustomEndpoint;
+            return this;
+        }
+
+        public Builder iam2CustomEndpoint(String iam2CustomEndpoint) {
+            return iam2CustomEndpoint(Output.of(iam2CustomEndpoint));
         }
 
         public Builder iamBetaCustomEndpoint(@Nullable Output<String> iamBetaCustomEndpoint) {

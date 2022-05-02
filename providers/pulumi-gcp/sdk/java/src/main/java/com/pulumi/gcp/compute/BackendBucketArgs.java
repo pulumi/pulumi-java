@@ -83,6 +83,21 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The security policy associated with this backend bucket.
+     * 
+     */
+    @Import(name="edgeSecurityPolicy")
+    private @Nullable Output<String> edgeSecurityPolicy;
+
+    /**
+     * @return The security policy associated with this backend bucket.
+     * 
+     */
+    public Optional<Output<String>> edgeSecurityPolicy() {
+        return Optional.ofNullable(this.edgeSecurityPolicy);
+    }
+
+    /**
      * If true, enable Cloud CDN for this BackendBucket.
      * 
      */
@@ -148,6 +163,7 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
         this.cdnPolicy = $.cdnPolicy;
         this.customResponseHeaders = $.customResponseHeaders;
         this.description = $.description;
+        this.edgeSecurityPolicy = $.edgeSecurityPolicy;
         this.enableCdn = $.enableCdn;
         this.name = $.name;
         this.project = $.project;
@@ -267,6 +283,27 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param edgeSecurityPolicy The security policy associated with this backend bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder edgeSecurityPolicy(@Nullable Output<String> edgeSecurityPolicy) {
+            $.edgeSecurityPolicy = edgeSecurityPolicy;
+            return this;
+        }
+
+        /**
+         * @param edgeSecurityPolicy The security policy associated with this backend bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
+            return edgeSecurityPolicy(Output.of(edgeSecurityPolicy));
         }
 
         /**

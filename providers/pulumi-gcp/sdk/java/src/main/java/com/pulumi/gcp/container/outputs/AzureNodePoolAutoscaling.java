@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AzureNodePoolAutoscaling {
     /**
-     * @return Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+     * @return Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
      * 
      */
     private final Integer maxNodeCount;
     /**
-     * @return Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+     * @return Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     private final Integer minNodeCount;
@@ -29,14 +29,14 @@ public final class AzureNodePoolAutoscaling {
     }
 
     /**
-     * @return Required. Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
+     * @return Maximum number of nodes in the node pool. Must be &gt;= min_node_count.
      * 
      */
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
     /**
-     * @return Required. Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
+     * @return Minimum number of nodes in the node pool. Must be &gt;= 1 and &lt;= max_node_count.
      * 
      */
     public Integer minNodeCount() {

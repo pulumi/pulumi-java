@@ -17,12 +17,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Creates and manages service account keys, which allow the use of a service account outside of Google Cloud.
- * 
- * * [API documentation](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys)
- * * How-to Guides
- *     * [Official Documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)
- * 
  * ## Example Usage
  * 
  * ## Import
@@ -154,8 +148,11 @@ public class Key extends com.pulumi.resources.CustomResource {
     }
     /**
      * The Service account id of the Key. This can be a string in the format
-     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
-     * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. If the `{ACCOUNT}`-only syntax is used, either
+     * the **full** email address of the service account or its name can be specified as a value, in which case the project will
+     * automatically be inferred from the account. Otherwise, if the `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`
+     * syntax is used, the `{ACCOUNT}` specified can be the full email address of the service account or the service account&#39;s
+     * unique id. Substituting `-` as a wildcard for the `{PROJECT_ID}` will infer the project from the account.
      * 
      */
     @Export(name="serviceAccountId", type=String.class, parameters={})
@@ -163,8 +160,11 @@ public class Key extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The Service account id of the Key. This can be a string in the format
-     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`, where `{ACCOUNT}` is the email address or
-     * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
+     * `{ACCOUNT}` or `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. If the `{ACCOUNT}`-only syntax is used, either
+     * the **full** email address of the service account or its name can be specified as a value, in which case the project will
+     * automatically be inferred from the account. Otherwise, if the `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`
+     * syntax is used, the `{ACCOUNT}` specified can be the full email address of the service account or the service account&#39;s
+     * unique id. Substituting `-` as a wildcard for the `{PROJECT_ID}` will infer the project from the account.
      * 
      */
     public Output<String> serviceAccountId() {

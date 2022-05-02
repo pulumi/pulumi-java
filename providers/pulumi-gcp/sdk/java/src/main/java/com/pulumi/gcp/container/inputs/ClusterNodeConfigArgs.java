@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigEphemeralStorageConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigGcfsConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigGuestAcceleratorArgs;
+import com.pulumi.gcp.container.inputs.ClusterNodeConfigGvnicArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigKubeletConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigLinuxNodeConfigArgs;
 import com.pulumi.gcp.container.inputs.ClusterNodeConfigSandboxConfigArgs;
@@ -132,6 +133,29 @@ public final class ClusterNodeConfigArgs extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<List<ClusterNodeConfigGuestAcceleratorArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
+    }
+
+    /**
+     * Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    @Import(name="gvnic")
+    private @Nullable Output<ClusterNodeConfigGvnicArgs> gvnic;
+
+    /**
+     * @return Google Virtual NIC (gVNIC) is a virtual network interface.
+     * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+     * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+     * GKE node version 1.15.11-gke.15 or later
+     * Structure is documented below.
+     * 
+     */
+    public Optional<Output<ClusterNodeConfigGvnicArgs>> gvnic() {
+        return Optional.ofNullable(this.gvnic);
     }
 
     /**
@@ -477,6 +501,7 @@ public final class ClusterNodeConfigArgs extends com.pulumi.resources.ResourceAr
         this.ephemeralStorageConfig = $.ephemeralStorageConfig;
         this.gcfsConfig = $.gcfsConfig;
         this.guestAccelerators = $.guestAccelerators;
+        this.gvnic = $.gvnic;
         this.imageType = $.imageType;
         this.kubeletConfig = $.kubeletConfig;
         this.labels = $.labels;
@@ -666,6 +691,35 @@ public final class ClusterNodeConfigArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder guestAccelerators(ClusterNodeConfigGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
+        }
+
+        /**
+         * @param gvnic Google Virtual NIC (gVNIC) is a virtual network interface.
+         * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+         * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+         * GKE node version 1.15.11-gke.15 or later
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gvnic(@Nullable Output<ClusterNodeConfigGvnicArgs> gvnic) {
+            $.gvnic = gvnic;
+            return this;
+        }
+
+        /**
+         * @param gvnic Google Virtual NIC (gVNIC) is a virtual network interface.
+         * Installing the gVNIC driver allows for more efficient traffic transmission across the Google network infrastructure.
+         * gVNIC is an alternative to the virtIO-based ethernet driver. GKE nodes must use a Container-Optimized OS node image.
+         * GKE node version 1.15.11-gke.15 or later
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gvnic(ClusterNodeConfigGvnicArgs gvnic) {
+            return gvnic(Output.of(gvnic));
         }
 
         /**

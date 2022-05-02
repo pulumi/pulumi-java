@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.artifactregistry.RepositoryArgs;
 import com.pulumi.gcp.artifactregistry.inputs.RepositoryState;
+import com.pulumi.gcp.artifactregistry.outputs.RepositoryMavenConfig;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -162,6 +163,26 @@ public class Repository extends com.pulumi.resources.CustomResource {
      */
     public Output<String> location() {
         return this.location;
+    }
+    /**
+     * MavenRepositoryConfig is maven related repository details.
+     * Provides additional configuration details for repositories of the maven
+     * format type.
+     * Structure is documented below.
+     * 
+     */
+    @Export(name="mavenConfig", type=RepositoryMavenConfig.class, parameters={})
+    private Output</* @Nullable */ RepositoryMavenConfig> mavenConfig;
+
+    /**
+     * @return MavenRepositoryConfig is maven related repository details.
+     * Provides additional configuration details for repositories of the maven
+     * format type.
+     * Structure is documented below.
+     * 
+     */
+    public Output<Optional<RepositoryMavenConfig>> mavenConfig() {
+        return Codegen.optional(this.mavenConfig);
     }
     /**
      * The name of the repository, for example: &#34;projects/p1/locations/us-central1/repositories/repo1&#34;

@@ -84,6 +84,21 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * KMS key name used for data encryption.
+     * 
+     */
+    @Import(name="kmsKeyName")
+    private @Nullable Output<String> kmsKeyName;
+
+    /**
+     * @return KMS key name used for data encryption.
+     * 
+     */
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
+    }
+
+    /**
      * Resource labels to represent user-provided metadata.
      * 
      */
@@ -166,7 +181,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The service tier of the instance.
-     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
      * 
      */
     @Import(name="tier")
@@ -174,7 +189,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The service tier of the instance.
-     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+     * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
      * 
      */
     public Optional<Output<String>> tier() {
@@ -215,6 +230,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.etag = $.etag;
         this.fileShares = $.fileShares;
+        this.kmsKeyName = $.kmsKeyName;
         this.labels = $.labels;
         this.location = $.location;
         this.name = $.name;
@@ -328,6 +344,27 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder fileShares(InstanceFileSharesArgs fileShares) {
             return fileShares(Output.of(fileShares));
+        }
+
+        /**
+         * @param kmsKeyName KMS key name used for data encryption.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
+            $.kmsKeyName = kmsKeyName;
+            return this;
+        }
+
+        /**
+         * @param kmsKeyName KMS key name used for data encryption.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
 
         /**
@@ -455,7 +492,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param tier The service tier of the instance.
-         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
          * 
          * @return builder
          * 
@@ -467,7 +504,7 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param tier The service tier of the instance.
-         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
+         * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
          * 
          * @return builder
          * 
