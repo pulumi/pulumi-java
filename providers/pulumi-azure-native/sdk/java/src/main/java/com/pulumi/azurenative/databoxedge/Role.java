@@ -136,7 +136,9 @@ public class Role extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:Role").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:Role").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:Role").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Role").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:Role").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:Role").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:Role").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

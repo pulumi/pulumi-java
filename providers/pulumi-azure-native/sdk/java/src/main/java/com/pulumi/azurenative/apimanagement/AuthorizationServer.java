@@ -332,7 +332,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:AuthorizationServer").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:AuthorizationServer").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:AuthorizationServer").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:AuthorizationServer").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:AuthorizationServer").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:AuthorizationServer").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

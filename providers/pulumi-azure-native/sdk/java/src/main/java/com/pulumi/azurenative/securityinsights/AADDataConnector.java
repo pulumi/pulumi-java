@@ -163,7 +163,11 @@ public class AADDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:AADDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:AADDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:AADDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AADDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AADDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:AADDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:AADDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:AADDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:AADDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

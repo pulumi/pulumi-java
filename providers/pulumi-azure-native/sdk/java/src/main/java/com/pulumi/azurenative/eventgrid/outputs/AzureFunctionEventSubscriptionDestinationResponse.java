@@ -3,15 +3,24 @@
 
 package com.pulumi.azurenative.eventgrid.outputs;
 
+import com.pulumi.azurenative.eventgrid.outputs.DynamicDeliveryAttributeMappingResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StaticDeliveryAttributeMappingResponse;
+import com.pulumi.core.Either;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFunctionEventSubscriptionDestinationResponse {
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
     /**
      * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;AzureFunction&#39;.
@@ -36,16 +45,25 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
 
     @CustomType.Constructor
     private AzureFunctionEventSubscriptionDestinationResponse(
+        @CustomType.Parameter("deliveryAttributeMappings") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings,
         @CustomType.Parameter("endpointType") String endpointType,
         @CustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
         @CustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes,
         @CustomType.Parameter("resourceId") @Nullable String resourceId) {
+        this.deliveryAttributeMappings = deliveryAttributeMappings;
         this.endpointType = endpointType;
         this.maxEventsPerBatch = maxEventsPerBatch;
         this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
         this.resourceId = resourceId;
     }
 
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings() {
+        return this.deliveryAttributeMappings == null ? List.of() : this.deliveryAttributeMappings;
+    }
     /**
      * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;AzureFunction&#39;.
@@ -85,6 +103,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
     }
 
     public static final class Builder {
+        private @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
         private String endpointType;
         private @Nullable Integer maxEventsPerBatch;
         private @Nullable Integer preferredBatchSizeInKilobytes;
@@ -96,12 +115,20 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
 
         public Builder(AzureFunctionEventSubscriptionDestinationResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.deliveryAttributeMappings = defaults.deliveryAttributeMappings;
     	      this.endpointType = defaults.endpointType;
     	      this.maxEventsPerBatch = defaults.maxEventsPerBatch;
     	      this.preferredBatchSizeInKilobytes = defaults.preferredBatchSizeInKilobytes;
     	      this.resourceId = defaults.resourceId;
         }
 
+        public Builder deliveryAttributeMappings(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings) {
+            this.deliveryAttributeMappings = deliveryAttributeMappings;
+            return this;
+        }
+        public Builder deliveryAttributeMappings(Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>... deliveryAttributeMappings) {
+            return deliveryAttributeMappings(List.of(deliveryAttributeMappings));
+        }
         public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
@@ -118,7 +145,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }        public AzureFunctionEventSubscriptionDestinationResponse build() {
-            return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
+            return new AzureFunctionEventSubscriptionDestinationResponse(deliveryAttributeMappings, endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }
     }
 }

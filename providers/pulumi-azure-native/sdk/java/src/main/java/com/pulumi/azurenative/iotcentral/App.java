@@ -194,9 +194,9 @@ public class App extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:iotcentral/v20170701privatepreview:App").build()),
                 Output.of(Alias.builder().type("azure-native:iotcentral/v20180901:App").build()),
-                Output.of(Alias.builder().type("azure-native:iotcentral/v20210601:App").build())
+                Output.of(Alias.builder().type("azure-native:iotcentral/v20210601:App").build()),
+                Output.of(Alias.builder().type("azure-native:iotcentral/v20211101preview:App").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

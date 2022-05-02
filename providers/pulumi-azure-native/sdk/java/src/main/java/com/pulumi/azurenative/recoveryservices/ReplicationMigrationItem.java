@@ -133,7 +133,9 @@ public class ReplicationMigrationItem extends com.pulumi.resources.CustomResourc
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20210801:ReplicationMigrationItem").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211001:ReplicationMigrationItem").build()),
                 Output.of(Alias.builder().type("azure-native:recoveryservices/v20211101:ReplicationMigrationItem").build()),
-                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationMigrationItem").build())
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20211201:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220101:ReplicationMigrationItem").build()),
+                Output.of(Alias.builder().type("azure-native:recoveryservices/v20220201:ReplicationMigrationItem").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

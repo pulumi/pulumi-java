@@ -137,7 +137,8 @@ public class ServerTrustCertificate extends com.pulumi.resources.CustomResource 
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ServerTrustCertificate").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerTrustCertificate").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ServerTrustCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ServerTrustCertificate").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

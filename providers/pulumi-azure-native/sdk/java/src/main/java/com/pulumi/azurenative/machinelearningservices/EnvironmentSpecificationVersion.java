@@ -48,14 +48,14 @@ public class EnvironmentSpecificationVersion extends com.pulumi.resources.Custom
         return this.name;
     }
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Export(name="properties", type=EnvironmentSpecificationVersionResponse.class, parameters={})
     private Output<EnvironmentSpecificationVersionResponse> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<EnvironmentSpecificationVersionResponse> properties() {

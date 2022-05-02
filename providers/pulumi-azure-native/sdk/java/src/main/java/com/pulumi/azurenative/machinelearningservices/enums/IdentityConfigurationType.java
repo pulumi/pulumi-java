@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies the type of identity framework.
+     * [Required] Specifies the type of identity framework.
      * 
      */
     @EnumType

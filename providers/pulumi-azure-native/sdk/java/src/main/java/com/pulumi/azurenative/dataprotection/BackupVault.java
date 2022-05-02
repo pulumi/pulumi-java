@@ -187,7 +187,10 @@ public class BackupVault extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210601preview:BackupVault").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20210701:BackupVault").build()),
                 Output.of(Alias.builder().type("azure-native:dataprotection/v20211001preview:BackupVault").build()),
-                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupVault").build())
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20211201preview:BackupVault").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220101:BackupVault").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220201preview:BackupVault").build()),
+                Output.of(Alias.builder().type("azure-native:dataprotection/v20220301:BackupVault").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

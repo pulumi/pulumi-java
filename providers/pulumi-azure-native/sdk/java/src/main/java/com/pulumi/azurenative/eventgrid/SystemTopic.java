@@ -212,6 +212,7 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:SystemTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:SystemTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:SystemTopic").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:SystemTopic").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:SystemTopic").build())
             ))
             .build();

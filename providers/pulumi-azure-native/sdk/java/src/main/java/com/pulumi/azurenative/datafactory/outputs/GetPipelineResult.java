@@ -36,6 +36,7 @@ import com.pulumi.azurenative.datafactory.outputs.LookupActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import com.pulumi.azurenative.datafactory.outputs.PipelinePolicyResponse;
 import com.pulumi.azurenative.datafactory.outputs.PipelineResponseFolder;
+import com.pulumi.azurenative.datafactory.outputs.ScriptActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SetVariableActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SqlServerStoredProcedureActivityResponse;
 import com.pulumi.azurenative.datafactory.outputs.SwitchActivityResponse;

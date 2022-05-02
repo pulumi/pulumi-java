@@ -301,7 +301,8 @@ public class SourceControlConfiguration extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20210301:SourceControlConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20210501preview:SourceControlConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20211101preview:SourceControlConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:SourceControlConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220101preview:SourceControlConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:kubernetesconfiguration/v20220301:SourceControlConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

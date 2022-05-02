@@ -162,6 +162,20 @@ public class Standard extends com.pulumi.resources.CustomResource {
         return this.standardType;
     }
     /**
+     * List of all standard supported clouds.
+     * 
+     */
+    @Export(name="supportedClouds", type=List.class, parameters={String.class})
+    private Output</* @Nullable */ List<String>> supportedClouds;
+
+    /**
+     * @return List of all standard supported clouds.
+     * 
+     */
+    public Output<Optional<List<String>>> supportedClouds() {
+        return Codegen.optional(this.supportedClouds);
+    }
+    /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */

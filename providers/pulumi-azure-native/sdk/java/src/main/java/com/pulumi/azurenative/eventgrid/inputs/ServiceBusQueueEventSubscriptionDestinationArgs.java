@@ -3,10 +3,14 @@
 
 package com.pulumi.azurenative.eventgrid.inputs;
 
+import com.pulumi.azurenative.eventgrid.inputs.DynamicDeliveryAttributeMappingArgs;
+import com.pulumi.azurenative.eventgrid.inputs.StaticDeliveryAttributeMappingArgs;
+import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,6 +23,21 @@ import javax.annotation.Nullable;
 public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ServiceBusQueueEventSubscriptionDestinationArgs Empty = new ServiceBusQueueEventSubscriptionDestinationArgs();
+
+    /**
+     * Delivery attribute details.
+     * 
+     */
+    @Import(name="deliveryAttributeMappings")
+    private @Nullable Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>> deliveryAttributeMappings;
+
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    public Optional<Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>>> deliveryAttributeMappings() {
+        return Optional.ofNullable(this.deliveryAttributeMappings);
+    }
 
     /**
      * Type of the endpoint for the event subscription destination.
@@ -55,6 +74,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.p
     private ServiceBusQueueEventSubscriptionDestinationArgs() {}
 
     private ServiceBusQueueEventSubscriptionDestinationArgs(ServiceBusQueueEventSubscriptionDestinationArgs $) {
+        this.deliveryAttributeMappings = $.deliveryAttributeMappings;
         this.endpointType = $.endpointType;
         this.resourceId = $.resourceId;
     }
@@ -75,6 +95,37 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends com.p
 
         public Builder(ServiceBusQueueEventSubscriptionDestinationArgs defaults) {
             $ = new ServiceBusQueueEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(@Nullable Output<List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>>> deliveryAttributeMappings) {
+            $.deliveryAttributeMappings = deliveryAttributeMappings;
+            return this;
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(List<Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>> deliveryAttributeMappings) {
+            return deliveryAttributeMappings(Output.of(deliveryAttributeMappings));
+        }
+
+        /**
+         * @param deliveryAttributeMappings Delivery attribute details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder deliveryAttributeMappings(Either<DynamicDeliveryAttributeMappingArgs,StaticDeliveryAttributeMappingArgs>... deliveryAttributeMappings) {
+            return deliveryAttributeMappings(List.of(deliveryAttributeMappings));
         }
 
         /**

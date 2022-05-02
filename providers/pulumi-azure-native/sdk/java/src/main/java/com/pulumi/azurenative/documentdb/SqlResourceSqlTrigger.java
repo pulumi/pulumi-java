@@ -145,7 +145,9 @@ public class SqlResourceSqlTrigger extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlTrigger").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlTrigger").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlTrigger").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlTrigger").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlTrigger").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

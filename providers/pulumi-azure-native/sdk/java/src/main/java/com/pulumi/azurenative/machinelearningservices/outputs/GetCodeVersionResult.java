@@ -22,7 +22,7 @@ public final class GetCodeVersionResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final CodeVersionResponse properties;
@@ -66,7 +66,7 @@ public final class GetCodeVersionResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public CodeVersionResponse properties() {

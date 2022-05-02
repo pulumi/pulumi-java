@@ -286,7 +286,8 @@ public class PartnerTopicEventSubscription extends com.pulumi.resources.CustomRe
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:PartnerTopicEventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:PartnerTopicEventSubscription").build()),
-                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerTopicEventSubscription").build())
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:PartnerTopicEventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:PartnerTopicEventSubscription").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

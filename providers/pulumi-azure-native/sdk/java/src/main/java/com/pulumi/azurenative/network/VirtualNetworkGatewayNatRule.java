@@ -181,7 +181,8 @@ public class VirtualNetworkGatewayNatRule extends com.pulumi.resources.CustomRes
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualNetworkGatewayNatRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualNetworkGatewayNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkGatewayNatRule").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkGatewayNatRule").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualNetworkGatewayNatRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

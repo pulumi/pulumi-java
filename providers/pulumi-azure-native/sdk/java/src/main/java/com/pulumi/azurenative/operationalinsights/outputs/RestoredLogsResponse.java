@@ -20,7 +20,7 @@ public final class RestoredLogsResponse {
      * @return The table to restore data from.
      * 
      */
-    private final String sourceTable;
+    private final @Nullable String sourceTable;
     /**
      * @return The timestamp to start the restore from (UTC).
      * 
@@ -30,7 +30,7 @@ public final class RestoredLogsResponse {
     @CustomType.Constructor
     private RestoredLogsResponse(
         @CustomType.Parameter("endRestoreTime") @Nullable String endRestoreTime,
-        @CustomType.Parameter("sourceTable") String sourceTable,
+        @CustomType.Parameter("sourceTable") @Nullable String sourceTable,
         @CustomType.Parameter("startRestoreTime") @Nullable String startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
         this.sourceTable = sourceTable;
@@ -48,8 +48,8 @@ public final class RestoredLogsResponse {
      * @return The table to restore data from.
      * 
      */
-    public String sourceTable() {
-        return this.sourceTable;
+    public Optional<String> sourceTable() {
+        return Optional.ofNullable(this.sourceTable);
     }
     /**
      * @return The timestamp to start the restore from (UTC).
@@ -69,7 +69,7 @@ public final class RestoredLogsResponse {
 
     public static final class Builder {
         private @Nullable String endRestoreTime;
-        private String sourceTable;
+        private @Nullable String sourceTable;
         private @Nullable String startRestoreTime;
 
         public Builder() {
@@ -87,8 +87,8 @@ public final class RestoredLogsResponse {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
-        public Builder sourceTable(String sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+        public Builder sourceTable(@Nullable String sourceTable) {
+            this.sourceTable = sourceTable;
             return this;
         }
         public Builder startRestoreTime(@Nullable String startRestoreTime) {

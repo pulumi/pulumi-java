@@ -372,7 +372,8 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:SecurityRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:SecurityRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:SecurityRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:SecurityRule").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:SecurityRule").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:SecurityRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

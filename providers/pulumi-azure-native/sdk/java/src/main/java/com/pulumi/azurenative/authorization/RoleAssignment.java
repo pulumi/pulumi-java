@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 
 /**
  * Role Assignments
- * API Version: 2020-08-01-preview.
+ * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
  * 

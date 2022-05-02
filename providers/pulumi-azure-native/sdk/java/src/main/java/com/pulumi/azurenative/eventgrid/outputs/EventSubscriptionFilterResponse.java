@@ -4,16 +4,23 @@
 package com.pulumi.azurenative.eventgrid.outputs;
 
 import com.pulumi.azurenative.eventgrid.outputs.BoolEqualsAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.IsNotNullAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.IsNullOrUndefinedAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberGreaterThanAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberGreaterThanOrEqualsAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberInAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.NumberInRangeAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberLessThanAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberLessThanOrEqualsAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.NumberNotInAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.NumberNotInRangeAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StringBeginsWithAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StringContainsAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StringEndsWithAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StringInAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StringNotBeginsWithAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StringNotContainsAdvancedFilterResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StringNotEndsWithAdvancedFilterResponse;
 import com.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -31,6 +38,11 @@ public final class EventSubscriptionFilterResponse {
      * 
      */
     private final @Nullable List<Object> advancedFilters;
+    /**
+     * @return Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+     * 
+     */
+    private final @Nullable Boolean enableAdvancedFilteringOnArrays;
     /**
      * @return A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
      * 
@@ -59,11 +71,13 @@ public final class EventSubscriptionFilterResponse {
     @CustomType.Constructor
     private EventSubscriptionFilterResponse(
         @CustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @CustomType.Parameter("enableAdvancedFilteringOnArrays") @Nullable Boolean enableAdvancedFilteringOnArrays,
         @CustomType.Parameter("includedEventTypes") @Nullable List<String> includedEventTypes,
         @CustomType.Parameter("isSubjectCaseSensitive") @Nullable Boolean isSubjectCaseSensitive,
         @CustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
         @CustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith) {
         this.advancedFilters = advancedFilters;
+        this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
         this.includedEventTypes = includedEventTypes;
         this.isSubjectCaseSensitive = isSubjectCaseSensitive;
         this.subjectBeginsWith = subjectBeginsWith;
@@ -76,6 +90,13 @@ public final class EventSubscriptionFilterResponse {
      */
     public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
+    }
+    /**
+     * @return Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+     * 
+     */
+    public Optional<Boolean> enableAdvancedFilteringOnArrays() {
+        return Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
     }
     /**
      * @return A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
@@ -120,6 +141,7 @@ public final class EventSubscriptionFilterResponse {
 
     public static final class Builder {
         private @Nullable List<Object> advancedFilters;
+        private @Nullable Boolean enableAdvancedFilteringOnArrays;
         private @Nullable List<String> includedEventTypes;
         private @Nullable Boolean isSubjectCaseSensitive;
         private @Nullable String subjectBeginsWith;
@@ -132,6 +154,7 @@ public final class EventSubscriptionFilterResponse {
         public Builder(EventSubscriptionFilterResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.advancedFilters = defaults.advancedFilters;
+    	      this.enableAdvancedFilteringOnArrays = defaults.enableAdvancedFilteringOnArrays;
     	      this.includedEventTypes = defaults.includedEventTypes;
     	      this.isSubjectCaseSensitive = defaults.isSubjectCaseSensitive;
     	      this.subjectBeginsWith = defaults.subjectBeginsWith;
@@ -144,6 +167,10 @@ public final class EventSubscriptionFilterResponse {
         }
         public Builder advancedFilters(Object... advancedFilters) {
             return advancedFilters(List.of(advancedFilters));
+        }
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
+            this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
+            return this;
         }
         public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
             this.includedEventTypes = includedEventTypes;
@@ -164,7 +191,7 @@ public final class EventSubscriptionFilterResponse {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }        public EventSubscriptionFilterResponse build() {
-            return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
+            return new EventSubscriptionFilterResponse(advancedFilters, enableAdvancedFilteringOnArrays, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }
     }
 }

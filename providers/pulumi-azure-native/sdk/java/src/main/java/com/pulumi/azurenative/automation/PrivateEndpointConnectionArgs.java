@@ -8,6 +8,7 @@ import com.pulumi.azurenative.automation.inputs.PrivateLinkServiceConnectionStat
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -30,6 +31,21 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
+    }
+
+    /**
+     * Gets the groupIds.
+     * 
+     */
+    @Import(name="groupIds")
+    private @Nullable Output<List<String>> groupIds;
+
+    /**
+     * @return Gets the groupIds.
+     * 
+     */
+    public Optional<Output<List<String>>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -96,6 +112,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
 
     private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
         this.automationAccountName = $.automationAccountName;
+        this.groupIds = $.groupIds;
         this.privateEndpoint = $.privateEndpoint;
         this.privateEndpointConnectionName = $.privateEndpointConnectionName;
         this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
@@ -139,6 +156,37 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
          */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
+        }
+
+        /**
+         * @param groupIds Gets the groupIds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupIds(@Nullable Output<List<String>> groupIds) {
+            $.groupIds = groupIds;
+            return this;
+        }
+
+        /**
+         * @param groupIds Gets the groupIds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupIds(List<String> groupIds) {
+            return groupIds(Output.of(groupIds));
+        }
+
+        /**
+         * @param groupIds Gets the groupIds.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder groupIds(String... groupIds) {
+            return groupIds(List.of(groupIds));
         }
 
         /**

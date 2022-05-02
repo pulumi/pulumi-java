@@ -222,7 +222,9 @@ public class IoTAddon extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:IoTAddon").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:IoTAddon").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:IoTAddon").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:IoTAddon").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:IoTAddon").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:IoTAddon").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:IoTAddon").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

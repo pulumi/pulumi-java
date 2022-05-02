@@ -163,7 +163,11 @@ public class AATPDataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:AATPDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:AATPDataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:AATPDataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AATPDataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:AATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:AATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:AATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:AATPDataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:AATPDataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

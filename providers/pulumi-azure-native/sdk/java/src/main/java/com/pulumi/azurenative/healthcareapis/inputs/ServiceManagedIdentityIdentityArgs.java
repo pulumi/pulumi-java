@@ -3,11 +3,13 @@
 
 package com.pulumi.azurenative.healthcareapis.inputs;
 
-import com.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
+import com.pulumi.azurenative.healthcareapis.enums.ServiceManagedIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Object;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,21 +27,37 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
      */
-    @Import(name="type")
-    private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
+    @Import(name="type", required=true)
+    private Output<Either<String,ServiceManagedIdentityType>> type;
 
     /**
      * @return Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
      */
-    public Optional<Output<Either<String,ManagedServiceIdentityType>>> type() {
-        return Optional.ofNullable(this.type);
+    public Output<Either<String,ServiceManagedIdentityType>> type() {
+        return this.type;
+    }
+
+    /**
+     * The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * 
+     */
+    @Import(name="userAssignedIdentities")
+    private @Nullable Output<Map<String,Object>> userAssignedIdentities;
+
+    /**
+     * @return The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     * 
+     */
+    public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
     private ServiceManagedIdentityIdentityArgs() {}
 
     private ServiceManagedIdentityIdentityArgs(ServiceManagedIdentityIdentityArgs $) {
         this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
@@ -66,7 +84,7 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
+        public Builder type(Output<Either<String,ServiceManagedIdentityType>> type) {
             $.type = type;
             return this;
         }
@@ -77,7 +95,7 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder type(Either<String,ManagedServiceIdentityType> type) {
+        public Builder type(Either<String,ServiceManagedIdentityType> type) {
             return type(Output.of(type));
         }
 
@@ -97,11 +115,33 @@ public final class ServiceManagedIdentityIdentityArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder type(ManagedServiceIdentityType type) {
+        public Builder type(ServiceManagedIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
+            $.userAssignedIdentities = userAssignedIdentities;
+            return this;
+        }
+
+        /**
+         * @param userAssignedIdentities The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
+            return userAssignedIdentities(Output.of(userAssignedIdentities));
+        }
+
         public ServiceManagedIdentityIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;
         }
     }

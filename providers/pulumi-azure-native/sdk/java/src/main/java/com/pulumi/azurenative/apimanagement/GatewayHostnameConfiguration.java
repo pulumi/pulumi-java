@@ -185,7 +185,8 @@ public class GatewayHostnameConfiguration extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:GatewayHostnameConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:GatewayHostnameConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:GatewayHostnameConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayHostnameConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:GatewayHostnameConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:GatewayHostnameConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

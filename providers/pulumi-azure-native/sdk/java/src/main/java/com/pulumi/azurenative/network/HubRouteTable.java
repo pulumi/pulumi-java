@@ -187,7 +187,8 @@ public class HubRouteTable extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:HubRouteTable").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:HubRouteTable").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:HubRouteTable").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:HubRouteTable").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:HubRouteTable").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:HubRouteTable").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

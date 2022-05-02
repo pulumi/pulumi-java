@@ -33,14 +33,14 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     @Import(name="emails")
     private @Nullable Output<String> emails;
 
     /**
-     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     * @return List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
      * 
      */
     public Optional<Output<String>> emails() {
@@ -48,14 +48,14 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     @Import(name="notificationsByRole")
     private @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     public Optional<Output<SecurityContactPropertiesNotificationsByRoleArgs>> notificationsByRole() {
@@ -142,7 +142,7 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param emails List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+         * @param emails List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param emails List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+         * @param emails List of email addresses which will get notifications from Microsoft Defender for Cloud by the configurations defined in this security contact.
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param notificationsByRole Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param notificationsByRole Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class SecurityContactArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param notificationsByRole Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param notificationsByRole Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 

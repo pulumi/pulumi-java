@@ -186,7 +186,8 @@ public class SqlManagedInstance extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210601preview:SqlManagedInstance").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:SqlManagedInstance").build()),
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210801:SqlManagedInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:SqlManagedInstance").build())
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20211101:SqlManagedInstance").build()),
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20220301preview:SqlManagedInstance").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

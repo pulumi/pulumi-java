@@ -216,7 +216,8 @@ public class FailoverGroup extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:FailoverGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:FailoverGroup").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:FailoverGroup").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:FailoverGroup").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:FailoverGroup").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:FailoverGroup").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

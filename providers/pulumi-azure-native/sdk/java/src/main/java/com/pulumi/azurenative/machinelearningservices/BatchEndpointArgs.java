@@ -78,14 +78,14 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Additional attributes of the entity.
+     * [Required] Additional attributes of the entity.
      * 
      */
     @Import(name="properties", required=true)
     private Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchEndpointArgs> properties;
 
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public Output<com.pulumi.azurenative.machinelearningservices.inputs.BatchEndpointArgs> properties() {
@@ -253,7 +253,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 
@@ -264,7 +264,7 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param properties Additional attributes of the entity.
+         * @param properties [Required] Additional attributes of the entity.
          * 
          * @return builder
          * 

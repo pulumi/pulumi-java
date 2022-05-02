@@ -139,7 +139,11 @@ public class SentinelOnboardingState extends com.pulumi.resources.CustomResource
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:SentinelOnboardingState").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:SentinelOnboardingState").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:SentinelOnboardingState").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:SentinelOnboardingState").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:SentinelOnboardingState").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:SentinelOnboardingState").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:SentinelOnboardingState").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

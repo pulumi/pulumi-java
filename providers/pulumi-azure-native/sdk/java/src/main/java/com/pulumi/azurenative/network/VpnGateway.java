@@ -280,7 +280,8 @@ public class VpnGateway extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VpnGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VpnGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VpnGateway").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VpnGateway").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VpnGateway").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

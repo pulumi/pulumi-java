@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * Virtual Router Peering resource.
- * API Version: 2020-08-01.
+ * API Version: 2021-08-01.
  * 
  * ## Example Usage
  * 
@@ -165,7 +165,8 @@ public class VirtualRouterPeering extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualRouterPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualRouterPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualRouterPeering").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualRouterPeering").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualRouterPeering").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualRouterPeering").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

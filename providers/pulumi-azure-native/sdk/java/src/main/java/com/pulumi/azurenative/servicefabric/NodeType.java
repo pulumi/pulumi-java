@@ -329,7 +329,9 @@ public class NodeType extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210501:NodeType").build()),
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210701preview:NodeType").build()),
                 Output.of(Alias.builder().type("azure-native:servicefabric/v20210901privatepreview:NodeType").build()),
-                Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:NodeType").build())
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20211101preview:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20220101:NodeType").build()),
+                Output.of(Alias.builder().type("azure-native:servicefabric/v20220201preview:NodeType").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -287,6 +287,7 @@ public class SystemTopicEventSubscription extends com.pulumi.resources.CustomRes
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200401preview:SystemTopicEventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:SystemTopicEventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:SystemTopicEventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:SystemTopicEventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:SystemTopicEventSubscription").build())
             ))
             .build();

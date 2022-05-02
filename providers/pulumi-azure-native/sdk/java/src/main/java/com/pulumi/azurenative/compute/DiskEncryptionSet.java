@@ -231,7 +231,8 @@ public class DiskEncryptionSet extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:DiskEncryptionSet").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20201201:DiskEncryptionSet").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20210401:DiskEncryptionSet").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskEncryptionSet").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:DiskEncryptionSet").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211201:DiskEncryptionSet").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

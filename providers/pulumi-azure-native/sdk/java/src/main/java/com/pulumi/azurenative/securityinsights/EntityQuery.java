@@ -142,7 +142,10 @@ public class EntityQuery extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:EntityQuery").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:EntityQuery").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:EntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:EntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:EntityQuery").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:EntityQuery").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

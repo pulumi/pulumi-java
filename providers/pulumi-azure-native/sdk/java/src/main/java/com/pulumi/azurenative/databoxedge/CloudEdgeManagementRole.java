@@ -184,7 +184,9 @@ public class CloudEdgeManagementRole extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201:CloudEdgeManagementRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210201preview:CloudEdgeManagementRole").build()),
                 Output.of(Alias.builder().type("azure-native:databoxedge/v20210601:CloudEdgeManagementRole").build()),
-                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:CloudEdgeManagementRole").build())
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20210601preview:CloudEdgeManagementRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220301:CloudEdgeManagementRole").build()),
+                Output.of(Alias.builder().type("azure-native:databoxedge/v20220401preview:CloudEdgeManagementRole").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

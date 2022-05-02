@@ -158,7 +158,8 @@ public class NetworkInterfaceTapConfiguration extends com.pulumi.resources.Custo
                 Output.of(Alias.builder().type("azure-native:network/v20201101:NetworkInterfaceTapConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:NetworkInterfaceTapConfiguration").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:NetworkInterfaceTapConfiguration").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkInterfaceTapConfiguration").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:NetworkInterfaceTapConfiguration").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:NetworkInterfaceTapConfiguration").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

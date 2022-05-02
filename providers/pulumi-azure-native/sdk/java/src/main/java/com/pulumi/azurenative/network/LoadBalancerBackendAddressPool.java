@@ -217,7 +217,8 @@ public class LoadBalancerBackendAddressPool extends com.pulumi.resources.CustomR
                 Output.of(Alias.builder().type("azure-native:network/v20201101:LoadBalancerBackendAddressPool").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:LoadBalancerBackendAddressPool").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:LoadBalancerBackendAddressPool").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:LoadBalancerBackendAddressPool").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:LoadBalancerBackendAddressPool").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:LoadBalancerBackendAddressPool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

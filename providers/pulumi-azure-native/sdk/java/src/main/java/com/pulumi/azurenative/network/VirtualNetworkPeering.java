@@ -301,7 +301,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:VirtualNetworkPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:VirtualNetworkPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:VirtualNetworkPeering").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkPeering").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:VirtualNetworkPeering").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:VirtualNetworkPeering").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -22,7 +22,7 @@ public final class GetModelContainerResult {
      */
     private final String name;
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     private final ModelContainerResponse properties;
@@ -66,7 +66,7 @@ public final class GetModelContainerResult {
         return this.name;
     }
     /**
-     * @return Additional attributes of the entity.
+     * @return [Required] Additional attributes of the entity.
      * 
      */
     public ModelContainerResponse properties() {

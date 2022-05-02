@@ -19,14 +19,14 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
     public static final IdAssetReferenceArgs Empty = new IdAssetReferenceArgs();
 
     /**
-     * ARM resource ID of the asset.
+     * [Required] ARM resource ID of the asset.
      * 
      */
     @Import(name="assetId", required=true)
     private Output<String> assetId;
 
     /**
-     * @return ARM resource ID of the asset.
+     * @return [Required] ARM resource ID of the asset.
      * 
      */
     public Output<String> assetId() {
@@ -76,7 +76,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param assetId ARM resource ID of the asset.
+         * @param assetId [Required] ARM resource ID of the asset.
          * 
          * @return builder
          * 
@@ -87,7 +87,7 @@ public final class IdAssetReferenceArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param assetId ARM resource ID of the asset.
+         * @param assetId [Required] ARM resource ID of the asset.
          * 
          * @return builder
          * 

@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:sql:ManagedDatabase testdb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb1 
+ * $ pulumi import azure-native:sql:ManagedDatabase testdb2 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb2 
  * ```
  * 
  */
@@ -229,7 +229,8 @@ public class ManagedDatabase extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ManagedDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ManagedDatabase").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ManagedDatabase").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedDatabase").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ManagedDatabase").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ManagedDatabase").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

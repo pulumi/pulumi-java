@@ -214,7 +214,8 @@ public class PeeringService extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:peering/v20200401:PeeringService").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20201001:PeeringService").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20210101:PeeringService").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:PeeringService").build())
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:PeeringService").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20220101:PeeringService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

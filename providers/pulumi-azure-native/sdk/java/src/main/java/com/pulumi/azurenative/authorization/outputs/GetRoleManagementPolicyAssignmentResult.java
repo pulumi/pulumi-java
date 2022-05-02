@@ -4,14 +4,26 @@
 package com.pulumi.azurenative.authorization.outputs;
 
 import com.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyApprovalRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyAuthenticationContextRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyEnablementRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyExpirationRuleResponse;
+import com.pulumi.azurenative.authorization.outputs.RoleManagementPolicyNotificationRuleResponse;
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Object;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRoleManagementPolicyAssignmentResult {
+    /**
+     * @return The readonly computed rule applied to the policy.
+     * 
+     */
+    private final List<Object> effectiveRules;
     /**
      * @return The role management policy Id.
      * 
@@ -50,6 +62,7 @@ public final class GetRoleManagementPolicyAssignmentResult {
 
     @CustomType.Constructor
     private GetRoleManagementPolicyAssignmentResult(
+        @CustomType.Parameter("effectiveRules") List<Object> effectiveRules,
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("policyAssignmentProperties") PolicyAssignmentPropertiesResponse policyAssignmentProperties,
@@ -57,6 +70,7 @@ public final class GetRoleManagementPolicyAssignmentResult {
         @CustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
         @CustomType.Parameter("scope") @Nullable String scope,
         @CustomType.Parameter("type") String type) {
+        this.effectiveRules = effectiveRules;
         this.id = id;
         this.name = name;
         this.policyAssignmentProperties = policyAssignmentProperties;
@@ -66,6 +80,13 @@ public final class GetRoleManagementPolicyAssignmentResult {
         this.type = type;
     }
 
+    /**
+     * @return The readonly computed rule applied to the policy.
+     * 
+     */
+    public List<Object> effectiveRules() {
+        return this.effectiveRules;
+    }
     /**
      * @return The role management policy Id.
      * 
@@ -125,6 +146,7 @@ public final class GetRoleManagementPolicyAssignmentResult {
     }
 
     public static final class Builder {
+        private List<Object> effectiveRules;
         private String id;
         private String name;
         private PolicyAssignmentPropertiesResponse policyAssignmentProperties;
@@ -139,6 +161,7 @@ public final class GetRoleManagementPolicyAssignmentResult {
 
         public Builder(GetRoleManagementPolicyAssignmentResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.effectiveRules = defaults.effectiveRules;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.policyAssignmentProperties = defaults.policyAssignmentProperties;
@@ -148,6 +171,13 @@ public final class GetRoleManagementPolicyAssignmentResult {
     	      this.type = defaults.type;
         }
 
+        public Builder effectiveRules(List<Object> effectiveRules) {
+            this.effectiveRules = Objects.requireNonNull(effectiveRules);
+            return this;
+        }
+        public Builder effectiveRules(Object... effectiveRules) {
+            return effectiveRules(List.of(effectiveRules));
+        }
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
@@ -176,7 +206,7 @@ public final class GetRoleManagementPolicyAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetRoleManagementPolicyAssignmentResult build() {
-            return new GetRoleManagementPolicyAssignmentResult(id, name, policyAssignmentProperties, policyId, roleDefinitionId, scope, type);
+            return new GetRoleManagementPolicyAssignmentResult(effectiveRules, id, name, policyAssignmentProperties, policyId, roleDefinitionId, scope, type);
         }
     }
 }

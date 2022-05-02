@@ -13,14 +13,14 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
     public static final GetResourceManagementPrivateLinkArgs Empty = new GetResourceManagementPrivateLinkArgs();
 
     /**
-     * The name of the resource group the template will be deployed to. The name is case insensitive.
+     * The name of the resource group. The name is case insensitive.
      * 
      */
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
     /**
-     * @return The name of the resource group the template will be deployed to. The name is case insensitive.
+     * @return The name of the resource group. The name is case insensitive.
      * 
      */
     public String resourceGroupName() {
@@ -68,7 +68,7 @@ public final class GetResourceManagementPrivateLinkArgs extends com.pulumi.resou
         }
 
         /**
-         * @param resourceGroupName The name of the resource group the template will be deployed to. The name is case insensitive.
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
          * 
          * @return builder
          * 

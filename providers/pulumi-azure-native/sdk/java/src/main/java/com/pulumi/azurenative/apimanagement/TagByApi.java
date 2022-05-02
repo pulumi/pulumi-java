@@ -117,7 +117,8 @@ public class TagByApi extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:TagByApi").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:TagByApi").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:TagByApi").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:TagByApi").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:TagByApi").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:TagByApi").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

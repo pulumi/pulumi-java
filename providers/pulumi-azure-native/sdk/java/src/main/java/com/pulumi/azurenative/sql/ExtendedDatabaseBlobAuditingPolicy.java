@@ -362,7 +362,8 @@ public class ExtendedDatabaseBlobAuditingPolicy extends com.pulumi.resources.Cus
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:ExtendedDatabaseBlobAuditingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:ExtendedDatabaseBlobAuditingPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:ExtendedDatabaseBlobAuditingPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ExtendedDatabaseBlobAuditingPolicy").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:ExtendedDatabaseBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:ExtendedDatabaseBlobAuditingPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

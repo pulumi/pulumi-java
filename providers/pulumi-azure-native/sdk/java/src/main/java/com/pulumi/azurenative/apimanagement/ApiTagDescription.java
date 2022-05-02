@@ -174,7 +174,8 @@ public class ApiTagDescription extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiTagDescription").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiTagDescription").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiTagDescription").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiTagDescription").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiTagDescription").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiTagDescription").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -17,7 +17,7 @@ public final class CodeConfigurationResponse {
      */
     private final @Nullable String codeId;
     /**
-     * @return The script to execute on startup. eg. &#34;score.py&#34;
+     * @return [Required] The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     private final String scoringScript;
@@ -38,7 +38,7 @@ public final class CodeConfigurationResponse {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * @return The script to execute on startup. eg. &#34;score.py&#34;
+     * @return [Required] The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     public String scoringScript() {

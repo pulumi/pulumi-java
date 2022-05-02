@@ -315,7 +315,8 @@ public class PrivateLinkService extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PrivateLinkService").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PrivateLinkService").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PrivateLinkService").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateLinkService").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateLinkService").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PrivateLinkService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

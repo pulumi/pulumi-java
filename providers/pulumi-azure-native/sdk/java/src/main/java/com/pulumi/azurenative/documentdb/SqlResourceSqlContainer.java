@@ -157,7 +157,9 @@ public class SqlResourceSqlContainer extends com.pulumi.resources.CustomResource
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:SqlResourceSqlContainer").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:SqlResourceSqlContainer").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:SqlResourceSqlContainer").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlContainer").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:SqlResourceSqlContainer").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

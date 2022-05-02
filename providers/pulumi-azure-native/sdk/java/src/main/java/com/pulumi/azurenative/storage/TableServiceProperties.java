@@ -115,7 +115,8 @@ public class TableServiceProperties extends com.pulumi.resources.CustomResource 
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:TableServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:TableServiceProperties").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:TableServiceProperties").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:TableServiceProperties").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:TableServiceProperties").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:TableServiceProperties").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

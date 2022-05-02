@@ -269,7 +269,8 @@ public class InboundNatRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:InboundNatRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:InboundNatRule").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:InboundNatRule").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:InboundNatRule").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:InboundNatRule").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:InboundNatRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -254,7 +254,8 @@ public class StreamingLocator extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180601preview:StreamingLocator").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20180701:StreamingLocator").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:StreamingLocator").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:StreamingLocator").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:StreamingLocator").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:StreamingLocator").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

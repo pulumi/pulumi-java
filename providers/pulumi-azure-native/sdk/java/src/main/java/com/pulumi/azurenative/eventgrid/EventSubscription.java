@@ -259,6 +259,7 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:EventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:EventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:EventSubscription").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:EventSubscription").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:EventSubscription").build())
             ))
             .build();

@@ -9,6 +9,7 @@ import com.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsArgs;
 import com.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -269,6 +270,8 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
         }
 
         public GatewayPropertiesArgs build() {
+            $.httpsOnly = Codegen.booleanProp("httpsOnly").output().arg($.httpsOnly).def(false).getNullable();
+            $.public_ = Codegen.booleanProp("public").output().arg($.public_).def(false).getNullable();
             return $;
         }
     }

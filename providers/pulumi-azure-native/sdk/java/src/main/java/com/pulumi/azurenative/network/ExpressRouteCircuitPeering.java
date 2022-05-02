@@ -435,7 +435,8 @@ public class ExpressRouteCircuitPeering extends com.pulumi.resources.CustomResou
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRouteCircuitPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRouteCircuitPeering").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRouteCircuitPeering").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitPeering").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitPeering").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ExpressRouteCircuitPeering").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

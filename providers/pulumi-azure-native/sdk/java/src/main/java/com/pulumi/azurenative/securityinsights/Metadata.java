@@ -297,7 +297,10 @@ public class Metadata extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:Metadata").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Metadata").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Metadata").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Metadata").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Metadata").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Metadata").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

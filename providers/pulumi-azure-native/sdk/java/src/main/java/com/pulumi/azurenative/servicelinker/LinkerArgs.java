@@ -5,10 +5,12 @@ package com.pulumi.azurenative.servicelinker;
 
 import com.pulumi.azurenative.servicelinker.enums.ClientType;
 import com.pulumi.azurenative.servicelinker.inputs.SecretAuthInfoArgs;
+import com.pulumi.azurenative.servicelinker.inputs.SecretStoreArgs;
 import com.pulumi.azurenative.servicelinker.inputs.ServicePrincipalCertificateAuthInfoArgs;
 import com.pulumi.azurenative.servicelinker.inputs.ServicePrincipalSecretAuthInfoArgs;
 import com.pulumi.azurenative.servicelinker.inputs.SystemAssignedIdentityAuthInfoArgs;
 import com.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoArgs;
+import com.pulumi.azurenative.servicelinker.inputs.VNetSolutionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -84,6 +86,21 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * An option to store secret value in secure place
+     * 
+     */
+    @Import(name="secretStore")
+    private @Nullable Output<SecretStoreArgs> secretStore;
+
+    /**
+     * @return An option to store secret value in secure place
+     * 
+     */
+    public Optional<Output<SecretStoreArgs>> secretStore() {
+        return Optional.ofNullable(this.secretStore);
+    }
+
+    /**
      * The resource Id of target service.
      * 
      */
@@ -98,6 +115,21 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.targetId);
     }
 
+    /**
+     * The VNet solution.
+     * 
+     */
+    @Import(name="vNetSolution")
+    private @Nullable Output<VNetSolutionArgs> vNetSolution;
+
+    /**
+     * @return The VNet solution.
+     * 
+     */
+    public Optional<Output<VNetSolutionArgs>> vNetSolution() {
+        return Optional.ofNullable(this.vNetSolution);
+    }
+
     private LinkerArgs() {}
 
     private LinkerArgs(LinkerArgs $) {
@@ -105,7 +137,9 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
         this.clientType = $.clientType;
         this.linkerName = $.linkerName;
         this.resourceUri = $.resourceUri;
+        this.secretStore = $.secretStore;
         this.targetId = $.targetId;
+        this.vNetSolution = $.vNetSolution;
     }
 
     public static Builder builder() {
@@ -231,6 +265,27 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param secretStore An option to store secret value in secure place
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretStore(@Nullable Output<SecretStoreArgs> secretStore) {
+            $.secretStore = secretStore;
+            return this;
+        }
+
+        /**
+         * @param secretStore An option to store secret value in secure place
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secretStore(SecretStoreArgs secretStore) {
+            return secretStore(Output.of(secretStore));
+        }
+
+        /**
          * @param targetId The resource Id of target service.
          * 
          * @return builder
@@ -249,6 +304,27 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder targetId(String targetId) {
             return targetId(Output.of(targetId));
+        }
+
+        /**
+         * @param vNetSolution The VNet solution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vNetSolution(@Nullable Output<VNetSolutionArgs> vNetSolution) {
+            $.vNetSolution = vNetSolution;
+            return this;
+        }
+
+        /**
+         * @param vNetSolution The VNet solution.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vNetSolution(VNetSolutionArgs vNetSolution) {
+            return vNetSolution(Output.of(vNetSolution));
         }
 
         public LinkerArgs build() {

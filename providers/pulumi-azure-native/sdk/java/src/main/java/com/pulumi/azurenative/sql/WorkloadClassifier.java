@@ -184,7 +184,8 @@ public class WorkloadClassifier extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:WorkloadClassifier").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:WorkloadClassifier").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:WorkloadClassifier").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:WorkloadClassifier").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:WorkloadClassifier").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:WorkloadClassifier").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

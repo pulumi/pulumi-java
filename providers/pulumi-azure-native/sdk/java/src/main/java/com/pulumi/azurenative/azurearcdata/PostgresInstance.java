@@ -184,7 +184,8 @@ public class PostgresInstance extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:azurearcdata/v20210601preview:PostgresInstance").build()),
-                Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:PostgresInstance").build())
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20210701preview:PostgresInstance").build()),
+                Output.of(Alias.builder().type("azure-native:azurearcdata/v20220301preview:PostgresInstance").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

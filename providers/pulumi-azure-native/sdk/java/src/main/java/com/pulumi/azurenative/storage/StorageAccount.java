@@ -619,7 +619,8 @@ public class StorageAccount extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storage/v20210201:StorageAccount").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210401:StorageAccount").build()),
                 Output.of(Alias.builder().type("azure-native:storage/v20210601:StorageAccount").build()),
-                Output.of(Alias.builder().type("azure-native:storage/v20210801:StorageAccount").build())
+                Output.of(Alias.builder().type("azure-native:storage/v20210801:StorageAccount").build()),
+                Output.of(Alias.builder().type("azure-native:storage/v20210901:StorageAccount").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -232,7 +232,8 @@ public class StorageTarget extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:storagecache/v20201001:StorageTarget").build()),
                 Output.of(Alias.builder().type("azure-native:storagecache/v20210301:StorageTarget").build()),
                 Output.of(Alias.builder().type("azure-native:storagecache/v20210501:StorageTarget").build()),
-                Output.of(Alias.builder().type("azure-native:storagecache/v20210901:StorageTarget").build())
+                Output.of(Alias.builder().type("azure-native:storagecache/v20210901:StorageTarget").build()),
+                Output.of(Alias.builder().type("azure-native:storagecache/v20220101:StorageTarget").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

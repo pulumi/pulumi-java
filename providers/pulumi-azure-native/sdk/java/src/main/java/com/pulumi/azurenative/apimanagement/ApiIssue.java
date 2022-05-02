@@ -188,7 +188,8 @@ public class ApiIssue extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiIssue").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiIssue").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiIssue").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiIssue").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiIssue").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiIssue").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

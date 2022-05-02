@@ -7,6 +7,7 @@ import com.pulumi.azurenative.Utilities;
 import com.pulumi.azurenative.healthcareapis.PrivateEndpointConnectionArgs;
 import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointResponse;
 import com.pulumi.azurenative.healthcareapis.outputs.PrivateLinkServiceConnectionStateResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.Alias;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * The Private Endpoint Connection resource.
- * API Version: 2020-03-30.
+ * API Version: 2021-11-01.
  * 
  * ## Example Usage
  * 
@@ -91,6 +92,20 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
         return this.provisioningState;
     }
     /**
+     * Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
+    private Output<SystemDataResponse> systemData;
+
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
+    public Output<SystemDataResponse> systemData() {
+        return this.systemData;
+    }
+    /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
@@ -140,7 +155,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20200330:PrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210111:PrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:PrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:PrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:PrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

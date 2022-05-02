@@ -365,7 +365,8 @@ public class AzureFirewall extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:AzureFirewall").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:AzureFirewall").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:AzureFirewall").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:AzureFirewall").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:AzureFirewall").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:AzureFirewall").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

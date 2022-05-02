@@ -162,7 +162,8 @@ public class Application extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:batch/v20200501:Application").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20200901:Application").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20210101:Application").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:Application").build())
+                Output.of(Alias.builder().type("azure-native:batch/v20210601:Application").build()),
+                Output.of(Alias.builder().type("azure-native:batch/v20220101:Application").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

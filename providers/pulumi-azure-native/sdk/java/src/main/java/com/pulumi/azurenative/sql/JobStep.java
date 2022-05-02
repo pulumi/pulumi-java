@@ -188,7 +188,8 @@ public class JobStep extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:JobStep").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:JobStep").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:JobStep").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:JobStep").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:JobStep").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:JobStep").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

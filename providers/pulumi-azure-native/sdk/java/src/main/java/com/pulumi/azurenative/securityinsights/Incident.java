@@ -354,7 +354,11 @@ public class Incident extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:Incident").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:Incident").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210401:Incident").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Incident").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:Incident").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:Incident").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:Incident").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:Incident").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:Incident").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

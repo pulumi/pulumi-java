@@ -411,7 +411,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:compute/v20200930:Snapshot").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20201201:Snapshot").build()),
                 Output.of(Alias.builder().type("azure-native:compute/v20210401:Snapshot").build()),
-                Output.of(Alias.builder().type("azure-native:compute/v20210801:Snapshot").build())
+                Output.of(Alias.builder().type("azure-native:compute/v20210801:Snapshot").build()),
+                Output.of(Alias.builder().type("azure-native:compute/v20211201:Snapshot").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

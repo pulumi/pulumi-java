@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * Workspace resource.
- * API Version: 2021-06-01-preview.
+ * API Version: 2021-11-01.
  * 
  * ## Example Usage
  * 
@@ -167,7 +167,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:Workspace").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:Workspace").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:Workspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

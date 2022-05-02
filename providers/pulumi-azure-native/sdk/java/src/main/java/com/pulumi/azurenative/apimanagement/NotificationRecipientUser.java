@@ -118,7 +118,8 @@ public class NotificationRecipientUser extends com.pulumi.resources.CustomResour
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:NotificationRecipientUser").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:NotificationRecipientUser").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:NotificationRecipientUser").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NotificationRecipientUser").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:NotificationRecipientUser").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:NotificationRecipientUser").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

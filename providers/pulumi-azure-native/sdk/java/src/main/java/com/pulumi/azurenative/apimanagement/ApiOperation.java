@@ -221,7 +221,8 @@ public class ApiOperation extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiOperation").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiOperation").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiOperation").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiOperation").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiOperation").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiOperation").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

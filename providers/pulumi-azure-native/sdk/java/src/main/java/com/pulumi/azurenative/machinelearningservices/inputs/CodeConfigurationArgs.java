@@ -35,14 +35,14 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The script to execute on startup. eg. &#34;score.py&#34;
+     * [Required] The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     @Import(name="scoringScript", required=true)
     private Output<String> scoringScript;
 
     /**
-     * @return The script to execute on startup. eg. &#34;score.py&#34;
+     * @return [Required] The script to execute on startup. eg. &#34;score.py&#34;
      * 
      */
     public Output<String> scoringScript() {
@@ -96,7 +96,7 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param scoringScript The script to execute on startup. eg. &#34;score.py&#34;
+         * @param scoringScript [Required] The script to execute on startup. eg. &#34;score.py&#34;
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param scoringScript The script to execute on startup. eg. &#34;score.py&#34;
+         * @param scoringScript [Required] The script to execute on startup. eg. &#34;score.py&#34;
          * 
          * @return builder
          * 

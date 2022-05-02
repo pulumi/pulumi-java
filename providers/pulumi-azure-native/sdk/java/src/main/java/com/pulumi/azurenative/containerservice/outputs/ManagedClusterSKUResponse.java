@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedClusterSKUResponse {
     /**
-     * @return Name of a managed cluster SKU.
+     * @return The name of a managed cluster SKU.
      * 
      */
     private final @Nullable String name;
     /**
-     * @return Tier of a managed cluster SKU.
+     * @return If not specified, the default is &#39;Free&#39;. See [uptime SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for more details.
      * 
      */
     private final @Nullable String tier;
@@ -31,14 +31,14 @@ public final class ManagedClusterSKUResponse {
     }
 
     /**
-     * @return Name of a managed cluster SKU.
+     * @return The name of a managed cluster SKU.
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Tier of a managed cluster SKU.
+     * @return If not specified, the default is &#39;Free&#39;. See [uptime SLA](https://docs.microsoft.com/azure/aks/uptime-sla) for more details.
      * 
      */
     public Optional<String> tier() {

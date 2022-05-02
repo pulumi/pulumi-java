@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDataCollectionEndpointResult {
     /**
-     * @return The endpoint used by agents to access their configuration.
+     * @return The endpoint used by clients to access their configuration.
      * 
      */
     private final @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess;
@@ -120,7 +120,7 @@ public final class GetDataCollectionEndpointResult {
     }
 
     /**
-     * @return The endpoint used by agents to access their configuration.
+     * @return The endpoint used by clients to access their configuration.
      * 
      */
     public Optional<DataCollectionEndpointResponseConfigurationAccess> configurationAccess() {

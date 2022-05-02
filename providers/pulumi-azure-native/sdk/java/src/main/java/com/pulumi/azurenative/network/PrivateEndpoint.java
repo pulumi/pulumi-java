@@ -261,7 +261,8 @@ public class PrivateEndpoint extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PrivateEndpoint").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PrivateEndpoint").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PrivateEndpoint").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateEndpoint").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PrivateEndpoint").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PrivateEndpoint").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

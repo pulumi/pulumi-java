@@ -263,6 +263,7 @@ public class Domain extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20200601:Domain").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20201015preview:Domain").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20210601preview:Domain").build()),
+                Output.of(Alias.builder().type("azure-native:eventgrid/v20211015preview:Domain").build()),
                 Output.of(Alias.builder().type("azure-native:eventgrid/v20211201:Domain").build())
             ))
             .build();

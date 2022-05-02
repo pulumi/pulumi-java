@@ -115,7 +115,8 @@ public class BackupShortTermRetentionPolicy extends com.pulumi.resources.CustomR
                 Output.of(Alias.builder().type("azure-native:sql/v20201101preview:BackupShortTermRetentionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210201preview:BackupShortTermRetentionPolicy").build()),
                 Output.of(Alias.builder().type("azure-native:sql/v20210501preview:BackupShortTermRetentionPolicy").build()),
-                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:BackupShortTermRetentionPolicy").build())
+                Output.of(Alias.builder().type("azure-native:sql/v20210801preview:BackupShortTermRetentionPolicy").build()),
+                Output.of(Alias.builder().type("azure-native:sql/v20211101preview:BackupShortTermRetentionPolicy").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -233,7 +233,11 @@ public class FusionAlertRule extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:FusionAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:FusionAlertRule").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:FusionAlertRule").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:FusionAlertRule").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:FusionAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:FusionAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:FusionAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:FusionAlertRule").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:FusionAlertRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

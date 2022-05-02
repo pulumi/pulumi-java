@@ -146,7 +146,8 @@ public class ApiIssueComment extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:ApiIssueComment").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:ApiIssueComment").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:ApiIssueComment").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiIssueComment").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:ApiIssueComment").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:ApiIssueComment").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

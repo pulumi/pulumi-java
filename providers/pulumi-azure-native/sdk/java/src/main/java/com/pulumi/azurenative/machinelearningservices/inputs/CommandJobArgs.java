@@ -48,14 +48,14 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     @Import(name="command", required=true)
     private Output<String> command;
 
     /**
-     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
      */
     public Output<String> command() {
@@ -63,14 +63,14 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Compute binding for the job.
+     * [Required] Compute binding for the job.
      * 
      */
     @Import(name="compute", required=true)
     private Output<ComputeConfigurationArgs> compute;
 
     /**
-     * @return Compute binding for the job.
+     * @return [Required] Compute binding for the job.
      * 
      */
     public Output<ComputeConfigurationArgs> compute() {
@@ -339,7 +339,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * @param command [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
          * 
          * @return builder
          * 
@@ -350,7 +350,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * @param command [Required] The command to execute on startup of the job. eg. &#34;python train.py&#34;
          * 
          * @return builder
          * 
@@ -360,7 +360,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param compute Compute binding for the job.
+         * @param compute [Required] Compute binding for the job.
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class CommandJobArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param compute Compute binding for the job.
+         * @param compute [Required] Compute binding for the job.
          * 
          * @return builder
          * 

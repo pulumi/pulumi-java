@@ -170,7 +170,8 @@ public class Transform extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:media/v20180601preview:Transform").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20180701:Transform").build()),
                 Output.of(Alias.builder().type("azure-native:media/v20200501:Transform").build()),
-                Output.of(Alias.builder().type("azure-native:media/v20210601:Transform").build())
+                Output.of(Alias.builder().type("azure-native:media/v20210601:Transform").build()),
+                Output.of(Alias.builder().type("azure-native:media/v20211101:Transform").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

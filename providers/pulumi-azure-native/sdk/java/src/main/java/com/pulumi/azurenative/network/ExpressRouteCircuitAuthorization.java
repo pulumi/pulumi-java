@@ -188,7 +188,8 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
                 Output.of(Alias.builder().type("azure-native:network/v20201101:ExpressRouteCircuitAuthorization").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:ExpressRouteCircuitAuthorization").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:ExpressRouteCircuitAuthorization").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitAuthorization").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:ExpressRouteCircuitAuthorization").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

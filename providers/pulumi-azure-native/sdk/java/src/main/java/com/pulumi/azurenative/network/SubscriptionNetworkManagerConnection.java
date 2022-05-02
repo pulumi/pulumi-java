@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * The Network Manager Connection resource
- * API Version: 2021-05-01-preview.
+ * API Version: 2022-02-01-preview.
  * 
  * ## Example Usage
  * 
@@ -151,7 +151,8 @@ public class SubscriptionNetworkManagerConnection extends com.pulumi.resources.C
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SubscriptionNetworkManagerConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:SubscriptionNetworkManagerConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:SubscriptionNetworkManagerConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
 
 /**
  * The Scope Connections resource
- * API Version: 2021-05-01-preview.
+ * API Version: 2022-02-01-preview.
  * 
  * ## Example Usage
  * 
@@ -165,7 +165,8 @@ public class ScopeConnection extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:network/v20210501preview:ScopeConnection").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501preview:ScopeConnection").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20220201preview:ScopeConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

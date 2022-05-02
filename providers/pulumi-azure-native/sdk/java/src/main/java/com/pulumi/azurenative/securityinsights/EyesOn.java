@@ -163,7 +163,10 @@ public class EyesOn extends com.pulumi.resources.CustomResource {
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:EyesOn").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:EyesOn").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:EyesOn").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:EyesOn").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:EyesOn").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:EyesOn").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:EyesOn").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

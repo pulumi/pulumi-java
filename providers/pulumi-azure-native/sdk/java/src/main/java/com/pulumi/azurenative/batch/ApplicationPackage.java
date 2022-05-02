@@ -188,7 +188,8 @@ public class ApplicationPackage extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:batch/v20200501:ApplicationPackage").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20200901:ApplicationPackage").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20210101:ApplicationPackage").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:ApplicationPackage").build())
+                Output.of(Alias.builder().type("azure-native:batch/v20210601:ApplicationPackage").build()),
+                Output.of(Alias.builder().type("azure-native:batch/v20220101:ApplicationPackage").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

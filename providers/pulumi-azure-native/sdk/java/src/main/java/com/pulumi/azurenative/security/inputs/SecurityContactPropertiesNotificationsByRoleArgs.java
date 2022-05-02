@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+ * Defines whether to send email notifications from Microsoft Defender for Cloud to persons with specific RBAC roles on the subscription.
  * 
  */
 public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.pulumi.resources.ResourceArgs {
@@ -24,14 +24,14 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     public static final SecurityContactPropertiesNotificationsByRoleArgs Empty = new SecurityContactPropertiesNotificationsByRoleArgs();
 
     /**
-     * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
      * 
      */
     @Import(name="roles")
     private @Nullable Output<List<Either<String,Roles>>> roles;
 
     /**
-     * @return Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * @return Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
      * 
      */
     public Optional<Output<List<Either<String,Roles>>>> roles() {
@@ -39,14 +39,14 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     }
 
     /**
-     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
     /**
-     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * @return Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
      * 
      */
     public Optional<Output<Either<String,State>>> state() {
@@ -79,7 +79,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * @param roles Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
          * 
          * @return builder
          * 
@@ -90,7 +90,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * @param roles Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * @param roles Defines which RBAC roles will get email notifications from Microsoft Defender for Cloud. List of allowed RBAC roles:
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param state Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param state Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param state Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
         }
 
         /**
-         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * @param state Defines whether to send email notifications from AMicrosoft Defender for Cloud to persons with specific RBAC roles on the subscription.
          * 
          * @return builder
          * 

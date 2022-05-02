@@ -129,7 +129,11 @@ public class DataConnector extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20190101preview:DataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20200101:DataConnector").build()),
                 Output.of(Alias.builder().type("azure-native:securityinsights/v20210301preview:DataConnector").build()),
-                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:DataConnector").build())
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20210901preview:DataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001:DataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20211001preview:DataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220101preview:DataConnector").build()),
+                Output.of(Alias.builder().type("azure-native:securityinsights/v20220401preview:DataConnector").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

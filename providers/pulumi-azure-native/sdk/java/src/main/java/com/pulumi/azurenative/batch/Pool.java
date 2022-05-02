@@ -430,7 +430,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:batch/v20200501:Pool").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20200901:Pool").build()),
                 Output.of(Alias.builder().type("azure-native:batch/v20210101:Pool").build()),
-                Output.of(Alias.builder().type("azure-native:batch/v20210601:Pool").build())
+                Output.of(Alias.builder().type("azure-native:batch/v20210601:Pool").build()),
+                Output.of(Alias.builder().type("azure-native:batch/v20220101:Pool").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

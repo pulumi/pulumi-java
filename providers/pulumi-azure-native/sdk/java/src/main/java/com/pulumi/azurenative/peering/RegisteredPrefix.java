@@ -168,7 +168,8 @@ public class RegisteredPrefix extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:peering/v20200401:RegisteredPrefix").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20201001:RegisteredPrefix").build()),
                 Output.of(Alias.builder().type("azure-native:peering/v20210101:RegisteredPrefix").build()),
-                Output.of(Alias.builder().type("azure-native:peering/v20210601:RegisteredPrefix").build())
+                Output.of(Alias.builder().type("azure-native:peering/v20210601:RegisteredPrefix").build()),
+                Output.of(Alias.builder().type("azure-native:peering/v20220101:RegisteredPrefix").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

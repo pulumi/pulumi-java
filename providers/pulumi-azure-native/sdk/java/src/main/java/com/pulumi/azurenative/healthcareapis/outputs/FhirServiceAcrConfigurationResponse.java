@@ -3,6 +3,7 @@
 
 package com.pulumi.azurenative.healthcareapis.outputs;
 
+import com.pulumi.azurenative.healthcareapis.outputs.ServiceOciArtifactEntryResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -16,10 +17,18 @@ public final class FhirServiceAcrConfigurationResponse {
      * 
      */
     private final @Nullable List<String> loginServers;
+    /**
+     * @return The list of Open Container Initiative (OCI) artifacts.
+     * 
+     */
+    private final @Nullable List<ServiceOciArtifactEntryResponse> ociArtifacts;
 
     @CustomType.Constructor
-    private FhirServiceAcrConfigurationResponse(@CustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
+    private FhirServiceAcrConfigurationResponse(
+        @CustomType.Parameter("loginServers") @Nullable List<String> loginServers,
+        @CustomType.Parameter("ociArtifacts") @Nullable List<ServiceOciArtifactEntryResponse> ociArtifacts) {
         this.loginServers = loginServers;
+        this.ociArtifacts = ociArtifacts;
     }
 
     /**
@@ -28,6 +37,13 @@ public final class FhirServiceAcrConfigurationResponse {
      */
     public List<String> loginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
+    }
+    /**
+     * @return The list of Open Container Initiative (OCI) artifacts.
+     * 
+     */
+    public List<ServiceOciArtifactEntryResponse> ociArtifacts() {
+        return this.ociArtifacts == null ? List.of() : this.ociArtifacts;
     }
 
     public static Builder builder() {
@@ -40,6 +56,7 @@ public final class FhirServiceAcrConfigurationResponse {
 
     public static final class Builder {
         private @Nullable List<String> loginServers;
+        private @Nullable List<ServiceOciArtifactEntryResponse> ociArtifacts;
 
         public Builder() {
     	      // Empty
@@ -48,6 +65,7 @@ public final class FhirServiceAcrConfigurationResponse {
         public Builder(FhirServiceAcrConfigurationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.loginServers = defaults.loginServers;
+    	      this.ociArtifacts = defaults.ociArtifacts;
         }
 
         public Builder loginServers(@Nullable List<String> loginServers) {
@@ -56,8 +74,15 @@ public final class FhirServiceAcrConfigurationResponse {
         }
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
+        }
+        public Builder ociArtifacts(@Nullable List<ServiceOciArtifactEntryResponse> ociArtifacts) {
+            this.ociArtifacts = ociArtifacts;
+            return this;
+        }
+        public Builder ociArtifacts(ServiceOciArtifactEntryResponse... ociArtifacts) {
+            return ociArtifacts(List.of(ociArtifacts));
         }        public FhirServiceAcrConfigurationResponse build() {
-            return new FhirServiceAcrConfigurationResponse(loginServers);
+            return new FhirServiceAcrConfigurationResponse(loginServers, ociArtifacts);
         }
     }
 }

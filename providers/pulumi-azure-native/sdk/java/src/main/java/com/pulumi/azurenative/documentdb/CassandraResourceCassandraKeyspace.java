@@ -157,7 +157,9 @@ public class CassandraResourceCassandraKeyspace extends com.pulumi.resources.Cus
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210615:CassandraResourceCassandraKeyspace").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20210701preview:CassandraResourceCassandraKeyspace").build()),
                 Output.of(Alias.builder().type("azure-native:documentdb/v20211015:CassandraResourceCassandraKeyspace").build()),
-                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraKeyspace").build())
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211015preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20211115preview:CassandraResourceCassandraKeyspace").build()),
+                Output.of(Alias.builder().type("azure-native:documentdb/v20220215preview:CassandraResourceCassandraKeyspace").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -3,9 +3,13 @@
 
 package com.pulumi.azurenative.eventgrid.outputs;
 
+import com.pulumi.azurenative.eventgrid.outputs.DynamicDeliveryAttributeMappingResponse;
+import com.pulumi.azurenative.eventgrid.outputs.StaticDeliveryAttributeMappingResponse;
+import com.pulumi.core.Either;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,6 +26,11 @@ public final class WebHookEventSubscriptionDestinationResponse {
      * 
      */
     private final @Nullable String azureActiveDirectoryTenantId;
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
     /**
      * @return The base URL that represents the endpoint of the destination of an event subscription.
      * 
@@ -53,6 +62,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
     private WebHookEventSubscriptionDestinationResponse(
         @CustomType.Parameter("azureActiveDirectoryApplicationIdOrUri") @Nullable String azureActiveDirectoryApplicationIdOrUri,
         @CustomType.Parameter("azureActiveDirectoryTenantId") @Nullable String azureActiveDirectoryTenantId,
+        @CustomType.Parameter("deliveryAttributeMappings") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings,
         @CustomType.Parameter("endpointBaseUrl") String endpointBaseUrl,
         @CustomType.Parameter("endpointType") String endpointType,
         @CustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
@@ -60,6 +70,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
         @CustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
+        this.deliveryAttributeMappings = deliveryAttributeMappings;
         this.endpointBaseUrl = endpointBaseUrl;
         this.endpointType = endpointType;
         this.endpointUrl = endpointUrl;
@@ -80,6 +91,13 @@ public final class WebHookEventSubscriptionDestinationResponse {
      */
     public Optional<String> azureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
+    }
+    /**
+     * @return Delivery attribute details.
+     * 
+     */
+    public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings() {
+        return this.deliveryAttributeMappings == null ? List.of() : this.deliveryAttributeMappings;
     }
     /**
      * @return The base URL that represents the endpoint of the destination of an event subscription.
@@ -129,6 +147,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
     public static final class Builder {
         private @Nullable String azureActiveDirectoryApplicationIdOrUri;
         private @Nullable String azureActiveDirectoryTenantId;
+        private @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings;
         private String endpointBaseUrl;
         private String endpointType;
         private @Nullable String endpointUrl;
@@ -143,6 +162,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
     	      Objects.requireNonNull(defaults);
     	      this.azureActiveDirectoryApplicationIdOrUri = defaults.azureActiveDirectoryApplicationIdOrUri;
     	      this.azureActiveDirectoryTenantId = defaults.azureActiveDirectoryTenantId;
+    	      this.deliveryAttributeMappings = defaults.deliveryAttributeMappings;
     	      this.endpointBaseUrl = defaults.endpointBaseUrl;
     	      this.endpointType = defaults.endpointType;
     	      this.endpointUrl = defaults.endpointUrl;
@@ -157,6 +177,13 @@ public final class WebHookEventSubscriptionDestinationResponse {
         public Builder azureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
             this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
+        }
+        public Builder deliveryAttributeMappings(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> deliveryAttributeMappings) {
+            this.deliveryAttributeMappings = deliveryAttributeMappings;
+            return this;
+        }
+        public Builder deliveryAttributeMappings(Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>... deliveryAttributeMappings) {
+            return deliveryAttributeMappings(List.of(deliveryAttributeMappings));
         }
         public Builder endpointBaseUrl(String endpointBaseUrl) {
             this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl);
@@ -178,7 +205,7 @@ public final class WebHookEventSubscriptionDestinationResponse {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }        public WebHookEventSubscriptionDestinationResponse build() {
-            return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
+            return new WebHookEventSubscriptionDestinationResponse(azureActiveDirectoryApplicationIdOrUri, azureActiveDirectoryTenantId, deliveryAttributeMappings, endpointBaseUrl, endpointType, endpointUrl, maxEventsPerBatch, preferredBatchSizeInKilobytes);
         }
     }
 }

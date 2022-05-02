@@ -30,7 +30,7 @@ public final class DefenderForServersAwsOfferingResponse {
     private final String description;
     /**
      * @return The type of the security offering.
-     * Expected value is &#39;DefenderForServersAWS&#39;.
+     * Expected value is &#39;DefenderForServersAws&#39;.
      * 
      */
     private final String offeringType;
@@ -70,7 +70,7 @@ public final class DefenderForServersAwsOfferingResponse {
     }
     /**
      * @return The type of the security offering.
-     * Expected value is &#39;DefenderForServersAWS&#39;.
+     * Expected value is &#39;DefenderForServersAws&#39;.
      * 
      */
     public String offeringType() {

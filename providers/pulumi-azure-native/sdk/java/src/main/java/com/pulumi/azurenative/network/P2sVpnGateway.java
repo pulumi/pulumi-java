@@ -275,7 +275,8 @@ public class P2sVpnGateway extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:P2sVpnGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:P2sVpnGateway").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:P2sVpnGateway").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:P2sVpnGateway").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:P2sVpnGateway").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:P2sVpnGateway").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

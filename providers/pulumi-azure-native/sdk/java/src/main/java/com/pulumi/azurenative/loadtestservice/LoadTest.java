@@ -195,7 +195,8 @@ public class LoadTest extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
-                Output.of(Alias.builder().type("azure-native:loadtestservice/v20211201preview:LoadTest").build())
+                Output.of(Alias.builder().type("azure-native:loadtestservice/v20211201preview:LoadTest").build()),
+                Output.of(Alias.builder().type("azure-native:loadtestservice/v20220415preview:LoadTest").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

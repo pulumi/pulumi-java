@@ -348,7 +348,8 @@ public class PublicIPPrefix extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:network/v20201101:PublicIPPrefix").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210201:PublicIPPrefix").build()),
                 Output.of(Alias.builder().type("azure-native:network/v20210301:PublicIPPrefix").build()),
-                Output.of(Alias.builder().type("azure-native:network/v20210501:PublicIPPrefix").build())
+                Output.of(Alias.builder().type("azure-native:network/v20210501:PublicIPPrefix").build()),
+                Output.of(Alias.builder().type("azure-native:network/v20210801:PublicIPPrefix").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

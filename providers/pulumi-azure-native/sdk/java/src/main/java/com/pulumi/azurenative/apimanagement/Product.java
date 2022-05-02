@@ -206,7 +206,8 @@ public class Product extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20201201:Product").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210101preview:Product").build()),
                 Output.of(Alias.builder().type("azure-native:apimanagement/v20210401preview:Product").build()),
-                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Product").build())
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20210801:Product").build()),
+                Output.of(Alias.builder().type("azure-native:apimanagement/v20211201preview:Product").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

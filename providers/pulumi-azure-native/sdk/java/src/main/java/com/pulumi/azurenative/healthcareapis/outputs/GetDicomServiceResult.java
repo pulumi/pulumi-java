@@ -4,9 +4,12 @@
 package com.pulumi.azurenative.healthcareapis.outputs;
 
 import com.pulumi.azurenative.healthcareapis.outputs.DicomServiceAuthenticationConfigurationResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.PrivateEndpointConnectionResponse;
+import com.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import com.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -30,6 +33,11 @@ public final class GetDicomServiceResult {
      */
     private final String id;
     /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    private final @Nullable ServiceManagedIdentityResponseIdentity identity;
+    /**
      * @return The resource location.
      * 
      */
@@ -40,10 +48,20 @@ public final class GetDicomServiceResult {
      */
     private final String name;
     /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    /**
      * @return The provisioning state.
      * 
      */
     private final String provisioningState;
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    private final String publicNetworkAccess;
     /**
      * @return The url of the Dicom Services.
      * 
@@ -70,9 +88,12 @@ public final class GetDicomServiceResult {
         @CustomType.Parameter("authenticationConfiguration") @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration,
         @CustomType.Parameter("etag") @Nullable String etag,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
         @CustomType.Parameter("location") @Nullable String location,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
         @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") String publicNetworkAccess,
         @CustomType.Parameter("serviceUrl") String serviceUrl,
         @CustomType.Parameter("systemData") SystemDataResponse systemData,
         @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
@@ -80,9 +101,12 @@ public final class GetDicomServiceResult {
         this.authenticationConfiguration = authenticationConfiguration;
         this.etag = etag;
         this.id = id;
+        this.identity = identity;
         this.location = location;
         this.name = name;
+        this.privateEndpointConnections = privateEndpointConnections;
         this.provisioningState = provisioningState;
+        this.publicNetworkAccess = publicNetworkAccess;
         this.serviceUrl = serviceUrl;
         this.systemData = systemData;
         this.tags = tags;
@@ -111,6 +135,13 @@ public final class GetDicomServiceResult {
         return this.id;
     }
     /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     * 
+     */
+    public Optional<ServiceManagedIdentityResponseIdentity> identity() {
+        return Optional.ofNullable(this.identity);
+    }
+    /**
      * @return The resource location.
      * 
      */
@@ -125,11 +156,25 @@ public final class GetDicomServiceResult {
         return this.name;
     }
     /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
+    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
+        return this.privateEndpointConnections;
+    }
+    /**
      * @return The provisioning state.
      * 
      */
     public String provisioningState() {
         return this.provisioningState;
+    }
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
+    public String publicNetworkAccess() {
+        return this.publicNetworkAccess;
     }
     /**
      * @return The url of the Dicom Services.
@@ -172,9 +217,12 @@ public final class GetDicomServiceResult {
         private @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration;
         private @Nullable String etag;
         private String id;
+        private @Nullable ServiceManagedIdentityResponseIdentity identity;
         private @Nullable String location;
         private String name;
+        private List<PrivateEndpointConnectionResponse> privateEndpointConnections;
         private String provisioningState;
+        private String publicNetworkAccess;
         private String serviceUrl;
         private SystemDataResponse systemData;
         private @Nullable Map<String,String> tags;
@@ -189,9 +237,12 @@ public final class GetDicomServiceResult {
     	      this.authenticationConfiguration = defaults.authenticationConfiguration;
     	      this.etag = defaults.etag;
     	      this.id = defaults.id;
+    	      this.identity = defaults.identity;
     	      this.location = defaults.location;
     	      this.name = defaults.name;
+    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
     	      this.provisioningState = defaults.provisioningState;
+    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
     	      this.serviceUrl = defaults.serviceUrl;
     	      this.systemData = defaults.systemData;
     	      this.tags = defaults.tags;
@@ -210,6 +261,10 @@ public final class GetDicomServiceResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
+        public Builder identity(@Nullable ServiceManagedIdentityResponseIdentity identity) {
+            this.identity = identity;
+            return this;
+        }
         public Builder location(@Nullable String location) {
             this.location = location;
             return this;
@@ -218,8 +273,19 @@ public final class GetDicomServiceResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            return this;
+        }
+        public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
+            return privateEndpointConnections(List.of(privateEndpointConnections));
+        }
         public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
+            return this;
+        }
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            this.publicNetworkAccess = Objects.requireNonNull(publicNetworkAccess);
             return this;
         }
         public Builder serviceUrl(String serviceUrl) {
@@ -238,7 +304,7 @@ public final class GetDicomServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }        public GetDicomServiceResult build() {
-            return new GetDicomServiceResult(authenticationConfiguration, etag, id, location, name, provisioningState, serviceUrl, systemData, tags, type);
+            return new GetDicomServiceResult(authenticationConfiguration, etag, id, identity, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, serviceUrl, systemData, tags, type);
         }
     }
 }
