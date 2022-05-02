@@ -8,11 +8,11 @@ import com.pulumi.azuread.inputs.ServicePrincipalFeatureTagArgs;
 import com.pulumi.azuread.inputs.ServicePrincipalSamlSingleSignOnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accountEnabled")
-      private final @Nullable Output<Boolean> accountEnabled;
+    private @Nullable Output<Boolean> accountEnabled;
 
-    public Output<Boolean> accountEnabled() {
-        return this.accountEnabled == null ? Codegen.empty() : this.accountEnabled;
+    /**
+     * @return Whether or not the service principal account is enabled. Defaults to `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> accountEnabled() {
+        return Optional.ofNullable(this.accountEnabled);
     }
 
     /**
@@ -36,10 +40,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="alternativeNames")
-      private final @Nullable Output<List<String>> alternativeNames;
+    private @Nullable Output<List<String>> alternativeNames;
 
-    public Output<List<String>> alternativeNames() {
-        return this.alternativeNames == null ? Codegen.empty() : this.alternativeNames;
+    /**
+     * @return A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+     * 
+     */
+    public Optional<Output<List<String>>> alternativeNames() {
+        return Optional.ofNullable(this.alternativeNames);
     }
 
     /**
@@ -47,10 +55,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="appRoleAssignmentRequired")
-      private final @Nullable Output<Boolean> appRoleAssignmentRequired;
+    private @Nullable Output<Boolean> appRoleAssignmentRequired;
 
-    public Output<Boolean> appRoleAssignmentRequired() {
-        return this.appRoleAssignmentRequired == null ? Codegen.empty() : this.appRoleAssignmentRequired;
+    /**
+     * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> appRoleAssignmentRequired() {
+        return Optional.ofNullable(this.appRoleAssignmentRequired);
     }
 
     /**
@@ -58,8 +70,12 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
+    /**
+     * @return The application ID (client ID) of the application for which to create a service principal.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -69,10 +85,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return A description of the service principal provided for internal end-users.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,26 +100,37 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="featureTags")
-      private final @Nullable Output<List<ServicePrincipalFeatureTagArgs>> featureTags;
+    private @Nullable Output<List<ServicePrincipalFeatureTagArgs>> featureTags;
 
-    public Output<List<ServicePrincipalFeatureTagArgs>> featureTags() {
-        return this.featureTags == null ? Codegen.empty() : this.featureTags;
+    /**
+     * @return A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+     * 
+     */
+    public Optional<Output<List<ServicePrincipalFeatureTagArgs>>> featureTags() {
+        return Optional.ofNullable(this.featureTags);
     }
 
     /**
      * Block of features to configure for this service principal using tags
      * 
-     * @Deprecated
+     * @deprecated
      * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
      * 
      */
     @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
     @Import(name="features")
-      private final @Nullable Output<List<ServicePrincipalFeatureArgs>> features;
+    private @Nullable Output<List<ServicePrincipalFeatureArgs>> features;
 
+    /**
+     * @return Block of features to configure for this service principal using tags
+     * 
+     * @deprecated
+     * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
+     * 
+     */
     @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
-    public Output<List<ServicePrincipalFeatureArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<ServicePrincipalFeatureArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -107,10 +138,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="loginUrl")
-      private final @Nullable Output<String> loginUrl;
+    private @Nullable Output<String> loginUrl;
 
-    public Output<String> loginUrl() {
-        return this.loginUrl == null ? Codegen.empty() : this.loginUrl;
+    /**
+     * @return The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on.
+     * 
+     */
+    public Optional<Output<String>> loginUrl() {
+        return Optional.ofNullable(this.loginUrl);
     }
 
     /**
@@ -118,10 +153,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    /**
+     * @return A free text field to capture information about the service principal, typically used for operational purposes.
+     * 
+     */
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -129,10 +168,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notificationEmailAddresses")
-      private final @Nullable Output<List<String>> notificationEmailAddresses;
+    private @Nullable Output<List<String>> notificationEmailAddresses;
 
-    public Output<List<String>> notificationEmailAddresses() {
-        return this.notificationEmailAddresses == null ? Codegen.empty() : this.notificationEmailAddresses;
+    /**
+     * @return A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+     * 
+     */
+    public Optional<Output<List<String>>> notificationEmailAddresses() {
+        return Optional.ofNullable(this.notificationEmailAddresses);
     }
 
     /**
@@ -140,10 +183,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="owners")
-      private final @Nullable Output<List<String>> owners;
+    private @Nullable Output<List<String>> owners;
 
-    public Output<List<String>> owners() {
-        return this.owners == null ? Codegen.empty() : this.owners;
+    /**
+     * @return A set of object IDs of principals that will be granted ownership of the service principal. Supported object types are users or service principals. By default, no owners are assigned.
+     * 
+     */
+    public Optional<Output<List<String>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -151,10 +198,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="preferredSingleSignOnMode")
-      private final @Nullable Output<String> preferredSingleSignOnMode;
+    private @Nullable Output<String> preferredSingleSignOnMode;
 
-    public Output<String> preferredSingleSignOnMode() {
-        return this.preferredSingleSignOnMode == null ? Codegen.empty() : this.preferredSingleSignOnMode;
+    /**
+     * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
+     * 
+     */
+    public Optional<Output<String>> preferredSingleSignOnMode() {
+        return Optional.ofNullable(this.preferredSingleSignOnMode);
     }
 
     /**
@@ -162,10 +213,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="samlSingleSignOn")
-      private final @Nullable Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn;
+    private @Nullable Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn;
 
-    public Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn() {
-        return this.samlSingleSignOn == null ? Codegen.empty() : this.samlSingleSignOn;
+    /**
+     * @return A `saml_single_sign_on` block as documented below.
+     * 
+     */
+    public Optional<Output<ServicePrincipalSamlSingleSignOnArgs>> samlSingleSignOn() {
+        return Optional.ofNullable(this.samlSingleSignOn);
     }
 
     /**
@@ -173,10 +228,14 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    /**
+     * @return A set of tags to apply to the service principal. Cannot be used together with the `feature_tags` block.
+     * 
+     */
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -184,250 +243,445 @@ public final class ServicePrincipalArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="useExisting")
-      private final @Nullable Output<Boolean> useExisting;
+    private @Nullable Output<Boolean> useExisting;
 
-    public Output<Boolean> useExisting() {
-        return this.useExisting == null ? Codegen.empty() : this.useExisting;
+    /**
+     * @return When true, any existing service principal linked to the same application will be automatically imported. When false, an import error will be raised for any pre-existing service principal.
+     * 
+     */
+    public Optional<Output<Boolean>> useExisting() {
+        return Optional.ofNullable(this.useExisting);
     }
 
-    public ServicePrincipalArgs(
-        @Nullable Output<Boolean> accountEnabled,
-        @Nullable Output<List<String>> alternativeNames,
-        @Nullable Output<Boolean> appRoleAssignmentRequired,
-        Output<String> applicationId,
-        @Nullable Output<String> description,
-        @Nullable Output<List<ServicePrincipalFeatureTagArgs>> featureTags,
-        @Nullable Output<List<ServicePrincipalFeatureArgs>> features,
-        @Nullable Output<String> loginUrl,
-        @Nullable Output<String> notes,
-        @Nullable Output<List<String>> notificationEmailAddresses,
-        @Nullable Output<List<String>> owners,
-        @Nullable Output<String> preferredSingleSignOnMode,
-        @Nullable Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<Boolean> useExisting) {
-        this.accountEnabled = accountEnabled;
-        this.alternativeNames = alternativeNames;
-        this.appRoleAssignmentRequired = appRoleAssignmentRequired;
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.description = description;
-        this.featureTags = featureTags;
-        this.features = features;
-        this.loginUrl = loginUrl;
-        this.notes = notes;
-        this.notificationEmailAddresses = notificationEmailAddresses;
-        this.owners = owners;
-        this.preferredSingleSignOnMode = preferredSingleSignOnMode;
-        this.samlSingleSignOn = samlSingleSignOn;
-        this.tags = tags;
-        this.useExisting = useExisting;
-    }
+    private ServicePrincipalArgs() {}
 
-    private ServicePrincipalArgs() {
-        this.accountEnabled = Codegen.empty();
-        this.alternativeNames = Codegen.empty();
-        this.appRoleAssignmentRequired = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.featureTags = Codegen.empty();
-        this.features = Codegen.empty();
-        this.loginUrl = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.notificationEmailAddresses = Codegen.empty();
-        this.owners = Codegen.empty();
-        this.preferredSingleSignOnMode = Codegen.empty();
-        this.samlSingleSignOn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.useExisting = Codegen.empty();
+    private ServicePrincipalArgs(ServicePrincipalArgs $) {
+        this.accountEnabled = $.accountEnabled;
+        this.alternativeNames = $.alternativeNames;
+        this.appRoleAssignmentRequired = $.appRoleAssignmentRequired;
+        this.applicationId = $.applicationId;
+        this.description = $.description;
+        this.featureTags = $.featureTags;
+        this.features = $.features;
+        this.loginUrl = $.loginUrl;
+        this.notes = $.notes;
+        this.notificationEmailAddresses = $.notificationEmailAddresses;
+        this.owners = $.owners;
+        this.preferredSingleSignOnMode = $.preferredSingleSignOnMode;
+        this.samlSingleSignOn = $.samlSingleSignOn;
+        this.tags = $.tags;
+        this.useExisting = $.useExisting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> accountEnabled;
-        private @Nullable Output<List<String>> alternativeNames;
-        private @Nullable Output<Boolean> appRoleAssignmentRequired;
-        private Output<String> applicationId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ServicePrincipalFeatureTagArgs>> featureTags;
-        private @Nullable Output<List<ServicePrincipalFeatureArgs>> features;
-        private @Nullable Output<String> loginUrl;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<List<String>> notificationEmailAddresses;
-        private @Nullable Output<List<String>> owners;
-        private @Nullable Output<String> preferredSingleSignOnMode;
-        private @Nullable Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<Boolean> useExisting;
+        private ServicePrincipalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalArgs();
         }
 
         public Builder(ServicePrincipalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountEnabled = defaults.accountEnabled;
-    	      this.alternativeNames = defaults.alternativeNames;
-    	      this.appRoleAssignmentRequired = defaults.appRoleAssignmentRequired;
-    	      this.applicationId = defaults.applicationId;
-    	      this.description = defaults.description;
-    	      this.featureTags = defaults.featureTags;
-    	      this.features = defaults.features;
-    	      this.loginUrl = defaults.loginUrl;
-    	      this.notes = defaults.notes;
-    	      this.notificationEmailAddresses = defaults.notificationEmailAddresses;
-    	      this.owners = defaults.owners;
-    	      this.preferredSingleSignOnMode = defaults.preferredSingleSignOnMode;
-    	      this.samlSingleSignOn = defaults.samlSingleSignOn;
-    	      this.tags = defaults.tags;
-    	      this.useExisting = defaults.useExisting;
+            $ = new ServicePrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountEnabled Whether or not the service principal account is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountEnabled(@Nullable Output<Boolean> accountEnabled) {
-            this.accountEnabled = accountEnabled;
+            $.accountEnabled = accountEnabled;
             return this;
         }
-        public Builder accountEnabled(@Nullable Boolean accountEnabled) {
-            this.accountEnabled = Codegen.ofNullable(accountEnabled);
-            return this;
+
+        /**
+         * @param accountEnabled Whether or not the service principal account is enabled. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountEnabled(Boolean accountEnabled) {
+            return accountEnabled(Output.of(accountEnabled));
         }
+
+        /**
+         * @param alternativeNames A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeNames(@Nullable Output<List<String>> alternativeNames) {
-            this.alternativeNames = alternativeNames;
+            $.alternativeNames = alternativeNames;
             return this;
         }
-        public Builder alternativeNames(@Nullable List<String> alternativeNames) {
-            this.alternativeNames = Codegen.ofNullable(alternativeNames);
-            return this;
+
+        /**
+         * @param alternativeNames A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder alternativeNames(List<String> alternativeNames) {
+            return alternativeNames(Output.of(alternativeNames));
         }
+
+        /**
+         * @param alternativeNames A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternativeNames(String... alternativeNames) {
             return alternativeNames(List.of(alternativeNames));
         }
+
+        /**
+         * @param appRoleAssignmentRequired Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoleAssignmentRequired(@Nullable Output<Boolean> appRoleAssignmentRequired) {
-            this.appRoleAssignmentRequired = appRoleAssignmentRequired;
+            $.appRoleAssignmentRequired = appRoleAssignmentRequired;
             return this;
         }
-        public Builder appRoleAssignmentRequired(@Nullable Boolean appRoleAssignmentRequired) {
-            this.appRoleAssignmentRequired = Codegen.ofNullable(appRoleAssignmentRequired);
-            return this;
+
+        /**
+         * @param appRoleAssignmentRequired Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appRoleAssignmentRequired(Boolean appRoleAssignmentRequired) {
+            return appRoleAssignmentRequired(Output.of(appRoleAssignmentRequired));
         }
+
+        /**
+         * @param applicationId The application ID (client ID) of the application for which to create a service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
+        /**
+         * @param applicationId The application ID (client ID) of the application for which to create a service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
+        /**
+         * @param description A description of the service principal provided for internal end-users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description A description of the service principal provided for internal end-users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureTags(@Nullable Output<List<ServicePrincipalFeatureTagArgs>> featureTags) {
-            this.featureTags = featureTags;
+            $.featureTags = featureTags;
             return this;
         }
-        public Builder featureTags(@Nullable List<ServicePrincipalFeatureTagArgs> featureTags) {
-            this.featureTags = Codegen.ofNullable(featureTags);
-            return this;
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureTags(List<ServicePrincipalFeatureTagArgs> featureTags) {
+            return featureTags(Output.of(featureTags));
         }
+
+        /**
+         * @param featureTags A `feature_tags` block as described below. Cannot be used together with the `tags` property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureTags(ServicePrincipalFeatureTagArgs... featureTags) {
             return featureTags(List.of(featureTags));
         }
+
+        /**
+         * @param features Block of features to configure for this service principal using tags
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
+         * 
+         */
+        @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
         public Builder features(@Nullable Output<List<ServicePrincipalFeatureArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<ServicePrincipalFeatureArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        /**
+         * @param features Block of features to configure for this service principal using tags
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
+         * 
+         */
+        @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
+        public Builder features(List<ServicePrincipalFeatureArgs> features) {
+            return features(Output.of(features));
         }
+
+        /**
+         * @param features Block of features to configure for this service principal using tags
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
+         * 
+         */
+        @Deprecated /* This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider */
         public Builder features(ServicePrincipalFeatureArgs... features) {
             return features(List.of(features));
         }
+
+        /**
+         * @param loginUrl The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginUrl(@Nullable Output<String> loginUrl) {
-            this.loginUrl = loginUrl;
+            $.loginUrl = loginUrl;
             return this;
         }
-        public Builder loginUrl(@Nullable String loginUrl) {
-            this.loginUrl = Codegen.ofNullable(loginUrl);
-            return this;
+
+        /**
+         * @param loginUrl The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder loginUrl(String loginUrl) {
+            return loginUrl(Output.of(loginUrl));
         }
+
+        /**
+         * @param notes A free text field to capture information about the service principal, typically used for operational purposes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        /**
+         * @param notes A free text field to capture information about the service principal, typically used for operational purposes.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
+        /**
+         * @param notificationEmailAddresses A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailAddresses(@Nullable Output<List<String>> notificationEmailAddresses) {
-            this.notificationEmailAddresses = notificationEmailAddresses;
+            $.notificationEmailAddresses = notificationEmailAddresses;
             return this;
         }
-        public Builder notificationEmailAddresses(@Nullable List<String> notificationEmailAddresses) {
-            this.notificationEmailAddresses = Codegen.ofNullable(notificationEmailAddresses);
-            return this;
+
+        /**
+         * @param notificationEmailAddresses A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder notificationEmailAddresses(List<String> notificationEmailAddresses) {
+            return notificationEmailAddresses(Output.of(notificationEmailAddresses));
         }
+
+        /**
+         * @param notificationEmailAddresses A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailAddresses(String... notificationEmailAddresses) {
             return notificationEmailAddresses(List.of(notificationEmailAddresses));
         }
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the service principal. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable Output<List<String>> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
-        public Builder owners(@Nullable List<String> owners) {
-            this.owners = Codegen.ofNullable(owners);
-            return this;
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the service principal. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owners(List<String> owners) {
+            return owners(Output.of(owners));
         }
+
+        /**
+         * @param owners A set of object IDs of principals that will be granted ownership of the service principal. Supported object types are users or service principals. By default, no owners are assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
+        /**
+         * @param preferredSingleSignOnMode The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredSingleSignOnMode(@Nullable Output<String> preferredSingleSignOnMode) {
-            this.preferredSingleSignOnMode = preferredSingleSignOnMode;
+            $.preferredSingleSignOnMode = preferredSingleSignOnMode;
             return this;
         }
-        public Builder preferredSingleSignOnMode(@Nullable String preferredSingleSignOnMode) {
-            this.preferredSingleSignOnMode = Codegen.ofNullable(preferredSingleSignOnMode);
-            return this;
+
+        /**
+         * @param preferredSingleSignOnMode The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredSingleSignOnMode(String preferredSingleSignOnMode) {
+            return preferredSingleSignOnMode(Output.of(preferredSingleSignOnMode));
         }
+
+        /**
+         * @param samlSingleSignOn A `saml_single_sign_on` block as documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samlSingleSignOn(@Nullable Output<ServicePrincipalSamlSingleSignOnArgs> samlSingleSignOn) {
-            this.samlSingleSignOn = samlSingleSignOn;
+            $.samlSingleSignOn = samlSingleSignOn;
             return this;
         }
-        public Builder samlSingleSignOn(@Nullable ServicePrincipalSamlSingleSignOnArgs samlSingleSignOn) {
-            this.samlSingleSignOn = Codegen.ofNullable(samlSingleSignOn);
-            return this;
+
+        /**
+         * @param samlSingleSignOn A `saml_single_sign_on` block as documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder samlSingleSignOn(ServicePrincipalSamlSingleSignOnArgs samlSingleSignOn) {
+            return samlSingleSignOn(Output.of(samlSingleSignOn));
         }
+
+        /**
+         * @param tags A set of tags to apply to the service principal. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        /**
+         * @param tags A set of tags to apply to the service principal. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
+        /**
+         * @param tags A set of tags to apply to the service principal. Cannot be used together with the `feature_tags` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
+        /**
+         * @param useExisting When true, any existing service principal linked to the same application will be automatically imported. When false, an import error will be raised for any pre-existing service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useExisting(@Nullable Output<Boolean> useExisting) {
-            this.useExisting = useExisting;
+            $.useExisting = useExisting;
             return this;
         }
-        public Builder useExisting(@Nullable Boolean useExisting) {
-            this.useExisting = Codegen.ofNullable(useExisting);
-            return this;
-        }        public ServicePrincipalArgs build() {
-            return new ServicePrincipalArgs(accountEnabled, alternativeNames, appRoleAssignmentRequired, applicationId, description, featureTags, features, loginUrl, notes, notificationEmailAddresses, owners, preferredSingleSignOnMode, samlSingleSignOn, tags, useExisting);
+
+        /**
+         * @param useExisting When true, any existing service principal linked to the same application will be automatically imported. When false, an import error will be raised for any pre-existing service principal.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useExisting(Boolean useExisting) {
+            return useExisting(Output.of(useExisting));
+        }
+
+        public ServicePrincipalArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            return $;
         }
     }
+
 }

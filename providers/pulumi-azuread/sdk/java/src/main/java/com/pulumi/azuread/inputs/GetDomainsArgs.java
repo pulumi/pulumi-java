@@ -21,10 +21,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adminManaged")
-      private final @Nullable Boolean adminManaged;
+    private @Nullable Boolean adminManaged;
 
+    /**
+     * @return Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> adminManaged() {
-        return this.adminManaged == null ? Optional.empty() : Optional.ofNullable(this.adminManaged);
+        return Optional.ofNullable(this.adminManaged);
     }
 
     /**
@@ -32,10 +36,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeUnverified")
-      private final @Nullable Boolean includeUnverified;
+    private @Nullable Boolean includeUnverified;
 
+    /**
+     * @return Set to `true` if unverified Azure AD domains should be included. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> includeUnverified() {
-        return this.includeUnverified == null ? Optional.empty() : Optional.ofNullable(this.includeUnverified);
+        return Optional.ofNullable(this.includeUnverified);
     }
 
     /**
@@ -43,10 +51,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyDefault")
-      private final @Nullable Boolean onlyDefault;
+    private @Nullable Boolean onlyDefault;
 
+    /**
+     * @return Set to `true` to only return the default domain.
+     * 
+     */
     public Optional<Boolean> onlyDefault() {
-        return this.onlyDefault == null ? Optional.empty() : Optional.ofNullable(this.onlyDefault);
+        return Optional.ofNullable(this.onlyDefault);
     }
 
     /**
@@ -54,10 +66,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyInitial")
-      private final @Nullable Boolean onlyInitial;
+    private @Nullable Boolean onlyInitial;
 
+    /**
+     * @return Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> onlyInitial() {
-        return this.onlyInitial == null ? Optional.empty() : Optional.ofNullable(this.onlyInitial);
+        return Optional.ofNullable(this.onlyInitial);
     }
 
     /**
@@ -65,10 +81,14 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onlyRoot")
-      private final @Nullable Boolean onlyRoot;
+    private @Nullable Boolean onlyRoot;
 
+    /**
+     * @return Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+     * 
+     */
     public Optional<Boolean> onlyRoot() {
-        return this.onlyRoot == null ? Optional.empty() : Optional.ofNullable(this.onlyRoot);
+        return Optional.ofNullable(this.onlyRoot);
     }
 
     /**
@@ -76,94 +96,124 @@ public final class GetDomainsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="supportsServices")
-      private final @Nullable List<String> supportsServices;
+    private @Nullable List<String> supportsServices;
 
-    public List<String> supportsServices() {
-        return this.supportsServices == null ? List.of() : this.supportsServices;
+    /**
+     * @return A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+     * 
+     */
+    public Optional<List<String>> supportsServices() {
+        return Optional.ofNullable(this.supportsServices);
     }
 
-    public GetDomainsArgs(
-        @Nullable Boolean adminManaged,
-        @Nullable Boolean includeUnverified,
-        @Nullable Boolean onlyDefault,
-        @Nullable Boolean onlyInitial,
-        @Nullable Boolean onlyRoot,
-        @Nullable List<String> supportsServices) {
-        this.adminManaged = adminManaged;
-        this.includeUnverified = includeUnverified;
-        this.onlyDefault = onlyDefault;
-        this.onlyInitial = onlyInitial;
-        this.onlyRoot = onlyRoot;
-        this.supportsServices = supportsServices;
-    }
+    private GetDomainsArgs() {}
 
-    private GetDomainsArgs() {
-        this.adminManaged = null;
-        this.includeUnverified = null;
-        this.onlyDefault = null;
-        this.onlyInitial = null;
-        this.onlyRoot = null;
-        this.supportsServices = List.of();
+    private GetDomainsArgs(GetDomainsArgs $) {
+        this.adminManaged = $.adminManaged;
+        this.includeUnverified = $.includeUnverified;
+        this.onlyDefault = $.onlyDefault;
+        this.onlyInitial = $.onlyInitial;
+        this.onlyRoot = $.onlyRoot;
+        this.supportsServices = $.supportsServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean adminManaged;
-        private @Nullable Boolean includeUnverified;
-        private @Nullable Boolean onlyDefault;
-        private @Nullable Boolean onlyInitial;
-        private @Nullable Boolean onlyRoot;
-        private @Nullable List<String> supportsServices;
+        private GetDomainsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainsArgs();
         }
 
         public Builder(GetDomainsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminManaged = defaults.adminManaged;
-    	      this.includeUnverified = defaults.includeUnverified;
-    	      this.onlyDefault = defaults.onlyDefault;
-    	      this.onlyInitial = defaults.onlyInitial;
-    	      this.onlyRoot = defaults.onlyRoot;
-    	      this.supportsServices = defaults.supportsServices;
+            $ = new GetDomainsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminManaged Set to `true` to only return domains whose DNS is managed by Microsoft 365. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminManaged(@Nullable Boolean adminManaged) {
-            this.adminManaged = adminManaged;
+            $.adminManaged = adminManaged;
             return this;
         }
+
+        /**
+         * @param includeUnverified Set to `true` if unverified Azure AD domains should be included. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeUnverified(@Nullable Boolean includeUnverified) {
-            this.includeUnverified = includeUnverified;
+            $.includeUnverified = includeUnverified;
             return this;
         }
+
+        /**
+         * @param onlyDefault Set to `true` to only return the default domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyDefault(@Nullable Boolean onlyDefault) {
-            this.onlyDefault = onlyDefault;
+            $.onlyDefault = onlyDefault;
             return this;
         }
+
+        /**
+         * @param onlyInitial Set to `true` to only return the initial domain, which is your primary Azure Active Directory tenant domain. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyInitial(@Nullable Boolean onlyInitial) {
-            this.onlyInitial = onlyInitial;
+            $.onlyInitial = onlyInitial;
             return this;
         }
+
+        /**
+         * @param onlyRoot Set to `true` to only return verified root domains. Excludes subdomains and unverified domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyRoot(@Nullable Boolean onlyRoot) {
-            this.onlyRoot = onlyRoot;
+            $.onlyRoot = onlyRoot;
             return this;
         }
+
+        /**
+         * @param supportsServices A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsServices(@Nullable List<String> supportsServices) {
-            this.supportsServices = supportsServices;
+            $.supportsServices = supportsServices;
             return this;
         }
+
+        /**
+         * @param supportsServices A list of supported services that must be supported by a domain. Possible values include `Email`, `Sharepoint`, `EmailInternalRelayOnly`, `OfficeCommunicationsOnline`, `SharePointDefaultDomain`, `FullRedelegation`, `SharePointPublic`, `OrgIdAuthentication`, `Yammer` and `Intune`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportsServices(String... supportsServices) {
             return supportsServices(List.of(supportsServices));
-        }        public GetDomainsArgs build() {
-            return new GetDomainsArgs(adminManaged, includeUnverified, onlyDefault, onlyInitial, onlyRoot, supportsServices);
+        }
+
+        public GetDomainsArgs build() {
+            return $;
         }
     }
+
 }

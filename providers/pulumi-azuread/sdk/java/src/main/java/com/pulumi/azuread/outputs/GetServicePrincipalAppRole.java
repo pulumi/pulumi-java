@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalAppRole {
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
      * 
      */
     private final List<String> allowedMemberTypes;
     /**
-     * Permission help text that appears in the admin app assignment and consent experiences.
+     * @return Permission help text that appears in the admin app assignment and consent experiences.
      * 
      */
     private final String description;
     /**
-     * The display name of the application associated with this service principal.
+     * @return The display name of the application associated with this service principal.
      * 
      */
     private final String displayName;
     /**
-     * Determines if the permission scope is enabled.
+     * @return Determines if the permission scope is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
      */
     private final String id;
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
      */
     private final String value;
@@ -59,44 +59,44 @@ public final class GetServicePrincipalAppRole {
     }
 
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in daemon service scenarios). Possible values are: `User` and `Application`, or both.
      * 
-    */
+     */
     public List<String> allowedMemberTypes() {
         return this.allowedMemberTypes;
     }
     /**
-     * Permission help text that appears in the admin app assignment and consent experiences.
+     * @return Permission help text that appears in the admin app assignment and consent experiences.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the application associated with this service principal.
+     * @return The display name of the application associated with this service principal.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Determines if the permission scope is enabled.
+     * @return Determines if the permission scope is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

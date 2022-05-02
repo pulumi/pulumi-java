@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationOptionalClaims {
     /**
-     * One or more `access_token` blocks as documented below.
+     * @return One or more `access_token` blocks as documented below.
      * 
      */
     private final @Nullable List<ApplicationOptionalClaimsAccessToken> accessTokens;
     /**
-     * One or more `id_token` blocks as documented below.
+     * @return One or more `id_token` blocks as documented below.
      * 
      */
     private final @Nullable List<ApplicationOptionalClaimsIdToken> idTokens;
     /**
-     * One or more `saml2_token` blocks as documented below.
+     * @return One or more `saml2_token` blocks as documented below.
      * 
      */
     private final @Nullable List<ApplicationOptionalClaimsSaml2Token> saml2Tokens;
@@ -40,23 +40,23 @@ public final class ApplicationOptionalClaims {
     }
 
     /**
-     * One or more `access_token` blocks as documented below.
+     * @return One or more `access_token` blocks as documented below.
      * 
-    */
+     */
     public List<ApplicationOptionalClaimsAccessToken> accessTokens() {
         return this.accessTokens == null ? List.of() : this.accessTokens;
     }
     /**
-     * One or more `id_token` blocks as documented below.
+     * @return One or more `id_token` blocks as documented below.
      * 
-    */
+     */
     public List<ApplicationOptionalClaimsIdToken> idTokens() {
         return this.idTokens == null ? List.of() : this.idTokens;
     }
     /**
-     * One or more `saml2_token` blocks as documented below.
+     * @return One or more `saml2_token` blocks as documented below.
      * 
-    */
+     */
     public List<ApplicationOptionalClaimsSaml2Token> saml2Tokens() {
         return this.saml2Tokens == null ? List.of() : this.saml2Tokens;
     }

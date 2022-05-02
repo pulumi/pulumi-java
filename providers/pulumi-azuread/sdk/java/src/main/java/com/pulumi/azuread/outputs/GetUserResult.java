@@ -12,222 +12,222 @@ import java.util.Objects;
 @CustomType
 public final class GetUserResult {
     /**
-     * Whether or not the account is enabled.
+     * @return Whether or not the account is enabled.
      * 
      */
     private final Boolean accountEnabled;
     /**
-     * The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+     * @return The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
      * 
      */
     private final String ageGroup;
     /**
-     * A list of telephone numbers for the user.
+     * @return A list of telephone numbers for the user.
      * 
      */
     private final List<String> businessPhones;
     /**
-     * The city in which the user is located.
+     * @return The city in which the user is located.
      * 
      */
     private final String city;
     /**
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * @return The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
      * 
      */
     private final String companyName;
     /**
-     * Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+     * @return Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
      * 
      */
     private final String consentProvidedForMinor;
     /**
-     * The cost center associated with the user.
+     * @return The cost center associated with the user.
      * 
      */
     private final String costCenter;
     /**
-     * The country/region in which the user is located, e.g. `US` or `UK`.
+     * @return The country/region in which the user is located, e.g. `US` or `UK`.
      * 
      */
     private final String country;
     /**
-     * Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
+     * @return Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
      * 
      */
     private final String creationType;
     /**
-     * The name for the department in which the user works.
+     * @return The name for the department in which the user works.
      * 
      */
     private final String department;
     /**
-     * The display name of the user.
+     * @return The display name of the user.
      * 
      */
     private final String displayName;
     /**
-     * The name of the division in which the user works.
+     * @return The name of the division in which the user works.
      * 
      */
     private final String division;
     /**
-     * The employee identifier assigned to the user by the organisation.
+     * @return The employee identifier assigned to the user by the organisation.
      * 
      */
     private final String employeeId;
     /**
-     * Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
+     * @return Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
      * 
      */
     private final String employeeType;
     /**
-     * For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * @return For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
      * 
      */
     private final String externalUserState;
     /**
-     * The fax number of the user.
+     * @return The fax number of the user.
      * 
      */
     private final String faxNumber;
     /**
-     * The given name (first name) of the user.
+     * @return The given name (first name) of the user.
      * 
      */
     private final String givenName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+     * @return A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
      * 
      */
     private final List<String> imAddresses;
     /**
-     * The user’s job title.
+     * @return The user’s job title.
      * 
      */
     private final String jobTitle;
     /**
-     * The SMTP address for the user.
+     * @return The SMTP address for the user.
      * 
      */
     private final String mail;
     /**
-     * The email alias of the user.
+     * @return The email alias of the user.
      * 
      */
     private final String mailNickname;
     /**
-     * The object ID of the user's manager.
+     * @return The object ID of the user&#39;s manager.
      * 
      */
     private final String managerId;
     /**
-     * The primary cellular telephone number for the user.
+     * @return The primary cellular telephone number for the user.
      * 
      */
     private final String mobilePhone;
     /**
-     * The object ID of the user.
+     * @return The object ID of the user.
      * 
      */
     private final String objectId;
     /**
-     * The office location in the user's place of business.
+     * @return The office location in the user&#39;s place of business.
      * 
      */
     private final String officeLocation;
     /**
-     * The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
      * 
      */
     private final String onpremisesDistinguishedName;
     /**
-     * The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
      * 
      */
     private final String onpremisesDomainName;
     /**
-     * The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+     * @return The value used to associate an on-premise Active Directory user account with their Azure AD user object.
      * 
      */
     private final String onpremisesImmutableId;
     /**
-     * The on-premise SAM account name of the user.
+     * @return The on-premise SAM account name of the user.
      * 
      */
     private final String onpremisesSamAccountName;
     /**
-     * The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
      * 
      */
     private final String onpremisesSecurityIdentifier;
     /**
-     * Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+     * @return Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
      * 
      */
     private final Boolean onpremisesSyncEnabled;
     /**
-     * The on-premise user principal name of the user.
+     * @return The on-premise user principal name of the user.
      * 
      */
     private final String onpremisesUserPrincipalName;
     /**
-     * A list of additional email addresses for the user.
+     * @return A list of additional email addresses for the user.
      * 
      */
     private final List<String> otherMails;
     /**
-     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+     * @return The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
      * 
      */
     private final String postalCode;
     /**
-     * The user's preferred language, in ISO 639-1 notation.
+     * @return The user&#39;s preferred language, in ISO 639-1 notation.
      * 
      */
     private final String preferredLanguage;
     /**
-     * List of email addresses for the user that direct to the same mailbox.
+     * @return List of email addresses for the user that direct to the same mailbox.
      * 
      */
     private final List<String> proxyAddresses;
     /**
-     * Whether or not the Outlook global address list should include this user.
+     * @return Whether or not the Outlook global address list should include this user.
      * 
      */
     private final Boolean showInAddressList;
     /**
-     * The state or province in the user's address.
+     * @return The state or province in the user&#39;s address.
      * 
      */
     private final String state;
     /**
-     * The street address of the user's place of business.
+     * @return The street address of the user&#39;s place of business.
      * 
      */
     private final String streetAddress;
     /**
-     * The user's surname (family name or last name).
+     * @return The user&#39;s surname (family name or last name).
      * 
      */
     private final String surname;
     /**
-     * The usage location of the user.
+     * @return The usage location of the user.
      * 
      */
     private final String usageLocation;
     /**
-     * The user principal name (UPN) of the user.
+     * @return The user principal name (UPN) of the user.
      * 
      */
     private final String userPrincipalName;
     /**
-     * The user type in the directory. Possible values are `Guest` or `Member`.
+     * @return The user type in the directory. Possible values are `Guest` or `Member`.
      * 
      */
     private final String userType;
@@ -325,310 +325,310 @@ public final class GetUserResult {
     }
 
     /**
-     * Whether or not the account is enabled.
+     * @return Whether or not the account is enabled.
      * 
-    */
+     */
     public Boolean accountEnabled() {
         return this.accountEnabled;
     }
     /**
-     * The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
+     * @return The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`.
      * 
-    */
+     */
     public String ageGroup() {
         return this.ageGroup;
     }
     /**
-     * A list of telephone numbers for the user.
+     * @return A list of telephone numbers for the user.
      * 
-    */
+     */
     public List<String> businessPhones() {
         return this.businessPhones;
     }
     /**
-     * The city in which the user is located.
+     * @return The city in which the user is located.
      * 
-    */
+     */
     public String city() {
         return this.city;
     }
     /**
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * @return The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
      * 
-    */
+     */
     public String companyName() {
         return this.companyName;
     }
     /**
-     * Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
+     * @return Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`.
      * 
-    */
+     */
     public String consentProvidedForMinor() {
         return this.consentProvidedForMinor;
     }
     /**
-     * The cost center associated with the user.
+     * @return The cost center associated with the user.
      * 
-    */
+     */
     public String costCenter() {
         return this.costCenter;
     }
     /**
-     * The country/region in which the user is located, e.g. `US` or `UK`.
+     * @return The country/region in which the user is located, e.g. `US` or `UK`.
      * 
-    */
+     */
     public String country() {
         return this.country;
     }
     /**
-     * Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
+     * @return Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
      * 
-    */
+     */
     public String creationType() {
         return this.creationType;
     }
     /**
-     * The name for the department in which the user works.
+     * @return The name for the department in which the user works.
      * 
-    */
+     */
     public String department() {
         return this.department;
     }
     /**
-     * The display name of the user.
+     * @return The display name of the user.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The name of the division in which the user works.
+     * @return The name of the division in which the user works.
      * 
-    */
+     */
     public String division() {
         return this.division;
     }
     /**
-     * The employee identifier assigned to the user by the organisation.
+     * @return The employee identifier assigned to the user by the organisation.
      * 
-    */
+     */
     public String employeeId() {
         return this.employeeId;
     }
     /**
-     * Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
+     * @return Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
      * 
-    */
+     */
     public String employeeType() {
         return this.employeeType;
     }
     /**
-     * For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * @return For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
      * 
-    */
+     */
     public String externalUserState() {
         return this.externalUserState;
     }
     /**
-     * The fax number of the user.
+     * @return The fax number of the user.
      * 
-    */
+     */
     public String faxNumber() {
         return this.faxNumber;
     }
     /**
-     * The given name (first name) of the user.
+     * @return The given name (first name) of the user.
      * 
-    */
+     */
     public String givenName() {
         return this.givenName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+     * @return A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
      * 
-    */
+     */
     public List<String> imAddresses() {
         return this.imAddresses;
     }
     /**
-     * The user’s job title.
+     * @return The user’s job title.
      * 
-    */
+     */
     public String jobTitle() {
         return this.jobTitle;
     }
     /**
-     * The SMTP address for the user.
+     * @return The SMTP address for the user.
      * 
-    */
+     */
     public String mail() {
         return this.mail;
     }
     /**
-     * The email alias of the user.
+     * @return The email alias of the user.
      * 
-    */
+     */
     public String mailNickname() {
         return this.mailNickname;
     }
     /**
-     * The object ID of the user's manager.
+     * @return The object ID of the user&#39;s manager.
      * 
-    */
+     */
     public String managerId() {
         return this.managerId;
     }
     /**
-     * The primary cellular telephone number for the user.
+     * @return The primary cellular telephone number for the user.
      * 
-    */
+     */
     public String mobilePhone() {
         return this.mobilePhone;
     }
     /**
-     * The object ID of the user.
+     * @return The object ID of the user.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The office location in the user's place of business.
+     * @return The office location in the user&#39;s place of business.
      * 
-    */
+     */
     public String officeLocation() {
         return this.officeLocation;
     }
     /**
-     * The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
      * 
-    */
+     */
     public String onpremisesDistinguishedName() {
         return this.onpremisesDistinguishedName;
     }
     /**
-     * The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
      * 
-    */
+     */
     public String onpremisesDomainName() {
         return this.onpremisesDomainName;
     }
     /**
-     * The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+     * @return The value used to associate an on-premise Active Directory user account with their Azure AD user object.
      * 
-    */
+     */
     public String onpremisesImmutableId() {
         return this.onpremisesImmutableId;
     }
     /**
-     * The on-premise SAM account name of the user.
+     * @return The on-premise SAM account name of the user.
      * 
-    */
+     */
     public String onpremisesSamAccountName() {
         return this.onpremisesSamAccountName;
     }
     /**
-     * The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+     * @return The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
      * 
-    */
+     */
     public String onpremisesSecurityIdentifier() {
         return this.onpremisesSecurityIdentifier;
     }
     /**
-     * Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+     * @return Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
      * 
-    */
+     */
     public Boolean onpremisesSyncEnabled() {
         return this.onpremisesSyncEnabled;
     }
     /**
-     * The on-premise user principal name of the user.
+     * @return The on-premise user principal name of the user.
      * 
-    */
+     */
     public String onpremisesUserPrincipalName() {
         return this.onpremisesUserPrincipalName;
     }
     /**
-     * A list of additional email addresses for the user.
+     * @return A list of additional email addresses for the user.
      * 
-    */
+     */
     public List<String> otherMails() {
         return this.otherMails;
     }
     /**
-     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+     * @return The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
      * 
-    */
+     */
     public String postalCode() {
         return this.postalCode;
     }
     /**
-     * The user's preferred language, in ISO 639-1 notation.
+     * @return The user&#39;s preferred language, in ISO 639-1 notation.
      * 
-    */
+     */
     public String preferredLanguage() {
         return this.preferredLanguage;
     }
     /**
-     * List of email addresses for the user that direct to the same mailbox.
+     * @return List of email addresses for the user that direct to the same mailbox.
      * 
-    */
+     */
     public List<String> proxyAddresses() {
         return this.proxyAddresses;
     }
     /**
-     * Whether or not the Outlook global address list should include this user.
+     * @return Whether or not the Outlook global address list should include this user.
      * 
-    */
+     */
     public Boolean showInAddressList() {
         return this.showInAddressList;
     }
     /**
-     * The state or province in the user's address.
+     * @return The state or province in the user&#39;s address.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The street address of the user's place of business.
+     * @return The street address of the user&#39;s place of business.
      * 
-    */
+     */
     public String streetAddress() {
         return this.streetAddress;
     }
     /**
-     * The user's surname (family name or last name).
+     * @return The user&#39;s surname (family name or last name).
      * 
-    */
+     */
     public String surname() {
         return this.surname;
     }
     /**
-     * The usage location of the user.
+     * @return The usage location of the user.
      * 
-    */
+     */
     public String usageLocation() {
         return this.usageLocation;
     }
     /**
-     * The user principal name (UPN) of the user.
+     * @return The user principal name (UPN) of the user.
      * 
-    */
+     */
     public String userPrincipalName() {
         return this.userPrincipalName;
     }
     /**
-     * The user type in the directory. Possible values are `Guest` or `Member`.
+     * @return The user type in the directory. Possible values are `Guest` or `Member`.
      * 
-    */
+     */
     public String userType() {
         return this.userType;
     }

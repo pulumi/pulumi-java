@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 /**
  * Manages a single group membership within Azure Active Directory.
  * 
- * > **Warning** Do not use this resource at the same time as the `members` property of the `azuread.Group` resource for the same group. Doing so will cause a conflict and group members will be removed.
+ * &gt; **Warning** Do not use this resource at the same time as the `members` property of the `azuread.Group` resource for the same group. Doing so will cause a conflict and group members will be removed.
  * 
  * ## API Permissions
  * 
@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import azuread:index/groupMember:GroupMember test 00000000-0000-0000-0000-000000000000/member/11111111-1111-1111-1111-111111111111
  * ```
  * 
- *  -> This ID format is unique to Terraform and is composed of the Azure AD Group Object ID and the target Member Object ID in the format `{GroupObjectID}/member/{MemberObjectID}`.
+ *  -&gt; This ID format is unique to Terraform and is composed of the Azure AD Group Object ID and the target Member Object ID in the format `{GroupObjectID}/member/{MemberObjectID}`.
  * 
  */
 @ResourceType(type="azuread:index/groupMember:GroupMember")

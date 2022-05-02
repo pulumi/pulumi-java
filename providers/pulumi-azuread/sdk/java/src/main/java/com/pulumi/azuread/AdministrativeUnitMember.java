@@ -11,12 +11,13 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * Manages a single administrative unit membership within Azure Active Directory.
  * 
- * > **Warning** Do not use this resource at the same time as the `members` property of the `azuread.AdministrativeUnit` resource for the same administrative unit. Doing so will cause a conflict and administrative unit members will be removed.
+ * &gt; **Warning** Do not use this resource at the same time as the `members` property of the `azuread.AdministrativeUnit` resource for the same administrative unit. Doing so will cause a conflict and administrative unit members will be removed.
  * 
  * ## API Permissions
  * 
@@ -36,7 +37,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import azuread:index/administrativeUnitMember:AdministrativeUnitMember test 00000000-0000-0000-0000-000000000000/member/11111111-1111-1111-1111-111111111111
  * ```
  * 
- *  -> This ID format is unique to Terraform and is composed of the Administrative Unit Object ID and the target Member Object ID in the format `{AdministrativeUnitObjectID}/member/{MemberObjectID}`.
+ *  -&gt; This ID format is unique to Terraform and is composed of the Administrative Unit Object ID and the target Member Object ID in the format `{AdministrativeUnitObjectID}/member/{MemberObjectID}`.
  * 
  */
 @ResourceType(type="azuread:index/administrativeUnitMember:AdministrativeUnitMember")
@@ -52,8 +53,8 @@ public class AdministrativeUnitMember extends com.pulumi.resources.CustomResourc
      * @return The object ID of the administrative unit you want to add the member to. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> administrativeUnitObjectId() {
-        return this.administrativeUnitObjectId;
+    public Output<Optional<String>> administrativeUnitObjectId() {
+        return Codegen.optional(this.administrativeUnitObjectId);
     }
     /**
      * The object ID of the user or group you want to add as a member of the administrative unit. Changing this forces a new resource to be created.
@@ -66,8 +67,8 @@ public class AdministrativeUnitMember extends com.pulumi.resources.CustomResourc
      * @return The object ID of the user or group you want to add as a member of the administrative unit. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> memberObjectId() {
-        return this.memberObjectId;
+    public Output<Optional<String>> memberObjectId() {
+        return Codegen.optional(this.memberObjectId);
     }
 
     /**

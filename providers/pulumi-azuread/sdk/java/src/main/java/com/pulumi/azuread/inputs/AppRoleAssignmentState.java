@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="appRoleId")
-      private final @Nullable Output<String> appRoleId;
+    private @Nullable Output<String> appRoleId;
 
-    public Output<String> appRoleId() {
-        return this.appRoleId == null ? Codegen.empty() : this.appRoleId;
+    /**
+     * @return The ID of the app role to be assigned. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> appRoleId() {
+        return Optional.ofNullable(this.appRoleId);
     }
 
     /**
@@ -31,10 +35,14 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalDisplayName")
-      private final @Nullable Output<String> principalDisplayName;
+    private @Nullable Output<String> principalDisplayName;
 
-    public Output<String> principalDisplayName() {
-        return this.principalDisplayName == null ? Codegen.empty() : this.principalDisplayName;
+    /**
+     * @return The display name of the principal to which the app role is assigned.
+     * 
+     */
+    public Optional<Output<String>> principalDisplayName() {
+        return Optional.ofNullable(this.principalDisplayName);
     }
 
     /**
@@ -42,10 +50,14 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalObjectId")
-      private final @Nullable Output<String> principalObjectId;
+    private @Nullable Output<String> principalObjectId;
 
-    public Output<String> principalObjectId() {
-        return this.principalObjectId == null ? Codegen.empty() : this.principalObjectId;
+    /**
+     * @return The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> principalObjectId() {
+        return Optional.ofNullable(this.principalObjectId);
     }
 
     /**
@@ -53,10 +65,14 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="principalType")
-      private final @Nullable Output<String> principalType;
+    private @Nullable Output<String> principalType;
 
-    public Output<String> principalType() {
-        return this.principalType == null ? Codegen.empty() : this.principalType;
+    /**
+     * @return The object type of the principal to which the app role is assigned.
+     * 
+     */
+    public Optional<Output<String>> principalType() {
+        return Optional.ofNullable(this.principalType);
     }
 
     /**
@@ -64,10 +80,14 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceDisplayName")
-      private final @Nullable Output<String> resourceDisplayName;
+    private @Nullable Output<String> resourceDisplayName;
 
-    public Output<String> resourceDisplayName() {
-        return this.resourceDisplayName == null ? Codegen.empty() : this.resourceDisplayName;
+    /**
+     * @return The display name of the application representing the resource.
+     * 
+     */
+    public Optional<Output<String>> resourceDisplayName() {
+        return Optional.ofNullable(this.resourceDisplayName);
     }
 
     /**
@@ -75,115 +95,174 @@ public final class AppRoleAssignmentState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceObjectId")
-      private final @Nullable Output<String> resourceObjectId;
+    private @Nullable Output<String> resourceObjectId;
 
-    public Output<String> resourceObjectId() {
-        return this.resourceObjectId == null ? Codegen.empty() : this.resourceObjectId;
+    /**
+     * @return The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> resourceObjectId() {
+        return Optional.ofNullable(this.resourceObjectId);
     }
 
-    public AppRoleAssignmentState(
-        @Nullable Output<String> appRoleId,
-        @Nullable Output<String> principalDisplayName,
-        @Nullable Output<String> principalObjectId,
-        @Nullable Output<String> principalType,
-        @Nullable Output<String> resourceDisplayName,
-        @Nullable Output<String> resourceObjectId) {
-        this.appRoleId = appRoleId;
-        this.principalDisplayName = principalDisplayName;
-        this.principalObjectId = principalObjectId;
-        this.principalType = principalType;
-        this.resourceDisplayName = resourceDisplayName;
-        this.resourceObjectId = resourceObjectId;
-    }
+    private AppRoleAssignmentState() {}
 
-    private AppRoleAssignmentState() {
-        this.appRoleId = Codegen.empty();
-        this.principalDisplayName = Codegen.empty();
-        this.principalObjectId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.resourceDisplayName = Codegen.empty();
-        this.resourceObjectId = Codegen.empty();
+    private AppRoleAssignmentState(AppRoleAssignmentState $) {
+        this.appRoleId = $.appRoleId;
+        this.principalDisplayName = $.principalDisplayName;
+        this.principalObjectId = $.principalObjectId;
+        this.principalType = $.principalType;
+        this.resourceDisplayName = $.resourceDisplayName;
+        this.resourceObjectId = $.resourceObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppRoleAssignmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appRoleId;
-        private @Nullable Output<String> principalDisplayName;
-        private @Nullable Output<String> principalObjectId;
-        private @Nullable Output<String> principalType;
-        private @Nullable Output<String> resourceDisplayName;
-        private @Nullable Output<String> resourceObjectId;
+        private AppRoleAssignmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppRoleAssignmentState();
         }
 
         public Builder(AppRoleAssignmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appRoleId = defaults.appRoleId;
-    	      this.principalDisplayName = defaults.principalDisplayName;
-    	      this.principalObjectId = defaults.principalObjectId;
-    	      this.principalType = defaults.principalType;
-    	      this.resourceDisplayName = defaults.resourceDisplayName;
-    	      this.resourceObjectId = defaults.resourceObjectId;
+            $ = new AppRoleAssignmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appRoleId The ID of the app role to be assigned. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appRoleId(@Nullable Output<String> appRoleId) {
-            this.appRoleId = appRoleId;
+            $.appRoleId = appRoleId;
             return this;
         }
-        public Builder appRoleId(@Nullable String appRoleId) {
-            this.appRoleId = Codegen.ofNullable(appRoleId);
-            return this;
+
+        /**
+         * @param appRoleId The ID of the app role to be assigned. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appRoleId(String appRoleId) {
+            return appRoleId(Output.of(appRoleId));
         }
+
+        /**
+         * @param principalDisplayName The display name of the principal to which the app role is assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalDisplayName(@Nullable Output<String> principalDisplayName) {
-            this.principalDisplayName = principalDisplayName;
+            $.principalDisplayName = principalDisplayName;
             return this;
         }
-        public Builder principalDisplayName(@Nullable String principalDisplayName) {
-            this.principalDisplayName = Codegen.ofNullable(principalDisplayName);
-            return this;
+
+        /**
+         * @param principalDisplayName The display name of the principal to which the app role is assigned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalDisplayName(String principalDisplayName) {
+            return principalDisplayName(Output.of(principalDisplayName));
         }
+
+        /**
+         * @param principalObjectId The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalObjectId(@Nullable Output<String> principalObjectId) {
-            this.principalObjectId = principalObjectId;
+            $.principalObjectId = principalObjectId;
             return this;
         }
-        public Builder principalObjectId(@Nullable String principalObjectId) {
-            this.principalObjectId = Codegen.ofNullable(principalObjectId);
-            return this;
+
+        /**
+         * @param principalObjectId The object ID of the user, group or service principal to be assigned this app role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalObjectId(String principalObjectId) {
+            return principalObjectId(Output.of(principalObjectId));
         }
+
+        /**
+         * @param principalType The object type of the principal to which the app role is assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(@Nullable Output<String> principalType) {
-            this.principalType = principalType;
+            $.principalType = principalType;
             return this;
         }
-        public Builder principalType(@Nullable String principalType) {
-            this.principalType = Codegen.ofNullable(principalType);
-            return this;
+
+        /**
+         * @param principalType The object type of the principal to which the app role is assigned.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalType(String principalType) {
+            return principalType(Output.of(principalType));
         }
+
+        /**
+         * @param resourceDisplayName The display name of the application representing the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceDisplayName(@Nullable Output<String> resourceDisplayName) {
-            this.resourceDisplayName = resourceDisplayName;
+            $.resourceDisplayName = resourceDisplayName;
             return this;
         }
-        public Builder resourceDisplayName(@Nullable String resourceDisplayName) {
-            this.resourceDisplayName = Codegen.ofNullable(resourceDisplayName);
-            return this;
+
+        /**
+         * @param resourceDisplayName The display name of the application representing the resource.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceDisplayName(String resourceDisplayName) {
+            return resourceDisplayName(Output.of(resourceDisplayName));
         }
+
+        /**
+         * @param resourceObjectId The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceObjectId(@Nullable Output<String> resourceObjectId) {
-            this.resourceObjectId = resourceObjectId;
+            $.resourceObjectId = resourceObjectId;
             return this;
         }
-        public Builder resourceObjectId(@Nullable String resourceObjectId) {
-            this.resourceObjectId = Codegen.ofNullable(resourceObjectId);
-            return this;
-        }        public AppRoleAssignmentState build() {
-            return new AppRoleAssignmentState(appRoleId, principalDisplayName, principalObjectId, principalType, resourceDisplayName, resourceObjectId);
+
+        /**
+         * @param resourceObjectId The object ID of the service principal representing the resource. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder resourceObjectId(String resourceObjectId) {
+            return resourceObjectId(Output.of(resourceObjectId));
+        }
+
+        public AppRoleAssignmentState build() {
+            return $;
         }
     }
+
 }

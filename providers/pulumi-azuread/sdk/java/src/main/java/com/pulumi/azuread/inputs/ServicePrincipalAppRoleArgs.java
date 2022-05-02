@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allowedMemberTypes")
-      private final @Nullable Output<List<String>> allowedMemberTypes;
+    private @Nullable Output<List<String>> allowedMemberTypes;
 
-    public Output<List<String>> allowedMemberTypes() {
-        return this.allowedMemberTypes == null ? Codegen.empty() : this.allowedMemberTypes;
+    /**
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+     * 
+     */
+    public Optional<Output<List<String>>> allowedMemberTypes() {
+        return Optional.ofNullable(this.allowedMemberTypes);
     }
 
     /**
@@ -33,10 +37,14 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return A description of the service principal provided for internal end-users.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +52,14 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -55,10 +67,14 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    /**
+     * @return Specifies whether the permission scope is enabled.
+     * 
+     */
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -66,10 +82,14 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    /**
+     * @return The unique identifier of the delegated permission.
+     * 
+     */
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -77,118 +97,184 @@ public final class ServicePrincipalAppRoleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    /**
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * 
+     */
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ServicePrincipalAppRoleArgs(
-        @Nullable Output<List<String>> allowedMemberTypes,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> id,
-        @Nullable Output<String> value) {
-        this.allowedMemberTypes = allowedMemberTypes;
-        this.description = description;
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.id = id;
-        this.value = value;
-    }
+    private ServicePrincipalAppRoleArgs() {}
 
-    private ServicePrincipalAppRoleArgs() {
-        this.allowedMemberTypes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.id = Codegen.empty();
-        this.value = Codegen.empty();
+    private ServicePrincipalAppRoleArgs(ServicePrincipalAppRoleArgs $) {
+        this.allowedMemberTypes = $.allowedMemberTypes;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalAppRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedMemberTypes;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> value;
+        private ServicePrincipalAppRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalAppRoleArgs();
         }
 
         public Builder(ServicePrincipalAppRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedMemberTypes = defaults.allowedMemberTypes;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.value = defaults.value;
+            $ = new ServicePrincipalAppRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMemberTypes(@Nullable Output<List<String>> allowedMemberTypes) {
-            this.allowedMemberTypes = allowedMemberTypes;
+            $.allowedMemberTypes = allowedMemberTypes;
             return this;
         }
-        public Builder allowedMemberTypes(@Nullable List<String> allowedMemberTypes) {
-            this.allowedMemberTypes = Codegen.ofNullable(allowedMemberTypes);
-            return this;
+
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowedMemberTypes(List<String> allowedMemberTypes) {
+            return allowedMemberTypes(Output.of(allowedMemberTypes));
         }
+
+        /**
+         * @param allowedMemberTypes Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMemberTypes(String... allowedMemberTypes) {
             return allowedMemberTypes(List.of(allowedMemberTypes));
         }
+
+        /**
+         * @param description A description of the service principal provided for internal end-users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description A description of the service principal provided for internal end-users.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName Display name for the app role that appears during app role assignment and in consent experiences.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName Display name for the app role that appears during app role assignment and in consent experiences.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param enabled Specifies whether the permission scope is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        /**
+         * @param enabled Specifies whether the permission scope is enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param id The unique identifier of the delegated permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        /**
+         * @param id The unique identifier of the delegated permission.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
+        /**
+         * @param value The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ServicePrincipalAppRoleArgs build() {
-            return new ServicePrincipalAppRoleArgs(allowedMemberTypes, description, displayName, enabled, id, value);
+
+        /**
+         * @param value The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ServicePrincipalAppRoleArgs build() {
+            return $;
         }
     }
+
 }

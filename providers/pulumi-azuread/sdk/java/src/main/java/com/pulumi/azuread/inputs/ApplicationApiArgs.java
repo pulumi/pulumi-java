@@ -6,12 +6,12 @@ package com.pulumi.azuread.inputs;
 import com.pulumi.azuread.inputs.ApplicationApiOauth2PermissionScopeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,14 @@ public final class ApplicationApiArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="knownClientApplications")
-      private final @Nullable Output<List<String>> knownClientApplications;
+    private @Nullable Output<List<String>> knownClientApplications;
 
-    public Output<List<String>> knownClientApplications() {
-        return this.knownClientApplications == null ? Codegen.empty() : this.knownClientApplications;
+    /**
+     * @return A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+     * 
+     */
+    public Optional<Output<List<String>>> knownClientApplications() {
+        return Optional.ofNullable(this.knownClientApplications);
     }
 
     /**
@@ -35,10 +39,14 @@ public final class ApplicationApiArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mappedClaimsEnabled")
-      private final @Nullable Output<Boolean> mappedClaimsEnabled;
+    private @Nullable Output<Boolean> mappedClaimsEnabled;
 
-    public Output<Boolean> mappedClaimsEnabled() {
-        return this.mappedClaimsEnabled == null ? Codegen.empty() : this.mappedClaimsEnabled;
+    /**
+     * @return Allows an application to use claims mapping without specifying a custom signing key. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> mappedClaimsEnabled() {
+        return Optional.ofNullable(this.mappedClaimsEnabled);
     }
 
     /**
@@ -46,10 +54,14 @@ public final class ApplicationApiArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="oauth2PermissionScopes")
-      private final @Nullable Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes;
+    private @Nullable Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes;
 
-    public Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes() {
-        return this.oauth2PermissionScopes == null ? Codegen.empty() : this.oauth2PermissionScopes;
+    /**
+     * @return One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+     * 
+     */
+    public Optional<Output<List<ApplicationApiOauth2PermissionScopeArgs>>> oauth2PermissionScopes() {
+        return Optional.ofNullable(this.oauth2PermissionScopes);
     }
 
     /**
@@ -57,95 +69,150 @@ public final class ApplicationApiArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="requestedAccessTokenVersion")
-      private final @Nullable Output<Integer> requestedAccessTokenVersion;
+    private @Nullable Output<Integer> requestedAccessTokenVersion;
 
-    public Output<Integer> requestedAccessTokenVersion() {
-        return this.requestedAccessTokenVersion == null ? Codegen.empty() : this.requestedAccessTokenVersion;
+    /**
+     * @return The access token version expected by this resource. Must be one of `1` or `2`, and must be `2` when `sign_in_audience` is either `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount` Defaults to `1`.
+     * 
+     */
+    public Optional<Output<Integer>> requestedAccessTokenVersion() {
+        return Optional.ofNullable(this.requestedAccessTokenVersion);
     }
 
-    public ApplicationApiArgs(
-        @Nullable Output<List<String>> knownClientApplications,
-        @Nullable Output<Boolean> mappedClaimsEnabled,
-        @Nullable Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes,
-        @Nullable Output<Integer> requestedAccessTokenVersion) {
-        this.knownClientApplications = knownClientApplications;
-        this.mappedClaimsEnabled = mappedClaimsEnabled;
-        this.oauth2PermissionScopes = oauth2PermissionScopes;
-        this.requestedAccessTokenVersion = requestedAccessTokenVersion;
-    }
+    private ApplicationApiArgs() {}
 
-    private ApplicationApiArgs() {
-        this.knownClientApplications = Codegen.empty();
-        this.mappedClaimsEnabled = Codegen.empty();
-        this.oauth2PermissionScopes = Codegen.empty();
-        this.requestedAccessTokenVersion = Codegen.empty();
+    private ApplicationApiArgs(ApplicationApiArgs $) {
+        this.knownClientApplications = $.knownClientApplications;
+        this.mappedClaimsEnabled = $.mappedClaimsEnabled;
+        this.oauth2PermissionScopes = $.oauth2PermissionScopes;
+        this.requestedAccessTokenVersion = $.requestedAccessTokenVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> knownClientApplications;
-        private @Nullable Output<Boolean> mappedClaimsEnabled;
-        private @Nullable Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes;
-        private @Nullable Output<Integer> requestedAccessTokenVersion;
+        private ApplicationApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApiArgs();
         }
 
         public Builder(ApplicationApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.knownClientApplications = defaults.knownClientApplications;
-    	      this.mappedClaimsEnabled = defaults.mappedClaimsEnabled;
-    	      this.oauth2PermissionScopes = defaults.oauth2PermissionScopes;
-    	      this.requestedAccessTokenVersion = defaults.requestedAccessTokenVersion;
+            $ = new ApplicationApiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param knownClientApplications A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownClientApplications(@Nullable Output<List<String>> knownClientApplications) {
-            this.knownClientApplications = knownClientApplications;
+            $.knownClientApplications = knownClientApplications;
             return this;
         }
-        public Builder knownClientApplications(@Nullable List<String> knownClientApplications) {
-            this.knownClientApplications = Codegen.ofNullable(knownClientApplications);
-            return this;
+
+        /**
+         * @param knownClientApplications A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder knownClientApplications(List<String> knownClientApplications) {
+            return knownClientApplications(Output.of(knownClientApplications));
         }
+
+        /**
+         * @param knownClientApplications A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder knownClientApplications(String... knownClientApplications) {
             return knownClientApplications(List.of(knownClientApplications));
         }
+
+        /**
+         * @param mappedClaimsEnabled Allows an application to use claims mapping without specifying a custom signing key. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedClaimsEnabled(@Nullable Output<Boolean> mappedClaimsEnabled) {
-            this.mappedClaimsEnabled = mappedClaimsEnabled;
+            $.mappedClaimsEnabled = mappedClaimsEnabled;
             return this;
         }
-        public Builder mappedClaimsEnabled(@Nullable Boolean mappedClaimsEnabled) {
-            this.mappedClaimsEnabled = Codegen.ofNullable(mappedClaimsEnabled);
-            return this;
+
+        /**
+         * @param mappedClaimsEnabled Allows an application to use claims mapping without specifying a custom signing key. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mappedClaimsEnabled(Boolean mappedClaimsEnabled) {
+            return mappedClaimsEnabled(Output.of(mappedClaimsEnabled));
         }
+
+        /**
+         * @param oauth2PermissionScopes One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2PermissionScopes(@Nullable Output<List<ApplicationApiOauth2PermissionScopeArgs>> oauth2PermissionScopes) {
-            this.oauth2PermissionScopes = oauth2PermissionScopes;
+            $.oauth2PermissionScopes = oauth2PermissionScopes;
             return this;
         }
-        public Builder oauth2PermissionScopes(@Nullable List<ApplicationApiOauth2PermissionScopeArgs> oauth2PermissionScopes) {
-            this.oauth2PermissionScopes = Codegen.ofNullable(oauth2PermissionScopes);
-            return this;
+
+        /**
+         * @param oauth2PermissionScopes One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder oauth2PermissionScopes(List<ApplicationApiOauth2PermissionScopeArgs> oauth2PermissionScopes) {
+            return oauth2PermissionScopes(Output.of(oauth2PermissionScopes));
         }
+
+        /**
+         * @param oauth2PermissionScopes One or more `oauth2_permission_scope` blocks as documented below, to describe delegated permissions exposed by the web API represented by this application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2PermissionScopes(ApplicationApiOauth2PermissionScopeArgs... oauth2PermissionScopes) {
             return oauth2PermissionScopes(List.of(oauth2PermissionScopes));
         }
+
+        /**
+         * @param requestedAccessTokenVersion The access token version expected by this resource. Must be one of `1` or `2`, and must be `2` when `sign_in_audience` is either `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount` Defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedAccessTokenVersion(@Nullable Output<Integer> requestedAccessTokenVersion) {
-            this.requestedAccessTokenVersion = requestedAccessTokenVersion;
+            $.requestedAccessTokenVersion = requestedAccessTokenVersion;
             return this;
         }
-        public Builder requestedAccessTokenVersion(@Nullable Integer requestedAccessTokenVersion) {
-            this.requestedAccessTokenVersion = Codegen.ofNullable(requestedAccessTokenVersion);
-            return this;
-        }        public ApplicationApiArgs build() {
-            return new ApplicationApiArgs(knownClientApplications, mappedClaimsEnabled, oauth2PermissionScopes, requestedAccessTokenVersion);
+
+        /**
+         * @param requestedAccessTokenVersion The access token version expected by this resource. Must be one of `1` or `2`, and must be `2` when `sign_in_audience` is either `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount` Defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder requestedAccessTokenVersion(Integer requestedAccessTokenVersion) {
+            return requestedAccessTokenVersion(Output.of(requestedAccessTokenVersion));
+        }
+
+        public ApplicationApiArgs build() {
+            return $;
         }
     }
+
 }

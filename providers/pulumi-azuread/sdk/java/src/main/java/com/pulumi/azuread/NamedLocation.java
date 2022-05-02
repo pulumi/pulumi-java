@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class NamedLocation extends com.pulumi.resources.CustomResource {
      * @return A `country` block as documented below, which configures a country-based named location.
      * 
      */
-    public Output</* @Nullable */ NamedLocationCountry> country() {
-        return this.country;
+    public Output<Optional<NamedLocationCountry>> country() {
+        return Codegen.optional(this.country);
     }
     /**
      * The friendly name for this named location.
@@ -78,8 +79,8 @@ public class NamedLocation extends com.pulumi.resources.CustomResource {
      * @return An `ip` block as documented below, which configures an IP-based named location.
      * 
      */
-    public Output</* @Nullable */ NamedLocationIp> ip() {
-        return this.ip;
+    public Output<Optional<NamedLocationIp>> ip() {
+        return Codegen.optional(this.ip);
     }
 
     /**

@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePrincipalAppRole {
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
      * 
      */
     private final @Nullable List<String> allowedMemberTypes;
     /**
-     * A description of the service principal provided for internal end-users.
+     * @return A description of the service principal provided for internal end-users.
      * 
      */
     private final @Nullable String description;
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * Specifies whether the permission scope is enabled.
+     * @return Specifies whether the permission scope is enabled.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The unique identifier of the delegated permission.
+     * @return The unique identifier of the delegated permission.
      * 
      */
     private final @Nullable String id;
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
      */
     private final @Nullable String value;
@@ -61,44 +61,44 @@ public final class ServicePrincipalAppRole {
     }
 
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are: `User` and `Application`, or both.
      * 
-    */
+     */
     public List<String> allowedMemberTypes() {
         return this.allowedMemberTypes == null ? List.of() : this.allowedMemberTypes;
     }
     /**
-     * A description of the service principal provided for internal end-users.
+     * @return A description of the service principal provided for internal end-users.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Display name for the app role that appears during app role assignment and in consent experiences.
+     * @return Display name for the app role that appears during app role assignment and in consent experiences.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Specifies whether the permission scope is enabled.
+     * @return Specifies whether the permission scope is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The unique identifier of the delegated permission.
+     * @return The unique identifier of the delegated permission.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

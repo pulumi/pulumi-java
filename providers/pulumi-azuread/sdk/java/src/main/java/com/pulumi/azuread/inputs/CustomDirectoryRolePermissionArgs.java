@@ -5,7 +5,6 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,75 @@ public final class CustomDirectoryRolePermissionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="allowedResourceActions", required=true)
-      private final Output<List<String>> allowedResourceActions;
+    private Output<List<String>> allowedResourceActions;
 
+    /**
+     * @return A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+     * 
+     */
     public Output<List<String>> allowedResourceActions() {
         return this.allowedResourceActions;
     }
 
-    public CustomDirectoryRolePermissionArgs(Output<List<String>> allowedResourceActions) {
-        this.allowedResourceActions = Objects.requireNonNull(allowedResourceActions, "expected parameter 'allowedResourceActions' to be non-null");
-    }
+    private CustomDirectoryRolePermissionArgs() {}
 
-    private CustomDirectoryRolePermissionArgs() {
-        this.allowedResourceActions = Codegen.empty();
+    private CustomDirectoryRolePermissionArgs(CustomDirectoryRolePermissionArgs $) {
+        this.allowedResourceActions = $.allowedResourceActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDirectoryRolePermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedResourceActions;
+        private CustomDirectoryRolePermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDirectoryRolePermissionArgs();
         }
 
         public Builder(CustomDirectoryRolePermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedResourceActions = defaults.allowedResourceActions;
+            $ = new CustomDirectoryRolePermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedResourceActions A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedResourceActions(Output<List<String>> allowedResourceActions) {
-            this.allowedResourceActions = Objects.requireNonNull(allowedResourceActions);
+            $.allowedResourceActions = allowedResourceActions;
             return this;
         }
+
+        /**
+         * @param allowedResourceActions A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedResourceActions(List<String> allowedResourceActions) {
-            this.allowedResourceActions = Output.of(Objects.requireNonNull(allowedResourceActions));
-            return this;
+            return allowedResourceActions(Output.of(allowedResourceActions));
         }
+
+        /**
+         * @param allowedResourceActions A set of tasks that can be performed on a resource. For more information, see the [Permissions Reference](https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) documentation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedResourceActions(String... allowedResourceActions) {
             return allowedResourceActions(List.of(allowedResourceActions));
-        }        public CustomDirectoryRolePermissionArgs build() {
-            return new CustomDirectoryRolePermissionArgs(allowedResourceActions);
+        }
+
+        public CustomDirectoryRolePermissionArgs build() {
+            $.allowedResourceActions = Objects.requireNonNull($.allowedResourceActions, "expected parameter 'allowedResourceActions' to be non-null");
+            return $;
         }
     }
+
 }

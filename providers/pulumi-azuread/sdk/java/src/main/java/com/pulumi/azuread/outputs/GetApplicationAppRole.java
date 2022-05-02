@@ -12,32 +12,32 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationAppRole {
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are `User` or `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are `User` or `Application`, or both.
      * 
      */
     private final List<String> allowedMemberTypes;
     /**
-     * Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+     * @return Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
      * 
      */
     private final String description;
     /**
-     * Specifies the display name of the application.
+     * @return Specifies the display name of the application.
      * 
      */
     private final String displayName;
     /**
-     * Determines if the app role is enabled.
+     * @return Determines if the app role is enabled.
      * 
      */
     private final Boolean enabled;
     /**
-     * The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+     * @return The unique identifier for an app role or OAuth2 permission scope published by the resource application.
      * 
      */
     private final String id;
     /**
-     * The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+     * @return The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
      * 
      */
     private final String value;
@@ -59,44 +59,44 @@ public final class GetApplicationAppRole {
     }
 
     /**
-     * Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are `User` or `Application`, or both.
+     * @return Specifies whether this app role definition can be assigned to users and groups, or to other applications (that are accessing this application in a standalone scenario). Possible values are `User` or `Application`, or both.
      * 
-    */
+     */
     public List<String> allowedMemberTypes() {
         return this.allowedMemberTypes;
     }
     /**
-     * Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
+     * @return Description of the app role that appears when the role is being assigned and, if the role functions as an application permissions, during the consent experiences.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Specifies the display name of the application.
+     * @return Specifies the display name of the application.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Determines if the app role is enabled.
+     * @return Determines if the app role is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+     * @return The unique identifier for an app role or OAuth2 permission scope published by the resource application.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
+     * @return The value that is used for the `roles` claim in ID tokens and OAuth 2.0 access tokens that are authenticating an assigned service or user principal.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

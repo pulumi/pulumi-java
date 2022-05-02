@@ -19,10 +19,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailNickname")
-      private final @Nullable String mailNickname;
+    private @Nullable String mailNickname;
 
+    /**
+     * @return The email alias of the user.
+     * 
+     */
     public Optional<String> mailNickname() {
-        return this.mailNickname == null ? Optional.empty() : Optional.ofNullable(this.mailNickname);
+        return Optional.ofNullable(this.mailNickname);
     }
 
     /**
@@ -30,10 +34,14 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
+    /**
+     * @return The object ID of the user.
+     * 
+     */
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -41,64 +49,78 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userPrincipalName")
-      private final @Nullable String userPrincipalName;
+    private @Nullable String userPrincipalName;
 
+    /**
+     * @return The user principal name (UPN) of the user.
+     * 
+     */
     public Optional<String> userPrincipalName() {
-        return this.userPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.userPrincipalName);
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
-    public GetUserArgs(
-        @Nullable String mailNickname,
-        @Nullable String objectId,
-        @Nullable String userPrincipalName) {
-        this.mailNickname = mailNickname;
-        this.objectId = objectId;
-        this.userPrincipalName = userPrincipalName;
-    }
+    private GetUserArgs() {}
 
-    private GetUserArgs() {
-        this.mailNickname = null;
-        this.objectId = null;
-        this.userPrincipalName = null;
+    private GetUserArgs(GetUserArgs $) {
+        this.mailNickname = $.mailNickname;
+        this.objectId = $.objectId;
+        this.userPrincipalName = $.userPrincipalName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mailNickname;
-        private @Nullable String objectId;
-        private @Nullable String userPrincipalName;
+        private GetUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserArgs();
         }
 
         public Builder(GetUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mailNickname = defaults.mailNickname;
-    	      this.objectId = defaults.objectId;
-    	      this.userPrincipalName = defaults.userPrincipalName;
+            $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mailNickname The email alias of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailNickname(@Nullable String mailNickname) {
-            this.mailNickname = mailNickname;
+            $.mailNickname = mailNickname;
             return this;
         }
+
+        /**
+         * @param objectId The object ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
+        /**
+         * @param userPrincipalName The user principal name (UPN) of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
+            $.userPrincipalName = userPrincipalName;
             return this;
-        }        public GetUserArgs build() {
-            return new GetUserArgs(mailNickname, objectId, userPrincipalName);
+        }
+
+        public GetUserArgs build() {
+            return $;
         }
     }
+
 }

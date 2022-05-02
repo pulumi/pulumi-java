@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class ServicePrincipalClaimsMappingPolicyAssignmentState extends co
      * 
      */
     @Import(name="claimsMappingPolicyId")
-      private final @Nullable Output<String> claimsMappingPolicyId;
+    private @Nullable Output<String> claimsMappingPolicyId;
 
-    public Output<String> claimsMappingPolicyId() {
-        return this.claimsMappingPolicyId == null ? Codegen.empty() : this.claimsMappingPolicyId;
+    /**
+     * @return The ID of the claims mapping policy to assign.
+     * 
+     */
+    public Optional<Output<String>> claimsMappingPolicyId() {
+        return Optional.ofNullable(this.claimsMappingPolicyId);
     }
 
     /**
@@ -31,63 +35,86 @@ public final class ServicePrincipalClaimsMappingPolicyAssignmentState extends co
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Output<String> servicePrincipalId;
+    private @Nullable Output<String> servicePrincipalId;
 
-    public Output<String> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
+    /**
+     * @return The object ID of the service principal for the policy assignment.
+     * 
+     */
+    public Optional<Output<String>> servicePrincipalId() {
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
-    public ServicePrincipalClaimsMappingPolicyAssignmentState(
-        @Nullable Output<String> claimsMappingPolicyId,
-        @Nullable Output<String> servicePrincipalId) {
-        this.claimsMappingPolicyId = claimsMappingPolicyId;
-        this.servicePrincipalId = servicePrincipalId;
-    }
+    private ServicePrincipalClaimsMappingPolicyAssignmentState() {}
 
-    private ServicePrincipalClaimsMappingPolicyAssignmentState() {
-        this.claimsMappingPolicyId = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
+    private ServicePrincipalClaimsMappingPolicyAssignmentState(ServicePrincipalClaimsMappingPolicyAssignmentState $) {
+        this.claimsMappingPolicyId = $.claimsMappingPolicyId;
+        this.servicePrincipalId = $.servicePrincipalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalClaimsMappingPolicyAssignmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> claimsMappingPolicyId;
-        private @Nullable Output<String> servicePrincipalId;
+        private ServicePrincipalClaimsMappingPolicyAssignmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalClaimsMappingPolicyAssignmentState();
         }
 
         public Builder(ServicePrincipalClaimsMappingPolicyAssignmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimsMappingPolicyId = defaults.claimsMappingPolicyId;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
+            $ = new ServicePrincipalClaimsMappingPolicyAssignmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimsMappingPolicyId The ID of the claims mapping policy to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimsMappingPolicyId(@Nullable Output<String> claimsMappingPolicyId) {
-            this.claimsMappingPolicyId = claimsMappingPolicyId;
+            $.claimsMappingPolicyId = claimsMappingPolicyId;
             return this;
         }
-        public Builder claimsMappingPolicyId(@Nullable String claimsMappingPolicyId) {
-            this.claimsMappingPolicyId = Codegen.ofNullable(claimsMappingPolicyId);
-            return this;
+
+        /**
+         * @param claimsMappingPolicyId The ID of the claims mapping policy to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder claimsMappingPolicyId(String claimsMappingPolicyId) {
+            return claimsMappingPolicyId(Output.of(claimsMappingPolicyId));
         }
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for the policy assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<String> servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
-        public Builder servicePrincipalId(@Nullable String servicePrincipalId) {
-            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
-            return this;
-        }        public ServicePrincipalClaimsMappingPolicyAssignmentState build() {
-            return new ServicePrincipalClaimsMappingPolicyAssignmentState(claimsMappingPolicyId, servicePrincipalId);
+
+        /**
+         * @param servicePrincipalId The object ID of the service principal for the policy assignment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder servicePrincipalId(String servicePrincipalId) {
+            return servicePrincipalId(Output.of(servicePrincipalId));
+        }
+
+        public ServicePrincipalClaimsMappingPolicyAssignmentState build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import azuread:index/applicationPreAuthorized:ApplicationPreAuthorized example 00000000-0000-0000-0000-000000000000/preAuthorizedApplication/11111111-1111-1111-1111-111111111111
  * ```
  * 
- *  -> This ID format is unique to Terraform and is composed of the authorizing application's object ID, the string "preAuthorizedApplication" and the authorized application's application ID (client ID) in the format `{ObjectId}/preAuthorizedApplication/{ApplicationId}`.
+ *  -&gt; This ID format is unique to Terraform and is composed of the authorizing application&#39;s object ID, the string &#34;preAuthorizedApplication&#34; and the authorized application&#39;s application ID (client ID) in the format `{ObjectId}/preAuthorizedApplication/{ApplicationId}`.
  * 
  */
 @ResourceType(type="azuread:index/applicationPreAuthorized:ApplicationPreAuthorized")

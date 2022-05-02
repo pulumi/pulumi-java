@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationWeb {
     /**
-     * Home page or landing page of the application.
+     * @return Home page or landing page of the application.
      * 
      */
     private final @Nullable String homepageUrl;
     /**
-     * An `implicit_grant` block as documented above.
+     * @return An `implicit_grant` block as documented above.
      * 
      */
     private final @Nullable ApplicationWebImplicitGrant implicitGrant;
     /**
-     * The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
      * 
      */
     private final @Nullable String logoutUrl;
     /**
-     * A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
      * 
      */
     private final @Nullable List<String> redirectUris;
@@ -47,30 +47,30 @@ public final class ApplicationWeb {
     }
 
     /**
-     * Home page or landing page of the application.
+     * @return Home page or landing page of the application.
      * 
-    */
+     */
     public Optional<String> homepageUrl() {
         return Optional.ofNullable(this.homepageUrl);
     }
     /**
-     * An `implicit_grant` block as documented above.
+     * @return An `implicit_grant` block as documented above.
      * 
-    */
+     */
     public Optional<ApplicationWebImplicitGrant> implicitGrant() {
         return Optional.ofNullable(this.implicitGrant);
     }
     /**
-     * The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
      * 
-    */
+     */
     public Optional<String> logoutUrl() {
         return Optional.ofNullable(this.logoutUrl);
     }
     /**
-     * A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
      * 
-    */
+     */
     public List<String> redirectUris() {
         return this.redirectUris == null ? List.of() : this.redirectUris;
     }

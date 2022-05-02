@@ -19,10 +19,14 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
+    /**
+     * @return Specifies the display name of the templated application.
+     * 
+     */
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -30,55 +34,66 @@ public final class GetApplicationTemplateArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="templateId")
-      private final @Nullable String templateId;
+    private @Nullable String templateId;
 
+    /**
+     * @return Specifies the ID of the templated application.
+     * 
+     */
     public Optional<String> templateId() {
-        return this.templateId == null ? Optional.empty() : Optional.ofNullable(this.templateId);
+        return Optional.ofNullable(this.templateId);
     }
 
-    public GetApplicationTemplateArgs(
-        @Nullable String displayName,
-        @Nullable String templateId) {
-        this.displayName = displayName;
-        this.templateId = templateId;
-    }
+    private GetApplicationTemplateArgs() {}
 
-    private GetApplicationTemplateArgs() {
-        this.displayName = null;
-        this.templateId = null;
+    private GetApplicationTemplateArgs(GetApplicationTemplateArgs $) {
+        this.displayName = $.displayName;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String templateId;
+        private GetApplicationTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationTemplateArgs();
         }
 
         public Builder(GetApplicationTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.templateId = defaults.templateId;
+            $ = new GetApplicationTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Specifies the display name of the templated application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param templateId Specifies the ID of the templated application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
-        }        public GetApplicationTemplateArgs build() {
-            return new GetApplicationTemplateArgs(displayName, templateId);
+        }
+
+        public GetApplicationTemplateArgs build() {
+            return $;
         }
     }
+
 }

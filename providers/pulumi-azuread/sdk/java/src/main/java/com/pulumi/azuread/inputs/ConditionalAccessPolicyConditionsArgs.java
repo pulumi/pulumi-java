@@ -10,10 +10,10 @@ import com.pulumi.azuread.inputs.ConditionalAccessPolicyConditionsPlatformsArgs;
 import com.pulumi.azuread.inputs.ConditionalAccessPolicyConditionsUsersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,8 +26,12 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="applications", required=true)
-      private final Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications;
+    private Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications;
 
+    /**
+     * @return An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
+     * 
+     */
     public Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications() {
         return this.applications;
     }
@@ -37,8 +41,12 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clientAppTypes", required=true)
-      private final Output<List<String>> clientAppTypes;
+    private Output<List<String>> clientAppTypes;
 
+    /**
+     * @return A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+     * 
+     */
     public Output<List<String>> clientAppTypes() {
         return this.clientAppTypes;
     }
@@ -48,32 +56,44 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="devices")
-      private final @Nullable Output<ConditionalAccessPolicyConditionsDevicesArgs> devices;
+    private @Nullable Output<ConditionalAccessPolicyConditionsDevicesArgs> devices;
 
-    public Output<ConditionalAccessPolicyConditionsDevicesArgs> devices() {
-        return this.devices == null ? Codegen.empty() : this.devices;
+    /**
+     * @return A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyConditionsDevicesArgs>> devices() {
+        return Optional.ofNullable(this.devices);
     }
 
     /**
      * A `locations` block as documented below, which specifies locations included in and excluded from the policy.
      * 
      */
-    @Import(name="locations", required=true)
-      private final Output<ConditionalAccessPolicyConditionsLocationsArgs> locations;
+    @Import(name="locations")
+    private @Nullable Output<ConditionalAccessPolicyConditionsLocationsArgs> locations;
 
-    public Output<ConditionalAccessPolicyConditionsLocationsArgs> locations() {
-        return this.locations;
+    /**
+     * @return A `locations` block as documented below, which specifies locations included in and excluded from the policy.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyConditionsLocationsArgs>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
      * A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
      * 
      */
-    @Import(name="platforms", required=true)
-      private final Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms;
+    @Import(name="platforms")
+    private @Nullable Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms;
 
-    public Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms() {
-        return this.platforms;
+    /**
+     * @return A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyConditionsPlatformsArgs>> platforms() {
+        return Optional.ofNullable(this.platforms);
     }
 
     /**
@@ -81,10 +101,14 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="signInRiskLevels")
-      private final @Nullable Output<List<String>> signInRiskLevels;
+    private @Nullable Output<List<String>> signInRiskLevels;
 
-    public Output<List<String>> signInRiskLevels() {
-        return this.signInRiskLevels == null ? Codegen.empty() : this.signInRiskLevels;
+    /**
+     * @return A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * 
+     */
+    public Optional<Output<List<String>>> signInRiskLevels() {
+        return Optional.ofNullable(this.signInRiskLevels);
     }
 
     /**
@@ -92,10 +116,14 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="userRiskLevels")
-      private final @Nullable Output<List<String>> userRiskLevels;
+    private @Nullable Output<List<String>> userRiskLevels;
 
-    public Output<List<String>> userRiskLevels() {
-        return this.userRiskLevels == null ? Codegen.empty() : this.userRiskLevels;
+    /**
+     * @return A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+     * 
+     */
+    public Optional<Output<List<String>>> userRiskLevels() {
+        return Optional.ofNullable(this.userRiskLevels);
     }
 
     /**
@@ -103,150 +131,251 @@ public final class ConditionalAccessPolicyConditionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="users", required=true)
-      private final Output<ConditionalAccessPolicyConditionsUsersArgs> users;
+    private Output<ConditionalAccessPolicyConditionsUsersArgs> users;
 
+    /**
+     * @return A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
+     * 
+     */
     public Output<ConditionalAccessPolicyConditionsUsersArgs> users() {
         return this.users;
     }
 
-    public ConditionalAccessPolicyConditionsArgs(
-        Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications,
-        Output<List<String>> clientAppTypes,
-        @Nullable Output<ConditionalAccessPolicyConditionsDevicesArgs> devices,
-        Output<ConditionalAccessPolicyConditionsLocationsArgs> locations,
-        Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms,
-        @Nullable Output<List<String>> signInRiskLevels,
-        @Nullable Output<List<String>> userRiskLevels,
-        Output<ConditionalAccessPolicyConditionsUsersArgs> users) {
-        this.applications = Objects.requireNonNull(applications, "expected parameter 'applications' to be non-null");
-        this.clientAppTypes = Objects.requireNonNull(clientAppTypes, "expected parameter 'clientAppTypes' to be non-null");
-        this.devices = devices;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.platforms = Objects.requireNonNull(platforms, "expected parameter 'platforms' to be non-null");
-        this.signInRiskLevels = signInRiskLevels;
-        this.userRiskLevels = userRiskLevels;
-        this.users = Objects.requireNonNull(users, "expected parameter 'users' to be non-null");
-    }
+    private ConditionalAccessPolicyConditionsArgs() {}
 
-    private ConditionalAccessPolicyConditionsArgs() {
-        this.applications = Codegen.empty();
-        this.clientAppTypes = Codegen.empty();
-        this.devices = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.platforms = Codegen.empty();
-        this.signInRiskLevels = Codegen.empty();
-        this.userRiskLevels = Codegen.empty();
-        this.users = Codegen.empty();
+    private ConditionalAccessPolicyConditionsArgs(ConditionalAccessPolicyConditionsArgs $) {
+        this.applications = $.applications;
+        this.clientAppTypes = $.clientAppTypes;
+        this.devices = $.devices;
+        this.locations = $.locations;
+        this.platforms = $.platforms;
+        this.signInRiskLevels = $.signInRiskLevels;
+        this.userRiskLevels = $.userRiskLevels;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications;
-        private Output<List<String>> clientAppTypes;
-        private @Nullable Output<ConditionalAccessPolicyConditionsDevicesArgs> devices;
-        private Output<ConditionalAccessPolicyConditionsLocationsArgs> locations;
-        private Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms;
-        private @Nullable Output<List<String>> signInRiskLevels;
-        private @Nullable Output<List<String>> userRiskLevels;
-        private Output<ConditionalAccessPolicyConditionsUsersArgs> users;
+        private ConditionalAccessPolicyConditionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applications = defaults.applications;
-    	      this.clientAppTypes = defaults.clientAppTypes;
-    	      this.devices = defaults.devices;
-    	      this.locations = defaults.locations;
-    	      this.platforms = defaults.platforms;
-    	      this.signInRiskLevels = defaults.signInRiskLevels;
-    	      this.userRiskLevels = defaults.userRiskLevels;
-    	      this.users = defaults.users;
+            $ = new ConditionalAccessPolicyConditionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applications An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applications(Output<ConditionalAccessPolicyConditionsApplicationsArgs> applications) {
-            this.applications = Objects.requireNonNull(applications);
+            $.applications = applications;
             return this;
         }
+
+        /**
+         * @param applications An `applications` block as documented below, which specifies applications and user actions included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applications(ConditionalAccessPolicyConditionsApplicationsArgs applications) {
-            this.applications = Output.of(Objects.requireNonNull(applications));
-            return this;
+            return applications(Output.of(applications));
         }
+
+        /**
+         * @param clientAppTypes A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAppTypes(Output<List<String>> clientAppTypes) {
-            this.clientAppTypes = Objects.requireNonNull(clientAppTypes);
+            $.clientAppTypes = clientAppTypes;
             return this;
         }
+
+        /**
+         * @param clientAppTypes A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAppTypes(List<String> clientAppTypes) {
-            this.clientAppTypes = Output.of(Objects.requireNonNull(clientAppTypes));
-            return this;
+            return clientAppTypes(Output.of(clientAppTypes));
         }
+
+        /**
+         * @param clientAppTypes A list of client application types included in the policy. Possible values are: `all`, `browser`, `mobileAppsAndDesktopClients`, `exchangeActiveSync`, `easSupported` and `other`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAppTypes(String... clientAppTypes) {
             return clientAppTypes(List.of(clientAppTypes));
         }
+
+        /**
+         * @param devices A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devices(@Nullable Output<ConditionalAccessPolicyConditionsDevicesArgs> devices) {
-            this.devices = devices;
+            $.devices = devices;
             return this;
         }
-        public Builder devices(@Nullable ConditionalAccessPolicyConditionsDevicesArgs devices) {
-            this.devices = Codegen.ofNullable(devices);
+
+        /**
+         * @param devices A `devices` block as documented below, which describes devices to be included in and excluded from the policy. A `devices` block can be added to an existing policy, but removing the `devices` block forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(ConditionalAccessPolicyConditionsDevicesArgs devices) {
+            return devices(Output.of(devices));
+        }
+
+        /**
+         * @param locations A `locations` block as documented below, which specifies locations included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder locations(@Nullable Output<ConditionalAccessPolicyConditionsLocationsArgs> locations) {
+            $.locations = locations;
             return this;
         }
-        public Builder locations(Output<ConditionalAccessPolicyConditionsLocationsArgs> locations) {
-            this.locations = Objects.requireNonNull(locations);
-            return this;
-        }
+
+        /**
+         * @param locations A `locations` block as documented below, which specifies locations included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(ConditionalAccessPolicyConditionsLocationsArgs locations) {
-            this.locations = Output.of(Objects.requireNonNull(locations));
+            return locations(Output.of(locations));
+        }
+
+        /**
+         * @param platforms A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder platforms(@Nullable Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms) {
+            $.platforms = platforms;
             return this;
         }
-        public Builder platforms(Output<ConditionalAccessPolicyConditionsPlatformsArgs> platforms) {
-            this.platforms = Objects.requireNonNull(platforms);
-            return this;
-        }
+
+        /**
+         * @param platforms A `platforms` block as documented below, which specifies platforms included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platforms(ConditionalAccessPolicyConditionsPlatformsArgs platforms) {
-            this.platforms = Output.of(Objects.requireNonNull(platforms));
-            return this;
+            return platforms(Output.of(platforms));
         }
+
+        /**
+         * @param signInRiskLevels A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signInRiskLevels(@Nullable Output<List<String>> signInRiskLevels) {
-            this.signInRiskLevels = signInRiskLevels;
+            $.signInRiskLevels = signInRiskLevels;
             return this;
         }
-        public Builder signInRiskLevels(@Nullable List<String> signInRiskLevels) {
-            this.signInRiskLevels = Codegen.ofNullable(signInRiskLevels);
-            return this;
+
+        /**
+         * @param signInRiskLevels A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder signInRiskLevels(List<String> signInRiskLevels) {
+            return signInRiskLevels(Output.of(signInRiskLevels));
         }
+
+        /**
+         * @param signInRiskLevels A list of sign-in risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signInRiskLevels(String... signInRiskLevels) {
             return signInRiskLevels(List.of(signInRiskLevels));
         }
+
+        /**
+         * @param userRiskLevels A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRiskLevels(@Nullable Output<List<String>> userRiskLevels) {
-            this.userRiskLevels = userRiskLevels;
+            $.userRiskLevels = userRiskLevels;
             return this;
         }
-        public Builder userRiskLevels(@Nullable List<String> userRiskLevels) {
-            this.userRiskLevels = Codegen.ofNullable(userRiskLevels);
-            return this;
+
+        /**
+         * @param userRiskLevels A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userRiskLevels(List<String> userRiskLevels) {
+            return userRiskLevels(Output.of(userRiskLevels));
         }
+
+        /**
+         * @param userRiskLevels A list of user risk levels included in the policy. Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userRiskLevels(String... userRiskLevels) {
             return userRiskLevels(List.of(userRiskLevels));
         }
+
+        /**
+         * @param users A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(Output<ConditionalAccessPolicyConditionsUsersArgs> users) {
-            this.users = Objects.requireNonNull(users);
+            $.users = users;
             return this;
         }
+
+        /**
+         * @param users A `users` block as documented below, which specifies users, groups, and roles included in and excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder users(ConditionalAccessPolicyConditionsUsersArgs users) {
-            this.users = Output.of(Objects.requireNonNull(users));
-            return this;
-        }        public ConditionalAccessPolicyConditionsArgs build() {
-            return new ConditionalAccessPolicyConditionsArgs(applications, clientAppTypes, devices, locations, platforms, signInRiskLevels, userRiskLevels, users);
+            return users(Output.of(users));
+        }
+
+        public ConditionalAccessPolicyConditionsArgs build() {
+            $.applications = Objects.requireNonNull($.applications, "expected parameter 'applications' to be non-null");
+            $.clientAppTypes = Objects.requireNonNull($.clientAppTypes, "expected parameter 'clientAppTypes' to be non-null");
+            $.users = Objects.requireNonNull($.users, "expected parameter 'users' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,84 +17,126 @@ public final class ConditionalAccessPolicyConditionsPlatformsArgs extends com.pu
     public static final ConditionalAccessPolicyConditionsPlatformsArgs Empty = new ConditionalAccessPolicyConditionsPlatformsArgs();
 
     /**
-     * A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+     * A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
      * 
      */
     @Import(name="excludedPlatforms")
-      private final @Nullable Output<List<String>> excludedPlatforms;
+    private @Nullable Output<List<String>> excludedPlatforms;
 
-    public Output<List<String>> excludedPlatforms() {
-        return this.excludedPlatforms == null ? Codegen.empty() : this.excludedPlatforms;
+    /**
+     * @return A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+     * 
+     */
+    public Optional<Output<List<String>>> excludedPlatforms() {
+        return Optional.ofNullable(this.excludedPlatforms);
     }
 
     /**
-     * A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+     * A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
      * 
      */
     @Import(name="includedPlatforms", required=true)
-      private final Output<List<String>> includedPlatforms;
+    private Output<List<String>> includedPlatforms;
 
+    /**
+     * @return A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+     * 
+     */
     public Output<List<String>> includedPlatforms() {
         return this.includedPlatforms;
     }
 
-    public ConditionalAccessPolicyConditionsPlatformsArgs(
-        @Nullable Output<List<String>> excludedPlatforms,
-        Output<List<String>> includedPlatforms) {
-        this.excludedPlatforms = excludedPlatforms;
-        this.includedPlatforms = Objects.requireNonNull(includedPlatforms, "expected parameter 'includedPlatforms' to be non-null");
-    }
+    private ConditionalAccessPolicyConditionsPlatformsArgs() {}
 
-    private ConditionalAccessPolicyConditionsPlatformsArgs() {
-        this.excludedPlatforms = Codegen.empty();
-        this.includedPlatforms = Codegen.empty();
+    private ConditionalAccessPolicyConditionsPlatformsArgs(ConditionalAccessPolicyConditionsPlatformsArgs $) {
+        this.excludedPlatforms = $.excludedPlatforms;
+        this.includedPlatforms = $.includedPlatforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsPlatformsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedPlatforms;
-        private Output<List<String>> includedPlatforms;
+        private ConditionalAccessPolicyConditionsPlatformsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsPlatformsArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsPlatformsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedPlatforms = defaults.excludedPlatforms;
-    	      this.includedPlatforms = defaults.includedPlatforms;
+            $ = new ConditionalAccessPolicyConditionsPlatformsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedPlatforms A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPlatforms(@Nullable Output<List<String>> excludedPlatforms) {
-            this.excludedPlatforms = excludedPlatforms;
+            $.excludedPlatforms = excludedPlatforms;
             return this;
         }
-        public Builder excludedPlatforms(@Nullable List<String> excludedPlatforms) {
-            this.excludedPlatforms = Codegen.ofNullable(excludedPlatforms);
-            return this;
+
+        /**
+         * @param excludedPlatforms A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedPlatforms(List<String> excludedPlatforms) {
+            return excludedPlatforms(Output.of(excludedPlatforms));
         }
+
+        /**
+         * @param excludedPlatforms A list of platforms explicitly excluded from the policy. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPlatforms(String... excludedPlatforms) {
             return excludedPlatforms(List.of(excludedPlatforms));
         }
+
+        /**
+         * @param includedPlatforms A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPlatforms(Output<List<String>> includedPlatforms) {
-            this.includedPlatforms = Objects.requireNonNull(includedPlatforms);
+            $.includedPlatforms = includedPlatforms;
             return this;
         }
+
+        /**
+         * @param includedPlatforms A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPlatforms(List<String> includedPlatforms) {
-            this.includedPlatforms = Output.of(Objects.requireNonNull(includedPlatforms));
-            return this;
+            return includedPlatforms(Output.of(includedPlatforms));
         }
+
+        /**
+         * @param includedPlatforms A list of platforms the policy applies to, unless explicitly excluded. Possible values are: `all`, `android`, `iOS`, `linux`, `macOS`, `windows`, `windowsPhone` or `unknownFutureValue`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPlatforms(String... includedPlatforms) {
             return includedPlatforms(List.of(includedPlatforms));
-        }        public ConditionalAccessPolicyConditionsPlatformsArgs build() {
-            return new ConditionalAccessPolicyConditionsPlatformsArgs(excludedPlatforms, includedPlatforms);
+        }
+
+        public ConditionalAccessPolicyConditionsPlatformsArgs build() {
+            $.includedPlatforms = Objects.requireNonNull($.includedPlatforms, "expected parameter 'includedPlatforms' to be non-null");
+            return $;
         }
     }
+
 }

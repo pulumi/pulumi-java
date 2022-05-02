@@ -7,9 +7,9 @@ import com.pulumi.azuread.inputs.NamedLocationCountryArgs;
 import com.pulumi.azuread.inputs.NamedLocationIpArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class NamedLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="country")
-      private final @Nullable Output<NamedLocationCountryArgs> country;
+    private @Nullable Output<NamedLocationCountryArgs> country;
 
-    public Output<NamedLocationCountryArgs> country() {
-        return this.country == null ? Codegen.empty() : this.country;
+    /**
+     * @return A `country` block as documented below, which configures a country-based named location.
+     * 
+     */
+    public Optional<Output<NamedLocationCountryArgs>> country() {
+        return Optional.ofNullable(this.country);
     }
 
     /**
@@ -33,8 +37,12 @@ public final class NamedLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return The friendly name for this named location.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -44,76 +52,109 @@ public final class NamedLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<NamedLocationIpArgs> ip;
+    private @Nullable Output<NamedLocationIpArgs> ip;
 
-    public Output<NamedLocationIpArgs> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    /**
+     * @return An `ip` block as documented below, which configures an IP-based named location.
+     * 
+     */
+    public Optional<Output<NamedLocationIpArgs>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
-    public NamedLocationArgs(
-        @Nullable Output<NamedLocationCountryArgs> country,
-        Output<String> displayName,
-        @Nullable Output<NamedLocationIpArgs> ip) {
-        this.country = country;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.ip = ip;
-    }
+    private NamedLocationArgs() {}
 
-    private NamedLocationArgs() {
-        this.country = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.ip = Codegen.empty();
+    private NamedLocationArgs(NamedLocationArgs $) {
+        this.country = $.country;
+        this.displayName = $.displayName;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NamedLocationCountryArgs> country;
-        private Output<String> displayName;
-        private @Nullable Output<NamedLocationIpArgs> ip;
+        private NamedLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedLocationArgs();
         }
 
         public Builder(NamedLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.country = defaults.country;
-    	      this.displayName = defaults.displayName;
-    	      this.ip = defaults.ip;
+            $ = new NamedLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param country A `country` block as documented below, which configures a country-based named location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(@Nullable Output<NamedLocationCountryArgs> country) {
-            this.country = country;
+            $.country = country;
             return this;
         }
-        public Builder country(@Nullable NamedLocationCountryArgs country) {
-            this.country = Codegen.ofNullable(country);
-            return this;
+
+        /**
+         * @param country A `country` block as documented below, which configures a country-based named location.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder country(NamedLocationCountryArgs country) {
+            return country(Output.of(country));
         }
+
+        /**
+         * @param displayName The friendly name for this named location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName The friendly name for this named location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param ip An `ip` block as documented below, which configures an IP-based named location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<NamedLocationIpArgs> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable NamedLocationIpArgs ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
-        }        public NamedLocationArgs build() {
-            return new NamedLocationArgs(country, displayName, ip);
+
+        /**
+         * @param ip An `ip` block as documented below, which configures an IP-based named location.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ip(NamedLocationIpArgs ip) {
+            return ip(Output.of(ip));
+        }
+
+        public NamedLocationArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

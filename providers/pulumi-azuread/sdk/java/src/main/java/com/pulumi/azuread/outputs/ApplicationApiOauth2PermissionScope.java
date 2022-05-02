@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationApiOauth2PermissionScope {
     /**
-     * Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
      * 
      */
     private final @Nullable String adminConsentDescription;
     /**
-     * Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
      * 
      */
     private final @Nullable String adminConsentDisplayName;
     /**
-     * Determines if the permission scope is enabled. Defaults to `true`.
+     * @return Determines if the permission scope is enabled. Defaults to `true`.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
      */
     private final String id;
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
      * 
      */
     private final @Nullable String type;
     /**
-     * Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+     * @return Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
      * 
      */
     private final @Nullable String userConsentDescription;
     /**
-     * Display name for the delegated permission that appears in the end user consent experience.
+     * @return Display name for the delegated permission that appears in the end user consent experience.
      * 
      */
     private final @Nullable String userConsentDisplayName;
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
      */
     private final @Nullable String value;
@@ -74,58 +74,58 @@ public final class ApplicationApiOauth2PermissionScope {
     }
 
     /**
-     * Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Delegated permission description that appears in all tenant-wide admin consent experiences, intended to be read by an administrator granting the permission on behalf of all users.
      * 
-    */
+     */
     public Optional<String> adminConsentDescription() {
         return Optional.ofNullable(this.adminConsentDescription);
     }
     /**
-     * Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
+     * @return Display name for the delegated permission, intended to be read by an administrator granting the permission on behalf of all users.
      * 
-    */
+     */
     public Optional<String> adminConsentDisplayName() {
         return Optional.ofNullable(this.adminConsentDisplayName);
     }
     /**
-     * Determines if the permission scope is enabled. Defaults to `true`.
+     * @return Determines if the permission scope is enabled. Defaults to `true`.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The unique identifier of the delegated permission. Must be a valid UUID.
+     * @return The unique identifier of the delegated permission. Must be a valid UUID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
+     * @return Whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. Defaults to `User`. Possible values are `User` or `Admin`.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
+     * @return Delegated permission description that appears in the end user consent experience, intended to be read by a user consenting on their own behalf.
      * 
-    */
+     */
     public Optional<String> userConsentDescription() {
         return Optional.ofNullable(this.userConsentDescription);
     }
     /**
-     * Display name for the delegated permission that appears in the end user consent experience.
+     * @return Display name for the delegated permission that appears in the end user consent experience.
      * 
-    */
+     */
     public Optional<String> userConsentDisplayName() {
         return Optional.ofNullable(this.userConsentDisplayName);
     }
     /**
-     * The value that is used for the `scp` claim in OAuth 2.0 access tokens.
+     * @return The value that is used for the `scp` claim in OAuth 2.0 access tokens.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -11,47 +11,47 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationTemplateResult {
     /**
-     * List of categories for this templated application.
+     * @return List of categories for this templated application.
      * 
      */
     private final List<String> categories;
     /**
-     * The display name for the templated application.
+     * @return The display name for the templated application.
      * 
      */
     private final String displayName;
     /**
-     * Home page URL of the templated application.
+     * @return Home page URL of the templated application.
      * 
      */
     private final String homepageUrl;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * URL to retrieve the logo for this templated application.
+     * @return URL to retrieve the logo for this templated application.
      * 
      */
     private final String logoUrl;
     /**
-     * Name of the publisher for this templated application.
+     * @return Name of the publisher for this templated application.
      * 
      */
     private final String publisher;
     /**
-     * List of provisioning modes supported by this templated application.
+     * @return List of provisioning modes supported by this templated application.
      * 
      */
     private final List<String> supportedProvisioningTypes;
     /**
-     * List of single sign on modes supported by this templated application.
+     * @return List of single sign on modes supported by this templated application.
      * 
      */
     private final List<String> supportedSingleSignOnModes;
     /**
-     * The ID of the templated application.
+     * @return The ID of the templated application.
      * 
      */
     private final String templateId;
@@ -79,65 +79,65 @@ public final class GetApplicationTemplateResult {
     }
 
     /**
-     * List of categories for this templated application.
+     * @return List of categories for this templated application.
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * The display name for the templated application.
+     * @return The display name for the templated application.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Home page URL of the templated application.
+     * @return Home page URL of the templated application.
      * 
-    */
+     */
     public String homepageUrl() {
         return this.homepageUrl;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * URL to retrieve the logo for this templated application.
+     * @return URL to retrieve the logo for this templated application.
      * 
-    */
+     */
     public String logoUrl() {
         return this.logoUrl;
     }
     /**
-     * Name of the publisher for this templated application.
+     * @return Name of the publisher for this templated application.
      * 
-    */
+     */
     public String publisher() {
         return this.publisher;
     }
     /**
-     * List of provisioning modes supported by this templated application.
+     * @return List of provisioning modes supported by this templated application.
      * 
-    */
+     */
     public List<String> supportedProvisioningTypes() {
         return this.supportedProvisioningTypes;
     }
     /**
-     * List of single sign on modes supported by this templated application.
+     * @return List of single sign on modes supported by this templated application.
      * 
-    */
+     */
     public List<String> supportedSingleSignOnModes() {
         return this.supportedSingleSignOnModes;
     }
     /**
-     * The ID of the templated application.
+     * @return The ID of the templated application.
      * 
-    */
+     */
     public String templateId() {
         return this.templateId;
     }

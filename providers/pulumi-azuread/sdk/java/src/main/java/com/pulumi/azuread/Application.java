@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return An `api` block as documented below, which configures API related settings for this application.
      * 
      */
-    public Output</* @Nullable */ ApplicationApi> api() {
-        return this.api;
+    public Output<Optional<ApplicationApi>> api() {
+        return Codegen.optional(this.api);
     }
     /**
      * A mapping of app role values to app role IDs, intended to be useful when referencing app roles in other resources in your configuration.
@@ -77,8 +78,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A collection of `app_role` blocks as documented below. For more information see [official documentation on Application Roles](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles).
      * 
      */
-    public Output</* @Nullable */ List<ApplicationAppRole>> appRoles() {
-        return this.appRoles;
+    public Output<Optional<List<ApplicationAppRole>>> appRoles() {
+        return Codegen.optional(this.appRoles);
     }
     /**
      * The Application ID (also called Client ID).
@@ -105,8 +106,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies whether this application supports device authentication without a user. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deviceOnlyAuthEnabled() {
-        return this.deviceOnlyAuthEnabled;
+    public Output<Optional<Boolean>> deviceOnlyAuthEnabled() {
+        return Codegen.optional(this.deviceOnlyAuthEnabled);
     }
     /**
      * Whether Microsoft has disabled the registered application. If the application is disabled, this will be a string indicating the status/reason, e.g. `DisabledDueToViolationOfServicesAgreement`
@@ -137,18 +138,18 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.displayName;
     }
     /**
-     * Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+     * Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
      * 
      */
     @Export(name="fallbackPublicClientEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> fallbackPublicClientEnabled;
 
     /**
-     * @return Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI. Defaults to `false`.
+     * @return Specifies whether the application is a public client. Appropriate for apps using token grant flows that don&#39;t use a redirect URI. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> fallbackPublicClientEnabled() {
-        return this.fallbackPublicClientEnabled;
+    public Output<Optional<Boolean>> fallbackPublicClientEnabled() {
+        return Codegen.optional(this.fallbackPublicClientEnabled);
     }
     /**
      * A `feature_tags` block as described below. Cannot be used together with the `tags` property.
@@ -175,8 +176,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupMembershipClaims() {
-        return this.groupMembershipClaims;
+    public Output<Optional<List<String>>> groupMembershipClaims() {
+        return Codegen.optional(this.groupMembershipClaims);
     }
     /**
      * A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
@@ -189,8 +190,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A set of user-defined URI(s) that uniquely identify an application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
      * 
      */
-    public Output</* @Nullable */ List<String>> identifierUris() {
-        return this.identifierUris;
+    public Output<Optional<List<String>>> identifierUris() {
+        return Codegen.optional(this.identifierUris);
     }
     /**
      * A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
@@ -203,36 +204,36 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A logo image to upload for the application, as a raw base64-encoded string. The image should be in gif, jpeg or png format. Note that once an image has been uploaded, it is not possible to remove it without replacing it with another image.
      * 
      */
-    public Output</* @Nullable */ String> logoImage() {
-        return this.logoImage;
+    public Output<Optional<String>> logoImage() {
+        return Codegen.optional(this.logoImage);
     }
     /**
-     * CDN URL to the application's logo, as uploaded with the `logo_image` property.
+     * CDN URL to the application&#39;s logo, as uploaded with the `logo_image` property.
      * 
      */
     @Export(name="logoUrl", type=String.class, parameters={})
     private Output<String> logoUrl;
 
     /**
-     * @return CDN URL to the application's logo, as uploaded with the `logo_image` property.
+     * @return CDN URL to the application&#39;s logo, as uploaded with the `logo_image` property.
      * 
      */
     public Output<String> logoUrl() {
         return this.logoUrl;
     }
     /**
-     * URL of the application's marketing page.
+     * URL of the application&#39;s marketing page.
      * 
      */
     @Export(name="marketingUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> marketingUrl;
 
     /**
-     * @return URL of the application's marketing page.
+     * @return URL of the application&#39;s marketing page.
      * 
      */
-    public Output</* @Nullable */ String> marketingUrl() {
-        return this.marketingUrl;
+    public Output<Optional<String>> marketingUrl() {
+        return Codegen.optional(this.marketingUrl);
     }
     /**
      * A mapping of OAuth2.0 permission scope values to scope IDs, intended to be useful when referencing permission scopes in other resources in your configuration.
@@ -259,18 +260,18 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies whether, as part of OAuth 2.0 token requests, Azure AD allows POST requests, as opposed to GET requests. Defaults to `false`, which specifies that only GET requests are allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> oauth2PostResponseRequired() {
-        return this.oauth2PostResponseRequired;
+    public Output<Optional<Boolean>> oauth2PostResponseRequired() {
+        return Codegen.optional(this.oauth2PostResponseRequired);
     }
     /**
-     * The application's object ID.
+     * The application&#39;s object ID.
      * 
      */
     @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
-     * @return The application's object ID.
+     * @return The application&#39;s object ID.
      * 
      */
     public Output<String> objectId() {
@@ -287,8 +288,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return An `optional_claims` block as documented below.
      * 
      */
-    public Output</* @Nullable */ ApplicationOptionalClaims> optionalClaims() {
-        return this.optionalClaims;
+    public Output<Optional<ApplicationOptionalClaims>> optionalClaims() {
+        return Codegen.optional(this.optionalClaims);
     }
     /**
      * A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
@@ -301,8 +302,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A set of object IDs of principals that will be granted ownership of the application. Supported object types are users or service principals. By default, no owners are assigned.
      * 
      */
-    public Output</* @Nullable */ List<String>> owners() {
-        return this.owners;
+    public Output<Optional<List<String>>> owners() {
+        return Codegen.optional(this.owners);
     }
     /**
      * If `true`, will return an error if an existing application is found with the same name. Defaults to `false`.
@@ -315,22 +316,22 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return If `true`, will return an error if an existing application is found with the same name. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames;
+    public Output<Optional<Boolean>> preventDuplicateNames() {
+        return Codegen.optional(this.preventDuplicateNames);
     }
     /**
-     * URL of the application's privacy statement.
+     * URL of the application&#39;s privacy statement.
      * 
      */
     @Export(name="privacyStatementUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> privacyStatementUrl;
 
     /**
-     * @return URL of the application's privacy statement.
+     * @return URL of the application&#39;s privacy statement.
      * 
      */
-    public Output</* @Nullable */ String> privacyStatementUrl() {
-        return this.privacyStatementUrl;
+    public Output<Optional<String>> privacyStatementUrl() {
+        return Codegen.optional(this.privacyStatementUrl);
     }
     /**
      * A `public_client` block as documented below, which configures non-web app or non-web API application settings, for example mobile or other public clients such as an installed application running on a desktop device.
@@ -343,8 +344,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A `public_client` block as documented below, which configures non-web app or non-web API application settings, for example mobile or other public clients such as an installed application running on a desktop device.
      * 
      */
-    public Output</* @Nullable */ ApplicationPublicClient> publicClient() {
-        return this.publicClient;
+    public Output<Optional<ApplicationPublicClient>> publicClient() {
+        return Codegen.optional(this.publicClient);
     }
     /**
      * The verified publisher domain for the application.
@@ -371,8 +372,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A collection of `required_resource_access` blocks as documented below.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationRequiredResourceAccess>> requiredResourceAccesses() {
-        return this.requiredResourceAccesses;
+    public Output<Optional<List<ApplicationRequiredResourceAccess>>> requiredResourceAccesses() {
+        return Codegen.optional(this.requiredResourceAccesses);
     }
     /**
      * The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`. Defaults to `AzureADMyOrg`.
@@ -385,8 +386,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The Microsoft account types that are supported for the current application. Must be one of `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`. Defaults to `AzureADMyOrg`.
      * 
      */
-    public Output</* @Nullable */ String> signInAudience() {
-        return this.signInAudience;
+    public Output<Optional<String>> signInAudience() {
+        return Codegen.optional(this.signInAudience);
     }
     /**
      * A `single_page_application` block as documented below, which configures single-page application (SPA) related settings for this application.
@@ -399,22 +400,22 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A `single_page_application` block as documented below, which configures single-page application (SPA) related settings for this application.
      * 
      */
-    public Output</* @Nullable */ ApplicationSinglePageApplication> singlePageApplication() {
-        return this.singlePageApplication;
+    public Output<Optional<ApplicationSinglePageApplication>> singlePageApplication() {
+        return Codegen.optional(this.singlePageApplication);
     }
     /**
-     * URL of the application's support page.
+     * URL of the application&#39;s support page.
      * 
      */
     @Export(name="supportUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> supportUrl;
 
     /**
-     * @return URL of the application's support page.
+     * @return URL of the application&#39;s support page.
      * 
      */
-    public Output</* @Nullable */ String> supportUrl() {
-        return this.supportUrl;
+    public Output<Optional<String>> supportUrl() {
+        return Codegen.optional(this.supportUrl);
     }
     /**
      * A set of tags to apply to the application. Cannot be used together with the `feature_tags` block.
@@ -445,18 +446,18 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.templateId;
     }
     /**
-     * URL of the application's terms of service statement.
+     * URL of the application&#39;s terms of service statement.
      * 
      */
     @Export(name="termsOfServiceUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> termsOfServiceUrl;
 
     /**
-     * @return URL of the application's terms of service statement.
+     * @return URL of the application&#39;s terms of service statement.
      * 
      */
-    public Output</* @Nullable */ String> termsOfServiceUrl() {
-        return this.termsOfServiceUrl;
+    public Output<Optional<String>> termsOfServiceUrl() {
+        return Codegen.optional(this.termsOfServiceUrl);
     }
     /**
      * A `web` block as documented below, which configures web related settings for this application.
@@ -469,8 +470,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A `web` block as documented below, which configures web related settings for this application.
      * 
      */
-    public Output</* @Nullable */ ApplicationWeb> web() {
-        return this.web;
+    public Output<Optional<ApplicationWeb>> web() {
+        return Codegen.optional(this.web);
     }
 
     /**

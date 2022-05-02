@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationPublicClient {
     /**
-     * A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * @return A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * 
      */
     private final List<String> redirectUris;
@@ -22,9 +22,9 @@ public final class GetApplicationPublicClient {
     }
 
     /**
-     * A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * @return A list of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      * 
-    */
+     */
     public List<String> redirectUris() {
         return this.redirectUris;
     }

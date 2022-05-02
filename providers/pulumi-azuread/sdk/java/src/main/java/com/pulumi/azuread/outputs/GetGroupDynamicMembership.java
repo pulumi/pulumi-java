@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupDynamicMembership {
     /**
-     * Whether rule processing is "On" (true) or "Paused" (false).
+     * @return Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
      * 
      */
     private final Boolean enabled;
     /**
-     * The rule that determines membership of this group.
+     * @return The rule that determines membership of this group.
      * 
      */
     private final String rule;
@@ -30,16 +30,16 @@ public final class GetGroupDynamicMembership {
     }
 
     /**
-     * Whether rule processing is "On" (true) or "Paused" (false).
+     * @return Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The rule that determines membership of this group.
+     * @return The rule that determines membership of this group.
      * 
-    */
+     */
     public String rule() {
         return this.rule;
     }

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class ApplicationPassword extends com.pulumi.resources.CustomResource {
      * @return A relative duration for which the password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> endDateRelative() {
-        return this.endDateRelative;
+    public Output<Optional<String>> endDateRelative() {
+        return Codegen.optional(this.endDateRelative);
     }
     /**
      * A UUID used to uniquely identify this password credential.
@@ -103,18 +104,18 @@ public class ApplicationPassword extends com.pulumi.resources.CustomResource {
      * @return A map of arbitrary key/value pairs that will force recreation of the password when they change, enabling password rotation based on external conditions such as a rotating timestamp. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> rotateWhenChanged() {
-        return this.rotateWhenChanged;
+    public Output<Optional<Map<String,String>>> rotateWhenChanged() {
+        return Codegen.optional(this.rotateWhenChanged);
     }
     /**
-     * The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
+     * The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
      * 
      */
     @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
     /**
-     * @return The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
+     * @return The start date from which the password is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
      * 
      */
     public Output<String> startDate() {

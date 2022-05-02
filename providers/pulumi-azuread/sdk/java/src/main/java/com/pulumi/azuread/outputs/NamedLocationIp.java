@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NamedLocationIp {
     /**
-     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+     * @return List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
      * 
      */
     private final List<String> ipRanges;
     /**
-     * Whether the named location is trusted. Defaults to `false`.
+     * @return Whether the named location is trusted. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean trusted;
@@ -33,16 +33,16 @@ public final class NamedLocationIp {
     }
 
     /**
-     * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+     * @return List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
      * 
-    */
+     */
     public List<String> ipRanges() {
         return this.ipRanges;
     }
     /**
-     * Whether the named location is trusted. Defaults to `false`.
+     * @return Whether the named location is trusted. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> trusted() {
         return Optional.ofNullable(this.trusted);
     }

@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationOptionalClaimsAccessToken {
     /**
-     * List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+     * @return List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
      * 
      */
     private final @Nullable List<String> additionalProperties;
     /**
-     * Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+     * @return Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
      * 
      */
     private final @Nullable Boolean essential;
     /**
-     * The name of the optional claim.
+     * @return The name of the optional claim.
      * 
      */
     private final String name;
     /**
-     * The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+     * @return The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
      * 
      */
     private final @Nullable String source;
@@ -47,30 +47,30 @@ public final class ApplicationOptionalClaimsAccessToken {
     }
 
     /**
-     * List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+     * @return List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
      * 
-    */
+     */
     public List<String> additionalProperties() {
         return this.additionalProperties == null ? List.of() : this.additionalProperties;
     }
     /**
-     * Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+     * @return Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
      * 
-    */
+     */
     public Optional<Boolean> essential() {
         return Optional.ofNullable(this.essential);
     }
     /**
-     * The name of the optional claim.
+     * @return The name of the optional claim.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+     * @return The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }

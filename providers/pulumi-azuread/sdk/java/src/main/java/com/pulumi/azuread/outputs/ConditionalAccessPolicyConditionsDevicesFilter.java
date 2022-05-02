@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ConditionalAccessPolicyConditionsDevicesFilter {
     /**
-     * Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
+     * @return Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
      * 
      */
     private final String mode;
     /**
-     * Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
+     * @return Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
      * 
      */
     private final String rule;
@@ -29,16 +29,16 @@ public final class ConditionalAccessPolicyConditionsDevicesFilter {
     }
 
     /**
-     * Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
+     * @return Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
+     * @return Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
      * 
-    */
+     */
     public String rule() {
         return this.rule;
     }

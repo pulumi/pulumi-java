@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,8 +22,12 @@ public final class NamedLocationIpArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipRanges", required=true)
-      private final Output<List<String>> ipRanges;
+    private Output<List<String>> ipRanges;
 
+    /**
+     * @return List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+     * 
+     */
     public Output<List<String>> ipRanges() {
         return this.ipRanges;
     }
@@ -33,66 +37,97 @@ public final class NamedLocationIpArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="trusted")
-      private final @Nullable Output<Boolean> trusted;
+    private @Nullable Output<Boolean> trusted;
 
-    public Output<Boolean> trusted() {
-        return this.trusted == null ? Codegen.empty() : this.trusted;
+    /**
+     * @return Whether the named location is trusted. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> trusted() {
+        return Optional.ofNullable(this.trusted);
     }
 
-    public NamedLocationIpArgs(
-        Output<List<String>> ipRanges,
-        @Nullable Output<Boolean> trusted) {
-        this.ipRanges = Objects.requireNonNull(ipRanges, "expected parameter 'ipRanges' to be non-null");
-        this.trusted = trusted;
-    }
+    private NamedLocationIpArgs() {}
 
-    private NamedLocationIpArgs() {
-        this.ipRanges = Codegen.empty();
-        this.trusted = Codegen.empty();
+    private NamedLocationIpArgs(NamedLocationIpArgs $) {
+        this.ipRanges = $.ipRanges;
+        this.trusted = $.trusted;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamedLocationIpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> ipRanges;
-        private @Nullable Output<Boolean> trusted;
+        private NamedLocationIpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamedLocationIpArgs();
         }
 
         public Builder(NamedLocationIpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipRanges = defaults.ipRanges;
-    	      this.trusted = defaults.trusted;
+            $ = new NamedLocationIpArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipRanges List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(Output<List<String>> ipRanges) {
-            this.ipRanges = Objects.requireNonNull(ipRanges);
+            $.ipRanges = ipRanges;
             return this;
         }
+
+        /**
+         * @param ipRanges List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(List<String> ipRanges) {
-            this.ipRanges = Output.of(Objects.requireNonNull(ipRanges));
-            return this;
+            return ipRanges(Output.of(ipRanges));
         }
+
+        /**
+         * @param ipRanges List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRanges(String... ipRanges) {
             return ipRanges(List.of(ipRanges));
         }
+
+        /**
+         * @param trusted Whether the named location is trusted. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trusted(@Nullable Output<Boolean> trusted) {
-            this.trusted = trusted;
+            $.trusted = trusted;
             return this;
         }
-        public Builder trusted(@Nullable Boolean trusted) {
-            this.trusted = Codegen.ofNullable(trusted);
-            return this;
-        }        public NamedLocationIpArgs build() {
-            return new NamedLocationIpArgs(ipRanges, trusted);
+
+        /**
+         * @param trusted Whether the named location is trusted. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trusted(Boolean trusted) {
+            return trusted(Output.of(trusted));
+        }
+
+        public NamedLocationIpArgs build() {
+            $.ipRanges = Objects.requireNonNull($.ipRanges, "expected parameter 'ipRanges' to be non-null");
+            return $;
         }
     }
+
 }
