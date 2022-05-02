@@ -18,17 +18,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AwsNodePoolConfig {
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * @return The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
     private final AwsNodePoolConfigConfigEncryption configEncryption;
     /**
-     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * @return The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
     private final String iamInstanceProfile;
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     private final @Nullable String instanceType;
@@ -86,21 +86,21 @@ public final class AwsNodePoolConfig {
     }
 
     /**
-     * @return Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
+     * @return The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
     public AwsNodePoolConfigConfigEncryption configEncryption() {
         return this.configEncryption;
     }
     /**
-     * @return Required. The name of the AWS IAM role assigned to nodes in the pool.
+     * @return The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
     public String iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
-     * @return Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
+     * @return Optional. The AWS instance type. When unspecified, it defaults to `m5.large`.
      * 
      */
     public Optional<String> instanceType() {

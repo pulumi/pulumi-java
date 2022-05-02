@@ -49,17 +49,28 @@ public final class RouterBgp {
      * 
      */
     private final Integer asn;
+    /**
+     * @return The interval in seconds between BGP keepalive messages that are sent to the peer.
+     * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+     * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+     * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+     * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
+    private final @Nullable Integer keepaliveInterval;
 
     @CustomType.Constructor
     private RouterBgp(
         @CustomType.Parameter("advertiseMode") @Nullable String advertiseMode,
         @CustomType.Parameter("advertisedGroups") @Nullable List<String> advertisedGroups,
         @CustomType.Parameter("advertisedIpRanges") @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
-        @CustomType.Parameter("asn") Integer asn) {
+        @CustomType.Parameter("asn") Integer asn,
+        @CustomType.Parameter("keepaliveInterval") @Nullable Integer keepaliveInterval) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
         this.asn = asn;
+        this.keepaliveInterval = keepaliveInterval;
     }
 
     /**
@@ -105,6 +116,17 @@ public final class RouterBgp {
     public Integer asn() {
         return this.asn;
     }
+    /**
+     * @return The interval in seconds between BGP keepalive messages that are sent to the peer.
+     * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+     * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+     * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+     * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
+    public Optional<Integer> keepaliveInterval() {
+        return Optional.ofNullable(this.keepaliveInterval);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -119,6 +141,7 @@ public final class RouterBgp {
         private @Nullable List<String> advertisedGroups;
         private @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges;
         private Integer asn;
+        private @Nullable Integer keepaliveInterval;
 
         public Builder() {
     	      // Empty
@@ -130,6 +153,7 @@ public final class RouterBgp {
     	      this.advertisedGroups = defaults.advertisedGroups;
     	      this.advertisedIpRanges = defaults.advertisedIpRanges;
     	      this.asn = defaults.asn;
+    	      this.keepaliveInterval = defaults.keepaliveInterval;
         }
 
         public Builder advertiseMode(@Nullable String advertiseMode) {
@@ -153,8 +177,12 @@ public final class RouterBgp {
         public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
+        }
+        public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
+            this.keepaliveInterval = keepaliveInterval;
+            return this;
         }        public RouterBgp build() {
-            return new RouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
+            return new RouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }
     }
 }

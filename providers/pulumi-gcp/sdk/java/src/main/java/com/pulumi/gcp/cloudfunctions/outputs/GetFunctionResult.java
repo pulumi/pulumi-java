@@ -5,6 +5,8 @@ package com.pulumi.gcp.cloudfunctions.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.gcp.cloudfunctions.outputs.GetFunctionEventTrigger;
+import com.pulumi.gcp.cloudfunctions.outputs.GetFunctionSecretEnvironmentVariable;
+import com.pulumi.gcp.cloudfunctions.outputs.GetFunctionSecretVolume;
 import com.pulumi.gcp.cloudfunctions.outputs.GetFunctionSourceRepository;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -78,6 +80,8 @@ public final class GetFunctionResult {
      * 
      */
     private final String runtime;
+    private final List<GetFunctionSecretEnvironmentVariable> secretEnvironmentVariables;
+    private final List<GetFunctionSecretVolume> secretVolumes;
     /**
      * @return The service account email to be assumed by the cloud function.
      * 
@@ -137,6 +141,8 @@ public final class GetFunctionResult {
         @CustomType.Parameter("project") @Nullable String project,
         @CustomType.Parameter("region") @Nullable String region,
         @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("secretEnvironmentVariables") List<GetFunctionSecretEnvironmentVariable> secretEnvironmentVariables,
+        @CustomType.Parameter("secretVolumes") List<GetFunctionSecretVolume> secretVolumes,
         @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
         @CustomType.Parameter("sourceArchiveBucket") String sourceArchiveBucket,
         @CustomType.Parameter("sourceArchiveObject") String sourceArchiveObject,
@@ -161,6 +167,8 @@ public final class GetFunctionResult {
         this.project = project;
         this.region = region;
         this.runtime = runtime;
+        this.secretEnvironmentVariables = secretEnvironmentVariables;
+        this.secretVolumes = secretVolumes;
         this.serviceAccountEmail = serviceAccountEmail;
         this.sourceArchiveBucket = sourceArchiveBucket;
         this.sourceArchiveObject = sourceArchiveObject;
@@ -263,6 +271,12 @@ public final class GetFunctionResult {
     public String runtime() {
         return this.runtime;
     }
+    public List<GetFunctionSecretEnvironmentVariable> secretEnvironmentVariables() {
+        return this.secretEnvironmentVariables;
+    }
+    public List<GetFunctionSecretVolume> secretVolumes() {
+        return this.secretVolumes;
+    }
     /**
      * @return The service account email to be assumed by the cloud function.
      * 
@@ -345,6 +359,8 @@ public final class GetFunctionResult {
         private @Nullable String project;
         private @Nullable String region;
         private String runtime;
+        private List<GetFunctionSecretEnvironmentVariable> secretEnvironmentVariables;
+        private List<GetFunctionSecretVolume> secretVolumes;
         private String serviceAccountEmail;
         private String sourceArchiveBucket;
         private String sourceArchiveObject;
@@ -376,6 +392,8 @@ public final class GetFunctionResult {
     	      this.project = defaults.project;
     	      this.region = defaults.region;
     	      this.runtime = defaults.runtime;
+    	      this.secretEnvironmentVariables = defaults.secretEnvironmentVariables;
+    	      this.secretVolumes = defaults.secretVolumes;
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
     	      this.sourceArchiveBucket = defaults.sourceArchiveBucket;
     	      this.sourceArchiveObject = defaults.sourceArchiveObject;
@@ -453,6 +471,20 @@ public final class GetFunctionResult {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
+        public Builder secretEnvironmentVariables(List<GetFunctionSecretEnvironmentVariable> secretEnvironmentVariables) {
+            this.secretEnvironmentVariables = Objects.requireNonNull(secretEnvironmentVariables);
+            return this;
+        }
+        public Builder secretEnvironmentVariables(GetFunctionSecretEnvironmentVariable... secretEnvironmentVariables) {
+            return secretEnvironmentVariables(List.of(secretEnvironmentVariables));
+        }
+        public Builder secretVolumes(List<GetFunctionSecretVolume> secretVolumes) {
+            this.secretVolumes = Objects.requireNonNull(secretVolumes);
+            return this;
+        }
+        public Builder secretVolumes(GetFunctionSecretVolume... secretVolumes) {
+            return secretVolumes(List.of(secretVolumes));
+        }
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
@@ -488,7 +520,7 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }        public GetFunctionResult build() {
-            return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, description, entryPoint, environmentVariables, eventTriggers, httpsTriggerUrl, id, ingressSettings, labels, maxInstances, minInstances, name, project, region, runtime, serviceAccountEmail, sourceArchiveBucket, sourceArchiveObject, sourceRepositories, timeout, triggerHttp, vpcConnector, vpcConnectorEgressSettings);
+            return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, description, entryPoint, environmentVariables, eventTriggers, httpsTriggerUrl, id, ingressSettings, labels, maxInstances, minInstances, name, project, region, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveBucket, sourceArchiveObject, sourceRepositories, timeout, triggerHttp, vpcConnector, vpcConnectorEgressSettings);
         }
     }
 }

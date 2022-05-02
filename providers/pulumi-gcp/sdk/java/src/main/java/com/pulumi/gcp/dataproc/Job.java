@@ -14,6 +14,7 @@ import com.pulumi.gcp.dataproc.outputs.JobHadoopConfig;
 import com.pulumi.gcp.dataproc.outputs.JobHiveConfig;
 import com.pulumi.gcp.dataproc.outputs.JobPigConfig;
 import com.pulumi.gcp.dataproc.outputs.JobPlacement;
+import com.pulumi.gcp.dataproc.outputs.JobPrestoConfig;
 import com.pulumi.gcp.dataproc.outputs.JobPysparkConfig;
 import com.pulumi.gcp.dataproc.outputs.JobReference;
 import com.pulumi.gcp.dataproc.outputs.JobScheduling;
@@ -157,6 +158,20 @@ public class Job extends com.pulumi.resources.CustomResource {
      */
     public Output<JobPlacement> placement() {
         return this.placement;
+    }
+    /**
+     * The config of presto job
+     * 
+     */
+    @Export(name="prestoConfig", type=JobPrestoConfig.class, parameters={})
+    private Output</* @Nullable */ JobPrestoConfig> prestoConfig;
+
+    /**
+     * @return The config of presto job
+     * 
+     */
+    public Output<Optional<JobPrestoConfig>> prestoConfig() {
+        return Codegen.optional(this.prestoConfig);
     }
     /**
      * The project in which the `cluster` can be found and jobs

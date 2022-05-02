@@ -71,9 +71,17 @@ public class Bucket extends com.pulumi.resources.CustomResource {
     public Output<Optional<List<BucketCor>>> cors() {
         return Codegen.optional(this.cors);
     }
+    /**
+     * Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+     * 
+     */
     @Export(name="defaultEventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultEventBasedHold;
 
+    /**
+     * @return Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.
+     * 
+     */
     public Output<Optional<Boolean>> defaultEventBasedHold() {
         return Codegen.optional(this.defaultEventBasedHold);
     }

@@ -15,51 +15,133 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Four different resources help you manage your IAM policy for a folder. Each of these resources serves a different use case:
+ * 
+ * * `gcp.folder.IAMPolicy`: Authoritative. Sets the IAM policy for the folder and replaces any existing policy already attached.
+ * * `gcp.folder.IAMBinding`: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the folder are preserved.
+ * * `gcp.folder.IAMMember`: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the folder are preserved.
+ * * `gcp.folder.IamAuditConfig`: Authoritative for a given service. Updates the IAM policy to enable audit logging for the given service.
+ * 
+ * &gt; **Note:** `gcp.folder.IAMPolicy` **cannot** be used in conjunction with `gcp.folder.IAMBinding`, `gcp.folder.IAMMember`, or `gcp.folder.IamAuditConfig` or they will fight over what your policy should be.
+ * 
+ * &gt; **Note:** `gcp.folder.IAMBinding` resources **can be** used in conjunction with `gcp.folder.IAMMember` resources **only if** they do not grant privilege to the same role.
+ * 
+ * &gt; **Note:** The underlying API method `projects.setIamPolicy` has constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
+ *    IAM Conditions cannot be used with Basic Roles such as Owner. Violating these constraints will result in the API returning a 400 error code so please review these if you encounter errors with this resource.
+ * 
+ * ## google\_folder\_iam\_policy
+ * 
+ * !&gt; **Be careful!** You can accidentally lock yourself out of your folder
+ *    using this resource. Deleting a `gcp.folder.IAMPolicy` removes access
+ *    from anyone without permissions on its parent folder/organization. Proceed with caution.
+ *    It&#39;s not recommended to use `gcp.folder.IAMPolicy` with your provider folder
+ *    to avoid locking yourself out, and it should generally only be used with folders
+ *    fully managed by this provider. If you do use this resource, it is recommended to **import** the policy before
+ *    applying the change.
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_binding
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_member
+ * 
+ * With IAM Conditions:
+ * 
+ * ## google\_folder\_iam\_audit\_config
+ * 
+ * ## Import
+ * 
+ * IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+ * 
+ * This member resource can be imported using the `folder`, role, and member e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iamAuditConfig:IamAuditConfig my_folder &#34;folder roles/viewer user:foo@example.com&#34;
+ * ```
+ * 
+ *  IAM binding imports use space-delimited identifiers; the resource in question and the role.
+ * 
+ * This binding resource can be imported using the `folder` and role, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iamAuditConfig:IamAuditConfig my_folder &#34;folder roles/viewer&#34;
+ * ```
+ * 
+ *  IAM policy imports use the identifier of the resource in question.
+ * 
+ * This policy resource can be imported using the `folder`.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iamAuditConfig:IamAuditConfig my_folder folder
+ * ```
+ * 
+ *  IAM audit config imports use the identifier of the resource in question and the service, e.g.
+ * 
+ * ```sh
+ *  $ pulumi import gcp:folder/iamAuditConfig:IamAuditConfig my_folder &#34;folder foo.googleapis.com&#34;
+ * ```
+ * 
+ *  -&gt; **Custom Roles**If you&#39;re importing a IAM resource with a custom role, make sure to use the
+ * 
+ * full name of the custom role, e.g. `organizations/{{org_id}}/roles/{{role_id}}`.
+ * 
+ */
 @ResourceType(type="gcp:folder/iamAuditConfig:IamAuditConfig")
 public class IamAuditConfig extends com.pulumi.resources.CustomResource {
     /**
-     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     @Export(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
     private Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs;
 
     /**
-     * @return The configuration for logging of each type of permission. This can be specified multiple times.
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     public Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
-     * The etag of iam policy
+     * (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
-     * @return The etag of iam policy
+     * @return (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     public Output<String> etag() {
         return this.etag;
     }
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Output<String> folder() {
         return this.folder;
     }
     /**
-     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
-     * @return Service which will be enabled for audit logging. The special value allServices covers all services.
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     public Output<String> service() {

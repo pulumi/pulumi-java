@@ -19,7 +19,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
     private final @Nullable String natIp;
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
      * 
      */
     private final @Nullable String networkTier;
@@ -45,7 +45,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
     }
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM and STANDARD tier is valid for IPv6.
      * 
      */
     public Optional<String> networkTier() {

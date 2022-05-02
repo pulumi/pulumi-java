@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
+import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRedirectOptionsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +22,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * Action to take when `match` matches the request. Valid values:
-     * * &#34;allow&#34; : allow access to target
-     * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-     * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-     * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * * allow: allow access to target.
+     * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+     * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+     * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
      */
     @Import(name="action", required=true)
@@ -32,10 +34,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
 
     /**
      * @return Action to take when `match` matches the request. Valid values:
-     * * &#34;allow&#34; : allow access to target
-     * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-     * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-     * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+     * * allow: allow access to target.
+     * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+     * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+     * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+     * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
      */
     public Output<String> action() {
@@ -125,6 +128,23 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
         return Optional.ofNullable(this.rateLimitOptions);
     }
 
+    /**
+     * )
+     * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
+    @Import(name="redirectOptions")
+    private @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
+
+    /**
+     * @return )
+     * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+     * 
+     */
+    public Optional<Output<SecurityPolicyRuleRedirectOptionsArgs>> redirectOptions() {
+        return Optional.ofNullable(this.redirectOptions);
+    }
+
     private SecurityPolicyRuleArgs() {}
 
     private SecurityPolicyRuleArgs(SecurityPolicyRuleArgs $) {
@@ -134,6 +154,7 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
         this.preview = $.preview;
         this.priority = $.priority;
         this.rateLimitOptions = $.rateLimitOptions;
+        this.redirectOptions = $.redirectOptions;
     }
 
     public static Builder builder() {
@@ -156,10 +177,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param action Action to take when `match` matches the request. Valid values:
-         * * &#34;allow&#34; : allow access to target
-         * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-         * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-         * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+         * * allow: allow access to target.
+         * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+         * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+         * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+         * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
          * 
          * @return builder
          * 
@@ -171,10 +193,11 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param action Action to take when `match` matches the request. Valid values:
-         * * &#34;allow&#34; : allow access to target
-         * * &#34;deny(status)&#34; : deny access to target, returns the  HTTP response code specified (valid values are 403, 404 and 502)
-         * * &#34;rate_based_ban&#34; : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
-         * * &#34;threshold&#34; : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
+         * * allow: allow access to target.
+         * * deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502).
+         * * rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
+         * * redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions.
+         * * throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
          * 
          * @return builder
          * 
@@ -294,6 +317,29 @@ public final class SecurityPolicyRuleArgs extends com.pulumi.resources.ResourceA
          */
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
             return rateLimitOptions(Output.of(rateLimitOptions));
+        }
+
+        /**
+         * @param redirectOptions )
+         * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
+            $.redirectOptions = redirectOptions;
+            return this;
+        }
+
+        /**
+         * @param redirectOptions )
+         * Can be specified if the `action` is &#34;redirect&#34;. Cannot be specified for other actions. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
+            return redirectOptions(Output.of(redirectOptions));
         }
 
         public SecurityPolicyRuleArgs build() {

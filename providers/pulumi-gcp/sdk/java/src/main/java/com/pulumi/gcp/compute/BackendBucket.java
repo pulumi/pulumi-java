@@ -128,6 +128,20 @@ public class BackendBucket extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
+     * The security policy associated with this backend bucket.
+     * 
+     */
+    @Export(name="edgeSecurityPolicy", type=String.class, parameters={})
+    private Output</* @Nullable */ String> edgeSecurityPolicy;
+
+    /**
+     * @return The security policy associated with this backend bucket.
+     * 
+     */
+    public Output<Optional<String>> edgeSecurityPolicy() {
+        return Codegen.optional(this.edgeSecurityPolicy);
+    }
+    /**
      * If true, enable Cloud CDN for this BackendBucket.
      * 
      */

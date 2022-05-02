@@ -45,7 +45,7 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable AzureClusterControlPlaneRootVolume rootVolume;
     /**
-     * @return Required. SSH configuration for how to access the underlying control plane machines.
+     * @return SSH configuration for how to access the underlying control plane machines.
      * 
      */
     private final AzureClusterControlPlaneSshConfig sshConfig;
@@ -60,7 +60,7 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
      */
     private final String version;
@@ -130,7 +130,7 @@ public final class AzureClusterControlPlane {
         return Optional.ofNullable(this.rootVolume);
     }
     /**
-     * @return Required. SSH configuration for how to access the underlying control plane machines.
+     * @return SSH configuration for how to access the underlying control plane machines.
      * 
      */
     public AzureClusterControlPlaneSshConfig sshConfig() {
@@ -151,7 +151,7 @@ public final class AzureClusterControlPlane {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * @return Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
+     * @return The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
      */
     public String version() {

@@ -60,14 +60,14 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.annotations);
     }
     /**
-     * Required. Autoscaler configuration for this node pool.
+     * Autoscaler configuration for this node pool.
      * 
      */
     @Export(name="autoscaling", type=AwsNodePoolAutoscaling.class, parameters={})
     private Output<AwsNodePoolAutoscaling> autoscaling;
 
     /**
-     * @return Required. Autoscaler configuration for this node pool.
+     * @return Autoscaler configuration for this node pool.
      * 
      */
     public Output<AwsNodePoolAutoscaling> autoscaling() {
@@ -88,14 +88,14 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
         return this.cluster;
     }
     /**
-     * Required. The configuration of the node pool.
+     * The configuration of the node pool.
      * 
      */
     @Export(name="config", type=AwsNodePoolConfig.class, parameters={})
     private Output<AwsNodePoolConfig> config;
 
     /**
-     * @return Required. The configuration of the node pool.
+     * @return The configuration of the node pool.
      * 
      */
     public Output<AwsNodePoolConfig> config() {
@@ -146,14 +146,14 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
         return this.location;
     }
     /**
-     * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     @Export(name="maxPodsConstraint", type=AwsNodePoolMaxPodsConstraint.class, parameters={})
     private Output<AwsNodePoolMaxPodsConstraint> maxPodsConstraint;
 
     /**
-     * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
+     * @return The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
     public Output<AwsNodePoolMaxPodsConstraint> maxPodsConstraint() {
@@ -218,14 +218,14 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
         return this.state;
     }
     /**
-     * Required. The subnet where the node pool node run.
+     * The subnet where the node pool node run.
      * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
-     * @return Required. The subnet where the node pool node run.
+     * @return The subnet where the node pool node run.
      * 
      */
     public Output<String> subnetId() {
@@ -260,14 +260,14 @@ public class AwsNodePool extends com.pulumi.resources.CustomResource {
         return this.updateTime;
     }
     /**
-     * Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
      * 
      */
     @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
-     * @return Required. The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
+     * @return The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
      * 
      */
     public Output<String> version() {

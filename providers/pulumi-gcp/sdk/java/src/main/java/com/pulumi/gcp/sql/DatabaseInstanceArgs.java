@@ -166,24 +166,16 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The region the instance will sit in. Note, Cloud SQL is not
-     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-     * make sure you understand this.
+     * The region the instance will sit in. If a region is not provided in the resource definition,
+     * the provider region will be used instead.
      * 
      */
     @Import(name="region")
     private @Nullable Output<String> region;
 
     /**
-     * @return The region the instance will sit in. Note, Cloud SQL is not
-     * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-     * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-     * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-     * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-     * make sure you understand this.
+     * @return The region the instance will sit in. If a region is not provided in the resource definition,
+     * the provider region will be used instead.
      * 
      */
     public Optional<Output<String>> region() {
@@ -483,12 +475,8 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param region The region the instance will sit in. Note, Cloud SQL is not
-         * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-         * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-         * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-         * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-         * make sure you understand this.
+         * @param region The region the instance will sit in. If a region is not provided in the resource definition,
+         * the provider region will be used instead.
          * 
          * @return builder
          * 
@@ -499,12 +487,8 @@ public final class DatabaseInstanceArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param region The region the instance will sit in. Note, Cloud SQL is not
-         * available in all regions - choose from one of the options listed [here](https://cloud.google.com/sql/docs/mysql/instance-locations).
-         * A valid region must be provided to use this resource. If a region is not provided in the resource definition,
-         * the provider region will be used instead, but this will be an apply-time error for instances if the provider
-         * region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
-         * make sure you understand this.
+         * @param region The region the instance will sit in. If a region is not provided in the resource definition,
+         * the provider region will be used instead.
          * 
          * @return builder
          * 

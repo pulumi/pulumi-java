@@ -9,8 +9,10 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dns.inputs.GetKeysArgs;
 import com.pulumi.gcp.dns.inputs.GetManagedZoneArgs;
+import com.pulumi.gcp.dns.inputs.GetRecordSetArgs;
 import com.pulumi.gcp.dns.outputs.GetKeysResult;
 import com.pulumi.gcp.dns.outputs.GetManagedZoneResult;
+import com.pulumi.gcp.dns.outputs.GetRecordSetResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class DnsFunctions {
@@ -41,5 +43,21 @@ public final class DnsFunctions {
     }
     public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:dns/getManagedZone:getManagedZone", TypeShape.of(GetManagedZoneResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get a DNS record set within Google Cloud DNS
+     * For more information see
+     * [the official documentation](https://cloud.google.com/dns/docs/records)
+     * and
+     * [API](https://cloud.google.com/dns/docs/reference/v1/resourceRecordSets)
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args) {
+        return getRecordSet(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("gcp:dns/getRecordSet:getRecordSet", TypeShape.of(GetRecordSetResult.class), args, Utilities.withVersion(options));
     }
 }

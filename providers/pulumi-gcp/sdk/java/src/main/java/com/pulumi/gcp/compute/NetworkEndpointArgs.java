@@ -22,8 +22,8 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    @Import(name="instance", required=true)
-    private Output<String> instance;
+    @Import(name="instance")
+    private @Nullable Output<String> instance;
 
     /**
      * @return The name for a specific VM instance that the IP address belongs to.
@@ -31,8 +31,8 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    public Output<String> instance() {
-        return this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -153,7 +153,7 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder instance(Output<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
@@ -282,7 +282,6 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
         }
 
         public NetworkEndpointArgs build() {
-            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
             $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
             $.networkEndpointGroup = Objects.requireNonNull($.networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
             $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");

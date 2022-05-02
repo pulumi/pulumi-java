@@ -5,6 +5,7 @@ package com.pulumi.gcp.dataflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -152,6 +153,25 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.region);
     }
 
+    /**
+     * If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    @Import(name="skipWaitOnJobTermination")
+    private @Nullable Output<Boolean> skipWaitOnJobTermination;
+
+    /**
+     * @return If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+     * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+     * different, e.g. by embedding a release ID or by using a random_id.
+     * 
+     */
+    public Optional<Output<Boolean>> skipWaitOnJobTermination() {
+        return Optional.ofNullable(this.skipWaitOnJobTermination);
+    }
+
     private FlexTemplateJobArgs() {}
 
     private FlexTemplateJobArgs(FlexTemplateJobArgs $) {
@@ -162,6 +182,7 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
         this.parameters = $.parameters;
         this.project = $.project;
         this.region = $.region;
+        this.skipWaitOnJobTermination = $.skipWaitOnJobTermination;
     }
 
     public static Builder builder() {
@@ -357,6 +378,31 @@ public final class FlexTemplateJobArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder region(String region) {
             return region(Output.of(region));
+        }
+
+        /**
+         * @param skipWaitOnJobTermination If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+         * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+         * different, e.g. by embedding a release ID or by using a random_id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipWaitOnJobTermination(@Nullable Output<Boolean> skipWaitOnJobTermination) {
+            $.skipWaitOnJobTermination = skipWaitOnJobTermination;
+            return this;
+        }
+
+        /**
+         * @param skipWaitOnJobTermination If true, treat DRAINING and CANCELLING as terminal job states and do not wait for further changes before removing from
+         * terraform state and moving on. WARNING: this will lead to job name conflicts if you do not ensure that the job names are
+         * different, e.g. by embedding a release ID or by using a random_id.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder skipWaitOnJobTermination(Boolean skipWaitOnJobTermination) {
+            return skipWaitOnJobTermination(Output.of(skipWaitOnJobTermination));
         }
 
         public FlexTemplateJobArgs build() {

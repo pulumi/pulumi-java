@@ -39,14 +39,14 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Configuration related to the cluster RBAC settings.
+     * Configuration related to the cluster RBAC settings.
      * 
      */
     @Import(name="authorization")
     private @Nullable Output<AzureClusterAuthorizationArgs> authorization;
 
     /**
-     * @return Required. Configuration related to the cluster RBAC settings.
+     * @return Configuration related to the cluster RBAC settings.
      * 
      */
     public Optional<Output<AzureClusterAuthorizationArgs>> authorization() {
@@ -54,14 +54,14 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
     @Import(name="azureRegion")
     private @Nullable Output<String> azureRegion;
 
     /**
-     * @return Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+     * @return The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
     public Optional<Output<String>> azureRegion() {
@@ -69,14 +69,14 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     @Import(name="client")
     private @Nullable Output<String> client;
 
     /**
-     * @return Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+     * @return Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
     public Optional<Output<String>> client() {
@@ -84,14 +84,14 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Configuration related to the cluster control plane.
+     * Configuration related to the cluster control plane.
      * 
      */
     @Import(name="controlPlane")
     private @Nullable Output<AzureClusterControlPlaneArgs> controlPlane;
 
     /**
-     * @return Required. Configuration related to the cluster control plane.
+     * @return Configuration related to the cluster control plane.
      * 
      */
     public Optional<Output<AzureClusterControlPlaneArgs>> controlPlane() {
@@ -206,14 +206,14 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Cluster-wide networking configuration.
+     * Cluster-wide networking configuration.
      * 
      */
     @Import(name="networking")
     private @Nullable Output<AzureClusterNetworkingArgs> networking;
 
     /**
-     * @return Required. Cluster-wide networking configuration.
+     * @return Cluster-wide networking configuration.
      * 
      */
     public Optional<Output<AzureClusterNetworkingArgs>> networking() {
@@ -392,7 +392,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * @param authorization Configuration related to the cluster RBAC settings.
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param authorization Required. Configuration related to the cluster RBAC settings.
+         * @param authorization Configuration related to the cluster RBAC settings.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param azureRegion Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+         * @param azureRegion The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param azureRegion Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
+         * @param azureRegion The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
          * 
          * @return builder
          * 
@@ -434,7 +434,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param client Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+         * @param client Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
          * 
          * @return builder
          * 
@@ -445,7 +445,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param client Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+         * @param client Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
          * 
          * @return builder
          * 
@@ -455,7 +455,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * @param controlPlane Configuration related to the cluster control plane.
          * 
          * @return builder
          * 
@@ -466,7 +466,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param controlPlane Required. Configuration related to the cluster control plane.
+         * @param controlPlane Configuration related to the cluster control plane.
          * 
          * @return builder
          * 
@@ -625,7 +625,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networking Required. Cluster-wide networking configuration.
+         * @param networking Cluster-wide networking configuration.
          * 
          * @return builder
          * 
@@ -636,7 +636,7 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networking Required. Cluster-wide networking configuration.
+         * @param networking Cluster-wide networking configuration.
          * 
          * @return builder
          * 

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.dataproc.MetastoreServiceArgs;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceState;
+import com.pulumi.gcp.dataproc.outputs.MetastoreServiceEncryptionConfig;
 import com.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfig;
 import com.pulumi.gcp.dataproc.outputs.MetastoreServiceMaintenanceWindow;
 import java.lang.Integer;
@@ -55,6 +56,24 @@ public class MetastoreService extends com.pulumi.resources.CustomResource {
      */
     public Output<String> artifactGcsUri() {
         return this.artifactGcsUri;
+    }
+    /**
+     * Information used to configure the Dataproc Metastore service to encrypt
+     * customer data at rest.
+     * Structure is documented below.
+     * 
+     */
+    @Export(name="encryptionConfig", type=MetastoreServiceEncryptionConfig.class, parameters={})
+    private Output</* @Nullable */ MetastoreServiceEncryptionConfig> encryptionConfig;
+
+    /**
+     * @return Information used to configure the Dataproc Metastore service to encrypt
+     * customer data at rest.
+     * Structure is documented below.
+     * 
+     */
+    public Output<Optional<MetastoreServiceEncryptionConfig>> encryptionConfig() {
+        return Codegen.optional(this.encryptionConfig);
     }
     /**
      * The URI of the endpoint used to access the metastore service.

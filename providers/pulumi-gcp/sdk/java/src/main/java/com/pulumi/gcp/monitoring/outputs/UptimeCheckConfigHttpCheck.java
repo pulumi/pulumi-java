@@ -43,7 +43,7 @@ public final class UptimeCheckConfigHttpCheck {
      */
     private final @Nullable Boolean maskHeaders;
     /**
-     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
      * 
      */
     private final @Nullable String path;
@@ -132,7 +132,7 @@ public final class UptimeCheckConfigHttpCheck {
         return Optional.ofNullable(this.maskHeaders);
     }
     /**
-     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to &#34;/&#34;).
+     * @return The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;).
      * 
      */
     public Optional<String> path() {

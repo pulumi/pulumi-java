@@ -15,14 +15,14 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     public static final AwsClusterNetworkingArgs Empty = new AwsClusterNetworkingArgs();
 
     /**
-     * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
     @Import(name="podAddressCidrBlocks", required=true)
     private Output<List<String>> podAddressCidrBlocks;
 
     /**
-     * @return Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * @return All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
     public Output<List<String>> podAddressCidrBlocks() {
@@ -30,14 +30,14 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
     @Import(name="serviceAddressCidrBlocks", required=true)
     private Output<List<String>> serviceAddressCidrBlocks;
 
     /**
-     * @return Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * @return All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
     public Output<List<String>> serviceAddressCidrBlocks() {
@@ -45,14 +45,14 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+     * The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
      * 
      */
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
     /**
-     * @return Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+     * @return The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
      * 
      */
     public Output<String> vpcId() {
@@ -86,7 +86,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param podAddressCidrBlocks All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -97,7 +97,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param podAddressCidrBlocks All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param podAddressCidrBlocks Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param podAddressCidrBlocks All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param serviceAddressCidrBlocks All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param serviceAddressCidrBlocks All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param serviceAddressCidrBlocks Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * @param serviceAddressCidrBlocks All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param vpcId Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+         * @param vpcId The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class AwsClusterNetworkingArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param vpcId Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
+         * @param vpcId The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
          * 
          * @return builder
          * 

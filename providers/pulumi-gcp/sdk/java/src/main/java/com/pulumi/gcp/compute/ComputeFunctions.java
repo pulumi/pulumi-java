@@ -266,6 +266,9 @@ public final class ComputeFunctions {
      * ## Example Usage
      * 
      */
+    public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate() {
+        return getInstanceTemplate(GetInstanceTemplateArgs.Empty, InvokeOptions.Empty);
+    }
     public static CompletableFuture<GetInstanceTemplateResult> getInstanceTemplate(GetInstanceTemplateArgs args) {
         return getInstanceTemplate(args, InvokeOptions.Empty);
     }

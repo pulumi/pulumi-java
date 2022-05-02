@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.bigquery.DatasetAccessArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessState;
+import com.pulumi.gcp.bigquery.outputs.DatasetAccessAuthorizedDataset;
 import com.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,6 +18,8 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * This resource does not support import.
@@ -39,6 +42,22 @@ public class DatasetAccess extends com.pulumi.resources.CustomResource {
      */
     public Output<Boolean> apiUpdatedMember() {
         return this.apiUpdatedMember;
+    }
+    /**
+     * The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    @Export(name="authorizedDataset", type=DatasetAccessAuthorizedDataset.class, parameters={})
+    private Output</* @Nullable */ DatasetAccessAuthorizedDataset> authorizedDataset;
+
+    /**
+     * @return The dataset this entry applies to
+     * Structure is documented below.
+     * 
+     */
+    public Output<Optional<DatasetAccessAuthorizedDataset>> authorizedDataset() {
+        return Codegen.optional(this.authorizedDataset);
     }
     /**
      * The ID of the dataset containing this table.

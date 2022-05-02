@@ -18,14 +18,14 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
     public static final IamAuditConfigState Empty = new IamAuditConfigState();
 
     /**
-     * The configuration for logging of each type of permission. This can be specified multiple times.
+     * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     @Import(name="auditLogConfigs")
     private @Nullable Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     /**
-     * @return The configuration for logging of each type of permission. This can be specified multiple times.
+     * @return The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
     public Optional<Output<List<IamAuditConfigAuditLogConfigArgs>>> auditLogConfigs() {
@@ -33,36 +33,44 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The etag of iam policy
+     * (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
     /**
-     * @return The etag of iam policy
+     * @return (Computed) The etag of the folder&#39;s IAM policy.
      * 
      */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
 
+    /**
+     * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * Service which will be enabled for audit logging. The special value allServices covers all services.
+     * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     @Import(name="service")
     private @Nullable Output<String> service;
 
     /**
-     * @return Service which will be enabled for audit logging. The special value allServices covers all services.
+     * @return Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
     public Optional<Output<String>> service() {
@@ -97,7 +105,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -108,7 +116,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -118,7 +126,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param auditLogConfigs The configuration for logging of each type of permission. This can be specified multiple times.
+         * @param auditLogConfigs The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
          * 
          * @return builder
          * 
@@ -128,7 +136,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param etag The etag of iam policy
+         * @param etag (Computed) The etag of the folder&#39;s IAM policy.
          * 
          * @return builder
          * 
@@ -139,7 +147,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param etag The etag of iam policy
+         * @param etag (Computed) The etag of the folder&#39;s IAM policy.
          * 
          * @return builder
          * 
@@ -148,17 +156,29 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
 
         /**
-         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
          * 
          * @return builder
          * 
@@ -169,7 +189,7 @@ public final class IamAuditConfigState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param service Service which will be enabled for audit logging. The special value allServices covers all services.
+         * @param service Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_folder\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
          * 
          * @return builder
          * 

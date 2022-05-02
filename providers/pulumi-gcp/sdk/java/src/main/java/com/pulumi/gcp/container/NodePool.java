@@ -14,6 +14,7 @@ import com.pulumi.gcp.container.outputs.NodePoolAutoscaling;
 import com.pulumi.gcp.container.outputs.NodePoolManagement;
 import com.pulumi.gcp.container.outputs.NodePoolNetworkConfig;
 import com.pulumi.gcp.container.outputs.NodePoolNodeConfig;
+import com.pulumi.gcp.container.outputs.NodePoolPlacementPolicy;
 import com.pulumi.gcp.container.outputs.NodePoolUpgradeSettings;
 import java.lang.Integer;
 import java.lang.String;
@@ -284,6 +285,22 @@ public class NodePool extends com.pulumi.resources.CustomResource {
 
     public Output<String> operation() {
         return this.operation;
+    }
+    /**
+     * ) Specifies a custom placement policy for the
+     * nodes.
+     * 
+     */
+    @Export(name="placementPolicy", type=NodePoolPlacementPolicy.class, parameters={})
+    private Output</* @Nullable */ NodePoolPlacementPolicy> placementPolicy;
+
+    /**
+     * @return ) Specifies a custom placement policy for the
+     * nodes.
+     * 
+     */
+    public Output<Optional<NodePoolPlacementPolicy>> placementPolicy() {
+        return Codegen.optional(this.placementPolicy);
     }
     /**
      * The ID of the project in which to create the node pool. If blank,

@@ -19,19 +19,16 @@ public final class RegionNetworkEndpointGroupAppEngine {
      */
     private final @Nullable String service;
     /**
-     * @return A template to parse function field from a request URL. URL mask allows
-     * for routing to multiple Cloud Functions without having to create
-     * multiple Network Endpoint Groups and backend services.
-     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
-     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
-     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+     * @return A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources
+     * on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources.
+     * The fields parsed by this template are platform-specific and are as follows: API Gateway: The gateway ID,
+     * App Engine: The service and version, Cloud Functions: The function name, Cloud Run: The service and tag
      * 
      */
     private final @Nullable String urlMask;
     /**
-     * @return Optional serving version.
-     * The version must be 1-63 characters long, and comply with RFC1035.
-     * Example value: &#34;v1&#34;, &#34;v2&#34;.
+     * @return The optional resource version. The version identified by this value is platform-specific and is follows:
+     * API Gateway: Unused, App Engine: The service version, Cloud Functions: Unused, Cloud Run: The service tag
      * 
      */
     private final @Nullable String version;
@@ -56,21 +53,18 @@ public final class RegionNetworkEndpointGroupAppEngine {
         return Optional.ofNullable(this.service);
     }
     /**
-     * @return A template to parse function field from a request URL. URL mask allows
-     * for routing to multiple Cloud Functions without having to create
-     * multiple Network Endpoint Groups and backend services.
-     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
-     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
-     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+     * @return A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources
+     * on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources.
+     * The fields parsed by this template are platform-specific and are as follows: API Gateway: The gateway ID,
+     * App Engine: The service and version, Cloud Functions: The function name, Cloud Run: The service and tag
      * 
      */
     public Optional<String> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
     /**
-     * @return Optional serving version.
-     * The version must be 1-63 characters long, and comply with RFC1035.
-     * Example value: &#34;v1&#34;, &#34;v2&#34;.
+     * @return The optional resource version. The version identified by this value is platform-specific and is follows:
+     * API Gateway: Unused, App Engine: The service version, Cloud Functions: Unused, Cloud Run: The service tag
      * 
      */
     public Optional<String> version() {

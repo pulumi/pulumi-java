@@ -19,6 +19,40 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     public static final AccessApprovalSettingsState Empty = new AccessApprovalSettingsState();
 
     /**
+     * The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    @Import(name="activeKeyVersion")
+    private @Nullable Output<String> activeKeyVersion;
+
+    /**
+     * @return The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+     * 
+     */
+    public Optional<Output<String>> activeKeyVersion() {
+        return Optional.ofNullable(this.activeKeyVersion);
+    }
+
+    /**
+     * If the field is true, that indicates that an ancestor of this Project has set active_key_version.
+     * 
+     */
+    @Import(name="ancestorHasActiveKeyVersion")
+    private @Nullable Output<Boolean> ancestorHasActiveKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that an ancestor of this Project has set active_key_version.
+     * 
+     */
+    public Optional<Output<Boolean>> ancestorHasActiveKeyVersion() {
+        return Optional.ofNullable(this.ancestorHasActiveKeyVersion);
+    }
+
+    /**
      * If the field is true, that indicates that at least one service is enrolled for Access Approval in one or more ancestors
      * of the Project.
      * 
@@ -56,6 +90,27 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      */
     public Optional<Output<List<AccessApprovalSettingsEnrolledServiceArgs>>> enrolledServices() {
         return Optional.ofNullable(this.enrolledServices);
+    }
+
+    /**
+     * If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Project (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+     * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+     * top-down.
+     * 
+     */
+    @Import(name="invalidKeyVersion")
+    private @Nullable Output<Boolean> invalidKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Project (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+     * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+     * top-down.
+     * 
+     */
+    public Optional<Output<Boolean>> invalidKeyVersion() {
+        return Optional.ofNullable(this.invalidKeyVersion);
     }
 
     /**
@@ -137,8 +192,11 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     private AccessApprovalSettingsState() {}
 
     private AccessApprovalSettingsState(AccessApprovalSettingsState $) {
+        this.activeKeyVersion = $.activeKeyVersion;
+        this.ancestorHasActiveKeyVersion = $.ancestorHasActiveKeyVersion;
         this.enrolledAncestor = $.enrolledAncestor;
         this.enrolledServices = $.enrolledServices;
+        this.invalidKeyVersion = $.invalidKeyVersion;
         this.name = $.name;
         this.notificationEmails = $.notificationEmails;
         this.project = $.project;
@@ -161,6 +219,52 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
 
         public Builder(AccessApprovalSettingsState defaults) {
             $ = new AccessApprovalSettingsState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(@Nullable Output<String> activeKeyVersion) {
+            $.activeKeyVersion = activeKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * This property will be ignored if set by an ancestor of the resource, and new non-empty values may not be set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(String activeKeyVersion) {
+            return activeKeyVersion(Output.of(activeKeyVersion));
+        }
+
+        /**
+         * @param ancestorHasActiveKeyVersion If the field is true, that indicates that an ancestor of this Project has set active_key_version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ancestorHasActiveKeyVersion(@Nullable Output<Boolean> ancestorHasActiveKeyVersion) {
+            $.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param ancestorHasActiveKeyVersion If the field is true, that indicates that an ancestor of this Project has set active_key_version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ancestorHasActiveKeyVersion(Boolean ancestorHasActiveKeyVersion) {
+            return ancestorHasActiveKeyVersion(Output.of(ancestorHasActiveKeyVersion));
         }
 
         /**
@@ -227,6 +331,33 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
          */
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
+        }
+
+        /**
+         * @param invalidKeyVersion If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+         * this Project (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+         * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+         * top-down.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invalidKeyVersion(@Nullable Output<Boolean> invalidKeyVersion) {
+            $.invalidKeyVersion = invalidKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param invalidKeyVersion If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+         * this Project (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on it,
+         * etc.) This key version is not necessarily the effective key version at this level, as key versions are inherited
+         * top-down.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invalidKeyVersion(Boolean invalidKeyVersion) {
+            return invalidKeyVersion(Output.of(invalidKeyVersion));
         }
 
         /**

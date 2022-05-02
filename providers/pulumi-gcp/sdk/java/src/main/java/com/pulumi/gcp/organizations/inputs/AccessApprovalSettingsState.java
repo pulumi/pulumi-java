@@ -19,6 +19,38 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     public static final AccessApprovalSettingsState Empty = new AccessApprovalSettingsState();
 
     /**
+     * The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * 
+     */
+    @Import(name="activeKeyVersion")
+    private @Nullable Output<String> activeKeyVersion;
+
+    /**
+     * @return The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * 
+     */
+    public Optional<Output<String>> activeKeyVersion() {
+        return Optional.ofNullable(this.activeKeyVersion);
+    }
+
+    /**
+     * This field will always be unset for the organization since organizations do not have ancestors.
+     * 
+     */
+    @Import(name="ancestorHasActiveKeyVersion")
+    private @Nullable Output<Boolean> ancestorHasActiveKeyVersion;
+
+    /**
+     * @return This field will always be unset for the organization since organizations do not have ancestors.
+     * 
+     */
+    public Optional<Output<Boolean>> ancestorHasActiveKeyVersion() {
+        return Optional.ofNullable(this.ancestorHasActiveKeyVersion);
+    }
+
+    /**
      * This field will always be unset for the organization since organizations do not have ancestors.
      * 
      */
@@ -54,6 +86,25 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
      */
     public Optional<Output<List<AccessApprovalSettingsEnrolledServiceArgs>>> enrolledServices() {
         return Optional.ofNullable(this.enrolledServices);
+    }
+
+    /**
+     * If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+     * it, etc.).
+     * 
+     */
+    @Import(name="invalidKeyVersion")
+    private @Nullable Output<Boolean> invalidKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+     * it, etc.).
+     * 
+     */
+    public Optional<Output<Boolean>> invalidKeyVersion() {
+        return Optional.ofNullable(this.invalidKeyVersion);
     }
 
     /**
@@ -108,8 +159,11 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
     private AccessApprovalSettingsState() {}
 
     private AccessApprovalSettingsState(AccessApprovalSettingsState $) {
+        this.activeKeyVersion = $.activeKeyVersion;
+        this.ancestorHasActiveKeyVersion = $.ancestorHasActiveKeyVersion;
         this.enrolledAncestor = $.enrolledAncestor;
         this.enrolledServices = $.enrolledServices;
+        this.invalidKeyVersion = $.invalidKeyVersion;
         this.name = $.name;
         this.notificationEmails = $.notificationEmails;
         this.organizationId = $.organizationId;
@@ -131,6 +185,50 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
 
         public Builder(AccessApprovalSettingsState defaults) {
             $ = new AccessApprovalSettingsState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(@Nullable Output<String> activeKeyVersion) {
+            $.activeKeyVersion = activeKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param activeKeyVersion The asymmetric crypto key version to use for signing approval requests.
+         * Empty active_key_version indicates that a Google-managed key should be used for signing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder activeKeyVersion(String activeKeyVersion) {
+            return activeKeyVersion(Output.of(activeKeyVersion));
+        }
+
+        /**
+         * @param ancestorHasActiveKeyVersion This field will always be unset for the organization since organizations do not have ancestors.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ancestorHasActiveKeyVersion(@Nullable Output<Boolean> ancestorHasActiveKeyVersion) {
+            $.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param ancestorHasActiveKeyVersion This field will always be unset for the organization since organizations do not have ancestors.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ancestorHasActiveKeyVersion(Boolean ancestorHasActiveKeyVersion) {
+            return ancestorHasActiveKeyVersion(Output.of(ancestorHasActiveKeyVersion));
         }
 
         /**
@@ -195,6 +293,31 @@ public final class AccessApprovalSettingsState extends com.pulumi.resources.Reso
          */
         public Builder enrolledServices(AccessApprovalSettingsEnrolledServiceArgs... enrolledServices) {
             return enrolledServices(List.of(enrolledServices));
+        }
+
+        /**
+         * @param invalidKeyVersion If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+         * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+         * it, etc.).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invalidKeyVersion(@Nullable Output<Boolean> invalidKeyVersion) {
+            $.invalidKeyVersion = invalidKeyVersion;
+            return this;
+        }
+
+        /**
+         * @param invalidKeyVersion If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+         * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+         * it, etc.).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder invalidKeyVersion(Boolean invalidKeyVersion) {
+            return invalidKeyVersion(Output.of(invalidKeyVersion));
         }
 
         /**

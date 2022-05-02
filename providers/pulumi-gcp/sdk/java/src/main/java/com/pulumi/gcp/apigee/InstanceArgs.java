@@ -90,18 +90,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Compute Engine location where the instance resides. For trial organization
-     * subscriptions, the location must be a Compute Engine zone. For paid organization
-     * subscriptions, it should correspond to a Compute Engine region.
+     * Required. Compute Engine location where the instance resides.
      * 
      */
     @Import(name="location", required=true)
     private Output<String> location;
 
     /**
-     * @return Compute Engine location where the instance resides. For trial organization
-     * subscriptions, the location must be a Compute Engine zone. For paid organization
-     * subscriptions, it should correspond to a Compute Engine region.
+     * @return Required. Compute Engine location where the instance resides.
      * 
      */
     public Output<String> location() {
@@ -287,9 +283,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param location Compute Engine location where the instance resides. For trial organization
-         * subscriptions, the location must be a Compute Engine zone. For paid organization
-         * subscriptions, it should correspond to a Compute Engine region.
+         * @param location Required. Compute Engine location where the instance resides.
          * 
          * @return builder
          * 
@@ -300,9 +294,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param location Compute Engine location where the instance resides. For trial organization
-         * subscriptions, the location must be a Compute Engine zone. For paid organization
-         * subscriptions, it should correspond to a Compute Engine region.
+         * @param location Required. Compute Engine location where the instance resides.
          * 
          * @return builder
          * 

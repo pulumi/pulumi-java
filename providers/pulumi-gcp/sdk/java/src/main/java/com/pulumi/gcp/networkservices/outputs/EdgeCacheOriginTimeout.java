@@ -12,20 +12,33 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EdgeCacheOriginTimeout {
     /**
-     * @return The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * @return The maximum duration to wait for a single origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * The connectTimeout capped by the deadline set by the request&#39;s maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.
      * 
      */
     private final @Nullable String connectTimeout;
     /**
-     * @return The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
-     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * @return The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 504 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 15 seconds. The timeout must be a value between 1s and 30s.
+     * If a failoverOrigin is specified, the maxAttemptsTimeout of the first configured origin sets the deadline for all connection attempts across all failoverOrigins.
      * 
      */
     private final @Nullable String maxAttemptsTimeout;
     /**
-     * @return The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
-     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * @return The maximum duration to wait between reads of a single HTTP connection/stream.
+     * Defaults to 15 seconds.  The timeout must be a value between 1s and 30s.
+     * The readTimeout is capped by the responseTimeout.  All reads of the HTTP connection/stream must be completed by the deadline set by the responseTimeout.
+     * If the response headers have already been written to the connection, the response will be truncated and logged.
+     * 
+     */
+    private final @Nullable String readTimeout;
+    /**
+     * @return The maximum duration to wait for the last byte of a response to arrive when reading from the HTTP connection/stream.
+     * Defaults to 30 seconds. The timeout must be a value between 1s and 120s.
+     * The responseTimeout starts after the connection has been established.
+     * This also applies to HTTP Chunked Transfer Encoding responses, and/or when an open-ended Range request is made to the origin. Origins that take longer to write additional bytes to the response than the configured responseTimeout will result in an error being returned to the client.
+     * If the response headers have already been written to the connection, the response will be truncated and logged.
      * 
      */
     private final @Nullable String responseTimeout;
@@ -34,31 +47,48 @@ public final class EdgeCacheOriginTimeout {
     private EdgeCacheOriginTimeout(
         @CustomType.Parameter("connectTimeout") @Nullable String connectTimeout,
         @CustomType.Parameter("maxAttemptsTimeout") @Nullable String maxAttemptsTimeout,
+        @CustomType.Parameter("readTimeout") @Nullable String readTimeout,
         @CustomType.Parameter("responseTimeout") @Nullable String responseTimeout) {
         this.connectTimeout = connectTimeout;
         this.maxAttemptsTimeout = maxAttemptsTimeout;
+        this.readTimeout = readTimeout;
         this.responseTimeout = responseTimeout;
     }
 
     /**
-     * @return The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
+     * @return The maximum duration to wait for a single origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * The connectTimeout capped by the deadline set by the request&#39;s maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.
      * 
      */
     public Optional<String> connectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
     /**
-     * @return The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 503 will be returned if the timeout is reached before a response is returned.
-     * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
+     * @return The maximum time across all connection attempts to the origin, including failover origins, before returning an error to the client. A HTTP 504 will be returned if the timeout is reached before a response is returned.
+     * Defaults to 15 seconds. The timeout must be a value between 1s and 30s.
+     * If a failoverOrigin is specified, the maxAttemptsTimeout of the first configured origin sets the deadline for all connection attempts across all failoverOrigins.
      * 
      */
     public Optional<String> maxAttemptsTimeout() {
         return Optional.ofNullable(this.maxAttemptsTimeout);
     }
     /**
-     * @return The maximum duration to wait for data to arrive when reading from the HTTP connection/stream.
-     * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
+     * @return The maximum duration to wait between reads of a single HTTP connection/stream.
+     * Defaults to 15 seconds.  The timeout must be a value between 1s and 30s.
+     * The readTimeout is capped by the responseTimeout.  All reads of the HTTP connection/stream must be completed by the deadline set by the responseTimeout.
+     * If the response headers have already been written to the connection, the response will be truncated and logged.
+     * 
+     */
+    public Optional<String> readTimeout() {
+        return Optional.ofNullable(this.readTimeout);
+    }
+    /**
+     * @return The maximum duration to wait for the last byte of a response to arrive when reading from the HTTP connection/stream.
+     * Defaults to 30 seconds. The timeout must be a value between 1s and 120s.
+     * The responseTimeout starts after the connection has been established.
+     * This also applies to HTTP Chunked Transfer Encoding responses, and/or when an open-ended Range request is made to the origin. Origins that take longer to write additional bytes to the response than the configured responseTimeout will result in an error being returned to the client.
+     * If the response headers have already been written to the connection, the response will be truncated and logged.
      * 
      */
     public Optional<String> responseTimeout() {
@@ -76,6 +106,7 @@ public final class EdgeCacheOriginTimeout {
     public static final class Builder {
         private @Nullable String connectTimeout;
         private @Nullable String maxAttemptsTimeout;
+        private @Nullable String readTimeout;
         private @Nullable String responseTimeout;
 
         public Builder() {
@@ -86,6 +117,7 @@ public final class EdgeCacheOriginTimeout {
     	      Objects.requireNonNull(defaults);
     	      this.connectTimeout = defaults.connectTimeout;
     	      this.maxAttemptsTimeout = defaults.maxAttemptsTimeout;
+    	      this.readTimeout = defaults.readTimeout;
     	      this.responseTimeout = defaults.responseTimeout;
         }
 
@@ -97,11 +129,15 @@ public final class EdgeCacheOriginTimeout {
             this.maxAttemptsTimeout = maxAttemptsTimeout;
             return this;
         }
+        public Builder readTimeout(@Nullable String readTimeout) {
+            this.readTimeout = readTimeout;
+            return this;
+        }
         public Builder responseTimeout(@Nullable String responseTimeout) {
             this.responseTimeout = responseTimeout;
             return this;
         }        public EdgeCacheOriginTimeout build() {
-            return new EdgeCacheOriginTimeout(connectTimeout, maxAttemptsTimeout, responseTimeout);
+            return new EdgeCacheOriginTimeout(connectTimeout, maxAttemptsTimeout, readTimeout, responseTimeout);
         }
     }
 }

@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  * [the official documentation](https://cloud.google.com/container-engine/docs/clusters)
  * and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters).
  * 
- * &gt; **Note:** All arguments and attributes, including basic auth username and
+ * &gt; **Warning:** All arguments and attributes, including basic auth username and
  * passwords as well as certificate outputs will be stored in the raw state as
  * plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
@@ -756,7 +756,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     /**
      * Determines whether alias IPs or routes will be used for pod IPs in the cluster.
      * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
-     * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+     * and requires the `ip_allocation_policy` block to be defined. By default, when this field is unspecified and no `ip_allocation_policy` blocks are set, GKE will create a `ROUTES`-based cluster.
      * 
      */
     @Export(name="networkingMode", type=String.class, parameters={})
@@ -765,7 +765,7 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     /**
      * @return Determines whether alias IPs or routes will be used for pod IPs in the cluster.
      * Options are `VPC_NATIVE` or `ROUTES`. `VPC_NATIVE` enables [IP aliasing](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-aliases),
-     * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
+     * and requires the `ip_allocation_policy` block to be defined. By default, when this field is unspecified and no `ip_allocation_policy` blocks are set, GKE will create a `ROUTES`-based cluster.
      * 
      */
     public Output<String> networkingMode() {
@@ -1105,15 +1105,15 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="verticalPodAutoscaling", type=ClusterVerticalPodAutoscaling.class, parameters={})
-    private Output</* @Nullable */ ClusterVerticalPodAutoscaling> verticalPodAutoscaling;
+    private Output<ClusterVerticalPodAutoscaling> verticalPodAutoscaling;
 
     /**
      * @return Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it.
      * Structure is documented below.
      * 
      */
-    public Output<Optional<ClusterVerticalPodAutoscaling>> verticalPodAutoscaling() {
-        return Codegen.optional(this.verticalPodAutoscaling);
+    public Output<ClusterVerticalPodAutoscaling> verticalPodAutoscaling() {
+        return this.verticalPodAutoscaling;
     }
     /**
      * Workload Identity allows Kubernetes service accounts to act as a user-managed

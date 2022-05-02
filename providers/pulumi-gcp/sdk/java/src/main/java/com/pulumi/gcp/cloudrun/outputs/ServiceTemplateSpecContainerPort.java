@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceTemplateSpecContainerPort {
     /**
-     * @return Port number.
+     * @return Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
-    private final Integer containerPort;
+    private final @Nullable Integer containerPort;
     /**
      * @return Volume&#39;s name.
      * 
      */
     private final @Nullable String name;
     /**
-     * @return Protocol used on port. Defaults to TCP.
+     * @return Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
      */
     private final @Nullable String protocol;
 
     @CustomType.Constructor
     private ServiceTemplateSpecContainerPort(
-        @CustomType.Parameter("containerPort") Integer containerPort,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
         @CustomType.Parameter("name") @Nullable String name,
         @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
@@ -39,11 +39,11 @@ public final class ServiceTemplateSpecContainerPort {
     }
 
     /**
-     * @return Port number.
+     * @return Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
-    public Integer containerPort() {
-        return this.containerPort;
+    public Optional<Integer> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
     /**
      * @return Volume&#39;s name.
@@ -53,7 +53,7 @@ public final class ServiceTemplateSpecContainerPort {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Protocol used on port. Defaults to TCP.
+     * @return Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
      */
     public Optional<String> protocol() {
@@ -69,7 +69,7 @@ public final class ServiceTemplateSpecContainerPort {
     }
 
     public static final class Builder {
-        private Integer containerPort;
+        private @Nullable Integer containerPort;
         private @Nullable String name;
         private @Nullable String protocol;
 
@@ -84,8 +84,8 @@ public final class ServiceTemplateSpecContainerPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder containerPort(Integer containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+        public Builder containerPort(@Nullable Integer containerPort) {
+            this.containerPort = containerPort;
             return this;
         }
         public Builder name(@Nullable String name) {

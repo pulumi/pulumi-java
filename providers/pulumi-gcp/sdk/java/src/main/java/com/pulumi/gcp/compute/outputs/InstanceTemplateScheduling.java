@@ -45,6 +45,14 @@ public final class InstanceTemplateScheduling {
      * 
      */
     private final @Nullable Boolean preemptible;
+    /**
+     * @return Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+     * `preemptible` should be `true` and `auto_restart` should be
+     * `false`. For more info about
+     * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+     * 
+     */
+    private final @Nullable String provisioningModel;
 
     @CustomType.Constructor
     private InstanceTemplateScheduling(
@@ -52,12 +60,14 @@ public final class InstanceTemplateScheduling {
         @CustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
         @CustomType.Parameter("nodeAffinities") @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities,
         @CustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
-        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
+        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @CustomType.Parameter("provisioningModel") @Nullable String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;
         this.preemptible = preemptible;
+        this.provisioningModel = provisioningModel;
     }
 
     /**
@@ -100,6 +110,16 @@ public final class InstanceTemplateScheduling {
     public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }
+    /**
+     * @return Describe the type of preemptible VM. This field accepts the value `STANDARD` or `SPOT`. If the value is `STANDARD`, there will be no discount. If this   is set to `SPOT`,
+     * `preemptible` should be `true` and `auto_restart` should be
+     * `false`. For more info about
+     * `SPOT`, read [here](https://cloud.google.com/compute/docs/instances/spot)
+     * 
+     */
+    public Optional<String> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -115,6 +135,7 @@ public final class InstanceTemplateScheduling {
         private @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities;
         private @Nullable String onHostMaintenance;
         private @Nullable Boolean preemptible;
+        private @Nullable String provisioningModel;
 
         public Builder() {
     	      // Empty
@@ -127,6 +148,7 @@ public final class InstanceTemplateScheduling {
     	      this.nodeAffinities = defaults.nodeAffinities;
     	      this.onHostMaintenance = defaults.onHostMaintenance;
     	      this.preemptible = defaults.preemptible;
+    	      this.provisioningModel = defaults.provisioningModel;
         }
 
         public Builder automaticRestart(@Nullable Boolean automaticRestart) {
@@ -151,8 +173,12 @@ public final class InstanceTemplateScheduling {
         public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
+        }
+        public Builder provisioningModel(@Nullable String provisioningModel) {
+            this.provisioningModel = provisioningModel;
+            return this;
         }        public InstanceTemplateScheduling build() {
-            return new InstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+            return new InstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
         }
     }
 }

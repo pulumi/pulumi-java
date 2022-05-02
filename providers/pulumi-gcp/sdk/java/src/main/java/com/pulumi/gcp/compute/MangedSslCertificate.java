@@ -18,6 +18,50 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * An SslCertificate resource, used for HTTPS load balancing.  This resource
+ * represents a certificate for which the certificate secrets are created and
+ * managed by Google.
+ * 
+ * For a resource where you provide the key, see the
+ * SSL Certificate resource.
+ * 
+ * To get more information about ManagedSslCertificate, see:
+ * 
+ * * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/sslCertificates)
+ * * How-to Guides
+ *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/ssl-certificates)
+ * 
+ * &gt; **Warning:** This resource should be used with extreme caution!  Provisioning an SSL
+ * certificate is complex.  Ensure that you understand the lifecycle of a
+ * certificate before attempting complex tasks like cert rotation automatically.
+ * This resource will &#34;return&#34; as soon as the certificate object is created,
+ * but post-creation the certificate object will go through a &#34;provisioning&#34;
+ * process.  The provisioning process can complete only when the domain name
+ * for which the certificate is created points to a target pool which, itself,
+ * points at the certificate.  Depending on your DNS provider, this may take
+ * some time, and migrating from self-managed certificates to Google-managed
+ * certificates may entail some downtime while the certificate provisions.
+ * 
+ * In conclusion: Be extremely cautious.
+ * 
+ * ## Example Usage
+ * 
+ * ## Import
+ * 
+ * ManagedSslCertificate can be imported using any of these accepted formats
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/mangedSslCertificate:MangedSslCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/mangedSslCertificate:MangedSslCertificate default {{project}}/{{name}}
+ * ```
+ * 
+ * ```sh
+ *  $ pulumi import gcp:compute/mangedSslCertificate:MangedSslCertificate default {{name}}
+ * ```
+ * 
  * @deprecated
  * gcp.compute.MangedSslCertificate has been deprecated in favor of gcp.compute.ManagedSslCertificate
  * 
@@ -82,52 +126,76 @@ public class MangedSslCertificate extends com.pulumi.resources.CustomResource {
         return this.expireTime;
     }
     /**
-     * Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-     * of &#39;MANAGED&#39; in &#39;type&#39;).
+     * Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
      * 
      */
     @Export(name="managed", type=MangedSslCertificateManaged.class, parameters={})
     private Output</* @Nullable */ MangedSslCertificateManaged> managed;
 
     /**
-     * @return Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-     * of &#39;MANAGED&#39; in &#39;type&#39;).
+     * @return Properties relevant to a managed certificate.  These will be used if the
+     * certificate is managed (as indicated by a value of `MANAGED` in `type`).
+     * Structure is documented below.
      * 
      */
     public Output<Optional<MangedSslCertificateManaged>> managed() {
         return Codegen.optional(this.managed);
     }
     /**
-     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-     * namespace as the managed SSL certificates.
+     * Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-     * comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-     * &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase letter, and all following characters
-     * must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-     * namespace as the managed SSL certificates.
+     * @return Name of the resource. Provided by the client when the resource is
+     * created. The name must be 1-63 characters long, and comply with
+     * RFC1035. Specifically, the name must be 1-63 characters long and match
+     * the regular expression `a-z?` which means the
+     * first character must be a lowercase letter, and all following
+     * characters must be a dash, lowercase letter, or digit, except the last
+     * character, which cannot be a dash.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
+    /**
+     * The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
+    /**
+     * The URI of the created resource.
+     * 
+     */
     @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Output<String> selfLink() {
         return this.selfLink;
     }
@@ -146,16 +214,20 @@ public class MangedSslCertificate extends com.pulumi.resources.CustomResource {
         return this.subjectAlternativeNames;
     }
     /**
-     * Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-     * Possible values: [&#34;MANAGED&#34;]
+     * Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
      * 
      */
     @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
-     * @return Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API which type this is. Default value: &#34;MANAGED&#34;
-     * Possible values: [&#34;MANAGED&#34;]
+     * @return Enum field whose value is always `MANAGED` - used to signal to the API
+     * which type this is.
+     * Default value is `MANAGED`.
+     * Possible values are `MANAGED`.
      * 
      */
     public Output<Optional<String>> type() {

@@ -26,15 +26,26 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      * 
      */
     private final @Nullable Integer numInstances;
+    /**
+     * @return Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+     * Accepted values are:
+     * * PREEMPTIBILITY_UNSPECIFIED
+     * * NON_PREEMPTIBLE
+     * * PREEMPTIBLE
+     * 
+     */
+    private final @Nullable String preemptibility;
 
     @CustomType.Constructor
     private ClusterClusterConfigPreemptibleWorkerConfig(
         @CustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig,
         @CustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
-        @CustomType.Parameter("numInstances") @Nullable Integer numInstances) {
+        @CustomType.Parameter("numInstances") @Nullable Integer numInstances,
+        @CustomType.Parameter("preemptibility") @Nullable String preemptibility) {
         this.diskConfig = diskConfig;
         this.instanceNames = instanceNames;
         this.numInstances = numInstances;
+        this.preemptibility = preemptibility;
     }
 
     /**
@@ -55,6 +66,17 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
     public Optional<Integer> numInstances() {
         return Optional.ofNullable(this.numInstances);
     }
+    /**
+     * @return Specifies the preemptibility of the secondary workers. The default value is `PREEMPTIBLE`
+     * Accepted values are:
+     * * PREEMPTIBILITY_UNSPECIFIED
+     * * NON_PREEMPTIBLE
+     * * PREEMPTIBLE
+     * 
+     */
+    public Optional<String> preemptibility() {
+        return Optional.ofNullable(this.preemptibility);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -68,6 +90,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
         private @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig;
         private @Nullable List<String> instanceNames;
         private @Nullable Integer numInstances;
+        private @Nullable String preemptibility;
 
         public Builder() {
     	      // Empty
@@ -78,6 +101,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
     	      this.diskConfig = defaults.diskConfig;
     	      this.instanceNames = defaults.instanceNames;
     	      this.numInstances = defaults.numInstances;
+    	      this.preemptibility = defaults.preemptibility;
         }
 
         public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig) {
@@ -94,8 +118,12 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
         public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
+        }
+        public Builder preemptibility(@Nullable String preemptibility) {
+            this.preemptibility = preemptibility;
+            return this;
         }        public ClusterClusterConfigPreemptibleWorkerConfig build() {
-            return new ClusterClusterConfigPreemptibleWorkerConfig(diskConfig, instanceNames, numInstances);
+            return new ClusterClusterConfigPreemptibleWorkerConfig(diskConfig, instanceNames, numInstances, preemptibility);
         }
     }
 }

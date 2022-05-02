@@ -108,6 +108,29 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
         return this.asn;
     }
 
+    /**
+     * The interval in seconds between BGP keepalive messages that are sent to the peer.
+     * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+     * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+     * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+     * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
+    @Import(name="keepaliveInterval")
+    private @Nullable Output<Integer> keepaliveInterval;
+
+    /**
+     * @return The interval in seconds between BGP keepalive messages that are sent to the peer.
+     * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+     * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+     * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+     * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+     * 
+     */
+    public Optional<Output<Integer>> keepaliveInterval() {
+        return Optional.ofNullable(this.keepaliveInterval);
+    }
+
     private RouterBgpArgs() {}
 
     private RouterBgpArgs(RouterBgpArgs $) {
@@ -115,6 +138,7 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
         this.advertisedGroups = $.advertisedGroups;
         this.advertisedIpRanges = $.advertisedIpRanges;
         this.asn = $.asn;
+        this.keepaliveInterval = $.keepaliveInterval;
     }
 
     public static Builder builder() {
@@ -277,6 +301,35 @@ public final class RouterBgpArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder asn(Integer asn) {
             return asn(Output.of(asn));
+        }
+
+        /**
+         * @param keepaliveInterval The interval in seconds between BGP keepalive messages that are sent to the peer.
+         * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+         * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+         * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+         * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keepaliveInterval(@Nullable Output<Integer> keepaliveInterval) {
+            $.keepaliveInterval = keepaliveInterval;
+            return this;
+        }
+
+        /**
+         * @param keepaliveInterval The interval in seconds between BGP keepalive messages that are sent to the peer.
+         * Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
+         * maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
+         * BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
+         * the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keepaliveInterval(Integer keepaliveInterval) {
+            return keepaliveInterval(Output.of(keepaliveInterval));
         }
 
         public RouterBgpArgs build() {

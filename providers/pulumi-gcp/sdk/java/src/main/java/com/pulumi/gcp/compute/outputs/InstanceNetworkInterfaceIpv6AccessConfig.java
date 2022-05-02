@@ -15,7 +15,7 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
     private final @Nullable String externalIpv6PrefixLength;
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
      * 
      */
     private final String networkTier;
@@ -46,7 +46,7 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
     }
     /**
      * @return The service-level to be provided for IPv6 traffic when the
-     * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
+     * subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
      * 
      */
     public String networkTier() {

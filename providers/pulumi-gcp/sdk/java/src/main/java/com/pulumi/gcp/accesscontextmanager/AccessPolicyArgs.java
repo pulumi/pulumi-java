@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
@@ -31,6 +33,23 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Folder or project on which this policy is applicable.
+     * Format: folders/{{folder_id}} or projects/{{project_id}}
+     * 
+     */
+    @Import(name="scopes")
+    private @Nullable Output<String> scopes;
+
+    /**
+     * @return Folder or project on which this policy is applicable.
+     * Format: folders/{{folder_id}} or projects/{{project_id}}
+     * 
+     */
+    public Optional<Output<String>> scopes() {
+        return Optional.ofNullable(this.scopes);
+    }
+
+    /**
      * Human readable title. Does not affect behavior.
      * 
      */
@@ -49,6 +68,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
 
     private AccessPolicyArgs(AccessPolicyArgs $) {
         this.parent = $.parent;
+        this.scopes = $.scopes;
         this.title = $.title;
     }
 
@@ -91,6 +111,29 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
+        }
+
+        /**
+         * @param scopes Folder or project on which this policy is applicable.
+         * Format: folders/{{folder_id}} or projects/{{project_id}}
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopes(@Nullable Output<String> scopes) {
+            $.scopes = scopes;
+            return this;
+        }
+
+        /**
+         * @param scopes Folder or project on which this policy is applicable.
+         * Format: folders/{{folder_id}} or projects/{{project_id}}
+         * 
+         * @return builder
+         * 
+         */
+        public Builder scopes(String scopes) {
+            return scopes(Output.of(scopes));
         }
 
         /**

@@ -9,6 +9,7 @@ import com.pulumi.gcp.container.inputs.NodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.NodePoolManagementArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNetworkConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigArgs;
+import com.pulumi.gcp.container.inputs.NodePoolPlacementPolicyArgs;
 import com.pulumi.gcp.container.inputs.NodePoolUpgradeSettingsArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -243,6 +244,23 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * ) Specifies a custom placement policy for the
+     * nodes.
+     * 
+     */
+    @Import(name="placementPolicy")
+    private @Nullable Output<NodePoolPlacementPolicyArgs> placementPolicy;
+
+    /**
+     * @return ) Specifies a custom placement policy for the
+     * nodes.
+     * 
+     */
+    public Optional<Output<NodePoolPlacementPolicyArgs>> placementPolicy() {
+        return Optional.ofNullable(this.placementPolicy);
+    }
+
+    /**
      * The ID of the project in which to create the node pool. If blank,
      * the provider-configured project will be used.
      * 
@@ -318,6 +336,7 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
         this.nodeConfig = $.nodeConfig;
         this.nodeCount = $.nodeCount;
         this.nodeLocations = $.nodeLocations;
+        this.placementPolicy = $.placementPolicy;
         this.project = $.project;
         this.upgradeSettings = $.upgradeSettings;
         this.version = $.version;
@@ -644,6 +663,29 @@ public final class NodePoolArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder nodeLocations(String... nodeLocations) {
             return nodeLocations(List.of(nodeLocations));
+        }
+
+        /**
+         * @param placementPolicy ) Specifies a custom placement policy for the
+         * nodes.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder placementPolicy(@Nullable Output<NodePoolPlacementPolicyArgs> placementPolicy) {
+            $.placementPolicy = placementPolicy;
+            return this;
+        }
+
+        /**
+         * @param placementPolicy ) Specifies a custom placement policy for the
+         * nodes.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder placementPolicy(NodePoolPlacementPolicyArgs placementPolicy) {
+            return placementPolicy(Output.of(placementPolicy));
         }
 
         /**

@@ -16,17 +16,20 @@ public final class GetRouterBgp {
     private final List<String> advertisedGroups;
     private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
     private final Integer asn;
+    private final Integer keepaliveInterval;
 
     @CustomType.Constructor
     private GetRouterBgp(
         @CustomType.Parameter("advertiseMode") String advertiseMode,
         @CustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
         @CustomType.Parameter("advertisedIpRanges") List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
-        @CustomType.Parameter("asn") Integer asn) {
+        @CustomType.Parameter("asn") Integer asn,
+        @CustomType.Parameter("keepaliveInterval") Integer keepaliveInterval) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
         this.asn = asn;
+        this.keepaliveInterval = keepaliveInterval;
     }
 
     public String advertiseMode() {
@@ -40,6 +43,9 @@ public final class GetRouterBgp {
     }
     public Integer asn() {
         return this.asn;
+    }
+    public Integer keepaliveInterval() {
+        return this.keepaliveInterval;
     }
 
     public static Builder builder() {
@@ -55,6 +61,7 @@ public final class GetRouterBgp {
         private List<String> advertisedGroups;
         private List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
         private Integer asn;
+        private Integer keepaliveInterval;
 
         public Builder() {
     	      // Empty
@@ -66,6 +73,7 @@ public final class GetRouterBgp {
     	      this.advertisedGroups = defaults.advertisedGroups;
     	      this.advertisedIpRanges = defaults.advertisedIpRanges;
     	      this.asn = defaults.asn;
+    	      this.keepaliveInterval = defaults.keepaliveInterval;
         }
 
         public Builder advertiseMode(String advertiseMode) {
@@ -89,8 +97,12 @@ public final class GetRouterBgp {
         public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
+        }
+        public Builder keepaliveInterval(Integer keepaliveInterval) {
+            this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
+            return this;
         }        public GetRouterBgp build() {
-            return new GetRouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
+            return new GetRouterBgp(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }
     }
 }

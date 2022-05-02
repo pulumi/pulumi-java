@@ -12,6 +12,15 @@ import com.pulumi.gcp.sourcerepo.outputs.GetRepositoryResult;
 import java.util.concurrent.CompletableFuture;
 
 public final class SourcerepoFunctions {
+    /**
+     * Get infomation about an existing Google Cloud Source Repository.
+     * For more information see [the official documentation](https://cloud.google.com/source-repositories)
+     * and
+     * [API](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos).
+     * 
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {
         return getRepository(args, InvokeOptions.Empty);
     }

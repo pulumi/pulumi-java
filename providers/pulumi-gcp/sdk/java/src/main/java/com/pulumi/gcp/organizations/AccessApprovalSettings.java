@@ -14,6 +14,7 @@ import com.pulumi.gcp.organizations.outputs.AccessApprovalSettingsEnrolledServic
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,6 +41,36 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:organizations/accessApprovalSettings:AccessApprovalSettings")
 public class AccessApprovalSettings extends com.pulumi.resources.CustomResource {
+    /**
+     * The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * 
+     */
+    @Export(name="activeKeyVersion", type=String.class, parameters={})
+    private Output</* @Nullable */ String> activeKeyVersion;
+
+    /**
+     * @return The asymmetric crypto key version to use for signing approval requests.
+     * Empty active_key_version indicates that a Google-managed key should be used for signing.
+     * 
+     */
+    public Output<Optional<String>> activeKeyVersion() {
+        return Codegen.optional(this.activeKeyVersion);
+    }
+    /**
+     * This field will always be unset for the organization since organizations do not have ancestors.
+     * 
+     */
+    @Export(name="ancestorHasActiveKeyVersion", type=Boolean.class, parameters={})
+    private Output<Boolean> ancestorHasActiveKeyVersion;
+
+    /**
+     * @return This field will always be unset for the organization since organizations do not have ancestors.
+     * 
+     */
+    public Output<Boolean> ancestorHasActiveKeyVersion() {
+        return this.ancestorHasActiveKeyVersion;
+    }
     /**
      * This field will always be unset for the organization since organizations do not have ancestors.
      * 
@@ -75,6 +106,24 @@ public class AccessApprovalSettings extends com.pulumi.resources.CustomResource 
      */
     public Output<List<AccessApprovalSettingsEnrolledService>> enrolledServices() {
         return this.enrolledServices;
+    }
+    /**
+     * If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+     * it, etc.).
+     * 
+     */
+    @Export(name="invalidKeyVersion", type=Boolean.class, parameters={})
+    private Output<Boolean> invalidKeyVersion;
+
+    /**
+     * @return If the field is true, that indicates that there is some configuration issue with the active_key_version configured on
+     * this Organization (e.g. it doesn&#39;t exist or the Access Approval service account doesn&#39;t have the correct permissions on
+     * it, etc.).
+     * 
+     */
+    public Output<Boolean> invalidKeyVersion() {
+        return this.invalidKeyVersion;
     }
     /**
      * The resource name of the settings. Format is &#34;organizations/{organization_id}/accessApprovalSettings&#34;

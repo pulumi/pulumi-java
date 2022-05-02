@@ -139,7 +139,7 @@ public final class GetInstanceTemplateResult {
      * is not provided, the provider project is used.
      * 
      */
-    private final String project;
+    private final @Nullable String project;
     /**
      * @return An instance template is a global resource that is not
      * bound to a zone or a region. However, you can still specify some regional
@@ -207,7 +207,7 @@ public final class GetInstanceTemplateResult {
         @CustomType.Parameter("namePrefix") String namePrefix,
         @CustomType.Parameter("networkInterfaces") List<GetInstanceTemplateNetworkInterface> networkInterfaces,
         @CustomType.Parameter("networkPerformanceConfigs") List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs,
-        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("project") @Nullable String project,
         @CustomType.Parameter("region") String region,
         @CustomType.Parameter("reservationAffinities") List<GetInstanceTemplateReservationAffinity> reservationAffinities,
         @CustomType.Parameter("schedulings") List<GetInstanceTemplateScheduling> schedulings,
@@ -404,8 +404,8 @@ public final class GetInstanceTemplateResult {
      * is not provided, the provider project is used.
      * 
      */
-    public String project() {
-        return this.project;
+    public Optional<String> project() {
+        return Optional.ofNullable(this.project);
     }
     /**
      * @return An instance template is a global resource that is not
@@ -497,7 +497,7 @@ public final class GetInstanceTemplateResult {
         private String namePrefix;
         private List<GetInstanceTemplateNetworkInterface> networkInterfaces;
         private List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs;
-        private String project;
+        private @Nullable String project;
         private String region;
         private List<GetInstanceTemplateReservationAffinity> reservationAffinities;
         private List<GetInstanceTemplateScheduling> schedulings;
@@ -647,8 +647,8 @@ public final class GetInstanceTemplateResult {
         public Builder networkPerformanceConfigs(GetInstanceTemplateNetworkPerformanceConfig... networkPerformanceConfigs) {
             return networkPerformanceConfigs(List.of(networkPerformanceConfigs));
         }
-        public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+        public Builder project(@Nullable String project) {
+            this.project = project;
             return this;
         }
         public Builder region(String region) {

@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigquery.inputs.AppProfileState;
 import com.pulumi.gcp.bigquery.outputs.AppProfileSingleClusterRouting;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -99,6 +100,22 @@ public class AppProfile extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> instance() {
         return Codegen.optional(this.instance);
+    }
+    /**
+     * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+     * clusters are eligible.
+     * 
+     */
+    @Export(name="multiClusterRoutingClusterIds", type=List.class, parameters={String.class})
+    private Output</* @Nullable */ List<String>> multiClusterRoutingClusterIds;
+
+    /**
+     * @return The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all
+     * clusters are eligible.
+     * 
+     */
+    public Output<Optional<List<String>>> multiClusterRoutingClusterIds() {
+        return Codegen.optional(this.multiClusterRoutingClusterIds);
     }
     /**
      * If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available

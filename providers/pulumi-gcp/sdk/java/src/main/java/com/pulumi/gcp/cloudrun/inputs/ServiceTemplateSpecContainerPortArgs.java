@@ -17,18 +17,18 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     public static final ServiceTemplateSpecContainerPortArgs Empty = new ServiceTemplateSpecContainerPortArgs();
 
     /**
-     * Port number.
+     * Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
-    @Import(name="containerPort", required=true)
-    private Output<Integer> containerPort;
+    @Import(name="containerPort")
+    private @Nullable Output<Integer> containerPort;
 
     /**
-     * @return Port number.
+     * @return Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
      * 
      */
-    public Output<Integer> containerPort() {
-        return this.containerPort;
+    public Optional<Output<Integer>> containerPort() {
+        return Optional.ofNullable(this.containerPort);
     }
 
     /**
@@ -47,14 +47,14 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
     }
 
     /**
-     * Protocol used on port. Defaults to TCP.
+     * Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return Protocol used on port. Defaults to TCP.
+     * @return Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -88,18 +88,18 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
         }
 
         /**
-         * @param containerPort Port number.
+         * @param containerPort Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
          * 
          * @return builder
          * 
          */
-        public Builder containerPort(Output<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             $.containerPort = containerPort;
             return this;
         }
 
         /**
-         * @param containerPort Port number.
+         * @param containerPort Port number the container listens on. This must be a valid port number, 0 &lt; x &lt; 65536.
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
         }
 
         /**
-         * @param protocol Protocol used on port. Defaults to TCP.
+         * @param protocol Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
         }
 
         /**
-         * @param protocol Protocol used on port. Defaults to TCP.
+         * @param protocol Protocol for port. Must be &#34;TCP&#34;. Defaults to &#34;TCP&#34;.
          * 
          * @return builder
          * 
@@ -151,7 +151,6 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
         }
 
         public ServiceTemplateSpecContainerPortArgs build() {
-            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
             return $;
         }
     }

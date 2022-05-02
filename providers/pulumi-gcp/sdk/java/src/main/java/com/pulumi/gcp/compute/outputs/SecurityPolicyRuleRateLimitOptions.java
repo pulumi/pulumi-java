@@ -34,13 +34,12 @@ public final class SecurityPolicyRuleRateLimitOptions {
      */
     private final String conformAction;
     /**
-     * @return Determines the key to enforce the rate_limit_threshold on.
-     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+     * @return Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
      * 
      */
     private final @Nullable String enforceOnKey;
     /**
-     * @return Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * @return Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
     private final @Nullable String enforceOnKeyName;
@@ -102,15 +101,14 @@ public final class SecurityPolicyRuleRateLimitOptions {
         return this.conformAction;
     }
     /**
-     * @return Determines the key to enforce the rate_limit_threshold on.
-     * Possible values incude &#34;ALL&#34;, &#34;ALL_IPS&#34;, &#34;HTTP_HEADER&#34;, &#34;IP&#34;, &#34;XFF_IP&#34;. If not specified, defaults to &#34;ALL&#34;.
+     * @return Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to &#34;ALL&#34;.
      * 
      */
     public Optional<String> enforceOnKey() {
         return Optional.ofNullable(this.enforceOnKey);
     }
     /**
-     * @return Rate limit key name applicable only for HTTP_HEADER key types. Name of the HTTP header whose value is taken as the key value.
+     * @return Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value.
      * 
      */
     public Optional<String> enforceOnKeyName() {
