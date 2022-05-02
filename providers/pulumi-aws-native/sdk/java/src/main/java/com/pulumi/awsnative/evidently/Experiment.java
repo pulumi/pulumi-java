@@ -7,6 +7,7 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.evidently.ExperimentArgs;
 import com.pulumi.awsnative.evidently.outputs.ExperimentMetricGoalObject;
 import com.pulumi.awsnative.evidently.outputs.ExperimentOnlineAbConfigObject;
+import com.pulumi.awsnative.evidently.outputs.ExperimentRunningStatusObject;
 import com.pulumi.awsnative.evidently.outputs.ExperimentTag;
 import com.pulumi.awsnative.evidently.outputs.ExperimentTreatmentObject;
 import com.pulumi.core.Output;
@@ -66,6 +67,20 @@ public class Experiment extends com.pulumi.resources.CustomResource {
 
     public Output<Optional<String>> randomizationSalt() {
         return Codegen.optional(this.randomizationSalt);
+    }
+    /**
+     * Start Experiment. Default is False
+     * 
+     */
+    @Export(name="runningStatus", type=ExperimentRunningStatusObject.class, parameters={})
+    private Output</* @Nullable */ ExperimentRunningStatusObject> runningStatus;
+
+    /**
+     * @return Start Experiment. Default is False
+     * 
+     */
+    public Output<Optional<ExperimentRunningStatusObject>> runningStatus() {
+        return Codegen.optional(this.runningStatus);
     }
     @Export(name="samplingRate", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> samplingRate;

@@ -18,6 +18,11 @@ public final class WorkflowStepCustomStepDetailsProperties {
      */
     private final @Nullable String name;
     /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    private final @Nullable String sourceFileLocation;
+    /**
      * @return The ARN for the lambda function that is being called.
      * 
      */
@@ -31,9 +36,11 @@ public final class WorkflowStepCustomStepDetailsProperties {
     @CustomType.Constructor
     private WorkflowStepCustomStepDetailsProperties(
         @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceFileLocation") @Nullable String sourceFileLocation,
         @CustomType.Parameter("target") @Nullable String target,
         @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.name = name;
+        this.sourceFileLocation = sourceFileLocation;
         this.target = target;
         this.timeoutSeconds = timeoutSeconds;
     }
@@ -44,6 +51,13 @@ public final class WorkflowStepCustomStepDetailsProperties {
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+    /**
+     * @return Specifies which file to use as input to the workflow step.
+     * 
+     */
+    public Optional<String> sourceFileLocation() {
+        return Optional.ofNullable(this.sourceFileLocation);
     }
     /**
      * @return The ARN for the lambda function that is being called.
@@ -70,6 +84,7 @@ public final class WorkflowStepCustomStepDetailsProperties {
 
     public static final class Builder {
         private @Nullable String name;
+        private @Nullable String sourceFileLocation;
         private @Nullable String target;
         private @Nullable Integer timeoutSeconds;
 
@@ -80,12 +95,17 @@ public final class WorkflowStepCustomStepDetailsProperties {
         public Builder(WorkflowStepCustomStepDetailsProperties defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.name = defaults.name;
+    	      this.sourceFileLocation = defaults.sourceFileLocation;
     	      this.target = defaults.target;
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+        public Builder sourceFileLocation(@Nullable String sourceFileLocation) {
+            this.sourceFileLocation = sourceFileLocation;
             return this;
         }
         public Builder target(@Nullable String target) {
@@ -96,7 +116,7 @@ public final class WorkflowStepCustomStepDetailsProperties {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }        public WorkflowStepCustomStepDetailsProperties build() {
-            return new WorkflowStepCustomStepDetailsProperties(name, target, timeoutSeconds);
+            return new WorkflowStepCustomStepDetailsProperties(name, sourceFileLocation, target, timeoutSeconds);
         }
     }
 }

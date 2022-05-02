@@ -6,7 +6,7 @@ package com.pulumi.awsnative.events;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.events.ConnectionArgs;
 import com.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
-import com.pulumi.awsnative.events.outputs.AuthParametersProperties;
+import com.pulumi.awsnative.events.outputs.ConnectionAuthParameters;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -37,10 +37,10 @@ public class Connection extends com.pulumi.resources.CustomResource {
     public Output<String> arn() {
         return this.arn;
     }
-    @Export(name="authParameters", type=AuthParametersProperties.class, parameters={})
-    private Output<AuthParametersProperties> authParameters;
+    @Export(name="authParameters", type=ConnectionAuthParameters.class, parameters={})
+    private Output<ConnectionAuthParameters> authParameters;
 
-    public Output<AuthParametersProperties> authParameters() {
+    public Output<ConnectionAuthParameters> authParameters() {
         return this.authParameters;
     }
     @Export(name="authorizationType", type=ConnectionAuthorizationType.class, parameters={})

@@ -5,8 +5,10 @@ package com.pulumi.awsnative.appflow.outputs;
 
 import com.pulumi.awsnative.appflow.outputs.FlowEventBridgeDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowLookoutMetricsDestinationProperties;
+import com.pulumi.awsnative.appflow.outputs.FlowMarketoDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowRedshiftDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowS3DestinationProperties;
+import com.pulumi.awsnative.appflow.outputs.FlowSAPODataDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowSalesforceDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowSnowflakeDestinationProperties;
 import com.pulumi.awsnative.appflow.outputs.FlowUpsolverDestinationProperties;
@@ -20,8 +22,10 @@ import javax.annotation.Nullable;
 public final class FlowDestinationConnectorProperties {
     private final @Nullable FlowEventBridgeDestinationProperties eventBridge;
     private final @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics;
+    private final @Nullable FlowMarketoDestinationProperties marketo;
     private final @Nullable FlowRedshiftDestinationProperties redshift;
     private final @Nullable FlowS3DestinationProperties s3;
+    private final @Nullable FlowSAPODataDestinationProperties sAPOData;
     private final @Nullable FlowSalesforceDestinationProperties salesforce;
     private final @Nullable FlowSnowflakeDestinationProperties snowflake;
     private final @Nullable FlowUpsolverDestinationProperties upsolver;
@@ -31,16 +35,20 @@ public final class FlowDestinationConnectorProperties {
     private FlowDestinationConnectorProperties(
         @CustomType.Parameter("eventBridge") @Nullable FlowEventBridgeDestinationProperties eventBridge,
         @CustomType.Parameter("lookoutMetrics") @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
+        @CustomType.Parameter("marketo") @Nullable FlowMarketoDestinationProperties marketo,
         @CustomType.Parameter("redshift") @Nullable FlowRedshiftDestinationProperties redshift,
         @CustomType.Parameter("s3") @Nullable FlowS3DestinationProperties s3,
+        @CustomType.Parameter("sAPOData") @Nullable FlowSAPODataDestinationProperties sAPOData,
         @CustomType.Parameter("salesforce") @Nullable FlowSalesforceDestinationProperties salesforce,
         @CustomType.Parameter("snowflake") @Nullable FlowSnowflakeDestinationProperties snowflake,
         @CustomType.Parameter("upsolver") @Nullable FlowUpsolverDestinationProperties upsolver,
         @CustomType.Parameter("zendesk") @Nullable FlowZendeskDestinationProperties zendesk) {
         this.eventBridge = eventBridge;
         this.lookoutMetrics = lookoutMetrics;
+        this.marketo = marketo;
         this.redshift = redshift;
         this.s3 = s3;
+        this.sAPOData = sAPOData;
         this.salesforce = salesforce;
         this.snowflake = snowflake;
         this.upsolver = upsolver;
@@ -53,11 +61,17 @@ public final class FlowDestinationConnectorProperties {
     public Optional<FlowLookoutMetricsDestinationProperties> lookoutMetrics() {
         return Optional.ofNullable(this.lookoutMetrics);
     }
+    public Optional<FlowMarketoDestinationProperties> marketo() {
+        return Optional.ofNullable(this.marketo);
+    }
     public Optional<FlowRedshiftDestinationProperties> redshift() {
         return Optional.ofNullable(this.redshift);
     }
     public Optional<FlowS3DestinationProperties> s3() {
         return Optional.ofNullable(this.s3);
+    }
+    public Optional<FlowSAPODataDestinationProperties> sAPOData() {
+        return Optional.ofNullable(this.sAPOData);
     }
     public Optional<FlowSalesforceDestinationProperties> salesforce() {
         return Optional.ofNullable(this.salesforce);
@@ -83,8 +97,10 @@ public final class FlowDestinationConnectorProperties {
     public static final class Builder {
         private @Nullable FlowEventBridgeDestinationProperties eventBridge;
         private @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics;
+        private @Nullable FlowMarketoDestinationProperties marketo;
         private @Nullable FlowRedshiftDestinationProperties redshift;
         private @Nullable FlowS3DestinationProperties s3;
+        private @Nullable FlowSAPODataDestinationProperties sAPOData;
         private @Nullable FlowSalesforceDestinationProperties salesforce;
         private @Nullable FlowSnowflakeDestinationProperties snowflake;
         private @Nullable FlowUpsolverDestinationProperties upsolver;
@@ -98,8 +114,10 @@ public final class FlowDestinationConnectorProperties {
     	      Objects.requireNonNull(defaults);
     	      this.eventBridge = defaults.eventBridge;
     	      this.lookoutMetrics = defaults.lookoutMetrics;
+    	      this.marketo = defaults.marketo;
     	      this.redshift = defaults.redshift;
     	      this.s3 = defaults.s3;
+    	      this.sAPOData = defaults.sAPOData;
     	      this.salesforce = defaults.salesforce;
     	      this.snowflake = defaults.snowflake;
     	      this.upsolver = defaults.upsolver;
@@ -114,12 +132,20 @@ public final class FlowDestinationConnectorProperties {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
+        public Builder marketo(@Nullable FlowMarketoDestinationProperties marketo) {
+            this.marketo = marketo;
+            return this;
+        }
         public Builder redshift(@Nullable FlowRedshiftDestinationProperties redshift) {
             this.redshift = redshift;
             return this;
         }
         public Builder s3(@Nullable FlowS3DestinationProperties s3) {
             this.s3 = s3;
+            return this;
+        }
+        public Builder sAPOData(@Nullable FlowSAPODataDestinationProperties sAPOData) {
+            this.sAPOData = sAPOData;
             return this;
         }
         public Builder salesforce(@Nullable FlowSalesforceDestinationProperties salesforce) {
@@ -138,7 +164,7 @@ public final class FlowDestinationConnectorProperties {
             this.zendesk = zendesk;
             return this;
         }        public FlowDestinationConnectorProperties build() {
-            return new FlowDestinationConnectorProperties(eventBridge, lookoutMetrics, redshift, s3, salesforce, snowflake, upsolver, zendesk);
+            return new FlowDestinationConnectorProperties(eventBridge, lookoutMetrics, marketo, redshift, s3, sAPOData, salesforce, snowflake, upsolver, zendesk);
         }
     }
 }

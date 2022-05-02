@@ -4,7 +4,6 @@
 package com.pulumi.awsnative.events.outputs;
 
 import com.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
-import com.pulumi.awsnative.events.outputs.AuthParametersProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +17,6 @@ public final class GetConnectionResult {
      * 
      */
     private final @Nullable String arn;
-    private final @Nullable AuthParametersProperties authParameters;
     private final @Nullable ConnectionAuthorizationType authorizationType;
     /**
      * @return Description of the connection.
@@ -34,12 +32,10 @@ public final class GetConnectionResult {
     @CustomType.Constructor
     private GetConnectionResult(
         @CustomType.Parameter("arn") @Nullable String arn,
-        @CustomType.Parameter("authParameters") @Nullable AuthParametersProperties authParameters,
         @CustomType.Parameter("authorizationType") @Nullable ConnectionAuthorizationType authorizationType,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.arn = arn;
-        this.authParameters = authParameters;
         this.authorizationType = authorizationType;
         this.description = description;
         this.secretArn = secretArn;
@@ -51,9 +47,6 @@ public final class GetConnectionResult {
      */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
-    }
-    public Optional<AuthParametersProperties> authParameters() {
-        return Optional.ofNullable(this.authParameters);
     }
     public Optional<ConnectionAuthorizationType> authorizationType() {
         return Optional.ofNullable(this.authorizationType);
@@ -83,7 +76,6 @@ public final class GetConnectionResult {
 
     public static final class Builder {
         private @Nullable String arn;
-        private @Nullable AuthParametersProperties authParameters;
         private @Nullable ConnectionAuthorizationType authorizationType;
         private @Nullable String description;
         private @Nullable String secretArn;
@@ -95,7 +87,6 @@ public final class GetConnectionResult {
         public Builder(GetConnectionResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
-    	      this.authParameters = defaults.authParameters;
     	      this.authorizationType = defaults.authorizationType;
     	      this.description = defaults.description;
     	      this.secretArn = defaults.secretArn;
@@ -103,10 +94,6 @@ public final class GetConnectionResult {
 
         public Builder arn(@Nullable String arn) {
             this.arn = arn;
-            return this;
-        }
-        public Builder authParameters(@Nullable AuthParametersProperties authParameters) {
-            this.authParameters = authParameters;
             return this;
         }
         public Builder authorizationType(@Nullable ConnectionAuthorizationType authorizationType) {
@@ -121,7 +108,7 @@ public final class GetConnectionResult {
             this.secretArn = secretArn;
             return this;
         }        public GetConnectionResult build() {
-            return new GetConnectionResult(arn, authParameters, authorizationType, description, secretArn);
+            return new GetConnectionResult(arn, authorizationType, description, secretArn);
         }
     }
 }

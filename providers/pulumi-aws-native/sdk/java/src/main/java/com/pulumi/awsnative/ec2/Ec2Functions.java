@@ -18,6 +18,7 @@ import com.pulumi.awsnative.ec2.inputs.GetIPAMArgs;
 import com.pulumi.awsnative.ec2.inputs.GetIPAMPoolArgs;
 import com.pulumi.awsnative.ec2.inputs.GetIPAMScopeArgs;
 import com.pulumi.awsnative.ec2.inputs.GetInternetGatewayArgs;
+import com.pulumi.awsnative.ec2.inputs.GetKeyPairArgs;
 import com.pulumi.awsnative.ec2.inputs.GetLocalGatewayRouteArgs;
 import com.pulumi.awsnative.ec2.inputs.GetLocalGatewayRouteTableVPCAssociationArgs;
 import com.pulumi.awsnative.ec2.inputs.GetNetworkAclArgs;
@@ -33,6 +34,7 @@ import com.pulumi.awsnative.ec2.inputs.GetSubnetArgs;
 import com.pulumi.awsnative.ec2.inputs.GetSubnetNetworkAclAssociationArgs;
 import com.pulumi.awsnative.ec2.inputs.GetSubnetRouteTableAssociationArgs;
 import com.pulumi.awsnative.ec2.inputs.GetTransitGatewayArgs;
+import com.pulumi.awsnative.ec2.inputs.GetTransitGatewayAttachmentArgs;
 import com.pulumi.awsnative.ec2.inputs.GetTransitGatewayConnectArgs;
 import com.pulumi.awsnative.ec2.inputs.GetTransitGatewayMulticastDomainArgs;
 import com.pulumi.awsnative.ec2.inputs.GetTransitGatewayMulticastDomainAssociationArgs;
@@ -56,6 +58,7 @@ import com.pulumi.awsnative.ec2.outputs.GetIPAMPoolResult;
 import com.pulumi.awsnative.ec2.outputs.GetIPAMResult;
 import com.pulumi.awsnative.ec2.outputs.GetIPAMScopeResult;
 import com.pulumi.awsnative.ec2.outputs.GetInternetGatewayResult;
+import com.pulumi.awsnative.ec2.outputs.GetKeyPairResult;
 import com.pulumi.awsnative.ec2.outputs.GetLocalGatewayRouteResult;
 import com.pulumi.awsnative.ec2.outputs.GetLocalGatewayRouteTableVPCAssociationResult;
 import com.pulumi.awsnative.ec2.outputs.GetNetworkAclResult;
@@ -70,6 +73,7 @@ import com.pulumi.awsnative.ec2.outputs.GetSpotFleetResult;
 import com.pulumi.awsnative.ec2.outputs.GetSubnetNetworkAclAssociationResult;
 import com.pulumi.awsnative.ec2.outputs.GetSubnetResult;
 import com.pulumi.awsnative.ec2.outputs.GetSubnetRouteTableAssociationResult;
+import com.pulumi.awsnative.ec2.outputs.GetTransitGatewayAttachmentResult;
 import com.pulumi.awsnative.ec2.outputs.GetTransitGatewayConnectResult;
 import com.pulumi.awsnative.ec2.outputs.GetTransitGatewayMulticastDomainAssociationResult;
 import com.pulumi.awsnative.ec2.outputs.GetTransitGatewayMulticastDomainResult;
@@ -227,6 +231,16 @@ public final class Ec2Functions {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * The AWS::EC2::KeyPair creates an SSH key pair
+     * 
+     */
+    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args) {
+        return getKeyPair(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetKeyPairResult> getKeyPair(GetKeyPairArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ec2:getKeyPair", TypeShape.of(GetKeyPairResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Describes a route for a local gateway route table.
      * 
      */
@@ -375,6 +389,16 @@ public final class Ec2Functions {
     }
     public static CompletableFuture<GetTransitGatewayResult> getTransitGateway(GetTransitGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGateway", TypeShape.of(GetTransitGatewayResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::EC2::TransitGatewayAttachment
+     * 
+     */
+    public static CompletableFuture<GetTransitGatewayAttachmentResult> getTransitGatewayAttachment(GetTransitGatewayAttachmentArgs args) {
+        return getTransitGatewayAttachment(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetTransitGatewayAttachmentResult> getTransitGatewayAttachment(GetTransitGatewayAttachmentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayAttachment", TypeShape.of(GetTransitGatewayAttachmentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * The AWS::EC2::TransitGatewayConnect type

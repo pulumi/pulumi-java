@@ -23,14 +23,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     public static final KeyArgs Empty = new KeyArgs();
 
     /**
-     * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * @return A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
      * 
      */
     public Optional<Output<String>> description() {
@@ -38,14 +38,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
      * 
      */
     @Import(name="enableKeyRotation")
     private @Nullable Output<Boolean> enableKeyRotation;
 
     /**
-     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * @return Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
      * 
      */
     public Optional<Output<Boolean>> enableKeyRotation() {
@@ -53,14 +53,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * @return Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -68,14 +68,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     @Import(name="keyPolicy", required=true)
     private Output<Object> keyPolicy;
 
     /**
-     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * @return The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
      * 
      */
     public Output<Object> keyPolicy() {
@@ -83,14 +83,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
      * 
      */
     @Import(name="keySpec")
     private @Nullable Output<KeySpec> keySpec;
 
     /**
-     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * @return Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
      * 
      */
     public Optional<Output<KeySpec>> keySpec() {
@@ -98,14 +98,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
      * 
      */
     @Import(name="keyUsage")
     private @Nullable Output<KeyUsage> keyUsage;
 
     /**
-     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * @return Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
      * 
      */
     public Optional<Output<KeyUsage>> keyUsage() {
@@ -113,14 +113,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
      * 
      */
     @Import(name="multiRegion")
     private @Nullable Output<Boolean> multiRegion;
 
     /**
-     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * @return Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
      * 
      */
     public Optional<Output<Boolean>> multiRegion() {
@@ -128,14 +128,14 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     @Import(name="pendingWindowInDays")
     private @Nullable Output<Integer> pendingWindowInDays;
 
     /**
-     * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * @return Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
     public Optional<Output<Integer>> pendingWindowInDays() {
@@ -190,7 +190,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * @param description A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
          * 
          * @return builder
          * 
@@ -201,7 +201,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * @param description A description of the AWS KMS key. Use a description that helps you to distinguish this AWS KMS key from others in the account, such as its intended use.
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableKeyRotation Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+         * @param enableKeyRotation Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
          * 
          * @return builder
          * 
@@ -222,7 +222,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableKeyRotation Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+         * @param enableKeyRotation Enables automatic rotation of the key material for the specified AWS KMS key. By default, automation key rotation is not enabled.
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * @param enabled Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
          * 
          * @return builder
          * 
@@ -243,7 +243,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * @param enabled Specifies whether the AWS KMS key is enabled. Disabled AWS KMS keys cannot be used in cryptographic operations.
          * 
          * @return builder
          * 
@@ -253,7 +253,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * @param keyPolicy The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
          * 
          * @return builder
          * 
@@ -264,7 +264,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * @param keyPolicy The key policy that authorizes use of the AWS KMS key. The key policy must observe the following rules.
          * 
          * @return builder
          * 
@@ -274,7 +274,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keySpec Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+         * @param keySpec Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -285,7 +285,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keySpec Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+         * @param keySpec Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -295,7 +295,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyUsage Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+         * @param keyUsage Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -306,7 +306,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyUsage Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+         * @param keyUsage Determines the cryptographic operations for which you can use the AWS KMS key. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeyUsage value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -316,7 +316,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param multiRegion Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+         * @param multiRegion Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -327,7 +327,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param multiRegion Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+         * @param multiRegion Specifies whether the AWS KMS key should be Multi-Region. You can&#39;t change the MultiRegion value after the AWS KMS key is created.
          * 
          * @return builder
          * 
@@ -337,7 +337,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
          * 
          * @return builder
          * 
@@ -348,7 +348,7 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes an AWS KMS key that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
          * 
          * @return builder
          * 

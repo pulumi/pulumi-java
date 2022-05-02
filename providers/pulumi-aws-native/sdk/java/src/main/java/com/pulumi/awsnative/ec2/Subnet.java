@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.ec2.SubnetArgs;
+import com.pulumi.awsnative.ec2.outputs.PrivateDnsNameOptionsOnLaunchProperties;
 import com.pulumi.awsnative.ec2.outputs.SubnetTag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -34,11 +35,23 @@ public class Subnet extends com.pulumi.resources.CustomResource {
     public Output<Optional<String>> availabilityZone() {
         return Codegen.optional(this.availabilityZone);
     }
-    @Export(name="cidrBlock", type=String.class, parameters={})
-    private Output<String> cidrBlock;
+    @Export(name="availabilityZoneId", type=String.class, parameters={})
+    private Output</* @Nullable */ String> availabilityZoneId;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock;
+    public Output<Optional<String>> availabilityZoneId() {
+        return Codegen.optional(this.availabilityZoneId);
+    }
+    @Export(name="cidrBlock", type=String.class, parameters={})
+    private Output</* @Nullable */ String> cidrBlock;
+
+    public Output<Optional<String>> cidrBlock() {
+        return Codegen.optional(this.cidrBlock);
+    }
+    @Export(name="enableDns64", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> enableDns64;
+
+    public Output<Optional<Boolean>> enableDns64() {
+        return Codegen.optional(this.enableDns64);
     }
     @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv6CidrBlock;
@@ -51,6 +64,12 @@ public class Subnet extends com.pulumi.resources.CustomResource {
 
     public Output<List<String>> ipv6CidrBlocks() {
         return this.ipv6CidrBlocks;
+    }
+    @Export(name="ipv6Native", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> ipv6Native;
+
+    public Output<Optional<Boolean>> ipv6Native() {
+        return Codegen.optional(this.ipv6Native);
     }
     @Export(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapPublicIpOnLaunch;
@@ -69,6 +88,12 @@ public class Subnet extends com.pulumi.resources.CustomResource {
 
     public Output<Optional<String>> outpostArn() {
         return Codegen.optional(this.outpostArn);
+    }
+    @Export(name="privateDnsNameOptionsOnLaunch", type=PrivateDnsNameOptionsOnLaunchProperties.class, parameters={})
+    private Output</* @Nullable */ PrivateDnsNameOptionsOnLaunchProperties> privateDnsNameOptionsOnLaunch;
+
+    public Output<Optional<PrivateDnsNameOptionsOnLaunchProperties>> privateDnsNameOptionsOnLaunch() {
+        return Codegen.optional(this.privateDnsNameOptionsOnLaunch);
     }
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;

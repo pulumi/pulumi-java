@@ -8,6 +8,8 @@ import com.pulumi.awsnative.apprunner.ServiceArgs;
 import com.pulumi.awsnative.apprunner.outputs.ServiceEncryptionConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceHealthCheckConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceInstanceConfiguration;
+import com.pulumi.awsnative.apprunner.outputs.ServiceNetworkConfiguration;
+import com.pulumi.awsnative.apprunner.outputs.ServiceObservabilityConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceSourceConfiguration;
 import com.pulumi.awsnative.apprunner.outputs.ServiceTag;
 import com.pulumi.core.Output;
@@ -56,6 +58,18 @@ public class Service extends com.pulumi.resources.CustomResource {
 
     public Output<Optional<ServiceInstanceConfiguration>> instanceConfiguration() {
         return Codegen.optional(this.instanceConfiguration);
+    }
+    @Export(name="networkConfiguration", type=ServiceNetworkConfiguration.class, parameters={})
+    private Output</* @Nullable */ ServiceNetworkConfiguration> networkConfiguration;
+
+    public Output<Optional<ServiceNetworkConfiguration>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
+    }
+    @Export(name="observabilityConfiguration", type=ServiceObservabilityConfiguration.class, parameters={})
+    private Output</* @Nullable */ ServiceObservabilityConfiguration> observabilityConfiguration;
+
+    public Output<Optional<ServiceObservabilityConfiguration>> observabilityConfiguration() {
+        return Codegen.optional(this.observabilityConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the AppRunner Service.

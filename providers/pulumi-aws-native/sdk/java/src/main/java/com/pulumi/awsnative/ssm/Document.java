@@ -7,6 +7,7 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.ssm.DocumentArgs;
 import com.pulumi.awsnative.ssm.enums.DocumentFormat;
 import com.pulumi.awsnative.ssm.enums.DocumentType;
+import com.pulumi.awsnative.ssm.enums.DocumentUpdateMethod;
 import com.pulumi.awsnative.ssm.outputs.DocumentAttachmentsSource;
 import com.pulumi.awsnative.ssm.outputs.DocumentRequires;
 import com.pulumi.awsnative.ssm.outputs.DocumentTag;
@@ -139,6 +140,20 @@ public class Document extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> targetType() {
         return Codegen.optional(this.targetType);
+    }
+    /**
+     * Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+     * 
+     */
+    @Export(name="updateMethod", type=DocumentUpdateMethod.class, parameters={})
+    private Output</* @Nullable */ DocumentUpdateMethod> updateMethod;
+
+    /**
+     * @return Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+     * 
+     */
+    public Output<Optional<DocumentUpdateMethod>> updateMethod() {
+        return Codegen.optional(this.updateMethod);
     }
     /**
      * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.

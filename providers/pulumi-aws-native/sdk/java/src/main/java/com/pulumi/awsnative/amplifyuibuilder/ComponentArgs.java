@@ -6,6 +6,7 @@ package com.pulumi.awsnative.amplifyuibuilder;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentBindingPropertiesArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentChildArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentCollectionPropertiesArgs;
+import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentEventsArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ComponentTagsArgs;
@@ -23,11 +24,11 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ComponentArgs Empty = new ComponentArgs();
 
-    @Import(name="bindingProperties")
-    private @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
+    @Import(name="bindingProperties", required=true)
+    private Output<ComponentBindingPropertiesArgs> bindingProperties;
 
-    public Optional<Output<ComponentBindingPropertiesArgs>> bindingProperties() {
-        return Optional.ofNullable(this.bindingProperties);
+    public Output<ComponentBindingPropertiesArgs> bindingProperties() {
+        return this.bindingProperties;
     }
 
     @Import(name="children")
@@ -44,11 +45,18 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.collectionProperties);
     }
 
-    @Import(name="componentType")
-    private @Nullable Output<String> componentType;
+    @Import(name="componentType", required=true)
+    private Output<String> componentType;
 
-    public Optional<Output<String>> componentType() {
-        return Optional.ofNullable(this.componentType);
+    public Output<String> componentType() {
+        return this.componentType;
+    }
+
+    @Import(name="events")
+    private @Nullable Output<ComponentEventsArgs> events;
+
+    public Optional<Output<ComponentEventsArgs>> events() {
+        return Optional.ofNullable(this.events);
     }
 
     @Import(name="name")
@@ -58,18 +66,25 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
-    @Import(name="overrides")
-    private @Nullable Output<ComponentOverridesArgs> overrides;
+    @Import(name="overrides", required=true)
+    private Output<ComponentOverridesArgs> overrides;
 
-    public Optional<Output<ComponentOverridesArgs>> overrides() {
-        return Optional.ofNullable(this.overrides);
+    public Output<ComponentOverridesArgs> overrides() {
+        return this.overrides;
     }
 
-    @Import(name="properties")
-    private @Nullable Output<ComponentPropertiesArgs> properties;
+    @Import(name="properties", required=true)
+    private Output<ComponentPropertiesArgs> properties;
 
-    public Optional<Output<ComponentPropertiesArgs>> properties() {
-        return Optional.ofNullable(this.properties);
+    public Output<ComponentPropertiesArgs> properties() {
+        return this.properties;
+    }
+
+    @Import(name="schemaVersion")
+    private @Nullable Output<String> schemaVersion;
+
+    public Optional<Output<String>> schemaVersion() {
+        return Optional.ofNullable(this.schemaVersion);
     }
 
     @Import(name="sourceId")
@@ -86,11 +101,11 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.tags);
     }
 
-    @Import(name="variants")
-    private @Nullable Output<List<ComponentVariantArgs>> variants;
+    @Import(name="variants", required=true)
+    private Output<List<ComponentVariantArgs>> variants;
 
-    public Optional<Output<List<ComponentVariantArgs>>> variants() {
-        return Optional.ofNullable(this.variants);
+    public Output<List<ComponentVariantArgs>> variants() {
+        return this.variants;
     }
 
     private ComponentArgs() {}
@@ -100,9 +115,11 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         this.children = $.children;
         this.collectionProperties = $.collectionProperties;
         this.componentType = $.componentType;
+        this.events = $.events;
         this.name = $.name;
         this.overrides = $.overrides;
         this.properties = $.properties;
+        this.schemaVersion = $.schemaVersion;
         this.sourceId = $.sourceId;
         this.tags = $.tags;
         this.variants = $.variants;
@@ -126,7 +143,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ComponentArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder bindingProperties(@Nullable Output<ComponentBindingPropertiesArgs> bindingProperties) {
+        public Builder bindingProperties(Output<ComponentBindingPropertiesArgs> bindingProperties) {
             $.bindingProperties = bindingProperties;
             return this;
         }
@@ -157,13 +174,22 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return collectionProperties(Output.of(collectionProperties));
         }
 
-        public Builder componentType(@Nullable Output<String> componentType) {
+        public Builder componentType(Output<String> componentType) {
             $.componentType = componentType;
             return this;
         }
 
         public Builder componentType(String componentType) {
             return componentType(Output.of(componentType));
+        }
+
+        public Builder events(@Nullable Output<ComponentEventsArgs> events) {
+            $.events = events;
+            return this;
+        }
+
+        public Builder events(ComponentEventsArgs events) {
+            return events(Output.of(events));
         }
 
         public Builder name(@Nullable Output<String> name) {
@@ -175,7 +201,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
-        public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
+        public Builder overrides(Output<ComponentOverridesArgs> overrides) {
             $.overrides = overrides;
             return this;
         }
@@ -184,13 +210,22 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return overrides(Output.of(overrides));
         }
 
-        public Builder properties(@Nullable Output<ComponentPropertiesArgs> properties) {
+        public Builder properties(Output<ComponentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
         public Builder properties(ComponentPropertiesArgs properties) {
             return properties(Output.of(properties));
+        }
+
+        public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
+            $.schemaVersion = schemaVersion;
+            return this;
+        }
+
+        public Builder schemaVersion(String schemaVersion) {
+            return schemaVersion(Output.of(schemaVersion));
         }
 
         public Builder sourceId(@Nullable Output<String> sourceId) {
@@ -211,7 +246,7 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return tags(Output.of(tags));
         }
 
-        public Builder variants(@Nullable Output<List<ComponentVariantArgs>> variants) {
+        public Builder variants(Output<List<ComponentVariantArgs>> variants) {
             $.variants = variants;
             return this;
         }
@@ -225,6 +260,11 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ComponentArgs build() {
+            $.bindingProperties = Objects.requireNonNull($.bindingProperties, "expected parameter 'bindingProperties' to be non-null");
+            $.componentType = Objects.requireNonNull($.componentType, "expected parameter 'componentType' to be non-null");
+            $.overrides = Objects.requireNonNull($.overrides, "expected parameter 'overrides' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.variants = Objects.requireNonNull($.variants, "expected parameter 'variants' to be non-null");
             return $;
         }
     }

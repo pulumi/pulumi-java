@@ -3,9 +3,14 @@
 
 package com.pulumi.awsnative.ecs.outputs;
 
+import com.pulumi.awsnative.ecs.enums.ServicePropagateTags;
 import com.pulumi.awsnative.ecs.outputs.ServiceCapacityProviderStrategyItem;
 import com.pulumi.awsnative.ecs.outputs.ServiceDeploymentConfiguration;
+import com.pulumi.awsnative.ecs.outputs.ServiceLoadBalancer;
 import com.pulumi.awsnative.ecs.outputs.ServiceNetworkConfiguration;
+import com.pulumi.awsnative.ecs.outputs.ServicePlacementConstraint;
+import com.pulumi.awsnative.ecs.outputs.ServicePlacementStrategy;
+import com.pulumi.awsnative.ecs.outputs.ServiceRegistry;
 import com.pulumi.awsnative.ecs.outputs.ServiceTag;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -21,12 +26,18 @@ public final class GetServiceResult {
     private final @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy;
     private final @Nullable ServiceDeploymentConfiguration deploymentConfiguration;
     private final @Nullable Integer desiredCount;
+    private final @Nullable Boolean enableECSManagedTags;
     private final @Nullable Boolean enableExecuteCommand;
     private final @Nullable Integer healthCheckGracePeriodSeconds;
+    private final @Nullable List<ServiceLoadBalancer> loadBalancers;
     private final @Nullable String name;
     private final @Nullable ServiceNetworkConfiguration networkConfiguration;
+    private final @Nullable List<ServicePlacementConstraint> placementConstraints;
+    private final @Nullable List<ServicePlacementStrategy> placementStrategies;
     private final @Nullable String platformVersion;
+    private final @Nullable ServicePropagateTags propagateTags;
     private final @Nullable String serviceArn;
+    private final @Nullable List<ServiceRegistry> serviceRegistries;
     private final @Nullable List<ServiceTag> tags;
     private final @Nullable String taskDefinition;
 
@@ -35,23 +46,35 @@ public final class GetServiceResult {
         @CustomType.Parameter("capacityProviderStrategy") @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
         @CustomType.Parameter("deploymentConfiguration") @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
         @CustomType.Parameter("desiredCount") @Nullable Integer desiredCount,
+        @CustomType.Parameter("enableECSManagedTags") @Nullable Boolean enableECSManagedTags,
         @CustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
         @CustomType.Parameter("healthCheckGracePeriodSeconds") @Nullable Integer healthCheckGracePeriodSeconds,
+        @CustomType.Parameter("loadBalancers") @Nullable List<ServiceLoadBalancer> loadBalancers,
         @CustomType.Parameter("name") @Nullable String name,
         @CustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
+        @CustomType.Parameter("placementConstraints") @Nullable List<ServicePlacementConstraint> placementConstraints,
+        @CustomType.Parameter("placementStrategies") @Nullable List<ServicePlacementStrategy> placementStrategies,
         @CustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @CustomType.Parameter("propagateTags") @Nullable ServicePropagateTags propagateTags,
         @CustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @CustomType.Parameter("serviceRegistries") @Nullable List<ServiceRegistry> serviceRegistries,
         @CustomType.Parameter("tags") @Nullable List<ServiceTag> tags,
         @CustomType.Parameter("taskDefinition") @Nullable String taskDefinition) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         this.deploymentConfiguration = deploymentConfiguration;
         this.desiredCount = desiredCount;
+        this.enableECSManagedTags = enableECSManagedTags;
         this.enableExecuteCommand = enableExecuteCommand;
         this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
+        this.loadBalancers = loadBalancers;
         this.name = name;
         this.networkConfiguration = networkConfiguration;
+        this.placementConstraints = placementConstraints;
+        this.placementStrategies = placementStrategies;
         this.platformVersion = platformVersion;
+        this.propagateTags = propagateTags;
         this.serviceArn = serviceArn;
+        this.serviceRegistries = serviceRegistries;
         this.tags = tags;
         this.taskDefinition = taskDefinition;
     }
@@ -65,11 +88,17 @@ public final class GetServiceResult {
     public Optional<Integer> desiredCount() {
         return Optional.ofNullable(this.desiredCount);
     }
+    public Optional<Boolean> enableECSManagedTags() {
+        return Optional.ofNullable(this.enableECSManagedTags);
+    }
     public Optional<Boolean> enableExecuteCommand() {
         return Optional.ofNullable(this.enableExecuteCommand);
     }
     public Optional<Integer> healthCheckGracePeriodSeconds() {
         return Optional.ofNullable(this.healthCheckGracePeriodSeconds);
+    }
+    public List<ServiceLoadBalancer> loadBalancers() {
+        return this.loadBalancers == null ? List.of() : this.loadBalancers;
     }
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
@@ -77,11 +106,23 @@ public final class GetServiceResult {
     public Optional<ServiceNetworkConfiguration> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
+    public List<ServicePlacementConstraint> placementConstraints() {
+        return this.placementConstraints == null ? List.of() : this.placementConstraints;
+    }
+    public List<ServicePlacementStrategy> placementStrategies() {
+        return this.placementStrategies == null ? List.of() : this.placementStrategies;
+    }
     public Optional<String> platformVersion() {
         return Optional.ofNullable(this.platformVersion);
     }
+    public Optional<ServicePropagateTags> propagateTags() {
+        return Optional.ofNullable(this.propagateTags);
+    }
     public Optional<String> serviceArn() {
         return Optional.ofNullable(this.serviceArn);
+    }
+    public List<ServiceRegistry> serviceRegistries() {
+        return this.serviceRegistries == null ? List.of() : this.serviceRegistries;
     }
     public List<ServiceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
@@ -102,12 +143,18 @@ public final class GetServiceResult {
         private @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy;
         private @Nullable ServiceDeploymentConfiguration deploymentConfiguration;
         private @Nullable Integer desiredCount;
+        private @Nullable Boolean enableECSManagedTags;
         private @Nullable Boolean enableExecuteCommand;
         private @Nullable Integer healthCheckGracePeriodSeconds;
+        private @Nullable List<ServiceLoadBalancer> loadBalancers;
         private @Nullable String name;
         private @Nullable ServiceNetworkConfiguration networkConfiguration;
+        private @Nullable List<ServicePlacementConstraint> placementConstraints;
+        private @Nullable List<ServicePlacementStrategy> placementStrategies;
         private @Nullable String platformVersion;
+        private @Nullable ServicePropagateTags propagateTags;
         private @Nullable String serviceArn;
+        private @Nullable List<ServiceRegistry> serviceRegistries;
         private @Nullable List<ServiceTag> tags;
         private @Nullable String taskDefinition;
 
@@ -120,12 +167,18 @@ public final class GetServiceResult {
     	      this.capacityProviderStrategy = defaults.capacityProviderStrategy;
     	      this.deploymentConfiguration = defaults.deploymentConfiguration;
     	      this.desiredCount = defaults.desiredCount;
+    	      this.enableECSManagedTags = defaults.enableECSManagedTags;
     	      this.enableExecuteCommand = defaults.enableExecuteCommand;
     	      this.healthCheckGracePeriodSeconds = defaults.healthCheckGracePeriodSeconds;
+    	      this.loadBalancers = defaults.loadBalancers;
     	      this.name = defaults.name;
     	      this.networkConfiguration = defaults.networkConfiguration;
+    	      this.placementConstraints = defaults.placementConstraints;
+    	      this.placementStrategies = defaults.placementStrategies;
     	      this.platformVersion = defaults.platformVersion;
+    	      this.propagateTags = defaults.propagateTags;
     	      this.serviceArn = defaults.serviceArn;
+    	      this.serviceRegistries = defaults.serviceRegistries;
     	      this.tags = defaults.tags;
     	      this.taskDefinition = defaults.taskDefinition;
         }
@@ -145,6 +198,10 @@ public final class GetServiceResult {
             this.desiredCount = desiredCount;
             return this;
         }
+        public Builder enableECSManagedTags(@Nullable Boolean enableECSManagedTags) {
+            this.enableECSManagedTags = enableECSManagedTags;
+            return this;
+        }
         public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
@@ -152,6 +209,13 @@ public final class GetServiceResult {
         public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
+        }
+        public Builder loadBalancers(@Nullable List<ServiceLoadBalancer> loadBalancers) {
+            this.loadBalancers = loadBalancers;
+            return this;
+        }
+        public Builder loadBalancers(ServiceLoadBalancer... loadBalancers) {
+            return loadBalancers(List.of(loadBalancers));
         }
         public Builder name(@Nullable String name) {
             this.name = name;
@@ -161,13 +225,38 @@ public final class GetServiceResult {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
+        public Builder placementConstraints(@Nullable List<ServicePlacementConstraint> placementConstraints) {
+            this.placementConstraints = placementConstraints;
+            return this;
+        }
+        public Builder placementConstraints(ServicePlacementConstraint... placementConstraints) {
+            return placementConstraints(List.of(placementConstraints));
+        }
+        public Builder placementStrategies(@Nullable List<ServicePlacementStrategy> placementStrategies) {
+            this.placementStrategies = placementStrategies;
+            return this;
+        }
+        public Builder placementStrategies(ServicePlacementStrategy... placementStrategies) {
+            return placementStrategies(List.of(placementStrategies));
+        }
         public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
+            return this;
+        }
+        public Builder propagateTags(@Nullable ServicePropagateTags propagateTags) {
+            this.propagateTags = propagateTags;
             return this;
         }
         public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
+        }
+        public Builder serviceRegistries(@Nullable List<ServiceRegistry> serviceRegistries) {
+            this.serviceRegistries = serviceRegistries;
+            return this;
+        }
+        public Builder serviceRegistries(ServiceRegistry... serviceRegistries) {
+            return serviceRegistries(List.of(serviceRegistries));
         }
         public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
@@ -180,7 +269,7 @@ public final class GetServiceResult {
             this.taskDefinition = taskDefinition;
             return this;
         }        public GetServiceResult build() {
-            return new GetServiceResult(capacityProviderStrategy, deploymentConfiguration, desiredCount, enableExecuteCommand, healthCheckGracePeriodSeconds, name, networkConfiguration, platformVersion, serviceArn, tags, taskDefinition);
+            return new GetServiceResult(capacityProviderStrategy, deploymentConfiguration, desiredCount, enableECSManagedTags, enableExecuteCommand, healthCheckGracePeriodSeconds, loadBalancers, name, networkConfiguration, placementConstraints, placementStrategies, platformVersion, propagateTags, serviceArn, serviceRegistries, tags, taskDefinition);
         }
     }
 }

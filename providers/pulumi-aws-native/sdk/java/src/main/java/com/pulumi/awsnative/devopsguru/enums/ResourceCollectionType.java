@@ -14,7 +14,8 @@ import java.util.StringJoiner;
      */
     @EnumType
     public enum ResourceCollectionType {
-        AwsCloudFormation("AWS_CLOUD_FORMATION");
+        AwsCloudFormation("AWS_CLOUD_FORMATION"),
+        AwsTags("AWS_TAGS");
 
         private final String value;
 

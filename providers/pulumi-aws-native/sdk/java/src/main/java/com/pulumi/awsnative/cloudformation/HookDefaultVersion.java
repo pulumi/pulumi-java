@@ -16,6 +16,8 @@ import javax.annotation.Nullable;
 /**
  * Set a version as default version for a hook in CloudFormation Registry.
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="aws-native:cloudformation:HookDefaultVersion")
 public class HookDefaultVersion extends com.pulumi.resources.CustomResource {

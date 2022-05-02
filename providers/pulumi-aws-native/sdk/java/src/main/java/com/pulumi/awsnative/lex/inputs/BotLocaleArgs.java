@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.lex.inputs;
 
+import com.pulumi.awsnative.lex.inputs.BotCustomVocabularyArgs;
 import com.pulumi.awsnative.lex.inputs.BotIntentArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotTypeArgs;
 import com.pulumi.awsnative.lex.inputs.BotVoiceSettingsArgs;
@@ -23,6 +24,13 @@ import javax.annotation.Nullable;
 public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BotLocaleArgs Empty = new BotLocaleArgs();
+
+    @Import(name="customVocabulary")
+    private @Nullable Output<BotCustomVocabularyArgs> customVocabulary;
+
+    public Optional<Output<BotCustomVocabularyArgs>> customVocabulary() {
+        return Optional.ofNullable(this.customVocabulary);
+    }
 
     @Import(name="description")
     private @Nullable Output<String> description;
@@ -85,6 +93,7 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     private BotLocaleArgs() {}
 
     private BotLocaleArgs(BotLocaleArgs $) {
+        this.customVocabulary = $.customVocabulary;
         this.description = $.description;
         this.intents = $.intents;
         this.localeId = $.localeId;
@@ -109,6 +118,15 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(BotLocaleArgs defaults) {
             $ = new BotLocaleArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder customVocabulary(@Nullable Output<BotCustomVocabularyArgs> customVocabulary) {
+            $.customVocabulary = customVocabulary;
+            return this;
+        }
+
+        public Builder customVocabulary(BotCustomVocabularyArgs customVocabulary) {
+            return customVocabulary(Output.of(customVocabulary));
         }
 
         public Builder description(@Nullable Output<String> description) {

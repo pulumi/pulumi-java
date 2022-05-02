@@ -5,6 +5,7 @@ package com.pulumi.awsnative.mediapackage.outputs;
 
 import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestManifestLayout;
 import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
+import com.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestScteMarkersSource;
 import com.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
@@ -31,6 +32,11 @@ public final class PackagingConfigurationDashManifest {
      * 
      */
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
+    /**
+     * @return The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     */
+    private final @Nullable PackagingConfigurationDashManifestScteMarkersSource scteMarkersSource;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     @CustomType.Constructor
@@ -39,11 +45,13 @@ public final class PackagingConfigurationDashManifest {
         @CustomType.Parameter("manifestName") @Nullable String manifestName,
         @CustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
         @CustomType.Parameter("profile") @Nullable PackagingConfigurationDashManifestProfile profile,
+        @CustomType.Parameter("scteMarkersSource") @Nullable PackagingConfigurationDashManifestScteMarkersSource scteMarkersSource,
         @CustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestLayout = manifestLayout;
         this.manifestName = manifestName;
         this.minBufferTimeSeconds = minBufferTimeSeconds;
         this.profile = profile;
+        this.scteMarkersSource = scteMarkersSource;
         this.streamSelection = streamSelection;
     }
 
@@ -71,6 +79,13 @@ public final class PackagingConfigurationDashManifest {
     public Optional<PackagingConfigurationDashManifestProfile> profile() {
         return Optional.ofNullable(this.profile);
     }
+    /**
+     * @return The source of scte markers used. When set to SEGMENTS, the scte markers are sourced from the segments of the ingested content. When set to MANIFEST, the scte markers are sourced from the manifest of the ingested content.
+     * 
+     */
+    public Optional<PackagingConfigurationDashManifestScteMarkersSource> scteMarkersSource() {
+        return Optional.ofNullable(this.scteMarkersSource);
+    }
     public Optional<PackagingConfigurationStreamSelection> streamSelection() {
         return Optional.ofNullable(this.streamSelection);
     }
@@ -88,6 +103,7 @@ public final class PackagingConfigurationDashManifest {
         private @Nullable String manifestName;
         private @Nullable Integer minBufferTimeSeconds;
         private @Nullable PackagingConfigurationDashManifestProfile profile;
+        private @Nullable PackagingConfigurationDashManifestScteMarkersSource scteMarkersSource;
         private @Nullable PackagingConfigurationStreamSelection streamSelection;
 
         public Builder() {
@@ -100,6 +116,7 @@ public final class PackagingConfigurationDashManifest {
     	      this.manifestName = defaults.manifestName;
     	      this.minBufferTimeSeconds = defaults.minBufferTimeSeconds;
     	      this.profile = defaults.profile;
+    	      this.scteMarkersSource = defaults.scteMarkersSource;
     	      this.streamSelection = defaults.streamSelection;
         }
 
@@ -119,11 +136,15 @@ public final class PackagingConfigurationDashManifest {
             this.profile = profile;
             return this;
         }
+        public Builder scteMarkersSource(@Nullable PackagingConfigurationDashManifestScteMarkersSource scteMarkersSource) {
+            this.scteMarkersSource = scteMarkersSource;
+            return this;
+        }
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }        public PackagingConfigurationDashManifest build() {
-            return new PackagingConfigurationDashManifest(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
+            return new PackagingConfigurationDashManifest(manifestLayout, manifestName, minBufferTimeSeconds, profile, scteMarkersSource, streamSelection);
         }
     }
 }

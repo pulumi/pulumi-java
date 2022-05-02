@@ -5,8 +5,10 @@ package com.pulumi.awsnative.ses;
 
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.ses.inputs.GetConfigurationSetArgs;
+import com.pulumi.awsnative.ses.inputs.GetConfigurationSetEventDestinationArgs;
 import com.pulumi.awsnative.ses.inputs.GetContactListArgs;
 import com.pulumi.awsnative.ses.inputs.GetTemplateArgs;
+import com.pulumi.awsnative.ses.outputs.GetConfigurationSetEventDestinationResult;
 import com.pulumi.awsnative.ses.outputs.GetConfigurationSetResult;
 import com.pulumi.awsnative.ses.outputs.GetContactListResult;
 import com.pulumi.awsnative.ses.outputs.GetTemplateResult;
@@ -25,6 +27,16 @@ public final class SesFunctions {
     }
     public static CompletableFuture<GetConfigurationSetResult> getConfigurationSet(GetConfigurationSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSet", TypeShape.of(GetConfigurationSetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::SES::ConfigurationSetEventDestination
+     * 
+     */
+    public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args) {
+        return getConfigurationSetEventDestination(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConfigurationSetEventDestinationResult> getConfigurationSetEventDestination(GetConfigurationSetEventDestinationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:ses:getConfigurationSetEventDestination", TypeShape.of(GetConfigurationSetEventDestinationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Resource schema for AWS::SES::ContactList.

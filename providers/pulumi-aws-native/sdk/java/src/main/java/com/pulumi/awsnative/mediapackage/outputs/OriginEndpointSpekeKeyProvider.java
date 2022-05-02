@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.mediapackage.outputs;
 
+import com.pulumi.awsnative.mediapackage.outputs.OriginEndpointEncryptionContractConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -17,6 +18,7 @@ public final class OriginEndpointSpekeKeyProvider {
      * 
      */
     private final @Nullable String certificateArn;
+    private final @Nullable OriginEndpointEncryptionContractConfiguration encryptionContractConfiguration;
     /**
      * @return The resource ID to include in key requests.
      * 
@@ -41,11 +43,13 @@ public final class OriginEndpointSpekeKeyProvider {
     @CustomType.Constructor
     private OriginEndpointSpekeKeyProvider(
         @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("encryptionContractConfiguration") @Nullable OriginEndpointEncryptionContractConfiguration encryptionContractConfiguration,
         @CustomType.Parameter("resourceId") String resourceId,
         @CustomType.Parameter("roleArn") String roleArn,
         @CustomType.Parameter("systemIds") List<String> systemIds,
         @CustomType.Parameter("url") String url) {
         this.certificateArn = certificateArn;
+        this.encryptionContractConfiguration = encryptionContractConfiguration;
         this.resourceId = resourceId;
         this.roleArn = roleArn;
         this.systemIds = systemIds;
@@ -58,6 +62,9 @@ public final class OriginEndpointSpekeKeyProvider {
      */
     public Optional<String> certificateArn() {
         return Optional.ofNullable(this.certificateArn);
+    }
+    public Optional<OriginEndpointEncryptionContractConfiguration> encryptionContractConfiguration() {
+        return Optional.ofNullable(this.encryptionContractConfiguration);
     }
     /**
      * @return The resource ID to include in key requests.
@@ -98,6 +105,7 @@ public final class OriginEndpointSpekeKeyProvider {
 
     public static final class Builder {
         private @Nullable String certificateArn;
+        private @Nullable OriginEndpointEncryptionContractConfiguration encryptionContractConfiguration;
         private String resourceId;
         private String roleArn;
         private List<String> systemIds;
@@ -110,6 +118,7 @@ public final class OriginEndpointSpekeKeyProvider {
         public Builder(OriginEndpointSpekeKeyProvider defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.certificateArn = defaults.certificateArn;
+    	      this.encryptionContractConfiguration = defaults.encryptionContractConfiguration;
     	      this.resourceId = defaults.resourceId;
     	      this.roleArn = defaults.roleArn;
     	      this.systemIds = defaults.systemIds;
@@ -118,6 +127,10 @@ public final class OriginEndpointSpekeKeyProvider {
 
         public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
+            return this;
+        }
+        public Builder encryptionContractConfiguration(@Nullable OriginEndpointEncryptionContractConfiguration encryptionContractConfiguration) {
+            this.encryptionContractConfiguration = encryptionContractConfiguration;
             return this;
         }
         public Builder resourceId(String resourceId) {
@@ -139,7 +152,7 @@ public final class OriginEndpointSpekeKeyProvider {
             this.url = Objects.requireNonNull(url);
             return this;
         }        public OriginEndpointSpekeKeyProvider build() {
-            return new OriginEndpointSpekeKeyProvider(certificateArn, resourceId, roleArn, systemIds, url);
+            return new OriginEndpointSpekeKeyProvider(certificateArn, encryptionContractConfiguration, resourceId, roleArn, systemIds, url);
         }
     }
 }
