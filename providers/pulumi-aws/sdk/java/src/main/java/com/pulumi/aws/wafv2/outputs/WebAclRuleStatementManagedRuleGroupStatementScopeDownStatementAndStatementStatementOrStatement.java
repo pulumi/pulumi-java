@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatement {
     /**
-     * @return The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     private final List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatement> statements;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     }
 
     /**
-     * @return The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return Statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementAndStatementStatementOrStatementStatement> statements() {

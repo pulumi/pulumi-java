@@ -24,24 +24,24 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool id, e.g.,
+ * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool ID, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment example &lt;identity-pool-id&gt;
+ *  $ pulumi import aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment example us-west-2_abc123
  * ```
  * 
  */
 @ResourceType(type="aws:cognito/identityPoolRoleAttachment:IdentityPoolRoleAttachment")
 public class IdentityPoolRoleAttachment extends com.pulumi.resources.CustomResource {
     /**
-     * An identity pool ID in the format REGION:GUID.
+     * An identity pool ID in the format `REGION_GUID`.
      * 
      */
     @Export(name="identityPoolId", type=String.class, parameters={})
     private Output<String> identityPoolId;
 
     /**
-     * @return An identity pool ID in the format REGION:GUID.
+     * @return An identity pool ID in the format `REGION_GUID`.
      * 
      */
     public Output<String> identityPoolId() {

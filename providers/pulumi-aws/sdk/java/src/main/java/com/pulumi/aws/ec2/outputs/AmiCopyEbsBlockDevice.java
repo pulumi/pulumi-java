@@ -36,6 +36,11 @@ public final class AmiCopyEbsBlockDevice {
      */
     private final @Nullable Integer iops;
     /**
+     * @return The ARN of the Outpost on which the snapshot is stored.
+     * 
+     */
+    private final @Nullable String outpostArn;
+    /**
      * @return The id of an EBS snapshot that will be used to initialize the created
      * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
      * snapshot.
@@ -66,6 +71,7 @@ public final class AmiCopyEbsBlockDevice {
         @CustomType.Parameter("deviceName") @Nullable String deviceName,
         @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
         @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("outpostArn") @Nullable String outpostArn,
         @CustomType.Parameter("snapshotId") @Nullable String snapshotId,
         @CustomType.Parameter("throughput") @Nullable Integer throughput,
         @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
@@ -74,6 +80,7 @@ public final class AmiCopyEbsBlockDevice {
         this.deviceName = deviceName;
         this.encrypted = encrypted;
         this.iops = iops;
+        this.outpostArn = outpostArn;
         this.snapshotId = snapshotId;
         this.throughput = throughput;
         this.volumeSize = volumeSize;
@@ -109,6 +116,13 @@ public final class AmiCopyEbsBlockDevice {
      */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
+    }
+    /**
+     * @return The ARN of the Outpost on which the snapshot is stored.
+     * 
+     */
+    public Optional<String> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
     }
     /**
      * @return The id of an EBS snapshot that will be used to initialize the created
@@ -156,6 +170,7 @@ public final class AmiCopyEbsBlockDevice {
         private @Nullable String deviceName;
         private @Nullable Boolean encrypted;
         private @Nullable Integer iops;
+        private @Nullable String outpostArn;
         private @Nullable String snapshotId;
         private @Nullable Integer throughput;
         private @Nullable Integer volumeSize;
@@ -171,6 +186,7 @@ public final class AmiCopyEbsBlockDevice {
     	      this.deviceName = defaults.deviceName;
     	      this.encrypted = defaults.encrypted;
     	      this.iops = defaults.iops;
+    	      this.outpostArn = defaults.outpostArn;
     	      this.snapshotId = defaults.snapshotId;
     	      this.throughput = defaults.throughput;
     	      this.volumeSize = defaults.volumeSize;
@@ -193,6 +209,10 @@ public final class AmiCopyEbsBlockDevice {
             this.iops = iops;
             return this;
         }
+        public Builder outpostArn(@Nullable String outpostArn) {
+            this.outpostArn = outpostArn;
+            return this;
+        }
         public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
@@ -209,7 +229,7 @@ public final class AmiCopyEbsBlockDevice {
             this.volumeType = volumeType;
             return this;
         }        public AmiCopyEbsBlockDevice build() {
-            return new AmiCopyEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
+            return new AmiCopyEbsBlockDevice(deleteOnTermination, deviceName, encrypted, iops, outpostArn, snapshotId, throughput, volumeSize, volumeType);
         }
     }
 }

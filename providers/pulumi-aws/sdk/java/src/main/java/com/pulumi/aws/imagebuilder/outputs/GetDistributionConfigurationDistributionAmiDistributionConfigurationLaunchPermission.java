@@ -11,6 +11,16 @@ import java.util.Objects;
 @CustomType
 public final class GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
+     * @return Set of AWS Organization ARNs.
+     * 
+     */
+    private final List<String> organizationArns;
+    /**
+     * @return Set of AWS Organizational Unit ARNs.
+     * 
+     */
+    private final List<String> organizationalUnitArns;
+    /**
      * @return Set of EC2 launch permission user groups.
      * 
      */
@@ -23,12 +33,30 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
 
     @CustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
+        @CustomType.Parameter("organizationArns") List<String> organizationArns,
+        @CustomType.Parameter("organizationalUnitArns") List<String> organizationalUnitArns,
         @CustomType.Parameter("userGroups") List<String> userGroups,
         @CustomType.Parameter("userIds") List<String> userIds) {
+        this.organizationArns = organizationArns;
+        this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;
         this.userIds = userIds;
     }
 
+    /**
+     * @return Set of AWS Organization ARNs.
+     * 
+     */
+    public List<String> organizationArns() {
+        return this.organizationArns;
+    }
+    /**
+     * @return Set of AWS Organizational Unit ARNs.
+     * 
+     */
+    public List<String> organizationalUnitArns() {
+        return this.organizationalUnitArns;
+    }
     /**
      * @return Set of EC2 launch permission user groups.
      * 
@@ -53,6 +81,8 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     }
 
     public static final class Builder {
+        private List<String> organizationArns;
+        private List<String> organizationalUnitArns;
         private List<String> userGroups;
         private List<String> userIds;
 
@@ -62,10 +92,26 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
 
         public Builder(GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.organizationArns = defaults.organizationArns;
+    	      this.organizationalUnitArns = defaults.organizationalUnitArns;
     	      this.userGroups = defaults.userGroups;
     	      this.userIds = defaults.userIds;
         }
 
+        public Builder organizationArns(List<String> organizationArns) {
+            this.organizationArns = Objects.requireNonNull(organizationArns);
+            return this;
+        }
+        public Builder organizationArns(String... organizationArns) {
+            return organizationArns(List.of(organizationArns));
+        }
+        public Builder organizationalUnitArns(List<String> organizationalUnitArns) {
+            this.organizationalUnitArns = Objects.requireNonNull(organizationalUnitArns);
+            return this;
+        }
+        public Builder organizationalUnitArns(String... organizationalUnitArns) {
+            return organizationalUnitArns(List.of(organizationalUnitArns));
+        }
         public Builder userGroups(List<String> userGroups) {
             this.userGroups = Objects.requireNonNull(userGroups);
             return this;
@@ -80,7 +126,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
         public Builder userIds(String... userIds) {
             return userIds(List.of(userIds));
         }        public GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission build() {
-            return new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(userGroups, userIds);
+            return new GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(organizationArns, organizationalUnitArns, userGroups, userIds);
         }
     }
 }

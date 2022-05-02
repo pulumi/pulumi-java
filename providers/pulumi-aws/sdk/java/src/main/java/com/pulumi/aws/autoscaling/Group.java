@@ -25,18 +25,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides an Auto Scaling Group resource.
- * 
- * &gt; **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
- * 
- * &gt; **NOTE on Auto Scaling Groups and ASG Attachments:** This provider currently provides
- * both a standalone `aws.autoscaling.Attachment` resource
- * (describing an ASG attached to an ELB or ALB), and an `aws.autoscaling.Group`
- * with `load_balancers` and `target_group_arns` defined in-line. These two methods are not
- * mutually-exclusive. If `aws.autoscaling.Attachment` resources are used, either alone or with inline
- * `load_balancers` or `target_group_arns`, the `aws.autoscaling.Group` resource must be configured
- * to ignore changes to the `load_balancers` and `target_group_arns` arguments.
- * 
  * ## Example Usage
  * ## Waiting for Capacity
  * 
@@ -478,18 +466,22 @@ public class Group extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.placementGroup);
     }
     /**
-     * Allows setting instance protection. The
-     * Auto Scaling Group will not select instances with this setting for termination
-     * during scale in events.
+     * Indicates whether newly launched instances
+     * are automatically protected from termination by Amazon EC2 Auto Scaling when
+     * scaling in. For more information about preventing instances from terminating
+     * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+     * in the Amazon EC2 Auto Scaling User Guide.
      * 
      */
     @Export(name="protectFromScaleIn", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> protectFromScaleIn;
 
     /**
-     * @return Allows setting instance protection. The
-     * Auto Scaling Group will not select instances with this setting for termination
-     * during scale in events.
+     * @return Indicates whether newly launched instances
+     * are automatically protected from termination by Amazon EC2 Auto Scaling when
+     * scaling in. For more information about preventing instances from terminating
+     * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+     * in the Amazon EC2 Auto Scaling User Guide.
      * 
      */
     public Output<Optional<Boolean>> protectFromScaleIn() {
@@ -526,28 +518,32 @@ public class Group extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.suspendedProcesses);
     }
     /**
-     * Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+     * Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
      * 
      */
     @Export(name="tags", type=List.class, parameters={GroupTag.class})
     private Output</* @Nullable */ List<GroupTag>> tags;
 
     /**
-     * @return Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+     * @return Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
      * 
      */
     public Output<Optional<List<GroupTag>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+     * Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
+     * 
+     * @deprecated
+     * Use tag instead
      * 
      */
+    @Deprecated /* Use tag instead */
     @Export(name="tagsCollection", type=List.class, parameters={Map.class})
     private Output</* @Nullable */ List<Map<String,String>>> tagsCollection;
 
     /**
-     * @return Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+     * @return Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
      * 
      */
     public Output<Optional<List<Map<String,String>>>> tagsCollection() {

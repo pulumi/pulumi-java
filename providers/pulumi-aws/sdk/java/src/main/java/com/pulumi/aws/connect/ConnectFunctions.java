@@ -11,6 +11,7 @@ import com.pulumi.aws.connect.inputs.GetHoursOfOperationArgs;
 import com.pulumi.aws.connect.inputs.GetInstanceArgs;
 import com.pulumi.aws.connect.inputs.GetLambdaFunctionAssociationArgs;
 import com.pulumi.aws.connect.inputs.GetPromptArgs;
+import com.pulumi.aws.connect.inputs.GetQueueArgs;
 import com.pulumi.aws.connect.inputs.GetQuickConnectArgs;
 import com.pulumi.aws.connect.outputs.GetBotAssociationResult;
 import com.pulumi.aws.connect.outputs.GetContactFlowModuleResult;
@@ -19,6 +20,7 @@ import com.pulumi.aws.connect.outputs.GetHoursOfOperationResult;
 import com.pulumi.aws.connect.outputs.GetInstanceResult;
 import com.pulumi.aws.connect.outputs.GetLambdaFunctionAssociationResult;
 import com.pulumi.aws.connect.outputs.GetPromptResult;
+import com.pulumi.aws.connect.outputs.GetQueueResult;
 import com.pulumi.aws.connect.outputs.GetQuickConnectResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -112,6 +114,18 @@ public final class ConnectFunctions {
     }
     public static CompletableFuture<GetPromptResult> getPrompt(GetPromptArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides details about a specific Amazon Connect Queue.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
+        return getQueue(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:connect/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Provides details about a specific Amazon Connect Quick Connect.

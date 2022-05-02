@@ -62,6 +62,11 @@ public final class GetClusterResult {
      * 
      */
     private final String zookeeperConnectString;
+    /**
+     * @return A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphabetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+     * 
+     */
+    private final String zookeeperConnectStringTls;
 
     @CustomType.Constructor
     private GetClusterResult(
@@ -75,7 +80,8 @@ public final class GetClusterResult {
         @CustomType.Parameter("kafkaVersion") String kafkaVersion,
         @CustomType.Parameter("numberOfBrokerNodes") Integer numberOfBrokerNodes,
         @CustomType.Parameter("tags") Map<String,String> tags,
-        @CustomType.Parameter("zookeeperConnectString") String zookeeperConnectString) {
+        @CustomType.Parameter("zookeeperConnectString") String zookeeperConnectString,
+        @CustomType.Parameter("zookeeperConnectStringTls") String zookeeperConnectStringTls) {
         this.arn = arn;
         this.bootstrapBrokers = bootstrapBrokers;
         this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
@@ -87,6 +93,7 @@ public final class GetClusterResult {
         this.numberOfBrokerNodes = numberOfBrokerNodes;
         this.tags = tags;
         this.zookeeperConnectString = zookeeperConnectString;
+        this.zookeeperConnectStringTls = zookeeperConnectStringTls;
     }
 
     /**
@@ -162,6 +169,13 @@ public final class GetClusterResult {
     public String zookeeperConnectString() {
         return this.zookeeperConnectString;
     }
+    /**
+     * @return A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphabetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
+     * 
+     */
+    public String zookeeperConnectStringTls() {
+        return this.zookeeperConnectStringTls;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -183,6 +197,7 @@ public final class GetClusterResult {
         private Integer numberOfBrokerNodes;
         private Map<String,String> tags;
         private String zookeeperConnectString;
+        private String zookeeperConnectStringTls;
 
         public Builder() {
     	      // Empty
@@ -201,6 +216,7 @@ public final class GetClusterResult {
     	      this.numberOfBrokerNodes = defaults.numberOfBrokerNodes;
     	      this.tags = defaults.tags;
     	      this.zookeeperConnectString = defaults.zookeeperConnectString;
+    	      this.zookeeperConnectStringTls = defaults.zookeeperConnectStringTls;
         }
 
         public Builder arn(String arn) {
@@ -246,8 +262,12 @@ public final class GetClusterResult {
         public Builder zookeeperConnectString(String zookeeperConnectString) {
             this.zookeeperConnectString = Objects.requireNonNull(zookeeperConnectString);
             return this;
+        }
+        public Builder zookeeperConnectStringTls(String zookeeperConnectStringTls) {
+            this.zookeeperConnectStringTls = Objects.requireNonNull(zookeeperConnectStringTls);
+            return this;
         }        public GetClusterResult build() {
-            return new GetClusterResult(arn, bootstrapBrokers, bootstrapBrokersSaslIam, bootstrapBrokersSaslScram, bootstrapBrokersTls, clusterName, id, kafkaVersion, numberOfBrokerNodes, tags, zookeeperConnectString);
+            return new GetClusterResult(arn, bootstrapBrokers, bootstrapBrokersSaslIam, bootstrapBrokersSaslScram, bootstrapBrokersTls, clusterName, id, kafkaVersion, numberOfBrokerNodes, tags, zookeeperConnectString, zookeeperConnectStringTls);
         }
     }
 }

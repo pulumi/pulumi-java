@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.fsx.inputs;
 
+import com.pulumi.aws.fsx.inputs.LustreFileSystemLogConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -245,6 +246,21 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+     * 
+     */
+    @Import(name="logConfiguration")
+    private @Nullable Output<LustreFileSystemLogConfigurationArgs> logConfiguration;
+
+    /**
+     * @return The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+     * 
+     */
+    public Optional<Output<LustreFileSystemLogConfigurationArgs>> logConfiguration() {
+        return Optional.ofNullable(this.logConfiguration);
+    }
+
+    /**
      * The value to be used when mounting the filesystem.
      * 
      */
@@ -442,6 +458,7 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
         this.importPath = $.importPath;
         this.importedFileChunkSize = $.importedFileChunkSize;
         this.kmsKeyId = $.kmsKeyId;
+        this.logConfiguration = $.logConfiguration;
         this.mountName = $.mountName;
         this.networkInterfaceIds = $.networkInterfaceIds;
         this.ownerId = $.ownerId;
@@ -787,6 +804,27 @@ public final class LustreFileSystemState extends com.pulumi.resources.ResourceAr
          */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        /**
+         * @param logConfiguration The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logConfiguration(@Nullable Output<LustreFileSystemLogConfigurationArgs> logConfiguration) {
+            $.logConfiguration = logConfiguration;
+            return this;
+        }
+
+        /**
+         * @param logConfiguration The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logConfiguration(LustreFileSystemLogConfigurationArgs logConfiguration) {
+            return logConfiguration(Output.of(logConfiguration));
         }
 
         /**

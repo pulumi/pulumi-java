@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.imagebuilder.outputs;
 
+import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationInstanceMetadataOption;
 import com.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationLogging;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -30,6 +31,11 @@ public final class GetInfrastructureConfigurationResult {
      * 
      */
     private final String id;
+    /**
+     * @return Nested list of instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances.
+     * 
+     */
+    private final List<GetInfrastructureConfigurationInstanceMetadataOption> instanceMetadataOptions;
     /**
      * @return Name of the IAM Instance Profile associated with the configuration.
      * 
@@ -93,6 +99,7 @@ public final class GetInfrastructureConfigurationResult {
         @CustomType.Parameter("dateUpdated") String dateUpdated,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceMetadataOptions") List<GetInfrastructureConfigurationInstanceMetadataOption> instanceMetadataOptions,
         @CustomType.Parameter("instanceProfileName") String instanceProfileName,
         @CustomType.Parameter("instanceTypes") List<String> instanceTypes,
         @CustomType.Parameter("keyPair") String keyPair,
@@ -109,6 +116,7 @@ public final class GetInfrastructureConfigurationResult {
         this.dateUpdated = dateUpdated;
         this.description = description;
         this.id = id;
+        this.instanceMetadataOptions = instanceMetadataOptions;
         this.instanceProfileName = instanceProfileName;
         this.instanceTypes = instanceTypes;
         this.keyPair = keyPair;
@@ -148,6 +156,13 @@ public final class GetInfrastructureConfigurationResult {
      */
     public String id() {
         return this.id;
+    }
+    /**
+     * @return Nested list of instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances.
+     * 
+     */
+    public List<GetInfrastructureConfigurationInstanceMetadataOption> instanceMetadataOptions() {
+        return this.instanceMetadataOptions;
     }
     /**
      * @return Name of the IAM Instance Profile associated with the configuration.
@@ -241,6 +256,7 @@ public final class GetInfrastructureConfigurationResult {
         private String dateUpdated;
         private String description;
         private String id;
+        private List<GetInfrastructureConfigurationInstanceMetadataOption> instanceMetadataOptions;
         private String instanceProfileName;
         private List<String> instanceTypes;
         private String keyPair;
@@ -264,6 +280,7 @@ public final class GetInfrastructureConfigurationResult {
     	      this.dateUpdated = defaults.dateUpdated;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
+    	      this.instanceMetadataOptions = defaults.instanceMetadataOptions;
     	      this.instanceProfileName = defaults.instanceProfileName;
     	      this.instanceTypes = defaults.instanceTypes;
     	      this.keyPair = defaults.keyPair;
@@ -296,6 +313,13 @@ public final class GetInfrastructureConfigurationResult {
         public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
+        }
+        public Builder instanceMetadataOptions(List<GetInfrastructureConfigurationInstanceMetadataOption> instanceMetadataOptions) {
+            this.instanceMetadataOptions = Objects.requireNonNull(instanceMetadataOptions);
+            return this;
+        }
+        public Builder instanceMetadataOptions(GetInfrastructureConfigurationInstanceMetadataOption... instanceMetadataOptions) {
+            return instanceMetadataOptions(List.of(instanceMetadataOptions));
         }
         public Builder instanceProfileName(String instanceProfileName) {
             this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
@@ -350,7 +374,7 @@ public final class GetInfrastructureConfigurationResult {
             this.terminateInstanceOnFailure = Objects.requireNonNull(terminateInstanceOnFailure);
             return this;
         }        public GetInfrastructureConfigurationResult build() {
-            return new GetInfrastructureConfigurationResult(arn, dateCreated, dateUpdated, description, id, instanceProfileName, instanceTypes, keyPair, loggings, name, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, terminateInstanceOnFailure);
+            return new GetInfrastructureConfigurationResult(arn, dateCreated, dateUpdated, description, id, instanceMetadataOptions, instanceProfileName, instanceTypes, keyPair, loggings, name, resourceTags, securityGroupIds, snsTopicArn, subnetId, tags, terminateInstanceOnFailure);
         }
     }
 }

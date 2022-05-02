@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -48,6 +49,20 @@ public class Association extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<Boolean>> applyOnlyAtCronInterval() {
         return Codegen.optional(this.applyOnlyAtCronInterval);
+    }
+    /**
+     * The ARN of the SSM association
+     * 
+     */
+    @Export(name="arn", type=String.class, parameters={})
+    private Output<String> arn;
+
+    /**
+     * @return The ARN of the SSM association
+     * 
+     */
+    public Output<String> arn() {
+        return this.arn;
     }
     /**
      * The ID of the SSM association.
@@ -122,7 +137,11 @@ public class Association extends com.pulumi.resources.CustomResource {
     /**
      * The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
      * 
+     * @deprecated
+     * use &#39;targets&#39; argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId
+     * 
      */
+    @Deprecated /* use 'targets' argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId */
     @Export(name="instanceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceId;
 
@@ -230,6 +249,20 @@ public class Association extends com.pulumi.resources.CustomResource {
      */
     public Output<List<AssociationTarget>> targets() {
         return this.targets;
+    }
+    /**
+     * The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+     * 
+     */
+    @Export(name="waitForSuccessTimeoutSeconds", type=Integer.class, parameters={})
+    private Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds;
+
+    /**
+     * @return The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+     * 
+     */
+    public Output<Optional<Integer>> waitForSuccessTimeoutSeconds() {
+        return Codegen.optional(this.waitForSuccessTimeoutSeconds);
     }
 
     /**

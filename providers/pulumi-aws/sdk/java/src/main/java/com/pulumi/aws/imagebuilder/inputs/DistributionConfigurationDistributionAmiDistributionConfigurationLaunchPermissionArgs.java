@@ -17,6 +17,36 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     public static final DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs Empty = new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs();
 
     /**
+     * Set of AWS Organization ARNs to assign.
+     * 
+     */
+    @Import(name="organizationArns")
+    private @Nullable Output<List<String>> organizationArns;
+
+    /**
+     * @return Set of AWS Organization ARNs to assign.
+     * 
+     */
+    public Optional<Output<List<String>>> organizationArns() {
+        return Optional.ofNullable(this.organizationArns);
+    }
+
+    /**
+     * Set of AWS Organizational Unit ARNs to assign.
+     * 
+     */
+    @Import(name="organizationalUnitArns")
+    private @Nullable Output<List<String>> organizationalUnitArns;
+
+    /**
+     * @return Set of AWS Organizational Unit ARNs to assign.
+     * 
+     */
+    public Optional<Output<List<String>>> organizationalUnitArns() {
+        return Optional.ofNullable(this.organizationalUnitArns);
+    }
+
+    /**
      * Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
      */
@@ -49,6 +79,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs() {}
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs $) {
+        this.organizationArns = $.organizationArns;
+        this.organizationalUnitArns = $.organizationalUnitArns;
         this.userGroups = $.userGroups;
         this.userIds = $.userIds;
     }
@@ -69,6 +101,68 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs defaults) {
             $ = new DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param organizationArns Set of AWS Organization ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArns(@Nullable Output<List<String>> organizationArns) {
+            $.organizationArns = organizationArns;
+            return this;
+        }
+
+        /**
+         * @param organizationArns Set of AWS Organization ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArns(List<String> organizationArns) {
+            return organizationArns(Output.of(organizationArns));
+        }
+
+        /**
+         * @param organizationArns Set of AWS Organization ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationArns(String... organizationArns) {
+            return organizationArns(List.of(organizationArns));
+        }
+
+        /**
+         * @param organizationalUnitArns Set of AWS Organizational Unit ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArns(@Nullable Output<List<String>> organizationalUnitArns) {
+            $.organizationalUnitArns = organizationalUnitArns;
+            return this;
+        }
+
+        /**
+         * @param organizationalUnitArns Set of AWS Organizational Unit ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArns(List<String> organizationalUnitArns) {
+            return organizationalUnitArns(Output.of(organizationalUnitArns));
+        }
+
+        /**
+         * @param organizationalUnitArns Set of AWS Organizational Unit ARNs to assign.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationalUnitArns(String... organizationalUnitArns) {
+            return organizationalUnitArns(List.of(organizationalUnitArns));
         }
 
         /**

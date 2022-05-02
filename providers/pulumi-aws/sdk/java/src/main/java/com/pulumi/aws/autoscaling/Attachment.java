@@ -34,7 +34,11 @@ public class Attachment extends com.pulumi.resources.CustomResource {
     /**
      * The ARN of an ALB Target Group.
      * 
+     * @deprecated
+     * Use lb_target_group_arn instead
+     * 
      */
+    @Deprecated /* Use lb_target_group_arn instead */
     @Export(name="albTargetGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> albTargetGroupArn;
 
@@ -72,6 +76,20 @@ public class Attachment extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> elb() {
         return Codegen.optional(this.elb);
+    }
+    /**
+     * The ARN of a load balancer target group.
+     * 
+     */
+    @Export(name="lbTargetGroupArn", type=String.class, parameters={})
+    private Output</* @Nullable */ String> lbTargetGroupArn;
+
+    /**
+     * @return The ARN of a load balancer target group.
+     * 
+     */
+    public Output<Optional<String>> lbTargetGroupArn() {
+        return Codegen.optional(this.lbTargetGroupArn);
     }
 
     /**

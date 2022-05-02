@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EndpointMongodbSettings {
     /**
-     * @return Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+     * @return Authentication mechanism to access the MongoDB source endpoint. Default is `default`.
      * 
      */
     private final @Nullable String authMechanism;
     /**
-     * @return Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+     * @return Authentication database name. Not used when `auth_type` is `no`. Default is `admin`.
      * 
      */
     private final @Nullable String authSource;
     /**
-     * @return Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+     * @return Authentication type to access the MongoDB source endpoint. Default is `password`.
      * 
      */
     private final @Nullable String authType;
     /**
-     * @return Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+     * @return Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Default is `1000`.
      * 
      */
     private final @Nullable String docsToInvestigate;
     /**
-     * @return Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+     * @return Document ID. Use this setting when `nesting_level` is set to `none`. Default is `false`.
      * 
      */
     private final @Nullable String extractDocId;
     /**
-     * @return Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+     * @return Specifies either document or table mode. Default is `none`. Valid values are `one` (table mode) and `none` (document mode).
      * 
      */
     private final @Nullable String nestingLevel;
@@ -59,42 +59,42 @@ public final class EndpointMongodbSettings {
     }
 
     /**
-     * @return Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
+     * @return Authentication mechanism to access the MongoDB source endpoint. Default is `default`.
      * 
      */
     public Optional<String> authMechanism() {
         return Optional.ofNullable(this.authMechanism);
     }
     /**
-     * @return Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
+     * @return Authentication database name. Not used when `auth_type` is `no`. Default is `admin`.
      * 
      */
     public Optional<String> authSource() {
         return Optional.ofNullable(this.authSource);
     }
     /**
-     * @return Authentication type to access the MongoDB source endpoint. Defaults to `password`.
+     * @return Authentication type to access the MongoDB source endpoint. Default is `password`.
      * 
      */
     public Optional<String> authType() {
         return Optional.ofNullable(this.authType);
     }
     /**
-     * @return Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
+     * @return Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Default is `1000`.
      * 
      */
     public Optional<String> docsToInvestigate() {
         return Optional.ofNullable(this.docsToInvestigate);
     }
     /**
-     * @return Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
+     * @return Document ID. Use this setting when `nesting_level` is set to `none`. Default is `false`.
      * 
      */
     public Optional<String> extractDocId() {
         return Optional.ofNullable(this.extractDocId);
     }
     /**
-     * @return Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
+     * @return Specifies either document or table mode. Default is `none`. Valid values are `one` (table mode) and `none` (document mode).
      * 
      */
     public Optional<String> nestingLevel() {

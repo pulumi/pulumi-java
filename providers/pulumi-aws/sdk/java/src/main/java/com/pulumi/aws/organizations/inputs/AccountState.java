@@ -5,6 +5,7 @@ package com.pulumi.aws.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,6 +30,21 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
+    }
+
+    /**
+     * If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+     * 
+     */
+    @Import(name="closeOnDeletion")
+    private @Nullable Output<Boolean> closeOnDeletion;
+
+    /**
+     * @return If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+     * 
+     */
+    public Optional<Output<Boolean>> closeOnDeletion() {
+        return Optional.ofNullable(this.closeOnDeletion);
     }
 
     /**
@@ -128,14 +144,14 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value mapping of resource tags.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value mapping of resource tags.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -161,6 +177,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
 
     private AccountState(AccountState $) {
         this.arn = $.arn;
+        this.closeOnDeletion = $.closeOnDeletion;
         this.email = $.email;
         this.iamUserAccessToBilling = $.iamUserAccessToBilling;
         this.joinedMethod = $.joinedMethod;
@@ -210,6 +227,27 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
+        }
+
+        /**
+         * @param closeOnDeletion If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder closeOnDeletion(@Nullable Output<Boolean> closeOnDeletion) {
+            $.closeOnDeletion = closeOnDeletion;
+            return this;
+        }
+
+        /**
+         * @param closeOnDeletion If true, a deletion event will close the account. Otherwise, it will only remove from the organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder closeOnDeletion(Boolean closeOnDeletion) {
+            return closeOnDeletion(Output.of(closeOnDeletion));
         }
 
         /**
@@ -345,7 +383,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value mapping of resource tags.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -356,7 +394,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value mapping of resource tags.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

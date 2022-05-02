@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticsearch.outputs;
 
+import com.pulumi.aws.elasticsearch.outputs.DomainClusterConfigColdStorageOptions;
 import com.pulumi.aws.elasticsearch.outputs.DomainClusterConfigZoneAwarenessConfig;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -14,6 +15,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainClusterConfig {
+    /**
+     * @return Configuration block containing cold storage configuration. Detailed below.
+     * 
+     */
+    private final @Nullable DomainClusterConfigColdStorageOptions coldStorageOptions;
     /**
      * @return Number of dedicated main nodes in the cluster.
      * 
@@ -67,6 +73,7 @@ public final class DomainClusterConfig {
 
     @CustomType.Constructor
     private DomainClusterConfig(
+        @CustomType.Parameter("coldStorageOptions") @Nullable DomainClusterConfigColdStorageOptions coldStorageOptions,
         @CustomType.Parameter("dedicatedMasterCount") @Nullable Integer dedicatedMasterCount,
         @CustomType.Parameter("dedicatedMasterEnabled") @Nullable Boolean dedicatedMasterEnabled,
         @CustomType.Parameter("dedicatedMasterType") @Nullable String dedicatedMasterType,
@@ -77,6 +84,7 @@ public final class DomainClusterConfig {
         @CustomType.Parameter("warmType") @Nullable String warmType,
         @CustomType.Parameter("zoneAwarenessConfig") @Nullable DomainClusterConfigZoneAwarenessConfig zoneAwarenessConfig,
         @CustomType.Parameter("zoneAwarenessEnabled") @Nullable Boolean zoneAwarenessEnabled) {
+        this.coldStorageOptions = coldStorageOptions;
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;
@@ -89,6 +97,13 @@ public final class DomainClusterConfig {
         this.zoneAwarenessEnabled = zoneAwarenessEnabled;
     }
 
+    /**
+     * @return Configuration block containing cold storage configuration. Detailed below.
+     * 
+     */
+    public Optional<DomainClusterConfigColdStorageOptions> coldStorageOptions() {
+        return Optional.ofNullable(this.coldStorageOptions);
+    }
     /**
      * @return Number of dedicated main nodes in the cluster.
      * 
@@ -169,6 +184,7 @@ public final class DomainClusterConfig {
     }
 
     public static final class Builder {
+        private @Nullable DomainClusterConfigColdStorageOptions coldStorageOptions;
         private @Nullable Integer dedicatedMasterCount;
         private @Nullable Boolean dedicatedMasterEnabled;
         private @Nullable String dedicatedMasterType;
@@ -186,6 +202,7 @@ public final class DomainClusterConfig {
 
         public Builder(DomainClusterConfig defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.coldStorageOptions = defaults.coldStorageOptions;
     	      this.dedicatedMasterCount = defaults.dedicatedMasterCount;
     	      this.dedicatedMasterEnabled = defaults.dedicatedMasterEnabled;
     	      this.dedicatedMasterType = defaults.dedicatedMasterType;
@@ -198,6 +215,10 @@ public final class DomainClusterConfig {
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
+        public Builder coldStorageOptions(@Nullable DomainClusterConfigColdStorageOptions coldStorageOptions) {
+            this.coldStorageOptions = coldStorageOptions;
+            return this;
+        }
         public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
@@ -238,7 +259,7 @@ public final class DomainClusterConfig {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }        public DomainClusterConfig build() {
-            return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
+            return new DomainClusterConfig(coldStorageOptions, dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }
     }
 }

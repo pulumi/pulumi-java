@@ -48,18 +48,35 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
     }
 
     /**
-     * Set of configuration blocks describing the rules managing the replication documented below.
+     * List of configuration blocks describing the rules managing the replication documented below.
      * 
      */
     @Import(name="rules")
     private @Nullable Output<List<BucketReplicationConfigRuleArgs>> rules;
 
     /**
-     * @return Set of configuration blocks describing the rules managing the replication documented below.
+     * @return List of configuration blocks describing the rules managing the replication documented below.
      * 
      */
     public Optional<Output<List<BucketReplicationConfigRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
+    }
+
+    /**
+     * A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+     * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+     * 
+     */
+    @Import(name="token")
+    private @Nullable Output<String> token;
+
+    /**
+     * @return A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+     * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+     * 
+     */
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
     private BucketReplicationConfigState() {}
@@ -68,6 +85,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
         this.bucket = $.bucket;
         this.role = $.role;
         this.rules = $.rules;
+        this.token = $.token;
     }
 
     public static Builder builder() {
@@ -131,7 +149,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * @param rules List of configuration blocks describing the rules managing the replication documented below.
          * 
          * @return builder
          * 
@@ -142,7 +160,7 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * @param rules List of configuration blocks describing the rules managing the replication documented below.
          * 
          * @return builder
          * 
@@ -152,13 +170,36 @@ public final class BucketReplicationConfigState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param rules Set of configuration blocks describing the rules managing the replication documented below.
+         * @param rules List of configuration blocks describing the rules managing the replication documented below.
          * 
          * @return builder
          * 
          */
         public Builder rules(BucketReplicationConfigRuleArgs... rules) {
             return rules(List.of(rules));
+        }
+
+        /**
+         * @param token A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+         * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder token(@Nullable Output<String> token) {
+            $.token = token;
+            return this;
+        }
+
+        /**
+         * @param token A token to allow replication to be enabled on an Object Lock-enabled bucket. You must contact AWS support for the bucket&#39;s &#34;Object Lock token&#34;.
+         * For more details, see [Using S3 Object Lock with replication](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-managing.html#object-lock-managing-replication).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder token(String token) {
+            return token(Output.of(token));
         }
 
         public BucketReplicationConfigState build() {

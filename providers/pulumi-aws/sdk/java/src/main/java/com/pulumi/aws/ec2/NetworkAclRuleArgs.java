@@ -67,13 +67,13 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="icmpCode")
-    private @Nullable Output<String> icmpCode;
+    private @Nullable Output<Integer> icmpCode;
 
     /**
      * @return ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Optional<Output<String>> icmpCode() {
+    public Optional<Output<Integer>> icmpCode() {
         return Optional.ofNullable(this.icmpCode);
     }
 
@@ -82,13 +82,13 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="icmpType")
-    private @Nullable Output<String> icmpType;
+    private @Nullable Output<Integer> icmpType;
 
     /**
      * @return ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Optional<Output<String>> icmpType() {
+    public Optional<Output<Integer>> icmpType() {
         return Optional.ofNullable(this.icmpType);
     }
 
@@ -285,7 +285,7 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder icmpCode(@Nullable Output<String> icmpCode) {
+        public Builder icmpCode(@Nullable Output<Integer> icmpCode) {
             $.icmpCode = icmpCode;
             return this;
         }
@@ -296,7 +296,7 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder icmpCode(String icmpCode) {
+        public Builder icmpCode(Integer icmpCode) {
             return icmpCode(Output.of(icmpCode));
         }
 
@@ -306,7 +306,7 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder icmpType(@Nullable Output<String> icmpType) {
+        public Builder icmpType(@Nullable Output<Integer> icmpType) {
             $.icmpType = icmpType;
             return this;
         }
@@ -317,7 +317,7 @@ public final class NetworkAclRuleArgs extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder icmpType(String icmpType) {
+        public Builder icmpType(Integer icmpType) {
             return icmpType(Output.of(icmpType));
         }
 

@@ -16,14 +16,14 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDomainNameArgs Empty = new GetDomainNameArgs();
 
     /**
-     * The fully-qualified domain name to look up. If no domain name is found, an error will be returned.
+     * Fully-qualified domain name to look up. If no domain name is found, an error will be returned.
      * 
      */
     @Import(name="domainName", required=true)
     private String domainName;
 
     /**
-     * @return The fully-qualified domain name to look up. If no domain name is found, an error will be returned.
+     * @return Fully-qualified domain name to look up. If no domain name is found, an error will be returned.
      * 
      */
     public String domainName() {
@@ -71,7 +71,7 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param domainName The fully-qualified domain name to look up. If no domain name is found, an error will be returned.
+         * @param domainName Fully-qualified domain name to look up. If no domain name is found, an error will be returned.
          * 
          * @return builder
          * 

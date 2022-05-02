@@ -4,6 +4,7 @@
 package com.pulumi.aws.transfer.inputs;
 
 import com.pulumi.aws.transfer.inputs.ServerEndpointDetailsArgs;
+import com.pulumi.aws.transfer.inputs.ServerWorkflowDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -230,6 +231,36 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+     * 
+     */
+    @Import(name="postAuthenticationLoginBanner")
+    private @Nullable Output<String> postAuthenticationLoginBanner;
+
+    /**
+     * @return Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+     * 
+     */
+    public Optional<Output<String>> postAuthenticationLoginBanner() {
+        return Optional.ofNullable(this.postAuthenticationLoginBanner);
+    }
+
+    /**
+     * Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+     * 
+     */
+    @Import(name="preAuthenticationLoginBanner")
+    private @Nullable Output<String> preAuthenticationLoginBanner;
+
+    /**
+     * @return Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+     * 
+     */
+    public Optional<Output<String>> preAuthenticationLoginBanner() {
+        return Optional.ofNullable(this.preAuthenticationLoginBanner);
+    }
+
+    /**
      * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint. This defaults to `SFTP` . The available protocols are:
      * * `SFTP`: File transfer over SSH
      * * `FTPS`: File transfer with TLS encryption
@@ -310,6 +341,21 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.url);
     }
 
+    /**
+     * Specifies the workflow details. See Workflow Details below.
+     * 
+     */
+    @Import(name="workflowDetails")
+    private @Nullable Output<ServerWorkflowDetailsArgs> workflowDetails;
+
+    /**
+     * @return Specifies the workflow details. See Workflow Details below.
+     * 
+     */
+    public Optional<Output<ServerWorkflowDetailsArgs>> workflowDetails() {
+        return Optional.ofNullable(this.workflowDetails);
+    }
+
     private ServerState() {}
 
     private ServerState(ServerState $) {
@@ -327,11 +373,14 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
         this.identityProviderType = $.identityProviderType;
         this.invocationRole = $.invocationRole;
         this.loggingRole = $.loggingRole;
+        this.postAuthenticationLoginBanner = $.postAuthenticationLoginBanner;
+        this.preAuthenticationLoginBanner = $.preAuthenticationLoginBanner;
         this.protocols = $.protocols;
         this.securityPolicyName = $.securityPolicyName;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
         this.url = $.url;
+        this.workflowDetails = $.workflowDetails;
     }
 
     public static Builder builder() {
@@ -647,6 +696,48 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param postAuthenticationLoginBanner Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder postAuthenticationLoginBanner(@Nullable Output<String> postAuthenticationLoginBanner) {
+            $.postAuthenticationLoginBanner = postAuthenticationLoginBanner;
+            return this;
+        }
+
+        /**
+         * @param postAuthenticationLoginBanner Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder postAuthenticationLoginBanner(String postAuthenticationLoginBanner) {
+            return postAuthenticationLoginBanner(Output.of(postAuthenticationLoginBanner));
+        }
+
+        /**
+         * @param preAuthenticationLoginBanner Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preAuthenticationLoginBanner(@Nullable Output<String> preAuthenticationLoginBanner) {
+            $.preAuthenticationLoginBanner = preAuthenticationLoginBanner;
+            return this;
+        }
+
+        /**
+         * @param preAuthenticationLoginBanner Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preAuthenticationLoginBanner(String preAuthenticationLoginBanner) {
+            return preAuthenticationLoginBanner(Output.of(preAuthenticationLoginBanner));
+        }
+
+        /**
          * @param protocols Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint. This defaults to `SFTP` . The available protocols are:
          * * `SFTP`: File transfer over SSH
          * * `FTPS`: File transfer with TLS encryption
@@ -768,6 +859,27 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder url(String url) {
             return url(Output.of(url));
+        }
+
+        /**
+         * @param workflowDetails Specifies the workflow details. See Workflow Details below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowDetails(@Nullable Output<ServerWorkflowDetailsArgs> workflowDetails) {
+            $.workflowDetails = workflowDetails;
+            return this;
+        }
+
+        /**
+         * @param workflowDetails Specifies the workflow details. See Workflow Details below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workflowDetails(ServerWorkflowDetailsArgs workflowDetails) {
+            return workflowDetails(Output.of(workflowDetails));
         }
 
         public ServerState build() {

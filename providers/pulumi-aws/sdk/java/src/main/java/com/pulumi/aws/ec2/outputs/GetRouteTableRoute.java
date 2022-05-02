@@ -20,6 +20,11 @@ public final class GetRouteTableRoute {
      */
     private final String cidrBlock;
     /**
+     * @return ARN of the core network.
+     * 
+     */
+    private final String coreNetworkArn;
+    /**
      * @return The ID of a managed prefix list destination of the route.
      * 
      */
@@ -79,6 +84,7 @@ public final class GetRouteTableRoute {
     private GetRouteTableRoute(
         @CustomType.Parameter("carrierGatewayId") String carrierGatewayId,
         @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("coreNetworkArn") String coreNetworkArn,
         @CustomType.Parameter("destinationPrefixListId") String destinationPrefixListId,
         @CustomType.Parameter("egressOnlyGatewayId") String egressOnlyGatewayId,
         @CustomType.Parameter("gatewayId") String gatewayId,
@@ -92,6 +98,7 @@ public final class GetRouteTableRoute {
         @CustomType.Parameter("vpcPeeringConnectionId") String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.cidrBlock = cidrBlock;
+        this.coreNetworkArn = coreNetworkArn;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyGatewayId = egressOnlyGatewayId;
         this.gatewayId = gatewayId;
@@ -118,6 +125,13 @@ public final class GetRouteTableRoute {
      */
     public String cidrBlock() {
         return this.cidrBlock;
+    }
+    /**
+     * @return ARN of the core network.
+     * 
+     */
+    public String coreNetworkArn() {
+        return this.coreNetworkArn;
     }
     /**
      * @return The ID of a managed prefix list destination of the route.
@@ -208,6 +222,7 @@ public final class GetRouteTableRoute {
     public static final class Builder {
         private String carrierGatewayId;
         private String cidrBlock;
+        private String coreNetworkArn;
         private String destinationPrefixListId;
         private String egressOnlyGatewayId;
         private String gatewayId;
@@ -228,6 +243,7 @@ public final class GetRouteTableRoute {
     	      Objects.requireNonNull(defaults);
     	      this.carrierGatewayId = defaults.carrierGatewayId;
     	      this.cidrBlock = defaults.cidrBlock;
+    	      this.coreNetworkArn = defaults.coreNetworkArn;
     	      this.destinationPrefixListId = defaults.destinationPrefixListId;
     	      this.egressOnlyGatewayId = defaults.egressOnlyGatewayId;
     	      this.gatewayId = defaults.gatewayId;
@@ -247,6 +263,10 @@ public final class GetRouteTableRoute {
         }
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            return this;
+        }
+        public Builder coreNetworkArn(String coreNetworkArn) {
+            this.coreNetworkArn = Objects.requireNonNull(coreNetworkArn);
             return this;
         }
         public Builder destinationPrefixListId(String destinationPrefixListId) {
@@ -293,7 +313,7 @@ public final class GetRouteTableRoute {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }        public GetRouteTableRoute build() {
-            return new GetRouteTableRoute(carrierGatewayId, cidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, localGatewayId, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
+            return new GetRouteTableRoute(carrierGatewayId, cidrBlock, coreNetworkArn, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, localGatewayId, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
         }
     }
 }

@@ -7,11 +7,13 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.lambda.inputs.GetAliasArgs;
 import com.pulumi.aws.lambda.inputs.GetCodeSigningConfigArgs;
 import com.pulumi.aws.lambda.inputs.GetFunctionArgs;
+import com.pulumi.aws.lambda.inputs.GetFunctionUrlArgs;
 import com.pulumi.aws.lambda.inputs.GetInvocationArgs;
 import com.pulumi.aws.lambda.inputs.GetLayerVersionArgs;
 import com.pulumi.aws.lambda.outputs.GetAliasResult;
 import com.pulumi.aws.lambda.outputs.GetCodeSigningConfigResult;
 import com.pulumi.aws.lambda.outputs.GetFunctionResult;
+import com.pulumi.aws.lambda.outputs.GetFunctionUrlResult;
 import com.pulumi.aws.lambda.outputs.GetInvocationResult;
 import com.pulumi.aws.lambda.outputs.GetLayerVersionResult;
 import com.pulumi.core.TypeShape;
@@ -57,6 +59,18 @@ public final class LambdaFunctions {
     }
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getFunction:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides information about a Lambda function URL.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args) {
+        return getFunctionUrl(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:lambda/getFunctionUrl:getFunctionUrl", TypeShape.of(GetFunctionUrlResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to invoke custom lambda functions as data source.

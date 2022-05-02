@@ -306,14 +306,14 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+     * Identifier of the VPC in which to create the target group. Required when `target_type` is `instance`, `ip` or `alb`. Does not apply when `target_type` is `lambda`.
      * 
      */
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
     /**
-     * @return Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+     * @return Identifier of the VPC in which to create the target group. Required when `target_type` is `instance`, `ip` or `alb`. Does not apply when `target_type` is `lambda`.
      * 
      */
     public Optional<Output<String>> vpcId() {
@@ -763,7 +763,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param vpcId Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+         * @param vpcId Identifier of the VPC in which to create the target group. Required when `target_type` is `instance`, `ip` or `alb`. Does not apply when `target_type` is `lambda`.
          * 
          * @return builder
          * 
@@ -774,7 +774,7 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param vpcId Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+         * @param vpcId Identifier of the VPC in which to create the target group. Required when `target_type` is `instance`, `ip` or `alb`. Does not apply when `target_type` is `lambda`.
          * 
          * @return builder
          * 

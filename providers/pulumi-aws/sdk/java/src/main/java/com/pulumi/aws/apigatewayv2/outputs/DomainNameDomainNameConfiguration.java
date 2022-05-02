@@ -12,28 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DomainNameDomainNameConfiguration {
     /**
-     * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+     * @return ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
      * 
      */
     private final String certificateArn;
     /**
-     * @return The endpoint type. Valid values: `REGIONAL`.
+     * @return Endpoint type. Valid values: `REGIONAL`.
      * 
      */
     private final String endpointType;
     /**
-     * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * @return Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
      */
     private final @Nullable String hostedZoneId;
     /**
-     * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * @return ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    private final @Nullable String ownershipVerificationCertificateArn;
+    /**
+     * @return Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
      */
     private final String securityPolicy;
     /**
-     * @return The target domain name.
+     * @return Target domain name.
      * 
      */
     private final @Nullable String targetDomainName;
@@ -43,46 +47,54 @@ public final class DomainNameDomainNameConfiguration {
         @CustomType.Parameter("certificateArn") String certificateArn,
         @CustomType.Parameter("endpointType") String endpointType,
         @CustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId,
+        @CustomType.Parameter("ownershipVerificationCertificateArn") @Nullable String ownershipVerificationCertificateArn,
         @CustomType.Parameter("securityPolicy") String securityPolicy,
         @CustomType.Parameter("targetDomainName") @Nullable String targetDomainName) {
         this.certificateArn = certificateArn;
         this.endpointType = endpointType;
         this.hostedZoneId = hostedZoneId;
+        this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
         this.securityPolicy = securityPolicy;
         this.targetDomainName = targetDomainName;
     }
 
     /**
-     * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+     * @return ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
      * 
      */
     public String certificateArn() {
         return this.certificateArn;
     }
     /**
-     * @return The endpoint type. Valid values: `REGIONAL`.
+     * @return Endpoint type. Valid values: `REGIONAL`.
      * 
      */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * @return Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
      */
     public Optional<String> hostedZoneId() {
         return Optional.ofNullable(this.hostedZoneId);
     }
     /**
-     * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * @return ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    public Optional<String> ownershipVerificationCertificateArn() {
+        return Optional.ofNullable(this.ownershipVerificationCertificateArn);
+    }
+    /**
+     * @return Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
      */
     public String securityPolicy() {
         return this.securityPolicy;
     }
     /**
-     * @return The target domain name.
+     * @return Target domain name.
      * 
      */
     public Optional<String> targetDomainName() {
@@ -101,6 +113,7 @@ public final class DomainNameDomainNameConfiguration {
         private String certificateArn;
         private String endpointType;
         private @Nullable String hostedZoneId;
+        private @Nullable String ownershipVerificationCertificateArn;
         private String securityPolicy;
         private @Nullable String targetDomainName;
 
@@ -113,6 +126,7 @@ public final class DomainNameDomainNameConfiguration {
     	      this.certificateArn = defaults.certificateArn;
     	      this.endpointType = defaults.endpointType;
     	      this.hostedZoneId = defaults.hostedZoneId;
+    	      this.ownershipVerificationCertificateArn = defaults.ownershipVerificationCertificateArn;
     	      this.securityPolicy = defaults.securityPolicy;
     	      this.targetDomainName = defaults.targetDomainName;
         }
@@ -129,6 +143,10 @@ public final class DomainNameDomainNameConfiguration {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
+        public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
+            this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+            return this;
+        }
         public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
@@ -137,7 +155,7 @@ public final class DomainNameDomainNameConfiguration {
             this.targetDomainName = targetDomainName;
             return this;
         }        public DomainNameDomainNameConfiguration build() {
-            return new DomainNameDomainNameConfiguration(certificateArn, endpointType, hostedZoneId, securityPolicy, targetDomainName);
+            return new DomainNameDomainNameConfiguration(certificateArn, endpointType, hostedZoneId, ownershipVerificationCertificateArn, securityPolicy, targetDomainName);
         }
     }
 }

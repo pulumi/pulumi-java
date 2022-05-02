@@ -18,12 +18,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Manages an RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.
- * 
- * More information about Aurora global databases can be found in the [Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating).
- * 
- * ## Example Usage
- * 
  * ## Import
  * 
  * `aws_rds_global_cluster` can be imported by using the RDS Global Cluster identifier, e.g.,
@@ -89,33 +83,15 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
     public Output<Optional<Boolean>> deletionProtection() {
         return Codegen.optional(this.deletionProtection);
     }
-    /**
-     * Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-     * 
-     */
     @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;
 
-    /**
-     * @return Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-     * 
-     */
     public Output<String> engine() {
         return this.engine;
     }
-    /**
-     * Engine version of the Aurora global database.
-     * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-     * 
-     */
     @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
-    /**
-     * @return Engine version of the Aurora global database.
-     * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-     * 
-     */
     public Output<String> engineVersion() {
         return this.engineVersion;
     }
@@ -134,14 +110,14 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.forceDestroy);
     }
     /**
-     * The global cluster identifier.
+     * Global cluster identifier.
      * 
      */
     @Export(name="globalClusterIdentifier", type=String.class, parameters={})
     private Output<String> globalClusterIdentifier;
 
     /**
-     * @return The global cluster identifier.
+     * @return Global cluster identifier.
      * 
      */
     public Output<String> globalClusterIdentifier() {

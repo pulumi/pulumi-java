@@ -17,15 +17,26 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final DefaultSubnetArgs Empty = new DefaultSubnetArgs();
 
+    @Import(name="assignIpv6AddressOnCreation")
+    private @Nullable Output<Boolean> assignIpv6AddressOnCreation;
+
+    public Optional<Output<Boolean>> assignIpv6AddressOnCreation() {
+        return Optional.ofNullable(this.assignIpv6AddressOnCreation);
+    }
+
     /**
-     * AZ for the subnet.
+     * is required
+     * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+     * * The default value for `map_public_ip_on_launch` is `true`
      * 
      */
     @Import(name="availabilityZone", required=true)
     private Output<String> availabilityZone;
 
     /**
-     * @return AZ for the subnet.
+     * @return is required
+     * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+     * * The default value for `map_public_ip_on_launch` is `true`
      * 
      */
     public Output<String> availabilityZone() {
@@ -60,6 +71,28 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.enableResourceNameDnsAaaaRecordOnLaunch);
     }
 
+    /**
+     * Whether destroying the resource deletes the default subnet. Default: `false`
+     * 
+     */
+    @Import(name="forceDestroy")
+    private @Nullable Output<Boolean> forceDestroy;
+
+    /**
+     * @return Whether destroying the resource deletes the default subnet. Default: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
+    }
+
+    @Import(name="ipv6CidrBlock")
+    private @Nullable Output<String> ipv6CidrBlock;
+
+    public Optional<Output<String>> ipv6CidrBlock() {
+        return Optional.ofNullable(this.ipv6CidrBlock);
+    }
+
     @Import(name="ipv6Native")
     private @Nullable Output<Boolean> ipv6Native;
 
@@ -74,26 +107,11 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.mapCustomerOwnedIpOnLaunch);
     }
 
-    /**
-     * Whether instances launched into the subnet should be assigned a public IP address.
-     * 
-     */
     @Import(name="mapPublicIpOnLaunch")
     private @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
-    /**
-     * @return Whether instances launched into the subnet should be assigned a public IP address.
-     * 
-     */
     public Optional<Output<Boolean>> mapPublicIpOnLaunch() {
         return Optional.ofNullable(this.mapPublicIpOnLaunch);
-    }
-
-    @Import(name="outpostArn")
-    private @Nullable Output<String> outpostArn;
-
-    public Optional<Output<String>> outpostArn() {
-        return Optional.ofNullable(this.outpostArn);
     }
 
     @Import(name="privateDnsHostnameTypeOnLaunch")
@@ -103,17 +121,9 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.privateDnsHostnameTypeOnLaunch);
     }
 
-    /**
-     * Map of tags to assign to the resource.
-     * 
-     */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
-    /**
-     * @return Map of tags to assign to the resource.
-     * 
-     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -121,15 +131,17 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
     private DefaultSubnetArgs() {}
 
     private DefaultSubnetArgs(DefaultSubnetArgs $) {
+        this.assignIpv6AddressOnCreation = $.assignIpv6AddressOnCreation;
         this.availabilityZone = $.availabilityZone;
         this.customerOwnedIpv4Pool = $.customerOwnedIpv4Pool;
         this.enableDns64 = $.enableDns64;
         this.enableResourceNameDnsARecordOnLaunch = $.enableResourceNameDnsARecordOnLaunch;
         this.enableResourceNameDnsAaaaRecordOnLaunch = $.enableResourceNameDnsAaaaRecordOnLaunch;
+        this.forceDestroy = $.forceDestroy;
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
         this.ipv6Native = $.ipv6Native;
         this.mapCustomerOwnedIpOnLaunch = $.mapCustomerOwnedIpOnLaunch;
         this.mapPublicIpOnLaunch = $.mapPublicIpOnLaunch;
-        this.outpostArn = $.outpostArn;
         this.privateDnsHostnameTypeOnLaunch = $.privateDnsHostnameTypeOnLaunch;
         this.tags = $.tags;
     }
@@ -152,8 +164,19 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DefaultSubnetArgs(Objects.requireNonNull(defaults));
         }
 
+        public Builder assignIpv6AddressOnCreation(@Nullable Output<Boolean> assignIpv6AddressOnCreation) {
+            $.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
+            return this;
+        }
+
+        public Builder assignIpv6AddressOnCreation(Boolean assignIpv6AddressOnCreation) {
+            return assignIpv6AddressOnCreation(Output.of(assignIpv6AddressOnCreation));
+        }
+
         /**
-         * @param availabilityZone AZ for the subnet.
+         * @param availabilityZone is required
+         * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+         * * The default value for `map_public_ip_on_launch` is `true`
          * 
          * @return builder
          * 
@@ -164,7 +187,9 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param availabilityZone AZ for the subnet.
+         * @param availabilityZone is required
+         * * The `availability_zone_id`, `cidr_block` and `vpc_id` arguments become computed attributes
+         * * The default value for `map_public_ip_on_launch` is `true`
          * 
          * @return builder
          * 
@@ -209,6 +234,36 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             return enableResourceNameDnsAaaaRecordOnLaunch(Output.of(enableResourceNameDnsAaaaRecordOnLaunch));
         }
 
+        /**
+         * @param forceDestroy Whether destroying the resource deletes the default subnet. Default: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
+            $.forceDestroy = forceDestroy;
+            return this;
+        }
+
+        /**
+         * @param forceDestroy Whether destroying the resource deletes the default subnet. Default: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
+        }
+
+        public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
+            $.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            return ipv6CidrBlock(Output.of(ipv6CidrBlock));
+        }
+
         public Builder ipv6Native(@Nullable Output<Boolean> ipv6Native) {
             $.ipv6Native = ipv6Native;
             return this;
@@ -227,34 +282,13 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             return mapCustomerOwnedIpOnLaunch(Output.of(mapCustomerOwnedIpOnLaunch));
         }
 
-        /**
-         * @param mapPublicIpOnLaunch Whether instances launched into the subnet should be assigned a public IP address.
-         * 
-         * @return builder
-         * 
-         */
         public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
             $.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
-        /**
-         * @param mapPublicIpOnLaunch Whether instances launched into the subnet should be assigned a public IP address.
-         * 
-         * @return builder
-         * 
-         */
         public Builder mapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
             return mapPublicIpOnLaunch(Output.of(mapPublicIpOnLaunch));
-        }
-
-        public Builder outpostArn(@Nullable Output<String> outpostArn) {
-            $.outpostArn = outpostArn;
-            return this;
-        }
-
-        public Builder outpostArn(String outpostArn) {
-            return outpostArn(Output.of(outpostArn));
         }
 
         public Builder privateDnsHostnameTypeOnLaunch(@Nullable Output<String> privateDnsHostnameTypeOnLaunch) {
@@ -266,23 +300,11 @@ public final class DefaultSubnetArgs extends com.pulumi.resources.ResourceArgs {
             return privateDnsHostnameTypeOnLaunch(Output.of(privateDnsHostnameTypeOnLaunch));
         }
 
-        /**
-         * @param tags Map of tags to assign to the resource.
-         * 
-         * @return builder
-         * 
-         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
-        /**
-         * @param tags Map of tags to assign to the resource.
-         * 
-         * @return builder
-         * 
-         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

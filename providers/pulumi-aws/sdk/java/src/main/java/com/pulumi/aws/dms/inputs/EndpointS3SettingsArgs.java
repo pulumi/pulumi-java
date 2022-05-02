@@ -6,6 +6,7 @@ package com.pulumi.aws.dms.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,14 +18,29 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     public static final EndpointS3SettingsArgs Empty = new EndpointS3SettingsArgs();
 
     /**
-     * S3 Bucket Object prefix.
+     * Whether to add column name information to the .csv output file. Default is `false`.
+     * 
+     */
+    @Import(name="addColumnName")
+    private @Nullable Output<Boolean> addColumnName;
+
+    /**
+     * @return Whether to add column name information to the .csv output file. Default is `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> addColumnName() {
+        return Optional.ofNullable(this.addColumnName);
+    }
+
+    /**
+     * S3 object prefix.
      * 
      */
     @Import(name="bucketFolder")
     private @Nullable Output<String> bucketFolder;
 
     /**
-     * @return S3 Bucket Object prefix.
+     * @return S3 object prefix.
      * 
      */
     public Optional<Output<String>> bucketFolder() {
@@ -32,14 +48,14 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * S3 Bucket name.
+     * S3 bucket name.
      * 
      */
     @Import(name="bucketName")
     private @Nullable Output<String> bucketName;
 
     /**
-     * @return S3 Bucket name.
+     * @return S3 bucket name.
      * 
      */
     public Optional<Output<String>> bucketName() {
@@ -47,14 +63,104 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+     * Predefined (canned) access control list for objects created in an S3 bucket. Valid values include `NONE`, `PRIVATE`, `PUBLIC_READ`, `PUBLIC_READ_WRITE`, `AUTHENTICATED_READ`, `AWS_EXEC_READ`, `BUCKET_OWNER_READ`, and `BUCKET_OWNER_FULL_CONTROL`. Default is `NONE`.
+     * 
+     */
+    @Import(name="cannedAclForObjects")
+    private @Nullable Output<String> cannedAclForObjects;
+
+    /**
+     * @return Predefined (canned) access control list for objects created in an S3 bucket. Valid values include `NONE`, `PRIVATE`, `PUBLIC_READ`, `PUBLIC_READ_WRITE`, `AUTHENTICATED_READ`, `AWS_EXEC_READ`, `BUCKET_OWNER_READ`, and `BUCKET_OWNER_FULL_CONTROL`. Default is `NONE`.
+     * 
+     */
+    public Optional<Output<String>> cannedAclForObjects() {
+        return Optional.ofNullable(this.cannedAclForObjects);
+    }
+
+    /**
+     * Whether to write insert and update operations to .csv or .parquet output files. Default is `false`.
+     * 
+     */
+    @Import(name="cdcInsertsAndUpdates")
+    private @Nullable Output<Boolean> cdcInsertsAndUpdates;
+
+    /**
+     * @return Whether to write insert and update operations to .csv or .parquet output files. Default is `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> cdcInsertsAndUpdates() {
+        return Optional.ofNullable(this.cdcInsertsAndUpdates);
+    }
+
+    /**
+     * Whether to write insert operations to .csv or .parquet output files. Default is `false`.
+     * 
+     */
+    @Import(name="cdcInsertsOnly")
+    private @Nullable Output<Boolean> cdcInsertsOnly;
+
+    /**
+     * @return Whether to write insert operations to .csv or .parquet output files. Default is `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> cdcInsertsOnly() {
+        return Optional.ofNullable(this.cdcInsertsOnly);
+    }
+
+    /**
+     * Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is `60`.
+     * 
+     */
+    @Import(name="cdcMaxBatchInterval")
+    private @Nullable Output<Integer> cdcMaxBatchInterval;
+
+    /**
+     * @return Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is `60`.
+     * 
+     */
+    public Optional<Output<Integer>> cdcMaxBatchInterval() {
+        return Optional.ofNullable(this.cdcMaxBatchInterval);
+    }
+
+    /**
+     * Minimum file size, defined in megabytes, to reach for a file output. Default is `32`.
+     * 
+     */
+    @Import(name="cdcMinFileSize")
+    private @Nullable Output<Integer> cdcMinFileSize;
+
+    /**
+     * @return Minimum file size, defined in megabytes, to reach for a file output. Default is `32`.
+     * 
+     */
+    public Optional<Output<Integer>> cdcMinFileSize() {
+        return Optional.ofNullable(this.cdcMinFileSize);
+    }
+
+    /**
+     * Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it&#39;s optional. If `cdc_path` is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+     * 
+     */
+    @Import(name="cdcPath")
+    private @Nullable Output<String> cdcPath;
+
+    /**
+     * @return Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it&#39;s optional. If `cdc_path` is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+     * 
+     */
+    public Optional<Output<String>> cdcPath() {
+        return Optional.ofNullable(this.cdcPath);
+    }
+
+    /**
+     * Set to compress target files. Default is `NONE`. Valid values are `GZIP` and `NONE`.
      * 
      */
     @Import(name="compressionType")
     private @Nullable Output<String> compressionType;
 
     /**
-     * @return Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+     * @return Set to compress target files. Default is `NONE`. Valid values are `GZIP` and `NONE`.
      * 
      */
     public Optional<Output<String>> compressionType() {
@@ -62,14 +168,14 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Delimiter used to separate columns in the source files. Defaults to `,`.
+     * Delimiter used to separate columns in the source files. Default is `,`.
      * 
      */
     @Import(name="csvDelimiter")
     private @Nullable Output<String> csvDelimiter;
 
     /**
-     * @return Delimiter used to separate columns in the source files. Defaults to `,`.
+     * @return Delimiter used to separate columns in the source files. Default is `,`.
      * 
      */
     public Optional<Output<String>> csvDelimiter() {
@@ -77,14 +183,44 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Delimiter used to separate rows in the source files. Defaults to `\n`.
+     * String to use for all columns not included in the supplemental log.
+     * 
+     */
+    @Import(name="csvNoSupValue")
+    private @Nullable Output<String> csvNoSupValue;
+
+    /**
+     * @return String to use for all columns not included in the supplemental log.
+     * 
+     */
+    public Optional<Output<String>> csvNoSupValue() {
+        return Optional.ofNullable(this.csvNoSupValue);
+    }
+
+    /**
+     * String to as null when writing to the target.
+     * 
+     */
+    @Import(name="csvNullValue")
+    private @Nullable Output<String> csvNullValue;
+
+    /**
+     * @return String to as null when writing to the target.
+     * 
+     */
+    public Optional<Output<String>> csvNullValue() {
+        return Optional.ofNullable(this.csvNullValue);
+    }
+
+    /**
+     * Delimiter used to separate rows in the source files. Default is `\n`.
      * 
      */
     @Import(name="csvRowDelimiter")
     private @Nullable Output<String> csvRowDelimiter;
 
     /**
-     * @return Delimiter used to separate rows in the source files. Defaults to `\n`.
+     * @return Delimiter used to separate rows in the source files. Default is `\n`.
      * 
      */
     public Optional<Output<String>> csvRowDelimiter() {
@@ -92,14 +228,14 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+     * Output format for the files that AWS DMS uses to create S3 objects. Valid values are `csv` and `parquet`. Default is `csv`.
      * 
      */
     @Import(name="dataFormat")
     private @Nullable Output<String> dataFormat;
 
     /**
-     * @return The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+     * @return Output format for the files that AWS DMS uses to create S3 objects. Valid values are `csv` and `parquet`. Default is `csv`.
      * 
      */
     public Optional<Output<String>> dataFormat() {
@@ -107,14 +243,44 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+     * Size of one data page in bytes. Default is `1048576` (1 MiB).
+     * 
+     */
+    @Import(name="dataPageSize")
+    private @Nullable Output<Integer> dataPageSize;
+
+    /**
+     * @return Size of one data page in bytes. Default is `1048576` (1 MiB).
+     * 
+     */
+    public Optional<Output<Integer>> dataPageSize() {
+        return Optional.ofNullable(this.dataPageSize);
+    }
+
+    /**
+     * Date separating delimiter to use during folder partitioning. Valid values are `SLASH`, `UNDERSCORE`, `DASH`, and `NONE`. Default is `SLASH`.
+     * 
+     */
+    @Import(name="datePartitionDelimiter")
+    private @Nullable Output<String> datePartitionDelimiter;
+
+    /**
+     * @return Date separating delimiter to use during folder partitioning. Valid values are `SLASH`, `UNDERSCORE`, `DASH`, and `NONE`. Default is `SLASH`.
+     * 
+     */
+    public Optional<Output<String>> datePartitionDelimiter() {
+        return Optional.ofNullable(this.datePartitionDelimiter);
+    }
+
+    /**
+     * Partition S3 bucket folders based on transaction commit dates. Default is `false`.
      * 
      */
     @Import(name="datePartitionEnabled")
     private @Nullable Output<Boolean> datePartitionEnabled;
 
     /**
-     * @return Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+     * @return Partition S3 bucket folders based on transaction commit dates. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> datePartitionEnabled() {
@@ -122,14 +288,74 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+     * Date format to use during folder partitioning. Use this parameter when `date_partition_enabled` is set to true. Valid values are `YYYYMMDD`, `YYYYMMDDHH`, `YYYYMM`, `MMYYYYDD`, and `DDMMYYYY`. Default is `YYYYMMDD`.
+     * 
+     */
+    @Import(name="datePartitionSequence")
+    private @Nullable Output<String> datePartitionSequence;
+
+    /**
+     * @return Date format to use during folder partitioning. Use this parameter when `date_partition_enabled` is set to true. Valid values are `YYYYMMDD`, `YYYYMMDDHH`, `YYYYMM`, `MMYYYYDD`, and `DDMMYYYY`. Default is `YYYYMMDD`.
+     * 
+     */
+    public Optional<Output<String>> datePartitionSequence() {
+        return Optional.ofNullable(this.datePartitionSequence);
+    }
+
+    /**
+     * Maximum size in bytes of an encoded dictionary page of a column. Default is `1048576` (1 MiB).
+     * 
+     */
+    @Import(name="dictPageSizeLimit")
+    private @Nullable Output<Integer> dictPageSizeLimit;
+
+    /**
+     * @return Maximum size in bytes of an encoded dictionary page of a column. Default is `1048576` (1 MiB).
+     * 
+     */
+    public Optional<Output<Integer>> dictPageSizeLimit() {
+        return Optional.ofNullable(this.dictPageSizeLimit);
+    }
+
+    /**
+     * Whether to enable statistics for Parquet pages and row groups. Default is `true`.
+     * 
+     */
+    @Import(name="enableStatistics")
+    private @Nullable Output<Boolean> enableStatistics;
+
+    /**
+     * @return Whether to enable statistics for Parquet pages and row groups. Default is `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> enableStatistics() {
+        return Optional.ofNullable(this.enableStatistics);
+    }
+
+    /**
+     * Type of encoding to use. Value values are `rle_dictionary`, `plain`, and `plain_dictionary`. Default is `rle_dictionary`.
+     * 
+     */
+    @Import(name="encodingType")
+    private @Nullable Output<String> encodingType;
+
+    /**
+     * @return Type of encoding to use. Value values are `rle_dictionary`, `plain`, and `plain_dictionary`. Default is `rle_dictionary`.
+     * 
+     */
+    public Optional<Output<String>> encodingType() {
+        return Optional.ofNullable(this.encodingType);
+    }
+
+    /**
+     * Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are `SSE_S3` and `SSE_KMS`. Default is `SSE_S3`.
      * 
      */
     @Import(name="encryptionMode")
     private @Nullable Output<String> encryptionMode;
 
     /**
-     * @return The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+     * @return Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are `SSE_S3` and `SSE_KMS`. Default is `SSE_S3`.
      * 
      */
     public Optional<Output<String>> encryptionMode() {
@@ -152,14 +378,59 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+     * When this value is set to `1`, DMS ignores the first row header in a .csv file. Default is `0`.
+     * 
+     */
+    @Import(name="ignoreHeadersRow")
+    private @Nullable Output<Integer> ignoreHeadersRow;
+
+    /**
+     * @return When this value is set to `1`, DMS ignores the first row header in a .csv file. Default is `0`.
+     * 
+     */
+    public Optional<Output<Integer>> ignoreHeadersRow() {
+        return Optional.ofNullable(this.ignoreHeadersRow);
+    }
+
+    /**
+     * Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is `false`.
+     * 
+     */
+    @Import(name="includeOpForFullLoad")
+    private @Nullable Output<Boolean> includeOpForFullLoad;
+
+    /**
+     * @return Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> includeOpForFullLoad() {
+        return Optional.ofNullable(this.includeOpForFullLoad);
+    }
+
+    /**
+     * Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from `1` to `1048576`. Default is `1048576` (1 GB).
+     * 
+     */
+    @Import(name="maxFileSize")
+    private @Nullable Output<Integer> maxFileSize;
+
+    /**
+     * @return Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from `1` to `1048576`. Default is `1048576` (1 GB).
+     * 
+     */
+    public Optional<Output<Integer>> maxFileSize() {
+        return Optional.ofNullable(this.maxFileSize);
+    }
+
+    /**
+     * - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is `false`.
      * 
      */
     @Import(name="parquetTimestampInMillisecond")
     private @Nullable Output<Boolean> parquetTimestampInMillisecond;
 
     /**
-     * @return - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+     * @return - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is `false`.
      * 
      */
     public Optional<Output<Boolean>> parquetTimestampInMillisecond() {
@@ -167,14 +438,14 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+     * Version of the .parquet file format. Default is `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
      * 
      */
     @Import(name="parquetVersion")
     private @Nullable Output<String> parquetVersion;
 
     /**
-     * @return The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+     * @return Version of the .parquet file format. Default is `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
      * 
      */
     public Optional<Output<String>> parquetVersion() {
@@ -182,14 +453,59 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+     * Whether DMS saves the transaction order for a CDC load on the S3 target specified by `cdc_path`. Default is `false`.
+     * 
+     */
+    @Import(name="preserveTransactions")
+    private @Nullable Output<Boolean> preserveTransactions;
+
+    /**
+     * @return Whether DMS saves the transaction order for a CDC load on the S3 target specified by `cdc_path`. Default is `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> preserveTransactions() {
+        return Optional.ofNullable(this.preserveTransactions);
+    }
+
+    /**
+     * For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is `true`.
+     * 
+     */
+    @Import(name="rfc4180")
+    private @Nullable Output<Boolean> rfc4180;
+
+    /**
+     * @return For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> rfc4180() {
+        return Optional.ofNullable(this.rfc4180);
+    }
+
+    /**
+     * Number of rows in a row group. Default is `10000`.
+     * 
+     */
+    @Import(name="rowGroupLength")
+    private @Nullable Output<Integer> rowGroupLength;
+
+    /**
+     * @return Number of rows in a row group. Default is `10000`.
+     * 
+     */
+    public Optional<Output<Integer>> rowGroupLength() {
+        return Optional.ofNullable(this.rowGroupLength);
+    }
+
+    /**
+     * If you set encryptionMode to `SSE_KMS`, set this parameter to the ARN for the AWS KMS key.
      * 
      */
     @Import(name="serverSideEncryptionKmsKeyId")
     private @Nullable Output<String> serverSideEncryptionKmsKeyId;
 
     /**
-     * @return If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+     * @return If you set encryptionMode to `SSE_KMS`, set this parameter to the ARN for the AWS KMS key.
      * 
      */
     public Optional<Output<String>> serverSideEncryptionKmsKeyId() {
@@ -197,36 +513,89 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+     * ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     @Import(name="serviceAccessRoleArn")
     private @Nullable Output<String> serviceAccessRoleArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+     * @return ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     public Optional<Output<String>> serviceAccessRoleArn() {
         return Optional.ofNullable(this.serviceAccessRoleArn);
     }
 
+    /**
+     * Column to add with timestamp information to the endpoint data for an Amazon S3 target.
+     * 
+     */
+    @Import(name="timestampColumnName")
+    private @Nullable Output<String> timestampColumnName;
+
+    /**
+     * @return Column to add with timestamp information to the endpoint data for an Amazon S3 target.
+     * 
+     */
+    public Optional<Output<String>> timestampColumnName() {
+        return Optional.ofNullable(this.timestampColumnName);
+    }
+
+    /**
+     * Whether to use `csv_no_sup_value` for columns not included in the supplemental log.
+     * 
+     */
+    @Import(name="useCsvNoSupValue")
+    private @Nullable Output<Boolean> useCsvNoSupValue;
+
+    /**
+     * @return Whether to use `csv_no_sup_value` for columns not included in the supplemental log.
+     * 
+     */
+    public Optional<Output<Boolean>> useCsvNoSupValue() {
+        return Optional.ofNullable(this.useCsvNoSupValue);
+    }
+
     private EndpointS3SettingsArgs() {}
 
     private EndpointS3SettingsArgs(EndpointS3SettingsArgs $) {
+        this.addColumnName = $.addColumnName;
         this.bucketFolder = $.bucketFolder;
         this.bucketName = $.bucketName;
+        this.cannedAclForObjects = $.cannedAclForObjects;
+        this.cdcInsertsAndUpdates = $.cdcInsertsAndUpdates;
+        this.cdcInsertsOnly = $.cdcInsertsOnly;
+        this.cdcMaxBatchInterval = $.cdcMaxBatchInterval;
+        this.cdcMinFileSize = $.cdcMinFileSize;
+        this.cdcPath = $.cdcPath;
         this.compressionType = $.compressionType;
         this.csvDelimiter = $.csvDelimiter;
+        this.csvNoSupValue = $.csvNoSupValue;
+        this.csvNullValue = $.csvNullValue;
         this.csvRowDelimiter = $.csvRowDelimiter;
         this.dataFormat = $.dataFormat;
+        this.dataPageSize = $.dataPageSize;
+        this.datePartitionDelimiter = $.datePartitionDelimiter;
         this.datePartitionEnabled = $.datePartitionEnabled;
+        this.datePartitionSequence = $.datePartitionSequence;
+        this.dictPageSizeLimit = $.dictPageSizeLimit;
+        this.enableStatistics = $.enableStatistics;
+        this.encodingType = $.encodingType;
         this.encryptionMode = $.encryptionMode;
         this.externalTableDefinition = $.externalTableDefinition;
+        this.ignoreHeadersRow = $.ignoreHeadersRow;
+        this.includeOpForFullLoad = $.includeOpForFullLoad;
+        this.maxFileSize = $.maxFileSize;
         this.parquetTimestampInMillisecond = $.parquetTimestampInMillisecond;
         this.parquetVersion = $.parquetVersion;
+        this.preserveTransactions = $.preserveTransactions;
+        this.rfc4180 = $.rfc4180;
+        this.rowGroupLength = $.rowGroupLength;
         this.serverSideEncryptionKmsKeyId = $.serverSideEncryptionKmsKeyId;
         this.serviceAccessRoleArn = $.serviceAccessRoleArn;
+        this.timestampColumnName = $.timestampColumnName;
+        this.useCsvNoSupValue = $.useCsvNoSupValue;
     }
 
     public static Builder builder() {
@@ -248,7 +617,28 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bucketFolder S3 Bucket Object prefix.
+         * @param addColumnName Whether to add column name information to the .csv output file. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addColumnName(@Nullable Output<Boolean> addColumnName) {
+            $.addColumnName = addColumnName;
+            return this;
+        }
+
+        /**
+         * @param addColumnName Whether to add column name information to the .csv output file. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder addColumnName(Boolean addColumnName) {
+            return addColumnName(Output.of(addColumnName));
+        }
+
+        /**
+         * @param bucketFolder S3 object prefix.
          * 
          * @return builder
          * 
@@ -259,7 +649,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bucketFolder S3 Bucket Object prefix.
+         * @param bucketFolder S3 object prefix.
          * 
          * @return builder
          * 
@@ -269,7 +659,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bucketName S3 Bucket name.
+         * @param bucketName S3 bucket name.
          * 
          * @return builder
          * 
@@ -280,7 +670,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param bucketName S3 Bucket name.
+         * @param bucketName S3 bucket name.
          * 
          * @return builder
          * 
@@ -290,7 +680,133 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param compressionType Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+         * @param cannedAclForObjects Predefined (canned) access control list for objects created in an S3 bucket. Valid values include `NONE`, `PRIVATE`, `PUBLIC_READ`, `PUBLIC_READ_WRITE`, `AUTHENTICATED_READ`, `AWS_EXEC_READ`, `BUCKET_OWNER_READ`, and `BUCKET_OWNER_FULL_CONTROL`. Default is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cannedAclForObjects(@Nullable Output<String> cannedAclForObjects) {
+            $.cannedAclForObjects = cannedAclForObjects;
+            return this;
+        }
+
+        /**
+         * @param cannedAclForObjects Predefined (canned) access control list for objects created in an S3 bucket. Valid values include `NONE`, `PRIVATE`, `PUBLIC_READ`, `PUBLIC_READ_WRITE`, `AUTHENTICATED_READ`, `AWS_EXEC_READ`, `BUCKET_OWNER_READ`, and `BUCKET_OWNER_FULL_CONTROL`. Default is `NONE`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cannedAclForObjects(String cannedAclForObjects) {
+            return cannedAclForObjects(Output.of(cannedAclForObjects));
+        }
+
+        /**
+         * @param cdcInsertsAndUpdates Whether to write insert and update operations to .csv or .parquet output files. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcInsertsAndUpdates(@Nullable Output<Boolean> cdcInsertsAndUpdates) {
+            $.cdcInsertsAndUpdates = cdcInsertsAndUpdates;
+            return this;
+        }
+
+        /**
+         * @param cdcInsertsAndUpdates Whether to write insert and update operations to .csv or .parquet output files. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcInsertsAndUpdates(Boolean cdcInsertsAndUpdates) {
+            return cdcInsertsAndUpdates(Output.of(cdcInsertsAndUpdates));
+        }
+
+        /**
+         * @param cdcInsertsOnly Whether to write insert operations to .csv or .parquet output files. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcInsertsOnly(@Nullable Output<Boolean> cdcInsertsOnly) {
+            $.cdcInsertsOnly = cdcInsertsOnly;
+            return this;
+        }
+
+        /**
+         * @param cdcInsertsOnly Whether to write insert operations to .csv or .parquet output files. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcInsertsOnly(Boolean cdcInsertsOnly) {
+            return cdcInsertsOnly(Output.of(cdcInsertsOnly));
+        }
+
+        /**
+         * @param cdcMaxBatchInterval Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is `60`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcMaxBatchInterval(@Nullable Output<Integer> cdcMaxBatchInterval) {
+            $.cdcMaxBatchInterval = cdcMaxBatchInterval;
+            return this;
+        }
+
+        /**
+         * @param cdcMaxBatchInterval Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is `60`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcMaxBatchInterval(Integer cdcMaxBatchInterval) {
+            return cdcMaxBatchInterval(Output.of(cdcMaxBatchInterval));
+        }
+
+        /**
+         * @param cdcMinFileSize Minimum file size, defined in megabytes, to reach for a file output. Default is `32`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcMinFileSize(@Nullable Output<Integer> cdcMinFileSize) {
+            $.cdcMinFileSize = cdcMinFileSize;
+            return this;
+        }
+
+        /**
+         * @param cdcMinFileSize Minimum file size, defined in megabytes, to reach for a file output. Default is `32`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcMinFileSize(Integer cdcMinFileSize) {
+            return cdcMinFileSize(Output.of(cdcMinFileSize));
+        }
+
+        /**
+         * @param cdcPath Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it&#39;s optional. If `cdc_path` is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcPath(@Nullable Output<String> cdcPath) {
+            $.cdcPath = cdcPath;
+            return this;
+        }
+
+        /**
+         * @param cdcPath Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it&#39;s optional. If `cdc_path` is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cdcPath(String cdcPath) {
+            return cdcPath(Output.of(cdcPath));
+        }
+
+        /**
+         * @param compressionType Set to compress target files. Default is `NONE`. Valid values are `GZIP` and `NONE`.
          * 
          * @return builder
          * 
@@ -301,7 +817,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param compressionType Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
+         * @param compressionType Set to compress target files. Default is `NONE`. Valid values are `GZIP` and `NONE`.
          * 
          * @return builder
          * 
@@ -311,7 +827,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param csvDelimiter Delimiter used to separate columns in the source files. Defaults to `,`.
+         * @param csvDelimiter Delimiter used to separate columns in the source files. Default is `,`.
          * 
          * @return builder
          * 
@@ -322,7 +838,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param csvDelimiter Delimiter used to separate columns in the source files. Defaults to `,`.
+         * @param csvDelimiter Delimiter used to separate columns in the source files. Default is `,`.
          * 
          * @return builder
          * 
@@ -332,7 +848,49 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Defaults to `\n`.
+         * @param csvNoSupValue String to use for all columns not included in the supplemental log.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder csvNoSupValue(@Nullable Output<String> csvNoSupValue) {
+            $.csvNoSupValue = csvNoSupValue;
+            return this;
+        }
+
+        /**
+         * @param csvNoSupValue String to use for all columns not included in the supplemental log.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder csvNoSupValue(String csvNoSupValue) {
+            return csvNoSupValue(Output.of(csvNoSupValue));
+        }
+
+        /**
+         * @param csvNullValue String to as null when writing to the target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder csvNullValue(@Nullable Output<String> csvNullValue) {
+            $.csvNullValue = csvNullValue;
+            return this;
+        }
+
+        /**
+         * @param csvNullValue String to as null when writing to the target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder csvNullValue(String csvNullValue) {
+            return csvNullValue(Output.of(csvNullValue));
+        }
+
+        /**
+         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Default is `\n`.
          * 
          * @return builder
          * 
@@ -343,7 +901,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Defaults to `\n`.
+         * @param csvRowDelimiter Delimiter used to separate rows in the source files. Default is `\n`.
          * 
          * @return builder
          * 
@@ -353,7 +911,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dataFormat The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+         * @param dataFormat Output format for the files that AWS DMS uses to create S3 objects. Valid values are `csv` and `parquet`. Default is `csv`.
          * 
          * @return builder
          * 
@@ -364,7 +922,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dataFormat The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+         * @param dataFormat Output format for the files that AWS DMS uses to create S3 objects. Valid values are `csv` and `parquet`. Default is `csv`.
          * 
          * @return builder
          * 
@@ -374,7 +932,49 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+         * @param dataPageSize Size of one data page in bytes. Default is `1048576` (1 MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataPageSize(@Nullable Output<Integer> dataPageSize) {
+            $.dataPageSize = dataPageSize;
+            return this;
+        }
+
+        /**
+         * @param dataPageSize Size of one data page in bytes. Default is `1048576` (1 MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataPageSize(Integer dataPageSize) {
+            return dataPageSize(Output.of(dataPageSize));
+        }
+
+        /**
+         * @param datePartitionDelimiter Date separating delimiter to use during folder partitioning. Valid values are `SLASH`, `UNDERSCORE`, `DASH`, and `NONE`. Default is `SLASH`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datePartitionDelimiter(@Nullable Output<String> datePartitionDelimiter) {
+            $.datePartitionDelimiter = datePartitionDelimiter;
+            return this;
+        }
+
+        /**
+         * @param datePartitionDelimiter Date separating delimiter to use during folder partitioning. Valid values are `SLASH`, `UNDERSCORE`, `DASH`, and `NONE`. Default is `SLASH`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datePartitionDelimiter(String datePartitionDelimiter) {
+            return datePartitionDelimiter(Output.of(datePartitionDelimiter));
+        }
+
+        /**
+         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Default is `false`.
          * 
          * @return builder
          * 
@@ -385,7 +985,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+         * @param datePartitionEnabled Partition S3 bucket folders based on transaction commit dates. Default is `false`.
          * 
          * @return builder
          * 
@@ -395,7 +995,91 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param encryptionMode The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+         * @param datePartitionSequence Date format to use during folder partitioning. Use this parameter when `date_partition_enabled` is set to true. Valid values are `YYYYMMDD`, `YYYYMMDDHH`, `YYYYMM`, `MMYYYYDD`, and `DDMMYYYY`. Default is `YYYYMMDD`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datePartitionSequence(@Nullable Output<String> datePartitionSequence) {
+            $.datePartitionSequence = datePartitionSequence;
+            return this;
+        }
+
+        /**
+         * @param datePartitionSequence Date format to use during folder partitioning. Use this parameter when `date_partition_enabled` is set to true. Valid values are `YYYYMMDD`, `YYYYMMDDHH`, `YYYYMM`, `MMYYYYDD`, and `DDMMYYYY`. Default is `YYYYMMDD`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder datePartitionSequence(String datePartitionSequence) {
+            return datePartitionSequence(Output.of(datePartitionSequence));
+        }
+
+        /**
+         * @param dictPageSizeLimit Maximum size in bytes of an encoded dictionary page of a column. Default is `1048576` (1 MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dictPageSizeLimit(@Nullable Output<Integer> dictPageSizeLimit) {
+            $.dictPageSizeLimit = dictPageSizeLimit;
+            return this;
+        }
+
+        /**
+         * @param dictPageSizeLimit Maximum size in bytes of an encoded dictionary page of a column. Default is `1048576` (1 MiB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dictPageSizeLimit(Integer dictPageSizeLimit) {
+            return dictPageSizeLimit(Output.of(dictPageSizeLimit));
+        }
+
+        /**
+         * @param enableStatistics Whether to enable statistics for Parquet pages and row groups. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableStatistics(@Nullable Output<Boolean> enableStatistics) {
+            $.enableStatistics = enableStatistics;
+            return this;
+        }
+
+        /**
+         * @param enableStatistics Whether to enable statistics for Parquet pages and row groups. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableStatistics(Boolean enableStatistics) {
+            return enableStatistics(Output.of(enableStatistics));
+        }
+
+        /**
+         * @param encodingType Type of encoding to use. Value values are `rle_dictionary`, `plain`, and `plain_dictionary`. Default is `rle_dictionary`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encodingType(@Nullable Output<String> encodingType) {
+            $.encodingType = encodingType;
+            return this;
+        }
+
+        /**
+         * @param encodingType Type of encoding to use. Value values are `rle_dictionary`, `plain`, and `plain_dictionary`. Default is `rle_dictionary`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encodingType(String encodingType) {
+            return encodingType(Output.of(encodingType));
+        }
+
+        /**
+         * @param encryptionMode Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are `SSE_S3` and `SSE_KMS`. Default is `SSE_S3`.
          * 
          * @return builder
          * 
@@ -406,7 +1090,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param encryptionMode The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+         * @param encryptionMode Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are `SSE_S3` and `SSE_KMS`. Default is `SSE_S3`.
          * 
          * @return builder
          * 
@@ -437,7 +1121,70 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+         * @param ignoreHeadersRow When this value is set to `1`, DMS ignores the first row header in a .csv file. Default is `0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreHeadersRow(@Nullable Output<Integer> ignoreHeadersRow) {
+            $.ignoreHeadersRow = ignoreHeadersRow;
+            return this;
+        }
+
+        /**
+         * @param ignoreHeadersRow When this value is set to `1`, DMS ignores the first row header in a .csv file. Default is `0`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreHeadersRow(Integer ignoreHeadersRow) {
+            return ignoreHeadersRow(Output.of(ignoreHeadersRow));
+        }
+
+        /**
+         * @param includeOpForFullLoad Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeOpForFullLoad(@Nullable Output<Boolean> includeOpForFullLoad) {
+            $.includeOpForFullLoad = includeOpForFullLoad;
+            return this;
+        }
+
+        /**
+         * @param includeOpForFullLoad Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includeOpForFullLoad(Boolean includeOpForFullLoad) {
+            return includeOpForFullLoad(Output.of(includeOpForFullLoad));
+        }
+
+        /**
+         * @param maxFileSize Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from `1` to `1048576`. Default is `1048576` (1 GB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxFileSize(@Nullable Output<Integer> maxFileSize) {
+            $.maxFileSize = maxFileSize;
+            return this;
+        }
+
+        /**
+         * @param maxFileSize Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from `1` to `1048576`. Default is `1048576` (1 GB).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxFileSize(Integer maxFileSize) {
+            return maxFileSize(Output.of(maxFileSize));
+        }
+
+        /**
+         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is `false`.
          * 
          * @return builder
          * 
@@ -448,7 +1195,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+         * @param parquetTimestampInMillisecond - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is `false`.
          * 
          * @return builder
          * 
@@ -458,7 +1205,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param parquetVersion The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+         * @param parquetVersion Version of the .parquet file format. Default is `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
          * 
          * @return builder
          * 
@@ -469,7 +1216,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param parquetVersion The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+         * @param parquetVersion Version of the .parquet file format. Default is `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
          * 
          * @return builder
          * 
@@ -479,7 +1226,70 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+         * @param preserveTransactions Whether DMS saves the transaction order for a CDC load on the S3 target specified by `cdc_path`. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserveTransactions(@Nullable Output<Boolean> preserveTransactions) {
+            $.preserveTransactions = preserveTransactions;
+            return this;
+        }
+
+        /**
+         * @param preserveTransactions Whether DMS saves the transaction order for a CDC load on the S3 target specified by `cdc_path`. Default is `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserveTransactions(Boolean preserveTransactions) {
+            return preserveTransactions(Output.of(preserveTransactions));
+        }
+
+        /**
+         * @param rfc4180 For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rfc4180(@Nullable Output<Boolean> rfc4180) {
+            $.rfc4180 = rfc4180;
+            return this;
+        }
+
+        /**
+         * @param rfc4180 For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rfc4180(Boolean rfc4180) {
+            return rfc4180(Output.of(rfc4180));
+        }
+
+        /**
+         * @param rowGroupLength Number of rows in a row group. Default is `10000`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rowGroupLength(@Nullable Output<Integer> rowGroupLength) {
+            $.rowGroupLength = rowGroupLength;
+            return this;
+        }
+
+        /**
+         * @param rowGroupLength Number of rows in a row group. Default is `10000`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rowGroupLength(Integer rowGroupLength) {
+            return rowGroupLength(Output.of(rowGroupLength));
+        }
+
+        /**
+         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the ARN for the AWS KMS key.
          * 
          * @return builder
          * 
@@ -490,7 +1300,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
+         * @param serverSideEncryptionKmsKeyId If you set encryptionMode to `SSE_KMS`, set this parameter to the ARN for the AWS KMS key.
          * 
          * @return builder
          * 
@@ -500,7 +1310,7 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 
@@ -511,13 +1321,55 @@ public final class EndpointS3SettingsArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 
          */
         public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             return serviceAccessRoleArn(Output.of(serviceAccessRoleArn));
+        }
+
+        /**
+         * @param timestampColumnName Column to add with timestamp information to the endpoint data for an Amazon S3 target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampColumnName(@Nullable Output<String> timestampColumnName) {
+            $.timestampColumnName = timestampColumnName;
+            return this;
+        }
+
+        /**
+         * @param timestampColumnName Column to add with timestamp information to the endpoint data for an Amazon S3 target.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timestampColumnName(String timestampColumnName) {
+            return timestampColumnName(Output.of(timestampColumnName));
+        }
+
+        /**
+         * @param useCsvNoSupValue Whether to use `csv_no_sup_value` for columns not included in the supplemental log.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useCsvNoSupValue(@Nullable Output<Boolean> useCsvNoSupValue) {
+            $.useCsvNoSupValue = useCsvNoSupValue;
+            return this;
+        }
+
+        /**
+         * @param useCsvNoSupValue Whether to use `csv_no_sup_value` for columns not included in the supplemental log.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useCsvNoSupValue(Boolean useCsvNoSupValue) {
+            return useCsvNoSupValue(Output.of(useCsvNoSupValue));
         }
 
         public EndpointS3SettingsArgs build() {

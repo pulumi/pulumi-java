@@ -16,16 +16,14 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     public static final DomainNameDomainNameConfigurationArgs Empty = new DomainNameDomainNameConfigurationArgs();
 
     /**
-     * The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+     * ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
      * 
      */
     @Import(name="certificateArn", required=true)
     private Output<String> certificateArn;
 
     /**
-     * @return The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-     * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+     * @return ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
      * 
      */
     public Output<String> certificateArn() {
@@ -33,14 +31,14 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     }
 
     /**
-     * The endpoint type. Valid values: `REGIONAL`.
+     * Endpoint type. Valid values: `REGIONAL`.
      * 
      */
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
     /**
-     * @return The endpoint type. Valid values: `REGIONAL`.
+     * @return Endpoint type. Valid values: `REGIONAL`.
      * 
      */
     public Output<String> endpointType() {
@@ -48,14 +46,14 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     }
 
     /**
-     * The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
      */
     @Import(name="hostedZoneId")
     private @Nullable Output<String> hostedZoneId;
 
     /**
-     * @return The Amazon Route 53 Hosted Zone ID of the endpoint.
+     * @return Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
      */
     public Optional<Output<String>> hostedZoneId() {
@@ -63,14 +61,29 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     }
 
     /**
-     * The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    @Import(name="ownershipVerificationCertificateArn")
+    private @Nullable Output<String> ownershipVerificationCertificateArn;
+
+    /**
+     * @return ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    public Optional<Output<String>> ownershipVerificationCertificateArn() {
+        return Optional.ofNullable(this.ownershipVerificationCertificateArn);
+    }
+
+    /**
+     * Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
      */
     @Import(name="securityPolicy", required=true)
     private Output<String> securityPolicy;
 
     /**
-     * @return The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+     * @return Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
      */
     public Output<String> securityPolicy() {
@@ -78,14 +91,14 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
     }
 
     /**
-     * The target domain name.
+     * Target domain name.
      * 
      */
     @Import(name="targetDomainName")
     private @Nullable Output<String> targetDomainName;
 
     /**
-     * @return The target domain name.
+     * @return Target domain name.
      * 
      */
     public Optional<Output<String>> targetDomainName() {
@@ -98,6 +111,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         this.certificateArn = $.certificateArn;
         this.endpointType = $.endpointType;
         this.hostedZoneId = $.hostedZoneId;
+        this.ownershipVerificationCertificateArn = $.ownershipVerificationCertificateArn;
         this.securityPolicy = $.securityPolicy;
         this.targetDomainName = $.targetDomainName;
     }
@@ -121,8 +135,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param certificateArn The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-         * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+         * @param certificateArn ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
          * 
          * @return builder
          * 
@@ -133,8 +146,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param certificateArn The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
-         * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
+         * @param certificateArn ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source. Use the [`aws.acm.Certificate`](https://www.terraform.io/docs/providers/aws/r/acm_certificate.html) resource to configure an ACM certificate.
          * 
          * @return builder
          * 
@@ -144,7 +156,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param endpointType The endpoint type. Valid values: `REGIONAL`.
+         * @param endpointType Endpoint type. Valid values: `REGIONAL`.
          * 
          * @return builder
          * 
@@ -155,7 +167,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param endpointType The endpoint type. Valid values: `REGIONAL`.
+         * @param endpointType Endpoint type. Valid values: `REGIONAL`.
          * 
          * @return builder
          * 
@@ -165,7 +177,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param hostedZoneId The Amazon Route 53 Hosted Zone ID of the endpoint.
+         * @param hostedZoneId Amazon Route 53 Hosted Zone ID of the endpoint.
          * 
          * @return builder
          * 
@@ -176,7 +188,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param hostedZoneId The Amazon Route 53 Hosted Zone ID of the endpoint.
+         * @param hostedZoneId Amazon Route 53 Hosted Zone ID of the endpoint.
          * 
          * @return builder
          * 
@@ -186,7 +198,28 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param securityPolicy The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+         * @param ownershipVerificationCertificateArn ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownershipVerificationCertificateArn(@Nullable Output<String> ownershipVerificationCertificateArn) {
+            $.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+            return this;
+        }
+
+        /**
+         * @param ownershipVerificationCertificateArn ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ownershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+            return ownershipVerificationCertificateArn(Output.of(ownershipVerificationCertificateArn));
+        }
+
+        /**
+         * @param securityPolicy Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
          * 
          * @return builder
          * 
@@ -197,7 +230,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param securityPolicy The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
+         * @param securityPolicy Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
          * 
          * @return builder
          * 
@@ -207,7 +240,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param targetDomainName The target domain name.
+         * @param targetDomainName Target domain name.
          * 
          * @return builder
          * 
@@ -218,7 +251,7 @@ public final class DomainNameDomainNameConfigurationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param targetDomainName The target domain name.
+         * @param targetDomainName Target domain name.
          * 
          * @return builder
          * 

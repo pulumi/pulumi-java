@@ -16,6 +16,11 @@ import java.util.Objects;
 public final class GetImagePipelineResult {
     private final String arn;
     /**
+     * @return Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    private final String containerRecipeArn;
+    /**
      * @return Date the image pipeline was created.
      * 
      */
@@ -56,7 +61,7 @@ public final class GetImagePipelineResult {
      */
     private final String id;
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     private final String imageRecipeArn;
@@ -99,6 +104,7 @@ public final class GetImagePipelineResult {
     @CustomType.Constructor
     private GetImagePipelineResult(
         @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("containerRecipeArn") String containerRecipeArn,
         @CustomType.Parameter("dateCreated") String dateCreated,
         @CustomType.Parameter("dateLastRun") String dateLastRun,
         @CustomType.Parameter("dateNextRun") String dateNextRun,
@@ -116,6 +122,7 @@ public final class GetImagePipelineResult {
         @CustomType.Parameter("status") String status,
         @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
+        this.containerRecipeArn = containerRecipeArn;
         this.dateCreated = dateCreated;
         this.dateLastRun = dateLastRun;
         this.dateNextRun = dateNextRun;
@@ -136,6 +143,13 @@ public final class GetImagePipelineResult {
 
     public String arn() {
         return this.arn;
+    }
+    /**
+     * @return Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public String containerRecipeArn() {
+        return this.containerRecipeArn;
     }
     /**
      * @return Date the image pipeline was created.
@@ -194,7 +208,7 @@ public final class GetImagePipelineResult {
         return this.id;
     }
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     public String imageRecipeArn() {
@@ -260,6 +274,7 @@ public final class GetImagePipelineResult {
 
     public static final class Builder {
         private String arn;
+        private String containerRecipeArn;
         private String dateCreated;
         private String dateLastRun;
         private String dateNextRun;
@@ -284,6 +299,7 @@ public final class GetImagePipelineResult {
         public Builder(GetImagePipelineResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
+    	      this.containerRecipeArn = defaults.containerRecipeArn;
     	      this.dateCreated = defaults.dateCreated;
     	      this.dateLastRun = defaults.dateLastRun;
     	      this.dateNextRun = defaults.dateNextRun;
@@ -304,6 +320,10 @@ public final class GetImagePipelineResult {
 
         public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
+            return this;
+        }
+        public Builder containerRecipeArn(String containerRecipeArn) {
+            this.containerRecipeArn = Objects.requireNonNull(containerRecipeArn);
             return this;
         }
         public Builder dateCreated(String dateCreated) {
@@ -376,7 +396,7 @@ public final class GetImagePipelineResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }        public GetImagePipelineResult build() {
-            return new GetImagePipelineResult(arn, dateCreated, dateLastRun, dateNextRun, dateUpdated, description, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, platform, schedules, status, tags);
+            return new GetImagePipelineResult(arn, containerRecipeArn, dateCreated, dateLastRun, dateNextRun, dateUpdated, description, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, platform, schedules, status, tags);
         }
     }
 }

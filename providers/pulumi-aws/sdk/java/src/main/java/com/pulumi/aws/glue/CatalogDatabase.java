@@ -6,12 +6,14 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.glue.CatalogDatabaseArgs;
 import com.pulumi.aws.glue.inputs.CatalogDatabaseState;
+import com.pulumi.aws.glue.outputs.CatalogDatabaseCreateTableDefaultPermission;
 import com.pulumi.aws.glue.outputs.CatalogDatabaseTargetDatabase;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -59,6 +61,20 @@ public class CatalogDatabase extends com.pulumi.resources.CustomResource {
      */
     public Output<String> catalogId() {
         return this.catalogId;
+    }
+    /**
+     * Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+     * 
+     */
+    @Export(name="createTableDefaultPermissions", type=List.class, parameters={CatalogDatabaseCreateTableDefaultPermission.class})
+    private Output<List<CatalogDatabaseCreateTableDefaultPermission>> createTableDefaultPermissions;
+
+    /**
+     * @return Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+     * 
+     */
+    public Output<List<CatalogDatabaseCreateTableDefaultPermission>> createTableDefaultPermissions() {
+        return this.createTableDefaultPermissions;
     }
     /**
      * Description of the database.

@@ -19,37 +19,37 @@ public final class EndpointKafkaSettings {
      */
     private final String broker;
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeControlDetails;
     /**
-     * @return Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeNullAndEmpty;
     /**
-     * @return Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     private final @Nullable Boolean includePartitionValue;
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeTableAlterOperations;
     /**
-     * @return Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     private final @Nullable Boolean includeTransactionDetails;
     /**
-     * @return The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     private final @Nullable String messageFormat;
     /**
-     * @return The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+     * @return Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
      * 
      */
     private final @Nullable Integer messageMaxBytes;
@@ -59,17 +59,17 @@ public final class EndpointKafkaSettings {
      */
     private final @Nullable Boolean noHexPrefix;
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     private final @Nullable Boolean partitionIncludeSchemaTable;
     /**
-     * @return The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     private final @Nullable String saslPassword;
     /**
-     * @return The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     private final @Nullable String saslUsername;
@@ -79,27 +79,27 @@ public final class EndpointKafkaSettings {
      */
     private final @Nullable String securityProtocol;
     /**
-     * @return The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+     * @return ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
      */
     private final @Nullable String sslCaCertificateArn;
     /**
-     * @return The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+     * @return ARN of the client certificate used to securely connect to a Kafka target endpoint.
      * 
      */
     private final @Nullable String sslClientCertificateArn;
     /**
-     * @return The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+     * @return ARN for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     private final @Nullable String sslClientKeyArn;
     /**
-     * @return The password for the client private key used to securely connect to a Kafka target endpoint.
+     * @return Password for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     private final @Nullable String sslClientKeyPassword;
     /**
-     * @return Kafka topic for migration. Defaults to `kafka-default-topic`.
+     * @return Kafka topic for migration. Default is `kafka-default-topic`.
      * 
      */
     private final @Nullable String topic;
@@ -152,49 +152,49 @@ public final class EndpointKafkaSettings {
         return this.broker;
     }
     /**
-     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
+     * @return Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. Default is `false`.
      * 
      */
     public Optional<Boolean> includeControlDetails() {
         return Optional.ofNullable(this.includeControlDetails);
     }
     /**
-     * @return Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
+     * @return Include NULL and empty columns in the target. Default is `false`.
      * 
      */
     public Optional<Boolean> includeNullAndEmpty() {
         return Optional.ofNullable(this.includeNullAndEmpty);
     }
     /**
-     * @return Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
+     * @return Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. Default is `false`.
      * 
      */
     public Optional<Boolean> includePartitionValue() {
         return Optional.ofNullable(this.includePartitionValue);
     }
     /**
-     * @return Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
+     * @return Includes any data definition language (DDL) operations that change the table in the control data. Default is `false`.
      * 
      */
     public Optional<Boolean> includeTableAlterOperations() {
         return Optional.ofNullable(this.includeTableAlterOperations);
     }
     /**
-     * @return Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
+     * @return Provides detailed transaction information from the source database. Default is `false`.
      * 
      */
     public Optional<Boolean> includeTransactionDetails() {
         return Optional.ofNullable(this.includeTransactionDetails);
     }
     /**
-     * @return The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
+     * @return Output format for the records created. Default is `json`. Valid values are `json` and `json-unformatted` (a single line with no tab).
      * 
      */
     public Optional<String> messageFormat() {
         return Optional.ofNullable(this.messageFormat);
     }
     /**
-     * @return The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
+     * @return Maximum size in bytes for records created on the endpoint Default is `1,000,000`.
      * 
      */
     public Optional<Integer> messageMaxBytes() {
@@ -208,21 +208,21 @@ public final class EndpointKafkaSettings {
         return Optional.ofNullable(this.noHexPrefix);
     }
     /**
-     * @return Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
+     * @return Prefixes schema and table names to partition values, when the partition type is primary-key-type. Default is `false`.
      * 
      */
     public Optional<Boolean> partitionIncludeSchemaTable() {
         return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
     /**
-     * @return The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     public Optional<String> saslPassword() {
         return Optional.ofNullable(this.saslPassword);
     }
     /**
-     * @return The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
+     * @return Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
     public Optional<String> saslUsername() {
@@ -236,35 +236,35 @@ public final class EndpointKafkaSettings {
         return Optional.ofNullable(this.securityProtocol);
     }
     /**
-     * @return The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
+     * @return ARN for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
      */
     public Optional<String> sslCaCertificateArn() {
         return Optional.ofNullable(this.sslCaCertificateArn);
     }
     /**
-     * @return The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
+     * @return ARN of the client certificate used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<String> sslClientCertificateArn() {
         return Optional.ofNullable(this.sslClientCertificateArn);
     }
     /**
-     * @return The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
+     * @return ARN for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<String> sslClientKeyArn() {
         return Optional.ofNullable(this.sslClientKeyArn);
     }
     /**
-     * @return The password for the client private key used to securely connect to a Kafka target endpoint.
+     * @return Password for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
     public Optional<String> sslClientKeyPassword() {
         return Optional.ofNullable(this.sslClientKeyPassword);
     }
     /**
-     * @return Kafka topic for migration. Defaults to `kafka-default-topic`.
+     * @return Kafka topic for migration. Default is `kafka-default-topic`.
      * 
      */
     public Optional<String> topic() {

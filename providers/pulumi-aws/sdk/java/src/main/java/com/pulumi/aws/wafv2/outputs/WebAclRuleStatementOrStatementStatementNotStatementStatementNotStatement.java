@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatement {
     /**
-     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * @return Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     private final List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatement> statements;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
     }
 
     /**
-     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * @return Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     public List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatement> statements() {

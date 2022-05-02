@@ -290,14 +290,14 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     @Import(name="objectAcl")
     private @Nullable Output<String> objectAcl;
 
     /**
-     * @return Access Control List permission for S3 bucket objects. Defaults to `private`.
+     * @return Access Control List permission for S3 objects. Defaults to `private`.
      * 
      */
     public Optional<Output<String>> objectAcl() {
@@ -905,7 +905,7 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objectAcl Access Control List permission for S3 bucket objects. Defaults to `private`.
+         * @param objectAcl Access Control List permission for S3 objects. Defaults to `private`.
          * 
          * @return builder
          * 
@@ -916,7 +916,7 @@ public final class SmbFileShareState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param objectAcl Access Control List permission for S3 bucket objects. Defaults to `private`.
+         * @param objectAcl Access Control List permission for S3 objects. Defaults to `private`.
          * 
          * @return builder
          * 

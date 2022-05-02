@@ -37,6 +37,54 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return Codegen.optional(this.accessKey);
     }
     /**
+     * File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+     * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+     * 
+     */
+    @Export(name="customCaBundle", type=String.class, parameters={})
+    private Output</* @Nullable */ String> customCaBundle;
+
+    /**
+     * @return File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+     * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+     * 
+     */
+    public Output<Optional<String>> customCaBundle() {
+        return Codegen.optional(this.customCaBundle);
+    }
+    /**
+     * Address of the EC2 metadata service endpoint to use. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+     * 
+     */
+    @Export(name="ec2MetadataServiceEndpoint", type=String.class, parameters={})
+    private Output</* @Nullable */ String> ec2MetadataServiceEndpoint;
+
+    /**
+     * @return Address of the EC2 metadata service endpoint to use. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+     * 
+     */
+    public Output<Optional<String>> ec2MetadataServiceEndpoint() {
+        return Codegen.optional(this.ec2MetadataServiceEndpoint);
+    }
+    /**
+     * Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+     * 
+     */
+    @Export(name="ec2MetadataServiceEndpointMode", type=String.class, parameters={})
+    private Output</* @Nullable */ String> ec2MetadataServiceEndpointMode;
+
+    /**
+     * @return Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+     * 
+     */
+    public Output<Optional<String>> ec2MetadataServiceEndpointMode() {
+        return Codegen.optional(this.ec2MetadataServiceEndpointMode);
+    }
+    /**
      * The address of an HTTP proxy to use when accessing the AWS API. Can also be configured using the `HTTP_PROXY` or
      * `HTTPS_PROXY` environment variables.
      * 
@@ -95,18 +143,36 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return Codegen.optional(this.secretKey);
     }
     /**
-     * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+     * The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
+     * 
+     * @deprecated
+     * Use shared_credentials_files instead.
      * 
      */
+    @Deprecated /* Use shared_credentials_files instead. */
     @Export(name="sharedCredentialsFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedCredentialsFile;
 
     /**
-     * @return The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+     * @return The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
      * 
      */
     public Output<Optional<String>> sharedCredentialsFile() {
         return Codegen.optional(this.sharedCredentialsFile);
+    }
+    /**
+     * The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+     * 
+     */
+    @Export(name="stsRegion", type=String.class, parameters={})
+    private Output</* @Nullable */ String> stsRegion;
+
+    /**
+     * @return The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+     * 
+     */
+    public Output<Optional<String>> stsRegion() {
+        return Codegen.optional(this.stsRegion);
     }
     /**
      * session token. A session token is only required if you are using temporary security credentials.

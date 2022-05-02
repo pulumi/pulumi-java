@@ -30,17 +30,17 @@ public final class GetTransitGatewayResult {
      */
     private final String associationDefaultRouteTableId;
     /**
-     * @return Whether resource attachment requests are automatically accepted.
+     * @return Whether resource attachment requests are automatically accepted
      * 
      */
     private final String autoAcceptSharedAttachments;
     /**
-     * @return Whether resource attachments are automatically associated with the default association route table.
+     * @return Whether resource attachments are automatically associated with the default association route table
      * 
      */
     private final String defaultRouteTableAssociation;
     /**
-     * @return Whether resource attachments automatically propagate routes to the default propagation route table.
+     * @return Whether resource attachments automatically propagate routes to the default propagation route table
      * 
      */
     private final String defaultRouteTablePropagation;
@@ -50,7 +50,7 @@ public final class GetTransitGatewayResult {
      */
     private final String description;
     /**
-     * @return Whether DNS support is enabled.
+     * @return Whether DNS support is enabled
      * 
      */
     private final String dnsSupport;
@@ -61,12 +61,17 @@ public final class GetTransitGatewayResult {
      */
     private final String id;
     /**
+     * @return Whether Multicast support is enabled
+     * 
+     */
+    private final String multicastSupport;
+    /**
      * @return Identifier of the AWS account that owns the EC2 Transit Gateway
      * 
      */
     private final String ownerId;
     /**
-     * @return Identifier of the default propagation route table.
+     * @return Identifier of the default propagation route table
      * 
      */
     private final String propagationDefaultRouteTableId;
@@ -76,7 +81,12 @@ public final class GetTransitGatewayResult {
      */
     private final Map<String,String> tags;
     /**
-     * @return Whether VPN Equal Cost Multipath Protocol support is enabled.
+     * @return The list of associated CIDR blocks
+     * 
+     */
+    private final List<String> transitGatewayCidrBlocks;
+    /**
+     * @return Whether VPN Equal Cost Multipath Protocol support is enabled
      * 
      */
     private final String vpnEcmpSupport;
@@ -93,9 +103,11 @@ public final class GetTransitGatewayResult {
         @CustomType.Parameter("dnsSupport") String dnsSupport,
         @CustomType.Parameter("filters") @Nullable List<GetTransitGatewayFilter> filters,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("multicastSupport") String multicastSupport,
         @CustomType.Parameter("ownerId") String ownerId,
         @CustomType.Parameter("propagationDefaultRouteTableId") String propagationDefaultRouteTableId,
         @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("transitGatewayCidrBlocks") List<String> transitGatewayCidrBlocks,
         @CustomType.Parameter("vpnEcmpSupport") String vpnEcmpSupport) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
@@ -107,9 +119,11 @@ public final class GetTransitGatewayResult {
         this.dnsSupport = dnsSupport;
         this.filters = filters;
         this.id = id;
+        this.multicastSupport = multicastSupport;
         this.ownerId = ownerId;
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         this.tags = tags;
+        this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
         this.vpnEcmpSupport = vpnEcmpSupport;
     }
 
@@ -135,21 +149,21 @@ public final class GetTransitGatewayResult {
         return this.associationDefaultRouteTableId;
     }
     /**
-     * @return Whether resource attachment requests are automatically accepted.
+     * @return Whether resource attachment requests are automatically accepted
      * 
      */
     public String autoAcceptSharedAttachments() {
         return this.autoAcceptSharedAttachments;
     }
     /**
-     * @return Whether resource attachments are automatically associated with the default association route table.
+     * @return Whether resource attachments are automatically associated with the default association route table
      * 
      */
     public String defaultRouteTableAssociation() {
         return this.defaultRouteTableAssociation;
     }
     /**
-     * @return Whether resource attachments automatically propagate routes to the default propagation route table.
+     * @return Whether resource attachments automatically propagate routes to the default propagation route table
      * 
      */
     public String defaultRouteTablePropagation() {
@@ -163,7 +177,7 @@ public final class GetTransitGatewayResult {
         return this.description;
     }
     /**
-     * @return Whether DNS support is enabled.
+     * @return Whether DNS support is enabled
      * 
      */
     public String dnsSupport() {
@@ -180,6 +194,13 @@ public final class GetTransitGatewayResult {
         return this.id;
     }
     /**
+     * @return Whether Multicast support is enabled
+     * 
+     */
+    public String multicastSupport() {
+        return this.multicastSupport;
+    }
+    /**
      * @return Identifier of the AWS account that owns the EC2 Transit Gateway
      * 
      */
@@ -187,7 +208,7 @@ public final class GetTransitGatewayResult {
         return this.ownerId;
     }
     /**
-     * @return Identifier of the default propagation route table.
+     * @return Identifier of the default propagation route table
      * 
      */
     public String propagationDefaultRouteTableId() {
@@ -201,7 +222,14 @@ public final class GetTransitGatewayResult {
         return this.tags;
     }
     /**
-     * @return Whether VPN Equal Cost Multipath Protocol support is enabled.
+     * @return The list of associated CIDR blocks
+     * 
+     */
+    public List<String> transitGatewayCidrBlocks() {
+        return this.transitGatewayCidrBlocks;
+    }
+    /**
+     * @return Whether VPN Equal Cost Multipath Protocol support is enabled
      * 
      */
     public String vpnEcmpSupport() {
@@ -227,9 +255,11 @@ public final class GetTransitGatewayResult {
         private String dnsSupport;
         private @Nullable List<GetTransitGatewayFilter> filters;
         private String id;
+        private String multicastSupport;
         private String ownerId;
         private String propagationDefaultRouteTableId;
         private Map<String,String> tags;
+        private List<String> transitGatewayCidrBlocks;
         private String vpnEcmpSupport;
 
         public Builder() {
@@ -248,9 +278,11 @@ public final class GetTransitGatewayResult {
     	      this.dnsSupport = defaults.dnsSupport;
     	      this.filters = defaults.filters;
     	      this.id = defaults.id;
+    	      this.multicastSupport = defaults.multicastSupport;
     	      this.ownerId = defaults.ownerId;
     	      this.propagationDefaultRouteTableId = defaults.propagationDefaultRouteTableId;
     	      this.tags = defaults.tags;
+    	      this.transitGatewayCidrBlocks = defaults.transitGatewayCidrBlocks;
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
@@ -297,6 +329,10 @@ public final class GetTransitGatewayResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
+        public Builder multicastSupport(String multicastSupport) {
+            this.multicastSupport = Objects.requireNonNull(multicastSupport);
+            return this;
+        }
         public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
@@ -309,11 +345,18 @@ public final class GetTransitGatewayResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
+        public Builder transitGatewayCidrBlocks(List<String> transitGatewayCidrBlocks) {
+            this.transitGatewayCidrBlocks = Objects.requireNonNull(transitGatewayCidrBlocks);
+            return this;
+        }
+        public Builder transitGatewayCidrBlocks(String... transitGatewayCidrBlocks) {
+            return transitGatewayCidrBlocks(List.of(transitGatewayCidrBlocks));
+        }
         public Builder vpnEcmpSupport(String vpnEcmpSupport) {
             this.vpnEcmpSupport = Objects.requireNonNull(vpnEcmpSupport);
             return this;
         }        public GetTransitGatewayResult build() {
-            return new GetTransitGatewayResult(amazonSideAsn, arn, associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, filters, id, ownerId, propagationDefaultRouteTableId, tags, vpnEcmpSupport);
+            return new GetTransitGatewayResult(amazonSideAsn, arn, associationDefaultRouteTableId, autoAcceptSharedAttachments, defaultRouteTableAssociation, defaultRouteTablePropagation, description, dnsSupport, filters, id, multicastSupport, ownerId, propagationDefaultRouteTableId, tags, transitGatewayCidrBlocks, vpnEcmpSupport);
         }
     }
 }

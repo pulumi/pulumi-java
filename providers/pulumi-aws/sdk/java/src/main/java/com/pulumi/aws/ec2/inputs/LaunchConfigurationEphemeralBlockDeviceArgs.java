@@ -5,8 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class LaunchConfigurationEphemeralBlockDeviceArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,17 +23,25 @@ public final class LaunchConfigurationEphemeralBlockDeviceArgs extends com.pulum
         return this.deviceName;
     }
 
-    @Import(name="virtualName", required=true)
-    private Output<String> virtualName;
+    @Import(name="noDevice")
+    private @Nullable Output<Boolean> noDevice;
 
-    public Output<String> virtualName() {
-        return this.virtualName;
+    public Optional<Output<Boolean>> noDevice() {
+        return Optional.ofNullable(this.noDevice);
+    }
+
+    @Import(name="virtualName")
+    private @Nullable Output<String> virtualName;
+
+    public Optional<Output<String>> virtualName() {
+        return Optional.ofNullable(this.virtualName);
     }
 
     private LaunchConfigurationEphemeralBlockDeviceArgs() {}
 
     private LaunchConfigurationEphemeralBlockDeviceArgs(LaunchConfigurationEphemeralBlockDeviceArgs $) {
         this.deviceName = $.deviceName;
+        this.noDevice = $.noDevice;
         this.virtualName = $.virtualName;
     }
 
@@ -61,7 +72,16 @@ public final class LaunchConfigurationEphemeralBlockDeviceArgs extends com.pulum
             return deviceName(Output.of(deviceName));
         }
 
-        public Builder virtualName(Output<String> virtualName) {
+        public Builder noDevice(@Nullable Output<Boolean> noDevice) {
+            $.noDevice = noDevice;
+            return this;
+        }
+
+        public Builder noDevice(Boolean noDevice) {
+            return noDevice(Output.of(noDevice));
+        }
+
+        public Builder virtualName(@Nullable Output<String> virtualName) {
             $.virtualName = virtualName;
             return this;
         }
@@ -72,7 +92,6 @@ public final class LaunchConfigurationEphemeralBlockDeviceArgs extends com.pulum
 
         public LaunchConfigurationEphemeralBlockDeviceArgs build() {
             $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
-            $.virtualName = Objects.requireNonNull($.virtualName, "expected parameter 'virtualName' to be non-null");
             return $;
         }
     }

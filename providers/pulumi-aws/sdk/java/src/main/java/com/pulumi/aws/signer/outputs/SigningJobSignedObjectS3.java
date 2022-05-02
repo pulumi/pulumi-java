@@ -17,7 +17,7 @@ public final class SigningJobSignedObjectS3 {
      */
     private final @Nullable String bucket;
     /**
-     * @return Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the object that contains your unsigned code.
      * 
      */
     private final @Nullable String key;
@@ -38,7 +38,7 @@ public final class SigningJobSignedObjectS3 {
         return Optional.ofNullable(this.bucket);
     }
     /**
-     * @return Key name of the bucket object that contains your unsigned code.
+     * @return Key name of the object that contains your unsigned code.
      * 
      */
     public Optional<String> key() {

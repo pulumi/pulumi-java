@@ -46,9 +46,17 @@ public class ClusterEndpoint extends com.pulumi.resources.CustomResource {
     public Output<String> arn() {
         return this.arn;
     }
+    /**
+     * The identifier of the endpoint.
+     * 
+     */
     @Export(name="clusterEndpointIdentifier", type=String.class, parameters={})
     private Output<String> clusterEndpointIdentifier;
 
+    /**
+     * @return The identifier of the endpoint.
+     * 
+     */
     public Output<String> clusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
     }

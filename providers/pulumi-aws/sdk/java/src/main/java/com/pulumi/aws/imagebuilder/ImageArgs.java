@@ -19,6 +19,21 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     public static final ImageArgs Empty = new ImageArgs();
 
     /**
+     * - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    @Import(name="containerRecipeArn")
+    private @Nullable Output<String> containerRecipeArn;
+
+    /**
+     * @return - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public Optional<Output<String>> containerRecipeArn() {
+        return Optional.ofNullable(this.containerRecipeArn);
+    }
+
+    /**
      * Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
      */
@@ -49,18 +64,18 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    @Import(name="imageRecipeArn", required=true)
-    private Output<String> imageRecipeArn;
+    @Import(name="imageRecipeArn")
+    private @Nullable Output<String> imageRecipeArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    public Output<String> imageRecipeArn() {
-        return this.imageRecipeArn;
+    public Optional<Output<String>> imageRecipeArn() {
+        return Optional.ofNullable(this.imageRecipeArn);
     }
 
     /**
@@ -111,6 +126,7 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     private ImageArgs() {}
 
     private ImageArgs(ImageArgs $) {
+        this.containerRecipeArn = $.containerRecipeArn;
         this.distributionConfigurationArn = $.distributionConfigurationArn;
         this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
         this.imageRecipeArn = $.imageRecipeArn;
@@ -135,6 +151,27 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ImageArgs defaults) {
             $ = new ImageArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param containerRecipeArn - Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
+            $.containerRecipeArn = containerRecipeArn;
+            return this;
+        }
+
+        /**
+         * @param containerRecipeArn - Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(String containerRecipeArn) {
+            return containerRecipeArn(Output.of(containerRecipeArn));
         }
 
         /**
@@ -180,18 +217,18 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 
          */
-        public Builder imageRecipeArn(Output<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             $.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 
@@ -264,7 +301,6 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ImageArgs build() {
-            $.imageRecipeArn = Objects.requireNonNull($.imageRecipeArn, "expected parameter 'imageRecipeArn' to be non-null");
             $.infrastructureConfigurationArn = Objects.requireNonNull($.infrastructureConfigurationArn, "expected parameter 'infrastructureConfigurationArn' to be non-null");
             return $;
         }

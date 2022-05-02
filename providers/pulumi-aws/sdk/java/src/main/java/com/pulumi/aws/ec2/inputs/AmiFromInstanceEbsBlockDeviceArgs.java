@@ -82,6 +82,21 @@ public final class AmiFromInstanceEbsBlockDeviceArgs extends com.pulumi.resource
     }
 
     /**
+     * The ARN of the Outpost on which the snapshot is stored.
+     * 
+     */
+    @Import(name="outpostArn")
+    private @Nullable Output<String> outpostArn;
+
+    /**
+     * @return The ARN of the Outpost on which the snapshot is stored.
+     * 
+     */
+    public Optional<Output<String>> outpostArn() {
+        return Optional.ofNullable(this.outpostArn);
+    }
+
+    /**
      * The id of an EBS snapshot that will be used to initialize the created
      * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
      * snapshot.
@@ -156,6 +171,7 @@ public final class AmiFromInstanceEbsBlockDeviceArgs extends com.pulumi.resource
         this.deviceName = $.deviceName;
         this.encrypted = $.encrypted;
         this.iops = $.iops;
+        this.outpostArn = $.outpostArn;
         this.snapshotId = $.snapshotId;
         this.throughput = $.throughput;
         this.volumeSize = $.volumeSize;
@@ -266,6 +282,27 @@ public final class AmiFromInstanceEbsBlockDeviceArgs extends com.pulumi.resource
          */
         public Builder iops(Integer iops) {
             return iops(Output.of(iops));
+        }
+
+        /**
+         * @param outpostArn The ARN of the Outpost on which the snapshot is stored.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outpostArn(@Nullable Output<String> outpostArn) {
+            $.outpostArn = outpostArn;
+            return this;
+        }
+
+        /**
+         * @param outpostArn The ARN of the Outpost on which the snapshot is stored.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outpostArn(String outpostArn) {
+            return outpostArn(Output.of(outpostArn));
         }
 
         /**

@@ -4,6 +4,7 @@
 package com.pulumi.aws.elasticache.inputs;
 
 import com.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeArgs;
+import com.pulumi.aws.elasticache.inputs.ReplicationGroupLogDeliveryConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -81,14 +82,18 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+     * Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
      * 
      */
     @Import(name="autoMinorVersionUpgrade")
     private @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     /**
-     * @return Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+     * @return Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
      * 
      */
     public Optional<Output<Boolean>> autoMinorVersionUpgrade() {
@@ -111,14 +116,14 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+     * List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not considered.
      * 
      */
     @Import(name="availabilityZones")
     private @Nullable Output<List<String>> availabilityZones;
 
     /**
-     * @return List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+     * @return List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not considered.
      * 
      */
     public Optional<Output<List<String>>> availabilityZones() {
@@ -143,14 +148,22 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     /**
      * Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
      * 
+     * @deprecated
+     * Use num_node_groups and replicas_per_node_group instead
+     * 
      */
+    @Deprecated /* Use num_node_groups and replicas_per_node_group instead */
     @Import(name="clusterMode")
     private @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
 
     /**
      * @return Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
      * 
+     * @deprecated
+     * Use num_node_groups and replicas_per_node_group instead
+     * 
      */
+    @Deprecated /* Use num_node_groups and replicas_per_node_group instead */
     public Optional<Output<ReplicationGroupClusterModeArgs>> clusterMode() {
         return Optional.ofNullable(this.clusterMode);
     }
@@ -186,6 +199,21 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * User-created description for the replication group. Must not be empty.
+     * 
+     */
+    @Import(name="description")
+    private @Nullable Output<String> description;
+
+    /**
+     * @return User-created description for the replication group. Must not be empty.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
+    }
+
+    /**
      * Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
      * 
      */
@@ -201,14 +229,14 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
      * 
      */
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
     /**
-     * @return Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * @return Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
      * 
      */
     public Optional<Output<String>> engineVersion() {
@@ -246,14 +274,14 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+     * The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter (or the `num_node_groups` parameter of the deprecated `cluster_mode` block) cannot be set.
      * 
      */
     @Import(name="globalReplicationGroupId")
     private @Nullable Output<String> globalReplicationGroupId;
 
     /**
-     * @return The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+     * @return The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter (or the `num_node_groups` parameter of the deprecated `cluster_mode` block) cannot be set.
      * 
      */
     public Optional<Output<String>> globalReplicationGroupId() {
@@ -273,6 +301,21 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
      */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
+    }
+
+    /**
+     * Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See Log Delivery Configuration below for more details.
+     * 
+     */
+    @Import(name="logDeliveryConfigurations")
+    private @Nullable Output<List<ReplicationGroupLogDeliveryConfigurationArgs>> logDeliveryConfigurations;
+
+    /**
+     * @return Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See Log Delivery Configuration below for more details.
+     * 
+     */
+    public Optional<Output<List<ReplicationGroupLogDeliveryConfigurationArgs>>> logDeliveryConfigurations() {
+        return Optional.ofNullable(this.logDeliveryConfigurations);
     }
 
     /**
@@ -351,16 +394,54 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+     * Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_node_groups`, the deprecated`number_cache_clusters`, or the deprecated `cluster_mode`. Defaults to `1`.
      * 
      */
+    @Import(name="numCacheClusters")
+    private @Nullable Output<Integer> numCacheClusters;
+
+    /**
+     * @return Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_node_groups`, the deprecated`number_cache_clusters`, or the deprecated `cluster_mode`. Defaults to `1`.
+     * 
+     */
+    public Optional<Output<Integer>> numCacheClusters() {
+        return Optional.ofNullable(this.numCacheClusters);
+    }
+
+    /**
+     * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+     * 
+     */
+    @Import(name="numNodeGroups")
+    private @Nullable Output<Integer> numNodeGroups;
+
+    /**
+     * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+     * 
+     */
+    public Optional<Output<Integer>> numNodeGroups() {
+        return Optional.ofNullable(this.numNodeGroups);
+    }
+
+    /**
+     * Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_cache_clusters`, `num_node_groups`, or the deprecated `cluster_mode`. Defaults to `1`.
+     * 
+     * @deprecated
+     * Use num_cache_clusters instead
+     * 
+     */
+    @Deprecated /* Use num_cache_clusters instead */
     @Import(name="numberCacheClusters")
     private @Nullable Output<Integer> numberCacheClusters;
 
     /**
-     * @return Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+     * @return Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_cache_clusters`, `num_node_groups`, or the deprecated `cluster_mode`. Defaults to `1`.
+     * 
+     * @deprecated
+     * Use num_cache_clusters instead
      * 
      */
+    @Deprecated /* Use num_cache_clusters instead */
     public Optional<Output<Integer>> numberCacheClusters() {
         return Optional.ofNullable(this.numberCacheClusters);
     }
@@ -396,6 +477,21 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
+     * List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is considered. The first item in the list will be the primary node. Ignored when updating.
+     * 
+     */
+    @Import(name="preferredCacheClusterAzs")
+    private @Nullable Output<List<String>> preferredCacheClusterAzs;
+
+    /**
+     * @return List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is considered. The first item in the list will be the primary node. Ignored when updating.
+     * 
+     */
+    public Optional<Output<List<String>>> preferredCacheClusterAzs() {
+        return Optional.ofNullable(this.preferredCacheClusterAzs);
+    }
+
+    /**
      * (Redis only) Address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
      * 
      */
@@ -426,16 +522,39 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * User-created description for the replication group.
+     * Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
      */
+    @Import(name="replicasPerNodeGroup")
+    private @Nullable Output<Integer> replicasPerNodeGroup;
+
+    /**
+     * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+     * 
+     */
+    public Optional<Output<Integer>> replicasPerNodeGroup() {
+        return Optional.ofNullable(this.replicasPerNodeGroup);
+    }
+
+    /**
+     * User-created description for the replication group. Must not be empty.
+     * 
+     * @deprecated
+     * Use description instead
+     * 
+     */
+    @Deprecated /* Use description instead */
     @Import(name="replicationGroupDescription")
     private @Nullable Output<String> replicationGroupDescription;
 
     /**
-     * @return User-created description for the replication group.
+     * @return User-created description for the replication group. Must not be empty.
+     * 
+     * @deprecated
+     * Use description instead
      * 
      */
+    @Deprecated /* Use description instead */
     public Optional<Output<String>> replicationGroupDescription() {
         return Optional.ofNullable(this.replicationGroupDescription);
     }
@@ -618,22 +737,28 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         this.clusterMode = $.clusterMode;
         this.configurationEndpointAddress = $.configurationEndpointAddress;
         this.dataTieringEnabled = $.dataTieringEnabled;
+        this.description = $.description;
         this.engine = $.engine;
         this.engineVersion = $.engineVersion;
         this.engineVersionActual = $.engineVersionActual;
         this.finalSnapshotIdentifier = $.finalSnapshotIdentifier;
         this.globalReplicationGroupId = $.globalReplicationGroupId;
         this.kmsKeyId = $.kmsKeyId;
+        this.logDeliveryConfigurations = $.logDeliveryConfigurations;
         this.maintenanceWindow = $.maintenanceWindow;
         this.memberClusters = $.memberClusters;
         this.multiAzEnabled = $.multiAzEnabled;
         this.nodeType = $.nodeType;
         this.notificationTopicArn = $.notificationTopicArn;
+        this.numCacheClusters = $.numCacheClusters;
+        this.numNodeGroups = $.numNodeGroups;
         this.numberCacheClusters = $.numberCacheClusters;
         this.parameterGroupName = $.parameterGroupName;
         this.port = $.port;
+        this.preferredCacheClusterAzs = $.preferredCacheClusterAzs;
         this.primaryEndpointAddress = $.primaryEndpointAddress;
         this.readerEndpointAddress = $.readerEndpointAddress;
+        this.replicasPerNodeGroup = $.replicasPerNodeGroup;
         this.replicationGroupDescription = $.replicationGroupDescription;
         this.replicationGroupId = $.replicationGroupId;
         this.securityGroupIds = $.securityGroupIds;
@@ -752,7 +877,9 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param autoMinorVersionUpgrade Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+         * @param autoMinorVersionUpgrade Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+         * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+         * Defaults to `true`.
          * 
          * @return builder
          * 
@@ -763,7 +890,9 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param autoMinorVersionUpgrade Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
+         * @param autoMinorVersionUpgrade Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+         * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+         * Defaults to `true`.
          * 
          * @return builder
          * 
@@ -794,7 +923,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not considered.
          * 
          * @return builder
          * 
@@ -805,7 +934,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not considered.
          * 
          * @return builder
          * 
@@ -815,7 +944,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not important.
+         * @param availabilityZones List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is not considered.
          * 
          * @return builder
          * 
@@ -850,7 +979,11 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use num_node_groups and replicas_per_node_group instead
+         * 
          */
+        @Deprecated /* Use num_node_groups and replicas_per_node_group instead */
         public Builder clusterMode(@Nullable Output<ReplicationGroupClusterModeArgs> clusterMode) {
             $.clusterMode = clusterMode;
             return this;
@@ -861,7 +994,11 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use num_node_groups and replicas_per_node_group instead
+         * 
          */
+        @Deprecated /* Use num_node_groups and replicas_per_node_group instead */
         public Builder clusterMode(ReplicationGroupClusterModeArgs clusterMode) {
             return clusterMode(Output.of(clusterMode));
         }
@@ -909,6 +1046,27 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
+         * @param description User-created description for the replication group. Must not be empty.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(@Nullable Output<String> description) {
+            $.description = description;
+            return this;
+        }
+
+        /**
+         * @param description User-created description for the replication group. Must not be empty.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        /**
          * @param engine Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
          * 
          * @return builder
@@ -930,7 +1088,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
          * 
          * @return builder
          * 
@@ -941,7 +1099,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * @param engineVersion Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, see Attributes Reference below.
          * 
          * @return builder
          * 
@@ -993,7 +1151,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter (or the `num_node_groups` parameter of the deprecated `cluster_mode` block) cannot be set.
          * 
          * @return builder
          * 
@@ -1004,7 +1162,7 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
+         * @param globalReplicationGroupId The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter (or the `num_node_groups` parameter of the deprecated `cluster_mode` block) cannot be set.
          * 
          * @return builder
          * 
@@ -1032,6 +1190,37 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
          */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(@Nullable Output<List<ReplicationGroupLogDeliveryConfigurationArgs>> logDeliveryConfigurations) {
+            $.logDeliveryConfigurations = logDeliveryConfigurations;
+            return this;
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(List<ReplicationGroupLogDeliveryConfigurationArgs> logDeliveryConfigurations) {
+            return logDeliveryConfigurations(Output.of(logDeliveryConfigurations));
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(ReplicationGroupLogDeliveryConfigurationArgs... logDeliveryConfigurations) {
+            return logDeliveryConfigurations(List.of(logDeliveryConfigurations));
         }
 
         /**
@@ -1150,22 +1339,72 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+         * @param numCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_node_groups`, the deprecated`number_cache_clusters`, or the deprecated `cluster_mode`. Defaults to `1`.
          * 
          * @return builder
          * 
          */
+        public Builder numCacheClusters(@Nullable Output<Integer> numCacheClusters) {
+            $.numCacheClusters = numCacheClusters;
+            return this;
+        }
+
+        /**
+         * @param numCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_node_groups`, the deprecated`number_cache_clusters`, or the deprecated `cluster_mode`. Defaults to `1`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder numCacheClusters(Integer numCacheClusters) {
+            return numCacheClusters(Output.of(numCacheClusters));
+        }
+
+        /**
+         * @param numNodeGroups Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder numNodeGroups(@Nullable Output<Integer> numNodeGroups) {
+            $.numNodeGroups = numNodeGroups;
+            return this;
+        }
+
+        /**
+         * @param numNodeGroups Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder numNodeGroups(Integer numNodeGroups) {
+            return numNodeGroups(Output.of(numNodeGroups));
+        }
+
+        /**
+         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_cache_clusters`, `num_node_groups`, or the deprecated `cluster_mode`. Defaults to `1`.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use num_cache_clusters instead
+         * 
+         */
+        @Deprecated /* Use num_cache_clusters instead */
         public Builder numberCacheClusters(@Nullable Output<Integer> numberCacheClusters) {
             $.numberCacheClusters = numberCacheClusters;
             return this;
         }
 
         /**
-         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
+         * @param numberCacheClusters Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. Conflicts with `num_cache_clusters`, `num_node_groups`, or the deprecated `cluster_mode`. Defaults to `1`.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use num_cache_clusters instead
+         * 
          */
+        @Deprecated /* Use num_cache_clusters instead */
         public Builder numberCacheClusters(Integer numberCacheClusters) {
             return numberCacheClusters(Output.of(numberCacheClusters));
         }
@@ -1213,6 +1452,37 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
+         * @param preferredCacheClusterAzs List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is considered. The first item in the list will be the primary node. Ignored when updating.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredCacheClusterAzs(@Nullable Output<List<String>> preferredCacheClusterAzs) {
+            $.preferredCacheClusterAzs = preferredCacheClusterAzs;
+            return this;
+        }
+
+        /**
+         * @param preferredCacheClusterAzs List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is considered. The first item in the list will be the primary node. Ignored when updating.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredCacheClusterAzs(List<String> preferredCacheClusterAzs) {
+            return preferredCacheClusterAzs(Output.of(preferredCacheClusterAzs));
+        }
+
+        /**
+         * @param preferredCacheClusterAzs List of EC2 availability zones in which the replication group&#39;s cache clusters will be created. The order of the availability zones in the list is considered. The first item in the list will be the primary node. Ignored when updating.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredCacheClusterAzs(String... preferredCacheClusterAzs) {
+            return preferredCacheClusterAzs(List.of(preferredCacheClusterAzs));
+        }
+
+        /**
          * @param primaryEndpointAddress (Redis only) Address of the endpoint for the primary node in the replication group, if the cluster mode is disabled.
          * 
          * @return builder
@@ -1255,22 +1525,51 @@ public final class ReplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param replicationGroupDescription User-created description for the replication group.
+         * @param replicasPerNodeGroup Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
          * 
          * @return builder
          * 
          */
+        public Builder replicasPerNodeGroup(@Nullable Output<Integer> replicasPerNodeGroup) {
+            $.replicasPerNodeGroup = replicasPerNodeGroup;
+            return this;
+        }
+
+        /**
+         * @param replicasPerNodeGroup Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
+            return replicasPerNodeGroup(Output.of(replicasPerNodeGroup));
+        }
+
+        /**
+         * @param replicationGroupDescription User-created description for the replication group. Must not be empty.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use description instead
+         * 
+         */
+        @Deprecated /* Use description instead */
         public Builder replicationGroupDescription(@Nullable Output<String> replicationGroupDescription) {
             $.replicationGroupDescription = replicationGroupDescription;
             return this;
         }
 
         /**
-         * @param replicationGroupDescription User-created description for the replication group.
+         * @param replicationGroupDescription User-created description for the replication group. Must not be empty.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use description instead
+         * 
          */
+        @Deprecated /* Use description instead */
         public Builder replicationGroupDescription(String replicationGroupDescription) {
             return replicationGroupDescription(Output.of(replicationGroupDescription));
         }

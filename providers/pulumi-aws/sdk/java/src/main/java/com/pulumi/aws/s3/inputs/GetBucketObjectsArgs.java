@@ -19,14 +19,22 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
     /**
      * Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
      * 
+     * @deprecated
+     * Use the aws_s3_objects data source instead
+     * 
      */
+    @Deprecated /* Use the aws_s3_objects data source instead */
     @Import(name="bucket", required=true)
     private String bucket;
 
     /**
      * @return Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
      * 
+     * @deprecated
+     * Use the aws_s3_objects data source instead
+     * 
      */
+    @Deprecated /* Use the aws_s3_objects data source instead */
     public String bucket() {
         return this.bucket;
     }
@@ -156,7 +164,11 @@ public final class GetBucketObjectsArgs extends com.pulumi.resources.InvokeArgs 
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the aws_s3_objects data source instead
+         * 
          */
+        @Deprecated /* Use the aws_s3_objects data source instead */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;

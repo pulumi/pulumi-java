@@ -7,6 +7,7 @@ import com.pulumi.asset.Archive;
 import com.pulumi.aws.lambda.enums.Runtime;
 import com.pulumi.aws.lambda.inputs.FunctionDeadLetterConfigArgs;
 import com.pulumi.aws.lambda.inputs.FunctionEnvironmentArgs;
+import com.pulumi.aws.lambda.inputs.FunctionEphemeralStorageArgs;
 import com.pulumi.aws.lambda.inputs.FunctionFileSystemConfigArgs;
 import com.pulumi.aws.lambda.inputs.FunctionImageConfigArgs;
 import com.pulumi.aws.lambda.inputs.FunctionTracingConfigArgs;
@@ -116,6 +117,21 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<FunctionEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
+    }
+
+    /**
+     * The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+     * 
+     */
+    @Import(name="ephemeralStorage")
+    private @Nullable Output<FunctionEphemeralStorageArgs> ephemeralStorage;
+
+    /**
+     * @return The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+     * 
+     */
+    public Optional<Output<FunctionEphemeralStorageArgs>> ephemeralStorage() {
+        return Optional.ofNullable(this.ephemeralStorage);
     }
 
     /**
@@ -442,6 +458,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
         this.deadLetterConfig = $.deadLetterConfig;
         this.description = $.description;
         this.environment = $.environment;
+        this.ephemeralStorage = $.ephemeralStorage;
         this.fileSystemConfig = $.fileSystemConfig;
         this.handler = $.handler;
         this.imageConfig = $.imageConfig;
@@ -617,6 +634,27 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder environment(FunctionEnvironmentArgs environment) {
             return environment(Output.of(environment));
+        }
+
+        /**
+         * @param ephemeralStorage The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ephemeralStorage(@Nullable Output<FunctionEphemeralStorageArgs> ephemeralStorage) {
+            $.ephemeralStorage = ephemeralStorage;
+            return this;
+        }
+
+        /**
+         * @param ephemeralStorage The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ephemeralStorage(FunctionEphemeralStorageArgs ephemeralStorage) {
+            return ephemeralStorage(Output.of(ephemeralStorage));
         }
 
         /**

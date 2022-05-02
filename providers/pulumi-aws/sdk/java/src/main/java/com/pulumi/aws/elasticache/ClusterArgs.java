@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticache;
 
+import com.pulumi.aws.elasticache.inputs.ClusterLogDeliveryConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -32,6 +33,25 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<Boolean>> applyImmediately() {
         return Optional.ofNullable(this.applyImmediately);
+    }
+
+    /**
+     * Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
+     * 
+     */
+    @Import(name="autoMinorVersionUpgrade")
+    private @Nullable Output<String> autoMinorVersionUpgrade;
+
+    /**
+     * @return Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+     * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+     * Defaults to `true`.
+     * 
+     */
+    public Optional<Output<String>> autoMinorVersionUpgrade() {
+        return Optional.ofNullable(this.autoMinorVersionUpgrade);
     }
 
     /**
@@ -96,8 +116,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Version number of the cache engine to be used.
+     * If not set, defaults to the latest version.
      * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     @Import(name="engineVersion")
@@ -105,8 +126,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Version number of the cache engine to be used.
+     * If not set, defaults to the latest version.
      * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+     * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
      * 
      */
     public Optional<Output<String>> engineVersion() {
@@ -126,6 +148,21 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> finalSnapshotIdentifier() {
         return Optional.ofNullable(this.finalSnapshotIdentifier);
+    }
+
+    /**
+     * Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+     * 
+     */
+    @Import(name="logDeliveryConfigurations")
+    private @Nullable Output<List<ClusterLogDeliveryConfigurationArgs>> logDeliveryConfigurations;
+
+    /**
+     * @return Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+     * 
+     */
+    public Optional<Output<List<ClusterLogDeliveryConfigurationArgs>>> logDeliveryConfigurations() {
+        return Optional.ofNullable(this.logDeliveryConfigurations);
     }
 
     /**
@@ -376,12 +413,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     private ClusterArgs(ClusterArgs $) {
         this.applyImmediately = $.applyImmediately;
+        this.autoMinorVersionUpgrade = $.autoMinorVersionUpgrade;
         this.availabilityZone = $.availabilityZone;
         this.azMode = $.azMode;
         this.clusterId = $.clusterId;
         this.engine = $.engine;
         this.engineVersion = $.engineVersion;
         this.finalSnapshotIdentifier = $.finalSnapshotIdentifier;
+        this.logDeliveryConfigurations = $.logDeliveryConfigurations;
         this.maintenanceWindow = $.maintenanceWindow;
         this.nodeType = $.nodeType;
         this.notificationTopicArn = $.notificationTopicArn;
@@ -437,6 +476,31 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder applyImmediately(Boolean applyImmediately) {
             return applyImmediately(Output.of(applyImmediately));
+        }
+
+        /**
+         * @param autoMinorVersionUpgrade Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+         * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+         * Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autoMinorVersionUpgrade(@Nullable Output<String> autoMinorVersionUpgrade) {
+            $.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+            return this;
+        }
+
+        /**
+         * @param autoMinorVersionUpgrade Specifies whether minor version engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window.
+         * Only supported for engine type `&#34;redis&#34;` and if the engine version is 6 or higher.
+         * Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autoMinorVersionUpgrade(String autoMinorVersionUpgrade) {
+            return autoMinorVersionUpgrade(Output.of(autoMinorVersionUpgrade));
         }
 
         /**
@@ -525,8 +589,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param engineVersion Version number of the cache engine to be used.
+         * If not set, defaults to the latest version.
          * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
          * 
          * @return builder
          * 
@@ -538,8 +603,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param engineVersion Version number of the cache engine to be used.
+         * If not set, defaults to the latest version.
          * See [Describe Cache Engine Versions](https://docs.aws.amazon.com/cli/latest/reference/elasticache/describe-cache-engine-versions.html)
-         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+         * in the AWS Documentation for supported versions. When `engine` is `redis` and the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, , see Attributes Reference below.
          * 
          * @return builder
          * 
@@ -567,6 +633,37 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder finalSnapshotIdentifier(String finalSnapshotIdentifier) {
             return finalSnapshotIdentifier(Output.of(finalSnapshotIdentifier));
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(@Nullable Output<List<ClusterLogDeliveryConfigurationArgs>> logDeliveryConfigurations) {
+            $.logDeliveryConfigurations = logDeliveryConfigurations;
+            return this;
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(List<ClusterLogDeliveryConfigurationArgs> logDeliveryConfigurations) {
+            return logDeliveryConfigurations(Output.of(logDeliveryConfigurations));
+        }
+
+        /**
+         * @param logDeliveryConfigurations Specifies the destination and format of Redis [SLOWLOG](https://redis.io/commands/slowlog) or Redis [Engine Log](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html#Log_contents-engine-log). See the documentation on [Amazon ElastiCache](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Log_Delivery.html). See Log Delivery Configuration below for more details.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logDeliveryConfigurations(ClusterLogDeliveryConfigurationArgs... logDeliveryConfigurations) {
+            return logDeliveryConfigurations(List.of(logDeliveryConfigurations));
         }
 
         /**

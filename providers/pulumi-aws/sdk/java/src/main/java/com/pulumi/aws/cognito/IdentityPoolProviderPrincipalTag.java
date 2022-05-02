@@ -21,32 +21,32 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool id, e.g.,
+ * Cognito Identity Pool Roles Attachment can be imported using the Identity Pool ID and provider name, e.g.,
  * 
  * ```sh
- *  $ pulumi import aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag example &lt;identity-pool-id&gt;:&lt;identity_provider_name&gt;
+ *  $ pulumi import aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag example us-west-2_abc123:CorpAD
  * ```
  * 
  */
 @ResourceType(type="aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag")
 public class IdentityPoolProviderPrincipalTag extends com.pulumi.resources.CustomResource {
     /**
-     * An identity pool ID in the format REGION:GUID.
+     * An identity pool ID.
      * 
      */
     @Export(name="identityPoolId", type=String.class, parameters={})
     private Output<String> identityPoolId;
 
     /**
-     * @return An identity pool ID in the format REGION:GUID.
+     * @return An identity pool ID.
      * 
      */
     public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
     /**
-     * The name of the identity provider
-     * * `principal_tags`: (Optional: []) - String to string map of variables
+     * The name of the identity provider.
+     * * `principal_tags`: (Optional: []) - String to string map of variables.
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
@@ -54,8 +54,8 @@ public class IdentityPoolProviderPrincipalTag extends com.pulumi.resources.Custo
     private Output<String> identityProviderName;
 
     /**
-     * @return The name of the identity provider
-     * * `principal_tags`: (Optional: []) - String to string map of variables
+     * @return The name of the identity provider.
+     * * `principal_tags`: (Optional: []) - String to string map of variables.
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */

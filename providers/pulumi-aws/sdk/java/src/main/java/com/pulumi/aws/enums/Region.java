@@ -18,6 +18,7 @@ import java.util.StringJoiner;
         APEast1("ap-east-1"),
         APNortheast1("ap-northeast-1"),
         APNortheast2("ap-northeast-2"),
+        APNortheast3("ap-northeast-3"),
         APSouth1("ap-south-1"),
         APSoutheast2("ap-southeast-2"),
         APSoutheast1("ap-southeast-1"),

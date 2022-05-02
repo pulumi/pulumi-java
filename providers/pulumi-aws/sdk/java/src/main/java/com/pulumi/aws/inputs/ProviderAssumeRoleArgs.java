@@ -18,9 +18,28 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
 
     public static final ProviderAssumeRoleArgs Empty = new ProviderAssumeRoleArgs();
 
+    @Import(name="duration")
+    private @Nullable Output<String> duration;
+
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
+    }
+
+    /**
+     * @deprecated
+     * Use assume_role.0.duration instead
+     * 
+     */
+    @Deprecated /* Use assume_role.0.duration instead */
     @Import(name="durationSeconds")
     private @Nullable Output<Integer> durationSeconds;
 
+    /**
+     * @deprecated
+     * Use assume_role.0.duration instead
+     * 
+     */
+    @Deprecated /* Use assume_role.0.duration instead */
     public Optional<Output<Integer>> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -77,6 +96,7 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
     private ProviderAssumeRoleArgs() {}
 
     private ProviderAssumeRoleArgs(ProviderAssumeRoleArgs $) {
+        this.duration = $.duration;
         this.durationSeconds = $.durationSeconds;
         this.externalId = $.externalId;
         this.policy = $.policy;
@@ -105,11 +125,36 @@ public final class ProviderAssumeRoleArgs extends com.pulumi.resources.ResourceA
             $ = new ProviderAssumeRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        public Builder duration(@Nullable Output<String> duration) {
+            $.duration = duration;
+            return this;
+        }
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
+        }
+
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use assume_role.0.duration instead
+         * 
+         */
+        @Deprecated /* Use assume_role.0.duration instead */
         public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             $.durationSeconds = durationSeconds;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Use assume_role.0.duration instead
+         * 
+         */
+        @Deprecated /* Use assume_role.0.duration instead */
         public Builder durationSeconds(Integer durationSeconds) {
             return durationSeconds(Output.of(durationSeconds));
         }

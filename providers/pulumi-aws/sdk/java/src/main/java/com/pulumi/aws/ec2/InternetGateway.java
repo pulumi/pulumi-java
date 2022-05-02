@@ -60,14 +60,14 @@ public class InternetGateway extends com.pulumi.resources.CustomResource {
         return this.ownerId;
     }
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
@@ -88,18 +88,18 @@ public class InternetGateway extends com.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
     /**
-     * The VPC ID to create in.
+     * The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
      * 
      */
     @Export(name="vpcId", type=String.class, parameters={})
-    private Output</* @Nullable */ String> vpcId;
+    private Output<String> vpcId;
 
     /**
-     * @return The VPC ID to create in.
+     * @return The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
      * 
      */
-    public Output<Optional<String>> vpcId() {
-        return Codegen.optional(this.vpcId);
+    public Output<String> vpcId() {
+        return this.vpcId;
     }
 
     /**

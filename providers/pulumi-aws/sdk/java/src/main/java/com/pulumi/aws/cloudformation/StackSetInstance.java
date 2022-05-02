@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.cloudformation.StackSetInstanceArgs;
 import com.pulumi.aws.cloudformation.inputs.StackSetInstanceState;
 import com.pulumi.aws.cloudformation.outputs.StackSetInstanceDeploymentTargets;
+import com.pulumi.aws.cloudformation.outputs.StackSetInstanceOperationPreferences;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -28,10 +29,16 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * CloudFormation StackSet Instances can be imported using the StackSet name, target AWS account ID, and target AWS region separated by commas (`,`) e.g.,
+ * CloudFormation StackSet Instances that target an AWS Account ID can be imported using the StackSet name, target AWS account ID, and target AWS region separated by commas (`,`) e.g.
  * 
  * ```sh
  *  $ pulumi import aws:cloudformation/stackSetInstance:StackSetInstance example example,123456789012,us-east-1
+ * ```
+ * 
+ *  CloudFormation StackSet Instances that target AWS Organizational Units can be imported using the StackSet name, a slash (`/`) separated list of organizational unit IDs, and target AWS region separated by commas (`,`) e.g.
+ * 
+ * ```sh
+ *  $ pulumi import aws:cloudformation/stackSetInstance:StackSetInstance example example,ou-sdas-123123123/ou-sdas-789789789,us-east-1
  * ```
  * 
  */
@@ -52,6 +59,20 @@ public class StackSetInstance extends com.pulumi.resources.CustomResource {
         return this.accountId;
     }
     /**
+     * Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    @Export(name="callAs", type=String.class, parameters={})
+    private Output</* @Nullable */ String> callAs;
+
+    /**
+     * @return Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    public Output<Optional<String>> callAs() {
+        return Codegen.optional(this.callAs);
+    }
+    /**
      * The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
@@ -64,6 +85,20 @@ public class StackSetInstance extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<StackSetInstanceDeploymentTargets>> deploymentTargets() {
         return Codegen.optional(this.deploymentTargets);
+    }
+    /**
+     * Preferences for how AWS CloudFormation performs a stack set operation.
+     * 
+     */
+    @Export(name="operationPreferences", type=StackSetInstanceOperationPreferences.class, parameters={})
+    private Output</* @Nullable */ StackSetInstanceOperationPreferences> operationPreferences;
+
+    /**
+     * @return Preferences for how AWS CloudFormation performs a stack set operation.
+     * 
+     */
+    public Output<Optional<StackSetInstanceOperationPreferences>> operationPreferences() {
+        return Codegen.optional(this.operationPreferences);
     }
     /**
      * The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.

@@ -3,10 +3,11 @@
 
 package com.pulumi.aws.apigateway.inputs;
 
-import com.pulumi.aws.apigateway.inputs.AccountThrottleSettingsArgs;
+import com.pulumi.aws.apigateway.inputs.AccountThrottleSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -36,13 +37,13 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttleSettings")
-    private @Nullable Output<AccountThrottleSettingsArgs> throttleSettings;
+    private @Nullable Output<List<AccountThrottleSettingArgs>> throttleSettings;
 
     /**
      * @return Account-Level throttle settings. See exported fields below.
      * 
      */
-    public Optional<Output<AccountThrottleSettingsArgs>> throttleSettings() {
+    public Optional<Output<List<AccountThrottleSettingArgs>>> throttleSettings() {
         return Optional.ofNullable(this.throttleSettings);
     }
 
@@ -98,7 +99,7 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(@Nullable Output<AccountThrottleSettingsArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Output<List<AccountThrottleSettingArgs>> throttleSettings) {
             $.throttleSettings = throttleSettings;
             return this;
         }
@@ -109,8 +110,18 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder throttleSettings(AccountThrottleSettingsArgs throttleSettings) {
+        public Builder throttleSettings(List<AccountThrottleSettingArgs> throttleSettings) {
             return throttleSettings(Output.of(throttleSettings));
+        }
+
+        /**
+         * @param throttleSettings Account-Level throttle settings. See exported fields below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder throttleSettings(AccountThrottleSettingArgs... throttleSettings) {
+            return throttleSettings(List.of(throttleSettings));
         }
 
         public AccountState build() {

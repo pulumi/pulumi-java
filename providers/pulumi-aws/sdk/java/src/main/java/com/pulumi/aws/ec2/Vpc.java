@@ -186,14 +186,14 @@ public class Vpc extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.enableDnsSupport);
     }
     /**
-     * A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+     * A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
      * 
      */
     @Export(name="instanceTenancy", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceTenancy;
 
     /**
-     * @return A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
+     * @return A tenancy option for instances launched into the VPC. Default is `default`, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is `dedicated`, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee.
      * 
      */
     public Output<Optional<String>> instanceTenancy() {
@@ -229,7 +229,6 @@ public class Vpc extends com.pulumi.resources.CustomResource {
     }
     /**
      * The association ID for the IPv6 CIDR block.
-     * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
      * 
      */
     @Export(name="ipv6AssociationId", type=String.class, parameters={})
@@ -237,7 +236,6 @@ public class Vpc extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The association ID for the IPv6 CIDR block.
-     * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
      * 
      */
     public Output<String> ipv6AssociationId() {

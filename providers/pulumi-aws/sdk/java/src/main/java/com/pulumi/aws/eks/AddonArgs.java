@@ -5,6 +5,7 @@ package com.pulumi.aws.eks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Name of the EKS add-on. The name must match one of
-     * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+     * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
     @Import(name="addonName", required=true)
@@ -26,7 +27,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Name of the EKS add-on. The name must match one of
-     * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+     * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
     public Output<String> addonName() {
@@ -63,6 +64,21 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Output<String> clusterName() {
         return this.clusterName;
+    }
+
+    /**
+     * Indicates if you want to preserve the created resources when deleting the EKS add-on.
+     * 
+     */
+    @Import(name="preserve")
+    private @Nullable Output<Boolean> preserve;
+
+    /**
+     * @return Indicates if you want to preserve the created resources when deleting the EKS add-on.
+     * 
+     */
+    public Optional<Output<Boolean>> preserve() {
+        return Optional.ofNullable(this.preserve);
     }
 
     /**
@@ -110,14 +126,14 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -130,6 +146,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
         this.addonName = $.addonName;
         this.addonVersion = $.addonVersion;
         this.clusterName = $.clusterName;
+        this.preserve = $.preserve;
         this.resolveConflicts = $.resolveConflicts;
         this.serviceAccountRoleArn = $.serviceAccountRoleArn;
         this.tags = $.tags;
@@ -155,7 +172,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param addonName Name of the EKS add-on. The name must match one of
-         * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+         * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
          * 
          * @return builder
          * 
@@ -167,7 +184,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param addonName Name of the EKS add-on. The name must match one of
-         * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+         * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
          * 
          * @return builder
          * 
@@ -218,6 +235,27 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
+        }
+
+        /**
+         * @param preserve Indicates if you want to preserve the created resources when deleting the EKS add-on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserve(@Nullable Output<Boolean> preserve) {
+            $.preserve = preserve;
+            return this;
+        }
+
+        /**
+         * @param preserve Indicates if you want to preserve the created resources when deleting the EKS add-on.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preserve(Boolean preserve) {
+            return preserve(Output.of(preserve));
         }
 
         /**
@@ -277,7 +315,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -288,7 +326,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

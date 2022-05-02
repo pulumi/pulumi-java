@@ -32,14 +32,29 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     }
 
     /**
-     * The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
+     * The ARN of the automated backup from which to restore. Required if `source_db_instance_identifier` or `source_dbi_resource_id` is not specified.
+     * 
+     */
+    @Import(name="sourceDbInstanceAutomatedBackupsArn")
+    private @Nullable Output<String> sourceDbInstanceAutomatedBackupsArn;
+
+    /**
+     * @return The ARN of the automated backup from which to restore. Required if `source_db_instance_identifier` or `source_dbi_resource_id` is not specified.
+     * 
+     */
+    public Optional<Output<String>> sourceDbInstanceAutomatedBackupsArn() {
+        return Optional.ofNullable(this.sourceDbInstanceAutomatedBackupsArn);
+    }
+
+    /**
+     * The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_db_instance_automated_backups_arn` or `source_dbi_resource_id` is not specified.
      * 
      */
     @Import(name="sourceDbInstanceIdentifier")
     private @Nullable Output<String> sourceDbInstanceIdentifier;
 
     /**
-     * @return The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
+     * @return The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_db_instance_automated_backups_arn` or `source_dbi_resource_id` is not specified.
      * 
      */
     public Optional<Output<String>> sourceDbInstanceIdentifier() {
@@ -47,14 +62,14 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
     }
 
     /**
-     * The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
+     * The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` or `source_db_instance_automated_backups_arn` is not specified.
      * 
      */
     @Import(name="sourceDbiResourceId")
     private @Nullable Output<String> sourceDbiResourceId;
 
     /**
-     * @return The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
+     * @return The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` or `source_db_instance_automated_backups_arn` is not specified.
      * 
      */
     public Optional<Output<String>> sourceDbiResourceId() {
@@ -80,6 +95,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
 
     private InstanceRestoreToPointInTimeArgs(InstanceRestoreToPointInTimeArgs $) {
         this.restoreTime = $.restoreTime;
+        this.sourceDbInstanceAutomatedBackupsArn = $.sourceDbInstanceAutomatedBackupsArn;
         this.sourceDbInstanceIdentifier = $.sourceDbInstanceIdentifier;
         this.sourceDbiResourceId = $.sourceDbiResourceId;
         this.useLatestRestorableTime = $.useLatestRestorableTime;
@@ -125,7 +141,28 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param sourceDbInstanceIdentifier The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
+         * @param sourceDbInstanceAutomatedBackupsArn The ARN of the automated backup from which to restore. Required if `source_db_instance_identifier` or `source_dbi_resource_id` is not specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDbInstanceAutomatedBackupsArn(@Nullable Output<String> sourceDbInstanceAutomatedBackupsArn) {
+            $.sourceDbInstanceAutomatedBackupsArn = sourceDbInstanceAutomatedBackupsArn;
+            return this;
+        }
+
+        /**
+         * @param sourceDbInstanceAutomatedBackupsArn The ARN of the automated backup from which to restore. Required if `source_db_instance_identifier` or `source_dbi_resource_id` is not specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceDbInstanceAutomatedBackupsArn(String sourceDbInstanceAutomatedBackupsArn) {
+            return sourceDbInstanceAutomatedBackupsArn(Output.of(sourceDbInstanceAutomatedBackupsArn));
+        }
+
+        /**
+         * @param sourceDbInstanceIdentifier The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_db_instance_automated_backups_arn` or `source_dbi_resource_id` is not specified.
          * 
          * @return builder
          * 
@@ -136,7 +173,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param sourceDbInstanceIdentifier The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
+         * @param sourceDbInstanceIdentifier The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_db_instance_automated_backups_arn` or `source_dbi_resource_id` is not specified.
          * 
          * @return builder
          * 
@@ -146,7 +183,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param sourceDbiResourceId The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
+         * @param sourceDbiResourceId The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` or `source_db_instance_automated_backups_arn` is not specified.
          * 
          * @return builder
          * 
@@ -157,7 +194,7 @@ public final class InstanceRestoreToPointInTimeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param sourceDbiResourceId The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
+         * @param sourceDbiResourceId The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` or `source_db_instance_automated_backups_arn` is not specified.
          * 
          * @return builder
          * 

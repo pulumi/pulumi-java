@@ -66,14 +66,14 @@ public class NetworkInterface extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Configuration block to define the attachment of the ENI. See below.
+     * Configuration block to define the attachment of the ENI. See Attachment below for more details!
      * 
      */
     @Export(name="attachments", type=List.class, parameters={NetworkInterfaceAttachment.class})
     private Output<List<NetworkInterfaceAttachment>> attachments;
 
     /**
-     * @return Configuration block to define the attachment of the ENI. See below.
+     * @return Configuration block to define the attachment of the ENI. See Attachment below for more details!
      * 
      */
     public Output<List<NetworkInterfaceAttachment>> attachments() {

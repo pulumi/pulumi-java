@@ -5,6 +5,7 @@ package com.pulumi.aws.imagebuilder.outputs;
 
 import com.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfiguration;
 import com.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfiguration;
+import com.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionLaunchTemplateConfiguration;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -25,6 +26,11 @@ public final class DistributionConfigurationDistribution {
      */
     private final @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration;
     /**
+     * @return Set of launch template configuration settings that apply to image distribution. Detailed below.
+     * 
+     */
+    private final @Nullable List<DistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations;
+    /**
      * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
      */
@@ -39,10 +45,12 @@ public final class DistributionConfigurationDistribution {
     private DistributionConfigurationDistribution(
         @CustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
         @CustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
+        @CustomType.Parameter("launchTemplateConfigurations") @Nullable List<DistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations,
         @CustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
         @CustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
+        this.launchTemplateConfigurations = launchTemplateConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
         this.region = region;
     }
@@ -60,6 +68,13 @@ public final class DistributionConfigurationDistribution {
      */
     public Optional<DistributionConfigurationDistributionContainerDistributionConfiguration> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
+    }
+    /**
+     * @return Set of launch template configuration settings that apply to image distribution. Detailed below.
+     * 
+     */
+    public List<DistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations() {
+        return this.launchTemplateConfigurations == null ? List.of() : this.launchTemplateConfigurations;
     }
     /**
      * @return Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
@@ -87,6 +102,7 @@ public final class DistributionConfigurationDistribution {
     public static final class Builder {
         private @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration;
         private @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration;
+        private @Nullable List<DistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations;
         private @Nullable List<String> licenseConfigurationArns;
         private String region;
 
@@ -98,6 +114,7 @@ public final class DistributionConfigurationDistribution {
     	      Objects.requireNonNull(defaults);
     	      this.amiDistributionConfiguration = defaults.amiDistributionConfiguration;
     	      this.containerDistributionConfiguration = defaults.containerDistributionConfiguration;
+    	      this.launchTemplateConfigurations = defaults.launchTemplateConfigurations;
     	      this.licenseConfigurationArns = defaults.licenseConfigurationArns;
     	      this.region = defaults.region;
         }
@@ -110,6 +127,13 @@ public final class DistributionConfigurationDistribution {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
+        public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationDistributionLaunchTemplateConfiguration> launchTemplateConfigurations) {
+            this.launchTemplateConfigurations = launchTemplateConfigurations;
+            return this;
+        }
+        public Builder launchTemplateConfigurations(DistributionConfigurationDistributionLaunchTemplateConfiguration... launchTemplateConfigurations) {
+            return launchTemplateConfigurations(List.of(launchTemplateConfigurations));
+        }
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
@@ -121,7 +145,7 @@ public final class DistributionConfigurationDistribution {
             this.region = Objects.requireNonNull(region);
             return this;
         }        public DistributionConfigurationDistribution build() {
-            return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, licenseConfigurationArns, region);
+            return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }
     }
 }

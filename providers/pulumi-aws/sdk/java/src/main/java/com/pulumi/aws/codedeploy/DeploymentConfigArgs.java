@@ -36,15 +36,15 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
      * The name of the deployment config.
      * 
      */
-    @Import(name="deploymentConfigName", required=true)
-    private Output<String> deploymentConfigName;
+    @Import(name="deploymentConfigName")
+    private @Nullable Output<String> deploymentConfigName;
 
     /**
      * @return The name of the deployment config.
      * 
      */
-    public Output<String> deploymentConfigName() {
-        return this.deploymentConfigName;
+    public Optional<Output<String>> deploymentConfigName() {
+        return Optional.ofNullable(this.deploymentConfigName);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder deploymentConfigName(Output<String> deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
             $.deploymentConfigName = deploymentConfigName;
             return this;
         }
@@ -189,7 +189,6 @@ public final class DeploymentConfigArgs extends com.pulumi.resources.ResourceArg
         }
 
         public DeploymentConfigArgs build() {
-            $.deploymentConfigName = Objects.requireNonNull($.deploymentConfigName, "expected parameter 'deploymentConfigName' to be non-null");
             return $;
         }
     }

@@ -52,14 +52,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
      * 
      */
     @Import(name="availabilityZone")
     private @Nullable Output<String> availabilityZone;
 
     /**
-     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
      * 
      */
     public Optional<Output<String>> availabilityZone() {
@@ -67,16 +67,29 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Cluster Identifier. Must be a lower case
-     * string.
+     * If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+     * 
+     */
+    @Import(name="availabilityZoneRelocationEnabled")
+    private @Nullable Output<Boolean> availabilityZoneRelocationEnabled;
+
+    /**
+     * @return If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+     * 
+     */
+    public Optional<Output<Boolean>> availabilityZoneRelocationEnabled() {
+        return Optional.ofNullable(this.availabilityZoneRelocationEnabled);
+    }
+
+    /**
+     * The Cluster Identifier. Must be a lower case string.
      * 
      */
     @Import(name="clusterIdentifier", required=true)
     private Output<String> clusterIdentifier;
 
     /**
-     * @return The Cluster Identifier. Must be a lower case
-     * string.
+     * @return The Cluster Identifier. Must be a lower case string.
      * 
      */
     public Output<String> clusterIdentifier() {
@@ -408,7 +421,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * The port number on which the cluster accepts incoming connections.
-     * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+     * The cluster is accessible only via the JDBC and ODBC connection strings.
+     * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+     * Default port is 5439.
      * 
      */
     @Import(name="port")
@@ -416,7 +431,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The port number on which the cluster accepts incoming connections.
-     * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+     * The cluster is accessible only via the JDBC and ODBC connection strings.
+     * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+     * Default port is 5439.
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -551,6 +568,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.allowVersionUpgrade = $.allowVersionUpgrade;
         this.automatedSnapshotRetentionPeriod = $.automatedSnapshotRetentionPeriod;
         this.availabilityZone = $.availabilityZone;
+        this.availabilityZoneRelocationEnabled = $.availabilityZoneRelocationEnabled;
         this.clusterIdentifier = $.clusterIdentifier;
         this.clusterParameterGroupName = $.clusterParameterGroupName;
         this.clusterPublicKey = $.clusterPublicKey;
@@ -645,7 +663,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
          * 
          * @return builder
          * 
@@ -656,7 +674,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+         * @param availabilityZone The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
          * 
          * @return builder
          * 
@@ -666,8 +684,28 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clusterIdentifier The Cluster Identifier. Must be a lower case
-         * string.
+         * @param availabilityZoneRelocationEnabled If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityZoneRelocationEnabled(@Nullable Output<Boolean> availabilityZoneRelocationEnabled) {
+            $.availabilityZoneRelocationEnabled = availabilityZoneRelocationEnabled;
+            return this;
+        }
+
+        /**
+         * @param availabilityZoneRelocationEnabled If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder availabilityZoneRelocationEnabled(Boolean availabilityZoneRelocationEnabled) {
+            return availabilityZoneRelocationEnabled(Output.of(availabilityZoneRelocationEnabled));
+        }
+
+        /**
+         * @param clusterIdentifier The Cluster Identifier. Must be a lower case string.
          * 
          * @return builder
          * 
@@ -678,8 +716,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param clusterIdentifier The Cluster Identifier. Must be a lower case
-         * string.
+         * @param clusterIdentifier The Cluster Identifier. Must be a lower case string.
          * 
          * @return builder
          * 
@@ -1159,7 +1196,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param port The port number on which the cluster accepts incoming connections.
-         * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+         * The cluster is accessible only via the JDBC and ODBC connection strings.
+         * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+         * Default port is 5439.
          * 
          * @return builder
          * 
@@ -1171,7 +1210,9 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param port The port number on which the cluster accepts incoming connections.
-         * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+         * The cluster is accessible only via the JDBC and ODBC connection strings.
+         * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+         * Default port is 5439.
          * 
          * @return builder
          * 

@@ -47,14 +47,14 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -77,14 +77,14 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * The VPC ID to create in.
+     * The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
      * 
      */
     @Import(name="vpcId")
     private @Nullable Output<String> vpcId;
 
     /**
-     * @return The VPC ID to create in.
+     * @return The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
      * 
      */
     public Optional<Output<String>> vpcId() {
@@ -162,7 +162,7 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -204,7 +204,7 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param vpcId The VPC ID to create in.
+         * @param vpcId The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class InternetGatewayState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param vpcId The VPC ID to create in.
+         * @param vpcId The VPC ID to create in.  See the aws.ec2.InternetGatewayAttachment resource for an alternate way to attach an Internet Gateway to a VPC.
          * 
          * @return builder
          * 

@@ -9,10 +9,6 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLaunchTemplateIamInstanceProfile {
-    /**
-     * @return Amazon Resource Name (ARN) of the launch template.
-     * 
-     */
     private final String arn;
     /**
      * @return The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
@@ -28,10 +24,6 @@ public final class GetLaunchTemplateIamInstanceProfile {
         this.name = name;
     }
 
-    /**
-     * @return Amazon Resource Name (ARN) of the launch template.
-     * 
-     */
     public String arn() {
         return this.arn;
     }

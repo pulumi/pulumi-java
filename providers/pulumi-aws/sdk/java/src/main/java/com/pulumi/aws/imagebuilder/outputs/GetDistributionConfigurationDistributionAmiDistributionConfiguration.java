@@ -18,7 +18,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final Map<String,String> amiTags;
     /**
-     * @return Description to apply to distributed AMI.
+     * @return Description of the container distribution configuration.
      * 
      */
     private final String description;
@@ -67,7 +67,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
         return this.amiTags;
     }
     /**
-     * @return Description to apply to distributed AMI.
+     * @return Description of the container distribution configuration.
      * 
      */
     public String description() {

@@ -45,11 +45,27 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
         return this.scheduleExpression;
     }
 
+    /**
+     * The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+     * 
+     */
+    @Import(name="timezone")
+    private @Nullable Output<String> timezone;
+
+    /**
+     * @return The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+     * 
+     */
+    public Optional<Output<String>> timezone() {
+        return Optional.ofNullable(this.timezone);
+    }
+
     private ImagePipelineScheduleArgs() {}
 
     private ImagePipelineScheduleArgs(ImagePipelineScheduleArgs $) {
         this.pipelineExecutionStartCondition = $.pipelineExecutionStartCondition;
         this.scheduleExpression = $.scheduleExpression;
+        this.timezone = $.timezone;
     }
 
     public static Builder builder() {
@@ -110,6 +126,27 @@ public final class ImagePipelineScheduleArgs extends com.pulumi.resources.Resour
          */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        /**
+         * @param timezone The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timezone(@Nullable Output<String> timezone) {
+            $.timezone = timezone;
+            return this;
+        }
+
+        /**
+         * @param timezone The timezone that applies to the scheduling expression. For example, &#34;Etc/UTC&#34;, &#34;America/Los_Angeles&#34; in the [IANA timezone format](https://www.joda.org/joda-time/timezones.html). If not specified this defaults to UTC.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timezone(String timezone) {
+            return timezone(Output.of(timezone));
         }
 
         public ImagePipelineScheduleArgs build() {

@@ -10,6 +10,7 @@ import com.pulumi.aws.ec2.inputs.GetCoipPoolArgs;
 import com.pulumi.aws.ec2.inputs.GetCoipPoolsArgs;
 import com.pulumi.aws.ec2.inputs.GetCustomerGatewayArgs;
 import com.pulumi.aws.ec2.inputs.GetDedicatedHostArgs;
+import com.pulumi.aws.ec2.inputs.GetEipsArgs;
 import com.pulumi.aws.ec2.inputs.GetElasticIpArgs;
 import com.pulumi.aws.ec2.inputs.GetInstanceArgs;
 import com.pulumi.aws.ec2.inputs.GetInstanceTypeArgs;
@@ -31,6 +32,7 @@ import com.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupsArgs;
 import com.pulumi.aws.ec2.inputs.GetLocalGatewaysArgs;
 import com.pulumi.aws.ec2.inputs.GetManagedPrefixListArgs;
 import com.pulumi.aws.ec2.inputs.GetNatGatewayArgs;
+import com.pulumi.aws.ec2.inputs.GetNatGatewaysArgs;
 import com.pulumi.aws.ec2.inputs.GetNetworkAclsArgs;
 import com.pulumi.aws.ec2.inputs.GetNetworkInterfaceArgs;
 import com.pulumi.aws.ec2.inputs.GetNetworkInterfacesArgs;
@@ -60,6 +62,7 @@ import com.pulumi.aws.ec2.outputs.GetCoipPoolResult;
 import com.pulumi.aws.ec2.outputs.GetCoipPoolsResult;
 import com.pulumi.aws.ec2.outputs.GetCustomerGatewayResult;
 import com.pulumi.aws.ec2.outputs.GetDedicatedHostResult;
+import com.pulumi.aws.ec2.outputs.GetEipsResult;
 import com.pulumi.aws.ec2.outputs.GetElasticIpResult;
 import com.pulumi.aws.ec2.outputs.GetInstanceResult;
 import com.pulumi.aws.ec2.outputs.GetInstanceTypeOfferingResult;
@@ -81,6 +84,7 @@ import com.pulumi.aws.ec2.outputs.GetLocalGatewayVirtualInterfaceResult;
 import com.pulumi.aws.ec2.outputs.GetLocalGatewaysResult;
 import com.pulumi.aws.ec2.outputs.GetManagedPrefixListResult;
 import com.pulumi.aws.ec2.outputs.GetNatGatewayResult;
+import com.pulumi.aws.ec2.outputs.GetNatGatewaysResult;
 import com.pulumi.aws.ec2.outputs.GetNetworkAclsResult;
 import com.pulumi.aws.ec2.outputs.GetNetworkInterfaceResult;
 import com.pulumi.aws.ec2.outputs.GetNetworkInterfacesResult;
@@ -90,6 +94,7 @@ import com.pulumi.aws.ec2.outputs.GetRouteTableResult;
 import com.pulumi.aws.ec2.outputs.GetRouteTablesResult;
 import com.pulumi.aws.ec2.outputs.GetSecurityGroupResult;
 import com.pulumi.aws.ec2.outputs.GetSecurityGroupsResult;
+import com.pulumi.aws.ec2.outputs.GetSerialConsoleAccessResult;
 import com.pulumi.aws.ec2.outputs.GetSpotPriceResult;
 import com.pulumi.aws.ec2.outputs.GetSubnetIdsResult;
 import com.pulumi.aws.ec2.outputs.GetSubnetResult;
@@ -107,6 +112,7 @@ import com.pulumi.aws.ec2.outputs.GetVpnGatewayResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.resources.InvokeArgs;
 import java.util.concurrent.CompletableFuture;
 
 public final class Ec2Functions {
@@ -196,6 +202,21 @@ public final class Ec2Functions {
     }
     public static CompletableFuture<GetDedicatedHostResult> getDedicatedHost(GetDedicatedHostArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getDedicatedHost:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides a list of Elastic IPs in a region.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEipsResult> getEips() {
+        return getEips(GetEipsArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEipsResult> getEips(GetEipsArgs args) {
+        return getEips(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEipsResult> getEips(GetEipsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2/getEips:getEips", TypeShape.of(GetEipsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.ec2.Eip` provides details about a specific Elastic IP.
@@ -319,6 +340,10 @@ public final class Ec2Functions {
     public static CompletableFuture<GetInternetGatewayResult> getInternetGateway(GetInternetGatewayArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInternetGateway:getInternetGateway", TypeShape.of(GetInternetGatewayResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetIpamPreviewNextCidrResult> getIpamPreviewNextCidr(GetIpamPreviewNextCidrArgs args) {
         return getIpamPreviewNextCidr(args, InvokeOptions.Empty);
     }
@@ -505,6 +530,19 @@ public final class Ec2Functions {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This resource can be useful for getting back a list of NAT gateway ids to be referenced elsewhere.
+     * 
+     */
+    public static CompletableFuture<GetNatGatewaysResult> getNatGateways() {
+        return getNatGateways(GetNatGatewaysArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args) {
+        return getNatGateways(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetNatGatewaysResult> getNatGateways(GetNatGatewaysArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateways:getNatGateways", TypeShape.of(GetNatGatewaysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * ## Example Usage
      * 
      */
@@ -545,6 +583,10 @@ public final class Ec2Functions {
     public static CompletableFuture<GetNetworkInterfacesResult> getNetworkInterfaces(GetNetworkInterfacesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterfaces:getNetworkInterfaces", TypeShape.of(GetNetworkInterfacesResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetPrefixListResult> getPrefixList() {
         return getPrefixList(GetPrefixListArgs.Empty, InvokeOptions.Empty);
     }
@@ -634,6 +676,21 @@ public final class Ec2Functions {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroups:getSecurityGroups", TypeShape.of(GetSecurityGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * Provides a way to check whether serial console access is enabled for your AWS account in the current AWS region.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess() {
+        return getSerialConsoleAccess(InvokeArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args) {
+        return getSerialConsoleAccess(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetSerialConsoleAccessResult> getSerialConsoleAccess(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2/getSerialConsoleAccess:getSerialConsoleAccess", TypeShape.of(GetSerialConsoleAccessResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * Information about most recent Spot Price for a given EC2 instance.
      * 
      * ## Example Usage
@@ -669,6 +726,8 @@ public final class Ec2Functions {
      * `aws.ec2.getSubnetIds` provides a set of ids for a vpc_id
      * 
      * This resource can be useful for getting back a set of subnet ids for a vpc.
+     * 
+     * &gt; **NOTE:** The `aws.ec2.getSubnetIds` data source has been deprecated and will be removed in a future version. Use the `aws.ec2.getSubnets` data source instead.
      * 
      */
     public static CompletableFuture<GetSubnetIdsResult> getSubnetIds(GetSubnetIdsArgs args) {

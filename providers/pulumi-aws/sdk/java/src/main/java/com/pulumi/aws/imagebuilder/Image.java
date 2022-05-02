@@ -50,6 +50,20 @@ public class Image extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
+     * - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    @Export(name="containerRecipeArn", type=String.class, parameters={})
+    private Output</* @Nullable */ String> containerRecipeArn;
+
+    /**
+     * @return - Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public Output<Optional<String>> containerRecipeArn() {
+        return Codegen.optional(this.containerRecipeArn);
+    }
+    /**
      * Date the image was created.
      * 
      */
@@ -92,18 +106,18 @@ public class Image extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.enhancedImageMetadataEnabled);
     }
     /**
-     * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     @Export(name="imageRecipeArn", type=String.class, parameters={})
-    private Output<String> imageRecipeArn;
+    private Output</* @Nullable */ String> imageRecipeArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    public Output<String> imageRecipeArn() {
-        return this.imageRecipeArn;
+    public Output<Optional<String>> imageRecipeArn() {
+        return Codegen.optional(this.imageRecipeArn);
     }
     /**
      * Configuration block with image tests configuration. Detailed below.

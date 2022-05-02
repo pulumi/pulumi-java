@@ -7,6 +7,8 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class BuildStorageLocationArgs extends com.pulumi.resources.ResourceArgs {
@@ -44,6 +46,21 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * A specific version of the file. If not set, the latest version of the file is retrieved.
+     * 
+     */
+    @Import(name="objectVersion")
+    private @Nullable Output<String> objectVersion;
+
+    /**
+     * @return A specific version of the file. If not set, the latest version of the file is retrieved.
+     * 
+     */
+    public Optional<Output<String>> objectVersion() {
+        return Optional.ofNullable(this.objectVersion);
+    }
+
+    /**
      * ARN of the access role that allows Amazon GameLift to access your S3 bucket.
      * 
      */
@@ -63,6 +80,7 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
     private BuildStorageLocationArgs(BuildStorageLocationArgs $) {
         this.bucket = $.bucket;
         this.key = $.key;
+        this.objectVersion = $.objectVersion;
         this.roleArn = $.roleArn;
     }
 
@@ -124,6 +142,27 @@ public final class BuildStorageLocationArgs extends com.pulumi.resources.Resourc
          */
         public Builder key(String key) {
             return key(Output.of(key));
+        }
+
+        /**
+         * @param objectVersion A specific version of the file. If not set, the latest version of the file is retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectVersion(@Nullable Output<String> objectVersion) {
+            $.objectVersion = objectVersion;
+            return this;
+        }
+
+        /**
+         * @param objectVersion A specific version of the file. If not set, the latest version of the file is retrieved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectVersion(String objectVersion) {
+            return objectVersion(Output.of(objectVersion));
         }
 
         /**

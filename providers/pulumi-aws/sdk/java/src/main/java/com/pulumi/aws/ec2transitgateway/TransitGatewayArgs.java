@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -107,6 +108,13 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.dnsSupport);
     }
 
+    @Import(name="multicastSupport")
+    private @Nullable Output<String> multicastSupport;
+
+    public Optional<Output<String>> multicastSupport() {
+        return Optional.ofNullable(this.multicastSupport);
+    }
+
     /**
      * Key-value tags for the EC2 Transit Gateway. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
@@ -120,6 +128,21 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
      */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
+    }
+
+    /**
+     * One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+     * 
+     */
+    @Import(name="transitGatewayCidrBlocks")
+    private @Nullable Output<List<String>> transitGatewayCidrBlocks;
+
+    /**
+     * @return One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+     * 
+     */
+    public Optional<Output<List<String>>> transitGatewayCidrBlocks() {
+        return Optional.ofNullable(this.transitGatewayCidrBlocks);
     }
 
     /**
@@ -146,7 +169,9 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
         this.defaultRouteTablePropagation = $.defaultRouteTablePropagation;
         this.description = $.description;
         this.dnsSupport = $.dnsSupport;
+        this.multicastSupport = $.multicastSupport;
         this.tags = $.tags;
+        this.transitGatewayCidrBlocks = $.transitGatewayCidrBlocks;
         this.vpnEcmpSupport = $.vpnEcmpSupport;
     }
 
@@ -294,6 +319,15 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
             return dnsSupport(Output.of(dnsSupport));
         }
 
+        public Builder multicastSupport(@Nullable Output<String> multicastSupport) {
+            $.multicastSupport = multicastSupport;
+            return this;
+        }
+
+        public Builder multicastSupport(String multicastSupport) {
+            return multicastSupport(Output.of(multicastSupport));
+        }
+
         /**
          * @param tags Key-value tags for the EC2 Transit Gateway. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
@@ -313,6 +347,37 @@ public final class TransitGatewayArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
+        }
+
+        /**
+         * @param transitGatewayCidrBlocks One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayCidrBlocks(@Nullable Output<List<String>> transitGatewayCidrBlocks) {
+            $.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
+            return this;
+        }
+
+        /**
+         * @param transitGatewayCidrBlocks One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayCidrBlocks(List<String> transitGatewayCidrBlocks) {
+            return transitGatewayCidrBlocks(Output.of(transitGatewayCidrBlocks));
+        }
+
+        /**
+         * @param transitGatewayCidrBlocks One or more IPv4 or IPv6 CIDR blocks for the transit gateway. Must be a size /24 CIDR block or larger for IPv4, or a size /64 CIDR block or larger for IPv6.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder transitGatewayCidrBlocks(String... transitGatewayCidrBlocks) {
+            return transitGatewayCidrBlocks(List.of(transitGatewayCidrBlocks));
         }
 
         /**

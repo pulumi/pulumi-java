@@ -24,7 +24,7 @@ public final class GetDistributionConfigurationResult {
      */
     private final String dateUpdated;
     /**
-     * @return Description to apply to distributed AMI.
+     * @return Description of the container distribution configuration.
      * 
      */
     private final String description;
@@ -87,7 +87,7 @@ public final class GetDistributionConfigurationResult {
         return this.dateUpdated;
     }
     /**
-     * @return Description to apply to distributed AMI.
+     * @return Description of the container distribution configuration.
      * 
      */
     public String description() {

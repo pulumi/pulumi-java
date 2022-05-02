@@ -75,6 +75,21 @@ public final class ProxyAuthArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.secretArn);
     }
 
+    /**
+     * The name of the database user to which the proxy connects.
+     * 
+     */
+    @Import(name="username")
+    private @Nullable Output<String> username;
+
+    /**
+     * @return The name of the database user to which the proxy connects.
+     * 
+     */
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
+    }
+
     private ProxyAuthArgs() {}
 
     private ProxyAuthArgs(ProxyAuthArgs $) {
@@ -82,6 +97,7 @@ public final class ProxyAuthArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.iamAuth = $.iamAuth;
         this.secretArn = $.secretArn;
+        this.username = $.username;
     }
 
     public static Builder builder() {
@@ -184,6 +200,27 @@ public final class ProxyAuthArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder secretArn(String secretArn) {
             return secretArn(Output.of(secretArn));
+        }
+
+        /**
+         * @param username The name of the database user to which the proxy connects.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder username(@Nullable Output<String> username) {
+            $.username = username;
+            return this;
+        }
+
+        /**
+         * @param username The name of the database user to which the proxy connects.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder username(String username) {
+            return username(Output.of(username));
         }
 
         public ProxyAuthArgs build() {

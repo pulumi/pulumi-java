@@ -30,6 +30,21 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
+     * Core network ARN of the Route belonging to the Route Table.
+     * 
+     */
+    @Import(name="coreNetworkArn")
+    private @Nullable String coreNetworkArn;
+
+    /**
+     * @return Core network ARN of the Route belonging to the Route Table.
+     * 
+     */
+    public Optional<String> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
+    }
+
+    /**
      * CIDR block of the Route belonging to the Route Table.
      * 
      */
@@ -213,6 +228,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
 
     private GetRouteArgs(GetRouteArgs $) {
         this.carrierGatewayId = $.carrierGatewayId;
+        this.coreNetworkArn = $.coreNetworkArn;
         this.destinationCidrBlock = $.destinationCidrBlock;
         this.destinationIpv6CidrBlock = $.destinationIpv6CidrBlock;
         this.destinationPrefixListId = $.destinationPrefixListId;
@@ -253,6 +269,17 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
          */
         public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             $.carrierGatewayId = carrierGatewayId;
+            return this;
+        }
+
+        /**
+         * @param coreNetworkArn Core network ARN of the Route belonging to the Route Table.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(@Nullable String coreNetworkArn) {
+            $.coreNetworkArn = coreNetworkArn;
             return this;
         }
 

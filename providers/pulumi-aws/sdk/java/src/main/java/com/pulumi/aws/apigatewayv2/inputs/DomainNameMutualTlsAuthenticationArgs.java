@@ -16,16 +16,14 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
     public static final DomainNameMutualTlsAuthenticationArgs Empty = new DomainNameMutualTlsAuthenticationArgs();
 
     /**
-     * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
-     * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+     * Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`. The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
      * 
      */
     @Import(name="truststoreUri", required=true)
     private Output<String> truststoreUri;
 
     /**
-     * @return An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
-     * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+     * @return Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`. The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
      * 
      */
     public Output<String> truststoreUri() {
@@ -33,14 +31,14 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
     }
 
     /**
-     * The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+     * Version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
      * 
      */
     @Import(name="truststoreVersion")
     private @Nullable Output<String> truststoreVersion;
 
     /**
-     * @return The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+     * @return Version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
      * 
      */
     public Optional<Output<String>> truststoreVersion() {
@@ -73,8 +71,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
-         * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+         * @param truststoreUri Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`. The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
          * 
          * @return builder
          * 
@@ -85,8 +82,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
-         * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+         * @param truststoreUri Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`. The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
          * 
          * @return builder
          * 
@@ -96,7 +92,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param truststoreVersion The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+         * @param truststoreVersion Version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
          * 
          * @return builder
          * 
@@ -107,7 +103,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends com.pulumi.reso
         }
 
         /**
-         * @param truststoreVersion The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+         * @param truststoreVersion Version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
          * 
          * @return builder
          * 

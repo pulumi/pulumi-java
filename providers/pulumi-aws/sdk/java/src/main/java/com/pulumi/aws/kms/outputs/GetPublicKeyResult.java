@@ -44,6 +44,11 @@ public final class GetPublicKeyResult {
      */
     private final String publicKey;
     /**
+     * @return Exported public key. The value is Privacy Enhanced Mail (PEM) encoded.
+     * 
+     */
+    private final String publicKeyPem;
+    /**
      * @return Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
      */
@@ -59,6 +64,7 @@ public final class GetPublicKeyResult {
         @CustomType.Parameter("keyId") String keyId,
         @CustomType.Parameter("keyUsage") String keyUsage,
         @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("publicKeyPem") String publicKeyPem,
         @CustomType.Parameter("signingAlgorithms") List<String> signingAlgorithms) {
         this.arn = arn;
         this.customerMasterKeySpec = customerMasterKeySpec;
@@ -68,6 +74,7 @@ public final class GetPublicKeyResult {
         this.keyId = keyId;
         this.keyUsage = keyUsage;
         this.publicKey = publicKey;
+        this.publicKeyPem = publicKeyPem;
         this.signingAlgorithms = signingAlgorithms;
     }
 
@@ -120,6 +127,13 @@ public final class GetPublicKeyResult {
         return this.publicKey;
     }
     /**
+     * @return Exported public key. The value is Privacy Enhanced Mail (PEM) encoded.
+     * 
+     */
+    public String publicKeyPem() {
+        return this.publicKeyPem;
+    }
+    /**
      * @return Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
      */
@@ -144,6 +158,7 @@ public final class GetPublicKeyResult {
         private String keyId;
         private String keyUsage;
         private String publicKey;
+        private String publicKeyPem;
         private List<String> signingAlgorithms;
 
         public Builder() {
@@ -160,6 +175,7 @@ public final class GetPublicKeyResult {
     	      this.keyId = defaults.keyId;
     	      this.keyUsage = defaults.keyUsage;
     	      this.publicKey = defaults.publicKey;
+    	      this.publicKeyPem = defaults.publicKeyPem;
     	      this.signingAlgorithms = defaults.signingAlgorithms;
         }
 
@@ -201,6 +217,10 @@ public final class GetPublicKeyResult {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
+        public Builder publicKeyPem(String publicKeyPem) {
+            this.publicKeyPem = Objects.requireNonNull(publicKeyPem);
+            return this;
+        }
         public Builder signingAlgorithms(List<String> signingAlgorithms) {
             this.signingAlgorithms = Objects.requireNonNull(signingAlgorithms);
             return this;
@@ -208,7 +228,7 @@ public final class GetPublicKeyResult {
         public Builder signingAlgorithms(String... signingAlgorithms) {
             return signingAlgorithms(List.of(signingAlgorithms));
         }        public GetPublicKeyResult build() {
-            return new GetPublicKeyResult(arn, customerMasterKeySpec, encryptionAlgorithms, grantTokens, id, keyId, keyUsage, publicKey, signingAlgorithms);
+            return new GetPublicKeyResult(arn, customerMasterKeySpec, encryptionAlgorithms, grantTokens, id, keyId, keyUsage, publicKey, publicKeyPem, signingAlgorithms);
         }
     }
 }

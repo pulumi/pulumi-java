@@ -30,47 +30,37 @@ import javax.annotation.Nullable;
  * Mapping docs](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html)
  * to understand the implications of using these attributes.
  * 
- * The `root_block_device` mapping supports the following:
+ * ### `ebs_block_device`
  * 
- * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`,
- *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
- * * `volume_size` - (Optional) The size of the volume in gigabytes.
- * * `iops` - (Optional) The amount of provisioned
- *   [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `&#34;io1&#34;`.
- * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
- *   on instance termination (Default: `true`).
- * 
- * Modifying any of the `root_block_device` settings requires resource
- * replacement.
- * 
- * Each `ebs_block_device` supports the following:
- * 
- * * `device_name` - The name of the device to mount.
- * * `snapshot_id` - (Optional) The Snapshot ID to mount.
- * * `volume_type` - (Optional) The type of volume. Can be `&#34;standard&#34;`, `&#34;gp2&#34;`,
- *   or `&#34;io1&#34;`. (Default: `&#34;standard&#34;`).
- * * `volume_size` - (Optional) The size of the volume in gigabytes.
- * * `iops` - (Optional) The amount of provisioned
- *   [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
- *   This must be set with a `volume_type` of `&#34;io1&#34;`.
- * * `delete_on_termination` - (Optional) Whether the volume should be destroyed
- *   on instance termination (Default: `true`).
+ * * `delete_on_termination` - (Optional) Whether the volume should be destroyed on instance termination. Default is `true`.
+ * * `device_name` - (Required) Name of the device to mount.
+ * * `iops` - (Optional) Amount of provisioned [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `io1`.
+ * * `snapshot_id` - (Optional) Snapshot ID to mount.
+ * * `volume_size` - (Optional) Size of the volume in gigabytes.
+ * * `volume_type` - (Optional) Type of volume. Valid values are `standard`, `gp2`, or `io1`. Default is `standard`.
  * 
  * Modifying any `ebs_block_device` currently requires resource replacement.
  * 
- * Each `ephemeral_block_device` supports the following:
+ * ### `ephemeral_block_device`
  * 
- * * `device_name` - The name of the block device to mount on the instance.
- * * `virtual_name` - The [Instance Store Device
- *   Name](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
- *   (e.g., `&#34;ephemeral0&#34;`)
+ * * `device_name` - Name of the block device to mount on the instance.
+ * * `virtual_name` - The [Instance Store Device Name](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
  * 
  * Each AWS Instance type has a different set of Instance Store block devices
  * available for attachment. AWS [publishes a
  * list](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes)
  * of which ephemeral devices are available on each type. The devices are always
- * identified by the `virtual_name` in the format `&#34;ephemeral{0..N}&#34;`.
+ * identified by the `virtual_name` in the format `ephemeral{0..N}`.
+ * 
+ * ### `root_block_device`
+ * 
+ * * `delete_on_termination` - (Optional) Whether the volume should be destroyed on instance termination. Default is `true`.
+ * * `iops` - (Optional) Amount of provisioned [IOPS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). This must be set with a `volume_type` of `io1`.
+ * * `volume_size` - (Optional) Size of the volume in gigabytes.
+ * * `volume_type` - (Optional) Type of volume. Valid values are `standard`, `gp2`, or `io1`. Default is `standard`.
+ * 
+ * Modifying any of the `root_block_device` settings requires resource
+ * replacement.
  * 
  * &gt; **NOTE:** Currently, changes to `*_block_device` configuration of _existing_
  * resources cannot be automatically detected by this provider. After making updates
@@ -89,236 +79,294 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:opsworks/instance:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
     /**
-     * The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
+     * OpsWorks agent to install. Default is `INHERIT`.
      * 
      */
     @Export(name="agentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentVersion;
 
     /**
-     * @return The AWS OpsWorks agent to install.  Defaults to `&#34;INHERIT&#34;`.
+     * @return OpsWorks agent to install. Default is `INHERIT`.
      * 
      */
     public Output<Optional<String>> agentVersion() {
         return Codegen.optional(this.agentVersion);
     }
     /**
-     * The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
+     * AMI to use for the instance.  If an AMI is specified, `os` must be `Custom`.
      * 
      */
     @Export(name="amiId", type=String.class, parameters={})
     private Output<String> amiId;
 
     /**
-     * @return The AMI to use for the instance.  If an AMI is specified, `os` must be `&#34;Custom&#34;`.
+     * @return AMI to use for the instance.  If an AMI is specified, `os` must be `Custom`.
      * 
      */
     public Output<String> amiId() {
         return this.amiId;
     }
     /**
-     * Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
+     * Machine architecture for created instances.  Valid values are `x86_64` or `i386`. The default is `x86_64`.
      * 
      */
     @Export(name="architecture", type=String.class, parameters={})
     private Output</* @Nullable */ String> architecture;
 
     /**
-     * @return Machine architecture for created instances.  Can be either `&#34;x86_64&#34;` (the default) or `&#34;i386&#34;`
+     * @return Machine architecture for created instances.  Valid values are `x86_64` or `i386`. The default is `x86_64`.
      * 
      */
     public Output<Optional<String>> architecture() {
         return Codegen.optional(this.architecture);
     }
     /**
-     * Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
+     * Creates load-based or time-based instances.  Valid values are `load`, `timer`.
      * 
      */
     @Export(name="autoScalingType", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoScalingType;
 
     /**
-     * @return Creates load-based or time-based instances.  If set, can be either: `&#34;load&#34;` or `&#34;timer&#34;`.
+     * @return Creates load-based or time-based instances.  Valid values are `load`, `timer`.
      * 
      */
     public Output<Optional<String>> autoScalingType() {
         return Codegen.optional(this.autoScalingType);
     }
     /**
-     * Name of the availability zone where instances will be created
-     * by default.
+     * Name of the availability zone where instances will be created by default.
      * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
-     * @return Name of the availability zone where instances will be created
-     * by default.
+     * @return Name of the availability zone where instances will be created by default.
      * 
      */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
+    /**
+     * Time that the instance was created.
+     * 
+     */
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Time that the instance was created.
+     * 
+     */
     public Output<String> createdAt() {
         return this.createdAt;
     }
+    /**
+     * Whether to delete EBS volume on deletion. Default is `true`.
+     * 
+     */
     @Export(name="deleteEbs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEbs;
 
+    /**
+     * @return Whether to delete EBS volume on deletion. Default is `true`.
+     * 
+     */
     public Output<Optional<Boolean>> deleteEbs() {
         return Codegen.optional(this.deleteEbs);
     }
+    /**
+     * Whether to delete the Elastic IP on deletion.
+     * 
+     */
     @Export(name="deleteEip", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteEip;
 
+    /**
+     * @return Whether to delete the Elastic IP on deletion.
+     * 
+     */
     public Output<Optional<Boolean>> deleteEip() {
         return Codegen.optional(this.deleteEip);
     }
     /**
-     * Additional EBS block devices to attach to the
-     * instance.  See Block Devices below for details.
+     * Configuration block for additional EBS block devices to attach to the instance. See Block Devices below.
      * 
      */
     @Export(name="ebsBlockDevices", type=List.class, parameters={InstanceEbsBlockDevice.class})
     private Output<List<InstanceEbsBlockDevice>> ebsBlockDevices;
 
     /**
-     * @return Additional EBS block devices to attach to the
-     * instance.  See Block Devices below for details.
+     * @return Configuration block for additional EBS block devices to attach to the instance. See Block Devices below.
      * 
      */
     public Output<List<InstanceEbsBlockDevice>> ebsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
-     * If true, the launched EC2 instance will be EBS-optimized.
+     * Whether the launched EC2 instance will be EBS-optimized.
      * 
      */
     @Export(name="ebsOptimized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ebsOptimized;
 
     /**
-     * @return If true, the launched EC2 instance will be EBS-optimized.
+     * @return Whether the launched EC2 instance will be EBS-optimized.
      * 
      */
     public Output<Optional<Boolean>> ebsOptimized() {
         return Codegen.optional(this.ebsOptimized);
     }
     /**
-     * EC2 instance ID
+     * EC2 instance ID.
      * 
      */
     @Export(name="ec2InstanceId", type=String.class, parameters={})
     private Output<String> ec2InstanceId;
 
     /**
-     * @return EC2 instance ID
+     * @return EC2 instance ID.
      * 
      */
     public Output<String> ec2InstanceId() {
         return this.ec2InstanceId;
     }
+    /**
+     * ECS cluster&#39;s ARN for container instances.
+     * 
+     */
     @Export(name="ecsClusterArn", type=String.class, parameters={})
     private Output<String> ecsClusterArn;
 
+    /**
+     * @return ECS cluster&#39;s ARN for container instances.
+     * 
+     */
     public Output<String> ecsClusterArn() {
         return this.ecsClusterArn;
     }
+    /**
+     * Instance Elastic IP address.
+     * 
+     */
     @Export(name="elasticIp", type=String.class, parameters={})
     private Output<String> elasticIp;
 
+    /**
+     * @return Instance Elastic IP address.
+     * 
+     */
     public Output<String> elasticIp() {
         return this.elasticIp;
     }
     /**
-     * Customize Ephemeral (also known as
-     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+     * Configuration block for ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below.
      * 
      */
     @Export(name="ephemeralBlockDevices", type=List.class, parameters={InstanceEphemeralBlockDevice.class})
     private Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices;
 
     /**
-     * @return Customize Ephemeral (also known as
-     * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
+     * @return Configuration block for ephemeral (also known as &#34;Instance Store&#34;) volumes on the instance. See Block Devices below.
      * 
      */
     public Output<List<InstanceEphemeralBlockDevice>> ephemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
     /**
-     * The instance&#39;s host name.
+     * Instance&#39;s host name.
      * 
      */
     @Export(name="hostname", type=String.class, parameters={})
     private Output<String> hostname;
 
     /**
-     * @return The instance&#39;s host name.
+     * @return Instance&#39;s host name.
      * 
      */
     public Output<String> hostname() {
         return this.hostname;
     }
+    /**
+     * For registered instances, infrastructure class: ec2 or on-premises.
+     * 
+     */
     @Export(name="infrastructureClass", type=String.class, parameters={})
     private Output<String> infrastructureClass;
 
+    /**
+     * @return For registered instances, infrastructure class: ec2 or on-premises.
+     * 
+     */
     public Output<String> infrastructureClass() {
         return this.infrastructureClass;
     }
     /**
-     * Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+     * Controls where to install OS and package updates when the instance boots.  Default is `true`.
      * 
      */
     @Export(name="installUpdatesOnBoot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> installUpdatesOnBoot;
 
     /**
-     * @return Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+     * @return Controls where to install OS and package updates when the instance boots.  Default is `true`.
      * 
      */
     public Output<Optional<Boolean>> installUpdatesOnBoot() {
         return Codegen.optional(this.installUpdatesOnBoot);
     }
+    /**
+     * ARN of the instance&#39;s IAM profile.
+     * 
+     */
     @Export(name="instanceProfileArn", type=String.class, parameters={})
     private Output<String> instanceProfileArn;
 
+    /**
+     * @return ARN of the instance&#39;s IAM profile.
+     * 
+     */
     public Output<String> instanceProfileArn() {
         return this.instanceProfileArn;
     }
     /**
-     * The type of instance to start
+     * Type of instance to start.
      * 
      */
     @Export(name="instanceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceType;
 
     /**
-     * @return The type of instance to start
+     * @return Type of instance to start.
      * 
      */
     public Output<Optional<String>> instanceType() {
         return Codegen.optional(this.instanceType);
     }
+    /**
+     * ID of the last service error.
+     * 
+     */
     @Export(name="lastServiceErrorId", type=String.class, parameters={})
     private Output<String> lastServiceErrorId;
 
+    /**
+     * @return ID of the last service error.
+     * 
+     */
     public Output<String> lastServiceErrorId() {
         return this.lastServiceErrorId;
     }
     /**
-     * The ids of the layers the instance will belong to.
+     * List of the layers the instance will belong to.
      * 
      */
     @Export(name="layerIds", type=List.class, parameters={String.class})
     private Output<List<String>> layerIds;
 
     /**
-     * @return The ids of the layers the instance will belong to.
+     * @return List of the layers the instance will belong to.
      * 
      */
     public Output<List<String>> layerIds() {
@@ -338,163 +386,227 @@ public class Instance extends com.pulumi.resources.CustomResource {
     public Output<String> os() {
         return this.os;
     }
+    /**
+     * Instance&#39;s platform.
+     * 
+     */
     @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
+    /**
+     * @return Instance&#39;s platform.
+     * 
+     */
     public Output<String> platform() {
         return this.platform;
     }
     /**
-     * The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
-     * for your VPC
+     * Private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     @Export(name="privateDns", type=String.class, parameters={})
     private Output<String> privateDns;
 
     /**
-     * @return The private DNS name assigned to the instance. Can only be
-     * used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames
-     * for your VPC
+     * @return Private DNS name assigned to the instance. Can only be used inside the Amazon EC2, and only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     public Output<String> privateDns() {
         return this.privateDns;
     }
     /**
-     * The private IP address assigned to the instance
+     * Private IP address assigned to the instance.
      * 
      */
     @Export(name="privateIp", type=String.class, parameters={})
     private Output<String> privateIp;
 
     /**
-     * @return The private IP address assigned to the instance
+     * @return Private IP address assigned to the instance.
      * 
      */
     public Output<String> privateIp() {
         return this.privateIp;
     }
     /**
-     * The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you&#39;ve enabled DNS hostnames for your VPC
+     * Public DNS name assigned to the instance. For EC2-VPC, this is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     @Export(name="publicDns", type=String.class, parameters={})
     private Output<String> publicDns;
 
     /**
-     * @return The public DNS name assigned to the instance. For EC2-VPC, this
-     * is only available if you&#39;ve enabled DNS hostnames for your VPC
+     * @return Public DNS name assigned to the instance. For EC2-VPC, this is only available if you&#39;ve enabled DNS hostnames for your VPC.
      * 
      */
     public Output<String> publicDns() {
         return this.publicDns;
     }
     /**
-     * The public IP address assigned to the instance, if applicable.
+     * Public IP address assigned to the instance, if applicable.
      * 
      */
     @Export(name="publicIp", type=String.class, parameters={})
     private Output<String> publicIp;
 
     /**
-     * @return The public IP address assigned to the instance, if applicable.
+     * @return Public IP address assigned to the instance, if applicable.
      * 
      */
     public Output<String> publicIp() {
         return this.publicIp;
     }
+    /**
+     * For registered instances, who performed the registration.
+     * 
+     */
     @Export(name="registeredBy", type=String.class, parameters={})
     private Output<String> registeredBy;
 
+    /**
+     * @return For registered instances, who performed the registration.
+     * 
+     */
     public Output<String> registeredBy() {
         return this.registeredBy;
     }
+    /**
+     * Instance&#39;s reported AWS OpsWorks Stacks agent version.
+     * 
+     */
     @Export(name="reportedAgentVersion", type=String.class, parameters={})
     private Output<String> reportedAgentVersion;
 
+    /**
+     * @return Instance&#39;s reported AWS OpsWorks Stacks agent version.
+     * 
+     */
     public Output<String> reportedAgentVersion() {
         return this.reportedAgentVersion;
     }
+    /**
+     * For registered instances, the reported operating system family.
+     * 
+     */
     @Export(name="reportedOsFamily", type=String.class, parameters={})
     private Output<String> reportedOsFamily;
 
+    /**
+     * @return For registered instances, the reported operating system family.
+     * 
+     */
     public Output<String> reportedOsFamily() {
         return this.reportedOsFamily;
     }
+    /**
+     * For registered instances, the reported operating system name.
+     * 
+     */
     @Export(name="reportedOsName", type=String.class, parameters={})
     private Output<String> reportedOsName;
 
+    /**
+     * @return For registered instances, the reported operating system name.
+     * 
+     */
     public Output<String> reportedOsName() {
         return this.reportedOsName;
     }
+    /**
+     * For registered instances, the reported operating system version.
+     * 
+     */
     @Export(name="reportedOsVersion", type=String.class, parameters={})
     private Output<String> reportedOsVersion;
 
+    /**
+     * @return For registered instances, the reported operating system version.
+     * 
+     */
     public Output<String> reportedOsVersion() {
         return this.reportedOsVersion;
     }
     /**
-     * Customize details about the root block
-     * device of the instance. See Block Devices below for details.
+     * Configuration block for the root block device of the instance. See Block Devices below.
      * 
      */
     @Export(name="rootBlockDevices", type=List.class, parameters={InstanceRootBlockDevice.class})
     private Output<List<InstanceRootBlockDevice>> rootBlockDevices;
 
     /**
-     * @return Customize details about the root block
-     * device of the instance. See Block Devices below for details.
+     * @return Configuration block for the root block device of the instance. See Block Devices below.
      * 
      */
     public Output<List<InstanceRootBlockDevice>> rootBlockDevices() {
         return this.rootBlockDevices;
     }
     /**
-     * Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
+     * Name of the type of root device instances will have by default. Valid values are `ebs` or `instance-store`.
      * 
      */
     @Export(name="rootDeviceType", type=String.class, parameters={})
     private Output<String> rootDeviceType;
 
     /**
-     * @return Name of the type of root device instances will have by default.  Can be either `&#34;ebs&#34;` or `&#34;instance-store&#34;`
+     * @return Name of the type of root device instances will have by default. Valid values are `ebs` or `instance-store`.
      * 
      */
     public Output<String> rootDeviceType() {
         return this.rootDeviceType;
     }
+    /**
+     * Root device volume ID.
+     * 
+     */
     @Export(name="rootDeviceVolumeId", type=String.class, parameters={})
     private Output<String> rootDeviceVolumeId;
 
+    /**
+     * @return Root device volume ID.
+     * 
+     */
     public Output<String> rootDeviceVolumeId() {
         return this.rootDeviceVolumeId;
     }
     /**
-     * The associated security groups.
+     * Associated security groups.
      * 
      */
     @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupIds;
 
     /**
-     * @return The associated security groups.
+     * @return Associated security groups.
      * 
      */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
+    /**
+     * SSH key&#39;s Deep Security Agent (DSA) fingerprint.
+     * 
+     */
     @Export(name="sshHostDsaKeyFingerprint", type=String.class, parameters={})
     private Output<String> sshHostDsaKeyFingerprint;
 
+    /**
+     * @return SSH key&#39;s Deep Security Agent (DSA) fingerprint.
+     * 
+     */
     public Output<String> sshHostDsaKeyFingerprint() {
         return this.sshHostDsaKeyFingerprint;
     }
+    /**
+     * SSH key&#39;s RSA fingerprint.
+     * 
+     */
     @Export(name="sshHostRsaKeyFingerprint", type=String.class, parameters={})
     private Output<String> sshHostRsaKeyFingerprint;
 
+    /**
+     * @return SSH key&#39;s RSA fingerprint.
+     * 
+     */
     public Output<String> sshHostRsaKeyFingerprint() {
         return this.sshHostRsaKeyFingerprint;
     }
@@ -513,78 +625,84 @@ public class Instance extends com.pulumi.resources.CustomResource {
         return this.sshKeyName;
     }
     /**
-     * The id of the stack the instance will belong to.
+     * Identifier of the stack the instance will belong to.
      * 
      */
     @Export(name="stackId", type=String.class, parameters={})
     private Output<String> stackId;
 
     /**
-     * @return The id of the stack the instance will belong to.
+     * @return Identifier of the stack the instance will belong to.
      * 
      */
     public Output<String> stackId() {
         return this.stackId;
     }
     /**
-     * The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
+     * Desired state of the instance. Valid values are `running` or `stopped`.
      * 
      */
     @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
-     * @return The desired state of the instance.  Can be either `&#34;running&#34;` or `&#34;stopped&#34;`.
+     * @return Desired state of the instance. Valid values are `running` or `stopped`.
      * 
      */
     public Output<Optional<String>> state() {
         return Codegen.optional(this.state);
     }
+    /**
+     * Instance status. Will be one of `booting`, `connection_lost`, `online`, `pending`, `rebooting`, `requested`, `running_setup`, `setup_failed`, `shutting_down`, `start_failed`, `stop_failed`, `stopped`, `stopping`, `terminated`, or `terminating`.
+     * 
+     */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Instance status. Will be one of `booting`, `connection_lost`, `online`, `pending`, `rebooting`, `requested`, `running_setup`, `setup_failed`, `shutting_down`, `start_failed`, `stop_failed`, `stopped`, `stopping`, `terminated`, or `terminating`.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
     /**
-     * Subnet ID to attach to
+     * Subnet ID to attach to.
      * 
      */
     @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
-     * @return Subnet ID to attach to
+     * @return Subnet ID to attach to.
      * 
      */
     public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
-     * Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
+     * Instance tenancy to use. Valid values are `default`, `dedicated` or `host`.
      * 
      */
     @Export(name="tenancy", type=String.class, parameters={})
     private Output<String> tenancy;
 
     /**
-     * @return Instance tenancy to use. Can be one of `&#34;default&#34;`, `&#34;dedicated&#34;` or `&#34;host&#34;`
+     * @return Instance tenancy to use. Valid values are `default`, `dedicated` or `host`.
      * 
      */
     public Output<String> tenancy() {
         return this.tenancy;
     }
     /**
-     * Keyword to choose what virtualization mode created instances
-     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
+     * Keyword to choose what virtualization mode created instances will use. Valid values are `paravirtual` or `hvm`.
      * 
      */
     @Export(name="virtualizationType", type=String.class, parameters={})
     private Output<String> virtualizationType;
 
     /**
-     * @return Keyword to choose what virtualization mode created instances
-     * will use. Can be either `&#34;paravirtual&#34;` or `&#34;hvm&#34;`.
+     * @return Keyword to choose what virtualization mode created instances will use. Valid values are `paravirtual` or `hvm`.
      * 
      */
     public Output<String> virtualizationType() {

@@ -41,11 +41,26 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
+    @Import(name="certificateAuthorities")
+    private @Nullable Output<List<ClusterCertificateAuthorityArgs>> certificateAuthorities;
+
+    /**
+     * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+     * 
+     */
+    public Optional<Output<List<ClusterCertificateAuthorityArgs>>> certificateAuthorities() {
+        return Optional.ofNullable(this.certificateAuthorities);
+    }
+
+    /**
+     * The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
+     * 
+     */
     @Import(name="certificateAuthority")
     private @Nullable Output<ClusterCertificateAuthorityArgs> certificateAuthority;
 
     /**
-     * @return Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+     * @return The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
      * 
      */
     public Optional<Output<ClusterCertificateAuthorityArgs>> certificateAuthority() {
@@ -266,6 +281,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
 
     private ClusterState(ClusterState $) {
         this.arn = $.arn;
+        this.certificateAuthorities = $.certificateAuthorities;
         this.certificateAuthority = $.certificateAuthority;
         this.createdAt = $.createdAt;
         this.enabledClusterLogTypes = $.enabledClusterLogTypes;
@@ -323,7 +339,38 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateAuthority Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+         * @param certificateAuthorities Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorities(@Nullable Output<List<ClusterCertificateAuthorityArgs>> certificateAuthorities) {
+            $.certificateAuthorities = certificateAuthorities;
+            return this;
+        }
+
+        /**
+         * @param certificateAuthorities Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorities(List<ClusterCertificateAuthorityArgs> certificateAuthorities) {
+            return certificateAuthorities(Output.of(certificateAuthorities));
+        }
+
+        /**
+         * @param certificateAuthorities Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder certificateAuthorities(ClusterCertificateAuthorityArgs... certificateAuthorities) {
+            return certificateAuthorities(List.of(certificateAuthorities));
+        }
+
+        /**
+         * @param certificateAuthority The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
          * 
          * @return builder
          * 
@@ -334,7 +381,7 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateAuthority Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
+         * @param certificateAuthority The first certificate authority. Base64 encoded certificate data required to communicate with your cluster.
          * 
          * @return builder
          * 

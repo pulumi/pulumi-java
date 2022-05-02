@@ -80,30 +80,42 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.automatedSnapshotRetentionPeriod);
     }
     /**
-     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+     * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
      * 
      */
     @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
-     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
+     * @return The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency. Can only be changed if `availability_zone_relocation_enabled` is `true`.
      * 
      */
     public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
-     * The Cluster Identifier. Must be a lower case
-     * string.
+     * If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+     * 
+     */
+    @Export(name="availabilityZoneRelocationEnabled", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> availabilityZoneRelocationEnabled;
+
+    /**
+     * @return If true, the cluster can be relocated to another availabity zone, either automatically by AWS or when requested. Default is `false`. Available for use on clusters from the RA3 instance family.
+     * 
+     */
+    public Output<Optional<Boolean>> availabilityZoneRelocationEnabled() {
+        return Codegen.optional(this.availabilityZoneRelocationEnabled);
+    }
+    /**
+     * The Cluster Identifier. Must be a lower case string.
      * 
      */
     @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
-     * @return The Cluster Identifier. Must be a lower case
-     * string.
+     * @return The Cluster Identifier. Must be a lower case string.
      * 
      */
     public Output<String> clusterIdentifier() {
@@ -441,7 +453,9 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     }
     /**
      * The port number on which the cluster accepts incoming connections.
-     * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+     * The cluster is accessible only via the JDBC and ODBC connection strings.
+     * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+     * Default port is 5439.
      * 
      */
     @Export(name="port", type=Integer.class, parameters={})
@@ -449,7 +463,9 @@ public class Cluster extends com.pulumi.resources.CustomResource {
 
     /**
      * @return The port number on which the cluster accepts incoming connections.
-     * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
+     * The cluster is accessible only via the JDBC and ODBC connection strings.
+     * Part of the connection string requires the port on which the cluster will listen for incoming connections.
+     * Default port is 5439.
      * 
      */
     public Output<Optional<Integer>> port() {

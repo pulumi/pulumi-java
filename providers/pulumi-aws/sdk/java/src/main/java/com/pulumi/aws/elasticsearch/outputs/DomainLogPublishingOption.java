@@ -18,7 +18,7 @@ public final class DomainLogPublishingOption {
      */
     private final String cloudwatchLogGroupArn;
     /**
-     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     private final @Nullable Boolean enabled;
@@ -46,7 +46,7 @@ public final class DomainLogPublishingOption {
         return this.cloudwatchLogGroupArn;
     }
     /**
-     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     public Optional<Boolean> enabled() {

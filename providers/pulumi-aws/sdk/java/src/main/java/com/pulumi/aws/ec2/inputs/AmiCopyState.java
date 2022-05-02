@@ -51,6 +51,21 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+     * 
+     */
+    @Import(name="bootMode")
+    private @Nullable Output<String> bootMode;
+
+    /**
+     * @return The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+     * 
+     */
+    public Optional<Output<String>> bootMode() {
+        return Optional.ofNullable(this.bootMode);
+    }
+
+    /**
      * A longer, human-readable description for the AMI.
      * 
      */
@@ -413,6 +428,7 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
     private AmiCopyState(AmiCopyState $) {
         this.architecture = $.architecture;
         this.arn = $.arn;
+        this.bootMode = $.bootMode;
         this.description = $.description;
         this.destinationOutpostArn = $.destinationOutpostArn;
         this.ebsBlockDevices = $.ebsBlockDevices;
@@ -501,6 +517,27 @@ public final class AmiCopyState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
+        }
+
+        /**
+         * @param bootMode The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootMode(@Nullable Output<String> bootMode) {
+            $.bootMode = bootMode;
+            return this;
+        }
+
+        /**
+         * @param bootMode The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bootMode(String bootMode) {
+            return bootMode(Output.of(bootMode));
         }
 
         /**
