@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aboutMe")
-      private final @Nullable Output<String> aboutMe;
+    private @Nullable Output<String> aboutMe;
 
-    public Output<String> aboutMe() {
-        return this.aboutMe == null ? Codegen.empty() : this.aboutMe;
+    /**
+     * @return A freeform field for the user to describe themselves
+     * 
+     */
+    public Optional<Output<String>> aboutMe() {
+        return Optional.ofNullable(this.aboutMe);
     }
 
     /**
@@ -33,10 +37,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountEnabled")
-      private final @Nullable Output<Boolean> accountEnabled;
+    private @Nullable Output<Boolean> accountEnabled;
 
-    public Output<Boolean> accountEnabled() {
-        return this.accountEnabled == null ? Codegen.empty() : this.accountEnabled;
+    /**
+     * @return Whether or not the account should be enabled.
+     * 
+     */
+    public Optional<Output<Boolean>> accountEnabled() {
+        return Optional.ofNullable(this.accountEnabled);
     }
 
     /**
@@ -44,10 +52,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ageGroup")
-      private final @Nullable Output<String> ageGroup;
+    private @Nullable Output<String> ageGroup;
 
-    public Output<String> ageGroup() {
-        return this.ageGroup == null ? Codegen.empty() : this.ageGroup;
+    /**
+     * @return The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`. Omit this property or specify a blank string to unset.
+     * 
+     */
+    public Optional<Output<String>> ageGroup() {
+        return Optional.ofNullable(this.ageGroup);
     }
 
     /**
@@ -55,10 +67,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="businessPhones")
-      private final @Nullable Output<List<String>> businessPhones;
+    private @Nullable Output<List<String>> businessPhones;
 
-    public Output<List<String>> businessPhones() {
-        return this.businessPhones == null ? Codegen.empty() : this.businessPhones;
+    /**
+     * @return A list of telephone numbers for the user. Only one number can be set for this property. Read-only for users synced with Azure AD Connect.
+     * 
+     */
+    public Optional<Output<List<String>>> businessPhones() {
+        return Optional.ofNullable(this.businessPhones);
     }
 
     /**
@@ -66,10 +82,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="city")
-      private final @Nullable Output<String> city;
+    private @Nullable Output<String> city;
 
-    public Output<String> city() {
-        return this.city == null ? Codegen.empty() : this.city;
+    /**
+     * @return The city in which the user is located.
+     * 
+     */
+    public Optional<Output<String>> city() {
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -77,10 +97,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="companyName")
-      private final @Nullable Output<String> companyName;
+    private @Nullable Output<String> companyName;
 
-    public Output<String> companyName() {
-        return this.companyName == null ? Codegen.empty() : this.companyName;
+    /**
+     * @return The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * 
+     */
+    public Optional<Output<String>> companyName() {
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
@@ -88,10 +112,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consentProvidedForMinor")
-      private final @Nullable Output<String> consentProvidedForMinor;
+    private @Nullable Output<String> consentProvidedForMinor;
 
-    public Output<String> consentProvidedForMinor() {
-        return this.consentProvidedForMinor == null ? Codegen.empty() : this.consentProvidedForMinor;
+    /**
+     * @return Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
+     * 
+     */
+    public Optional<Output<String>> consentProvidedForMinor() {
+        return Optional.ofNullable(this.consentProvidedForMinor);
     }
 
     /**
@@ -99,10 +127,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="costCenter")
-      private final @Nullable Output<String> costCenter;
+    private @Nullable Output<String> costCenter;
 
-    public Output<String> costCenter() {
-        return this.costCenter == null ? Codegen.empty() : this.costCenter;
+    /**
+     * @return The cost center associated with the user.
+     * 
+     */
+    public Optional<Output<String>> costCenter() {
+        return Optional.ofNullable(this.costCenter);
     }
 
     /**
@@ -110,10 +142,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="country")
-      private final @Nullable Output<String> country;
+    private @Nullable Output<String> country;
 
-    public Output<String> country() {
-        return this.country == null ? Codegen.empty() : this.country;
+    /**
+     * @return The country/region in which the user is located, e.g. `US` or `UK`.
+     * 
+     */
+    public Optional<Output<String>> country() {
+        return Optional.ofNullable(this.country);
     }
 
     /**
@@ -121,10 +157,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationType")
-      private final @Nullable Output<String> creationType;
+    private @Nullable Output<String> creationType;
 
-    public Output<String> creationType() {
-        return this.creationType == null ? Codegen.empty() : this.creationType;
+    /**
+     * @return Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
+     * 
+     */
+    public Optional<Output<String>> creationType() {
+        return Optional.ofNullable(this.creationType);
     }
 
     /**
@@ -132,21 +172,29 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="department")
-      private final @Nullable Output<String> department;
+    private @Nullable Output<String> department;
 
-    public Output<String> department() {
-        return this.department == null ? Codegen.empty() : this.department;
+    /**
+     * @return The name for the department in which the user works.
+     * 
+     */
+    public Optional<Output<String>> department() {
+        return Optional.ofNullable(this.department);
     }
 
     /**
-     * Whether the user's password is exempt from expiring. Defaults to `false`.
+     * Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
      * 
      */
     @Import(name="disablePasswordExpiration")
-      private final @Nullable Output<Boolean> disablePasswordExpiration;
+    private @Nullable Output<Boolean> disablePasswordExpiration;
 
-    public Output<Boolean> disablePasswordExpiration() {
-        return this.disablePasswordExpiration == null ? Codegen.empty() : this.disablePasswordExpiration;
+    /**
+     * @return Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> disablePasswordExpiration() {
+        return Optional.ofNullable(this.disablePasswordExpiration);
     }
 
     /**
@@ -154,10 +202,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableStrongPassword")
-      private final @Nullable Output<Boolean> disableStrongPassword;
+    private @Nullable Output<Boolean> disableStrongPassword;
 
-    public Output<Boolean> disableStrongPassword() {
-        return this.disableStrongPassword == null ? Codegen.empty() : this.disableStrongPassword;
+    /**
+     * @return Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> disableStrongPassword() {
+        return Optional.ofNullable(this.disableStrongPassword);
     }
 
     /**
@@ -165,10 +217,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The name to display in the address book for the user.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -176,10 +232,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="division")
-      private final @Nullable Output<String> division;
+    private @Nullable Output<String> division;
 
-    public Output<String> division() {
-        return this.division == null ? Codegen.empty() : this.division;
+    /**
+     * @return The name of the division in which the user works.
+     * 
+     */
+    public Optional<Output<String>> division() {
+        return Optional.ofNullable(this.division);
     }
 
     /**
@@ -187,10 +247,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="employeeId")
-      private final @Nullable Output<String> employeeId;
+    private @Nullable Output<String> employeeId;
 
-    public Output<String> employeeId() {
-        return this.employeeId == null ? Codegen.empty() : this.employeeId;
+    /**
+     * @return The employee identifier assigned to the user by the organisation.
+     * 
+     */
+    public Optional<Output<String>> employeeId() {
+        return Optional.ofNullable(this.employeeId);
     }
 
     /**
@@ -198,21 +262,29 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="employeeType")
-      private final @Nullable Output<String> employeeType;
+    private @Nullable Output<String> employeeType;
 
-    public Output<String> employeeType() {
-        return this.employeeType == null ? Codegen.empty() : this.employeeType;
+    /**
+     * @return Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
+     * 
+     */
+    public Optional<Output<String>> employeeType() {
+        return Optional.ofNullable(this.employeeType);
     }
 
     /**
-     * For an external user invited to the tenant, this property represents the invited user's invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
      * 
      */
     @Import(name="externalUserState")
-      private final @Nullable Output<String> externalUserState;
+    private @Nullable Output<String> externalUserState;
 
-    public Output<String> externalUserState() {
-        return this.externalUserState == null ? Codegen.empty() : this.externalUserState;
+    /**
+     * @return For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+     * 
+     */
+    public Optional<Output<String>> externalUserState() {
+        return Optional.ofNullable(this.externalUserState);
     }
 
     /**
@@ -220,10 +292,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="faxNumber")
-      private final @Nullable Output<String> faxNumber;
+    private @Nullable Output<String> faxNumber;
 
-    public Output<String> faxNumber() {
-        return this.faxNumber == null ? Codegen.empty() : this.faxNumber;
+    /**
+     * @return The fax number of the user.
+     * 
+     */
+    public Optional<Output<String>> faxNumber() {
+        return Optional.ofNullable(this.faxNumber);
     }
 
     /**
@@ -231,10 +307,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forcePasswordChange")
-      private final @Nullable Output<Boolean> forcePasswordChange;
+    private @Nullable Output<Boolean> forcePasswordChange;
 
-    public Output<Boolean> forcePasswordChange() {
-        return this.forcePasswordChange == null ? Codegen.empty() : this.forcePasswordChange;
+    /**
+     * @return Whether the user is forced to change the password during the next sign-in. Only takes effect when also changing the password. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> forcePasswordChange() {
+        return Optional.ofNullable(this.forcePasswordChange);
     }
 
     /**
@@ -242,10 +322,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="givenName")
-      private final @Nullable Output<String> givenName;
+    private @Nullable Output<String> givenName;
 
-    public Output<String> givenName() {
-        return this.givenName == null ? Codegen.empty() : this.givenName;
+    /**
+     * @return The given name (first name) of the user.
+     * 
+     */
+    public Optional<Output<String>> givenName() {
+        return Optional.ofNullable(this.givenName);
     }
 
     /**
@@ -253,10 +337,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imAddresses")
-      private final @Nullable Output<List<String>> imAddresses;
+    private @Nullable Output<List<String>> imAddresses;
 
-    public Output<List<String>> imAddresses() {
-        return this.imAddresses == null ? Codegen.empty() : this.imAddresses;
+    /**
+     * @return A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+     * 
+     */
+    public Optional<Output<List<String>>> imAddresses() {
+        return Optional.ofNullable(this.imAddresses);
     }
 
     /**
@@ -264,10 +352,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobTitle")
-      private final @Nullable Output<String> jobTitle;
+    private @Nullable Output<String> jobTitle;
 
-    public Output<String> jobTitle() {
-        return this.jobTitle == null ? Codegen.empty() : this.jobTitle;
+    /**
+     * @return The user’s job title.
+     * 
+     */
+    public Optional<Output<String>> jobTitle() {
+        return Optional.ofNullable(this.jobTitle);
     }
 
     /**
@@ -275,10 +367,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mail")
-      private final @Nullable Output<String> mail;
+    private @Nullable Output<String> mail;
 
-    public Output<String> mail() {
-        return this.mail == null ? Codegen.empty() : this.mail;
+    /**
+     * @return The SMTP address for the user. This property cannot be unset once specified.
+     * 
+     */
+    public Optional<Output<String>> mail() {
+        return Optional.ofNullable(this.mail);
     }
 
     /**
@@ -286,21 +382,29 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mailNickname")
-      private final @Nullable Output<String> mailNickname;
+    private @Nullable Output<String> mailNickname;
 
-    public Output<String> mailNickname() {
-        return this.mailNickname == null ? Codegen.empty() : this.mailNickname;
+    /**
+     * @return The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+     * 
+     */
+    public Optional<Output<String>> mailNickname() {
+        return Optional.ofNullable(this.mailNickname);
     }
 
     /**
-     * The object ID of the user's manager.
+     * The object ID of the user&#39;s manager.
      * 
      */
     @Import(name="managerId")
-      private final @Nullable Output<String> managerId;
+    private @Nullable Output<String> managerId;
 
-    public Output<String> managerId() {
-        return this.managerId == null ? Codegen.empty() : this.managerId;
+    /**
+     * @return The object ID of the user&#39;s manager.
+     * 
+     */
+    public Optional<Output<String>> managerId() {
+        return Optional.ofNullable(this.managerId);
     }
 
     /**
@@ -308,10 +412,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mobilePhone")
-      private final @Nullable Output<String> mobilePhone;
+    private @Nullable Output<String> mobilePhone;
 
-    public Output<String> mobilePhone() {
-        return this.mobilePhone == null ? Codegen.empty() : this.mobilePhone;
+    /**
+     * @return The primary cellular telephone number for the user.
+     * 
+     */
+    public Optional<Output<String>> mobilePhone() {
+        return Optional.ofNullable(this.mobilePhone);
     }
 
     /**
@@ -319,21 +427,29 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    /**
+     * @return The object ID of the user.
+     * 
+     */
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
-     * The office location in the user's place of business.
+     * The office location in the user&#39;s place of business.
      * 
      */
     @Import(name="officeLocation")
-      private final @Nullable Output<String> officeLocation;
+    private @Nullable Output<String> officeLocation;
 
-    public Output<String> officeLocation() {
-        return this.officeLocation == null ? Codegen.empty() : this.officeLocation;
+    /**
+     * @return The office location in the user&#39;s place of business.
+     * 
+     */
+    public Optional<Output<String>> officeLocation() {
+        return Optional.ofNullable(this.officeLocation);
     }
 
     /**
@@ -341,10 +457,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesDistinguishedName")
-      private final @Nullable Output<String> onpremisesDistinguishedName;
+    private @Nullable Output<String> onpremisesDistinguishedName;
 
-    public Output<String> onpremisesDistinguishedName() {
-        return this.onpremisesDistinguishedName == null ? Codegen.empty() : this.onpremisesDistinguishedName;
+    /**
+     * @return The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesDistinguishedName() {
+        return Optional.ofNullable(this.onpremisesDistinguishedName);
     }
 
     /**
@@ -352,21 +472,29 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesDomainName")
-      private final @Nullable Output<String> onpremisesDomainName;
+    private @Nullable Output<String> onpremisesDomainName;
 
-    public Output<String> onpremisesDomainName() {
-        return this.onpremisesDomainName == null ? Codegen.empty() : this.onpremisesDomainName;
+    /**
+     * @return The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesDomainName() {
+        return Optional.ofNullable(this.onpremisesDomainName);
     }
 
     /**
-     * The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user's `user_principal_name` property when creating a new user account.
+     * The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
      * 
      */
     @Import(name="onpremisesImmutableId")
-      private final @Nullable Output<String> onpremisesImmutableId;
+    private @Nullable Output<String> onpremisesImmutableId;
 
-    public Output<String> onpremisesImmutableId() {
-        return this.onpremisesImmutableId == null ? Codegen.empty() : this.onpremisesImmutableId;
+    /**
+     * @return The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
+     * 
+     */
+    public Optional<Output<String>> onpremisesImmutableId() {
+        return Optional.ofNullable(this.onpremisesImmutableId);
     }
 
     /**
@@ -374,10 +502,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSamAccountName")
-      private final @Nullable Output<String> onpremisesSamAccountName;
+    private @Nullable Output<String> onpremisesSamAccountName;
 
-    public Output<String> onpremisesSamAccountName() {
-        return this.onpremisesSamAccountName == null ? Codegen.empty() : this.onpremisesSamAccountName;
+    /**
+     * @return The on-premise SAM account name of the user.
+     * 
+     */
+    public Optional<Output<String>> onpremisesSamAccountName() {
+        return Optional.ofNullable(this.onpremisesSamAccountName);
     }
 
     /**
@@ -385,10 +517,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSecurityIdentifier")
-      private final @Nullable Output<String> onpremisesSecurityIdentifier;
+    private @Nullable Output<String> onpremisesSecurityIdentifier;
 
-    public Output<String> onpremisesSecurityIdentifier() {
-        return this.onpremisesSecurityIdentifier == null ? Codegen.empty() : this.onpremisesSecurityIdentifier;
+    /**
+     * @return The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesSecurityIdentifier() {
+        return Optional.ofNullable(this.onpremisesSecurityIdentifier);
     }
 
     /**
@@ -396,10 +532,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSyncEnabled")
-      private final @Nullable Output<Boolean> onpremisesSyncEnabled;
+    private @Nullable Output<Boolean> onpremisesSyncEnabled;
 
-    public Output<Boolean> onpremisesSyncEnabled() {
-        return this.onpremisesSyncEnabled == null ? Codegen.empty() : this.onpremisesSyncEnabled;
+    /**
+     * @return Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+     * 
+     */
+    public Optional<Output<Boolean>> onpremisesSyncEnabled() {
+        return Optional.ofNullable(this.onpremisesSyncEnabled);
     }
 
     /**
@@ -407,10 +547,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesUserPrincipalName")
-      private final @Nullable Output<String> onpremisesUserPrincipalName;
+    private @Nullable Output<String> onpremisesUserPrincipalName;
 
-    public Output<String> onpremisesUserPrincipalName() {
-        return this.onpremisesUserPrincipalName == null ? Codegen.empty() : this.onpremisesUserPrincipalName;
+    /**
+     * @return The on-premise user principal name of the user.
+     * 
+     */
+    public Optional<Output<String>> onpremisesUserPrincipalName() {
+        return Optional.ofNullable(this.onpremisesUserPrincipalName);
     }
 
     /**
@@ -418,10 +562,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="otherMails")
-      private final @Nullable Output<List<String>> otherMails;
+    private @Nullable Output<List<String>> otherMails;
 
-    public Output<List<String>> otherMails() {
-        return this.otherMails == null ? Codegen.empty() : this.otherMails;
+    /**
+     * @return A list of additional email addresses for the user.
+     * 
+     */
+    public Optional<Output<List<String>>> otherMails() {
+        return Optional.ofNullable(this.otherMails);
     }
 
     /**
@@ -429,32 +577,44 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    /**
+     * @return The password for the user. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. This property is required when creating a new user.
+     * 
+     */
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
-     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+     * The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable Output<String> postalCode;
+    private @Nullable Output<String> postalCode;
 
-    public Output<String> postalCode() {
-        return this.postalCode == null ? Codegen.empty() : this.postalCode;
+    /**
+     * @return The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
+     * 
+     */
+    public Optional<Output<String>> postalCode() {
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
-     * The user's preferred language, in ISO 639-1 notation.
+     * The user&#39;s preferred language, in ISO 639-1 notation.
      * 
      */
     @Import(name="preferredLanguage")
-      private final @Nullable Output<String> preferredLanguage;
+    private @Nullable Output<String> preferredLanguage;
 
-    public Output<String> preferredLanguage() {
-        return this.preferredLanguage == null ? Codegen.empty() : this.preferredLanguage;
+    /**
+     * @return The user&#39;s preferred language, in ISO 639-1 notation.
+     * 
+     */
+    public Optional<Output<String>> preferredLanguage() {
+        return Optional.ofNullable(this.preferredLanguage);
     }
 
     /**
@@ -462,10 +622,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxyAddresses")
-      private final @Nullable Output<List<String>> proxyAddresses;
+    private @Nullable Output<List<String>> proxyAddresses;
 
-    public Output<List<String>> proxyAddresses() {
-        return this.proxyAddresses == null ? Codegen.empty() : this.proxyAddresses;
+    /**
+     * @return List of email addresses for the user that direct to the same mailbox.
+     * 
+     */
+    public Optional<Output<List<String>>> proxyAddresses() {
+        return Optional.ofNullable(this.proxyAddresses);
     }
 
     /**
@@ -473,43 +637,59 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="showInAddressList")
-      private final @Nullable Output<Boolean> showInAddressList;
+    private @Nullable Output<Boolean> showInAddressList;
 
-    public Output<Boolean> showInAddressList() {
-        return this.showInAddressList == null ? Codegen.empty() : this.showInAddressList;
+    /**
+     * @return Whether or not the Outlook global address list should include this user. Defaults to `true`.
+     * 
+     */
+    public Optional<Output<Boolean>> showInAddressList() {
+        return Optional.ofNullable(this.showInAddressList);
     }
 
     /**
-     * The state or province in the user's address.
+     * The state or province in the user&#39;s address.
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    /**
+     * @return The state or province in the user&#39;s address.
+     * 
+     */
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
-     * The street address of the user's place of business.
+     * The street address of the user&#39;s place of business.
      * 
      */
     @Import(name="streetAddress")
-      private final @Nullable Output<String> streetAddress;
+    private @Nullable Output<String> streetAddress;
 
-    public Output<String> streetAddress() {
-        return this.streetAddress == null ? Codegen.empty() : this.streetAddress;
+    /**
+     * @return The street address of the user&#39;s place of business.
+     * 
+     */
+    public Optional<Output<String>> streetAddress() {
+        return Optional.ofNullable(this.streetAddress);
     }
 
     /**
-     * The user's surname (family name or last name).
+     * The user&#39;s surname (family name or last name).
      * 
      */
     @Import(name="surname")
-      private final @Nullable Output<String> surname;
+    private @Nullable Output<String> surname;
 
-    public Output<String> surname() {
-        return this.surname == null ? Codegen.empty() : this.surname;
+    /**
+     * @return The user&#39;s surname (family name or last name).
+     * 
+     */
+    public Optional<Output<String>> surname() {
+        return Optional.ofNullable(this.surname);
     }
 
     /**
@@ -517,10 +697,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usageLocation")
-      private final @Nullable Output<String> usageLocation;
+    private @Nullable Output<String> usageLocation;
 
-    public Output<String> usageLocation() {
-        return this.usageLocation == null ? Codegen.empty() : this.usageLocation;
+    /**
+     * @return The usage location of the user. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
+     * 
+     */
+    public Optional<Output<String>> usageLocation() {
+        return Optional.ofNullable(this.usageLocation);
     }
 
     /**
@@ -528,10 +712,14 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPrincipalName")
-      private final @Nullable Output<String> userPrincipalName;
+    private @Nullable Output<String> userPrincipalName;
 
-    public Output<String> userPrincipalName() {
-        return this.userPrincipalName == null ? Codegen.empty() : this.userPrincipalName;
+    /**
+     * @return The user principal name (UPN) of the user.
+     * 
+     */
+    public Optional<Output<String>> userPrincipalName() {
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
     /**
@@ -539,673 +727,1138 @@ public final class UserState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userType")
-      private final @Nullable Output<String> userType;
+    private @Nullable Output<String> userType;
 
-    public Output<String> userType() {
-        return this.userType == null ? Codegen.empty() : this.userType;
+    /**
+     * @return The user type in the directory. Possible values are `Guest` or `Member`.
+     * 
+     */
+    public Optional<Output<String>> userType() {
+        return Optional.ofNullable(this.userType);
     }
 
-    public UserState(
-        @Nullable Output<String> aboutMe,
-        @Nullable Output<Boolean> accountEnabled,
-        @Nullable Output<String> ageGroup,
-        @Nullable Output<List<String>> businessPhones,
-        @Nullable Output<String> city,
-        @Nullable Output<String> companyName,
-        @Nullable Output<String> consentProvidedForMinor,
-        @Nullable Output<String> costCenter,
-        @Nullable Output<String> country,
-        @Nullable Output<String> creationType,
-        @Nullable Output<String> department,
-        @Nullable Output<Boolean> disablePasswordExpiration,
-        @Nullable Output<Boolean> disableStrongPassword,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> division,
-        @Nullable Output<String> employeeId,
-        @Nullable Output<String> employeeType,
-        @Nullable Output<String> externalUserState,
-        @Nullable Output<String> faxNumber,
-        @Nullable Output<Boolean> forcePasswordChange,
-        @Nullable Output<String> givenName,
-        @Nullable Output<List<String>> imAddresses,
-        @Nullable Output<String> jobTitle,
-        @Nullable Output<String> mail,
-        @Nullable Output<String> mailNickname,
-        @Nullable Output<String> managerId,
-        @Nullable Output<String> mobilePhone,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> officeLocation,
-        @Nullable Output<String> onpremisesDistinguishedName,
-        @Nullable Output<String> onpremisesDomainName,
-        @Nullable Output<String> onpremisesImmutableId,
-        @Nullable Output<String> onpremisesSamAccountName,
-        @Nullable Output<String> onpremisesSecurityIdentifier,
-        @Nullable Output<Boolean> onpremisesSyncEnabled,
-        @Nullable Output<String> onpremisesUserPrincipalName,
-        @Nullable Output<List<String>> otherMails,
-        @Nullable Output<String> password,
-        @Nullable Output<String> postalCode,
-        @Nullable Output<String> preferredLanguage,
-        @Nullable Output<List<String>> proxyAddresses,
-        @Nullable Output<Boolean> showInAddressList,
-        @Nullable Output<String> state,
-        @Nullable Output<String> streetAddress,
-        @Nullable Output<String> surname,
-        @Nullable Output<String> usageLocation,
-        @Nullable Output<String> userPrincipalName,
-        @Nullable Output<String> userType) {
-        this.aboutMe = aboutMe;
-        this.accountEnabled = accountEnabled;
-        this.ageGroup = ageGroup;
-        this.businessPhones = businessPhones;
-        this.city = city;
-        this.companyName = companyName;
-        this.consentProvidedForMinor = consentProvidedForMinor;
-        this.costCenter = costCenter;
-        this.country = country;
-        this.creationType = creationType;
-        this.department = department;
-        this.disablePasswordExpiration = disablePasswordExpiration;
-        this.disableStrongPassword = disableStrongPassword;
-        this.displayName = displayName;
-        this.division = division;
-        this.employeeId = employeeId;
-        this.employeeType = employeeType;
-        this.externalUserState = externalUserState;
-        this.faxNumber = faxNumber;
-        this.forcePasswordChange = forcePasswordChange;
-        this.givenName = givenName;
-        this.imAddresses = imAddresses;
-        this.jobTitle = jobTitle;
-        this.mail = mail;
-        this.mailNickname = mailNickname;
-        this.managerId = managerId;
-        this.mobilePhone = mobilePhone;
-        this.objectId = objectId;
-        this.officeLocation = officeLocation;
-        this.onpremisesDistinguishedName = onpremisesDistinguishedName;
-        this.onpremisesDomainName = onpremisesDomainName;
-        this.onpremisesImmutableId = onpremisesImmutableId;
-        this.onpremisesSamAccountName = onpremisesSamAccountName;
-        this.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
-        this.onpremisesSyncEnabled = onpremisesSyncEnabled;
-        this.onpremisesUserPrincipalName = onpremisesUserPrincipalName;
-        this.otherMails = otherMails;
-        this.password = password;
-        this.postalCode = postalCode;
-        this.preferredLanguage = preferredLanguage;
-        this.proxyAddresses = proxyAddresses;
-        this.showInAddressList = showInAddressList;
-        this.state = state;
-        this.streetAddress = streetAddress;
-        this.surname = surname;
-        this.usageLocation = usageLocation;
-        this.userPrincipalName = userPrincipalName;
-        this.userType = userType;
-    }
+    private UserState() {}
 
-    private UserState() {
-        this.aboutMe = Codegen.empty();
-        this.accountEnabled = Codegen.empty();
-        this.ageGroup = Codegen.empty();
-        this.businessPhones = Codegen.empty();
-        this.city = Codegen.empty();
-        this.companyName = Codegen.empty();
-        this.consentProvidedForMinor = Codegen.empty();
-        this.costCenter = Codegen.empty();
-        this.country = Codegen.empty();
-        this.creationType = Codegen.empty();
-        this.department = Codegen.empty();
-        this.disablePasswordExpiration = Codegen.empty();
-        this.disableStrongPassword = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.division = Codegen.empty();
-        this.employeeId = Codegen.empty();
-        this.employeeType = Codegen.empty();
-        this.externalUserState = Codegen.empty();
-        this.faxNumber = Codegen.empty();
-        this.forcePasswordChange = Codegen.empty();
-        this.givenName = Codegen.empty();
-        this.imAddresses = Codegen.empty();
-        this.jobTitle = Codegen.empty();
-        this.mail = Codegen.empty();
-        this.mailNickname = Codegen.empty();
-        this.managerId = Codegen.empty();
-        this.mobilePhone = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.officeLocation = Codegen.empty();
-        this.onpremisesDistinguishedName = Codegen.empty();
-        this.onpremisesDomainName = Codegen.empty();
-        this.onpremisesImmutableId = Codegen.empty();
-        this.onpremisesSamAccountName = Codegen.empty();
-        this.onpremisesSecurityIdentifier = Codegen.empty();
-        this.onpremisesSyncEnabled = Codegen.empty();
-        this.onpremisesUserPrincipalName = Codegen.empty();
-        this.otherMails = Codegen.empty();
-        this.password = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.preferredLanguage = Codegen.empty();
-        this.proxyAddresses = Codegen.empty();
-        this.showInAddressList = Codegen.empty();
-        this.state = Codegen.empty();
-        this.streetAddress = Codegen.empty();
-        this.surname = Codegen.empty();
-        this.usageLocation = Codegen.empty();
-        this.userPrincipalName = Codegen.empty();
-        this.userType = Codegen.empty();
+    private UserState(UserState $) {
+        this.aboutMe = $.aboutMe;
+        this.accountEnabled = $.accountEnabled;
+        this.ageGroup = $.ageGroup;
+        this.businessPhones = $.businessPhones;
+        this.city = $.city;
+        this.companyName = $.companyName;
+        this.consentProvidedForMinor = $.consentProvidedForMinor;
+        this.costCenter = $.costCenter;
+        this.country = $.country;
+        this.creationType = $.creationType;
+        this.department = $.department;
+        this.disablePasswordExpiration = $.disablePasswordExpiration;
+        this.disableStrongPassword = $.disableStrongPassword;
+        this.displayName = $.displayName;
+        this.division = $.division;
+        this.employeeId = $.employeeId;
+        this.employeeType = $.employeeType;
+        this.externalUserState = $.externalUserState;
+        this.faxNumber = $.faxNumber;
+        this.forcePasswordChange = $.forcePasswordChange;
+        this.givenName = $.givenName;
+        this.imAddresses = $.imAddresses;
+        this.jobTitle = $.jobTitle;
+        this.mail = $.mail;
+        this.mailNickname = $.mailNickname;
+        this.managerId = $.managerId;
+        this.mobilePhone = $.mobilePhone;
+        this.objectId = $.objectId;
+        this.officeLocation = $.officeLocation;
+        this.onpremisesDistinguishedName = $.onpremisesDistinguishedName;
+        this.onpremisesDomainName = $.onpremisesDomainName;
+        this.onpremisesImmutableId = $.onpremisesImmutableId;
+        this.onpremisesSamAccountName = $.onpremisesSamAccountName;
+        this.onpremisesSecurityIdentifier = $.onpremisesSecurityIdentifier;
+        this.onpremisesSyncEnabled = $.onpremisesSyncEnabled;
+        this.onpremisesUserPrincipalName = $.onpremisesUserPrincipalName;
+        this.otherMails = $.otherMails;
+        this.password = $.password;
+        this.postalCode = $.postalCode;
+        this.preferredLanguage = $.preferredLanguage;
+        this.proxyAddresses = $.proxyAddresses;
+        this.showInAddressList = $.showInAddressList;
+        this.state = $.state;
+        this.streetAddress = $.streetAddress;
+        this.surname = $.surname;
+        this.usageLocation = $.usageLocation;
+        this.userPrincipalName = $.userPrincipalName;
+        this.userType = $.userType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aboutMe;
-        private @Nullable Output<Boolean> accountEnabled;
-        private @Nullable Output<String> ageGroup;
-        private @Nullable Output<List<String>> businessPhones;
-        private @Nullable Output<String> city;
-        private @Nullable Output<String> companyName;
-        private @Nullable Output<String> consentProvidedForMinor;
-        private @Nullable Output<String> costCenter;
-        private @Nullable Output<String> country;
-        private @Nullable Output<String> creationType;
-        private @Nullable Output<String> department;
-        private @Nullable Output<Boolean> disablePasswordExpiration;
-        private @Nullable Output<Boolean> disableStrongPassword;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> division;
-        private @Nullable Output<String> employeeId;
-        private @Nullable Output<String> employeeType;
-        private @Nullable Output<String> externalUserState;
-        private @Nullable Output<String> faxNumber;
-        private @Nullable Output<Boolean> forcePasswordChange;
-        private @Nullable Output<String> givenName;
-        private @Nullable Output<List<String>> imAddresses;
-        private @Nullable Output<String> jobTitle;
-        private @Nullable Output<String> mail;
-        private @Nullable Output<String> mailNickname;
-        private @Nullable Output<String> managerId;
-        private @Nullable Output<String> mobilePhone;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> officeLocation;
-        private @Nullable Output<String> onpremisesDistinguishedName;
-        private @Nullable Output<String> onpremisesDomainName;
-        private @Nullable Output<String> onpremisesImmutableId;
-        private @Nullable Output<String> onpremisesSamAccountName;
-        private @Nullable Output<String> onpremisesSecurityIdentifier;
-        private @Nullable Output<Boolean> onpremisesSyncEnabled;
-        private @Nullable Output<String> onpremisesUserPrincipalName;
-        private @Nullable Output<List<String>> otherMails;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> postalCode;
-        private @Nullable Output<String> preferredLanguage;
-        private @Nullable Output<List<String>> proxyAddresses;
-        private @Nullable Output<Boolean> showInAddressList;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> streetAddress;
-        private @Nullable Output<String> surname;
-        private @Nullable Output<String> usageLocation;
-        private @Nullable Output<String> userPrincipalName;
-        private @Nullable Output<String> userType;
+        private UserState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserState();
         }
 
         public Builder(UserState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aboutMe = defaults.aboutMe;
-    	      this.accountEnabled = defaults.accountEnabled;
-    	      this.ageGroup = defaults.ageGroup;
-    	      this.businessPhones = defaults.businessPhones;
-    	      this.city = defaults.city;
-    	      this.companyName = defaults.companyName;
-    	      this.consentProvidedForMinor = defaults.consentProvidedForMinor;
-    	      this.costCenter = defaults.costCenter;
-    	      this.country = defaults.country;
-    	      this.creationType = defaults.creationType;
-    	      this.department = defaults.department;
-    	      this.disablePasswordExpiration = defaults.disablePasswordExpiration;
-    	      this.disableStrongPassword = defaults.disableStrongPassword;
-    	      this.displayName = defaults.displayName;
-    	      this.division = defaults.division;
-    	      this.employeeId = defaults.employeeId;
-    	      this.employeeType = defaults.employeeType;
-    	      this.externalUserState = defaults.externalUserState;
-    	      this.faxNumber = defaults.faxNumber;
-    	      this.forcePasswordChange = defaults.forcePasswordChange;
-    	      this.givenName = defaults.givenName;
-    	      this.imAddresses = defaults.imAddresses;
-    	      this.jobTitle = defaults.jobTitle;
-    	      this.mail = defaults.mail;
-    	      this.mailNickname = defaults.mailNickname;
-    	      this.managerId = defaults.managerId;
-    	      this.mobilePhone = defaults.mobilePhone;
-    	      this.objectId = defaults.objectId;
-    	      this.officeLocation = defaults.officeLocation;
-    	      this.onpremisesDistinguishedName = defaults.onpremisesDistinguishedName;
-    	      this.onpremisesDomainName = defaults.onpremisesDomainName;
-    	      this.onpremisesImmutableId = defaults.onpremisesImmutableId;
-    	      this.onpremisesSamAccountName = defaults.onpremisesSamAccountName;
-    	      this.onpremisesSecurityIdentifier = defaults.onpremisesSecurityIdentifier;
-    	      this.onpremisesSyncEnabled = defaults.onpremisesSyncEnabled;
-    	      this.onpremisesUserPrincipalName = defaults.onpremisesUserPrincipalName;
-    	      this.otherMails = defaults.otherMails;
-    	      this.password = defaults.password;
-    	      this.postalCode = defaults.postalCode;
-    	      this.preferredLanguage = defaults.preferredLanguage;
-    	      this.proxyAddresses = defaults.proxyAddresses;
-    	      this.showInAddressList = defaults.showInAddressList;
-    	      this.state = defaults.state;
-    	      this.streetAddress = defaults.streetAddress;
-    	      this.surname = defaults.surname;
-    	      this.usageLocation = defaults.usageLocation;
-    	      this.userPrincipalName = defaults.userPrincipalName;
-    	      this.userType = defaults.userType;
+            $ = new UserState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aboutMe A freeform field for the user to describe themselves
+         * 
+         * @return builder
+         * 
+         */
         public Builder aboutMe(@Nullable Output<String> aboutMe) {
-            this.aboutMe = aboutMe;
+            $.aboutMe = aboutMe;
             return this;
         }
-        public Builder aboutMe(@Nullable String aboutMe) {
-            this.aboutMe = Codegen.ofNullable(aboutMe);
-            return this;
+
+        /**
+         * @param aboutMe A freeform field for the user to describe themselves
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aboutMe(String aboutMe) {
+            return aboutMe(Output.of(aboutMe));
         }
+
+        /**
+         * @param accountEnabled Whether or not the account should be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountEnabled(@Nullable Output<Boolean> accountEnabled) {
-            this.accountEnabled = accountEnabled;
+            $.accountEnabled = accountEnabled;
             return this;
         }
-        public Builder accountEnabled(@Nullable Boolean accountEnabled) {
-            this.accountEnabled = Codegen.ofNullable(accountEnabled);
-            return this;
+
+        /**
+         * @param accountEnabled Whether or not the account should be enabled.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder accountEnabled(Boolean accountEnabled) {
+            return accountEnabled(Output.of(accountEnabled));
         }
+
+        /**
+         * @param ageGroup The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ageGroup(@Nullable Output<String> ageGroup) {
-            this.ageGroup = ageGroup;
+            $.ageGroup = ageGroup;
             return this;
         }
-        public Builder ageGroup(@Nullable String ageGroup) {
-            this.ageGroup = Codegen.ofNullable(ageGroup);
-            return this;
+
+        /**
+         * @param ageGroup The age group of the user. Supported values are `Adult`, `NotAdult` and `Minor`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ageGroup(String ageGroup) {
+            return ageGroup(Output.of(ageGroup));
         }
+
+        /**
+         * @param businessPhones A list of telephone numbers for the user. Only one number can be set for this property. Read-only for users synced with Azure AD Connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessPhones(@Nullable Output<List<String>> businessPhones) {
-            this.businessPhones = businessPhones;
+            $.businessPhones = businessPhones;
             return this;
         }
-        public Builder businessPhones(@Nullable List<String> businessPhones) {
-            this.businessPhones = Codegen.ofNullable(businessPhones);
-            return this;
+
+        /**
+         * @param businessPhones A list of telephone numbers for the user. Only one number can be set for this property. Read-only for users synced with Azure AD Connect.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder businessPhones(List<String> businessPhones) {
+            return businessPhones(Output.of(businessPhones));
         }
+
+        /**
+         * @param businessPhones A list of telephone numbers for the user. Only one number can be set for this property. Read-only for users synced with Azure AD Connect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder businessPhones(String... businessPhones) {
             return businessPhones(List.of(businessPhones));
         }
+
+        /**
+         * @param city The city in which the user is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable Output<String> city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
-        public Builder city(@Nullable String city) {
-            this.city = Codegen.ofNullable(city);
-            return this;
+
+        /**
+         * @param city The city in which the user is located.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder city(String city) {
+            return city(Output.of(city));
         }
+
+        /**
+         * @param companyName The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(@Nullable Output<String> companyName) {
-            this.companyName = companyName;
+            $.companyName = companyName;
             return this;
         }
-        public Builder companyName(@Nullable String companyName) {
-            this.companyName = Codegen.ofNullable(companyName);
-            return this;
+
+        /**
+         * @param companyName The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder companyName(String companyName) {
+            return companyName(Output.of(companyName));
         }
+
+        /**
+         * @param consentProvidedForMinor Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consentProvidedForMinor(@Nullable Output<String> consentProvidedForMinor) {
-            this.consentProvidedForMinor = consentProvidedForMinor;
+            $.consentProvidedForMinor = consentProvidedForMinor;
             return this;
         }
-        public Builder consentProvidedForMinor(@Nullable String consentProvidedForMinor) {
-            this.consentProvidedForMinor = Codegen.ofNullable(consentProvidedForMinor);
-            return this;
+
+        /**
+         * @param consentProvidedForMinor Whether consent has been obtained for minors. Supported values are `Granted`, `Denied` and `NotRequired`. Omit this property or specify a blank string to unset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consentProvidedForMinor(String consentProvidedForMinor) {
+            return consentProvidedForMinor(Output.of(consentProvidedForMinor));
         }
+
+        /**
+         * @param costCenter The cost center associated with the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costCenter(@Nullable Output<String> costCenter) {
-            this.costCenter = costCenter;
+            $.costCenter = costCenter;
             return this;
         }
-        public Builder costCenter(@Nullable String costCenter) {
-            this.costCenter = Codegen.ofNullable(costCenter);
-            return this;
+
+        /**
+         * @param costCenter The cost center associated with the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder costCenter(String costCenter) {
+            return costCenter(Output.of(costCenter));
         }
+
+        /**
+         * @param country The country/region in which the user is located, e.g. `US` or `UK`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(@Nullable Output<String> country) {
-            this.country = country;
+            $.country = country;
             return this;
         }
-        public Builder country(@Nullable String country) {
-            this.country = Codegen.ofNullable(country);
-            return this;
+
+        /**
+         * @param country The country/region in which the user is located, e.g. `US` or `UK`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder country(String country) {
+            return country(Output.of(country));
         }
+
+        /**
+         * @param creationType Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationType(@Nullable Output<String> creationType) {
-            this.creationType = creationType;
+            $.creationType = creationType;
             return this;
         }
-        public Builder creationType(@Nullable String creationType) {
-            this.creationType = Codegen.ofNullable(creationType);
-            return this;
+
+        /**
+         * @param creationType Indicates whether the user account was created as a regular school or work account (`null`), an external account (`Invitation`), a local account for an Azure Active Directory B2C tenant (`LocalAccount`) or self-service sign-up using email verification (`EmailVerified`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder creationType(String creationType) {
+            return creationType(Output.of(creationType));
         }
+
+        /**
+         * @param department The name for the department in which the user works.
+         * 
+         * @return builder
+         * 
+         */
         public Builder department(@Nullable Output<String> department) {
-            this.department = department;
+            $.department = department;
             return this;
         }
-        public Builder department(@Nullable String department) {
-            this.department = Codegen.ofNullable(department);
-            return this;
+
+        /**
+         * @param department The name for the department in which the user works.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder department(String department) {
+            return department(Output.of(department));
         }
+
+        /**
+         * @param disablePasswordExpiration Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disablePasswordExpiration(@Nullable Output<Boolean> disablePasswordExpiration) {
-            this.disablePasswordExpiration = disablePasswordExpiration;
+            $.disablePasswordExpiration = disablePasswordExpiration;
             return this;
         }
-        public Builder disablePasswordExpiration(@Nullable Boolean disablePasswordExpiration) {
-            this.disablePasswordExpiration = Codegen.ofNullable(disablePasswordExpiration);
-            return this;
+
+        /**
+         * @param disablePasswordExpiration Whether the user&#39;s password is exempt from expiring. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder disablePasswordExpiration(Boolean disablePasswordExpiration) {
+            return disablePasswordExpiration(Output.of(disablePasswordExpiration));
         }
+
+        /**
+         * @param disableStrongPassword Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableStrongPassword(@Nullable Output<Boolean> disableStrongPassword) {
-            this.disableStrongPassword = disableStrongPassword;
+            $.disableStrongPassword = disableStrongPassword;
             return this;
         }
-        public Builder disableStrongPassword(@Nullable Boolean disableStrongPassword) {
-            this.disableStrongPassword = Codegen.ofNullable(disableStrongPassword);
-            return this;
+
+        /**
+         * @param disableStrongPassword Whether the user is allowed weaker passwords than the default policy to be specified. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder disableStrongPassword(Boolean disableStrongPassword) {
+            return disableStrongPassword(Output.of(disableStrongPassword));
         }
+
+        /**
+         * @param displayName The name to display in the address book for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName The name to display in the address book for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param division The name of the division in which the user works.
+         * 
+         * @return builder
+         * 
+         */
         public Builder division(@Nullable Output<String> division) {
-            this.division = division;
+            $.division = division;
             return this;
         }
-        public Builder division(@Nullable String division) {
-            this.division = Codegen.ofNullable(division);
-            return this;
+
+        /**
+         * @param division The name of the division in which the user works.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder division(String division) {
+            return division(Output.of(division));
         }
+
+        /**
+         * @param employeeId The employee identifier assigned to the user by the organisation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder employeeId(@Nullable Output<String> employeeId) {
-            this.employeeId = employeeId;
+            $.employeeId = employeeId;
             return this;
         }
-        public Builder employeeId(@Nullable String employeeId) {
-            this.employeeId = Codegen.ofNullable(employeeId);
-            return this;
+
+        /**
+         * @param employeeId The employee identifier assigned to the user by the organisation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder employeeId(String employeeId) {
+            return employeeId(Output.of(employeeId));
         }
+
+        /**
+         * @param employeeType Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder employeeType(@Nullable Output<String> employeeType) {
-            this.employeeType = employeeType;
+            $.employeeType = employeeType;
             return this;
         }
-        public Builder employeeType(@Nullable String employeeType) {
-            this.employeeType = Codegen.ofNullable(employeeType);
-            return this;
+
+        /**
+         * @param employeeType Captures enterprise worker type. For example, Employee, Contractor, Consultant, or Vendor.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder employeeType(String employeeType) {
+            return employeeType(Output.of(employeeType));
         }
+
+        /**
+         * @param externalUserState For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalUserState(@Nullable Output<String> externalUserState) {
-            this.externalUserState = externalUserState;
+            $.externalUserState = externalUserState;
             return this;
         }
-        public Builder externalUserState(@Nullable String externalUserState) {
-            this.externalUserState = Codegen.ofNullable(externalUserState);
-            return this;
+
+        /**
+         * @param externalUserState For an external user invited to the tenant, this property represents the invited user&#39;s invitation status. Possible values are `PendingAcceptance` or `Accepted`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalUserState(String externalUserState) {
+            return externalUserState(Output.of(externalUserState));
         }
+
+        /**
+         * @param faxNumber The fax number of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faxNumber(@Nullable Output<String> faxNumber) {
-            this.faxNumber = faxNumber;
+            $.faxNumber = faxNumber;
             return this;
         }
-        public Builder faxNumber(@Nullable String faxNumber) {
-            this.faxNumber = Codegen.ofNullable(faxNumber);
-            return this;
+
+        /**
+         * @param faxNumber The fax number of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder faxNumber(String faxNumber) {
+            return faxNumber(Output.of(faxNumber));
         }
+
+        /**
+         * @param forcePasswordChange Whether the user is forced to change the password during the next sign-in. Only takes effect when also changing the password. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forcePasswordChange(@Nullable Output<Boolean> forcePasswordChange) {
-            this.forcePasswordChange = forcePasswordChange;
+            $.forcePasswordChange = forcePasswordChange;
             return this;
         }
-        public Builder forcePasswordChange(@Nullable Boolean forcePasswordChange) {
-            this.forcePasswordChange = Codegen.ofNullable(forcePasswordChange);
-            return this;
+
+        /**
+         * @param forcePasswordChange Whether the user is forced to change the password during the next sign-in. Only takes effect when also changing the password. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder forcePasswordChange(Boolean forcePasswordChange) {
+            return forcePasswordChange(Output.of(forcePasswordChange));
         }
+
+        /**
+         * @param givenName The given name (first name) of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder givenName(@Nullable Output<String> givenName) {
-            this.givenName = givenName;
+            $.givenName = givenName;
             return this;
         }
-        public Builder givenName(@Nullable String givenName) {
-            this.givenName = Codegen.ofNullable(givenName);
-            return this;
+
+        /**
+         * @param givenName The given name (first name) of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder givenName(String givenName) {
+            return givenName(Output.of(givenName));
         }
+
+        /**
+         * @param imAddresses A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imAddresses(@Nullable Output<List<String>> imAddresses) {
-            this.imAddresses = imAddresses;
+            $.imAddresses = imAddresses;
             return this;
         }
-        public Builder imAddresses(@Nullable List<String> imAddresses) {
-            this.imAddresses = Codegen.ofNullable(imAddresses);
-            return this;
+
+        /**
+         * @param imAddresses A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imAddresses(List<String> imAddresses) {
+            return imAddresses(Output.of(imAddresses));
         }
+
+        /**
+         * @param imAddresses A list of instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imAddresses(String... imAddresses) {
             return imAddresses(List.of(imAddresses));
         }
+
+        /**
+         * @param jobTitle The user’s job title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobTitle(@Nullable Output<String> jobTitle) {
-            this.jobTitle = jobTitle;
+            $.jobTitle = jobTitle;
             return this;
         }
-        public Builder jobTitle(@Nullable String jobTitle) {
-            this.jobTitle = Codegen.ofNullable(jobTitle);
-            return this;
+
+        /**
+         * @param jobTitle The user’s job title.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder jobTitle(String jobTitle) {
+            return jobTitle(Output.of(jobTitle));
         }
+
+        /**
+         * @param mail The SMTP address for the user. This property cannot be unset once specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mail(@Nullable Output<String> mail) {
-            this.mail = mail;
+            $.mail = mail;
             return this;
         }
-        public Builder mail(@Nullable String mail) {
-            this.mail = Codegen.ofNullable(mail);
-            return this;
+
+        /**
+         * @param mail The SMTP address for the user. This property cannot be unset once specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mail(String mail) {
+            return mail(Output.of(mail));
         }
+
+        /**
+         * @param mailNickname The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailNickname(@Nullable Output<String> mailNickname) {
-            this.mailNickname = mailNickname;
+            $.mailNickname = mailNickname;
             return this;
         }
-        public Builder mailNickname(@Nullable String mailNickname) {
-            this.mailNickname = Codegen.ofNullable(mailNickname);
-            return this;
+
+        /**
+         * @param mailNickname The mail alias for the user. Defaults to the user name part of the user principal name (UPN).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailNickname(String mailNickname) {
+            return mailNickname(Output.of(mailNickname));
         }
+
+        /**
+         * @param managerId The object ID of the user&#39;s manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerId(@Nullable Output<String> managerId) {
-            this.managerId = managerId;
+            $.managerId = managerId;
             return this;
         }
-        public Builder managerId(@Nullable String managerId) {
-            this.managerId = Codegen.ofNullable(managerId);
-            return this;
+
+        /**
+         * @param managerId The object ID of the user&#39;s manager.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managerId(String managerId) {
+            return managerId(Output.of(managerId));
         }
+
+        /**
+         * @param mobilePhone The primary cellular telephone number for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobilePhone(@Nullable Output<String> mobilePhone) {
-            this.mobilePhone = mobilePhone;
+            $.mobilePhone = mobilePhone;
             return this;
         }
-        public Builder mobilePhone(@Nullable String mobilePhone) {
-            this.mobilePhone = Codegen.ofNullable(mobilePhone);
-            return this;
+
+        /**
+         * @param mobilePhone The primary cellular telephone number for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mobilePhone(String mobilePhone) {
+            return mobilePhone(Output.of(mobilePhone));
         }
+
+        /**
+         * @param objectId The object ID of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        /**
+         * @param objectId The object ID of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
+        /**
+         * @param officeLocation The office location in the user&#39;s place of business.
+         * 
+         * @return builder
+         * 
+         */
         public Builder officeLocation(@Nullable Output<String> officeLocation) {
-            this.officeLocation = officeLocation;
+            $.officeLocation = officeLocation;
             return this;
         }
-        public Builder officeLocation(@Nullable String officeLocation) {
-            this.officeLocation = Codegen.ofNullable(officeLocation);
-            return this;
+
+        /**
+         * @param officeLocation The office location in the user&#39;s place of business.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder officeLocation(String officeLocation) {
+            return officeLocation(Output.of(officeLocation));
         }
+
+        /**
+         * @param onpremisesDistinguishedName The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesDistinguishedName(@Nullable Output<String> onpremisesDistinguishedName) {
-            this.onpremisesDistinguishedName = onpremisesDistinguishedName;
+            $.onpremisesDistinguishedName = onpremisesDistinguishedName;
             return this;
         }
-        public Builder onpremisesDistinguishedName(@Nullable String onpremisesDistinguishedName) {
-            this.onpremisesDistinguishedName = Codegen.ofNullable(onpremisesDistinguishedName);
-            return this;
+
+        /**
+         * @param onpremisesDistinguishedName The on-premises distinguished name (DN) of the user, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesDistinguishedName(String onpremisesDistinguishedName) {
+            return onpremisesDistinguishedName(Output.of(onpremisesDistinguishedName));
         }
+
+        /**
+         * @param onpremisesDomainName The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesDomainName(@Nullable Output<String> onpremisesDomainName) {
-            this.onpremisesDomainName = onpremisesDomainName;
+            $.onpremisesDomainName = onpremisesDomainName;
             return this;
         }
-        public Builder onpremisesDomainName(@Nullable String onpremisesDomainName) {
-            this.onpremisesDomainName = Codegen.ofNullable(onpremisesDomainName);
-            return this;
+
+        /**
+         * @param onpremisesDomainName The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesDomainName(String onpremisesDomainName) {
+            return onpremisesDomainName(Output.of(onpremisesDomainName));
         }
+
+        /**
+         * @param onpremisesImmutableId The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesImmutableId(@Nullable Output<String> onpremisesImmutableId) {
-            this.onpremisesImmutableId = onpremisesImmutableId;
+            $.onpremisesImmutableId = onpremisesImmutableId;
             return this;
         }
-        public Builder onpremisesImmutableId(@Nullable String onpremisesImmutableId) {
-            this.onpremisesImmutableId = Codegen.ofNullable(onpremisesImmutableId);
-            return this;
+
+        /**
+         * @param onpremisesImmutableId The value used to associate an on-premise Active Directory user account with their Azure AD user object. This must be specified if you are using a federated domain for the user&#39;s `user_principal_name` property when creating a new user account.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesImmutableId(String onpremisesImmutableId) {
+            return onpremisesImmutableId(Output.of(onpremisesImmutableId));
         }
+
+        /**
+         * @param onpremisesSamAccountName The on-premise SAM account name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSamAccountName(@Nullable Output<String> onpremisesSamAccountName) {
-            this.onpremisesSamAccountName = onpremisesSamAccountName;
+            $.onpremisesSamAccountName = onpremisesSamAccountName;
             return this;
         }
-        public Builder onpremisesSamAccountName(@Nullable String onpremisesSamAccountName) {
-            this.onpremisesSamAccountName = Codegen.ofNullable(onpremisesSamAccountName);
-            return this;
+
+        /**
+         * @param onpremisesSamAccountName The on-premise SAM account name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSamAccountName(String onpremisesSamAccountName) {
+            return onpremisesSamAccountName(Output.of(onpremisesSamAccountName));
         }
+
+        /**
+         * @param onpremisesSecurityIdentifier The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSecurityIdentifier(@Nullable Output<String> onpremisesSecurityIdentifier) {
-            this.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
+            $.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
             return this;
         }
-        public Builder onpremisesSecurityIdentifier(@Nullable String onpremisesSecurityIdentifier) {
-            this.onpremisesSecurityIdentifier = Codegen.ofNullable(onpremisesSecurityIdentifier);
-            return this;
+
+        /**
+         * @param onpremisesSecurityIdentifier The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSecurityIdentifier(String onpremisesSecurityIdentifier) {
+            return onpremisesSecurityIdentifier(Output.of(onpremisesSecurityIdentifier));
         }
+
+        /**
+         * @param onpremisesSyncEnabled Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSyncEnabled(@Nullable Output<Boolean> onpremisesSyncEnabled) {
-            this.onpremisesSyncEnabled = onpremisesSyncEnabled;
+            $.onpremisesSyncEnabled = onpremisesSyncEnabled;
             return this;
         }
-        public Builder onpremisesSyncEnabled(@Nullable Boolean onpremisesSyncEnabled) {
-            this.onpremisesSyncEnabled = Codegen.ofNullable(onpremisesSyncEnabled);
-            return this;
+
+        /**
+         * @param onpremisesSyncEnabled Whether this user is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSyncEnabled(Boolean onpremisesSyncEnabled) {
+            return onpremisesSyncEnabled(Output.of(onpremisesSyncEnabled));
         }
+
+        /**
+         * @param onpremisesUserPrincipalName The on-premise user principal name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesUserPrincipalName(@Nullable Output<String> onpremisesUserPrincipalName) {
-            this.onpremisesUserPrincipalName = onpremisesUserPrincipalName;
+            $.onpremisesUserPrincipalName = onpremisesUserPrincipalName;
             return this;
         }
-        public Builder onpremisesUserPrincipalName(@Nullable String onpremisesUserPrincipalName) {
-            this.onpremisesUserPrincipalName = Codegen.ofNullable(onpremisesUserPrincipalName);
-            return this;
+
+        /**
+         * @param onpremisesUserPrincipalName The on-premise user principal name of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesUserPrincipalName(String onpremisesUserPrincipalName) {
+            return onpremisesUserPrincipalName(Output.of(onpremisesUserPrincipalName));
         }
+
+        /**
+         * @param otherMails A list of additional email addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherMails(@Nullable Output<List<String>> otherMails) {
-            this.otherMails = otherMails;
+            $.otherMails = otherMails;
             return this;
         }
-        public Builder otherMails(@Nullable List<String> otherMails) {
-            this.otherMails = Codegen.ofNullable(otherMails);
-            return this;
+
+        /**
+         * @param otherMails A list of additional email addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder otherMails(List<String> otherMails) {
+            return otherMails(Output.of(otherMails));
         }
+
+        /**
+         * @param otherMails A list of additional email addresses for the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder otherMails(String... otherMails) {
             return otherMails(List.of(otherMails));
         }
+
+        /**
+         * @param password The password for the user. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. This property is required when creating a new user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        /**
+         * @param password The password for the user. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. This property is required when creating a new user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
+        /**
+         * @param postalCode The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable Output<String> postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
-        public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Codegen.ofNullable(postalCode);
-            return this;
+
+        /**
+         * @param postalCode The postal code for the user&#39;s postal address. The postal code is specific to the user&#39;s country/region. In the United States of America, this attribute contains the ZIP code.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder postalCode(String postalCode) {
+            return postalCode(Output.of(postalCode));
         }
+
+        /**
+         * @param preferredLanguage The user&#39;s preferred language, in ISO 639-1 notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredLanguage(@Nullable Output<String> preferredLanguage) {
-            this.preferredLanguage = preferredLanguage;
+            $.preferredLanguage = preferredLanguage;
             return this;
         }
-        public Builder preferredLanguage(@Nullable String preferredLanguage) {
-            this.preferredLanguage = Codegen.ofNullable(preferredLanguage);
-            return this;
+
+        /**
+         * @param preferredLanguage The user&#39;s preferred language, in ISO 639-1 notation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredLanguage(String preferredLanguage) {
+            return preferredLanguage(Output.of(preferredLanguage));
         }
+
+        /**
+         * @param proxyAddresses List of email addresses for the user that direct to the same mailbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyAddresses(@Nullable Output<List<String>> proxyAddresses) {
-            this.proxyAddresses = proxyAddresses;
+            $.proxyAddresses = proxyAddresses;
             return this;
         }
-        public Builder proxyAddresses(@Nullable List<String> proxyAddresses) {
-            this.proxyAddresses = Codegen.ofNullable(proxyAddresses);
-            return this;
+
+        /**
+         * @param proxyAddresses List of email addresses for the user that direct to the same mailbox.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder proxyAddresses(List<String> proxyAddresses) {
+            return proxyAddresses(Output.of(proxyAddresses));
         }
+
+        /**
+         * @param proxyAddresses List of email addresses for the user that direct to the same mailbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyAddresses(String... proxyAddresses) {
             return proxyAddresses(List.of(proxyAddresses));
         }
+
+        /**
+         * @param showInAddressList Whether or not the Outlook global address list should include this user. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder showInAddressList(@Nullable Output<Boolean> showInAddressList) {
-            this.showInAddressList = showInAddressList;
+            $.showInAddressList = showInAddressList;
             return this;
         }
-        public Builder showInAddressList(@Nullable Boolean showInAddressList) {
-            this.showInAddressList = Codegen.ofNullable(showInAddressList);
-            return this;
+
+        /**
+         * @param showInAddressList Whether or not the Outlook global address list should include this user. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder showInAddressList(Boolean showInAddressList) {
+            return showInAddressList(Output.of(showInAddressList));
         }
+
+        /**
+         * @param state The state or province in the user&#39;s address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        /**
+         * @param state The state or province in the user&#39;s address.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
+        /**
+         * @param streetAddress The street address of the user&#39;s place of business.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress(@Nullable Output<String> streetAddress) {
-            this.streetAddress = streetAddress;
+            $.streetAddress = streetAddress;
             return this;
         }
-        public Builder streetAddress(@Nullable String streetAddress) {
-            this.streetAddress = Codegen.ofNullable(streetAddress);
-            return this;
+
+        /**
+         * @param streetAddress The street address of the user&#39;s place of business.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder streetAddress(String streetAddress) {
+            return streetAddress(Output.of(streetAddress));
         }
+
+        /**
+         * @param surname The user&#39;s surname (family name or last name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder surname(@Nullable Output<String> surname) {
-            this.surname = surname;
+            $.surname = surname;
             return this;
         }
-        public Builder surname(@Nullable String surname) {
-            this.surname = Codegen.ofNullable(surname);
-            return this;
+
+        /**
+         * @param surname The user&#39;s surname (family name or last name).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder surname(String surname) {
+            return surname(Output.of(surname));
         }
+
+        /**
+         * @param usageLocation The usage location of the user. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageLocation(@Nullable Output<String> usageLocation) {
-            this.usageLocation = usageLocation;
+            $.usageLocation = usageLocation;
             return this;
         }
-        public Builder usageLocation(@Nullable String usageLocation) {
-            this.usageLocation = Codegen.ofNullable(usageLocation);
-            return this;
+
+        /**
+         * @param usageLocation The usage location of the user. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder usageLocation(String usageLocation) {
+            return usageLocation(Output.of(usageLocation));
         }
+
+        /**
+         * @param userPrincipalName The user principal name (UPN) of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
+            $.userPrincipalName = userPrincipalName;
             return this;
         }
-        public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = Codegen.ofNullable(userPrincipalName);
-            return this;
+
+        /**
+         * @param userPrincipalName The user principal name (UPN) of the user.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userPrincipalName(String userPrincipalName) {
+            return userPrincipalName(Output.of(userPrincipalName));
         }
+
+        /**
+         * @param userType The user type in the directory. Possible values are `Guest` or `Member`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(@Nullable Output<String> userType) {
-            this.userType = userType;
+            $.userType = userType;
             return this;
         }
-        public Builder userType(@Nullable String userType) {
-            this.userType = Codegen.ofNullable(userType);
-            return this;
-        }        public UserState build() {
-            return new UserState(aboutMe, accountEnabled, ageGroup, businessPhones, city, companyName, consentProvidedForMinor, costCenter, country, creationType, department, disablePasswordExpiration, disableStrongPassword, displayName, division, employeeId, employeeType, externalUserState, faxNumber, forcePasswordChange, givenName, imAddresses, jobTitle, mail, mailNickname, managerId, mobilePhone, objectId, officeLocation, onpremisesDistinguishedName, onpremisesDomainName, onpremisesImmutableId, onpremisesSamAccountName, onpremisesSecurityIdentifier, onpremisesSyncEnabled, onpremisesUserPrincipalName, otherMails, password, postalCode, preferredLanguage, proxyAddresses, showInAddressList, state, streetAddress, surname, usageLocation, userPrincipalName, userType);
+
+        /**
+         * @param userType The user type in the directory. Possible values are `Guest` or `Member`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userType(String userType) {
+            return userType(Output.of(userType));
+        }
+
+        public UserState build() {
+            return $;
         }
     }
+
 }

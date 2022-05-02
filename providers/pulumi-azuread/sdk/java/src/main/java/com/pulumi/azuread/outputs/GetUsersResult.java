@@ -15,29 +15,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetUsersResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final @Nullable Boolean ignoreMissing;
     /**
-     * The email aliases of the users.
+     * @return The email aliases of the users.
      * 
      */
     private final List<String> mailNicknames;
     /**
-     * The object IDs of the users.
+     * @return The object IDs of the users.
      * 
      */
     private final List<String> objectIds;
     private final @Nullable Boolean returnAll;
     /**
-     * The user principal names (UPNs) of the users.
+     * @return The user principal names (UPNs) of the users.
      * 
      */
     private final List<String> userPrincipalNames;
     /**
-     * A list of users. Each `user` object provides the attributes documented below.
+     * @return A list of users. Each `user` object provides the attributes documented below.
      * 
      */
     private final List<GetUsersUser> users;
@@ -61,9 +61,9 @@ public final class GetUsersResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -71,16 +71,16 @@ public final class GetUsersResult {
         return Optional.ofNullable(this.ignoreMissing);
     }
     /**
-     * The email aliases of the users.
+     * @return The email aliases of the users.
      * 
-    */
+     */
     public List<String> mailNicknames() {
         return this.mailNicknames;
     }
     /**
-     * The object IDs of the users.
+     * @return The object IDs of the users.
      * 
-    */
+     */
     public List<String> objectIds() {
         return this.objectIds;
     }
@@ -88,16 +88,16 @@ public final class GetUsersResult {
         return Optional.ofNullable(this.returnAll);
     }
     /**
-     * The user principal names (UPNs) of the users.
+     * @return The user principal names (UPNs) of the users.
      * 
-    */
+     */
     public List<String> userPrincipalNames() {
         return this.userPrincipalNames;
     }
     /**
-     * A list of users. Each `user` object provides the attributes documented below.
+     * @return A list of users. Each `user` object provides the attributes documented below.
      * 
-    */
+     */
     public List<GetUsersUser> users() {
         return this.users;
     }

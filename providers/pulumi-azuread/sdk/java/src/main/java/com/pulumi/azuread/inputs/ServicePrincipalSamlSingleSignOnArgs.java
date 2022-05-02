@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,64 @@ public final class ServicePrincipalSamlSingleSignOnArgs extends com.pulumi.resou
      * 
      */
     @Import(name="relayState")
-      private final @Nullable Output<String> relayState;
+    private @Nullable Output<String> relayState;
 
-    public Output<String> relayState() {
-        return this.relayState == null ? Codegen.empty() : this.relayState;
+    /**
+     * @return The relative URI the service provider would redirect to after completion of the single sign-on flow.
+     * 
+     */
+    public Optional<Output<String>> relayState() {
+        return Optional.ofNullable(this.relayState);
     }
 
-    public ServicePrincipalSamlSingleSignOnArgs(@Nullable Output<String> relayState) {
-        this.relayState = relayState;
-    }
+    private ServicePrincipalSamlSingleSignOnArgs() {}
 
-    private ServicePrincipalSamlSingleSignOnArgs() {
-        this.relayState = Codegen.empty();
+    private ServicePrincipalSamlSingleSignOnArgs(ServicePrincipalSamlSingleSignOnArgs $) {
+        this.relayState = $.relayState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalSamlSingleSignOnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> relayState;
+        private ServicePrincipalSamlSingleSignOnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalSamlSingleSignOnArgs();
         }
 
         public Builder(ServicePrincipalSamlSingleSignOnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.relayState = defaults.relayState;
+            $ = new ServicePrincipalSamlSingleSignOnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param relayState The relative URI the service provider would redirect to after completion of the single sign-on flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayState(@Nullable Output<String> relayState) {
-            this.relayState = relayState;
+            $.relayState = relayState;
             return this;
         }
-        public Builder relayState(@Nullable String relayState) {
-            this.relayState = Codegen.ofNullable(relayState);
-            return this;
-        }        public ServicePrincipalSamlSingleSignOnArgs build() {
-            return new ServicePrincipalSamlSingleSignOnArgs(relayState);
+
+        /**
+         * @param relayState The relative URI the service provider would redirect to after completion of the single sign-on flow.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relayState(String relayState) {
+            return relayState(Output.of(relayState));
+        }
+
+        public ServicePrincipalSamlSingleSignOnArgs build() {
+            return $;
         }
     }
+
 }

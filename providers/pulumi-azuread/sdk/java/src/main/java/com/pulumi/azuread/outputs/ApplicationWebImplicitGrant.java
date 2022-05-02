@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationWebImplicitGrant {
     /**
-     * Whether this web application can request an access token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an access token using OAuth 2.0 implicit flow.
      * 
      */
     private final @Nullable Boolean accessTokenIssuanceEnabled;
     /**
-     * Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an ID token using OAuth 2.0 implicit flow.
      * 
      */
     private final @Nullable Boolean idTokenIssuanceEnabled;
@@ -31,16 +31,16 @@ public final class ApplicationWebImplicitGrant {
     }
 
     /**
-     * Whether this web application can request an access token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an access token using OAuth 2.0 implicit flow.
      * 
-    */
+     */
     public Optional<Boolean> accessTokenIssuanceEnabled() {
         return Optional.ofNullable(this.accessTokenIssuanceEnabled);
     }
     /**
-     * Whether this web application can request an ID token using OAuth 2.0 implicit flow.
+     * @return Whether this web application can request an ID token using OAuth 2.0 implicit flow.
      * 
-    */
+     */
     public Optional<Boolean> idTokenIssuanceEnabled() {
         return Optional.ofNullable(this.idTokenIssuanceEnabled);
     }

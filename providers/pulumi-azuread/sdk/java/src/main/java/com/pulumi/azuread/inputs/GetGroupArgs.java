@@ -20,10 +20,14 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
+    /**
+     * @return The display name for the group.
+     * 
+     */
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -31,10 +35,14 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailEnabled")
-      private final @Nullable Boolean mailEnabled;
+    private @Nullable Boolean mailEnabled;
 
+    /**
+     * @return Whether the group is mail-enabled.
+     * 
+     */
     public Optional<Boolean> mailEnabled() {
-        return this.mailEnabled == null ? Optional.empty() : Optional.ofNullable(this.mailEnabled);
+        return Optional.ofNullable(this.mailEnabled);
     }
 
     /**
@@ -42,10 +50,14 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
+    /**
+     * @return Specifies the object ID of the group.
+     * 
+     */
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -53,73 +65,90 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityEnabled")
-      private final @Nullable Boolean securityEnabled;
+    private @Nullable Boolean securityEnabled;
 
+    /**
+     * @return Whether the group is a security group.
+     * 
+     */
     public Optional<Boolean> securityEnabled() {
-        return this.securityEnabled == null ? Optional.empty() : Optional.ofNullable(this.securityEnabled);
+        return Optional.ofNullable(this.securityEnabled);
     }
 
-    public GetGroupArgs(
-        @Nullable String displayName,
-        @Nullable Boolean mailEnabled,
-        @Nullable String objectId,
-        @Nullable Boolean securityEnabled) {
-        this.displayName = displayName;
-        this.mailEnabled = mailEnabled;
-        this.objectId = objectId;
-        this.securityEnabled = securityEnabled;
-    }
+    private GetGroupArgs() {}
 
-    private GetGroupArgs() {
-        this.displayName = null;
-        this.mailEnabled = null;
-        this.objectId = null;
-        this.securityEnabled = null;
+    private GetGroupArgs(GetGroupArgs $) {
+        this.displayName = $.displayName;
+        this.mailEnabled = $.mailEnabled;
+        this.objectId = $.objectId;
+        this.securityEnabled = $.securityEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable Boolean mailEnabled;
-        private @Nullable String objectId;
-        private @Nullable Boolean securityEnabled;
+        private GetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupArgs();
         }
 
         public Builder(GetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.mailEnabled = defaults.mailEnabled;
-    	      this.objectId = defaults.objectId;
-    	      this.securityEnabled = defaults.securityEnabled;
+            $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name for the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param mailEnabled Whether the group is mail-enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailEnabled(@Nullable Boolean mailEnabled) {
-            this.mailEnabled = mailEnabled;
+            $.mailEnabled = mailEnabled;
             return this;
         }
+
+        /**
+         * @param objectId Specifies the object ID of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
+        /**
+         * @param securityEnabled Whether the group is a security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityEnabled(@Nullable Boolean securityEnabled) {
-            this.securityEnabled = securityEnabled;
+            $.securityEnabled = securityEnabled;
             return this;
-        }        public GetGroupArgs build() {
-            return new GetGroupArgs(displayName, mailEnabled, objectId, securityEnabled);
+        }
+
+        public GetGroupArgs build() {
+            return $;
         }
     }
+
 }

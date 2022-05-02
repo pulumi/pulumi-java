@@ -5,7 +5,6 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,8 +19,12 @@ public final class ClaimsMappingPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="definitions", required=true)
-      private final Output<List<String>> definitions;
+    private Output<List<String>> definitions;
 
+    /**
+     * @return A string collection containing a JSON string that defines the rules and settings for this policy
+     * 
+     */
     public Output<List<String>> definitions() {
         return this.definitions;
     }
@@ -31,66 +34,98 @@ public final class ClaimsMappingPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return The display name for this Claims Mapping Policy.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
 
-    public ClaimsMappingPolicyArgs(
-        Output<List<String>> definitions,
-        Output<String> displayName) {
-        this.definitions = Objects.requireNonNull(definitions, "expected parameter 'definitions' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private ClaimsMappingPolicyArgs() {}
 
-    private ClaimsMappingPolicyArgs() {
-        this.definitions = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private ClaimsMappingPolicyArgs(ClaimsMappingPolicyArgs $) {
+        this.definitions = $.definitions;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClaimsMappingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> definitions;
-        private Output<String> displayName;
+        private ClaimsMappingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClaimsMappingPolicyArgs();
         }
 
         public Builder(ClaimsMappingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definitions = defaults.definitions;
-    	      this.displayName = defaults.displayName;
+            $ = new ClaimsMappingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitions(Output<List<String>> definitions) {
-            this.definitions = Objects.requireNonNull(definitions);
+            $.definitions = definitions;
             return this;
         }
+
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitions(List<String> definitions) {
-            this.definitions = Output.of(Objects.requireNonNull(definitions));
-            return this;
+            return definitions(Output.of(definitions));
         }
+
+        /**
+         * @param definitions A string collection containing a JSON string that defines the rules and settings for this policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder definitions(String... definitions) {
             return definitions(List.of(definitions));
         }
+
+        /**
+         * @param displayName The display name for this Claims Mapping Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName The display name for this Claims Mapping Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
-        }        public ClaimsMappingPolicyArgs build() {
-            return new ClaimsMappingPolicyArgs(definitions, displayName);
+            return displayName(Output.of(displayName));
+        }
+
+        public ClaimsMappingPolicyArgs build() {
+            $.definitions = Objects.requireNonNull($.definitions, "expected parameter 'definitions' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class ServicePrincipalDelegatedPermissionGrant extends com.pulumi.resourc
      * @return - The object ID of the user on behalf of whom the service principal is authorized to access the resource. When omitted, the delegated permission grant will be consented for all users. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> userObjectId() {
-        return this.userObjectId;
+    public Output<Optional<String>> userObjectId() {
+        return Codegen.optional(this.userObjectId);
     }
 
     /**

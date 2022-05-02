@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDomainsResult {
     /**
-     * Whether the DNS for the domain is managed by Microsoft 365.
+     * @return Whether the DNS for the domain is managed by Microsoft 365.
      * 
      */
     private final @Nullable Boolean adminManaged;
     /**
-     * A list of tenant domains. Each `domain` object provides the attributes documented below.
+     * @return A list of tenant domains. Each `domain` object provides the attributes documented below.
      * 
      */
     private final List<GetDomainsDomain> domains;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -56,23 +56,23 @@ public final class GetDomainsResult {
     }
 
     /**
-     * Whether the DNS for the domain is managed by Microsoft 365.
+     * @return Whether the DNS for the domain is managed by Microsoft 365.
      * 
-    */
+     */
     public Optional<Boolean> adminManaged() {
         return Optional.ofNullable(this.adminManaged);
     }
     /**
-     * A list of tenant domains. Each `domain` object provides the attributes documented below.
+     * @return A list of tenant domains. Each `domain` object provides the attributes documented below.
      * 
-    */
+     */
     public List<GetDomainsDomain> domains() {
         return this.domains;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

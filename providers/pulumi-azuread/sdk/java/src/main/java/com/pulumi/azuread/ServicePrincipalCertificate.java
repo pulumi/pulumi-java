@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,7 +33,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import azuread:index/servicePrincipalCertificate:ServicePrincipalCertificate test 00000000-0000-0000-0000-000000000000/certificate/11111111-1111-1111-1111-111111111111
  * ```
  * 
- *  -> This ID format is unique to Terraform and is composed of the service principal's object ID, the string "certificate" and the certificate's key ID in the format `{ServicePrincipalObjectId}/certificate/{CertificateKeyId}`.
+ *  -&gt; This ID format is unique to Terraform and is composed of the service principal&#39;s object ID, the string &#34;certificate&#34; and the certificate&#39;s key ID in the format `{ServicePrincipalObjectId}/certificate/{CertificateKeyId}`.
  * 
  */
 @ResourceType(type="azuread:index/servicePrincipalCertificate:ServicePrincipalCertificate")
@@ -48,8 +49,8 @@ public class ServicePrincipalCertificate extends com.pulumi.resources.CustomReso
      * @return Specifies the encoding used for the supplied certificate data. Must be one of `pem`, `base64` or `hex`. Defaults to `pem`.
      * 
      */
-    public Output</* @Nullable */ String> encoding() {
-        return this.encoding;
+    public Output<Optional<String>> encoding() {
+        return Codegen.optional(this.encoding);
     }
     /**
      * The end date until which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
@@ -66,18 +67,18 @@ public class ServicePrincipalCertificate extends com.pulumi.resources.CustomReso
         return this.endDate;
     }
     /**
-     * A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Changing this field forces a new resource to be created.
+     * A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;, &#34;h&#34;. Changing this field forces a new resource to be created.
      * 
      */
     @Export(name="endDateRelative", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDateRelative;
 
     /**
-     * @return A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". Changing this field forces a new resource to be created.
+     * @return A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Valid time units are &#34;ns&#34;, &#34;us&#34; (or &#34;µs&#34;), &#34;ms&#34;, &#34;s&#34;, &#34;m&#34;, &#34;h&#34;. Changing this field forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> endDateRelative() {
-        return this.endDateRelative;
+    public Output<Optional<String>> endDateRelative() {
+        return Codegen.optional(this.endDateRelative);
     }
     /**
      * A UUID used to uniquely identify this certificate. If not specified a UUID will be automatically generated. Changing this field forces a new resource to be created.
@@ -108,14 +109,14 @@ public class ServicePrincipalCertificate extends com.pulumi.resources.CustomReso
         return this.servicePrincipalId;
     }
     /**
-     * The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
+     * The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
      * 
      */
     @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
     /**
-     * @return The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
+     * @return The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date is used.  Changing this field forces a new resource to be created.
      * 
      */
     public Output<String> startDate() {
@@ -132,8 +133,8 @@ public class ServicePrincipalCertificate extends com.pulumi.resources.CustomReso
      * @return The type of key/certificate. Must be one of `AsymmetricX509Cert` or `Symmetric`. Changing this fields forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument.

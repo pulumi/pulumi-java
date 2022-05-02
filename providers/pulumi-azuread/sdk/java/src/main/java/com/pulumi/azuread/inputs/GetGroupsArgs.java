@@ -21,10 +21,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNamePrefix")
-      private final @Nullable String displayNamePrefix;
+    private @Nullable String displayNamePrefix;
 
+    /**
+     * @return A common display name prefix to match when returning groups.
+     * 
+     */
     public Optional<String> displayNamePrefix() {
-        return this.displayNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.displayNamePrefix);
+        return Optional.ofNullable(this.displayNamePrefix);
     }
 
     /**
@@ -32,10 +36,29 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayNames")
-      private final @Nullable List<String> displayNames;
+    private @Nullable List<String> displayNames;
 
-    public List<String> displayNames() {
-        return this.displayNames == null ? List.of() : this.displayNames;
+    /**
+     * @return The display names of the groups.
+     * 
+     */
+    public Optional<List<String>> displayNames() {
+        return Optional.ofNullable(this.displayNames);
+    }
+
+    /**
+     * Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
+     * 
+     */
+    @Import(name="ignoreMissing")
+    private @Nullable Boolean ignoreMissing;
+
+    /**
+     * @return Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
+     * 
+     */
+    public Optional<Boolean> ignoreMissing() {
+        return Optional.ofNullable(this.ignoreMissing);
     }
 
     /**
@@ -43,10 +66,14 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mailEnabled")
-      private final @Nullable Boolean mailEnabled;
+    private @Nullable Boolean mailEnabled;
 
+    /**
+     * @return Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+     * 
+     */
     public Optional<Boolean> mailEnabled() {
-        return this.mailEnabled == null ? Optional.empty() : Optional.ofNullable(this.mailEnabled);
+        return Optional.ofNullable(this.mailEnabled);
     }
 
     /**
@@ -54,21 +81,29 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIds")
-      private final @Nullable List<String> objectIds;
+    private @Nullable List<String> objectIds;
 
-    public List<String> objectIds() {
-        return this.objectIds == null ? List.of() : this.objectIds;
+    /**
+     * @return The object IDs of the groups.
+     * 
+     */
+    public Optional<List<String>> objectIds() {
+        return Optional.ofNullable(this.objectIds);
     }
 
     /**
-     * A flag to denote if all groups should be fetched and returned.
+     * A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
      * 
      */
     @Import(name="returnAll")
-      private final @Nullable Boolean returnAll;
+    private @Nullable Boolean returnAll;
 
+    /**
+     * @return A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
+     * 
+     */
     public Optional<Boolean> returnAll() {
-        return this.returnAll == null ? Optional.empty() : Optional.ofNullable(this.returnAll);
+        return Optional.ofNullable(this.returnAll);
     }
 
     /**
@@ -76,97 +111,146 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityEnabled")
-      private final @Nullable Boolean securityEnabled;
+    private @Nullable Boolean securityEnabled;
 
+    /**
+     * @return Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+     * 
+     */
     public Optional<Boolean> securityEnabled() {
-        return this.securityEnabled == null ? Optional.empty() : Optional.ofNullable(this.securityEnabled);
+        return Optional.ofNullable(this.securityEnabled);
     }
 
-    public GetGroupsArgs(
-        @Nullable String displayNamePrefix,
-        @Nullable List<String> displayNames,
-        @Nullable Boolean mailEnabled,
-        @Nullable List<String> objectIds,
-        @Nullable Boolean returnAll,
-        @Nullable Boolean securityEnabled) {
-        this.displayNamePrefix = displayNamePrefix;
-        this.displayNames = displayNames;
-        this.mailEnabled = mailEnabled;
-        this.objectIds = objectIds;
-        this.returnAll = returnAll;
-        this.securityEnabled = securityEnabled;
-    }
+    private GetGroupsArgs() {}
 
-    private GetGroupsArgs() {
-        this.displayNamePrefix = null;
-        this.displayNames = List.of();
-        this.mailEnabled = null;
-        this.objectIds = List.of();
-        this.returnAll = null;
-        this.securityEnabled = null;
+    private GetGroupsArgs(GetGroupsArgs $) {
+        this.displayNamePrefix = $.displayNamePrefix;
+        this.displayNames = $.displayNames;
+        this.ignoreMissing = $.ignoreMissing;
+        this.mailEnabled = $.mailEnabled;
+        this.objectIds = $.objectIds;
+        this.returnAll = $.returnAll;
+        this.securityEnabled = $.securityEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayNamePrefix;
-        private @Nullable List<String> displayNames;
-        private @Nullable Boolean mailEnabled;
-        private @Nullable List<String> objectIds;
-        private @Nullable Boolean returnAll;
-        private @Nullable Boolean securityEnabled;
+        private GetGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupsArgs();
         }
 
         public Builder(GetGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayNamePrefix = defaults.displayNamePrefix;
-    	      this.displayNames = defaults.displayNames;
-    	      this.mailEnabled = defaults.mailEnabled;
-    	      this.objectIds = defaults.objectIds;
-    	      this.returnAll = defaults.returnAll;
-    	      this.securityEnabled = defaults.securityEnabled;
+            $ = new GetGroupsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayNamePrefix A common display name prefix to match when returning groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNamePrefix(@Nullable String displayNamePrefix) {
-            this.displayNamePrefix = displayNamePrefix;
+            $.displayNamePrefix = displayNamePrefix;
             return this;
         }
+
+        /**
+         * @param displayNames The display names of the groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNames(@Nullable List<String> displayNames) {
-            this.displayNames = displayNames;
+            $.displayNames = displayNames;
             return this;
         }
+
+        /**
+         * @param displayNames The display names of the groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayNames(String... displayNames) {
             return displayNames(List.of(displayNames));
         }
+
+        /**
+         * @param ignoreMissing Ignore missing groups and return groups that were found. The data source will still fail if no groups are found. Cannot be specified with `return_all`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+            $.ignoreMissing = ignoreMissing;
+            return this;
+        }
+
+        /**
+         * @param mailEnabled Whether the returned groups should be mail-enabled. By itself this does not exclude security-enabled groups. Setting this to `true` ensures all groups are mail-enabled, and setting to `false` ensures that all groups are _not_ mail-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailEnabled(@Nullable Boolean mailEnabled) {
-            this.mailEnabled = mailEnabled;
+            $.mailEnabled = mailEnabled;
             return this;
         }
+
+        /**
+         * @param objectIds The object IDs of the groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIds(@Nullable List<String> objectIds) {
-            this.objectIds = objectIds;
+            $.objectIds = objectIds;
             return this;
         }
+
+        /**
+         * @param objectIds The object IDs of the groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectIds(String... objectIds) {
             return objectIds(List.of(objectIds));
         }
+
+        /**
+         * @param returnAll A flag to denote if all groups should be fetched and returned. Cannot be specified wth `ignore_missing`. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnAll(@Nullable Boolean returnAll) {
-            this.returnAll = returnAll;
+            $.returnAll = returnAll;
             return this;
         }
+
+        /**
+         * @param securityEnabled Whether the returned groups should be security-enabled. By itself this does not exclude mail-enabled groups. Setting this to `true` ensures all groups are security-enabled, and setting to `false` ensures that all groups are _not_ security-enabled. To ignore this filter, omit the property or set it to null. Cannot be specified together with `object_ids`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityEnabled(@Nullable Boolean securityEnabled) {
-            this.securityEnabled = securityEnabled;
+            $.securityEnabled = securityEnabled;
             return this;
-        }        public GetGroupsArgs build() {
-            return new GetGroupsArgs(displayNamePrefix, displayNames, mailEnabled, objectIds, returnAll, securityEnabled);
+        }
+
+        public GetGroupsArgs build() {
+            return $;
         }
     }
+
 }

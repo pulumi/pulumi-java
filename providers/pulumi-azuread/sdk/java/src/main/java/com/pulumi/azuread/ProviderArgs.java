@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +22,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificate")
-      private final @Nullable Output<String> clientCertificate;
+    private @Nullable Output<String> clientCertificate;
 
-    public Output<String> clientCertificate() {
-        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
+    /**
+     * @return Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
+     * 
+     */
+    public Optional<Output<String>> clientCertificate() {
+        return Optional.ofNullable(this.clientCertificate);
     }
 
     /**
@@ -33,10 +38,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificatePassword")
-      private final @Nullable Output<String> clientCertificatePassword;
+    private @Nullable Output<String> clientCertificatePassword;
 
-    public Output<String> clientCertificatePassword() {
-        return this.clientCertificatePassword == null ? Codegen.empty() : this.clientCertificatePassword;
+    /**
+     * @return The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+     * Certificate
+     * 
+     */
+    public Optional<Output<String>> clientCertificatePassword() {
+        return Optional.ofNullable(this.clientCertificatePassword);
     }
 
     /**
@@ -45,10 +55,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificatePath")
-      private final @Nullable Output<String> clientCertificatePath;
+    private @Nullable Output<String> clientCertificatePath;
 
-    public Output<String> clientCertificatePath() {
-        return this.clientCertificatePath == null ? Codegen.empty() : this.clientCertificatePath;
+    /**
+     * @return The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
+     * Principal using a Client Certificate
+     * 
+     */
+    public Optional<Output<String>> clientCertificatePath() {
+        return Optional.ofNullable(this.clientCertificatePath);
     }
 
     /**
@@ -56,10 +71,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    /**
+     * @return The Client ID which should be used for service principal authentication
+     * 
+     */
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -67,21 +86,29 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    /**
+     * @return The application password to use when authenticating as a Service Principal using a Client Secret
+     * 
+     */
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
-     * Disable the Terraform Partner ID, which is used if a custom `partner_id` isn't specified
+     * Disable the Terraform Partner ID, which is used if a custom `partner_id` isn&#39;t specified
      * 
      */
     @Import(name="disableTerraformPartnerId", json=true)
-      private final @Nullable Output<Boolean> disableTerraformPartnerId;
+    private @Nullable Output<Boolean> disableTerraformPartnerId;
 
-    public Output<Boolean> disableTerraformPartnerId() {
-        return this.disableTerraformPartnerId == null ? Codegen.empty() : this.disableTerraformPartnerId;
+    /**
+     * @return Disable the Terraform Partner ID, which is used if a custom `partner_id` isn&#39;t specified
+     * 
+     */
+    public Optional<Output<Boolean>> disableTerraformPartnerId() {
+        return Optional.ofNullable(this.disableTerraformPartnerId);
     }
 
     /**
@@ -90,10 +117,15 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    /**
+     * @return The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+     * `usgovernment`), `usgovernmentl5` (also `dod`), and `china`. Defaults to `global`
+     * 
+     */
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -101,10 +133,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="msiEndpoint")
-      private final @Nullable Output<String> msiEndpoint;
+    private @Nullable Output<String> msiEndpoint;
 
-    public Output<String> msiEndpoint() {
-        return this.msiEndpoint == null ? Codegen.empty() : this.msiEndpoint;
+    /**
+     * @return The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
+     * 
+     */
+    public Optional<Output<String>> msiEndpoint() {
+        return Optional.ofNullable(this.msiEndpoint);
     }
 
     /**
@@ -112,10 +148,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partnerId")
-      private final @Nullable Output<String> partnerId;
+    private @Nullable Output<String> partnerId;
 
-    public Output<String> partnerId() {
-        return this.partnerId == null ? Codegen.empty() : this.partnerId;
+    /**
+     * @return A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
+     * 
+     */
+    public Optional<Output<String>> partnerId() {
+        return Optional.ofNullable(this.partnerId);
     }
 
     /**
@@ -123,10 +163,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    /**
+     * @return The Tenant ID which should be used. Works with all authentication methods except Managed Identity
+     * 
+     */
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -134,10 +178,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useCli", json=true)
-      private final @Nullable Output<Boolean> useCli;
+    private @Nullable Output<Boolean> useCli;
 
-    public Output<Boolean> useCli() {
-        return this.useCli == null ? Codegen.empty() : this.useCli;
+    /**
+     * @return Allow Azure CLI to be used for Authentication
+     * 
+     */
+    public Optional<Output<Boolean>> useCli() {
+        return Optional.ofNullable(this.useCli);
     }
 
     /**
@@ -145,193 +193,315 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useMsi", json=true)
-      private final @Nullable Output<Boolean> useMsi;
+    private @Nullable Output<Boolean> useMsi;
 
-    public Output<Boolean> useMsi() {
-        return this.useMsi == null ? Codegen.empty() : this.useMsi;
+    /**
+     * @return Allow Managed Identity to be used for Authentication
+     * 
+     */
+    public Optional<Output<Boolean>> useMsi() {
+        return Optional.ofNullable(this.useMsi);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> clientCertificate,
-        @Nullable Output<String> clientCertificatePassword,
-        @Nullable Output<String> clientCertificatePath,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<Boolean> disableTerraformPartnerId,
-        @Nullable Output<String> environment,
-        @Nullable Output<String> msiEndpoint,
-        @Nullable Output<String> partnerId,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<Boolean> useCli,
-        @Nullable Output<Boolean> useMsi) {
-        this.clientCertificate = clientCertificate;
-        this.clientCertificatePassword = clientCertificatePassword;
-        this.clientCertificatePath = clientCertificatePath;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.disableTerraformPartnerId = disableTerraformPartnerId;
-        this.environment = Codegen.stringProp("environment").output().arg(environment).env("ARM_ENVIRONMENT").def("public").getNullable();
-        this.msiEndpoint = Codegen.stringProp("msiEndpoint").output().arg(msiEndpoint).env("ARM_MSI_ENDPOINT").getNullable();
-        this.partnerId = partnerId;
-        this.tenantId = tenantId;
-        this.useCli = useCli;
-        this.useMsi = Codegen.booleanProp("useMsi").output().arg(useMsi).env("ARM_USE_MSI").def(false).getNullable();
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.clientCertificate = Codegen.empty();
-        this.clientCertificatePassword = Codegen.empty();
-        this.clientCertificatePath = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.disableTerraformPartnerId = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.msiEndpoint = Codegen.empty();
-        this.partnerId = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.useCli = Codegen.empty();
-        this.useMsi = Codegen.empty();
+    private ProviderArgs(ProviderArgs $) {
+        this.clientCertificate = $.clientCertificate;
+        this.clientCertificatePassword = $.clientCertificatePassword;
+        this.clientCertificatePath = $.clientCertificatePath;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.disableTerraformPartnerId = $.disableTerraformPartnerId;
+        this.environment = $.environment;
+        this.msiEndpoint = $.msiEndpoint;
+        this.partnerId = $.partnerId;
+        this.tenantId = $.tenantId;
+        this.useCli = $.useCli;
+        this.useMsi = $.useMsi;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientCertificate;
-        private @Nullable Output<String> clientCertificatePassword;
-        private @Nullable Output<String> clientCertificatePath;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<Boolean> disableTerraformPartnerId;
-        private @Nullable Output<String> environment;
-        private @Nullable Output<String> msiEndpoint;
-        private @Nullable Output<String> partnerId;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<Boolean> useCli;
-        private @Nullable Output<Boolean> useMsi;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientCertificatePassword = defaults.clientCertificatePassword;
-    	      this.clientCertificatePath = defaults.clientCertificatePath;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.disableTerraformPartnerId = defaults.disableTerraformPartnerId;
-    	      this.environment = defaults.environment;
-    	      this.msiEndpoint = defaults.msiEndpoint;
-    	      this.partnerId = defaults.partnerId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.useCli = defaults.useCli;
-    	      this.useMsi = defaults.useMsi;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertificate Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
-            this.clientCertificate = clientCertificate;
+            $.clientCertificate = clientCertificate;
             return this;
         }
-        public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Codegen.ofNullable(clientCertificate);
-            return this;
+
+        /**
+         * @param clientCertificate Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientCertificate(String clientCertificate) {
+            return clientCertificate(Output.of(clientCertificate));
         }
+
+        /**
+         * @param clientCertificatePassword The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+         * Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePassword(@Nullable Output<String> clientCertificatePassword) {
-            this.clientCertificatePassword = clientCertificatePassword;
+            $.clientCertificatePassword = clientCertificatePassword;
             return this;
         }
-        public Builder clientCertificatePassword(@Nullable String clientCertificatePassword) {
-            this.clientCertificatePassword = Codegen.ofNullable(clientCertificatePassword);
-            return this;
+
+        /**
+         * @param clientCertificatePassword The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
+         * Certificate
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientCertificatePassword(String clientCertificatePassword) {
+            return clientCertificatePassword(Output.of(clientCertificatePassword));
         }
+
+        /**
+         * @param clientCertificatePath The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
+         * Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatePath(@Nullable Output<String> clientCertificatePath) {
-            this.clientCertificatePath = clientCertificatePath;
+            $.clientCertificatePath = clientCertificatePath;
             return this;
         }
-        public Builder clientCertificatePath(@Nullable String clientCertificatePath) {
-            this.clientCertificatePath = Codegen.ofNullable(clientCertificatePath);
-            return this;
+
+        /**
+         * @param clientCertificatePath The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
+         * Principal using a Client Certificate
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientCertificatePath(String clientCertificatePath) {
+            return clientCertificatePath(Output.of(clientCertificatePath));
         }
+
+        /**
+         * @param clientId The Client ID which should be used for service principal authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        /**
+         * @param clientId The Client ID which should be used for service principal authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
+        /**
+         * @param clientSecret The application password to use when authenticating as a Service Principal using a Client Secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        /**
+         * @param clientSecret The application password to use when authenticating as a Service Principal using a Client Secret
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
+        /**
+         * @param disableTerraformPartnerId Disable the Terraform Partner ID, which is used if a custom `partner_id` isn&#39;t specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableTerraformPartnerId(@Nullable Output<Boolean> disableTerraformPartnerId) {
-            this.disableTerraformPartnerId = disableTerraformPartnerId;
+            $.disableTerraformPartnerId = disableTerraformPartnerId;
             return this;
         }
-        public Builder disableTerraformPartnerId(@Nullable Boolean disableTerraformPartnerId) {
-            this.disableTerraformPartnerId = Codegen.ofNullable(disableTerraformPartnerId);
-            return this;
+
+        /**
+         * @param disableTerraformPartnerId Disable the Terraform Partner ID, which is used if a custom `partner_id` isn&#39;t specified
+         * 
+         * @return builder
+         * 
+         */
+        public Builder disableTerraformPartnerId(Boolean disableTerraformPartnerId) {
+            return disableTerraformPartnerId(Output.of(disableTerraformPartnerId));
         }
+
+        /**
+         * @param environment The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+         * `usgovernment`), `usgovernmentl5` (also `dod`), and `china`. Defaults to `global`
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        /**
+         * @param environment The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
+         * `usgovernment`), `usgovernmentl5` (also `dod`), and `china`. Defaults to `global`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
+        /**
+         * @param msiEndpoint The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiEndpoint(@Nullable Output<String> msiEndpoint) {
-            this.msiEndpoint = msiEndpoint;
+            $.msiEndpoint = msiEndpoint;
             return this;
         }
-        public Builder msiEndpoint(@Nullable String msiEndpoint) {
-            this.msiEndpoint = Codegen.ofNullable(msiEndpoint);
-            return this;
+
+        /**
+         * @param msiEndpoint The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
+         * 
+         * @return builder
+         * 
+         */
+        public Builder msiEndpoint(String msiEndpoint) {
+            return msiEndpoint(Output.of(msiEndpoint));
         }
+
+        /**
+         * @param partnerId A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(@Nullable Output<String> partnerId) {
-            this.partnerId = partnerId;
+            $.partnerId = partnerId;
             return this;
         }
-        public Builder partnerId(@Nullable String partnerId) {
-            this.partnerId = Codegen.ofNullable(partnerId);
-            return this;
+
+        /**
+         * @param partnerId A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
+         * 
+         * @return builder
+         * 
+         */
+        public Builder partnerId(String partnerId) {
+            return partnerId(Output.of(partnerId));
         }
+
+        /**
+         * @param tenantId The Tenant ID which should be used. Works with all authentication methods except Managed Identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        /**
+         * @param tenantId The Tenant ID which should be used. Works with all authentication methods except Managed Identity
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
+        /**
+         * @param useCli Allow Azure CLI to be used for Authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCli(@Nullable Output<Boolean> useCli) {
-            this.useCli = useCli;
+            $.useCli = useCli;
             return this;
         }
-        public Builder useCli(@Nullable Boolean useCli) {
-            this.useCli = Codegen.ofNullable(useCli);
-            return this;
+
+        /**
+         * @param useCli Allow Azure CLI to be used for Authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useCli(Boolean useCli) {
+            return useCli(Output.of(useCli));
         }
+
+        /**
+         * @param useMsi Allow Managed Identity to be used for Authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder useMsi(@Nullable Output<Boolean> useMsi) {
-            this.useMsi = useMsi;
+            $.useMsi = useMsi;
             return this;
         }
-        public Builder useMsi(@Nullable Boolean useMsi) {
-            this.useMsi = Codegen.ofNullable(useMsi);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(clientCertificate, clientCertificatePassword, clientCertificatePath, clientId, clientSecret, disableTerraformPartnerId, environment, msiEndpoint, partnerId, tenantId, useCli, useMsi);
+
+        /**
+         * @param useMsi Allow Managed Identity to be used for Authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useMsi(Boolean useMsi) {
+            return useMsi(Output.of(useMsi));
+        }
+
+        public ProviderArgs build() {
+            $.environment = Codegen.stringProp("environment").output().arg($.environment).env("ARM_ENVIRONMENT").def("public").getNullable();
+            $.msiEndpoint = Codegen.stringProp("msiEndpoint").output().arg($.msiEndpoint).env("ARM_MSI_ENDPOINT").getNullable();
+            $.useMsi = Codegen.booleanProp("useMsi").output().arg($.useMsi).env("ARM_USE_MSI").def(false).getNullable();
+            return $;
         }
     }
+
 }

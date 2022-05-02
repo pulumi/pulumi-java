@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="applicationObjectId")
-      private final @Nullable Output<String> applicationObjectId;
+    private @Nullable Output<String> applicationObjectId;
 
-    public Output<String> applicationObjectId() {
-        return this.applicationObjectId == null ? Codegen.empty() : this.applicationObjectId;
+    /**
+     * @return The object ID of the application for which this certificate should be created. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> applicationObjectId() {
+        return Optional.ofNullable(this.applicationObjectId);
     }
 
     /**
@@ -31,10 +35,14 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    /**
+     * @return Specifies the encoding used for the supplied certificate data. Must be one of `pem`, `base64` or `hex`. Defaults to `pem`.
+     * 
+     */
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -42,10 +50,14 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<String> endDate;
+    private @Nullable Output<String> endDate;
 
-    public Output<String> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    /**
+     * @return The end date until which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If omitted, the API will decide a suitable expiry date, which is typically around 2 years from the start date. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -53,10 +65,14 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="endDateRelative")
-      private final @Nullable Output<String> endDateRelative;
+    private @Nullable Output<String> endDateRelative;
 
-    public Output<String> endDateRelative() {
-        return this.endDateRelative == null ? Codegen.empty() : this.endDateRelative;
+    /**
+     * @return A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> endDateRelative() {
+        return Optional.ofNullable(this.endDateRelative);
     }
 
     /**
@@ -64,21 +80,29 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    /**
+     * @return A UUID used to uniquely identify this certificate. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
-     * The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date and time are used.  Changing this field forces a new resource to be created.
+     * The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date and time are used.  Changing this field forces a new resource to be created.
      * 
      */
     @Import(name="startDate")
-      private final @Nullable Output<String> startDate;
+    private @Nullable Output<String> startDate;
 
-    public Output<String> startDate() {
-        return this.startDate == null ? Codegen.empty() : this.startDate;
+    /**
+     * @return The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date and time are used.  Changing this field forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> startDate() {
+        return Optional.ofNullable(this.startDate);
     }
 
     /**
@@ -86,10 +110,14 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    /**
+     * @return The type of key/certificate. Must be one of `AsymmetricX509Cert` or `Symmetric`. Changing this fields forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -97,141 +125,218 @@ public final class ApplicationCertificateState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    /**
+     * @return The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument.
+     * 
+     */
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApplicationCertificateState(
-        @Nullable Output<String> applicationObjectId,
-        @Nullable Output<String> encoding,
-        @Nullable Output<String> endDate,
-        @Nullable Output<String> endDateRelative,
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> startDate,
-        @Nullable Output<String> type,
-        @Nullable Output<String> value) {
-        this.applicationObjectId = applicationObjectId;
-        this.encoding = encoding;
-        this.endDate = endDate;
-        this.endDateRelative = endDateRelative;
-        this.keyId = keyId;
-        this.startDate = startDate;
-        this.type = type;
-        this.value = value;
-    }
+    private ApplicationCertificateState() {}
 
-    private ApplicationCertificateState() {
-        this.applicationObjectId = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.endDate = Codegen.empty();
-        this.endDateRelative = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.startDate = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApplicationCertificateState(ApplicationCertificateState $) {
+        this.applicationObjectId = $.applicationObjectId;
+        this.encoding = $.encoding;
+        this.endDate = $.endDate;
+        this.endDateRelative = $.endDateRelative;
+        this.keyId = $.keyId;
+        this.startDate = $.startDate;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationCertificateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationObjectId;
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<String> endDate;
-        private @Nullable Output<String> endDateRelative;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> startDate;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> value;
+        private ApplicationCertificateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationCertificateState();
         }
 
         public Builder(ApplicationCertificateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationObjectId = defaults.applicationObjectId;
-    	      this.encoding = defaults.encoding;
-    	      this.endDate = defaults.endDate;
-    	      this.endDateRelative = defaults.endDateRelative;
-    	      this.keyId = defaults.keyId;
-    	      this.startDate = defaults.startDate;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ApplicationCertificateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationObjectId The object ID of the application for which this certificate should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(@Nullable Output<String> applicationObjectId) {
-            this.applicationObjectId = applicationObjectId;
+            $.applicationObjectId = applicationObjectId;
             return this;
         }
-        public Builder applicationObjectId(@Nullable String applicationObjectId) {
-            this.applicationObjectId = Codegen.ofNullable(applicationObjectId);
-            return this;
+
+        /**
+         * @param applicationObjectId The object ID of the application for which this certificate should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationObjectId(String applicationObjectId) {
+            return applicationObjectId(Output.of(applicationObjectId));
         }
+
+        /**
+         * @param encoding Specifies the encoding used for the supplied certificate data. Must be one of `pem`, `base64` or `hex`. Defaults to `pem`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        /**
+         * @param encoding Specifies the encoding used for the supplied certificate data. Must be one of `pem`, `base64` or `hex`. Defaults to `pem`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
+        /**
+         * @param endDate The end date until which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If omitted, the API will decide a suitable expiry date, which is typically around 2 years from the start date. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable String endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        /**
+         * @param endDate The end date until which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If omitted, the API will decide a suitable expiry date, which is typically around 2 years from the start date. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endDate(String endDate) {
+            return endDate(Output.of(endDate));
         }
+
+        /**
+         * @param endDateRelative A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDateRelative(@Nullable Output<String> endDateRelative) {
-            this.endDateRelative = endDateRelative;
+            $.endDateRelative = endDateRelative;
             return this;
         }
-        public Builder endDateRelative(@Nullable String endDateRelative) {
-            this.endDateRelative = Codegen.ofNullable(endDateRelative);
-            return this;
+
+        /**
+         * @param endDateRelative A relative duration for which the certificate is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder endDateRelative(String endDateRelative) {
+            return endDateRelative(Output.of(endDateRelative));
         }
+
+        /**
+         * @param keyId A UUID used to uniquely identify this certificate. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        /**
+         * @param keyId A UUID used to uniquely identify this certificate. If omitted, a random UUID will be automatically generated. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
+        /**
+         * @param startDate The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date and time are used.  Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable Output<String> startDate) {
-            this.startDate = startDate;
+            $.startDate = startDate;
             return this;
         }
-        public Builder startDate(@Nullable String startDate) {
-            this.startDate = Codegen.ofNullable(startDate);
-            return this;
+
+        /**
+         * @param startDate The start date from which the certificate is valid, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn&#39;t specified, the current date and time are used.  Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startDate(String startDate) {
+            return startDate(Output.of(startDate));
         }
+
+        /**
+         * @param type The type of key/certificate. Must be one of `AsymmetricX509Cert` or `Symmetric`. Changing this fields forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        /**
+         * @param type The type of key/certificate. Must be one of `AsymmetricX509Cert` or `Symmetric`. Changing this fields forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
+        /**
+         * @param value The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApplicationCertificateState build() {
-            return new ApplicationCertificateState(applicationObjectId, encoding, endDate, endDateRelative, keyId, startDate, type, value);
+
+        /**
+         * @param value The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApplicationCertificateState build() {
+            return $;
         }
     }
+
 }

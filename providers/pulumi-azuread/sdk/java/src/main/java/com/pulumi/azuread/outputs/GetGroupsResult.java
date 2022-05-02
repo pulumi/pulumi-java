@@ -15,18 +15,19 @@ import javax.annotation.Nullable;
 public final class GetGroupsResult {
     private final String displayNamePrefix;
     /**
-     * The display names of the groups.
+     * @return The display names of the groups.
      * 
      */
     private final List<String> displayNames;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
+    private final @Nullable Boolean ignoreMissing;
     private final Boolean mailEnabled;
     /**
-     * The object IDs of the groups.
+     * @return The object IDs of the groups.
      * 
      */
     private final List<String> objectIds;
@@ -38,6 +39,7 @@ public final class GetGroupsResult {
         @CustomType.Parameter("displayNamePrefix") String displayNamePrefix,
         @CustomType.Parameter("displayNames") List<String> displayNames,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ignoreMissing") @Nullable Boolean ignoreMissing,
         @CustomType.Parameter("mailEnabled") Boolean mailEnabled,
         @CustomType.Parameter("objectIds") List<String> objectIds,
         @CustomType.Parameter("returnAll") @Nullable Boolean returnAll,
@@ -45,6 +47,7 @@ public final class GetGroupsResult {
         this.displayNamePrefix = displayNamePrefix;
         this.displayNames = displayNames;
         this.id = id;
+        this.ignoreMissing = ignoreMissing;
         this.mailEnabled = mailEnabled;
         this.objectIds = objectIds;
         this.returnAll = returnAll;
@@ -55,26 +58,29 @@ public final class GetGroupsResult {
         return this.displayNamePrefix;
     }
     /**
-     * The display names of the groups.
+     * @return The display names of the groups.
      * 
-    */
+     */
     public List<String> displayNames() {
         return this.displayNames;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
+    }
+    public Optional<Boolean> ignoreMissing() {
+        return Optional.ofNullable(this.ignoreMissing);
     }
     public Boolean mailEnabled() {
         return this.mailEnabled;
     }
     /**
-     * The object IDs of the groups.
+     * @return The object IDs of the groups.
      * 
-    */
+     */
     public List<String> objectIds() {
         return this.objectIds;
     }
@@ -97,6 +103,7 @@ public final class GetGroupsResult {
         private String displayNamePrefix;
         private List<String> displayNames;
         private String id;
+        private @Nullable Boolean ignoreMissing;
         private Boolean mailEnabled;
         private List<String> objectIds;
         private @Nullable Boolean returnAll;
@@ -111,6 +118,7 @@ public final class GetGroupsResult {
     	      this.displayNamePrefix = defaults.displayNamePrefix;
     	      this.displayNames = defaults.displayNames;
     	      this.id = defaults.id;
+    	      this.ignoreMissing = defaults.ignoreMissing;
     	      this.mailEnabled = defaults.mailEnabled;
     	      this.objectIds = defaults.objectIds;
     	      this.returnAll = defaults.returnAll;
@@ -132,6 +140,10 @@ public final class GetGroupsResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
+        public Builder ignoreMissing(@Nullable Boolean ignoreMissing) {
+            this.ignoreMissing = ignoreMissing;
+            return this;
+        }
         public Builder mailEnabled(Boolean mailEnabled) {
             this.mailEnabled = Objects.requireNonNull(mailEnabled);
             return this;
@@ -151,7 +163,7 @@ public final class GetGroupsResult {
             this.securityEnabled = Objects.requireNonNull(securityEnabled);
             return this;
         }        public GetGroupsResult build() {
-            return new GetGroupsResult(displayNamePrefix, displayNames, id, mailEnabled, objectIds, returnAll, securityEnabled);
+            return new GetGroupsResult(displayNamePrefix, displayNames, id, ignoreMissing, mailEnabled, objectIds, returnAll, securityEnabled);
         }
     }
 }

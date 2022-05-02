@@ -3,14 +3,14 @@
 
 package com.pulumi.azuread.inputs;
 
-import com.pulumi.azuread.inputs.ConditionalAccessPolicyConditionsGetArgs;
-import com.pulumi.azuread.inputs.ConditionalAccessPolicyGrantControlsGetArgs;
-import com.pulumi.azuread.inputs.ConditionalAccessPolicySessionControlsGetArgs;
+import com.pulumi.azuread.inputs.ConditionalAccessPolicyConditionsArgs;
+import com.pulumi.azuread.inputs.ConditionalAccessPolicyGrantControlsArgs;
+import com.pulumi.azuread.inputs.ConditionalAccessPolicySessionControlsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,14 @@ public final class ConditionalAccessPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<ConditionalAccessPolicyConditionsGetArgs> conditions;
+    private @Nullable Output<ConditionalAccessPolicyConditionsArgs> conditions;
 
-    public Output<ConditionalAccessPolicyConditionsGetArgs> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    /**
+     * @return A `conditions` block as documented below, which specifies the rules that must be met for the policy to apply.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyConditionsArgs>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -34,10 +38,14 @@ public final class ConditionalAccessPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The friendly name for this Conditional Access Policy.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -45,10 +53,14 @@ public final class ConditionalAccessPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="grantControls")
-      private final @Nullable Output<ConditionalAccessPolicyGrantControlsGetArgs> grantControls;
+    private @Nullable Output<ConditionalAccessPolicyGrantControlsArgs> grantControls;
 
-    public Output<ConditionalAccessPolicyGrantControlsGetArgs> grantControls() {
-        return this.grantControls == null ? Codegen.empty() : this.grantControls;
+    /**
+     * @return A `grant_controls` block as documented below, which specifies the grant controls that must be fulfilled to pass the policy.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyGrantControlsArgs>> grantControls() {
+        return Optional.ofNullable(this.grantControls);
     }
 
     /**
@@ -56,10 +68,14 @@ public final class ConditionalAccessPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sessionControls")
-      private final @Nullable Output<ConditionalAccessPolicySessionControlsGetArgs> sessionControls;
+    private @Nullable Output<ConditionalAccessPolicySessionControlsArgs> sessionControls;
 
-    public Output<ConditionalAccessPolicySessionControlsGetArgs> sessionControls() {
-        return this.sessionControls == null ? Codegen.empty() : this.sessionControls;
+    /**
+     * @return A `session_controls` block as documented below, which specifies the session controls that are enforced after sign-in.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicySessionControlsArgs>> sessionControls() {
+        return Optional.ofNullable(this.sessionControls);
     }
 
     /**
@@ -67,102 +83,152 @@ public final class ConditionalAccessPolicyState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    /**
+     * @return Specifies the state of the policy object. Possible values are: `enabled`, `disabled` and `enabledForReportingButNotEnforced`
+     * 
+     */
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public ConditionalAccessPolicyState(
-        @Nullable Output<ConditionalAccessPolicyConditionsGetArgs> conditions,
-        @Nullable Output<String> displayName,
-        @Nullable Output<ConditionalAccessPolicyGrantControlsGetArgs> grantControls,
-        @Nullable Output<ConditionalAccessPolicySessionControlsGetArgs> sessionControls,
-        @Nullable Output<String> state) {
-        this.conditions = conditions;
-        this.displayName = displayName;
-        this.grantControls = grantControls;
-        this.sessionControls = sessionControls;
-        this.state = state;
-    }
+    private ConditionalAccessPolicyState() {}
 
-    private ConditionalAccessPolicyState() {
-        this.conditions = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.grantControls = Codegen.empty();
-        this.sessionControls = Codegen.empty();
-        this.state = Codegen.empty();
+    private ConditionalAccessPolicyState(ConditionalAccessPolicyState $) {
+        this.conditions = $.conditions;
+        this.displayName = $.displayName;
+        this.grantControls = $.grantControls;
+        this.sessionControls = $.sessionControls;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionalAccessPolicyConditionsGetArgs> conditions;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<ConditionalAccessPolicyGrantControlsGetArgs> grantControls;
-        private @Nullable Output<ConditionalAccessPolicySessionControlsGetArgs> sessionControls;
-        private @Nullable Output<String> state;
+        private ConditionalAccessPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyState();
         }
 
         public Builder(ConditionalAccessPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.displayName = defaults.displayName;
-    	      this.grantControls = defaults.grantControls;
-    	      this.sessionControls = defaults.sessionControls;
-    	      this.state = defaults.state;
+            $ = new ConditionalAccessPolicyState(Objects.requireNonNull(defaults));
         }
 
-        public Builder conditions(@Nullable Output<ConditionalAccessPolicyConditionsGetArgs> conditions) {
-            this.conditions = conditions;
+        /**
+         * @param conditions A `conditions` block as documented below, which specifies the rules that must be met for the policy to apply.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditions(@Nullable Output<ConditionalAccessPolicyConditionsArgs> conditions) {
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable ConditionalAccessPolicyConditionsGetArgs conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        /**
+         * @param conditions A `conditions` block as documented below, which specifies the rules that must be met for the policy to apply.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditions(ConditionalAccessPolicyConditionsArgs conditions) {
+            return conditions(Output.of(conditions));
         }
+
+        /**
+         * @param displayName The friendly name for this Conditional Access Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
+
+        /**
+         * @param displayName The friendly name for this Conditional Access Policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param grantControls A `grant_controls` block as documented below, which specifies the grant controls that must be fulfilled to pass the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantControls(@Nullable Output<ConditionalAccessPolicyGrantControlsArgs> grantControls) {
+            $.grantControls = grantControls;
             return this;
         }
-        public Builder grantControls(@Nullable Output<ConditionalAccessPolicyGrantControlsGetArgs> grantControls) {
-            this.grantControls = grantControls;
+
+        /**
+         * @param grantControls A `grant_controls` block as documented below, which specifies the grant controls that must be fulfilled to pass the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder grantControls(ConditionalAccessPolicyGrantControlsArgs grantControls) {
+            return grantControls(Output.of(grantControls));
+        }
+
+        /**
+         * @param sessionControls A `session_controls` block as documented below, which specifies the session controls that are enforced after sign-in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionControls(@Nullable Output<ConditionalAccessPolicySessionControlsArgs> sessionControls) {
+            $.sessionControls = sessionControls;
             return this;
         }
-        public Builder grantControls(@Nullable ConditionalAccessPolicyGrantControlsGetArgs grantControls) {
-            this.grantControls = Codegen.ofNullable(grantControls);
-            return this;
+
+        /**
+         * @param sessionControls A `session_controls` block as documented below, which specifies the session controls that are enforced after sign-in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionControls(ConditionalAccessPolicySessionControlsArgs sessionControls) {
+            return sessionControls(Output.of(sessionControls));
         }
-        public Builder sessionControls(@Nullable Output<ConditionalAccessPolicySessionControlsGetArgs> sessionControls) {
-            this.sessionControls = sessionControls;
-            return this;
-        }
-        public Builder sessionControls(@Nullable ConditionalAccessPolicySessionControlsGetArgs sessionControls) {
-            this.sessionControls = Codegen.ofNullable(sessionControls);
-            return this;
-        }
+
+        /**
+         * @param state Specifies the state of the policy object. Possible values are: `enabled`, `disabled` and `enabledForReportingButNotEnforced`
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public ConditionalAccessPolicyState build() {
-            return new ConditionalAccessPolicyState(conditions, displayName, grantControls, sessionControls, state);
+
+        /**
+         * @param state Specifies the state of the policy object. Possible values are: `enabled`, `disabled` and `enabledForReportingButNotEnforced`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public ConditionalAccessPolicyState build() {
+            return $;
         }
     }
+
 }

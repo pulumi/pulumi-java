@@ -12,62 +12,62 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalsServicePrincipal {
     /**
-     * Whether or not the service principal account is enabled.
+     * @return Whether or not the service principal account is enabled.
      * 
      */
     private final Boolean accountEnabled;
     /**
-     * Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
+     * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
      * 
      */
     private final Boolean appRoleAssignmentRequired;
     /**
-     * The application ID (client ID) of the application associated with this service principal.
+     * @return The application ID (client ID) of the application associated with this service principal.
      * 
      */
     private final String applicationId;
     /**
-     * The tenant ID where the associated application is registered.
+     * @return The tenant ID where the associated application is registered.
      * 
      */
     private final String applicationTenantId;
     /**
-     * The display name of the application associated with this service principal.
+     * @return The display name of the application associated with this service principal.
      * 
      */
     private final String displayName;
     /**
-     * The object ID of the service principal.
+     * @return The object ID of the service principal.
      * 
      */
     private final String objectId;
     /**
-     * The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
      */
     private final String preferredSingleSignOnMode;
     /**
-     * The URL where the service exposes SAML metadata for federation.
+     * @return The URL where the service exposes SAML metadata for federation.
      * 
      */
     private final String samlMetadataUrl;
     /**
-     * A list of identifier URI(s), copied over from the associated application.
+     * @return A list of identifier URI(s), copied over from the associated application.
      * 
      */
     private final List<String> servicePrincipalNames;
     /**
-     * The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
      */
     private final String signInAudience;
     /**
-     * A list of tags applied to the service principal.
+     * @return A list of tags applied to the service principal.
      * 
      */
     private final List<String> tags;
     /**
-     * Identifies whether the service principal represents an application or a managed identity. Possible values include `Application` or `ManagedIdentity`.
+     * @return Identifies whether the service principal represents an application or a managed identity. Possible values include `Application` or `ManagedIdentity`.
      * 
      */
     private final String type;
@@ -101,86 +101,86 @@ public final class GetServicePrincipalsServicePrincipal {
     }
 
     /**
-     * Whether or not the service principal account is enabled.
+     * @return Whether or not the service principal account is enabled.
      * 
-    */
+     */
     public Boolean accountEnabled() {
         return this.accountEnabled;
     }
     /**
-     * Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
+     * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application.
      * 
-    */
+     */
     public Boolean appRoleAssignmentRequired() {
         return this.appRoleAssignmentRequired;
     }
     /**
-     * The application ID (client ID) of the application associated with this service principal.
+     * @return The application ID (client ID) of the application associated with this service principal.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * The tenant ID where the associated application is registered.
+     * @return The tenant ID where the associated application is registered.
      * 
-    */
+     */
     public String applicationTenantId() {
         return this.applicationTenantId;
     }
     /**
-     * The display name of the application associated with this service principal.
+     * @return The display name of the application associated with this service principal.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The object ID of the service principal.
+     * @return The object ID of the service principal.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
+     * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
      * 
-    */
+     */
     public String preferredSingleSignOnMode() {
         return this.preferredSingleSignOnMode;
     }
     /**
-     * The URL where the service exposes SAML metadata for federation.
+     * @return The URL where the service exposes SAML metadata for federation.
      * 
-    */
+     */
     public String samlMetadataUrl() {
         return this.samlMetadataUrl;
     }
     /**
-     * A list of identifier URI(s), copied over from the associated application.
+     * @return A list of identifier URI(s), copied over from the associated application.
      * 
-    */
+     */
     public List<String> servicePrincipalNames() {
         return this.servicePrincipalNames;
     }
     /**
-     * The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
+     * @return The Microsoft account types that are supported for the associated application. Possible values include `AzureADMyOrg`, `AzureADMultipleOrgs`, `AzureADandPersonalMicrosoftAccount` or `PersonalMicrosoftAccount`.
      * 
-    */
+     */
     public String signInAudience() {
         return this.signInAudience;
     }
     /**
-     * A list of tags applied to the service principal.
+     * @return A list of tags applied to the service principal.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags;
     }
     /**
-     * Identifies whether the service principal represents an application or a managed identity. Possible values include `Application` or `ManagedIdentity`.
+     * @return Identifies whether the service principal represents an application or a managed identity. Possible values include `Application` or `ManagedIdentity`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

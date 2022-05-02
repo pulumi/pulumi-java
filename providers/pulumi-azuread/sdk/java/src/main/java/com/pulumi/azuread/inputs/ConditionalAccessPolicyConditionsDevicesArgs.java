@@ -6,8 +6,8 @@ package com.pulumi.azuread.inputs;
 import com.pulumi.azuread.inputs.ConditionalAccessPolicyConditionsDevicesFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,64 @@ public final class ConditionalAccessPolicyConditionsDevicesArgs extends com.pulu
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter;
+    private @Nullable Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter;
 
-    public Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    /**
+     * @return A `filter` block as described below. A `filter` block can be added to an existing policy, but removing the `filter` block forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<ConditionalAccessPolicyConditionsDevicesFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
-    public ConditionalAccessPolicyConditionsDevicesArgs(@Nullable Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter) {
-        this.filter = filter;
-    }
+    private ConditionalAccessPolicyConditionsDevicesArgs() {}
 
-    private ConditionalAccessPolicyConditionsDevicesArgs() {
-        this.filter = Codegen.empty();
+    private ConditionalAccessPolicyConditionsDevicesArgs(ConditionalAccessPolicyConditionsDevicesArgs $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsDevicesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter;
+        private ConditionalAccessPolicyConditionsDevicesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsDevicesArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsDevicesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new ConditionalAccessPolicyConditionsDevicesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filter A `filter` block as described below. A `filter` block can be added to an existing policy, but removing the `filter` block forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<ConditionalAccessPolicyConditionsDevicesFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable ConditionalAccessPolicyConditionsDevicesFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
-        }        public ConditionalAccessPolicyConditionsDevicesArgs build() {
-            return new ConditionalAccessPolicyConditionsDevicesArgs(filter);
+
+        /**
+         * @param filter A `filter` block as described below. A `filter` block can be added to an existing policy, but removing the `filter` block forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder filter(ConditionalAccessPolicyConditionsDevicesFilterArgs filter) {
+            return filter(Output.of(filter));
+        }
+
+        public ConditionalAccessPolicyConditionsDevicesArgs build() {
+            return $;
         }
     }
+
 }

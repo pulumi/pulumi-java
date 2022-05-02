@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
      * 
      */
-    public Output</* @Nullable */ String> clientCertificate() {
-        return this.clientCertificate;
+    public Output<Optional<String>> clientCertificate() {
+        return Codegen.optional(this.clientCertificate);
     }
     /**
      * The password to decrypt the Client Certificate. For use when authenticating as a Service Principal using a Client
@@ -48,8 +49,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * Certificate
      * 
      */
-    public Output</* @Nullable */ String> clientCertificatePassword() {
-        return this.clientCertificatePassword;
+    public Output<Optional<String>> clientCertificatePassword() {
+        return Codegen.optional(this.clientCertificatePassword);
     }
     /**
      * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
@@ -64,8 +65,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * Principal using a Client Certificate
      * 
      */
-    public Output</* @Nullable */ String> clientCertificatePath() {
-        return this.clientCertificatePath;
+    public Output<Optional<String>> clientCertificatePath() {
+        return Codegen.optional(this.clientCertificatePath);
     }
     /**
      * The Client ID which should be used for service principal authentication
@@ -78,8 +79,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The Client ID which should be used for service principal authentication
      * 
      */
-    public Output</* @Nullable */ String> clientId() {
-        return this.clientId;
+    public Output<Optional<String>> clientId() {
+        return Codegen.optional(this.clientId);
     }
     /**
      * The application password to use when authenticating as a Service Principal using a Client Secret
@@ -92,8 +93,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The application password to use when authenticating as a Service Principal using a Client Secret
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * The cloud environment which should be used. Possible values are: `global` (also `public`), `usgovernmentl4` (also
@@ -108,8 +109,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * `usgovernment`), `usgovernmentl5` (also `dod`), and `china`. Defaults to `global`
      * 
      */
-    public Output</* @Nullable */ String> environment() {
-        return this.environment;
+    public Output<Optional<String>> environment() {
+        return Codegen.optional(this.environment);
     }
     /**
      * The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
@@ -122,8 +123,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The path to a custom endpoint for Managed Identity - in most circumstances this should be detected automatically
      * 
      */
-    public Output</* @Nullable */ String> msiEndpoint() {
-        return this.msiEndpoint;
+    public Output<Optional<String>> msiEndpoint() {
+        return Codegen.optional(this.msiEndpoint);
     }
     /**
      * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
@@ -136,8 +137,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution
      * 
      */
-    public Output</* @Nullable */ String> partnerId() {
-        return this.partnerId;
+    public Output<Optional<String>> partnerId() {
+        return Codegen.optional(this.partnerId);
     }
     /**
      * The Tenant ID which should be used. Works with all authentication methods except Managed Identity
@@ -150,8 +151,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The Tenant ID which should be used. Works with all authentication methods except Managed Identity
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
 
     /**

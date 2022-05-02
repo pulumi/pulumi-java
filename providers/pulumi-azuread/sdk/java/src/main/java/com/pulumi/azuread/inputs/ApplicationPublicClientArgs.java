@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,74 @@ public final class ApplicationPublicClientArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="redirectUris")
-      private final @Nullable Output<List<String>> redirectUris;
+    private @Nullable Output<List<String>> redirectUris;
 
-    public Output<List<String>> redirectUris() {
-        return this.redirectUris == null ? Codegen.empty() : this.redirectUris;
+    /**
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
+     * 
+     */
+    public Optional<Output<List<String>>> redirectUris() {
+        return Optional.ofNullable(this.redirectUris);
     }
 
-    public ApplicationPublicClientArgs(@Nullable Output<List<String>> redirectUris) {
-        this.redirectUris = redirectUris;
-    }
+    private ApplicationPublicClientArgs() {}
 
-    private ApplicationPublicClientArgs() {
-        this.redirectUris = Codegen.empty();
+    private ApplicationPublicClientArgs(ApplicationPublicClientArgs $) {
+        this.redirectUris = $.redirectUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPublicClientArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> redirectUris;
+        private ApplicationPublicClientArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPublicClientArgs();
         }
 
         public Builder(ApplicationPublicClientArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectUris = defaults.redirectUris;
+            $ = new ApplicationPublicClientArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(@Nullable Output<List<String>> redirectUris) {
-            this.redirectUris = redirectUris;
+            $.redirectUris = redirectUris;
             return this;
         }
-        public Builder redirectUris(@Nullable List<String> redirectUris) {
-            this.redirectUris = Codegen.ofNullable(redirectUris);
-            return this;
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirectUris(List<String> redirectUris) {
+            return redirectUris(Output.of(redirectUris));
         }
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `https` or `ms-appx-web` URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(String... redirectUris) {
             return redirectUris(List.of(redirectUris));
-        }        public ApplicationPublicClientArgs build() {
-            return new ApplicationPublicClientArgs(redirectUris);
+        }
+
+        public ApplicationPublicClientArgs build() {
+            return $;
         }
     }
+
 }

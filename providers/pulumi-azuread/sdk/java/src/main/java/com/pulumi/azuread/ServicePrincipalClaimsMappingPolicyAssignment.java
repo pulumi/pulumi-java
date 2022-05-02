@@ -14,14 +14,6 @@ import java.lang.String;
 import javax.annotation.Nullable;
 
 /**
- * ## 
- * 
- * ***
- * subcategory: "Service Principals"
- * ---
- * 
- * # Resource: azuread.ServicePrincipalClaimsMappingPolicyAssignment
- * 
  * Manages a Claims Mapping Policy Assignment within Azure Active Directory.
  * 
  * ## API Permissions

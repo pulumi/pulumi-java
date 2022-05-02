@@ -5,9 +5,9 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class DirectoryRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The display name of the directory role to activate. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -31,63 +35,86 @@ public final class DirectoryRoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    /**
+     * @return The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
-    public DirectoryRoleArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> templateId) {
-        this.displayName = displayName;
-        this.templateId = templateId;
-    }
+    private DirectoryRoleArgs() {}
 
-    private DirectoryRoleArgs() {
-        this.displayName = Codegen.empty();
-        this.templateId = Codegen.empty();
+    private DirectoryRoleArgs(DirectoryRoleArgs $) {
+        this.displayName = $.displayName;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> templateId;
+        private DirectoryRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryRoleArgs();
         }
 
         public Builder(DirectoryRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.templateId = defaults.templateId;
+            $ = new DirectoryRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The display name of the directory role to activate. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName The display name of the directory role to activate. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param templateId The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
-        }        public DirectoryRoleArgs build() {
-            return new DirectoryRoleArgs(displayName, templateId);
+
+        /**
+         * @param templateId The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
+        }
+
+        public DirectoryRoleArgs build() {
+            return $;
         }
     }
+
 }

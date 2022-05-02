@@ -3,14 +3,14 @@
 
 package com.pulumi.azuread.inputs;
 
-import com.pulumi.azuread.inputs.GroupDynamicMembershipGetArgs;
+import com.pulumi.azuread.inputs.GroupDynamicMembershipArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assignableToRole")
-      private final @Nullable Output<Boolean> assignableToRole;
+    private @Nullable Output<Boolean> assignableToRole;
 
-    public Output<Boolean> assignableToRole() {
-        return this.assignableToRole == null ? Codegen.empty() : this.assignableToRole;
+    /**
+     * @return Indicates whether this group can be assigned to an Azure Active Directory role. Can only be `true` for security-enabled groups. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<Boolean>> assignableToRole() {
+        return Optional.ofNullable(this.assignableToRole);
     }
 
     /**
@@ -34,21 +38,29 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoSubscribeNewMembers")
-      private final @Nullable Output<Boolean> autoSubscribeNewMembers;
+    private @Nullable Output<Boolean> autoSubscribeNewMembers;
 
-    public Output<Boolean> autoSubscribeNewMembers() {
-        return this.autoSubscribeNewMembers == null ? Codegen.empty() : this.autoSubscribeNewMembers;
+    /**
+     * @return Indicates whether new members added to the group will be auto-subscribed to receive email notifications. Can only be set for Unified groups.
+     * 
+     */
+    public Optional<Output<Boolean>> autoSubscribeNewMembers() {
+        return Optional.ofNullable(this.autoSubscribeNewMembers);
     }
 
     /**
-     * A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+     * A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
      * 
      */
     @Import(name="behaviors")
-      private final @Nullable Output<List<String>> behaviors;
+    private @Nullable Output<List<String>> behaviors;
 
-    public Output<List<String>> behaviors() {
-        return this.behaviors == null ? Codegen.empty() : this.behaviors;
+    /**
+     * @return A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<List<String>>> behaviors() {
+        return Optional.ofNullable(this.behaviors);
     }
 
     /**
@@ -56,10 +68,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return The description for the group.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +83,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The display name for the group.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -78,10 +98,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dynamicMembership")
-      private final @Nullable Output<GroupDynamicMembershipGetArgs> dynamicMembership;
+    private @Nullable Output<GroupDynamicMembershipArgs> dynamicMembership;
 
-    public Output<GroupDynamicMembershipGetArgs> dynamicMembership() {
-        return this.dynamicMembership == null ? Codegen.empty() : this.dynamicMembership;
+    /**
+     * @return A `dynamic_membership` block as documented below. Required when `types` contains `DynamicMembership`. Cannot be used with the `members` property.
+     * 
+     */
+    public Optional<Output<GroupDynamicMembershipArgs>> dynamicMembership() {
+        return Optional.ofNullable(this.dynamicMembership);
     }
 
     /**
@@ -89,10 +113,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalSendersAllowed")
-      private final @Nullable Output<Boolean> externalSendersAllowed;
+    private @Nullable Output<Boolean> externalSendersAllowed;
 
-    public Output<Boolean> externalSendersAllowed() {
-        return this.externalSendersAllowed == null ? Codegen.empty() : this.externalSendersAllowed;
+    /**
+     * @return Indicates whether people external to the organization can send messages to the group. Can only be set for Unified groups.
+     * 
+     */
+    public Optional<Output<Boolean>> externalSendersAllowed() {
+        return Optional.ofNullable(this.externalSendersAllowed);
     }
 
     /**
@@ -100,10 +128,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hideFromAddressLists")
-      private final @Nullable Output<Boolean> hideFromAddressLists;
+    private @Nullable Output<Boolean> hideFromAddressLists;
 
-    public Output<Boolean> hideFromAddressLists() {
-        return this.hideFromAddressLists == null ? Codegen.empty() : this.hideFromAddressLists;
+    /**
+     * @return Indicates whether the group is displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups. Can only be set for Unified groups.
+     * 
+     */
+    public Optional<Output<Boolean>> hideFromAddressLists() {
+        return Optional.ofNullable(this.hideFromAddressLists);
     }
 
     /**
@@ -111,10 +143,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hideFromOutlookClients")
-      private final @Nullable Output<Boolean> hideFromOutlookClients;
+    private @Nullable Output<Boolean> hideFromOutlookClients;
 
-    public Output<Boolean> hideFromOutlookClients() {
-        return this.hideFromOutlookClients == null ? Codegen.empty() : this.hideFromOutlookClients;
+    /**
+     * @return Indicates whether the group is displayed in Outlook clients, such as Outlook for Windows and Outlook on the web. Can only be set for Unified groups.
+     * 
+     */
+    public Optional<Output<Boolean>> hideFromOutlookClients() {
+        return Optional.ofNullable(this.hideFromOutlookClients);
     }
 
     /**
@@ -122,10 +158,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mail")
-      private final @Nullable Output<String> mail;
+    private @Nullable Output<String> mail;
 
-    public Output<String> mail() {
-        return this.mail == null ? Codegen.empty() : this.mail;
+    /**
+     * @return The SMTP address for the group.
+     * 
+     */
+    public Optional<Output<String>> mail() {
+        return Optional.ofNullable(this.mail);
     }
 
     /**
@@ -133,10 +173,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mailEnabled")
-      private final @Nullable Output<Boolean> mailEnabled;
+    private @Nullable Output<Boolean> mailEnabled;
 
-    public Output<Boolean> mailEnabled() {
-        return this.mailEnabled == null ? Codegen.empty() : this.mailEnabled;
+    /**
+     * @return Whether the group is a mail enabled, with a shared group mailbox. At least one of `mail_enabled` or `security_enabled` must be specified. Only Microsoft 365 groups can be mail enabled (see the `types` property).
+     * 
+     */
+    public Optional<Output<Boolean>> mailEnabled() {
+        return Optional.ofNullable(this.mailEnabled);
     }
 
     /**
@@ -144,10 +188,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mailNickname")
-      private final @Nullable Output<String> mailNickname;
+    private @Nullable Output<String> mailNickname;
 
-    public Output<String> mailNickname() {
-        return this.mailNickname == null ? Codegen.empty() : this.mailNickname;
+    /**
+     * @return The mail alias for the group, unique in the organisation. Required for mail-enabled groups. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> mailNickname() {
+        return Optional.ofNullable(this.mailNickname);
     }
 
     /**
@@ -155,10 +203,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    /**
+     * @return A set of members who should be present in this group. Supported object types are Users, Groups or Service Principals. Cannot be used with the `dynamic_membership` block.
+     * 
+     */
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -166,10 +218,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    /**
+     * @return The object ID of the group.
+     * 
+     */
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -177,10 +233,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesDomainName")
-      private final @Nullable Output<String> onpremisesDomainName;
+    private @Nullable Output<String> onpremisesDomainName;
 
-    public Output<String> onpremisesDomainName() {
-        return this.onpremisesDomainName == null ? Codegen.empty() : this.onpremisesDomainName;
+    /**
+     * @return The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesDomainName() {
+        return Optional.ofNullable(this.onpremisesDomainName);
     }
 
     /**
@@ -188,10 +248,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesNetbiosName")
-      private final @Nullable Output<String> onpremisesNetbiosName;
+    private @Nullable Output<String> onpremisesNetbiosName;
 
-    public Output<String> onpremisesNetbiosName() {
-        return this.onpremisesNetbiosName == null ? Codegen.empty() : this.onpremisesNetbiosName;
+    /**
+     * @return The on-premises NetBIOS name, synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesNetbiosName() {
+        return Optional.ofNullable(this.onpremisesNetbiosName);
     }
 
     /**
@@ -199,10 +263,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSamAccountName")
-      private final @Nullable Output<String> onpremisesSamAccountName;
+    private @Nullable Output<String> onpremisesSamAccountName;
 
-    public Output<String> onpremisesSamAccountName() {
-        return this.onpremisesSamAccountName == null ? Codegen.empty() : this.onpremisesSamAccountName;
+    /**
+     * @return The on-premises SAM account name, synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesSamAccountName() {
+        return Optional.ofNullable(this.onpremisesSamAccountName);
     }
 
     /**
@@ -210,10 +278,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSecurityIdentifier")
-      private final @Nullable Output<String> onpremisesSecurityIdentifier;
+    private @Nullable Output<String> onpremisesSecurityIdentifier;
 
-    public Output<String> onpremisesSecurityIdentifier() {
-        return this.onpremisesSecurityIdentifier == null ? Codegen.empty() : this.onpremisesSecurityIdentifier;
+    /**
+     * @return The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+     * 
+     */
+    public Optional<Output<String>> onpremisesSecurityIdentifier() {
+        return Optional.ofNullable(this.onpremisesSecurityIdentifier);
     }
 
     /**
@@ -221,10 +293,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onpremisesSyncEnabled")
-      private final @Nullable Output<Boolean> onpremisesSyncEnabled;
+    private @Nullable Output<Boolean> onpremisesSyncEnabled;
 
-    public Output<Boolean> onpremisesSyncEnabled() {
-        return this.onpremisesSyncEnabled == null ? Codegen.empty() : this.onpremisesSyncEnabled;
+    /**
+     * @return Whether this group is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+     * 
+     */
+    public Optional<Output<Boolean>> onpremisesSyncEnabled() {
+        return Optional.ofNullable(this.onpremisesSyncEnabled);
     }
 
     /**
@@ -232,10 +308,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owners")
-      private final @Nullable Output<List<String>> owners;
+    private @Nullable Output<List<String>> owners;
 
-    public Output<List<String>> owners() {
-        return this.owners == null ? Codegen.empty() : this.owners;
+    /**
+     * @return A set of owners who own this group. Supported object types are Users or Service Principals
+     * 
+     */
+    public Optional<Output<List<String>>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -243,10 +323,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preferredLanguage")
-      private final @Nullable Output<String> preferredLanguage;
+    private @Nullable Output<String> preferredLanguage;
 
-    public Output<String> preferredLanguage() {
-        return this.preferredLanguage == null ? Codegen.empty() : this.preferredLanguage;
+    /**
+     * @return The preferred language for a Microsoft 365 group, in ISO 639-1 notation.
+     * 
+     */
+    public Optional<Output<String>> preferredLanguage() {
+        return Optional.ofNullable(this.preferredLanguage);
     }
 
     /**
@@ -254,10 +338,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preventDuplicateNames")
-      private final @Nullable Output<Boolean> preventDuplicateNames;
+    private @Nullable Output<Boolean> preventDuplicateNames;
 
-    public Output<Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames == null ? Codegen.empty() : this.preventDuplicateNames;
+    /**
+     * @return If `true`, will return an error if an existing group is found with the same name. Defaults to `false`.
+     * 
+     */
+    public Optional<Output<Boolean>> preventDuplicateNames() {
+        return Optional.ofNullable(this.preventDuplicateNames);
     }
 
     /**
@@ -265,10 +353,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningOptions")
-      private final @Nullable Output<List<String>> provisioningOptions;
+    private @Nullable Output<List<String>> provisioningOptions;
 
-    public Output<List<String>> provisioningOptions() {
-        return this.provisioningOptions == null ? Codegen.empty() : this.provisioningOptions;
+    /**
+     * @return A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<List<String>>> provisioningOptions() {
+        return Optional.ofNullable(this.provisioningOptions);
     }
 
     /**
@@ -276,10 +368,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxyAddresses")
-      private final @Nullable Output<List<String>> proxyAddresses;
+    private @Nullable Output<List<String>> proxyAddresses;
 
-    public Output<List<String>> proxyAddresses() {
-        return this.proxyAddresses == null ? Codegen.empty() : this.proxyAddresses;
+    /**
+     * @return List of email addresses for the group that direct to the same group mailbox.
+     * 
+     */
+    public Optional<Output<List<String>>> proxyAddresses() {
+        return Optional.ofNullable(this.proxyAddresses);
     }
 
     /**
@@ -287,10 +383,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityEnabled")
-      private final @Nullable Output<Boolean> securityEnabled;
+    private @Nullable Output<Boolean> securityEnabled;
 
-    public Output<Boolean> securityEnabled() {
-        return this.securityEnabled == null ? Codegen.empty() : this.securityEnabled;
+    /**
+     * @return Whether the group is a security group for controlling access to in-app resources. At least one of `security_enabled` or `mail_enabled` must be specified. A Microsoft 365 group can be security enabled _and_ mail enabled (see the `types` property).
+     * 
+     */
+    public Optional<Output<Boolean>> securityEnabled() {
+        return Optional.ofNullable(this.securityEnabled);
     }
 
     /**
@@ -298,10 +398,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="theme")
-      private final @Nullable Output<String> theme;
+    private @Nullable Output<String> theme;
 
-    public Output<String> theme() {
-        return this.theme == null ? Codegen.empty() : this.theme;
+    /**
+     * @return The colour theme for a Microsoft 365 group. Possible values are `Blue`, `Green`, `Orange`, `Pink`, `Purple`, `Red` or `Teal`. By default, no theme is set.
+     * 
+     */
+    public Optional<Output<String>> theme() {
+        return Optional.ofNullable(this.theme);
     }
 
     /**
@@ -309,10 +413,14 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable Output<List<String>> types;
+    private @Nullable Output<List<String>> types;
 
-    public Output<List<String>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    /**
+     * @return A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<List<String>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     /**
@@ -320,419 +428,718 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<String> visibility;
+    private @Nullable Output<String> visibility;
 
-    public Output<String> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    /**
+     * @return The group join policy and group content visibility. Possible values are `Private`, `Public`, or `Hiddenmembership`. Only Microsoft 365 groups can have `Hiddenmembership` visibility and this value must be set when the group is created. By default, security groups will receive `Private` visibility and Microsoft 365 groups will receive `Public` visibility.
+     * 
+     */
+    public Optional<Output<String>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public GroupState(
-        @Nullable Output<Boolean> assignableToRole,
-        @Nullable Output<Boolean> autoSubscribeNewMembers,
-        @Nullable Output<List<String>> behaviors,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<GroupDynamicMembershipGetArgs> dynamicMembership,
-        @Nullable Output<Boolean> externalSendersAllowed,
-        @Nullable Output<Boolean> hideFromAddressLists,
-        @Nullable Output<Boolean> hideFromOutlookClients,
-        @Nullable Output<String> mail,
-        @Nullable Output<Boolean> mailEnabled,
-        @Nullable Output<String> mailNickname,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> onpremisesDomainName,
-        @Nullable Output<String> onpremisesNetbiosName,
-        @Nullable Output<String> onpremisesSamAccountName,
-        @Nullable Output<String> onpremisesSecurityIdentifier,
-        @Nullable Output<Boolean> onpremisesSyncEnabled,
-        @Nullable Output<List<String>> owners,
-        @Nullable Output<String> preferredLanguage,
-        @Nullable Output<Boolean> preventDuplicateNames,
-        @Nullable Output<List<String>> provisioningOptions,
-        @Nullable Output<List<String>> proxyAddresses,
-        @Nullable Output<Boolean> securityEnabled,
-        @Nullable Output<String> theme,
-        @Nullable Output<List<String>> types,
-        @Nullable Output<String> visibility) {
-        this.assignableToRole = assignableToRole;
-        this.autoSubscribeNewMembers = autoSubscribeNewMembers;
-        this.behaviors = behaviors;
-        this.description = description;
-        this.displayName = displayName;
-        this.dynamicMembership = dynamicMembership;
-        this.externalSendersAllowed = externalSendersAllowed;
-        this.hideFromAddressLists = hideFromAddressLists;
-        this.hideFromOutlookClients = hideFromOutlookClients;
-        this.mail = mail;
-        this.mailEnabled = mailEnabled;
-        this.mailNickname = mailNickname;
-        this.members = members;
-        this.objectId = objectId;
-        this.onpremisesDomainName = onpremisesDomainName;
-        this.onpremisesNetbiosName = onpremisesNetbiosName;
-        this.onpremisesSamAccountName = onpremisesSamAccountName;
-        this.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
-        this.onpremisesSyncEnabled = onpremisesSyncEnabled;
-        this.owners = owners;
-        this.preferredLanguage = preferredLanguage;
-        this.preventDuplicateNames = preventDuplicateNames;
-        this.provisioningOptions = provisioningOptions;
-        this.proxyAddresses = proxyAddresses;
-        this.securityEnabled = securityEnabled;
-        this.theme = theme;
-        this.types = types;
-        this.visibility = visibility;
-    }
+    private GroupState() {}
 
-    private GroupState() {
-        this.assignableToRole = Codegen.empty();
-        this.autoSubscribeNewMembers = Codegen.empty();
-        this.behaviors = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.dynamicMembership = Codegen.empty();
-        this.externalSendersAllowed = Codegen.empty();
-        this.hideFromAddressLists = Codegen.empty();
-        this.hideFromOutlookClients = Codegen.empty();
-        this.mail = Codegen.empty();
-        this.mailEnabled = Codegen.empty();
-        this.mailNickname = Codegen.empty();
-        this.members = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.onpremisesDomainName = Codegen.empty();
-        this.onpremisesNetbiosName = Codegen.empty();
-        this.onpremisesSamAccountName = Codegen.empty();
-        this.onpremisesSecurityIdentifier = Codegen.empty();
-        this.onpremisesSyncEnabled = Codegen.empty();
-        this.owners = Codegen.empty();
-        this.preferredLanguage = Codegen.empty();
-        this.preventDuplicateNames = Codegen.empty();
-        this.provisioningOptions = Codegen.empty();
-        this.proxyAddresses = Codegen.empty();
-        this.securityEnabled = Codegen.empty();
-        this.theme = Codegen.empty();
-        this.types = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private GroupState(GroupState $) {
+        this.assignableToRole = $.assignableToRole;
+        this.autoSubscribeNewMembers = $.autoSubscribeNewMembers;
+        this.behaviors = $.behaviors;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.dynamicMembership = $.dynamicMembership;
+        this.externalSendersAllowed = $.externalSendersAllowed;
+        this.hideFromAddressLists = $.hideFromAddressLists;
+        this.hideFromOutlookClients = $.hideFromOutlookClients;
+        this.mail = $.mail;
+        this.mailEnabled = $.mailEnabled;
+        this.mailNickname = $.mailNickname;
+        this.members = $.members;
+        this.objectId = $.objectId;
+        this.onpremisesDomainName = $.onpremisesDomainName;
+        this.onpremisesNetbiosName = $.onpremisesNetbiosName;
+        this.onpremisesSamAccountName = $.onpremisesSamAccountName;
+        this.onpremisesSecurityIdentifier = $.onpremisesSecurityIdentifier;
+        this.onpremisesSyncEnabled = $.onpremisesSyncEnabled;
+        this.owners = $.owners;
+        this.preferredLanguage = $.preferredLanguage;
+        this.preventDuplicateNames = $.preventDuplicateNames;
+        this.provisioningOptions = $.provisioningOptions;
+        this.proxyAddresses = $.proxyAddresses;
+        this.securityEnabled = $.securityEnabled;
+        this.theme = $.theme;
+        this.types = $.types;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> assignableToRole;
-        private @Nullable Output<Boolean> autoSubscribeNewMembers;
-        private @Nullable Output<List<String>> behaviors;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<GroupDynamicMembershipGetArgs> dynamicMembership;
-        private @Nullable Output<Boolean> externalSendersAllowed;
-        private @Nullable Output<Boolean> hideFromAddressLists;
-        private @Nullable Output<Boolean> hideFromOutlookClients;
-        private @Nullable Output<String> mail;
-        private @Nullable Output<Boolean> mailEnabled;
-        private @Nullable Output<String> mailNickname;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> onpremisesDomainName;
-        private @Nullable Output<String> onpremisesNetbiosName;
-        private @Nullable Output<String> onpremisesSamAccountName;
-        private @Nullable Output<String> onpremisesSecurityIdentifier;
-        private @Nullable Output<Boolean> onpremisesSyncEnabled;
-        private @Nullable Output<List<String>> owners;
-        private @Nullable Output<String> preferredLanguage;
-        private @Nullable Output<Boolean> preventDuplicateNames;
-        private @Nullable Output<List<String>> provisioningOptions;
-        private @Nullable Output<List<String>> proxyAddresses;
-        private @Nullable Output<Boolean> securityEnabled;
-        private @Nullable Output<String> theme;
-        private @Nullable Output<List<String>> types;
-        private @Nullable Output<String> visibility;
+        private GroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupState();
         }
 
         public Builder(GroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignableToRole = defaults.assignableToRole;
-    	      this.autoSubscribeNewMembers = defaults.autoSubscribeNewMembers;
-    	      this.behaviors = defaults.behaviors;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.dynamicMembership = defaults.dynamicMembership;
-    	      this.externalSendersAllowed = defaults.externalSendersAllowed;
-    	      this.hideFromAddressLists = defaults.hideFromAddressLists;
-    	      this.hideFromOutlookClients = defaults.hideFromOutlookClients;
-    	      this.mail = defaults.mail;
-    	      this.mailEnabled = defaults.mailEnabled;
-    	      this.mailNickname = defaults.mailNickname;
-    	      this.members = defaults.members;
-    	      this.objectId = defaults.objectId;
-    	      this.onpremisesDomainName = defaults.onpremisesDomainName;
-    	      this.onpremisesNetbiosName = defaults.onpremisesNetbiosName;
-    	      this.onpremisesSamAccountName = defaults.onpremisesSamAccountName;
-    	      this.onpremisesSecurityIdentifier = defaults.onpremisesSecurityIdentifier;
-    	      this.onpremisesSyncEnabled = defaults.onpremisesSyncEnabled;
-    	      this.owners = defaults.owners;
-    	      this.preferredLanguage = defaults.preferredLanguage;
-    	      this.preventDuplicateNames = defaults.preventDuplicateNames;
-    	      this.provisioningOptions = defaults.provisioningOptions;
-    	      this.proxyAddresses = defaults.proxyAddresses;
-    	      this.securityEnabled = defaults.securityEnabled;
-    	      this.theme = defaults.theme;
-    	      this.types = defaults.types;
-    	      this.visibility = defaults.visibility;
+            $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignableToRole Indicates whether this group can be assigned to an Azure Active Directory role. Can only be `true` for security-enabled groups. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignableToRole(@Nullable Output<Boolean> assignableToRole) {
-            this.assignableToRole = assignableToRole;
+            $.assignableToRole = assignableToRole;
             return this;
         }
-        public Builder assignableToRole(@Nullable Boolean assignableToRole) {
-            this.assignableToRole = Codegen.ofNullable(assignableToRole);
-            return this;
+
+        /**
+         * @param assignableToRole Indicates whether this group can be assigned to an Azure Active Directory role. Can only be `true` for security-enabled groups. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder assignableToRole(Boolean assignableToRole) {
+            return assignableToRole(Output.of(assignableToRole));
         }
+
+        /**
+         * @param autoSubscribeNewMembers Indicates whether new members added to the group will be auto-subscribed to receive email notifications. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoSubscribeNewMembers(@Nullable Output<Boolean> autoSubscribeNewMembers) {
-            this.autoSubscribeNewMembers = autoSubscribeNewMembers;
+            $.autoSubscribeNewMembers = autoSubscribeNewMembers;
             return this;
         }
-        public Builder autoSubscribeNewMembers(@Nullable Boolean autoSubscribeNewMembers) {
-            this.autoSubscribeNewMembers = Codegen.ofNullable(autoSubscribeNewMembers);
-            return this;
+
+        /**
+         * @param autoSubscribeNewMembers Indicates whether new members added to the group will be auto-subscribed to receive email notifications. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder autoSubscribeNewMembers(Boolean autoSubscribeNewMembers) {
+            return autoSubscribeNewMembers(Output.of(autoSubscribeNewMembers));
         }
+
+        /**
+         * @param behaviors A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behaviors(@Nullable Output<List<String>> behaviors) {
-            this.behaviors = behaviors;
+            $.behaviors = behaviors;
             return this;
         }
-        public Builder behaviors(@Nullable List<String> behaviors) {
-            this.behaviors = Codegen.ofNullable(behaviors);
-            return this;
+
+        /**
+         * @param behaviors A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder behaviors(List<String> behaviors) {
+            return behaviors(Output.of(behaviors));
         }
+
+        /**
+         * @param behaviors A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behaviors(String... behaviors) {
             return behaviors(List.of(behaviors));
         }
+
+        /**
+         * @param description The description for the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description The description for the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName The display name for the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
+
+        /**
+         * @param displayName The display name for the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param dynamicMembership A `dynamic_membership` block as documented below. Required when `types` contains `DynamicMembership`. Cannot be used with the `members` property.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dynamicMembership(@Nullable Output<GroupDynamicMembershipArgs> dynamicMembership) {
+            $.dynamicMembership = dynamicMembership;
             return this;
         }
-        public Builder dynamicMembership(@Nullable Output<GroupDynamicMembershipGetArgs> dynamicMembership) {
-            this.dynamicMembership = dynamicMembership;
-            return this;
+
+        /**
+         * @param dynamicMembership A `dynamic_membership` block as documented below. Required when `types` contains `DynamicMembership`. Cannot be used with the `members` property.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dynamicMembership(GroupDynamicMembershipArgs dynamicMembership) {
+            return dynamicMembership(Output.of(dynamicMembership));
         }
-        public Builder dynamicMembership(@Nullable GroupDynamicMembershipGetArgs dynamicMembership) {
-            this.dynamicMembership = Codegen.ofNullable(dynamicMembership);
-            return this;
-        }
+
+        /**
+         * @param externalSendersAllowed Indicates whether people external to the organization can send messages to the group. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalSendersAllowed(@Nullable Output<Boolean> externalSendersAllowed) {
-            this.externalSendersAllowed = externalSendersAllowed;
+            $.externalSendersAllowed = externalSendersAllowed;
             return this;
         }
-        public Builder externalSendersAllowed(@Nullable Boolean externalSendersAllowed) {
-            this.externalSendersAllowed = Codegen.ofNullable(externalSendersAllowed);
-            return this;
+
+        /**
+         * @param externalSendersAllowed Indicates whether people external to the organization can send messages to the group. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalSendersAllowed(Boolean externalSendersAllowed) {
+            return externalSendersAllowed(Output.of(externalSendersAllowed));
         }
+
+        /**
+         * @param hideFromAddressLists Indicates whether the group is displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hideFromAddressLists(@Nullable Output<Boolean> hideFromAddressLists) {
-            this.hideFromAddressLists = hideFromAddressLists;
+            $.hideFromAddressLists = hideFromAddressLists;
             return this;
         }
-        public Builder hideFromAddressLists(@Nullable Boolean hideFromAddressLists) {
-            this.hideFromAddressLists = Codegen.ofNullable(hideFromAddressLists);
-            return this;
+
+        /**
+         * @param hideFromAddressLists Indicates whether the group is displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hideFromAddressLists(Boolean hideFromAddressLists) {
+            return hideFromAddressLists(Output.of(hideFromAddressLists));
         }
+
+        /**
+         * @param hideFromOutlookClients Indicates whether the group is displayed in Outlook clients, such as Outlook for Windows and Outlook on the web. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hideFromOutlookClients(@Nullable Output<Boolean> hideFromOutlookClients) {
-            this.hideFromOutlookClients = hideFromOutlookClients;
+            $.hideFromOutlookClients = hideFromOutlookClients;
             return this;
         }
-        public Builder hideFromOutlookClients(@Nullable Boolean hideFromOutlookClients) {
-            this.hideFromOutlookClients = Codegen.ofNullable(hideFromOutlookClients);
-            return this;
+
+        /**
+         * @param hideFromOutlookClients Indicates whether the group is displayed in Outlook clients, such as Outlook for Windows and Outlook on the web. Can only be set for Unified groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hideFromOutlookClients(Boolean hideFromOutlookClients) {
+            return hideFromOutlookClients(Output.of(hideFromOutlookClients));
         }
+
+        /**
+         * @param mail The SMTP address for the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mail(@Nullable Output<String> mail) {
-            this.mail = mail;
+            $.mail = mail;
             return this;
         }
-        public Builder mail(@Nullable String mail) {
-            this.mail = Codegen.ofNullable(mail);
-            return this;
+
+        /**
+         * @param mail The SMTP address for the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mail(String mail) {
+            return mail(Output.of(mail));
         }
+
+        /**
+         * @param mailEnabled Whether the group is a mail enabled, with a shared group mailbox. At least one of `mail_enabled` or `security_enabled` must be specified. Only Microsoft 365 groups can be mail enabled (see the `types` property).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailEnabled(@Nullable Output<Boolean> mailEnabled) {
-            this.mailEnabled = mailEnabled;
+            $.mailEnabled = mailEnabled;
             return this;
         }
-        public Builder mailEnabled(@Nullable Boolean mailEnabled) {
-            this.mailEnabled = Codegen.ofNullable(mailEnabled);
-            return this;
+
+        /**
+         * @param mailEnabled Whether the group is a mail enabled, with a shared group mailbox. At least one of `mail_enabled` or `security_enabled` must be specified. Only Microsoft 365 groups can be mail enabled (see the `types` property).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailEnabled(Boolean mailEnabled) {
+            return mailEnabled(Output.of(mailEnabled));
         }
+
+        /**
+         * @param mailNickname The mail alias for the group, unique in the organisation. Required for mail-enabled groups. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailNickname(@Nullable Output<String> mailNickname) {
-            this.mailNickname = mailNickname;
+            $.mailNickname = mailNickname;
             return this;
         }
-        public Builder mailNickname(@Nullable String mailNickname) {
-            this.mailNickname = Codegen.ofNullable(mailNickname);
-            return this;
+
+        /**
+         * @param mailNickname The mail alias for the group, unique in the organisation. Required for mail-enabled groups. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mailNickname(String mailNickname) {
+            return mailNickname(Output.of(mailNickname));
         }
+
+        /**
+         * @param members A set of members who should be present in this group. Supported object types are Users, Groups or Service Principals. Cannot be used with the `dynamic_membership` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        /**
+         * @param members A set of members who should be present in this group. Supported object types are Users, Groups or Service Principals. Cannot be used with the `dynamic_membership` block.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
+        /**
+         * @param members A set of members who should be present in this group. Supported object types are Users, Groups or Service Principals. Cannot be used with the `dynamic_membership` block.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
+        /**
+         * @param objectId The object ID of the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        /**
+         * @param objectId The object ID of the group.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
+        /**
+         * @param onpremisesDomainName The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesDomainName(@Nullable Output<String> onpremisesDomainName) {
-            this.onpremisesDomainName = onpremisesDomainName;
+            $.onpremisesDomainName = onpremisesDomainName;
             return this;
         }
-        public Builder onpremisesDomainName(@Nullable String onpremisesDomainName) {
-            this.onpremisesDomainName = Codegen.ofNullable(onpremisesDomainName);
-            return this;
+
+        /**
+         * @param onpremisesDomainName The on-premises FQDN, also called dnsDomainName, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesDomainName(String onpremisesDomainName) {
+            return onpremisesDomainName(Output.of(onpremisesDomainName));
         }
+
+        /**
+         * @param onpremisesNetbiosName The on-premises NetBIOS name, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesNetbiosName(@Nullable Output<String> onpremisesNetbiosName) {
-            this.onpremisesNetbiosName = onpremisesNetbiosName;
+            $.onpremisesNetbiosName = onpremisesNetbiosName;
             return this;
         }
-        public Builder onpremisesNetbiosName(@Nullable String onpremisesNetbiosName) {
-            this.onpremisesNetbiosName = Codegen.ofNullable(onpremisesNetbiosName);
-            return this;
+
+        /**
+         * @param onpremisesNetbiosName The on-premises NetBIOS name, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesNetbiosName(String onpremisesNetbiosName) {
+            return onpremisesNetbiosName(Output.of(onpremisesNetbiosName));
         }
+
+        /**
+         * @param onpremisesSamAccountName The on-premises SAM account name, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSamAccountName(@Nullable Output<String> onpremisesSamAccountName) {
-            this.onpremisesSamAccountName = onpremisesSamAccountName;
+            $.onpremisesSamAccountName = onpremisesSamAccountName;
             return this;
         }
-        public Builder onpremisesSamAccountName(@Nullable String onpremisesSamAccountName) {
-            this.onpremisesSamAccountName = Codegen.ofNullable(onpremisesSamAccountName);
-            return this;
+
+        /**
+         * @param onpremisesSamAccountName The on-premises SAM account name, synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSamAccountName(String onpremisesSamAccountName) {
+            return onpremisesSamAccountName(Output.of(onpremisesSamAccountName));
         }
+
+        /**
+         * @param onpremisesSecurityIdentifier The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSecurityIdentifier(@Nullable Output<String> onpremisesSecurityIdentifier) {
-            this.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
+            $.onpremisesSecurityIdentifier = onpremisesSecurityIdentifier;
             return this;
         }
-        public Builder onpremisesSecurityIdentifier(@Nullable String onpremisesSecurityIdentifier) {
-            this.onpremisesSecurityIdentifier = Codegen.ofNullable(onpremisesSecurityIdentifier);
-            return this;
+
+        /**
+         * @param onpremisesSecurityIdentifier The on-premises security identifier (SID), synchronised from the on-premises directory when Azure AD Connect is used.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSecurityIdentifier(String onpremisesSecurityIdentifier) {
+            return onpremisesSecurityIdentifier(Output.of(onpremisesSecurityIdentifier));
         }
+
+        /**
+         * @param onpremisesSyncEnabled Whether this group is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder onpremisesSyncEnabled(@Nullable Output<Boolean> onpremisesSyncEnabled) {
-            this.onpremisesSyncEnabled = onpremisesSyncEnabled;
+            $.onpremisesSyncEnabled = onpremisesSyncEnabled;
             return this;
         }
-        public Builder onpremisesSyncEnabled(@Nullable Boolean onpremisesSyncEnabled) {
-            this.onpremisesSyncEnabled = Codegen.ofNullable(onpremisesSyncEnabled);
-            return this;
+
+        /**
+         * @param onpremisesSyncEnabled Whether this group is synchronised from an on-premises directory (`true`), no longer synchronised (`false`), or has never been synchronised (`null`).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder onpremisesSyncEnabled(Boolean onpremisesSyncEnabled) {
+            return onpremisesSyncEnabled(Output.of(onpremisesSyncEnabled));
         }
+
+        /**
+         * @param owners A set of owners who own this group. Supported object types are Users or Service Principals
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(@Nullable Output<List<String>> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
-        public Builder owners(@Nullable List<String> owners) {
-            this.owners = Codegen.ofNullable(owners);
-            return this;
+
+        /**
+         * @param owners A set of owners who own this group. Supported object types are Users or Service Principals
+         * 
+         * @return builder
+         * 
+         */
+        public Builder owners(List<String> owners) {
+            return owners(Output.of(owners));
         }
+
+        /**
+         * @param owners A set of owners who own this group. Supported object types are Users or Service Principals
+         * 
+         * @return builder
+         * 
+         */
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
+        /**
+         * @param preferredLanguage The preferred language for a Microsoft 365 group, in ISO 639-1 notation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredLanguage(@Nullable Output<String> preferredLanguage) {
-            this.preferredLanguage = preferredLanguage;
+            $.preferredLanguage = preferredLanguage;
             return this;
         }
-        public Builder preferredLanguage(@Nullable String preferredLanguage) {
-            this.preferredLanguage = Codegen.ofNullable(preferredLanguage);
-            return this;
+
+        /**
+         * @param preferredLanguage The preferred language for a Microsoft 365 group, in ISO 639-1 notation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preferredLanguage(String preferredLanguage) {
+            return preferredLanguage(Output.of(preferredLanguage));
         }
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing group is found with the same name. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preventDuplicateNames(@Nullable Output<Boolean> preventDuplicateNames) {
-            this.preventDuplicateNames = preventDuplicateNames;
+            $.preventDuplicateNames = preventDuplicateNames;
             return this;
         }
-        public Builder preventDuplicateNames(@Nullable Boolean preventDuplicateNames) {
-            this.preventDuplicateNames = Codegen.ofNullable(preventDuplicateNames);
-            return this;
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing group is found with the same name. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preventDuplicateNames(Boolean preventDuplicateNames) {
+            return preventDuplicateNames(Output.of(preventDuplicateNames));
         }
+
+        /**
+         * @param provisioningOptions A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningOptions(@Nullable Output<List<String>> provisioningOptions) {
-            this.provisioningOptions = provisioningOptions;
+            $.provisioningOptions = provisioningOptions;
             return this;
         }
-        public Builder provisioningOptions(@Nullable List<String> provisioningOptions) {
-            this.provisioningOptions = Codegen.ofNullable(provisioningOptions);
-            return this;
+
+        /**
+         * @param provisioningOptions A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder provisioningOptions(List<String> provisioningOptions) {
+            return provisioningOptions(Output.of(provisioningOptions));
         }
+
+        /**
+         * @param provisioningOptions A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningOptions(String... provisioningOptions) {
             return provisioningOptions(List.of(provisioningOptions));
         }
+
+        /**
+         * @param proxyAddresses List of email addresses for the group that direct to the same group mailbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyAddresses(@Nullable Output<List<String>> proxyAddresses) {
-            this.proxyAddresses = proxyAddresses;
+            $.proxyAddresses = proxyAddresses;
             return this;
         }
-        public Builder proxyAddresses(@Nullable List<String> proxyAddresses) {
-            this.proxyAddresses = Codegen.ofNullable(proxyAddresses);
-            return this;
+
+        /**
+         * @param proxyAddresses List of email addresses for the group that direct to the same group mailbox.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder proxyAddresses(List<String> proxyAddresses) {
+            return proxyAddresses(Output.of(proxyAddresses));
         }
+
+        /**
+         * @param proxyAddresses List of email addresses for the group that direct to the same group mailbox.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyAddresses(String... proxyAddresses) {
             return proxyAddresses(List.of(proxyAddresses));
         }
+
+        /**
+         * @param securityEnabled Whether the group is a security group for controlling access to in-app resources. At least one of `security_enabled` or `mail_enabled` must be specified. A Microsoft 365 group can be security enabled _and_ mail enabled (see the `types` property).
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityEnabled(@Nullable Output<Boolean> securityEnabled) {
-            this.securityEnabled = securityEnabled;
+            $.securityEnabled = securityEnabled;
             return this;
         }
-        public Builder securityEnabled(@Nullable Boolean securityEnabled) {
-            this.securityEnabled = Codegen.ofNullable(securityEnabled);
-            return this;
+
+        /**
+         * @param securityEnabled Whether the group is a security group for controlling access to in-app resources. At least one of `security_enabled` or `mail_enabled` must be specified. A Microsoft 365 group can be security enabled _and_ mail enabled (see the `types` property).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityEnabled(Boolean securityEnabled) {
+            return securityEnabled(Output.of(securityEnabled));
         }
+
+        /**
+         * @param theme The colour theme for a Microsoft 365 group. Possible values are `Blue`, `Green`, `Orange`, `Pink`, `Purple`, `Red` or `Teal`. By default, no theme is set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder theme(@Nullable Output<String> theme) {
-            this.theme = theme;
+            $.theme = theme;
             return this;
         }
-        public Builder theme(@Nullable String theme) {
-            this.theme = Codegen.ofNullable(theme);
-            return this;
+
+        /**
+         * @param theme The colour theme for a Microsoft 365 group. Possible values are `Blue`, `Green`, `Orange`, `Pink`, `Purple`, `Red` or `Teal`. By default, no theme is set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder theme(String theme) {
+            return theme(Output.of(theme));
         }
+
+        /**
+         * @param types A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(@Nullable Output<List<String>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<String> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        /**
+         * @param types A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder types(List<String> types) {
+            return types(Output.of(types));
         }
+
+        /**
+         * @param types A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder types(String... types) {
             return types(List.of(types));
         }
+
+        /**
+         * @param visibility The group join policy and group content visibility. Possible values are `Private`, `Public`, or `Hiddenmembership`. Only Microsoft 365 groups can have `Hiddenmembership` visibility and this value must be set when the group is created. By default, security groups will receive `Private` visibility and Microsoft 365 groups will receive `Public` visibility.
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable Output<String> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable String visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public GroupState build() {
-            return new GroupState(assignableToRole, autoSubscribeNewMembers, behaviors, description, displayName, dynamicMembership, externalSendersAllowed, hideFromAddressLists, hideFromOutlookClients, mail, mailEnabled, mailNickname, members, objectId, onpremisesDomainName, onpremisesNetbiosName, onpremisesSamAccountName, onpremisesSecurityIdentifier, onpremisesSyncEnabled, owners, preferredLanguage, preventDuplicateNames, provisioningOptions, proxyAddresses, securityEnabled, theme, types, visibility);
+
+        /**
+         * @param visibility The group join policy and group content visibility. Possible values are `Private`, `Public`, or `Hiddenmembership`. Only Microsoft 365 groups can have `Hiddenmembership` visibility and this value must be set when the group is created. By default, security groups will receive `Private` visibility and Microsoft 365 groups will receive `Public` visibility.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder visibility(String visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public GroupState build() {
+            return $;
         }
     }
+
 }

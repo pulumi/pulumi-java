@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,99 @@ public final class ServicePrincipalFeatureArgs extends com.pulumi.resources.Reso
     public static final ServicePrincipalFeatureArgs Empty = new ServicePrincipalFeatureArgs();
 
     @Import(name="customSingleSignOnApp")
-      private final @Nullable Output<Boolean> customSingleSignOnApp;
+    private @Nullable Output<Boolean> customSingleSignOnApp;
 
-    public Output<Boolean> customSingleSignOnApp() {
-        return this.customSingleSignOnApp == null ? Codegen.empty() : this.customSingleSignOnApp;
+    public Optional<Output<Boolean>> customSingleSignOnApp() {
+        return Optional.ofNullable(this.customSingleSignOnApp);
     }
 
     @Import(name="enterpriseApplication")
-      private final @Nullable Output<Boolean> enterpriseApplication;
+    private @Nullable Output<Boolean> enterpriseApplication;
 
-    public Output<Boolean> enterpriseApplication() {
-        return this.enterpriseApplication == null ? Codegen.empty() : this.enterpriseApplication;
+    public Optional<Output<Boolean>> enterpriseApplication() {
+        return Optional.ofNullable(this.enterpriseApplication);
     }
 
     @Import(name="galleryApplication")
-      private final @Nullable Output<Boolean> galleryApplication;
+    private @Nullable Output<Boolean> galleryApplication;
 
-    public Output<Boolean> galleryApplication() {
-        return this.galleryApplication == null ? Codegen.empty() : this.galleryApplication;
+    public Optional<Output<Boolean>> galleryApplication() {
+        return Optional.ofNullable(this.galleryApplication);
     }
 
     @Import(name="visibleToUsers")
-      private final @Nullable Output<Boolean> visibleToUsers;
+    private @Nullable Output<Boolean> visibleToUsers;
 
-    public Output<Boolean> visibleToUsers() {
-        return this.visibleToUsers == null ? Codegen.empty() : this.visibleToUsers;
+    public Optional<Output<Boolean>> visibleToUsers() {
+        return Optional.ofNullable(this.visibleToUsers);
     }
 
-    public ServicePrincipalFeatureArgs(
-        @Nullable Output<Boolean> customSingleSignOnApp,
-        @Nullable Output<Boolean> enterpriseApplication,
-        @Nullable Output<Boolean> galleryApplication,
-        @Nullable Output<Boolean> visibleToUsers) {
-        this.customSingleSignOnApp = customSingleSignOnApp;
-        this.enterpriseApplication = enterpriseApplication;
-        this.galleryApplication = galleryApplication;
-        this.visibleToUsers = visibleToUsers;
-    }
+    private ServicePrincipalFeatureArgs() {}
 
-    private ServicePrincipalFeatureArgs() {
-        this.customSingleSignOnApp = Codegen.empty();
-        this.enterpriseApplication = Codegen.empty();
-        this.galleryApplication = Codegen.empty();
-        this.visibleToUsers = Codegen.empty();
+    private ServicePrincipalFeatureArgs(ServicePrincipalFeatureArgs $) {
+        this.customSingleSignOnApp = $.customSingleSignOnApp;
+        this.enterpriseApplication = $.enterpriseApplication;
+        this.galleryApplication = $.galleryApplication;
+        this.visibleToUsers = $.visibleToUsers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> customSingleSignOnApp;
-        private @Nullable Output<Boolean> enterpriseApplication;
-        private @Nullable Output<Boolean> galleryApplication;
-        private @Nullable Output<Boolean> visibleToUsers;
+        private ServicePrincipalFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalFeatureArgs();
         }
 
         public Builder(ServicePrincipalFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSingleSignOnApp = defaults.customSingleSignOnApp;
-    	      this.enterpriseApplication = defaults.enterpriseApplication;
-    	      this.galleryApplication = defaults.galleryApplication;
-    	      this.visibleToUsers = defaults.visibleToUsers;
+            $ = new ServicePrincipalFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customSingleSignOnApp(@Nullable Output<Boolean> customSingleSignOnApp) {
-            this.customSingleSignOnApp = customSingleSignOnApp;
+            $.customSingleSignOnApp = customSingleSignOnApp;
             return this;
         }
-        public Builder customSingleSignOnApp(@Nullable Boolean customSingleSignOnApp) {
-            this.customSingleSignOnApp = Codegen.ofNullable(customSingleSignOnApp);
-            return this;
+
+        public Builder customSingleSignOnApp(Boolean customSingleSignOnApp) {
+            return customSingleSignOnApp(Output.of(customSingleSignOnApp));
         }
+
         public Builder enterpriseApplication(@Nullable Output<Boolean> enterpriseApplication) {
-            this.enterpriseApplication = enterpriseApplication;
+            $.enterpriseApplication = enterpriseApplication;
             return this;
         }
-        public Builder enterpriseApplication(@Nullable Boolean enterpriseApplication) {
-            this.enterpriseApplication = Codegen.ofNullable(enterpriseApplication);
-            return this;
+
+        public Builder enterpriseApplication(Boolean enterpriseApplication) {
+            return enterpriseApplication(Output.of(enterpriseApplication));
         }
+
         public Builder galleryApplication(@Nullable Output<Boolean> galleryApplication) {
-            this.galleryApplication = galleryApplication;
+            $.galleryApplication = galleryApplication;
             return this;
         }
-        public Builder galleryApplication(@Nullable Boolean galleryApplication) {
-            this.galleryApplication = Codegen.ofNullable(galleryApplication);
-            return this;
+
+        public Builder galleryApplication(Boolean galleryApplication) {
+            return galleryApplication(Output.of(galleryApplication));
         }
+
         public Builder visibleToUsers(@Nullable Output<Boolean> visibleToUsers) {
-            this.visibleToUsers = visibleToUsers;
+            $.visibleToUsers = visibleToUsers;
             return this;
         }
-        public Builder visibleToUsers(@Nullable Boolean visibleToUsers) {
-            this.visibleToUsers = Codegen.ofNullable(visibleToUsers);
-            return this;
-        }        public ServicePrincipalFeatureArgs build() {
-            return new ServicePrincipalFeatureArgs(customSingleSignOnApp, enterpriseApplication, galleryApplication, visibleToUsers);
+
+        public Builder visibleToUsers(Boolean visibleToUsers) {
+            return visibleToUsers(Output.of(visibleToUsers));
+        }
+
+        public ServicePrincipalFeatureArgs build() {
+            return $;
         }
     }
+
 }

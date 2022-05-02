@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ApplicationRequiredResourceAccessResourceAccess {
     /**
-     * The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+     * @return The unique identifier for an app role or OAuth2 permission scope published by the resource application.
      * 
      */
     private final String id;
     /**
-     * Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
+     * @return Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
      * 
      */
     private final String type;
@@ -29,16 +29,16 @@ public final class ApplicationRequiredResourceAccessResourceAccess {
     }
 
     /**
-     * The unique identifier for an app role or OAuth2 permission scope published by the resource application.
+     * @return The unique identifier for an app role or OAuth2 permission scope published by the resource application.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
+     * @return Specifies whether the `id` property references an app role or an OAuth2 permission scope. Possible values are `Role` or `Scope`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

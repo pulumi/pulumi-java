@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePrincipalFeatureTag {
     /**
-     * Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+     * @return Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean customSingleSignOn;
     /**
-     * Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+     * @return Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean enterprise;
     /**
-     * Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+     * @return Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean gallery;
     /**
-     * Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+     * @return Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean hide;
@@ -45,30 +45,30 @@ public final class ServicePrincipalFeatureTag {
     }
 
     /**
-     * Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
+     * @return Whether this service principal represents a custom SAML application. Enabling this will assign the `WindowsAzureActiveDirectoryCustomSingleSignOnApplication` tag. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> customSingleSignOn() {
         return Optional.ofNullable(this.customSingleSignOn);
     }
     /**
-     * Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
+     * @return Whether this service principal represents an Enterprise Application. Enabling this will assign the `WindowsAzureActiveDirectoryIntegratedApp` tag. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> enterprise() {
         return Optional.ofNullable(this.enterprise);
     }
     /**
-     * Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
+     * @return Whether this service principal represents a gallery application. Enabling this will assign the `WindowsAzureActiveDirectoryGalleryApplicationNonPrimaryV1` tag. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> gallery() {
         return Optional.ofNullable(this.gallery);
     }
     /**
-     * Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
+     * @return Whether this app is invisible to users in My Apps and Office 365 Launcher. Enabling this will assign the `HideApp` tag. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> hide() {
         return Optional.ofNullable(this.hide);
     }

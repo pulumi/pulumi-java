@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,7 +35,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import azuread:index/directoryRoleMember:DirectoryRoleMember test 00000000-0000-0000-0000-000000000000/member/11111111-1111-1111-1111-111111111111
  * ```
  * 
- *  -> This ID format is unique to Terraform and is composed of the Directory Role Object ID and the target Member Object ID in the format `{RoleObjectID}/member/{MemberObjectID}`.
+ *  -&gt; This ID format is unique to Terraform and is composed of the Directory Role Object ID and the target Member Object ID in the format `{RoleObjectID}/member/{MemberObjectID}`.
  * 
  */
 @ResourceType(type="azuread:index/directoryRoleMember:DirectoryRoleMember")
@@ -50,8 +51,8 @@ public class DirectoryRoleMember extends com.pulumi.resources.CustomResource {
      * @return The object ID of the principal you want to add as a member to the directory role. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> memberObjectId() {
-        return this.memberObjectId;
+    public Output<Optional<String>> memberObjectId() {
+        return Codegen.optional(this.memberObjectId);
     }
     /**
      * The object ID of the directory role you want to add the member to. Changing this forces a new resource to be created.
@@ -64,8 +65,8 @@ public class DirectoryRoleMember extends com.pulumi.resources.CustomResource {
      * @return The object ID of the directory role you want to add the member to. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ String> roleObjectId() {
-        return this.roleObjectId;
+    public Output<Optional<String>> roleObjectId() {
+        return Codegen.optional(this.roleObjectId);
     }
 
     /**

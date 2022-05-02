@@ -6,9 +6,9 @@ package com.pulumi.azuread;
 import com.pulumi.azuread.inputs.InvitationMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,14 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<InvitationMessageArgs> message;
+    private @Nullable Output<InvitationMessageArgs> message;
 
-    public Output<InvitationMessageArgs> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    /**
+     * @return A `message` block as documented below, which configures the message being sent to the invited user. If this block is omitted, no message will be sent.
+     * 
+     */
+    public Optional<Output<InvitationMessageArgs>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -32,8 +36,12 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redirectUrl", required=true)
-      private final Output<String> redirectUrl;
+    private Output<String> redirectUrl;
 
+    /**
+     * @return The URL that the user should be redirected to once the invitation is redeemed.
+     * 
+     */
     public Output<String> redirectUrl() {
         return this.redirectUrl;
     }
@@ -43,10 +51,14 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userDisplayName")
-      private final @Nullable Output<String> userDisplayName;
+    private @Nullable Output<String> userDisplayName;
 
-    public Output<String> userDisplayName() {
-        return this.userDisplayName == null ? Codegen.empty() : this.userDisplayName;
+    /**
+     * @return The display name of the user being invited.
+     * 
+     */
+    public Optional<Output<String>> userDisplayName() {
+        return Optional.ofNullable(this.userDisplayName);
     }
 
     /**
@@ -54,8 +66,12 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userEmailAddress", required=true)
-      private final Output<String> userEmailAddress;
+    private Output<String> userEmailAddress;
 
+    /**
+     * @return The email address of the user being invited.
+     * 
+     */
     public Output<String> userEmailAddress() {
         return this.userEmailAddress;
     }
@@ -65,102 +81,154 @@ public final class InvitationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userType")
-      private final @Nullable Output<String> userType;
+    private @Nullable Output<String> userType;
 
-    public Output<String> userType() {
-        return this.userType == null ? Codegen.empty() : this.userType;
+    /**
+     * @return The user type of the user being invited. Must be one of `Guest` or `Member`. Only Global Administrators can invite users as members. Defaults to `Guest`.
+     * 
+     */
+    public Optional<Output<String>> userType() {
+        return Optional.ofNullable(this.userType);
     }
 
-    public InvitationArgs(
-        @Nullable Output<InvitationMessageArgs> message,
-        Output<String> redirectUrl,
-        @Nullable Output<String> userDisplayName,
-        Output<String> userEmailAddress,
-        @Nullable Output<String> userType) {
-        this.message = message;
-        this.redirectUrl = Objects.requireNonNull(redirectUrl, "expected parameter 'redirectUrl' to be non-null");
-        this.userDisplayName = userDisplayName;
-        this.userEmailAddress = Objects.requireNonNull(userEmailAddress, "expected parameter 'userEmailAddress' to be non-null");
-        this.userType = userType;
-    }
+    private InvitationArgs() {}
 
-    private InvitationArgs() {
-        this.message = Codegen.empty();
-        this.redirectUrl = Codegen.empty();
-        this.userDisplayName = Codegen.empty();
-        this.userEmailAddress = Codegen.empty();
-        this.userType = Codegen.empty();
+    private InvitationArgs(InvitationArgs $) {
+        this.message = $.message;
+        this.redirectUrl = $.redirectUrl;
+        this.userDisplayName = $.userDisplayName;
+        this.userEmailAddress = $.userEmailAddress;
+        this.userType = $.userType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InvitationMessageArgs> message;
-        private Output<String> redirectUrl;
-        private @Nullable Output<String> userDisplayName;
-        private Output<String> userEmailAddress;
-        private @Nullable Output<String> userType;
+        private InvitationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationArgs();
         }
 
         public Builder(InvitationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.redirectUrl = defaults.redirectUrl;
-    	      this.userDisplayName = defaults.userDisplayName;
-    	      this.userEmailAddress = defaults.userEmailAddress;
-    	      this.userType = defaults.userType;
+            $ = new InvitationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message A `message` block as documented below, which configures the message being sent to the invited user. If this block is omitted, no message will be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<InvitationMessageArgs> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable InvitationMessageArgs message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        /**
+         * @param message A `message` block as documented below, which configures the message being sent to the invited user. If this block is omitted, no message will be sent.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder message(InvitationMessageArgs message) {
+            return message(Output.of(message));
         }
+
+        /**
+         * @param redirectUrl The URL that the user should be redirected to once the invitation is redeemed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(Output<String> redirectUrl) {
-            this.redirectUrl = Objects.requireNonNull(redirectUrl);
+            $.redirectUrl = redirectUrl;
             return this;
         }
+
+        /**
+         * @param redirectUrl The URL that the user should be redirected to once the invitation is redeemed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(String redirectUrl) {
-            this.redirectUrl = Output.of(Objects.requireNonNull(redirectUrl));
-            return this;
+            return redirectUrl(Output.of(redirectUrl));
         }
+
+        /**
+         * @param userDisplayName The display name of the user being invited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDisplayName(@Nullable Output<String> userDisplayName) {
-            this.userDisplayName = userDisplayName;
+            $.userDisplayName = userDisplayName;
             return this;
         }
-        public Builder userDisplayName(@Nullable String userDisplayName) {
-            this.userDisplayName = Codegen.ofNullable(userDisplayName);
-            return this;
+
+        /**
+         * @param userDisplayName The display name of the user being invited.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userDisplayName(String userDisplayName) {
+            return userDisplayName(Output.of(userDisplayName));
         }
+
+        /**
+         * @param userEmailAddress The email address of the user being invited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmailAddress(Output<String> userEmailAddress) {
-            this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
+            $.userEmailAddress = userEmailAddress;
             return this;
         }
+
+        /**
+         * @param userEmailAddress The email address of the user being invited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmailAddress(String userEmailAddress) {
-            this.userEmailAddress = Output.of(Objects.requireNonNull(userEmailAddress));
-            return this;
+            return userEmailAddress(Output.of(userEmailAddress));
         }
+
+        /**
+         * @param userType The user type of the user being invited. Must be one of `Guest` or `Member`. Only Global Administrators can invite users as members. Defaults to `Guest`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userType(@Nullable Output<String> userType) {
-            this.userType = userType;
+            $.userType = userType;
             return this;
         }
-        public Builder userType(@Nullable String userType) {
-            this.userType = Codegen.ofNullable(userType);
-            return this;
-        }        public InvitationArgs build() {
-            return new InvitationArgs(message, redirectUrl, userDisplayName, userEmailAddress, userType);
+
+        /**
+         * @param userType The user type of the user being invited. Must be one of `Guest` or `Member`. Only Global Administrators can invite users as members. Defaults to `Guest`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userType(String userType) {
+            return userType(Output.of(userType));
+        }
+
+        public InvitationArgs build() {
+            $.redirectUrl = Objects.requireNonNull($.redirectUrl, "expected parameter 'redirectUrl' to be non-null");
+            $.userEmailAddress = Objects.requireNonNull($.userEmailAddress, "expected parameter 'userEmailAddress' to be non-null");
+            return $;
         }
     }
+
 }

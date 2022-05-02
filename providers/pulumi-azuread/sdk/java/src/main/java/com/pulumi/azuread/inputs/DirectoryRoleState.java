@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class DirectoryRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return The description of the directory role.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +35,14 @@ public final class DirectoryRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    /**
+     * @return The display name of the directory role to activate. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,10 +50,14 @@ public final class DirectoryRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    /**
+     * @return The object ID of the directory role.
+     * 
+     */
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -53,89 +65,130 @@ public final class DirectoryRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    /**
+     * @return The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
-    public DirectoryRoleState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> templateId) {
-        this.description = description;
-        this.displayName = displayName;
-        this.objectId = objectId;
-        this.templateId = templateId;
-    }
+    private DirectoryRoleState() {}
 
-    private DirectoryRoleState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.templateId = Codegen.empty();
+    private DirectoryRoleState(DirectoryRoleState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.objectId = $.objectId;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectoryRoleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> templateId;
+        private DirectoryRoleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectoryRoleState();
         }
 
         public Builder(DirectoryRoleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.objectId = defaults.objectId;
-    	      this.templateId = defaults.templateId;
+            $ = new DirectoryRoleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description The description of the directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName The display name of the directory role to activate. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        /**
+         * @param displayName The display name of the directory role to activate. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param objectId The object ID of the directory role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        /**
+         * @param objectId The object ID of the directory role.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
+        /**
+         * @param templateId The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
-        }        public DirectoryRoleState build() {
-            return new DirectoryRoleState(description, displayName, objectId, templateId);
+
+        /**
+         * @param templateId The object ID of the role template from which to activate the directory role. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
+        }
+
+        public DirectoryRoleState build() {
+            return $;
         }
     }
+
 }
