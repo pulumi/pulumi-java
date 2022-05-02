@@ -15,14 +15,14 @@ public final class BucketIntelligentTieringConfigurationTieringArgs extends com.
     public static final BucketIntelligentTieringConfigurationTieringArgs Empty = new BucketIntelligentTieringConfigurationTieringArgs();
 
     /**
-     * S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+     * S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
      * 
      */
     @Import(name="accessTier", required=true)
     private Output<String> accessTier;
 
     /**
-     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
      * 
      */
     public Output<String> accessTier() {
@@ -70,7 +70,7 @@ public final class BucketIntelligentTieringConfigurationTieringArgs extends com.
         }
 
         /**
-         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class BucketIntelligentTieringConfigurationTieringArgs extends com.
         }
 
         /**
-         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+         * @param accessTier S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
          * 
          * @return builder
          * 

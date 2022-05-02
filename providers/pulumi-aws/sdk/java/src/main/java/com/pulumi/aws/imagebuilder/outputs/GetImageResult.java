@@ -21,6 +21,11 @@ public final class GetImageResult {
      */
     private final String buildVersionArn;
     /**
+     * @return Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    private final String containerRecipeArn;
+    /**
      * @return Date the image was created.
      * 
      */
@@ -41,7 +46,7 @@ public final class GetImageResult {
      */
     private final String id;
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     private final String imageRecipeArn;
@@ -90,6 +95,7 @@ public final class GetImageResult {
     private GetImageResult(
         @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("buildVersionArn") String buildVersionArn,
+        @CustomType.Parameter("containerRecipeArn") String containerRecipeArn,
         @CustomType.Parameter("dateCreated") String dateCreated,
         @CustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
         @CustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
@@ -105,6 +111,7 @@ public final class GetImageResult {
         @CustomType.Parameter("version") String version) {
         this.arn = arn;
         this.buildVersionArn = buildVersionArn;
+        this.containerRecipeArn = containerRecipeArn;
         this.dateCreated = dateCreated;
         this.distributionConfigurationArn = distributionConfigurationArn;
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
@@ -129,6 +136,13 @@ public final class GetImageResult {
      */
     public String buildVersionArn() {
         return this.buildVersionArn;
+    }
+    /**
+     * @return Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public String containerRecipeArn() {
+        return this.containerRecipeArn;
     }
     /**
      * @return Date the image was created.
@@ -159,7 +173,7 @@ public final class GetImageResult {
         return this.id;
     }
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
     public String imageRecipeArn() {
@@ -233,6 +247,7 @@ public final class GetImageResult {
     public static final class Builder {
         private String arn;
         private String buildVersionArn;
+        private String containerRecipeArn;
         private String dateCreated;
         private String distributionConfigurationArn;
         private Boolean enhancedImageMetadataEnabled;
@@ -255,6 +270,7 @@ public final class GetImageResult {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
     	      this.buildVersionArn = defaults.buildVersionArn;
+    	      this.containerRecipeArn = defaults.containerRecipeArn;
     	      this.dateCreated = defaults.dateCreated;
     	      this.distributionConfigurationArn = defaults.distributionConfigurationArn;
     	      this.enhancedImageMetadataEnabled = defaults.enhancedImageMetadataEnabled;
@@ -276,6 +292,10 @@ public final class GetImageResult {
         }
         public Builder buildVersionArn(String buildVersionArn) {
             this.buildVersionArn = Objects.requireNonNull(buildVersionArn);
+            return this;
+        }
+        public Builder containerRecipeArn(String containerRecipeArn) {
+            this.containerRecipeArn = Objects.requireNonNull(containerRecipeArn);
             return this;
         }
         public Builder dateCreated(String dateCreated) {
@@ -336,7 +356,7 @@ public final class GetImageResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public GetImageResult build() {
-            return new GetImageResult(arn, buildVersionArn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, version);
+            return new GetImageResult(arn, buildVersionArn, containerRecipeArn, dateCreated, distributionConfigurationArn, enhancedImageMetadataEnabled, id, imageRecipeArn, imageTestsConfigurations, infrastructureConfigurationArn, name, osVersion, outputResources, platform, tags, version);
         }
     }
 }

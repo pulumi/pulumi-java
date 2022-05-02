@@ -24,6 +24,11 @@ public final class InstanceNetworkInterface {
      */
     private final Integer deviceIndex;
     /**
+     * @return Integer index of the network card. Limited by instance type. The default index is `0`.
+     * 
+     */
+    private final @Nullable Integer networkCardIndex;
+    /**
      * @return ID of the network interface to attach.
      * 
      */
@@ -33,9 +38,11 @@ public final class InstanceNetworkInterface {
     private InstanceNetworkInterface(
         @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
         @CustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @CustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
         @CustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceIndex = deviceIndex;
+        this.networkCardIndex = networkCardIndex;
         this.networkInterfaceId = networkInterfaceId;
     }
 
@@ -52,6 +59,13 @@ public final class InstanceNetworkInterface {
      */
     public Integer deviceIndex() {
         return this.deviceIndex;
+    }
+    /**
+     * @return Integer index of the network card. Limited by instance type. The default index is `0`.
+     * 
+     */
+    public Optional<Integer> networkCardIndex() {
+        return Optional.ofNullable(this.networkCardIndex);
     }
     /**
      * @return ID of the network interface to attach.
@@ -72,6 +86,7 @@ public final class InstanceNetworkInterface {
     public static final class Builder {
         private @Nullable Boolean deleteOnTermination;
         private Integer deviceIndex;
+        private @Nullable Integer networkCardIndex;
         private String networkInterfaceId;
 
         public Builder() {
@@ -82,6 +97,7 @@ public final class InstanceNetworkInterface {
     	      Objects.requireNonNull(defaults);
     	      this.deleteOnTermination = defaults.deleteOnTermination;
     	      this.deviceIndex = defaults.deviceIndex;
+    	      this.networkCardIndex = defaults.networkCardIndex;
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
@@ -93,11 +109,15 @@ public final class InstanceNetworkInterface {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
+        public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
+            this.networkCardIndex = networkCardIndex;
+            return this;
+        }
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }        public InstanceNetworkInterface build() {
-            return new InstanceNetworkInterface(deleteOnTermination, deviceIndex, networkInterfaceId);
+            return new InstanceNetworkInterface(deleteOnTermination, deviceIndex, networkCardIndex, networkInterfaceId);
         }
     }
 }

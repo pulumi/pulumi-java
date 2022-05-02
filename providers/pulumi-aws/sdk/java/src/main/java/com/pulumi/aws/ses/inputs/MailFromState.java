@@ -31,14 +31,14 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Verified domain name to generate DKIM tokens for.
+     * Verified domain name or email identity to generate DKIM tokens for.
      * 
      */
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
     /**
-     * @return Verified domain name to generate DKIM tokens for.
+     * @return Verified domain name or email identity to generate DKIM tokens for.
      * 
      */
     public Optional<Output<String>> domain() {
@@ -108,7 +108,7 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domain Verified domain name to generate DKIM tokens for.
+         * @param domain Verified domain name or email identity to generate DKIM tokens for.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class MailFromState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domain Verified domain name to generate DKIM tokens for.
+         * @param domain Verified domain name or email identity to generate DKIM tokens for.
          * 
          * @return builder
          * 

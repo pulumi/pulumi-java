@@ -318,29 +318,6 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-     * 
-     * @deprecated
-     * Use the parameter &#34;instance_interruption_behavior&#34; instead.
-     * 
-     */
-    @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-    @Import(name="instanceInterruptionBehaviour")
-    private @Nullable Output<String> instanceInterruptionBehaviour;
-
-    /**
-     * @return Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-     * 
-     * @deprecated
-     * Use the parameter &#34;instance_interruption_behavior&#34; instead.
-     * 
-     */
-    @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-    public Optional<Output<String>> instanceInterruptionBehaviour() {
-        return Optional.ofNullable(this.instanceInterruptionBehaviour);
-    }
-
-    /**
      * The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
      * 
      */
@@ -662,14 +639,14 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Import(name="userData")
     private @Nullable Output<String> userData;
 
     /**
-     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Optional<Output<String>> userData() {
@@ -677,18 +654,33 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Import(name="userDataBase64")
     private @Nullable Output<String> userDataBase64;
 
     /**
-     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Optional<Output<String>> userDataBase64() {
         return Optional.ofNullable(this.userDataBase64);
+    }
+
+    /**
+     * When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    @Import(name="userDataReplaceOnChange")
+    private @Nullable Output<Boolean> userDataReplaceOnChange;
+
+    /**
+     * @return When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    public Optional<Output<Boolean>> userDataReplaceOnChange() {
+        return Optional.ofNullable(this.userDataReplaceOnChange);
     }
 
     /**
@@ -792,7 +784,6 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         this.iamInstanceProfile = $.iamInstanceProfile;
         this.instanceInitiatedShutdownBehavior = $.instanceInitiatedShutdownBehavior;
         this.instanceInterruptionBehavior = $.instanceInterruptionBehavior;
-        this.instanceInterruptionBehaviour = $.instanceInterruptionBehaviour;
         this.instanceType = $.instanceType;
         this.ipv6AddressCount = $.ipv6AddressCount;
         this.ipv6Addresses = $.ipv6Addresses;
@@ -816,6 +807,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         this.tenancy = $.tenancy;
         this.userData = $.userData;
         this.userDataBase64 = $.userDataBase64;
+        this.userDataReplaceOnChange = $.userDataReplaceOnChange;
         this.validFrom = $.validFrom;
         this.validUntil = $.validUntil;
         this.volumeTags = $.volumeTags;
@@ -1262,35 +1254,6 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
          */
         public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
             return instanceInterruptionBehavior(Output.of(instanceInterruptionBehavior));
-        }
-
-        /**
-         * @param instanceInterruptionBehaviour Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-         * 
-         * @return builder
-         * 
-         * @deprecated
-         * Use the parameter &#34;instance_interruption_behavior&#34; instead.
-         * 
-         */
-        @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-        public Builder instanceInterruptionBehaviour(@Nullable Output<String> instanceInterruptionBehaviour) {
-            $.instanceInterruptionBehaviour = instanceInterruptionBehaviour;
-            return this;
-        }
-
-        /**
-         * @param instanceInterruptionBehaviour Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
-         * 
-         * @return builder
-         * 
-         * @deprecated
-         * Use the parameter &#34;instance_interruption_behavior&#34; instead.
-         * 
-         */
-        @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-        public Builder instanceInterruptionBehaviour(String instanceInterruptionBehaviour) {
-            return instanceInterruptionBehaviour(Output.of(instanceInterruptionBehaviour));
         }
 
         /**
@@ -1781,7 +1744,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1792,7 +1755,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1802,7 +1765,7 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1813,13 +1776,34 @@ public final class SpotInstanceRequestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
          */
         public Builder userDataBase64(String userDataBase64) {
             return userDataBase64(Output.of(userDataBase64));
+        }
+
+        /**
+         * @param userDataReplaceOnChange When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userDataReplaceOnChange(@Nullable Output<Boolean> userDataReplaceOnChange) {
+            $.userDataReplaceOnChange = userDataReplaceOnChange;
+            return this;
+        }
+
+        /**
+         * @param userDataReplaceOnChange When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userDataReplaceOnChange(Boolean userDataReplaceOnChange) {
+            return userDataReplaceOnChange(Output.of(userDataReplaceOnChange));
         }
 
         /**

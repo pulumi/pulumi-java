@@ -47,14 +47,37 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The certificate data, in PEM format.
+     * The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    @Import(name="caPem")
+    private @Nullable Output<String> caPem;
+
+    /**
+     * @return The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+     * 
+     */
+    public Optional<Output<String>> caPem() {
+        return Optional.ofNullable(this.caPem);
+    }
+
+    /**
+     * The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
      * 
      */
     @Import(name="certificatePem")
     private @Nullable Output<String> certificatePem;
 
     /**
-     * @return The certificate data, in PEM format.
+     * @return The certificate to be registered. If `ca_pem` is unspecified, review
+     * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+     * If `ca_pem` is specified, review
+     * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+     * for more information on registering a certificate.
      * 
      */
     public Optional<Output<String>> certificatePem() {
@@ -85,14 +108,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When no CSR is provided, the private key.
+     * When neither CSR nor certificate is provided, the private key.
      * 
      */
     @Import(name="privateKey")
     private @Nullable Output<String> privateKey;
 
     /**
-     * @return When no CSR is provided, the private key.
+     * @return When neither CSR nor certificate is provided, the private key.
      * 
      */
     public Optional<Output<String>> privateKey() {
@@ -100,14 +123,14 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * When no CSR is provided, the public key.
+     * When neither CSR nor certificate is provided, the public key.
      * 
      */
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
     /**
-     * @return When no CSR is provided, the public key.
+     * @return When neither CSR nor certificate is provided, the public key.
      * 
      */
     public Optional<Output<String>> publicKey() {
@@ -119,6 +142,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     private CertificateState(CertificateState $) {
         this.active = $.active;
         this.arn = $.arn;
+        this.caPem = $.caPem;
         this.certificatePem = $.certificatePem;
         this.csr = $.csr;
         this.privateKey = $.privateKey;
@@ -186,7 +210,32 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificatePem The certificate data, in PEM format.
+         * @param caPem The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caPem(@Nullable Output<String> caPem) {
+            $.caPem = caPem;
+            return this;
+        }
+
+        /**
+         * @param caPem The CA certificate for the certificate to be registered. If this is set, the CA needs to be registered with AWS IoT beforehand.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder caPem(String caPem) {
+            return caPem(Output.of(caPem));
+        }
+
+        /**
+         * @param certificatePem The certificate to be registered. If `ca_pem` is unspecified, review
+         * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+         * If `ca_pem` is specified, review
+         * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+         * for more information on registering a certificate.
          * 
          * @return builder
          * 
@@ -197,7 +246,11 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificatePem The certificate data, in PEM format.
+         * @param certificatePem The certificate to be registered. If `ca_pem` is unspecified, review
+         * [RegisterCertificateWithoutCA](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificateWithoutCA.html).
+         * If `ca_pem` is specified, review
+         * [RegisterCertificate](https://docs.aws.amazon.com/iot/latest/apireference/API_RegisterCertificate.html)
+         * for more information on registering a certificate.
          * 
          * @return builder
          * 
@@ -236,7 +289,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param privateKey When no CSR is provided, the private key.
+         * @param privateKey When neither CSR nor certificate is provided, the private key.
          * 
          * @return builder
          * 
@@ -247,7 +300,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param privateKey When no CSR is provided, the private key.
+         * @param privateKey When neither CSR nor certificate is provided, the private key.
          * 
          * @return builder
          * 
@@ -257,7 +310,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param publicKey When no CSR is provided, the public key.
+         * @param publicKey When neither CSR nor certificate is provided, the public key.
          * 
          * @return builder
          * 
@@ -268,7 +321,7 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param publicKey When no CSR is provided, the public key.
+         * @param publicKey When neither CSR nor certificate is provided, the public key.
          * 
          * @return builder
          * 

@@ -17,14 +17,14 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     public static final EndpointElasticsearchSettingsArgs Empty = new EndpointElasticsearchSettingsArgs();
 
     /**
-     * Endpoint for the Elasticsearch cluster.
+     * Endpoint for the OpenSearch cluster.
      * 
      */
     @Import(name="endpointUri", required=true)
     private Output<String> endpointUri;
 
     /**
-     * @return Endpoint for the Elasticsearch cluster.
+     * @return Endpoint for the OpenSearch cluster.
      * 
      */
     public Output<String> endpointUri() {
@@ -32,14 +32,14 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     }
 
     /**
-     * Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+     * Maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster. Default is `300`.
      * 
      */
     @Import(name="errorRetryDuration")
     private @Nullable Output<Integer> errorRetryDuration;
 
     /**
-     * @return Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+     * @return Maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster. Default is `300`.
      * 
      */
     public Optional<Output<Integer>> errorRetryDuration() {
@@ -47,14 +47,14 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     }
 
     /**
-     * Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+     * Maximum percentage of records that can fail to be written before a full load operation stops. Default is `10`.
      * 
      */
     @Import(name="fullLoadErrorPercentage")
     private @Nullable Output<Integer> fullLoadErrorPercentage;
 
     /**
-     * @return Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+     * @return Maximum percentage of records that can fail to be written before a full load operation stops. Default is `10`.
      * 
      */
     public Optional<Output<Integer>> fullLoadErrorPercentage() {
@@ -62,14 +62,14 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
     }
 
     /**
-     * Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+     * ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     @Import(name="serviceAccessRoleArn", required=true)
     private Output<String> serviceAccessRoleArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+     * @return ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
     public Output<String> serviceAccessRoleArn() {
@@ -104,7 +104,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param endpointUri Endpoint for the Elasticsearch cluster.
+         * @param endpointUri Endpoint for the OpenSearch cluster.
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param endpointUri Endpoint for the Elasticsearch cluster.
+         * @param endpointUri Endpoint for the OpenSearch cluster.
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster. Default is `300`.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
+         * @param errorRetryDuration Maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster. Default is `300`.
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Default is `10`.
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
+         * @param fullLoadErrorPercentage Maximum percentage of records that can fail to be written before a full load operation stops. Default is `10`.
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class EndpointElasticsearchSettingsArgs extends com.pulumi.resource
         }
 
         /**
-         * @param serviceAccessRoleArn Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
+         * @param serviceAccessRoleArn ARN of the IAM Role with permissions to read from or write to the S3 Bucket.
          * 
          * @return builder
          * 

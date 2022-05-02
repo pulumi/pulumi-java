@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.transfer.ServerArgs;
 import com.pulumi.aws.transfer.inputs.ServerState;
 import com.pulumi.aws.transfer.outputs.ServerEndpointDetails;
+import com.pulumi.aws.transfer.outputs.ServerWorkflowDetails;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -235,6 +236,34 @@ public class Server extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.loggingRole);
     }
     /**
+     * Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+     * 
+     */
+    @Export(name="postAuthenticationLoginBanner", type=String.class, parameters={})
+    private Output</* @Nullable */ String> postAuthenticationLoginBanner;
+
+    /**
+     * @return Specify a string to display when users connect to a server. This string is displayed after the user authenticates. The SFTP protocol does not support post-authentication display banners.
+     * 
+     */
+    public Output<Optional<String>> postAuthenticationLoginBanner() {
+        return Codegen.optional(this.postAuthenticationLoginBanner);
+    }
+    /**
+     * Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+     * 
+     */
+    @Export(name="preAuthenticationLoginBanner", type=String.class, parameters={})
+    private Output</* @Nullable */ String> preAuthenticationLoginBanner;
+
+    /**
+     * @return Specify a string to display when users connect to a server. This string is displayed before the user authenticates.
+     * 
+     */
+    public Output<Optional<String>> preAuthenticationLoginBanner() {
+        return Codegen.optional(this.preAuthenticationLoginBanner);
+    }
+    /**
      * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server&#39;s endpoint. This defaults to `SFTP` . The available protocols are:
      * * `SFTP`: File transfer over SSH
      * * `FTPS`: File transfer with TLS encryption
@@ -309,6 +338,20 @@ public class Server extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> url() {
         return Codegen.optional(this.url);
+    }
+    /**
+     * Specifies the workflow details. See Workflow Details below.
+     * 
+     */
+    @Export(name="workflowDetails", type=ServerWorkflowDetails.class, parameters={})
+    private Output</* @Nullable */ ServerWorkflowDetails> workflowDetails;
+
+    /**
+     * @return Specifies the workflow details. See Workflow Details below.
+     * 
+     */
+    public Output<Optional<ServerWorkflowDetails>> workflowDetails() {
+        return Codegen.optional(this.workflowDetails);
     }
 
     /**

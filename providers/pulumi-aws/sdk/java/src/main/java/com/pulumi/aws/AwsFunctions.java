@@ -16,6 +16,7 @@ import com.pulumi.aws.inputs.GetIpRangesArgs;
 import com.pulumi.aws.inputs.GetPrefixListArgs;
 import com.pulumi.aws.inputs.GetRegionArgs;
 import com.pulumi.aws.inputs.GetRegionsArgs;
+import com.pulumi.aws.inputs.GetServiceArgs;
 import com.pulumi.aws.outputs.GetAmiIdsResult;
 import com.pulumi.aws.outputs.GetAmiResult;
 import com.pulumi.aws.outputs.GetArnResult;
@@ -32,6 +33,7 @@ import com.pulumi.aws.outputs.GetPartitionResult;
 import com.pulumi.aws.outputs.GetPrefixListResult;
 import com.pulumi.aws.outputs.GetRegionResult;
 import com.pulumi.aws.outputs.GetRegionsResult;
+import com.pulumi.aws.outputs.GetServiceResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -184,6 +186,8 @@ public final class AwsFunctions {
      * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
      * for the effective account in which this provider is working.
      * 
+     * &gt; **NOTE:** To use this data source, you must have the `s3:ListAllMyBuckets` permission.
+     * 
      * ## Example Usage
      * 
      * @deprecated
@@ -200,6 +204,10 @@ public final class AwsFunctions {
     public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
     }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDefaultTagsResult> getDefaultTags() {
         return getDefaultTags(GetDefaultTagsArgs.Empty, InvokeOptions.Empty);
     }
@@ -256,6 +264,7 @@ public final class AwsFunctions {
         return Deployment.getInstance().invokeAsync("aws:index/getPartition:getPartition", TypeShape.of(GetPartitionResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * ## Example Usage
      * 
      * @deprecated
      * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
@@ -305,5 +314,20 @@ public final class AwsFunctions {
     }
     public static CompletableFuture<GetRegionsResult> getRegions(GetRegionsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Use this data source to compose and decompose AWS service DNS names.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetServiceResult> getService() {
+        return getService(GetServiceArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
+        return getService(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:index/getService:getService", TypeShape.of(GetServiceResult.class), args, Utilities.withVersion(options));
     }
 }

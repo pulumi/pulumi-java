@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementAndStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeader {
     /**
-     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return Name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
     private final String name;
@@ -21,7 +21,7 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementS
     }
 
     /**
-     * @return The name of the query header to inspect. This setting must be provided as lower case characters.
+     * @return Name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
     public String name() {

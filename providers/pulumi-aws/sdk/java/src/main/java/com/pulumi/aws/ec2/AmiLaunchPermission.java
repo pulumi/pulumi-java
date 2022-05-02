@@ -11,16 +11,17 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Adds launch permission to Amazon Machine Image (AMI) from another AWS account.
+ * Adds a launch permission to an Amazon Machine Image (AMI).
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * AWS AMI Launch Permission can be imported using the `ACCOUNT-ID/IMAGE-ID`, e.g.,
+ * AMI Launch Permissions can be imported using `[ACCOUNT-ID|GROUP-NAME|ORGANIZATION-ARN|ORGANIZATIONAL-UNIT-ARN]/IMAGE-ID`, e.g.,
  * 
  * ```sh
  *  $ pulumi import aws:ec2/amiLaunchPermission:AmiLaunchPermission example 123456789012/ami-12345678
@@ -30,32 +31,74 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:ec2/amiLaunchPermission:AmiLaunchPermission")
 public class AmiLaunchPermission extends com.pulumi.resources.CustomResource {
     /**
-     * An AWS Account ID to add launch permissions.
+     * The AWS account ID for the launch permission.
      * 
      */
     @Export(name="accountId", type=String.class, parameters={})
-    private Output<String> accountId;
+    private Output</* @Nullable */ String> accountId;
 
     /**
-     * @return An AWS Account ID to add launch permissions.
+     * @return The AWS account ID for the launch permission.
      * 
      */
-    public Output<String> accountId() {
-        return this.accountId;
+    public Output<Optional<String>> accountId() {
+        return Codegen.optional(this.accountId);
     }
     /**
-     * A region-unique name for the AMI.
+     * The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    @Export(name="group", type=String.class, parameters={})
+    private Output</* @Nullable */ String> group;
+
+    /**
+     * @return The name of the group for the launch permission. Valid values: `&#34;all&#34;`.
+     * 
+     */
+    public Output<Optional<String>> group() {
+        return Codegen.optional(this.group);
+    }
+    /**
+     * The ID of the AMI.
      * 
      */
     @Export(name="imageId", type=String.class, parameters={})
     private Output<String> imageId;
 
     /**
-     * @return A region-unique name for the AMI.
+     * @return The ID of the AMI.
      * 
      */
     public Output<String> imageId() {
         return this.imageId;
+    }
+    /**
+     * The ARN of an organization for the launch permission.
+     * 
+     */
+    @Export(name="organizationArn", type=String.class, parameters={})
+    private Output</* @Nullable */ String> organizationArn;
+
+    /**
+     * @return The ARN of an organization for the launch permission.
+     * 
+     */
+    public Output<Optional<String>> organizationArn() {
+        return Codegen.optional(this.organizationArn);
+    }
+    /**
+     * The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    @Export(name="organizationalUnitArn", type=String.class, parameters={})
+    private Output</* @Nullable */ String> organizationalUnitArn;
+
+    /**
+     * @return The ARN of an organizational unit for the launch permission.
+     * 
+     */
+    public Output<Optional<String>> organizationalUnitArn() {
+        return Codegen.optional(this.organizationalUnitArn);
     }
 
     /**

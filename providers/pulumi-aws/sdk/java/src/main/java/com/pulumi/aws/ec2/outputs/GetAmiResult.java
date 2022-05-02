@@ -33,6 +33,11 @@ public final class GetAmiResult {
      */
     private final List<GetAmiBlockDeviceMapping> blockDeviceMappings;
     /**
+     * @return The boot mode of the image.
+     * 
+     */
+    private final String bootMode;
+    /**
      * @return The date and time the image was created.
      * 
      */
@@ -186,6 +191,7 @@ public final class GetAmiResult {
         @CustomType.Parameter("architecture") String architecture,
         @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("blockDeviceMappings") List<GetAmiBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("bootMode") String bootMode,
         @CustomType.Parameter("creationDate") String creationDate,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("enaSupport") Boolean enaSupport,
@@ -220,6 +226,7 @@ public final class GetAmiResult {
         this.architecture = architecture;
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
+        this.bootMode = bootMode;
         this.creationDate = creationDate;
         this.description = description;
         this.enaSupport = enaSupport;
@@ -273,6 +280,13 @@ public final class GetAmiResult {
      */
     public List<GetAmiBlockDeviceMapping> blockDeviceMappings() {
         return this.blockDeviceMappings;
+    }
+    /**
+     * @return The boot mode of the image.
+     * 
+     */
+    public String bootMode() {
+        return this.bootMode;
     }
     /**
      * @return The date and time the image was created.
@@ -497,6 +511,7 @@ public final class GetAmiResult {
         private String architecture;
         private String arn;
         private List<GetAmiBlockDeviceMapping> blockDeviceMappings;
+        private String bootMode;
         private String creationDate;
         private String description;
         private Boolean enaSupport;
@@ -538,6 +553,7 @@ public final class GetAmiResult {
     	      this.architecture = defaults.architecture;
     	      this.arn = defaults.arn;
     	      this.blockDeviceMappings = defaults.blockDeviceMappings;
+    	      this.bootMode = defaults.bootMode;
     	      this.creationDate = defaults.creationDate;
     	      this.description = defaults.description;
     	      this.enaSupport = defaults.enaSupport;
@@ -585,6 +601,10 @@ public final class GetAmiResult {
         }
         public Builder blockDeviceMappings(GetAmiBlockDeviceMapping... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
+        }
+        public Builder bootMode(String bootMode) {
+            this.bootMode = Objects.requireNonNull(bootMode);
+            return this;
         }
         public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
@@ -722,7 +742,7 @@ public final class GetAmiResult {
             this.virtualizationType = Objects.requireNonNull(virtualizationType);
             return this;
         }        public GetAmiResult build() {
-            return new GetAmiResult(architecture, arn, blockDeviceMappings, creationDate, description, enaSupport, executableUsers, filters, hypervisor, id, imageId, imageLocation, imageOwnerAlias, imageType, kernelId, mostRecent, name, nameRegex, ownerId, owners, platform, platformDetails, productCodes, public_, ramdiskId, rootDeviceName, rootDeviceType, rootSnapshotId, sriovNetSupport, state, stateReason, tags, usageOperation, virtualizationType);
+            return new GetAmiResult(architecture, arn, blockDeviceMappings, bootMode, creationDate, description, enaSupport, executableUsers, filters, hypervisor, id, imageId, imageLocation, imageOwnerAlias, imageType, kernelId, mostRecent, name, nameRegex, ownerId, owners, platform, platformDetails, productCodes, public_, ramdiskId, rootDeviceName, rootDeviceType, rootSnapshotId, sriovNetSupport, state, stateReason, tags, usageOperation, virtualizationType);
         }
     }
 }

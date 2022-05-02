@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatement {
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     private final @Nullable WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch fieldToMatch;
@@ -33,7 +33,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementS
     }
 
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     public Optional<WebAclRuleStatementNotStatementStatementOrStatementStatementSqliMatchStatementFieldToMatch> fieldToMatch() {

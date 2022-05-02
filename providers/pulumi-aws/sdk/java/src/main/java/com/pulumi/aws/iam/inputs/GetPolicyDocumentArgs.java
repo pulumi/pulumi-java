@@ -17,16 +17,24 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
     public static final GetPolicyDocumentArgs Empty = new GetPolicyDocumentArgs();
 
     /**
-     * IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+     * - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+     * 
+     * @deprecated
+     * Use the attribute &#34;override_policy_documents&#34; instead.
      * 
      */
+    @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     @Import(name="overrideJson")
     private @Nullable String overrideJson;
 
     /**
-     * @return IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+     * @return - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+     * 
+     * @deprecated
+     * Use the attribute &#34;override_policy_documents&#34; instead.
      * 
      */
+    @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     public Optional<String> overrideJson() {
         return Optional.ofNullable(this.overrideJson);
     }
@@ -62,16 +70,24 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+     * - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+     * 
+     * @deprecated
+     * Use the attribute &#34;source_policy_documents&#34; instead.
      * 
      */
+    @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     @Import(name="sourceJson")
     private @Nullable String sourceJson;
 
     /**
-     * @return IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+     * @return - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+     * 
+     * @deprecated
+     * Use the attribute &#34;source_policy_documents&#34; instead.
      * 
      */
+    @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     public Optional<String> sourceJson() {
         return Optional.ofNullable(this.sourceJson);
     }
@@ -152,11 +168,15 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
         }
 
         /**
-         * @param overrideJson IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
+         * @param overrideJson - IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the attribute &#34;override_policy_documents&#34; instead.
+         * 
          */
+        @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
         public Builder overrideJson(@Nullable String overrideJson) {
             $.overrideJson = overrideJson;
             return this;
@@ -195,11 +215,15 @@ public final class GetPolicyDocumentArgs extends com.pulumi.resources.InvokeArgs
         }
 
         /**
-         * @param sourceJson IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
+         * @param sourceJson - IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use the attribute &#34;source_policy_documents&#34; instead.
+         * 
          */
+        @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
         public Builder sourceJson(@Nullable String sourceJson) {
             $.sourceJson = sourceJson;
             return this;

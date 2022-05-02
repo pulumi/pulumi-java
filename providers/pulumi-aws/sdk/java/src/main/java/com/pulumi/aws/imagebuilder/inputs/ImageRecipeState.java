@@ -5,6 +5,7 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
 import com.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
+import com.pulumi.aws.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -35,14 +36,14 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+     * Configuration block(s) with block device mappings for the image recipe. Detailed below.
      * 
      */
     @Import(name="blockDeviceMappings")
     private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
     /**
-     * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+     * @return Configuration block(s) with block device mappings for the image recipe. Detailed below.
      * 
      */
     public Optional<Output<List<ImageRecipeBlockDeviceMappingArgs>>> blockDeviceMappings() {
@@ -95,14 +96,14 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Name of the image recipe.
+     * The name of the component parameter.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name of the image recipe.
+     * @return The name of the component parameter.
      * 
      */
     public Optional<Output<String>> name() {
@@ -152,6 +153,21 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> platform() {
         return Optional.ofNullable(this.platform);
+    }
+
+    /**
+     * Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+     * 
+     */
+    @Import(name="systemsManagerAgent")
+    private @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+
+    /**
+     * @return Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+     * 
+     */
+    public Optional<Output<ImageRecipeSystemsManagerAgentArgs>> systemsManagerAgent() {
+        return Optional.ofNullable(this.systemsManagerAgent);
     }
 
     /**
@@ -241,6 +257,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         this.owner = $.owner;
         this.parentImage = $.parentImage;
         this.platform = $.platform;
+        this.systemsManagerAgent = $.systemsManagerAgent;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
         this.userDataBase64 = $.userDataBase64;
@@ -288,7 +305,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the image recipe. Detailed below.
          * 
          * @return builder
          * 
@@ -299,7 +316,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the image recipe. Detailed below.
          * 
          * @return builder
          * 
@@ -309,7 +326,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param blockDeviceMappings Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+         * @param blockDeviceMappings Configuration block(s) with block device mappings for the image recipe. Detailed below.
          * 
          * @return builder
          * 
@@ -392,7 +409,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Name of the image recipe.
+         * @param name The name of the component parameter.
          * 
          * @return builder
          * 
@@ -403,7 +420,7 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Name of the image recipe.
+         * @param name The name of the component parameter.
          * 
          * @return builder
          * 
@@ -473,6 +490,27 @@ public final class ImageRecipeState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder platform(String platform) {
             return platform(Output.of(platform));
+        }
+
+        /**
+         * @param systemsManagerAgent Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder systemsManagerAgent(@Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
+            $.systemsManagerAgent = systemsManagerAgent;
+            return this;
+        }
+
+        /**
+         * @param systemsManagerAgent Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder systemsManagerAgent(ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
+            return systemsManagerAgent(Output.of(systemsManagerAgent));
         }
 
         /**

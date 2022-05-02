@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatement {
     /**
-     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return Statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     private final List<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementStatement> statements;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementA
     }
 
     /**
-     * @return The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
+     * @return Statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
     public List<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementStatement> statements() {

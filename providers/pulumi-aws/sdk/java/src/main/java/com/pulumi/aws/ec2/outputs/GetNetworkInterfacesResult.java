@@ -20,7 +20,7 @@ public final class GetNetworkInterfacesResult {
      */
     private final String id;
     /**
-     * @return A list of all the network interface ids found. This data source will fail if none are found.
+     * @return A list of all the network interface ids found.
      * 
      */
     private final List<String> ids;
@@ -49,7 +49,7 @@ public final class GetNetworkInterfacesResult {
         return this.id;
     }
     /**
-     * @return A list of all the network interface ids found. This data source will fail if none are found.
+     * @return A list of all the network interface ids found.
      * 
      */
     public List<String> ids() {

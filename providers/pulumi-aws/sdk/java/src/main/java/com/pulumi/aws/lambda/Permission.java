@@ -78,28 +78,42 @@ public class Permission extends com.pulumi.resources.CustomResource {
         return this.function;
     }
     /**
-     * The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+     * The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
      * 
      */
     @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     /**
-     * @return The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+     * @return The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
      * 
      */
     public Output<String> principal() {
         return this.principal;
     }
     /**
-     * Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+     * The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+     * 
+     */
+    @Export(name="principalOrgId", type=String.class, parameters={})
+    private Output</* @Nullable */ String> principalOrgId;
+
+    /**
+     * @return The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+     * 
+     */
+    public Output<Optional<String>> principalOrgId() {
+        return Codegen.optional(this.principalOrgId);
+    }
+    /**
+     * Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
      * 
      */
     @Export(name="qualifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> qualifier;
 
     /**
-     * @return Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+     * @return Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
      * 
      */
     public Output<Optional<String>> qualifier() {

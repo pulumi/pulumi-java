@@ -3,11 +3,13 @@
 
 package com.pulumi.aws.athena.inputs;
 
+import com.pulumi.aws.athena.inputs.DatabaseAclConfigurationArgs;
 import com.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,14 +20,29 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     public static final DatabaseState Empty = new DatabaseState();
 
     /**
-     * Name of s3 bucket to save the results of the query execution.
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+     * 
+     */
+    @Import(name="aclConfiguration")
+    private @Nullable Output<DatabaseAclConfigurationArgs> aclConfiguration;
+
+    /**
+     * @return Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+     * 
+     */
+    public Optional<Output<DatabaseAclConfigurationArgs>> aclConfiguration() {
+        return Optional.ofNullable(this.aclConfiguration);
+    }
+
+    /**
+     * Name of S3 bucket to save the results of the query execution.
      * 
      */
     @Import(name="bucket")
     private @Nullable Output<String> bucket;
 
     /**
-     * @return Name of s3 bucket to save the results of the query execution.
+     * @return Name of S3 bucket to save the results of the query execution.
      * 
      */
     public Optional<Output<String>> bucket() {
@@ -33,18 +50,48 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+     * Description of the database.
+     * 
+     */
+    @Import(name="comment")
+    private @Nullable Output<String> comment;
+
+    /**
+     * @return Description of the database.
+     * 
+     */
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
+    }
+
+    /**
+     * The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. See Encryption Configuration below.
      * 
      */
     @Import(name="encryptionConfiguration")
     private @Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
-     * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+     * @return The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. See Encryption Configuration below.
      * 
      */
     public Optional<Output<DatabaseEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
+    }
+
+    /**
+     * The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+     * 
+     */
+    @Import(name="expectedBucketOwner")
+    private @Nullable Output<String> expectedBucketOwner;
+
+    /**
+     * @return The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+     * 
+     */
+    public Optional<Output<String>> expectedBucketOwner() {
+        return Optional.ofNullable(this.expectedBucketOwner);
     }
 
     /**
@@ -77,13 +124,32 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * A key-value map of custom metadata properties for the database definition.
+     * 
+     */
+    @Import(name="properties")
+    private @Nullable Output<Map<String,String>> properties;
+
+    /**
+     * @return A key-value map of custom metadata properties for the database definition.
+     * 
+     */
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
+    }
+
     private DatabaseState() {}
 
     private DatabaseState(DatabaseState $) {
+        this.aclConfiguration = $.aclConfiguration;
         this.bucket = $.bucket;
+        this.comment = $.comment;
         this.encryptionConfiguration = $.encryptionConfiguration;
+        this.expectedBucketOwner = $.expectedBucketOwner;
         this.forceDestroy = $.forceDestroy;
         this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
@@ -105,7 +171,28 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param bucket Name of s3 bucket to save the results of the query execution.
+         * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aclConfiguration(@Nullable Output<DatabaseAclConfigurationArgs> aclConfiguration) {
+            $.aclConfiguration = aclConfiguration;
+            return this;
+        }
+
+        /**
+         * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aclConfiguration(DatabaseAclConfigurationArgs aclConfiguration) {
+            return aclConfiguration(Output.of(aclConfiguration));
+        }
+
+        /**
+         * @param bucket Name of S3 bucket to save the results of the query execution.
          * 
          * @return builder
          * 
@@ -116,7 +203,7 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param bucket Name of s3 bucket to save the results of the query execution.
+         * @param bucket Name of S3 bucket to save the results of the query execution.
          * 
          * @return builder
          * 
@@ -126,7 +213,28 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+         * @param comment Description of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder comment(@Nullable Output<String> comment) {
+            $.comment = comment;
+            return this;
+        }
+
+        /**
+         * @param comment Description of the database.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
+        }
+
+        /**
+         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. See Encryption Configuration below.
          * 
          * @return builder
          * 
@@ -137,13 +245,34 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
+         * @param encryptionConfiguration The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. See Encryption Configuration below.
          * 
          * @return builder
          * 
          */
         public Builder encryptionConfiguration(DatabaseEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
+        }
+
+        /**
+         * @param expectedBucketOwner The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expectedBucketOwner(@Nullable Output<String> expectedBucketOwner) {
+            $.expectedBucketOwner = expectedBucketOwner;
+            return this;
+        }
+
+        /**
+         * @param expectedBucketOwner The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expectedBucketOwner(String expectedBucketOwner) {
+            return expectedBucketOwner(Output.of(expectedBucketOwner));
         }
 
         /**
@@ -186,6 +315,27 @@ public final class DatabaseState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder name(String name) {
             return name(Output.of(name));
+        }
+
+        /**
+         * @param properties A key-value map of custom metadata properties for the database definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder properties(@Nullable Output<Map<String,String>> properties) {
+            $.properties = properties;
+            return this;
+        }
+
+        /**
+         * @param properties A key-value map of custom metadata properties for the database definition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
 
         public DatabaseState build() {

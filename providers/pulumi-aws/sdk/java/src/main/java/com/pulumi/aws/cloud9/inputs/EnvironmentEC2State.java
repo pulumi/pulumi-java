@@ -48,6 +48,21 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+     * 
+     */
+    @Import(name="connectionType")
+    private @Nullable Output<String> connectionType;
+
+    /**
+     * @return The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+     * 
+     */
+    public Optional<Output<String>> connectionType() {
+        return Optional.ofNullable(this.connectionType);
+    }
+
+    /**
      * The description of the environment.
      * 
      */
@@ -60,6 +75,33 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+     * * `amazonlinux-1-x86_64`
+     * * `amazonlinux-2-x86_64`
+     * * `ubuntu-18.04-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+     * 
+     */
+    @Import(name="imageId")
+    private @Nullable Output<String> imageId;
+
+    /**
+     * @return The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+     * * `amazonlinux-1-x86_64`
+     * * `amazonlinux-2-x86_64`
+     * * `ubuntu-18.04-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+     * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+     * 
+     */
+    public Optional<Output<String>> imageId() {
+        return Optional.ofNullable(this.imageId);
     }
 
     /**
@@ -172,7 +214,9 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
     private EnvironmentEC2State(EnvironmentEC2State $) {
         this.arn = $.arn;
         this.automaticStopTimeMinutes = $.automaticStopTimeMinutes;
+        this.connectionType = $.connectionType;
         this.description = $.description;
+        this.imageId = $.imageId;
         this.instanceType = $.instanceType;
         this.name = $.name;
         this.ownerArn = $.ownerArn;
@@ -243,6 +287,27 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
         }
 
         /**
+         * @param connectionType The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionType(@Nullable Output<String> connectionType) {
+            $.connectionType = connectionType;
+            return this;
+        }
+
+        /**
+         * @param connectionType The connection type used for connecting to an Amazon EC2 environment. Valid values are `CONNECT_SSH` and `CONNECT_SSM`. For more information please refer [AWS documentation for Cloud9](https://docs.aws.amazon.com/cloud9/latest/user-guide/ec2-ssm.html).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder connectionType(String connectionType) {
+            return connectionType(Output.of(connectionType));
+        }
+
+        /**
          * @param description The description of the environment.
          * 
          * @return builder
@@ -261,6 +326,39 @@ public final class EnvironmentEC2State extends com.pulumi.resources.ResourceArgs
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param imageId The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+         * * `amazonlinux-1-x86_64`
+         * * `amazonlinux-2-x86_64`
+         * * `ubuntu-18.04-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(@Nullable Output<String> imageId) {
+            $.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * @param imageId The identifier for the Amazon Machine Image (AMI) that&#39;s used to create the EC2 instance. Valid values are
+         * * `amazonlinux-1-x86_64`
+         * * `amazonlinux-2-x86_64`
+         * * `ubuntu-18.04-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-1-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/amazonlinux-2-x86_64`
+         * * `resolve:ssm:/aws/service/cloud9/amis/ubuntu-18.04-x86_64`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
         }
 
         /**

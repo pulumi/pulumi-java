@@ -61,14 +61,14 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+     * The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
      * 
      */
     @Import(name="principal", required=true)
     private Output<String> principal;
 
     /**
-     * @return The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+     * @return The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
      * 
      */
     public Output<String> principal() {
@@ -76,14 +76,29 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+     * The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+     * 
+     */
+    @Import(name="principalOrgId")
+    private @Nullable Output<String> principalOrgId;
+
+    /**
+     * @return The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+     * 
+     */
+    public Optional<Output<String>> principalOrgId() {
+        return Optional.ofNullable(this.principalOrgId);
+    }
+
+    /**
+     * Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
      * 
      */
     @Import(name="qualifier")
     private @Nullable Output<String> qualifier;
 
     /**
-     * @return Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+     * @return Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
      * 
      */
     public Optional<Output<String>> qualifier() {
@@ -165,6 +180,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
         this.eventSourceToken = $.eventSourceToken;
         this.function = $.function;
         this.principal = $.principal;
+        this.principalOrgId = $.principalOrgId;
         this.qualifier = $.qualifier;
         this.sourceAccount = $.sourceAccount;
         this.sourceArn = $.sourceArn;
@@ -254,7 +270,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param principal The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+         * @param principal The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
          * 
          * @return builder
          * 
@@ -265,7 +281,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param principal The principal who is getting this permissionE.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
+         * @param principal The principal who is getting this permission e.g., `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
          * 
          * @return builder
          * 
@@ -275,7 +291,28 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param qualifier Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+         * @param principalOrgId The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalOrgId(@Nullable Output<String> principalOrgId) {
+            $.principalOrgId = principalOrgId;
+            return this;
+        }
+
+        /**
+         * @param principalOrgId The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder principalOrgId(String principalOrgId) {
+            return principalOrgId(Output.of(principalOrgId));
+        }
+
+        /**
+         * @param qualifier Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
          * 
          * @return builder
          * 
@@ -286,7 +323,7 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param qualifier Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARNE.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+         * @param qualifier Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
          * 
          * @return builder
          * 

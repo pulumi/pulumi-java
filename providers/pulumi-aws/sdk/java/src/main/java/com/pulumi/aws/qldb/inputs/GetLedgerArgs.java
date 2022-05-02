@@ -5,7 +5,10 @@ package com.pulumi.aws.qldb.inputs;
 
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
@@ -27,10 +30,18 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    @Import(name="tags")
+    private @Nullable Map<String,String> tags;
+
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
+    }
+
     private GetLedgerArgs() {}
 
     private GetLedgerArgs(GetLedgerArgs $) {
         this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
@@ -59,6 +70,11 @@ public final class GetLedgerArgs extends com.pulumi.resources.InvokeArgs {
          */
         public Builder name(String name) {
             $.name = name;
+            return this;
+        }
+
+        public Builder tags(@Nullable Map<String,String> tags) {
+            $.tags = tags;
             return this;
         }
 

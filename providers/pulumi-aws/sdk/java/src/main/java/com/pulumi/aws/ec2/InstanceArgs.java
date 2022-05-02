@@ -567,14 +567,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Import(name="userData")
     private @Nullable Output<String> userData;
 
     /**
-     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+     * @return User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Optional<Output<String>> userData() {
@@ -582,18 +582,33 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     @Import(name="userDataBase64")
     private @Nullable Output<String> userDataBase64;
 
     /**
-     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+     * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
      * 
      */
     public Optional<Output<String>> userDataBase64() {
         return Optional.ofNullable(this.userDataBase64);
+    }
+
+    /**
+     * When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    @Import(name="userDataReplaceOnChange")
+    private @Nullable Output<Boolean> userDataReplaceOnChange;
+
+    /**
+     * @return When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+     * 
+     */
+    public Optional<Output<Boolean>> userDataReplaceOnChange() {
+        return Optional.ofNullable(this.userDataReplaceOnChange);
     }
 
     /**
@@ -666,6 +681,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         this.tenancy = $.tenancy;
         this.userData = $.userData;
         this.userDataBase64 = $.userDataBase64;
+        this.userDataReplaceOnChange = $.userDataReplaceOnChange;
         this.volumeTags = $.volumeTags;
         this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
     }
@@ -1538,7 +1554,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1549,7 +1565,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+         * @param userData User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1559,7 +1575,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
@@ -1570,13 +1586,34 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+         * @param userDataBase64 Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the `user_data_replace_on_change` is set then updates to this field will trigger a destroy and recreate.
          * 
          * @return builder
          * 
          */
         public Builder userDataBase64(String userDataBase64) {
             return userDataBase64(Output.of(userDataBase64));
+        }
+
+        /**
+         * @param userDataReplaceOnChange When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userDataReplaceOnChange(@Nullable Output<Boolean> userDataReplaceOnChange) {
+            $.userDataReplaceOnChange = userDataReplaceOnChange;
+            return this;
+        }
+
+        /**
+         * @param userDataReplaceOnChange When used in combination with `user_data` or `user_data_base64` will trigger a destroy and recreate when set to `true`. Defaults to `false` if not set.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userDataReplaceOnChange(Boolean userDataReplaceOnChange) {
+            return userDataReplaceOnChange(Output.of(userDataReplaceOnChange));
         }
 
         /**

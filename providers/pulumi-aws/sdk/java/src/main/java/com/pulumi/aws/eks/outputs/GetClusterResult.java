@@ -24,7 +24,7 @@ public final class GetClusterResult {
      * @return Nested attribute containing `certificate-authority-data` for your cluster.
      * 
      */
-    private final GetClusterCertificateAuthority certificateAuthority;
+    private final List<GetClusterCertificateAuthority> certificateAuthorities;
     /**
      * @return The Unix epoch time stamp in seconds for when the cluster was created.
      * 
@@ -90,7 +90,7 @@ public final class GetClusterResult {
     @CustomType.Constructor
     private GetClusterResult(
         @CustomType.Parameter("arn") String arn,
-        @CustomType.Parameter("certificateAuthority") GetClusterCertificateAuthority certificateAuthority,
+        @CustomType.Parameter("certificateAuthorities") List<GetClusterCertificateAuthority> certificateAuthorities,
         @CustomType.Parameter("createdAt") String createdAt,
         @CustomType.Parameter("enabledClusterLogTypes") List<String> enabledClusterLogTypes,
         @CustomType.Parameter("endpoint") String endpoint,
@@ -105,7 +105,7 @@ public final class GetClusterResult {
         @CustomType.Parameter("version") String version,
         @CustomType.Parameter("vpcConfig") GetClusterVpcConfig vpcConfig) {
         this.arn = arn;
-        this.certificateAuthority = certificateAuthority;
+        this.certificateAuthorities = certificateAuthorities;
         this.createdAt = createdAt;
         this.enabledClusterLogTypes = enabledClusterLogTypes;
         this.endpoint = endpoint;
@@ -132,8 +132,8 @@ public final class GetClusterResult {
      * @return Nested attribute containing `certificate-authority-data` for your cluster.
      * 
      */
-    public GetClusterCertificateAuthority certificateAuthority() {
-        return this.certificateAuthority;
+    public List<GetClusterCertificateAuthority> certificateAuthorities() {
+        return this.certificateAuthorities;
     }
     /**
      * @return The Unix epoch time stamp in seconds for when the cluster was created.
@@ -233,7 +233,7 @@ public final class GetClusterResult {
 
     public static final class Builder {
         private String arn;
-        private GetClusterCertificateAuthority certificateAuthority;
+        private List<GetClusterCertificateAuthority> certificateAuthorities;
         private String createdAt;
         private List<String> enabledClusterLogTypes;
         private String endpoint;
@@ -255,7 +255,7 @@ public final class GetClusterResult {
         public Builder(GetClusterResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
-    	      this.certificateAuthority = defaults.certificateAuthority;
+    	      this.certificateAuthorities = defaults.certificateAuthorities;
     	      this.createdAt = defaults.createdAt;
     	      this.enabledClusterLogTypes = defaults.enabledClusterLogTypes;
     	      this.endpoint = defaults.endpoint;
@@ -275,9 +275,12 @@ public final class GetClusterResult {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
-        public Builder certificateAuthority(GetClusterCertificateAuthority certificateAuthority) {
-            this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
+        public Builder certificateAuthorities(List<GetClusterCertificateAuthority> certificateAuthorities) {
+            this.certificateAuthorities = Objects.requireNonNull(certificateAuthorities);
             return this;
+        }
+        public Builder certificateAuthorities(GetClusterCertificateAuthority... certificateAuthorities) {
+            return certificateAuthorities(List.of(certificateAuthorities));
         }
         public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
@@ -340,7 +343,7 @@ public final class GetClusterResult {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
         }        public GetClusterResult build() {
-            return new GetClusterResult(arn, certificateAuthority, createdAt, enabledClusterLogTypes, endpoint, id, identities, kubernetesNetworkConfigs, name, platformVersion, roleArn, status, tags, version, vpcConfig);
+            return new GetClusterResult(arn, certificateAuthorities, createdAt, enabledClusterLogTypes, endpoint, id, identities, kubernetesNetworkConfigs, name, platformVersion, roleArn, status, tags, version, vpcConfig);
         }
     }
 }

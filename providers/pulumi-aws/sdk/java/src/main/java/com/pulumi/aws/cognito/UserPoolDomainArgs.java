@@ -31,14 +31,14 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The domain string.
+     * For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
      * 
      */
     @Import(name="domain", required=true)
     private Output<String> domain;
 
     /**
-     * @return The domain string.
+     * @return For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
      * 
      */
     public Output<String> domain() {
@@ -108,7 +108,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param domain The domain string.
+         * @param domain For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class UserPoolDomainArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param domain The domain string.
+         * @param domain For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.
          * 
          * @return builder
          * 

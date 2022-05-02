@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class GetImageRecipeResult {
     private final String arn;
     /**
-     * @return Set of objects with block device mappings for the the image recipe.
+     * @return Set of objects with block device mappings for the image recipe.
      * 
      */
     private final List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings;
@@ -51,7 +51,7 @@ public final class GetImageRecipeResult {
      */
     private final String owner;
     /**
-     * @return Platform of the image recipe.
+     * @return Base image of the image recipe.
      * 
      */
     private final String parentImage;
@@ -117,7 +117,7 @@ public final class GetImageRecipeResult {
         return this.arn;
     }
     /**
-     * @return Set of objects with block device mappings for the the image recipe.
+     * @return Set of objects with block device mappings for the image recipe.
      * 
      */
     public List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings() {
@@ -166,7 +166,7 @@ public final class GetImageRecipeResult {
         return this.owner;
     }
     /**
-     * @return Platform of the image recipe.
+     * @return Base image of the image recipe.
      * 
      */
     public String parentImage() {

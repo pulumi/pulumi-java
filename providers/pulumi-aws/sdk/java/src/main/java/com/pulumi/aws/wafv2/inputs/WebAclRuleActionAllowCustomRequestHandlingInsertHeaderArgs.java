@@ -14,14 +14,14 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
     public static final WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs Empty = new WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs();
 
     /**
-     * The label string.
+     * Label string.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The label string.
+     * @return Label string.
      * 
      */
     public Output<String> name() {
@@ -29,14 +29,14 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
     }
 
     /**
-     * The value of the custom header.
+     * Value of the custom header.
      * 
      */
     @Import(name="value", required=true)
     private Output<String> value;
 
     /**
-     * @return The value of the custom header.
+     * @return Value of the custom header.
      * 
      */
     public Output<String> value() {
@@ -69,7 +69,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
         }
 
         /**
-         * @param name The label string.
+         * @param name Label string.
          * 
          * @return builder
          * 
@@ -80,7 +80,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
         }
 
         /**
-         * @param name The label string.
+         * @param name Label string.
          * 
          * @return builder
          * 
@@ -90,7 +90,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
         }
 
         /**
-         * @param value The value of the custom header.
+         * @param value Value of the custom header.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingInsertHeaderArgs ex
         }
 
         /**
-         * @param value The value of the custom header.
+         * @param value Value of the custom header.
          * 
          * @return builder
          * 

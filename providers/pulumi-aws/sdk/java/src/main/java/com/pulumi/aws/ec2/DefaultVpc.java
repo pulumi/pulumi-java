@@ -18,17 +18,6 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides a resource to manage the [default AWS VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html)
- * in the current region.
- * 
- * For AWS accounts created after 2013-12-04, each region comes with a Default VPC.
- * **This is an advanced resource**, and has special caveats to be aware of when
- * using it. Please read this document in its entirety before using this resource.
- * 
- * The `aws.ec2.DefaultVpc` behaves differently from normal resources, in that
- * this provider does not _create_ this resource, but instead &#34;adopts&#34; it
- * into management.
- * 
  * ## Example Usage
  * 
  * ## Import
@@ -42,89 +31,47 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:ec2/defaultVpc:DefaultVpc")
 public class DefaultVpc extends com.pulumi.resources.CustomResource {
-    /**
-     * Amazon Resource Name (ARN) of VPC
-     * 
-     */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    /**
-     * @return Amazon Resource Name (ARN) of VPC
-     * 
-     */
     public Output<String> arn() {
         return this.arn;
     }
-    /**
-     * Whether or not an Amazon-provided IPv6 CIDR
-     * block with a /56 prefix length for the VPC was assigned
-     * 
-     */
     @Export(name="assignGeneratedIpv6CidrBlock", type=Boolean.class, parameters={})
-    private Output<Boolean> assignGeneratedIpv6CidrBlock;
+    private Output</* @Nullable */ Boolean> assignGeneratedIpv6CidrBlock;
 
-    /**
-     * @return Whether or not an Amazon-provided IPv6 CIDR
-     * block with a /56 prefix length for the VPC was assigned
-     * 
-     */
-    public Output<Boolean> assignGeneratedIpv6CidrBlock() {
-        return this.assignGeneratedIpv6CidrBlock;
+    public Output<Optional<Boolean>> assignGeneratedIpv6CidrBlock() {
+        return Codegen.optional(this.assignGeneratedIpv6CidrBlock);
     }
     /**
-     * The CIDR block of the VPC
+     * The primary IPv4 CIDR block for the VPC
      * 
      */
     @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
-     * @return The CIDR block of the VPC
+     * @return The primary IPv4 CIDR block for the VPC
      * 
      */
     public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
-    /**
-     * The ID of the network ACL created by default on VPC creation
-     * 
-     */
     @Export(name="defaultNetworkAclId", type=String.class, parameters={})
     private Output<String> defaultNetworkAclId;
 
-    /**
-     * @return The ID of the network ACL created by default on VPC creation
-     * 
-     */
     public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId;
     }
-    /**
-     * The ID of the route table created by default on VPC creation
-     * 
-     */
     @Export(name="defaultRouteTableId", type=String.class, parameters={})
     private Output<String> defaultRouteTableId;
 
-    /**
-     * @return The ID of the route table created by default on VPC creation
-     * 
-     */
     public Output<String> defaultRouteTableId() {
         return this.defaultRouteTableId;
     }
-    /**
-     * The ID of the security group created by default on VPC creation
-     * 
-     */
     @Export(name="defaultSecurityGroupId", type=String.class, parameters={})
     private Output<String> defaultSecurityGroupId;
 
-    /**
-     * @return The ID of the security group created by default on VPC creation
-     * 
-     */
     public Output<String> defaultSecurityGroupId() {
         return this.defaultSecurityGroupId;
     }
@@ -134,21 +81,9 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
-    /**
-     * A boolean flag to enable/disable ClassicLink
-     * for the VPC. Only valid in regions and accounts that support EC2 Classic.
-     * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
-     * 
-     */
     @Export(name="enableClassiclink", type=Boolean.class, parameters={})
     private Output<Boolean> enableClassiclink;
 
-    /**
-     * @return A boolean flag to enable/disable ClassicLink
-     * for the VPC. Only valid in regions and accounts that support EC2 Classic.
-     * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
-     * 
-     */
     public Output<Boolean> enableClassiclink() {
         return this.enableClassiclink;
     }
@@ -158,85 +93,61 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     public Output<Boolean> enableClassiclinkDnsSupport() {
         return this.enableClassiclinkDnsSupport;
     }
-    /**
-     * A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-     * 
-     */
     @Export(name="enableDnsHostnames", type=Boolean.class, parameters={})
-    private Output<Boolean> enableDnsHostnames;
+    private Output</* @Nullable */ Boolean> enableDnsHostnames;
 
-    /**
-     * @return A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
-     * 
-     */
-    public Output<Boolean> enableDnsHostnames() {
-        return this.enableDnsHostnames;
+    public Output<Optional<Boolean>> enableDnsHostnames() {
+        return Codegen.optional(this.enableDnsHostnames);
     }
-    /**
-     * A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-     * 
-     */
     @Export(name="enableDnsSupport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsSupport;
 
-    /**
-     * @return A boolean flag to enable/disable DNS support in the VPC. Defaults true.
-     * 
-     */
     public Output<Optional<Boolean>> enableDnsSupport() {
         return Codegen.optional(this.enableDnsSupport);
     }
+    @Export(name="existingDefaultVpc", type=Boolean.class, parameters={})
+    private Output<Boolean> existingDefaultVpc;
+
+    public Output<Boolean> existingDefaultVpc() {
+        return this.existingDefaultVpc;
+    }
     /**
-     * Tenancy of instances spin up within VPC.
+     * Whether destroying the resource deletes the default VPC. Default: `false`
+     * 
+     */
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> forceDestroy;
+
+    /**
+     * @return Whether destroying the resource deletes the default VPC. Default: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
+    }
+    /**
+     * The allowed tenancy of instances launched into the VPC
      * 
      */
     @Export(name="instanceTenancy", type=String.class, parameters={})
     private Output<String> instanceTenancy;
 
     /**
-     * @return Tenancy of instances spin up within VPC.
+     * @return The allowed tenancy of instances launched into the VPC
      * 
      */
     public Output<String> instanceTenancy() {
         return this.instanceTenancy;
     }
-    @Export(name="ipv4IpamPoolId", type=String.class, parameters={})
-    private Output</* @Nullable */ String> ipv4IpamPoolId;
-
-    public Output<Optional<String>> ipv4IpamPoolId() {
-        return Codegen.optional(this.ipv4IpamPoolId);
-    }
-    @Export(name="ipv4NetmaskLength", type=Integer.class, parameters={})
-    private Output</* @Nullable */ Integer> ipv4NetmaskLength;
-
-    public Output<Optional<Integer>> ipv4NetmaskLength() {
-        return Codegen.optional(this.ipv4NetmaskLength);
-    }
-    /**
-     * The association ID for the IPv6 CIDR block of the VPC
-     * 
-     */
     @Export(name="ipv6AssociationId", type=String.class, parameters={})
     private Output<String> ipv6AssociationId;
 
-    /**
-     * @return The association ID for the IPv6 CIDR block of the VPC
-     * 
-     */
     public Output<String> ipv6AssociationId() {
         return this.ipv6AssociationId;
     }
-    /**
-     * The IPv6 CIDR block of the VPC
-     * 
-     */
     @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output<String> ipv6CidrBlock;
 
-    /**
-     * @return The IPv6 CIDR block of the VPC
-     * 
-     */
     public Output<String> ipv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
@@ -258,49 +169,21 @@ public class DefaultVpc extends com.pulumi.resources.CustomResource {
     public Output<Optional<Integer>> ipv6NetmaskLength() {
         return Codegen.optional(this.ipv6NetmaskLength);
     }
-    /**
-     * The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC&#39;s main route table by using an
-     * `aws.ec2.MainRouteTableAssociation`
-     * 
-     */
     @Export(name="mainRouteTableId", type=String.class, parameters={})
     private Output<String> mainRouteTableId;
 
-    /**
-     * @return The ID of the main route table associated with
-     * this VPC. Note that you can change a VPC&#39;s main route table by using an
-     * `aws.ec2.MainRouteTableAssociation`
-     * 
-     */
     public Output<String> mainRouteTableId() {
         return this.mainRouteTableId;
     }
-    /**
-     * The ID of the AWS account that owns the VPC.
-     * 
-     */
     @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
-    /**
-     * @return The ID of the AWS account that owns the VPC.
-     * 
-     */
     public Output<String> ownerId() {
         return this.ownerId;
     }
-    /**
-     * A map of tags to assign to the resource.
-     * 
-     */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    /**
-     * @return A map of tags to assign to the resource.
-     * 
-     */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }

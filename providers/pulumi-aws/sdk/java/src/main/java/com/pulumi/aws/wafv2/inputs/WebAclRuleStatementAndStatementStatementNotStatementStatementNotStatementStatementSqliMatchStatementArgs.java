@@ -18,14 +18,14 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
     public static final WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs Empty = new WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs();
 
     /**
-     * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     @Import(name="fieldToMatch")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
     /**
-     * @return The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+     * @return Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchArgs>> fieldToMatch() {
@@ -73,7 +73,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class WebAclRuleStatementAndStatementStatementNotStatementStatement
         }
 
         /**
-         * @param fieldToMatch The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
+         * @param fieldToMatch Part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
          * 
          * @return builder
          * 

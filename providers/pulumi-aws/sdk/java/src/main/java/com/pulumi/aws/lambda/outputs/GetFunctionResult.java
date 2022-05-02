@@ -5,6 +5,7 @@ package com.pulumi.aws.lambda.outputs;
 
 import com.pulumi.aws.lambda.outputs.GetFunctionDeadLetterConfig;
 import com.pulumi.aws.lambda.outputs.GetFunctionEnvironment;
+import com.pulumi.aws.lambda.outputs.GetFunctionEphemeralStorage;
 import com.pulumi.aws.lambda.outputs.GetFunctionFileSystemConfig;
 import com.pulumi.aws.lambda.outputs.GetFunctionTracingConfig;
 import com.pulumi.aws.lambda.outputs.GetFunctionVpcConfig;
@@ -49,6 +50,11 @@ public final class GetFunctionResult {
      * 
      */
     private final GetFunctionEnvironment environment;
+    /**
+     * @return The amount of Ephemeral storage(`/tmp`) allocated for the Lambda Function.
+     * 
+     */
+    private final List<GetFunctionEphemeralStorage> ephemeralStorages;
     /**
      * @return The connection settings for an Amazon EFS file system.
      * 
@@ -166,6 +172,7 @@ public final class GetFunctionResult {
         @CustomType.Parameter("deadLetterConfig") GetFunctionDeadLetterConfig deadLetterConfig,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("environment") GetFunctionEnvironment environment,
+        @CustomType.Parameter("ephemeralStorages") List<GetFunctionEphemeralStorage> ephemeralStorages,
         @CustomType.Parameter("fileSystemConfigs") List<GetFunctionFileSystemConfig> fileSystemConfigs,
         @CustomType.Parameter("functionName") String functionName,
         @CustomType.Parameter("handler") String handler,
@@ -196,6 +203,7 @@ public final class GetFunctionResult {
         this.deadLetterConfig = deadLetterConfig;
         this.description = description;
         this.environment = environment;
+        this.ephemeralStorages = ephemeralStorages;
         this.fileSystemConfigs = fileSystemConfigs;
         this.functionName = functionName;
         this.handler = handler;
@@ -263,6 +271,13 @@ public final class GetFunctionResult {
      */
     public GetFunctionEnvironment environment() {
         return this.environment;
+    }
+    /**
+     * @return The amount of Ephemeral storage(`/tmp`) allocated for the Lambda Function.
+     * 
+     */
+    public List<GetFunctionEphemeralStorage> ephemeralStorages() {
+        return this.ephemeralStorages;
     }
     /**
      * @return The connection settings for an Amazon EFS file system.
@@ -436,6 +451,7 @@ public final class GetFunctionResult {
         private GetFunctionDeadLetterConfig deadLetterConfig;
         private String description;
         private GetFunctionEnvironment environment;
+        private List<GetFunctionEphemeralStorage> ephemeralStorages;
         private List<GetFunctionFileSystemConfig> fileSystemConfigs;
         private String functionName;
         private String handler;
@@ -473,6 +489,7 @@ public final class GetFunctionResult {
     	      this.deadLetterConfig = defaults.deadLetterConfig;
     	      this.description = defaults.description;
     	      this.environment = defaults.environment;
+    	      this.ephemeralStorages = defaults.ephemeralStorages;
     	      this.fileSystemConfigs = defaults.fileSystemConfigs;
     	      this.functionName = defaults.functionName;
     	      this.handler = defaults.handler;
@@ -525,6 +542,13 @@ public final class GetFunctionResult {
         public Builder environment(GetFunctionEnvironment environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
+        }
+        public Builder ephemeralStorages(List<GetFunctionEphemeralStorage> ephemeralStorages) {
+            this.ephemeralStorages = Objects.requireNonNull(ephemeralStorages);
+            return this;
+        }
+        public Builder ephemeralStorages(GetFunctionEphemeralStorage... ephemeralStorages) {
+            return ephemeralStorages(List.of(ephemeralStorages));
         }
         public Builder fileSystemConfigs(List<GetFunctionFileSystemConfig> fileSystemConfigs) {
             this.fileSystemConfigs = Objects.requireNonNull(fileSystemConfigs);
@@ -628,7 +652,7 @@ public final class GetFunctionResult {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
         }        public GetFunctionResult build() {
-            return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, functionName, handler, id, imageUri, invokeArn, kmsKeyArn, lastModified, layers, memorySize, qualifiedArn, qualifier, reservedConcurrentExecutions, role, runtime, signingJobArn, signingProfileVersionArn, sourceCodeHash, sourceCodeSize, tags, timeout, tracingConfig, version, vpcConfig);
+            return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, ephemeralStorages, fileSystemConfigs, functionName, handler, id, imageUri, invokeArn, kmsKeyArn, lastModified, layers, memorySize, qualifiedArn, qualifier, reservedConcurrentExecutions, role, runtime, signingJobArn, signingProfileVersionArn, sourceCodeHash, sourceCodeSize, tags, timeout, tracingConfig, version, vpcConfig);
         }
     }
 }

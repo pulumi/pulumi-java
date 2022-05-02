@@ -54,6 +54,16 @@ public final class LaunchTemplateNetworkInterface {
      */
     private final @Nullable List<String> ipv4Addresses;
     /**
+     * @return The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+     * 
+     */
+    private final @Nullable Integer ipv4PrefixCount;
+    /**
+     * @return One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+     * 
+     */
+    private final @Nullable List<String> ipv4Prefixes;
+    /**
      * @return The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
      * 
      */
@@ -63,6 +73,16 @@ public final class LaunchTemplateNetworkInterface {
      * 
      */
     private final @Nullable List<String> ipv6Addresses;
+    /**
+     * @return The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+     * 
+     */
+    private final @Nullable Integer ipv6PrefixCount;
+    /**
+     * @return One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+     * 
+     */
+    private final @Nullable List<String> ipv6Prefixes;
     /**
      * @return The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
      * 
@@ -99,8 +119,12 @@ public final class LaunchTemplateNetworkInterface {
         @CustomType.Parameter("interfaceType") @Nullable String interfaceType,
         @CustomType.Parameter("ipv4AddressCount") @Nullable Integer ipv4AddressCount,
         @CustomType.Parameter("ipv4Addresses") @Nullable List<String> ipv4Addresses,
+        @CustomType.Parameter("ipv4PrefixCount") @Nullable Integer ipv4PrefixCount,
+        @CustomType.Parameter("ipv4Prefixes") @Nullable List<String> ipv4Prefixes,
         @CustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
         @CustomType.Parameter("ipv6Addresses") @Nullable List<String> ipv6Addresses,
+        @CustomType.Parameter("ipv6PrefixCount") @Nullable Integer ipv6PrefixCount,
+        @CustomType.Parameter("ipv6Prefixes") @Nullable List<String> ipv6Prefixes,
         @CustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
         @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
         @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
@@ -114,8 +138,12 @@ public final class LaunchTemplateNetworkInterface {
         this.interfaceType = interfaceType;
         this.ipv4AddressCount = ipv4AddressCount;
         this.ipv4Addresses = ipv4Addresses;
+        this.ipv4PrefixCount = ipv4PrefixCount;
+        this.ipv4Prefixes = ipv4Prefixes;
         this.ipv6AddressCount = ipv6AddressCount;
         this.ipv6Addresses = ipv6Addresses;
+        this.ipv6PrefixCount = ipv6PrefixCount;
+        this.ipv6Prefixes = ipv6Prefixes;
         this.networkCardIndex = networkCardIndex;
         this.networkInterfaceId = networkInterfaceId;
         this.privateIpAddress = privateIpAddress;
@@ -180,6 +208,20 @@ public final class LaunchTemplateNetworkInterface {
         return this.ipv4Addresses == null ? List.of() : this.ipv4Addresses;
     }
     /**
+     * @return The number of IPv4 prefixes to be automatically assigned to the network interface. Conflicts with `ipv4_prefixes`
+     * 
+     */
+    public Optional<Integer> ipv4PrefixCount() {
+        return Optional.ofNullable(this.ipv4PrefixCount);
+    }
+    /**
+     * @return One or more IPv4 prefixes to be assigned to the network interface. Conflicts with `ipv4_prefix_count`
+     * 
+     */
+    public List<String> ipv4Prefixes() {
+        return this.ipv4Prefixes == null ? List.of() : this.ipv4Prefixes;
+    }
+    /**
      * @return The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
      * 
      */
@@ -192,6 +234,20 @@ public final class LaunchTemplateNetworkInterface {
      */
     public List<String> ipv6Addresses() {
         return this.ipv6Addresses == null ? List.of() : this.ipv6Addresses;
+    }
+    /**
+     * @return The number of IPv6 prefixes to be automatically assigned to the network interface. Conflicts with `ipv6_prefixes`
+     * 
+     */
+    public Optional<Integer> ipv6PrefixCount() {
+        return Optional.ofNullable(this.ipv6PrefixCount);
+    }
+    /**
+     * @return One or more IPv6 prefixes to be assigned to the network interface. Conflicts with `ipv6_prefix_count`
+     * 
+     */
+    public List<String> ipv6Prefixes() {
+        return this.ipv6Prefixes == null ? List.of() : this.ipv6Prefixes;
     }
     /**
      * @return The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
@@ -246,8 +302,12 @@ public final class LaunchTemplateNetworkInterface {
         private @Nullable String interfaceType;
         private @Nullable Integer ipv4AddressCount;
         private @Nullable List<String> ipv4Addresses;
+        private @Nullable Integer ipv4PrefixCount;
+        private @Nullable List<String> ipv4Prefixes;
         private @Nullable Integer ipv6AddressCount;
         private @Nullable List<String> ipv6Addresses;
+        private @Nullable Integer ipv6PrefixCount;
+        private @Nullable List<String> ipv6Prefixes;
         private @Nullable Integer networkCardIndex;
         private @Nullable String networkInterfaceId;
         private @Nullable String privateIpAddress;
@@ -268,8 +328,12 @@ public final class LaunchTemplateNetworkInterface {
     	      this.interfaceType = defaults.interfaceType;
     	      this.ipv4AddressCount = defaults.ipv4AddressCount;
     	      this.ipv4Addresses = defaults.ipv4Addresses;
+    	      this.ipv4PrefixCount = defaults.ipv4PrefixCount;
+    	      this.ipv4Prefixes = defaults.ipv4Prefixes;
     	      this.ipv6AddressCount = defaults.ipv6AddressCount;
     	      this.ipv6Addresses = defaults.ipv6Addresses;
+    	      this.ipv6PrefixCount = defaults.ipv6PrefixCount;
+    	      this.ipv6Prefixes = defaults.ipv6Prefixes;
     	      this.networkCardIndex = defaults.networkCardIndex;
     	      this.networkInterfaceId = defaults.networkInterfaceId;
     	      this.privateIpAddress = defaults.privateIpAddress;
@@ -312,6 +376,17 @@ public final class LaunchTemplateNetworkInterface {
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+        public Builder ipv4PrefixCount(@Nullable Integer ipv4PrefixCount) {
+            this.ipv4PrefixCount = ipv4PrefixCount;
+            return this;
+        }
+        public Builder ipv4Prefixes(@Nullable List<String> ipv4Prefixes) {
+            this.ipv4Prefixes = ipv4Prefixes;
+            return this;
+        }
+        public Builder ipv4Prefixes(String... ipv4Prefixes) {
+            return ipv4Prefixes(List.of(ipv4Prefixes));
+        }
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
@@ -322,6 +397,17 @@ public final class LaunchTemplateNetworkInterface {
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
+        }
+        public Builder ipv6PrefixCount(@Nullable Integer ipv6PrefixCount) {
+            this.ipv6PrefixCount = ipv6PrefixCount;
+            return this;
+        }
+        public Builder ipv6Prefixes(@Nullable List<String> ipv6Prefixes) {
+            this.ipv6Prefixes = ipv6Prefixes;
+            return this;
+        }
+        public Builder ipv6Prefixes(String... ipv6Prefixes) {
+            return ipv6Prefixes(List.of(ipv6Prefixes));
         }
         public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
@@ -346,7 +432,7 @@ public final class LaunchTemplateNetworkInterface {
             this.subnetId = subnetId;
             return this;
         }        public LaunchTemplateNetworkInterface build() {
-            return new LaunchTemplateNetworkInterface(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv6AddressCount, ipv6Addresses, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);
+            return new LaunchTemplateNetworkInterface(associateCarrierIpAddress, associatePublicIpAddress, deleteOnTermination, description, deviceIndex, interfaceType, ipv4AddressCount, ipv4Addresses, ipv4PrefixCount, ipv4Prefixes, ipv6AddressCount, ipv6Addresses, ipv6PrefixCount, ipv6Prefixes, networkCardIndex, networkInterfaceId, privateIpAddress, securityGroups, subnetId);
         }
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.aws.fsx;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.fsx.LustreFileSystemArgs;
 import com.pulumi.aws.fsx.inputs.LustreFileSystemState;
+import com.pulumi.aws.fsx.outputs.LustreFileSystemLogConfiguration;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -259,6 +260,20 @@ public class LustreFileSystem extends com.pulumi.resources.CustomResource {
      */
     public Output<String> kmsKeyId() {
         return this.kmsKeyId;
+    }
+    /**
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+     * 
+     */
+    @Export(name="logConfiguration", type=LustreFileSystemLogConfiguration.class, parameters={})
+    private Output<LustreFileSystemLogConfiguration> logConfiguration;
+
+    /**
+     * @return The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+     * 
+     */
+    public Output<LustreFileSystemLogConfiguration> logConfiguration() {
+        return this.logConfiguration;
     }
     /**
      * The value to be used when mounting the filesystem.

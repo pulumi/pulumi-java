@@ -72,6 +72,20 @@ public class AmiFromInstance extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
+     * The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+     * 
+     */
+    @Export(name="bootMode", type=String.class, parameters={})
+    private Output<String> bootMode;
+
+    /**
+     * @return The boot mode of the AMI. For more information, see [Boot modes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html) in the Amazon Elastic Compute Cloud User Guide.
+     * 
+     */
+    public Output<String> bootMode() {
+        return this.bootMode;
+    }
+    /**
      * A longer, human-readable description for the AMI.
      * 
      */

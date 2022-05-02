@@ -38,15 +38,15 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @Import(name="artifactStore")
-    private @Nullable Output<PipelineArtifactStoreArgs> artifactStore;
+    @Import(name="artifactStores")
+    private @Nullable Output<List<PipelineArtifactStoreArgs>> artifactStores;
 
     /**
      * @return One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    public Optional<Output<PipelineArtifactStoreArgs>> artifactStore() {
-        return Optional.ofNullable(this.artifactStore);
+    public Optional<Output<List<PipelineArtifactStoreArgs>>> artifactStores() {
+        return Optional.ofNullable(this.artifactStores);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
 
     private PipelineState(PipelineState $) {
         this.arn = $.arn;
-        this.artifactStore = $.artifactStore;
+        this.artifactStores = $.artifactStores;
         this.name = $.name;
         this.roleArn = $.roleArn;
         this.stages = $.stages;
@@ -176,24 +176,34 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
          * 
          * @return builder
          * 
          */
-        public Builder artifactStore(@Nullable Output<PipelineArtifactStoreArgs> artifactStore) {
-            $.artifactStore = artifactStore;
+        public Builder artifactStores(@Nullable Output<List<PipelineArtifactStoreArgs>> artifactStores) {
+            $.artifactStores = artifactStores;
             return this;
         }
 
         /**
-         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
          * 
          * @return builder
          * 
          */
-        public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
-            return artifactStore(Output.of(artifactStore));
+        public Builder artifactStores(List<PipelineArtifactStoreArgs> artifactStores) {
+            return artifactStores(Output.of(artifactStores));
+        }
+
+        /**
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactStores(PipelineArtifactStoreArgs... artifactStores) {
+            return artifactStores(List.of(artifactStores));
         }
 
         /**

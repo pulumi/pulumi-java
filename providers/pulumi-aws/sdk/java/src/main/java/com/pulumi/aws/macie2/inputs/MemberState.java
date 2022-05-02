@@ -82,13 +82,13 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationDisableEmailNotification")
-    private @Nullable Output<String> invitationDisableEmailNotification;
+    private @Nullable Output<Boolean> invitationDisableEmailNotification;
 
     /**
      * @return Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    public Optional<Output<String>> invitationDisableEmailNotification() {
+    public Optional<Output<Boolean>> invitationDisableEmailNotification() {
         return Optional.ofNullable(this.invitationDisableEmailNotification);
     }
 
@@ -338,7 +338,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(@Nullable Output<Boolean> invitationDisableEmailNotification) {
             $.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
@@ -349,7 +349,7 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
          * @return builder
          * 
          */
-        public Builder invitationDisableEmailNotification(String invitationDisableEmailNotification) {
+        public Builder invitationDisableEmailNotification(Boolean invitationDisableEmailNotification) {
             return invitationDisableEmailNotification(Output.of(invitationDisableEmailNotification));
         }
 

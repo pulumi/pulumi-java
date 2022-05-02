@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.servicecatalog.inputs;
 
+import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductOutputArgs;
 import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterArgs;
 import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesArgs;
 import com.pulumi.core.Output;
@@ -183,6 +184,21 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      */
     public Optional<Output<List<String>>> notificationArns() {
         return Optional.ofNullable(this.notificationArns);
+    }
+
+    /**
+     * The set of outputs for the product created.
+     * 
+     */
+    @Import(name="outputs")
+    private @Nullable Output<List<ProvisionedProductOutputArgs>> outputs;
+
+    /**
+     * @return The set of outputs for the product created.
+     * 
+     */
+    public Optional<Output<List<ProvisionedProductOutputArgs>>> outputs() {
+        return Optional.ofNullable(this.outputs);
     }
 
     /**
@@ -409,6 +425,7 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
         this.launchRoleArn = $.launchRoleArn;
         this.name = $.name;
         this.notificationArns = $.notificationArns;
+        this.outputs = $.outputs;
         this.pathId = $.pathId;
         this.pathName = $.pathName;
         this.productId = $.productId;
@@ -692,6 +709,37 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
          */
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
+        }
+
+        /**
+         * @param outputs The set of outputs for the product created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outputs(@Nullable Output<List<ProvisionedProductOutputArgs>> outputs) {
+            $.outputs = outputs;
+            return this;
+        }
+
+        /**
+         * @param outputs The set of outputs for the product created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outputs(List<ProvisionedProductOutputArgs> outputs) {
+            return outputs(Output.of(outputs));
+        }
+
+        /**
+         * @param outputs The set of outputs for the product created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder outputs(ProvisionedProductOutputArgs... outputs) {
+            return outputs(List.of(outputs));
         }
 
         /**

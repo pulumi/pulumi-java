@@ -32,11 +32,35 @@ public final class Config {
         return Codegen.objectProp("assumeRole", AssumeRole.class).config(config).get();
     }
 /**
+ * File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+ * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+ * 
+ */
+    public Optional<String> customCaBundle() {
+        return Codegen.stringProp("customCaBundle").config(config).get();
+    }
+/**
  * Configuration block with settings to default resource tags across all resources.
  * 
  */
     public Optional<DefaultTags> defaultTags() {
         return Codegen.objectProp("defaultTags", DefaultTags.class).config(config).get();
+    }
+/**
+ * Address of the EC2 metadata service endpoint to use. Can also be configured using the
+ * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+ * 
+ */
+    public Optional<String> ec2MetadataServiceEndpoint() {
+        return Codegen.stringProp("ec2MetadataServiceEndpoint").config(config).get();
+    }
+/**
+ * Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+ * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+ * 
+ */
+    public Optional<String> ec2MetadataServiceEndpointMode() {
+        return Codegen.stringProp("ec2MetadataServiceEndpointMode").config(config).get();
     }
     public Optional<List<Endpoints>> endpoints() {
         return Codegen.objectProp("endpoints", TypeShape.<List<Endpoints>>builder(List.class).addParameter(Endpoints.class).build()).config(config).get();
@@ -78,23 +102,32 @@ public final class Config {
  * 
  */
     public Optional<String> profile() {
-        return Codegen.stringProp("profile").config(config).env("AWS_PROFILE").get();
+        return Codegen.stringProp("profile").config(config).get();
     }
 /**
  * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
  * 
  */
-    public String region() {
-        return Codegen.stringProp("region").config(config).env("AWS_REGION", "AWS_DEFAULT_REGION").require();
+    public Optional<String> region() {
+        return Codegen.stringProp("region").config(config).env("AWS_REGION", "AWS_DEFAULT_REGION").get();
     }
 /**
- * Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
- * default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+ * Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+ * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
  * Specific to the Amazon S3 service.
  * 
  */
     public Optional<Boolean> s3ForcePathStyle() {
         return Codegen.booleanProp("s3ForcePathStyle").config(config).get();
+    }
+/**
+ * Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+ * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
+ * Specific to the Amazon S3 service.
+ * 
+ */
+    public Optional<Boolean> s3UsePathStyle() {
+        return Codegen.booleanProp("s3UsePathStyle").config(config).get();
     }
 /**
  * The secret key for API operations. You can retrieve this from the &#39;Security &amp; Credentials&#39; section of the AWS console.
@@ -104,11 +137,25 @@ public final class Config {
         return Codegen.stringProp("secretKey").config(config).get();
     }
 /**
- * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+ * List of paths to shared config files. If not set, defaults to [~/.aws/config].
+ * 
+ */
+    public Optional<List<String>> sharedConfigFiles() {
+        return Codegen.objectProp("sharedConfigFiles", TypeShape.<List<String>>builder(List.class).addParameter(String.class).build()).config(config).get();
+    }
+/**
+ * The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
  * 
  */
     public Optional<String> sharedCredentialsFile() {
         return Codegen.stringProp("sharedCredentialsFile").config(config).get();
+    }
+/**
+ * List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
+ * 
+ */
+    public Optional<List<String>> sharedCredentialsFiles() {
+        return Codegen.objectProp("sharedCredentialsFiles", TypeShape.<List<String>>builder(List.class).addParameter(String.class).build()).config(config).get();
     }
 /**
  * Skip the credentials validation via STS API. Used for AWS API implementations that do not have STS
@@ -125,6 +172,10 @@ public final class Config {
     public Optional<Boolean> skipGetEc2Platforms() {
         return Codegen.booleanProp("skipGetEc2Platforms").config(config).def(true).get();
     }
+/**
+ * Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.
+ * 
+ */
     public Optional<Boolean> skipMetadataApiCheck() {
         return Codegen.booleanProp("skipMetadataApiCheck").config(config).def(true).get();
     }
@@ -144,10 +195,31 @@ public final class Config {
         return Codegen.booleanProp("skipRequestingAccountId").config(config).get();
     }
 /**
+ * The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+ * 
+ */
+    public Optional<String> stsRegion() {
+        return Codegen.stringProp("stsRegion").config(config).get();
+    }
+/**
  * session token. A session token is only required if you are using temporary security credentials.
  * 
  */
     public Optional<String> token() {
         return Codegen.stringProp("token").config(config).get();
+    }
+/**
+ * Resolve an endpoint with DualStack capability
+ * 
+ */
+    public Optional<Boolean> useDualstackEndpoint() {
+        return Codegen.booleanProp("useDualstackEndpoint").config(config).get();
+    }
+/**
+ * Resolve an endpoint with FIPS capability
+ * 
+ */
+    public Optional<Boolean> useFipsEndpoint() {
+        return Codegen.booleanProp("useFipsEndpoint").config(config).get();
     }
 }

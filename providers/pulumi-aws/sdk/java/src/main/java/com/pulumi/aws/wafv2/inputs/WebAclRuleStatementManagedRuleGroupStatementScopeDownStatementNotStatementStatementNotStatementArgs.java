@@ -15,14 +15,14 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     public static final WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementArgs Empty = new WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementArgs();
 
     /**
-     * The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     @Import(name="statements", required=true)
     private Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatementArgs>> statements;
 
     /**
-     * @return The statement to negate. You can use any statement that can be nested. See Statement above for details.
+     * @return Statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
     public Output<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementNotStatementStatementArgs>> statements() {
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 
@@ -75,7 +75,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
         }
 
         /**
-         * @param statements The statement to negate. You can use any statement that can be nested. See Statement above for details.
+         * @param statements Statement to negate. You can use any statement that can be nested. See Statement above for details.
          * 
          * @return builder
          * 

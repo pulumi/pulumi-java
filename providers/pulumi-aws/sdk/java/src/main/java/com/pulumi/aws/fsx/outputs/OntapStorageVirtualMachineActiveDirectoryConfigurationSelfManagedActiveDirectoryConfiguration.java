@@ -28,13 +28,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     private final @Nullable String fileSystemAdministratorsGroup;
     /**
-     * @deprecated
-     * use &#39;organizational_unit_distinguished_name&#39; instead
-     * 
-     */
-    @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    private final @Nullable String organizationalUnitDistinguidshedName;
-    /**
      * @return The fully qualified distinguished name of the organizational unit within your self-managed AD directory that the Windows File Server instance will join. For example, `OU=FSx,DC=yourdomain,DC=corp,DC=com`. Only accepts OU as the direct parent of the SVM. If none is provided, the SVM is created in the default location of your self-managed AD directory. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253).
      * 
      */
@@ -55,14 +48,12 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
         @CustomType.Parameter("dnsIps") List<String> dnsIps,
         @CustomType.Parameter("domainName") String domainName,
         @CustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
-        @CustomType.Parameter("organizationalUnitDistinguidshedName") @Nullable String organizationalUnitDistinguidshedName,
         @CustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
         @CustomType.Parameter("password") String password,
         @CustomType.Parameter("username") String username) {
         this.dnsIps = dnsIps;
         this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
-        this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         this.password = password;
         this.username = username;
@@ -88,15 +79,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     public Optional<String> fileSystemAdministratorsGroup() {
         return Optional.ofNullable(this.fileSystemAdministratorsGroup);
-    }
-    /**
-     * @deprecated
-     * use &#39;organizational_unit_distinguished_name&#39; instead
-     * 
-     */
-    @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    public Optional<String> organizationalUnitDistinguidshedName() {
-        return Optional.ofNullable(this.organizationalUnitDistinguidshedName);
     }
     /**
      * @return The fully qualified distinguished name of the organizational unit within your self-managed AD directory that the Windows File Server instance will join. For example, `OU=FSx,DC=yourdomain,DC=corp,DC=com`. Only accepts OU as the direct parent of the SVM. If none is provided, the SVM is created in the default location of your self-managed AD directory. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253).
@@ -132,7 +114,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
         private List<String> dnsIps;
         private String domainName;
         private @Nullable String fileSystemAdministratorsGroup;
-        private @Nullable String organizationalUnitDistinguidshedName;
         private @Nullable String organizationalUnitDistinguishedName;
         private String password;
         private String username;
@@ -146,7 +127,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     	      this.dnsIps = defaults.dnsIps;
     	      this.domainName = defaults.domainName;
     	      this.fileSystemAdministratorsGroup = defaults.fileSystemAdministratorsGroup;
-    	      this.organizationalUnitDistinguidshedName = defaults.organizationalUnitDistinguidshedName;
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
     	      this.password = defaults.password;
     	      this.username = defaults.username;
@@ -167,10 +147,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
-        public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
-            this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
-            return this;
-        }
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
@@ -183,7 +159,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
             this.username = Objects.requireNonNull(username);
             return this;
         }        public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration build() {
-            return new OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration(dnsIps, domainName, fileSystemAdministratorsGroup, organizationalUnitDistinguidshedName, organizationalUnitDistinguishedName, password, username);
+            return new OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration(dnsIps, domainName, fileSystemAdministratorsGroup, organizationalUnitDistinguishedName, password, username);
         }
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.aws.ecr.inputs;
 import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -17,21 +18,21 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
      * The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
      * 
      */
-    @Import(name="rule", required=true)
-    private Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule;
+    @Import(name="rules", required=true)
+    private Output<List<ReplicationConfigurationReplicationConfigurationRuleArgs>> rules;
 
     /**
      * @return The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
      * 
      */
-    public Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule() {
-        return this.rule;
+    public Output<List<ReplicationConfigurationReplicationConfigurationRuleArgs>> rules() {
+        return this.rules;
     }
 
     private ReplicationConfigurationReplicationConfigurationArgs() {}
 
     private ReplicationConfigurationReplicationConfigurationArgs(ReplicationConfigurationReplicationConfigurationArgs $) {
-        this.rule = $.rule;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
@@ -53,28 +54,38 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
         }
 
         /**
-         * @param rule The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+         * @param rules The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
          * 
          * @return builder
          * 
          */
-        public Builder rule(Output<ReplicationConfigurationReplicationConfigurationRuleArgs> rule) {
-            $.rule = rule;
+        public Builder rules(Output<List<ReplicationConfigurationReplicationConfigurationRuleArgs>> rules) {
+            $.rules = rules;
             return this;
         }
 
         /**
-         * @param rule The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+         * @param rules The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
          * 
          * @return builder
          * 
          */
-        public Builder rule(ReplicationConfigurationReplicationConfigurationRuleArgs rule) {
-            return rule(Output.of(rule));
+        public Builder rules(List<ReplicationConfigurationReplicationConfigurationRuleArgs> rules) {
+            return rules(Output.of(rules));
+        }
+
+        /**
+         * @param rules The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rules(ReplicationConfigurationReplicationConfigurationRuleArgs... rules) {
+            return rules(List.of(rules));
         }
 
         public ReplicationConfigurationReplicationConfigurationArgs build() {
-            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
             return $;
         }
     }

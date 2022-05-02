@@ -8,6 +8,7 @@ import com.pulumi.aws.ssm.inputs.AssociationTargetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,21 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<Boolean>> applyOnlyAtCronInterval() {
         return Optional.ofNullable(this.applyOnlyAtCronInterval);
+    }
+
+    /**
+     * The ARN of the SSM association
+     * 
+     */
+    @Import(name="arn")
+    private @Nullable Output<String> arn;
+
+    /**
+     * @return The ARN of the SSM association
+     * 
+     */
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -113,14 +129,22 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
     /**
      * The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
      * 
+     * @deprecated
+     * use &#39;targets&#39; argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId
+     * 
      */
+    @Deprecated /* use 'targets' argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId */
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
     /**
      * @return The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
      * 
+     * @deprecated
+     * use &#39;targets&#39; argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId
+     * 
      */
+    @Deprecated /* use 'targets' argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -230,10 +254,26 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.targets);
     }
 
+    /**
+     * The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+     * 
+     */
+    @Import(name="waitForSuccessTimeoutSeconds")
+    private @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
+
+    /**
+     * @return The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+     * 
+     */
+    public Optional<Output<Integer>> waitForSuccessTimeoutSeconds() {
+        return Optional.ofNullable(this.waitForSuccessTimeoutSeconds);
+    }
+
     private AssociationState() {}
 
     private AssociationState(AssociationState $) {
         this.applyOnlyAtCronInterval = $.applyOnlyAtCronInterval;
+        this.arn = $.arn;
         this.associationId = $.associationId;
         this.associationName = $.associationName;
         this.automationTargetParameterName = $.automationTargetParameterName;
@@ -247,6 +287,7 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
         this.parameters = $.parameters;
         this.scheduleExpression = $.scheduleExpression;
         this.targets = $.targets;
+        this.waitForSuccessTimeoutSeconds = $.waitForSuccessTimeoutSeconds;
     }
 
     public static Builder builder() {
@@ -286,6 +327,27 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder applyOnlyAtCronInterval(Boolean applyOnlyAtCronInterval) {
             return applyOnlyAtCronInterval(Output.of(applyOnlyAtCronInterval));
+        }
+
+        /**
+         * @param arn The ARN of the SSM association
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(@Nullable Output<String> arn) {
+            $.arn = arn;
+            return this;
+        }
+
+        /**
+         * @param arn The ARN of the SSM association
+         * 
+         * @return builder
+         * 
+         */
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
 
         /**
@@ -398,7 +460,11 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * use &#39;targets&#39; argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId
+         * 
          */
+        @Deprecated /* use 'targets' argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
@@ -409,7 +475,11 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * use &#39;targets&#39; argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId
+         * 
          */
+        @Deprecated /* use 'targets' argument instead. https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateAssociation.html#systemsmanager-CreateAssociation-request-InstanceId */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
@@ -569,6 +639,27 @@ public final class AssociationState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder targets(AssociationTargetArgs... targets) {
             return targets(List.of(targets));
+        }
+
+        /**
+         * @param waitForSuccessTimeoutSeconds The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder waitForSuccessTimeoutSeconds(@Nullable Output<Integer> waitForSuccessTimeoutSeconds) {
+            $.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * @param waitForSuccessTimeoutSeconds The number of seconds to wait for the association status to be `Success`. If `Success` status is not reached within the given time, create opration will fail.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder waitForSuccessTimeoutSeconds(Integer waitForSuccessTimeoutSeconds) {
+            return waitForSuccessTimeoutSeconds(Output.of(waitForSuccessTimeoutSeconds));
         }
 
         public AssociationState build() {

@@ -4,6 +4,7 @@
 package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.aws.glue.inputs.TriggerActionArgs;
+import com.pulumi.aws.glue.inputs.TriggerEventBatchingConditionArgs;
 import com.pulumi.aws.glue.inputs.TriggerPredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -78,6 +79,21 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
+    }
+
+    /**
+     * Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+     * 
+     */
+    @Import(name="eventBatchingConditions")
+    private @Nullable Output<List<TriggerEventBatchingConditionArgs>> eventBatchingConditions;
+
+    /**
+     * @return Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+     * 
+     */
+    public Optional<Output<List<TriggerEventBatchingConditionArgs>>> eventBatchingConditions() {
+        return Optional.ofNullable(this.eventBatchingConditions);
     }
 
     /**
@@ -222,6 +238,7 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
         this.arn = $.arn;
         this.description = $.description;
         this.enabled = $.enabled;
+        this.eventBatchingConditions = $.eventBatchingConditions;
         this.name = $.name;
         this.predicate = $.predicate;
         this.schedule = $.schedule;
@@ -343,6 +360,37 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
+        }
+
+        /**
+         * @param eventBatchingConditions Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventBatchingConditions(@Nullable Output<List<TriggerEventBatchingConditionArgs>> eventBatchingConditions) {
+            $.eventBatchingConditions = eventBatchingConditions;
+            return this;
+        }
+
+        /**
+         * @param eventBatchingConditions Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventBatchingConditions(List<TriggerEventBatchingConditionArgs> eventBatchingConditions) {
+            return eventBatchingConditions(Output.of(eventBatchingConditions));
+        }
+
+        /**
+         * @param eventBatchingConditions Batch condition that must be met (specified number of events received or batch time window expired) before EventBridge event trigger fires. See Event Batching Condition.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder eventBatchingConditions(TriggerEventBatchingConditionArgs... eventBatchingConditions) {
+            return eventBatchingConditions(List.of(eventBatchingConditions));
         }
 
         /**

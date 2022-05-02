@@ -19,14 +19,14 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
     /**
-     * The domain name. Must be between 1 and 512 characters in length.
+     * Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
     /**
-     * @return The domain name. Must be between 1 and 512 characters in length.
+     * @return Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     public Output<String> domainName() {
@@ -34,14 +34,14 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The domain name configuration.
+     * Domain name configuration. See below.
      * 
      */
     @Import(name="domainNameConfiguration", required=true)
     private Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
     /**
-     * @return The domain name configuration.
+     * @return Domain name configuration. See below.
      * 
      */
     public Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration() {
@@ -49,14 +49,14 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The mutual TLS authentication configuration for the domain name.
+     * Mutual TLS authentication configuration for the domain name.
      * 
      */
     @Import(name="mutualTlsAuthentication")
     private @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     /**
-     * @return The mutual TLS authentication configuration for the domain name.
+     * @return Mutual TLS authentication configuration for the domain name.
      * 
      */
     public Optional<Output<DomainNameMutualTlsAuthenticationArgs>> mutualTlsAuthentication() {
@@ -64,14 +64,14 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -106,7 +106,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * @param domainName Domain name. Must be between 1 and 512 characters in length.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainName The domain name. Must be between 1 and 512 characters in length.
+         * @param domainName Domain name. Must be between 1 and 512 characters in length.
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainNameConfiguration The domain name configuration.
+         * @param domainNameConfiguration Domain name configuration. See below.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param domainNameConfiguration The domain name configuration.
+         * @param domainNameConfiguration Domain name configuration. See below.
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name.
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for the domain name.
+         * @param mutualTlsAuthentication Mutual TLS authentication configuration for the domain name.
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

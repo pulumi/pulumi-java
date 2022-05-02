@@ -10,6 +10,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Optional;
@@ -38,7 +39,7 @@ import javax.annotation.Nullable;
 public class Addon extends com.pulumi.resources.CustomResource {
     /**
      * Name of the EKS add-on. The name must match one of
-     * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+     * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
     @Export(name="addonName", type=String.class, parameters={})
@@ -46,7 +47,7 @@ public class Addon extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Name of the EKS add-on. The name must match one of
-     * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
+     * the names returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
     public Output<String> addonName() {
@@ -125,6 +126,20 @@ public class Addon extends com.pulumi.resources.CustomResource {
         return this.modifiedAt;
     }
     /**
+     * Indicates if you want to preserve the created resources when deleting the EKS add-on.
+     * 
+     */
+    @Export(name="preserve", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> preserve;
+
+    /**
+     * @return Indicates if you want to preserve the created resources when deleting the EKS add-on.
+     * 
+     */
+    public Output<Optional<Boolean>> preserve() {
+        return Codegen.optional(this.preserve);
+    }
+    /**
      * Define how to resolve parameter value conflicts
      * when migrating an existing add-on to an Amazon EKS add-on or when applying
      * version updates to the add-on. Valid values are `NONE` and `OVERWRITE`.
@@ -167,14 +182,14 @@ public class Addon extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.serviceAccountRoleArn);
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {

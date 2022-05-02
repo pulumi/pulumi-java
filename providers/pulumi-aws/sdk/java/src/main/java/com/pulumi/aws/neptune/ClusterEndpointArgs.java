@@ -17,9 +17,17 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
 
     public static final ClusterEndpointArgs Empty = new ClusterEndpointArgs();
 
+    /**
+     * The identifier of the endpoint.
+     * 
+     */
     @Import(name="clusterEndpointIdentifier", required=true)
     private Output<String> clusterEndpointIdentifier;
 
+    /**
+     * @return The identifier of the endpoint.
+     * 
+     */
     public Output<String> clusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
     }
@@ -128,11 +136,23 @@ public final class ClusterEndpointArgs extends com.pulumi.resources.ResourceArgs
             $ = new ClusterEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterEndpointIdentifier The identifier of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointIdentifier(Output<String> clusterEndpointIdentifier) {
             $.clusterEndpointIdentifier = clusterEndpointIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterEndpointIdentifier The identifier of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
             return clusterEndpointIdentifier(Output.of(clusterEndpointIdentifier));
         }

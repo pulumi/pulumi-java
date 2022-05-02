@@ -3,10 +3,12 @@
 
 package com.pulumi.aws.glue.inputs;
 
+import com.pulumi.aws.glue.inputs.CatalogDatabaseCreateTableDefaultPermissionArgs;
 import com.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,6 +47,21 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<String>> catalogId() {
         return Optional.ofNullable(this.catalogId);
+    }
+
+    /**
+     * Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+     * 
+     */
+    @Import(name="createTableDefaultPermissions")
+    private @Nullable Output<List<CatalogDatabaseCreateTableDefaultPermissionArgs>> createTableDefaultPermissions;
+
+    /**
+     * @return Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+     * 
+     */
+    public Optional<Output<List<CatalogDatabaseCreateTableDefaultPermissionArgs>>> createTableDefaultPermissions() {
+        return Optional.ofNullable(this.createTableDefaultPermissions);
     }
 
     /**
@@ -127,6 +144,7 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
     private CatalogDatabaseState(CatalogDatabaseState $) {
         this.arn = $.arn;
         this.catalogId = $.catalogId;
+        this.createTableDefaultPermissions = $.createTableDefaultPermissions;
         this.description = $.description;
         this.locationUri = $.locationUri;
         this.name = $.name;
@@ -192,6 +210,37 @@ public final class CatalogDatabaseState extends com.pulumi.resources.ResourceArg
          */
         public Builder catalogId(String catalogId) {
             return catalogId(Output.of(catalogId));
+        }
+
+        /**
+         * @param createTableDefaultPermissions Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createTableDefaultPermissions(@Nullable Output<List<CatalogDatabaseCreateTableDefaultPermissionArgs>> createTableDefaultPermissions) {
+            $.createTableDefaultPermissions = createTableDefaultPermissions;
+            return this;
+        }
+
+        /**
+         * @param createTableDefaultPermissions Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createTableDefaultPermissions(List<CatalogDatabaseCreateTableDefaultPermissionArgs> createTableDefaultPermissions) {
+            return createTableDefaultPermissions(Output.of(createTableDefaultPermissions));
+        }
+
+        /**
+         * @param createTableDefaultPermissions Creates a set of default permissions on the table for principals. See `create_table_default_permission` below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder createTableDefaultPermissions(CatalogDatabaseCreateTableDefaultPermissionArgs... createTableDefaultPermissions) {
+            return createTableDefaultPermissions(List.of(createTableDefaultPermissions));
         }
 
         /**

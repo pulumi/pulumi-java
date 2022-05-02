@@ -37,6 +37,36 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * The ARN of the core network.
+     * 
+     */
+    @Import(name="coreNetworkArn")
+    private @Nullable Output<String> coreNetworkArn;
+
+    /**
+     * @return The ARN of the core network.
+     * 
+     */
+    public Optional<Output<String>> coreNetworkArn() {
+        return Optional.ofNullable(this.coreNetworkArn);
+    }
+
+    /**
+     * The ARN of the core network attachment.
+     * 
+     */
+    @Import(name="coreNetworkAttachmentArn")
+    private @Nullable Output<String> coreNetworkAttachmentArn;
+
+    /**
+     * @return The ARN of the core network attachment.
+     * 
+     */
+    public Optional<Output<String>> coreNetworkAttachmentArn() {
+        return Optional.ofNullable(this.coreNetworkAttachmentArn);
+    }
+
+    /**
      * The configuration information for the VPN connection&#39;s customer gateway (in the native XML format).
      * 
      */
@@ -985,6 +1015,8 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
 
     private VpnConnectionState(VpnConnectionState $) {
         this.arn = $.arn;
+        this.coreNetworkArn = $.coreNetworkArn;
+        this.coreNetworkAttachmentArn = $.coreNetworkAttachmentArn;
         this.customerGatewayConfiguration = $.customerGatewayConfiguration;
         this.customerGatewayId = $.customerGatewayId;
         this.enableAcceleration = $.enableAcceleration;
@@ -1087,6 +1119,48 @@ public final class VpnConnectionState extends com.pulumi.resources.ResourceArgs 
          */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
+        }
+
+        /**
+         * @param coreNetworkArn The ARN of the core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(@Nullable Output<String> coreNetworkArn) {
+            $.coreNetworkArn = coreNetworkArn;
+            return this;
+        }
+
+        /**
+         * @param coreNetworkArn The ARN of the core network.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkArn(String coreNetworkArn) {
+            return coreNetworkArn(Output.of(coreNetworkArn));
+        }
+
+        /**
+         * @param coreNetworkAttachmentArn The ARN of the core network attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkAttachmentArn(@Nullable Output<String> coreNetworkAttachmentArn) {
+            $.coreNetworkAttachmentArn = coreNetworkAttachmentArn;
+            return this;
+        }
+
+        /**
+         * @param coreNetworkAttachmentArn The ARN of the core network attachment.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder coreNetworkAttachmentArn(String coreNetworkAttachmentArn) {
+            return coreNetworkAttachmentArn(Output.of(coreNetworkAttachmentArn));
         }
 
         /**

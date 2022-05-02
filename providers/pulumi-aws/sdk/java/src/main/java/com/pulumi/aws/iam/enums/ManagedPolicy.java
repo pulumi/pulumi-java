@@ -289,6 +289,7 @@ import java.util.StringJoiner;
         ReadOnlyAccess("arn:aws:iam::aws:policy/ReadOnlyAccess"),
         ResourceGroupsandTagEditorFullAccess("arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess"),
         ResourceGroupsandTagEditorReadOnlyAccess("arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess"),
+        SecretsManagerReadWrite("arn:aws:iam::aws:policy/SecretsManagerReadWrite"),
         SecurityAudit("arn:aws:iam::aws:policy/SecurityAudit"),
         ServerMigrationConnector("arn:aws:iam::aws:policy/ServerMigrationConnector"),
         ServerMigrationServiceRole("arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole"),

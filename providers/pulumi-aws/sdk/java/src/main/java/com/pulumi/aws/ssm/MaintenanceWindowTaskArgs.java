@@ -20,6 +20,21 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
     public static final MaintenanceWindowTaskArgs Empty = new MaintenanceWindowTaskArgs();
 
     /**
+     * Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    @Import(name="cutoffBehavior")
+    private @Nullable Output<String> cutoffBehavior;
+
+    /**
+     * @return Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+     * 
+     */
+    public Optional<Output<String>> cutoffBehavior() {
+        return Optional.ofNullable(this.cutoffBehavior);
+    }
+
+    /**
      * The description of the maintenance window task.
      * 
      */
@@ -38,30 +53,30 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
      * The maximum number of targets this task can be run for in parallel.
      * 
      */
-    @Import(name="maxConcurrency", required=true)
-    private Output<String> maxConcurrency;
+    @Import(name="maxConcurrency")
+    private @Nullable Output<String> maxConcurrency;
 
     /**
      * @return The maximum number of targets this task can be run for in parallel.
      * 
      */
-    public Output<String> maxConcurrency() {
-        return this.maxConcurrency;
+    public Optional<Output<String>> maxConcurrency() {
+        return Optional.ofNullable(this.maxConcurrency);
     }
 
     /**
      * The maximum number of errors allowed before this task stops being scheduled.
      * 
      */
-    @Import(name="maxErrors", required=true)
-    private Output<String> maxErrors;
+    @Import(name="maxErrors")
+    private @Nullable Output<String> maxErrors;
 
     /**
      * @return The maximum number of errors allowed before this task stops being scheduled.
      * 
      */
-    public Output<String> maxErrors() {
-        return this.maxErrors;
+    public Optional<Output<String>> maxErrors() {
+        return Optional.ofNullable(this.maxErrors);
     }
 
     /**
@@ -187,6 +202,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
     private MaintenanceWindowTaskArgs() {}
 
     private MaintenanceWindowTaskArgs(MaintenanceWindowTaskArgs $) {
+        this.cutoffBehavior = $.cutoffBehavior;
         this.description = $.description;
         this.maxConcurrency = $.maxConcurrency;
         this.maxErrors = $.maxErrors;
@@ -219,6 +235,27 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param cutoffBehavior Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cutoffBehavior(@Nullable Output<String> cutoffBehavior) {
+            $.cutoffBehavior = cutoffBehavior;
+            return this;
+        }
+
+        /**
+         * @param cutoffBehavior Indicates whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached. Valid values are `CONTINUE_TASK` and `CANCEL_TASK`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder cutoffBehavior(String cutoffBehavior) {
+            return cutoffBehavior(Output.of(cutoffBehavior));
+        }
+
+        /**
          * @param description The description of the maintenance window task.
          * 
          * @return builder
@@ -245,7 +282,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder maxConcurrency(Output<String> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
             $.maxConcurrency = maxConcurrency;
             return this;
         }
@@ -266,7 +303,7 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
          * @return builder
          * 
          */
-        public Builder maxErrors(Output<String> maxErrors) {
+        public Builder maxErrors(@Nullable Output<String> maxErrors) {
             $.maxErrors = maxErrors;
             return this;
         }
@@ -460,8 +497,6 @@ public final class MaintenanceWindowTaskArgs extends com.pulumi.resources.Resour
         }
 
         public MaintenanceWindowTaskArgs build() {
-            $.maxConcurrency = Objects.requireNonNull($.maxConcurrency, "expected parameter 'maxConcurrency' to be non-null");
-            $.maxErrors = Objects.requireNonNull($.maxErrors, "expected parameter 'maxErrors' to be non-null");
             $.taskArn = Objects.requireNonNull($.taskArn, "expected parameter 'taskArn' to be non-null");
             $.taskType = Objects.requireNonNull($.taskType, "expected parameter 'taskType' to be non-null");
             $.windowId = Objects.requireNonNull($.windowId, "expected parameter 'windowId' to be non-null");

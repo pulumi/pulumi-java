@@ -63,34 +63,16 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.deletionProtection);
     }
 
-    /**
-     * Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-     * 
-     */
     @Import(name="engine")
     private @Nullable Output<String> engine;
 
-    /**
-     * @return Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-     * 
-     */
     public Optional<Output<String>> engine() {
         return Optional.ofNullable(this.engine);
     }
 
-    /**
-     * Engine version of the Aurora global database.
-     * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-     * 
-     */
     @Import(name="engineVersion")
     private @Nullable Output<String> engineVersion;
 
-    /**
-     * @return Engine version of the Aurora global database.
-     * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-     * 
-     */
     public Optional<Output<String>> engineVersion() {
         return Optional.ofNullable(this.engineVersion);
     }
@@ -111,14 +93,14 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The global cluster identifier.
+     * Global cluster identifier.
      * 
      */
     @Import(name="globalClusterIdentifier")
     private @Nullable Output<String> globalClusterIdentifier;
 
     /**
-     * @return The global cluster identifier.
+     * @return Global cluster identifier.
      * 
      */
     public Optional<Output<String>> globalClusterIdentifier() {
@@ -282,46 +264,20 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
             return deletionProtection(Output.of(deletionProtection));
         }
 
-        /**
-         * @param engine Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder engine(@Nullable Output<String> engine) {
             $.engine = engine;
             return this;
         }
 
-        /**
-         * @param engine Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder engine(String engine) {
             return engine(Output.of(engine));
         }
 
-        /**
-         * @param engineVersion Engine version of the Aurora global database.
-         * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
             $.engineVersion = engineVersion;
             return this;
         }
 
-        /**
-         * @param engineVersion Engine version of the Aurora global database.
-         * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder engineVersion(String engineVersion) {
             return engineVersion(Output.of(engineVersion));
         }
@@ -348,7 +304,7 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param globalClusterIdentifier The global cluster identifier.
+         * @param globalClusterIdentifier Global cluster identifier.
          * 
          * @return builder
          * 
@@ -359,7 +315,7 @@ public final class GlobalClusterState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param globalClusterIdentifier The global cluster identifier.
+         * @param globalClusterIdentifier Global cluster identifier.
          * 
          * @return builder
          * 

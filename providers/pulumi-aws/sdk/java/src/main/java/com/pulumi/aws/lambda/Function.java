@@ -9,6 +9,7 @@ import com.pulumi.aws.lambda.FunctionArgs;
 import com.pulumi.aws.lambda.inputs.FunctionState;
 import com.pulumi.aws.lambda.outputs.FunctionDeadLetterConfig;
 import com.pulumi.aws.lambda.outputs.FunctionEnvironment;
+import com.pulumi.aws.lambda.outputs.FunctionEphemeralStorage;
 import com.pulumi.aws.lambda.outputs.FunctionFileSystemConfig;
 import com.pulumi.aws.lambda.outputs.FunctionImageConfig;
 import com.pulumi.aws.lambda.outputs.FunctionTracingConfig;
@@ -146,6 +147,20 @@ public class Function extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<FunctionEnvironment>> environment() {
         return Codegen.optional(this.environment);
+    }
+    /**
+     * The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+     * 
+     */
+    @Export(name="ephemeralStorage", type=FunctionEphemeralStorage.class, parameters={})
+    private Output<FunctionEphemeralStorage> ephemeralStorage;
+
+    /**
+     * @return The amount of Ephemeral storage(`/tmp`) to allocate for the Lambda Function in MB. This parameter is used to expand the total amount of Ephemeral storage available, beyond the default amount of `512`MB. Detailed below.
+     * 
+     */
+    public Output<FunctionEphemeralStorage> ephemeralStorage() {
+        return this.ephemeralStorage;
     }
     /**
      * Configuration block. Detailed below.

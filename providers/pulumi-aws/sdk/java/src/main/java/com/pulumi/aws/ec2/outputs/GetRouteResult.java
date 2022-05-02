@@ -10,6 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetRouteResult {
     private final String carrierGatewayId;
+    private final String coreNetworkArn;
     private final String destinationCidrBlock;
     private final String destinationIpv6CidrBlock;
     private final String destinationPrefixListId;
@@ -31,6 +32,7 @@ public final class GetRouteResult {
     @CustomType.Constructor
     private GetRouteResult(
         @CustomType.Parameter("carrierGatewayId") String carrierGatewayId,
+        @CustomType.Parameter("coreNetworkArn") String coreNetworkArn,
         @CustomType.Parameter("destinationCidrBlock") String destinationCidrBlock,
         @CustomType.Parameter("destinationIpv6CidrBlock") String destinationIpv6CidrBlock,
         @CustomType.Parameter("destinationPrefixListId") String destinationPrefixListId,
@@ -45,6 +47,7 @@ public final class GetRouteResult {
         @CustomType.Parameter("transitGatewayId") String transitGatewayId,
         @CustomType.Parameter("vpcPeeringConnectionId") String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
+        this.coreNetworkArn = coreNetworkArn;
         this.destinationCidrBlock = destinationCidrBlock;
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;
@@ -62,6 +65,9 @@ public final class GetRouteResult {
 
     public String carrierGatewayId() {
         return this.carrierGatewayId;
+    }
+    public String coreNetworkArn() {
+        return this.coreNetworkArn;
     }
     public String destinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -117,6 +123,7 @@ public final class GetRouteResult {
 
     public static final class Builder {
         private String carrierGatewayId;
+        private String coreNetworkArn;
         private String destinationCidrBlock;
         private String destinationIpv6CidrBlock;
         private String destinationPrefixListId;
@@ -138,6 +145,7 @@ public final class GetRouteResult {
         public Builder(GetRouteResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.carrierGatewayId = defaults.carrierGatewayId;
+    	      this.coreNetworkArn = defaults.coreNetworkArn;
     	      this.destinationCidrBlock = defaults.destinationCidrBlock;
     	      this.destinationIpv6CidrBlock = defaults.destinationIpv6CidrBlock;
     	      this.destinationPrefixListId = defaults.destinationPrefixListId;
@@ -155,6 +163,10 @@ public final class GetRouteResult {
 
         public Builder carrierGatewayId(String carrierGatewayId) {
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
+            return this;
+        }
+        public Builder coreNetworkArn(String coreNetworkArn) {
+            this.coreNetworkArn = Objects.requireNonNull(coreNetworkArn);
             return this;
         }
         public Builder destinationCidrBlock(String destinationCidrBlock) {
@@ -209,7 +221,7 @@ public final class GetRouteResult {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }        public GetRouteResult build() {
-            return new GetRouteResult(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, id, instanceId, localGatewayId, natGatewayId, networkInterfaceId, routeTableId, transitGatewayId, vpcPeeringConnectionId);
+            return new GetRouteResult(carrierGatewayId, coreNetworkArn, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, id, instanceId, localGatewayId, natGatewayId, networkInterfaceId, routeTableId, transitGatewayId, vpcPeeringConnectionId);
         }
     }
 }

@@ -61,6 +61,20 @@ public class Authorizer extends com.pulumi.resources.CustomResource {
         return this.authorizerFunctionArn;
     }
     /**
+     * Specifies whether the HTTP caching is enabled or not. Default: `false`.
+     * 
+     */
+    @Export(name="enableCachingForHttp", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> enableCachingForHttp;
+
+    /**
+     * @return Specifies whether the HTTP caching is enabled or not. Default: `false`.
+     * 
+     */
+    public Output<Optional<Boolean>> enableCachingForHttp() {
+        return Codegen.optional(this.enableCachingForHttp);
+    }
+    /**
      * The name of the authorizer.
      * 
      */

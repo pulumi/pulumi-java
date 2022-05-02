@@ -137,15 +137,15 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    @Import(name="lifecyclePolicy")
-    private @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
+    @Import(name="lifecyclePolicies")
+    private @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
 
     /**
      * @return A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    public Optional<Output<FileSystemLifecyclePolicyArgs>> lifecyclePolicy() {
-        return Optional.ofNullable(this.lifecyclePolicy);
+    public Optional<Output<List<FileSystemLifecyclePolicyArgs>>> lifecyclePolicies() {
+        return Optional.ofNullable(this.lifecyclePolicies);
     }
 
     /**
@@ -278,7 +278,7 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
         this.dnsName = $.dnsName;
         this.encrypted = $.encrypted;
         this.kmsKeyId = $.kmsKeyId;
-        this.lifecyclePolicy = $.lifecyclePolicy;
+        this.lifecyclePolicies = $.lifecyclePolicies;
         this.numberOfMountTargets = $.numberOfMountTargets;
         this.ownerId = $.ownerId;
         this.performanceMode = $.performanceMode;
@@ -461,24 +461,34 @@ public final class FileSystemState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lifecyclePolicy A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
+         * @param lifecyclePolicies A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
          * 
          * @return builder
          * 
          */
-        public Builder lifecyclePolicy(@Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy) {
-            $.lifecyclePolicy = lifecyclePolicy;
+        public Builder lifecyclePolicies(@Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
+            $.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
 
         /**
-         * @param lifecyclePolicy A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
+         * @param lifecyclePolicies A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
          * 
          * @return builder
          * 
          */
-        public Builder lifecyclePolicy(FileSystemLifecyclePolicyArgs lifecyclePolicy) {
-            return lifecyclePolicy(Output.of(lifecyclePolicy));
+        public Builder lifecyclePolicies(List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
+            return lifecyclePolicies(Output.of(lifecyclePolicies));
+        }
+
+        /**
+         * @param lifecyclePolicies A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lifecyclePolicies(FileSystemLifecyclePolicyArgs... lifecyclePolicies) {
+            return lifecyclePolicies(List.of(lifecyclePolicies));
         }
 
         /**

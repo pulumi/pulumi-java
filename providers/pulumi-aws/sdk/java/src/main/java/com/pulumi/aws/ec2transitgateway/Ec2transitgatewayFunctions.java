@@ -4,17 +4,25 @@
 package com.pulumi.aws.ec2transitgateway;
 
 import com.pulumi.aws.Utilities;
+import com.pulumi.aws.ec2transitgateway.inputs.GetConnectArgs;
+import com.pulumi.aws.ec2transitgateway.inputs.GetConnectPeerArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentArgs;
+import com.pulumi.aws.ec2transitgateway.inputs.GetMulticastDomainArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetPeeringAttachmentArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetRouteTableArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentArgs;
+import com.pulumi.aws.ec2transitgateway.inputs.GetVpcAttachmentsArgs;
 import com.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentArgs;
+import com.pulumi.aws.ec2transitgateway.outputs.GetConnectPeerResult;
+import com.pulumi.aws.ec2transitgateway.outputs.GetConnectResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetDirectConnectGatewayAttachmentResult;
+import com.pulumi.aws.ec2transitgateway.outputs.GetMulticastDomainResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetPeeringAttachmentResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetRouteTableResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetTransitGatewayResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetVpcAttachmentResult;
+import com.pulumi.aws.ec2transitgateway.outputs.GetVpcAttachmentsResult;
 import com.pulumi.aws.ec2transitgateway.outputs.GetVpnAttachmentResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -22,6 +30,36 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class Ec2transitgatewayFunctions {
+    /**
+     * Get information on an EC2 Transit Gateway Connect.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConnectResult> getConnect() {
+        return getConnect(GetConnectArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConnectResult> getConnect(GetConnectArgs args) {
+        return getConnect(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConnectResult> getConnect(GetConnectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getConnect:getConnect", TypeShape.of(GetConnectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information on an EC2 Transit Gateway Connect Peer.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetConnectPeerResult> getConnectPeer() {
+        return getConnectPeer(GetConnectPeerArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConnectPeerResult> getConnectPeer(GetConnectPeerArgs args) {
+        return getConnectPeer(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConnectPeerResult> getConnectPeer(GetConnectPeerArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getConnectPeer:getConnectPeer", TypeShape.of(GetConnectPeerResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Get information on an EC2 Transit Gateway&#39;s attachment to a Direct Connect Gateway.
      * 
@@ -36,6 +74,21 @@ public final class Ec2transitgatewayFunctions {
     }
     public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment(GetDirectConnectGatewayAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getDirectConnectGatewayAttachment:getDirectConnectGatewayAttachment", TypeShape.of(GetDirectConnectGatewayAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information on an EC2 Transit Gateway Multicast Domain.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetMulticastDomainResult> getMulticastDomain() {
+        return getMulticastDomain(GetMulticastDomainArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetMulticastDomainResult> getMulticastDomain(GetMulticastDomainArgs args) {
+        return getMulticastDomain(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetMulticastDomainResult> getMulticastDomain(GetMulticastDomainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getMulticastDomain:getMulticastDomain", TypeShape.of(GetMulticastDomainResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on an EC2 Transit Gateway Peering Attachment.
@@ -96,6 +149,21 @@ public final class Ec2transitgatewayFunctions {
     }
     public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment(GetVpcAttachmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpcAttachment:getVpcAttachment", TypeShape.of(GetVpcAttachmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Get information on EC2 Transit Gateway VPC Attachments.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetVpcAttachmentsResult> getVpcAttachments() {
+        return getVpcAttachments(GetVpcAttachmentsArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetVpcAttachmentsResult> getVpcAttachments(GetVpcAttachmentsArgs args) {
+        return getVpcAttachments(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetVpcAttachmentsResult> getVpcAttachments(GetVpcAttachmentsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpcAttachments:getVpcAttachments", TypeShape.of(GetVpcAttachmentsResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Get information on an EC2 Transit Gateway VPN Attachment.

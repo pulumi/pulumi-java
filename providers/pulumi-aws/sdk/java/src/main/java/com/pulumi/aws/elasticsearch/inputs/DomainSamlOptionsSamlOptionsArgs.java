@@ -109,14 +109,14 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
     }
 
     /**
-     * Element of the SAML assertion to use for username. Default is NameID.
+     * Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
      * 
      */
     @Import(name="subjectKey")
     private @Nullable Output<String> subjectKey;
 
     /**
-     * @return Element of the SAML assertion to use for username. Default is NameID.
+     * @return Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
      * 
      */
     public Optional<Output<String>> subjectKey() {
@@ -280,7 +280,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param subjectKey Element of the SAML assertion to use for username. Default is NameID.
+         * @param subjectKey Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
          * 
          * @return builder
          * 
@@ -291,7 +291,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends com.pulumi.resources
         }
 
         /**
-         * @param subjectKey Element of the SAML assertion to use for username. Default is NameID.
+         * @param subjectKey Custom SAML attribute to use for user names. Default is an empty string - `&#34;&#34;`. This will cause Elasticsearch to use the `NameID` element of the `Subject`, which is the default location for name identifiers in the SAML specification.
          * 
          * @return builder
          * 

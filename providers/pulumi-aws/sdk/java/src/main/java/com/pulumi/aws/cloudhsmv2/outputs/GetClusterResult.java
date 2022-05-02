@@ -3,7 +3,7 @@
 
 package com.pulumi.aws.cloudhsmv2.outputs;
 
-import com.pulumi.aws.cloudhsmv2.outputs.GetClusterClusterCertificates;
+import com.pulumi.aws.cloudhsmv2.outputs.GetClusterClusterCertificate;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetClusterResult {
      *   The number of available cluster certificates may vary depending on state of the cluster.
      * 
      */
-    private final GetClusterClusterCertificates clusterCertificates;
+    private final List<GetClusterClusterCertificate> clusterCertificates;
     private final String clusterId;
     private final String clusterState;
     /**
@@ -47,7 +47,7 @@ public final class GetClusterResult {
 
     @CustomType.Constructor
     private GetClusterResult(
-        @CustomType.Parameter("clusterCertificates") GetClusterClusterCertificates clusterCertificates,
+        @CustomType.Parameter("clusterCertificates") List<GetClusterClusterCertificate> clusterCertificates,
         @CustomType.Parameter("clusterId") String clusterId,
         @CustomType.Parameter("clusterState") String clusterState,
         @CustomType.Parameter("id") String id,
@@ -73,7 +73,7 @@ public final class GetClusterResult {
      *   The number of available cluster certificates may vary depending on state of the cluster.
      * 
      */
-    public GetClusterClusterCertificates clusterCertificates() {
+    public List<GetClusterClusterCertificate> clusterCertificates() {
         return this.clusterCertificates;
     }
     public String clusterId() {
@@ -120,7 +120,7 @@ public final class GetClusterResult {
     }
 
     public static final class Builder {
-        private GetClusterClusterCertificates clusterCertificates;
+        private List<GetClusterClusterCertificate> clusterCertificates;
         private String clusterId;
         private String clusterState;
         private String id;
@@ -143,9 +143,12 @@ public final class GetClusterResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder clusterCertificates(GetClusterClusterCertificates clusterCertificates) {
+        public Builder clusterCertificates(List<GetClusterClusterCertificate> clusterCertificates) {
             this.clusterCertificates = Objects.requireNonNull(clusterCertificates);
             return this;
+        }
+        public Builder clusterCertificates(GetClusterClusterCertificate... clusterCertificates) {
+            return clusterCertificates(List.of(clusterCertificates));
         }
         public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);

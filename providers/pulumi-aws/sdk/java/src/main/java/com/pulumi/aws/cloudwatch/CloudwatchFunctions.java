@@ -4,10 +4,12 @@
 package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.aws.Utilities;
+import com.pulumi.aws.cloudwatch.inputs.GetEventBusArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetEventConnectionArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetEventSourceArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetLogGroupArgs;
 import com.pulumi.aws.cloudwatch.inputs.GetLogGroupsArgs;
+import com.pulumi.aws.cloudwatch.outputs.GetEventBusResult;
 import com.pulumi.aws.cloudwatch.outputs.GetEventConnectionResult;
 import com.pulumi.aws.cloudwatch.outputs.GetEventSourceResult;
 import com.pulumi.aws.cloudwatch.outputs.GetLogGroupResult;
@@ -18,6 +20,20 @@ import com.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;
 
 public final class CloudwatchFunctions {
+    /**
+     * This data source can be used to fetch information about a specific
+     * EventBridge event bus. Use this data source to compute the ARN of
+     * an event bus, given the name of the bus.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args) {
+        return getEventBus(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudwatch/getEventBus:getEventBus", TypeShape.of(GetEventBusResult.class), args, Utilities.withVersion(options));
+    }
     /**
      * Use this data source to retrieve information about an EventBridge connection.
      * 

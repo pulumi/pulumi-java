@@ -20,6 +20,8 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * CloudSearch Domains can be imported using the `name`, e.g.,

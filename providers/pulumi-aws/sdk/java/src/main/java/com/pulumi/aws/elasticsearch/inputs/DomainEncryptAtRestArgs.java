@@ -17,31 +17,23 @@ public final class DomainEncryptAtRestArgs extends com.pulumi.resources.Resource
     public static final DomainEncryptAtRestArgs Empty = new DomainEncryptAtRestArgs();
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
     /**
-     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    /**
-     * KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
-     * 
-     */
     @Import(name="kmsKeyId")
     private @Nullable Output<String> kmsKeyId;
 
-    /**
-     * @return KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
-     * 
-     */
     public Optional<Output<String>> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -72,7 +64,7 @@ public final class DomainEncryptAtRestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
          * 
          * @return builder
          * 
@@ -83,7 +75,7 @@ public final class DomainEncryptAtRestArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
          * 
          * @return builder
          * 
@@ -92,23 +84,11 @@ public final class DomainEncryptAtRestArgs extends com.pulumi.resources.Resource
             return enabled(Output.of(enabled));
         }
 
-        /**
-         * @param kmsKeyId KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
-         * 
-         * @return builder
-         * 
-         */
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        /**
-         * @param kmsKeyId KMS key id to encrypt the Elasticsearch domain with. If not specified then it defaults to using the `aws/es` service KMS key.
-         * 
-         * @return builder
-         * 
-         */
         public Builder kmsKeyId(String kmsKeyId) {
             return kmsKeyId(Output.of(kmsKeyId));
         }

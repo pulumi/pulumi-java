@@ -17,31 +17,23 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
     public static final KeyPairArgs Empty = new KeyPairArgs();
 
     /**
-     * The name for the key pair.
+     * The key pair name.
      * 
      */
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
     /**
-     * @return The name for the key pair.
+     * @return The key pair name.
      * 
      */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
 
-    /**
-     * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
-     * 
-     */
     @Import(name="keyNamePrefix")
     private @Nullable Output<String> keyNamePrefix;
 
-    /**
-     * @return Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
-     * 
-     */
     public Optional<Output<String>> keyNamePrefix() {
         return Optional.ofNullable(this.keyNamePrefix);
     }
@@ -104,7 +96,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyName The name for the key pair.
+         * @param keyName The key pair name.
          * 
          * @return builder
          * 
@@ -115,7 +107,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param keyName The name for the key pair.
+         * @param keyName The key pair name.
          * 
          * @return builder
          * 
@@ -124,23 +116,11 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
             return keyName(Output.of(keyName));
         }
 
-        /**
-         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
             $.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
-        /**
-         * @param keyNamePrefix Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
-         * 
-         * @return builder
-         * 
-         */
         public Builder keyNamePrefix(String keyNamePrefix) {
             return keyNamePrefix(Output.of(keyNamePrefix));
         }

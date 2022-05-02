@@ -93,14 +93,14 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
         return this.dailyAutomaticBackupStartTime;
     }
     /**
-     * - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+     * - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
      * 
      */
     @Export(name="deploymentType", type=String.class, parameters={})
     private Output<String> deploymentType;
 
     /**
-     * @return - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
+     * @return - The filesystem deployment type. Supports `MULTI_AZ_1` and `SINGLE_AZ_1`.
      * 
      */
     public Output<String> deploymentType() {
@@ -289,14 +289,14 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.storageType);
     }
     /**
-     * A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+     * A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
      * 
      */
     @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
-     * @return A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
+     * @return A list of IDs for the subnets that the file system will be accessible from. Upto 2 subnets can be provided.
      * 
      */
     public Output<List<String>> subnetIds() {
@@ -330,9 +330,17 @@ public class OntapFileSystem extends com.pulumi.resources.CustomResource {
     public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
+    /**
+     * Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+     * 
+     */
     @Export(name="throughputCapacity", type=Integer.class, parameters={})
     private Output<Integer> throughputCapacity;
 
+    /**
+     * @return Sets the throughput capacity (in MBps) for the file system that you&#39;re creating. Valid values are `128`, `256`, `512`, `1024`, and `2048`.
+     * 
+     */
     public Output<Integer> throughputCapacity() {
         return this.throughputCapacity;
     }

@@ -47,9 +47,17 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * The Key Pair ID.
+     * 
+     */
     @Import(name="keyPairId")
     private @Nullable String keyPairId;
 
+    /**
+     * @return The Key Pair ID.
+     * 
+     */
     public Optional<String> keyPairId() {
         return Optional.ofNullable(this.keyPairId);
     }
@@ -128,6 +136,12 @@ public final class GetKeyPairArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param keyPairId The Key Pair ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPairId(@Nullable String keyPairId) {
             $.keyPairId = keyPairId;
             return this;

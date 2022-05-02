@@ -10,6 +10,7 @@ import com.pulumi.aws.cloudfront.inputs.GetFunctionArgs;
 import com.pulumi.aws.cloudfront.inputs.GetLogDeliveryCanonicalUserIdArgs;
 import com.pulumi.aws.cloudfront.inputs.GetOriginAccessIdentityArgs;
 import com.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyArgs;
+import com.pulumi.aws.cloudfront.inputs.GetRealtimeLogConfigArgs;
 import com.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicyArgs;
 import com.pulumi.aws.cloudfront.outputs.GetCachePolicyResult;
 import com.pulumi.aws.cloudfront.outputs.GetDistributionResult;
@@ -17,6 +18,7 @@ import com.pulumi.aws.cloudfront.outputs.GetFunctionResult;
 import com.pulumi.aws.cloudfront.outputs.GetLogDeliveryCanonicalUserIdResult;
 import com.pulumi.aws.cloudfront.outputs.GetOriginAccessIdentityResult;
 import com.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyResult;
+import com.pulumi.aws.cloudfront.outputs.GetRealtimeLogConfigResult;
 import com.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -97,6 +99,18 @@ public final class CloudfrontFunctions {
     }
     public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy(GetOriginRequestPolicyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginRequestPolicy:getOriginRequestPolicy", TypeShape.of(GetOriginRequestPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Provides a CloudFront real-time log configuration resource.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args) {
+        return getRealtimeLogConfig(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:cloudfront/getRealtimeLogConfig:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Use this data source to retrieve information about a CloudFront cache policy.

@@ -26,14 +26,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     public static final WebAclRuleStatementAndStatementStatementArgs Empty = new WebAclRuleStatementAndStatementStatementArgs();
 
     /**
-     * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+     * Logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
      * 
      */
     @Import(name="andStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementAndStatementArgs> andStatement;
 
     /**
-     * @return A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+     * @return Logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementAndStatementArgs>> andStatement() {
@@ -41,14 +41,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+     * Rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
      * 
      */
     @Import(name="byteMatchStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
     /**
-     * @return A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+     * @return Rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementByteMatchStatementArgs>> byteMatchStatement() {
@@ -56,14 +56,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+     * Rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
      * 
      */
     @Import(name="geoMatchStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
     /**
-     * @return A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+     * @return Rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs>> geoMatchStatement() {
@@ -71,14 +71,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+     * Rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
      * 
      */
     @Import(name="ipSetReferenceStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
     /**
-     * @return A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+     * @return Rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs>> ipSetReferenceStatement() {
@@ -86,14 +86,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+     * Rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
      * 
      */
     @Import(name="labelMatchStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
     /**
-     * @return A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+     * @return Rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs>> labelMatchStatement() {
@@ -101,14 +101,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+     * Logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
      * 
      */
     @Import(name="notStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementNotStatementArgs> notStatement;
 
     /**
-     * @return A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+     * @return Logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementNotStatementArgs>> notStatement() {
@@ -116,14 +116,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+     * Logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
      * 
      */
     @Import(name="orStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementArgs> orStatement;
 
     /**
-     * @return A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+     * @return Logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementOrStatementArgs>> orStatement() {
@@ -131,14 +131,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+     * Rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
      * 
      */
     @Import(name="regexPatternSetReferenceStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     /**
-     * @return A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+     * @return Rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs>> regexPatternSetReferenceStatement() {
@@ -146,14 +146,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+     * Rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
      */
     @Import(name="sizeConstraintStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
     /**
-     * @return A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+     * @return Rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs>> sizeConstraintStatement() {
@@ -176,14 +176,14 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
     }
 
     /**
-     * A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+     * Rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
      * 
      */
     @Import(name="xssMatchStatement")
     private @Nullable Output<WebAclRuleStatementAndStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
     /**
-     * @return A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+     * @return Rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementAndStatementStatementXssMatchStatementArgs>> xssMatchStatement() {
@@ -225,7 +225,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param andStatement A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+         * @param andStatement Logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param andStatement A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
+         * @param andStatement Logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
          * 
          * @return builder
          * 
@@ -246,7 +246,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+         * @param byteMatchStatement Rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
          * 
          * @return builder
          * 
@@ -257,7 +257,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param byteMatchStatement A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
+         * @param byteMatchStatement Rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
          * 
          * @return builder
          * 
@@ -267,7 +267,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param geoMatchStatement A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+         * @param geoMatchStatement Rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param geoMatchStatement A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
+         * @param geoMatchStatement Rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param ipSetReferenceStatement A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+         * @param ipSetReferenceStatement Rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
          * 
          * @return builder
          * 
@@ -299,7 +299,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param ipSetReferenceStatement A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
+         * @param ipSetReferenceStatement Rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
          * 
          * @return builder
          * 
@@ -309,7 +309,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param labelMatchStatement A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+         * @param labelMatchStatement Rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
          * 
          * @return builder
          * 
@@ -320,7 +320,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param labelMatchStatement A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
+         * @param labelMatchStatement Rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
          * 
          * @return builder
          * 
@@ -330,7 +330,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param notStatement A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+         * @param notStatement Logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
          * 
          * @return builder
          * 
@@ -341,7 +341,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param notStatement A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
+         * @param notStatement Logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
          * 
          * @return builder
          * 
@@ -351,7 +351,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param orStatement A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+         * @param orStatement Logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
          * 
          * @return builder
          * 
@@ -362,7 +362,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param orStatement A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
+         * @param orStatement Logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
          * 
          * @return builder
          * 
@@ -372,7 +372,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param regexPatternSetReferenceStatement A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+         * @param regexPatternSetReferenceStatement Rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
          * 
          * @return builder
          * 
@@ -383,7 +383,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param regexPatternSetReferenceStatement A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
+         * @param regexPatternSetReferenceStatement Rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
          * 
          * @return builder
          * 
@@ -393,7 +393,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param sizeConstraintStatement A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+         * @param sizeConstraintStatement Rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param sizeConstraintStatement A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
+         * @param sizeConstraintStatement Rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (&gt;) or less than (&lt;). See Size Constraint Statement below for more details.
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param xssMatchStatement A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+         * @param xssMatchStatement Rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
          * 
          * @return builder
          * 
@@ -446,7 +446,7 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends com.pulu
         }
 
         /**
-         * @param xssMatchStatement A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
+         * @param xssMatchStatement Rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
          * 
          * @return builder
          * 

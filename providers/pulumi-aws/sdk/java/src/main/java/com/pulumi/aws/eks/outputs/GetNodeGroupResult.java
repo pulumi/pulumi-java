@@ -6,6 +6,7 @@ package com.pulumi.aws.eks.outputs;
 import com.pulumi.aws.eks.outputs.GetNodeGroupRemoteAccess;
 import com.pulumi.aws.eks.outputs.GetNodeGroupResource;
 import com.pulumi.aws.eks.outputs.GetNodeGroupScalingConfig;
+import com.pulumi.aws.eks.outputs.GetNodeGroupTaint;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
@@ -88,6 +89,11 @@ public final class GetNodeGroupResult {
      */
     private final Map<String,String> tags;
     /**
+     * @return List of objects containing information about taints applied to the nodes in the EKS Node Group.
+     * 
+     */
+    private final List<GetNodeGroupTaint> taints;
+    /**
      * @return Kubernetes version.
      * 
      */
@@ -111,6 +117,7 @@ public final class GetNodeGroupResult {
         @CustomType.Parameter("status") String status,
         @CustomType.Parameter("subnetIds") List<String> subnetIds,
         @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("taints") List<GetNodeGroupTaint> taints,
         @CustomType.Parameter("version") String version) {
         this.amiType = amiType;
         this.arn = arn;
@@ -128,6 +135,7 @@ public final class GetNodeGroupResult {
         this.status = status;
         this.subnetIds = subnetIds;
         this.tags = tags;
+        this.taints = taints;
         this.version = version;
     }
 
@@ -236,6 +244,13 @@ public final class GetNodeGroupResult {
         return this.tags;
     }
     /**
+     * @return List of objects containing information about taints applied to the nodes in the EKS Node Group.
+     * 
+     */
+    public List<GetNodeGroupTaint> taints() {
+        return this.taints;
+    }
+    /**
      * @return Kubernetes version.
      * 
      */
@@ -268,6 +283,7 @@ public final class GetNodeGroupResult {
         private String status;
         private List<String> subnetIds;
         private Map<String,String> tags;
+        private List<GetNodeGroupTaint> taints;
         private String version;
 
         public Builder() {
@@ -292,6 +308,7 @@ public final class GetNodeGroupResult {
     	      this.status = defaults.status;
     	      this.subnetIds = defaults.subnetIds;
     	      this.tags = defaults.tags;
+    	      this.taints = defaults.taints;
     	      this.version = defaults.version;
         }
 
@@ -374,11 +391,18 @@ public final class GetNodeGroupResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
+        public Builder taints(List<GetNodeGroupTaint> taints) {
+            this.taints = Objects.requireNonNull(taints);
+            return this;
+        }
+        public Builder taints(GetNodeGroupTaint... taints) {
+            return taints(List.of(taints));
+        }
         public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }        public GetNodeGroupResult build() {
-            return new GetNodeGroupResult(amiType, arn, clusterName, diskSize, id, instanceTypes, labels, nodeGroupName, nodeRoleArn, releaseVersion, remoteAccesses, resources, scalingConfigs, status, subnetIds, tags, version);
+            return new GetNodeGroupResult(amiType, arn, clusterName, diskSize, id, instanceTypes, labels, nodeGroupName, nodeRoleArn, releaseVersion, remoteAccesses, resources, scalingConfigs, status, subnetIds, tags, taints, version);
         }
     }
 }
