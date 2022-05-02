@@ -23,27 +23,6 @@ import javax.annotation.Nullable;
  * Creates and destroys a volume in Docker. This can be used alongside docker.Container to prepare volumes that can be shared across containers.
  * 
  * ## Example Usage
- * ## Schema
- * 
- * ### Optional
- * 
- * - **driver** (String) Driver type for the volume. Defaults to `local`.
- * - **driver_opts** (Map of String) Options specific to the driver.
- * - **id** (String) The ID of this resource.
- * - **labels** (Block Set) User-defined key/value metadata (see below for nested schema)
- * - **name** (String) The name of the Docker volume (will be generated if not provided).
- * 
- * ### Read-Only
- * 
- * - **mountpoint** (String) The mountpoint of the volume.
- * 
- * &lt;a id=&#34;nestedblock--labels&#34;&gt;&lt;/a&gt;
- * ### Nested Schema for `labels`
- * 
- * Required:
- * 
- * - **label** (String) Name of the label
- * - **value** (String) Value of the label
  * 
  * ## Import
  * 

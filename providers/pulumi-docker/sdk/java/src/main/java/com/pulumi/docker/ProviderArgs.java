@@ -100,6 +100,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.registryAuth);
     }
 
+    /**
+     * Additional SSH option flags to be appended when using `ssh://` protocol
+     * 
+     */
+    @Import(name="sshOpts", json=true)
+    private @Nullable Output<List<String>> sshOpts;
+
+    /**
+     * @return Additional SSH option flags to be appended when using `ssh://` protocol
+     * 
+     */
+    public Optional<Output<List<String>>> sshOpts() {
+        return Optional.ofNullable(this.sshOpts);
+    }
+
     private ProviderArgs() {}
 
     private ProviderArgs(ProviderArgs $) {
@@ -109,6 +124,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.host = $.host;
         this.keyMaterial = $.keyMaterial;
         this.registryAuth = $.registryAuth;
+        this.sshOpts = $.sshOpts;
     }
 
     public static Builder builder() {
@@ -245,6 +261,37 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder registryAuth(ProviderRegistryAuthArgs... registryAuth) {
             return registryAuth(List.of(registryAuth));
+        }
+
+        /**
+         * @param sshOpts Additional SSH option flags to be appended when using `ssh://` protocol
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sshOpts(@Nullable Output<List<String>> sshOpts) {
+            $.sshOpts = sshOpts;
+            return this;
+        }
+
+        /**
+         * @param sshOpts Additional SSH option flags to be appended when using `ssh://` protocol
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sshOpts(List<String> sshOpts) {
+            return sshOpts(Output.of(sshOpts));
+        }
+
+        /**
+         * @param sshOpts Additional SSH option flags to be appended when using `ssh://` protocol
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sshOpts(String... sshOpts) {
+            return sshOpts(List.of(sshOpts));
         }
 
         public ProviderArgs build() {

@@ -23,59 +23,19 @@ import javax.annotation.Nullable;
  *  This resource will *not* pull new layers of the image automatically unless used in conjunction with docker.RegistryImage data source to update the `pull_triggers` field.
  * 
  * ## Example Usage
- * ## Schema
- * 
- * ### Required
- * 
- * - **name** (String) The name of the Docker image, including any tags or SHA256 repo digests.
- * 
- * ### Optional
- * 
- * - **build** (Block Set, Max: 1) Configuration to build an image. Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too. (see below for nested schema)
- * - **force_remove** (Boolean) If true, then the image is removed forcibly when the resource is destroyed.
- * - **id** (String) The ID of this resource.
- * - **keep_locally** (Boolean) If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
- * - **pull_trigger** (String, Deprecated) A value which cause an image pull when changed
- * - **pull_triggers** (Set of String) List of values which cause an image pull when changed. This is used to store the image digest from the registry when using the docker_registry_image.
- * 
- * ### Read-Only
- * 
- * - **latest** (String, Deprecated) The ID of the image in the form of `sha256:&lt;hash&gt;` image digest. Do not confuse it with the default `latest` tag.
- * - **output** (String, Deprecated)
- * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:&lt;hash&gt;`.
- * 
- * &lt;a id=&#34;nestedblock--build&#34;&gt;&lt;/a&gt;
- * ### Nested Schema for `build`
- * 
- * Required:
- * 
- * - **path** (String) Context path
- * 
- * Optional:
- * 
- * - **build_arg** (Map of String) Set build-time variables
- * - **dockerfile** (String) Name of the Dockerfile. Defaults to `Dockerfile`.
- * - **force_remove** (Boolean) Always remove intermediate containers
- * - **label** (Map of String) Set metadata for an image
- * - **no_cache** (Boolean) Do not use cache when building the image
- * - **remove** (Boolean) Remove intermediate containers after a successful build. Defaults to  `true`.
- * - **tag** (List of String) Name and optionally a tag in the &#39;name:tag&#39; format
- * - **target** (String) Set the target build stage to build
  * 
  */
 @ResourceType(type="docker:index/remoteImage:RemoteImage")
 public class RemoteImage extends com.pulumi.resources.CustomResource {
     /**
-     * Configuration to build an image. Please see [docker build command
-     * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
+     * Configuration to build an image. Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
     @Export(name="build", type=RemoteImageBuild.class, parameters={})
     private Output</* @Nullable */ RemoteImageBuild> build;
 
     /**
-     * @return Configuration to build an image. Please see [docker build command
-     * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
+     * @return Configuration to build an image. Please see [docker build command reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
     public Output<Optional<RemoteImageBuild>> build() {
@@ -96,16 +56,14 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.forceRemove);
     }
     /**
-     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
-     * the docker local storage on destroy operation.
+     * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
      * 
      */
     @Export(name="keepLocally", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> keepLocally;
 
     /**
-     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
-     * the docker local storage on destroy operation.
+     * @return If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
      * 
      */
     public Output<Optional<Boolean>> keepLocally() {
@@ -174,16 +132,14 @@ public class RemoteImage extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.pullTrigger);
     }
     /**
-     * List of values which cause an image pull when changed. This is used to store the image digest from the registry when
-     * using the [docker_registry_image](../data-sources/registry_image.md).
+     * List of values which cause an image pull when changed. This is used to store the image digest from the registry when using the docker*registry*image.
      * 
      */
     @Export(name="pullTriggers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> pullTriggers;
 
     /**
-     * @return List of values which cause an image pull when changed. This is used to store the image digest from the registry when
-     * using the [docker_registry_image](../data-sources/registry_image.md).
+     * @return List of values which cause an image pull when changed. This is used to store the image digest from the registry when using the docker*registry*image.
      * 
      */
     public Output<Optional<List<String>>> pullTriggers() {
