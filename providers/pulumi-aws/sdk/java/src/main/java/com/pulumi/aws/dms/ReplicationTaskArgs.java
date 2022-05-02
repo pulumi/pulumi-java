@@ -5,6 +5,7 @@ package com.pulumi.aws.dms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -122,6 +123,21 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * Whether to run or stop the replication task.
+     * 
+     */
+    @Import(name="startReplicationTask")
+    private @Nullable Output<Boolean> startReplicationTask;
+
+    /**
+     * @return Whether to run or stop the replication task.
+     * 
+     */
+    public Optional<Output<Boolean>> startReplicationTask() {
+        return Optional.ofNullable(this.startReplicationTask);
+    }
+
+    /**
      * An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
      * 
      */
@@ -176,6 +192,7 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
         this.replicationTaskId = $.replicationTaskId;
         this.replicationTaskSettings = $.replicationTaskSettings;
         this.sourceEndpointArn = $.sourceEndpointArn;
+        this.startReplicationTask = $.startReplicationTask;
         this.tableMappings = $.tableMappings;
         this.tags = $.tags;
         this.targetEndpointArn = $.targetEndpointArn;
@@ -344,6 +361,27 @@ public final class ReplicationTaskArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder sourceEndpointArn(String sourceEndpointArn) {
             return sourceEndpointArn(Output.of(sourceEndpointArn));
+        }
+
+        /**
+         * @param startReplicationTask Whether to run or stop the replication task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startReplicationTask(@Nullable Output<Boolean> startReplicationTask) {
+            $.startReplicationTask = startReplicationTask;
+            return this;
+        }
+
+        /**
+         * @param startReplicationTask Whether to run or stop the replication task.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder startReplicationTask(Boolean startReplicationTask) {
+            return startReplicationTask(Output.of(startReplicationTask));
         }
 
         /**

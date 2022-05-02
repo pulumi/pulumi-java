@@ -162,30 +162,22 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
-    /**
-     * A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
-     * 
-     */
     @Import(name="records")
     private @Nullable Output<List<String>> records;
 
-    /**
-     * @return A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
-     * 
-     */
     public Optional<Output<List<String>>> records() {
         return Optional.ofNullable(this.records);
     }
 
     /**
-     * Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+     * Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, `multivalue_answer`, or `weighted` routing policies documented below.
      * 
      */
     @Import(name="setIdentifier")
     private @Nullable Output<String> setIdentifier;
 
     /**
-     * @return Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+     * @return Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, `multivalue_answer`, or `weighted` routing policies documented below.
      * 
      */
     public Optional<Output<String>> setIdentifier() {
@@ -522,39 +514,21 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
-        /**
-         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
-         * 
-         * @return builder
-         * 
-         */
         public Builder records(@Nullable Output<List<String>> records) {
             $.records = records;
             return this;
         }
 
-        /**
-         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
-         * 
-         * @return builder
-         * 
-         */
         public Builder records(List<String> records) {
             return records(Output.of(records));
         }
 
-        /**
-         * @param records A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\&#34;\&#34;` inside the configuration string (e.g. `&#34;first255characters\&#34;\&#34;morecharacters&#34;`).
-         * 
-         * @return builder
-         * 
-         */
         public Builder records(String... records) {
             return records(List.of(records));
         }
 
         /**
-         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, `multivalue_answer`, or `weighted` routing policies documented below.
          * 
          * @return builder
          * 
@@ -565,7 +539,7 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
+         * @param setIdentifier Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, `multivalue_answer`, or `weighted` routing policies documented below.
          * 
          * @return builder
          * 

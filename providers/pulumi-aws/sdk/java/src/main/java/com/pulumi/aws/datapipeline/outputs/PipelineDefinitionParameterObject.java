@@ -12,6 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineDefinitionParameterObject {
+    /**
+     * @return Configuration block for attributes of the parameter object. See below
+     * 
+     */
     private final @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes;
     /**
      * @return ID of the parameter value.
@@ -27,6 +31,10 @@ public final class PipelineDefinitionParameterObject {
         this.id = id;
     }
 
+    /**
+     * @return Configuration block for attributes of the parameter object. See below
+     * 
+     */
     public List<PipelineDefinitionParameterObjectAttribute> attributes() {
         return this.attributes == null ? List.of() : this.attributes;
     }

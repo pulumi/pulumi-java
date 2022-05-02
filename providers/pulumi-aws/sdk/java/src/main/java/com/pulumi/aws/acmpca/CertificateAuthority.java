@@ -192,14 +192,18 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
         return this.serial;
     }
     /**
-     * Status of the certificate authority.
+     * (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
+     * 
+     * @deprecated
+     * The reported value of the &#34;status&#34; attribute is often inaccurate. Use the resource&#39;s &#34;enabled&#34; attribute to explicitly set status.
      * 
      */
+    @Deprecated /* The reported value of the ""status"" attribute is often inaccurate. Use the resource's ""enabled"" attribute to explicitly set status. */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return Status of the certificate authority.
+     * @return (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
      * 
      */
     public Output<String> status() {
@@ -220,14 +224,14 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

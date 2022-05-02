@@ -54,14 +54,14 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * The web ACL capacity units (WCUs) currently being used by this web ACL.
+     * Web ACL capacity units (WCUs) currently being used by this web ACL.
      * 
      */
     @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
     /**
-     * @return The web ACL capacity units (WCUs) currently being used by this web ACL.
+     * @return Web ACL capacity units (WCUs) currently being used by this web ACL.
      * 
      */
     public Output<Integer> capacity() {
@@ -82,28 +82,28 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.customResponseBodies);
     }
     /**
-     * The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+     * Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
     @Export(name="defaultAction", type=WebAclDefaultAction.class, parameters={})
     private Output<WebAclDefaultAction> defaultAction;
 
     /**
-     * @return The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
+     * @return Action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
     public Output<WebAclDefaultAction> defaultAction() {
         return this.defaultAction;
     }
     /**
-     * A friendly description of the WebACL.
+     * Friendly description of the WebACL.
      * 
      */
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return A friendly description of the WebACL.
+     * @return Friendly description of the WebACL.
      * 
      */
     public Output<Optional<String>> description() {
@@ -116,28 +116,28 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
         return this.lockToken;
     }
     /**
-     * The label string.
+     * Label string.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The label string.
+     * @return Label string.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+     * Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
     @Export(name="rules", type=List.class, parameters={WebAclRule.class})
     private Output</* @Nullable */ List<WebAclRule>> rules;
 
     /**
-     * @return The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
+     * @return Rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
     public Output<Optional<List<WebAclRule>>> rules() {
@@ -158,28 +158,28 @@ public class WebAcl extends com.pulumi.resources.CustomResource {
         return this.scope;
     }
     /**
-     * An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of key-value pairs to associate with the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

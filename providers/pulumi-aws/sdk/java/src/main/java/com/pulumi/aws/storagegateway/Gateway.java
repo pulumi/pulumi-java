@@ -7,6 +7,7 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.storagegateway.GatewayArgs;
 import com.pulumi.aws.storagegateway.inputs.GatewayState;
 import com.pulumi.aws.storagegateway.outputs.GatewayGatewayNetworkInterface;
+import com.pulumi.aws.storagegateway.outputs.GatewayMaintenanceStartTime;
 import com.pulumi.aws.storagegateway.outputs.GatewaySmbActiveDirectorySettings;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -249,6 +250,20 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      */
     public Output<String> hostEnvironment() {
         return this.hostEnvironment;
+    }
+    /**
+     * The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+     * 
+     */
+    @Export(name="maintenanceStartTime", type=GatewayMaintenanceStartTime.class, parameters={})
+    private Output<GatewayMaintenanceStartTime> maintenanceStartTime;
+
+    /**
+     * @return The gateway&#39;s weekly maintenance start time information, including day and time of the week. The maintenance time is the time in your gateway&#39;s time zone. More details below.
+     * 
+     */
+    public Output<GatewayMaintenanceStartTime> maintenanceStartTime() {
+        return this.maintenanceStartTime;
     }
     /**
      * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.

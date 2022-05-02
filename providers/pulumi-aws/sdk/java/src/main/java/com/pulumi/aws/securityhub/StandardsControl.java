@@ -14,6 +14,10 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * ## Example Usage
+ * 
+ */
 @ResourceType(type="aws:securityhub/standardsControl:StandardsControl")
 public class StandardsControl extends com.pulumi.resources.CustomResource {
     /**

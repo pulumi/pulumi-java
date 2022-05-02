@@ -19,14 +19,14 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
     public static final IdentityPoolRoleAttachmentState Empty = new IdentityPoolRoleAttachmentState();
 
     /**
-     * An identity pool ID in the format REGION:GUID.
+     * An identity pool ID in the format `REGION_GUID`.
      * 
      */
     @Import(name="identityPoolId")
     private @Nullable Output<String> identityPoolId;
 
     /**
-     * @return An identity pool ID in the format REGION:GUID.
+     * @return An identity pool ID in the format `REGION_GUID`.
      * 
      */
     public Optional<Output<String>> identityPoolId() {
@@ -90,7 +90,7 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID in the format `REGION_GUID`.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID in the format `REGION_GUID`.
          * 
          * @return builder
          * 

@@ -17,6 +17,8 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * ECS cluster capacity providers can be imported using the `cluster_name` attribute. For example

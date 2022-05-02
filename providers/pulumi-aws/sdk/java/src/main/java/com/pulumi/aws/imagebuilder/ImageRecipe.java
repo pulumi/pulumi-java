@@ -8,6 +8,7 @@ import com.pulumi.aws.imagebuilder.ImageRecipeArgs;
 import com.pulumi.aws.imagebuilder.inputs.ImageRecipeState;
 import com.pulumi.aws.imagebuilder.outputs.ImageRecipeBlockDeviceMapping;
 import com.pulumi.aws.imagebuilder.outputs.ImageRecipeComponent;
+import com.pulumi.aws.imagebuilder.outputs.ImageRecipeSystemsManagerAgent;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -49,14 +50,14 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+     * Configuration block(s) with block device mappings for the image recipe. Detailed below.
      * 
      */
     @Export(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeBlockDeviceMapping.class})
     private Output</* @Nullable */ List<ImageRecipeBlockDeviceMapping>> blockDeviceMappings;
 
     /**
-     * @return Configuration block(s) with block device mappings for the the image recipe. Detailed below.
+     * @return Configuration block(s) with block device mappings for the image recipe. Detailed below.
      * 
      */
     public Output<Optional<List<ImageRecipeBlockDeviceMapping>>> blockDeviceMappings() {
@@ -105,14 +106,14 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Name of the image recipe.
+     * The name of the component parameter.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return Name of the image recipe.
+     * @return The name of the component parameter.
      * 
      */
     public Output<String> name() {
@@ -159,6 +160,20 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      */
     public Output<String> platform() {
         return this.platform;
+    }
+    /**
+     * Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+     * 
+     */
+    @Export(name="systemsManagerAgent", type=ImageRecipeSystemsManagerAgent.class, parameters={})
+    private Output<ImageRecipeSystemsManagerAgent> systemsManagerAgent;
+
+    /**
+     * @return Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.
+     * 
+     */
+    public Output<ImageRecipeSystemsManagerAgent> systemsManagerAgent() {
+        return this.systemsManagerAgent;
     }
     /**
      * Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.

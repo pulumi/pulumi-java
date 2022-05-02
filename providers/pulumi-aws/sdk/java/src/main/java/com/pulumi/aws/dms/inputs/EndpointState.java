@@ -23,14 +23,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     public static final EndpointState Empty = new EndpointState();
 
     /**
-     * The Amazon Resource Name (ARN) for the certificate.
+     * ARN for the certificate.
      * 
      */
     @Import(name="certificateArn")
     private @Nullable Output<String> certificateArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the certificate.
+     * @return ARN for the certificate.
      * 
      */
     public Optional<Output<String>> certificateArn() {
@@ -38,14 +38,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the endpoint database.
+     * Name of the endpoint database.
      * 
      */
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
     /**
-     * @return The name of the endpoint database.
+     * @return Name of the endpoint database.
      * 
      */
     public Optional<Output<String>> databaseName() {
@@ -53,14 +53,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with Elasticsearch settings. Detailed below.
+     * Configuration block for OpenSearch settings. See below.
      * 
      */
     @Import(name="elasticsearchSettings")
     private @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
 
     /**
-     * @return Configuration block with Elasticsearch settings. Detailed below.
+     * @return Configuration block for OpenSearch settings. See below.
      * 
      */
     public Optional<Output<EndpointElasticsearchSettingsArgs>> elasticsearchSettings() {
@@ -68,14 +68,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the endpoint.
+     * ARN for the endpoint.
      * 
      */
     @Import(name="endpointArn")
     private @Nullable Output<String> endpointArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the endpoint.
+     * @return ARN for the endpoint.
      * 
      */
     public Optional<Output<String>> endpointArn() {
@@ -83,14 +83,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The database endpoint identifier.
+     * Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
      * 
      */
     @Import(name="endpointId")
     private @Nullable Output<String> endpointId;
 
     /**
-     * @return The database endpoint identifier.
+     * @return Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
      * 
      */
     public Optional<Output<String>> endpointId() {
@@ -98,14 +98,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of endpoint. Can be one of `source | target`.
+     * Type of endpoint. Valid values are `source`, `target`.
      * 
      */
     @Import(name="endpointType")
     private @Nullable Output<String> endpointType;
 
     /**
-     * @return The type of endpoint. Can be one of `source | target`.
+     * @return Type of endpoint. Valid values are `source`, `target`.
      * 
      */
     public Optional<Output<String>> endpointType() {
@@ -113,14 +113,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+     * Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
      * 
      */
     @Import(name="engineName")
     private @Nullable Output<String> engineName;
 
     /**
-     * @return The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+     * @return Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
      * 
      */
     public Optional<Output<String>> engineName() {
@@ -143,14 +143,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with Kafka settings. Detailed below.
+     * Configuration block for Kafka settings. See below.
      * 
      */
     @Import(name="kafkaSettings")
     private @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
 
     /**
-     * @return Configuration block with Kafka settings. Detailed below.
+     * @return Configuration block for Kafka settings. See below.
      * 
      */
     public Optional<Output<EndpointKafkaSettingsArgs>> kafkaSettings() {
@@ -158,14 +158,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with Kinesis settings. Detailed below.
+     * Configuration block for Kinesis settings. See below.
      * 
      */
     @Import(name="kinesisSettings")
     private @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
 
     /**
-     * @return Configuration block with Kinesis settings. Detailed below.
+     * @return Configuration block for Kinesis settings. See below.
      * 
      */
     public Optional<Output<EndpointKinesisSettingsArgs>> kinesisSettings() {
@@ -173,14 +173,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+     * ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+     * @return ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
     public Optional<Output<String>> kmsKeyArn() {
@@ -188,14 +188,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with MongoDB settings. Detailed below.
+     * Configuration block for MongoDB settings. See below.
      * 
      */
     @Import(name="mongodbSettings")
     private @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
 
     /**
-     * @return Configuration block with MongoDB settings. Detailed below.
+     * @return Configuration block for MongoDB settings. See below.
      * 
      */
     public Optional<Output<EndpointMongodbSettingsArgs>> mongodbSettings() {
@@ -203,14 +203,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The password to be used to login to the endpoint database.
+     * Password to be used to login to the endpoint database.
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return The password to be used to login to the endpoint database.
+     * @return Password to be used to login to the endpoint database.
      * 
      */
     public Optional<Output<String>> password() {
@@ -218,14 +218,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The port used by the endpoint database.
+     * Port used by the endpoint database.
      * 
      */
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The port used by the endpoint database.
+     * @return Port used by the endpoint database.
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -233,14 +233,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block with S3 settings. Detailed below.
+     * Configuration block for S3 settings. See below.
      * 
      */
     @Import(name="s3Settings")
     private @Nullable Output<EndpointS3SettingsArgs> s3Settings;
 
     /**
-     * @return Configuration block with S3 settings. Detailed below.
+     * @return Configuration block for S3 settings. See below.
      * 
      */
     public Optional<Output<EndpointS3SettingsArgs>> s3Settings() {
@@ -248,14 +248,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+     * ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
     @Import(name="secretsManagerAccessRoleArn")
     private @Nullable Output<String> secretsManagerAccessRoleArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+     * @return ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
     public Optional<Output<String>> secretsManagerAccessRoleArn() {
@@ -263,14 +263,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+     * Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
     @Import(name="secretsManagerArn")
     private @Nullable Output<String> secretsManagerArn;
 
     /**
-     * @return The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+     * @return Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
     public Optional<Output<String>> secretsManagerArn() {
@@ -278,14 +278,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The host name of the server.
+     * Host name of the server.
      * 
      */
     @Import(name="serverName")
     private @Nullable Output<String> serverName;
 
     /**
-     * @return The host name of the server.
+     * @return Host name of the server.
      * 
      */
     public Optional<Output<String>> serverName() {
@@ -293,14 +293,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+     * ARN used by the service access IAM role for dynamodb endpoints.
      * 
      */
     @Import(name="serviceAccessRole")
     private @Nullable Output<String> serviceAccessRole;
 
     /**
-     * @return The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+     * @return ARN used by the service access IAM role for dynamodb endpoints.
      * 
      */
     public Optional<Output<String>> serviceAccessRole() {
@@ -308,14 +308,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+     * SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
      * 
      */
     @Import(name="sslMode")
     private @Nullable Output<String> sslMode;
 
     /**
-     * @return The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+     * @return SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
      * 
      */
     public Optional<Output<String>> sslMode() {
@@ -323,14 +323,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -338,14 +338,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Optional<Output<Map<String,String>>> tagsAll() {
@@ -353,14 +353,14 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The user name to be used to login to the endpoint database.
+     * User name to be used to login to the endpoint database.
      * 
      */
     @Import(name="username")
     private @Nullable Output<String> username;
 
     /**
-     * @return The user name to be used to login to the endpoint database.
+     * @return User name to be used to login to the endpoint database.
      * 
      */
     public Optional<Output<String>> username() {
@@ -414,7 +414,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * @param certificateArn ARN for the certificate.
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateArn The Amazon Resource Name (ARN) for the certificate.
+         * @param certificateArn ARN for the certificate.
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param databaseName The name of the endpoint database.
+         * @param databaseName Name of the endpoint database.
          * 
          * @return builder
          * 
@@ -446,7 +446,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param databaseName The name of the endpoint database.
+         * @param databaseName Name of the endpoint database.
          * 
          * @return builder
          * 
@@ -456,7 +456,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param elasticsearchSettings Configuration block with Elasticsearch settings. Detailed below.
+         * @param elasticsearchSettings Configuration block for OpenSearch settings. See below.
          * 
          * @return builder
          * 
@@ -467,7 +467,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param elasticsearchSettings Configuration block with Elasticsearch settings. Detailed below.
+         * @param elasticsearchSettings Configuration block for OpenSearch settings. See below.
          * 
          * @return builder
          * 
@@ -477,7 +477,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointArn The Amazon Resource Name (ARN) for the endpoint.
+         * @param endpointArn ARN for the endpoint.
          * 
          * @return builder
          * 
@@ -488,7 +488,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointArn The Amazon Resource Name (ARN) for the endpoint.
+         * @param endpointArn ARN for the endpoint.
          * 
          * @return builder
          * 
@@ -498,7 +498,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointId The database endpoint identifier.
+         * @param endpointId Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
          * 
          * @return builder
          * 
@@ -509,7 +509,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointId The database endpoint identifier.
+         * @param endpointId Database endpoint identifier. Identifiers must contain from 1 to 255 alphanumeric characters or hyphens, begin with a letter, contain only ASCII letters, digits, and hyphens, not end with a hyphen, and not contain two consecutive hyphens.
          * 
          * @return builder
          * 
@@ -519,7 +519,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointType The type of endpoint. Can be one of `source | target`.
+         * @param endpointType Type of endpoint. Valid values are `source`, `target`.
          * 
          * @return builder
          * 
@@ -530,7 +530,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param endpointType The type of endpoint. Can be one of `source | target`.
+         * @param endpointType Type of endpoint. Valid values are `source`, `target`.
          * 
          * @return builder
          * 
@@ -540,7 +540,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param engineName The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+         * @param engineName Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
          * 
          * @return builder
          * 
@@ -551,7 +551,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param engineName The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+         * @param engineName Type of engine for the endpoint. Valid values are `aurora`, `aurora-postgresql`, `azuredb`, `db2`, `docdb`, `dynamodb`, `elasticsearch`, `kafka`, `kinesis`, `mariadb`, `mongodb`, `mysql`, `opensearch`, `oracle`, `postgres`, `redshift`, `s3`, `sqlserver`, `sybase`.
          * 
          * @return builder
          * 
@@ -582,7 +582,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kafkaSettings Configuration block with Kafka settings. Detailed below.
+         * @param kafkaSettings Configuration block for Kafka settings. See below.
          * 
          * @return builder
          * 
@@ -593,7 +593,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kafkaSettings Configuration block with Kafka settings. Detailed below.
+         * @param kafkaSettings Configuration block for Kafka settings. See below.
          * 
          * @return builder
          * 
@@ -603,7 +603,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kinesisSettings Configuration block with Kinesis settings. Detailed below.
+         * @param kinesisSettings Configuration block for Kinesis settings. See below.
          * 
          * @return builder
          * 
@@ -614,7 +614,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kinesisSettings Configuration block with Kinesis settings. Detailed below.
+         * @param kinesisSettings Configuration block for Kinesis settings. See below.
          * 
          * @return builder
          * 
@@ -624,7 +624,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kmsKeyArn The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+         * @param kmsKeyArn ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
          * 
          * @return builder
          * 
@@ -635,7 +635,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param kmsKeyArn The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
+         * @param kmsKeyArn ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
          * 
          * @return builder
          * 
@@ -645,7 +645,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mongodbSettings Configuration block with MongoDB settings. Detailed below.
+         * @param mongodbSettings Configuration block for MongoDB settings. See below.
          * 
          * @return builder
          * 
@@ -656,7 +656,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mongodbSettings Configuration block with MongoDB settings. Detailed below.
+         * @param mongodbSettings Configuration block for MongoDB settings. See below.
          * 
          * @return builder
          * 
@@ -666,7 +666,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The password to be used to login to the endpoint database.
+         * @param password Password to be used to login to the endpoint database.
          * 
          * @return builder
          * 
@@ -677,7 +677,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password The password to be used to login to the endpoint database.
+         * @param password Password to be used to login to the endpoint database.
          * 
          * @return builder
          * 
@@ -687,7 +687,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port used by the endpoint database.
+         * @param port Port used by the endpoint database.
          * 
          * @return builder
          * 
@@ -698,7 +698,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param port The port used by the endpoint database.
+         * @param port Port used by the endpoint database.
          * 
          * @return builder
          * 
@@ -708,7 +708,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param s3Settings Configuration block with S3 settings. Detailed below.
+         * @param s3Settings Configuration block for S3 settings. See below.
          * 
          * @return builder
          * 
@@ -719,7 +719,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param s3Settings Configuration block with S3 settings. Detailed below.
+         * @param s3Settings Configuration block for S3 settings. See below.
          * 
          * @return builder
          * 
@@ -729,7 +729,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secretsManagerAccessRoleArn Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+         * @param secretsManagerAccessRoleArn ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
          * 
          * @return builder
          * 
@@ -740,7 +740,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secretsManagerAccessRoleArn Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
+         * @param secretsManagerAccessRoleArn ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
          * 
          * @return builder
          * 
@@ -750,7 +750,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secretsManagerArn The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+         * @param secretsManagerArn Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
          * 
          * @return builder
          * 
@@ -761,7 +761,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param secretsManagerArn The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
+         * @param secretsManagerArn Full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
          * 
          * @return builder
          * 
@@ -771,7 +771,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serverName The host name of the server.
+         * @param serverName Host name of the server.
          * 
          * @return builder
          * 
@@ -782,7 +782,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serverName The host name of the server.
+         * @param serverName Host name of the server.
          * 
          * @return builder
          * 
@@ -792,7 +792,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serviceAccessRole The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+         * @param serviceAccessRole ARN used by the service access IAM role for dynamodb endpoints.
          * 
          * @return builder
          * 
@@ -803,7 +803,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param serviceAccessRole The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
+         * @param serviceAccessRole ARN used by the service access IAM role for dynamodb endpoints.
          * 
          * @return builder
          * 
@@ -813,7 +813,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sslMode The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+         * @param sslMode SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
          * 
          * @return builder
          * 
@@ -824,7 +824,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sslMode The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
+         * @param sslMode SSL mode to use for the connection. Valid values are `none`, `require`, `verify-ca`, `verify-full`
          * 
          * @return builder
          * 
@@ -834,7 +834,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -845,7 +845,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -855,7 +855,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -866,7 +866,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -876,7 +876,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param username The user name to be used to login to the endpoint database.
+         * @param username User name to be used to login to the endpoint database.
          * 
          * @return builder
          * 
@@ -887,7 +887,7 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param username The user name to be used to login to the endpoint database.
+         * @param username User name to be used to login to the endpoint database.
          * 
          * @return builder
          * 

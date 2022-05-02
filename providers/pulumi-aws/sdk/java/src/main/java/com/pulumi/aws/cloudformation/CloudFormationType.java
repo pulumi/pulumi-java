@@ -17,6 +17,8 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * `aws_cloudformation_type` can be imported with their type version Amazon Resource Name (ARN), e.g.,

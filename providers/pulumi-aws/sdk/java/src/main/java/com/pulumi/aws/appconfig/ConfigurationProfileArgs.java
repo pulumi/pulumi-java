@@ -109,6 +109,21 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<String> type;
+
+    /**
+     * @return The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
+    }
+
+    /**
      * A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
@@ -132,6 +147,7 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
         this.name = $.name;
         this.retrievalRoleArn = $.retrievalRoleArn;
         this.tags = $.tags;
+        this.type = $.type;
         this.validators = $.validators;
     }
 
@@ -277,6 +293,27 @@ public final class ConfigurationProfileArgs extends com.pulumi.resources.Resourc
          */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
+        }
+
+        /**
+         * @param type The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         /**

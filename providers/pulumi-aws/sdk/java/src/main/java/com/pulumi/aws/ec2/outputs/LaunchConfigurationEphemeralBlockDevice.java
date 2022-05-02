@@ -4,27 +4,36 @@
 package com.pulumi.aws.ec2.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class LaunchConfigurationEphemeralBlockDevice {
     private final String deviceName;
-    private final String virtualName;
+    private final @Nullable Boolean noDevice;
+    private final @Nullable String virtualName;
 
     @CustomType.Constructor
     private LaunchConfigurationEphemeralBlockDevice(
         @CustomType.Parameter("deviceName") String deviceName,
-        @CustomType.Parameter("virtualName") String virtualName) {
+        @CustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @CustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
+        this.noDevice = noDevice;
         this.virtualName = virtualName;
     }
 
     public String deviceName() {
         return this.deviceName;
     }
-    public String virtualName() {
-        return this.virtualName;
+    public Optional<Boolean> noDevice() {
+        return Optional.ofNullable(this.noDevice);
+    }
+    public Optional<String> virtualName() {
+        return Optional.ofNullable(this.virtualName);
     }
 
     public static Builder builder() {
@@ -37,7 +46,8 @@ public final class LaunchConfigurationEphemeralBlockDevice {
 
     public static final class Builder {
         private String deviceName;
-        private String virtualName;
+        private @Nullable Boolean noDevice;
+        private @Nullable String virtualName;
 
         public Builder() {
     	      // Empty
@@ -46,6 +56,7 @@ public final class LaunchConfigurationEphemeralBlockDevice {
         public Builder(LaunchConfigurationEphemeralBlockDevice defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.deviceName = defaults.deviceName;
+    	      this.noDevice = defaults.noDevice;
     	      this.virtualName = defaults.virtualName;
         }
 
@@ -53,11 +64,15 @@ public final class LaunchConfigurationEphemeralBlockDevice {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
-        public Builder virtualName(String virtualName) {
-            this.virtualName = Objects.requireNonNull(virtualName);
+        public Builder noDevice(@Nullable Boolean noDevice) {
+            this.noDevice = noDevice;
+            return this;
+        }
+        public Builder virtualName(@Nullable String virtualName) {
+            this.virtualName = virtualName;
             return this;
         }        public LaunchConfigurationEphemeralBlockDevice build() {
-            return new LaunchConfigurationEphemeralBlockDevice(deviceName, virtualName);
+            return new LaunchConfigurationEphemeralBlockDevice(deviceName, noDevice, virtualName);
         }
     }
 }

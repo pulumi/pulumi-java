@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.athena.inputs;
 
+import com.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationAclConfigurationArgs;
 import com.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -17,18 +18,48 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
     public static final WorkgroupConfigurationResultConfigurationArgs Empty = new WorkgroupConfigurationResultConfigurationArgs();
 
     /**
-     * Configuration block with encryption settings. Documented below.
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+     * 
+     */
+    @Import(name="aclConfiguration")
+    private @Nullable Output<WorkgroupConfigurationResultConfigurationAclConfigurationArgs> aclConfiguration;
+
+    /**
+     * @return Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+     * 
+     */
+    public Optional<Output<WorkgroupConfigurationResultConfigurationAclConfigurationArgs>> aclConfiguration() {
+        return Optional.ofNullable(this.aclConfiguration);
+    }
+
+    /**
+     * Configuration block with encryption settings. See Encryption Configuration below.
      * 
      */
     @Import(name="encryptionConfiguration")
     private @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     /**
-     * @return Configuration block with encryption settings. Documented below.
+     * @return Configuration block with encryption settings. See Encryption Configuration below.
      * 
      */
     public Optional<Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs>> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
+    }
+
+    /**
+     * The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+     * 
+     */
+    @Import(name="expectedBucketOwner")
+    private @Nullable Output<String> expectedBucketOwner;
+
+    /**
+     * @return The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+     * 
+     */
+    public Optional<Output<String>> expectedBucketOwner() {
+        return Optional.ofNullable(this.expectedBucketOwner);
     }
 
     /**
@@ -49,7 +80,9 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
     private WorkgroupConfigurationResultConfigurationArgs() {}
 
     private WorkgroupConfigurationResultConfigurationArgs(WorkgroupConfigurationResultConfigurationArgs $) {
+        this.aclConfiguration = $.aclConfiguration;
         this.encryptionConfiguration = $.encryptionConfiguration;
+        this.expectedBucketOwner = $.expectedBucketOwner;
         this.outputLocation = $.outputLocation;
     }
 
@@ -72,7 +105,28 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
         }
 
         /**
-         * @param encryptionConfiguration Configuration block with encryption settings. Documented below.
+         * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aclConfiguration(@Nullable Output<WorkgroupConfigurationResultConfigurationAclConfigurationArgs> aclConfiguration) {
+            $.aclConfiguration = aclConfiguration;
+            return this;
+        }
+
+        /**
+         * @param aclConfiguration Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. See ACL Configuration below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder aclConfiguration(WorkgroupConfigurationResultConfigurationAclConfigurationArgs aclConfiguration) {
+            return aclConfiguration(Output.of(aclConfiguration));
+        }
+
+        /**
+         * @param encryptionConfiguration Configuration block with encryption settings. See Encryption Configuration below.
          * 
          * @return builder
          * 
@@ -83,13 +137,34 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends com.pul
         }
 
         /**
-         * @param encryptionConfiguration Configuration block with encryption settings. Documented below.
+         * @param encryptionConfiguration Configuration block with encryption settings. See Encryption Configuration below.
          * 
          * @return builder
          * 
          */
         public Builder encryptionConfiguration(WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
             return encryptionConfiguration(Output.of(encryptionConfiguration));
+        }
+
+        /**
+         * @param expectedBucketOwner The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expectedBucketOwner(@Nullable Output<String> expectedBucketOwner) {
+            $.expectedBucketOwner = expectedBucketOwner;
+            return this;
+        }
+
+        /**
+         * @param expectedBucketOwner The AWS account ID that you expect to be the owner of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expectedBucketOwner(String expectedBucketOwner) {
+            return expectedBucketOwner(Output.of(expectedBucketOwner));
         }
 
         /**

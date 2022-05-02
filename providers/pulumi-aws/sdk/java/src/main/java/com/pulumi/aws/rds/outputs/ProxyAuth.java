@@ -31,17 +31,24 @@ public final class ProxyAuth {
      * 
      */
     private final @Nullable String secretArn;
+    /**
+     * @return The name of the database user to which the proxy connects.
+     * 
+     */
+    private final @Nullable String username;
 
     @CustomType.Constructor
     private ProxyAuth(
         @CustomType.Parameter("authScheme") @Nullable String authScheme,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("iamAuth") @Nullable String iamAuth,
-        @CustomType.Parameter("secretArn") @Nullable String secretArn) {
+        @CustomType.Parameter("secretArn") @Nullable String secretArn,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;
         this.secretArn = secretArn;
+        this.username = username;
     }
 
     /**
@@ -72,6 +79,13 @@ public final class ProxyAuth {
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
+    /**
+     * @return The name of the database user to which the proxy connects.
+     * 
+     */
+    public Optional<String> username() {
+        return Optional.ofNullable(this.username);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -86,6 +100,7 @@ public final class ProxyAuth {
         private @Nullable String description;
         private @Nullable String iamAuth;
         private @Nullable String secretArn;
+        private @Nullable String username;
 
         public Builder() {
     	      // Empty
@@ -97,6 +112,7 @@ public final class ProxyAuth {
     	      this.description = defaults.description;
     	      this.iamAuth = defaults.iamAuth;
     	      this.secretArn = defaults.secretArn;
+    	      this.username = defaults.username;
         }
 
         public Builder authScheme(@Nullable String authScheme) {
@@ -114,8 +130,12 @@ public final class ProxyAuth {
         public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
+        }
+        public Builder username(@Nullable String username) {
+            this.username = username;
+            return this;
         }        public ProxyAuth build() {
-            return new ProxyAuth(authScheme, description, iamAuth, secretArn);
+            return new ProxyAuth(authScheme, description, iamAuth, secretArn, username);
         }
     }
 }

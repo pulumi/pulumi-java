@@ -8,11 +8,13 @@ import com.pulumi.aws.route53.inputs.GetDelegationSetArgs;
 import com.pulumi.aws.route53.inputs.GetResolverEndpointArgs;
 import com.pulumi.aws.route53.inputs.GetResolverRuleArgs;
 import com.pulumi.aws.route53.inputs.GetResolverRulesArgs;
+import com.pulumi.aws.route53.inputs.GetTrafficPolicyDocumentArgs;
 import com.pulumi.aws.route53.inputs.GetZoneArgs;
 import com.pulumi.aws.route53.outputs.GetDelegationSetResult;
 import com.pulumi.aws.route53.outputs.GetResolverEndpointResult;
 import com.pulumi.aws.route53.outputs.GetResolverRuleResult;
 import com.pulumi.aws.route53.outputs.GetResolverRulesResult;
+import com.pulumi.aws.route53.outputs.GetTrafficPolicyDocumentResult;
 import com.pulumi.aws.route53.outputs.GetZoneResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
@@ -80,6 +82,21 @@ public final class Route53Functions {
     }
     public static CompletableFuture<GetResolverRulesResult> getResolverRules(GetResolverRulesArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getResolverRules:getResolverRules", TypeShape.of(GetResolverRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Generates an Route53 traffic policy document in JSON format for use with resources that expect policy documents such as [`aws.route53.TrafficPolicy`](https://www.terraform.io/docs/providers/aws/r/route53_traffic_policy.html).
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument() {
+        return getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs.Empty, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args) {
+        return getTrafficPolicyDocument(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetTrafficPolicyDocumentResult> getTrafficPolicyDocument(GetTrafficPolicyDocumentArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:route53/getTrafficPolicyDocument:getTrafficPolicyDocument", TypeShape.of(GetTrafficPolicyDocumentResult.class), args, Utilities.withVersion(options));
     }
     /**
      * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.

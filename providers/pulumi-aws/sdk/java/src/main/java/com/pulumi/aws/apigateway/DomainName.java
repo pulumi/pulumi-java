@@ -59,288 +59,280 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:apigateway/domainName:DomainName")
 public class DomainName extends com.pulumi.resources.CustomResource {
     /**
-     * Amazon Resource Name (ARN)
+     * ARN of domain name.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return Amazon Resource Name (ARN)
+     * @return ARN of domain name.
      * 
      */
     public Output<String> arn() {
         return this.arn;
     }
     /**
-     * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     /**
-     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Output<Optional<String>> certificateArn() {
         return Codegen.optional(this.certificateArn);
     }
     /**
-     * The certificate issued for the domain name
-     * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`.
+     * Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
     /**
-     * @return The certificate issued for the domain name
-     * being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`.
+     * @return Certificate issued for the domain name being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Output<Optional<String>> certificateBody() {
         return Codegen.optional(this.certificateBody);
     }
     /**
-     * The certificate for the CA that issued the
-     * certificate, along with any intermediate CA certificates required to
-     * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-     * `regional_certificate_arn`, and `regional_certificate_name`.
+     * Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
-     * @return The certificate for the CA that issued the
-     * certificate, along with any intermediate CA certificates required to
-     * create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
-     * `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return Certificate for the CA that issued the certificate, along with any intermediate CA certificates required to create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Output<Optional<String>> certificateChain() {
         return Codegen.optional(this.certificateChain);
     }
     /**
-     * The unique name to use when registering this
-     * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`. Required if `certificate_arn` is not set.
+     * Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
     @Export(name="certificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateName;
 
     /**
-     * @return The unique name to use when registering this
-     * certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
-     * `regional_certificate_name`. Required if `certificate_arn` is not set.
+     * @return Unique name to use when registering this certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
     public Output<Optional<String>> certificateName() {
         return Codegen.optional(this.certificateName);
     }
     /**
-     * The private key associated with the
-     * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     @Export(name="certificatePrivateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePrivateKey;
 
     /**
-     * @return The private key associated with the
-     * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
+     * @return Private key associated with the domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
     public Output<Optional<String>> certificatePrivateKey() {
         return Codegen.optional(this.certificatePrivateKey);
     }
     /**
-     * The upload date associated with the domain certificate.
+     * Upload date associated with the domain certificate.
      * 
      */
     @Export(name="certificateUploadDate", type=String.class, parameters={})
     private Output<String> certificateUploadDate;
 
     /**
-     * @return The upload date associated with the domain certificate.
+     * @return Upload date associated with the domain certificate.
      * 
      */
     public Output<String> certificateUploadDate() {
         return this.certificateUploadDate;
     }
     /**
-     * The hostname created by Cloudfront to represent
-     * the distribution that implements this domain name mapping.
+     * Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
      */
     @Export(name="cloudfrontDomainName", type=String.class, parameters={})
     private Output<String> cloudfrontDomainName;
 
     /**
-     * @return The hostname created by Cloudfront to represent
-     * the distribution that implements this domain name mapping.
+     * @return Hostname created by Cloudfront to represent the distribution that implements this domain name mapping.
      * 
      */
     public Output<String> cloudfrontDomainName() {
         return this.cloudfrontDomainName;
     }
     /**
-     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-     * that can be used to create a Route53 alias record for the distribution.
+     * For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
      */
     @Export(name="cloudfrontZoneId", type=String.class, parameters={})
     private Output<String> cloudfrontZoneId;
 
     /**
-     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
-     * that can be used to create a Route53 alias record for the distribution.
+     * @return For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`) that can be used to create a Route53 alias record for the distribution.
      * 
      */
     public Output<String> cloudfrontZoneId() {
         return this.cloudfrontZoneId;
     }
     /**
-     * The fully-qualified domain name to register
+     * Fully-qualified domain name to register.
      * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
-     * @return The fully-qualified domain name to register
+     * @return Fully-qualified domain name to register.
      * 
      */
     public Output<String> domainName() {
         return this.domainName;
     }
     /**
-     * Configuration block defining API endpoint information including type. Defined below.
+     * Configuration block defining API endpoint information including type. See below.
      * 
      */
     @Export(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
     private Output<DomainNameEndpointConfiguration> endpointConfiguration;
 
     /**
-     * @return Configuration block defining API endpoint information including type. Defined below.
+     * @return Configuration block defining API endpoint information including type. See below.
      * 
      */
     public Output<DomainNameEndpointConfiguration> endpointConfiguration() {
         return this.endpointConfiguration;
     }
     /**
-     * The mutual TLS authentication configuration for the domain name. Defined below.
+     * Mutual TLS authentication configuration for the domain name. See below.
      * 
      */
     @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
     /**
-     * @return The mutual TLS authentication configuration for the domain name. Defined below.
+     * @return Mutual TLS authentication configuration for the domain name. See below.
      * 
      */
     public Output<Optional<DomainNameMutualTlsAuthentication>> mutualTlsAuthentication() {
         return Codegen.optional(this.mutualTlsAuthentication);
     }
     /**
-     * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+     * ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    @Export(name="ownershipVerificationCertificateArn", type=String.class, parameters={})
+    private Output<String> ownershipVerificationCertificateArn;
+
+    /**
+     * @return ARN of the AWS-issued certificate used to validate custom domain ownership (when `certificate_arn` is issued via an ACM Private CA or `mutual_tls_authentication` is configured with an ACM-imported certificate.)
+     * 
+     */
+    public Output<String> ownershipVerificationCertificateArn() {
+        return this.ownershipVerificationCertificateArn;
+    }
+    /**
+     * ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     @Export(name="regionalCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateArn;
 
     /**
-     * @return The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
+     * @return ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     public Output<Optional<String>> regionalCertificateArn() {
         return Codegen.optional(this.regionalCertificateArn);
     }
     /**
-     * The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-     * `certificate_private_key`.
+     * User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     @Export(name="regionalCertificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateName;
 
     /**
-     * @return The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
-     * `certificate_private_key`.
+     * @return User-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
     public Output<Optional<String>> regionalCertificateName() {
         return Codegen.optional(this.regionalCertificateName);
     }
     /**
-     * The hostname for the custom domain&#39;s regional endpoint.
+     * Hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     /**
-     * @return The hostname for the custom domain&#39;s regional endpoint.
+     * @return Hostname for the custom domain&#39;s regional endpoint.
      * 
      */
     public Output<String> regionalDomainName() {
         return this.regionalDomainName;
     }
     /**
-     * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
     @Export(name="regionalZoneId", type=String.class, parameters={})
     private Output<String> regionalZoneId;
 
     /**
-     * @return The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
+     * @return Hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
     public Output<String> regionalZoneId() {
         return this.regionalZoneId;
     }
     /**
-     * The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+     * Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
     @Export(name="securityPolicy", type=String.class, parameters={})
     private Output<String> securityPolicy;
 
     /**
-     * @return The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
+     * @return Transport Layer Security (TLS) version + cipher suite for this DomainName. Valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
     public Output<String> securityPolicy() {
         return this.securityPolicy;
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

@@ -13,15 +13,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     /**
+     * @return The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year.
+     * 
+     */
+    private final @Nullable String cronExpression;
+    /**
      * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
      */
-    private final Integer interval;
+    private final @Nullable Integer interval;
     /**
      * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
      * 
      */
     private final @Nullable String intervalUnit;
+    /**
+     * @return Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the source resource, specify `CLOUD`. To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL`. If you omit this parameter, `CLOUD` is used by default. If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source resource, or in the Region of that Outpost. Valid values are `CLOUD` and `OUTPOST_LOCAL`.
+     * 
+     */
+    private final @Nullable String location;
     /**
      * @return A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
      * 
@@ -30,20 +40,31 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
 
     @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCreateRule(
-        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("cronExpression") @Nullable String cronExpression,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
         @CustomType.Parameter("intervalUnit") @Nullable String intervalUnit,
+        @CustomType.Parameter("location") @Nullable String location,
         @CustomType.Parameter("times") @Nullable String times) {
+        this.cronExpression = cronExpression;
         this.interval = interval;
         this.intervalUnit = intervalUnit;
+        this.location = location;
         this.times = times;
     }
 
     /**
+     * @return The schedule, as a Cron expression. The schedule interval must be between 1 hour and 1 year.
+     * 
+     */
+    public Optional<String> cronExpression() {
+        return Optional.ofNullable(this.cronExpression);
+    }
+    /**
      * @return The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
      */
-    public Integer interval() {
-        return this.interval;
+    public Optional<Integer> interval() {
+        return Optional.ofNullable(this.interval);
     }
     /**
      * @return The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
@@ -51,6 +72,13 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
      */
     public Optional<String> intervalUnit() {
         return Optional.ofNullable(this.intervalUnit);
+    }
+    /**
+     * @return Specifies the destination for snapshots created by the policy. To create snapshots in the same Region as the source resource, specify `CLOUD`. To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL`. If you omit this parameter, `CLOUD` is used by default. If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source resource. If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source resource, or in the Region of that Outpost. Valid values are `CLOUD` and `OUTPOST_LOCAL`.
+     * 
+     */
+    public Optional<String> location() {
+        return Optional.ofNullable(this.location);
     }
     /**
      * @return A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
@@ -69,8 +97,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     }
 
     public static final class Builder {
-        private Integer interval;
+        private @Nullable String cronExpression;
+        private @Nullable Integer interval;
         private @Nullable String intervalUnit;
+        private @Nullable String location;
         private @Nullable String times;
 
         public Builder() {
@@ -79,24 +109,34 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
 
         public Builder(LifecyclePolicyPolicyDetailsScheduleCreateRule defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.cronExpression = defaults.cronExpression;
     	      this.interval = defaults.interval;
     	      this.intervalUnit = defaults.intervalUnit;
+    	      this.location = defaults.location;
     	      this.times = defaults.times;
         }
 
-        public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+        public Builder cronExpression(@Nullable String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public Builder interval(@Nullable Integer interval) {
+            this.interval = interval;
             return this;
         }
         public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
+        public Builder location(@Nullable String location) {
+            this.location = location;
+            return this;
+        }
         public Builder times(@Nullable String times) {
             this.times = times;
             return this;
         }        public LifecyclePolicyPolicyDetailsScheduleCreateRule build() {
-            return new LifecyclePolicyPolicyDetailsScheduleCreateRule(interval, intervalUnit, times);
+            return new LifecyclePolicyPolicyDetailsScheduleCreateRule(cronExpression, interval, intervalUnit, location, times);
         }
     }
 }

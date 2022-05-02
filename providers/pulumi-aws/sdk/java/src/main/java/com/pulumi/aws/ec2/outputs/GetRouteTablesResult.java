@@ -21,7 +21,7 @@ public final class GetRouteTablesResult {
      */
     private final String id;
     /**
-     * @return A set of all the route table ids found. This data source will fail if none are found.
+     * @return A list of all the route table ids found.
      * 
      */
     private final List<String> ids;
@@ -53,7 +53,7 @@ public final class GetRouteTablesResult {
         return this.id;
     }
     /**
-     * @return A set of all the route table ids found. This data source will fail if none are found.
+     * @return A list of all the route table ids found.
      * 
      */
     public List<String> ids() {

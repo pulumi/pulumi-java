@@ -22,6 +22,21 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     public static final FleetState Empty = new FleetState();
 
     /**
+     * Reserved.
+     * 
+     */
+    @Import(name="context")
+    private @Nullable Output<String> context;
+
+    /**
+     * @return Reserved.
+     * 
+     */
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
+    }
+
+    /**
      * Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
      * 
      */
@@ -189,6 +204,7 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
     private FleetState() {}
 
     private FleetState(FleetState $) {
+        this.context = $.context;
         this.excessCapacityTerminationPolicy = $.excessCapacityTerminationPolicy;
         this.launchTemplateConfig = $.launchTemplateConfig;
         this.onDemandOptions = $.onDemandOptions;
@@ -218,6 +234,27 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
 
         public Builder(FleetState defaults) {
             $ = new FleetState(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param context Reserved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder context(@Nullable Output<String> context) {
+            $.context = context;
+            return this;
+        }
+
+        /**
+         * @param context Reserved.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
 
         /**

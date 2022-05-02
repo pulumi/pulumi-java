@@ -30,6 +30,11 @@ public final class GetClusterResult {
      */
     private final String availabilityZone;
     /**
+     * @return Indicates whether the cluster is able to be relocated to another availability zone.
+     * 
+     */
+    private final Boolean availabilityZoneRelocationEnabled;
+    /**
      * @return The name of the S3 bucket where the log files are to be stored
      * 
      */
@@ -171,6 +176,7 @@ public final class GetClusterResult {
         @CustomType.Parameter("allowVersionUpgrade") Boolean allowVersionUpgrade,
         @CustomType.Parameter("automatedSnapshotRetentionPeriod") Integer automatedSnapshotRetentionPeriod,
         @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("availabilityZoneRelocationEnabled") Boolean availabilityZoneRelocationEnabled,
         @CustomType.Parameter("bucketName") String bucketName,
         @CustomType.Parameter("clusterIdentifier") String clusterIdentifier,
         @CustomType.Parameter("clusterParameterGroupName") String clusterParameterGroupName,
@@ -202,6 +208,7 @@ public final class GetClusterResult {
         this.allowVersionUpgrade = allowVersionUpgrade;
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         this.availabilityZone = availabilityZone;
+        this.availabilityZoneRelocationEnabled = availabilityZoneRelocationEnabled;
         this.bucketName = bucketName;
         this.clusterIdentifier = clusterIdentifier;
         this.clusterParameterGroupName = clusterParameterGroupName;
@@ -252,6 +259,13 @@ public final class GetClusterResult {
      */
     public String availabilityZone() {
         return this.availabilityZone;
+    }
+    /**
+     * @return Indicates whether the cluster is able to be relocated to another availability zone.
+     * 
+     */
+    public Boolean availabilityZoneRelocationEnabled() {
+        return this.availabilityZoneRelocationEnabled;
     }
     /**
      * @return The name of the S3 bucket where the log files are to be stored
@@ -458,6 +472,7 @@ public final class GetClusterResult {
         private Boolean allowVersionUpgrade;
         private Integer automatedSnapshotRetentionPeriod;
         private String availabilityZone;
+        private Boolean availabilityZoneRelocationEnabled;
         private String bucketName;
         private String clusterIdentifier;
         private String clusterParameterGroupName;
@@ -496,6 +511,7 @@ public final class GetClusterResult {
     	      this.allowVersionUpgrade = defaults.allowVersionUpgrade;
     	      this.automatedSnapshotRetentionPeriod = defaults.automatedSnapshotRetentionPeriod;
     	      this.availabilityZone = defaults.availabilityZone;
+    	      this.availabilityZoneRelocationEnabled = defaults.availabilityZoneRelocationEnabled;
     	      this.bucketName = defaults.bucketName;
     	      this.clusterIdentifier = defaults.clusterIdentifier;
     	      this.clusterParameterGroupName = defaults.clusterParameterGroupName;
@@ -536,6 +552,10 @@ public final class GetClusterResult {
         }
         public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            return this;
+        }
+        public Builder availabilityZoneRelocationEnabled(Boolean availabilityZoneRelocationEnabled) {
+            this.availabilityZoneRelocationEnabled = Objects.requireNonNull(availabilityZoneRelocationEnabled);
             return this;
         }
         public Builder bucketName(String bucketName) {
@@ -659,7 +679,7 @@ public final class GetClusterResult {
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }        public GetClusterResult build() {
-            return new GetClusterResult(allowVersionUpgrade, automatedSnapshotRetentionPeriod, availabilityZone, bucketName, clusterIdentifier, clusterParameterGroupName, clusterPublicKey, clusterRevisionNumber, clusterSecurityGroups, clusterSubnetGroupName, clusterType, clusterVersion, databaseName, elasticIp, enableLogging, encrypted, endpoint, enhancedVpcRouting, iamRoles, id, kmsKeyId, masterUsername, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, s3KeyPrefix, tags, vpcId, vpcSecurityGroupIds);
+            return new GetClusterResult(allowVersionUpgrade, automatedSnapshotRetentionPeriod, availabilityZone, availabilityZoneRelocationEnabled, bucketName, clusterIdentifier, clusterParameterGroupName, clusterPublicKey, clusterRevisionNumber, clusterSecurityGroups, clusterSubnetGroupName, clusterType, clusterVersion, databaseName, elasticIp, enableLogging, encrypted, endpoint, enhancedVpcRouting, iamRoles, id, kmsKeyId, masterUsername, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, s3KeyPrefix, tags, vpcId, vpcSecurityGroupIds);
         }
     }
 }

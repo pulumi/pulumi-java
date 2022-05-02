@@ -6,6 +6,7 @@ package com.pulumi.aws.xray;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.xray.GroupArgs;
 import com.pulumi.aws.xray.inputs.GroupState;
+import com.pulumi.aws.xray.outputs.GroupInsightsConfiguration;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -72,6 +73,20 @@ public class Group extends com.pulumi.resources.CustomResource {
      */
     public Output<String> groupName() {
         return this.groupName;
+    }
+    /**
+     * Configuration options for enabling insights.
+     * 
+     */
+    @Export(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
+    private Output<GroupInsightsConfiguration> insightsConfiguration;
+
+    /**
+     * @return Configuration options for enabling insights.
+     * 
+     */
+    public Output<GroupInsightsConfiguration> insightsConfiguration() {
+        return this.insightsConfiguration;
     }
     /**
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.

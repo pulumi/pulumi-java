@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.autoscaling.inputs;
 
+import com.pulumi.aws.autoscaling.inputs.GroupWarmPoolInstanceReusePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Integer;
@@ -15,6 +16,21 @@ import javax.annotation.Nullable;
 public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GroupWarmPoolArgs Empty = new GroupWarmPoolArgs();
+
+    /**
+     * Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.
+     * 
+     */
+    @Import(name="instanceReusePolicy")
+    private @Nullable Output<GroupWarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
+
+    /**
+     * @return Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.
+     * 
+     */
+    public Optional<Output<GroupWarmPoolInstanceReusePolicyArgs>> instanceReusePolicy() {
+        return Optional.ofNullable(this.instanceReusePolicy);
+    }
 
     /**
      * Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
@@ -47,14 +63,14 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+     * Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default), Running or Hibernated.
      * 
      */
     @Import(name="poolState")
     private @Nullable Output<String> poolState;
 
     /**
-     * @return Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+     * @return Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default), Running or Hibernated.
      * 
      */
     public Optional<Output<String>> poolState() {
@@ -64,6 +80,7 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
     private GroupWarmPoolArgs() {}
 
     private GroupWarmPoolArgs(GroupWarmPoolArgs $) {
+        this.instanceReusePolicy = $.instanceReusePolicy;
         this.maxGroupPreparedCapacity = $.maxGroupPreparedCapacity;
         this.minSize = $.minSize;
         this.poolState = $.poolState;
@@ -85,6 +102,27 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(GroupWarmPoolArgs defaults) {
             $ = new GroupWarmPoolArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param instanceReusePolicy Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceReusePolicy(@Nullable Output<GroupWarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
+            $.instanceReusePolicy = instanceReusePolicy;
+            return this;
+        }
+
+        /**
+         * @param instanceReusePolicy Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default is to terminate instances in the Auto Scaling group when the group scales in.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceReusePolicy(GroupWarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
+            return instanceReusePolicy(Output.of(instanceReusePolicy));
         }
 
         /**
@@ -130,7 +168,7 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param poolState Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+         * @param poolState Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default), Running or Hibernated.
          * 
          * @return builder
          * 
@@ -141,7 +179,7 @@ public final class GroupWarmPoolArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param poolState Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
+         * @param poolState Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default), Running or Hibernated.
          * 
          * @return builder
          * 

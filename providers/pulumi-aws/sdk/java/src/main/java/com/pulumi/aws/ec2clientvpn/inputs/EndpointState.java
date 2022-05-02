@@ -4,10 +4,13 @@
 package com.pulumi.aws.ec2clientvpn.inputs;
 
 import com.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
+import com.pulumi.aws.ec2clientvpn.inputs.EndpointClientConnectOptionsArgs;
+import com.pulumi.aws.ec2clientvpn.inputs.EndpointClientLoginBannerOptionsArgs;
 import com.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -63,6 +66,36 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> clientCidrBlock() {
         return Optional.ofNullable(this.clientCidrBlock);
+    }
+
+    /**
+     * The options for managing connection authorization for new client connections.
+     * 
+     */
+    @Import(name="clientConnectOptions")
+    private @Nullable Output<EndpointClientConnectOptionsArgs> clientConnectOptions;
+
+    /**
+     * @return The options for managing connection authorization for new client connections.
+     * 
+     */
+    public Optional<Output<EndpointClientConnectOptionsArgs>> clientConnectOptions() {
+        return Optional.ofNullable(this.clientConnectOptions);
+    }
+
+    /**
+     * Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+     * 
+     */
+    @Import(name="clientLoginBannerOptions")
+    private @Nullable Output<EndpointClientLoginBannerOptionsArgs> clientLoginBannerOptions;
+
+    /**
+     * @return Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+     * 
+     */
+    public Optional<Output<EndpointClientLoginBannerOptionsArgs>> clientLoginBannerOptions() {
+        return Optional.ofNullable(this.clientLoginBannerOptions);
     }
 
     /**
@@ -126,6 +159,21 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+     * 
+     */
+    @Import(name="securityGroupIds")
+    private @Nullable Output<List<String>> securityGroupIds;
+
+    /**
+     * @return The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+     * 
+     */
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
+    }
+
+    /**
      * Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
      * 
      */
@@ -156,6 +204,21 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+     * 
+     */
+    @Import(name="sessionTimeoutHours")
+    private @Nullable Output<Integer> sessionTimeoutHours;
+
+    /**
+     * @return The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+     * 
+     */
+    public Optional<Output<Integer>> sessionTimeoutHours() {
+        return Optional.ofNullable(this.sessionTimeoutHours);
+    }
+
+    /**
      * Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
      * 
      */
@@ -171,16 +234,24 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The current state of the Client VPN endpoint.
+     * **Deprecated** The current state of the Client VPN endpoint.
+     * 
+     * @deprecated
+     * This attribute has been deprecated.
      * 
      */
+    @Deprecated /* This attribute has been deprecated. */
     @Import(name="status")
     private @Nullable Output<String> status;
 
     /**
-     * @return The current state of the Client VPN endpoint.
+     * @return **Deprecated** The current state of the Client VPN endpoint.
+     * 
+     * @deprecated
+     * This attribute has been deprecated.
      * 
      */
+    @Deprecated /* This attribute has been deprecated. */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -230,23 +301,59 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.transportProtocol);
     }
 
+    /**
+     * The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+     * 
+     */
+    @Import(name="vpcId")
+    private @Nullable Output<String> vpcId;
+
+    /**
+     * @return The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+     * 
+     */
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
+    }
+
+    /**
+     * The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+     * 
+     */
+    @Import(name="vpnPort")
+    private @Nullable Output<Integer> vpnPort;
+
+    /**
+     * @return The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+     * 
+     */
+    public Optional<Output<Integer>> vpnPort() {
+        return Optional.ofNullable(this.vpnPort);
+    }
+
     private EndpointState() {}
 
     private EndpointState(EndpointState $) {
         this.arn = $.arn;
         this.authenticationOptions = $.authenticationOptions;
         this.clientCidrBlock = $.clientCidrBlock;
+        this.clientConnectOptions = $.clientConnectOptions;
+        this.clientLoginBannerOptions = $.clientLoginBannerOptions;
         this.connectionLogOptions = $.connectionLogOptions;
         this.description = $.description;
         this.dnsName = $.dnsName;
         this.dnsServers = $.dnsServers;
+        this.securityGroupIds = $.securityGroupIds;
         this.selfServicePortal = $.selfServicePortal;
         this.serverCertificateArn = $.serverCertificateArn;
+        this.sessionTimeoutHours = $.sessionTimeoutHours;
         this.splitTunnel = $.splitTunnel;
         this.status = $.status;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
         this.transportProtocol = $.transportProtocol;
+        this.vpcId = $.vpcId;
+        this.vpnPort = $.vpnPort;
     }
 
     public static Builder builder() {
@@ -338,6 +445,48 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder clientCidrBlock(String clientCidrBlock) {
             return clientCidrBlock(Output.of(clientCidrBlock));
+        }
+
+        /**
+         * @param clientConnectOptions The options for managing connection authorization for new client connections.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientConnectOptions(@Nullable Output<EndpointClientConnectOptionsArgs> clientConnectOptions) {
+            $.clientConnectOptions = clientConnectOptions;
+            return this;
+        }
+
+        /**
+         * @param clientConnectOptions The options for managing connection authorization for new client connections.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientConnectOptions(EndpointClientConnectOptionsArgs clientConnectOptions) {
+            return clientConnectOptions(Output.of(clientConnectOptions));
+        }
+
+        /**
+         * @param clientLoginBannerOptions Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientLoginBannerOptions(@Nullable Output<EndpointClientLoginBannerOptionsArgs> clientLoginBannerOptions) {
+            $.clientLoginBannerOptions = clientLoginBannerOptions;
+            return this;
+        }
+
+        /**
+         * @param clientLoginBannerOptions Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder clientLoginBannerOptions(EndpointClientLoginBannerOptionsArgs clientLoginBannerOptions) {
+            return clientLoginBannerOptions(Output.of(clientLoginBannerOptions));
         }
 
         /**
@@ -435,6 +584,37 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param securityGroupIds The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
+            $.securityGroupIds = securityGroupIds;
+            return this;
+        }
+
+        /**
+         * @param securityGroupIds The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
+        }
+
+        /**
+         * @param securityGroupIds The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securityGroupIds(String... securityGroupIds) {
+            return securityGroupIds(List.of(securityGroupIds));
+        }
+
+        /**
          * @param selfServicePortal Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
          * 
          * @return builder
@@ -477,6 +657,27 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param sessionTimeoutHours The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionTimeoutHours(@Nullable Output<Integer> sessionTimeoutHours) {
+            $.sessionTimeoutHours = sessionTimeoutHours;
+            return this;
+        }
+
+        /**
+         * @param sessionTimeoutHours The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session. Default value is `24` - Valid values: `8 | 10 | 12 | 24`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionTimeoutHours(Integer sessionTimeoutHours) {
+            return sessionTimeoutHours(Output.of(sessionTimeoutHours));
+        }
+
+        /**
          * @param splitTunnel Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
          * 
          * @return builder
@@ -498,22 +699,30 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param status The current state of the Client VPN endpoint.
+         * @param status **Deprecated** The current state of the Client VPN endpoint.
          * 
          * @return builder
          * 
+         * @deprecated
+         * This attribute has been deprecated.
+         * 
          */
+        @Deprecated /* This attribute has been deprecated. */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
         /**
-         * @param status The current state of the Client VPN endpoint.
+         * @param status **Deprecated** The current state of the Client VPN endpoint.
          * 
          * @return builder
          * 
+         * @deprecated
+         * This attribute has been deprecated.
+         * 
          */
+        @Deprecated /* This attribute has been deprecated. */
         public Builder status(String status) {
             return status(Output.of(status));
         }
@@ -579,6 +788,48 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder transportProtocol(String transportProtocol) {
             return transportProtocol(Output.of(transportProtocol));
+        }
+
+        /**
+         * @param vpcId The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(@Nullable Output<String> vpcId) {
+            $.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * @param vpcId The ID of the VPC to associate with the Client VPN endpoint. If no security group IDs are specified in the request, the default security group for the VPC is applied.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        /**
+         * @param vpnPort The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnPort(@Nullable Output<Integer> vpnPort) {
+            $.vpnPort = vpnPort;
+            return this;
+        }
+
+        /**
+         * @param vpnPort The port number for the Client VPN endpoint. Valid values are `443` and `1194`. Default value is `443`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpnPort(Integer vpnPort) {
+            return vpnPort(Output.of(vpnPort));
         }
 
         public EndpointState build() {

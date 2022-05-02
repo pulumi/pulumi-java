@@ -20,6 +20,21 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     public static final ImagePipelineArgs Empty = new ImagePipelineArgs();
 
     /**
+     * Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    @Import(name="containerRecipeArn")
+    private @Nullable Output<String> containerRecipeArn;
+
+    /**
+     * @return Amazon Resource Name (ARN) of the container recipe.
+     * 
+     */
+    public Optional<Output<String>> containerRecipeArn() {
+        return Optional.ofNullable(this.containerRecipeArn);
+    }
+
+    /**
      * Description of the image pipeline.
      * 
      */
@@ -65,18 +80,18 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    @Import(name="imageRecipeArn", required=true)
-    private Output<String> imageRecipeArn;
+    @Import(name="imageRecipeArn")
+    private @Nullable Output<String> imageRecipeArn;
 
     /**
-     * @return Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+     * @return Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    public Output<String> imageRecipeArn() {
-        return this.imageRecipeArn;
+    public Optional<Output<String>> imageRecipeArn() {
+        return Optional.ofNullable(this.imageRecipeArn);
     }
 
     /**
@@ -172,6 +187,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
     private ImagePipelineArgs() {}
 
     private ImagePipelineArgs(ImagePipelineArgs $) {
+        this.containerRecipeArn = $.containerRecipeArn;
         this.description = $.description;
         this.distributionConfigurationArn = $.distributionConfigurationArn;
         this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
@@ -200,6 +216,27 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ImagePipelineArgs defaults) {
             $ = new ImagePipelineArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param containerRecipeArn Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
+            $.containerRecipeArn = containerRecipeArn;
+            return this;
+        }
+
+        /**
+         * @param containerRecipeArn Amazon Resource Name (ARN) of the container recipe.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder containerRecipeArn(String containerRecipeArn) {
+            return containerRecipeArn(Output.of(containerRecipeArn));
         }
 
         /**
@@ -266,18 +303,18 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 
          */
-        public Builder imageRecipeArn(Output<String> imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             $.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
         /**
-         * @param imageRecipeArn Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
+         * @param imageRecipeArn Amazon Resource Name (ARN) of the image recipe.
          * 
          * @return builder
          * 
@@ -413,7 +450,6 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ImagePipelineArgs build() {
-            $.imageRecipeArn = Objects.requireNonNull($.imageRecipeArn, "expected parameter 'imageRecipeArn' to be non-null");
             $.infrastructureConfigurationArn = Objects.requireNonNull($.infrastructureConfigurationArn, "expected parameter 'infrastructureConfigurationArn' to be non-null");
             return $;
         }

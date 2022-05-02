@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.imagebuilder.inputs;
 
+import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationInstanceMetadataOptionsArgs;
 import com.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -77,6 +78,21 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+     * 
+     */
+    @Import(name="instanceMetadataOptions")
+    private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions;
+
+    /**
+     * @return Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+     * 
+     */
+    public Optional<Output<InfrastructureConfigurationInstanceMetadataOptionsArgs>> instanceMetadataOptions() {
+        return Optional.ofNullable(this.instanceMetadataOptions);
     }
 
     /**
@@ -266,6 +282,7 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
         this.dateCreated = $.dateCreated;
         this.dateUpdated = $.dateUpdated;
         this.description = $.description;
+        this.instanceMetadataOptions = $.instanceMetadataOptions;
         this.instanceProfileName = $.instanceProfileName;
         this.instanceTypes = $.instanceTypes;
         this.keyPair = $.keyPair;
@@ -380,6 +397,27 @@ public final class InfrastructureConfigurationState extends com.pulumi.resources
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param instanceMetadataOptions Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceMetadataOptions(@Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions) {
+            $.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+
+        /**
+         * @param instanceMetadataOptions Configuration block with instance metadata options for the HTTP requests that pipeline builds use to launch EC2 build and test instances. Detailed below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder instanceMetadataOptions(InfrastructureConfigurationInstanceMetadataOptionsArgs instanceMetadataOptions) {
+            return instanceMetadataOptions(Output.of(instanceMetadataOptions));
         }
 
         /**

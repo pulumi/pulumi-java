@@ -32,9 +32,17 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
         return Optional.ofNullable(this.arn);
     }
 
+    /**
+     * The identifier of the endpoint.
+     * 
+     */
     @Import(name="clusterEndpointIdentifier")
     private @Nullable Output<String> clusterEndpointIdentifier;
 
+    /**
+     * @return The identifier of the endpoint.
+     * 
+     */
     public Optional<Output<String>> clusterEndpointIdentifier() {
         return Optional.ofNullable(this.clusterEndpointIdentifier);
     }
@@ -197,11 +205,23 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param clusterEndpointIdentifier The identifier of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointIdentifier(@Nullable Output<String> clusterEndpointIdentifier) {
             $.clusterEndpointIdentifier = clusterEndpointIdentifier;
             return this;
         }
 
+        /**
+         * @param clusterEndpointIdentifier The identifier of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
             return clusterEndpointIdentifier(Output.of(clusterEndpointIdentifier));
         }

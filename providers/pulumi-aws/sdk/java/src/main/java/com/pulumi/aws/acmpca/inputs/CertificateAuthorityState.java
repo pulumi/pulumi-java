@@ -186,16 +186,24 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Status of the certificate authority.
+     * (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
+     * 
+     * @deprecated
+     * The reported value of the &#34;status&#34; attribute is often inaccurate. Use the resource&#39;s &#34;enabled&#34; attribute to explicitly set status.
      * 
      */
+    @Deprecated /* The reported value of the ""status"" attribute is often inaccurate. Use the resource's ""enabled"" attribute to explicitly set status. */
     @Import(name="status")
     private @Nullable Output<String> status;
 
     /**
-     * @return Status of the certificate authority.
+     * @return (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
+     * 
+     * @deprecated
+     * The reported value of the &#34;status&#34; attribute is often inaccurate. Use the resource&#39;s &#34;enabled&#34; attribute to explicitly set status.
      * 
      */
+    @Deprecated /* The reported value of the ""status"" attribute is often inaccurate. Use the resource's ""enabled"" attribute to explicitly set status. */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -216,14 +224,14 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
     }
 
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Import(name="tagsAll")
     private @Nullable Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Optional<Output<Map<String,String>>> tagsAll() {
@@ -515,22 +523,30 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param status Status of the certificate authority.
+         * @param status (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
          * 
          * @return builder
          * 
+         * @deprecated
+         * The reported value of the &#34;status&#34; attribute is often inaccurate. Use the resource&#39;s &#34;enabled&#34; attribute to explicitly set status.
+         * 
          */
+        @Deprecated /* The reported value of the ""status"" attribute is often inaccurate. Use the resource's ""enabled"" attribute to explicitly set status. */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
         /**
-         * @param status Status of the certificate authority.
+         * @param status (**Deprecated** use the `enabled` attribute instead) Status of the certificate authority.
          * 
          * @return builder
          * 
+         * @deprecated
+         * The reported value of the &#34;status&#34; attribute is often inaccurate. Use the resource&#39;s &#34;enabled&#34; attribute to explicitly set status.
+         * 
          */
+        @Deprecated /* The reported value of the ""status"" attribute is often inaccurate. Use the resource's ""enabled"" attribute to explicitly set status. */
         public Builder status(String status) {
             return status(Output.of(status));
         }
@@ -557,7 +573,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 
@@ -568,7 +584,7 @@ public final class CertificateAuthorityState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider .
+         * @param tagsAll A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
          * 
          * @return builder
          * 

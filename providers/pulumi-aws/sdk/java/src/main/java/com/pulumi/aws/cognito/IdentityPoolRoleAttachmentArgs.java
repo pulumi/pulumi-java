@@ -19,14 +19,14 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
     public static final IdentityPoolRoleAttachmentArgs Empty = new IdentityPoolRoleAttachmentArgs();
 
     /**
-     * An identity pool ID in the format REGION:GUID.
+     * An identity pool ID in the format `REGION_GUID`.
      * 
      */
     @Import(name="identityPoolId", required=true)
     private Output<String> identityPoolId;
 
     /**
-     * @return An identity pool ID in the format REGION:GUID.
+     * @return An identity pool ID in the format `REGION_GUID`.
      * 
      */
     public Output<String> identityPoolId() {
@@ -90,7 +90,7 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID in the format `REGION_GUID`.
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class IdentityPoolRoleAttachmentArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID in the format `REGION_GUID`.
          * 
          * @return builder
          * 

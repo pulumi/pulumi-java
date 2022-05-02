@@ -6,6 +6,8 @@ package com.pulumi.aws.synthetics.outputs;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
+import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,6 +19,11 @@ public final class CanaryRunConfig {
      * 
      */
     private final @Nullable Boolean activeTracing;
+    /**
+     * @return Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+     * 
+     */
+    private final @Nullable Map<String,String> environmentVariables;
     /**
      * @return Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
      * 
@@ -31,9 +38,11 @@ public final class CanaryRunConfig {
     @CustomType.Constructor
     private CanaryRunConfig(
         @CustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
         @CustomType.Parameter("memoryInMb") @Nullable Integer memoryInMb,
         @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.activeTracing = activeTracing;
+        this.environmentVariables = environmentVariables;
         this.memoryInMb = memoryInMb;
         this.timeoutInSeconds = timeoutInSeconds;
     }
@@ -44,6 +53,13 @@ public final class CanaryRunConfig {
      */
     public Optional<Boolean> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
+    }
+    /**
+     * @return Map of environment variables that are accessible from the canary during execution. Please see [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime) for variables reserved for Lambda.
+     * 
+     */
+    public Map<String,String> environmentVariables() {
+        return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * @return Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
@@ -70,6 +86,7 @@ public final class CanaryRunConfig {
 
     public static final class Builder {
         private @Nullable Boolean activeTracing;
+        private @Nullable Map<String,String> environmentVariables;
         private @Nullable Integer memoryInMb;
         private @Nullable Integer timeoutInSeconds;
 
@@ -80,12 +97,17 @@ public final class CanaryRunConfig {
         public Builder(CanaryRunConfig defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.activeTracing = defaults.activeTracing;
+    	      this.environmentVariables = defaults.environmentVariables;
     	      this.memoryInMb = defaults.memoryInMb;
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
         public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = activeTracing;
+            return this;
+        }
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
+            this.environmentVariables = environmentVariables;
             return this;
         }
         public Builder memoryInMb(@Nullable Integer memoryInMb) {
@@ -96,7 +118,7 @@ public final class CanaryRunConfig {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }        public CanaryRunConfig build() {
-            return new CanaryRunConfig(activeTracing, memoryInMb, timeoutInSeconds);
+            return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMb, timeoutInSeconds);
         }
     }
 }

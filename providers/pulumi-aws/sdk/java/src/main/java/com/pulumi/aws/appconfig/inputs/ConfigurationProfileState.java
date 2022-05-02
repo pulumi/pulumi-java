@@ -154,6 +154,21 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
     }
 
     /**
+     * The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<String> type;
+
+    /**
+     * @return The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+     * 
+     */
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
+    }
+
+    /**
      * A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
@@ -180,6 +195,7 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
         this.retrievalRoleArn = $.retrievalRoleArn;
         this.tags = $.tags;
         this.tagsAll = $.tagsAll;
+        this.type = $.type;
         this.validators = $.validators;
     }
 
@@ -388,6 +404,27 @@ public final class ConfigurationProfileState extends com.pulumi.resources.Resour
          */
         public Builder tagsAll(Map<String,String> tagsAll) {
             return tagsAll(Output.of(tagsAll));
+        }
+
+        /**
+         * @param type The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<String> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type The type of configurations contained in the profile. Valid values: `AWS.AppConfig.FeatureFlags` and `AWS.Freeform`.  Default: `AWS.Freeform`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
 
         /**

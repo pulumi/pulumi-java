@@ -17,17 +17,9 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
 
     public static final UserLoginProfileState Empty = new UserLoginProfileState();
 
-    /**
-     * The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-     * 
-     */
     @Import(name="encryptedPassword")
     private @Nullable Output<String> encryptedPassword;
 
-    /**
-     * @return The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-     * 
-     */
     public Optional<Output<String>> encryptedPassword() {
         return Optional.ofNullable(this.encryptedPassword);
     }
@@ -48,14 +40,29 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * The plain text password, only available when `pgp_key` is not provided.
+     * 
+     */
+    @Import(name="password")
+    private @Nullable Output<String> password;
+
+    /**
+     * @return The plain text password, only available when `pgp_key` is not provided.
+     * 
+     */
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
+    }
+
+    /**
+     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     @Import(name="passwordLength")
     private @Nullable Output<Integer> passwordLength;
 
     /**
-     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     public Optional<Output<Integer>> passwordLength() {
@@ -63,14 +70,14 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
     @Import(name="passwordResetRequired")
     private @Nullable Output<Boolean> passwordResetRequired;
 
     /**
-     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
     public Optional<Output<Boolean>> passwordResetRequired() {
@@ -112,6 +119,7 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
     private UserLoginProfileState(UserLoginProfileState $) {
         this.encryptedPassword = $.encryptedPassword;
         this.keyFingerprint = $.keyFingerprint;
+        this.password = $.password;
         this.passwordLength = $.passwordLength;
         this.passwordResetRequired = $.passwordResetRequired;
         this.pgpKey = $.pgpKey;
@@ -136,23 +144,11 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
             $ = new UserLoginProfileState(Objects.requireNonNull(defaults));
         }
 
-        /**
-         * @param encryptedPassword The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-         * 
-         * @return builder
-         * 
-         */
         public Builder encryptedPassword(@Nullable Output<String> encryptedPassword) {
             $.encryptedPassword = encryptedPassword;
             return this;
         }
 
-        /**
-         * @param encryptedPassword The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
-         * 
-         * @return builder
-         * 
-         */
         public Builder encryptedPassword(String encryptedPassword) {
             return encryptedPassword(Output.of(encryptedPassword));
         }
@@ -179,7 +175,28 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param password The plain text password, only available when `pgp_key` is not provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(@Nullable Output<String> password) {
+            $.password = password;
+            return this;
+        }
+
+        /**
+         * @param password The plain text password, only available when `pgp_key` is not provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder password(String password) {
+            return password(Output.of(password));
+        }
+
+        /**
+         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
          * 
          * @return builder
          * 
@@ -190,7 +207,7 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
          * 
          * @return builder
          * 
@@ -200,7 +217,7 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
          * 
          * @return builder
          * 
@@ -211,7 +228,7 @@ public final class UserLoginProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
          * 
          * @return builder
          * 

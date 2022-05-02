@@ -21,6 +21,7 @@ import com.pulumi.aws.ec2.outputs.LaunchTemplateMetadataOptions;
 import com.pulumi.aws.ec2.outputs.LaunchTemplateMonitoring;
 import com.pulumi.aws.ec2.outputs.LaunchTemplateNetworkInterface;
 import com.pulumi.aws.ec2.outputs.LaunchTemplatePlacement;
+import com.pulumi.aws.ec2.outputs.LaunchTemplatePrivateDnsNameOptions;
 import com.pulumi.aws.ec2.outputs.LaunchTemplateTagSpecification;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
@@ -400,17 +401,9 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
     public Output<Optional<LaunchTemplateMonitoring>> monitoring() {
         return Codegen.optional(this.monitoring);
     }
-    /**
-     * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-     * 
-     */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    /**
-     * @return The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-     * 
-     */
     public Output<String> name() {
         return this.name;
     }
@@ -459,6 +452,20 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.placement);
     }
     /**
+     * The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+     * 
+     */
+    @Export(name="privateDnsNameOptions", type=LaunchTemplatePrivateDnsNameOptions.class, parameters={})
+    private Output</* @Nullable */ LaunchTemplatePrivateDnsNameOptions> privateDnsNameOptions;
+
+    /**
+     * @return The options for the instance hostname. The default values are inherited from the subnet. See Private DNS Name Options below for more details.
+     * 
+     */
+    public Output<Optional<LaunchTemplatePrivateDnsNameOptions>> privateDnsNameOptions() {
+        return Codegen.optional(this.privateDnsNameOptions);
+    }
+    /**
      * The ID of the RAM disk.
      * 
      */
@@ -503,14 +510,14 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tagSpecifications);
     }
     /**
-     * A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return A map of tags to assign to the launch template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
@@ -545,14 +552,14 @@ public class LaunchTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.updateDefaultVersion);
     }
     /**
-     * The Base64-encoded user data to provide when launching the instance.
+     * The base64-encoded user data to provide when launching the instance.
      * 
      */
     @Export(name="userData", type=String.class, parameters={})
     private Output</* @Nullable */ String> userData;
 
     /**
-     * @return The Base64-encoded user data to provide when launching the instance.
+     * @return The base64-encoded user data to provide when launching the instance.
      * 
      */
     public Output<Optional<String>> userData() {

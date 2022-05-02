@@ -16,14 +16,14 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
     public static final RuleSourceSourceDetailArgs Empty = new RuleSourceSourceDetailArgs();
 
     /**
-     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+     * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWSresources. This defaults to `aws.config` and is the only valid value.
      * 
      */
     @Import(name="eventSource")
     private @Nullable Output<String> eventSource;
 
     /**
-     * @return The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+     * @return The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWSresources. This defaults to `aws.config` and is the only valid value.
      * 
      */
     public Optional<Output<String>> eventSource() {
@@ -31,14 +31,14 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     @Import(name="maximumExecutionFrequency")
     private @Nullable Output<String> maximumExecutionFrequency;
 
     /**
-     * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+     * @return The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
     public Optional<Output<String>> maximumExecutionFrequency() {
@@ -46,14 +46,14 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+     * The type of notification that triggers AWS Config to run an evaluation for a rule. You canspecify the following notification types:
      * 
      */
     @Import(name="messageType")
     private @Nullable Output<String> messageType;
 
     /**
-     * @return The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+     * @return The type of notification that triggers AWS Config to run an evaluation for a rule. You canspecify the following notification types:
      * 
      */
     public Optional<Output<String>> messageType() {
@@ -87,7 +87,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param eventSource The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+         * @param eventSource The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWSresources. This defaults to `aws.config` and is the only valid value.
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param eventSource The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+         * @param eventSource The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWSresources. This defaults to `aws.config` and is the only valid value.
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+         * @param maximumExecutionFrequency The frequency that you want AWS Config to run evaluations for a rule that istriggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param messageType The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+         * @param messageType The type of notification that triggers AWS Config to run an evaluation for a rule. You canspecify the following notification types:
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class RuleSourceSourceDetailArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param messageType The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
+         * @param messageType The type of notification that triggers AWS Config to run an evaluation for a rule. You canspecify the following notification types:
          * 
          * @return builder
          * 

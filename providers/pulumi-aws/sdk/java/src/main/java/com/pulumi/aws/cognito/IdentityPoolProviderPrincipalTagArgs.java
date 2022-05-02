@@ -18,14 +18,14 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
     public static final IdentityPoolProviderPrincipalTagArgs Empty = new IdentityPoolProviderPrincipalTagArgs();
 
     /**
-     * An identity pool ID in the format REGION:GUID.
+     * An identity pool ID.
      * 
      */
     @Import(name="identityPoolId", required=true)
     private Output<String> identityPoolId;
 
     /**
-     * @return An identity pool ID in the format REGION:GUID.
+     * @return An identity pool ID.
      * 
      */
     public Output<String> identityPoolId() {
@@ -33,8 +33,8 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
     }
 
     /**
-     * The name of the identity provider
-     * * `principal_tags`: (Optional: []) - String to string map of variables
+     * The name of the identity provider.
+     * * `principal_tags`: (Optional: []) - String to string map of variables.
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
@@ -42,8 +42,8 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
     private Output<String> identityProviderName;
 
     /**
-     * @return The name of the identity provider
-     * * `principal_tags`: (Optional: []) - String to string map of variables
+     * @return The name of the identity provider.
+     * * `principal_tags`: (Optional: []) - String to string map of variables.
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
@@ -93,7 +93,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityPoolId An identity pool ID in the format REGION:GUID.
+         * @param identityPoolId An identity pool ID.
          * 
          * @return builder
          * 
@@ -114,8 +114,8 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityProviderName The name of the identity provider
-         * * `principal_tags`: (Optional: []) - String to string map of variables
+         * @param identityProviderName The name of the identity provider.
+         * * `principal_tags`: (Optional: []) - String to string map of variables.
          * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
          * 
          * @return builder
@@ -127,8 +127,8 @@ public final class IdentityPoolProviderPrincipalTagArgs extends com.pulumi.resou
         }
 
         /**
-         * @param identityProviderName The name of the identity provider
-         * * `principal_tags`: (Optional: []) - String to string map of variables
+         * @param identityProviderName The name of the identity provider.
+         * * `principal_tags`: (Optional: []) - String to string map of variables.
          * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
          * 
          * @return builder

@@ -53,6 +53,23 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+     * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+     * 
+     */
+    @Import(name="customCaBundle")
+    private @Nullable Output<String> customCaBundle;
+
+    /**
+     * @return File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+     * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+     * 
+     */
+    public Optional<Output<String>> customCaBundle() {
+        return Optional.ofNullable(this.customCaBundle);
+    }
+
+    /**
      * Configuration block with settings to default resource tags across all resources.
      * 
      */
@@ -65,6 +82,40 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<ProviderDefaultTagsArgs>> defaultTags() {
         return Optional.ofNullable(this.defaultTags);
+    }
+
+    /**
+     * Address of the EC2 metadata service endpoint to use. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+     * 
+     */
+    @Import(name="ec2MetadataServiceEndpoint")
+    private @Nullable Output<String> ec2MetadataServiceEndpoint;
+
+    /**
+     * @return Address of the EC2 metadata service endpoint to use. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+     * 
+     */
+    public Optional<Output<String>> ec2MetadataServiceEndpoint() {
+        return Optional.ofNullable(this.ec2MetadataServiceEndpoint);
+    }
+
+    /**
+     * Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+     * 
+     */
+    @Import(name="ec2MetadataServiceEndpointMode")
+    private @Nullable Output<String> ec2MetadataServiceEndpointMode;
+
+    /**
+     * @return Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+     * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+     * 
+     */
+    public Optional<Output<String>> ec2MetadataServiceEndpointMode() {
+        return Optional.ofNullable(this.ec2MetadataServiceEndpointMode);
     }
 
     @Import(name="endpoints", json=true)
@@ -174,22 +225,49 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
-     * default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+     * Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+     * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
      * Specific to the Amazon S3 service.
      * 
+     * @deprecated
+     * Use s3_use_path_style instead.
+     * 
      */
+    @Deprecated /* Use s3_use_path_style instead. */
     @Import(name="s3ForcePathStyle", json=true)
     private @Nullable Output<Boolean> s3ForcePathStyle;
 
     /**
-     * @return Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
-     * default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+     * @return Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+     * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
+     * Specific to the Amazon S3 service.
+     * 
+     * @deprecated
+     * Use s3_use_path_style instead.
+     * 
+     */
+    @Deprecated /* Use s3_use_path_style instead. */
+    public Optional<Output<Boolean>> s3ForcePathStyle() {
+        return Optional.ofNullable(this.s3ForcePathStyle);
+    }
+
+    /**
+     * Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+     * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
      * Specific to the Amazon S3 service.
      * 
      */
-    public Optional<Output<Boolean>> s3ForcePathStyle() {
-        return Optional.ofNullable(this.s3ForcePathStyle);
+    @Import(name="s3UsePathStyle", json=true)
+    private @Nullable Output<Boolean> s3UsePathStyle;
+
+    /**
+     * @return Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+     * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
+     * Specific to the Amazon S3 service.
+     * 
+     */
+    public Optional<Output<Boolean>> s3UsePathStyle() {
+        return Optional.ofNullable(this.s3UsePathStyle);
     }
 
     /**
@@ -208,18 +286,56 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+     * List of paths to shared config files. If not set, defaults to [~/.aws/config].
      * 
      */
+    @Import(name="sharedConfigFiles", json=true)
+    private @Nullable Output<List<String>> sharedConfigFiles;
+
+    /**
+     * @return List of paths to shared config files. If not set, defaults to [~/.aws/config].
+     * 
+     */
+    public Optional<Output<List<String>>> sharedConfigFiles() {
+        return Optional.ofNullable(this.sharedConfigFiles);
+    }
+
+    /**
+     * The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
+     * 
+     * @deprecated
+     * Use shared_credentials_files instead.
+     * 
+     */
+    @Deprecated /* Use shared_credentials_files instead. */
     @Import(name="sharedCredentialsFile")
     private @Nullable Output<String> sharedCredentialsFile;
 
     /**
-     * @return The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+     * @return The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
+     * 
+     * @deprecated
+     * Use shared_credentials_files instead.
      * 
      */
+    @Deprecated /* Use shared_credentials_files instead. */
     public Optional<Output<String>> sharedCredentialsFile() {
         return Optional.ofNullable(this.sharedCredentialsFile);
+    }
+
+    /**
+     * List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
+     * 
+     */
+    @Import(name="sharedCredentialsFiles", json=true)
+    private @Nullable Output<List<String>> sharedCredentialsFiles;
+
+    /**
+     * @return List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
+     * 
+     */
+    public Optional<Output<List<String>>> sharedCredentialsFiles() {
+        return Optional.ofNullable(this.sharedCredentialsFiles);
     }
 
     /**
@@ -254,9 +370,17 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.skipGetEc2Platforms);
     }
 
+    /**
+     * Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.
+     * 
+     */
     @Import(name="skipMetadataApiCheck", json=true)
     private @Nullable Output<Boolean> skipMetadataApiCheck;
 
+    /**
+     * @return Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.
+     * 
+     */
     public Optional<Output<Boolean>> skipMetadataApiCheck() {
         return Optional.ofNullable(this.skipMetadataApiCheck);
     }
@@ -294,6 +418,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+     * 
+     */
+    @Import(name="stsRegion")
+    private @Nullable Output<String> stsRegion;
+
+    /**
+     * @return The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+     * 
+     */
+    public Optional<Output<String>> stsRegion() {
+        return Optional.ofNullable(this.stsRegion);
+    }
+
+    /**
      * session token. A session token is only required if you are using temporary security credentials.
      * 
      */
@@ -308,13 +447,46 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.token);
     }
 
+    /**
+     * Resolve an endpoint with DualStack capability
+     * 
+     */
+    @Import(name="useDualstackEndpoint", json=true)
+    private @Nullable Output<Boolean> useDualstackEndpoint;
+
+    /**
+     * @return Resolve an endpoint with DualStack capability
+     * 
+     */
+    public Optional<Output<Boolean>> useDualstackEndpoint() {
+        return Optional.ofNullable(this.useDualstackEndpoint);
+    }
+
+    /**
+     * Resolve an endpoint with FIPS capability
+     * 
+     */
+    @Import(name="useFipsEndpoint", json=true)
+    private @Nullable Output<Boolean> useFipsEndpoint;
+
+    /**
+     * @return Resolve an endpoint with FIPS capability
+     * 
+     */
+    public Optional<Output<Boolean>> useFipsEndpoint() {
+        return Optional.ofNullable(this.useFipsEndpoint);
+    }
+
     private ProviderArgs() {}
 
     private ProviderArgs(ProviderArgs $) {
         this.accessKey = $.accessKey;
         this.allowedAccountIds = $.allowedAccountIds;
         this.assumeRole = $.assumeRole;
+        this.customCaBundle = $.customCaBundle;
         this.defaultTags = $.defaultTags;
+        this.ec2MetadataServiceEndpoint = $.ec2MetadataServiceEndpoint;
+        this.ec2MetadataServiceEndpointMode = $.ec2MetadataServiceEndpointMode;
         this.endpoints = $.endpoints;
         this.forbiddenAccountIds = $.forbiddenAccountIds;
         this.httpProxy = $.httpProxy;
@@ -324,14 +496,20 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.profile = $.profile;
         this.region = $.region;
         this.s3ForcePathStyle = $.s3ForcePathStyle;
+        this.s3UsePathStyle = $.s3UsePathStyle;
         this.secretKey = $.secretKey;
+        this.sharedConfigFiles = $.sharedConfigFiles;
         this.sharedCredentialsFile = $.sharedCredentialsFile;
+        this.sharedCredentialsFiles = $.sharedCredentialsFiles;
         this.skipCredentialsValidation = $.skipCredentialsValidation;
         this.skipGetEc2Platforms = $.skipGetEc2Platforms;
         this.skipMetadataApiCheck = $.skipMetadataApiCheck;
         this.skipRegionValidation = $.skipRegionValidation;
         this.skipRequestingAccountId = $.skipRequestingAccountId;
+        this.stsRegion = $.stsRegion;
         this.token = $.token;
+        this.useDualstackEndpoint = $.useDualstackEndpoint;
+        this.useFipsEndpoint = $.useFipsEndpoint;
     }
 
     public static Builder builder() {
@@ -396,6 +574,29 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param customCaBundle File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+         * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customCaBundle(@Nullable Output<String> customCaBundle) {
+            $.customCaBundle = customCaBundle;
+            return this;
+        }
+
+        /**
+         * @param customCaBundle File containing custom root and intermediate certificates. Can also be configured using the `AWS_CA_BUNDLE` environment
+         * variable. (Setting `ca_bundle` in the shared config file is not supported.)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customCaBundle(String customCaBundle) {
+            return customCaBundle(Output.of(customCaBundle));
+        }
+
+        /**
          * @param defaultTags Configuration block with settings to default resource tags across all resources.
          * 
          * @return builder
@@ -414,6 +615,52 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder defaultTags(ProviderDefaultTagsArgs defaultTags) {
             return defaultTags(Output.of(defaultTags));
+        }
+
+        /**
+         * @param ec2MetadataServiceEndpoint Address of the EC2 metadata service endpoint to use. Can also be configured using the
+         * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ec2MetadataServiceEndpoint(@Nullable Output<String> ec2MetadataServiceEndpoint) {
+            $.ec2MetadataServiceEndpoint = ec2MetadataServiceEndpoint;
+            return this;
+        }
+
+        /**
+         * @param ec2MetadataServiceEndpoint Address of the EC2 metadata service endpoint to use. Can also be configured using the
+         * `AWS_EC2_METADATA_SERVICE_ENDPOINT` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ec2MetadataServiceEndpoint(String ec2MetadataServiceEndpoint) {
+            return ec2MetadataServiceEndpoint(Output.of(ec2MetadataServiceEndpoint));
+        }
+
+        /**
+         * @param ec2MetadataServiceEndpointMode Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+         * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ec2MetadataServiceEndpointMode(@Nullable Output<String> ec2MetadataServiceEndpointMode) {
+            $.ec2MetadataServiceEndpointMode = ec2MetadataServiceEndpointMode;
+            return this;
+        }
+
+        /**
+         * @param ec2MetadataServiceEndpointMode Protocol to use with EC2 metadata service endpoint.Valid values are `IPv4` and `IPv6`. Can also be configured using the
+         * `AWS_EC2_METADATA_SERVICE_ENDPOINT_MODE` environment variable.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ec2MetadataServiceEndpointMode(String ec2MetadataServiceEndpointMode) {
+            return ec2MetadataServiceEndpointMode(Output.of(ec2MetadataServiceEndpointMode));
         }
 
         public Builder endpoints(@Nullable Output<List<ProviderEndpointArgs>> endpoints) {
@@ -571,28 +818,61 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param s3ForcePathStyle Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
-         * default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+         * @param s3ForcePathStyle Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+         * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
          * Specific to the Amazon S3 service.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use s3_use_path_style instead.
+         * 
          */
+        @Deprecated /* Use s3_use_path_style instead. */
         public Builder s3ForcePathStyle(@Nullable Output<Boolean> s3ForcePathStyle) {
             $.s3ForcePathStyle = s3ForcePathStyle;
             return this;
         }
 
         /**
-         * @param s3ForcePathStyle Set this to true to force the request to use path-style addressing, i.e., http://s3.amazonaws.com/BUCKET/KEY. By
-         * default, the S3 client will use virtual hosted bucket addressing when possible (http://BUCKET.s3.amazonaws.com/KEY).
+         * @param s3ForcePathStyle Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+         * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
+         * Specific to the Amazon S3 service.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use s3_use_path_style instead.
+         * 
+         */
+        @Deprecated /* Use s3_use_path_style instead. */
+        public Builder s3ForcePathStyle(Boolean s3ForcePathStyle) {
+            return s3ForcePathStyle(Output.of(s3ForcePathStyle));
+        }
+
+        /**
+         * @param s3UsePathStyle Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+         * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
          * Specific to the Amazon S3 service.
          * 
          * @return builder
          * 
          */
-        public Builder s3ForcePathStyle(Boolean s3ForcePathStyle) {
-            return s3ForcePathStyle(Output.of(s3ForcePathStyle));
+        public Builder s3UsePathStyle(@Nullable Output<Boolean> s3UsePathStyle) {
+            $.s3UsePathStyle = s3UsePathStyle;
+            return this;
+        }
+
+        /**
+         * @param s3UsePathStyle Set this to true to enable the request to use path-style addressing, i.e., https://s3.amazonaws.com/BUCKET/KEY. By
+         * default, the S3 client will use virtual hosted bucket addressing when possible (https://BUCKET.s3.amazonaws.com/KEY).
+         * Specific to the Amazon S3 service.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder s3UsePathStyle(Boolean s3UsePathStyle) {
+            return s3UsePathStyle(Output.of(s3UsePathStyle));
         }
 
         /**
@@ -617,24 +897,94 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sharedCredentialsFile The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+         * @param sharedConfigFiles List of paths to shared config files. If not set, defaults to [~/.aws/config].
          * 
          * @return builder
          * 
          */
+        public Builder sharedConfigFiles(@Nullable Output<List<String>> sharedConfigFiles) {
+            $.sharedConfigFiles = sharedConfigFiles;
+            return this;
+        }
+
+        /**
+         * @param sharedConfigFiles List of paths to shared config files. If not set, defaults to [~/.aws/config].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedConfigFiles(List<String> sharedConfigFiles) {
+            return sharedConfigFiles(Output.of(sharedConfigFiles));
+        }
+
+        /**
+         * @param sharedConfigFiles List of paths to shared config files. If not set, defaults to [~/.aws/config].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedConfigFiles(String... sharedConfigFiles) {
+            return sharedConfigFiles(List.of(sharedConfigFiles));
+        }
+
+        /**
+         * @param sharedCredentialsFile The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use shared_credentials_files instead.
+         * 
+         */
+        @Deprecated /* Use shared_credentials_files instead. */
         public Builder sharedCredentialsFile(@Nullable Output<String> sharedCredentialsFile) {
             $.sharedCredentialsFile = sharedCredentialsFile;
             return this;
         }
 
         /**
-         * @param sharedCredentialsFile The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
+         * @param sharedCredentialsFile The path to the shared credentials file. If not set, defaults to ~/.aws/credentials.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Use shared_credentials_files instead.
+         * 
+         */
+        @Deprecated /* Use shared_credentials_files instead. */
+        public Builder sharedCredentialsFile(String sharedCredentialsFile) {
+            return sharedCredentialsFile(Output.of(sharedCredentialsFile));
+        }
+
+        /**
+         * @param sharedCredentialsFiles List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
          * 
          * @return builder
          * 
          */
-        public Builder sharedCredentialsFile(String sharedCredentialsFile) {
-            return sharedCredentialsFile(Output.of(sharedCredentialsFile));
+        public Builder sharedCredentialsFiles(@Nullable Output<List<String>> sharedCredentialsFiles) {
+            $.sharedCredentialsFiles = sharedCredentialsFiles;
+            return this;
+        }
+
+        /**
+         * @param sharedCredentialsFiles List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedCredentialsFiles(List<String> sharedCredentialsFiles) {
+            return sharedCredentialsFiles(Output.of(sharedCredentialsFiles));
+        }
+
+        /**
+         * @param sharedCredentialsFiles List of paths to shared credentials files. If not set, defaults to [~/.aws/credentials].
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sharedCredentialsFiles(String... sharedCredentialsFiles) {
+            return sharedCredentialsFiles(List.of(sharedCredentialsFiles));
         }
 
         /**
@@ -681,11 +1031,23 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             return skipGetEc2Platforms(Output.of(skipGetEc2Platforms));
         }
 
+        /**
+         * @param skipMetadataApiCheck Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetadataApiCheck(@Nullable Output<Boolean> skipMetadataApiCheck) {
             $.skipMetadataApiCheck = skipMetadataApiCheck;
             return this;
         }
 
+        /**
+         * @param skipMetadataApiCheck Skip the AWS Metadata API check. Used for AWS API implementations that do not have a metadata api endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipMetadataApiCheck(Boolean skipMetadataApiCheck) {
             return skipMetadataApiCheck(Output.of(skipMetadataApiCheck));
         }
@@ -735,6 +1097,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param stsRegion The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stsRegion(@Nullable Output<String> stsRegion) {
+            $.stsRegion = stsRegion;
+            return this;
+        }
+
+        /**
+         * @param stsRegion The region where AWS STS operations will take place. Examples are us-east-1 and us-west-2.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder stsRegion(String stsRegion) {
+            return stsRegion(Output.of(stsRegion));
+        }
+
+        /**
          * @param token session token. A session token is only required if you are using temporary security credentials.
          * 
          * @return builder
@@ -755,8 +1138,49 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
             return token(Output.of(token));
         }
 
+        /**
+         * @param useDualstackEndpoint Resolve an endpoint with DualStack capability
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useDualstackEndpoint(@Nullable Output<Boolean> useDualstackEndpoint) {
+            $.useDualstackEndpoint = useDualstackEndpoint;
+            return this;
+        }
+
+        /**
+         * @param useDualstackEndpoint Resolve an endpoint with DualStack capability
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useDualstackEndpoint(Boolean useDualstackEndpoint) {
+            return useDualstackEndpoint(Output.of(useDualstackEndpoint));
+        }
+
+        /**
+         * @param useFipsEndpoint Resolve an endpoint with FIPS capability
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useFipsEndpoint(@Nullable Output<Boolean> useFipsEndpoint) {
+            $.useFipsEndpoint = useFipsEndpoint;
+            return this;
+        }
+
+        /**
+         * @param useFipsEndpoint Resolve an endpoint with FIPS capability
+         * 
+         * @return builder
+         * 
+         */
+        public Builder useFipsEndpoint(Boolean useFipsEndpoint) {
+            return useFipsEndpoint(Output.of(useFipsEndpoint));
+        }
+
         public ProviderArgs build() {
-            $.profile = Codegen.stringProp("profile").output().arg($.profile).env("AWS_PROFILE").getNullable();
             $.region = Codegen.stringProp("region").output().arg($.region).env("AWS_REGION", "AWS_DEFAULT_REGION").getNullable();
             $.skipCredentialsValidation = Codegen.booleanProp("skipCredentialsValidation").output().arg($.skipCredentialsValidation).def(true).getNullable();
             $.skipGetEc2Platforms = Codegen.booleanProp("skipGetEc2Platforms").output().arg($.skipGetEc2Platforms).def(true).getNullable();

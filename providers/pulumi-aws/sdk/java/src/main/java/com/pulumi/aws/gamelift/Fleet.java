@@ -6,6 +6,7 @@ package com.pulumi.aws.gamelift;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.gamelift.FleetArgs;
 import com.pulumi.aws.gamelift.inputs.FleetState;
+import com.pulumi.aws.gamelift.outputs.FleetCertificateConfiguration;
 import com.pulumi.aws.gamelift.outputs.FleetEc2InboundPermission;
 import com.pulumi.aws.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import com.pulumi.aws.gamelift.outputs.FleetRuntimeConfiguration;
@@ -20,13 +21,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Provides a Gamelift Fleet resource.
+ * Provides a GameLift Fleet resource.
  * 
  * ## Example Usage
  * 
  * ## Import
  * 
- * Gamelift Fleets cannot be imported at this time.
+ * GameLift Fleets can be imported using the ID, e.g.,
+ * 
+ * ```sh
+ *  $ pulumi import aws:gamelift/fleet:Fleet example &lt;fleet-id&gt;
+ * ```
  * 
  */
 @ResourceType(type="aws:gamelift/fleet:Fleet")
@@ -46,18 +51,46 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return this.arn;
     }
     /**
-     * ID of the Gamelift Build to be deployed on the fleet.
+     * Build ARN.
+     * 
+     */
+    @Export(name="buildArn", type=String.class, parameters={})
+    private Output<String> buildArn;
+
+    /**
+     * @return Build ARN.
+     * 
+     */
+    public Output<String> buildArn() {
+        return this.buildArn;
+    }
+    /**
+     * ID of the GameLift Build to be deployed on the fleet.
      * 
      */
     @Export(name="buildId", type=String.class, parameters={})
-    private Output<String> buildId;
+    private Output</* @Nullable */ String> buildId;
 
     /**
-     * @return ID of the Gamelift Build to be deployed on the fleet.
+     * @return ID of the GameLift Build to be deployed on the fleet.
      * 
      */
-    public Output<String> buildId() {
-        return this.buildId;
+    public Output<Optional<String>> buildId() {
+        return Codegen.optional(this.buildId);
+    }
+    /**
+     * Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+     * 
+     */
+    @Export(name="certificateConfiguration", type=FleetCertificateConfiguration.class, parameters={})
+    private Output<FleetCertificateConfiguration> certificateConfiguration;
+
+    /**
+     * @return Prompts GameLift to generate a TLS/SSL certificate for the fleet. See certificate_configuration.
+     * 
+     */
+    public Output<FleetCertificateConfiguration> certificateConfiguration() {
+        return this.certificateConfiguration;
     }
     /**
      * Human-readable description of the fleet.
@@ -78,14 +111,14 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ec2InboundPermissions", type=List.class, parameters={FleetEc2InboundPermission.class})
-    private Output</* @Nullable */ List<FleetEc2InboundPermission>> ec2InboundPermissions;
+    private Output<List<FleetEc2InboundPermission>> ec2InboundPermissions;
 
     /**
      * @return Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
      * 
      */
-    public Output<Optional<List<FleetEc2InboundPermission>>> ec2InboundPermissions() {
-        return Codegen.optional(this.ec2InboundPermissions);
+    public Output<List<FleetEc2InboundPermission>> ec2InboundPermissions() {
+        return this.ec2InboundPermissions;
     }
     /**
      * Name of an EC2 instance typeE.g., `t2.micro`
@@ -220,28 +253,56 @@ public class Fleet extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.runtimeConfiguration);
     }
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Script ARN.
+     * 
+     */
+    @Export(name="scriptArn", type=String.class, parameters={})
+    private Output<String> scriptArn;
+
+    /**
+     * @return Script ARN.
+     * 
+     */
+    public Output<String> scriptArn() {
+        return this.scriptArn;
+    }
+    /**
+     * ID of the GameLift Script to be deployed on the fleet.
+     * 
+     */
+    @Export(name="scriptId", type=String.class, parameters={})
+    private Output</* @Nullable */ String> scriptId;
+
+    /**
+     * @return ID of the GameLift Script to be deployed on the fleet.
+     * 
+     */
+    public Output<Optional<String>> scriptId() {
+        return Codegen.optional(this.scriptId);
+    }
+    /**
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

@@ -403,18 +403,22 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Allows setting instance protection. The
-     * Auto Scaling Group will not select instances with this setting for termination
-     * during scale in events.
+     * Indicates whether newly launched instances
+     * are automatically protected from termination by Amazon EC2 Auto Scaling when
+     * scaling in. For more information about preventing instances from terminating
+     * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+     * in the Amazon EC2 Auto Scaling User Guide.
      * 
      */
     @Import(name="protectFromScaleIn")
     private @Nullable Output<Boolean> protectFromScaleIn;
 
     /**
-     * @return Allows setting instance protection. The
-     * Auto Scaling Group will not select instances with this setting for termination
-     * during scale in events.
+     * @return Indicates whether newly launched instances
+     * are automatically protected from termination by Amazon EC2 Auto Scaling when
+     * scaling in. For more information about preventing instances from terminating
+     * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+     * in the Amazon EC2 Auto Scaling User Guide.
      * 
      */
     public Optional<Output<Boolean>> protectFromScaleIn() {
@@ -454,14 +458,14 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+     * Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<GroupTagArgs>> tags;
 
     /**
-     * @return Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+     * @return Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
      * 
      */
     public Optional<Output<List<GroupTagArgs>>> tags() {
@@ -469,16 +473,24 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+     * Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
+     * 
+     * @deprecated
+     * Use tag instead
      * 
      */
+    @Deprecated /* Use tag instead */
     @Import(name="tagsCollection")
     private @Nullable Output<List<Map<String,String>>> tagsCollection;
 
     /**
-     * @return Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+     * @return Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
+     * 
+     * @deprecated
+     * Use tag instead
      * 
      */
+    @Deprecated /* Use tag instead */
     public Optional<Output<List<Map<String,String>>>> tagsCollection() {
         return Optional.ofNullable(this.tagsCollection);
     }
@@ -1225,9 +1237,11 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protectFromScaleIn Allows setting instance protection. The
-         * Auto Scaling Group will not select instances with this setting for termination
-         * during scale in events.
+         * @param protectFromScaleIn Indicates whether newly launched instances
+         * are automatically protected from termination by Amazon EC2 Auto Scaling when
+         * scaling in. For more information about preventing instances from terminating
+         * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+         * in the Amazon EC2 Auto Scaling User Guide.
          * 
          * @return builder
          * 
@@ -1238,9 +1252,11 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param protectFromScaleIn Allows setting instance protection. The
-         * Auto Scaling Group will not select instances with this setting for termination
-         * during scale in events.
+         * @param protectFromScaleIn Indicates whether newly launched instances
+         * are automatically protected from termination by Amazon EC2 Auto Scaling when
+         * scaling in. For more information about preventing instances from terminating
+         * on scale in, see [Using instance scale-in protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
+         * in the Amazon EC2 Auto Scaling User Guide.
          * 
          * @return builder
          * 
@@ -1305,7 +1321,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
          * 
          * @return builder
          * 
@@ -1316,7 +1332,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
          * 
          * @return builder
          * 
@@ -1326,7 +1342,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
+         * @param tags Configuration block(s) containing resource tags. Conflicts with `tags`. See Tag below for more details.
          * 
          * @return builder
          * 
@@ -1336,32 +1352,44 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use tag instead
+         * 
          */
+        @Deprecated /* Use tag instead */
         public Builder tagsCollection(@Nullable Output<List<Map<String,String>>> tagsCollection) {
             $.tagsCollection = tagsCollection;
             return this;
         }
 
         /**
-         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use tag instead
+         * 
          */
+        @Deprecated /* Use tag instead */
         public Builder tagsCollection(List<Map<String,String>> tagsCollection) {
             return tagsCollection(Output.of(tagsCollection));
         }
 
         /**
-         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. Documented below.
+         * @param tagsCollection Set of maps containing resource tags. Conflicts with `tag`. See Tags below for more details.
          * 
          * @return builder
          * 
+         * @deprecated
+         * Use tag instead
+         * 
          */
+        @Deprecated /* Use tag instead */
         public Builder tagsCollection(Map<String,String>... tagsCollection) {
             return tagsCollection(List.of(tagsCollection));
         }

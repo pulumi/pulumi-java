@@ -23,9 +23,21 @@ public final class GetPolicyDocumentResult {
      * 
      */
     private final String json;
+    /**
+     * @deprecated
+     * Use the attribute &#34;override_policy_documents&#34; instead.
+     * 
+     */
+    @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     private final @Nullable String overrideJson;
     private final @Nullable List<String> overridePolicyDocuments;
     private final @Nullable String policyId;
+    /**
+     * @deprecated
+     * Use the attribute &#34;source_policy_documents&#34; instead.
+     * 
+     */
+    @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     private final @Nullable String sourceJson;
     private final @Nullable List<String> sourcePolicyDocuments;
     private final @Nullable List<GetPolicyDocumentStatement> statements;
@@ -67,6 +79,12 @@ public final class GetPolicyDocumentResult {
     public String json() {
         return this.json;
     }
+    /**
+     * @deprecated
+     * Use the attribute &#34;override_policy_documents&#34; instead.
+     * 
+     */
+    @Deprecated /* Use the attribute ""override_policy_documents"" instead. */
     public Optional<String> overrideJson() {
         return Optional.ofNullable(this.overrideJson);
     }
@@ -76,6 +94,12 @@ public final class GetPolicyDocumentResult {
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
+    /**
+     * @deprecated
+     * Use the attribute &#34;source_policy_documents&#34; instead.
+     * 
+     */
+    @Deprecated /* Use the attribute ""source_policy_documents"" instead. */
     public Optional<String> sourceJson() {
         return Optional.ofNullable(this.sourceJson);
     }

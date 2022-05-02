@@ -4,6 +4,7 @@
 package com.pulumi.aws.cloudformation;
 
 import com.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
+import com.pulumi.aws.cloudformation.inputs.StackSetInstanceOperationPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
@@ -34,6 +35,21 @@ public final class StackSetInstanceArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
+     * Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    @Import(name="callAs")
+    private @Nullable Output<String> callAs;
+
+    /**
+     * @return Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+     * 
+     */
+    public Optional<Output<String>> callAs() {
+        return Optional.ofNullable(this.callAs);
+    }
+
+    /**
      * The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
@@ -46,6 +62,21 @@ public final class StackSetInstanceArgs extends com.pulumi.resources.ResourceArg
      */
     public Optional<Output<StackSetInstanceDeploymentTargetsArgs>> deploymentTargets() {
         return Optional.ofNullable(this.deploymentTargets);
+    }
+
+    /**
+     * Preferences for how AWS CloudFormation performs a stack set operation.
+     * 
+     */
+    @Import(name="operationPreferences")
+    private @Nullable Output<StackSetInstanceOperationPreferencesArgs> operationPreferences;
+
+    /**
+     * @return Preferences for how AWS CloudFormation performs a stack set operation.
+     * 
+     */
+    public Optional<Output<StackSetInstanceOperationPreferencesArgs>> operationPreferences() {
+        return Optional.ofNullable(this.operationPreferences);
     }
 
     /**
@@ -112,7 +143,9 @@ public final class StackSetInstanceArgs extends com.pulumi.resources.ResourceArg
 
     private StackSetInstanceArgs(StackSetInstanceArgs $) {
         this.accountId = $.accountId;
+        this.callAs = $.callAs;
         this.deploymentTargets = $.deploymentTargets;
+        this.operationPreferences = $.operationPreferences;
         this.parameterOverrides = $.parameterOverrides;
         this.region = $.region;
         this.retainStack = $.retainStack;
@@ -159,6 +192,27 @@ public final class StackSetInstanceArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
+         * @param callAs Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder callAs(@Nullable Output<String> callAs) {
+            $.callAs = callAs;
+            return this;
+        }
+
+        /**
+         * @param callAs Specifies whether you are acting as an account administrator in the organization&#39;s management account or as a delegated administrator in a member account. Valid values: `SELF` (default), `DELEGATED_ADMIN`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder callAs(String callAs) {
+            return callAs(Output.of(callAs));
+        }
+
+        /**
          * @param deploymentTargets The AWS Organizations accounts to which StackSets deploys. StackSets doesn&#39;t deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
          * 
          * @return builder
@@ -177,6 +231,27 @@ public final class StackSetInstanceArgs extends com.pulumi.resources.ResourceArg
          */
         public Builder deploymentTargets(StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
             return deploymentTargets(Output.of(deploymentTargets));
+        }
+
+        /**
+         * @param operationPreferences Preferences for how AWS CloudFormation performs a stack set operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationPreferences(@Nullable Output<StackSetInstanceOperationPreferencesArgs> operationPreferences) {
+            $.operationPreferences = operationPreferences;
+            return this;
+        }
+
+        /**
+         * @param operationPreferences Preferences for how AWS CloudFormation performs a stack set operation.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder operationPreferences(StackSetInstanceOperationPreferencesArgs operationPreferences) {
+            return operationPreferences(Output.of(operationPreferences));
         }
 
         /**

@@ -6,6 +6,7 @@ package com.pulumi.aws.apprunner.inputs;
 import com.pulumi.aws.apprunner.inputs.ServiceEncryptionConfigurationArgs;
 import com.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationArgs;
 import com.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationArgs;
+import com.pulumi.aws.apprunner.inputs.ServiceNetworkConfigurationArgs;
 import com.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -96,6 +97,21 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * 
+     */
+    @Import(name="networkConfiguration")
+    private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
+
+    /**
+     * @return Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * 
+     */
+    public Optional<Output<ServiceNetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
+    }
+
+    /**
      * An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
      * 
      */
@@ -171,14 +187,14 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
     /**
-     * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Optional<Output<Map<String,String>>> tags() {
@@ -208,6 +224,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
         this.encryptionConfiguration = $.encryptionConfiguration;
         this.healthCheckConfiguration = $.healthCheckConfiguration;
         this.instanceConfiguration = $.instanceConfiguration;
+        this.networkConfiguration = $.networkConfiguration;
         this.serviceId = $.serviceId;
         this.serviceName = $.serviceName;
         this.serviceUrl = $.serviceUrl;
@@ -341,6 +358,27 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param networkConfiguration Configuration settings related to network traffic of the web application that the App Runner service runs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
+            $.networkConfiguration = networkConfiguration;
+            return this;
+        }
+
+        /**
+         * @param networkConfiguration Configuration settings related to network traffic of the web application that the App Runner service runs.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networkConfiguration(ServiceNetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
+        }
+
+        /**
          * @param serviceId An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
          * 
          * @return builder
@@ -446,7 +484,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 
@@ -457,7 +495,7 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+         * @param tags Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
          * 
          * @return builder
          * 

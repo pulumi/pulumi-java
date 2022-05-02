@@ -18,14 +18,14 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
     public static final UserLoginProfileArgs Empty = new UserLoginProfileArgs();
 
     /**
-     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     @Import(name="passwordLength")
     private @Nullable Output<Integer> passwordLength;
 
     /**
-     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
      * 
      */
     public Optional<Output<Integer>> passwordLength() {
@@ -33,14 +33,14 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
     @Import(name="passwordResetRequired")
     private @Nullable Output<Boolean> passwordResetRequired;
 
     /**
-     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+     * @return Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
      * 
      */
     public Optional<Output<Boolean>> passwordResetRequired() {
@@ -51,15 +51,15 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    @Import(name="pgpKey", required=true)
-    private Output<String> pgpKey;
+    @Import(name="pgpKey")
+    private @Nullable Output<String> pgpKey;
 
     /**
      * @return Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    public Output<String> pgpKey() {
-        return this.pgpKey;
+    public Optional<Output<String>> pgpKey() {
+        return Optional.ofNullable(this.pgpKey);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordLength The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument. Default value is `20`.
          * 
          * @return builder
          * 
@@ -126,7 +126,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
+         * @param passwordResetRequired Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation.
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder pgpKey(Output<String> pgpKey) {
+        public Builder pgpKey(@Nullable Output<String> pgpKey) {
             $.pgpKey = pgpKey;
             return this;
         }
@@ -189,7 +189,6 @@ public final class UserLoginProfileArgs extends com.pulumi.resources.ResourceArg
         }
 
         public UserLoginProfileArgs build() {
-            $.pgpKey = Objects.requireNonNull($.pgpKey, "expected parameter 'pgpKey' to be non-null");
             $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
             return $;
         }

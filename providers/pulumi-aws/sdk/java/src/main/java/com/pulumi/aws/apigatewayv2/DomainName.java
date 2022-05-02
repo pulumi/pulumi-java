@@ -38,98 +38,98 @@ import javax.annotation.Nullable;
 @ResourceType(type="aws:apigatewayv2/domainName:DomainName")
 public class DomainName extends com.pulumi.resources.CustomResource {
     /**
-     * The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+     * [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
     @Export(name="apiMappingSelectionExpression", type=String.class, parameters={})
     private Output<String> apiMappingSelectionExpression;
 
     /**
-     * @return The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
+     * @return [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
     public Output<String> apiMappingSelectionExpression() {
         return this.apiMappingSelectionExpression;
     }
     /**
-     * The ARN of the domain name.
+     * ARN of the domain name.
      * 
      */
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
-     * @return The ARN of the domain name.
+     * @return ARN of the domain name.
      * 
      */
     public Output<String> arn() {
         return this.arn;
     }
     /**
-     * The domain name. Must be between 1 and 512 characters in length.
+     * Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
-     * @return The domain name. Must be between 1 and 512 characters in length.
+     * @return Domain name. Must be between 1 and 512 characters in length.
      * 
      */
     public Output<String> domainName() {
         return this.domainName;
     }
     /**
-     * The domain name configuration.
+     * Domain name configuration. See below.
      * 
      */
     @Export(name="domainNameConfiguration", type=DomainNameDomainNameConfiguration.class, parameters={})
     private Output<DomainNameDomainNameConfiguration> domainNameConfiguration;
 
     /**
-     * @return The domain name configuration.
+     * @return Domain name configuration. See below.
      * 
      */
     public Output<DomainNameDomainNameConfiguration> domainNameConfiguration() {
         return this.domainNameConfiguration;
     }
     /**
-     * The mutual TLS authentication configuration for the domain name.
+     * Mutual TLS authentication configuration for the domain name.
      * 
      */
     @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
     /**
-     * @return The mutual TLS authentication configuration for the domain name.
+     * @return Mutual TLS authentication configuration for the domain name.
      * 
      */
     public Output<Optional<DomainNameMutualTlsAuthentication>> mutualTlsAuthentication() {
         return Codegen.optional(this.mutualTlsAuthentication);
     }
     /**
-     * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
-     * @return A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+     * @return Map of tags to assign to the domain name. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
     public Output<Optional<Map<String,String>>> tags() {
         return Codegen.optional(this.tags);
     }
     /**
-     * A map of tags assigned to the resource, including those inherited from the provider .
+     * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
-     * @return A map of tags assigned to the resource, including those inherited from the provider .
+     * @return Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
     public Output<Map<String,String>> tagsAll() {

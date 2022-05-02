@@ -7,10 +7,16 @@ import com.pulumi.aws.Utilities;
 import com.pulumi.aws.s3.inputs.GetBucketArgs;
 import com.pulumi.aws.s3.inputs.GetBucketObjectArgs;
 import com.pulumi.aws.s3.inputs.GetBucketObjectsArgs;
+import com.pulumi.aws.s3.inputs.GetBucketPolicyArgs;
+import com.pulumi.aws.s3.inputs.GetObjectArgs;
+import com.pulumi.aws.s3.inputs.GetObjectsArgs;
 import com.pulumi.aws.s3.outputs.GetBucketObjectResult;
 import com.pulumi.aws.s3.outputs.GetBucketObjectsResult;
+import com.pulumi.aws.s3.outputs.GetBucketPolicyResult;
 import com.pulumi.aws.s3.outputs.GetBucketResult;
 import com.pulumi.aws.s3.outputs.GetCanonicalUserIdResult;
+import com.pulumi.aws.s3.outputs.GetObjectResult;
+import com.pulumi.aws.s3.outputs.GetObjectsResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -34,6 +40,8 @@ public final class S3Functions {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucket:getBucket", TypeShape.of(GetBucketResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * &gt; **NOTE:** The `aws.s3.BucketObject` data source is DEPRECATED and will be removed in a future version! Use `aws.s3.BucketObjectv2` instead, where new features and fixes will be added.
+     * 
      * The S3 object data source allows access to the metadata and
      * _optionally_ (see below) content of an object stored inside S3 bucket.
      * 
@@ -49,9 +57,11 @@ public final class S3Functions {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObject:getBucketObject", TypeShape.of(GetBucketObjectResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * &gt; **NOTE:** The `aws.s3.getBucketObjects` data source is DEPRECATED and will be removed in a future version! Use `aws.s3.getObjects` instead, where new features and fixes will be added.
+     * 
      * &gt; **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider&#39;s performance.
      * 
-     * The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
+     * The objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
      * 
      */
     public static CompletableFuture<GetBucketObjectsResult> getBucketObjects(GetBucketObjectsArgs args) {
@@ -61,8 +71,22 @@ public final class S3Functions {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObjects:getBucketObjects", TypeShape.of(GetBucketObjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * The bucket policy data source returns IAM policy of an S3 bucket.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
+        return getBucketPolicy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:s3/getBucketPolicy:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
      * for the effective account in which this provider is working.
+     * 
+     * &gt; **NOTE:** To use this data source, you must have the `s3:ListAllMyBuckets` permission.
      * 
      * ## Example Usage
      * 
@@ -75,5 +99,26 @@ public final class S3Functions {
     }
     public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * The S3 object data source allows access to the metadata and
+     * _optionally_ (see below) content of an object stored inside S3 bucket.
+     * 
+     * &gt; **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args) {
+        return getObject(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:s3/getObject:getObject", TypeShape.of(GetObjectResult.class), args, Utilities.withVersion(options));
+    }
+    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args) {
+        return getObjects(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetObjectsResult> getObjects(GetObjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:s3/getObjects:getObjects", TypeShape.of(GetObjectsResult.class), args, Utilities.withVersion(options));
     }
 }

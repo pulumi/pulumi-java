@@ -17,14 +17,14 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
     public static final DomainCognitoOptionsArgs Empty = new DomainCognitoOptionsArgs();
 
     /**
-     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
     /**
-     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+     * @return Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
      * 
      */
     public Optional<Output<Boolean>> enabled() {
@@ -104,7 +104,7 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class DomainCognitoOptionsArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
+         * @param enabled Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`. Enabling node-to-node encryption of a new domain requires an `elasticsearch_version` of `6.0` or greater.
          * 
          * @return builder
          * 

@@ -6,6 +6,7 @@ package com.pulumi.aws.budgets;
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.budgets.BudgetArgs;
 import com.pulumi.aws.budgets.inputs.BudgetState;
+import com.pulumi.aws.budgets.outputs.BudgetCostFilter;
 import com.pulumi.aws.budgets.outputs.BudgetCostTypes;
 import com.pulumi.aws.budgets.outputs.BudgetNotification;
 import com.pulumi.core.Output;
@@ -79,15 +80,33 @@ public class Budget extends com.pulumi.resources.CustomResource {
     /**
      * Map of CostFilters key/value pairs to apply to the budget.
      * 
+     * @deprecated
+     * Use the attribute &#34;cost_filter&#34; instead.
+     * 
      */
-    @Export(name="costFilters", type=Map.class, parameters={String.class, String.class})
-    private Output<Map<String,String>> costFilters;
+    @Deprecated /* Use the attribute ""cost_filter"" instead. */
+    @Export(name="costFilterLegacy", type=Map.class, parameters={String.class, String.class})
+    private Output<Map<String,String>> costFilterLegacy;
 
     /**
      * @return Map of CostFilters key/value pairs to apply to the budget.
      * 
      */
-    public Output<Map<String,String>> costFilters() {
+    public Output<Map<String,String>> costFilterLegacy() {
+        return this.costFilterLegacy;
+    }
+    /**
+     * A list of CostFilter name/values pair to apply to budget.
+     * 
+     */
+    @Export(name="costFilters", type=List.class, parameters={BudgetCostFilter.class})
+    private Output<List<BudgetCostFilter>> costFilters;
+
+    /**
+     * @return A list of CostFilter name/values pair to apply to budget.
+     * 
+     */
+    public Output<List<BudgetCostFilter>> costFilters() {
         return this.costFilters;
     }
     /**

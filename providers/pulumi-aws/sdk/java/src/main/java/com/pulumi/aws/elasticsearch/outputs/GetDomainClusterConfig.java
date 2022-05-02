@@ -3,6 +3,7 @@
 
 package com.pulumi.aws.elasticsearch.outputs;
 
+import com.pulumi.aws.elasticsearch.outputs.GetDomainClusterConfigColdStorageOption;
 import com.pulumi.aws.elasticsearch.outputs.GetDomainClusterConfigZoneAwarenessConfig;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
@@ -10,11 +11,14 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDomainClusterConfig {
+    /**
+     * @return Configuration block containing cold storage configuration.
+     * 
+     */
+    private final List<GetDomainClusterConfigColdStorageOption> coldStorageOptions;
     /**
      * @return Number of dedicated master nodes in the cluster.
      * 
@@ -49,7 +53,7 @@ public final class GetDomainClusterConfig {
      * @return Indicates warm storage is enabled.
      * 
      */
-    private final @Nullable Boolean warmEnabled;
+    private final Boolean warmEnabled;
     /**
      * @return The instance type for the Elasticsearch cluster&#39;s warm nodes.
      * 
@@ -68,16 +72,18 @@ public final class GetDomainClusterConfig {
 
     @CustomType.Constructor
     private GetDomainClusterConfig(
+        @CustomType.Parameter("coldStorageOptions") List<GetDomainClusterConfigColdStorageOption> coldStorageOptions,
         @CustomType.Parameter("dedicatedMasterCount") Integer dedicatedMasterCount,
         @CustomType.Parameter("dedicatedMasterEnabled") Boolean dedicatedMasterEnabled,
         @CustomType.Parameter("dedicatedMasterType") String dedicatedMasterType,
         @CustomType.Parameter("instanceCount") Integer instanceCount,
         @CustomType.Parameter("instanceType") String instanceType,
         @CustomType.Parameter("warmCount") Integer warmCount,
-        @CustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
+        @CustomType.Parameter("warmEnabled") Boolean warmEnabled,
         @CustomType.Parameter("warmType") String warmType,
         @CustomType.Parameter("zoneAwarenessConfigs") List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
         @CustomType.Parameter("zoneAwarenessEnabled") Boolean zoneAwarenessEnabled) {
+        this.coldStorageOptions = coldStorageOptions;
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;
@@ -90,6 +96,13 @@ public final class GetDomainClusterConfig {
         this.zoneAwarenessEnabled = zoneAwarenessEnabled;
     }
 
+    /**
+     * @return Configuration block containing cold storage configuration.
+     * 
+     */
+    public List<GetDomainClusterConfigColdStorageOption> coldStorageOptions() {
+        return this.coldStorageOptions;
+    }
     /**
      * @return Number of dedicated master nodes in the cluster.
      * 
@@ -136,8 +149,8 @@ public final class GetDomainClusterConfig {
      * @return Indicates warm storage is enabled.
      * 
      */
-    public Optional<Boolean> warmEnabled() {
-        return Optional.ofNullable(this.warmEnabled);
+    public Boolean warmEnabled() {
+        return this.warmEnabled;
     }
     /**
      * @return The instance type for the Elasticsearch cluster&#39;s warm nodes.
@@ -170,13 +183,14 @@ public final class GetDomainClusterConfig {
     }
 
     public static final class Builder {
+        private List<GetDomainClusterConfigColdStorageOption> coldStorageOptions;
         private Integer dedicatedMasterCount;
         private Boolean dedicatedMasterEnabled;
         private String dedicatedMasterType;
         private Integer instanceCount;
         private String instanceType;
         private Integer warmCount;
-        private @Nullable Boolean warmEnabled;
+        private Boolean warmEnabled;
         private String warmType;
         private List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
         private Boolean zoneAwarenessEnabled;
@@ -187,6 +201,7 @@ public final class GetDomainClusterConfig {
 
         public Builder(GetDomainClusterConfig defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.coldStorageOptions = defaults.coldStorageOptions;
     	      this.dedicatedMasterCount = defaults.dedicatedMasterCount;
     	      this.dedicatedMasterEnabled = defaults.dedicatedMasterEnabled;
     	      this.dedicatedMasterType = defaults.dedicatedMasterType;
@@ -199,6 +214,13 @@ public final class GetDomainClusterConfig {
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
+        public Builder coldStorageOptions(List<GetDomainClusterConfigColdStorageOption> coldStorageOptions) {
+            this.coldStorageOptions = Objects.requireNonNull(coldStorageOptions);
+            return this;
+        }
+        public Builder coldStorageOptions(GetDomainClusterConfigColdStorageOption... coldStorageOptions) {
+            return coldStorageOptions(List.of(coldStorageOptions));
+        }
         public Builder dedicatedMasterCount(Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount);
             return this;
@@ -223,8 +245,8 @@ public final class GetDomainClusterConfig {
             this.warmCount = Objects.requireNonNull(warmCount);
             return this;
         }
-        public Builder warmEnabled(@Nullable Boolean warmEnabled) {
-            this.warmEnabled = warmEnabled;
+        public Builder warmEnabled(Boolean warmEnabled) {
+            this.warmEnabled = Objects.requireNonNull(warmEnabled);
             return this;
         }
         public Builder warmType(String warmType) {
@@ -242,7 +264,7 @@ public final class GetDomainClusterConfig {
             this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled);
             return this;
         }        public GetDomainClusterConfig build() {
-            return new GetDomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfigs, zoneAwarenessEnabled);
+            return new GetDomainClusterConfig(coldStorageOptions, dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfigs, zoneAwarenessEnabled);
         }
     }
 }

@@ -19,17 +19,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebAclRule {
     /**
-     * @return The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
+     * @return Action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
      * 
      */
     private final @Nullable WebAclRuleAction action;
     /**
-     * @return A friendly name of the rule.
+     * @return Friendly name of the rule.
      * 
      */
     private final String name;
     /**
-     * @return The override action to apply to the rules in a rule group. Used only for rule **statements that reference a rule group**, like `rule_group_reference_statement` and `managed_rule_group_statement`. See Override Action below for details.
+     * @return Override action to apply to the rules in a rule group. Used only for rule **statements that reference a rule group**, like `rule_group_reference_statement` and `managed_rule_group_statement`. See Override Action below for details.
      * 
      */
     private final @Nullable WebAclRuleOverrideAction overrideAction;
@@ -73,21 +73,21 @@ public final class WebAclRule {
     }
 
     /**
-     * @return The action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
+     * @return Action that AWS WAF should take on a web request when it matches the rule&#39;s statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
      * 
      */
     public Optional<WebAclRuleAction> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return A friendly name of the rule.
+     * @return Friendly name of the rule.
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The override action to apply to the rules in a rule group. Used only for rule **statements that reference a rule group**, like `rule_group_reference_statement` and `managed_rule_group_statement`. See Override Action below for details.
+     * @return Override action to apply to the rules in a rule group. Used only for rule **statements that reference a rule group**, like `rule_group_reference_statement` and `managed_rule_group_statement`. See Override Action below for details.
      * 
      */
     public Optional<WebAclRuleOverrideAction> overrideAction() {

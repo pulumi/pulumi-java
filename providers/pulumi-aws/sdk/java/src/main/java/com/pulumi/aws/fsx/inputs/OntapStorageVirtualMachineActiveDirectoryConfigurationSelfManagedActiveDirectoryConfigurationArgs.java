@@ -62,25 +62,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     }
 
     /**
-     * @deprecated
-     * use &#39;organizational_unit_distinguished_name&#39; instead
-     * 
-     */
-    @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    @Import(name="organizationalUnitDistinguidshedName")
-    private @Nullable Output<String> organizationalUnitDistinguidshedName;
-
-    /**
-     * @deprecated
-     * use &#39;organizational_unit_distinguished_name&#39; instead
-     * 
-     */
-    @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    public Optional<Output<String>> organizationalUnitDistinguidshedName() {
-        return Optional.ofNullable(this.organizationalUnitDistinguidshedName);
-    }
-
-    /**
      * The fully qualified distinguished name of the organizational unit within your self-managed AD directory that the Windows File Server instance will join. For example, `OU=FSx,DC=yourdomain,DC=corp,DC=com`. Only accepts OU as the direct parent of the SVM. If none is provided, the SVM is created in the default location of your self-managed AD directory. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253).
      * 
      */
@@ -131,7 +112,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
         this.dnsIps = $.dnsIps;
         this.domainName = $.domainName;
         this.fileSystemAdministratorsGroup = $.fileSystemAdministratorsGroup;
-        this.organizationalUnitDistinguidshedName = $.organizationalUnitDistinguidshedName;
         this.organizationalUnitDistinguishedName = $.organizationalUnitDistinguishedName;
         this.password = $.password;
         this.username = $.username;
@@ -226,31 +206,6 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
          */
         public Builder fileSystemAdministratorsGroup(String fileSystemAdministratorsGroup) {
             return fileSystemAdministratorsGroup(Output.of(fileSystemAdministratorsGroup));
-        }
-
-        /**
-         * @return builder
-         * 
-         * @deprecated
-         * use &#39;organizational_unit_distinguished_name&#39; instead
-         * 
-         */
-        @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-        public Builder organizationalUnitDistinguidshedName(@Nullable Output<String> organizationalUnitDistinguidshedName) {
-            $.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
-            return this;
-        }
-
-        /**
-         * @return builder
-         * 
-         * @deprecated
-         * use &#39;organizational_unit_distinguished_name&#39; instead
-         * 
-         */
-        @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-        public Builder organizationalUnitDistinguidshedName(String organizationalUnitDistinguidshedName) {
-            return organizationalUnitDistinguidshedName(Output.of(organizationalUnitDistinguidshedName));
         }
 
         /**

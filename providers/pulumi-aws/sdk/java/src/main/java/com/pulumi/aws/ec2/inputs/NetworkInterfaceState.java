@@ -36,14 +36,14 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Configuration block to define the attachment of the ENI. See below.
+     * Configuration block to define the attachment of the ENI. See Attachment below for more details!
      * 
      */
     @Import(name="attachments")
     private @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
 
     /**
-     * @return Configuration block to define the attachment of the ENI. See below.
+     * @return Configuration block to define the attachment of the ENI. See Attachment below for more details!
      * 
      */
     public Optional<Output<List<NetworkInterfaceAttachmentArgs>>> attachments() {
@@ -449,7 +449,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param attachments Configuration block to define the attachment of the ENI. See below.
+         * @param attachments Configuration block to define the attachment of the ENI. See Attachment below for more details!
          * 
          * @return builder
          * 
@@ -460,7 +460,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param attachments Configuration block to define the attachment of the ENI. See below.
+         * @param attachments Configuration block to define the attachment of the ENI. See Attachment below for more details!
          * 
          * @return builder
          * 
@@ -470,7 +470,7 @@ public final class NetworkInterfaceState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param attachments Configuration block to define the attachment of the ENI. See below.
+         * @param attachments Configuration block to define the attachment of the ENI. See Attachment below for more details!
          * 
          * @return builder
          * 

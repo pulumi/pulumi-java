@@ -34,14 +34,14 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     }
 
     /**
-     * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
+     * Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
      * 
      */
     @Import(name="forwardedIpConfig")
     private @Nullable Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig;
 
     /**
-     * @return The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
+     * @return Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs>> forwardedIpConfig() {
@@ -49,14 +49,14 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     }
 
     /**
-     * The limit on requests per 5-minute period for a single originating IP address.
+     * Limit on requests per 5-minute period for a single originating IP address.
      * 
      */
     @Import(name="limit", required=true)
     private Output<Integer> limit;
 
     /**
-     * @return The limit on requests per 5-minute period for a single originating IP address.
+     * @return Limit on requests per 5-minute period for a single originating IP address.
      * 
      */
     public Output<Integer> limit() {
@@ -64,14 +64,14 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
     }
 
     /**
-     * An optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+     * Optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
      * 
      */
     @Import(name="scopeDownStatement")
     private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement;
 
     /**
-     * @return An optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+     * @return Optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
      * 
      */
     public Optional<Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs>> scopeDownStatement() {
@@ -127,7 +127,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
+         * @param forwardedIpConfig Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param forwardedIpConfig The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
+         * @param forwardedIpConfig Configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that&#39;s reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param limit The limit on requests per 5-minute period for a single originating IP address.
+         * @param limit Limit on requests per 5-minute period for a single originating IP address.
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param limit The limit on requests per 5-minute period for a single originating IP address.
+         * @param limit Limit on requests per 5-minute period for a single originating IP address.
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param scopeDownStatement An optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+         * @param scopeDownStatement Optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends com.pulumi.
         }
 
         /**
-         * @param scopeDownStatement An optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
+         * @param scopeDownStatement Optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
          * 
          * @return builder
          * 

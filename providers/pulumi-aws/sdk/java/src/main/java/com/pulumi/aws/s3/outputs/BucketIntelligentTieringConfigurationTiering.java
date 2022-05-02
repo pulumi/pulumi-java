@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class BucketIntelligentTieringConfigurationTiering {
     /**
-     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
      * 
      */
     private final String accessTier;
@@ -30,7 +30,7 @@ public final class BucketIntelligentTieringConfigurationTiering {
     }
 
     /**
-     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
+     * @return S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_ACCESS`, `DEEP_ARCHIVE_ACCESS`.
      * 
      */
     public String accessTier() {

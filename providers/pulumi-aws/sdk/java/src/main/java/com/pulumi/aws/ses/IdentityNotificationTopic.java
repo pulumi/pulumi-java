@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
- * Identity Notification Topics can be imported using ID of the record. The ID is made up as IDENTITY|TYPE where IDENTITY is the SES Identity and TYPE is the Notification Type.
+ * Identity Notification Topics can be imported using the ID of the record. The ID is made up as `IDENTITY|TYPE` where `IDENTITY` is the SES Identity and `TYPE` is the Notification Type.
  * 
  * ```sh
  *  $ pulumi import aws:ses/identityNotificationTopic:IdentityNotificationTopic test &#39;example.com|Bounce&#39;
@@ -46,42 +46,42 @@ public class IdentityNotificationTopic extends com.pulumi.resources.CustomResour
         return this.identity;
     }
     /**
-     * Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+     * Whether SES should include original email headers in SNS notifications of this type. `false` by default.
      * 
      */
     @Export(name="includeOriginalHeaders", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> includeOriginalHeaders;
 
     /**
-     * @return Whether SES should include original email headers in SNS notifications of this type. *false* by default.
+     * @return Whether SES should include original email headers in SNS notifications of this type. `false` by default.
      * 
      */
     public Output<Optional<Boolean>> includeOriginalHeaders() {
         return Codegen.optional(this.includeOriginalHeaders);
     }
     /**
-     * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+     * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
      * 
      */
     @Export(name="notificationType", type=String.class, parameters={})
     private Output<String> notificationType;
 
     /**
-     * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
+     * @return The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: `Bounce`, `Complaint` or `Delivery`.
      * 
      */
     public Output<String> notificationType() {
         return this.notificationType;
     }
     /**
-     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
      * 
      */
     @Export(name="topicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> topicArn;
 
     /**
-     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to &#34;&#34; (an empty string) to disable publishing.
+     * @return The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to `&#34;&#34;` (an empty string) to disable publishing.
      * 
      */
     public Output<Optional<String>> topicArn() {

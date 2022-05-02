@@ -3,6 +3,9 @@
 
 package com.pulumi.aws.autoscaling.inputs;
 
+import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationArgs;
+import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationArgs;
+import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationArgs;
 import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs;
 import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs;
 import com.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs;
@@ -19,14 +22,59 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     public static final PolicyPredictiveScalingConfigurationMetricSpecificationArgs Empty = new PolicyPredictiveScalingConfigurationMetricSpecificationArgs();
 
     /**
-     * The load metric specification.
+     * The customized capacity metric specification. The field is only valid when you use `customized_load_metric_specification`
+     * 
+     */
+    @Import(name="customizedCapacityMetricSpecification")
+    private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationArgs> customizedCapacityMetricSpecification;
+
+    /**
+     * @return The customized capacity metric specification. The field is only valid when you use `customized_load_metric_specification`
+     * 
+     */
+    public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationArgs>> customizedCapacityMetricSpecification() {
+        return Optional.ofNullable(this.customizedCapacityMetricSpecification);
+    }
+
+    /**
+     * The customized load metric specification.
+     * 
+     */
+    @Import(name="customizedLoadMetricSpecification")
+    private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationArgs> customizedLoadMetricSpecification;
+
+    /**
+     * @return The customized load metric specification.
+     * 
+     */
+    public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationArgs>> customizedLoadMetricSpecification() {
+        return Optional.ofNullable(this.customizedLoadMetricSpecification);
+    }
+
+    /**
+     * The customized scaling metric specification.
+     * 
+     */
+    @Import(name="customizedScalingMetricSpecification")
+    private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationArgs> customizedScalingMetricSpecification;
+
+    /**
+     * @return The customized scaling metric specification.
+     * 
+     */
+    public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationArgs>> customizedScalingMetricSpecification() {
+        return Optional.ofNullable(this.customizedScalingMetricSpecification);
+    }
+
+    /**
+     * The predefined load metric specification.
      * 
      */
     @Import(name="predefinedLoadMetricSpecification")
     private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs> predefinedLoadMetricSpecification;
 
     /**
-     * @return The load metric specification.
+     * @return The predefined load metric specification.
      * 
      */
     public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs>> predefinedLoadMetricSpecification() {
@@ -49,14 +97,14 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     }
 
     /**
-     * The scaling metric specification.
+     * The predefined scaling metric specification.
      * 
      */
     @Import(name="predefinedScalingMetricSpecification")
     private @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification;
 
     /**
-     * @return The scaling metric specification.
+     * @return The predefined scaling metric specification.
      * 
      */
     public Optional<Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs>> predefinedScalingMetricSpecification() {
@@ -81,6 +129,9 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
     private PolicyPredictiveScalingConfigurationMetricSpecificationArgs() {}
 
     private PolicyPredictiveScalingConfigurationMetricSpecificationArgs(PolicyPredictiveScalingConfigurationMetricSpecificationArgs $) {
+        this.customizedCapacityMetricSpecification = $.customizedCapacityMetricSpecification;
+        this.customizedLoadMetricSpecification = $.customizedLoadMetricSpecification;
+        this.customizedScalingMetricSpecification = $.customizedScalingMetricSpecification;
         this.predefinedLoadMetricSpecification = $.predefinedLoadMetricSpecification;
         this.predefinedMetricPairSpecification = $.predefinedMetricPairSpecification;
         this.predefinedScalingMetricSpecification = $.predefinedScalingMetricSpecification;
@@ -106,7 +157,70 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
         }
 
         /**
-         * @param predefinedLoadMetricSpecification The load metric specification.
+         * @param customizedCapacityMetricSpecification The customized capacity metric specification. The field is only valid when you use `customized_load_metric_specification`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedCapacityMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationArgs> customizedCapacityMetricSpecification) {
+            $.customizedCapacityMetricSpecification = customizedCapacityMetricSpecification;
+            return this;
+        }
+
+        /**
+         * @param customizedCapacityMetricSpecification The customized capacity metric specification. The field is only valid when you use `customized_load_metric_specification`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedCapacityMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationArgs customizedCapacityMetricSpecification) {
+            return customizedCapacityMetricSpecification(Output.of(customizedCapacityMetricSpecification));
+        }
+
+        /**
+         * @param customizedLoadMetricSpecification The customized load metric specification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedLoadMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationArgs> customizedLoadMetricSpecification) {
+            $.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
+            return this;
+        }
+
+        /**
+         * @param customizedLoadMetricSpecification The customized load metric specification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedLoadMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationArgs customizedLoadMetricSpecification) {
+            return customizedLoadMetricSpecification(Output.of(customizedLoadMetricSpecification));
+        }
+
+        /**
+         * @param customizedScalingMetricSpecification The customized scaling metric specification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedScalingMetricSpecification(@Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationArgs> customizedScalingMetricSpecification) {
+            $.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
+            return this;
+        }
+
+        /**
+         * @param customizedScalingMetricSpecification The customized scaling metric specification.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customizedScalingMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationArgs customizedScalingMetricSpecification) {
+            return customizedScalingMetricSpecification(Output.of(customizedScalingMetricSpecification));
+        }
+
+        /**
+         * @param predefinedLoadMetricSpecification The predefined load metric specification.
          * 
          * @return builder
          * 
@@ -117,7 +231,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
         }
 
         /**
-         * @param predefinedLoadMetricSpecification The load metric specification.
+         * @param predefinedLoadMetricSpecification The predefined load metric specification.
          * 
          * @return builder
          * 
@@ -148,7 +262,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
         }
 
         /**
-         * @param predefinedScalingMetricSpecification The scaling metric specification.
+         * @param predefinedScalingMetricSpecification The predefined scaling metric specification.
          * 
          * @return builder
          * 
@@ -159,7 +273,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
         }
 
         /**
-         * @param predefinedScalingMetricSpecification The scaling metric specification.
+         * @param predefinedScalingMetricSpecification The predefined scaling metric specification.
          * 
          * @return builder
          * 

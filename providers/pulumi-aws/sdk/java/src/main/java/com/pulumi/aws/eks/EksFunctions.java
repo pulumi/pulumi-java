@@ -5,11 +5,13 @@ package com.pulumi.aws.eks;
 
 import com.pulumi.aws.Utilities;
 import com.pulumi.aws.eks.inputs.GetAddonArgs;
+import com.pulumi.aws.eks.inputs.GetAddonVersionArgs;
 import com.pulumi.aws.eks.inputs.GetClusterArgs;
 import com.pulumi.aws.eks.inputs.GetClusterAuthArgs;
 import com.pulumi.aws.eks.inputs.GetNodeGroupArgs;
 import com.pulumi.aws.eks.inputs.GetNodeGroupsArgs;
 import com.pulumi.aws.eks.outputs.GetAddonResult;
+import com.pulumi.aws.eks.outputs.GetAddonVersionResult;
 import com.pulumi.aws.eks.outputs.GetClusterAuthResult;
 import com.pulumi.aws.eks.outputs.GetClusterResult;
 import com.pulumi.aws.eks.outputs.GetClustersResult;
@@ -33,6 +35,18 @@ public final class EksFunctions {
     }
     public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getAddon:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieve information about a specific EKS add-on version compatible with an EKS cluster version.
+     * 
+     * ## Example Usage
+     * 
+     */
+    public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args) {
+        return getAddonVersion(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws:eks/getAddonVersion:getAddonVersion", TypeShape.of(GetAddonVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieve information about an EKS Cluster.

@@ -15,9 +15,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 /**
- * Provides network associations for AWS Client VPN endpoints. For more information on usage, please see the
- * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
- * 
  * ## Example Usage
  * 
  * ## Import
@@ -62,7 +59,11 @@ public class NetworkAssociation extends com.pulumi.resources.CustomResource {
     /**
      * A list of up to five custom security groups to apply to the target network. If not specified, the VPC&#39;s default security group is assigned.
      * 
+     * @deprecated
+     * Use the `security_group_ids` attribute of the `aws_ec2_client_vpn_endpoint` resource instead.
+     * 
      */
+    @Deprecated /* Use the `security_group_ids` attribute of the `aws_ec2_client_vpn_endpoint` resource instead. */
     @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
@@ -74,14 +75,18 @@ public class NetworkAssociation extends com.pulumi.resources.CustomResource {
         return this.securityGroups;
     }
     /**
-     * The current state of the target network association.
+     * **Deprecated** The current state of the target network association.
+     * 
+     * @deprecated
+     * This attribute has been deprecated.
      * 
      */
+    @Deprecated /* This attribute has been deprecated. */
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
-     * @return The current state of the target network association.
+     * @return **Deprecated** The current state of the target network association.
      * 
      */
     public Output<String> status() {

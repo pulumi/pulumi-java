@@ -34,7 +34,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      */
     private final String statistic;
     /**
-     * @return The unit of the metric.
+     * @return The unit of the metrics to return.
      * 
      */
     private final @Nullable String unit;
@@ -82,7 +82,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
         return this.statistic;
     }
     /**
-     * @return The unit of the metric.
+     * @return The unit of the metrics to return.
      * 
      */
     public Optional<String> unit() {

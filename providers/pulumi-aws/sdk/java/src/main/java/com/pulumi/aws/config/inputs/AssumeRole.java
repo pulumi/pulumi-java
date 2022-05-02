@@ -14,6 +14,13 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssumeRole {
+    private final @Nullable String duration;
+    /**
+     * @deprecated
+     * Use assume_role.0.duration instead
+     * 
+     */
+    @Deprecated /* Use assume_role.0.duration instead */
     private final @Nullable Integer durationSeconds;
     private final @Nullable String externalId;
     private final @Nullable String policy;
@@ -25,6 +32,7 @@ public final class AssumeRole {
 
     @CustomType.Constructor
     private AssumeRole(
+        @CustomType.Parameter("duration") @Nullable String duration,
         @CustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
         @CustomType.Parameter("externalId") @Nullable String externalId,
         @CustomType.Parameter("policy") @Nullable String policy,
@@ -33,6 +41,7 @@ public final class AssumeRole {
         @CustomType.Parameter("sessionName") @Nullable String sessionName,
         @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
         @CustomType.Parameter("transitiveTagKeys") @Nullable List<String> transitiveTagKeys) {
+        this.duration = duration;
         this.durationSeconds = durationSeconds;
         this.externalId = externalId;
         this.policy = policy;
@@ -43,6 +52,15 @@ public final class AssumeRole {
         this.transitiveTagKeys = transitiveTagKeys;
     }
 
+    public Optional<String> duration() {
+        return Optional.ofNullable(this.duration);
+    }
+    /**
+     * @deprecated
+     * Use assume_role.0.duration instead
+     * 
+     */
+    @Deprecated /* Use assume_role.0.duration instead */
     public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
@@ -77,6 +95,7 @@ public final class AssumeRole {
     }
 
     public static final class Builder {
+        private @Nullable String duration;
         private @Nullable Integer durationSeconds;
         private @Nullable String externalId;
         private @Nullable String policy;
@@ -92,6 +111,7 @@ public final class AssumeRole {
 
         public Builder(AssumeRole defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.duration = defaults.duration;
     	      this.durationSeconds = defaults.durationSeconds;
     	      this.externalId = defaults.externalId;
     	      this.policy = defaults.policy;
@@ -102,6 +122,10 @@ public final class AssumeRole {
     	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
+        public Builder duration(@Nullable String duration) {
+            this.duration = duration;
+            return this;
+        }
         public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
@@ -140,7 +164,7 @@ public final class AssumeRole {
         public Builder transitiveTagKeys(String... transitiveTagKeys) {
             return transitiveTagKeys(List.of(transitiveTagKeys));
         }        public AssumeRole build() {
-            return new AssumeRole(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
+            return new AssumeRole(duration, durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.aws.qldb.outputs;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
@@ -17,21 +18,27 @@ public final class GetLedgerResult {
      * 
      */
     private final String id;
+    private final String kmsKey;
     private final String name;
     private final String permissionsMode;
+    private final Map<String,String> tags;
 
     @CustomType.Constructor
     private GetLedgerResult(
         @CustomType.Parameter("arn") String arn,
         @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
         @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKey") String kmsKey,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("permissionsMode") String permissionsMode) {
+        @CustomType.Parameter("permissionsMode") String permissionsMode,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.deletionProtection = deletionProtection;
         this.id = id;
+        this.kmsKey = kmsKey;
         this.name = name;
         this.permissionsMode = permissionsMode;
+        this.tags = tags;
     }
 
     public String arn() {
@@ -47,11 +54,17 @@ public final class GetLedgerResult {
     public String id() {
         return this.id;
     }
+    public String kmsKey() {
+        return this.kmsKey;
+    }
     public String name() {
         return this.name;
     }
     public String permissionsMode() {
         return this.permissionsMode;
+    }
+    public Map<String,String> tags() {
+        return this.tags;
     }
 
     public static Builder builder() {
@@ -66,8 +79,10 @@ public final class GetLedgerResult {
         private String arn;
         private Boolean deletionProtection;
         private String id;
+        private String kmsKey;
         private String name;
         private String permissionsMode;
+        private Map<String,String> tags;
 
         public Builder() {
     	      // Empty
@@ -78,8 +93,10 @@ public final class GetLedgerResult {
     	      this.arn = defaults.arn;
     	      this.deletionProtection = defaults.deletionProtection;
     	      this.id = defaults.id;
+    	      this.kmsKey = defaults.kmsKey;
     	      this.name = defaults.name;
     	      this.permissionsMode = defaults.permissionsMode;
+    	      this.tags = defaults.tags;
         }
 
         public Builder arn(String arn) {
@@ -94,6 +111,10 @@ public final class GetLedgerResult {
             this.id = Objects.requireNonNull(id);
             return this;
         }
+        public Builder kmsKey(String kmsKey) {
+            this.kmsKey = Objects.requireNonNull(kmsKey);
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -101,8 +122,12 @@ public final class GetLedgerResult {
         public Builder permissionsMode(String permissionsMode) {
             this.permissionsMode = Objects.requireNonNull(permissionsMode);
             return this;
+        }
+        public Builder tags(Map<String,String> tags) {
+            this.tags = Objects.requireNonNull(tags);
+            return this;
         }        public GetLedgerResult build() {
-            return new GetLedgerResult(arn, deletionProtection, id, name, permissionsMode);
+            return new GetLedgerResult(arn, deletionProtection, id, kmsKey, name, permissionsMode, tags);
         }
     }
 }

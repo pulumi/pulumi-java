@@ -23,15 +23,15 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @Import(name="artifactStore", required=true)
-    private Output<PipelineArtifactStoreArgs> artifactStore;
+    @Import(name="artifactStores", required=true)
+    private Output<List<PipelineArtifactStoreArgs>> artifactStores;
 
     /**
      * @return One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    public Output<PipelineArtifactStoreArgs> artifactStore() {
-        return this.artifactStore;
+    public Output<List<PipelineArtifactStoreArgs>> artifactStores() {
+        return this.artifactStores;
     }
 
     /**
@@ -97,7 +97,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     private PipelineArgs() {}
 
     private PipelineArgs(PipelineArgs $) {
-        this.artifactStore = $.artifactStore;
+        this.artifactStores = $.artifactStores;
         this.name = $.name;
         this.roleArn = $.roleArn;
         this.stages = $.stages;
@@ -123,24 +123,34 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
          * 
          * @return builder
          * 
          */
-        public Builder artifactStore(Output<PipelineArtifactStoreArgs> artifactStore) {
-            $.artifactStore = artifactStore;
+        public Builder artifactStores(Output<List<PipelineArtifactStoreArgs>> artifactStores) {
+            $.artifactStores = artifactStores;
             return this;
         }
 
         /**
-         * @param artifactStore One or more artifact_store blocks. Artifact stores are documented below.
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
          * 
          * @return builder
          * 
          */
-        public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
-            return artifactStore(Output.of(artifactStore));
+        public Builder artifactStores(List<PipelineArtifactStoreArgs> artifactStores) {
+            return artifactStores(Output.of(artifactStores));
+        }
+
+        /**
+         * @param artifactStores One or more artifact_store blocks. Artifact stores are documented below.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder artifactStores(PipelineArtifactStoreArgs... artifactStores) {
+            return artifactStores(List.of(artifactStores));
         }
 
         /**
@@ -238,7 +248,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public PipelineArgs build() {
-            $.artifactStore = Objects.requireNonNull($.artifactStore, "expected parameter 'artifactStore' to be non-null");
+            $.artifactStores = Objects.requireNonNull($.artifactStores, "expected parameter 'artifactStores' to be non-null");
             $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
             $.stages = Objects.requireNonNull($.stages, "expected parameter 'stages' to be non-null");
             return $;

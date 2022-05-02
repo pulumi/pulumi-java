@@ -34,14 +34,14 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     }
 
     /**
-     * The name of the managed rule group.
+     * Name of the managed rule group.
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The name of the managed rule group.
+     * @return Name of the managed rule group.
      * 
      */
     public Output<String> name() {
@@ -64,18 +64,33 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
     }
 
     /**
-     * The name of the managed rule group vendor.
+     * Name of the managed rule group vendor.
      * 
      */
     @Import(name="vendorName", required=true)
     private Output<String> vendorName;
 
     /**
-     * @return The name of the managed rule group vendor.
+     * @return Name of the managed rule group vendor.
      * 
      */
     public Output<String> vendorName() {
         return this.vendorName;
+    }
+
+    /**
+     * Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<String> version;
+
+    /**
+     * @return Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+     * 
+     */
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     private WebAclRuleStatementManagedRuleGroupStatementArgs() {}
@@ -85,6 +100,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
         this.name = $.name;
         this.scopeDownStatement = $.scopeDownStatement;
         this.vendorName = $.vendorName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -137,7 +153,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
         }
 
         /**
-         * @param name The name of the managed rule group.
+         * @param name Name of the managed rule group.
          * 
          * @return builder
          * 
@@ -148,7 +164,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
         }
 
         /**
-         * @param name The name of the managed rule group.
+         * @param name Name of the managed rule group.
          * 
          * @return builder
          * 
@@ -179,7 +195,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
         }
 
         /**
-         * @param vendorName The name of the managed rule group vendor.
+         * @param vendorName Name of the managed rule group vendor.
          * 
          * @return builder
          * 
@@ -190,13 +206,34 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends com.
         }
 
         /**
-         * @param vendorName The name of the managed rule group vendor.
+         * @param vendorName Name of the managed rule group vendor.
          * 
          * @return builder
          * 
          */
         public Builder vendorName(String vendorName) {
             return vendorName(Output.of(vendorName));
+        }
+
+        /**
+         * @param version Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<String> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version Version of the managed rule group. You can set `Version_1.0` or `Version_1.1` etc. If you want to use the default version, do not set anything.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
 
         public WebAclRuleStatementManagedRuleGroupStatementArgs build() {

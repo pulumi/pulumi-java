@@ -14,18 +14,26 @@ public final class ReplicationGroupClusterMode {
     /**
      * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
+     * @deprecated
+     * Use root-level num_node_groups instead
+     * 
      */
+    @Deprecated /* Use root-level num_node_groups instead */
     private final @Nullable Integer numNodeGroups;
     /**
      * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
+     * @deprecated
+     * Use root-level replicas_per_node_group instead
+     * 
      */
-    private final Integer replicasPerNodeGroup;
+    @Deprecated /* Use root-level replicas_per_node_group instead */
+    private final @Nullable Integer replicasPerNodeGroup;
 
     @CustomType.Constructor
     private ReplicationGroupClusterMode(
         @CustomType.Parameter("numNodeGroups") @Nullable Integer numNodeGroups,
-        @CustomType.Parameter("replicasPerNodeGroup") Integer replicasPerNodeGroup) {
+        @CustomType.Parameter("replicasPerNodeGroup") @Nullable Integer replicasPerNodeGroup) {
         this.numNodeGroups = numNodeGroups;
         this.replicasPerNodeGroup = replicasPerNodeGroup;
     }
@@ -33,16 +41,24 @@ public final class ReplicationGroupClusterMode {
     /**
      * @return Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
+     * @deprecated
+     * Use root-level num_node_groups instead
+     * 
      */
+    @Deprecated /* Use root-level num_node_groups instead */
     public Optional<Integer> numNodeGroups() {
         return Optional.ofNullable(this.numNodeGroups);
     }
     /**
      * @return Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
+     * @deprecated
+     * Use root-level replicas_per_node_group instead
+     * 
      */
-    public Integer replicasPerNodeGroup() {
-        return this.replicasPerNodeGroup;
+    @Deprecated /* Use root-level replicas_per_node_group instead */
+    public Optional<Integer> replicasPerNodeGroup() {
+        return Optional.ofNullable(this.replicasPerNodeGroup);
     }
 
     public static Builder builder() {
@@ -55,7 +71,7 @@ public final class ReplicationGroupClusterMode {
 
     public static final class Builder {
         private @Nullable Integer numNodeGroups;
-        private Integer replicasPerNodeGroup;
+        private @Nullable Integer replicasPerNodeGroup;
 
         public Builder() {
     	      // Empty
@@ -71,8 +87,8 @@ public final class ReplicationGroupClusterMode {
             this.numNodeGroups = numNodeGroups;
             return this;
         }
-        public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
-            this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
+        public Builder replicasPerNodeGroup(@Nullable Integer replicasPerNodeGroup) {
+            this.replicasPerNodeGroup = replicasPerNodeGroup;
             return this;
         }        public ReplicationGroupClusterMode build() {
             return new ReplicationGroupClusterMode(numNodeGroups, replicasPerNodeGroup);

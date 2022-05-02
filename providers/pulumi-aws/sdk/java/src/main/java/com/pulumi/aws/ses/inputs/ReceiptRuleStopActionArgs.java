@@ -32,14 +32,14 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The scope to apply
+     * The scope to apply. The only acceptable value is `RuleSet`.
      * 
      */
     @Import(name="scope", required=true)
     private Output<String> scope;
 
     /**
-     * @return The scope to apply
+     * @return The scope to apply. The only acceptable value is `RuleSet`.
      * 
      */
     public Output<String> scope() {
@@ -109,7 +109,7 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param scope The scope to apply
+         * @param scope The scope to apply. The only acceptable value is `RuleSet`.
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class ReceiptRuleStopActionArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param scope The scope to apply
+         * @param scope The scope to apply. The only acceptable value is `RuleSet`.
          * 
          * @return builder
          * 
