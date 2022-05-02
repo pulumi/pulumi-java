@@ -46,7 +46,6 @@ public class App {
                 .applyValue(m -> m.orElseThrow().name().orElse(""));
 
             ctx.export("name", name);
-            return ctx.exports();
         });
     }
 }
