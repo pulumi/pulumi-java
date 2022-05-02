@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
+import com.pulumi.awsnative.lex.inputs.BotAdvancedRecognitionSettingArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueRegexFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -19,6 +20,13 @@ import javax.annotation.Nullable;
 public final class BotSlotValueSelectionSettingArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BotSlotValueSelectionSettingArgs Empty = new BotSlotValueSelectionSettingArgs();
+
+    @Import(name="advancedRecognitionSetting")
+    private @Nullable Output<BotAdvancedRecognitionSettingArgs> advancedRecognitionSetting;
+
+    public Optional<Output<BotAdvancedRecognitionSettingArgs>> advancedRecognitionSetting() {
+        return Optional.ofNullable(this.advancedRecognitionSetting);
+    }
 
     @Import(name="regexFilter")
     private @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
@@ -37,6 +45,7 @@ public final class BotSlotValueSelectionSettingArgs extends com.pulumi.resources
     private BotSlotValueSelectionSettingArgs() {}
 
     private BotSlotValueSelectionSettingArgs(BotSlotValueSelectionSettingArgs $) {
+        this.advancedRecognitionSetting = $.advancedRecognitionSetting;
         this.regexFilter = $.regexFilter;
         this.resolutionStrategy = $.resolutionStrategy;
     }
@@ -57,6 +66,15 @@ public final class BotSlotValueSelectionSettingArgs extends com.pulumi.resources
 
         public Builder(BotSlotValueSelectionSettingArgs defaults) {
             $ = new BotSlotValueSelectionSettingArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder advancedRecognitionSetting(@Nullable Output<BotAdvancedRecognitionSettingArgs> advancedRecognitionSetting) {
+            $.advancedRecognitionSetting = advancedRecognitionSetting;
+            return this;
+        }
+
+        public Builder advancedRecognitionSetting(BotAdvancedRecognitionSettingArgs advancedRecognitionSetting) {
+            return advancedRecognitionSetting(Output.of(advancedRecognitionSetting));
         }
 
         public Builder regexFilter(@Nullable Output<BotSlotValueRegexFilterArgs> regexFilter) {

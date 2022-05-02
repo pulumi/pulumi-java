@@ -6,20 +6,18 @@ package com.pulumi.awsnative.lex.outputs;
 import com.pulumi.awsnative.lex.outputs.BotAliasS3BucketLogDestination;
 import com.pulumi.core.annotations.CustomType;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class BotAliasAudioLogDestination {
-    private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
+    private final BotAliasS3BucketLogDestination s3Bucket;
 
     @CustomType.Constructor
-    private BotAliasAudioLogDestination(@CustomType.Parameter("s3Bucket") @Nullable BotAliasS3BucketLogDestination s3Bucket) {
+    private BotAliasAudioLogDestination(@CustomType.Parameter("s3Bucket") BotAliasS3BucketLogDestination s3Bucket) {
         this.s3Bucket = s3Bucket;
     }
 
-    public Optional<BotAliasS3BucketLogDestination> s3Bucket() {
-        return Optional.ofNullable(this.s3Bucket);
+    public BotAliasS3BucketLogDestination s3Bucket() {
+        return this.s3Bucket;
     }
 
     public static Builder builder() {
@@ -31,7 +29,7 @@ public final class BotAliasAudioLogDestination {
     }
 
     public static final class Builder {
-        private @Nullable BotAliasS3BucketLogDestination s3Bucket;
+        private BotAliasS3BucketLogDestination s3Bucket;
 
         public Builder() {
     	      // Empty
@@ -42,8 +40,8 @@ public final class BotAliasAudioLogDestination {
     	      this.s3Bucket = defaults.s3Bucket;
         }
 
-        public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
-            this.s3Bucket = s3Bucket;
+        public Builder s3Bucket(BotAliasS3BucketLogDestination s3Bucket) {
+            this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }        public BotAliasAudioLogDestination build() {
             return new BotAliasAudioLogDestination(s3Bucket);

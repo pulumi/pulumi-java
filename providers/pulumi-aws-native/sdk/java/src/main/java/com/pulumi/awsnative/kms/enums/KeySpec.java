@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * Specifies the type of AWS KMS key to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric AWS KMS keys. You can&#39;t change the KeySpec value after the AWS KMS key is created.
      * 
      */
     @EnumType
@@ -21,7 +21,11 @@ import java.util.StringJoiner;
         EccNistP256("ECC_NIST_P256"),
         EccNistP384("ECC_NIST_P384"),
         EccNistP521("ECC_NIST_P521"),
-        EccSecgP256k1("ECC_SECG_P256K1");
+        EccSecgP256k1("ECC_SECG_P256K1"),
+        Hmac224("HMAC_224"),
+        Hmac256("HMAC_256"),
+        Hmac384("HMAC_384"),
+        Hmac512("HMAC_512");
 
         private final String value;
 

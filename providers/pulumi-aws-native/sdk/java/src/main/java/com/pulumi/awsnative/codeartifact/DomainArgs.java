@@ -34,6 +34,21 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+     * 
+     */
+    @Import(name="encryptionKey")
+    private @Nullable Output<String> encryptionKey;
+
+    /**
+     * @return The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+     * 
+     */
+    public Optional<Output<String>> encryptionKey() {
+        return Optional.ofNullable(this.encryptionKey);
+    }
+
+    /**
      * The access control resource policy on the provided domain.
      * 
      */
@@ -67,6 +82,7 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
 
     private DomainArgs(DomainArgs $) {
         this.domainName = $.domainName;
+        this.encryptionKey = $.encryptionKey;
         this.permissionsPolicyDocument = $.permissionsPolicyDocument;
         this.tags = $.tags;
     }
@@ -108,6 +124,27 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
+            $.encryptionKey = encryptionKey;
+            return this;
+        }
+
+        /**
+         * @param encryptionKey The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder encryptionKey(String encryptionKey) {
+            return encryptionKey(Output.of(encryptionKey));
         }
 
         /**

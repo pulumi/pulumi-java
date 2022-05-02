@@ -9,6 +9,7 @@ import com.pulumi.awsnative.databrew.outputs.JobOutputFormatOptions;
 import com.pulumi.awsnative.databrew.outputs.JobS3Location;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,6 +22,7 @@ public final class JobOutput {
     private final @Nullable JobOutputFormat format;
     private final @Nullable JobOutputFormatOptions formatOptions;
     private final JobS3Location location;
+    private final @Nullable Integer maxOutputFiles;
     private final @Nullable Boolean overwrite;
     private final @Nullable List<String> partitionColumns;
 
@@ -30,12 +32,14 @@ public final class JobOutput {
         @CustomType.Parameter("format") @Nullable JobOutputFormat format,
         @CustomType.Parameter("formatOptions") @Nullable JobOutputFormatOptions formatOptions,
         @CustomType.Parameter("location") JobS3Location location,
+        @CustomType.Parameter("maxOutputFiles") @Nullable Integer maxOutputFiles,
         @CustomType.Parameter("overwrite") @Nullable Boolean overwrite,
         @CustomType.Parameter("partitionColumns") @Nullable List<String> partitionColumns) {
         this.compressionFormat = compressionFormat;
         this.format = format;
         this.formatOptions = formatOptions;
         this.location = location;
+        this.maxOutputFiles = maxOutputFiles;
         this.overwrite = overwrite;
         this.partitionColumns = partitionColumns;
     }
@@ -51,6 +55,9 @@ public final class JobOutput {
     }
     public JobS3Location location() {
         return this.location;
+    }
+    public Optional<Integer> maxOutputFiles() {
+        return Optional.ofNullable(this.maxOutputFiles);
     }
     public Optional<Boolean> overwrite() {
         return Optional.ofNullable(this.overwrite);
@@ -72,6 +79,7 @@ public final class JobOutput {
         private @Nullable JobOutputFormat format;
         private @Nullable JobOutputFormatOptions formatOptions;
         private JobS3Location location;
+        private @Nullable Integer maxOutputFiles;
         private @Nullable Boolean overwrite;
         private @Nullable List<String> partitionColumns;
 
@@ -85,6 +93,7 @@ public final class JobOutput {
     	      this.format = defaults.format;
     	      this.formatOptions = defaults.formatOptions;
     	      this.location = defaults.location;
+    	      this.maxOutputFiles = defaults.maxOutputFiles;
     	      this.overwrite = defaults.overwrite;
     	      this.partitionColumns = defaults.partitionColumns;
         }
@@ -105,6 +114,10 @@ public final class JobOutput {
             this.location = Objects.requireNonNull(location);
             return this;
         }
+        public Builder maxOutputFiles(@Nullable Integer maxOutputFiles) {
+            this.maxOutputFiles = maxOutputFiles;
+            return this;
+        }
         public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
@@ -116,7 +129,7 @@ public final class JobOutput {
         public Builder partitionColumns(String... partitionColumns) {
             return partitionColumns(List.of(partitionColumns));
         }        public JobOutput build() {
-            return new JobOutput(compressionFormat, format, formatOptions, location, overwrite, partitionColumns);
+            return new JobOutput(compressionFormat, format, formatOptions, location, maxOutputFiles, overwrite, partitionColumns);
         }
     }
 }

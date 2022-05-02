@@ -33,7 +33,7 @@ public final class RobomakerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getFleet", TypeShape.of(GetFleetResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
+     * AWS::RoboMaker::Robot resource creates an AWS RoboMaker Robot.
      * 
      */
     public static CompletableFuture<GetRobotResult> getRobot(GetRobotArgs args) {
@@ -43,7 +43,7 @@ public final class RobomakerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobot", TypeShape.of(GetRobotResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
+     * AWS::RoboMaker::RobotApplication resource creates an AWS RoboMaker RobotApplication. Robot application can be used in AWS RoboMaker Simulation Jobs.
      * 
      */
     public static CompletableFuture<GetRobotApplicationResult> getRobotApplication(GetRobotApplicationArgs args) {
@@ -53,7 +53,7 @@ public final class RobomakerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobotApplication", TypeShape.of(GetRobotApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
+     * AWS::RoboMaker::RobotApplicationVersion resource creates an AWS RoboMaker RobotApplicationVersion. This helps you control which code your robot uses.
      * 
      */
     public static CompletableFuture<GetRobotApplicationVersionResult> getRobotApplicationVersion(GetRobotApplicationVersionArgs args) {
@@ -63,7 +63,7 @@ public final class RobomakerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getRobotApplicationVersion", TypeShape.of(GetRobotApplicationVersionResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
+     * AWS::RoboMaker::SimulationApplication resource creates an AWS RoboMaker SimulationApplication. Simulation application can be used in AWS RoboMaker Simulation Jobs.
      * 
      */
     public static CompletableFuture<GetSimulationApplicationResult> getSimulationApplication(GetSimulationApplicationArgs args) {
@@ -73,7 +73,7 @@ public final class RobomakerFunctions {
         return Deployment.getInstance().invokeAsync("aws-native:robomaker:getSimulationApplication", TypeShape.of(GetSimulationApplicationResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * An example resource schema demonstrating some basic constructs and validation rules.
+     * AWS::RoboMaker::SimulationApplicationVersion resource creates an AWS RoboMaker SimulationApplicationVersion. This helps you control which code your simulation uses.
      * 
      */
     public static CompletableFuture<GetSimulationApplicationVersionResult> getSimulationApplicationVersion(GetSimulationApplicationVersionArgs args) {

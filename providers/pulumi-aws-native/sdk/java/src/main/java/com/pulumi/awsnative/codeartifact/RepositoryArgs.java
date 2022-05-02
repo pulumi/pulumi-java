@@ -34,6 +34,36 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The name of the domain that contains the repository.
+     * 
+     */
+    @Import(name="domainName", required=true)
+    private Output<String> domainName;
+
+    /**
+     * @return The name of the domain that contains the repository.
+     * 
+     */
+    public Output<String> domainName() {
+        return this.domainName;
+    }
+
+    /**
+     * The 12-digit account ID of the AWS account that owns the domain.
+     * 
+     */
+    @Import(name="domainOwner")
+    private @Nullable Output<String> domainOwner;
+
+    /**
+     * @return The 12-digit account ID of the AWS account that owns the domain.
+     * 
+     */
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
+    }
+
+    /**
      * A list of external connections associated with the repository.
      * 
      */
@@ -112,6 +142,8 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
 
     private RepositoryArgs(RepositoryArgs $) {
         this.description = $.description;
+        this.domainName = $.domainName;
+        this.domainOwner = $.domainOwner;
         this.externalConnections = $.externalConnections;
         this.permissionsPolicyDocument = $.permissionsPolicyDocument;
         this.repositoryName = $.repositoryName;
@@ -156,6 +188,48 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param domainName The name of the domain that contains the repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(Output<String> domainName) {
+            $.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * @param domainName The name of the domain that contains the repository.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
+        /**
+         * @param domainOwner The 12-digit account ID of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwner(@Nullable Output<String> domainOwner) {
+            $.domainOwner = domainOwner;
+            return this;
+        }
+
+        /**
+         * @param domainOwner The 12-digit account ID of the AWS account that owns the domain.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
         }
 
         /**
@@ -294,6 +368,7 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public RepositoryArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
             return $;
         }
     }

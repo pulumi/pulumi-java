@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class BotAliasCloudWatchLogGroupLogDestination {
     /**
-     * @return A string used to identify this tag
+     * @return A string used to identify the groupArn for the Cloudwatch Log Group
      * 
      */
     private final String cloudWatchLogGroupArn;
     /**
-     * @return A string containing the value for the tag
+     * @return A string containing the value for the Log Prefix
      * 
      */
     private final String logPrefix;
@@ -29,14 +29,14 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
     }
 
     /**
-     * @return A string used to identify this tag
+     * @return A string used to identify the groupArn for the Cloudwatch Log Group
      * 
      */
     public String cloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn;
     }
     /**
-     * @return A string containing the value for the tag
+     * @return A string containing the value for the Log Prefix
      * 
      */
     public String logPrefix() {

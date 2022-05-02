@@ -6,7 +6,9 @@ package com.pulumi.awsnative.sagemaker;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.sagemaker.DomainArgs;
 import com.pulumi.awsnative.sagemaker.enums.DomainAppNetworkAccessType;
+import com.pulumi.awsnative.sagemaker.enums.DomainAppSecurityGroupManagement;
 import com.pulumi.awsnative.sagemaker.enums.DomainAuthMode;
+import com.pulumi.awsnative.sagemaker.outputs.DomainSettings;
 import com.pulumi.awsnative.sagemaker.outputs.DomainTag;
 import com.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
 import com.pulumi.core.Output;
@@ -37,6 +39,20 @@ public class Domain extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<DomainAppNetworkAccessType>> appNetworkAccessType() {
         return Codegen.optional(this.appNetworkAccessType);
+    }
+    /**
+     * The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+     * 
+     */
+    @Export(name="appSecurityGroupManagement", type=DomainAppSecurityGroupManagement.class, parameters={})
+    private Output</* @Nullable */ DomainAppSecurityGroupManagement> appSecurityGroupManagement;
+
+    /**
+     * @return The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+     * 
+     */
+    public Output<Optional<DomainAppSecurityGroupManagement>> appSecurityGroupManagement() {
+        return Codegen.optional(this.appSecurityGroupManagement);
     }
     /**
      * The mode of authentication that members use to access the domain.
@@ -108,6 +124,12 @@ public class Domain extends com.pulumi.resources.CustomResource {
     public Output<String> domainName() {
         return this.domainName;
     }
+    @Export(name="domainSettings", type=DomainSettings.class, parameters={})
+    private Output</* @Nullable */ DomainSettings> domainSettings;
+
+    public Output<Optional<DomainSettings>> domainSettings() {
+        return Codegen.optional(this.domainSettings);
+    }
     /**
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
@@ -135,6 +157,20 @@ public class Domain extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> kmsKeyId() {
         return Codegen.optional(this.kmsKeyId);
+    }
+    /**
+     * The ID of the security group that authorizes traffic between the RSessionGateway apps and the RStudioServerPro app.
+     * 
+     */
+    @Export(name="securityGroupIdForDomainBoundary", type=String.class, parameters={})
+    private Output<String> securityGroupIdForDomainBoundary;
+
+    /**
+     * @return The ID of the security group that authorizes traffic between the RSessionGateway apps and the RStudioServerPro app.
+     * 
+     */
+    public Output<String> securityGroupIdForDomainBoundary() {
+        return this.securityGroupIdForDomainBoundary;
     }
     /**
      * The SSO managed application instance ID.

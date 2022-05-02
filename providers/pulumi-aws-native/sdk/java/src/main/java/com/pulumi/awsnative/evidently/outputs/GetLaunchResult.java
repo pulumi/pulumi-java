@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.evidently.outputs;
 
+import com.pulumi.awsnative.evidently.outputs.LaunchExecutionStatusObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchGroupObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import com.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
@@ -18,6 +19,11 @@ import javax.annotation.Nullable;
 public final class GetLaunchResult {
     private final @Nullable String arn;
     private final @Nullable String description;
+    /**
+     * @return Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    private final @Nullable LaunchExecutionStatusObject executionStatus;
     private final @Nullable List<LaunchGroupObject> groups;
     private final @Nullable List<LaunchMetricDefinitionObject> metricMonitors;
     private final @Nullable String randomizationSalt;
@@ -32,6 +38,7 @@ public final class GetLaunchResult {
     private GetLaunchResult(
         @CustomType.Parameter("arn") @Nullable String arn,
         @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("executionStatus") @Nullable LaunchExecutionStatusObject executionStatus,
         @CustomType.Parameter("groups") @Nullable List<LaunchGroupObject> groups,
         @CustomType.Parameter("metricMonitors") @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
         @CustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
@@ -39,6 +46,7 @@ public final class GetLaunchResult {
         @CustomType.Parameter("tags") @Nullable List<LaunchTag> tags) {
         this.arn = arn;
         this.description = description;
+        this.executionStatus = executionStatus;
         this.groups = groups;
         this.metricMonitors = metricMonitors;
         this.randomizationSalt = randomizationSalt;
@@ -51,6 +59,13 @@ public final class GetLaunchResult {
     }
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
+    }
+    /**
+     * @return Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    public Optional<LaunchExecutionStatusObject> executionStatus() {
+        return Optional.ofNullable(this.executionStatus);
     }
     public List<LaunchGroupObject> groups() {
         return this.groups == null ? List.of() : this.groups;
@@ -83,6 +98,7 @@ public final class GetLaunchResult {
     public static final class Builder {
         private @Nullable String arn;
         private @Nullable String description;
+        private @Nullable LaunchExecutionStatusObject executionStatus;
         private @Nullable List<LaunchGroupObject> groups;
         private @Nullable List<LaunchMetricDefinitionObject> metricMonitors;
         private @Nullable String randomizationSalt;
@@ -97,6 +113,7 @@ public final class GetLaunchResult {
     	      Objects.requireNonNull(defaults);
     	      this.arn = defaults.arn;
     	      this.description = defaults.description;
+    	      this.executionStatus = defaults.executionStatus;
     	      this.groups = defaults.groups;
     	      this.metricMonitors = defaults.metricMonitors;
     	      this.randomizationSalt = defaults.randomizationSalt;
@@ -110,6 +127,10 @@ public final class GetLaunchResult {
         }
         public Builder description(@Nullable String description) {
             this.description = description;
+            return this;
+        }
+        public Builder executionStatus(@Nullable LaunchExecutionStatusObject executionStatus) {
+            this.executionStatus = executionStatus;
             return this;
         }
         public Builder groups(@Nullable List<LaunchGroupObject> groups) {
@@ -144,7 +165,7 @@ public final class GetLaunchResult {
         public Builder tags(LaunchTag... tags) {
             return tags(List.of(tags));
         }        public GetLaunchResult build() {
-            return new GetLaunchResult(arn, description, groups, metricMonitors, randomizationSalt, scheduledSplitsConfig, tags);
+            return new GetLaunchResult(arn, description, executionStatus, groups, metricMonitors, randomizationSalt, scheduledSplitsConfig, tags);
         }
     }
 }

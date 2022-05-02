@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.fis.outputs;
 
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateActionMap;
+import com.pulumi.awsnative.fis.outputs.ExperimentTemplateLogConfiguration;
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateStopCondition;
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateTargetMap;
 import com.pulumi.core.annotations.CustomType;
@@ -18,6 +19,7 @@ public final class GetExperimentTemplateResult {
     private final @Nullable ExperimentTemplateActionMap actions;
     private final @Nullable String description;
     private final @Nullable String id;
+    private final @Nullable ExperimentTemplateLogConfiguration logConfiguration;
     private final @Nullable String roleArn;
     private final @Nullable List<ExperimentTemplateStopCondition> stopConditions;
     private final @Nullable ExperimentTemplateTargetMap targets;
@@ -27,12 +29,14 @@ public final class GetExperimentTemplateResult {
         @CustomType.Parameter("actions") @Nullable ExperimentTemplateActionMap actions,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("logConfiguration") @Nullable ExperimentTemplateLogConfiguration logConfiguration,
         @CustomType.Parameter("roleArn") @Nullable String roleArn,
         @CustomType.Parameter("stopConditions") @Nullable List<ExperimentTemplateStopCondition> stopConditions,
         @CustomType.Parameter("targets") @Nullable ExperimentTemplateTargetMap targets) {
         this.actions = actions;
         this.description = description;
         this.id = id;
+        this.logConfiguration = logConfiguration;
         this.roleArn = roleArn;
         this.stopConditions = stopConditions;
         this.targets = targets;
@@ -46,6 +50,9 @@ public final class GetExperimentTemplateResult {
     }
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+    public Optional<ExperimentTemplateLogConfiguration> logConfiguration() {
+        return Optional.ofNullable(this.logConfiguration);
     }
     public Optional<String> roleArn() {
         return Optional.ofNullable(this.roleArn);
@@ -69,6 +76,7 @@ public final class GetExperimentTemplateResult {
         private @Nullable ExperimentTemplateActionMap actions;
         private @Nullable String description;
         private @Nullable String id;
+        private @Nullable ExperimentTemplateLogConfiguration logConfiguration;
         private @Nullable String roleArn;
         private @Nullable List<ExperimentTemplateStopCondition> stopConditions;
         private @Nullable ExperimentTemplateTargetMap targets;
@@ -82,6 +90,7 @@ public final class GetExperimentTemplateResult {
     	      this.actions = defaults.actions;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
+    	      this.logConfiguration = defaults.logConfiguration;
     	      this.roleArn = defaults.roleArn;
     	      this.stopConditions = defaults.stopConditions;
     	      this.targets = defaults.targets;
@@ -99,6 +108,10 @@ public final class GetExperimentTemplateResult {
             this.id = id;
             return this;
         }
+        public Builder logConfiguration(@Nullable ExperimentTemplateLogConfiguration logConfiguration) {
+            this.logConfiguration = logConfiguration;
+            return this;
+        }
         public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
@@ -114,7 +127,7 @@ public final class GetExperimentTemplateResult {
             this.targets = targets;
             return this;
         }        public GetExperimentTemplateResult build() {
-            return new GetExperimentTemplateResult(actions, description, id, roleArn, stopConditions, targets);
+            return new GetExperimentTemplateResult(actions, description, id, logConfiguration, roleArn, stopConditions, targets);
         }
     }
 }

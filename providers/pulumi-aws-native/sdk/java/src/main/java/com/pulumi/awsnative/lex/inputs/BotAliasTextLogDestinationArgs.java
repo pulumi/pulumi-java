@@ -7,8 +7,6 @@ import com.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestinationA
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 /**
@@ -19,11 +17,11 @@ public final class BotAliasTextLogDestinationArgs extends com.pulumi.resources.R
 
     public static final BotAliasTextLogDestinationArgs Empty = new BotAliasTextLogDestinationArgs();
 
-    @Import(name="cloudWatch")
-    private @Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
+    @Import(name="cloudWatch", required=true)
+    private Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch;
 
-    public Optional<Output<BotAliasCloudWatchLogGroupLogDestinationArgs>> cloudWatch() {
-        return Optional.ofNullable(this.cloudWatch);
+    public Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch() {
+        return this.cloudWatch;
     }
 
     private BotAliasTextLogDestinationArgs() {}
@@ -50,7 +48,7 @@ public final class BotAliasTextLogDestinationArgs extends com.pulumi.resources.R
             $ = new BotAliasTextLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder cloudWatch(@Nullable Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
+        public Builder cloudWatch(Output<BotAliasCloudWatchLogGroupLogDestinationArgs> cloudWatch) {
             $.cloudWatch = cloudWatch;
             return this;
         }
@@ -60,6 +58,7 @@ public final class BotAliasTextLogDestinationArgs extends com.pulumi.resources.R
         }
 
         public BotAliasTextLogDestinationArgs build() {
+            $.cloudWatch = Objects.requireNonNull($.cloudWatch, "expected parameter 'cloudWatch' to be non-null");
             return $;
         }
     }

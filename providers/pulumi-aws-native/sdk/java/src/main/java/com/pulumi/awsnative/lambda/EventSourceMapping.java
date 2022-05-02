@@ -7,9 +7,9 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.lambda.EventSourceMappingArgs;
 import com.pulumi.awsnative.lambda.enums.EventSourceMappingFunctionResponseTypesItem;
 import com.pulumi.awsnative.lambda.outputs.EventSourceMappingDestinationConfig;
+import com.pulumi.awsnative.lambda.outputs.EventSourceMappingFilterCriteria;
 import com.pulumi.awsnative.lambda.outputs.EventSourceMappingSelfManagedEventSource;
 import com.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
-import com.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
@@ -102,14 +102,14 @@ public class EventSourceMapping extends com.pulumi.resources.CustomResource {
      * The filter criteria to control event filtering.
      * 
      */
-    @Export(name="filterCriteria", type=FilterCriteriaProperties.class, parameters={})
-    private Output</* @Nullable */ FilterCriteriaProperties> filterCriteria;
+    @Export(name="filterCriteria", type=EventSourceMappingFilterCriteria.class, parameters={})
+    private Output</* @Nullable */ EventSourceMappingFilterCriteria> filterCriteria;
 
     /**
      * @return The filter criteria to control event filtering.
      * 
      */
-    public Output<Optional<FilterCriteriaProperties>> filterCriteria() {
+    public Output<Optional<EventSourceMappingFilterCriteria>> filterCriteria() {
         return Codegen.optional(this.filterCriteria);
     }
     /**

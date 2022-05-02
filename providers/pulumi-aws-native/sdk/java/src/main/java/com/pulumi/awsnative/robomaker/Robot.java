@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * AWS::RoboMaker::Robot resource creates an AWS RoboMaker fleet.
+ * AWS::RoboMaker::Robot resource creates an AWS RoboMaker Robot.
  * 
  */
 @ResourceType(type="aws-native:robomaker:Robot")

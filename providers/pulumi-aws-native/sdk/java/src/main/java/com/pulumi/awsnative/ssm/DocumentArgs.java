@@ -5,6 +5,7 @@ package com.pulumi.awsnative.ssm;
 
 import com.pulumi.awsnative.ssm.enums.DocumentFormat;
 import com.pulumi.awsnative.ssm.enums.DocumentType;
+import com.pulumi.awsnative.ssm.enums.DocumentUpdateMethod;
 import com.pulumi.awsnative.ssm.inputs.DocumentAttachmentsSourceArgs;
 import com.pulumi.awsnative.ssm.inputs.DocumentRequiresArgs;
 import com.pulumi.awsnative.ssm.inputs.DocumentTagArgs;
@@ -143,6 +144,21 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+     * 
+     */
+    @Import(name="updateMethod")
+    private @Nullable Output<DocumentUpdateMethod> updateMethod;
+
+    /**
+     * @return Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+     * 
+     */
+    public Optional<Output<DocumentUpdateMethod>> updateMethod() {
+        return Optional.ofNullable(this.updateMethod);
+    }
+
+    /**
      * An optional field specifying the version of the artifact you are creating with the document. This value is unique across all versions of a document, and cannot be changed.
      * 
      */
@@ -168,6 +184,7 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
         this.requires = $.requires;
         this.tags = $.tags;
         this.targetType = $.targetType;
+        this.updateMethod = $.updateMethod;
         this.versionName = $.versionName;
     }
 
@@ -385,6 +402,27 @@ public final class DocumentArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder targetType(String targetType) {
             return targetType(Output.of(targetType));
+        }
+
+        /**
+         * @param updateMethod Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder updateMethod(@Nullable Output<DocumentUpdateMethod> updateMethod) {
+            $.updateMethod = updateMethod;
+            return this;
+        }
+
+        /**
+         * @param updateMethod Update method - when set to &#39;Replace&#39;, the update will replace the existing document; when set to &#39;NewVersion&#39;, the update will create a new version.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder updateMethod(DocumentUpdateMethod updateMethod) {
+            return updateMethod(Output.of(updateMethod));
         }
 
         /**

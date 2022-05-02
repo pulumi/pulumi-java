@@ -3,8 +3,10 @@
 
 package com.pulumi.awsnative.acmpca.outputs;
 
+import com.pulumi.awsnative.acmpca.outputs.CertificateCustomAttribute;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,6 +15,7 @@ import javax.annotation.Nullable;
 public final class CertificateSubject {
     private final @Nullable String commonName;
     private final @Nullable String country;
+    private final @Nullable List<CertificateCustomAttribute> customAttributes;
     private final @Nullable String distinguishedNameQualifier;
     private final @Nullable String generationQualifier;
     private final @Nullable String givenName;
@@ -30,6 +33,7 @@ public final class CertificateSubject {
     private CertificateSubject(
         @CustomType.Parameter("commonName") @Nullable String commonName,
         @CustomType.Parameter("country") @Nullable String country,
+        @CustomType.Parameter("customAttributes") @Nullable List<CertificateCustomAttribute> customAttributes,
         @CustomType.Parameter("distinguishedNameQualifier") @Nullable String distinguishedNameQualifier,
         @CustomType.Parameter("generationQualifier") @Nullable String generationQualifier,
         @CustomType.Parameter("givenName") @Nullable String givenName,
@@ -44,6 +48,7 @@ public final class CertificateSubject {
         @CustomType.Parameter("title") @Nullable String title) {
         this.commonName = commonName;
         this.country = country;
+        this.customAttributes = customAttributes;
         this.distinguishedNameQualifier = distinguishedNameQualifier;
         this.generationQualifier = generationQualifier;
         this.givenName = givenName;
@@ -63,6 +68,9 @@ public final class CertificateSubject {
     }
     public Optional<String> country() {
         return Optional.ofNullable(this.country);
+    }
+    public List<CertificateCustomAttribute> customAttributes() {
+        return this.customAttributes == null ? List.of() : this.customAttributes;
     }
     public Optional<String> distinguishedNameQualifier() {
         return Optional.ofNullable(this.distinguishedNameQualifier);
@@ -112,6 +120,7 @@ public final class CertificateSubject {
     public static final class Builder {
         private @Nullable String commonName;
         private @Nullable String country;
+        private @Nullable List<CertificateCustomAttribute> customAttributes;
         private @Nullable String distinguishedNameQualifier;
         private @Nullable String generationQualifier;
         private @Nullable String givenName;
@@ -133,6 +142,7 @@ public final class CertificateSubject {
     	      Objects.requireNonNull(defaults);
     	      this.commonName = defaults.commonName;
     	      this.country = defaults.country;
+    	      this.customAttributes = defaults.customAttributes;
     	      this.distinguishedNameQualifier = defaults.distinguishedNameQualifier;
     	      this.generationQualifier = defaults.generationQualifier;
     	      this.givenName = defaults.givenName;
@@ -154,6 +164,13 @@ public final class CertificateSubject {
         public Builder country(@Nullable String country) {
             this.country = country;
             return this;
+        }
+        public Builder customAttributes(@Nullable List<CertificateCustomAttribute> customAttributes) {
+            this.customAttributes = customAttributes;
+            return this;
+        }
+        public Builder customAttributes(CertificateCustomAttribute... customAttributes) {
+            return customAttributes(List.of(customAttributes));
         }
         public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
             this.distinguishedNameQualifier = distinguishedNameQualifier;
@@ -203,7 +220,7 @@ public final class CertificateSubject {
             this.title = title;
             return this;
         }        public CertificateSubject build() {
-            return new CertificateSubject(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
+            return new CertificateSubject(commonName, country, customAttributes, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
         }
     }
 }

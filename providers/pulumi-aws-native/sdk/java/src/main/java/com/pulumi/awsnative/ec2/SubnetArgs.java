@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.ec2;
 
+import com.pulumi.awsnative.ec2.inputs.PrivateDnsNameOptionsOnLaunchPropertiesArgs;
 import com.pulumi.awsnative.ec2.inputs.SubnetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -32,11 +33,25 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.availabilityZone);
     }
 
-    @Import(name="cidrBlock", required=true)
-    private Output<String> cidrBlock;
+    @Import(name="availabilityZoneId")
+    private @Nullable Output<String> availabilityZoneId;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock;
+    public Optional<Output<String>> availabilityZoneId() {
+        return Optional.ofNullable(this.availabilityZoneId);
+    }
+
+    @Import(name="cidrBlock")
+    private @Nullable Output<String> cidrBlock;
+
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
+    }
+
+    @Import(name="enableDns64")
+    private @Nullable Output<Boolean> enableDns64;
+
+    public Optional<Output<Boolean>> enableDns64() {
+        return Optional.ofNullable(this.enableDns64);
     }
 
     @Import(name="ipv6CidrBlock")
@@ -44,6 +59,13 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> ipv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
+    }
+
+    @Import(name="ipv6Native")
+    private @Nullable Output<Boolean> ipv6Native;
+
+    public Optional<Output<Boolean>> ipv6Native() {
+        return Optional.ofNullable(this.ipv6Native);
     }
 
     @Import(name="mapPublicIpOnLaunch")
@@ -58,6 +80,13 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> outpostArn() {
         return Optional.ofNullable(this.outpostArn);
+    }
+
+    @Import(name="privateDnsNameOptionsOnLaunch")
+    private @Nullable Output<PrivateDnsNameOptionsOnLaunchPropertiesArgs> privateDnsNameOptionsOnLaunch;
+
+    public Optional<Output<PrivateDnsNameOptionsOnLaunchPropertiesArgs>> privateDnsNameOptionsOnLaunch() {
+        return Optional.ofNullable(this.privateDnsNameOptionsOnLaunch);
     }
 
     @Import(name="tags")
@@ -79,10 +108,14 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
     private SubnetArgs(SubnetArgs $) {
         this.assignIpv6AddressOnCreation = $.assignIpv6AddressOnCreation;
         this.availabilityZone = $.availabilityZone;
+        this.availabilityZoneId = $.availabilityZoneId;
         this.cidrBlock = $.cidrBlock;
+        this.enableDns64 = $.enableDns64;
         this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.ipv6Native = $.ipv6Native;
         this.mapPublicIpOnLaunch = $.mapPublicIpOnLaunch;
         this.outpostArn = $.outpostArn;
+        this.privateDnsNameOptionsOnLaunch = $.privateDnsNameOptionsOnLaunch;
         this.tags = $.tags;
         this.vpcId = $.vpcId;
     }
@@ -123,13 +156,31 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
             return availabilityZone(Output.of(availabilityZone));
         }
 
-        public Builder cidrBlock(Output<String> cidrBlock) {
+        public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
+            $.availabilityZoneId = availabilityZoneId;
+            return this;
+        }
+
+        public Builder availabilityZoneId(String availabilityZoneId) {
+            return availabilityZoneId(Output.of(availabilityZoneId));
+        }
+
+        public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
             $.cidrBlock = cidrBlock;
             return this;
         }
 
         public Builder cidrBlock(String cidrBlock) {
             return cidrBlock(Output.of(cidrBlock));
+        }
+
+        public Builder enableDns64(@Nullable Output<Boolean> enableDns64) {
+            $.enableDns64 = enableDns64;
+            return this;
+        }
+
+        public Builder enableDns64(Boolean enableDns64) {
+            return enableDns64(Output.of(enableDns64));
         }
 
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
@@ -139,6 +190,15 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             return ipv6CidrBlock(Output.of(ipv6CidrBlock));
+        }
+
+        public Builder ipv6Native(@Nullable Output<Boolean> ipv6Native) {
+            $.ipv6Native = ipv6Native;
+            return this;
+        }
+
+        public Builder ipv6Native(Boolean ipv6Native) {
+            return ipv6Native(Output.of(ipv6Native));
         }
 
         public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
@@ -157,6 +217,15 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder outpostArn(String outpostArn) {
             return outpostArn(Output.of(outpostArn));
+        }
+
+        public Builder privateDnsNameOptionsOnLaunch(@Nullable Output<PrivateDnsNameOptionsOnLaunchPropertiesArgs> privateDnsNameOptionsOnLaunch) {
+            $.privateDnsNameOptionsOnLaunch = privateDnsNameOptionsOnLaunch;
+            return this;
+        }
+
+        public Builder privateDnsNameOptionsOnLaunch(PrivateDnsNameOptionsOnLaunchPropertiesArgs privateDnsNameOptionsOnLaunch) {
+            return privateDnsNameOptionsOnLaunch(Output.of(privateDnsNameOptionsOnLaunch));
         }
 
         public Builder tags(@Nullable Output<List<SubnetTagArgs>> tags) {
@@ -182,7 +251,6 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public SubnetArgs build() {
-            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
             $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
             return $;
         }

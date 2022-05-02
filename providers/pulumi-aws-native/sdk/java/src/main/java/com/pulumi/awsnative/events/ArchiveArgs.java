@@ -17,6 +17,13 @@ public final class ArchiveArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ArchiveArgs Empty = new ArchiveArgs();
 
+    @Import(name="archiveName")
+    private @Nullable Output<String> archiveName;
+
+    public Optional<Output<String>> archiveName() {
+        return Optional.ofNullable(this.archiveName);
+    }
+
     @Import(name="description")
     private @Nullable Output<String> description;
 
@@ -48,6 +55,7 @@ public final class ArchiveArgs extends com.pulumi.resources.ResourceArgs {
     private ArchiveArgs() {}
 
     private ArchiveArgs(ArchiveArgs $) {
+        this.archiveName = $.archiveName;
         this.description = $.description;
         this.eventPattern = $.eventPattern;
         this.retentionDays = $.retentionDays;
@@ -70,6 +78,15 @@ public final class ArchiveArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(ArchiveArgs defaults) {
             $ = new ArchiveArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder archiveName(@Nullable Output<String> archiveName) {
+            $.archiveName = archiveName;
+            return this;
+        }
+
+        public Builder archiveName(String archiveName) {
+            return archiveName(Output.of(archiveName));
         }
 
         public Builder description(@Nullable Output<String> description) {

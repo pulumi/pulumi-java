@@ -24,6 +24,7 @@ public final class GlobalTableReplicaSpecification {
     private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
     private final String region;
     private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
+    private final @Nullable String tableClass;
     private final @Nullable List<GlobalTableTag> tags;
 
     @CustomType.Constructor
@@ -34,6 +35,7 @@ public final class GlobalTableReplicaSpecification {
         @CustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
         @CustomType.Parameter("region") String region,
         @CustomType.Parameter("sSESpecification") @Nullable GlobalTableReplicaSSESpecification sSESpecification,
+        @CustomType.Parameter("tableClass") @Nullable String tableClass,
         @CustomType.Parameter("tags") @Nullable List<GlobalTableTag> tags) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.globalSecondaryIndexes = globalSecondaryIndexes;
@@ -41,6 +43,7 @@ public final class GlobalTableReplicaSpecification {
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
         this.region = region;
         this.sSESpecification = sSESpecification;
+        this.tableClass = tableClass;
         this.tags = tags;
     }
 
@@ -62,6 +65,9 @@ public final class GlobalTableReplicaSpecification {
     public Optional<GlobalTableReplicaSSESpecification> sSESpecification() {
         return Optional.ofNullable(this.sSESpecification);
     }
+    public Optional<String> tableClass() {
+        return Optional.ofNullable(this.tableClass);
+    }
     public List<GlobalTableTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -81,6 +87,7 @@ public final class GlobalTableReplicaSpecification {
         private @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
         private String region;
         private @Nullable GlobalTableReplicaSSESpecification sSESpecification;
+        private @Nullable String tableClass;
         private @Nullable List<GlobalTableTag> tags;
 
         public Builder() {
@@ -95,6 +102,7 @@ public final class GlobalTableReplicaSpecification {
     	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
     	      this.region = defaults.region;
     	      this.sSESpecification = defaults.sSESpecification;
+    	      this.tableClass = defaults.tableClass;
     	      this.tags = defaults.tags;
         }
 
@@ -125,6 +133,10 @@ public final class GlobalTableReplicaSpecification {
             this.sSESpecification = sSESpecification;
             return this;
         }
+        public Builder tableClass(@Nullable String tableClass) {
+            this.tableClass = tableClass;
+            return this;
+        }
         public Builder tags(@Nullable List<GlobalTableTag> tags) {
             this.tags = tags;
             return this;
@@ -132,7 +144,7 @@ public final class GlobalTableReplicaSpecification {
         public Builder tags(GlobalTableTag... tags) {
             return tags(List.of(tags));
         }        public GlobalTableReplicaSpecification build() {
-            return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
+            return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tableClass, tags);
         }
     }
 }

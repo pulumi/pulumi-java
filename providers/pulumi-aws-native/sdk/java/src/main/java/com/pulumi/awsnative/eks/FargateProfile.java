@@ -19,8 +19,6 @@ import javax.annotation.Nullable;
 /**
  * Resource Schema for AWS::EKS::FargateProfile
  * 
- * ## Example Usage
- * 
  */
 @ResourceType(type="aws-native:eks:FargateProfile")
 public class FargateProfile extends com.pulumi.resources.CustomResource {

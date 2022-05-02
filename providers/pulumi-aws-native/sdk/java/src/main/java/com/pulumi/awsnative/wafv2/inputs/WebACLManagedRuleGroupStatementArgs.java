@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
+import com.pulumi.awsnative.wafv2.inputs.WebACLManagedRuleGroupConfigArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -23,6 +24,21 @@ public final class WebACLManagedRuleGroupStatementArgs extends com.pulumi.resour
 
     public Optional<Output<List<WebACLExcludedRuleArgs>>> excludedRules() {
         return Optional.ofNullable(this.excludedRules);
+    }
+
+    /**
+     * Collection of ManagedRuleGroupConfig.
+     * 
+     */
+    @Import(name="managedRuleGroupConfigs")
+    private @Nullable Output<List<WebACLManagedRuleGroupConfigArgs>> managedRuleGroupConfigs;
+
+    /**
+     * @return Collection of ManagedRuleGroupConfig.
+     * 
+     */
+    public Optional<Output<List<WebACLManagedRuleGroupConfigArgs>>> managedRuleGroupConfigs() {
+        return Optional.ofNullable(this.managedRuleGroupConfigs);
     }
 
     @Import(name="name", required=true)
@@ -57,6 +73,7 @@ public final class WebACLManagedRuleGroupStatementArgs extends com.pulumi.resour
 
     private WebACLManagedRuleGroupStatementArgs(WebACLManagedRuleGroupStatementArgs $) {
         this.excludedRules = $.excludedRules;
+        this.managedRuleGroupConfigs = $.managedRuleGroupConfigs;
         this.name = $.name;
         this.scopeDownStatement = $.scopeDownStatement;
         this.vendorName = $.vendorName;
@@ -92,6 +109,37 @@ public final class WebACLManagedRuleGroupStatementArgs extends com.pulumi.resour
 
         public Builder excludedRules(WebACLExcludedRuleArgs... excludedRules) {
             return excludedRules(List.of(excludedRules));
+        }
+
+        /**
+         * @param managedRuleGroupConfigs Collection of ManagedRuleGroupConfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedRuleGroupConfigs(@Nullable Output<List<WebACLManagedRuleGroupConfigArgs>> managedRuleGroupConfigs) {
+            $.managedRuleGroupConfigs = managedRuleGroupConfigs;
+            return this;
+        }
+
+        /**
+         * @param managedRuleGroupConfigs Collection of ManagedRuleGroupConfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedRuleGroupConfigs(List<WebACLManagedRuleGroupConfigArgs> managedRuleGroupConfigs) {
+            return managedRuleGroupConfigs(Output.of(managedRuleGroupConfigs));
+        }
+
+        /**
+         * @param managedRuleGroupConfigs Collection of ManagedRuleGroupConfig.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder managedRuleGroupConfigs(WebACLManagedRuleGroupConfigArgs... managedRuleGroupConfigs) {
+            return managedRuleGroupConfigs(List.of(managedRuleGroupConfigs));
         }
 
         public Builder name(Output<String> name) {

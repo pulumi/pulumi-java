@@ -4,7 +4,7 @@
 package com.pulumi.awsnative.events;
 
 import com.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
-import com.pulumi.awsnative.events.inputs.AuthParametersPropertiesArgs;
+import com.pulumi.awsnative.events.inputs.ConnectionAuthParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
@@ -18,9 +18,9 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
     @Import(name="authParameters", required=true)
-    private Output<AuthParametersPropertiesArgs> authParameters;
+    private Output<ConnectionAuthParametersArgs> authParameters;
 
-    public Output<AuthParametersPropertiesArgs> authParameters() {
+    public Output<ConnectionAuthParametersArgs> authParameters() {
         return this.authParameters;
     }
 
@@ -88,12 +88,12 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder authParameters(Output<AuthParametersPropertiesArgs> authParameters) {
+        public Builder authParameters(Output<ConnectionAuthParametersArgs> authParameters) {
             $.authParameters = authParameters;
             return this;
         }
 
-        public Builder authParameters(AuthParametersPropertiesArgs authParameters) {
+        public Builder authParameters(ConnectionAuthParametersArgs authParameters) {
             return authParameters(Output.of(authParameters));
         }
 

@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.evidently;
 
+import com.pulumi.awsnative.evidently.inputs.LaunchExecutionStatusObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.LaunchGroupObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.LaunchMetricDefinitionObjectArgs;
 import com.pulumi.awsnative.evidently.inputs.LaunchStepConfigArgs;
@@ -25,6 +26,21 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
 
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    @Import(name="executionStatus")
+    private @Nullable Output<LaunchExecutionStatusObjectArgs> executionStatus;
+
+    /**
+     * @return Start or Stop Launch Launch. Default is not started.
+     * 
+     */
+    public Optional<Output<LaunchExecutionStatusObjectArgs>> executionStatus() {
+        return Optional.ofNullable(this.executionStatus);
     }
 
     @Import(name="groups", required=true)
@@ -88,6 +104,7 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
 
     private LaunchArgs(LaunchArgs $) {
         this.description = $.description;
+        this.executionStatus = $.executionStatus;
         this.groups = $.groups;
         this.metricMonitors = $.metricMonitors;
         this.name = $.name;
@@ -122,6 +139,27 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param executionStatus Start or Stop Launch Launch. Default is not started.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executionStatus(@Nullable Output<LaunchExecutionStatusObjectArgs> executionStatus) {
+            $.executionStatus = executionStatus;
+            return this;
+        }
+
+        /**
+         * @param executionStatus Start or Stop Launch Launch. Default is not started.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder executionStatus(LaunchExecutionStatusObjectArgs executionStatus) {
+            return executionStatus(Output.of(executionStatus));
         }
 
         public Builder groups(Output<List<LaunchGroupObjectArgs>> groups) {

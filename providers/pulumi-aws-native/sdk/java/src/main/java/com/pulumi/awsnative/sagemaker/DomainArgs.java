@@ -4,7 +4,9 @@
 package com.pulumi.awsnative.sagemaker;
 
 import com.pulumi.awsnative.sagemaker.enums.DomainAppNetworkAccessType;
+import com.pulumi.awsnative.sagemaker.enums.DomainAppSecurityGroupManagement;
 import com.pulumi.awsnative.sagemaker.enums.DomainAuthMode;
+import com.pulumi.awsnative.sagemaker.inputs.DomainSettingsArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainTagArgs;
 import com.pulumi.awsnative.sagemaker.inputs.DomainUserSettingsArgs;
 import com.pulumi.core.Output;
@@ -33,6 +35,21 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<DomainAppNetworkAccessType>> appNetworkAccessType() {
         return Optional.ofNullable(this.appNetworkAccessType);
+    }
+
+    /**
+     * The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+     * 
+     */
+    @Import(name="appSecurityGroupManagement")
+    private @Nullable Output<DomainAppSecurityGroupManagement> appSecurityGroupManagement;
+
+    /**
+     * @return The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+     * 
+     */
+    public Optional<Output<DomainAppSecurityGroupManagement>> appSecurityGroupManagement() {
+        return Optional.ofNullable(this.appSecurityGroupManagement);
     }
 
     /**
@@ -78,6 +95,13 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
+    }
+
+    @Import(name="domainSettings")
+    private @Nullable Output<DomainSettingsArgs> domainSettings;
+
+    public Optional<Output<DomainSettingsArgs>> domainSettings() {
+        return Optional.ofNullable(this.domainSettings);
     }
 
     /**
@@ -144,9 +168,11 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
 
     private DomainArgs(DomainArgs $) {
         this.appNetworkAccessType = $.appNetworkAccessType;
+        this.appSecurityGroupManagement = $.appSecurityGroupManagement;
         this.authMode = $.authMode;
         this.defaultUserSettings = $.defaultUserSettings;
         this.domainName = $.domainName;
+        this.domainSettings = $.domainSettings;
         this.kmsKeyId = $.kmsKeyId;
         this.subnetIds = $.subnetIds;
         this.tags = $.tags;
@@ -190,6 +216,27 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder appNetworkAccessType(DomainAppNetworkAccessType appNetworkAccessType) {
             return appNetworkAccessType(Output.of(appNetworkAccessType));
+        }
+
+        /**
+         * @param appSecurityGroupManagement The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appSecurityGroupManagement(@Nullable Output<DomainAppSecurityGroupManagement> appSecurityGroupManagement) {
+            $.appSecurityGroupManagement = appSecurityGroupManagement;
+            return this;
+        }
+
+        /**
+         * @param appSecurityGroupManagement The entity that creates and manages the required security groups for inter-app communication in VPCOnly mode. Required when CreateDomain.AppNetworkAccessType is VPCOnly and DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn is provided.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder appSecurityGroupManagement(DomainAppSecurityGroupManagement appSecurityGroupManagement) {
+            return appSecurityGroupManagement(Output.of(appSecurityGroupManagement));
         }
 
         /**
@@ -253,6 +300,15 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
+        }
+
+        public Builder domainSettings(@Nullable Output<DomainSettingsArgs> domainSettings) {
+            $.domainSettings = domainSettings;
+            return this;
+        }
+
+        public Builder domainSettings(DomainSettingsArgs domainSettings) {
+            return domainSettings(Output.of(domainSettings));
         }
 
         /**

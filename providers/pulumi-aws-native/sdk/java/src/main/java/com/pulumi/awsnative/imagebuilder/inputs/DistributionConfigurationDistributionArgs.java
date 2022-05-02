@@ -3,8 +3,8 @@
 
 package com.pulumi.awsnative.imagebuilder.inputs;
 
-import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs;
-import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs;
+import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationAmiDistributionConfigurationArgs;
+import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationContainerDistributionConfigurationArgs;
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationLaunchTemplateConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -23,33 +23,17 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
 
     public static final DistributionConfigurationDistributionArgs Empty = new DistributionConfigurationDistributionArgs();
 
-    /**
-     * The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
-     */
     @Import(name="amiDistributionConfiguration")
-    private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
+    private @Nullable Output<DistributionConfigurationAmiDistributionConfigurationArgs> amiDistributionConfiguration;
 
-    /**
-     * @return The specific AMI settings (for example, launch permissions, AMI tags).
-     * 
-     */
-    public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs>> amiDistributionConfiguration() {
+    public Optional<Output<DistributionConfigurationAmiDistributionConfigurationArgs>> amiDistributionConfiguration() {
         return Optional.ofNullable(this.amiDistributionConfiguration);
     }
 
-    /**
-     * Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
-     */
     @Import(name="containerDistributionConfiguration")
-    private @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
+    private @Nullable Output<DistributionConfigurationContainerDistributionConfigurationArgs> containerDistributionConfiguration;
 
-    /**
-     * @return Container distribution settings for encryption, licensing, and sharing in a specific Region.
-     * 
-     */
-    public Optional<Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs>> containerDistributionConfiguration() {
+    public Optional<Output<DistributionConfigurationContainerDistributionConfigurationArgs>> containerDistributionConfiguration() {
         return Optional.ofNullable(this.containerDistributionConfiguration);
     }
 
@@ -126,45 +110,21 @@ public final class DistributionConfigurationDistributionArgs extends com.pulumi.
             $ = new DistributionConfigurationDistributionArgs(Objects.requireNonNull(defaults));
         }
 
-        /**
-         * @param amiDistributionConfiguration The specific AMI settings (for example, launch permissions, AMI tags).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable Output<DistributionConfigurationAmiDistributionConfigurationArgs> amiDistributionConfiguration) {
             $.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        /**
-         * @param amiDistributionConfiguration The specific AMI settings (for example, launch permissions, AMI tags).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder amiDistributionConfiguration(DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(DistributionConfigurationAmiDistributionConfigurationArgs amiDistributionConfiguration) {
             return amiDistributionConfiguration(Output.of(amiDistributionConfiguration));
         }
 
-        /**
-         * @param containerDistributionConfiguration Container distribution settings for encryption, licensing, and sharing in a specific Region.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationContainerDistributionConfigurationArgs> containerDistributionConfiguration) {
             $.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        /**
-         * @param containerDistributionConfiguration Container distribution settings for encryption, licensing, and sharing in a specific Region.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder containerDistributionConfiguration(DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(DistributionConfigurationContainerDistributionConfigurationArgs containerDistributionConfiguration) {
             return containerDistributionConfiguration(Output.of(containerDistributionConfiguration));
         }
 

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.lex;
 import com.pulumi.awsnative.lex.inputs.BotLocaleArgs;
 import com.pulumi.awsnative.lex.inputs.BotS3LocationArgs;
 import com.pulumi.awsnative.lex.inputs.BotTagArgs;
+import com.pulumi.awsnative.lex.inputs.BotTestBotAliasSettingsArgs;
 import com.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
@@ -125,6 +126,13 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
         return this.roleArn;
     }
 
+    @Import(name="testBotAliasSettings")
+    private @Nullable Output<BotTestBotAliasSettingsArgs> testBotAliasSettings;
+
+    public Optional<Output<BotTestBotAliasSettingsArgs>> testBotAliasSettings() {
+        return Optional.ofNullable(this.testBotAliasSettings);
+    }
+
     /**
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
      * 
@@ -152,6 +160,7 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
         this.idleSessionTTLInSeconds = $.idleSessionTTLInSeconds;
         this.name = $.name;
         this.roleArn = $.roleArn;
+        this.testBotAliasSettings = $.testBotAliasSettings;
         this.testBotAliasTags = $.testBotAliasTags;
     }
 
@@ -332,6 +341,15 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
+        }
+
+        public Builder testBotAliasSettings(@Nullable Output<BotTestBotAliasSettingsArgs> testBotAliasSettings) {
+            $.testBotAliasSettings = testBotAliasSettings;
+            return this;
+        }
+
+        public Builder testBotAliasSettings(BotTestBotAliasSettingsArgs testBotAliasSettings) {
+            return testBotAliasSettings(Output.of(testBotAliasSettings));
         }
 
         /**

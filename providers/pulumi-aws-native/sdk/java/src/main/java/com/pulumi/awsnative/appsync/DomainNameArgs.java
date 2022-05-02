@@ -29,11 +29,19 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.description);
     }
 
+    @Import(name="domainName", required=true)
+    private Output<String> domainName;
+
+    public Output<String> domainName() {
+        return this.domainName;
+    }
+
     private DomainNameArgs() {}
 
     private DomainNameArgs(DomainNameArgs $) {
         this.certificateArn = $.certificateArn;
         this.description = $.description;
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
@@ -72,8 +80,18 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        public Builder domainName(Output<String> domainName) {
+            $.domainName = domainName;
+            return this;
+        }
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
+        }
+
         public DomainNameArgs build() {
             $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
             return $;
         }
     }

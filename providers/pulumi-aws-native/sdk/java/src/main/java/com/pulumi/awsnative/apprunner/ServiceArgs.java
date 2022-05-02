@@ -6,6 +6,8 @@ package com.pulumi.awsnative.apprunner;
 import com.pulumi.awsnative.apprunner.inputs.ServiceEncryptionConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceHealthCheckConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceInstanceConfigurationArgs;
+import com.pulumi.awsnative.apprunner.inputs.ServiceNetworkConfigurationArgs;
+import com.pulumi.awsnative.apprunner.inputs.ServiceObservabilityConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceSourceConfigurationArgs;
 import com.pulumi.awsnative.apprunner.inputs.ServiceTagArgs;
 import com.pulumi.core.Output;
@@ -57,6 +59,20 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.instanceConfiguration);
     }
 
+    @Import(name="networkConfiguration")
+    private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
+
+    public Optional<Output<ServiceNetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
+    }
+
+    @Import(name="observabilityConfiguration")
+    private @Nullable Output<ServiceObservabilityConfigurationArgs> observabilityConfiguration;
+
+    public Optional<Output<ServiceObservabilityConfigurationArgs>> observabilityConfiguration() {
+        return Optional.ofNullable(this.observabilityConfiguration);
+    }
+
     /**
      * The AppRunner Service Name.
      * 
@@ -93,6 +109,8 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         this.encryptionConfiguration = $.encryptionConfiguration;
         this.healthCheckConfiguration = $.healthCheckConfiguration;
         this.instanceConfiguration = $.instanceConfiguration;
+        this.networkConfiguration = $.networkConfiguration;
+        this.observabilityConfiguration = $.observabilityConfiguration;
         this.serviceName = $.serviceName;
         this.sourceConfiguration = $.sourceConfiguration;
         this.tags = $.tags;
@@ -162,6 +180,24 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder instanceConfiguration(ServiceInstanceConfigurationArgs instanceConfiguration) {
             return instanceConfiguration(Output.of(instanceConfiguration));
+        }
+
+        public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
+            $.networkConfiguration = networkConfiguration;
+            return this;
+        }
+
+        public Builder networkConfiguration(ServiceNetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
+        }
+
+        public Builder observabilityConfiguration(@Nullable Output<ServiceObservabilityConfigurationArgs> observabilityConfiguration) {
+            $.observabilityConfiguration = observabilityConfiguration;
+            return this;
+        }
+
+        public Builder observabilityConfiguration(ServiceObservabilityConfigurationArgs observabilityConfiguration) {
+            return observabilityConfiguration(Output.of(observabilityConfiguration));
         }
 
         /**

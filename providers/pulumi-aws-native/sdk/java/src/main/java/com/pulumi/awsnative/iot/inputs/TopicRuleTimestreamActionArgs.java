@@ -7,7 +7,6 @@ import com.pulumi.awsnative.iot.inputs.TopicRuleTimestreamDimensionArgs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleTimestreamTimestampArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,13 +17,6 @@ import javax.annotation.Nullable;
 public final class TopicRuleTimestreamActionArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final TopicRuleTimestreamActionArgs Empty = new TopicRuleTimestreamActionArgs();
-
-    @Import(name="batchMode")
-    private @Nullable Output<Boolean> batchMode;
-
-    public Optional<Output<Boolean>> batchMode() {
-        return Optional.ofNullable(this.batchMode);
-    }
 
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
@@ -64,7 +56,6 @@ public final class TopicRuleTimestreamActionArgs extends com.pulumi.resources.Re
     private TopicRuleTimestreamActionArgs() {}
 
     private TopicRuleTimestreamActionArgs(TopicRuleTimestreamActionArgs $) {
-        this.batchMode = $.batchMode;
         this.databaseName = $.databaseName;
         this.dimensions = $.dimensions;
         this.roleArn = $.roleArn;
@@ -88,15 +79,6 @@ public final class TopicRuleTimestreamActionArgs extends com.pulumi.resources.Re
 
         public Builder(TopicRuleTimestreamActionArgs defaults) {
             $ = new TopicRuleTimestreamActionArgs(Objects.requireNonNull(defaults));
-        }
-
-        public Builder batchMode(@Nullable Output<Boolean> batchMode) {
-            $.batchMode = batchMode;
-            return this;
-        }
-
-        public Builder batchMode(Boolean batchMode) {
-            return batchMode(Output.of(batchMode));
         }
 
         public Builder databaseName(Output<String> databaseName) {

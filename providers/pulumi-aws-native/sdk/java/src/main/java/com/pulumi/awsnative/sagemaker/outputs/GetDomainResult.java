@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.sagemaker.outputs;
 
+import com.pulumi.awsnative.sagemaker.outputs.DomainSettings;
 import com.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -27,11 +28,17 @@ public final class GetDomainResult {
      * 
      */
     private final @Nullable String domainId;
+    private final @Nullable DomainSettings domainSettings;
     /**
      * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
     private final @Nullable String homeEfsFileSystemId;
+    /**
+     * @return The ID of the security group that authorizes traffic between the RSessionGateway apps and the RStudioServerPro app.
+     * 
+     */
+    private final @Nullable String securityGroupIdForDomainBoundary;
     /**
      * @return The SSO managed application instance ID.
      * 
@@ -48,13 +55,17 @@ public final class GetDomainResult {
         @CustomType.Parameter("defaultUserSettings") @Nullable DomainUserSettings defaultUserSettings,
         @CustomType.Parameter("domainArn") @Nullable String domainArn,
         @CustomType.Parameter("domainId") @Nullable String domainId,
+        @CustomType.Parameter("domainSettings") @Nullable DomainSettings domainSettings,
         @CustomType.Parameter("homeEfsFileSystemId") @Nullable String homeEfsFileSystemId,
+        @CustomType.Parameter("securityGroupIdForDomainBoundary") @Nullable String securityGroupIdForDomainBoundary,
         @CustomType.Parameter("singleSignOnManagedApplicationInstanceId") @Nullable String singleSignOnManagedApplicationInstanceId,
         @CustomType.Parameter("url") @Nullable String url) {
         this.defaultUserSettings = defaultUserSettings;
         this.domainArn = domainArn;
         this.domainId = domainId;
+        this.domainSettings = domainSettings;
         this.homeEfsFileSystemId = homeEfsFileSystemId;
+        this.securityGroupIdForDomainBoundary = securityGroupIdForDomainBoundary;
         this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
         this.url = url;
     }
@@ -80,12 +91,22 @@ public final class GetDomainResult {
     public Optional<String> domainId() {
         return Optional.ofNullable(this.domainId);
     }
+    public Optional<DomainSettings> domainSettings() {
+        return Optional.ofNullable(this.domainSettings);
+    }
     /**
      * @return The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
     public Optional<String> homeEfsFileSystemId() {
         return Optional.ofNullable(this.homeEfsFileSystemId);
+    }
+    /**
+     * @return The ID of the security group that authorizes traffic between the RSessionGateway apps and the RStudioServerPro app.
+     * 
+     */
+    public Optional<String> securityGroupIdForDomainBoundary() {
+        return Optional.ofNullable(this.securityGroupIdForDomainBoundary);
     }
     /**
      * @return The SSO managed application instance ID.
@@ -114,7 +135,9 @@ public final class GetDomainResult {
         private @Nullable DomainUserSettings defaultUserSettings;
         private @Nullable String domainArn;
         private @Nullable String domainId;
+        private @Nullable DomainSettings domainSettings;
         private @Nullable String homeEfsFileSystemId;
+        private @Nullable String securityGroupIdForDomainBoundary;
         private @Nullable String singleSignOnManagedApplicationInstanceId;
         private @Nullable String url;
 
@@ -127,7 +150,9 @@ public final class GetDomainResult {
     	      this.defaultUserSettings = defaults.defaultUserSettings;
     	      this.domainArn = defaults.domainArn;
     	      this.domainId = defaults.domainId;
+    	      this.domainSettings = defaults.domainSettings;
     	      this.homeEfsFileSystemId = defaults.homeEfsFileSystemId;
+    	      this.securityGroupIdForDomainBoundary = defaults.securityGroupIdForDomainBoundary;
     	      this.singleSignOnManagedApplicationInstanceId = defaults.singleSignOnManagedApplicationInstanceId;
     	      this.url = defaults.url;
         }
@@ -144,8 +169,16 @@ public final class GetDomainResult {
             this.domainId = domainId;
             return this;
         }
+        public Builder domainSettings(@Nullable DomainSettings domainSettings) {
+            this.domainSettings = domainSettings;
+            return this;
+        }
         public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
+            return this;
+        }
+        public Builder securityGroupIdForDomainBoundary(@Nullable String securityGroupIdForDomainBoundary) {
+            this.securityGroupIdForDomainBoundary = securityGroupIdForDomainBoundary;
             return this;
         }
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
@@ -156,7 +189,7 @@ public final class GetDomainResult {
             this.url = url;
             return this;
         }        public GetDomainResult build() {
-            return new GetDomainResult(defaultUserSettings, domainArn, domainId, homeEfsFileSystemId, singleSignOnManagedApplicationInstanceId, url);
+            return new GetDomainResult(defaultUserSettings, domainArn, domainId, domainSettings, homeEfsFileSystemId, securityGroupIdForDomainBoundary, singleSignOnManagedApplicationInstanceId, url);
         }
     }
 }

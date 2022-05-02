@@ -3,17 +3,20 @@
 
 package com.pulumi.awsnative.amplifyuibuilder.outputs;
 
+import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentEvents;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
 public final class ComponentChild {
     private final @Nullable List<ComponentChild> children;
     private final String componentType;
+    private final @Nullable ComponentEvents events;
     private final String name;
     private final ComponentProperties properties;
 
@@ -21,10 +24,12 @@ public final class ComponentChild {
     private ComponentChild(
         @CustomType.Parameter("children") @Nullable List<ComponentChild> children,
         @CustomType.Parameter("componentType") String componentType,
+        @CustomType.Parameter("events") @Nullable ComponentEvents events,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("properties") ComponentProperties properties) {
         this.children = children;
         this.componentType = componentType;
+        this.events = events;
         this.name = name;
         this.properties = properties;
     }
@@ -34,6 +39,9 @@ public final class ComponentChild {
     }
     public String componentType() {
         return this.componentType;
+    }
+    public Optional<ComponentEvents> events() {
+        return Optional.ofNullable(this.events);
     }
     public String name() {
         return this.name;
@@ -53,6 +61,7 @@ public final class ComponentChild {
     public static final class Builder {
         private @Nullable List<ComponentChild> children;
         private String componentType;
+        private @Nullable ComponentEvents events;
         private String name;
         private ComponentProperties properties;
 
@@ -64,6 +73,7 @@ public final class ComponentChild {
     	      Objects.requireNonNull(defaults);
     	      this.children = defaults.children;
     	      this.componentType = defaults.componentType;
+    	      this.events = defaults.events;
     	      this.name = defaults.name;
     	      this.properties = defaults.properties;
         }
@@ -79,6 +89,10 @@ public final class ComponentChild {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
+        public Builder events(@Nullable ComponentEvents events) {
+            this.events = events;
+            return this;
+        }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
@@ -87,7 +101,7 @@ public final class ComponentChild {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }        public ComponentChild build() {
-            return new ComponentChild(children, componentType, name, properties);
+            return new ComponentChild(children, componentType, events, name, properties);
         }
     }
 }

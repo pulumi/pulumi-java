@@ -10,6 +10,7 @@ import com.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,6 +50,13 @@ public final class JobOutputArgs extends com.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    @Import(name="maxOutputFiles")
+    private @Nullable Output<Integer> maxOutputFiles;
+
+    public Optional<Output<Integer>> maxOutputFiles() {
+        return Optional.ofNullable(this.maxOutputFiles);
+    }
+
     @Import(name="overwrite")
     private @Nullable Output<Boolean> overwrite;
 
@@ -70,6 +78,7 @@ public final class JobOutputArgs extends com.pulumi.resources.ResourceArgs {
         this.format = $.format;
         this.formatOptions = $.formatOptions;
         this.location = $.location;
+        this.maxOutputFiles = $.maxOutputFiles;
         this.overwrite = $.overwrite;
         this.partitionColumns = $.partitionColumns;
     }
@@ -126,6 +135,15 @@ public final class JobOutputArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder location(JobS3LocationArgs location) {
             return location(Output.of(location));
+        }
+
+        public Builder maxOutputFiles(@Nullable Output<Integer> maxOutputFiles) {
+            $.maxOutputFiles = maxOutputFiles;
+            return this;
+        }
+
+        public Builder maxOutputFiles(Integer maxOutputFiles) {
+            return maxOutputFiles(Output.of(maxOutputFiles));
         }
 
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {

@@ -7,9 +7,11 @@ import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.lambda.inputs.GetCodeSigningConfigArgs;
 import com.pulumi.awsnative.lambda.inputs.GetEventSourceMappingArgs;
 import com.pulumi.awsnative.lambda.inputs.GetFunctionArgs;
+import com.pulumi.awsnative.lambda.inputs.GetUrlArgs;
 import com.pulumi.awsnative.lambda.outputs.GetCodeSigningConfigResult;
 import com.pulumi.awsnative.lambda.outputs.GetEventSourceMappingResult;
 import com.pulumi.awsnative.lambda.outputs.GetFunctionResult;
+import com.pulumi.awsnative.lambda.outputs.GetUrlResult;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
@@ -45,5 +47,15 @@ public final class LambdaFunctions {
     }
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lambda:getFunction", TypeShape.of(GetFunctionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Resource Type definition for AWS::Lambda::Url
+     * 
+     */
+    public static CompletableFuture<GetUrlResult> getUrl(GetUrlArgs args) {
+        return getUrl(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetUrlResult> getUrl(GetUrlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("aws-native:lambda:getUrl", TypeShape.of(GetUrlResult.class), args, Utilities.withVersion(options));
     }
 }

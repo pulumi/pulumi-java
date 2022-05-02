@@ -8,6 +8,7 @@ import com.pulumi.awsnative.amplifyuibuilder.ComponentArgs;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentBindingProperties;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentChild;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentCollectionProperties;
+import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentEvents;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentOverrides;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
 import com.pulumi.awsnative.amplifyuibuilder.outputs.ComponentTags;
@@ -34,10 +35,10 @@ public class Component extends com.pulumi.resources.CustomResource {
         return this.appId;
     }
     @Export(name="bindingProperties", type=ComponentBindingProperties.class, parameters={})
-    private Output</* @Nullable */ ComponentBindingProperties> bindingProperties;
+    private Output<ComponentBindingProperties> bindingProperties;
 
-    public Output<Optional<ComponentBindingProperties>> bindingProperties() {
-        return Codegen.optional(this.bindingProperties);
+    public Output<ComponentBindingProperties> bindingProperties() {
+        return this.bindingProperties;
     }
     @Export(name="children", type=List.class, parameters={ComponentChild.class})
     private Output</* @Nullable */ List<ComponentChild>> children;
@@ -52,16 +53,10 @@ public class Component extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.collectionProperties);
     }
     @Export(name="componentType", type=String.class, parameters={})
-    private Output</* @Nullable */ String> componentType;
+    private Output<String> componentType;
 
-    public Output<Optional<String>> componentType() {
-        return Codegen.optional(this.componentType);
-    }
-    @Export(name="createdAt", type=String.class, parameters={})
-    private Output<String> createdAt;
-
-    public Output<String> createdAt() {
-        return this.createdAt;
+    public Output<String> componentType() {
+        return this.componentType;
     }
     @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
@@ -69,29 +64,35 @@ public class Component extends com.pulumi.resources.CustomResource {
     public Output<String> environmentName() {
         return this.environmentName;
     }
-    @Export(name="modifiedAt", type=String.class, parameters={})
-    private Output<String> modifiedAt;
+    @Export(name="events", type=ComponentEvents.class, parameters={})
+    private Output</* @Nullable */ ComponentEvents> events;
 
-    public Output<String> modifiedAt() {
-        return this.modifiedAt;
+    public Output<Optional<ComponentEvents>> events() {
+        return Codegen.optional(this.events);
     }
     @Export(name="name", type=String.class, parameters={})
-    private Output</* @Nullable */ String> name;
+    private Output<String> name;
 
-    public Output<Optional<String>> name() {
-        return Codegen.optional(this.name);
+    public Output<String> name() {
+        return this.name;
     }
     @Export(name="overrides", type=ComponentOverrides.class, parameters={})
-    private Output</* @Nullable */ ComponentOverrides> overrides;
+    private Output<ComponentOverrides> overrides;
 
-    public Output<Optional<ComponentOverrides>> overrides() {
-        return Codegen.optional(this.overrides);
+    public Output<ComponentOverrides> overrides() {
+        return this.overrides;
     }
     @Export(name="properties", type=ComponentProperties.class, parameters={})
-    private Output</* @Nullable */ ComponentProperties> properties;
+    private Output<ComponentProperties> properties;
 
-    public Output<Optional<ComponentProperties>> properties() {
-        return Codegen.optional(this.properties);
+    public Output<ComponentProperties> properties() {
+        return this.properties;
+    }
+    @Export(name="schemaVersion", type=String.class, parameters={})
+    private Output</* @Nullable */ String> schemaVersion;
+
+    public Output<Optional<String>> schemaVersion() {
+        return Codegen.optional(this.schemaVersion);
     }
     @Export(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
@@ -106,10 +107,10 @@ public class Component extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.tags);
     }
     @Export(name="variants", type=List.class, parameters={ComponentVariant.class})
-    private Output</* @Nullable */ List<ComponentVariant>> variants;
+    private Output<List<ComponentVariant>> variants;
 
-    public Output<Optional<List<ComponentVariant>>> variants() {
-        return Codegen.optional(this.variants);
+    public Output<List<ComponentVariant>> variants() {
+        return this.variants;
     }
 
     /**
@@ -124,7 +125,7 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Component(String name, @Nullable ComponentArgs args) {
+    public Component(String name, ComponentArgs args) {
         this(name, args, null);
     }
     /**
@@ -133,7 +134,7 @@ public class Component extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Component(String name, @Nullable ComponentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Component(String name, ComponentArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:amplifyuibuilder:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

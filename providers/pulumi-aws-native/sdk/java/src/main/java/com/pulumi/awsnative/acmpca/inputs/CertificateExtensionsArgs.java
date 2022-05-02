@@ -3,6 +3,7 @@
 
 package com.pulumi.awsnative.acmpca.inputs;
 
+import com.pulumi.awsnative.acmpca.inputs.CertificateCustomExtensionArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateExtendedKeyUsageArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateGeneralNameArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
@@ -30,6 +31,13 @@ public final class CertificateExtensionsArgs extends com.pulumi.resources.Resour
         return Optional.ofNullable(this.certificatePolicies);
     }
 
+    @Import(name="customExtensions")
+    private @Nullable Output<List<CertificateCustomExtensionArgs>> customExtensions;
+
+    public Optional<Output<List<CertificateCustomExtensionArgs>>> customExtensions() {
+        return Optional.ofNullable(this.customExtensions);
+    }
+
     @Import(name="extendedKeyUsage")
     private @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
@@ -55,6 +63,7 @@ public final class CertificateExtensionsArgs extends com.pulumi.resources.Resour
 
     private CertificateExtensionsArgs(CertificateExtensionsArgs $) {
         this.certificatePolicies = $.certificatePolicies;
+        this.customExtensions = $.customExtensions;
         this.extendedKeyUsage = $.extendedKeyUsage;
         this.keyUsage = $.keyUsage;
         this.subjectAlternativeNames = $.subjectAlternativeNames;
@@ -89,6 +98,19 @@ public final class CertificateExtensionsArgs extends com.pulumi.resources.Resour
 
         public Builder certificatePolicies(CertificatePolicyInformationArgs... certificatePolicies) {
             return certificatePolicies(List.of(certificatePolicies));
+        }
+
+        public Builder customExtensions(@Nullable Output<List<CertificateCustomExtensionArgs>> customExtensions) {
+            $.customExtensions = customExtensions;
+            return this;
+        }
+
+        public Builder customExtensions(List<CertificateCustomExtensionArgs> customExtensions) {
+            return customExtensions(Output.of(customExtensions));
+        }
+
+        public Builder customExtensions(CertificateCustomExtensionArgs... customExtensions) {
+            return customExtensions(List.of(customExtensions));
         }
 
         public Builder extendedKeyUsage(@Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {

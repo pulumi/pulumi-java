@@ -10,6 +10,7 @@ import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisLoadBalan
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
 import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
+import com.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTransitGatewayRouteTableRoute;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
@@ -60,6 +61,10 @@ public final class NetworkInsightsAnalysisExplanation {
     private final @Nullable String state;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable;
+    private final @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway;
+    private final @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayAttachment;
+    private final @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayRouteTable;
+    private final @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection;
@@ -108,6 +113,10 @@ public final class NetworkInsightsAnalysisExplanation {
         @CustomType.Parameter("state") @Nullable String state,
         @CustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
         @CustomType.Parameter("subnetRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable,
+        @CustomType.Parameter("transitGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway,
+        @CustomType.Parameter("transitGatewayAttachment") @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayAttachment,
+        @CustomType.Parameter("transitGatewayRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayRouteTable,
+        @CustomType.Parameter("transitGatewayRouteTableRoute") @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute,
         @CustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc,
         @CustomType.Parameter("vpcEndpoint") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint,
         @CustomType.Parameter("vpcPeeringConnection") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection,
@@ -153,6 +162,10 @@ public final class NetworkInsightsAnalysisExplanation {
         this.state = state;
         this.subnet = subnet;
         this.subnetRouteTable = subnetRouteTable;
+        this.transitGateway = transitGateway;
+        this.transitGatewayAttachment = transitGatewayAttachment;
+        this.transitGatewayRouteTable = transitGatewayRouteTable;
+        this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
         this.vpc = vpc;
         this.vpcEndpoint = vpcEndpoint;
         this.vpcPeeringConnection = vpcPeeringConnection;
@@ -280,6 +293,18 @@ public final class NetworkInsightsAnalysisExplanation {
     public Optional<NetworkInsightsAnalysisAnalysisComponent> subnetRouteTable() {
         return Optional.ofNullable(this.subnetRouteTable);
     }
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> transitGateway() {
+        return Optional.ofNullable(this.transitGateway);
+    }
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> transitGatewayAttachment() {
+        return Optional.ofNullable(this.transitGatewayAttachment);
+    }
+    public Optional<NetworkInsightsAnalysisAnalysisComponent> transitGatewayRouteTable() {
+        return Optional.ofNullable(this.transitGatewayRouteTable);
+    }
+    public Optional<NetworkInsightsAnalysisTransitGatewayRouteTableRoute> transitGatewayRouteTableRoute() {
+        return Optional.ofNullable(this.transitGatewayRouteTableRoute);
+    }
     public Optional<NetworkInsightsAnalysisAnalysisComponent> vpc() {
         return Optional.ofNullable(this.vpc);
     }
@@ -345,6 +370,10 @@ public final class NetworkInsightsAnalysisExplanation {
         private @Nullable String state;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable;
+        private @Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway;
+        private @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayAttachment;
+        private @Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayRouteTable;
+        private @Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint;
         private @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection;
@@ -397,6 +426,10 @@ public final class NetworkInsightsAnalysisExplanation {
     	      this.state = defaults.state;
     	      this.subnet = defaults.subnet;
     	      this.subnetRouteTable = defaults.subnetRouteTable;
+    	      this.transitGateway = defaults.transitGateway;
+    	      this.transitGatewayAttachment = defaults.transitGatewayAttachment;
+    	      this.transitGatewayRouteTable = defaults.transitGatewayRouteTable;
+    	      this.transitGatewayRouteTableRoute = defaults.transitGatewayRouteTableRoute;
     	      this.vpc = defaults.vpc;
     	      this.vpcEndpoint = defaults.vpcEndpoint;
     	      this.vpcPeeringConnection = defaults.vpcPeeringConnection;
@@ -585,6 +618,22 @@ public final class NetworkInsightsAnalysisExplanation {
             this.subnetRouteTable = subnetRouteTable;
             return this;
         }
+        public Builder transitGateway(@Nullable NetworkInsightsAnalysisAnalysisComponent transitGateway) {
+            this.transitGateway = transitGateway;
+            return this;
+        }
+        public Builder transitGatewayAttachment(@Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayAttachment) {
+            this.transitGatewayAttachment = transitGatewayAttachment;
+            return this;
+        }
+        public Builder transitGatewayRouteTable(@Nullable NetworkInsightsAnalysisAnalysisComponent transitGatewayRouteTable) {
+            this.transitGatewayRouteTable = transitGatewayRouteTable;
+            return this;
+        }
+        public Builder transitGatewayRouteTableRoute(@Nullable NetworkInsightsAnalysisTransitGatewayRouteTableRoute transitGatewayRouteTableRoute) {
+            this.transitGatewayRouteTableRoute = transitGatewayRouteTableRoute;
+            return this;
+        }
         public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
             this.vpc = vpc;
             return this;
@@ -605,7 +654,7 @@ public final class NetworkInsightsAnalysisExplanation {
             this.vpnGateway = vpnGateway;
             return this;
         }        public NetworkInsightsAnalysisExplanation build() {
-            return new NetworkInsightsAnalysisExplanation(acl, aclRule, address, addresses, attachedTo, availabilityZones, cidrs, classicLoadBalancerListener, component, customerGateway, destination, destinationVpc, direction, elasticLoadBalancerListener, explanationCode, ingressRouteTable, internetGateway, loadBalancerArn, loadBalancerListenerPort, loadBalancerTarget, loadBalancerTargetGroup, loadBalancerTargetGroups, loadBalancerTargetPort, missingComponent, natGateway, networkInterface, packetField, port, portRanges, prefixList, protocols, routeTable, routeTableRoute, securityGroup, securityGroupRule, securityGroups, sourceVpc, state, subnet, subnetRouteTable, vpc, vpcEndpoint, vpcPeeringConnection, vpnConnection, vpnGateway);
+            return new NetworkInsightsAnalysisExplanation(acl, aclRule, address, addresses, attachedTo, availabilityZones, cidrs, classicLoadBalancerListener, component, customerGateway, destination, destinationVpc, direction, elasticLoadBalancerListener, explanationCode, ingressRouteTable, internetGateway, loadBalancerArn, loadBalancerListenerPort, loadBalancerTarget, loadBalancerTargetGroup, loadBalancerTargetGroups, loadBalancerTargetPort, missingComponent, natGateway, networkInterface, packetField, port, portRanges, prefixList, protocols, routeTable, routeTableRoute, securityGroup, securityGroupRule, securityGroups, sourceVpc, state, subnet, subnetRouteTable, transitGateway, transitGatewayAttachment, transitGatewayRouteTable, transitGatewayRouteTableRoute, vpc, vpcEndpoint, vpcPeeringConnection, vpnConnection, vpnGateway);
         }
     }
 }

@@ -47,11 +47,11 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
         return Optional.ofNullable(this.removeSubnetIds);
     }
 
-    @Import(name="subnetIds")
-    private @Nullable Output<List<String>> subnetIds;
+    @Import(name="subnetIds", required=true)
+    private Output<List<String>> subnetIds;
 
-    public Optional<Output<List<String>>> subnetIds() {
-        return Optional.ofNullable(this.subnetIds);
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds;
     }
 
     @Import(name="tags")
@@ -61,18 +61,18 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
         return Optional.ofNullable(this.tags);
     }
 
-    @Import(name="transitGatewayId")
-    private @Nullable Output<String> transitGatewayId;
+    @Import(name="transitGatewayId", required=true)
+    private Output<String> transitGatewayId;
 
-    public Optional<Output<String>> transitGatewayId() {
-        return Optional.ofNullable(this.transitGatewayId);
+    public Output<String> transitGatewayId() {
+        return this.transitGatewayId;
     }
 
-    @Import(name="vpcId")
-    private @Nullable Output<String> vpcId;
+    @Import(name="vpcId", required=true)
+    private Output<String> vpcId;
 
-    public Optional<Output<String>> vpcId() {
-        return Optional.ofNullable(this.vpcId);
+    public Output<String> vpcId() {
+        return this.vpcId;
     }
 
     private TransitGatewayVpcAttachmentArgs() {}
@@ -152,7 +152,7 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
             return removeSubnetIds(List.of(removeSubnetIds));
         }
 
-        public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
@@ -178,7 +178,7 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
             return tags(List.of(tags));
         }
 
-        public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
+        public Builder transitGatewayId(Output<String> transitGatewayId) {
             $.transitGatewayId = transitGatewayId;
             return this;
         }
@@ -187,7 +187,7 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
             return transitGatewayId(Output.of(transitGatewayId));
         }
 
-        public Builder vpcId(@Nullable Output<String> vpcId) {
+        public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
@@ -197,6 +197,9 @@ public final class TransitGatewayVpcAttachmentArgs extends com.pulumi.resources.
         }
 
         public TransitGatewayVpcAttachmentArgs build() {
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.transitGatewayId = Objects.requireNonNull($.transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
             return $;
         }
     }

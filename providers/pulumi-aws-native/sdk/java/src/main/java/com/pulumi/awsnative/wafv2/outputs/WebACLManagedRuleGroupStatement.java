@@ -4,6 +4,7 @@
 package com.pulumi.awsnative.wafv2.outputs;
 
 import com.pulumi.awsnative.wafv2.outputs.WebACLExcludedRule;
+import com.pulumi.awsnative.wafv2.outputs.WebACLManagedRuleGroupConfig;
 import com.pulumi.awsnative.wafv2.outputs.WebACLStatement;
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
@@ -15,6 +16,11 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebACLManagedRuleGroupStatement {
     private final @Nullable List<WebACLExcludedRule> excludedRules;
+    /**
+     * @return Collection of ManagedRuleGroupConfig.
+     * 
+     */
+    private final @Nullable List<WebACLManagedRuleGroupConfig> managedRuleGroupConfigs;
     private final String name;
     private final @Nullable WebACLStatement scopeDownStatement;
     private final String vendorName;
@@ -23,11 +29,13 @@ public final class WebACLManagedRuleGroupStatement {
     @CustomType.Constructor
     private WebACLManagedRuleGroupStatement(
         @CustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules,
+        @CustomType.Parameter("managedRuleGroupConfigs") @Nullable List<WebACLManagedRuleGroupConfig> managedRuleGroupConfigs,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement,
         @CustomType.Parameter("vendorName") String vendorName,
         @CustomType.Parameter("version") @Nullable String version) {
         this.excludedRules = excludedRules;
+        this.managedRuleGroupConfigs = managedRuleGroupConfigs;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;
         this.vendorName = vendorName;
@@ -36,6 +44,13 @@ public final class WebACLManagedRuleGroupStatement {
 
     public List<WebACLExcludedRule> excludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
+    }
+    /**
+     * @return Collection of ManagedRuleGroupConfig.
+     * 
+     */
+    public List<WebACLManagedRuleGroupConfig> managedRuleGroupConfigs() {
+        return this.managedRuleGroupConfigs == null ? List.of() : this.managedRuleGroupConfigs;
     }
     public String name() {
         return this.name;
@@ -60,6 +75,7 @@ public final class WebACLManagedRuleGroupStatement {
 
     public static final class Builder {
         private @Nullable List<WebACLExcludedRule> excludedRules;
+        private @Nullable List<WebACLManagedRuleGroupConfig> managedRuleGroupConfigs;
         private String name;
         private @Nullable WebACLStatement scopeDownStatement;
         private String vendorName;
@@ -72,6 +88,7 @@ public final class WebACLManagedRuleGroupStatement {
         public Builder(WebACLManagedRuleGroupStatement defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.excludedRules = defaults.excludedRules;
+    	      this.managedRuleGroupConfigs = defaults.managedRuleGroupConfigs;
     	      this.name = defaults.name;
     	      this.scopeDownStatement = defaults.scopeDownStatement;
     	      this.vendorName = defaults.vendorName;
@@ -84,6 +101,13 @@ public final class WebACLManagedRuleGroupStatement {
         }
         public Builder excludedRules(WebACLExcludedRule... excludedRules) {
             return excludedRules(List.of(excludedRules));
+        }
+        public Builder managedRuleGroupConfigs(@Nullable List<WebACLManagedRuleGroupConfig> managedRuleGroupConfigs) {
+            this.managedRuleGroupConfigs = managedRuleGroupConfigs;
+            return this;
+        }
+        public Builder managedRuleGroupConfigs(WebACLManagedRuleGroupConfig... managedRuleGroupConfigs) {
+            return managedRuleGroupConfigs(List.of(managedRuleGroupConfigs));
         }
         public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
@@ -101,7 +125,7 @@ public final class WebACLManagedRuleGroupStatement {
             this.version = version;
             return this;
         }        public WebACLManagedRuleGroupStatement build() {
-            return new WebACLManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName, version);
+            return new WebACLManagedRuleGroupStatement(excludedRules, managedRuleGroupConfigs, name, scopeDownStatement, vendorName, version);
         }
     }
 }

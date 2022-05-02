@@ -7,6 +7,7 @@ import com.pulumi.awsnative.lambda.enums.FunctionArchitecturesItem;
 import com.pulumi.awsnative.lambda.enums.FunctionPackageType;
 import com.pulumi.awsnative.lambda.outputs.FunctionDeadLetterConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionEnvironment;
+import com.pulumi.awsnative.lambda.outputs.FunctionEphemeralStorage;
 import com.pulumi.awsnative.lambda.outputs.FunctionFileSystemConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionImageConfig;
 import com.pulumi.awsnative.lambda.outputs.FunctionTag;
@@ -48,6 +49,11 @@ public final class GetFunctionResult {
      * 
      */
     private final @Nullable FunctionEnvironment environment;
+    /**
+     * @return A function&#39;s ephemeral storage settings.
+     * 
+     */
+    private final @Nullable FunctionEphemeralStorage ephemeralStorage;
     /**
      * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
@@ -127,6 +133,7 @@ public final class GetFunctionResult {
         @CustomType.Parameter("deadLetterConfig") @Nullable FunctionDeadLetterConfig deadLetterConfig,
         @CustomType.Parameter("description") @Nullable String description,
         @CustomType.Parameter("environment") @Nullable FunctionEnvironment environment,
+        @CustomType.Parameter("ephemeralStorage") @Nullable FunctionEphemeralStorage ephemeralStorage,
         @CustomType.Parameter("fileSystemConfigs") @Nullable List<FunctionFileSystemConfig> fileSystemConfigs,
         @CustomType.Parameter("handler") @Nullable String handler,
         @CustomType.Parameter("imageConfig") @Nullable FunctionImageConfig imageConfig,
@@ -147,6 +154,7 @@ public final class GetFunctionResult {
         this.deadLetterConfig = deadLetterConfig;
         this.description = description;
         this.environment = environment;
+        this.ephemeralStorage = ephemeralStorage;
         this.fileSystemConfigs = fileSystemConfigs;
         this.handler = handler;
         this.imageConfig = imageConfig;
@@ -200,6 +208,13 @@ public final class GetFunctionResult {
      */
     public Optional<FunctionEnvironment> environment() {
         return Optional.ofNullable(this.environment);
+    }
+    /**
+     * @return A function&#39;s ephemeral storage settings.
+     * 
+     */
+    public Optional<FunctionEphemeralStorage> ephemeralStorage() {
+        return Optional.ofNullable(this.ephemeralStorage);
     }
     /**
      * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
@@ -315,6 +330,7 @@ public final class GetFunctionResult {
         private @Nullable FunctionDeadLetterConfig deadLetterConfig;
         private @Nullable String description;
         private @Nullable FunctionEnvironment environment;
+        private @Nullable FunctionEphemeralStorage ephemeralStorage;
         private @Nullable List<FunctionFileSystemConfig> fileSystemConfigs;
         private @Nullable String handler;
         private @Nullable FunctionImageConfig imageConfig;
@@ -342,6 +358,7 @@ public final class GetFunctionResult {
     	      this.deadLetterConfig = defaults.deadLetterConfig;
     	      this.description = defaults.description;
     	      this.environment = defaults.environment;
+    	      this.ephemeralStorage = defaults.ephemeralStorage;
     	      this.fileSystemConfigs = defaults.fileSystemConfigs;
     	      this.handler = defaults.handler;
     	      this.imageConfig = defaults.imageConfig;
@@ -383,6 +400,10 @@ public final class GetFunctionResult {
         }
         public Builder environment(@Nullable FunctionEnvironment environment) {
             this.environment = environment;
+            return this;
+        }
+        public Builder ephemeralStorage(@Nullable FunctionEphemeralStorage ephemeralStorage) {
+            this.ephemeralStorage = ephemeralStorage;
             return this;
         }
         public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfig> fileSystemConfigs) {
@@ -450,7 +471,7 @@ public final class GetFunctionResult {
             this.vpcConfig = vpcConfig;
             return this;
         }        public GetFunctionResult build() {
-            return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
+            return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, ephemeralStorage, fileSystemConfigs, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.awsnative.fis;
 import com.pulumi.awsnative.Utilities;
 import com.pulumi.awsnative.fis.ExperimentTemplateArgs;
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateActionMap;
+import com.pulumi.awsnative.fis.outputs.ExperimentTemplateLogConfiguration;
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateStopCondition;
 import com.pulumi.awsnative.fis.outputs.ExperimentTemplateTargetMap;
 import com.pulumi.core.Output;
@@ -35,6 +36,12 @@ public class ExperimentTemplate extends com.pulumi.resources.CustomResource {
 
     public Output<String> description() {
         return this.description;
+    }
+    @Export(name="logConfiguration", type=ExperimentTemplateLogConfiguration.class, parameters={})
+    private Output</* @Nullable */ ExperimentTemplateLogConfiguration> logConfiguration;
+
+    public Output<Optional<ExperimentTemplateLogConfiguration>> logConfiguration() {
+        return Codegen.optional(this.logConfiguration);
     }
     @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
