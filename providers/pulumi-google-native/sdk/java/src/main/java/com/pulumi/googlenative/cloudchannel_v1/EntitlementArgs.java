@@ -94,14 +94,14 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters. This is only supported for Google Workspace entitlements.
      * 
      */
     @Import(name="purchaseOrderId")
     private @Nullable Output<String> purchaseOrderId;
 
     /**
-     * @return Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     * @return Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters. This is only supported for Google Workspace entitlements.
      * 
      */
     public Optional<Output<String>> purchaseOrderId() {
@@ -267,7 +267,7 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters. This is only supported for Google Workspace entitlements.
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class EntitlementArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+         * @param purchaseOrderId Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters. This is only supported for Google Workspace entitlements.
          * 
          * @return builder
          * 

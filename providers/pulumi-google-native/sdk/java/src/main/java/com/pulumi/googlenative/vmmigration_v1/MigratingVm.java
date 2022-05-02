@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.vmmigration_v1.MigratingVmArgs;
+import com.pulumi.googlenative.vmmigration_v1.outputs.AwsSourceVmDetailsResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.CloneJobResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDefaultsResponse;
 import com.pulumi.googlenative.vmmigration_v1.outputs.CutoverJobResponse;
@@ -28,6 +29,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:vmmigration/v1:MigratingVm")
 public class MigratingVm extends com.pulumi.resources.CustomResource {
+    /**
+     * Details of the VM from an AWS source.
+     * 
+     */
+    @Export(name="awsSourceVmDetails", type=AwsSourceVmDetailsResponse.class, parameters={})
+    private Output<AwsSourceVmDetailsResponse> awsSourceVmDetails;
+
+    /**
+     * @return Details of the VM from an AWS source.
+     * 
+     */
+    public Output<AwsSourceVmDetailsResponse> awsSourceVmDetails() {
+        return this.awsSourceVmDetails;
+    }
     /**
      * Details of the target VM in Compute Engine.
      * 

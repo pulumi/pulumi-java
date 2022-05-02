@@ -25,15 +25,26 @@ public final class DiscoveredResponse {
      * 
      */
     private final String continuousAnalysis;
+    /**
+     * @return The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     * @deprecated
+     * The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     */
+    @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+    private final String lastAnalysisTime;
 
     @CustomType.Constructor
     private DiscoveredResponse(
         @CustomType.Parameter("analysisStatus") String analysisStatus,
         @CustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
-        @CustomType.Parameter("continuousAnalysis") String continuousAnalysis) {
+        @CustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @CustomType.Parameter("lastAnalysisTime") String lastAnalysisTime) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;
+        this.lastAnalysisTime = lastAnalysisTime;
     }
 
     /**
@@ -57,6 +68,17 @@ public final class DiscoveredResponse {
     public String continuousAnalysis() {
         return this.continuousAnalysis;
     }
+    /**
+     * @return The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     * @deprecated
+     * The last time continuous analysis was done for this resource. Deprecated, do not use.
+     * 
+     */
+    @Deprecated /* The last time continuous analysis was done for this resource. Deprecated, do not use. */
+    public String lastAnalysisTime() {
+        return this.lastAnalysisTime;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -70,6 +92,7 @@ public final class DiscoveredResponse {
         private String analysisStatus;
         private StatusResponse analysisStatusError;
         private String continuousAnalysis;
+        private String lastAnalysisTime;
 
         public Builder() {
     	      // Empty
@@ -80,6 +103,7 @@ public final class DiscoveredResponse {
     	      this.analysisStatus = defaults.analysisStatus;
     	      this.analysisStatusError = defaults.analysisStatusError;
     	      this.continuousAnalysis = defaults.continuousAnalysis;
+    	      this.lastAnalysisTime = defaults.lastAnalysisTime;
         }
 
         public Builder analysisStatus(String analysisStatus) {
@@ -93,8 +117,12 @@ public final class DiscoveredResponse {
         public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
+        }
+        public Builder lastAnalysisTime(String lastAnalysisTime) {
+            this.lastAnalysisTime = Objects.requireNonNull(lastAnalysisTime);
+            return this;
         }        public DiscoveredResponse build() {
-            return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis);
+            return new DiscoveredResponse(analysisStatus, analysisStatusError, continuousAnalysis, lastAnalysisTime);
         }
     }
 }

@@ -87,7 +87,7 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Release(String name, @Nullable ReleaseArgs args) {
+    public Release(String name, ReleaseArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,7 +96,7 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Release(String name, @Nullable ReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Release(String name, ReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firebaserules/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 

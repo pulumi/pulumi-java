@@ -66,6 +66,20 @@ public class Network extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
+     * Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+     * 
+     */
+    @Export(name="enableUlaInternalIpv6", type=Boolean.class, parameters={})
+    private Output<Boolean> enableUlaInternalIpv6;
+
+    /**
+     * @return Enable ULA internal ipv6 on this network. Enabling this feature will assign a /48 from google defined ULA prefix fd20::/20. .
+     * 
+     */
+    public Output<Boolean> enableUlaInternalIpv6() {
+        return this.enableUlaInternalIpv6;
+    }
+    /**
      * The gateway address for default routing out of the network, selected by GCP.
      * 
      */
@@ -78,6 +92,38 @@ public class Network extends com.pulumi.resources.CustomResource {
      */
     public Output<String> gatewayIPv4() {
         return this.gatewayIPv4;
+    }
+    /**
+     * When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+     * 
+     */
+    @Export(name="internalIpv6Range", type=String.class, parameters={})
+    private Output<String> internalIpv6Range;
+
+    /**
+     * @return When enabling ula internal ipv6, caller optionally can specify the /48 range they want from the google defined ULA prefix fd20::/20. The input must be a valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will fail if the speficied /48 is already in used by another resource. If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. .
+     * 
+     */
+    public Output<String> internalIpv6Range() {
+        return this.internalIpv6Range;
+    }
+    /**
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    @Export(name="ipv4Range", type=String.class, parameters={})
+    private Output<String> ipv4Range;
+
+    /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    public Output<String> ipv4Range() {
+        return this.ipv4Range;
     }
     /**
      * Type of the resource. Always compute#network for networks.
@@ -122,6 +168,20 @@ public class Network extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
+    @Export(name="networkFirewallPolicyEnforcementOrder", type=String.class, parameters={})
+    private Output<String> networkFirewallPolicyEnforcementOrder;
+
+    /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
+    public Output<String> networkFirewallPolicyEnforcementOrder() {
+        return this.networkFirewallPolicyEnforcementOrder;
+    }
+    /**
      * A list of network peerings for the resource.
      * 
      */
@@ -162,6 +222,20 @@ public class Network extends com.pulumi.resources.CustomResource {
      */
     public Output<String> selfLink() {
         return this.selfLink;
+    }
+    /**
+     * Server-defined URL for this resource with the resource id.
+     * 
+     */
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
+    private Output<String> selfLinkWithId;
+
+    /**
+     * @return Server-defined URL for this resource with the resource id.
+     * 
+     */
+    public Output<String> selfLinkWithId() {
+        return this.selfLinkWithId;
     }
     /**
      * Server-defined fully-qualified URLs for all subnetworks in this VPC network.

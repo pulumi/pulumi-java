@@ -122,6 +122,24 @@ public class Network extends com.pulumi.resources.CustomResource {
         return this.internalIpv6Range;
     }
     /**
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     * @deprecated
+     * Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created. */
+    @Export(name="ipv4Range", type=String.class, parameters={})
+    private Output<String> ipv4Range;
+
+    /**
+     * @return Deprecated in favor of subnet mode networks. The range of internal addresses that are legal on this network. This range is a CIDR specification, for example: 192.168.0.0/16. Provided by the client when the network is created.
+     * 
+     */
+    public Output<String> ipv4Range() {
+        return this.ipv4Range;
+    }
+    /**
      * Type of the resource. Always compute#network for networks.
      * 
      */
@@ -163,9 +181,17 @@ public class Network extends com.pulumi.resources.CustomResource {
     public Output<String> name() {
         return this.name;
     }
+    /**
+     * The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     @Export(name="networkFirewallPolicyEnforcementOrder", type=String.class, parameters={})
     private Output<String> networkFirewallPolicyEnforcementOrder;
 
+    /**
+     * @return The network firewall policy enforcement order. Can be either AFTER_CLASSIC_FIREWALL or BEFORE_CLASSIC_FIREWALL. Defaults to AFTER_CLASSIC_FIREWALL if the field is not specified.
+     * 
+     */
     public Output<String> networkFirewallPolicyEnforcementOrder() {
         return this.networkFirewallPolicyEnforcementOrder;
     }

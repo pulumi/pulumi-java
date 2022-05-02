@@ -45,9 +45,17 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Required. The group identifier.
+     * 
+     */
     @Import(name="groupId", required=true)
     private Output<String> groupId;
 
+    /**
+     * @return Required. The group identifier.
+     * 
+     */
     public Output<String> groupId() {
         return this.groupId;
     }
@@ -59,21 +67,6 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.location);
     }
 
-    /**
-     * The Group name.
-     * 
-     */
-    @Import(name="name")
-    private @Nullable Output<String> name;
-
-    /**
-     * @return The Group name.
-     * 
-     */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
-    }
-
     @Import(name="project")
     private @Nullable Output<String> project;
 
@@ -81,9 +74,17 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -95,7 +96,6 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         this.displayName = $.displayName;
         this.groupId = $.groupId;
         this.location = $.location;
-        this.name = $.name;
         this.project = $.project;
         this.requestId = $.requestId;
     }
@@ -160,11 +160,23 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param groupId Required. The group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId Required. The group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
@@ -178,27 +190,6 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
-        /**
-         * @param name The Group name.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder name(@Nullable Output<String> name) {
-            $.name = name;
-            return this;
-        }
-
-        /**
-         * @param name The Group name.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder name(String name) {
-            return name(Output.of(name));
-        }
-
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
@@ -208,11 +199,23 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

@@ -35,13 +35,6 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
         return this.object;
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable String provisionalUserProject;
-
-    public Optional<String> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     @Import(name="userProject")
     private @Nullable String userProject;
 
@@ -55,7 +48,6 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
         this.bucket = $.bucket;
         this.generation = $.generation;
         this.object = $.object;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.userProject = $.userProject;
     }
 
@@ -89,11 +81,6 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
 
         public Builder object(String object) {
             $.object = object;
-            return this;
-        }
-
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
 

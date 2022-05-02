@@ -21,6 +21,42 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:compute/beta:TargetHttpsProxy")
 public class TargetHttpsProxy extends com.pulumi.resources.CustomResource {
     /**
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use serverTlsPolicy instead. */
+    @Export(name="authentication", type=String.class, parameters={})
+    private Output<String> authentication;
+
+    /**
+     * @return [Deprecated] Use serverTlsPolicy instead.
+     * 
+     */
+    public Output<String> authentication() {
+        return this.authentication;
+    }
+    /**
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use authorizationPolicy instead. */
+    @Export(name="authorization", type=String.class, parameters={})
+    private Output<String> authorization;
+
+    /**
+     * @return [Deprecated] Use authorizationPolicy instead.
+     * 
+     */
+    public Output<String> authorization() {
+        return this.authorization;
+    }
+    /**
      * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
      */

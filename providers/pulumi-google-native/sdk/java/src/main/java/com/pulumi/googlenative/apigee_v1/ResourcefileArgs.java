@@ -69,11 +69,19 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.extensions);
     }
 
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    /**
+     * Required. Name of the resource file. Must match the regular expression: [a-zA-Z0-9:/\\!@#$%^&amp;{}\[\]()+\-=,.~&#39;` ]{1,255}
+     * 
+     */
+    @Import(name="name", required=true)
+    private Output<String> name;
 
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    /**
+     * @return Required. Name of the resource file. Must match the regular expression: [a-zA-Z0-9:/\\!@#$%^&amp;{}\[\]()+\-=,.~&#39;` ]{1,255}
+     * 
+     */
+    public Output<String> name() {
+        return this.name;
     }
 
     @Import(name="organizationId", required=true)
@@ -83,9 +91,17 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Required. Resource file type. {{ resource_file_type }}
+     * 
+     */
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Required. Resource file type. {{ resource_file_type }}
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -202,11 +218,23 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
             return extensions(List.of(extensions));
         }
 
-        public Builder name(@Nullable Output<String> name) {
+        /**
+         * @param name Required. Name of the resource file. Must match the regular expression: [a-zA-Z0-9:/\\!@#$%^&amp;{}\[\]()+\-=,.~&#39;` ]{1,255}
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. Name of the resource file. Must match the regular expression: [a-zA-Z0-9:/\\!@#$%^&amp;{}\[\]()+\-=,.~&#39;` ]{1,255}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -220,17 +248,30 @@ public final class ResourcefileArgs extends com.pulumi.resources.ResourceArgs {
             return organizationId(Output.of(organizationId));
         }
 
+        /**
+         * @param type Required. Resource file type. {{ resource_file_type }}
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Required. Resource file type. {{ resource_file_type }}
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
         public ResourcefileArgs build() {
             $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

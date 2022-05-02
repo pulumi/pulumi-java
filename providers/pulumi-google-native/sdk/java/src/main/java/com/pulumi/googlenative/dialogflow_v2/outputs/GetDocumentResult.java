@@ -58,6 +58,11 @@ public final class GetDocumentResult {
      * 
      */
     private final String rawContent;
+    /**
+     * @return The current state of the document.
+     * 
+     */
+    private final String state;
 
     @CustomType.Constructor
     private GetDocumentResult(
@@ -69,7 +74,8 @@ public final class GetDocumentResult {
         @CustomType.Parameter("metadata") Map<String,String> metadata,
         @CustomType.Parameter("mimeType") String mimeType,
         @CustomType.Parameter("name") String name,
-        @CustomType.Parameter("rawContent") String rawContent) {
+        @CustomType.Parameter("rawContent") String rawContent,
+        @CustomType.Parameter("state") String state) {
         this.contentUri = contentUri;
         this.displayName = displayName;
         this.enableAutoReload = enableAutoReload;
@@ -79,6 +85,7 @@ public final class GetDocumentResult {
         this.mimeType = mimeType;
         this.name = name;
         this.rawContent = rawContent;
+        this.state = state;
     }
 
     /**
@@ -144,6 +151,13 @@ public final class GetDocumentResult {
     public String rawContent() {
         return this.rawContent;
     }
+    /**
+     * @return The current state of the document.
+     * 
+     */
+    public String state() {
+        return this.state;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -163,6 +177,7 @@ public final class GetDocumentResult {
         private String mimeType;
         private String name;
         private String rawContent;
+        private String state;
 
         public Builder() {
     	      // Empty
@@ -179,6 +194,7 @@ public final class GetDocumentResult {
     	      this.mimeType = defaults.mimeType;
     	      this.name = defaults.name;
     	      this.rawContent = defaults.rawContent;
+    	      this.state = defaults.state;
         }
 
         public Builder contentUri(String contentUri) {
@@ -219,8 +235,12 @@ public final class GetDocumentResult {
         public Builder rawContent(String rawContent) {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
+        }
+        public Builder state(String state) {
+            this.state = Objects.requireNonNull(state);
+            return this;
         }        public GetDocumentResult build() {
-            return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
+            return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent, state);
         }
     }
 }

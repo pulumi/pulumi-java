@@ -16,6 +16,15 @@ public final class InstanceGroupManagerStatusStatefulResponse {
      */
     private final Boolean hasStatefulConfig;
     /**
+     * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.
+     * 
+     * @deprecated
+     * [Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.
+     * 
+     */
+    @Deprecated /* [Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config. */
+    private final Boolean isStateful;
+    /**
      * @return Status of per-instance configs on the instance.
      * 
      */
@@ -24,8 +33,10 @@ public final class InstanceGroupManagerStatusStatefulResponse {
     @CustomType.Constructor
     private InstanceGroupManagerStatusStatefulResponse(
         @CustomType.Parameter("hasStatefulConfig") Boolean hasStatefulConfig,
+        @CustomType.Parameter("isStateful") Boolean isStateful,
         @CustomType.Parameter("perInstanceConfigs") InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
         this.hasStatefulConfig = hasStatefulConfig;
+        this.isStateful = isStateful;
         this.perInstanceConfigs = perInstanceConfigs;
     }
 
@@ -35,6 +46,17 @@ public final class InstanceGroupManagerStatusStatefulResponse {
      */
     public Boolean hasStatefulConfig() {
         return this.hasStatefulConfig;
+    }
+    /**
+     * @return A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.
+     * 
+     * @deprecated
+     * [Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config.
+     * 
+     */
+    @Deprecated /* [Output Only] A bit indicating whether the managed instance group has stateful configuration, that is, if you have configured any items in a stateful policy or in per-instance configs. The group might report that it has no stateful config even when there is still some preserved state on a managed instance, for example, if you have deleted all PICs but not yet applied those deletions. This field is deprecated in favor of has_stateful_config. */
+    public Boolean isStateful() {
+        return this.isStateful;
     }
     /**
      * @return Status of per-instance configs on the instance.
@@ -54,6 +76,7 @@ public final class InstanceGroupManagerStatusStatefulResponse {
 
     public static final class Builder {
         private Boolean hasStatefulConfig;
+        private Boolean isStateful;
         private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs;
 
         public Builder() {
@@ -63,6 +86,7 @@ public final class InstanceGroupManagerStatusStatefulResponse {
         public Builder(InstanceGroupManagerStatusStatefulResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.hasStatefulConfig = defaults.hasStatefulConfig;
+    	      this.isStateful = defaults.isStateful;
     	      this.perInstanceConfigs = defaults.perInstanceConfigs;
         }
 
@@ -70,11 +94,15 @@ public final class InstanceGroupManagerStatusStatefulResponse {
             this.hasStatefulConfig = Objects.requireNonNull(hasStatefulConfig);
             return this;
         }
+        public Builder isStateful(Boolean isStateful) {
+            this.isStateful = Objects.requireNonNull(isStateful);
+            return this;
+        }
         public Builder perInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse perInstanceConfigs) {
             this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
             return this;
         }        public InstanceGroupManagerStatusStatefulResponse build() {
-            return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
+            return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, isStateful, perInstanceConfigs);
         }
     }
 }

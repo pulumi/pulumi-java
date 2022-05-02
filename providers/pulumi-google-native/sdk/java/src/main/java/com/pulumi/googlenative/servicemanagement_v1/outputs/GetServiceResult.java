@@ -15,7 +15,7 @@ public final class GetServiceResult {
      */
     private final String producerProjectId;
     /**
-     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     private final String serviceName;
@@ -36,7 +36,7 @@ public final class GetServiceResult {
         return this.producerProjectId;
     }
     /**
-     * @return The name of the service. See the [overview](/service-management/overview) for naming requirements.
+     * @return The name of the service. See the [overview](https://cloud.google.com/service-management/overview) for naming requirements.
      * 
      */
     public String serviceName() {

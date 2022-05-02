@@ -89,6 +89,11 @@ public final class GetRouteResult {
      */
     private final Integer priority;
     /**
+     * @return [Output only] The status of the route.
+     * 
+     */
+    private final String routeStatus;
+    /**
      * @return The type of this route, which can be one of the following values: - &#39;TRANSIT&#39; for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - &#39;SUBNET&#39; for a route from a subnet of the VPC - &#39;BGP&#39; for a route learned from a BGP peer of this router - &#39;STATIC&#39; for a static route
      * 
      */
@@ -126,6 +131,7 @@ public final class GetRouteResult {
         @CustomType.Parameter("nextHopPeering") String nextHopPeering,
         @CustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
         @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeStatus") String routeStatus,
         @CustomType.Parameter("routeType") String routeType,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("tags") List<String> tags,
@@ -145,6 +151,7 @@ public final class GetRouteResult {
         this.nextHopPeering = nextHopPeering;
         this.nextHopVpnTunnel = nextHopVpnTunnel;
         this.priority = priority;
+        this.routeStatus = routeStatus;
         this.routeType = routeType;
         this.selfLink = selfLink;
         this.tags = tags;
@@ -257,6 +264,13 @@ public final class GetRouteResult {
         return this.priority;
     }
     /**
+     * @return [Output only] The status of the route.
+     * 
+     */
+    public String routeStatus() {
+        return this.routeStatus;
+    }
+    /**
      * @return The type of this route, which can be one of the following values: - &#39;TRANSIT&#39; for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - &#39;SUBNET&#39; for a route from a subnet of the VPC - &#39;BGP&#39; for a route learned from a BGP peer of this router - &#39;STATIC&#39; for a static route
      * 
      */
@@ -309,6 +323,7 @@ public final class GetRouteResult {
         private String nextHopPeering;
         private String nextHopVpnTunnel;
         private Integer priority;
+        private String routeStatus;
         private String routeType;
         private String selfLink;
         private List<String> tags;
@@ -335,6 +350,7 @@ public final class GetRouteResult {
     	      this.nextHopPeering = defaults.nextHopPeering;
     	      this.nextHopVpnTunnel = defaults.nextHopVpnTunnel;
     	      this.priority = defaults.priority;
+    	      this.routeStatus = defaults.routeStatus;
     	      this.routeType = defaults.routeType;
     	      this.selfLink = defaults.selfLink;
     	      this.tags = defaults.tags;
@@ -404,6 +420,10 @@ public final class GetRouteResult {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
+        public Builder routeStatus(String routeStatus) {
+            this.routeStatus = Objects.requireNonNull(routeStatus);
+            return this;
+        }
         public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
@@ -426,7 +446,7 @@ public final class GetRouteResult {
         public Builder warnings(RouteWarningsItemResponse... warnings) {
             return warnings(List.of(warnings));
         }        public GetRouteResult build() {
-            return new GetRouteResult(asPaths, creationTimestamp, description, destRange, kind, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopIp, nextHopNetwork, nextHopPeering, nextHopVpnTunnel, priority, routeType, selfLink, tags, warnings);
+            return new GetRouteResult(asPaths, creationTimestamp, description, destRange, kind, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopIp, nextHopNetwork, nextHopPeering, nextHopVpnTunnel, priority, routeStatus, routeType, selfLink, tags, warnings);
         }
     }
 }

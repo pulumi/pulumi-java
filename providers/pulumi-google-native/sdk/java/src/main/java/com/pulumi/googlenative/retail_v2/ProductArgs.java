@@ -28,14 +28,14 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProductArgs Empty = new ProductArgs();
 
     /**
-     * Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+     * Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
      * 
      */
     @Import(name="attributes")
     private @Nullable Output<Map<String,String>> attributes;
 
     /**
-     * @return Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+     * @return Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
      * 
      */
     public Optional<Output<Map<String,String>>> attributes() {
@@ -267,14 +267,14 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
+     * Product images for the product. We highly recommend putting the main image first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
      * 
      */
     @Import(name="images")
     private @Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images;
 
     /**
-     * @return Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
+     * @return Product images for the product. We highly recommend putting the main image first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
      * 
      */
     public Optional<Output<List<GoogleCloudRetailV2ImageArgs>>> images() {
@@ -304,14 +304,14 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
+     * The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
      * 
      */
     @Import(name="materials")
     private @Nullable Output<List<String>> materials;
 
     /**
-     * @return The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
+     * @return The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
      * 
      */
     public Optional<Output<List<String>>> materials() {
@@ -378,9 +378,17 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.primaryProductId);
     }
 
+    /**
+     * Required. The ID to use for the Product, which will become the final component of the Product.name. If the caller does not have permission to create the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Products with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     @Import(name="productId", required=true)
     private Output<String> productId;
 
+    /**
+     * @return Required. The ID to use for the Product, which will become the final component of the Product.name. If the caller does not have permission to create the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Products with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * 
+     */
     public Output<String> productId() {
         return this.productId;
     }
@@ -603,7 +611,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param attributes Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+         * @param attributes Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
          * 
          * @return builder
          * 
@@ -614,7 +622,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param attributes Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
+         * @param attributes Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ &#34;vendor&#34;: {&#34;text&#34;: [&#34;vendor123&#34;, &#34;vendor456&#34;]}, &#34;lengths_cm&#34;: {&#34;numbers&#34;:[2.3, 15.4]}, &#34;heights_cm&#34;: {&#34;numbers&#34;:[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a non-empty UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
          * 
          * @return builder
          * 
@@ -986,7 +994,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param images Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
+         * @param images Product images for the product. We highly recommend putting the main image first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
          * 
          * @return builder
          * 
@@ -997,7 +1005,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param images Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
+         * @param images Product images for the product. We highly recommend putting the main image first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
          * 
          * @return builder
          * 
@@ -1007,7 +1015,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param images Product images for the product.Highly recommended to put the main image to the first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
+         * @param images Product images for the product. We highly recommend putting the main image first. A maximum of 300 images are allowed. Corresponding properties: Google Merchant Center property [image_link](https://support.google.com/merchants/answer/6324350). Schema.org property [Product.image](https://schema.org/image).
          * 
          * @return builder
          * 
@@ -1047,7 +1055,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
+         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
          * 
          * @return builder
          * 
@@ -1058,7 +1066,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
+         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
          * 
          * @return builder
          * 
@@ -1068,7 +1076,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
+         * @param materials The material of the product. For example, &#34;leather&#34;, &#34;wooden&#34;. A maximum of 20 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 200 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant Center property [material](https://support.google.com/merchants/answer/6324410). Schema.org property [Product.material](https://schema.org/material).
          * 
          * @return builder
          * 
@@ -1171,11 +1179,23 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             return primaryProductId(Output.of(primaryProductId));
         }
 
+        /**
+         * @param productId Required. The ID to use for the Product, which will become the final component of the Product.name. If the caller does not have permission to create the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Products with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId Required. The ID to use for the Product, which will become the final component of the Product.name. If the caller does not have permission to create the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Products with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }

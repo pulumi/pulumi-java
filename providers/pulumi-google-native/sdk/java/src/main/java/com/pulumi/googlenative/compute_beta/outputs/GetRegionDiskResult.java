@@ -40,6 +40,15 @@ public final class GetRegionDiskResult {
      */
     private final List<GuestOsFeatureResponse> guestOsFeatures;
     /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    private final String interface_;
+    /**
      * @return Type of the resource. Always compute#disk for disks.
      * 
      */
@@ -190,6 +199,15 @@ public final class GetRegionDiskResult {
      */
     private final String status;
     /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    private final String storageType;
+    /**
      * @return URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
      * 
      */
@@ -217,6 +235,7 @@ public final class GetRegionDiskResult {
         @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
         @CustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("kind") String kind,
         @CustomType.Parameter("labelFingerprint") String labelFingerprint,
         @CustomType.Parameter("labels") Map<String,String> labels,
@@ -247,6 +266,7 @@ public final class GetRegionDiskResult {
         @CustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
         @CustomType.Parameter("sourceStorageObject") String sourceStorageObject,
         @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageType") String storageType,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("userLicenses") List<String> userLicenses,
         @CustomType.Parameter("users") List<String> users,
@@ -256,6 +276,7 @@ public final class GetRegionDiskResult {
         this.diskEncryptionKey = diskEncryptionKey;
         this.eraseWindowsVssSignature = eraseWindowsVssSignature;
         this.guestOsFeatures = guestOsFeatures;
+        this.interface_ = interface_;
         this.kind = kind;
         this.labelFingerprint = labelFingerprint;
         this.labels = labels;
@@ -286,6 +307,7 @@ public final class GetRegionDiskResult {
         this.sourceSnapshotId = sourceSnapshotId;
         this.sourceStorageObject = sourceStorageObject;
         this.status = status;
+        this.storageType = storageType;
         this.type = type;
         this.userLicenses = userLicenses;
         this.users = users;
@@ -326,6 +348,17 @@ public final class GetRegionDiskResult {
      */
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
+    }
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    public String interface_() {
+        return this.interface_;
     }
     /**
      * @return Type of the resource. Always compute#disk for disks.
@@ -538,6 +571,17 @@ public final class GetRegionDiskResult {
         return this.status;
     }
     /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    public String storageType() {
+        return this.storageType;
+    }
+    /**
      * @return URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
      * 
      */
@@ -580,6 +624,7 @@ public final class GetRegionDiskResult {
         private CustomerEncryptionKeyResponse diskEncryptionKey;
         private Boolean eraseWindowsVssSignature;
         private List<GuestOsFeatureResponse> guestOsFeatures;
+        private String interface_;
         private String kind;
         private String labelFingerprint;
         private Map<String,String> labels;
@@ -610,6 +655,7 @@ public final class GetRegionDiskResult {
         private String sourceSnapshotId;
         private String sourceStorageObject;
         private String status;
+        private String storageType;
         private String type;
         private List<String> userLicenses;
         private List<String> users;
@@ -626,6 +672,7 @@ public final class GetRegionDiskResult {
     	      this.diskEncryptionKey = defaults.diskEncryptionKey;
     	      this.eraseWindowsVssSignature = defaults.eraseWindowsVssSignature;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
+    	      this.interface_ = defaults.interface_;
     	      this.kind = defaults.kind;
     	      this.labelFingerprint = defaults.labelFingerprint;
     	      this.labels = defaults.labels;
@@ -656,6 +703,7 @@ public final class GetRegionDiskResult {
     	      this.sourceSnapshotId = defaults.sourceSnapshotId;
     	      this.sourceStorageObject = defaults.sourceStorageObject;
     	      this.status = defaults.status;
+    	      this.storageType = defaults.storageType;
     	      this.type = defaults.type;
     	      this.userLicenses = defaults.userLicenses;
     	      this.users = defaults.users;
@@ -684,6 +732,10 @@ public final class GetRegionDiskResult {
         }
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
+        }
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
+            return this;
         }
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
@@ -817,6 +869,10 @@ public final class GetRegionDiskResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
+        public Builder storageType(String storageType) {
+            this.storageType = Objects.requireNonNull(storageType);
+            return this;
+        }
         public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
@@ -839,7 +895,7 @@ public final class GetRegionDiskResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetRegionDiskResult build() {
-            return new GetRegionDiskResult(creationTimestamp, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, locked, multiWriter, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, satisfiesPzs, selfLink, sizeGb, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, type, userLicenses, users, zone);
+            return new GetRegionDiskResult(creationTimestamp, description, diskEncryptionKey, eraseWindowsVssSignature, guestOsFeatures, interface_, kind, labelFingerprint, labels, lastAttachTimestamp, lastDetachTimestamp, licenseCodes, licenses, locationHint, locked, multiWriter, name, options, physicalBlockSizeBytes, provisionedIops, region, replicaZones, resourcePolicies, satisfiesPzs, selfLink, sizeGb, sourceDisk, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceStorageObject, status, storageType, type, userLicenses, users, zone);
         }
     }
 }

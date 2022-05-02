@@ -54,6 +54,15 @@ public final class GetCaseResult {
      */
     private final String priority;
     /**
+     * @return The severity of this case. Deprecated. Use priority instead.
+     * 
+     * @deprecated
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+    private final String severity;
+    /**
      * @return The current status of the support case.
      * 
      */
@@ -89,6 +98,7 @@ public final class GetCaseResult {
         @CustomType.Parameter("escalated") Boolean escalated,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("priority") String priority,
+        @CustomType.Parameter("severity") String severity,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("subscriberEmailAddresses") List<String> subscriberEmailAddresses,
         @CustomType.Parameter("testCase") Boolean testCase,
@@ -102,6 +112,7 @@ public final class GetCaseResult {
         this.escalated = escalated;
         this.name = name;
         this.priority = priority;
+        this.severity = severity;
         this.state = state;
         this.subscriberEmailAddresses = subscriberEmailAddresses;
         this.testCase = testCase;
@@ -166,6 +177,17 @@ public final class GetCaseResult {
         return this.priority;
     }
     /**
+     * @return The severity of this case. Deprecated. Use priority instead.
+     * 
+     * @deprecated
+     * The severity of this case. Deprecated. Use priority instead.
+     * 
+     */
+    @Deprecated /* The severity of this case. Deprecated. Use priority instead. */
+    public String severity() {
+        return this.severity;
+    }
+    /**
      * @return The current status of the support case.
      * 
      */
@@ -218,6 +240,7 @@ public final class GetCaseResult {
         private Boolean escalated;
         private String name;
         private String priority;
+        private String severity;
         private String state;
         private List<String> subscriberEmailAddresses;
         private Boolean testCase;
@@ -238,6 +261,7 @@ public final class GetCaseResult {
     	      this.escalated = defaults.escalated;
     	      this.name = defaults.name;
     	      this.priority = defaults.priority;
+    	      this.severity = defaults.severity;
     	      this.state = defaults.state;
     	      this.subscriberEmailAddresses = defaults.subscriberEmailAddresses;
     	      this.testCase = defaults.testCase;
@@ -277,6 +301,10 @@ public final class GetCaseResult {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
+        public Builder severity(String severity) {
+            this.severity = Objects.requireNonNull(severity);
+            return this;
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
@@ -300,7 +328,7 @@ public final class GetCaseResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetCaseResult build() {
-            return new GetCaseResult(classification, createTime, creator, description, displayName, escalated, name, priority, state, subscriberEmailAddresses, testCase, timeZone, updateTime);
+            return new GetCaseResult(classification, createTime, creator, description, displayName, escalated, name, priority, severity, state, subscriberEmailAddresses, testCase, timeZone, updateTime);
         }
     }
 }

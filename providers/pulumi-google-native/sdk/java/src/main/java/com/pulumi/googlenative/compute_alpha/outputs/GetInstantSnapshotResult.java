@@ -33,7 +33,7 @@ public final class GetInstantSnapshotResult {
      */
     private final String diskSizeGb;
     /**
-     * @return Whether to attempt an application consistent instant snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return Whether to attempt an application consistent instant snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     private final Boolean guestFlush;
@@ -172,7 +172,7 @@ public final class GetInstantSnapshotResult {
         return this.diskSizeGb;
     }
     /**
-     * @return Whether to attempt an application consistent instant snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return Whether to attempt an application consistent instant snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     public Boolean guestFlush() {

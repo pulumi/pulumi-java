@@ -54,6 +54,11 @@ public final class GetDeviceResult {
      */
     private final String createTime;
     /**
+     * @return Unique identifier for the device.
+     * 
+     */
+    private final String deviceId;
+    /**
      * @return Type of device.
      * 
      */
@@ -169,6 +174,7 @@ public final class GetDeviceResult {
         @CustomType.Parameter("buildNumber") String buildNumber,
         @CustomType.Parameter("compromisedState") String compromisedState,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deviceId") String deviceId,
         @CustomType.Parameter("deviceType") String deviceType,
         @CustomType.Parameter("enabledDeveloperOptions") Boolean enabledDeveloperOptions,
         @CustomType.Parameter("enabledUsbDebugging") Boolean enabledUsbDebugging,
@@ -198,6 +204,7 @@ public final class GetDeviceResult {
         this.buildNumber = buildNumber;
         this.compromisedState = compromisedState;
         this.createTime = createTime;
+        this.deviceId = deviceId;
         this.deviceType = deviceType;
         this.enabledDeveloperOptions = enabledDeveloperOptions;
         this.enabledUsbDebugging = enabledUsbDebugging;
@@ -276,6 +283,13 @@ public final class GetDeviceResult {
      */
     public String createTime() {
         return this.createTime;
+    }
+    /**
+     * @return Unique identifier for the device.
+     * 
+     */
+    public String deviceId() {
+        return this.deviceId;
     }
     /**
      * @return Type of device.
@@ -442,6 +456,7 @@ public final class GetDeviceResult {
         private String buildNumber;
         private String compromisedState;
         private String createTime;
+        private String deviceId;
         private String deviceType;
         private Boolean enabledDeveloperOptions;
         private Boolean enabledUsbDebugging;
@@ -478,6 +493,7 @@ public final class GetDeviceResult {
     	      this.buildNumber = defaults.buildNumber;
     	      this.compromisedState = defaults.compromisedState;
     	      this.createTime = defaults.createTime;
+    	      this.deviceId = defaults.deviceId;
     	      this.deviceType = defaults.deviceType;
     	      this.enabledDeveloperOptions = defaults.enabledDeveloperOptions;
     	      this.enabledUsbDebugging = defaults.enabledUsbDebugging;
@@ -531,6 +547,10 @@ public final class GetDeviceResult {
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder deviceId(String deviceId) {
+            this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
         public Builder deviceType(String deviceType) {
@@ -623,7 +643,7 @@ public final class GetDeviceResult {
         public Builder wifiMacAddresses(String... wifiMacAddresses) {
             return wifiMacAddresses(List.of(wifiMacAddresses));
         }        public GetDeviceResult build() {
-            return new GetDeviceResult(androidSpecificAttributes, assetTag, basebandVersion, bootloaderVersion, brand, buildNumber, compromisedState, createTime, deviceType, enabledDeveloperOptions, enabledUsbDebugging, encryptionState, endpointVerificationSpecificAttributes, imei, kernelVersion, lastSyncTime, managementState, manufacturer, meid, model, name, networkOperator, osVersion, otherAccounts, ownerType, releaseVersion, securityPatchTime, serialNumber, wifiMacAddresses);
+            return new GetDeviceResult(androidSpecificAttributes, assetTag, basebandVersion, bootloaderVersion, brand, buildNumber, compromisedState, createTime, deviceId, deviceType, enabledDeveloperOptions, enabledUsbDebugging, encryptionState, endpointVerificationSpecificAttributes, imei, kernelVersion, lastSyncTime, managementState, manufacturer, meid, model, name, networkOperator, osVersion, otherAccounts, ownerType, releaseVersion, securityPatchTime, serialNumber, wifiMacAddresses);
         }
     }
 }

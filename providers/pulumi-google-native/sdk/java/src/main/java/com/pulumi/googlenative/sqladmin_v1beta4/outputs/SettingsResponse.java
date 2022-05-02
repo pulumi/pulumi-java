@@ -33,6 +33,15 @@ public final class SettingsResponse {
      */
     private final SqlActiveDirectoryConfigResponse activeDirectoryConfig;
     /**
+     * @return The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     * @deprecated
+     * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     */
+    @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+    private final List<String> authorizedGaeApplications;
+    /**
      * @return Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).
      * 
      */
@@ -113,6 +122,15 @@ public final class SettingsResponse {
      */
     private final String pricingPlan;
     /**
+     * @return The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     * @deprecated
+     * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     */
+    @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+    private final String replicationType;
+    /**
      * @return The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.
      * 
      */
@@ -147,6 +165,7 @@ public final class SettingsResponse {
     private SettingsResponse(
         @CustomType.Parameter("activationPolicy") String activationPolicy,
         @CustomType.Parameter("activeDirectoryConfig") SqlActiveDirectoryConfigResponse activeDirectoryConfig,
+        @CustomType.Parameter("authorizedGaeApplications") List<String> authorizedGaeApplications,
         @CustomType.Parameter("availabilityType") String availabilityType,
         @CustomType.Parameter("backupConfiguration") BackupConfigurationResponse backupConfiguration,
         @CustomType.Parameter("collation") String collation,
@@ -163,6 +182,7 @@ public final class SettingsResponse {
         @CustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
         @CustomType.Parameter("passwordValidationPolicy") PasswordValidationPolicyResponse passwordValidationPolicy,
         @CustomType.Parameter("pricingPlan") String pricingPlan,
+        @CustomType.Parameter("replicationType") String replicationType,
         @CustomType.Parameter("settingsVersion") String settingsVersion,
         @CustomType.Parameter("sqlServerAuditConfig") SqlServerAuditConfigResponse sqlServerAuditConfig,
         @CustomType.Parameter("storageAutoResize") Boolean storageAutoResize,
@@ -171,6 +191,7 @@ public final class SettingsResponse {
         @CustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.activationPolicy = activationPolicy;
         this.activeDirectoryConfig = activeDirectoryConfig;
+        this.authorizedGaeApplications = authorizedGaeApplications;
         this.availabilityType = availabilityType;
         this.backupConfiguration = backupConfiguration;
         this.collation = collation;
@@ -187,6 +208,7 @@ public final class SettingsResponse {
         this.maintenanceWindow = maintenanceWindow;
         this.passwordValidationPolicy = passwordValidationPolicy;
         this.pricingPlan = pricingPlan;
+        this.replicationType = replicationType;
         this.settingsVersion = settingsVersion;
         this.sqlServerAuditConfig = sqlServerAuditConfig;
         this.storageAutoResize = storageAutoResize;
@@ -208,6 +230,17 @@ public final class SettingsResponse {
      */
     public SqlActiveDirectoryConfigResponse activeDirectoryConfig() {
         return this.activeDirectoryConfig;
+    }
+    /**
+     * @return The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     * @deprecated
+     * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     */
+    @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+    public List<String> authorizedGaeApplications() {
+        return this.authorizedGaeApplications;
     }
     /**
      * @return Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).
@@ -322,6 +355,17 @@ public final class SettingsResponse {
         return this.pricingPlan;
     }
     /**
+     * @return The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     * @deprecated
+     * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     */
+    @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+    public String replicationType() {
+        return this.replicationType;
+    }
+    /**
      * @return The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.
      * 
      */
@@ -375,6 +419,7 @@ public final class SettingsResponse {
     public static final class Builder {
         private String activationPolicy;
         private SqlActiveDirectoryConfigResponse activeDirectoryConfig;
+        private List<String> authorizedGaeApplications;
         private String availabilityType;
         private BackupConfigurationResponse backupConfiguration;
         private String collation;
@@ -391,6 +436,7 @@ public final class SettingsResponse {
         private MaintenanceWindowResponse maintenanceWindow;
         private PasswordValidationPolicyResponse passwordValidationPolicy;
         private String pricingPlan;
+        private String replicationType;
         private String settingsVersion;
         private SqlServerAuditConfigResponse sqlServerAuditConfig;
         private Boolean storageAutoResize;
@@ -406,6 +452,7 @@ public final class SettingsResponse {
     	      Objects.requireNonNull(defaults);
     	      this.activationPolicy = defaults.activationPolicy;
     	      this.activeDirectoryConfig = defaults.activeDirectoryConfig;
+    	      this.authorizedGaeApplications = defaults.authorizedGaeApplications;
     	      this.availabilityType = defaults.availabilityType;
     	      this.backupConfiguration = defaults.backupConfiguration;
     	      this.collation = defaults.collation;
@@ -422,6 +469,7 @@ public final class SettingsResponse {
     	      this.maintenanceWindow = defaults.maintenanceWindow;
     	      this.passwordValidationPolicy = defaults.passwordValidationPolicy;
     	      this.pricingPlan = defaults.pricingPlan;
+    	      this.replicationType = defaults.replicationType;
     	      this.settingsVersion = defaults.settingsVersion;
     	      this.sqlServerAuditConfig = defaults.sqlServerAuditConfig;
     	      this.storageAutoResize = defaults.storageAutoResize;
@@ -437,6 +485,13 @@ public final class SettingsResponse {
         public Builder activeDirectoryConfig(SqlActiveDirectoryConfigResponse activeDirectoryConfig) {
             this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig);
             return this;
+        }
+        public Builder authorizedGaeApplications(List<String> authorizedGaeApplications) {
+            this.authorizedGaeApplications = Objects.requireNonNull(authorizedGaeApplications);
+            return this;
+        }
+        public Builder authorizedGaeApplications(String... authorizedGaeApplications) {
+            return authorizedGaeApplications(List.of(authorizedGaeApplications));
         }
         public Builder availabilityType(String availabilityType) {
             this.availabilityType = Objects.requireNonNull(availabilityType);
@@ -508,6 +563,10 @@ public final class SettingsResponse {
             this.pricingPlan = Objects.requireNonNull(pricingPlan);
             return this;
         }
+        public Builder replicationType(String replicationType) {
+            this.replicationType = Objects.requireNonNull(replicationType);
+            return this;
+        }
         public Builder settingsVersion(String settingsVersion) {
             this.settingsVersion = Objects.requireNonNull(settingsVersion);
             return this;
@@ -532,7 +591,7 @@ public final class SettingsResponse {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }        public SettingsResponse build() {
-            return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
+            return new SettingsResponse(activationPolicy, activeDirectoryConfig, authorizedGaeApplications, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, replicationType, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }
     }
 }

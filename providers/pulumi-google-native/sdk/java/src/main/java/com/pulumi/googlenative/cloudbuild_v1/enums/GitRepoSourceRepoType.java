@@ -28,7 +28,12 @@ import java.util.StringJoiner;
          * A GitHub-hosted repo not necessarily on &#34;github.com&#34; (i.e. GitHub Enterprise).
          * 
          */
-        Github("GITHUB");
+        Github("GITHUB"),
+        /**
+         * A Bitbucket Server-hosted repo.
+         * 
+         */
+        BitbucketServer("BITBUCKET_SERVER");
 
         private final String value;
 

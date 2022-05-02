@@ -135,6 +135,11 @@ public final class NodeConfigResponse {
      */
     private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
     /**
+     * @return Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+     * 
+     */
+    private final Boolean spot;
+    /**
      * @return The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
      * 
      */
@@ -174,6 +179,7 @@ public final class NodeConfigResponse {
         @CustomType.Parameter("sandboxConfig") SandboxConfigResponse sandboxConfig,
         @CustomType.Parameter("serviceAccount") String serviceAccount,
         @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("spot") Boolean spot,
         @CustomType.Parameter("tags") List<String> tags,
         @CustomType.Parameter("taints") List<NodeTaintResponse> taints,
         @CustomType.Parameter("workloadMetadataConfig") WorkloadMetadataConfigResponse workloadMetadataConfig) {
@@ -199,6 +205,7 @@ public final class NodeConfigResponse {
         this.sandboxConfig = sandboxConfig;
         this.serviceAccount = serviceAccount;
         this.shieldedInstanceConfig = shieldedInstanceConfig;
+        this.spot = spot;
         this.tags = tags;
         this.taints = taints;
         this.workloadMetadataConfig = workloadMetadataConfig;
@@ -359,6 +366,13 @@ public final class NodeConfigResponse {
         return this.shieldedInstanceConfig;
     }
     /**
+     * @return Spot flag for enabling Spot VM, which is a rebrand of the existing preemptible flag.
+     * 
+     */
+    public Boolean spot() {
+        return this.spot;
+    }
+    /**
      * @return The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during cluster or node pool creation. Each tag within the list must comply with RFC1035.
      * 
      */
@@ -411,6 +425,7 @@ public final class NodeConfigResponse {
         private SandboxConfigResponse sandboxConfig;
         private String serviceAccount;
         private ShieldedInstanceConfigResponse shieldedInstanceConfig;
+        private Boolean spot;
         private List<String> tags;
         private List<NodeTaintResponse> taints;
         private WorkloadMetadataConfigResponse workloadMetadataConfig;
@@ -443,6 +458,7 @@ public final class NodeConfigResponse {
     	      this.sandboxConfig = defaults.sandboxConfig;
     	      this.serviceAccount = defaults.serviceAccount;
     	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
+    	      this.spot = defaults.spot;
     	      this.tags = defaults.tags;
     	      this.taints = defaults.taints;
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
@@ -542,6 +558,10 @@ public final class NodeConfigResponse {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
+        public Builder spot(Boolean spot) {
+            this.spot = Objects.requireNonNull(spot);
+            return this;
+        }
         public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
@@ -560,7 +580,7 @@ public final class NodeConfigResponse {
             this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
             return this;
         }        public NodeConfigResponse build() {
-            return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, tags, taints, workloadMetadataConfig);
+            return new NodeConfigResponse(accelerators, advancedMachineFeatures, bootDiskKmsKey, diskSizeGb, diskType, gcfsConfig, gvnic, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, reservationAffinity, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
         }
     }
 }

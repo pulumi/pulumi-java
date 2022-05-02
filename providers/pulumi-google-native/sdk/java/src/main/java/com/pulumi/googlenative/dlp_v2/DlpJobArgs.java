@@ -47,9 +47,25 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.jobId);
     }
 
+    /**
+     * Deprecated. This field has no effect.
+     * 
+     * @deprecated
+     * Deprecated. This field has no effect.
+     * 
+     */
+    @Deprecated /* Deprecated. This field has no effect. */
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Deprecated. This field has no effect.
+     * 
+     * @deprecated
+     * Deprecated. This field has no effect.
+     * 
+     */
+    @Deprecated /* Deprecated. This field has no effect. */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -146,11 +162,31 @@ public final class DlpJobArgs extends com.pulumi.resources.ResourceArgs {
             return jobId(Output.of(jobId));
         }
 
+        /**
+         * @param location Deprecated. This field has no effect.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field has no effect.
+         * 
+         */
+        @Deprecated /* Deprecated. This field has no effect. */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Deprecated. This field has no effect.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. This field has no effect.
+         * 
+         */
+        @Deprecated /* Deprecated. This field has no effect. */
         public Builder location(String location) {
             return location(Output.of(location));
         }

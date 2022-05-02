@@ -173,13 +173,6 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.projectTeam);
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable Output<String> provisionalUserProject;
-
-    public Optional<Output<String>> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     /**
      * The access permission for the entity.
      * 
@@ -210,9 +203,17 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
         return Optional.ofNullable(this.selfLink);
     }
 
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -229,7 +230,6 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
         this.id = $.id;
         this.kind = $.kind;
         this.projectTeam = $.projectTeam;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.role = $.role;
         this.selfLink = $.selfLink;
         this.userProject = $.userProject;
@@ -464,15 +464,6 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
             return projectTeam(Output.of(projectTeam));
         }
 
-        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
-            return this;
-        }
-
-        public Builder provisionalUserProject(String provisionalUserProject) {
-            return provisionalUserProject(Output.of(provisionalUserProject));
-        }
-
         /**
          * @param role The access permission for the entity.
          * 
@@ -515,11 +506,23 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

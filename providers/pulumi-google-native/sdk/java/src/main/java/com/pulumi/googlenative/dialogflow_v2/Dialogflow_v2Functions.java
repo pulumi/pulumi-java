@@ -9,21 +9,27 @@ import com.pulumi.deployment.InvokeOptions;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetContextArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetConversationArgs;
+import com.pulumi.googlenative.dialogflow_v2.inputs.GetConversationDatasetArgs;
+import com.pulumi.googlenative.dialogflow_v2.inputs.GetConversationModelArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetConversationProfileArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetDocumentArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetEntityTypeArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetEnvironmentArgs;
+import com.pulumi.googlenative.dialogflow_v2.inputs.GetEvaluationArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetIntentArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetKnowledgeBaseArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetParticipantArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetSessionEntityTypeArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GetVersionArgs;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetContextResult;
+import com.pulumi.googlenative.dialogflow_v2.outputs.GetConversationDatasetResult;
+import com.pulumi.googlenative.dialogflow_v2.outputs.GetConversationModelResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetConversationProfileResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetConversationResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetDocumentResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetEntityTypeResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetEnvironmentResult;
+import com.pulumi.googlenative.dialogflow_v2.outputs.GetEvaluationResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetIntentResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetKnowledgeBaseResult;
 import com.pulumi.googlenative.dialogflow_v2.outputs.GetParticipantResult;
@@ -51,6 +57,26 @@ public final class Dialogflow_v2Functions {
     }
     public static CompletableFuture<GetConversationResult> getConversation(GetConversationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getConversation", TypeShape.of(GetConversationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Retrieves the specified conversation dataset.
+     * 
+     */
+    public static CompletableFuture<GetConversationDatasetResult> getConversationDataset(GetConversationDatasetArgs args) {
+        return getConversationDataset(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConversationDatasetResult> getConversationDataset(GetConversationDatasetArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getConversationDataset", TypeShape.of(GetConversationDatasetResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets conversation model.
+     * 
+     */
+    public static CompletableFuture<GetConversationModelResult> getConversationModel(GetConversationModelArgs args) {
+        return getConversationModel(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetConversationModelResult> getConversationModel(GetConversationModelArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getConversationModel", TypeShape.of(GetConversationModelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified conversation profile.
@@ -91,6 +117,16 @@ public final class Dialogflow_v2Functions {
     }
     public static CompletableFuture<GetEnvironmentResult> getEnvironment(GetEnvironmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Gets an evaluation of conversation model.
+     * 
+     */
+    public static CompletableFuture<GetEvaluationResult> getEvaluation(GetEvaluationArgs args) {
+        return getEvaluation(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetEvaluationResult> getEvaluation(GetEvaluationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getEvaluation", TypeShape.of(GetEvaluationResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves the specified intent.

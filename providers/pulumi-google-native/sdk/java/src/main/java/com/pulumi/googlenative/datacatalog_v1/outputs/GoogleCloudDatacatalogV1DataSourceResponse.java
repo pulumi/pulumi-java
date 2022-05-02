@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.datacatalog_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1StoragePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,13 +20,27 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
      * 
      */
     private final String service;
+    /**
+     * @return Data Catalog entry name, if applicable.
+     * 
+     */
+    private final String sourceEntry;
+    /**
+     * @return Detailed properties of the underlying storage.
+     * 
+     */
+    private final GoogleCloudDatacatalogV1StoragePropertiesResponse storageProperties;
 
     @CustomType.Constructor
     private GoogleCloudDatacatalogV1DataSourceResponse(
         @CustomType.Parameter("resource") String resource,
-        @CustomType.Parameter("service") String service) {
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("sourceEntry") String sourceEntry,
+        @CustomType.Parameter("storageProperties") GoogleCloudDatacatalogV1StoragePropertiesResponse storageProperties) {
         this.resource = resource;
         this.service = service;
+        this.sourceEntry = sourceEntry;
+        this.storageProperties = storageProperties;
     }
 
     /**
@@ -42,6 +57,20 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     public String service() {
         return this.service;
     }
+    /**
+     * @return Data Catalog entry name, if applicable.
+     * 
+     */
+    public String sourceEntry() {
+        return this.sourceEntry;
+    }
+    /**
+     * @return Detailed properties of the underlying storage.
+     * 
+     */
+    public GoogleCloudDatacatalogV1StoragePropertiesResponse storageProperties() {
+        return this.storageProperties;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -54,6 +83,8 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     public static final class Builder {
         private String resource;
         private String service;
+        private String sourceEntry;
+        private GoogleCloudDatacatalogV1StoragePropertiesResponse storageProperties;
 
         public Builder() {
     	      // Empty
@@ -63,6 +94,8 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     	      Objects.requireNonNull(defaults);
     	      this.resource = defaults.resource;
     	      this.service = defaults.service;
+    	      this.sourceEntry = defaults.sourceEntry;
+    	      this.storageProperties = defaults.storageProperties;
         }
 
         public Builder resource(String resource) {
@@ -72,8 +105,16 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
+        }
+        public Builder sourceEntry(String sourceEntry) {
+            this.sourceEntry = Objects.requireNonNull(sourceEntry);
+            return this;
+        }
+        public Builder storageProperties(GoogleCloudDatacatalogV1StoragePropertiesResponse storageProperties) {
+            this.storageProperties = Objects.requireNonNull(storageProperties);
+            return this;
         }        public GoogleCloudDatacatalogV1DataSourceResponse build() {
-            return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service);
+            return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service, sourceEntry, storageProperties);
         }
     }
 }

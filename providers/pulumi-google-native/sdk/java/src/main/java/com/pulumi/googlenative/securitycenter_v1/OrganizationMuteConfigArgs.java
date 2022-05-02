@@ -60,9 +60,17 @@ public final class OrganizationMuteConfigArgs extends com.pulumi.resources.Resou
         return this.filter;
     }
 
+    /**
+     * Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+     * 
+     */
     @Import(name="muteConfigId", required=true)
     private Output<String> muteConfigId;
 
+    /**
+     * @return Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+     * 
+     */
     public Output<String> muteConfigId() {
         return this.muteConfigId;
     }
@@ -181,11 +189,23 @@ public final class OrganizationMuteConfigArgs extends com.pulumi.resources.Resou
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param muteConfigId Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muteConfigId(Output<String> muteConfigId) {
             $.muteConfigId = muteConfigId;
             return this;
         }
 
+        /**
+         * @param muteConfigId Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder muteConfigId(String muteConfigId) {
             return muteConfigId(Output.of(muteConfigId));
         }

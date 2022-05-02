@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigqueryreservation_v1beta1.CapacityCommitmentArgs;
 import com.pulumi.googlenative.bigqueryreservation_v1beta1.outputs.StatusResponse;
+import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -63,14 +64,28 @@ public class CapacityCommitment extends com.pulumi.resources.CustomResource {
         return this.failureStatus;
     }
     /**
-     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    @Export(name="multiRegionAuxiliary", type=Boolean.class, parameters={})
+    private Output<Boolean> multiRegionAuxiliary;
+
+    /**
+     * @return Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization&#39;s secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization&#39;s default region.
+     * 
+     */
+    public Output<Boolean> multiRegionAuxiliary() {
+        return this.multiRegionAuxiliary;
+    }
+    /**
+     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public Output<String> name() {

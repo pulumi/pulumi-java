@@ -30,6 +30,8 @@ import com.pulumi.googlenative.container_v1beta1.outputs.MeshCertificatesRespons
 import com.pulumi.googlenative.container_v1beta1.outputs.MonitoringConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.NetworkConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.NetworkPolicyResponse;
+import com.pulumi.googlenative.container_v1beta1.outputs.NodeConfigResponse;
+import com.pulumi.googlenative.container_v1beta1.outputs.NodePoolAutoConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.NodePoolDefaultsResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.NodePoolResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.NotificationConfigResponse;
@@ -41,6 +43,7 @@ import com.pulumi.googlenative.container_v1beta1.outputs.ShieldedNodesResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.StatusConditionResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.TpuConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.VerticalPodAutoscalingResponse;
+import com.pulumi.googlenative.container_v1beta1.outputs.WorkloadALTSConfigResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.WorkloadCertificatesResponse;
 import com.pulumi.googlenative.container_v1beta1.outputs.WorkloadIdentityConfigResponse;
 import java.lang.Boolean;
@@ -211,6 +214,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.currentMasterVersion;
     }
     /**
+     * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     * @deprecated
+     * [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     */
+    @Deprecated /* [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information. */
+    @Export(name="currentNodeCount", type=Integer.class, parameters={})
+    private Output<Integer> currentNodeCount;
+
+    /**
+     * @return [Output only] The number of nodes currently in the cluster. Deprecated. Call Kubernetes API directly to retrieve node information.
+     * 
+     */
+    public Output<Integer> currentNodeCount() {
+        return this.currentNodeCount;
+    }
+    /**
      * [Output only] Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current version of the node software components. If they are currently at multiple versions because they&#39;re in the process of being upgraded, this reflects the minimum version of all nodes.
      * 
      */
@@ -281,6 +302,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.enableKubernetesAlpha;
     }
     /**
+     * Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use tpu_config.enabled instead.
+     * 
+     * @deprecated
+     * Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use tpu_config.enabled instead.
+     * 
+     */
+    @Deprecated /* Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use tpu_config.enabled instead. */
+    @Export(name="enableTpu", type=Boolean.class, parameters={})
+    private Output<Boolean> enableTpu;
+
+    /**
+     * @return Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use tpu_config.enabled instead.
+     * 
+     */
+    public Output<Boolean> enableTpu() {
+        return this.enableTpu;
+    }
+    /**
      * [Output only] The IP address of this cluster&#39;s master endpoint. The endpoint can be accessed from the internet at `https://username:password@endpoint/`. See the `masterAuth` property of this resource for username and password information.
      * 
      */
@@ -335,6 +374,42 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<String> initialClusterVersion() {
         return this.initialClusterVersion;
+    }
+    /**
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     * @deprecated
+     * The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    @Deprecated /* The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""node_config"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead. */
+    @Export(name="initialNodeCount", type=Integer.class, parameters={})
+    private Output<Integer> initialNodeCount;
+
+    /**
+     * @return The number of nodes to create in this cluster. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;node_config&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. This field is deprecated, use node_pool.initial_node_count instead.
+     * 
+     */
+    public Output<Integer> initialNodeCount() {
+        return this.initialNodeCount;
+    }
+    /**
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     * @deprecated
+     * Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    @Deprecated /* Deprecated. Use node_pools.instance_group_urls. */
+    @Export(name="instanceGroupUrls", type=List.class, parameters={String.class})
+    private Output<List<String>> instanceGroupUrls;
+
+    /**
+     * @return Deprecated. Use node_pools.instance_group_urls.
+     * 
+     */
+    public Output<List<String>> instanceGroupUrls() {
+        return this.instanceGroupUrls;
     }
     /**
      * Configuration for cluster IP allocation.
@@ -491,6 +566,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.masterAuthorizedNetworksConfig;
     }
     /**
+     * The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used for assigning private IP addresses to the master or set of masters, as well as the ILB VIP. This field is deprecated, use private_cluster_config.master_ipv4_cidr_block instead.
+     * 
+     * @deprecated
+     * The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used for assigning private IP addresses to the master or set of masters, as well as the ILB VIP. This field is deprecated, use private_cluster_config.master_ipv4_cidr_block instead.
+     * 
+     */
+    @Deprecated /* The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used for assigning private IP addresses to the master or set of masters, as well as the ILB VIP. This field is deprecated, use private_cluster_config.master_ipv4_cidr_block instead. */
+    @Export(name="masterIpv4CidrBlock", type=String.class, parameters={})
+    private Output<String> masterIpv4CidrBlock;
+
+    /**
+     * @return The IP prefix in CIDR notation to use for the hosted master network. This prefix will be used for assigning private IP addresses to the master or set of masters, as well as the ILB VIP. This field is deprecated, use private_cluster_config.master_ipv4_cidr_block instead.
+     * 
+     */
+    public Output<String> masterIpv4CidrBlock() {
+        return this.masterIpv4CidrBlock;
+    }
+    /**
      * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
      * 
      */
@@ -589,6 +682,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.networkPolicy;
     }
     /**
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     * @deprecated
+     * Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    @Deprecated /* Parameters used in creating the cluster's nodes. For requests, this field should only be used in lieu of a ""node_pool"" object, since this configuration (along with the ""initial_node_count"") will be used to create a ""NodePool"" object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead. */
+    @Export(name="nodeConfig", type=NodeConfigResponse.class, parameters={})
+    private Output<NodeConfigResponse> nodeConfig;
+
+    /**
+     * @return Parameters used in creating the cluster&#39;s nodes. For requests, this field should only be used in lieu of a &#34;node_pool&#34; object, since this configuration (along with the &#34;initial_node_count&#34;) will be used to create a &#34;NodePool&#34; object with an auto-generated name. Do not use this and a node_pool at the same time. For responses, this field will be populated with the node configuration of the first node pool. (For configuration of each node pool, see `node_pool.config`) If unspecified, the defaults are used. This field is deprecated, use node_pool.config instead.
+     * 
+     */
+    public Output<NodeConfigResponse> nodeConfig() {
+        return this.nodeConfig;
+    }
+    /**
      * [Output only] The size of the address space on each node for hosting containers. This is provisioned from within the `container_ipv4_cidr` range. This field will only be set when cluster is in route-based network mode.
      * 
      */
@@ -601,6 +712,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<Integer> nodeIpv4CidrSize() {
         return this.nodeIpv4CidrSize;
+    }
+    /**
+     * Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    @Export(name="nodePoolAutoConfig", type=NodePoolAutoConfigResponse.class, parameters={})
+    private Output<NodePoolAutoConfigResponse> nodePoolAutoConfig;
+
+    /**
+     * @return Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters.
+     * 
+     */
+    public Output<NodePoolAutoConfigResponse> nodePoolAutoConfig() {
+        return this.nodePoolAutoConfig;
     }
     /**
      * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
@@ -657,6 +782,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<PodSecurityPolicyConfigResponse> podSecurityPolicyConfig() {
         return this.podSecurityPolicyConfig;
+    }
+    /**
+     * If this is a private cluster setup. Private clusters are clusters that, by default have no external IP addresses on the nodes and where nodes and the master communicate over private IP addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
+     * 
+     * @deprecated
+     * If this is a private cluster setup. Private clusters are clusters that, by default have no external IP addresses on the nodes and where nodes and the master communicate over private IP addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
+     * 
+     */
+    @Deprecated /* If this is a private cluster setup. Private clusters are clusters that, by default have no external IP addresses on the nodes and where nodes and the master communicate over private IP addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead. */
+    @Export(name="privateCluster", type=Boolean.class, parameters={})
+    private Output<Boolean> privateCluster;
+
+    /**
+     * @return If this is a private cluster setup. Private clusters are clusters that, by default have no external IP addresses on the nodes and where nodes and the master communicate over private IP addresses. This field is deprecated, use private_cluster_config.enable_private_nodes instead.
+     * 
+     */
+    public Output<Boolean> privateCluster() {
+        return this.privateCluster;
     }
     /**
      * Configuration for private cluster.
@@ -771,6 +914,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available. */
+    @Export(name="statusMessage", type=String.class, parameters={})
+    private Output<String> statusMessage;
+
+    /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this cluster, if available.
+     * 
+     */
+    public Output<String> statusMessage() {
+        return this.statusMessage;
+    }
+    /**
      * The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
      * 
      */
@@ -827,6 +988,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.verticalPodAutoscaling;
     }
     /**
+     * Configuration for direct-path (via ALTS) with workload identity.
+     * 
+     */
+    @Export(name="workloadAltsConfig", type=WorkloadALTSConfigResponse.class, parameters={})
+    private Output<WorkloadALTSConfigResponse> workloadAltsConfig;
+
+    /**
+     * @return Configuration for direct-path (via ALTS) with workload identity.
+     * 
+     */
+    public Output<WorkloadALTSConfigResponse> workloadAltsConfig() {
+        return this.workloadAltsConfig;
+    }
+    /**
      * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
      * 
      */
@@ -853,6 +1028,24 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<WorkloadIdentityConfigResponse> workloadIdentityConfig() {
         return this.workloadIdentityConfig;
+    }
+    /**
+     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     * @deprecated
+     * [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     */
+    @Deprecated /* [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead. */
+    @Export(name="zone", type=String.class, parameters={})
+    private Output<String> zone;
+
+    /**
+     * @return [Output only] The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field is deprecated, use location instead.
+     * 
+     */
+    public Output<String> zone() {
+        return this.zone;
     }
 
     /**

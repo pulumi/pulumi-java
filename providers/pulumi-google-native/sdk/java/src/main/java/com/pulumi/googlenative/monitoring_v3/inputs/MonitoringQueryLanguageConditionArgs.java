@@ -5,6 +5,7 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.monitoring_v3.enums.MonitoringQueryLanguageConditionEvaluationMissingData;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -33,6 +34,21 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
      */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
+    }
+
+    /**
+     * A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    @Import(name="evaluationMissingData")
+    private @Nullable Output<MonitoringQueryLanguageConditionEvaluationMissingData> evaluationMissingData;
+
+    /**
+     * @return A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+     * 
+     */
+    public Optional<Output<MonitoringQueryLanguageConditionEvaluationMissingData>> evaluationMissingData() {
+        return Optional.ofNullable(this.evaluationMissingData);
     }
 
     /**
@@ -69,6 +85,7 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
 
     private MonitoringQueryLanguageConditionArgs(MonitoringQueryLanguageConditionArgs $) {
         this.duration = $.duration;
+        this.evaluationMissingData = $.evaluationMissingData;
         this.query = $.query;
         this.trigger = $.trigger;
     }
@@ -110,6 +127,27 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
          */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
+        }
+
+        /**
+         * @param evaluationMissingData A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder evaluationMissingData(@Nullable Output<MonitoringQueryLanguageConditionEvaluationMissingData> evaluationMissingData) {
+            $.evaluationMissingData = evaluationMissingData;
+            return this;
+        }
+
+        /**
+         * @param evaluationMissingData A condition control that determines how metric-threshold conditions are evaluated when data stops arriving.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder evaluationMissingData(MonitoringQueryLanguageConditionEvaluationMissingData evaluationMissingData) {
+            return evaluationMissingData(Output.of(evaluationMissingData));
         }
 
         /**

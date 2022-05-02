@@ -95,9 +95,17 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     @Import(name="languageCode")
     private @Nullable Output<String> languageCode;
 
+    /**
+     * @return Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+     * 
+     */
     public Optional<Output<String>> languageCode() {
         return Optional.ofNullable(this.languageCode);
     }
@@ -278,11 +286,23 @@ public final class EntityTypeArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(@Nullable Output<String> languageCode) {
             $.languageCode = languageCode;
             return this;
         }
 
+        /**
+         * @param languageCode Optional. The language used to access language-specific data. If not specified, the agent&#39;s default language is used. For more information, see [Multilingual intent and entity data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageCode(String languageCode) {
             return languageCode(Output.of(languageCode));
         }

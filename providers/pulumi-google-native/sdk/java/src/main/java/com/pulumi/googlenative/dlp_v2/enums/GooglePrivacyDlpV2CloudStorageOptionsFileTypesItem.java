@@ -54,7 +54,17 @@ import java.util.StringJoiner;
          * Included file extensions: tsv
          * 
          */
-        Tsv("TSV");
+        Tsv("TSV"),
+        /**
+         * Powerpoint files &gt;30 MB will be scanned as binary files. Included file extensions: pptx, pptm, potx, potm, pot
+         * 
+         */
+        Powerpoint("POWERPOINT"),
+        /**
+         * Excel files &gt;30 MB will be scanned as binary files. Included file extensions: xlsx, xlsm, xltx, xltm
+         * 
+         */
+        Excel("EXCEL");
 
         private final String value;
 

@@ -16,7 +16,6 @@ public final class AuditConfigResponse {
      * 
      */
     private final List<AuditLogConfigResponse> auditLogConfigs;
-    private final List<String> exemptedMembers;
     /**
      * @return Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
@@ -26,10 +25,8 @@ public final class AuditConfigResponse {
     @CustomType.Constructor
     private AuditConfigResponse(
         @CustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
-        @CustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
         @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
-        this.exemptedMembers = exemptedMembers;
         this.service = service;
     }
 
@@ -39,9 +36,6 @@ public final class AuditConfigResponse {
      */
     public List<AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
-    }
-    public List<String> exemptedMembers() {
-        return this.exemptedMembers;
     }
     /**
      * @return Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
@@ -61,7 +55,6 @@ public final class AuditConfigResponse {
 
     public static final class Builder {
         private List<AuditLogConfigResponse> auditLogConfigs;
-        private List<String> exemptedMembers;
         private String service;
 
         public Builder() {
@@ -71,7 +64,6 @@ public final class AuditConfigResponse {
         public Builder(AuditConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.exemptedMembers = defaults.exemptedMembers;
     	      this.service = defaults.service;
         }
 
@@ -82,18 +74,11 @@ public final class AuditConfigResponse {
         public Builder auditLogConfigs(AuditLogConfigResponse... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
-        public Builder exemptedMembers(List<String> exemptedMembers) {
-            this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
-            return this;
-        }
-        public Builder exemptedMembers(String... exemptedMembers) {
-            return exemptedMembers(List.of(exemptedMembers));
-        }
         public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }        public AuditConfigResponse build() {
-            return new AuditConfigResponse(auditLogConfigs, exemptedMembers, service);
+            return new AuditConfigResponse(auditLogConfigs, service);
         }
     }
 }

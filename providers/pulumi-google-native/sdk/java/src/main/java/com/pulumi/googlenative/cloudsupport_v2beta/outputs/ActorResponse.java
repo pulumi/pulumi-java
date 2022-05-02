@@ -25,22 +25,15 @@ public final class ActorResponse {
      * 
      */
     private final Boolean googleSupport;
-    /**
-     * @return An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
-     * 
-     */
-    private final String principalId;
 
     @CustomType.Constructor
     private ActorResponse(
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("email") String email,
-        @CustomType.Parameter("googleSupport") Boolean googleSupport,
-        @CustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("googleSupport") Boolean googleSupport) {
         this.displayName = displayName;
         this.email = email;
         this.googleSupport = googleSupport;
-        this.principalId = principalId;
     }
 
     /**
@@ -64,13 +57,6 @@ public final class ActorResponse {
     public Boolean googleSupport() {
         return this.googleSupport;
     }
-    /**
-     * @return An ID representing the user that was authenticated when the corresponding action was taken. This will be an email address, if one is available, or some other unique ID. See https://cloud.google.com/docs/authentication for more information on types of authentication.
-     * 
-     */
-    public String principalId() {
-        return this.principalId;
-    }
 
     public static Builder builder() {
         return new Builder();
@@ -84,7 +70,6 @@ public final class ActorResponse {
         private String displayName;
         private String email;
         private Boolean googleSupport;
-        private String principalId;
 
         public Builder() {
     	      // Empty
@@ -95,7 +80,6 @@ public final class ActorResponse {
     	      this.displayName = defaults.displayName;
     	      this.email = defaults.email;
     	      this.googleSupport = defaults.googleSupport;
-    	      this.principalId = defaults.principalId;
         }
 
         public Builder displayName(String displayName) {
@@ -109,12 +93,8 @@ public final class ActorResponse {
         public Builder googleSupport(Boolean googleSupport) {
             this.googleSupport = Objects.requireNonNull(googleSupport);
             return this;
-        }
-        public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
-            return this;
         }        public ActorResponse build() {
-            return new ActorResponse(displayName, email, googleSupport, principalId);
+            return new ActorResponse(displayName, email, googleSupport);
         }
     }
 }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.String;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -31,6 +32,15 @@ public final class GetHubResult {
      */
     private final String name;
     /**
+     * @return A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     * @deprecated
+     * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     */
+    @Deprecated /* Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead. */
+    private final List<String> spokes;
+    /**
      * @return The current lifecycle state of this Hub.
      * 
      */
@@ -52,6 +62,7 @@ public final class GetHubResult {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("spokes") List<String> spokes,
         @CustomType.Parameter("state") String state,
         @CustomType.Parameter("uniqueId") String uniqueId,
         @CustomType.Parameter("updateTime") String updateTime) {
@@ -59,6 +70,7 @@ public final class GetHubResult {
         this.description = description;
         this.labels = labels;
         this.name = name;
+        this.spokes = spokes;
         this.state = state;
         this.uniqueId = uniqueId;
         this.updateTime = updateTime;
@@ -91,6 +103,17 @@ public final class GetHubResult {
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     * @deprecated
+     * Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead.
+     * 
+     */
+    @Deprecated /* Output only. A list of the URIs of all attached spokes. This field is deprecated and will not be included in future API versions. Call ListSpokes on each region instead. */
+    public List<String> spokes() {
+        return this.spokes;
     }
     /**
      * @return The current lifecycle state of this Hub.
@@ -127,6 +150,7 @@ public final class GetHubResult {
         private String description;
         private Map<String,String> labels;
         private String name;
+        private List<String> spokes;
         private String state;
         private String uniqueId;
         private String updateTime;
@@ -141,6 +165,7 @@ public final class GetHubResult {
     	      this.description = defaults.description;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
+    	      this.spokes = defaults.spokes;
     	      this.state = defaults.state;
     	      this.uniqueId = defaults.uniqueId;
     	      this.updateTime = defaults.updateTime;
@@ -162,6 +187,13 @@ public final class GetHubResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder spokes(List<String> spokes) {
+            this.spokes = Objects.requireNonNull(spokes);
+            return this;
+        }
+        public Builder spokes(String... spokes) {
+            return spokes(List.of(spokes));
+        }
         public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
@@ -174,7 +206,7 @@ public final class GetHubResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetHubResult build() {
-            return new GetHubResult(createTime, description, labels, name, state, uniqueId, updateTime);
+            return new GetHubResult(createTime, description, labels, name, spokes, state, uniqueId, updateTime);
         }
     }
 }

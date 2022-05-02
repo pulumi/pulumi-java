@@ -124,14 +124,18 @@ public class Workload extends com.pulumi.resources.CustomResource {
         return this.kajEnrollmentState;
     }
     /**
-     * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field.
+     * 
+     * @deprecated
+     * Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field.
      * 
      */
+    @Deprecated /* Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field. */
     @Export(name="kmsSettings", type=GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse.class, parameters={})
     private Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse> kmsSettings;
 
     /**
-     * @return Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
+     * @return Input only. Settings used to create a CMEK crypto key. When set, a project with a KMS CMEK key is provisioned. This field is deprecated as of Feb 28, 2022. In order to create a Keyring, callers should specify, ENCRYPTION_KEYS_PROJECT or KEYRING in ResourceSettings.resource_type field.
      * 
      */
     public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse> kmsSettings() {

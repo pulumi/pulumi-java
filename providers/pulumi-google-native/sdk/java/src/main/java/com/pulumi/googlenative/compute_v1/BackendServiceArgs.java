@@ -14,6 +14,7 @@ import com.pulumi.googlenative.compute_v1.inputs.BackendServiceCdnPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.BackendServiceConnectionTrackingPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.BackendServiceFailoverPolicyArgs;
 import com.pulumi.googlenative.compute_v1.inputs.BackendServiceIAPArgs;
+import com.pulumi.googlenative.compute_v1.inputs.BackendServiceLocalityLoadBalancingPolicyConfigArgs;
 import com.pulumi.googlenative.compute_v1.inputs.BackendServiceLogConfigArgs;
 import com.pulumi.googlenative.compute_v1.inputs.CircuitBreakersArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ConnectionDrainingArgs;
@@ -245,6 +246,21 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
+    @Import(name="localityLbPolicies")
+    private @Nullable Output<List<BackendServiceLocalityLoadBalancingPolicyConfigArgs>> localityLbPolicies;
+
+    /**
+     * @return A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+     * 
+     */
+    public Optional<Output<List<BackendServiceLocalityLoadBalancingPolicyConfigArgs>>> localityLbPolicies() {
+        return Optional.ofNullable(this.localityLbPolicies);
+    }
+
+    /**
      * The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
@@ -335,6 +351,29 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     * @deprecated
+     * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+    @Import(name="port")
+    private @Nullable Output<Integer> port;
+
+    /**
+     * @return Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     * @deprecated
+     * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
+    }
+
+    /**
      * A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
      * 
      */
@@ -371,9 +410,17 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -416,14 +463,14 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+     * The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
      * 
      */
     @Import(name="timeoutSec")
     private @Nullable Output<Integer> timeoutSec;
 
     /**
-     * @return Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+     * @return The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
      * 
      */
     public Optional<Output<Integer>> timeoutSec() {
@@ -448,12 +495,14 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         this.healthChecks = $.healthChecks;
         this.iap = $.iap;
         this.loadBalancingScheme = $.loadBalancingScheme;
+        this.localityLbPolicies = $.localityLbPolicies;
         this.localityLbPolicy = $.localityLbPolicy;
         this.logConfig = $.logConfig;
         this.maxStreamDuration = $.maxStreamDuration;
         this.name = $.name;
         this.network = $.network;
         this.outlierDetection = $.outlierDetection;
+        this.port = $.port;
         this.portName = $.portName;
         this.project = $.project;
         this.protocol = $.protocol;
@@ -814,6 +863,37 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
+         * @param localityLbPolicies A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localityLbPolicies(@Nullable Output<List<BackendServiceLocalityLoadBalancingPolicyConfigArgs>> localityLbPolicies) {
+            $.localityLbPolicies = localityLbPolicies;
+            return this;
+        }
+
+        /**
+         * @param localityLbPolicies A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localityLbPolicies(List<BackendServiceLocalityLoadBalancingPolicyConfigArgs> localityLbPolicies) {
+            return localityLbPolicies(Output.of(localityLbPolicies));
+        }
+
+        /**
+         * @param localityLbPolicies A list of locality load balancing policies to be used in order of preference. Either the policy or the customPolicy field should be set. Overrides any value set in the localityLbPolicy field. localityLbPolicies is only supported when the BackendService is referenced by a URL Map that is referenced by a target gRPC proxy that has the validateForProxyless field set to true.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder localityLbPolicies(BackendServiceLocalityLoadBalancingPolicyConfigArgs... localityLbPolicies) {
+            return localityLbPolicies(List.of(localityLbPolicies));
+        }
+
+        /**
          * @param localityLbPolicy The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see https://ai.google/research/pubs/pub44824 This field is applicable to either: - A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session affinity settings will not take effect. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
          * 
          * @return builder
@@ -940,6 +1020,35 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
+         * @param port Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+        public Builder port(@Nullable Output<Integer> port) {
+            $.port = port;
+            return this;
+        }
+
+        /**
+         * @param port Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port. */
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        /**
          * @param portName A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For Internal TCP/UDP Load Balancing and Network Load Balancing, omit port_name.
          * 
          * @return builder
@@ -990,11 +1099,23 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -1051,7 +1172,7 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param timeoutSec Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+         * @param timeoutSec The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
          * 
          * @return builder
          * 
@@ -1062,7 +1183,7 @@ public final class BackendServiceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param timeoutSec Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
+         * @param timeoutSec The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
          * 
          * @return builder
          * 

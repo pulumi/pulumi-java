@@ -28,7 +28,12 @@ import java.util.StringJoiner;
          * The `parsed_data` includes every given non-empty message field.
          * 
          */
-        V2("V2");
+        V2("V2"),
+        /**
+         * This version is the same as V2, with the following change. The `parsed_data` contains unescaped escaped field separators, component separators, sub-component separators, repetition separators, escape characters, and truncation characters. If `schema` is specified, the schematized parser uses improved parsing heuristics compared to previous versions.
+         * 
+         */
+        V3("V3");
 
         private final String value;
 

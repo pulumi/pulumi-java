@@ -10,6 +10,7 @@ import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1Bu
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DataSourceResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1DatabaseTableSpecResponse;
+import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1FilesetSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1GcsFilesetSpecResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1PersonalDetailsResponse;
 import com.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1RoutineSpecResponse;
@@ -33,7 +34,7 @@ public final class GetEntryResult {
      */
     private final GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec;
     /**
-     * @return Business Context of the entry.
+     * @return Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     private final GoogleCloudDatacatalogV1BusinessContextResponse businessContext;
@@ -62,6 +63,11 @@ public final class GetEntryResult {
      * 
      */
     private final String displayName;
+    /**
+     * @return Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    private final GoogleCloudDatacatalogV1FilesetSpecResponse filesetSpec;
     /**
      * @return Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
      * 
@@ -143,6 +149,7 @@ public final class GetEntryResult {
         @CustomType.Parameter("databaseTableSpec") GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filesetSpec") GoogleCloudDatacatalogV1FilesetSpecResponse filesetSpec,
         @CustomType.Parameter("fullyQualifiedName") String fullyQualifiedName,
         @CustomType.Parameter("gcsFilesetSpec") GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec,
         @CustomType.Parameter("integratedSystem") String integratedSystem,
@@ -165,6 +172,7 @@ public final class GetEntryResult {
         this.databaseTableSpec = databaseTableSpec;
         this.description = description;
         this.displayName = displayName;
+        this.filesetSpec = filesetSpec;
         this.fullyQualifiedName = fullyQualifiedName;
         this.gcsFilesetSpec = gcsFilesetSpec;
         this.integratedSystem = integratedSystem;
@@ -196,7 +204,7 @@ public final class GetEntryResult {
         return this.bigqueryTableSpec;
     }
     /**
-     * @return Business Context of the entry.
+     * @return Business Context of the entry. Not supported for BigQuery datasets
      * 
      */
     public GoogleCloudDatacatalogV1BusinessContextResponse businessContext() {
@@ -236,6 +244,13 @@ public final class GetEntryResult {
      */
     public String displayName() {
         return this.displayName;
+    }
+    /**
+     * @return Specification that applies to a fileset resource. Valid only for entries with the `FILESET` type.
+     * 
+     */
+    public GoogleCloudDatacatalogV1FilesetSpecResponse filesetSpec() {
+        return this.filesetSpec;
     }
     /**
      * @return Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
@@ -353,6 +368,7 @@ public final class GetEntryResult {
         private GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec;
         private String description;
         private String displayName;
+        private GoogleCloudDatacatalogV1FilesetSpecResponse filesetSpec;
         private String fullyQualifiedName;
         private GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec;
         private String integratedSystem;
@@ -382,6 +398,7 @@ public final class GetEntryResult {
     	      this.databaseTableSpec = defaults.databaseTableSpec;
     	      this.description = defaults.description;
     	      this.displayName = defaults.displayName;
+    	      this.filesetSpec = defaults.filesetSpec;
     	      this.fullyQualifiedName = defaults.fullyQualifiedName;
     	      this.gcsFilesetSpec = defaults.gcsFilesetSpec;
     	      this.integratedSystem = defaults.integratedSystem;
@@ -428,6 +445,10 @@ public final class GetEntryResult {
         }
         public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
+            return this;
+        }
+        public Builder filesetSpec(GoogleCloudDatacatalogV1FilesetSpecResponse filesetSpec) {
+            this.filesetSpec = Objects.requireNonNull(filesetSpec);
             return this;
         }
         public Builder fullyQualifiedName(String fullyQualifiedName) {
@@ -486,7 +507,7 @@ public final class GetEntryResult {
             this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
             return this;
         }        public GetEntryResult build() {
-            return new GetEntryResult(bigqueryDateShardedSpec, bigqueryTableSpec, businessContext, dataSource, dataSourceConnectionSpec, databaseTableSpec, description, displayName, fullyQualifiedName, gcsFilesetSpec, integratedSystem, labels, linkedResource, name, personalDetails, routineSpec, schema, sourceSystemTimestamps, type, usageSignal, userSpecifiedSystem, userSpecifiedType);
+            return new GetEntryResult(bigqueryDateShardedSpec, bigqueryTableSpec, businessContext, dataSource, dataSourceConnectionSpec, databaseTableSpec, description, displayName, filesetSpec, fullyQualifiedName, gcsFilesetSpec, integratedSystem, labels, linkedResource, name, personalDetails, routineSpec, schema, sourceSystemTimestamps, type, usageSignal, userSpecifiedSystem, userSpecifiedType);
         }
     }
 }

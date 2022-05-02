@@ -9,6 +9,7 @@ import com.pulumi.googlenative.sqladmin_v1.enums.SettingsActivationPolicy;
 import com.pulumi.googlenative.sqladmin_v1.enums.SettingsAvailabilityType;
 import com.pulumi.googlenative.sqladmin_v1.enums.SettingsDataDiskType;
 import com.pulumi.googlenative.sqladmin_v1.enums.SettingsPricingPlan;
+import com.pulumi.googlenative.sqladmin_v1.enums.SettingsReplicationType;
 import com.pulumi.googlenative.sqladmin_v1.inputs.BackupConfigurationArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.DatabaseFlagsArgs;
 import com.pulumi.googlenative.sqladmin_v1.inputs.DenyMaintenancePeriodArgs;
@@ -64,6 +65,29 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<SqlActiveDirectoryConfigArgs>> activeDirectoryConfig() {
         return Optional.ofNullable(this.activeDirectoryConfig);
+    }
+
+    /**
+     * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     * @deprecated
+     * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     */
+    @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+    @Import(name="authorizedGaeApplications")
+    private @Nullable Output<List<String>> authorizedGaeApplications;
+
+    /**
+     * @return The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     * @deprecated
+     * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+     * 
+     */
+    @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+    public Optional<Output<List<String>>> authorizedGaeApplications() {
+        return Optional.ofNullable(this.authorizedGaeApplications);
     }
 
     /**
@@ -307,6 +331,29 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     * @deprecated
+     * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     */
+    @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+    @Import(name="replicationType")
+    private @Nullable Output<SettingsReplicationType> replicationType;
+
+    /**
+     * @return The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     * @deprecated
+     * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+     * 
+     */
+    @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+    public Optional<Output<SettingsReplicationType>> replicationType() {
+        return Optional.ofNullable(this.replicationType);
+    }
+
+    /**
      * The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.
      * 
      */
@@ -401,6 +448,7 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
     private SettingsArgs(SettingsArgs $) {
         this.activationPolicy = $.activationPolicy;
         this.activeDirectoryConfig = $.activeDirectoryConfig;
+        this.authorizedGaeApplications = $.authorizedGaeApplications;
         this.availabilityType = $.availabilityType;
         this.backupConfiguration = $.backupConfiguration;
         this.collation = $.collation;
@@ -417,6 +465,7 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
         this.maintenanceWindow = $.maintenanceWindow;
         this.passwordValidationPolicy = $.passwordValidationPolicy;
         this.pricingPlan = $.pricingPlan;
+        this.replicationType = $.replicationType;
         this.settingsVersion = $.settingsVersion;
         this.sqlServerAuditConfig = $.sqlServerAuditConfig;
         this.storageAutoResize = $.storageAutoResize;
@@ -483,6 +532,49 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder activeDirectoryConfig(SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
             return activeDirectoryConfig(Output.of(activeDirectoryConfig));
+        }
+
+        /**
+         * @param authorizedGaeApplications The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         */
+        @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+        public Builder authorizedGaeApplications(@Nullable Output<List<String>> authorizedGaeApplications) {
+            $.authorizedGaeApplications = authorizedGaeApplications;
+            return this;
+        }
+
+        /**
+         * @param authorizedGaeApplications The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         */
+        @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+        public Builder authorizedGaeApplications(List<String> authorizedGaeApplications) {
+            return authorizedGaeApplications(Output.of(authorizedGaeApplications));
+        }
+
+        /**
+         * @param authorizedGaeApplications The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
+         * 
+         */
+        @Deprecated /* The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only. */
+        public Builder authorizedGaeApplications(String... authorizedGaeApplications) {
+            return authorizedGaeApplications(List.of(authorizedGaeApplications));
         }
 
         /**
@@ -839,6 +931,35 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder pricingPlan(SettingsPricingPlan pricingPlan) {
             return pricingPlan(Output.of(pricingPlan));
+        }
+
+        /**
+         * @param replicationType The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+         * 
+         */
+        @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+        public Builder replicationType(@Nullable Output<SettingsReplicationType> replicationType) {
+            $.replicationType = replicationType;
+            return this;
+        }
+
+        /**
+         * @param replicationType The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances.
+         * 
+         */
+        @Deprecated /* The type of replication this instance uses. This can be either `ASYNCHRONOUS` or `SYNCHRONOUS`. (Deprecated) This property was only applicable to First Generation instances. */
+        public Builder replicationType(SettingsReplicationType replicationType) {
+            return replicationType(Output.of(replicationType));
         }
 
         /**

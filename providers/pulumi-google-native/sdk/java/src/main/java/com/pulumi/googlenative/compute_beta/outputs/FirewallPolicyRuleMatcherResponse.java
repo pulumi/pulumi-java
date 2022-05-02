@@ -5,6 +5,7 @@ package com.pulumi.googlenative.compute_beta.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleMatcherLayer4ConfigResponse;
+import com.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,6 +18,16 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> destIpRanges;
     /**
+     * @return Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+     * 
+     */
+    private final List<String> destRegionCodes;
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    private final List<String> destThreatIntelligences;
+    /**
      * @return Pairs of IP protocols and ports that the rule should match.
      * 
      */
@@ -26,15 +37,40 @@ public final class FirewallPolicyRuleMatcherResponse {
      * 
      */
     private final List<String> srcIpRanges;
+    /**
+     * @return Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+     * 
+     */
+    private final List<String> srcRegionCodes;
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    private final List<String> srcThreatIntelligences;
 
     @CustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
         @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @CustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
+        @CustomType.Parameter("destThreatIntelligences") List<String> destThreatIntelligences,
         @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
+        @CustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
+        @CustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags,
+        @CustomType.Parameter("srcThreatIntelligences") List<String> srcThreatIntelligences) {
         this.destIpRanges = destIpRanges;
+        this.destRegionCodes = destRegionCodes;
+        this.destThreatIntelligences = destThreatIntelligences;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;
+        this.srcRegionCodes = srcRegionCodes;
+        this.srcSecureTags = srcSecureTags;
+        this.srcThreatIntelligences = srcThreatIntelligences;
     }
 
     /**
@@ -43,6 +79,20 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     public List<String> destIpRanges() {
         return this.destIpRanges;
+    }
+    /**
+     * @return Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of dest region codes allowed is 5000.
+     * 
+     */
+    public List<String> destRegionCodes() {
+        return this.destRegionCodes;
+    }
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    public List<String> destThreatIntelligences() {
+        return this.destThreatIntelligences;
     }
     /**
      * @return Pairs of IP protocols and ports that the rule should match.
@@ -58,6 +108,27 @@ public final class FirewallPolicyRuleMatcherResponse {
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
+    /**
+     * @return Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex.&#34;US&#34; Maximum number of source region codes allowed is 5000.
+     * 
+     */
+    public List<String> srcRegionCodes() {
+        return this.srcRegionCodes;
+    }
+    /**
+     * @return List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
+     * 
+     */
+    public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
+        return this.srcSecureTags;
+    }
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    public List<String> srcThreatIntelligences() {
+        return this.srcThreatIntelligences;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -69,8 +140,13 @@ public final class FirewallPolicyRuleMatcherResponse {
 
     public static final class Builder {
         private List<String> destIpRanges;
+        private List<String> destRegionCodes;
+        private List<String> destThreatIntelligences;
         private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
         private List<String> srcIpRanges;
+        private List<String> srcRegionCodes;
+        private List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
+        private List<String> srcThreatIntelligences;
 
         public Builder() {
     	      // Empty
@@ -79,8 +155,13 @@ public final class FirewallPolicyRuleMatcherResponse {
         public Builder(FirewallPolicyRuleMatcherResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.destIpRanges = defaults.destIpRanges;
+    	      this.destRegionCodes = defaults.destRegionCodes;
+    	      this.destThreatIntelligences = defaults.destThreatIntelligences;
     	      this.layer4Configs = defaults.layer4Configs;
     	      this.srcIpRanges = defaults.srcIpRanges;
+    	      this.srcRegionCodes = defaults.srcRegionCodes;
+    	      this.srcSecureTags = defaults.srcSecureTags;
+    	      this.srcThreatIntelligences = defaults.srcThreatIntelligences;
         }
 
         public Builder destIpRanges(List<String> destIpRanges) {
@@ -89,6 +170,20 @@ public final class FirewallPolicyRuleMatcherResponse {
         }
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
+        }
+        public Builder destRegionCodes(List<String> destRegionCodes) {
+            this.destRegionCodes = Objects.requireNonNull(destRegionCodes);
+            return this;
+        }
+        public Builder destRegionCodes(String... destRegionCodes) {
+            return destRegionCodes(List.of(destRegionCodes));
+        }
+        public Builder destThreatIntelligences(List<String> destThreatIntelligences) {
+            this.destThreatIntelligences = Objects.requireNonNull(destThreatIntelligences);
+            return this;
+        }
+        public Builder destThreatIntelligences(String... destThreatIntelligences) {
+            return destThreatIntelligences(List.of(destThreatIntelligences));
         }
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
@@ -103,8 +198,29 @@ public final class FirewallPolicyRuleMatcherResponse {
         }
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
+        }
+        public Builder srcRegionCodes(List<String> srcRegionCodes) {
+            this.srcRegionCodes = Objects.requireNonNull(srcRegionCodes);
+            return this;
+        }
+        public Builder srcRegionCodes(String... srcRegionCodes) {
+            return srcRegionCodes(List.of(srcRegionCodes));
+        }
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+            this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
+            return this;
+        }
+        public Builder srcSecureTags(FirewallPolicyRuleSecureTagResponse... srcSecureTags) {
+            return srcSecureTags(List.of(srcSecureTags));
+        }
+        public Builder srcThreatIntelligences(List<String> srcThreatIntelligences) {
+            this.srcThreatIntelligences = Objects.requireNonNull(srcThreatIntelligences);
+            return this;
+        }
+        public Builder srcThreatIntelligences(String... srcThreatIntelligences) {
+            return srcThreatIntelligences(List.of(srcThreatIntelligences));
         }        public FirewallPolicyRuleMatcherResponse build() {
-            return new FirewallPolicyRuleMatcherResponse(destIpRanges, layer4Configs, srcIpRanges);
+            return new FirewallPolicyRuleMatcherResponse(destIpRanges, destRegionCodes, destThreatIntelligences, layer4Configs, srcIpRanges, srcRegionCodes, srcSecureTags, srcThreatIntelligences);
         }
     }
 }

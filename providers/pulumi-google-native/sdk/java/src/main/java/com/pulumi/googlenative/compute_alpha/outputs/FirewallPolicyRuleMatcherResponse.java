@@ -33,6 +33,11 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> destRegionCodes;
     /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    private final List<String> destThreatIntelligences;
+    /**
      * @return Pairs of IP protocols and ports that the rule should match.
      * 
      */
@@ -62,6 +67,11 @@ public final class FirewallPolicyRuleMatcherResponse {
      * 
      */
     private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    private final List<String> srcThreatIntelligences;
 
     @CustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
@@ -69,22 +79,26 @@ public final class FirewallPolicyRuleMatcherResponse {
         @CustomType.Parameter("destFqdns") List<String> destFqdns,
         @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
         @CustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
+        @CustomType.Parameter("destThreatIntelligences") List<String> destThreatIntelligences,
         @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
         @CustomType.Parameter("srcAddressGroups") List<String> srcAddressGroups,
         @CustomType.Parameter("srcFqdns") List<String> srcFqdns,
         @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
         @CustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
-        @CustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+        @CustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags,
+        @CustomType.Parameter("srcThreatIntelligences") List<String> srcThreatIntelligences) {
         this.destAddressGroups = destAddressGroups;
         this.destFqdns = destFqdns;
         this.destIpRanges = destIpRanges;
         this.destRegionCodes = destRegionCodes;
+        this.destThreatIntelligences = destThreatIntelligences;
         this.layer4Configs = layer4Configs;
         this.srcAddressGroups = srcAddressGroups;
         this.srcFqdns = srcFqdns;
         this.srcIpRanges = srcIpRanges;
         this.srcRegionCodes = srcRegionCodes;
         this.srcSecureTags = srcSecureTags;
+        this.srcThreatIntelligences = srcThreatIntelligences;
     }
 
     /**
@@ -114,6 +128,13 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     public List<String> destRegionCodes() {
         return this.destRegionCodes;
+    }
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
+     * 
+     */
+    public List<String> destThreatIntelligences() {
+        return this.destThreatIntelligences;
     }
     /**
      * @return Pairs of IP protocols and ports that the rule should match.
@@ -157,6 +178,13 @@ public final class FirewallPolicyRuleMatcherResponse {
     public List<FirewallPolicyRuleSecureTagResponse> srcSecureTags() {
         return this.srcSecureTags;
     }
+    /**
+     * @return Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
+     * 
+     */
+    public List<String> srcThreatIntelligences() {
+        return this.srcThreatIntelligences;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -171,12 +199,14 @@ public final class FirewallPolicyRuleMatcherResponse {
         private List<String> destFqdns;
         private List<String> destIpRanges;
         private List<String> destRegionCodes;
+        private List<String> destThreatIntelligences;
         private List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
         private List<String> srcAddressGroups;
         private List<String> srcFqdns;
         private List<String> srcIpRanges;
         private List<String> srcRegionCodes;
         private List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
+        private List<String> srcThreatIntelligences;
 
         public Builder() {
     	      // Empty
@@ -188,12 +218,14 @@ public final class FirewallPolicyRuleMatcherResponse {
     	      this.destFqdns = defaults.destFqdns;
     	      this.destIpRanges = defaults.destIpRanges;
     	      this.destRegionCodes = defaults.destRegionCodes;
+    	      this.destThreatIntelligences = defaults.destThreatIntelligences;
     	      this.layer4Configs = defaults.layer4Configs;
     	      this.srcAddressGroups = defaults.srcAddressGroups;
     	      this.srcFqdns = defaults.srcFqdns;
     	      this.srcIpRanges = defaults.srcIpRanges;
     	      this.srcRegionCodes = defaults.srcRegionCodes;
     	      this.srcSecureTags = defaults.srcSecureTags;
+    	      this.srcThreatIntelligences = defaults.srcThreatIntelligences;
         }
 
         public Builder destAddressGroups(List<String> destAddressGroups) {
@@ -223,6 +255,13 @@ public final class FirewallPolicyRuleMatcherResponse {
         }
         public Builder destRegionCodes(String... destRegionCodes) {
             return destRegionCodes(List.of(destRegionCodes));
+        }
+        public Builder destThreatIntelligences(List<String> destThreatIntelligences) {
+            this.destThreatIntelligences = Objects.requireNonNull(destThreatIntelligences);
+            return this;
+        }
+        public Builder destThreatIntelligences(String... destThreatIntelligences) {
+            return destThreatIntelligences(List.of(destThreatIntelligences));
         }
         public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
@@ -265,8 +304,15 @@ public final class FirewallPolicyRuleMatcherResponse {
         }
         public Builder srcSecureTags(FirewallPolicyRuleSecureTagResponse... srcSecureTags) {
             return srcSecureTags(List.of(srcSecureTags));
+        }
+        public Builder srcThreatIntelligences(List<String> srcThreatIntelligences) {
+            this.srcThreatIntelligences = Objects.requireNonNull(srcThreatIntelligences);
+            return this;
+        }
+        public Builder srcThreatIntelligences(String... srcThreatIntelligences) {
+            return srcThreatIntelligences(List.of(srcThreatIntelligences));
         }        public FirewallPolicyRuleMatcherResponse build() {
-            return new FirewallPolicyRuleMatcherResponse(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
+            return new FirewallPolicyRuleMatcherResponse(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, destThreatIntelligences, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags, srcThreatIntelligences);
         }
     }
 }

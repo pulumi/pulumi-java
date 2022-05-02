@@ -96,6 +96,24 @@ public final class JobStatistics2Response {
      */
     private final BigQueryModelTrainingResponse modelTraining;
     /**
+     * @return [Output-only, Beta] Deprecated; do not use.
+     * 
+     * @deprecated
+     * [Output-only, Beta] Deprecated; do not use.
+     * 
+     */
+    @Deprecated /* [Output-only, Beta] Deprecated; do not use. */
+    private final Integer modelTrainingCurrentIteration;
+    /**
+     * @return [Output-only, Beta] Deprecated; do not use.
+     * 
+     * @deprecated
+     * [Output-only, Beta] Deprecated; do not use.
+     * 
+     */
+    @Deprecated /* [Output-only, Beta] Deprecated; do not use. */
+    private final String modelTrainingExpectedTotalIteration;
+    /**
      * @return The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
      * 
      */
@@ -182,6 +200,8 @@ public final class JobStatistics2Response {
         @CustomType.Parameter("estimatedBytesProcessed") String estimatedBytesProcessed,
         @CustomType.Parameter("mlStatistics") MlStatisticsResponse mlStatistics,
         @CustomType.Parameter("modelTraining") BigQueryModelTrainingResponse modelTraining,
+        @CustomType.Parameter("modelTrainingCurrentIteration") Integer modelTrainingCurrentIteration,
+        @CustomType.Parameter("modelTrainingExpectedTotalIteration") String modelTrainingExpectedTotalIteration,
         @CustomType.Parameter("numDmlAffectedRows") String numDmlAffectedRows,
         @CustomType.Parameter("queryPlan") List<ExplainQueryStageResponse> queryPlan,
         @CustomType.Parameter("referencedRoutines") List<RoutineReferenceResponse> referencedRoutines,
@@ -210,6 +230,8 @@ public final class JobStatistics2Response {
         this.estimatedBytesProcessed = estimatedBytesProcessed;
         this.mlStatistics = mlStatistics;
         this.modelTraining = modelTraining;
+        this.modelTrainingCurrentIteration = modelTrainingCurrentIteration;
+        this.modelTrainingExpectedTotalIteration = modelTrainingExpectedTotalIteration;
         this.numDmlAffectedRows = numDmlAffectedRows;
         this.queryPlan = queryPlan;
         this.referencedRoutines = referencedRoutines;
@@ -323,6 +345,28 @@ public final class JobStatistics2Response {
      */
     public BigQueryModelTrainingResponse modelTraining() {
         return this.modelTraining;
+    }
+    /**
+     * @return [Output-only, Beta] Deprecated; do not use.
+     * 
+     * @deprecated
+     * [Output-only, Beta] Deprecated; do not use.
+     * 
+     */
+    @Deprecated /* [Output-only, Beta] Deprecated; do not use. */
+    public Integer modelTrainingCurrentIteration() {
+        return this.modelTrainingCurrentIteration;
+    }
+    /**
+     * @return [Output-only, Beta] Deprecated; do not use.
+     * 
+     * @deprecated
+     * [Output-only, Beta] Deprecated; do not use.
+     * 
+     */
+    @Deprecated /* [Output-only, Beta] Deprecated; do not use. */
+    public String modelTrainingExpectedTotalIteration() {
+        return this.modelTrainingExpectedTotalIteration;
     }
     /**
      * @return The number of rows affected by a DML statement. Present only for DML statements INSERT, UPDATE or DELETE.
@@ -446,6 +490,8 @@ public final class JobStatistics2Response {
         private String estimatedBytesProcessed;
         private MlStatisticsResponse mlStatistics;
         private BigQueryModelTrainingResponse modelTraining;
+        private Integer modelTrainingCurrentIteration;
+        private String modelTrainingExpectedTotalIteration;
         private String numDmlAffectedRows;
         private List<ExplainQueryStageResponse> queryPlan;
         private List<RoutineReferenceResponse> referencedRoutines;
@@ -481,6 +527,8 @@ public final class JobStatistics2Response {
     	      this.estimatedBytesProcessed = defaults.estimatedBytesProcessed;
     	      this.mlStatistics = defaults.mlStatistics;
     	      this.modelTraining = defaults.modelTraining;
+    	      this.modelTrainingCurrentIteration = defaults.modelTrainingCurrentIteration;
+    	      this.modelTrainingExpectedTotalIteration = defaults.modelTrainingExpectedTotalIteration;
     	      this.numDmlAffectedRows = defaults.numDmlAffectedRows;
     	      this.queryPlan = defaults.queryPlan;
     	      this.referencedRoutines = defaults.referencedRoutines;
@@ -551,6 +599,14 @@ public final class JobStatistics2Response {
         }
         public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
             this.modelTraining = Objects.requireNonNull(modelTraining);
+            return this;
+        }
+        public Builder modelTrainingCurrentIteration(Integer modelTrainingCurrentIteration) {
+            this.modelTrainingCurrentIteration = Objects.requireNonNull(modelTrainingCurrentIteration);
+            return this;
+        }
+        public Builder modelTrainingExpectedTotalIteration(String modelTrainingExpectedTotalIteration) {
+            this.modelTrainingExpectedTotalIteration = Objects.requireNonNull(modelTrainingExpectedTotalIteration);
             return this;
         }
         public Builder numDmlAffectedRows(String numDmlAffectedRows) {
@@ -627,7 +683,7 @@ public final class JobStatistics2Response {
         public Builder undeclaredQueryParameters(QueryParameterResponse... undeclaredQueryParameters) {
             return undeclaredQueryParameters(List.of(undeclaredQueryParameters));
         }        public JobStatistics2Response build() {
-            return new JobStatistics2Response(biEngineStatistics, billingTier, cacheHit, ddlAffectedRowAccessPolicyCount, ddlDestinationTable, ddlOperationPerformed, ddlTargetDataset, ddlTargetRoutine, ddlTargetRowAccessPolicy, ddlTargetTable, dmlStats, estimatedBytesProcessed, mlStatistics, modelTraining, numDmlAffectedRows, queryPlan, referencedRoutines, referencedTables, reservationUsage, schema, statementType, timeline, totalBytesBilled, totalBytesProcessed, totalBytesProcessedAccuracy, totalPartitionsProcessed, totalSlotMs, undeclaredQueryParameters);
+            return new JobStatistics2Response(biEngineStatistics, billingTier, cacheHit, ddlAffectedRowAccessPolicyCount, ddlDestinationTable, ddlOperationPerformed, ddlTargetDataset, ddlTargetRoutine, ddlTargetRowAccessPolicy, ddlTargetTable, dmlStats, estimatedBytesProcessed, mlStatistics, modelTraining, modelTrainingCurrentIteration, modelTrainingExpectedTotalIteration, numDmlAffectedRows, queryPlan, referencedRoutines, referencedTables, reservationUsage, schema, statementType, timeline, totalBytesBilled, totalBytesProcessed, totalBytesProcessedAccuracy, totalPartitionsProcessed, totalSlotMs, undeclaredQueryParameters);
         }
     }
 }

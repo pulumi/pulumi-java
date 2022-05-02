@@ -31,9 +31,17 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.assetTag);
     }
 
+    /**
+     * Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you&#39;re using this API for your own organization, use `customers/my_customer` If you&#39;re using this API to manage another organization, use `customers/{customer}`, where customer is the customer to whom the device belongs.
+     * 
+     */
     @Import(name="customer")
     private @Nullable Output<String> customer;
 
+    /**
+     * @return Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you&#39;re using this API for your own organization, use `customers/my_customer` If you&#39;re using this API to manage another organization, use `customers/{customer}`, where customer is the customer to whom the device belongs.
+     * 
+     */
     public Optional<Output<String>> customer() {
         return Optional.ofNullable(this.customer);
     }
@@ -132,11 +140,23 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             return assetTag(Output.of(assetTag));
         }
 
+        /**
+         * @param customer Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you&#39;re using this API for your own organization, use `customers/my_customer` If you&#39;re using this API to manage another organization, use `customers/{customer}`, where customer is the customer to whom the device belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customer(@Nullable Output<String> customer) {
             $.customer = customer;
             return this;
         }
 
+        /**
+         * @param customer Optional. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If you&#39;re using this API for your own organization, use `customers/my_customer` If you&#39;re using this API to manage another organization, use `customers/{customer}`, where customer is the customer to whom the device belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customer(String customer) {
             return customer(Output.of(customer));
         }

@@ -53,9 +53,17 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * The ID to use for the schema, which will become the final component of the schema&#39;s resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+     * 
+     */
     @Import(name="schemaId")
     private @Nullable Output<String> schemaId;
 
+    /**
+     * @return The ID to use for the schema, which will become the final component of the schema&#39;s resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+     * 
+     */
     public Optional<Output<String>> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
@@ -154,11 +162,23 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param schemaId The ID to use for the schema, which will become the final component of the schema&#39;s resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(@Nullable Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
+        /**
+         * @param schemaId The ID to use for the schema, which will become the final component of the schema&#39;s resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(String schemaId) {
             return schemaId(Output.of(schemaId));
         }

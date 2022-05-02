@@ -12,7 +12,7 @@ import java.util.Objects;
 @CustomType
 public final class DestinationResponse {
     /**
-     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
      * 
      */
     private final String cloudFunction;
@@ -26,19 +26,26 @@ public final class DestinationResponse {
      * 
      */
     private final GKEResponse gke;
+    /**
+     * @return The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+     * 
+     */
+    private final String workflow;
 
     @CustomType.Constructor
     private DestinationResponse(
         @CustomType.Parameter("cloudFunction") String cloudFunction,
         @CustomType.Parameter("cloudRun") CloudRunResponse cloudRun,
-        @CustomType.Parameter("gke") GKEResponse gke) {
+        @CustomType.Parameter("gke") GKEResponse gke,
+        @CustomType.Parameter("workflow") String workflow) {
         this.cloudFunction = cloudFunction;
         this.cloudRun = cloudRun;
         this.gke = gke;
+        this.workflow = workflow;
     }
 
     /**
-     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     * @return The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: `projects/{project}/locations/{location}/functions/{function}`
      * 
      */
     public String cloudFunction() {
@@ -58,6 +65,13 @@ public final class DestinationResponse {
     public GKEResponse gke() {
         return this.gke;
     }
+    /**
+     * @return The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`
+     * 
+     */
+    public String workflow() {
+        return this.workflow;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -71,6 +85,7 @@ public final class DestinationResponse {
         private String cloudFunction;
         private CloudRunResponse cloudRun;
         private GKEResponse gke;
+        private String workflow;
 
         public Builder() {
     	      // Empty
@@ -81,6 +96,7 @@ public final class DestinationResponse {
     	      this.cloudFunction = defaults.cloudFunction;
     	      this.cloudRun = defaults.cloudRun;
     	      this.gke = defaults.gke;
+    	      this.workflow = defaults.workflow;
         }
 
         public Builder cloudFunction(String cloudFunction) {
@@ -94,8 +110,12 @@ public final class DestinationResponse {
         public Builder gke(GKEResponse gke) {
             this.gke = Objects.requireNonNull(gke);
             return this;
+        }
+        public Builder workflow(String workflow) {
+            this.workflow = Objects.requireNonNull(workflow);
+            return this;
         }        public DestinationResponse build() {
-            return new DestinationResponse(cloudFunction, cloudRun, gke);
+            return new DestinationResponse(cloudFunction, cloudRun, gke, workflow);
         }
     }
 }

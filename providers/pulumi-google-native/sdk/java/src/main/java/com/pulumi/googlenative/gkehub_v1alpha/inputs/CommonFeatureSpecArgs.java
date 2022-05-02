@@ -5,8 +5,10 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.AnthosObservabilityFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecArgs;
+import com.pulumi.googlenative.gkehub_v1alpha.inputs.FeatureSpecArgs;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,6 +22,21 @@ import javax.annotation.Nullable;
 public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CommonFeatureSpecArgs Empty = new CommonFeatureSpecArgs();
+
+    /**
+     * Anthos Observability spec
+     * 
+     */
+    @Import(name="anthosobservability")
+    private @Nullable Output<AnthosObservabilityFeatureSpecArgs> anthosobservability;
+
+    /**
+     * @return Anthos Observability spec
+     * 
+     */
+    public Optional<Output<AnthosObservabilityFeatureSpecArgs>> anthosobservability() {
+        return Optional.ofNullable(this.anthosobservability);
+    }
 
     /**
      * Appdevexperience specific spec.
@@ -66,12 +83,29 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
         return Optional.ofNullable(this.multiclusteringress);
     }
 
+    /**
+     * Workload Certificate spec.
+     * 
+     */
+    @Import(name="workloadcertificate")
+    private @Nullable Output<FeatureSpecArgs> workloadcertificate;
+
+    /**
+     * @return Workload Certificate spec.
+     * 
+     */
+    public Optional<Output<FeatureSpecArgs>> workloadcertificate() {
+        return Optional.ofNullable(this.workloadcertificate);
+    }
+
     private CommonFeatureSpecArgs() {}
 
     private CommonFeatureSpecArgs(CommonFeatureSpecArgs $) {
+        this.anthosobservability = $.anthosobservability;
         this.appdevexperience = $.appdevexperience;
         this.cloudauditlogging = $.cloudauditlogging;
         this.multiclusteringress = $.multiclusteringress;
+        this.workloadcertificate = $.workloadcertificate;
     }
 
     public static Builder builder() {
@@ -90,6 +124,27 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
 
         public Builder(CommonFeatureSpecArgs defaults) {
             $ = new CommonFeatureSpecArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param anthosobservability Anthos Observability spec
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anthosobservability(@Nullable Output<AnthosObservabilityFeatureSpecArgs> anthosobservability) {
+            $.anthosobservability = anthosobservability;
+            return this;
+        }
+
+        /**
+         * @param anthosobservability Anthos Observability spec
+         * 
+         * @return builder
+         * 
+         */
+        public Builder anthosobservability(AnthosObservabilityFeatureSpecArgs anthosobservability) {
+            return anthosobservability(Output.of(anthosobservability));
         }
 
         /**
@@ -153,6 +208,27 @@ public final class CommonFeatureSpecArgs extends com.pulumi.resources.ResourceAr
          */
         public Builder multiclusteringress(MultiClusterIngressFeatureSpecArgs multiclusteringress) {
             return multiclusteringress(Output.of(multiclusteringress));
+        }
+
+        /**
+         * @param workloadcertificate Workload Certificate spec.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadcertificate(@Nullable Output<FeatureSpecArgs> workloadcertificate) {
+            $.workloadcertificate = workloadcertificate;
+            return this;
+        }
+
+        /**
+         * @param workloadcertificate Workload Certificate spec.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder workloadcertificate(FeatureSpecArgs workloadcertificate) {
+            return workloadcertificate(Output.of(workloadcertificate));
         }
 
         public CommonFeatureSpecArgs build() {

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildProvenanceArgs;
+import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,6 +21,29 @@ import javax.annotation.Nullable;
 public final class BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BuildDetailsArgs Empty = new BuildDetailsArgs();
+
+    /**
+     * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     * @deprecated
+     * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     */
+    @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+    @Import(name="intotoProvenance")
+    private @Nullable Output<InTotoProvenanceArgs> intotoProvenance;
+
+    /**
+     * @return Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     * @deprecated
+     * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+     * 
+     */
+    @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+    public Optional<Output<InTotoProvenanceArgs>> intotoProvenance() {
+        return Optional.ofNullable(this.intotoProvenance);
+    }
 
     /**
      * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence&#39;s envelope.
@@ -69,6 +93,7 @@ public final class BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
     private BuildDetailsArgs() {}
 
     private BuildDetailsArgs(BuildDetailsArgs $) {
+        this.intotoProvenance = $.intotoProvenance;
         this.intotoStatement = $.intotoStatement;
         this.provenance = $.provenance;
         this.provenanceBytes = $.provenanceBytes;
@@ -90,6 +115,35 @@ public final class BuildDetailsArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(BuildDetailsArgs defaults) {
             $ = new BuildDetailsArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param intotoProvenance Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+         * 
+         */
+        @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+        public Builder intotoProvenance(@Nullable Output<InTotoProvenanceArgs> intotoProvenance) {
+            $.intotoProvenance = intotoProvenance;
+            return this;
+        }
+
+        /**
+         * @param intotoProvenance Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec.
+         * 
+         */
+        @Deprecated /* Deprecated. See InTotoStatement for the replacement. In-toto Provenance representation as defined in spec. */
+        public Builder intotoProvenance(InTotoProvenanceArgs intotoProvenance) {
+            return intotoProvenance(Output.of(intotoProvenance));
         }
 
         /**

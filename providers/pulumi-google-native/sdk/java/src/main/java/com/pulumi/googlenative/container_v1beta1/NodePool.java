@@ -225,6 +225,24 @@ public class NodePool extends com.pulumi.resources.CustomResource {
         return this.status;
     }
     /**
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     * @deprecated
+     * [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     */
+    @Deprecated /* [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available. */
+    @Export(name="statusMessage", type=String.class, parameters={})
+    private Output<String> statusMessage;
+
+    /**
+     * @return [Output only] Deprecated. Use conditions instead. Additional information about the current status of this node pool instance, if available.
+     * 
+     */
+    public Output<String> statusMessage() {
+        return this.statusMessage;
+    }
+    /**
      * Upgrade settings control disruption and speed of the upgrade.
      * 
      */

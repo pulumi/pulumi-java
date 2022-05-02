@@ -50,7 +50,7 @@ public final class GetSnapshotResult {
      */
     private final String downloadBytes;
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     private final Boolean guestFlush;
@@ -145,6 +145,16 @@ public final class GetSnapshotResult {
      */
     private final String sourceInstantSnapshotId;
     /**
+     * @return URL of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    private final String sourceSnapshotSchedulePolicy;
+    /**
+     * @return ID of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    private final String sourceSnapshotSchedulePolicyId;
+    /**
      * @return The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.
      * 
      */
@@ -198,6 +208,8 @@ public final class GetSnapshotResult {
         @CustomType.Parameter("sourceDiskId") String sourceDiskId,
         @CustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
         @CustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
+        @CustomType.Parameter("sourceSnapshotSchedulePolicy") String sourceSnapshotSchedulePolicy,
+        @CustomType.Parameter("sourceSnapshotSchedulePolicyId") String sourceSnapshotSchedulePolicyId,
         @CustomType.Parameter("status") String status,
         @CustomType.Parameter("storageBytes") String storageBytes,
         @CustomType.Parameter("storageBytesStatus") String storageBytesStatus,
@@ -229,6 +241,8 @@ public final class GetSnapshotResult {
         this.sourceDiskId = sourceDiskId;
         this.sourceInstantSnapshot = sourceInstantSnapshot;
         this.sourceInstantSnapshotId = sourceInstantSnapshotId;
+        this.sourceSnapshotSchedulePolicy = sourceSnapshotSchedulePolicy;
+        this.sourceSnapshotSchedulePolicyId = sourceSnapshotSchedulePolicyId;
         this.status = status;
         this.storageBytes = storageBytes;
         this.storageBytesStatus = storageBytesStatus;
@@ -286,7 +300,7 @@ public final class GetSnapshotResult {
         return this.downloadBytes;
     }
     /**
-     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
+     * @return [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process.
      * 
      */
     public Boolean guestFlush() {
@@ -419,6 +433,20 @@ public final class GetSnapshotResult {
         return this.sourceInstantSnapshotId;
     }
     /**
+     * @return URL of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    public String sourceSnapshotSchedulePolicy() {
+        return this.sourceSnapshotSchedulePolicy;
+    }
+    /**
+     * @return ID of the resource policy which created this scheduled snapshot.
+     * 
+     */
+    public String sourceSnapshotSchedulePolicyId() {
+        return this.sourceSnapshotSchedulePolicyId;
+    }
+    /**
      * @return The status of the snapshot. This can be CREATING, DELETING, FAILED, READY, or UPLOADING.
      * 
      */
@@ -489,6 +517,8 @@ public final class GetSnapshotResult {
         private String sourceDiskId;
         private String sourceInstantSnapshot;
         private String sourceInstantSnapshotId;
+        private String sourceSnapshotSchedulePolicy;
+        private String sourceSnapshotSchedulePolicyId;
         private String status;
         private String storageBytes;
         private String storageBytesStatus;
@@ -527,6 +557,8 @@ public final class GetSnapshotResult {
     	      this.sourceDiskId = defaults.sourceDiskId;
     	      this.sourceInstantSnapshot = defaults.sourceInstantSnapshot;
     	      this.sourceInstantSnapshotId = defaults.sourceInstantSnapshotId;
+    	      this.sourceSnapshotSchedulePolicy = defaults.sourceSnapshotSchedulePolicy;
+    	      this.sourceSnapshotSchedulePolicyId = defaults.sourceSnapshotSchedulePolicyId;
     	      this.status = defaults.status;
     	      this.storageBytes = defaults.storageBytes;
     	      this.storageBytesStatus = defaults.storageBytesStatus;
@@ -647,6 +679,14 @@ public final class GetSnapshotResult {
             this.sourceInstantSnapshotId = Objects.requireNonNull(sourceInstantSnapshotId);
             return this;
         }
+        public Builder sourceSnapshotSchedulePolicy(String sourceSnapshotSchedulePolicy) {
+            this.sourceSnapshotSchedulePolicy = Objects.requireNonNull(sourceSnapshotSchedulePolicy);
+            return this;
+        }
+        public Builder sourceSnapshotSchedulePolicyId(String sourceSnapshotSchedulePolicyId) {
+            this.sourceSnapshotSchedulePolicyId = Objects.requireNonNull(sourceSnapshotSchedulePolicyId);
+            return this;
+        }
         public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
@@ -673,7 +713,7 @@ public final class GetSnapshotResult {
         public Builder userLicenses(String... userLicenses) {
             return userLicenses(List.of(userLicenses));
         }        public GetSnapshotResult build() {
-            return new GetSnapshotResult(architecture, autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, guestFlush, guestOsFeatures, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, selfLinkWithId, snapshotEncryptionKey, snapshotType, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceInstantSnapshot, sourceInstantSnapshotId, status, storageBytes, storageBytesStatus, storageLocations, userLicenses);
+            return new GetSnapshotResult(architecture, autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, guestFlush, guestOsFeatures, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, selfLinkWithId, snapshotEncryptionKey, snapshotType, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceInstantSnapshot, sourceInstantSnapshotId, sourceSnapshotSchedulePolicy, sourceSnapshotSchedulePolicyId, status, storageBytes, storageBytesStatus, storageLocations, userLicenses);
         }
     }
 }

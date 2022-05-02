@@ -22,9 +22,17 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BatchArgs Empty = new BatchArgs();
 
+    /**
+     * Optional. The ID to use for the batch, which will become the final component of the batch&#39;s resource name.This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
+     * 
+     */
     @Import(name="batchId")
     private @Nullable Output<String> batchId;
 
+    /**
+     * @return Optional. The ID to use for the batch, which will become the final component of the batch&#39;s resource name.This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
+     * 
+     */
     public Optional<Output<String>> batchId() {
         return Optional.ofNullable(this.batchId);
     }
@@ -88,9 +96,17 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.pysparkBatch);
     }
 
+    /**
+     * Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the second request is ignored and the Operation that corresponds to the first Batch created and stored in the backend is returned.Recommendation: Set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the second request is ignored and the Operation that corresponds to the first Batch created and stored in the backend is returned.Recommendation: Set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -189,11 +205,23 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchId Optional. The ID to use for the batch, which will become the final component of the batch&#39;s resource name.This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchId(@Nullable Output<String> batchId) {
             $.batchId = batchId;
             return this;
         }
 
+        /**
+         * @param batchId Optional. The ID to use for the batch, which will become the final component of the batch&#39;s resource name.This value must be 4-63 characters. Valid characters are /[a-z][0-9]-/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchId(String batchId) {
             return batchId(Output.of(batchId));
         }
@@ -279,11 +307,23 @@ public final class BatchArgs extends com.pulumi.resources.ResourceArgs {
             return pysparkBatch(Output.of(pysparkBatch));
         }
 
+        /**
+         * @param requestId Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the second request is ignored and the Operation that corresponds to the first Batch created and stored in the backend is returned.Recommendation: Set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the second request is ignored and the Operation that corresponds to the first Batch created and stored in the backend is returned.Recommendation: Set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

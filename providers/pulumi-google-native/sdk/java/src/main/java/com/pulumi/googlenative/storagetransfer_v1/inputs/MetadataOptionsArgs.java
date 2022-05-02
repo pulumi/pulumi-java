@@ -12,6 +12,7 @@ import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsMode;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsStorageClass;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsSymlink;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsTemporaryHold;
+import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsTimeCreated;
 import com.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsUid;
 import java.util.Objects;
 import java.util.Optional;
@@ -42,14 +43,14 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @Import(name="gid")
     private @Nullable Output<MetadataOptionsGid> gid;
 
     /**
-     * @return Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public Optional<Output<MetadataOptionsGid>> gid() {
@@ -72,14 +73,14 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @Import(name="mode")
     private @Nullable Output<MetadataOptionsMode> mode;
 
     /**
-     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public Optional<Output<MetadataOptionsMode>> mode() {
@@ -102,14 +103,14 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @Import(name="symlink")
     private @Nullable Output<MetadataOptionsSymlink> symlink;
 
     /**
-     * @return Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+     * @return Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public Optional<Output<MetadataOptionsSymlink>> symlink() {
@@ -132,14 +133,29 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+     * 
+     */
+    @Import(name="timeCreated")
+    private @Nullable Output<MetadataOptionsTimeCreated> timeCreated;
+
+    /**
+     * @return Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+     * 
+     */
+    public Optional<Output<MetadataOptionsTimeCreated>> timeCreated() {
+        return Optional.ofNullable(this.timeCreated);
+    }
+
+    /**
+     * Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @Import(name="uid")
     private @Nullable Output<MetadataOptionsUid> uid;
 
     /**
-     * @return Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * @return Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     public Optional<Output<MetadataOptionsUid>> uid() {
@@ -156,6 +172,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         this.storageClass = $.storageClass;
         this.symlink = $.symlink;
         this.temporaryHold = $.temporaryHold;
+        this.timeCreated = $.timeCreated;
         this.uid = $.uid;
     }
 
@@ -199,7 +216,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param gid Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+         * @param gid Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -210,7 +227,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param gid Specifies how each file&#39;s GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+         * @param gid Specifies how each file&#39;s POSIX group ID (GID) attribute should be handled by the transfer. By default, GID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -241,7 +258,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -252,7 +269,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
+         * @param mode Specifies how each file&#39;s mode attribute should be handled by the transfer. By default, mode is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -283,7 +300,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param symlink Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+         * @param symlink Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -294,7 +311,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param symlink Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
+         * @param symlink Specifies how symlinks should be handled by the transfer. By default, symlinks are not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -325,7 +342,28 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param uid Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+         * @param timeCreated Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreated(@Nullable Output<MetadataOptionsTimeCreated> timeCreated) {
+            $.timeCreated = timeCreated;
+            return this;
+        }
+
+        /**
+         * @param timeCreated Specifies how each object&#39;s `timeCreated` metadata is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TIME_CREATED_SKIP.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder timeCreated(MetadataOptionsTimeCreated timeCreated) {
+            return timeCreated(Output.of(timeCreated));
+        }
+
+        /**
+         * @param uid Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 
@@ -336,7 +374,7 @@ public final class MetadataOptionsArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param uid Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+         * @param uid Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
          * 
          * @return builder
          * 

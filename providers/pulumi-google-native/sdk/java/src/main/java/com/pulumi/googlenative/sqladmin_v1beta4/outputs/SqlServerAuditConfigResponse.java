@@ -19,13 +19,27 @@ public final class SqlServerAuditConfigResponse {
      * 
      */
     private final String kind;
+    /**
+     * @return How long to keep generated audit files.
+     * 
+     */
+    private final String retentionInterval;
+    /**
+     * @return How often to upload generated audit files.
+     * 
+     */
+    private final String uploadInterval;
 
     @CustomType.Constructor
     private SqlServerAuditConfigResponse(
         @CustomType.Parameter("bucket") String bucket,
-        @CustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("retentionInterval") String retentionInterval,
+        @CustomType.Parameter("uploadInterval") String uploadInterval) {
         this.bucket = bucket;
         this.kind = kind;
+        this.retentionInterval = retentionInterval;
+        this.uploadInterval = uploadInterval;
     }
 
     /**
@@ -42,6 +56,20 @@ public final class SqlServerAuditConfigResponse {
     public String kind() {
         return this.kind;
     }
+    /**
+     * @return How long to keep generated audit files.
+     * 
+     */
+    public String retentionInterval() {
+        return this.retentionInterval;
+    }
+    /**
+     * @return How often to upload generated audit files.
+     * 
+     */
+    public String uploadInterval() {
+        return this.uploadInterval;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -54,6 +82,8 @@ public final class SqlServerAuditConfigResponse {
     public static final class Builder {
         private String bucket;
         private String kind;
+        private String retentionInterval;
+        private String uploadInterval;
 
         public Builder() {
     	      // Empty
@@ -63,6 +93,8 @@ public final class SqlServerAuditConfigResponse {
     	      Objects.requireNonNull(defaults);
     	      this.bucket = defaults.bucket;
     	      this.kind = defaults.kind;
+    	      this.retentionInterval = defaults.retentionInterval;
+    	      this.uploadInterval = defaults.uploadInterval;
         }
 
         public Builder bucket(String bucket) {
@@ -72,8 +104,16 @@ public final class SqlServerAuditConfigResponse {
         public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
+        }
+        public Builder retentionInterval(String retentionInterval) {
+            this.retentionInterval = Objects.requireNonNull(retentionInterval);
+            return this;
+        }
+        public Builder uploadInterval(String uploadInterval) {
+            this.uploadInterval = Objects.requireNonNull(uploadInterval);
+            return this;
         }        public SqlServerAuditConfigResponse build() {
-            return new SqlServerAuditConfigResponse(bucket, kind);
+            return new SqlServerAuditConfigResponse(bucket, kind, retentionInterval, uploadInterval);
         }
     }
 }

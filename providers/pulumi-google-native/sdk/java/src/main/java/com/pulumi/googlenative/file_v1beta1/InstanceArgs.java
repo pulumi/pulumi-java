@@ -65,9 +65,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.fileShares);
     }
 
+    /**
+     * Required. The ID of the instance to create. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * 
+     */
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return Required. The ID of the instance to create. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -252,11 +260,23 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return fileShares(List.of(fileShares));
         }
 
+        /**
+         * @param instanceId Required. The ID of the instance to create. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId Required. The ID of the instance to create. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }

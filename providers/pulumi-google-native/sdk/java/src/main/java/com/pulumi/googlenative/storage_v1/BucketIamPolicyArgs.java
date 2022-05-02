@@ -70,13 +70,6 @@ public final class BucketIamPolicyArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.kind);
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable Output<String> provisionalUserProject;
-
-    public Optional<Output<String>> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     /**
      * The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
      * 
@@ -92,9 +85,17 @@ public final class BucketIamPolicyArgs extends com.pulumi.resources.ResourceArgs
         return Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     @Import(name="userProject")
     private @Nullable Output<String> userProject;
 
+    /**
+     * @return The project to be billed for this request. Required for Requester Pays buckets.
+     * 
+     */
     public Optional<Output<String>> userProject() {
         return Optional.ofNullable(this.userProject);
     }
@@ -121,7 +122,6 @@ public final class BucketIamPolicyArgs extends com.pulumi.resources.ResourceArgs
         this.bucket = $.bucket;
         this.etag = $.etag;
         this.kind = $.kind;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.resourceId = $.resourceId;
         this.userProject = $.userProject;
         this.version = $.version;
@@ -227,15 +227,6 @@ public final class BucketIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return kind(Output.of(kind));
         }
 
-        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
-            return this;
-        }
-
-        public Builder provisionalUserProject(String provisionalUserProject) {
-            return provisionalUserProject(Output.of(provisionalUserProject));
-        }
-
         /**
          * @param resourceId The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
          * 
@@ -257,11 +248,23 @@ public final class BucketIamPolicyArgs extends com.pulumi.resources.ResourceArgs
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(@Nullable Output<String> userProject) {
             $.userProject = userProject;
             return this;
         }
 
+        /**
+         * @param userProject The project to be billed for this request. Required for Requester Pays buckets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProject(String userProject) {
             return userProject(Output.of(userProject));
         }

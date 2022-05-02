@@ -4,6 +4,7 @@
 package com.pulumi.googlenative.bigquery_v2.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.bigquery_v2.outputs.CloneDefinitionResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.ExternalDataConfigurationResponse;
@@ -23,6 +24,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTableResult {
+    /**
+     * @return Clone definition.
+     * 
+     */
+    private final CloneDefinitionResponse cloneDefinition;
     /**
      * @return [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
@@ -99,6 +105,16 @@ public final class GetTableResult {
      */
     private final ModelDefinitionResponse model;
     /**
+     * @return Number of logical bytes that are less than 90 days old.
+     * 
+     */
+    private final String numActiveLogicalBytes;
+    /**
+     * @return Number of physical bytes less than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    private final String numActivePhysicalBytes;
+    /**
      * @return The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
@@ -109,6 +125,21 @@ public final class GetTableResult {
      */
     private final String numLongTermBytes;
     /**
+     * @return Number of logical bytes that are more than 90 days old.
+     * 
+     */
+    private final String numLongTermLogicalBytes;
+    /**
+     * @return Number of physical bytes more than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    private final String numLongTermPhysicalBytes;
+    /**
+     * @return The number of partitions present in the table or materialized view. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    private final String numPartitions;
+    /**
      * @return [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.
      * 
      */
@@ -118,6 +149,21 @@ public final class GetTableResult {
      * 
      */
     private final String numRows;
+    /**
+     * @return Number of physical bytes used by time travel storage (deleted or changed data). This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    private final String numTimeTravelPhysicalBytes;
+    /**
+     * @return Total number of logical bytes in the table or materialized view.
+     * 
+     */
+    private final String numTotalLogicalBytes;
+    /**
+     * @return The physical size of this table in bytes. This also includes storage used for time travel. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    private final String numTotalPhysicalBytes;
     /**
      * @return [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
@@ -171,6 +217,7 @@ public final class GetTableResult {
 
     @CustomType.Constructor
     private GetTableResult(
+        @CustomType.Parameter("cloneDefinition") CloneDefinitionResponse cloneDefinition,
         @CustomType.Parameter("clustering") ClusteringResponse clustering,
         @CustomType.Parameter("creationTime") String creationTime,
         @CustomType.Parameter("defaultCollation") String defaultCollation,
@@ -186,10 +233,18 @@ public final class GetTableResult {
         @CustomType.Parameter("location") String location,
         @CustomType.Parameter("materializedView") MaterializedViewDefinitionResponse materializedView,
         @CustomType.Parameter("model") ModelDefinitionResponse model,
+        @CustomType.Parameter("numActiveLogicalBytes") String numActiveLogicalBytes,
+        @CustomType.Parameter("numActivePhysicalBytes") String numActivePhysicalBytes,
         @CustomType.Parameter("numBytes") String numBytes,
         @CustomType.Parameter("numLongTermBytes") String numLongTermBytes,
+        @CustomType.Parameter("numLongTermLogicalBytes") String numLongTermLogicalBytes,
+        @CustomType.Parameter("numLongTermPhysicalBytes") String numLongTermPhysicalBytes,
+        @CustomType.Parameter("numPartitions") String numPartitions,
         @CustomType.Parameter("numPhysicalBytes") String numPhysicalBytes,
         @CustomType.Parameter("numRows") String numRows,
+        @CustomType.Parameter("numTimeTravelPhysicalBytes") String numTimeTravelPhysicalBytes,
+        @CustomType.Parameter("numTotalLogicalBytes") String numTotalLogicalBytes,
+        @CustomType.Parameter("numTotalPhysicalBytes") String numTotalPhysicalBytes,
         @CustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
         @CustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
         @CustomType.Parameter("schema") TableSchemaResponse schema,
@@ -200,6 +255,7 @@ public final class GetTableResult {
         @CustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
         @CustomType.Parameter("type") String type,
         @CustomType.Parameter("view") ViewDefinitionResponse view) {
+        this.cloneDefinition = cloneDefinition;
         this.clustering = clustering;
         this.creationTime = creationTime;
         this.defaultCollation = defaultCollation;
@@ -215,10 +271,18 @@ public final class GetTableResult {
         this.location = location;
         this.materializedView = materializedView;
         this.model = model;
+        this.numActiveLogicalBytes = numActiveLogicalBytes;
+        this.numActivePhysicalBytes = numActivePhysicalBytes;
         this.numBytes = numBytes;
         this.numLongTermBytes = numLongTermBytes;
+        this.numLongTermLogicalBytes = numLongTermLogicalBytes;
+        this.numLongTermPhysicalBytes = numLongTermPhysicalBytes;
+        this.numPartitions = numPartitions;
         this.numPhysicalBytes = numPhysicalBytes;
         this.numRows = numRows;
+        this.numTimeTravelPhysicalBytes = numTimeTravelPhysicalBytes;
+        this.numTotalLogicalBytes = numTotalLogicalBytes;
+        this.numTotalPhysicalBytes = numTotalPhysicalBytes;
         this.rangePartitioning = rangePartitioning;
         this.requirePartitionFilter = requirePartitionFilter;
         this.schema = schema;
@@ -231,6 +295,13 @@ public final class GetTableResult {
         this.view = view;
     }
 
+    /**
+     * @return Clone definition.
+     * 
+     */
+    public CloneDefinitionResponse cloneDefinition() {
+        return this.cloneDefinition;
+    }
     /**
      * @return [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
@@ -337,6 +408,20 @@ public final class GetTableResult {
         return this.model;
     }
     /**
+     * @return Number of logical bytes that are less than 90 days old.
+     * 
+     */
+    public String numActiveLogicalBytes() {
+        return this.numActiveLogicalBytes;
+    }
+    /**
+     * @return Number of physical bytes less than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public String numActivePhysicalBytes() {
+        return this.numActivePhysicalBytes;
+    }
+    /**
      * @return The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
@@ -351,6 +436,27 @@ public final class GetTableResult {
         return this.numLongTermBytes;
     }
     /**
+     * @return Number of logical bytes that are more than 90 days old.
+     * 
+     */
+    public String numLongTermLogicalBytes() {
+        return this.numLongTermLogicalBytes;
+    }
+    /**
+     * @return Number of physical bytes more than 90 days old. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public String numLongTermPhysicalBytes() {
+        return this.numLongTermPhysicalBytes;
+    }
+    /**
+     * @return The number of partitions present in the table or materialized view. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public String numPartitions() {
+        return this.numPartitions;
+    }
+    /**
      * @return [TrustedTester] The physical size of this table in bytes, excluding any data in the streaming buffer. This includes compression and storage used for time travel.
      * 
      */
@@ -363,6 +469,27 @@ public final class GetTableResult {
      */
     public String numRows() {
         return this.numRows;
+    }
+    /**
+     * @return Number of physical bytes used by time travel storage (deleted or changed data). This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public String numTimeTravelPhysicalBytes() {
+        return this.numTimeTravelPhysicalBytes;
+    }
+    /**
+     * @return Total number of logical bytes in the table or materialized view.
+     * 
+     */
+    public String numTotalLogicalBytes() {
+        return this.numTotalLogicalBytes;
+    }
+    /**
+     * @return The physical size of this table in bytes. This also includes storage used for time travel. This data is not kept in real time, and might be delayed by a few seconds to a few minutes.
+     * 
+     */
+    public String numTotalPhysicalBytes() {
+        return this.numTotalPhysicalBytes;
     }
     /**
      * @return [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
@@ -444,6 +571,7 @@ public final class GetTableResult {
     }
 
     public static final class Builder {
+        private CloneDefinitionResponse cloneDefinition;
         private ClusteringResponse clustering;
         private String creationTime;
         private String defaultCollation;
@@ -459,10 +587,18 @@ public final class GetTableResult {
         private String location;
         private MaterializedViewDefinitionResponse materializedView;
         private ModelDefinitionResponse model;
+        private String numActiveLogicalBytes;
+        private String numActivePhysicalBytes;
         private String numBytes;
         private String numLongTermBytes;
+        private String numLongTermLogicalBytes;
+        private String numLongTermPhysicalBytes;
+        private String numPartitions;
         private String numPhysicalBytes;
         private String numRows;
+        private String numTimeTravelPhysicalBytes;
+        private String numTotalLogicalBytes;
+        private String numTotalPhysicalBytes;
         private RangePartitioningResponse rangePartitioning;
         private Boolean requirePartitionFilter;
         private TableSchemaResponse schema;
@@ -480,6 +616,7 @@ public final class GetTableResult {
 
         public Builder(GetTableResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.cloneDefinition = defaults.cloneDefinition;
     	      this.clustering = defaults.clustering;
     	      this.creationTime = defaults.creationTime;
     	      this.defaultCollation = defaults.defaultCollation;
@@ -495,10 +632,18 @@ public final class GetTableResult {
     	      this.location = defaults.location;
     	      this.materializedView = defaults.materializedView;
     	      this.model = defaults.model;
+    	      this.numActiveLogicalBytes = defaults.numActiveLogicalBytes;
+    	      this.numActivePhysicalBytes = defaults.numActivePhysicalBytes;
     	      this.numBytes = defaults.numBytes;
     	      this.numLongTermBytes = defaults.numLongTermBytes;
+    	      this.numLongTermLogicalBytes = defaults.numLongTermLogicalBytes;
+    	      this.numLongTermPhysicalBytes = defaults.numLongTermPhysicalBytes;
+    	      this.numPartitions = defaults.numPartitions;
     	      this.numPhysicalBytes = defaults.numPhysicalBytes;
     	      this.numRows = defaults.numRows;
+    	      this.numTimeTravelPhysicalBytes = defaults.numTimeTravelPhysicalBytes;
+    	      this.numTotalLogicalBytes = defaults.numTotalLogicalBytes;
+    	      this.numTotalPhysicalBytes = defaults.numTotalPhysicalBytes;
     	      this.rangePartitioning = defaults.rangePartitioning;
     	      this.requirePartitionFilter = defaults.requirePartitionFilter;
     	      this.schema = defaults.schema;
@@ -511,6 +656,10 @@ public final class GetTableResult {
     	      this.view = defaults.view;
         }
 
+        public Builder cloneDefinition(CloneDefinitionResponse cloneDefinition) {
+            this.cloneDefinition = Objects.requireNonNull(cloneDefinition);
+            return this;
+        }
         public Builder clustering(ClusteringResponse clustering) {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
@@ -571,6 +720,14 @@ public final class GetTableResult {
             this.model = Objects.requireNonNull(model);
             return this;
         }
+        public Builder numActiveLogicalBytes(String numActiveLogicalBytes) {
+            this.numActiveLogicalBytes = Objects.requireNonNull(numActiveLogicalBytes);
+            return this;
+        }
+        public Builder numActivePhysicalBytes(String numActivePhysicalBytes) {
+            this.numActivePhysicalBytes = Objects.requireNonNull(numActivePhysicalBytes);
+            return this;
+        }
         public Builder numBytes(String numBytes) {
             this.numBytes = Objects.requireNonNull(numBytes);
             return this;
@@ -579,12 +736,36 @@ public final class GetTableResult {
             this.numLongTermBytes = Objects.requireNonNull(numLongTermBytes);
             return this;
         }
+        public Builder numLongTermLogicalBytes(String numLongTermLogicalBytes) {
+            this.numLongTermLogicalBytes = Objects.requireNonNull(numLongTermLogicalBytes);
+            return this;
+        }
+        public Builder numLongTermPhysicalBytes(String numLongTermPhysicalBytes) {
+            this.numLongTermPhysicalBytes = Objects.requireNonNull(numLongTermPhysicalBytes);
+            return this;
+        }
+        public Builder numPartitions(String numPartitions) {
+            this.numPartitions = Objects.requireNonNull(numPartitions);
+            return this;
+        }
         public Builder numPhysicalBytes(String numPhysicalBytes) {
             this.numPhysicalBytes = Objects.requireNonNull(numPhysicalBytes);
             return this;
         }
         public Builder numRows(String numRows) {
             this.numRows = Objects.requireNonNull(numRows);
+            return this;
+        }
+        public Builder numTimeTravelPhysicalBytes(String numTimeTravelPhysicalBytes) {
+            this.numTimeTravelPhysicalBytes = Objects.requireNonNull(numTimeTravelPhysicalBytes);
+            return this;
+        }
+        public Builder numTotalLogicalBytes(String numTotalLogicalBytes) {
+            this.numTotalLogicalBytes = Objects.requireNonNull(numTotalLogicalBytes);
+            return this;
+        }
+        public Builder numTotalPhysicalBytes(String numTotalPhysicalBytes) {
+            this.numTotalPhysicalBytes = Objects.requireNonNull(numTotalPhysicalBytes);
             return this;
         }
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
@@ -627,7 +808,7 @@ public final class GetTableResult {
             this.view = Objects.requireNonNull(view);
             return this;
         }        public GetTableResult build() {
-            return new GetTableResult(clustering, creationTime, defaultCollation, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, kind, labels, lastModifiedTime, location, materializedView, model, numBytes, numLongTermBytes, numPhysicalBytes, numRows, rangePartitioning, requirePartitionFilter, schema, selfLink, snapshotDefinition, streamingBuffer, tableReference, timePartitioning, type, view);
+            return new GetTableResult(cloneDefinition, clustering, creationTime, defaultCollation, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, kind, labels, lastModifiedTime, location, materializedView, model, numActiveLogicalBytes, numActivePhysicalBytes, numBytes, numLongTermBytes, numLongTermLogicalBytes, numLongTermPhysicalBytes, numPartitions, numPhysicalBytes, numRows, numTimeTravelPhysicalBytes, numTotalLogicalBytes, numTotalPhysicalBytes, rangePartitioning, requirePartitionFilter, schema, selfLink, snapshotDefinition, streamingBuffer, tableReference, timePartitioning, type, view);
         }
     }
 }

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
+import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1DataplexTableSpecArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,6 +19,21 @@ import javax.annotation.Nullable;
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1DatabaseTableSpecArgs Empty = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs();
+
+    /**
+     * Fields specific to a Dataplex table and present only in the Dataplex table entries.
+     * 
+     */
+    @Import(name="dataplexTable")
+    private @Nullable Output<GoogleCloudDatacatalogV1DataplexTableSpecArgs> dataplexTable;
+
+    /**
+     * @return Fields specific to a Dataplex table and present only in the Dataplex table entries.
+     * 
+     */
+    public Optional<Output<GoogleCloudDatacatalogV1DataplexTableSpecArgs>> dataplexTable() {
+        return Optional.ofNullable(this.dataplexTable);
+    }
 
     /**
      * Type of this table.
@@ -37,6 +53,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pul
     private GoogleCloudDatacatalogV1DatabaseTableSpecArgs() {}
 
     private GoogleCloudDatacatalogV1DatabaseTableSpecArgs(GoogleCloudDatacatalogV1DatabaseTableSpecArgs $) {
+        this.dataplexTable = $.dataplexTable;
         this.type = $.type;
     }
 
@@ -56,6 +73,27 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends com.pul
 
         public Builder(GoogleCloudDatacatalogV1DatabaseTableSpecArgs defaults) {
             $ = new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param dataplexTable Fields specific to a Dataplex table and present only in the Dataplex table entries.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataplexTable(@Nullable Output<GoogleCloudDatacatalogV1DataplexTableSpecArgs> dataplexTable) {
+            $.dataplexTable = dataplexTable;
+            return this;
+        }
+
+        /**
+         * @param dataplexTable Fields specific to a Dataplex table and present only in the Dataplex table entries.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataplexTable(GoogleCloudDatacatalogV1DataplexTableSpecArgs dataplexTable) {
+            return dataplexTable(Output.of(dataplexTable));
         }
 
         /**

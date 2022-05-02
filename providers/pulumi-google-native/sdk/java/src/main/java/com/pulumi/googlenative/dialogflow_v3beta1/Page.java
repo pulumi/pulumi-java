@@ -24,14 +24,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:dialogflow/v3beta1:Page")
 public class Page extends com.pulumi.resources.CustomResource {
     /**
-     * The human-readable name of the page, unique within the agent.
+     * The human-readable name of the page, unique within the flow.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return The human-readable name of the page, unique within the agent.
+     * @return The human-readable name of the page, unique within the flow.
      * 
      */
     public Output<String> displayName() {

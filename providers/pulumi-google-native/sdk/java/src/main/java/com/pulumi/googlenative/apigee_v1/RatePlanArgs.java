@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.apigee_v1.enums.RatePlanBillingPeriod;
 import com.pulumi.googlenative.apigee_v1.enums.RatePlanConsumptionPricingType;
+import com.pulumi.googlenative.apigee_v1.enums.RatePlanPaymentFundingModel;
 import com.pulumi.googlenative.apigee_v1.enums.RatePlanRevenueShareType;
 import com.pulumi.googlenative.apigee_v1.enums.RatePlanState;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1RateRangeArgs;
@@ -189,6 +190,29 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     * @deprecated
+     * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     */
+    @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+    @Import(name="paymentFundingModel")
+    private @Nullable Output<RatePlanPaymentFundingModel> paymentFundingModel;
+
+    /**
+     * @return DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     * @deprecated
+     * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+     * 
+     */
+    @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+    public Optional<Output<RatePlanPaymentFundingModel>> paymentFundingModel() {
+        return Optional.ofNullable(this.paymentFundingModel);
+    }
+
+    /**
      * Details of the revenue sharing model.
      * 
      */
@@ -278,6 +302,7 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
         this.fixedFeeFrequency = $.fixedFeeFrequency;
         this.fixedRecurringFee = $.fixedRecurringFee;
         this.organizationId = $.organizationId;
+        this.paymentFundingModel = $.paymentFundingModel;
         this.revenueShareRates = $.revenueShareRates;
         this.revenueShareType = $.revenueShareType;
         this.setupFee = $.setupFee;
@@ -539,6 +564,35 @@ public final class RatePlanArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
+        }
+
+        /**
+         * @param paymentFundingModel DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+         * 
+         */
+        @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+        public Builder paymentFundingModel(@Nullable Output<RatePlanPaymentFundingModel> paymentFundingModel) {
+            $.paymentFundingModel = paymentFundingModel;
+            return this;
+        }
+
+        /**
+         * @param paymentFundingModel DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid.
+         * 
+         */
+        @Deprecated /* DEPRECATED: This field is no longer supported and will eventually be removed when Apigee Hybrid 1.5/1.6 is no longer supported. Instead, use the `billingType` field inside `DeveloperMonetizationConfig` resource. Flag that specifies the billing account type, prepaid or postpaid. */
+        public Builder paymentFundingModel(RatePlanPaymentFundingModel paymentFundingModel) {
+            return paymentFundingModel(Output.of(paymentFundingModel));
         }
 
         /**

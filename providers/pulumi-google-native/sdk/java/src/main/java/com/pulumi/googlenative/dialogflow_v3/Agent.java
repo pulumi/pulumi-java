@@ -121,6 +121,20 @@ public class Agent extends com.pulumi.resources.CustomResource {
         return this.enableStackdriverLogging;
     }
     /**
+     * Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    @Export(name="locked", type=Boolean.class, parameters={})
+    private Output<Boolean> locked;
+
+    /**
+     * @return Indiciates whether the agent is locked for changes. If the agent is locked, modifications to the agent will be rejected except for RestoreAgent.
+     * 
+     */
+    public Output<Boolean> locked() {
+        return this.locked;
+    }
+    /**
      * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */

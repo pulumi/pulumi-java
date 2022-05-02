@@ -42,13 +42,6 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.projection);
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable String provisionalUserProject;
-
-    public Optional<String> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     @Import(name="userProject")
     private @Nullable String userProject;
 
@@ -63,7 +56,6 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
         this.ifMetagenerationMatch = $.ifMetagenerationMatch;
         this.ifMetagenerationNotMatch = $.ifMetagenerationNotMatch;
         this.projection = $.projection;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.userProject = $.userProject;
     }
 
@@ -102,11 +94,6 @@ public final class GetBucketArgs extends com.pulumi.resources.InvokeArgs {
 
         public Builder projection(@Nullable String projection) {
             $.projection = projection;
-            return this;
-        }
-
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
 

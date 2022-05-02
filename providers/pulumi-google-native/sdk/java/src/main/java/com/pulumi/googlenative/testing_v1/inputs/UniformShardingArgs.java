@@ -10,7 +10,7 @@ import java.util.Objects;
 
 
 /**
- * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be translated to &#34;-e numShard&#34; &#34;-e shardIndex&#34; AndroidJUnitRunner arguments. With uniform sharding enabled, specifying these sharding arguments via environment_variables is invalid.
+ * Uniformly shards test cases given a total number of shards. For Instrumentation test, it will be translated to &#34;-e numShard&#34; &#34;-e shardIndex&#34; AndroidJUnitRunner arguments. Based on the sharding mechanism AndroidJUnitRunner uses, there is no guarantee that test cases will be distributed uniformly across all shards. With uniform sharding enabled, specifying these sharding arguments via environment_variables is invalid.
  * 
  */
 public final class UniformShardingArgs extends com.pulumi.resources.ResourceArgs {

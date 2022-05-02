@@ -46,7 +46,16 @@ public final class GetSubnetworkResult {
      */
     private final Boolean enableL2;
     /**
-     * @return The range of external IPv6 addresses that are owned by this subnetwork.
+     * @return Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch. */
+    private final Boolean enablePrivateV6Access;
+    /**
+     * @return The external IPv6 address range that is assigned to this subnetwork.
      * 
      */
     private final String externalIpv6Prefix;
@@ -66,17 +75,22 @@ public final class GetSubnetworkResult {
      */
     private final String gatewayAddress;
     /**
+     * @return The internal IPv6 address range that is assigned to this subnetwork.
+     * 
+     */
+    private final String internalIpv6Prefix;
+    /**
      * @return The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be any range listed in the Valid ranges list. The range can be expanded after creation using expandIpCidrRange.
      * 
      */
     private final String ipCidrRange;
     /**
-     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
      * 
      */
     private final String ipv6AccessType;
     /**
-     * @return The range of internal IPv6 addresses that are owned by this subnetwork. Note this will be for private google access only eventually.
+     * @return This field is for internal use.
      * 
      */
     private final String ipv6CidrRange;
@@ -111,10 +125,19 @@ public final class GetSubnetworkResult {
      */
     private final Boolean privateIpGoogleAccess;
     /**
-     * @return The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This field can be both set at resource creation time and updated using patch.
+     * @return This field is for internal use. This field can be both set at resource creation time and updated using patch.
      * 
      */
     private final String privateIpv6GoogleAccess;
+    /**
+     * @return Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS. */
+    private final List<String> privateIpv6GoogleAccessServiceAccounts;
     /**
      * @return The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
      * 
@@ -151,7 +174,7 @@ public final class GetSubnetworkResult {
      */
     private final String selfLinkWithId;
     /**
-     * @return The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. This field can be both set at resource creation time and updated using patch.
+     * @return The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4 addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6 addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation time and updated using patch.
      * 
      */
     private final String stackType;
@@ -174,10 +197,12 @@ public final class GetSubnetworkResult {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
         @CustomType.Parameter("enableL2") Boolean enableL2,
+        @CustomType.Parameter("enablePrivateV6Access") Boolean enablePrivateV6Access,
         @CustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
         @CustomType.Parameter("fingerprint") String fingerprint,
         @CustomType.Parameter("flowSampling") Double flowSampling,
         @CustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @CustomType.Parameter("internalIpv6Prefix") String internalIpv6Prefix,
         @CustomType.Parameter("ipCidrRange") String ipCidrRange,
         @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
         @CustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
@@ -188,6 +213,7 @@ public final class GetSubnetworkResult {
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
         @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("privateIpv6GoogleAccessServiceAccounts") List<String> privateIpv6GoogleAccessServiceAccounts,
         @CustomType.Parameter("purpose") String purpose,
         @CustomType.Parameter("region") String region,
         @CustomType.Parameter("reservedInternalRange") String reservedInternalRange,
@@ -204,10 +230,12 @@ public final class GetSubnetworkResult {
         this.description = description;
         this.enableFlowLogs = enableFlowLogs;
         this.enableL2 = enableL2;
+        this.enablePrivateV6Access = enablePrivateV6Access;
         this.externalIpv6Prefix = externalIpv6Prefix;
         this.fingerprint = fingerprint;
         this.flowSampling = flowSampling;
         this.gatewayAddress = gatewayAddress;
+        this.internalIpv6Prefix = internalIpv6Prefix;
         this.ipCidrRange = ipCidrRange;
         this.ipv6AccessType = ipv6AccessType;
         this.ipv6CidrRange = ipv6CidrRange;
@@ -218,6 +246,7 @@ public final class GetSubnetworkResult {
         this.network = network;
         this.privateIpGoogleAccess = privateIpGoogleAccess;
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+        this.privateIpv6GoogleAccessServiceAccounts = privateIpv6GoogleAccessServiceAccounts;
         this.purpose = purpose;
         this.region = region;
         this.reservedInternalRange = reservedInternalRange;
@@ -273,7 +302,18 @@ public final class GetSubnetworkResult {
         return this.enableL2;
     }
     /**
-     * @return The range of external IPv6 addresses that are owned by this subnetwork.
+     * @return Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can directly access Google services via internal IPv6 addresses. This field can be both set at resource creation time and updated using patch. */
+    public Boolean enablePrivateV6Access() {
+        return this.enablePrivateV6Access;
+    }
+    /**
+     * @return The external IPv6 address range that is assigned to this subnetwork.
      * 
      */
     public String externalIpv6Prefix() {
@@ -301,6 +341,13 @@ public final class GetSubnetworkResult {
         return this.gatewayAddress;
     }
     /**
+     * @return The internal IPv6 address range that is assigned to this subnetwork.
+     * 
+     */
+    public String internalIpv6Prefix() {
+        return this.internalIpv6Prefix;
+    }
+    /**
      * @return The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported. This field is set at resource creation time. The range can be any range listed in the Valid ranges list. The range can be expanded after creation using expandIpCidrRange.
      * 
      */
@@ -308,14 +355,14 @@ public final class GetSubnetworkResult {
         return this.ipCidrRange;
     }
     /**
-     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+     * @return The access type of IPv6 address this subnet holds. It&#39;s immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
      * 
      */
     public String ipv6AccessType() {
         return this.ipv6AccessType;
     }
     /**
-     * @return The range of internal IPv6 addresses that are owned by this subnetwork. Note this will be for private google access only eventually.
+     * @return This field is for internal use.
      * 
      */
     public String ipv6CidrRange() {
@@ -364,11 +411,22 @@ public final class GetSubnetworkResult {
         return this.privateIpGoogleAccess;
     }
     /**
-     * @return The private IPv6 google access type for the VMs in this subnet. This is an expanded field of enablePrivateV6Access. If both fields are set, privateIpv6GoogleAccess will take priority. This field can be both set at resource creation time and updated using patch.
+     * @return This field is for internal use. This field can be both set at resource creation time and updated using patch.
      * 
      */
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
+    }
+    /**
+     * @return Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
+     * 
+     * @deprecated
+     * Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of enable PrivateIpv6GoogleAccess on instance directly. The service accounts can be used to selectively turn on Private IPv6 Google Access only on the VMs primary service account matching the value. This value only takes effect when PrivateIpv6GoogleAccess is ENABLE_OUTBOUND_VM_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS or ENABLE_BIDIRECTIONAL_ACCESS_TO_GOOGLE_FOR_SERVICE_ACCOUNTS. */
+    public List<String> privateIpv6GoogleAccessServiceAccounts() {
+        return this.privateIpv6GoogleAccessServiceAccounts;
     }
     /**
      * @return The purpose of the resource. This field can be either PRIVATE_RFC_1918 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn&#39;t supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
@@ -420,7 +478,7 @@ public final class GetSubnetworkResult {
         return this.selfLinkWithId;
     }
     /**
-     * @return The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. This field can be both set at resource creation time and updated using patch.
+     * @return The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4 addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6 addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation time and updated using patch.
      * 
      */
     public String stackType() {
@@ -456,10 +514,12 @@ public final class GetSubnetworkResult {
         private String description;
         private Boolean enableFlowLogs;
         private Boolean enableL2;
+        private Boolean enablePrivateV6Access;
         private String externalIpv6Prefix;
         private String fingerprint;
         private Double flowSampling;
         private String gatewayAddress;
+        private String internalIpv6Prefix;
         private String ipCidrRange;
         private String ipv6AccessType;
         private String ipv6CidrRange;
@@ -470,6 +530,7 @@ public final class GetSubnetworkResult {
         private String network;
         private Boolean privateIpGoogleAccess;
         private String privateIpv6GoogleAccess;
+        private List<String> privateIpv6GoogleAccessServiceAccounts;
         private String purpose;
         private String region;
         private String reservedInternalRange;
@@ -493,10 +554,12 @@ public final class GetSubnetworkResult {
     	      this.description = defaults.description;
     	      this.enableFlowLogs = defaults.enableFlowLogs;
     	      this.enableL2 = defaults.enableL2;
+    	      this.enablePrivateV6Access = defaults.enablePrivateV6Access;
     	      this.externalIpv6Prefix = defaults.externalIpv6Prefix;
     	      this.fingerprint = defaults.fingerprint;
     	      this.flowSampling = defaults.flowSampling;
     	      this.gatewayAddress = defaults.gatewayAddress;
+    	      this.internalIpv6Prefix = defaults.internalIpv6Prefix;
     	      this.ipCidrRange = defaults.ipCidrRange;
     	      this.ipv6AccessType = defaults.ipv6AccessType;
     	      this.ipv6CidrRange = defaults.ipv6CidrRange;
@@ -507,6 +570,7 @@ public final class GetSubnetworkResult {
     	      this.network = defaults.network;
     	      this.privateIpGoogleAccess = defaults.privateIpGoogleAccess;
     	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
+    	      this.privateIpv6GoogleAccessServiceAccounts = defaults.privateIpv6GoogleAccessServiceAccounts;
     	      this.purpose = defaults.purpose;
     	      this.region = defaults.region;
     	      this.reservedInternalRange = defaults.reservedInternalRange;
@@ -543,6 +607,10 @@ public final class GetSubnetworkResult {
             this.enableL2 = Objects.requireNonNull(enableL2);
             return this;
         }
+        public Builder enablePrivateV6Access(Boolean enablePrivateV6Access) {
+            this.enablePrivateV6Access = Objects.requireNonNull(enablePrivateV6Access);
+            return this;
+        }
         public Builder externalIpv6Prefix(String externalIpv6Prefix) {
             this.externalIpv6Prefix = Objects.requireNonNull(externalIpv6Prefix);
             return this;
@@ -557,6 +625,10 @@ public final class GetSubnetworkResult {
         }
         public Builder gatewayAddress(String gatewayAddress) {
             this.gatewayAddress = Objects.requireNonNull(gatewayAddress);
+            return this;
+        }
+        public Builder internalIpv6Prefix(String internalIpv6Prefix) {
+            this.internalIpv6Prefix = Objects.requireNonNull(internalIpv6Prefix);
             return this;
         }
         public Builder ipCidrRange(String ipCidrRange) {
@@ -598,6 +670,13 @@ public final class GetSubnetworkResult {
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
+        }
+        public Builder privateIpv6GoogleAccessServiceAccounts(List<String> privateIpv6GoogleAccessServiceAccounts) {
+            this.privateIpv6GoogleAccessServiceAccounts = Objects.requireNonNull(privateIpv6GoogleAccessServiceAccounts);
+            return this;
+        }
+        public Builder privateIpv6GoogleAccessServiceAccounts(String... privateIpv6GoogleAccessServiceAccounts) {
+            return privateIpv6GoogleAccessServiceAccounts(List.of(privateIpv6GoogleAccessServiceAccounts));
         }
         public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
@@ -645,7 +724,7 @@ public final class GetSubnetworkResult {
         public Builder vlans(Integer... vlans) {
             return vlans(List.of(vlans));
         }        public GetSubnetworkResult build() {
-            return new GetSubnetworkResult(aggregationInterval, allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, enableL2, externalIpv6Prefix, fingerprint, flowSampling, gatewayAddress, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, metadata, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, purpose, region, reservedInternalRange, role, secondaryIpRanges, selfLink, selfLinkWithId, stackType, state, vlans);
+            return new GetSubnetworkResult(aggregationInterval, allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, enableL2, enablePrivateV6Access, externalIpv6Prefix, fingerprint, flowSampling, gatewayAddress, internalIpv6Prefix, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, metadata, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, privateIpv6GoogleAccessServiceAccounts, purpose, region, reservedInternalRange, role, secondaryIpRanges, selfLink, selfLinkWithId, stackType, state, vlans);
         }
     }
 }

@@ -17,9 +17,17 @@ public final class SharedflowArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final SharedflowArgs Empty = new SharedflowArgs();
 
+    /**
+     * Required. Must be set to either `import` or `validate`.
+     * 
+     */
     @Import(name="action", required=true)
     private Output<String> action;
 
+    /**
+     * @return Required. Must be set to either `import` or `validate`.
+     * 
+     */
     public Output<String> action() {
         return this.action;
     }
@@ -69,9 +77,17 @@ public final class SharedflowArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.extensions);
     }
 
+    /**
+     * Required. The name to give the shared flow
+     * 
+     */
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Required. The name to give the shared flow
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -112,11 +128,23 @@ public final class SharedflowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SharedflowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Required. Must be set to either `import` or `validate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Required. Must be set to either `import` or `validate`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
@@ -194,11 +222,23 @@ public final class SharedflowArgs extends com.pulumi.resources.ResourceArgs {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param name Required. The name to give the shared flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Required. The name to give the shared flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

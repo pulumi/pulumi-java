@@ -24,14 +24,14 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     public static final ExecutionConfigArgs Empty = new ExecutionConfigArgs();
 
     /**
-     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
      * 
      */
     @Import(name="artifactStorage")
     private @Nullable Output<String> artifactStorage;
 
     /**
-     * @return Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+     * @return Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
      * 
      */
     public Optional<Output<String>> artifactStorage() {
@@ -69,14 +69,14 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
      * 
      */
     @Import(name="serviceAccount")
     private @Nullable Output<String> serviceAccount;
 
     /**
-     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     * @return Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
      * 
      */
     public Optional<Output<String>> serviceAccount() {
@@ -143,7 +143,7 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * @param artifactStorage Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param artifactStorage Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
+         * @param artifactStorage Optional. Cloud Storage location in which to store execution outputs. This can either be a bucket (&#34;gs://my-bucket&#34;) or a path within a bucket (&#34;gs://my-bucket/my-dir&#34;). If unspecified, a default bucket located in the same region will be used.
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+         * @param serviceAccount Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) is used.
          * 
          * @return builder
          * 

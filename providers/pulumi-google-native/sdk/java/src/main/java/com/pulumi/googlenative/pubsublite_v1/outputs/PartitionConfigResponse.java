@@ -5,6 +5,7 @@ package com.pulumi.googlenative.pubsublite_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.pubsublite_v1.outputs.CapacityResponse;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,13 +21,24 @@ public final class PartitionConfigResponse {
      * 
      */
     private final String count;
+    /**
+     * @return DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].
+     * 
+     * @deprecated
+     * DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].
+     * 
+     */
+    @Deprecated /* DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4]. */
+    private final Integer scale;
 
     @CustomType.Constructor
     private PartitionConfigResponse(
         @CustomType.Parameter("capacity") CapacityResponse capacity,
-        @CustomType.Parameter("count") String count) {
+        @CustomType.Parameter("count") String count,
+        @CustomType.Parameter("scale") Integer scale) {
         this.capacity = capacity;
         this.count = count;
+        this.scale = scale;
     }
 
     /**
@@ -43,6 +55,17 @@ public final class PartitionConfigResponse {
     public String count() {
         return this.count;
     }
+    /**
+     * @return DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].
+     * 
+     * @deprecated
+     * DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4].
+     * 
+     */
+    @Deprecated /* DEPRECATED: Use capacity instead which can express a superset of configurations. Every partition in the topic is allocated throughput equivalent to `scale` times the standard partition throughput (4 MiB/s). This is also reflected in the cost of this topic; a topic with `scale` of 2 and count of 10 is charged for 20 partitions. This value must be in the range [1,4]. */
+    public Integer scale() {
+        return this.scale;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -55,6 +78,7 @@ public final class PartitionConfigResponse {
     public static final class Builder {
         private CapacityResponse capacity;
         private String count;
+        private Integer scale;
 
         public Builder() {
     	      // Empty
@@ -64,6 +88,7 @@ public final class PartitionConfigResponse {
     	      Objects.requireNonNull(defaults);
     	      this.capacity = defaults.capacity;
     	      this.count = defaults.count;
+    	      this.scale = defaults.scale;
         }
 
         public Builder capacity(CapacityResponse capacity) {
@@ -73,8 +98,12 @@ public final class PartitionConfigResponse {
         public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
+        }
+        public Builder scale(Integer scale) {
+            this.scale = Objects.requireNonNull(scale);
+            return this;
         }        public PartitionConfigResponse build() {
-            return new PartitionConfigResponse(capacity, count);
+            return new PartitionConfigResponse(capacity, count, scale);
         }
     }
 }

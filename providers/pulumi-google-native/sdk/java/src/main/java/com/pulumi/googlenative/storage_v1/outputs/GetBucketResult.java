@@ -8,7 +8,6 @@ import com.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketAutoclassResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketBillingResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketCorsItemResponse;
-import com.pulumi.googlenative.storage_v1.outputs.BucketCustomPlacementConfigResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketEncryptionResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationResponse;
 import com.pulumi.googlenative.storage_v1.outputs.BucketLifecycleResponse;
@@ -46,11 +45,6 @@ public final class GetBucketResult {
      * 
      */
     private final List<BucketCorsItemResponse> cors;
-    /**
-     * @return The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    private final BucketCustomPlacementConfigResponse customPlacementConfig;
     /**
      * @return The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
      * 
@@ -178,7 +172,6 @@ public final class GetBucketResult {
         @CustomType.Parameter("autoclass") BucketAutoclassResponse autoclass,
         @CustomType.Parameter("billing") BucketBillingResponse billing,
         @CustomType.Parameter("cors") List<BucketCorsItemResponse> cors,
-        @CustomType.Parameter("customPlacementConfig") BucketCustomPlacementConfigResponse customPlacementConfig,
         @CustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
         @CustomType.Parameter("defaultObjectAcl") List<ObjectAccessControlResponse> defaultObjectAcl,
         @CustomType.Parameter("encryption") BucketEncryptionResponse encryption,
@@ -207,7 +200,6 @@ public final class GetBucketResult {
         this.autoclass = autoclass;
         this.billing = billing;
         this.cors = cors;
-        this.customPlacementConfig = customPlacementConfig;
         this.defaultEventBasedHold = defaultEventBasedHold;
         this.defaultObjectAcl = defaultObjectAcl;
         this.encryption = encryption;
@@ -261,13 +253,6 @@ public final class GetBucketResult {
      */
     public List<BucketCorsItemResponse> cors() {
         return this.cors;
-    }
-    /**
-     * @return The bucket&#39;s custom placement configuration for Custom Dual Regions.
-     * 
-     */
-    public BucketCustomPlacementConfigResponse customPlacementConfig() {
-        return this.customPlacementConfig;
     }
     /**
      * @return The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold&#39;s release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
@@ -451,7 +436,6 @@ public final class GetBucketResult {
         private BucketAutoclassResponse autoclass;
         private BucketBillingResponse billing;
         private List<BucketCorsItemResponse> cors;
-        private BucketCustomPlacementConfigResponse customPlacementConfig;
         private Boolean defaultEventBasedHold;
         private List<ObjectAccessControlResponse> defaultObjectAcl;
         private BucketEncryptionResponse encryption;
@@ -487,7 +471,6 @@ public final class GetBucketResult {
     	      this.autoclass = defaults.autoclass;
     	      this.billing = defaults.billing;
     	      this.cors = defaults.cors;
-    	      this.customPlacementConfig = defaults.customPlacementConfig;
     	      this.defaultEventBasedHold = defaults.defaultEventBasedHold;
     	      this.defaultObjectAcl = defaults.defaultObjectAcl;
     	      this.encryption = defaults.encryption;
@@ -535,10 +518,6 @@ public final class GetBucketResult {
         }
         public Builder cors(BucketCorsItemResponse... cors) {
             return cors(List.of(cors));
-        }
-        public Builder customPlacementConfig(BucketCustomPlacementConfigResponse customPlacementConfig) {
-            this.customPlacementConfig = Objects.requireNonNull(customPlacementConfig);
-            return this;
         }
         public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
@@ -639,7 +618,7 @@ public final class GetBucketResult {
             this.website = Objects.requireNonNull(website);
             return this;
         }        public GetBucketResult build() {
-            return new GetBucketResult(acl, autoclass, billing, cors, customPlacementConfig, defaultEventBasedHold, defaultObjectAcl, encryption, etag, iamConfiguration, kind, labels, lifecycle, location, locationType, logging, metageneration, name, owner, projectNumber, retentionPolicy, rpo, satisfiesPZS, selfLink, storageClass, timeCreated, updated, versioning, website);
+            return new GetBucketResult(acl, autoclass, billing, cors, defaultEventBasedHold, defaultObjectAcl, encryption, etag, iamConfiguration, kind, labels, lifecycle, location, locationType, logging, metageneration, name, owner, projectNumber, retentionPolicy, rpo, satisfiesPZS, selfLink, storageClass, timeCreated, updated, versioning, website);
         }
     }
 }

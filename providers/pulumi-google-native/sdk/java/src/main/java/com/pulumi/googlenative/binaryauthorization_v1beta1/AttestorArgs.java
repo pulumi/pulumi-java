@@ -16,9 +16,17 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final AttestorArgs Empty = new AttestorArgs();
 
+    /**
+     * Required. The attestors ID.
+     * 
+     */
     @Import(name="attestorId", required=true)
     private Output<String> attestorId;
 
+    /**
+     * @return Required. The attestors ID.
+     * 
+     */
     public Output<String> attestorId() {
         return this.attestorId;
     }
@@ -36,6 +44,21 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    @Import(name="etag")
+    private @Nullable Output<String> etag;
+
+    /**
+     * @return Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+     * 
+     */
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -80,6 +103,7 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
     private AttestorArgs(AttestorArgs $) {
         this.attestorId = $.attestorId;
         this.description = $.description;
+        this.etag = $.etag;
         this.name = $.name;
         this.project = $.project;
         this.userOwnedDrydockNote = $.userOwnedDrydockNote;
@@ -103,11 +127,23 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AttestorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestorId Required. The attestors ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestorId(Output<String> attestorId) {
             $.attestorId = attestorId;
             return this;
         }
 
+        /**
+         * @param attestorId Required. The attestors ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestorId(String attestorId) {
             return attestorId(Output.of(attestorId));
         }
@@ -131,6 +167,27 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param etag Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etag(@Nullable Output<String> etag) {
+            $.etag = etag;
+            return this;
+        }
+
+        /**
+         * @param etag Optional. A checksum, returned by the server, that can be sent on update requests to ensure the attestor has an up-to-date value before attempting to update it. See https://google.aip.dev/154.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
 
         /**

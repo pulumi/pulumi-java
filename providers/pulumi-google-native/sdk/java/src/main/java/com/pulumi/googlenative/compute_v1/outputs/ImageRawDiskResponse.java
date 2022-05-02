@@ -15,6 +15,15 @@ public final class ImageRawDiskResponse {
      */
     private final String containerType;
     /**
+     * @return [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.
+     * 
+     * @deprecated
+     * [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.
+     * 
+     */
+    @Deprecated /* [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created. */
+    private final String sha1Checksum;
+    /**
      * @return The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
      * 
      */
@@ -23,8 +32,10 @@ public final class ImageRawDiskResponse {
     @CustomType.Constructor
     private ImageRawDiskResponse(
         @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("sha1Checksum") String sha1Checksum,
         @CustomType.Parameter("source") String source) {
         this.containerType = containerType;
+        this.sha1Checksum = sha1Checksum;
         this.source = source;
     }
 
@@ -34,6 +45,17 @@ public final class ImageRawDiskResponse {
      */
     public String containerType() {
         return this.containerType;
+    }
+    /**
+     * @return [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.
+     * 
+     * @deprecated
+     * [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.
+     * 
+     */
+    @Deprecated /* [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created. */
+    public String sha1Checksum() {
+        return this.sha1Checksum;
     }
     /**
      * @return The full Google Cloud Storage URL where the raw disk image archive is stored. The following are valid formats for the URL: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
@@ -53,6 +75,7 @@ public final class ImageRawDiskResponse {
 
     public static final class Builder {
         private String containerType;
+        private String sha1Checksum;
         private String source;
 
         public Builder() {
@@ -62,6 +85,7 @@ public final class ImageRawDiskResponse {
         public Builder(ImageRawDiskResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.containerType = defaults.containerType;
+    	      this.sha1Checksum = defaults.sha1Checksum;
     	      this.source = defaults.source;
         }
 
@@ -69,11 +93,15 @@ public final class ImageRawDiskResponse {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
+        public Builder sha1Checksum(String sha1Checksum) {
+            this.sha1Checksum = Objects.requireNonNull(sha1Checksum);
+            return this;
+        }
         public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }        public ImageRawDiskResponse build() {
-            return new ImageRawDiskResponse(containerType, source);
+            return new ImageRawDiskResponse(containerType, sha1Checksum, source);
         }
     }
 }

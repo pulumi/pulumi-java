@@ -16,9 +16,17 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
+    /**
+     * Required. The ID to use for the backup. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen. Values that do not match this pattern will trigger an INVALID_ARGUMENT error.
+     * 
+     */
     @Import(name="backupId", required=true)
     private Output<String> backupId;
 
+    /**
+     * @return Required. The ID to use for the backup. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen. Values that do not match this pattern will trigger an INVALID_ARGUMENT error.
+     * 
+     */
     public Output<String> backupId() {
         return this.backupId;
     }
@@ -127,11 +135,23 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupId Required. The ID to use for the backup. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen. Values that do not match this pattern will trigger an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(Output<String> backupId) {
             $.backupId = backupId;
             return this;
         }
 
+        /**
+         * @param backupId Required. The ID to use for the backup. The ID must be unique within the specified project and location. This value must start with a lowercase letter followed by up to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen. Values that do not match this pattern will trigger an INVALID_ARGUMENT error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupId(String backupId) {
             return backupId(Output.of(backupId));
         }

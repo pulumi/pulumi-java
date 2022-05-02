@@ -51,6 +51,15 @@ public final class GetNodeResult {
      */
     private final String healthDescription;
     /**
+     * @return DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances. */
+    private final String ipAddress;
+    /**
      * @return Resource labels to represent user-provided metadata.
      * 
      */
@@ -70,6 +79,15 @@ public final class GetNodeResult {
      * 
      */
     private final List<NetworkEndpointResponse> networkEndpoints;
+    /**
+     * @return DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances. */
+    private final String port;
     /**
      * @return The scheduling options for this node.
      * 
@@ -110,10 +128,12 @@ public final class GetNodeResult {
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("health") String health,
         @CustomType.Parameter("healthDescription") String healthDescription,
+        @CustomType.Parameter("ipAddress") String ipAddress,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("network") String network,
         @CustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
+        @CustomType.Parameter("port") String port,
         @CustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
         @CustomType.Parameter("serviceAccount") String serviceAccount,
         @CustomType.Parameter("state") String state,
@@ -127,10 +147,12 @@ public final class GetNodeResult {
         this.description = description;
         this.health = health;
         this.healthDescription = healthDescription;
+        this.ipAddress = ipAddress;
         this.labels = labels;
         this.name = name;
         this.network = network;
         this.networkEndpoints = networkEndpoints;
+        this.port = port;
         this.schedulingConfig = schedulingConfig;
         this.serviceAccount = serviceAccount;
         this.state = state;
@@ -189,6 +211,17 @@ public final class GetNodeResult {
         return this.healthDescription;
     }
     /**
+     * @return DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network address for the TPU Node as visible to Compute Engine instances. */
+    public String ipAddress() {
+        return this.ipAddress;
+    }
+    /**
      * @return Resource labels to represent user-provided metadata.
      * 
      */
@@ -215,6 +248,17 @@ public final class GetNodeResult {
      */
     public List<NetworkEndpointResponse> networkEndpoints() {
         return this.networkEndpoints;
+    }
+    /**
+     * @return DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     * @deprecated
+     * Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances.
+     * 
+     */
+    @Deprecated /* Output only. DEPRECATED! Use network_endpoints instead. The network port for the TPU Node as visible to Compute Engine instances. */
+    public String port() {
+        return this.port;
     }
     /**
      * @return The scheduling options for this node.
@@ -275,10 +319,12 @@ public final class GetNodeResult {
         private String description;
         private String health;
         private String healthDescription;
+        private String ipAddress;
         private Map<String,String> labels;
         private String name;
         private String network;
         private List<NetworkEndpointResponse> networkEndpoints;
+        private String port;
         private SchedulingConfigResponse schedulingConfig;
         private String serviceAccount;
         private String state;
@@ -299,10 +345,12 @@ public final class GetNodeResult {
     	      this.description = defaults.description;
     	      this.health = defaults.health;
     	      this.healthDescription = defaults.healthDescription;
+    	      this.ipAddress = defaults.ipAddress;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
     	      this.network = defaults.network;
     	      this.networkEndpoints = defaults.networkEndpoints;
+    	      this.port = defaults.port;
     	      this.schedulingConfig = defaults.schedulingConfig;
     	      this.serviceAccount = defaults.serviceAccount;
     	      this.state = defaults.state;
@@ -339,6 +387,10 @@ public final class GetNodeResult {
             this.healthDescription = Objects.requireNonNull(healthDescription);
             return this;
         }
+        public Builder ipAddress(String ipAddress) {
+            this.ipAddress = Objects.requireNonNull(ipAddress);
+            return this;
+        }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
@@ -357,6 +409,10 @@ public final class GetNodeResult {
         }
         public Builder networkEndpoints(NetworkEndpointResponse... networkEndpoints) {
             return networkEndpoints(List.of(networkEndpoints));
+        }
+        public Builder port(String port) {
+            this.port = Objects.requireNonNull(port);
+            return this;
         }
         public Builder schedulingConfig(SchedulingConfigResponse schedulingConfig) {
             this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
@@ -385,7 +441,7 @@ public final class GetNodeResult {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }        public GetNodeResult build() {
-            return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, description, health, healthDescription, labels, name, network, networkEndpoints, schedulingConfig, serviceAccount, state, symptoms, tensorflowVersion, useServiceNetworking);
+            return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, description, health, healthDescription, ipAddress, labels, name, network, networkEndpoints, port, schedulingConfig, serviceAccount, state, symptoms, tensorflowVersion, useServiceNetworking);
         }
     }
 }

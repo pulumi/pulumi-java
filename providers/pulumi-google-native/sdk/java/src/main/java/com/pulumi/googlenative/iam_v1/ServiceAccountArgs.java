@@ -61,6 +61,29 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * Deprecated. Do not use.
+     * 
+     * @deprecated
+     * Deprecated. Do not use.
+     * 
+     */
+    @Deprecated /* Deprecated. Do not use. */
+    @Import(name="etag")
+    private @Nullable Output<String> etag;
+
+    /**
+     * @return Deprecated. Do not use.
+     * 
+     * @deprecated
+     * Deprecated. Do not use.
+     * 
+     */
+    @Deprecated /* Deprecated. Do not use. */
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
+    }
+
+    /**
      * The resource name of the service account. Use one of the following formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character, because it can cause response messages to contain misleading error codes. For example, if you try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
      * 
      */
@@ -88,6 +111,7 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
         this.accountId = $.accountId;
         this.description = $.description;
         this.displayName = $.displayName;
+        this.etag = $.etag;
         this.name = $.name;
         this.project = $.project;
     }
@@ -171,6 +195,35 @@ public final class ServiceAccountArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
+        }
+
+        /**
+         * @param etag Deprecated. Do not use.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Do not use.
+         * 
+         */
+        @Deprecated /* Deprecated. Do not use. */
+        public Builder etag(@Nullable Output<String> etag) {
+            $.etag = etag;
+            return this;
+        }
+
+        /**
+         * @param etag Deprecated. Do not use.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. Do not use.
+         * 
+         */
+        @Deprecated /* Deprecated. Do not use. */
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
 
         /**

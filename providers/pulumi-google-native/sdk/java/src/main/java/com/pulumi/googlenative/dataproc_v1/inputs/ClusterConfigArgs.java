@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.AutoscalingConfigArgs;
+import com.pulumi.googlenative.dataproc_v1.inputs.DataprocMetricConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.EncryptionConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.EndpointConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.GceClusterConfigArgs;
@@ -59,6 +60,21 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> configBucket() {
         return Optional.ofNullable(this.configBucket);
+    }
+
+    /**
+     * Optional. The configuration(s) for a dataproc metric(s).
+     * 
+     */
+    @Import(name="dataprocMetricConfig")
+    private @Nullable Output<DataprocMetricConfigArgs> dataprocMetricConfig;
+
+    /**
+     * @return Optional. The configuration(s) for a dataproc metric(s).
+     * 
+     */
+    public Optional<Output<DataprocMetricConfigArgs>> dataprocMetricConfig() {
+        return Optional.ofNullable(this.dataprocMetricConfig);
     }
 
     /**
@@ -261,6 +277,7 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
     private ClusterConfigArgs(ClusterConfigArgs $) {
         this.autoscalingConfig = $.autoscalingConfig;
         this.configBucket = $.configBucket;
+        this.dataprocMetricConfig = $.dataprocMetricConfig;
         this.encryptionConfig = $.encryptionConfig;
         this.endpointConfig = $.endpointConfig;
         this.gceClusterConfig = $.gceClusterConfig;
@@ -334,6 +351,27 @@ public final class ClusterConfigArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder configBucket(String configBucket) {
             return configBucket(Output.of(configBucket));
+        }
+
+        /**
+         * @param dataprocMetricConfig Optional. The configuration(s) for a dataproc metric(s).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataprocMetricConfig(@Nullable Output<DataprocMetricConfigArgs> dataprocMetricConfig) {
+            $.dataprocMetricConfig = dataprocMetricConfig;
+            return this;
+        }
+
+        /**
+         * @param dataprocMetricConfig Optional. The configuration(s) for a dataproc metric(s).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dataprocMetricConfig(DataprocMetricConfigArgs dataprocMetricConfig) {
+            return dataprocMetricConfig(Output.of(dataprocMetricConfig));
         }
 
         /**

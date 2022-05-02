@@ -9,6 +9,7 @@ import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueCategory;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueSeverity;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueType;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AnyArgs;
+import com.pulumi.googlenative.toolresults_v1beta3.inputs.StackTraceArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,6 +70,29 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     * @deprecated
+     * Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+    @Import(name="stackTrace")
+    private @Nullable Output<StackTraceArgs> stackTrace;
+
+    /**
+     * @return Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     * @deprecated
+     * Deprecated in favor of stack trace fields inside specific warnings.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+    public Optional<Output<StackTraceArgs>> stackTrace() {
+        return Optional.ofNullable(this.stackTrace);
+    }
+
+    /**
      * Type of issue. Required.
      * 
      */
@@ -104,6 +128,7 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
         this.category = $.category;
         this.errorMessage = $.errorMessage;
         this.severity = $.severity;
+        this.stackTrace = $.stackTrace;
         this.type = $.type;
         this.warning = $.warning;
     }
@@ -187,6 +212,35 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder severity(TestIssueSeverity severity) {
             return severity(Output.of(severity));
+        }
+
+        /**
+         * @param stackTrace Deprecated in favor of stack trace fields inside specific warnings.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of stack trace fields inside specific warnings.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+        public Builder stackTrace(@Nullable Output<StackTraceArgs> stackTrace) {
+            $.stackTrace = stackTrace;
+            return this;
+        }
+
+        /**
+         * @param stackTrace Deprecated in favor of stack trace fields inside specific warnings.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of stack trace fields inside specific warnings.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of stack trace fields inside specific warnings. */
+        public Builder stackTrace(StackTraceArgs stackTrace) {
+            return stackTrace(Output.of(stackTrace));
         }
 
         /**

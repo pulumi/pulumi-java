@@ -156,9 +156,17 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -419,11 +427,23 @@ public final class RegionUrlMapArgs extends com.pulumi.resources.ResourceArgs {
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }

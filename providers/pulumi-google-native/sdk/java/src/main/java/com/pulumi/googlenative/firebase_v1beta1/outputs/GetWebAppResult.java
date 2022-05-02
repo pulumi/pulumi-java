@@ -11,6 +11,11 @@ import java.util.Objects;
 @CustomType
 public final class GetWebAppResult {
     /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    private final String apiKeyId;
+    /**
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
@@ -43,12 +48,14 @@ public final class GetWebAppResult {
 
     @CustomType.Constructor
     private GetWebAppResult(
+        @CustomType.Parameter("apiKeyId") String apiKeyId,
         @CustomType.Parameter("appId") String appId,
         @CustomType.Parameter("appUrls") List<String> appUrls,
         @CustomType.Parameter("displayName") String displayName,
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("project") String project,
         @CustomType.Parameter("webId") String webId) {
+        this.apiKeyId = apiKeyId;
         this.appId = appId;
         this.appUrls = appUrls;
         this.displayName = displayName;
@@ -57,6 +64,13 @@ public final class GetWebAppResult {
         this.webId = webId;
     }
 
+    /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    public String apiKeyId() {
+        return this.apiKeyId;
+    }
     /**
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
@@ -109,6 +123,7 @@ public final class GetWebAppResult {
     }
 
     public static final class Builder {
+        private String apiKeyId;
         private String appId;
         private List<String> appUrls;
         private String displayName;
@@ -122,6 +137,7 @@ public final class GetWebAppResult {
 
         public Builder(GetWebAppResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.apiKeyId = defaults.apiKeyId;
     	      this.appId = defaults.appId;
     	      this.appUrls = defaults.appUrls;
     	      this.displayName = defaults.displayName;
@@ -130,6 +146,10 @@ public final class GetWebAppResult {
     	      this.webId = defaults.webId;
         }
 
+        public Builder apiKeyId(String apiKeyId) {
+            this.apiKeyId = Objects.requireNonNull(apiKeyId);
+            return this;
+        }
         public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
@@ -157,7 +177,7 @@ public final class GetWebAppResult {
             this.webId = Objects.requireNonNull(webId);
             return this;
         }        public GetWebAppResult build() {
-            return new GetWebAppResult(appId, appUrls, displayName, name, project, webId);
+            return new GetWebAppResult(apiKeyId, appId, appUrls, displayName, name, project, webId);
         }
     }
 }

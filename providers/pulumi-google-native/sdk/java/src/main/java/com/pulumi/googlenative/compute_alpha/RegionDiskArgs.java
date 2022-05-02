@@ -6,7 +6,10 @@ package com.pulumi.googlenative.compute_alpha;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.compute_alpha.enums.RegionDiskArchitecture;
+import com.pulumi.googlenative.compute_alpha.enums.RegionDiskInterface;
+import com.pulumi.googlenative.compute_alpha.enums.RegionDiskStorageType;
 import com.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.DiskAsyncReplicationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GuestOsFeatureArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,6 +37,21 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<RegionDiskArchitecture>> architecture() {
         return Optional.ofNullable(this.architecture);
+    }
+
+    /**
+     * Disk asynchronously replicated into this disk.
+     * 
+     */
+    @Import(name="asyncPrimaryDisk")
+    private @Nullable Output<DiskAsyncReplicationArgs> asyncPrimaryDisk;
+
+    /**
+     * @return Disk asynchronously replicated into this disk.
+     * 
+     */
+    public Optional<Output<DiskAsyncReplicationArgs>> asyncPrimaryDisk() {
+        return Optional.ofNullable(this.asyncPrimaryDisk);
     }
 
     /**
@@ -94,6 +112,29 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<List<GuestOsFeatureArgs>>> guestOsFeatures() {
         return Optional.ofNullable(this.guestOsFeatures);
+    }
+
+    /**
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    @Import(name="interface")
+    private @Nullable Output<RegionDiskInterface> interface_;
+
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    public Optional<Output<RegionDiskInterface>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -260,9 +301,17 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.replicaZones);
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -403,6 +452,29 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    @Import(name="storageType")
+    private @Nullable Output<RegionDiskStorageType> storageType;
+
+    /**
+     * @return [Deprecated] Storage type of the persistent disk.
+     * 
+     * @deprecated
+     * [Deprecated] Storage type of the persistent disk.
+     * 
+     */
+    @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+    public Optional<Output<RegionDiskStorageType>> storageType() {
+        return Optional.ofNullable(this.storageType);
+    }
+
+    /**
      * URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
      * 
      */
@@ -436,10 +508,12 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
 
     private RegionDiskArgs(RegionDiskArgs $) {
         this.architecture = $.architecture;
+        this.asyncPrimaryDisk = $.asyncPrimaryDisk;
         this.description = $.description;
         this.diskEncryptionKey = $.diskEncryptionKey;
         this.eraseWindowsVssSignature = $.eraseWindowsVssSignature;
         this.guestOsFeatures = $.guestOsFeatures;
+        this.interface_ = $.interface_;
         this.labels = $.labels;
         this.licenseCodes = $.licenseCodes;
         this.licenses = $.licenses;
@@ -462,6 +536,7 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
         this.sourceSnapshot = $.sourceSnapshot;
         this.sourceSnapshotEncryptionKey = $.sourceSnapshotEncryptionKey;
         this.sourceStorageObject = $.sourceStorageObject;
+        this.storageType = $.storageType;
         this.type = $.type;
         this.userLicenses = $.userLicenses;
     }
@@ -503,6 +578,27 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder architecture(RegionDiskArchitecture architecture) {
             return architecture(Output.of(architecture));
+        }
+
+        /**
+         * @param asyncPrimaryDisk Disk asynchronously replicated into this disk.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder asyncPrimaryDisk(@Nullable Output<DiskAsyncReplicationArgs> asyncPrimaryDisk) {
+            $.asyncPrimaryDisk = asyncPrimaryDisk;
+            return this;
+        }
+
+        /**
+         * @param asyncPrimaryDisk Disk asynchronously replicated into this disk.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder asyncPrimaryDisk(DiskAsyncReplicationArgs asyncPrimaryDisk) {
+            return asyncPrimaryDisk(Output.of(asyncPrimaryDisk));
         }
 
         /**
@@ -597,6 +693,35 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
+        }
+
+        /**
+         * @param interface_ [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         */
+        @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+        public Builder interface_(@Nullable Output<RegionDiskInterface> interface_) {
+            $.interface_ = interface_;
+            return this;
+        }
+
+        /**
+         * @param interface_ [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+         * 
+         */
+        @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+        public Builder interface_(RegionDiskInterface interface_) {
+            return interface_(Output.of(interface_));
         }
 
         /**
@@ -857,11 +982,23 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
             return replicaZones(List.of(replicaZones));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -1063,6 +1200,35 @@ public final class RegionDiskArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder sourceStorageObject(String sourceStorageObject) {
             return sourceStorageObject(Output.of(sourceStorageObject));
+        }
+
+        /**
+         * @param storageType [Deprecated] Storage type of the persistent disk.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Storage type of the persistent disk.
+         * 
+         */
+        @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+        public Builder storageType(@Nullable Output<RegionDiskStorageType> storageType) {
+            $.storageType = storageType;
+            return this;
+        }
+
+        /**
+         * @param storageType [Deprecated] Storage type of the persistent disk.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Storage type of the persistent disk.
+         * 
+         */
+        @Deprecated /* [Deprecated] Storage type of the persistent disk. */
+        public Builder storageType(RegionDiskStorageType storageType) {
+            return storageType(Output.of(storageType));
         }
 
         /**

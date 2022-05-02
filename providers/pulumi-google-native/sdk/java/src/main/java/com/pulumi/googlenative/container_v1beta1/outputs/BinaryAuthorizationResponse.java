@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BinaryAuthorizationResponse {
     /**
-     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
      */
     private final Boolean enabled;
@@ -21,7 +21,7 @@ public final class BinaryAuthorizationResponse {
     }
 
     /**
-     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     * @return Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
      */
     public Boolean enabled() {

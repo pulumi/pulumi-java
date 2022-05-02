@@ -21,6 +21,29 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
     public static final SecuritySettingsArgs Empty = new SecuritySettingsArgs();
 
     /**
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    @Import(name="authentication")
+    private @Nullable Output<String> authentication;
+
+    /**
+     * @return [Deprecated] Use clientTlsPolicy instead.
+     * 
+     * @deprecated
+     * [Deprecated] Use clientTlsPolicy instead.
+     * 
+     */
+    @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
+    }
+
+    /**
      * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service&#39;s backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
      * 
      */
@@ -53,6 +76,7 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
     private SecuritySettingsArgs() {}
 
     private SecuritySettingsArgs(SecuritySettingsArgs $) {
+        this.authentication = $.authentication;
         this.clientTlsPolicy = $.clientTlsPolicy;
         this.subjectAltNames = $.subjectAltNames;
     }
@@ -73,6 +97,35 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
 
         public Builder(SecuritySettingsArgs defaults) {
             $ = new SecuritySettingsArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param authentication [Deprecated] Use clientTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use clientTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+        public Builder authentication(@Nullable Output<String> authentication) {
+            $.authentication = authentication;
+            return this;
+        }
+
+        /**
+         * @param authentication [Deprecated] Use clientTlsPolicy instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * [Deprecated] Use clientTlsPolicy instead.
+         * 
+         */
+        @Deprecated /* [Deprecated] Use clientTlsPolicy instead. */
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
         }
 
         /**

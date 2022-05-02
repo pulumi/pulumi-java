@@ -19,14 +19,14 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServingConfigArgs Empty = new ServingConfigArgs();
 
     /**
-     * Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+     * Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
     @Import(name="boostControlIds")
     private @Nullable Output<List<String>> boostControlIds;
 
     /**
-     * @return Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+     * @return Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
     public Optional<Output<List<String>>> boostControlIds() {
@@ -235,14 +235,14 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+     * Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 1000. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
     @Import(name="redirectControlIds")
     private @Nullable Output<List<String>> redirectControlIds;
 
     /**
-     * @return Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+     * @return Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 1000. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
      * 
      */
     public Optional<Output<List<String>>> redirectControlIds() {
@@ -264,9 +264,17 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.replacementControlIds);
     }
 
+    /**
+     * Required. The ID to use for the ServingConfig, which will become the final component of the ServingConfig&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+     * 
+     */
     @Import(name="servingConfigId", required=true)
     private Output<String> servingConfigId;
 
+    /**
+     * @return Required. The ID to use for the ServingConfig, which will become the final component of the ServingConfig&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+     * 
+     */
     public Output<String> servingConfigId() {
         return this.servingConfigId;
     }
@@ -346,7 +354,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -357,7 +365,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -367,7 +375,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 10. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param boostControlIds Condition boost specifications. If a product matches multiple conditions in the specifications, boost scores from these specifications are all applied and combined in a non-linear way. Maximum number of specifications is 100. Notice that if both ServingConfig.boost_control_ids and [SearchRequest.boost_spec] are set, the boost conditions from both places are evaluated. If a search request matches multiple boost conditions, the final boost score is equal to the sum of the boost scores from all matched boost conditions. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -706,7 +714,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 1000. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -717,7 +725,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 1000. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -727,7 +735,7 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 100. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
+         * @param redirectControlIds Condition redirect specifications. Only the first triggered redirect action is applied, even if multiple apply. Maximum number of specifications is 1000. Can only be set if solution_types is SOLUTION_TYPE_SEARCH.
          * 
          * @return builder
          * 
@@ -767,11 +775,23 @@ public final class ServingConfigArgs extends com.pulumi.resources.ResourceArgs {
             return replacementControlIds(List.of(replacementControlIds));
         }
 
+        /**
+         * @param servingConfigId Required. The ID to use for the ServingConfig, which will become the final component of the ServingConfig&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingConfigId(Output<String> servingConfigId) {
             $.servingConfigId = servingConfigId;
             return this;
         }
 
+        /**
+         * @param servingConfigId Required. The ID to use for the ServingConfig, which will become the final component of the ServingConfig&#39;s resource name. This value should be 4-63 characters, and valid characters are /a-z-_/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingConfigId(String servingConfigId) {
             return servingConfigId(Output.of(servingConfigId));
         }

@@ -5,6 +5,7 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.datastream_v1alpha1.inputs.DropLargeObjectsArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,6 +36,21 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * Drop large object values.
+     * 
+     */
+    @Import(name="dropLargeObjects")
+    private @Nullable Output<DropLargeObjectsArgs> dropLargeObjects;
+
+    /**
+     * @return Drop large object values.
+     * 
+     */
+    public Optional<Output<DropLargeObjectsArgs>> dropLargeObjects() {
+        return Optional.ofNullable(this.dropLargeObjects);
+    }
+
+    /**
      * Oracle objects to exclude from the stream.
      * 
      */
@@ -53,6 +69,7 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
 
     private OracleSourceConfigArgs(OracleSourceConfigArgs $) {
         this.allowlist = $.allowlist;
+        this.dropLargeObjects = $.dropLargeObjects;
         this.rejectlist = $.rejectlist;
     }
 
@@ -93,6 +110,27 @@ public final class OracleSourceConfigArgs extends com.pulumi.resources.ResourceA
          */
         public Builder allowlist(OracleRdbmsArgs allowlist) {
             return allowlist(Output.of(allowlist));
+        }
+
+        /**
+         * @param dropLargeObjects Drop large object values.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dropLargeObjects(@Nullable Output<DropLargeObjectsArgs> dropLargeObjects) {
+            $.dropLargeObjects = dropLargeObjects;
+            return this;
+        }
+
+        /**
+         * @param dropLargeObjects Drop large object values.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dropLargeObjects(DropLargeObjectsArgs dropLargeObjects) {
+            return dropLargeObjects(Output.of(dropLargeObjects));
         }
 
         /**

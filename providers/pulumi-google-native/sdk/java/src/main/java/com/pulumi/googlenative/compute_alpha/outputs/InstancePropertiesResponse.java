@@ -62,7 +62,7 @@ public final class InstancePropertiesResponse {
      */
     private final List<AcceleratorConfigResponse> guestAccelerators;
     /**
-     * @return KeyRevocationActionType of the instance.
+     * @return KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     private final String keyRevocationActionType;
@@ -256,7 +256,7 @@ public final class InstancePropertiesResponse {
         return this.guestAccelerators;
     }
     /**
-     * @return KeyRevocationActionType of the instance.
+     * @return KeyRevocationActionType of the instance. Supported options are &#34;STOP&#34; and &#34;NONE&#34;. The default value is &#34;NONE&#34; if it is not specified.
      * 
      */
     public String keyRevocationActionType() {

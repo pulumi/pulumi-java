@@ -28,13 +28,6 @@ public final class GetDefaultObjectAccessControlArgs extends com.pulumi.resource
         return this.entity;
     }
 
-    @Import(name="provisionalUserProject")
-    private @Nullable String provisionalUserProject;
-
-    public Optional<String> provisionalUserProject() {
-        return Optional.ofNullable(this.provisionalUserProject);
-    }
-
     @Import(name="userProject")
     private @Nullable String userProject;
 
@@ -47,7 +40,6 @@ public final class GetDefaultObjectAccessControlArgs extends com.pulumi.resource
     private GetDefaultObjectAccessControlArgs(GetDefaultObjectAccessControlArgs $) {
         this.bucket = $.bucket;
         this.entity = $.entity;
-        this.provisionalUserProject = $.provisionalUserProject;
         this.userProject = $.userProject;
     }
 
@@ -76,11 +68,6 @@ public final class GetDefaultObjectAccessControlArgs extends com.pulumi.resource
 
         public Builder entity(String entity) {
             $.entity = entity;
-            return this;
-        }
-
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
 

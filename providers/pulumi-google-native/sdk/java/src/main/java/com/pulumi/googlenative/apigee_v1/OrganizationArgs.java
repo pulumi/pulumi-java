@@ -38,16 +38,24 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     * @deprecated
+     * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
+    @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
     @Import(name="analyticsRegion", required=true)
     private Output<String> analyticsRegion;
 
     /**
-     * @return Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * @return DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+     * 
+     * @deprecated
+     * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
+    @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
     public Output<String> analyticsRegion() {
         return this.analyticsRegion;
     }
@@ -142,9 +150,17 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: `projects/`
+     * 
+     */
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: `projects/`
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -283,22 +299,30 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param analyticsRegion Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * @param analyticsRegion DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
          * 
          * @return builder
          * 
+         * @deprecated
+         * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * 
          */
+        @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
         public Builder analyticsRegion(Output<String> analyticsRegion) {
             $.analyticsRegion = analyticsRegion;
             return this;
         }
 
         /**
-         * @param analyticsRegion Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * @param analyticsRegion DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
          * 
          * @return builder
          * 
+         * @deprecated
+         * Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
+         * 
          */
+        @Deprecated /* Required. DEPRECATED: This field will be deprecated once Apigee supports DRZ. Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org). */
         public Builder analyticsRegion(String analyticsRegion) {
             return analyticsRegion(Output.of(analyticsRegion));
         }
@@ -439,11 +463,23 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param parent Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: `projects/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent Required. Name of the GCP project in which to associate the Apigee organization. Pass the information as a query parameter using the following structure in your request: `projects/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

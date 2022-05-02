@@ -34,9 +34,17 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.alternativeNameServerConfig);
     }
 
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     @Import(name="clientOperationId")
     private @Nullable Output<String> clientOperationId;
 
+    /**
+     * @return For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     * 
+     */
     public Optional<Output<String>> clientOperationId() {
         return Optional.ofNullable(this.clientOperationId);
     }
@@ -84,21 +92,6 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<Boolean>> enableLogging() {
         return Optional.ofNullable(this.enableLogging);
-    }
-
-    /**
-     * Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    @Import(name="id")
-    private @Nullable Output<String> id;
-
-    /**
-     * @return Unique identifier for the resource; defined by the server (output only).
-     * 
-     */
-    public Optional<Output<String>> id() {
-        return Optional.ofNullable(this.id);
     }
 
     @Import(name="kind")
@@ -153,7 +146,6 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
         this.description = $.description;
         this.enableInboundForwarding = $.enableInboundForwarding;
         this.enableLogging = $.enableLogging;
-        this.id = $.id;
         this.kind = $.kind;
         this.name = $.name;
         this.networks = $.networks;
@@ -199,11 +191,23 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             return alternativeNameServerConfig(Output.of(alternativeNameServerConfig));
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             $.clientOperationId = clientOperationId;
             return this;
         }
 
+        /**
+         * @param clientOperationId For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientOperationId(String clientOperationId) {
             return clientOperationId(Output.of(clientOperationId));
         }
@@ -269,27 +273,6 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder enableLogging(Boolean enableLogging) {
             return enableLogging(Output.of(enableLogging));
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(@Nullable Output<String> id) {
-            $.id = id;
-            return this;
-        }
-
-        /**
-         * @param id Unique identifier for the resource; defined by the server (output only).
-         * 
-         * @return builder
-         * 
-         */
-        public Builder id(String id) {
-            return id(Output.of(id));
         }
 
         public Builder kind(@Nullable Output<String> kind) {

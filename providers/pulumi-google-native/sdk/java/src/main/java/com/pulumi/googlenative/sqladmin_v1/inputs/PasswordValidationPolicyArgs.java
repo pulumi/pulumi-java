@@ -53,6 +53,21 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     }
 
     /**
+     * Whether the password policy is enabled or not.
+     * 
+     */
+    @Import(name="enablePasswordPolicy")
+    private @Nullable Output<Boolean> enablePasswordPolicy;
+
+    /**
+     * @return Whether the password policy is enabled or not.
+     * 
+     */
+    public Optional<Output<Boolean>> enablePasswordPolicy() {
+        return Optional.ofNullable(this.enablePasswordPolicy);
+    }
+
+    /**
      * Minimum number of characters allowed.
      * 
      */
@@ -102,6 +117,7 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
     private PasswordValidationPolicyArgs(PasswordValidationPolicyArgs $) {
         this.complexity = $.complexity;
         this.disallowUsernameSubstring = $.disallowUsernameSubstring;
+        this.enablePasswordPolicy = $.enablePasswordPolicy;
         this.minLength = $.minLength;
         this.passwordChangeInterval = $.passwordChangeInterval;
         this.reuseInterval = $.reuseInterval;
@@ -165,6 +181,27 @@ public final class PasswordValidationPolicyArgs extends com.pulumi.resources.Res
          */
         public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             return disallowUsernameSubstring(Output.of(disallowUsernameSubstring));
+        }
+
+        /**
+         * @param enablePasswordPolicy Whether the password policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordPolicy(@Nullable Output<Boolean> enablePasswordPolicy) {
+            $.enablePasswordPolicy = enablePasswordPolicy;
+            return this;
+        }
+
+        /**
+         * @param enablePasswordPolicy Whether the password policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enablePasswordPolicy(Boolean enablePasswordPolicy) {
+            return enablePasswordPolicy(Output.of(enablePasswordPolicy));
         }
 
         /**

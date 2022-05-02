@@ -45,6 +45,15 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final List<GuestOsFeatureResponse> guestOsFeatures;
     /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    private final String interface_;
+    /**
      * @return Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
      * 
      */
@@ -118,6 +127,7 @@ public final class AttachedDiskInitializeParamsResponse {
         @CustomType.Parameter("diskSizeGb") String diskSizeGb,
         @CustomType.Parameter("diskType") String diskType,
         @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("interface") String interface_,
         @CustomType.Parameter("labels") Map<String,String> labels,
         @CustomType.Parameter("licenseCodes") List<String> licenseCodes,
         @CustomType.Parameter("licenses") List<String> licenses,
@@ -137,6 +147,7 @@ public final class AttachedDiskInitializeParamsResponse {
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
         this.guestOsFeatures = guestOsFeatures;
+        this.interface_ = interface_;
         this.labels = labels;
         this.licenseCodes = licenseCodes;
         this.licenses = licenses;
@@ -193,6 +204,17 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
+    }
+    /**
+     * @return [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     * @deprecated
+     * [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.
+     * 
+     */
+    @Deprecated /* [Deprecated] Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. */
+    public String interface_() {
+        return this.interface_;
     }
     /**
      * @return Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
@@ -301,6 +323,7 @@ public final class AttachedDiskInitializeParamsResponse {
         private String diskSizeGb;
         private String diskType;
         private List<GuestOsFeatureResponse> guestOsFeatures;
+        private String interface_;
         private Map<String,String> labels;
         private List<String> licenseCodes;
         private List<String> licenses;
@@ -327,6 +350,7 @@ public final class AttachedDiskInitializeParamsResponse {
     	      this.diskSizeGb = defaults.diskSizeGb;
     	      this.diskType = defaults.diskType;
     	      this.guestOsFeatures = defaults.guestOsFeatures;
+    	      this.interface_ = defaults.interface_;
     	      this.labels = defaults.labels;
     	      this.licenseCodes = defaults.licenseCodes;
     	      this.licenses = defaults.licenses;
@@ -368,6 +392,10 @@ public final class AttachedDiskInitializeParamsResponse {
         }
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
+        }
+        public Builder interface_(String interface_) {
+            this.interface_ = Objects.requireNonNull(interface_);
+            return this;
         }
         public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
@@ -433,7 +461,7 @@ public final class AttachedDiskInitializeParamsResponse {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }        public AttachedDiskInitializeParamsResponse build() {
-            return new AttachedDiskInitializeParamsResponse(architecture, description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenseCodes, licenses, multiWriter, onUpdateAction, provisionedIops, replicaZones, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey);
+            return new AttachedDiskInitializeParamsResponse(architecture, description, diskName, diskSizeGb, diskType, guestOsFeatures, interface_, labels, licenseCodes, licenses, multiWriter, onUpdateAction, provisionedIops, replicaZones, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceInstantSnapshot, sourceSnapshot, sourceSnapshotEncryptionKey);
         }
     }
 }

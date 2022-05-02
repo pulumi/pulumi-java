@@ -17,11 +17,19 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
-    @Import(name="ekmConnectionId", required=true)
-    private Output<String> ekmConnectionId;
+    /**
+     * Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`.
+     * 
+     */
+    @Import(name="ekmConnectionId")
+    private @Nullable Output<String> ekmConnectionId;
 
-    public Output<String> ekmConnectionId() {
-        return this.ekmConnectionId;
+    /**
+     * @return Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`.
+     * 
+     */
+    public Optional<Output<String>> ekmConnectionId() {
+        return Optional.ofNullable(this.ekmConnectionId);
     }
 
     /**
@@ -96,11 +104,23 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EkmConnectionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder ekmConnectionId(Output<String> ekmConnectionId) {
+        /**
+         * @param ekmConnectionId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ekmConnectionId(@Nullable Output<String> ekmConnectionId) {
             $.ekmConnectionId = ekmConnectionId;
             return this;
         }
 
+        /**
+         * @param ekmConnectionId Required. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ekmConnectionId(String ekmConnectionId) {
             return ekmConnectionId(Output.of(ekmConnectionId));
         }
@@ -176,7 +196,6 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public EkmConnectionArgs build() {
-            $.ekmConnectionId = Objects.requireNonNull($.ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
             return $;
         }
     }

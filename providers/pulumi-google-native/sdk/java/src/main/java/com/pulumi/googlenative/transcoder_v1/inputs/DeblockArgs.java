@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * Deblock preprocessing configuration.
+ * Deblock preprocessing configuration. **Note:** This configuration is not supported.
  * 
  */
 public final class DeblockArgs extends com.pulumi.resources.ResourceArgs {

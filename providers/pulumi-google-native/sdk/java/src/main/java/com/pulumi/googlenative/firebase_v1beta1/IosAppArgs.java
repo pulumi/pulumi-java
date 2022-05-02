@@ -16,6 +16,21 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     public static final IosAppArgs Empty = new IosAppArgs();
 
     /**
+     * The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    @Import(name="apiKeyId")
+    private @Nullable Output<String> apiKeyId;
+
+    /**
+     * @return The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+     * 
+     */
+    public Optional<Output<String>> apiKeyId() {
+        return Optional.ofNullable(this.apiKeyId);
+    }
+
+    /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
@@ -123,6 +138,7 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
     private IosAppArgs() {}
 
     private IosAppArgs(IosAppArgs $) {
+        this.apiKeyId = $.apiKeyId;
         this.appId = $.appId;
         this.appStoreId = $.appStoreId;
         this.bundleId = $.bundleId;
@@ -148,6 +164,27 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(IosAppArgs defaults) {
             $ = new IosAppArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param apiKeyId The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiKeyId(@Nullable Output<String> apiKeyId) {
+            $.apiKeyId = apiKeyId;
+            return this;
+        }
+
+        /**
+         * @param apiKeyId The key_id of the GCP ApiKey associated with this App. If set must have no restrictions, or only have restrictions that are valid for the associated Firebase App. Cannot be set in create requests, instead an existing valid API Key will be chosen, or if no valid API Keys exist, one will be provisioned for you. Cannot be set to an empty value in update requests.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder apiKeyId(String apiKeyId) {
+            return apiKeyId(Output.of(apiKeyId));
         }
 
         /**

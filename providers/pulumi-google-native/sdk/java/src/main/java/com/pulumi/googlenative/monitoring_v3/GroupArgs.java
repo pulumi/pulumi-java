@@ -83,9 +83,17 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * If true, validate this request but do not create the group.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return If true, validate this request but do not create the group.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -212,11 +220,23 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param validateOnly If true, validate this request but do not create the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, validate this request but do not create the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

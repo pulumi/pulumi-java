@@ -21,14 +21,14 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
     public static final TestTargetsForShardArgs Empty = new TestTargetsForShardArgs();
 
     /**
-     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of test_targets must be greater than 0.
      * 
      */
     @Import(name="testTargets")
     private @Nullable Output<List<String>> testTargets;
 
     /**
-     * @return Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+     * @return Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of test_targets must be greater than 0.
      * 
      */
     public Optional<Output<List<String>>> testTargets() {
@@ -60,7 +60,7 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of test_targets must be greater than 0.
          * 
          * @return builder
          * 
@@ -71,7 +71,7 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of test_targets must be greater than 0.
          * 
          * @return builder
          * 
@@ -81,7 +81,7 @@ public final class TestTargetsForShardArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of shard_test_targets must be greater than 0.
+         * @param testTargets Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, &#34;package com.my.packages&#34; &#34;class com.my.package.MyClass&#34;. The number of test_targets must be greater than 0.
          * 
          * @return builder
          * 

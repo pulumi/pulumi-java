@@ -5,6 +5,8 @@ package com.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.AbortInfoResponse;
+import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.AppEngineVersionInfoResponse;
+import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.CloudFunctionInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.CloudSQLInstanceInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.DeliverInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.DropInfoResponse;
@@ -17,6 +19,7 @@ import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.InstanceInfoRes
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.LoadBalancerInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.NetworkInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.RouteInfoResponse;
+import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.VpcConnectorInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.VpnGatewayInfoResponse;
 import com.pulumi.googlenative.networkmanagement_v1beta1.outputs.VpnTunnelInfoResponse;
 import java.lang.Boolean;
@@ -31,10 +34,20 @@ public final class StepResponse {
      */
     private final AbortInfoResponse abort;
     /**
+     * @return Display information of an App Engine service version.
+     * 
+     */
+    private final AppEngineVersionInfoResponse appEngineVersionInfo;
+    /**
      * @return This is a step that leads to the final state Drop.
      * 
      */
     private final Boolean causesDrop;
+    /**
+     * @return Display information of a Cloud function.
+     * 
+     */
+    private final CloudFunctionInfoResponse cloudFunction;
     /**
      * @return Display information of a Cloud SQL instance.
      * 
@@ -111,6 +124,11 @@ public final class StepResponse {
      */
     private final String state;
     /**
+     * @return Display information of a VPC connector.
+     * 
+     */
+    private final VpcConnectorInfoResponse vpcConnector;
+    /**
      * @return Display information of a Compute Engine VPN gateway.
      * 
      */
@@ -124,7 +142,9 @@ public final class StepResponse {
     @CustomType.Constructor
     private StepResponse(
         @CustomType.Parameter("abort") AbortInfoResponse abort,
+        @CustomType.Parameter("appEngineVersionInfo") AppEngineVersionInfoResponse appEngineVersionInfo,
         @CustomType.Parameter("causesDrop") Boolean causesDrop,
+        @CustomType.Parameter("cloudFunction") CloudFunctionInfoResponse cloudFunction,
         @CustomType.Parameter("cloudSqlInstance") CloudSQLInstanceInfoResponse cloudSqlInstance,
         @CustomType.Parameter("deliver") DeliverInfoResponse deliver,
         @CustomType.Parameter("description") String description,
@@ -140,10 +160,13 @@ public final class StepResponse {
         @CustomType.Parameter("project") String project,
         @CustomType.Parameter("route") RouteInfoResponse route,
         @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("vpcConnector") VpcConnectorInfoResponse vpcConnector,
         @CustomType.Parameter("vpnGateway") VpnGatewayInfoResponse vpnGateway,
         @CustomType.Parameter("vpnTunnel") VpnTunnelInfoResponse vpnTunnel) {
         this.abort = abort;
+        this.appEngineVersionInfo = appEngineVersionInfo;
         this.causesDrop = causesDrop;
+        this.cloudFunction = cloudFunction;
         this.cloudSqlInstance = cloudSqlInstance;
         this.deliver = deliver;
         this.description = description;
@@ -159,6 +182,7 @@ public final class StepResponse {
         this.project = project;
         this.route = route;
         this.state = state;
+        this.vpcConnector = vpcConnector;
         this.vpnGateway = vpnGateway;
         this.vpnTunnel = vpnTunnel;
     }
@@ -171,11 +195,25 @@ public final class StepResponse {
         return this.abort;
     }
     /**
+     * @return Display information of an App Engine service version.
+     * 
+     */
+    public AppEngineVersionInfoResponse appEngineVersionInfo() {
+        return this.appEngineVersionInfo;
+    }
+    /**
      * @return This is a step that leads to the final state Drop.
      * 
      */
     public Boolean causesDrop() {
         return this.causesDrop;
+    }
+    /**
+     * @return Display information of a Cloud function.
+     * 
+     */
+    public CloudFunctionInfoResponse cloudFunction() {
+        return this.cloudFunction;
     }
     /**
      * @return Display information of a Cloud SQL instance.
@@ -283,6 +321,13 @@ public final class StepResponse {
         return this.state;
     }
     /**
+     * @return Display information of a VPC connector.
+     * 
+     */
+    public VpcConnectorInfoResponse vpcConnector() {
+        return this.vpcConnector;
+    }
+    /**
      * @return Display information of a Compute Engine VPN gateway.
      * 
      */
@@ -307,7 +352,9 @@ public final class StepResponse {
 
     public static final class Builder {
         private AbortInfoResponse abort;
+        private AppEngineVersionInfoResponse appEngineVersionInfo;
         private Boolean causesDrop;
+        private CloudFunctionInfoResponse cloudFunction;
         private CloudSQLInstanceInfoResponse cloudSqlInstance;
         private DeliverInfoResponse deliver;
         private String description;
@@ -323,6 +370,7 @@ public final class StepResponse {
         private String project;
         private RouteInfoResponse route;
         private String state;
+        private VpcConnectorInfoResponse vpcConnector;
         private VpnGatewayInfoResponse vpnGateway;
         private VpnTunnelInfoResponse vpnTunnel;
 
@@ -333,7 +381,9 @@ public final class StepResponse {
         public Builder(StepResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.abort = defaults.abort;
+    	      this.appEngineVersionInfo = defaults.appEngineVersionInfo;
     	      this.causesDrop = defaults.causesDrop;
+    	      this.cloudFunction = defaults.cloudFunction;
     	      this.cloudSqlInstance = defaults.cloudSqlInstance;
     	      this.deliver = defaults.deliver;
     	      this.description = defaults.description;
@@ -349,6 +399,7 @@ public final class StepResponse {
     	      this.project = defaults.project;
     	      this.route = defaults.route;
     	      this.state = defaults.state;
+    	      this.vpcConnector = defaults.vpcConnector;
     	      this.vpnGateway = defaults.vpnGateway;
     	      this.vpnTunnel = defaults.vpnTunnel;
         }
@@ -357,8 +408,16 @@ public final class StepResponse {
             this.abort = Objects.requireNonNull(abort);
             return this;
         }
+        public Builder appEngineVersionInfo(AppEngineVersionInfoResponse appEngineVersionInfo) {
+            this.appEngineVersionInfo = Objects.requireNonNull(appEngineVersionInfo);
+            return this;
+        }
         public Builder causesDrop(Boolean causesDrop) {
             this.causesDrop = Objects.requireNonNull(causesDrop);
+            return this;
+        }
+        public Builder cloudFunction(CloudFunctionInfoResponse cloudFunction) {
+            this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
         public Builder cloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
@@ -421,6 +480,10 @@ public final class StepResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
+        public Builder vpcConnector(VpcConnectorInfoResponse vpcConnector) {
+            this.vpcConnector = Objects.requireNonNull(vpcConnector);
+            return this;
+        }
         public Builder vpnGateway(VpnGatewayInfoResponse vpnGateway) {
             this.vpnGateway = Objects.requireNonNull(vpnGateway);
             return this;
@@ -429,7 +492,7 @@ public final class StepResponse {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }        public StepResponse build() {
-            return new StepResponse(abort, causesDrop, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpnGateway, vpnTunnel);
+            return new StepResponse(abort, appEngineVersionInfo, causesDrop, cloudFunction, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpcConnector, vpnGateway, vpnTunnel);
         }
     }
 }

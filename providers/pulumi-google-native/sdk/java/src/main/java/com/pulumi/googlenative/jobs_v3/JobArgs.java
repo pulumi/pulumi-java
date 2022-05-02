@@ -10,6 +10,7 @@ import com.pulumi.googlenative.jobs_v3.enums.JobEmploymentTypesItem;
 import com.pulumi.googlenative.jobs_v3.enums.JobJobBenefitsItem;
 import com.pulumi.googlenative.jobs_v3.enums.JobJobLevel;
 import com.pulumi.googlenative.jobs_v3.enums.JobPostingRegion;
+import com.pulumi.googlenative.jobs_v3.enums.JobVisibility;
 import com.pulumi.googlenative.jobs_v3.inputs.ApplicationInfoArgs;
 import com.pulumi.googlenative.jobs_v3.inputs.CompensationInfoArgs;
 import com.pulumi.googlenative.jobs_v3.inputs.ProcessingOptionsArgs;
@@ -408,6 +409,29 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         return this.title;
     }
 
+    /**
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     * @deprecated
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+    @Import(name="visibility")
+    private @Nullable Output<JobVisibility> visibility;
+
+    /**
+     * @return Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     * @deprecated
+     * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+     * 
+     */
+    @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+    public Optional<Output<JobVisibility>> visibility() {
+        return Optional.ofNullable(this.visibility);
+    }
+
     private JobArgs() {}
 
     private JobArgs(JobArgs $) {
@@ -437,6 +461,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
         this.requisitionId = $.requisitionId;
         this.responsibilities = $.responsibilities;
         this.title = $.title;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
@@ -1029,6 +1054,35 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder title(String title) {
             return title(Output.of(title));
+        }
+
+        /**
+         * @param visibility Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+         * 
+         */
+        @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+        public Builder visibility(@Nullable Output<JobVisibility> visibility) {
+            $.visibility = visibility;
+            return this;
+        }
+
+        /**
+         * @param visibility Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified.
+         * 
+         */
+        @Deprecated /* Deprecated. The job is only visible to the owner. The visibility of the job. Defaults to Visibility.ACCOUNT_ONLY if not specified. */
+        public Builder visibility(JobVisibility visibility) {
+            return visibility(Output.of(visibility));
         }
 
         public JobArgs build() {

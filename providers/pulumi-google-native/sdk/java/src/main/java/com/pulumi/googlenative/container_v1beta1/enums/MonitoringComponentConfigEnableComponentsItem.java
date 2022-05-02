@@ -21,7 +21,7 @@ import java.util.StringJoiner;
          */
         SystemComponents("SYSTEM_COMPONENTS"),
         /**
-         * workloads
+         * Deprecated: Use Google Cloud Managed Service for Prometheus.
          * 
          */
         Workloads("WORKLOADS");

@@ -45,7 +45,7 @@ public final class Monitoring_v3Functions {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * Gets a single metric descriptor. This method does not require a Workspace.
+     * Gets a single metric descriptor.
      * 
      */
     public static CompletableFuture<GetMetricDescriptorResult> getMetricDescriptor(GetMetricDescriptorArgs args) {

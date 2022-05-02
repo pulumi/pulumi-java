@@ -32,9 +32,17 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.address);
     }
 
+    /**
+     * Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     @Import(name="endpointId", required=true)
     private Output<String> endpointId;
 
+    /**
+     * @return Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     * 
+     */
     public Output<String> endpointId() {
         return this.endpointId;
     }
@@ -181,11 +189,23 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return address(Output.of(address));
         }
 
+        /**
+         * @param endpointId Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(Output<String> endpointId) {
             $.endpointId = endpointId;
             return this;
         }
 
+        /**
+         * @param endpointId Required. The Resource ID must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointId(String endpointId) {
             return endpointId(Output.of(endpointId));
         }

@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.PickTimeSeriesFilterResponse;
 import com.pulumi.googlenative.monitoring_v1.outputs.RatioPartResponse;
+import com.pulumi.googlenative.monitoring_v1.outputs.StatisticalTimeSeriesFilterResponse;
 import java.util.Objects;
 
 @CustomType
@@ -31,17 +32,28 @@ public final class TimeSeriesFilterRatioResponse {
      * 
      */
     private final AggregationResponse secondaryAggregation;
+    /**
+     * @return Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     * @deprecated
+     * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     */
+    @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+    private final StatisticalTimeSeriesFilterResponse statisticalTimeSeriesFilter;
 
     @CustomType.Constructor
     private TimeSeriesFilterRatioResponse(
         @CustomType.Parameter("denominator") RatioPartResponse denominator,
         @CustomType.Parameter("numerator") RatioPartResponse numerator,
         @CustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        @CustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
+        @CustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation,
+        @CustomType.Parameter("statisticalTimeSeriesFilter") StatisticalTimeSeriesFilterResponse statisticalTimeSeriesFilter) {
         this.denominator = denominator;
         this.numerator = numerator;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;
         this.secondaryAggregation = secondaryAggregation;
+        this.statisticalTimeSeriesFilter = statisticalTimeSeriesFilter;
     }
 
     /**
@@ -72,6 +84,17 @@ public final class TimeSeriesFilterRatioResponse {
     public AggregationResponse secondaryAggregation() {
         return this.secondaryAggregation;
     }
+    /**
+     * @return Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     * @deprecated
+     * Statistics based time series filter. Note: This field is deprecated and completely ignored by the API.
+     * 
+     */
+    @Deprecated /* Statistics based time series filter. Note: This field is deprecated and completely ignored by the API. */
+    public StatisticalTimeSeriesFilterResponse statisticalTimeSeriesFilter() {
+        return this.statisticalTimeSeriesFilter;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -86,6 +109,7 @@ public final class TimeSeriesFilterRatioResponse {
         private RatioPartResponse numerator;
         private PickTimeSeriesFilterResponse pickTimeSeriesFilter;
         private AggregationResponse secondaryAggregation;
+        private StatisticalTimeSeriesFilterResponse statisticalTimeSeriesFilter;
 
         public Builder() {
     	      // Empty
@@ -97,6 +121,7 @@ public final class TimeSeriesFilterRatioResponse {
     	      this.numerator = defaults.numerator;
     	      this.pickTimeSeriesFilter = defaults.pickTimeSeriesFilter;
     	      this.secondaryAggregation = defaults.secondaryAggregation;
+    	      this.statisticalTimeSeriesFilter = defaults.statisticalTimeSeriesFilter;
         }
 
         public Builder denominator(RatioPartResponse denominator) {
@@ -114,8 +139,12 @@ public final class TimeSeriesFilterRatioResponse {
         public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
+        }
+        public Builder statisticalTimeSeriesFilter(StatisticalTimeSeriesFilterResponse statisticalTimeSeriesFilter) {
+            this.statisticalTimeSeriesFilter = Objects.requireNonNull(statisticalTimeSeriesFilter);
+            return this;
         }        public TimeSeriesFilterRatioResponse build() {
-            return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
+            return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation, statisticalTimeSeriesFilter);
         }
     }
 }

@@ -21,14 +21,14 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
     public static final AudioArgs Empty = new AudioArgs();
 
     /**
-     * Enable boosting high frequency components. The default is `false`.
+     * Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     @Import(name="highBoost")
     private @Nullable Output<Boolean> highBoost;
 
     /**
-     * @return Enable boosting high frequency components. The default is `false`.
+     * @return Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     public Optional<Output<Boolean>> highBoost() {
@@ -36,14 +36,14 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Enable boosting low frequency components. The default is `false`.
+     * Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     @Import(name="lowBoost")
     private @Nullable Output<Boolean> lowBoost;
 
     /**
-     * @return Enable boosting low frequency components. The default is `false`.
+     * @return Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
      * 
      */
     public Optional<Output<Boolean>> lowBoost() {
@@ -92,7 +92,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param highBoost Enable boosting high frequency components. The default is `false`.
+         * @param highBoost Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param highBoost Enable boosting high frequency components. The default is `false`.
+         * @param highBoost Enable boosting high frequency components. The default is `false`. **Note:** This field is not supported.
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lowBoost Enable boosting low frequency components. The default is `false`.
+         * @param lowBoost Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param lowBoost Enable boosting low frequency components. The default is `false`.
+         * @param lowBoost Enable boosting low frequency components. The default is `false`. **Note:** This field is not supported.
          * 
          * @return builder
          * 

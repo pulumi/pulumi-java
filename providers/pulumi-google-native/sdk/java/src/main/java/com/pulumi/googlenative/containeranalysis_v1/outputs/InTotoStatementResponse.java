@@ -14,7 +14,7 @@ import java.util.Objects;
 @CustomType
 public final class InTotoStatementResponse {
     /**
-     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * @return `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
      * 
      */
     private final String predicateType;
@@ -22,7 +22,7 @@ public final class InTotoStatementResponse {
     private final SlsaProvenanceResponse slsaProvenance;
     private final List<SubjectResponse> subject;
     /**
-     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * @return Always `https://in-toto.io/Statement/v0.1`.
      * 
      */
     private final String type;
@@ -42,7 +42,7 @@ public final class InTotoStatementResponse {
     }
 
     /**
-     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * @return `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
      * 
      */
     public String predicateType() {
@@ -58,7 +58,7 @@ public final class InTotoStatementResponse {
         return this.subject;
     }
     /**
-     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * @return Always `https://in-toto.io/Statement/v0.1`.
      * 
      */
     public String type() {

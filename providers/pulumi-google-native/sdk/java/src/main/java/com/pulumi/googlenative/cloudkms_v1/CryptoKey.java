@@ -18,7 +18,6 @@ import javax.annotation.Nullable;
 
 /**
  * Create a new CryptoKey within a KeyRing. CryptoKey.purpose and CryptoKey.version_template.algorithm are required.
- * Auto-naming is currently not supported for this resource.
  * Note - this resource&#39;s API doesn&#39;t support deletion. When deleted, the resource will persist
  * on Google Cloud even though it will be deleted from Pulumi state.
  * 

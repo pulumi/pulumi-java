@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.StringJoiner;
 
     /**
-     * Specifies how each file&#39;s UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+     * Specifies how each file&#39;s POSIX user ID (UID) attribute should be handled by the transfer. By default, UID is not preserved. Only applicable to transfers involving POSIX file systems, and ignored for other transfers.
      * 
      */
     @EnumType
@@ -20,7 +20,7 @@ import java.util.StringJoiner;
          */
         UidUnspecified("UID_UNSPECIFIED"),
         /**
-         * Skip UID during a transfer job.
+         * Do not preserve UID during a transfer job.
          * 
          */
         UidSkip("UID_SKIP"),

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.compute_beta.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.compute_beta.outputs.NodeGroupAutoscalingPolicyResponse;
 import com.pulumi.googlenative.compute_beta.outputs.NodeGroupMaintenanceWindowResponse;
+import com.pulumi.googlenative.compute_beta.outputs.ShareSettingsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -60,6 +61,11 @@ public final class GetNodeGroupResult {
      */
     private final String selfLink;
     /**
+     * @return Share-settings for the node group
+     * 
+     */
+    private final ShareSettingsResponse shareSettings;
+    /**
      * @return The total number of nodes in the node group.
      * 
      */
@@ -84,6 +90,7 @@ public final class GetNodeGroupResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("nodeTemplate") String nodeTemplate,
         @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
         @CustomType.Parameter("size") Integer size,
         @CustomType.Parameter("status") String status,
         @CustomType.Parameter("zone") String zone) {
@@ -98,6 +105,7 @@ public final class GetNodeGroupResult {
         this.name = name;
         this.nodeTemplate = nodeTemplate;
         this.selfLink = selfLink;
+        this.shareSettings = shareSettings;
         this.size = size;
         this.status = status;
         this.zone = zone;
@@ -173,6 +181,13 @@ public final class GetNodeGroupResult {
         return this.selfLink;
     }
     /**
+     * @return Share-settings for the node group
+     * 
+     */
+    public ShareSettingsResponse shareSettings() {
+        return this.shareSettings;
+    }
+    /**
      * @return The total number of nodes in the node group.
      * 
      */
@@ -210,6 +225,7 @@ public final class GetNodeGroupResult {
         private String name;
         private String nodeTemplate;
         private String selfLink;
+        private ShareSettingsResponse shareSettings;
         private Integer size;
         private String status;
         private String zone;
@@ -231,6 +247,7 @@ public final class GetNodeGroupResult {
     	      this.name = defaults.name;
     	      this.nodeTemplate = defaults.nodeTemplate;
     	      this.selfLink = defaults.selfLink;
+    	      this.shareSettings = defaults.shareSettings;
     	      this.size = defaults.size;
     	      this.status = defaults.status;
     	      this.zone = defaults.zone;
@@ -280,6 +297,10 @@ public final class GetNodeGroupResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
+        public Builder shareSettings(ShareSettingsResponse shareSettings) {
+            this.shareSettings = Objects.requireNonNull(shareSettings);
+            return this;
+        }
         public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
@@ -292,7 +313,7 @@ public final class GetNodeGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public GetNodeGroupResult build() {
-            return new GetNodeGroupResult(autoscalingPolicy, creationTimestamp, description, fingerprint, kind, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, selfLink, size, status, zone);
+            return new GetNodeGroupResult(autoscalingPolicy, creationTimestamp, description, fingerprint, kind, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, selfLink, shareSettings, size, status, zone);
         }
     }
 }

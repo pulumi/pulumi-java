@@ -24,14 +24,14 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     public static final InTotoStatementArgs Empty = new InTotoStatementArgs();
 
     /**
-     * &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
      * 
      */
     @Import(name="predicateType")
     private @Nullable Output<String> predicateType;
 
     /**
-     * @return &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+     * @return `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
      * 
      */
     public Optional<Output<String>> predicateType() {
@@ -60,14 +60,14 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * Always `https://in-toto.io/Statement/v0.1`.
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+     * @return Always `https://in-toto.io/Statement/v0.1`.
      * 
      */
     public Optional<Output<String>> type() {
@@ -103,7 +103,7 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param predicateType &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+         * @param predicateType `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param predicateType &#34;https://slsa.dev/provenance/v0.1&#34; for SlsaProvenance.
+         * @param predicateType `https://slsa.dev/provenance/v0.1` for SlsaProvenance.
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param type Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+         * @param type Always `https://in-toto.io/Statement/v0.1`.
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class InTotoStatementArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param type Always &#34;https://in-toto.io/Statement/v0.1&#34;.
+         * @param type Always `https://in-toto.io/Statement/v0.1`.
          * 
          * @return builder
          * 

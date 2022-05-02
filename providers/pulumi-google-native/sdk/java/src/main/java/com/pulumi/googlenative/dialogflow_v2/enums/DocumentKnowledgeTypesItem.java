@@ -29,7 +29,12 @@ import java.util.StringJoiner;
          * The entire document content as a whole can be used for query results. Only for Contact Center Solutions on Dialogflow.
          * 
          */
-        ArticleSuggestion("ARTICLE_SUGGESTION");
+        ArticleSuggestion("ARTICLE_SUGGESTION"),
+        /**
+         * The document contains agent-facing Smart Reply entries.
+         * 
+         */
+        AgentFacingSmartReply("AGENT_FACING_SMART_REPLY");
 
         private final String value;
 

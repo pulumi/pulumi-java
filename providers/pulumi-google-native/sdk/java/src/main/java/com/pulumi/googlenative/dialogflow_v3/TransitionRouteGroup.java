@@ -21,14 +21,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:dialogflow/v3:TransitionRouteGroup")
 public class TransitionRouteGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
-     * @return The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     * @return The human-readable name of the transition route group, unique within the flow. The display name can be no longer than 30 characters.
      * 
      */
     public Output<String> displayName() {

@@ -15,7 +15,7 @@ import java.util.StringJoiner;
     @EnumType
     public enum OSPolicyResourceExecResourceExecInterpreter {
         /**
-         * Defaults to NONE.
+         * Invalid value, the request will return validation error.
          * 
          */
         InterpreterUnspecified("INTERPRETER_UNSPECIFIED"),

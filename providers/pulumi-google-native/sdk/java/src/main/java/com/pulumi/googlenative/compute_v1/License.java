@@ -21,6 +21,24 @@ import javax.annotation.Nullable;
 @ResourceType(type="google-native:compute/v1:License")
 public class License extends com.pulumi.resources.CustomResource {
     /**
+     * Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     * @deprecated
+     * [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     */
+    @Deprecated /* [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee. */
+    @Export(name="chargesUseFee", type=Boolean.class, parameters={})
+    private Output<Boolean> chargesUseFee;
+
+    /**
+     * @return Deprecated. This field no longer reflects whether a license charges a usage fee.
+     * 
+     */
+    public Output<Boolean> chargesUseFee() {
+        return this.chargesUseFee;
+    }
+    /**
      * Creation timestamp in RFC3339 text format.
      * 
      */

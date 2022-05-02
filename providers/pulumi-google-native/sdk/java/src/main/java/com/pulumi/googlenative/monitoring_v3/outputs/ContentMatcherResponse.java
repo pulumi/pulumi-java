@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContentMatcherResponse {
     /**
-     * @return String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * @return String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
      */
     private final String content;
@@ -29,7 +29,7 @@ public final class ContentMatcherResponse {
     }
 
     /**
-     * @return String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
+     * @return String, regex or JSON content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
      * 
      */
     public String content() {

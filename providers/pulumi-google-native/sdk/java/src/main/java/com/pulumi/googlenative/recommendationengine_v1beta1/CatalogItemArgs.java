@@ -101,6 +101,29 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.itemGroupId);
     }
 
+    /**
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     * @deprecated
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+    @Import(name="languageCode")
+    private @Nullable Output<String> languageCode;
+
+    /**
+     * @return Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     * @deprecated
+     * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
+    }
+
     @Import(name="location")
     private @Nullable Output<String> location;
 
@@ -169,6 +192,7 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
         this.id = $.id;
         this.itemAttributes = $.itemAttributes;
         this.itemGroupId = $.itemGroupId;
+        this.languageCode = $.languageCode;
         this.location = $.location;
         this.productMetadata = $.productMetadata;
         this.project = $.project;
@@ -316,6 +340,35 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder itemGroupId(String itemGroupId) {
             return itemGroupId(Output.of(itemGroupId));
+        }
+
+        /**
+         * @param languageCode Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+         * 
+         */
+        @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+        public Builder languageCode(@Nullable Output<String> languageCode) {
+            $.languageCode = languageCode;
+            return this;
+        }
+
+        /**
+         * @param languageCode Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance.
+         * 
+         */
+        @Deprecated /* Optional. Deprecated. The model automatically detects the text language. Your catalog can include text in different languages, but duplicating catalog items to provide text in multiple languages can result in degraded model performance. */
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
 
         public Builder location(@Nullable Output<String> location) {

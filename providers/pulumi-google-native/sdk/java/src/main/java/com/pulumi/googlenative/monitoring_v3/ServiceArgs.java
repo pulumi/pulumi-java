@@ -143,9 +143,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * Optional. The Service id to use for this Service. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+     * 
+     */
     @Import(name="serviceId")
     private @Nullable Output<String> serviceId;
 
+    /**
+     * @return Optional. The Service id to use for this Service. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+     * 
+     */
     public Optional<Output<String>> serviceId() {
         return Optional.ofNullable(this.serviceId);
     }
@@ -398,11 +406,23 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param serviceId Optional. The Service id to use for this Service. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(@Nullable Output<String> serviceId) {
             $.serviceId = serviceId;
             return this;
         }
 
+        /**
+         * @param serviceId Optional. The Service id to use for this Service. If omitted, an id will be generated instead. Must match the pattern [a-z0-9\-]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceId(String serviceId) {
             return serviceId(Output.of(serviceId));
         }

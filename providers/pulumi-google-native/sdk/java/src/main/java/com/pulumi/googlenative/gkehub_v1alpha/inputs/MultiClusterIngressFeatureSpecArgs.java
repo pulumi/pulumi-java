@@ -5,6 +5,7 @@ package com.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.googlenative.gkehub_v1alpha.enums.MultiClusterIngressFeatureSpecBilling;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,6 +19,29 @@ import javax.annotation.Nullable;
 public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final MultiClusterIngressFeatureSpecArgs Empty = new MultiClusterIngressFeatureSpecArgs();
+
+    /**
+     * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     * @deprecated
+     * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     */
+    @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+    @Import(name="billing")
+    private @Nullable Output<MultiClusterIngressFeatureSpecBilling> billing;
+
+    /**
+     * @return Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     * @deprecated
+     * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+     * 
+     */
+    @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+    public Optional<Output<MultiClusterIngressFeatureSpecBilling>> billing() {
+        return Optional.ofNullable(this.billing);
+    }
 
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
@@ -37,6 +61,7 @@ public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resourc
     private MultiClusterIngressFeatureSpecArgs() {}
 
     private MultiClusterIngressFeatureSpecArgs(MultiClusterIngressFeatureSpecArgs $) {
+        this.billing = $.billing;
         this.configMembership = $.configMembership;
     }
 
@@ -56,6 +81,35 @@ public final class MultiClusterIngressFeatureSpecArgs extends com.pulumi.resourc
 
         public Builder(MultiClusterIngressFeatureSpecArgs defaults) {
             $ = new MultiClusterIngressFeatureSpecArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param billing Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+         * 
+         */
+        @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+        public Builder billing(@Nullable Output<MultiClusterIngressFeatureSpecBilling> billing) {
+            $.billing = billing;
+            return this;
+        }
+
+        /**
+         * @param billing Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated: This field will be ignored and should not be set. Customer&#39;s billing structure.
+         * 
+         */
+        @Deprecated /* Deprecated: This field will be ignored and should not be set. Customer's billing structure. */
+        public Builder billing(MultiClusterIngressFeatureSpecBilling billing) {
+            return billing(Output.of(billing));
         }
 
         /**

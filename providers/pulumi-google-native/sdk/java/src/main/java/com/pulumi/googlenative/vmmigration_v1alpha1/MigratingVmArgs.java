@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeEngineTargetDefaultsArgs;
 import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.SchedulePolicyArgs;
+import com.pulumi.googlenative.vmmigration_v1alpha1.inputs.TargetVMDetailsArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -31,6 +32,29 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<ComputeEngineTargetDefaultsArgs>> computeEngineTargetDefaults() {
         return Optional.ofNullable(this.computeEngineTargetDefaults);
+    }
+
+    /**
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+    @Import(name="computeEngineVmDefaults")
+    private @Nullable Output<TargetVMDetailsArgs> computeEngineVmDefaults;
+
+    /**
+     * @return Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+    public Optional<Output<TargetVMDetailsArgs>> computeEngineVmDefaults() {
+        return Optional.ofNullable(this.computeEngineVmDefaults);
     }
 
     /**
@@ -85,9 +109,17 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.location);
     }
 
+    /**
+     * Required. The migratingVm identifier.
+     * 
+     */
     @Import(name="migratingVmId", required=true)
     private Output<String> migratingVmId;
 
+    /**
+     * @return Required. The migratingVm identifier.
+     * 
+     */
     public Output<String> migratingVmId() {
         return this.migratingVmId;
     }
@@ -114,9 +146,17 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.project);
     }
 
+    /**
+     * A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -143,10 +183,34 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.sourceVmId);
     }
 
+    /**
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+    @Import(name="targetDefaults")
+    private @Nullable Output<TargetVMDetailsArgs> targetDefaults;
+
+    /**
+     * @return The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     * @deprecated
+     * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+     * 
+     */
+    @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+    public Optional<Output<TargetVMDetailsArgs>> targetDefaults() {
+        return Optional.ofNullable(this.targetDefaults);
+    }
+
     private MigratingVmArgs() {}
 
     private MigratingVmArgs(MigratingVmArgs $) {
         this.computeEngineTargetDefaults = $.computeEngineTargetDefaults;
+        this.computeEngineVmDefaults = $.computeEngineVmDefaults;
         this.description = $.description;
         this.displayName = $.displayName;
         this.labels = $.labels;
@@ -157,6 +221,7 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
         this.requestId = $.requestId;
         this.sourceId = $.sourceId;
         this.sourceVmId = $.sourceVmId;
+        this.targetDefaults = $.targetDefaults;
     }
 
     public static Builder builder() {
@@ -196,6 +261,35 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder computeEngineTargetDefaults(ComputeEngineTargetDefaultsArgs computeEngineTargetDefaults) {
             return computeEngineTargetDefaults(Output.of(computeEngineTargetDefaults));
+        }
+
+        /**
+         * @param computeEngineVmDefaults Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         */
+        @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+        public Builder computeEngineVmDefaults(@Nullable Output<TargetVMDetailsArgs> computeEngineVmDefaults) {
+            $.computeEngineVmDefaults = computeEngineVmDefaults;
+            return this;
+        }
+
+        /**
+         * @param computeEngineVmDefaults Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         */
+        @Deprecated /* Details of the VM in Compute Engine. Deprecated: Use compute_engine_target_defaults instead. */
+        public Builder computeEngineVmDefaults(TargetVMDetailsArgs computeEngineVmDefaults) {
+            return computeEngineVmDefaults(Output.of(computeEngineVmDefaults));
         }
 
         /**
@@ -270,11 +364,23 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migratingVmId Required. The migratingVm identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migratingVmId(Output<String> migratingVmId) {
             $.migratingVmId = migratingVmId;
             return this;
         }
 
+        /**
+         * @param migratingVmId Required. The migratingVm identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migratingVmId(String migratingVmId) {
             return migratingVmId(Output.of(migratingVmId));
         }
@@ -309,11 +415,23 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
             return project(Output.of(project));
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId A request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -346,6 +464,35 @@ public final class MigratingVmArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder sourceVmId(String sourceVmId) {
             return sourceVmId(Output.of(sourceVmId));
+        }
+
+        /**
+         * @param targetDefaults The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         */
+        @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+        public Builder targetDefaults(@Nullable Output<TargetVMDetailsArgs> targetDefaults) {
+            $.targetDefaults = targetDefaults;
+            return this;
+        }
+
+        /**
+         * @param targetDefaults The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead.
+         * 
+         */
+        @Deprecated /* The default configuration of the target VM that will be created in GCP as a result of the migration. Deprecated: Use compute_engine_target_defaults instead. */
+        public Builder targetDefaults(TargetVMDetailsArgs targetDefaults) {
+            return targetDefaults(Output.of(targetDefaults));
         }
 
         public MigratingVmArgs build() {

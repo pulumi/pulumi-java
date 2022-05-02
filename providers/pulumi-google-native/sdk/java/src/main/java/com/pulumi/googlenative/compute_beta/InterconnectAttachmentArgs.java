@@ -56,14 +56,14 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * This field is not available.
      * 
      */
     @Import(name="candidateIpv6Subnets")
     private @Nullable Output<List<String>> candidateIpv6Subnets;
 
     /**
-     * @return Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+     * @return This field is not available.
      * 
      */
     public Optional<Output<List<String>>> candidateIpv6Subnets() {
@@ -86,14 +86,14 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * This field is not available.
      * 
      */
     @Import(name="cloudRouterIpv6InterfaceId")
     private @Nullable Output<String> cloudRouterIpv6InterfaceId;
 
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public Optional<Output<String>> cloudRouterIpv6InterfaceId() {
@@ -101,33 +101,18 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * This field is not available.
      * 
      */
     @Import(name="customerRouterIpv6InterfaceId")
     private @Nullable Output<String> customerRouterIpv6InterfaceId;
 
     /**
-     * @return If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+     * @return This field is not available.
      * 
      */
     public Optional<Output<String>> customerRouterIpv6InterfaceId() {
         return Optional.ofNullable(this.customerRouterIpv6InterfaceId);
-    }
-
-    /**
-     * [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
-     * 
-     */
-    @Import(name="dataplaneVersion")
-    private @Nullable Output<Integer> dataplaneVersion;
-
-    /**
-     * @return [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
-     * 
-     */
-    public Optional<Output<Integer>> dataplaneVersion() {
-        return Optional.ofNullable(this.dataplaneVersion);
     }
 
     /**
@@ -309,9 +294,17 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         return this.region;
     }
 
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     @Import(name="requestId")
     private @Nullable Output<String> requestId;
 
+    /**
+     * @return An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     * 
+     */
     public Optional<Output<String>> requestId() {
         return Optional.ofNullable(this.requestId);
     }
@@ -361,9 +354,17 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         return Optional.ofNullable(this.type);
     }
 
+    /**
+     * If true, the request will not be committed.
+     * 
+     */
     @Import(name="validateOnly")
     private @Nullable Output<String> validateOnly;
 
+    /**
+     * @return If true, the request will not be committed.
+     * 
+     */
     public Optional<Output<String>> validateOnly() {
         return Optional.ofNullable(this.validateOnly);
     }
@@ -392,7 +393,6 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         this.candidateSubnets = $.candidateSubnets;
         this.cloudRouterIpv6InterfaceId = $.cloudRouterIpv6InterfaceId;
         this.customerRouterIpv6InterfaceId = $.customerRouterIpv6InterfaceId;
-        this.dataplaneVersion = $.dataplaneVersion;
         this.description = $.description;
         this.edgeAvailabilityDomain = $.edgeAvailabilityDomain;
         this.encryption = $.encryption;
@@ -475,7 +475,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param candidateIpv6Subnets Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+         * @param candidateIpv6Subnets This field is not available.
          * 
          * @return builder
          * 
@@ -486,7 +486,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param candidateIpv6Subnets Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+         * @param candidateIpv6Subnets This field is not available.
          * 
          * @return builder
          * 
@@ -496,7 +496,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param candidateIpv6Subnets Up to 16 candidate prefixes that control the allocation of cloudRouterIpv6Address and customerRouterIpv6Address for this attachment. Each prefix must be in the Global Unique Address (GUA) space. It is highly recommended that it be in a range owned by the requestor. A GUA in a range owned by Google will cause the request to fail. Google will select an available prefix from the supplied candidates or fail the request. If not supplied, a /125 from a Google-owned GUA block will be selected.
+         * @param candidateIpv6Subnets This field is not available.
          * 
          * @return builder
          * 
@@ -537,7 +537,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param cloudRouterIpv6InterfaceId If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+         * @param cloudRouterIpv6InterfaceId This field is not available.
          * 
          * @return builder
          * 
@@ -548,7 +548,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param cloudRouterIpv6InterfaceId If supplied, the interface id (index within the subnet) to be used for the cloud router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+         * @param cloudRouterIpv6InterfaceId This field is not available.
          * 
          * @return builder
          * 
@@ -558,7 +558,7 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param customerRouterIpv6InterfaceId If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+         * @param customerRouterIpv6InterfaceId This field is not available.
          * 
          * @return builder
          * 
@@ -569,34 +569,13 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param customerRouterIpv6InterfaceId If supplied, the interface id (index within the subnet) to be used for the customer router address. The id must be in the range of 1 to 6. If a subnet mask is supplied, it must be /125, and the subnet should either be 0 or match the selected subnet.
+         * @param customerRouterIpv6InterfaceId This field is not available.
          * 
          * @return builder
          * 
          */
         public Builder customerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
             return customerRouterIpv6InterfaceId(Output.of(customerRouterIpv6InterfaceId));
-        }
-
-        /**
-         * @param dataplaneVersion [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder dataplaneVersion(@Nullable Output<Integer> dataplaneVersion) {
-            $.dataplaneVersion = dataplaneVersion;
-            return this;
-        }
-
-        /**
-         * @param dataplaneVersion [Output only for types PARTNER and DEDICATED. Not present for PARTNER_PROVIDER.] Dataplane version for this InterconnectAttachment. This field is only present for Dataplane version 2 and higher. Absence of this field in the API output indicates that the Dataplane is version 1.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder dataplaneVersion(Integer dataplaneVersion) {
-            return dataplaneVersion(Output.of(dataplaneVersion));
         }
 
         /**
@@ -858,11 +837,23 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
             return region(Output.of(region));
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(@Nullable Output<String> requestId) {
             $.requestId = requestId;
             return this;
         }
 
+        /**
+         * @param requestId An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
         }
@@ -930,11 +921,23 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
             return type(Output.of(type));
         }
 
+        /**
+         * @param validateOnly If true, the request will not be committed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
             $.validateOnly = validateOnly;
             return this;
         }
 
+        /**
+         * @param validateOnly If true, the request will not be committed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateOnly(String validateOnly) {
             return validateOnly(Output.of(validateOnly));
         }

@@ -167,6 +167,21 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The name of the project. Should be of the form &#34;projects/{project_id}&#34;. @Deprecated
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the project. Should be of the form &#34;projects/{project_id}&#34;. @Deprecated
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
      * An analysis note associated with this image, in the form &#34;providers/{provider_id}/notes/{NOTE_ID}&#34; This field can be used as a filter in list requests.
      * 
      */
@@ -335,6 +350,7 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
         this.dsseAttestation = $.dsseAttestation;
         this.envelope = $.envelope;
         this.installation = $.installation;
+        this.name = $.name;
         this.noteName = $.noteName;
         this.project = $.project;
         this.remediation = $.remediation;
@@ -553,6 +569,27 @@ public final class OccurrenceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder installation(InstallationArgs installation) {
             return installation(Output.of(installation));
+        }
+
+        /**
+         * @param name The name of the project. Should be of the form &#34;projects/{project_id}&#34;. @Deprecated
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the project. Should be of the form &#34;projects/{project_id}&#34;. @Deprecated
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         /**

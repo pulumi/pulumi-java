@@ -82,6 +82,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslCertificateArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionSslPolicyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpProxyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetHttpsProxyArgs;
+import com.pulumi.googlenative.compute_alpha.inputs.GetRegionTargetTcpProxyArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetRegionUrlMapArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetReservationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.GetReservationIamPolicyArgs;
@@ -184,6 +185,7 @@ import com.pulumi.googlenative.compute_alpha.outputs.GetRegionSslCertificateResu
 import com.pulumi.googlenative.compute_alpha.outputs.GetRegionSslPolicyResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetRegionTargetHttpProxyResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetRegionTargetHttpsProxyResult;
+import com.pulumi.googlenative.compute_alpha.outputs.GetRegionTargetTcpProxyResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetRegionUrlMapResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetReservationIamPolicyResult;
 import com.pulumi.googlenative.compute_alpha.outputs.GetReservationResult;
@@ -963,6 +965,16 @@ public final class Compute_alphaFunctions {
     }
     public static CompletableFuture<GetRegionTargetHttpsProxyResult> getRegionTargetHttpsProxy(GetRegionTargetHttpsProxyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionTargetHttpsProxy", TypeShape.of(GetRegionTargetHttpsProxyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * Returns the specified TargetTcpProxy resource.
+     * 
+     */
+    public static CompletableFuture<GetRegionTargetTcpProxyResult> getRegionTargetTcpProxy(GetRegionTargetTcpProxyArgs args) {
+        return getRegionTargetTcpProxy(args, InvokeOptions.Empty);
+    }
+    public static CompletableFuture<GetRegionTargetTcpProxyResult> getRegionTargetTcpProxy(GetRegionTargetTcpProxyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionTargetTcpProxy", TypeShape.of(GetRegionTargetTcpProxyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.

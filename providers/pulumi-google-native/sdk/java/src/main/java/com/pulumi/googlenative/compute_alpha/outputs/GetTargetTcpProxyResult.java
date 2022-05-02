@@ -41,6 +41,11 @@ public final class GetTargetTcpProxyResult {
      */
     private final String proxyHeader;
     /**
+     * @return URL of the region where the regional TCP proxy resides. This field is not applicable to global TCP proxy.
+     * 
+     */
+    private final String region;
+    /**
      * @return Server-defined URL for the resource.
      * 
      */
@@ -59,6 +64,7 @@ public final class GetTargetTcpProxyResult {
         @CustomType.Parameter("name") String name,
         @CustomType.Parameter("proxyBind") Boolean proxyBind,
         @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("region") String region,
         @CustomType.Parameter("selfLink") String selfLink,
         @CustomType.Parameter("service") String service) {
         this.creationTimestamp = creationTimestamp;
@@ -67,6 +73,7 @@ public final class GetTargetTcpProxyResult {
         this.name = name;
         this.proxyBind = proxyBind;
         this.proxyHeader = proxyHeader;
+        this.region = region;
         this.selfLink = selfLink;
         this.service = service;
     }
@@ -114,6 +121,13 @@ public final class GetTargetTcpProxyResult {
         return this.proxyHeader;
     }
     /**
+     * @return URL of the region where the regional TCP proxy resides. This field is not applicable to global TCP proxy.
+     * 
+     */
+    public String region() {
+        return this.region;
+    }
+    /**
      * @return Server-defined URL for the resource.
      * 
      */
@@ -143,6 +157,7 @@ public final class GetTargetTcpProxyResult {
         private String name;
         private Boolean proxyBind;
         private String proxyHeader;
+        private String region;
         private String selfLink;
         private String service;
 
@@ -158,6 +173,7 @@ public final class GetTargetTcpProxyResult {
     	      this.name = defaults.name;
     	      this.proxyBind = defaults.proxyBind;
     	      this.proxyHeader = defaults.proxyHeader;
+    	      this.region = defaults.region;
     	      this.selfLink = defaults.selfLink;
     	      this.service = defaults.service;
         }
@@ -186,6 +202,10 @@ public final class GetTargetTcpProxyResult {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
+        public Builder region(String region) {
+            this.region = Objects.requireNonNull(region);
+            return this;
+        }
         public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
@@ -194,7 +214,7 @@ public final class GetTargetTcpProxyResult {
             this.service = Objects.requireNonNull(service);
             return this;
         }        public GetTargetTcpProxyResult build() {
-            return new GetTargetTcpProxyResult(creationTimestamp, description, kind, name, proxyBind, proxyHeader, selfLink, service);
+            return new GetTargetTcpProxyResult(creationTimestamp, description, kind, name, proxyBind, proxyHeader, region, selfLink, service);
         }
     }
 }

@@ -59,6 +59,15 @@ public final class GetBillingAccountSinkResult {
      */
     private final String name;
     /**
+     * @return Deprecated. This field is unused.
+     * 
+     * @deprecated
+     * Deprecated. This field is unused.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is unused. */
+    private final String outputVersionFormat;
+    /**
      * @return The last update timestamp of the sink.This field may not be present for older sinks.
      * 
      */
@@ -80,6 +89,7 @@ public final class GetBillingAccountSinkResult {
         @CustomType.Parameter("filter") String filter,
         @CustomType.Parameter("includeChildren") Boolean includeChildren,
         @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputVersionFormat") String outputVersionFormat,
         @CustomType.Parameter("updateTime") String updateTime,
         @CustomType.Parameter("writerIdentity") String writerIdentity) {
         this.bigqueryOptions = bigqueryOptions;
@@ -91,6 +101,7 @@ public final class GetBillingAccountSinkResult {
         this.filter = filter;
         this.includeChildren = includeChildren;
         this.name = name;
+        this.outputVersionFormat = outputVersionFormat;
         this.updateTime = updateTime;
         this.writerIdentity = writerIdentity;
     }
@@ -159,6 +170,17 @@ public final class GetBillingAccountSinkResult {
         return this.name;
     }
     /**
+     * @return Deprecated. This field is unused.
+     * 
+     * @deprecated
+     * Deprecated. This field is unused.
+     * 
+     */
+    @Deprecated /* Deprecated. This field is unused. */
+    public String outputVersionFormat() {
+        return this.outputVersionFormat;
+    }
+    /**
      * @return The last update timestamp of the sink.This field may not be present for older sinks.
      * 
      */
@@ -191,6 +213,7 @@ public final class GetBillingAccountSinkResult {
         private String filter;
         private Boolean includeChildren;
         private String name;
+        private String outputVersionFormat;
         private String updateTime;
         private String writerIdentity;
 
@@ -209,6 +232,7 @@ public final class GetBillingAccountSinkResult {
     	      this.filter = defaults.filter;
     	      this.includeChildren = defaults.includeChildren;
     	      this.name = defaults.name;
+    	      this.outputVersionFormat = defaults.outputVersionFormat;
     	      this.updateTime = defaults.updateTime;
     	      this.writerIdentity = defaults.writerIdentity;
         }
@@ -252,6 +276,10 @@ public final class GetBillingAccountSinkResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
+        public Builder outputVersionFormat(String outputVersionFormat) {
+            this.outputVersionFormat = Objects.requireNonNull(outputVersionFormat);
+            return this;
+        }
         public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
@@ -260,7 +288,7 @@ public final class GetBillingAccountSinkResult {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }        public GetBillingAccountSinkResult build() {
-            return new GetBillingAccountSinkResult(bigqueryOptions, createTime, description, destination, disabled, exclusions, filter, includeChildren, name, updateTime, writerIdentity);
+            return new GetBillingAccountSinkResult(bigqueryOptions, createTime, description, destination, disabled, exclusions, filter, includeChildren, name, outputVersionFormat, updateTime, writerIdentity);
         }
     }
 }

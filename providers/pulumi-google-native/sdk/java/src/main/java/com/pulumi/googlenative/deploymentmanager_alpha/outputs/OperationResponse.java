@@ -19,6 +19,15 @@ public final class OperationResponse {
      */
     private final String clientOperationId;
     /**
+     * @return [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This field is deprecated. */
+    private final String creationTimestamp;
+    /**
      * @return A textual description of the operation, which is set when the operation is created.
      * 
      */
@@ -127,6 +136,7 @@ public final class OperationResponse {
     @CustomType.Constructor
     private OperationResponse(
         @CustomType.Parameter("clientOperationId") String clientOperationId,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
         @CustomType.Parameter("description") String description,
         @CustomType.Parameter("endTime") String endTime,
         @CustomType.Parameter("error") OperationErrorResponse error,
@@ -149,6 +159,7 @@ public final class OperationResponse {
         @CustomType.Parameter("warnings") List<OperationWarningsItemResponse> warnings,
         @CustomType.Parameter("zone") String zone) {
         this.clientOperationId = clientOperationId;
+        this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.endTime = endTime;
         this.error = error;
@@ -178,6 +189,17 @@ public final class OperationResponse {
      */
     public String clientOperationId() {
         return this.clientOperationId;
+    }
+    /**
+     * @return [Deprecated] This field is deprecated.
+     * 
+     * @deprecated
+     * [Deprecated] This field is deprecated.
+     * 
+     */
+    @Deprecated /* [Deprecated] This field is deprecated. */
+    public String creationTimestamp() {
+        return this.creationTimestamp;
     }
     /**
      * @return A textual description of the operation, which is set when the operation is created.
@@ -337,6 +359,7 @@ public final class OperationResponse {
 
     public static final class Builder {
         private String clientOperationId;
+        private String creationTimestamp;
         private String description;
         private String endTime;
         private OperationErrorResponse error;
@@ -366,6 +389,7 @@ public final class OperationResponse {
         public Builder(OperationResponse defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.clientOperationId = defaults.clientOperationId;
+    	      this.creationTimestamp = defaults.creationTimestamp;
     	      this.description = defaults.description;
     	      this.endTime = defaults.endTime;
     	      this.error = defaults.error;
@@ -391,6 +415,10 @@ public final class OperationResponse {
 
         public Builder clientOperationId(String clientOperationId) {
             this.clientOperationId = Objects.requireNonNull(clientOperationId);
+            return this;
+        }
+        public Builder creationTimestamp(String creationTimestamp) {
+            this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
         public Builder description(String description) {
@@ -480,7 +508,7 @@ public final class OperationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }        public OperationResponse build() {
-            return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
+            return new OperationResponse(clientOperationId, creationTimestamp, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
         }
     }
 }
