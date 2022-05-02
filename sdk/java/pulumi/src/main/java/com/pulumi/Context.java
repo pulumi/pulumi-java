@@ -26,16 +26,9 @@ public interface Context extends OutputContext, ConfigContext {
     LoggingContext log();
 
     /**
-     * Exports and {@link Output} from a Pulumi stack.
+     * Exports an {@link Output} from a Pulumi stack.
      * @param name name of the {@code Output}
      * @param output the {@code Output} value
-     * @return the {@link Exports} associated with current {@link Context}
      */
-    Exports export(String name, Output<?> output);
-
-    /**
-     * Used to finish a stack callback.
-     * @return the {@link Exports} associated with current {@link Context}
-     */
-    Exports exports();
+    void export(String name, Output<?> output);
 }

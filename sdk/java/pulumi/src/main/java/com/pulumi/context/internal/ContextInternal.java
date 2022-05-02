@@ -2,13 +2,15 @@ package com.pulumi.context.internal;
 
 import com.pulumi.Config;
 import com.pulumi.Context;
-import com.pulumi.Exports;
 import com.pulumi.context.LoggingContext;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.Strings;
 import com.pulumi.core.internal.annotations.InternalUse;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+
+import java.util.Map;
+import java.util.Objects;
 
 import static com.pulumi.core.internal.Objects.require;
 import static java.util.Objects.requireNonNull;
@@ -61,14 +63,8 @@ public class ContextInternal implements Context {
     }
 
     @Override
-    public Exports export(String name, Output<?> output) {
+    public void export(String name, Output<?> output) {
         this.exports.export(name, output);
-        return this.exports;
-    }
-
-    @Override
-    public Exports exports() {
-        return this.exports;
     }
 
     @Override
@@ -79,5 +75,9 @@ public class ContextInternal implements Context {
     @Override
     public Config config(String name) {
         return config.config(name);
+    }
+
+    public Map<String, Output<?>> getExports() {
+        return exports.exports();
     }
 }

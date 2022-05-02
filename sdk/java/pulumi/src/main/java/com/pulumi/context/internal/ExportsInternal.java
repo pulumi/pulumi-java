@@ -1,7 +1,6 @@
 package com.pulumi.context.internal;
 
 import com.google.common.collect.ImmutableMap;
-import com.pulumi.Exports;
 import com.pulumi.core.Output;
 import com.pulumi.core.internal.annotations.InternalUse;
 
@@ -12,7 +11,7 @@ import static java.util.Objects.requireNonNull;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public class ExportsInternal implements Exports {
+public class ExportsInternal {
 
     private final ImmutableMap.Builder<String, Output<?>> exports;
 
@@ -26,14 +25,12 @@ public class ExportsInternal implements Exports {
         this.exports.putAll(exports);
     }
 
-    public Exports export(String name, Output<?> output) {
+    public void export(String name, Output<?> output) {
         requireNonNull(name, "The 'name' of an 'export' cannot be 'null'");
         requireNonNull(output, "The 'output' of an 'export' cannot be 'null'");
         this.exports.put(name, output);
-        return this;
     }
 
-    @Override
     public Map<String, Output<?>> exports() {
         return this.exports.build();
     }
