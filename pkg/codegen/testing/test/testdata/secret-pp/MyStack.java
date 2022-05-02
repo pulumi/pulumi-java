@@ -10,11 +10,10 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var dbCluster = new Cluster("dbCluster", ClusterArgs.builder()        
             .masterPassword(Output.ofSecret("foobar"))
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

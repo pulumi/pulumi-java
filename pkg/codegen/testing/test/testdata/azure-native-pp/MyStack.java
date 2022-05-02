@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var frontDoor = new FrontDoor("frontDoor", FrontDoorArgs.builder()        
             .routingRules(RoutingRule.builder()
                 .routeConfiguration(ForwardingConfiguration.builder()
@@ -75,6 +75,5 @@ public class App {
             .location("WestUs")
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

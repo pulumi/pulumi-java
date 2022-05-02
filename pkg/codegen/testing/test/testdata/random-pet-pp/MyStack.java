@@ -10,11 +10,10 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var random_pet = new RandomPet("random_pet", RandomPetArgs.builder()        
             .prefix("doggo")
             .build());
 
-        return ctx.exports();
-    }
+        }
 }

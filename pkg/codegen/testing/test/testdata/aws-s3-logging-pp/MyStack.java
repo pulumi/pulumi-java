@@ -10,7 +10,7 @@ public class App {
         Pulumi.run(App::stack);
     }
 
-    public static Exports stack(Context ctx) {
+    public static void stack(Context ctx) {
         var logs = new Bucket("logs");
 
         var bucket = new Bucket("bucket", BucketArgs.builder()        
@@ -20,6 +20,5 @@ public class App {
             .build());
 
         ctx.export("targetBucket", bucket.getLoggings().apply(loggings -> loggings[0].getTargetBucket()));
-        return ctx.exports();
-    }
+        }
 }
