@@ -5,11 +5,11 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class AdministrativeUnitArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return The description of the administrative unit.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,8 +37,12 @@ public final class AdministrativeUnitArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return The display name of the administrative unit.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -44,10 +52,14 @@ public final class AdministrativeUnitArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hiddenMembershipEnabled")
-      private final @Nullable Output<Boolean> hiddenMembershipEnabled;
+    private @Nullable Output<Boolean> hiddenMembershipEnabled;
 
-    public Output<Boolean> hiddenMembershipEnabled() {
-        return this.hiddenMembershipEnabled == null ? Codegen.empty() : this.hiddenMembershipEnabled;
+    /**
+     * @return Whether the administrative unit and its members are hidden or publicly viewable in the directory
+     * 
+     */
+    public Optional<Output<Boolean>> hiddenMembershipEnabled() {
+        return Optional.ofNullable(this.hiddenMembershipEnabled);
     }
 
     /**
@@ -55,10 +67,14 @@ public final class AdministrativeUnitArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    /**
+     * @return A set of object IDs of members who should be present in this administrative unit. Supported object types are Users or Groups.
+     * 
+     */
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -66,105 +82,163 @@ public final class AdministrativeUnitArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="preventDuplicateNames")
-      private final @Nullable Output<Boolean> preventDuplicateNames;
+    private @Nullable Output<Boolean> preventDuplicateNames;
 
-    public Output<Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames == null ? Codegen.empty() : this.preventDuplicateNames;
+    /**
+     * @return If `true`, will return an error if an existing administrative unit is found with the same name
+     * 
+     */
+    public Optional<Output<Boolean>> preventDuplicateNames() {
+        return Optional.ofNullable(this.preventDuplicateNames);
     }
 
-    public AdministrativeUnitArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Boolean> hiddenMembershipEnabled,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<Boolean> preventDuplicateNames) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.hiddenMembershipEnabled = hiddenMembershipEnabled;
-        this.members = members;
-        this.preventDuplicateNames = preventDuplicateNames;
-    }
+    private AdministrativeUnitArgs() {}
 
-    private AdministrativeUnitArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hiddenMembershipEnabled = Codegen.empty();
-        this.members = Codegen.empty();
-        this.preventDuplicateNames = Codegen.empty();
+    private AdministrativeUnitArgs(AdministrativeUnitArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.hiddenMembershipEnabled = $.hiddenMembershipEnabled;
+        this.members = $.members;
+        this.preventDuplicateNames = $.preventDuplicateNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdministrativeUnitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> hiddenMembershipEnabled;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<Boolean> preventDuplicateNames;
+        private AdministrativeUnitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdministrativeUnitArgs();
         }
 
         public Builder(AdministrativeUnitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.hiddenMembershipEnabled = defaults.hiddenMembershipEnabled;
-    	      this.members = defaults.members;
-    	      this.preventDuplicateNames = defaults.preventDuplicateNames;
+            $ = new AdministrativeUnitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description The description of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName The display name of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName The display name of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param hiddenMembershipEnabled Whether the administrative unit and its members are hidden or publicly viewable in the directory
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiddenMembershipEnabled(@Nullable Output<Boolean> hiddenMembershipEnabled) {
-            this.hiddenMembershipEnabled = hiddenMembershipEnabled;
+            $.hiddenMembershipEnabled = hiddenMembershipEnabled;
             return this;
         }
-        public Builder hiddenMembershipEnabled(@Nullable Boolean hiddenMembershipEnabled) {
-            this.hiddenMembershipEnabled = Codegen.ofNullable(hiddenMembershipEnabled);
-            return this;
+
+        /**
+         * @param hiddenMembershipEnabled Whether the administrative unit and its members are hidden or publicly viewable in the directory
+         * 
+         * @return builder
+         * 
+         */
+        public Builder hiddenMembershipEnabled(Boolean hiddenMembershipEnabled) {
+            return hiddenMembershipEnabled(Output.of(hiddenMembershipEnabled));
         }
+
+        /**
+         * @param members A set of object IDs of members who should be present in this administrative unit. Supported object types are Users or Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        /**
+         * @param members A set of object IDs of members who should be present in this administrative unit. Supported object types are Users or Groups.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
+        /**
+         * @param members A set of object IDs of members who should be present in this administrative unit. Supported object types are Users or Groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing administrative unit is found with the same name
+         * 
+         * @return builder
+         * 
+         */
         public Builder preventDuplicateNames(@Nullable Output<Boolean> preventDuplicateNames) {
-            this.preventDuplicateNames = preventDuplicateNames;
+            $.preventDuplicateNames = preventDuplicateNames;
             return this;
         }
-        public Builder preventDuplicateNames(@Nullable Boolean preventDuplicateNames) {
-            this.preventDuplicateNames = Codegen.ofNullable(preventDuplicateNames);
-            return this;
-        }        public AdministrativeUnitArgs build() {
-            return new AdministrativeUnitArgs(description, displayName, hiddenMembershipEnabled, members, preventDuplicateNames);
+
+        /**
+         * @param preventDuplicateNames If `true`, will return an error if an existing administrative unit is found with the same name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder preventDuplicateNames(Boolean preventDuplicateNames) {
+            return preventDuplicateNames(Output.of(preventDuplicateNames));
+        }
+
+        public AdministrativeUnitArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

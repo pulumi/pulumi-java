@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return Whether or not the service principal account is enabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> accountEnabled() {
-        return this.accountEnabled;
+    public Output<Optional<Boolean>> accountEnabled() {
+        return Codegen.optional(this.accountEnabled);
     }
     /**
      * A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
@@ -72,8 +73,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A set of alternative names, used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
      * 
      */
-    public Output</* @Nullable */ List<String>> alternativeNames() {
-        return this.alternativeNames;
+    public Output<Optional<List<String>>> alternativeNames() {
+        return Codegen.optional(this.alternativeNames);
     }
     /**
      * Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
@@ -86,8 +87,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> appRoleAssignmentRequired() {
-        return this.appRoleAssignmentRequired;
+    public Output<Optional<Boolean>> appRoleAssignmentRequired() {
+        return Codegen.optional(this.appRoleAssignmentRequired);
     }
     /**
      * A mapping of app role values to app role IDs, as published by the associated application, intended to be useful when referencing app roles in other resources in your configuration.
@@ -156,8 +157,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A description of the service principal provided for internal end-users.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name for the app role that appears during app role assignment and in consent experiences.
@@ -190,7 +191,7 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
     /**
      * Block of features to configure for this service principal using tags
      * 
-     * @Deprecated
+     * @deprecated
      * This block has been renamed to `feature_tags` and will be removed in version 3.0 of the provider
      * 
      */
@@ -230,18 +231,18 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return The URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on.
      * 
      */
-    public Output</* @Nullable */ String> loginUrl() {
-        return this.loginUrl;
+    public Output<Optional<String>> loginUrl() {
+        return Codegen.optional(this.loginUrl);
     }
     /**
-     * The URL that will be used by Microsoft's authorization service to log out an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
+     * The URL that will be used by Microsoft&#39;s authorization service to log out an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
      * 
      */
     @Export(name="logoutUrl", type=String.class, parameters={})
     private Output<String> logoutUrl;
 
     /**
-     * @return The URL that will be used by Microsoft's authorization service to log out an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
+     * @return The URL that will be used by Microsoft&#39;s authorization service to log out an user using OpenId Connect front-channel, back-channel or SAML logout protocols, taken from the associated application.
      * 
      */
     public Output<String> logoutUrl() {
@@ -258,8 +259,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A free text field to capture information about the service principal, typically used for operational purposes.
      * 
      */
-    public Output</* @Nullable */ String> notes() {
-        return this.notes;
+    public Output<Optional<String>> notes() {
+        return Codegen.optional(this.notes);
     }
     /**
      * A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
@@ -272,8 +273,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A set of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
      * 
      */
-    public Output</* @Nullable */ List<String>> notificationEmailAddresses() {
-        return this.notificationEmailAddresses;
+    public Output<Optional<List<String>>> notificationEmailAddresses() {
+        return Codegen.optional(this.notificationEmailAddresses);
     }
     /**
      * A mapping of OAuth2.0 permission scope values to scope IDs, as exposed by the associated application, intended to be useful when referencing permission scopes in other resources in your configuration.
@@ -328,8 +329,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A set of object IDs of principals that will be granted ownership of the service principal. Supported object types are users or service principals. By default, no owners are assigned.
      * 
      */
-    public Output</* @Nullable */ List<String>> owners() {
-        return this.owners;
+    public Output<Optional<List<String>>> owners() {
+        return Codegen.optional(this.owners);
     }
     /**
      * The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
@@ -342,8 +343,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return The single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. Supported values are `oidc`, `password`, `saml` or `notSupported`. Omit this property or specify a blank string to unset.
      * 
      */
-    public Output</* @Nullable */ String> preferredSingleSignOnMode() {
-        return this.preferredSingleSignOnMode;
+    public Output<Optional<String>> preferredSingleSignOnMode() {
+        return Codegen.optional(this.preferredSingleSignOnMode);
     }
     /**
      * A list of URLs where user tokens are sent for sign-in with the associated application, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent for the associated application.
@@ -384,8 +385,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return A `saml_single_sign_on` block as documented below.
      * 
      */
-    public Output</* @Nullable */ ServicePrincipalSamlSingleSignOn> samlSingleSignOn() {
-        return this.samlSingleSignOn;
+    public Output<Optional<ServicePrincipalSamlSingleSignOn>> samlSingleSignOn() {
+        return Codegen.optional(this.samlSingleSignOn);
     }
     /**
      * A list of identifier URI(s), copied over from the associated application.
@@ -454,8 +455,8 @@ public class ServicePrincipal extends com.pulumi.resources.CustomResource {
      * @return When true, any existing service principal linked to the same application will be automatically imported. When false, an import error will be raised for any pre-existing service principal.
      * 
      */
-    public Output</* @Nullable */ Boolean> useExisting() {
-        return this.useExisting;
+    public Output<Optional<Boolean>> useExisting() {
+        return Codegen.optional(this.useExisting);
     }
 
     /**

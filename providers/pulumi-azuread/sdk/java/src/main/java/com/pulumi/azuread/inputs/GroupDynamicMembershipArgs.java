@@ -5,7 +5,6 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,12 +15,16 @@ public final class GroupDynamicMembershipArgs extends com.pulumi.resources.Resou
     public static final GroupDynamicMembershipArgs Empty = new GroupDynamicMembershipArgs();
 
     /**
-     * Whether rule processing is "On" (true) or "Paused" (false).
+     * Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
+    /**
+     * @return Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -31,63 +34,88 @@ public final class GroupDynamicMembershipArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<String> rule;
+    private Output<String> rule;
 
+    /**
+     * @return The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
+     * 
+     */
     public Output<String> rule() {
         return this.rule;
     }
 
-    public GroupDynamicMembershipArgs(
-        Output<Boolean> enabled,
-        Output<String> rule) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private GroupDynamicMembershipArgs() {}
 
-    private GroupDynamicMembershipArgs() {
-        this.enabled = Codegen.empty();
-        this.rule = Codegen.empty();
+    private GroupDynamicMembershipArgs(GroupDynamicMembershipArgs $) {
+        this.enabled = $.enabled;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupDynamicMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private Output<String> rule;
+        private GroupDynamicMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupDynamicMembershipArgs();
         }
 
         public Builder(GroupDynamicMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.rule = defaults.rule;
+            $ = new GroupDynamicMembershipArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
+        /**
+         * @param enabled Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
+        /**
+         * @param rule The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(Output<String> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
+        /**
+         * @param rule The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(String rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public GroupDynamicMembershipArgs build() {
-            return new GroupDynamicMembershipArgs(enabled, rule);
+            return rule(Output.of(rule));
+        }
+
+        public GroupDynamicMembershipArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

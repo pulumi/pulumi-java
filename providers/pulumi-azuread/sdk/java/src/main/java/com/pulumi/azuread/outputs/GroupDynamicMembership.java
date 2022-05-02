@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GroupDynamicMembership {
     /**
-     * Whether rule processing is "On" (true) or "Paused" (false).
+     * @return Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
      * 
      */
     private final Boolean enabled;
     /**
-     * The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
+     * @return The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
      * 
      */
     private final String rule;
@@ -30,16 +30,16 @@ public final class GroupDynamicMembership {
     }
 
     /**
-     * Whether rule processing is "On" (true) or "Paused" (false).
+     * @return Whether rule processing is &#34;On&#34; (true) or &#34;Paused&#34; (false).
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
+     * @return The rule that determines membership of this group. For more information, see official documentation on [memmbership rules syntax](https://docs.microsoft.com/en-gb/azure/active-directory/enterprise-users/groups-dynamic-membership).
      * 
-    */
+     */
     public String rule() {
         return this.rule;
     }

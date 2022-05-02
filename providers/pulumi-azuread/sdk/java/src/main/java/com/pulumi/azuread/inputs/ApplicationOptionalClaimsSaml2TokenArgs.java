@@ -5,11 +5,11 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class ApplicationOptionalClaimsSaml2TokenArgs extends com.pulumi.re
      * 
      */
     @Import(name="additionalProperties")
-      private final @Nullable Output<List<String>> additionalProperties;
+    private @Nullable Output<List<String>> additionalProperties;
 
-    public Output<List<String>> additionalProperties() {
-        return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
+    /**
+     * @return List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+     * 
+     */
+    public Optional<Output<List<String>>> additionalProperties() {
+        return Optional.ofNullable(this.additionalProperties);
     }
 
     /**
@@ -33,10 +37,14 @@ public final class ApplicationOptionalClaimsSaml2TokenArgs extends com.pulumi.re
      * 
      */
     @Import(name="essential")
-      private final @Nullable Output<Boolean> essential;
+    private @Nullable Output<Boolean> essential;
 
-    public Output<Boolean> essential() {
-        return this.essential == null ? Codegen.empty() : this.essential;
+    /**
+     * @return Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+     * 
+     */
+    public Optional<Output<Boolean>> essential() {
+        return Optional.ofNullable(this.essential);
     }
 
     /**
@@ -44,8 +52,12 @@ public final class ApplicationOptionalClaimsSaml2TokenArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
+    /**
+     * @return The name of the optional claim.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -55,92 +67,141 @@ public final class ApplicationOptionalClaimsSaml2TokenArgs extends com.pulumi.re
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    /**
+     * @return The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+     * 
+     */
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public ApplicationOptionalClaimsSaml2TokenArgs(
-        @Nullable Output<List<String>> additionalProperties,
-        @Nullable Output<Boolean> essential,
-        Output<String> name,
-        @Nullable Output<String> source) {
-        this.additionalProperties = additionalProperties;
-        this.essential = essential;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.source = source;
-    }
+    private ApplicationOptionalClaimsSaml2TokenArgs() {}
 
-    private ApplicationOptionalClaimsSaml2TokenArgs() {
-        this.additionalProperties = Codegen.empty();
-        this.essential = Codegen.empty();
-        this.name = Codegen.empty();
-        this.source = Codegen.empty();
+    private ApplicationOptionalClaimsSaml2TokenArgs(ApplicationOptionalClaimsSaml2TokenArgs $) {
+        this.additionalProperties = $.additionalProperties;
+        this.essential = $.essential;
+        this.name = $.name;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationOptionalClaimsSaml2TokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalProperties;
-        private @Nullable Output<Boolean> essential;
-        private Output<String> name;
-        private @Nullable Output<String> source;
+        private ApplicationOptionalClaimsSaml2TokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationOptionalClaimsSaml2TokenArgs();
         }
 
         public Builder(ApplicationOptionalClaimsSaml2TokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
-    	      this.essential = defaults.essential;
-    	      this.name = defaults.name;
-    	      this.source = defaults.source;
+            $ = new ApplicationOptionalClaimsSaml2TokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalProperties List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(@Nullable Output<List<String>> additionalProperties) {
-            this.additionalProperties = additionalProperties;
+            $.additionalProperties = additionalProperties;
             return this;
         }
-        public Builder additionalProperties(@Nullable List<String> additionalProperties) {
-            this.additionalProperties = Codegen.ofNullable(additionalProperties);
-            return this;
+
+        /**
+         * @param additionalProperties List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder additionalProperties(List<String> additionalProperties) {
+            return additionalProperties(Output.of(additionalProperties));
         }
+
+        /**
+         * @param additionalProperties List of additional properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(String... additionalProperties) {
             return additionalProperties(List.of(additionalProperties));
         }
+
+        /**
+         * @param essential Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder essential(@Nullable Output<Boolean> essential) {
-            this.essential = essential;
+            $.essential = essential;
             return this;
         }
-        public Builder essential(@Nullable Boolean essential) {
-            this.essential = Codegen.ofNullable(essential);
-            return this;
+
+        /**
+         * @param essential Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder essential(Boolean essential) {
+            return essential(Output.of(essential));
         }
+
+        /**
+         * @param name The name of the optional claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
+        /**
+         * @param name The name of the optional claim.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
+        /**
+         * @param source The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public ApplicationOptionalClaimsSaml2TokenArgs build() {
-            return new ApplicationOptionalClaimsSaml2TokenArgs(additionalProperties, essential, name, source);
+
+        /**
+         * @param source The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public ApplicationOptionalClaimsSaml2TokenArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

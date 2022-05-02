@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplicationFeatureTag {
     /**
-     * Whether this application represents a custom SAML application for linked service principals.
+     * @return Whether this application represents a custom SAML application for linked service principals.
      * 
      */
     private final @Nullable Boolean customSingleSignOn;
     /**
-     * Whether this application represents an Enterprise Application for linked service principals.
+     * @return Whether this application represents an Enterprise Application for linked service principals.
      * 
      */
     private final @Nullable Boolean enterprise;
     /**
-     * Whether this application represents a gallery application for linked service principals.
+     * @return Whether this application represents a gallery application for linked service principals.
      * 
      */
     private final @Nullable Boolean gallery;
     /**
-     * Whether this app is visible to users in My Apps and Office 365 Launcher.
+     * @return Whether this app is visible to users in My Apps and Office 365 Launcher.
      * 
      */
     private final @Nullable Boolean hide;
@@ -45,30 +45,30 @@ public final class GetApplicationFeatureTag {
     }
 
     /**
-     * Whether this application represents a custom SAML application for linked service principals.
+     * @return Whether this application represents a custom SAML application for linked service principals.
      * 
-    */
+     */
     public Optional<Boolean> customSingleSignOn() {
         return Optional.ofNullable(this.customSingleSignOn);
     }
     /**
-     * Whether this application represents an Enterprise Application for linked service principals.
+     * @return Whether this application represents an Enterprise Application for linked service principals.
      * 
-    */
+     */
     public Optional<Boolean> enterprise() {
         return Optional.ofNullable(this.enterprise);
     }
     /**
-     * Whether this application represents a gallery application for linked service principals.
+     * @return Whether this application represents a gallery application for linked service principals.
      * 
-    */
+     */
     public Optional<Boolean> gallery() {
         return Optional.ofNullable(this.gallery);
     }
     /**
-     * Whether this app is visible to users in My Apps and Office 365 Launcher.
+     * @return Whether this app is visible to users in My Apps and Office 365 Launcher.
      * 
-    */
+     */
     public Optional<Boolean> hide() {
         return Optional.ofNullable(this.hide);
     }

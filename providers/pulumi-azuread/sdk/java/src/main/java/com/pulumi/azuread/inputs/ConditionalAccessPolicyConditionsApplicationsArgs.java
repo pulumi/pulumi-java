@@ -5,10 +5,10 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,107 +21,168 @@ public final class ConditionalAccessPolicyConditionsApplicationsArgs extends com
      * 
      */
     @Import(name="excludedApplications")
-      private final @Nullable Output<List<String>> excludedApplications;
-
-    public Output<List<String>> excludedApplications() {
-        return this.excludedApplications == null ? Codegen.empty() : this.excludedApplications;
-    }
+    private @Nullable Output<List<String>> excludedApplications;
 
     /**
-     * A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`.
+     * @return A list of application IDs explicitly excluded from the policy.
      * 
      */
-    @Import(name="includedApplications", required=true)
-      private final Output<List<String>> includedApplications;
-
-    public Output<List<String>> includedApplications() {
-        return this.includedApplications;
+    public Optional<Output<List<String>>> excludedApplications() {
+        return Optional.ofNullable(this.excludedApplications);
     }
 
     /**
-     * A list of user actions to include. Supported values are `urn:user:registersecurityinfo` and `urn:user:registerdevice`.
+     * A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
+     * 
+     */
+    @Import(name="includedApplications")
+    private @Nullable Output<List<String>> includedApplications;
+
+    /**
+     * @return A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
+     * 
+     */
+    public Optional<Output<List<String>>> includedApplications() {
+        return Optional.ofNullable(this.includedApplications);
+    }
+
+    /**
+     * A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
      * 
      */
     @Import(name="includedUserActions")
-      private final @Nullable Output<List<String>> includedUserActions;
+    private @Nullable Output<List<String>> includedUserActions;
 
-    public Output<List<String>> includedUserActions() {
-        return this.includedUserActions == null ? Codegen.empty() : this.includedUserActions;
+    /**
+     * @return A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
+     * 
+     */
+    public Optional<Output<List<String>>> includedUserActions() {
+        return Optional.ofNullable(this.includedUserActions);
     }
 
-    public ConditionalAccessPolicyConditionsApplicationsArgs(
-        @Nullable Output<List<String>> excludedApplications,
-        Output<List<String>> includedApplications,
-        @Nullable Output<List<String>> includedUserActions) {
-        this.excludedApplications = excludedApplications;
-        this.includedApplications = Objects.requireNonNull(includedApplications, "expected parameter 'includedApplications' to be non-null");
-        this.includedUserActions = includedUserActions;
-    }
+    private ConditionalAccessPolicyConditionsApplicationsArgs() {}
 
-    private ConditionalAccessPolicyConditionsApplicationsArgs() {
-        this.excludedApplications = Codegen.empty();
-        this.includedApplications = Codegen.empty();
-        this.includedUserActions = Codegen.empty();
+    private ConditionalAccessPolicyConditionsApplicationsArgs(ConditionalAccessPolicyConditionsApplicationsArgs $) {
+        this.excludedApplications = $.excludedApplications;
+        this.includedApplications = $.includedApplications;
+        this.includedUserActions = $.includedUserActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsApplicationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedApplications;
-        private Output<List<String>> includedApplications;
-        private @Nullable Output<List<String>> includedUserActions;
+        private ConditionalAccessPolicyConditionsApplicationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsApplicationsArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsApplicationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedApplications = defaults.excludedApplications;
-    	      this.includedApplications = defaults.includedApplications;
-    	      this.includedUserActions = defaults.includedUserActions;
+            $ = new ConditionalAccessPolicyConditionsApplicationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedApplications A list of application IDs explicitly excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedApplications(@Nullable Output<List<String>> excludedApplications) {
-            this.excludedApplications = excludedApplications;
+            $.excludedApplications = excludedApplications;
             return this;
         }
-        public Builder excludedApplications(@Nullable List<String> excludedApplications) {
-            this.excludedApplications = Codegen.ofNullable(excludedApplications);
-            return this;
+
+        /**
+         * @param excludedApplications A list of application IDs explicitly excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder excludedApplications(List<String> excludedApplications) {
+            return excludedApplications(Output.of(excludedApplications));
         }
+
+        /**
+         * @param excludedApplications A list of application IDs explicitly excluded from the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedApplications(String... excludedApplications) {
             return excludedApplications(List.of(excludedApplications));
         }
-        public Builder includedApplications(Output<List<String>> includedApplications) {
-            this.includedApplications = Objects.requireNonNull(includedApplications);
+
+        /**
+         * @param includedApplications A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedApplications(@Nullable Output<List<String>> includedApplications) {
+            $.includedApplications = includedApplications;
             return this;
         }
+
+        /**
+         * @param includedApplications A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedApplications(List<String> includedApplications) {
-            this.includedApplications = Output.of(Objects.requireNonNull(includedApplications));
-            return this;
+            return includedApplications(Output.of(includedApplications));
         }
+
+        /**
+         * @param includedApplications A list of application IDs the policy applies to, unless explicitly excluded (in `excluded_applications`). Can also be set to `All`. Cannot be specified with `included_user_actions`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedApplications(String... includedApplications) {
             return includedApplications(List.of(includedApplications));
         }
+
+        /**
+         * @param includedUserActions A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUserActions(@Nullable Output<List<String>> includedUserActions) {
-            this.includedUserActions = includedUserActions;
+            $.includedUserActions = includedUserActions;
             return this;
         }
-        public Builder includedUserActions(@Nullable List<String> includedUserActions) {
-            this.includedUserActions = Codegen.ofNullable(includedUserActions);
-            return this;
+
+        /**
+         * @param includedUserActions A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder includedUserActions(List<String> includedUserActions) {
+            return includedUserActions(Output.of(includedUserActions));
         }
+
+        /**
+         * @param includedUserActions A list of user actions to include. Supported values are `urn:user:registerdevice` and `urn:user:registersecurityinfo`. Cannot be specified with `included_applications`. One of `included_applications` or `included_user_actions` must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUserActions(String... includedUserActions) {
             return includedUserActions(List.of(includedUserActions));
-        }        public ConditionalAccessPolicyConditionsApplicationsArgs build() {
-            return new ConditionalAccessPolicyConditionsApplicationsArgs(excludedApplications, includedApplications, includedUserActions);
+        }
+
+        public ConditionalAccessPolicyConditionsApplicationsArgs build() {
+            return $;
         }
     }
+
 }

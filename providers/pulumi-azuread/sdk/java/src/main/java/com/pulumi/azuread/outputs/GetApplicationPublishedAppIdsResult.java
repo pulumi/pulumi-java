@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationPublishedAppIdsResult {
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A map of application names to application IDs.
+     * @return A map of application names to application IDs.
      * 
      */
     private final Map<String,String> result;
@@ -30,16 +30,16 @@ public final class GetApplicationPublishedAppIdsResult {
     }
 
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A map of application names to application IDs.
+     * @return A map of application names to application IDs.
      * 
-    */
+     */
     public Map<String,String> result() {
         return this.result;
     }

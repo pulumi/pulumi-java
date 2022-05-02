@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class AdministrativeUnit extends com.pulumi.resources.CustomResource {
      * @return The description of the administrative unit.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the administrative unit.
@@ -78,8 +79,8 @@ public class AdministrativeUnit extends com.pulumi.resources.CustomResource {
      * @return Whether the administrative unit and its members are hidden or publicly viewable in the directory
      * 
      */
-    public Output</* @Nullable */ Boolean> hiddenMembershipEnabled() {
-        return this.hiddenMembershipEnabled;
+    public Output<Optional<Boolean>> hiddenMembershipEnabled() {
+        return Codegen.optional(this.hiddenMembershipEnabled);
     }
     /**
      * A set of object IDs of members who should be present in this administrative unit. Supported object types are Users or Groups.
@@ -120,8 +121,8 @@ public class AdministrativeUnit extends com.pulumi.resources.CustomResource {
      * @return If `true`, will return an error if an existing administrative unit is found with the same name
      * 
      */
-    public Output</* @Nullable */ Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames;
+    public Output<Optional<Boolean>> preventDuplicateNames() {
+        return Codegen.optional(this.preventDuplicateNames);
     }
 
     /**

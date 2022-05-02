@@ -5,10 +5,10 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,8 +21,12 @@ public final class ServicePrincipalDelegatedPermissionGrantArgs extends com.pulu
      * 
      */
     @Import(name="claimValues", required=true)
-      private final Output<List<String>> claimValues;
+    private Output<List<String>> claimValues;
 
+    /**
+     * @return - A set of claim values for delegated permission scopes which should be included in access tokens for the resource.
+     * 
+     */
     public Output<List<String>> claimValues() {
         return this.claimValues;
     }
@@ -32,8 +36,12 @@ public final class ServicePrincipalDelegatedPermissionGrantArgs extends com.pulu
      * 
      */
     @Import(name="resourceServicePrincipalObjectId", required=true)
-      private final Output<String> resourceServicePrincipalObjectId;
+    private Output<String> resourceServicePrincipalObjectId;
 
+    /**
+     * @return The object ID of the service principal representing the resource to be accessed. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> resourceServicePrincipalObjectId() {
         return this.resourceServicePrincipalObjectId;
     }
@@ -43,8 +51,12 @@ public final class ServicePrincipalDelegatedPermissionGrantArgs extends com.pulu
      * 
      */
     @Import(name="servicePrincipalObjectId", required=true)
-      private final Output<String> servicePrincipalObjectId;
+    private Output<String> servicePrincipalObjectId;
 
+    /**
+     * @return The object ID of the service principal for which this delegated permission grant should be created. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> servicePrincipalObjectId() {
         return this.servicePrincipalObjectId;
     }
@@ -54,92 +66,143 @@ public final class ServicePrincipalDelegatedPermissionGrantArgs extends com.pulu
      * 
      */
     @Import(name="userObjectId")
-      private final @Nullable Output<String> userObjectId;
+    private @Nullable Output<String> userObjectId;
 
-    public Output<String> userObjectId() {
-        return this.userObjectId == null ? Codegen.empty() : this.userObjectId;
+    /**
+     * @return - The object ID of the user on behalf of whom the service principal is authorized to access the resource. When omitted, the delegated permission grant will be consented for all users. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> userObjectId() {
+        return Optional.ofNullable(this.userObjectId);
     }
 
-    public ServicePrincipalDelegatedPermissionGrantArgs(
-        Output<List<String>> claimValues,
-        Output<String> resourceServicePrincipalObjectId,
-        Output<String> servicePrincipalObjectId,
-        @Nullable Output<String> userObjectId) {
-        this.claimValues = Objects.requireNonNull(claimValues, "expected parameter 'claimValues' to be non-null");
-        this.resourceServicePrincipalObjectId = Objects.requireNonNull(resourceServicePrincipalObjectId, "expected parameter 'resourceServicePrincipalObjectId' to be non-null");
-        this.servicePrincipalObjectId = Objects.requireNonNull(servicePrincipalObjectId, "expected parameter 'servicePrincipalObjectId' to be non-null");
-        this.userObjectId = userObjectId;
-    }
+    private ServicePrincipalDelegatedPermissionGrantArgs() {}
 
-    private ServicePrincipalDelegatedPermissionGrantArgs() {
-        this.claimValues = Codegen.empty();
-        this.resourceServicePrincipalObjectId = Codegen.empty();
-        this.servicePrincipalObjectId = Codegen.empty();
-        this.userObjectId = Codegen.empty();
+    private ServicePrincipalDelegatedPermissionGrantArgs(ServicePrincipalDelegatedPermissionGrantArgs $) {
+        this.claimValues = $.claimValues;
+        this.resourceServicePrincipalObjectId = $.resourceServicePrincipalObjectId;
+        this.servicePrincipalObjectId = $.servicePrincipalObjectId;
+        this.userObjectId = $.userObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalDelegatedPermissionGrantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> claimValues;
-        private Output<String> resourceServicePrincipalObjectId;
-        private Output<String> servicePrincipalObjectId;
-        private @Nullable Output<String> userObjectId;
+        private ServicePrincipalDelegatedPermissionGrantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalDelegatedPermissionGrantArgs();
         }
 
         public Builder(ServicePrincipalDelegatedPermissionGrantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimValues = defaults.claimValues;
-    	      this.resourceServicePrincipalObjectId = defaults.resourceServicePrincipalObjectId;
-    	      this.servicePrincipalObjectId = defaults.servicePrincipalObjectId;
-    	      this.userObjectId = defaults.userObjectId;
+            $ = new ServicePrincipalDelegatedPermissionGrantArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claimValues - A set of claim values for delegated permission scopes which should be included in access tokens for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValues(Output<List<String>> claimValues) {
-            this.claimValues = Objects.requireNonNull(claimValues);
+            $.claimValues = claimValues;
             return this;
         }
+
+        /**
+         * @param claimValues - A set of claim values for delegated permission scopes which should be included in access tokens for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValues(List<String> claimValues) {
-            this.claimValues = Output.of(Objects.requireNonNull(claimValues));
-            return this;
+            return claimValues(Output.of(claimValues));
         }
+
+        /**
+         * @param claimValues - A set of claim values for delegated permission scopes which should be included in access tokens for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claimValues(String... claimValues) {
             return claimValues(List.of(claimValues));
         }
+
+        /**
+         * @param resourceServicePrincipalObjectId The object ID of the service principal representing the resource to be accessed. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceServicePrincipalObjectId(Output<String> resourceServicePrincipalObjectId) {
-            this.resourceServicePrincipalObjectId = Objects.requireNonNull(resourceServicePrincipalObjectId);
+            $.resourceServicePrincipalObjectId = resourceServicePrincipalObjectId;
             return this;
         }
+
+        /**
+         * @param resourceServicePrincipalObjectId The object ID of the service principal representing the resource to be accessed. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceServicePrincipalObjectId(String resourceServicePrincipalObjectId) {
-            this.resourceServicePrincipalObjectId = Output.of(Objects.requireNonNull(resourceServicePrincipalObjectId));
-            return this;
+            return resourceServicePrincipalObjectId(Output.of(resourceServicePrincipalObjectId));
         }
+
+        /**
+         * @param servicePrincipalObjectId The object ID of the service principal for which this delegated permission grant should be created. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalObjectId(Output<String> servicePrincipalObjectId) {
-            this.servicePrincipalObjectId = Objects.requireNonNull(servicePrincipalObjectId);
+            $.servicePrincipalObjectId = servicePrincipalObjectId;
             return this;
         }
+
+        /**
+         * @param servicePrincipalObjectId The object ID of the service principal for which this delegated permission grant should be created. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalObjectId(String servicePrincipalObjectId) {
-            this.servicePrincipalObjectId = Output.of(Objects.requireNonNull(servicePrincipalObjectId));
-            return this;
+            return servicePrincipalObjectId(Output.of(servicePrincipalObjectId));
         }
+
+        /**
+         * @param userObjectId - The object ID of the user on behalf of whom the service principal is authorized to access the resource. When omitted, the delegated permission grant will be consented for all users. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userObjectId(@Nullable Output<String> userObjectId) {
-            this.userObjectId = userObjectId;
+            $.userObjectId = userObjectId;
             return this;
         }
-        public Builder userObjectId(@Nullable String userObjectId) {
-            this.userObjectId = Codegen.ofNullable(userObjectId);
-            return this;
-        }        public ServicePrincipalDelegatedPermissionGrantArgs build() {
-            return new ServicePrincipalDelegatedPermissionGrantArgs(claimValues, resourceServicePrincipalObjectId, servicePrincipalObjectId, userObjectId);
+
+        /**
+         * @param userObjectId - The object ID of the user on behalf of whom the service principal is authorized to access the resource. When omitted, the delegated permission grant will be consented for all users. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder userObjectId(String userObjectId) {
+            return userObjectId(Output.of(userObjectId));
+        }
+
+        public ServicePrincipalDelegatedPermissionGrantArgs build() {
+            $.claimValues = Objects.requireNonNull($.claimValues, "expected parameter 'claimValues' to be non-null");
+            $.resourceServicePrincipalObjectId = Objects.requireNonNull($.resourceServicePrincipalObjectId, "expected parameter 'resourceServicePrincipalObjectId' to be non-null");
+            $.servicePrincipalObjectId = Objects.requireNonNull($.servicePrincipalObjectId, "expected parameter 'servicePrincipalObjectId' to be non-null");
+            return $;
         }
     }
+
 }

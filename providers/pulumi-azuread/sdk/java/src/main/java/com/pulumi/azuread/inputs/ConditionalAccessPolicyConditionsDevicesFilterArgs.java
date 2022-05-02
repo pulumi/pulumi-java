@@ -5,7 +5,6 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,8 +18,12 @@ public final class ConditionalAccessPolicyConditionsDevicesFilterArgs extends co
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
+    /**
+     * @return Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
+     * 
+     */
     public Output<String> mode() {
         return this.mode;
     }
@@ -30,63 +33,88 @@ public final class ConditionalAccessPolicyConditionsDevicesFilterArgs extends co
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<String> rule;
+    private Output<String> rule;
 
+    /**
+     * @return Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
+     * 
+     */
     public Output<String> rule() {
         return this.rule;
     }
 
-    public ConditionalAccessPolicyConditionsDevicesFilterArgs(
-        Output<String> mode,
-        Output<String> rule) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private ConditionalAccessPolicyConditionsDevicesFilterArgs() {}
 
-    private ConditionalAccessPolicyConditionsDevicesFilterArgs() {
-        this.mode = Codegen.empty();
-        this.rule = Codegen.empty();
+    private ConditionalAccessPolicyConditionsDevicesFilterArgs(ConditionalAccessPolicyConditionsDevicesFilterArgs $) {
+        this.mode = $.mode;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionalAccessPolicyConditionsDevicesFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mode;
-        private Output<String> rule;
+        private ConditionalAccessPolicyConditionsDevicesFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionalAccessPolicyConditionsDevicesFilterArgs();
         }
 
         public Builder(ConditionalAccessPolicyConditionsDevicesFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.rule = defaults.rule;
+            $ = new ConditionalAccessPolicyConditionsDevicesFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
+        /**
+         * @param mode Whether to include in, or exclude from, matching devices from the policy. Supported values are `include` or `exclude`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
+        /**
+         * @param rule Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(Output<String> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
+        /**
+         * @param rule Condition filter to match devices. For more information, see [official documentation](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(String rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
-        }        public ConditionalAccessPolicyConditionsDevicesFilterArgs build() {
-            return new ConditionalAccessPolicyConditionsDevicesFilterArgs(mode, rule);
+            return rule(Output.of(rule));
+        }
+
+        public ConditionalAccessPolicyConditionsDevicesFilterArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

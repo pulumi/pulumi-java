@@ -19,10 +19,14 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
+    /**
+     * @return Specifies the display name of the administrative unit.
+     * 
+     */
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -30,55 +34,66 @@ public final class GetAdministrativeUnitArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
+    /**
+     * @return Specifies the object ID of the administrative unit.
+     * 
+     */
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
-    public GetAdministrativeUnitArgs(
-        @Nullable String displayName,
-        @Nullable String objectId) {
-        this.displayName = displayName;
-        this.objectId = objectId;
-    }
+    private GetAdministrativeUnitArgs() {}
 
-    private GetAdministrativeUnitArgs() {
-        this.displayName = null;
-        this.objectId = null;
+    private GetAdministrativeUnitArgs(GetAdministrativeUnitArgs $) {
+        this.displayName = $.displayName;
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAdministrativeUnitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String objectId;
+        private GetAdministrativeUnitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAdministrativeUnitArgs();
         }
 
         public Builder(GetAdministrativeUnitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.objectId = defaults.objectId;
+            $ = new GetAdministrativeUnitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Specifies the display name of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param objectId Specifies the object ID of the administrative unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
-        }        public GetAdministrativeUnitArgs build() {
-            return new GetAdministrativeUnitArgs(displayName, objectId);
+        }
+
+        public GetAdministrativeUnitArgs build() {
+            return $;
         }
     }
+
 }

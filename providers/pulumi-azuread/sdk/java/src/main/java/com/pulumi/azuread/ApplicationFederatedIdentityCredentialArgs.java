@@ -5,10 +5,10 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,8 +21,12 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="applicationObjectId", required=true)
-      private final Output<String> applicationObjectId;
+    private Output<String> applicationObjectId;
 
+    /**
+     * @return The object ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created.
+     * 
+     */
     public Output<String> applicationObjectId() {
         return this.applicationObjectId;
     }
@@ -32,8 +36,12 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="audiences", required=true)
-      private final Output<List<String>> audiences;
+    private Output<List<String>> audiences;
 
+    /**
+     * @return List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.
+     * 
+     */
     public Output<List<String>> audiences() {
         return this.audiences;
     }
@@ -43,10 +51,14 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    /**
+     * @return A description for the federated identity credential.
+     * 
+     */
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,8 +66,12 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
+    /**
+     * @return A unique display name for the federated identity credential. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -65,8 +81,12 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="issuer", required=true)
-      private final Output<String> issuer;
+    private Output<String> issuer;
 
+    /**
+     * @return The URL of the external identity provider, which must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app.
+     * 
+     */
     public Output<String> issuer() {
         return this.issuer;
     }
@@ -76,118 +96,189 @@ public final class ApplicationFederatedIdentityCredentialArgs extends com.pulumi
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<String> subject;
+    private Output<String> subject;
 
+    /**
+     * @return The identifier of the external software workload within the external identity provider. The combination of issuer and subject must be unique on the app.
+     * 
+     */
     public Output<String> subject() {
         return this.subject;
     }
 
-    public ApplicationFederatedIdentityCredentialArgs(
-        Output<String> applicationObjectId,
-        Output<List<String>> audiences,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        Output<String> issuer,
-        Output<String> subject) {
-        this.applicationObjectId = Objects.requireNonNull(applicationObjectId, "expected parameter 'applicationObjectId' to be non-null");
-        this.audiences = Objects.requireNonNull(audiences, "expected parameter 'audiences' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-    }
+    private ApplicationFederatedIdentityCredentialArgs() {}
 
-    private ApplicationFederatedIdentityCredentialArgs() {
-        this.applicationObjectId = Codegen.empty();
-        this.audiences = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.subject = Codegen.empty();
+    private ApplicationFederatedIdentityCredentialArgs(ApplicationFederatedIdentityCredentialArgs $) {
+        this.applicationObjectId = $.applicationObjectId;
+        this.audiences = $.audiences;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.issuer = $.issuer;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationFederatedIdentityCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationObjectId;
-        private Output<List<String>> audiences;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private Output<String> issuer;
-        private Output<String> subject;
+        private ApplicationFederatedIdentityCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationFederatedIdentityCredentialArgs();
         }
 
         public Builder(ApplicationFederatedIdentityCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationObjectId = defaults.applicationObjectId;
-    	      this.audiences = defaults.audiences;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.issuer = defaults.issuer;
-    	      this.subject = defaults.subject;
+            $ = new ApplicationFederatedIdentityCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationObjectId The object ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(Output<String> applicationObjectId) {
-            this.applicationObjectId = Objects.requireNonNull(applicationObjectId);
+            $.applicationObjectId = applicationObjectId;
             return this;
         }
+
+        /**
+         * @param applicationObjectId The object ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationObjectId(String applicationObjectId) {
-            this.applicationObjectId = Output.of(Objects.requireNonNull(applicationObjectId));
-            return this;
+            return applicationObjectId(Output.of(applicationObjectId));
         }
+
+        /**
+         * @param audiences List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(Output<List<String>> audiences) {
-            this.audiences = Objects.requireNonNull(audiences);
+            $.audiences = audiences;
             return this;
         }
+
+        /**
+         * @param audiences List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(List<String> audiences) {
-            this.audiences = Output.of(Objects.requireNonNull(audiences));
-            return this;
+            return audiences(Output.of(audiences));
         }
+
+        /**
+         * @param audiences List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
+        /**
+         * @param description A description for the federated identity credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        /**
+         * @param description A description for the federated identity credential.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
+        /**
+         * @param displayName A unique display name for the federated identity credential. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
+        /**
+         * @param displayName A unique display name for the federated identity credential. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
+        /**
+         * @param issuer The URL of the external identity provider, which must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(Output<String> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
+        /**
+         * @param issuer The URL of the external identity provider, which must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
+            return issuer(Output.of(issuer));
         }
+
+        /**
+         * @param subject The identifier of the external software workload within the external identity provider. The combination of issuer and subject must be unique on the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<String> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
+        /**
+         * @param subject The identifier of the external software workload within the external identity provider. The combination of issuer and subject must be unique on the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
-        }        public ApplicationFederatedIdentityCredentialArgs build() {
-            return new ApplicationFederatedIdentityCredentialArgs(applicationObjectId, audiences, description, displayName, issuer, subject);
+            return subject(Output.of(subject));
+        }
+
+        public ApplicationFederatedIdentityCredentialArgs build() {
+            $.applicationObjectId = Objects.requireNonNull($.applicationObjectId, "expected parameter 'applicationObjectId' to be non-null");
+            $.audiences = Objects.requireNonNull($.audiences, "expected parameter 'audiences' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NamedLocationCountry {
     /**
-     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * @return List of countries and/or regions in two-letter format specified by ISO 3166-2.
      * 
      */
     private final List<String> countriesAndRegions;
     /**
-     * Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to `false`.
+     * @return Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
      * 
      */
     private final @Nullable Boolean includeUnknownCountriesAndRegions;
@@ -33,16 +33,16 @@ public final class NamedLocationCountry {
     }
 
     /**
-     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
+     * @return List of countries and/or regions in two-letter format specified by ISO 3166-2.
      * 
-    */
+     */
     public List<String> countriesAndRegions() {
         return this.countriesAndRegions;
     }
     /**
-     * Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to `false`.
+     * @return Whether IP addresses that don&#39;t map to a country or region should be included in the named location. Defaults to `false`.
      * 
-    */
+     */
     public Optional<Boolean> includeUnknownCountriesAndRegions() {
         return Optional.ofNullable(this.includeUnknownCountriesAndRegions);
     }

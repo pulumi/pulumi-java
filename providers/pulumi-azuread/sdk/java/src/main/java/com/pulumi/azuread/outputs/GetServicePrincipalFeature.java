@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class GetServicePrincipalFeature {
     /**
-     * Whether this service principal represents a custom SAML application.
+     * @return Whether this service principal represents a custom SAML application.
      * 
      */
     private final Boolean customSingleSignOnApp;
     /**
-     * Whether this service principal represents an Enterprise Application.
+     * @return Whether this service principal represents an Enterprise Application.
      * 
      */
     private final Boolean enterpriseApplication;
     /**
-     * Whether this service principal represents a gallery application.
+     * @return Whether this service principal represents a gallery application.
      * 
      */
     private final Boolean galleryApplication;
     /**
-     * Whether this app is visible to users in My Apps and Office 365 Launcher.
+     * @return Whether this app is visible to users in My Apps and Office 365 Launcher.
      * 
      */
     private final Boolean visibleToUsers;
@@ -43,30 +43,30 @@ public final class GetServicePrincipalFeature {
     }
 
     /**
-     * Whether this service principal represents a custom SAML application.
+     * @return Whether this service principal represents a custom SAML application.
      * 
-    */
+     */
     public Boolean customSingleSignOnApp() {
         return this.customSingleSignOnApp;
     }
     /**
-     * Whether this service principal represents an Enterprise Application.
+     * @return Whether this service principal represents an Enterprise Application.
      * 
-    */
+     */
     public Boolean enterpriseApplication() {
         return this.enterpriseApplication;
     }
     /**
-     * Whether this service principal represents a gallery application.
+     * @return Whether this service principal represents a gallery application.
      * 
-    */
+     */
     public Boolean galleryApplication() {
         return this.galleryApplication;
     }
     /**
-     * Whether this app is visible to users in My Apps and Office 365 Launcher.
+     * @return Whether this app is visible to users in My Apps and Office 365 Launcher.
      * 
-    */
+     */
     public Boolean visibleToUsers() {
         return this.visibleToUsers;
     }

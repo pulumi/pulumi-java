@@ -5,7 +5,6 @@ package com.pulumi.azuread;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,8 +18,12 @@ public final class GroupMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupObjectId", required=true)
-      private final Output<String> groupObjectId;
+    private Output<String> groupObjectId;
 
+    /**
+     * @return The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> groupObjectId() {
         return this.groupObjectId;
     }
@@ -30,63 +33,88 @@ public final class GroupMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberObjectId", required=true)
-      private final Output<String> memberObjectId;
+    private Output<String> memberObjectId;
 
+    /**
+     * @return The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+     * 
+     */
     public Output<String> memberObjectId() {
         return this.memberObjectId;
     }
 
-    public GroupMemberArgs(
-        Output<String> groupObjectId,
-        Output<String> memberObjectId) {
-        this.groupObjectId = Objects.requireNonNull(groupObjectId, "expected parameter 'groupObjectId' to be non-null");
-        this.memberObjectId = Objects.requireNonNull(memberObjectId, "expected parameter 'memberObjectId' to be non-null");
-    }
+    private GroupMemberArgs() {}
 
-    private GroupMemberArgs() {
-        this.groupObjectId = Codegen.empty();
-        this.memberObjectId = Codegen.empty();
+    private GroupMemberArgs(GroupMemberArgs $) {
+        this.groupObjectId = $.groupObjectId;
+        this.memberObjectId = $.memberObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupObjectId;
-        private Output<String> memberObjectId;
+        private GroupMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMemberArgs();
         }
 
         public Builder(GroupMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupObjectId = defaults.groupObjectId;
-    	      this.memberObjectId = defaults.memberObjectId;
+            $ = new GroupMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupObjectId The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupObjectId(Output<String> groupObjectId) {
-            this.groupObjectId = Objects.requireNonNull(groupObjectId);
+            $.groupObjectId = groupObjectId;
             return this;
         }
+
+        /**
+         * @param groupObjectId The object ID of the group you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupObjectId(String groupObjectId) {
-            this.groupObjectId = Output.of(Objects.requireNonNull(groupObjectId));
-            return this;
+            return groupObjectId(Output.of(groupObjectId));
         }
+
+        /**
+         * @param memberObjectId The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberObjectId(Output<String> memberObjectId) {
-            this.memberObjectId = Objects.requireNonNull(memberObjectId);
+            $.memberObjectId = memberObjectId;
             return this;
         }
+
+        /**
+         * @param memberObjectId The object ID of the principal you want to add as a member to the group. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberObjectId(String memberObjectId) {
-            this.memberObjectId = Output.of(Objects.requireNonNull(memberObjectId));
-            return this;
-        }        public GroupMemberArgs build() {
-            return new GroupMemberArgs(groupObjectId, memberObjectId);
+            return memberObjectId(Output.of(memberObjectId));
+        }
+
+        public GroupMemberArgs build() {
+            $.groupObjectId = Objects.requireNonNull($.groupObjectId, "expected parameter 'groupObjectId' to be non-null");
+            $.memberObjectId = Objects.requireNonNull($.memberObjectId, "expected parameter 'memberObjectId' to be non-null");
+            return $;
         }
     }
+
 }

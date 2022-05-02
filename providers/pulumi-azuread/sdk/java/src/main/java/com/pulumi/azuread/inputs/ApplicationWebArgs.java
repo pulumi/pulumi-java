@@ -6,10 +6,10 @@ package com.pulumi.azuread.inputs;
 import com.pulumi.azuread.inputs.ApplicationWebImplicitGrantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,14 @@ public final class ApplicationWebArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="homepageUrl")
-      private final @Nullable Output<String> homepageUrl;
+    private @Nullable Output<String> homepageUrl;
 
-    public Output<String> homepageUrl() {
-        return this.homepageUrl == null ? Codegen.empty() : this.homepageUrl;
+    /**
+     * @return Home page or landing page of the application.
+     * 
+     */
+    public Optional<Output<String>> homepageUrl() {
+        return Optional.ofNullable(this.homepageUrl);
     }
 
     /**
@@ -33,21 +37,29 @@ public final class ApplicationWebArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="implicitGrant")
-      private final @Nullable Output<ApplicationWebImplicitGrantArgs> implicitGrant;
+    private @Nullable Output<ApplicationWebImplicitGrantArgs> implicitGrant;
 
-    public Output<ApplicationWebImplicitGrantArgs> implicitGrant() {
-        return this.implicitGrant == null ? Codegen.empty() : this.implicitGrant;
+    /**
+     * @return An `implicit_grant` block as documented above.
+     * 
+     */
+    public Optional<Output<ApplicationWebImplicitGrantArgs>> implicitGrant() {
+        return Optional.ofNullable(this.implicitGrant);
     }
 
     /**
-     * The URL that will be used by Microsoft's authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
      * 
      */
     @Import(name="logoutUrl")
-      private final @Nullable Output<String> logoutUrl;
+    private @Nullable Output<String> logoutUrl;
 
-    public Output<String> logoutUrl() {
-        return this.logoutUrl == null ? Codegen.empty() : this.logoutUrl;
+    /**
+     * @return The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+     * 
+     */
+    public Optional<Output<String>> logoutUrl() {
+        return Optional.ofNullable(this.logoutUrl);
     }
 
     /**
@@ -55,92 +67,140 @@ public final class ApplicationWebArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="redirectUris")
-      private final @Nullable Output<List<String>> redirectUris;
+    private @Nullable Output<List<String>> redirectUris;
 
-    public Output<List<String>> redirectUris() {
-        return this.redirectUris == null ? Codegen.empty() : this.redirectUris;
+    /**
+     * @return A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+     * 
+     */
+    public Optional<Output<List<String>>> redirectUris() {
+        return Optional.ofNullable(this.redirectUris);
     }
 
-    public ApplicationWebArgs(
-        @Nullable Output<String> homepageUrl,
-        @Nullable Output<ApplicationWebImplicitGrantArgs> implicitGrant,
-        @Nullable Output<String> logoutUrl,
-        @Nullable Output<List<String>> redirectUris) {
-        this.homepageUrl = homepageUrl;
-        this.implicitGrant = implicitGrant;
-        this.logoutUrl = logoutUrl;
-        this.redirectUris = redirectUris;
-    }
+    private ApplicationWebArgs() {}
 
-    private ApplicationWebArgs() {
-        this.homepageUrl = Codegen.empty();
-        this.implicitGrant = Codegen.empty();
-        this.logoutUrl = Codegen.empty();
-        this.redirectUris = Codegen.empty();
+    private ApplicationWebArgs(ApplicationWebArgs $) {
+        this.homepageUrl = $.homepageUrl;
+        this.implicitGrant = $.implicitGrant;
+        this.logoutUrl = $.logoutUrl;
+        this.redirectUris = $.redirectUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationWebArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> homepageUrl;
-        private @Nullable Output<ApplicationWebImplicitGrantArgs> implicitGrant;
-        private @Nullable Output<String> logoutUrl;
-        private @Nullable Output<List<String>> redirectUris;
+        private ApplicationWebArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationWebArgs();
         }
 
         public Builder(ApplicationWebArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.homepageUrl = defaults.homepageUrl;
-    	      this.implicitGrant = defaults.implicitGrant;
-    	      this.logoutUrl = defaults.logoutUrl;
-    	      this.redirectUris = defaults.redirectUris;
+            $ = new ApplicationWebArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param homepageUrl Home page or landing page of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homepageUrl(@Nullable Output<String> homepageUrl) {
-            this.homepageUrl = homepageUrl;
+            $.homepageUrl = homepageUrl;
             return this;
         }
-        public Builder homepageUrl(@Nullable String homepageUrl) {
-            this.homepageUrl = Codegen.ofNullable(homepageUrl);
-            return this;
+
+        /**
+         * @param homepageUrl Home page or landing page of the application.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder homepageUrl(String homepageUrl) {
+            return homepageUrl(Output.of(homepageUrl));
         }
+
+        /**
+         * @param implicitGrant An `implicit_grant` block as documented above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder implicitGrant(@Nullable Output<ApplicationWebImplicitGrantArgs> implicitGrant) {
-            this.implicitGrant = implicitGrant;
+            $.implicitGrant = implicitGrant;
             return this;
         }
-        public Builder implicitGrant(@Nullable ApplicationWebImplicitGrantArgs implicitGrant) {
-            this.implicitGrant = Codegen.ofNullable(implicitGrant);
-            return this;
+
+        /**
+         * @param implicitGrant An `implicit_grant` block as documented above.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder implicitGrant(ApplicationWebImplicitGrantArgs implicitGrant) {
+            return implicitGrant(Output.of(implicitGrant));
         }
+
+        /**
+         * @param logoutUrl The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logoutUrl(@Nullable Output<String> logoutUrl) {
-            this.logoutUrl = logoutUrl;
+            $.logoutUrl = logoutUrl;
             return this;
         }
-        public Builder logoutUrl(@Nullable String logoutUrl) {
-            this.logoutUrl = Codegen.ofNullable(logoutUrl);
-            return this;
+
+        /**
+         * @param logoutUrl The URL that will be used by Microsoft&#39;s authorization service to sign out a user using front-channel, back-channel or SAML logout protocols.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logoutUrl(String logoutUrl) {
+            return logoutUrl(Output.of(logoutUrl));
         }
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(@Nullable Output<List<String>> redirectUris) {
-            this.redirectUris = redirectUris;
+            $.redirectUris = redirectUris;
             return this;
         }
-        public Builder redirectUris(@Nullable List<String> redirectUris) {
-            this.redirectUris = Codegen.ofNullable(redirectUris);
-            return this;
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder redirectUris(List<String> redirectUris) {
+            return redirectUris(Output.of(redirectUris));
         }
+
+        /**
+         * @param redirectUris A set of URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Must be a valid `http` URL or a URN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUris(String... redirectUris) {
             return redirectUris(List.of(redirectUris));
-        }        public ApplicationWebArgs build() {
-            return new ApplicationWebArgs(homepageUrl, implicitGrant, logoutUrl, redirectUris);
+        }
+
+        public ApplicationWebArgs build() {
+            return $;
         }
     }
+
 }

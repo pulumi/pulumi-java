@@ -5,9 +5,9 @@ package com.pulumi.azuread.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,14 @@ public final class AdministrativeUnitMemberState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="administrativeUnitObjectId")
-      private final @Nullable Output<String> administrativeUnitObjectId;
+    private @Nullable Output<String> administrativeUnitObjectId;
 
-    public Output<String> administrativeUnitObjectId() {
-        return this.administrativeUnitObjectId == null ? Codegen.empty() : this.administrativeUnitObjectId;
+    /**
+     * @return The object ID of the administrative unit you want to add the member to. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> administrativeUnitObjectId() {
+        return Optional.ofNullable(this.administrativeUnitObjectId);
     }
 
     /**
@@ -31,63 +35,86 @@ public final class AdministrativeUnitMemberState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="memberObjectId")
-      private final @Nullable Output<String> memberObjectId;
+    private @Nullable Output<String> memberObjectId;
 
-    public Output<String> memberObjectId() {
-        return this.memberObjectId == null ? Codegen.empty() : this.memberObjectId;
+    /**
+     * @return The object ID of the user or group you want to add as a member of the administrative unit. Changing this forces a new resource to be created.
+     * 
+     */
+    public Optional<Output<String>> memberObjectId() {
+        return Optional.ofNullable(this.memberObjectId);
     }
 
-    public AdministrativeUnitMemberState(
-        @Nullable Output<String> administrativeUnitObjectId,
-        @Nullable Output<String> memberObjectId) {
-        this.administrativeUnitObjectId = administrativeUnitObjectId;
-        this.memberObjectId = memberObjectId;
-    }
+    private AdministrativeUnitMemberState() {}
 
-    private AdministrativeUnitMemberState() {
-        this.administrativeUnitObjectId = Codegen.empty();
-        this.memberObjectId = Codegen.empty();
+    private AdministrativeUnitMemberState(AdministrativeUnitMemberState $) {
+        this.administrativeUnitObjectId = $.administrativeUnitObjectId;
+        this.memberObjectId = $.memberObjectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdministrativeUnitMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administrativeUnitObjectId;
-        private @Nullable Output<String> memberObjectId;
+        private AdministrativeUnitMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdministrativeUnitMemberState();
         }
 
         public Builder(AdministrativeUnitMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administrativeUnitObjectId = defaults.administrativeUnitObjectId;
-    	      this.memberObjectId = defaults.memberObjectId;
+            $ = new AdministrativeUnitMemberState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administrativeUnitObjectId The object ID of the administrative unit you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder administrativeUnitObjectId(@Nullable Output<String> administrativeUnitObjectId) {
-            this.administrativeUnitObjectId = administrativeUnitObjectId;
+            $.administrativeUnitObjectId = administrativeUnitObjectId;
             return this;
         }
-        public Builder administrativeUnitObjectId(@Nullable String administrativeUnitObjectId) {
-            this.administrativeUnitObjectId = Codegen.ofNullable(administrativeUnitObjectId);
-            return this;
+
+        /**
+         * @param administrativeUnitObjectId The object ID of the administrative unit you want to add the member to. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder administrativeUnitObjectId(String administrativeUnitObjectId) {
+            return administrativeUnitObjectId(Output.of(administrativeUnitObjectId));
         }
+
+        /**
+         * @param memberObjectId The object ID of the user or group you want to add as a member of the administrative unit. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberObjectId(@Nullable Output<String> memberObjectId) {
-            this.memberObjectId = memberObjectId;
+            $.memberObjectId = memberObjectId;
             return this;
         }
-        public Builder memberObjectId(@Nullable String memberObjectId) {
-            this.memberObjectId = Codegen.ofNullable(memberObjectId);
-            return this;
-        }        public AdministrativeUnitMemberState build() {
-            return new AdministrativeUnitMemberState(administrativeUnitObjectId, memberObjectId);
+
+        /**
+         * @param memberObjectId The object ID of the user or group you want to add as a member of the administrative unit. Changing this forces a new resource to be created.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder memberObjectId(String memberObjectId) {
+            return memberObjectId(Output.of(memberObjectId));
+        }
+
+        public AdministrativeUnitMemberState build() {
+            return $;
         }
     }
+
 }

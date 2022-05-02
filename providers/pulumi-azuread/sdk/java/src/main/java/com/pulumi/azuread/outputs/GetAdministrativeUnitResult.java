@@ -11,32 +11,32 @@ import java.util.Objects;
 @CustomType
 public final class GetAdministrativeUnitResult {
     /**
-     * The description of the administrative unit.
+     * @return The description of the administrative unit.
      * 
      */
     private final String description;
     /**
-     * The display name of the administrative unit.
+     * @return The display name of the administrative unit.
      * 
      */
     private final String displayName;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     /**
-     * A list of object IDs of members who are present in this administrative unit.
+     * @return A list of object IDs of members who are present in this administrative unit.
      * 
      */
     private final List<String> members;
     /**
-     * The object ID of the administrative unit.
+     * @return The object ID of the administrative unit.
      * 
      */
     private final String objectId;
     /**
-     * Whether the administrative unit _and_ its members are hidden or publicly viewable in the directory. One of: `Hiddenmembership` or `Public`.
+     * @return Whether the administrative unit _and_ its members are hidden or publicly viewable in the directory. One of: `Hiddenmembership` or `Public`.
      * 
      */
     private final String visibility;
@@ -58,44 +58,44 @@ public final class GetAdministrativeUnitResult {
     }
 
     /**
-     * The description of the administrative unit.
+     * @return The description of the administrative unit.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the administrative unit.
+     * @return The display name of the administrative unit.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A list of object IDs of members who are present in this administrative unit.
+     * @return A list of object IDs of members who are present in this administrative unit.
      * 
-    */
+     */
     public List<String> members() {
         return this.members;
     }
     /**
-     * The object ID of the administrative unit.
+     * @return The object ID of the administrative unit.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * Whether the administrative unit _and_ its members are hidden or publicly viewable in the directory. One of: `Hiddenmembership` or `Public`.
+     * @return Whether the administrative unit _and_ its members are hidden or publicly viewable in the directory. One of: `Hiddenmembership` or `Public`.
      * 
-    */
+     */
     public String visibility() {
         return this.visibility;
     }

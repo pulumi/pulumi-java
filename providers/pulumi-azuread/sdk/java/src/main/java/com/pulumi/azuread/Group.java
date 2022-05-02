@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,6 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Groups Administrator`, `User Administrator` or `Global Administrator`
  * 
  * The `external_senders_allowed`, `auto_subscribe_new_members`, `hide_from_address_lists` and `hide_from_outlook_clients` properties can only be configured when authenticating as a user and cannot be configured when authenticating as a service principal. Additionally, the user being used for authentication must be a Member of the tenant where the group is being managed and _not_ a Guest. This is a known API issue; please see the [Microsoft Graph Known Issues](https://docs.microsoft.com/en-us/graph/known-issues#groups) official documentation.
- * 
- * ## Example Usage
  * 
  * ## Import
  * 
@@ -57,8 +56,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this group can be assigned to an Azure Active Directory role. Can only be `true` for security-enabled groups. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ Boolean> assignableToRole() {
-        return this.assignableToRole;
+    public Output<Optional<Boolean>> assignableToRole() {
+        return Codegen.optional(this.assignableToRole);
     }
     /**
      * Indicates whether new members added to the group will be auto-subscribed to receive email notifications. Can only be set for Unified groups.
@@ -75,18 +74,18 @@ public class Group extends com.pulumi.resources.CustomResource {
         return this.autoSubscribeNewMembers;
     }
     /**
-     * A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+     * A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
      * 
      */
     @Export(name="behaviors", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> behaviors;
 
     /**
-     * @return A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
+     * @return A set of behaviors for a Microsoft 365 group. Possible values are `AllowOnlyMembersToPost`, `HideGroupInOutlook`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers` and `WelcomeEmailDisabled`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for more details. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ List<String>> behaviors() {
-        return this.behaviors;
+    public Output<Optional<List<String>>> behaviors() {
+        return Codegen.optional(this.behaviors);
     }
     /**
      * The description for the group.
@@ -99,8 +98,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The description for the group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name for the group.
@@ -127,8 +126,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A `dynamic_membership` block as documented below. Required when `types` contains `DynamicMembership`. Cannot be used with the `members` property.
      * 
      */
-    public Output</* @Nullable */ GroupDynamicMembership> dynamicMembership() {
-        return this.dynamicMembership;
+    public Output<Optional<GroupDynamicMembership>> dynamicMembership() {
+        return Codegen.optional(this.dynamicMembership);
     }
     /**
      * Indicates whether people external to the organization can send messages to the group. Can only be set for Unified groups.
@@ -197,8 +196,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Whether the group is a mail enabled, with a shared group mailbox. At least one of `mail_enabled` or `security_enabled` must be specified. Only Microsoft 365 groups can be mail enabled (see the `types` property).
      * 
      */
-    public Output</* @Nullable */ Boolean> mailEnabled() {
-        return this.mailEnabled;
+    public Output<Optional<Boolean>> mailEnabled() {
+        return Codegen.optional(this.mailEnabled);
     }
     /**
      * The mail alias for the group, unique in the organisation. Required for mail-enabled groups. Changing this forces a new resource to be created.
@@ -351,8 +350,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return If `true`, will return an error if an existing group is found with the same name. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> preventDuplicateNames() {
-        return this.preventDuplicateNames;
+    public Output<Optional<Boolean>> preventDuplicateNames() {
+        return Codegen.optional(this.preventDuplicateNames);
     }
     /**
      * A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
@@ -365,8 +364,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A set of provisioning options for a Microsoft 365 group. The only supported value is `Team`. See [official documentation](https://docs.microsoft.com/en-us/graph/group-set-options) for details. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ List<String>> provisioningOptions() {
-        return this.provisioningOptions;
+    public Output<Optional<List<String>>> provisioningOptions() {
+        return Codegen.optional(this.provisioningOptions);
     }
     /**
      * List of email addresses for the group that direct to the same group mailbox.
@@ -393,8 +392,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return Whether the group is a security group for controlling access to in-app resources. At least one of `security_enabled` or `mail_enabled` must be specified. A Microsoft 365 group can be security enabled _and_ mail enabled (see the `types` property).
      * 
      */
-    public Output</* @Nullable */ Boolean> securityEnabled() {
-        return this.securityEnabled;
+    public Output<Optional<Boolean>> securityEnabled() {
+        return Codegen.optional(this.securityEnabled);
     }
     /**
      * The colour theme for a Microsoft 365 group. Possible values are `Blue`, `Green`, `Orange`, `Pink`, `Purple`, `Red` or `Teal`. By default, no theme is set.
@@ -407,8 +406,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The colour theme for a Microsoft 365 group. Possible values are `Blue`, `Green`, `Orange`, `Pink`, `Purple`, `Red` or `Teal`. By default, no theme is set.
      * 
      */
-    public Output</* @Nullable */ String> theme() {
-        return this.theme;
+    public Output<Optional<String>> theme() {
+        return Codegen.optional(this.theme);
     }
     /**
      * A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
@@ -421,8 +420,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return A set of group types to configure for the group. Supported values are `DynamicMembership`, which denotes a group with dynamic membership, and `Unified`, which specifies a Microsoft 365 group. Required when `mail_enabled` is true. Changing this forces a new resource to be created.
      * 
      */
-    public Output</* @Nullable */ List<String>> types() {
-        return this.types;
+    public Output<Optional<List<String>>> types() {
+        return Codegen.optional(this.types);
     }
     /**
      * The group join policy and group content visibility. Possible values are `Private`, `Public`, or `Hiddenmembership`. Only Microsoft 365 groups can have `Hiddenmembership` visibility and this value must be set when the group is created. By default, security groups will receive `Private` visibility and Microsoft 365 groups will receive `Public` visibility.
