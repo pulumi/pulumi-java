@@ -5,9 +5,10 @@ package jvm
 import (
 	"bytes"
 	"fmt"
-	"github.com/zclconf/go-cty/cty"
 	"io"
 	"strings"
+
+	"github.com/zclconf/go-cty/cty"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
@@ -358,37 +359,18 @@ func makeResourceName(baseName string, suffix string) string {
 	return fmt.Sprintf(`"%s-"`, baseName) + " + " + suffix
 }
 
-func (g *generator) findResourceSchema(resource *pcl.Resource) (*schema.Resource, bool) {
-	if resource.Schema == nil {
-		return nil, false
-	}
-
+func (g *generator) findFunctionSchema(function string) (*schema.Function, bool) {
 	for _, pkg := range g.program.Packages() {
-		if pkg.Resources != nil {
-			for _, resourceSchame := range pkg.Resources {
-				if resourceSchame != nil && resourceSchame.Token == resource.Schema.Token {
-					return resourceSchame, true
+		if pkg.Functions != nil {
+			for _, functionSchame := range pkg.Functions {
+				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.LowerCamelCase(function)) {
+					return functionSchame, true
 				}
 			}
 		}
 	}
 
 	return nil, false
-}
-
-func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *schema.Function) {
-
-	for _, pkg := range g.program.Packages() {
-		if pkg.Functions != nil {
-			for _, functionSchame := range pkg.Functions {
-				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, names.Camel(function)) {
-					return true, functionSchame
-				}
-			}
-		}
-	}
-
-	return false, nil
 }
 
 func getTraversalKey(traversal hcl.Traversal) string {
@@ -409,12 +391,12 @@ func getTraversalKey(traversal hcl.Traversal) string {
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
-	variableName := names.Camel(names.MakeValidIdentifier(resource.Name()))
+	variableName := names.LowerCamelCase(names.MakeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
 		resourceProperties := map[string]schema.Type{}
-		resourceSchema, foundSchema := g.findResourceSchema(resource)
-		if foundSchema && resourceSchema.Properties != nil {
-			for _, property := range resourceSchema.Properties {
+		resourceSchema := resource.Schema
+		if resourceSchema != nil && resourceSchema.InputProperties != nil {
+			for _, property := range resourceSchema.InputProperties {
 				if property != nil && property.Type != nil {
 					resourceProperties[property.Name] = codegen.UnwrapType(property.Type)
 				}
@@ -473,7 +455,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							// check whether {root} is actually a variable name that holds the result
 							// of a function invoke
 							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
-								resultTypeName := names.Camel(typeName(functionSchema.Outputs))
+								resultTypeName := names.LowerCamelCase(typeName(functionSchema.Outputs))
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
 								g.genIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())
@@ -548,7 +530,7 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 	g.genNewline(w)
 }
 
-func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariable) (*schema.Function, bool) {
+func (g *generator) isFunctionInvoke(localVariable *pcl.LocalVariable) (*schema.Function, bool) {
 	value := localVariable.Definition.Value
 	switch value.(type) {
 	case *model.FunctionCallExpression:
@@ -557,7 +539,7 @@ func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariab
 		case pcl.Invoke:
 			args := call.Args[0]
 			_, schemaName := g.functionName(args)
-			foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
+			functionSchema, foundFunction := g.findFunctionSchema(schemaName)
 			if foundFunction {
 				return functionSchema, true
 			}
@@ -569,7 +551,7 @@ func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariab
 
 func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariable) {
 	variableName := localVariable.Name()
-	functionSchema, isInvokeCall := g.isFunctionInvoke(w, localVariable)
+	functionSchema, isInvokeCall := g.isFunctionInvoke(localVariable)
 	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
