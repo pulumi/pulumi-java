@@ -158,6 +158,32 @@ func (id Property) Setter() string {
 	return id.Field()
 }
 
+// MakeValidIdentifier replaces characters that are not allowed in Java identifiers with underscores. A reserved word is
+// prefixed with _. No attempt is made to ensure that the result is unique.
+func MakeValidIdentifier(name string) string {
+	var builder strings.Builder
+	for i, c := range name {
+		if i == 0 && c == '@' {
+			builder.WriteRune(c)
+			continue
+		}
+		if !isLegalIdentifierPart(c) {
+			builder.WriteRune('_')
+		} else {
+			if i == 0 && !isLegalIdentifierStart(c) {
+				builder.WriteRune('_')
+			}
+			builder.WriteRune(c)
+		}
+	}
+	name = builder.String()
+	if isReservedWord(name) {
+		return name + "_"
+	}
+
+	return name
+}
+
 // Title converts the input string to a title cased string.
 // If `s` has upper case letters, they are kept.
 func Title(s string) string {
