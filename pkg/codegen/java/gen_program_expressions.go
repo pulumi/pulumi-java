@@ -611,7 +611,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		for _, property := range destType.(*schema.ObjectType).Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
 		}
-		g.Fgenf(w, "%s.builder()", typeName(destType))
+		g.Fgenf(w, "%sArgs.builder()", typeName(destType))
 		g.genNewline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
@@ -683,7 +683,7 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 
 		switch key.Type() {
 		case cty.String:
-			g.Fgenf(w, ".get%s()", names.Title(key.AsString()))
+			g.Fgenf(w, ".%s()", names.MakeValidIdentifier(key.AsString()))
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
 			g.Fgenf(w, "[%d]", idx)

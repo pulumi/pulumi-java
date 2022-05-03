@@ -17,6 +17,20 @@ public class KeyedValue<T> {
     }
 
     /**
+     * Returns the key of the pair
+     */
+    public String key() {
+        return this.key;
+    }
+
+    /**
+     * Returns the value of the pair
+     */
+    public T value() {
+        return this.value;
+    }
+
+    /**
      * Creates an instance of KeyedValue(U)
      * @param key the key of the value
      * @param input the value itself
