@@ -1,0 +1,4 @@
+version: 1.56.0
+schema: https://raw.githubusercontent.com/pulumi/pulumi-azure-native/v1.56.0/provider/cmd/pulumi-resource-azure-native/schema.json
+out: sdk/java
+versionFile: src/main/resources/io/pulumi/azure-native/version.txt

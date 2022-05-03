@@ -1,0 +1,4 @@
+name: random
+description: An example of using pulumi-random with Java
+runtime:
+  name: jvm
