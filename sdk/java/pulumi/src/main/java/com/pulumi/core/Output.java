@@ -2,7 +2,6 @@ package com.pulumi.core;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -22,6 +21,7 @@ import com.pulumi.core.internal.OutputInternal;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -31,9 +31,11 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
+import static com.google.common.collect.Lists.newArrayList;
 import static com.pulumi.core.internal.OutputData.allHelperAsync;
 import static com.pulumi.core.internal.OutputInternal.TupleZeroOut;
 import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.toCollection;
 
 /**
  * {@code Output}{@literal <T>} is a key part of how Pulumi tracks dependencies
@@ -197,7 +199,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#all(Output[])  for more details.
      */
     static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
-        return all(Lists.newArrayList(outputs));
+        return all(newArrayList(outputs));
     }
 
     private static <T> Output<List<T>> all(List<Output<T>> outputs) {
@@ -210,8 +212,9 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * Takes in a {@code formattableString} with potential {@link Output}
-     * in the 'placeholder holes'. Conceptually, this method unwraps all the underlying values in the holes,
+     * Takes in a {@code formattableString} with potential {@link Output} or a regular {@link Object}.
+     * in the 'placeholder holes'.
+     * Conceptually, this method unwraps all the underlying values in the holes,
      * combines them appropriately with the {@code formattableString}, and produces an {@link Output}
      * containing the final result.
      * <p>
@@ -221,20 +224,39 @@ public interface Output<T> extends Copyable<Output<T>> {
      * Similarly, if any of the {@link Output}s are secrets,
      * then the final result will be a secret.
      *
-     * @param formattableString the format string with same syntax as expected by {@link String#format(String, Object...)}
-     * @param arguments         {@link Output}s that values of will be applied to the format String
+     * @param formattableString The format string with same syntax as expected by {@link String#format(String, Object...)},
+     *                          the behaviour on a {@code null} argument depends on the format conversion.
+     * @param arguments         {@link Output}s or regular {@link Object}s that values of will be applied to the format String
      * @return an {@link Output} with the result of the formatting
      */
-    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") Output... arguments) {
-        var data = Lists.newArrayList(arguments).stream()
+    static Output<String> format(String formattableString, @Nullable Object... arguments) {
+        var argumentsOrEmpty = arguments == null ? List.of() : newArrayList(arguments);
+        var data = argumentsOrEmpty.stream()
+                .map(Output::ensureOutput)
                 .map(OutputData::copyInputOutputData)
-                .collect(Collectors.toList());
+                .collect(toCollection(ArrayList::new)); // ArrayList preserves null
 
-        return new OutputInternal<>(
-                allHelperAsync(data)
-                        .thenApply(objs -> objs.apply(
-                                v -> v == null ? null : String.format(formattableString, v.toArray())))
-        );
+        var futureResult = CompletableFutures.allOf(data)
+                .thenApply(dataList ->
+                        OutputData.builder(new ArrayList<>(dataList.size()))
+                                .accumulate(dataList, (ts, t) -> {
+                                    ts.add(t);
+                                    return ts;
+                                })
+                                .build()
+                )
+                .thenApply(
+                        objs -> objs.apply(v -> String.format(formattableString, v.toArray()))
+                );
+        return new OutputInternal<>(futureResult);
+    }
+
+    private static Output<Object> ensureOutput(@Nullable Object o) {
+        if (o instanceof Output) {
+            //noinspection unchecked
+            return (Output<Object>) o;
+        }
+        return Output.ofNullable(o);
     }
 
     // Convenience methods for Either (a.k.a. Union)
@@ -334,6 +356,7 @@ public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Returns a shallow copy of the {@link List} wrapped in an {@link Output}
+     *
      * @return an {@link Output} holding a copy of the given list
      */
     static <E> Output<List<E>> copyOfList(List<E> values) {

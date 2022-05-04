@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.pulumi.core.OutputTests.waitFor;
 import static com.pulumi.core.OutputTests.waitForValue;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatCode;
 
 public class OutputsTest {
 
@@ -32,7 +33,40 @@ public class OutputsTest {
     public void testFormat() {
         var foo = Output.of("foo");
         var bar = Output.of("bar");
-        var result = Output.format("%s-%s", foo, bar);
-        assertThat(waitForValue(result)).isEqualTo("foo-bar");
+        var baz = "baz";
+        var result = Output.format("%s-%s-%s-%d", foo, bar, baz, null);
+        assertThat(waitForValue(result)).isEqualTo("foo-bar-baz-null");
+    }
+
+    @Test
+    public void testFormatNullArray() {
+        assertThatCode(() -> {
+            var result = Output.format("", (Object[]) null);
+            assertThat(waitForValue(result)).isEqualTo("");
+        }).doesNotThrowAnyException();
+    }
+
+    @Test
+    public void testFormatNullObject() {
+        assertThatCode(() -> {
+            var result = Output.format("", (Object) null);
+            assertThat(waitForValue(result)).isEqualTo("");
+        }).doesNotThrowAnyException();
+    }
+
+    @Test
+    public void testFormatNulls() {
+        assertThatCode(() -> {
+            var result = Output.format("%s%s%s", null, null, null);
+            assertThat(waitForValue(result)).isEqualTo("nullnullnull");
+        }).doesNotThrowAnyException();
+    }
+
+    @Test
+    public void testFormatEmpty() {
+        assertThatCode(() -> {
+            var result = Output.format("");
+            assertThat(waitForValue(result)).isEqualTo("");
+        }).doesNotThrowAnyException();
     }
 }
