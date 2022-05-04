@@ -20,7 +20,7 @@ public class App {
                 .build())
             .build());
 
-        final var ami = Output.of(AwsFunctions.getAmi(GetAmiArgsArgs.builder()
+        final var ami = Output.of(AwsFunctions.getAmi(GetAmiArgs.builder()
             .filters(GetAmiFilterArgs.builder()
                 .name("name")
                 .values("amzn-ami-hvm-*-x86_64-ebs")

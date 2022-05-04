@@ -14,7 +14,7 @@ public class App {
         final var config = ctx.config();
         final var storageAccountNameParam = config.get("storageAccountNameParam");
         final var resourceGroupNameParam = config.get("resourceGroupNameParam");
-        final var resourceGroupVar = Output.of(CoreFunctions.getResourceGroup(GetResourceGroupArgsArgs.builder()
+        final var resourceGroupVar = Output.of(CoreFunctions.getResourceGroup(GetResourceGroupArgs.builder()
             .name(resourceGroupNameParam)
             .build()));
 

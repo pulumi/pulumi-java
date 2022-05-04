@@ -12,11 +12,11 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var vpc = Output.of(Ec2Functions.getVpc(GetVpcArgsArgs.builder()
+        final var vpc = Output.of(Ec2Functions.getVpc(GetVpcArgs.builder()
             .default_(true)
             .build()));
 
-        final var subnets = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgsArgs.builder()
+        final var subnets = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
             .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
             .build()));
 
