@@ -15,7 +15,7 @@ public class App {
 
     public static void stack(Context ctx) {
         var siteBucket = new Bucket("siteBucket", BucketArgs.builder()        
-            .website(BucketWebsite.builder()
+            .website(BucketWebsiteArgs.builder()
                 .indexDocument("index.html")
                 .build())
             .build());
@@ -23,17 +23,17 @@ public class App {
         final var siteDir = "www";
 
         for (var range : readDir(siteDir)) {
-            new BucketObject("files-" + range.getKey(), BucketObjectArgs.builder()            
-                .bucket(siteBucket.getId())
-                .key(range.getValue())
-                .source(new FileAsset(Paths.get(siteDir, range.getValue())))
-                .contentType(Files.probeContentType(range.getValue()))
+            new BucketObject("files-" + range.key(), BucketObjectArgs.builder()            
+                .bucket(siteBucket.id())
+                .key(range.value())
+                .source(new FileAsset(Paths.get(siteDir, range.value())))
+                .contentType(Files.probeContentType(range.value()))
                 .build());
         }
 
         var bucketPolicy = new BucketPolicy("bucketPolicy", BucketPolicyArgs.builder()        
-            .bucket(siteBucket.getId())
-            .policy(siteBucket.getId().apply(id -> serializeJson(
+            .bucket(siteBucket.id())
+            .policy(siteBucket.id().apply(id -> serializeJson(
                 jsonObject(
                     jsonProperty("Version", "2012-10-17"),
                     jsonProperty("Statement", jsonArray(jsonObject(
@@ -45,7 +45,7 @@ public class App {
                 ))))
             .build());
 
-        ctx.export("bucketName", siteBucket.getBucket());
-        ctx.export("websiteUrl", siteBucket.getWebsiteEndpoint());
-        }
+        ctx.export("bucketName", siteBucket.bucket());
+        ctx.export("websiteUrl", siteBucket.websiteEndpoint());
+    }
 }

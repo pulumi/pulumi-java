@@ -14,15 +14,15 @@ public class App {
         var argocd_serverDeployment = new Deployment("argocd_serverDeployment", DeploymentArgs.builder()        
             .apiVersion("apps/v1")
             .kind("Deployment")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .name("argocd-server")
                 .build())
-            .spec(DeploymentSpec.builder()
-                .template(PodTemplateSpec.builder()
-                    .spec(PodSpec.builder()
-                        .containers(Container.builder()
-                            .readinessProbe(Probe.builder()
-                                .httpGet(HTTPGetAction.builder()
+            .spec(DeploymentSpecArgs.builder()
+                .template(PodTemplateSpecArgs.builder()
+                    .spec(PodSpecArgs.builder()
+                        .containers(ContainerArgs.builder()
+                            .readinessProbe(ProbeArgs.builder()
+                                .httpGet(HTTPGetActionArgs.builder()
                                     .port(8080)
                                     .build())
                                 .build())
@@ -32,5 +32,5 @@ public class App {
                 .build())
             .build());
 
-        }
+    }
 }

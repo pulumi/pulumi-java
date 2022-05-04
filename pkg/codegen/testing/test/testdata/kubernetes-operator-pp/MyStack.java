@@ -14,47 +14,47 @@ public class App {
         var pulumi_kubernetes_operatorDeployment = new Deployment("pulumi_kubernetes_operatorDeployment", DeploymentArgs.builder()        
             .apiVersion("apps/v1")
             .kind("Deployment")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .name("pulumi-kubernetes-operator")
                 .build())
-            .spec(DeploymentSpec.builder()
+            .spec(DeploymentSpecArgs.builder()
                 .replicas(1)
-                .selector(LabelSelector.builder()
+                .selector(LabelSelectorArgs.builder()
                     .matchLabels(Map.of("name", "pulumi-kubernetes-operator"))
                     .build())
-                .template(PodTemplateSpec.builder()
-                    .metadata(ObjectMeta.builder()
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(ObjectMetaArgs.builder()
                         .labels(Map.of("name", "pulumi-kubernetes-operator"))
                         .build())
-                    .spec(PodSpec.builder()
+                    .spec(PodSpecArgs.builder()
                         .serviceAccountName("pulumi-kubernetes-operator")
-                        .imagePullSecrets(LocalObjectReference.builder()
+                        .imagePullSecrets(LocalObjectReferenceArgs.builder()
                             .name("pulumi-kubernetes-operator")
                             .build())
-                        .containers(Container.builder()
+                        .containers(ContainerArgs.builder()
                             .name("pulumi-kubernetes-operator")
                             .image("pulumi/pulumi-kubernetes-operator:v0.0.2")
                             .command("pulumi-kubernetes-operator")
                             .args("--zap-level=debug")
                             .imagePullPolicy("Always")
                             .env(                            
-                                EnvVar.builder()
+                                EnvVarArgs.builder()
                                     .name("WATCH_NAMESPACE")
-                                    .valueFrom(EnvVarSource.builder()
-                                        .fieldRef(ObjectFieldSelector.builder()
+                                    .valueFrom(EnvVarSourceArgs.builder()
+                                        .fieldRef(ObjectFieldSelectorArgs.builder()
                                             .fieldPath("metadata.namespace")
                                             .build())
                                         .build())
                                     .build(),
-                                EnvVar.builder()
+                                EnvVarArgs.builder()
                                     .name("POD_NAME")
-                                    .valueFrom(EnvVarSource.builder()
-                                        .fieldRef(ObjectFieldSelector.builder()
+                                    .valueFrom(EnvVarSourceArgs.builder()
+                                        .fieldRef(ObjectFieldSelectorArgs.builder()
                                             .fieldPath("metadata.name")
                                             .build())
                                         .build())
                                     .build(),
-                                EnvVar.builder()
+                                EnvVarArgs.builder()
                                     .name("OPERATOR_NAME")
                                     .value("pulumi-kubernetes-operator")
                                     .build())
@@ -67,12 +67,12 @@ public class App {
         var pulumi_kubernetes_operatorRole = new Role("pulumi_kubernetes_operatorRole", RoleArgs.builder()        
             .apiVersion("rbac.authorization.k8s.io/v1")
             .kind("Role")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .creationTimestamp(null)
                 .name("pulumi-kubernetes-operator")
                 .build())
             .rules(            
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("")
                     .resources(                    
                         "pods",
@@ -92,7 +92,7 @@ public class App {
                         "update",
                         "watch")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("apps")
                     .resources(                    
                         "deployments",
@@ -108,32 +108,32 @@ public class App {
                         "update",
                         "watch")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("monitoring.coreos.com")
                     .resources("servicemonitors")
                     .verbs(                    
                         "get",
                         "create")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("apps")
                     .resourceNames("pulumi-kubernetes-operator")
                     .resources("deployments/finalizers")
                     .verbs("update")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("")
                     .resources("pods")
                     .verbs("get")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("apps")
                     .resources(                    
                         "replicasets",
                         "deployments")
                     .verbs("get")
                     .build(),
-                PolicyRule.builder()
+                PolicyRuleArgs.builder()
                     .apiGroups("pulumi.com")
                     .resources("*")
                     .verbs(                    
@@ -150,14 +150,14 @@ public class App {
         var pulumi_kubernetes_operatorRoleBinding = new RoleBinding("pulumi_kubernetes_operatorRoleBinding", RoleBindingArgs.builder()        
             .kind("RoleBinding")
             .apiVersion("rbac.authorization.k8s.io/v1")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .name("pulumi-kubernetes-operator")
                 .build())
-            .subjects(Subject.builder()
+            .subjects(SubjectArgs.builder()
                 .kind("ServiceAccount")
                 .name("pulumi-kubernetes-operator")
                 .build())
-            .roleRef(RoleRef.builder()
+            .roleRef(RoleRefArgs.builder()
                 .kind("Role")
                 .name("pulumi-kubernetes-operator")
                 .apiGroup("rbac.authorization.k8s.io")
@@ -167,10 +167,10 @@ public class App {
         var pulumi_kubernetes_operatorServiceAccount = new ServiceAccount("pulumi_kubernetes_operatorServiceAccount", ServiceAccountArgs.builder()        
             .apiVersion("v1")
             .kind("ServiceAccount")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .name("pulumi-kubernetes-operator")
                 .build())
             .build());
 
-        }
+    }
 }

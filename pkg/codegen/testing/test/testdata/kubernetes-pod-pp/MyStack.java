@@ -14,15 +14,15 @@ public class App {
         var bar = new Pod("bar", PodArgs.builder()        
             .apiVersion("v1")
             .kind("Pod")
-            .metadata(ObjectMeta.builder()
+            .metadata(ObjectMetaArgs.builder()
                 .namespace("foo")
                 .name("bar")
                 .build())
-            .spec(PodSpec.builder()
-                .containers(Container.builder()
+            .spec(PodSpecArgs.builder()
+                .containers(ContainerArgs.builder()
                     .name("nginx")
                     .image("nginx:1.14-alpine")
-                    .resources(ResourceRequirements.builder()
+                    .resources(ResourceRequirementsArgs.builder()
                         .limits(Map.ofEntries(
                             Map.entry("memory", "20Mi"),
                             Map.entry("cpu", 0.2)
@@ -32,5 +32,5 @@ public class App {
                 .build())
             .build());
 
-        }
+    }
 }

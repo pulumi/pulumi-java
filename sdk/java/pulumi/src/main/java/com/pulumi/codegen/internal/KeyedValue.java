@@ -28,6 +28,21 @@ public class KeyedValue<T> {
     }
 
     /**
+     * Returns the key of the pair
+     */
+    public String key() {
+        return this.key;
+    }
+
+
+    /**
+     * Returns the value of the pair
+     */
+    public T value() {
+        return this.value;
+    }
+
+    /**
      * Takes an Iterator(T) and creates a list of KeyedValue(T) where each key
      * is the index of the value from the iterator.
      */
