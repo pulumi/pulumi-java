@@ -1,0 +1,4 @@
+name: pulumiup-platform-stack
+description: An example of deploying a kubernetes cluster on EKS
+runtime:
+  name: java
