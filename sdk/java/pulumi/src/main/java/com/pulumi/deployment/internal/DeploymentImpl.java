@@ -565,7 +565,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                 String.format("Invoke RPC prepared: token='%s'", token),
                                 String.format(", obj='%s'", serialized)
                         );
-                        return this.monitor.invokeAsync(InvokeRequest.newBuilder()
+                        return this.monitor.invokeAsync(pulumirpc.Resource.ResourceInvokeRequest.newBuilder()
                                 .setTok(token)
                                 .setProvider(provider.orElse(""))
                                 .setVersion(version.orElse(""))

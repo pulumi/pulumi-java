@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 public interface Monitor {
     CompletableFuture<SupportsFeatureResponse> supportsFeatureAsync(SupportsFeatureRequest request);
 
-    CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request);
+    CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request);
 
     CompletableFuture<CallResponse> callAsync(CallRequest request);
 
