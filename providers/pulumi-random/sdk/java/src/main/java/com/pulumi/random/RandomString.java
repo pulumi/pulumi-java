@@ -26,6 +26,29 @@ import javax.annotation.Nullable;
  * Historically this resource&#39;s intended usage has been ambiguous as the original example used it in a password. For backwards compatibility it will continue to exist. For unique ids please use random_id, for sensitive random values please use random_password.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var random = new RandomString(&#34;random&#34;, RandomStringArgs.builder()        
+ *             .length(16)
+ *             .overrideSpecial(&#34;/@£$&#34;)
+ *             .special(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,32 @@ import javax.annotation.Nullable;
  * This resource can be used in conjunction with resources that have the `create_before_destroy` lifecycle flag set, to avoid conflicts with unique names during the brief period where both the old and new resources exist concurrently.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverRandomPet = new RandomPet(&#34;serverRandomPet&#34;, RandomPetArgs.builder()        
+ *             .keepers(Map.of(&#34;ami_id&#34;, var_.getAmi_id()))
+ *             .build());
+ * 
+ *         var serverInstance = new Instance(&#34;serverInstance&#34;, InstanceArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, serverRandomPet.getId().apply(id -&gt; String.format(&#34;web-server-%s&#34;, id))))
+ *             .ami(serverRandomPet.getKeepers().apply(keepers -&gt; keepers.getAmiId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="random:index/randomPet:RandomPet")

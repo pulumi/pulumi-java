@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var password = new RandomPassword(&#34;password&#34;, RandomPasswordArgs.builder()        
+ *             .length(16)
+ *             .special(true)
+ *             .overrideSpecial(&#34;!#$%&amp;*()-_=+[]{}&lt;&gt;:?&#34;)
+ *             .build());
+ * 
+ *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+ *             .instanceClass(&#34;db.t3.micro&#34;)
+ *             .allocatedStorage(64)
+ *             .engine(&#34;mysql&#34;)
+ *             .username(&#34;someone&#34;)
+ *             .password(password.getResult())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
