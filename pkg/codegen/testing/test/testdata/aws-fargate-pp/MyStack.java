@@ -17,18 +17,18 @@ public class App {
             .build()));
 
         final var subnets = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.getId()))
+            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
             .build()));
 
         var webSecurityGroup = new SecurityGroup("webSecurityGroup", SecurityGroupArgs.builder()        
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.getId()))
-            .egress(SecurityGroupEgress.builder()
+            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
+            .egress(SecurityGroupEgressArgs.builder()
                 .protocol("-1")
                 .fromPort(0)
                 .toPort(0)
                 .cidrBlocks("0.0.0.0/0")
                 .build())
-            .ingress(SecurityGroupIngress.builder()
+            .ingress(SecurityGroupIngressArgs.builder()
                 .protocol("tcp")
                 .fromPort(80)
                 .toPort(80)
@@ -54,28 +54,28 @@ public class App {
             .build());
 
         var taskExecRolePolicyAttachment = new RolePolicyAttachment("taskExecRolePolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(taskExecRole.getName())
+            .role(taskExecRole.name())
             .policyArn("arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy")
             .build());
 
         var webLoadBalancer = new LoadBalancer("webLoadBalancer", LoadBalancerArgs.builder()        
-            .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.getIds()))
-            .securityGroups(webSecurityGroup.getId())
+            .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+            .securityGroups(webSecurityGroup.id())
             .build());
 
         var webTargetGroup = new TargetGroup("webTargetGroup", TargetGroupArgs.builder()        
             .port(80)
             .protocol("HTTP")
             .targetType("ip")
-            .vpcId(vpc.apply(getVpcResult -> getVpcResult.getId()))
+            .vpcId(vpc.apply(getVpcResult -> getVpcResult.id()))
             .build());
 
         var webListener = new Listener("webListener", ListenerArgs.builder()        
-            .loadBalancerArn(webLoadBalancer.getArn())
+            .loadBalancerArn(webLoadBalancer.arn())
             .port(80)
-            .defaultActions(ListenerDefaultAction.builder()
+            .defaultActions(ListenerDefaultActionArgs.builder()
                 .type("forward")
-                .targetGroupArn(webTargetGroup.getArn())
+                .targetGroupArn(webTargetGroup.arn())
                 .build())
             .build());
 
@@ -85,7 +85,7 @@ public class App {
             .memory("512")
             .networkMode("awsvpc")
             .requiresCompatibilities("FARGATE")
-            .executionRoleArn(taskExecRole.getArn())
+            .executionRoleArn(taskExecRole.arn())
             .containerDefinitions(serializeJson(
                 jsonArray(jsonObject(
                     jsonProperty("name", "my-app"),
@@ -99,22 +99,22 @@ public class App {
             .build());
 
         var appService = new Service("appService", ServiceArgs.builder()        
-            .cluster(cluster.getArn())
+            .cluster(cluster.arn())
             .desiredCount(5)
             .launchType("FARGATE")
-            .taskDefinition(appTask.getArn())
-            .networkConfiguration(ServiceNetworkConfiguration.builder()
+            .taskDefinition(appTask.arn())
+            .networkConfiguration(ServiceNetworkConfigurationArgs.builder()
                 .assignPublicIp(true)
-                .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.getIds()))
-                .securityGroups(webSecurityGroup.getId())
+                .subnets(subnets.apply(getSubnetIdsResult -> getSubnetIdsResult.ids()))
+                .securityGroups(webSecurityGroup.id())
                 .build())
-            .loadBalancers(ServiceLoadBalancer.builder()
-                .targetGroupArn(webTargetGroup.getArn())
+            .loadBalancers(ServiceLoadBalancerArgs.builder()
+                .targetGroupArn(webTargetGroup.arn())
                 .containerName("my-app")
                 .containerPort(80)
                 .build())
             .build());
 
-        ctx.export("url", webLoadBalancer.getDnsName());
-        }
+        ctx.export("url", webLoadBalancer.dnsName());
+    }
 }

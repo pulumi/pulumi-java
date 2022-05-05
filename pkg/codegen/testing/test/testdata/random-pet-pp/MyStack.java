@@ -15,5 +15,5 @@ public class App {
             .prefix("doggo")
             .build());
 
-        }
+    }
 }

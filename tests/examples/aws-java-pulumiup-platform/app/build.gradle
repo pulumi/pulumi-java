@@ -1,0 +1,43 @@
+plugins {
+    id 'application'
+}
+
+var gprUser = project.findProperty("gpr.user")  ?: System.getenv("GPR_USER")
+var gprToken = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+
+repositories {
+    mavenLocal()
+    maven { // The google mirror is less flaky than mavenCentral()
+        url("https://maven-central.storage-download.googleapis.com/maven2/")
+    }
+    mavenCentral()
+
+    if (gprUser) {
+        repositories {
+            maven {
+                url = uri("https://maven.pkg.github.com/pulumi/pulumi-java")
+                credentials {
+                    username = gprUser
+                    password = gprToken
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation "com.pulumi:pulumi:0.1.0"
+    implementation "com.pulumi:kubernetes:3.15.1"
+    implementation "com.pulumi:aws:4.37.3"
+    implementation "com.pulumi:eks:0.37.1"
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.6'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.6'
+}
+
+application {
+    mainClass = project.hasProperty("mainClass")
+            ? project.getProperty("mainClass")
+            : 'com.broom.example.PulumiStack'
+}
