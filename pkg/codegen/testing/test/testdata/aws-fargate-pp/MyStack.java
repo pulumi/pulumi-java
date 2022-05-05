@@ -5,6 +5,7 @@ import java.io.*;
 import java.nio.*;
 import com.pulumi.*;
 import static com.pulumi.codegen.internal.Serialization.*;
+import com.pulumi.resources.CustomResourceOptions;
 
 public class App {
     public static void main(String[] args) {
@@ -113,7 +114,9 @@ public class App {
                 .containerName("my-app")
                 .containerPort(80)
                 .build())
-            .build());
+            .build(), CustomResourceOptions.builder()
+                .dependsOn(webListener)
+                .build());
 
         ctx.export("url", webLoadBalancer.dnsName());
     }
