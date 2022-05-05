@@ -1,8 +1,8 @@
 artifactID: aws
-version: 5.3.0
-schema: https://raw.githubusercontent.com/pulumi/pulumi-aws/v5.3.0/provider/cmd/pulumi-resource-aws/schema.json
 out: sdk/java
-versionFile: src/main/resources/com/pulumi/aws/version.txt
-pluginFile: src/main/resources/com/pulumi/aws/plugin.json
 overlays:
-  - "../build-templates"
+- ../build-templates
+pluginFile: src/main/resources/com/pulumi/aws/plugin.json
+schema: https://raw.githubusercontent.com/pulumi/pulumi-aws/v5.4.0/provider/cmd/pulumi-resource-aws/schema.json
+version: 5.4.0
+versionFile: src/main/resources/com/pulumi/aws/version.txt
