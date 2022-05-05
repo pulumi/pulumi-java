@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  * For more information see the [official documentation](https://cloud.google.com/vpc/docs/firewall-policies)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new FirewallPolicy(&#34;default&#34;, FirewallPolicyArgs.builder()        
+ *             .description(&#34;Example Resource&#34;)
+ *             .parent(&#34;organizations/12345&#34;)
+ *             .shortName(&#34;my-policy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

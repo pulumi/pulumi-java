@@ -25,6 +25,200 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-templates-inspect)
  * 
  * ## Example Usage
+ * ### Dlp Inspect Template Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new PreventionInspectTemplate(&#34;basic&#34;, PreventionInspectTemplateArgs.builder()        
+ *             .description(&#34;My description&#34;)
+ *             .displayName(&#34;display_name&#34;)
+ *             .inspectConfig(PreventionInspectTemplateInspectConfig.builder()
+ *                 .infoTypes(                
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;EMAIL_ADDRESS&#34;)
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;PERSON_NAME&#34;)
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;LAST_NAME&#34;)
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;DOMAIN_NAME&#34;)
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;PHONE_NUMBER&#34;)
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                         .name(&#34;FIRST_NAME&#34;)
+ *                         .build())
+ *                 .limits(PreventionInspectTemplateInspectConfigLimits.builder()
+ *                     .maxFindingsPerInfoType(                    
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;infoType&#34;, Map.of(&#34;name&#34;, &#34;PERSON_NAME&#34;)),
+ *                             Map.entry(&#34;maxFindings&#34;, &#34;75&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;infoType&#34;, Map.of(&#34;name&#34;, &#34;LAST_NAME&#34;)),
+ *                             Map.entry(&#34;maxFindings&#34;, &#34;80&#34;)
+ *                         ))
+ *                     .maxFindingsPerItem(10)
+ *                     .maxFindingsPerRequest(50)
+ *                     .build())
+ *                 .minLikelihood(&#34;UNLIKELY&#34;)
+ *                 .ruleSets(                
+ *                     PreventionInspectTemplateInspectConfigRuleSet.builder()
+ *                         .infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                             .name(&#34;EMAIL_ADDRESS&#34;)
+ *                             .build())
+ *                         .rules(PreventionInspectTemplateInspectConfigRuleSetRule.builder()
+ *                             .exclusionRule(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule.builder()
+ *                                 .matchingType(&#34;MATCHING_TYPE_FULL_MATCH&#34;)
+ *                                 .regex(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex.builder()
+ *                                     .pattern(&#34;.+@example.com&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigRuleSet.builder()
+ *                         .infoTypes(                        
+ *                             PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                                 .name(&#34;EMAIL_ADDRESS&#34;)
+ *                                 .build(),
+ *                             PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                                 .name(&#34;DOMAIN_NAME&#34;)
+ *                                 .build(),
+ *                             PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                                 .name(&#34;PHONE_NUMBER&#34;)
+ *                                 .build(),
+ *                             PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                                 .name(&#34;PERSON_NAME&#34;)
+ *                                 .build(),
+ *                             PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                                 .name(&#34;FIRST_NAME&#34;)
+ *                                 .build())
+ *                         .rules(PreventionInspectTemplateInspectConfigRuleSetRule.builder()
+ *                             .exclusionRule(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule.builder()
+ *                                 .dictionary(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary.builder()
+ *                                     .wordList(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList.builder()
+ *                                         .words(&#34;TEST&#34;)
+ *                                         .build())
+ *                                     .build())
+ *                                 .matchingType(&#34;MATCHING_TYPE_PARTIAL_MATCH&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigRuleSet.builder()
+ *                         .infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                             .name(&#34;PERSON_NAME&#34;)
+ *                             .build())
+ *                         .rules(PreventionInspectTemplateInspectConfigRuleSetRule.builder()
+ *                             .hotwordRule(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule.builder()
+ *                                 .hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex.builder()
+ *                                     .pattern(&#34;patient&#34;)
+ *                                     .build())
+ *                                 .likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment.builder()
+ *                                     .fixedLikelihood(&#34;VERY_LIKELY&#34;)
+ *                                     .build())
+ *                                 .proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity.builder()
+ *                                     .windowBefore(50)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                 .build())
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dlp Inspect Template Custom Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom = new PreventionInspectTemplate(&#34;custom&#34;, PreventionInspectTemplateArgs.builder()        
+ *             .description(&#34;My description&#34;)
+ *             .displayName(&#34;display_name&#34;)
+ *             .inspectConfig(PreventionInspectTemplateInspectConfig.builder()
+ *                 .customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoType.builder()
+ *                     .infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType.builder()
+ *                         .name(&#34;MY_CUSTOM_TYPE&#34;)
+ *                         .build())
+ *                     .likelihood(&#34;UNLIKELY&#34;)
+ *                     .regex(PreventionInspectTemplateInspectConfigCustomInfoTypeRegex.builder()
+ *                         .pattern(&#34;test*&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .infoTypes(PreventionInspectTemplateInspectConfigInfoType.builder()
+ *                     .name(&#34;EMAIL_ADDRESS&#34;)
+ *                     .build())
+ *                 .limits(PreventionInspectTemplateInspectConfigLimits.builder()
+ *                     .maxFindingsPerItem(10)
+ *                     .maxFindingsPerRequest(50)
+ *                     .build())
+ *                 .minLikelihood(&#34;UNLIKELY&#34;)
+ *                 .ruleSets(                
+ *                     PreventionInspectTemplateInspectConfigRuleSet.builder()
+ *                         .infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                             .name(&#34;EMAIL_ADDRESS&#34;)
+ *                             .build())
+ *                         .rules(PreventionInspectTemplateInspectConfigRuleSetRule.builder()
+ *                             .exclusionRule(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule.builder()
+ *                                 .matchingType(&#34;MATCHING_TYPE_FULL_MATCH&#34;)
+ *                                 .regex(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex.builder()
+ *                                     .pattern(&#34;.+@example.com&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build(),
+ *                     PreventionInspectTemplateInspectConfigRuleSet.builder()
+ *                         .infoTypes(PreventionInspectTemplateInspectConfigRuleSetInfoType.builder()
+ *                             .name(&#34;MY_CUSTOM_TYPE&#34;)
+ *                             .build())
+ *                         .rules(PreventionInspectTemplateInspectConfigRuleSetRule.builder()
+ *                             .hotwordRule(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule.builder()
+ *                                 .hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex.builder()
+ *                                     .pattern(&#34;example*&#34;)
+ *                                     .build())
+ *                                 .likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment.builder()
+ *                                     .fixedLikelihood(&#34;VERY_LIKELY&#34;)
+ *                                     .build())
+ *                                 .proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity.builder()
+ *                                     .windowBefore(50)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                 .build())
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

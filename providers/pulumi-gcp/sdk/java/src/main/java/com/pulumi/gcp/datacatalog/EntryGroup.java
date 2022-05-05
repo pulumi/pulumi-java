@@ -24,6 +24,52 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
  * ## Example Usage
+ * ### Data Catalog Entry Group Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicEntryGroup = new EntryGroup(&#34;basicEntryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Entry Group Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicEntryGroup = new EntryGroup(&#34;basicEntryGroup&#34;, EntryGroupArgs.builder()        
+ *             .description(&#34;example entry group&#34;)
+ *             .displayName(&#34;entry group&#34;)
+ *             .entryGroupId(&#34;my_group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

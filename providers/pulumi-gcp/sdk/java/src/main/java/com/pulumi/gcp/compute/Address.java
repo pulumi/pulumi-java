@@ -40,6 +40,153 @@ import javax.annotation.Nullable;
  *     * [Reserving a Static Internal IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
  * 
  * ## Example Usage
+ * ### Address Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipAddress = new Address(&#34;ipAddress&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Address With Subnetwork
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;);
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var internalWithSubnetAndAddress = new Address(&#34;internalWithSubnetAndAddress&#34;, AddressArgs.builder()        
+ *             .subnetwork(defaultSubnetwork.getId())
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .address(&#34;10.0.42.42&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Address With Gce Endpoint
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var internalWithGceEndpoint = new Address(&#34;internalWithGceEndpoint&#34;, AddressArgs.builder()        
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;GCE_ENDPOINT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Instance With Ip
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var static_ = new Address(&#34;static&#34;);
+ * 
+ *         final var debianImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var instanceWithIp = new Instance(&#34;instanceWithIp&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;f1-micro&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(debianImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .accessConfigs(InstanceNetworkInterfaceAccessConfig.builder()
+ *                     .natIp(static_.getAddress())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Compute Address Ipsec Interconnect
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var ipsec_interconnect_address = new Address(&#34;ipsec-interconnect-address&#34;, AddressArgs.builder()        
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;IPSEC_INTERCONNECT&#34;)
+ *             .address(&#34;192.168.1.0&#34;)
+ *             .prefixLength(29)
+ *             .network(network.getSelfLink())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -40,6 +40,248 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
  * 
  * ## Example Usage
+ * ### Backend Service Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service Cache Simple
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .enableCdn(true)
+ *             .cdnPolicy(BackendServiceCdnPolicy.builder()
+ *                 .signedUrlCacheMaxAgeSec(7200)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service Cache
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .enableCdn(true)
+ *             .cdnPolicy(BackendServiceCdnPolicy.builder()
+ *                 .cacheMode(&#34;CACHE_ALL_STATIC&#34;)
+ *                 .defaultTtl(3600)
+ *                 .clientTtl(7200)
+ *                 .maxTtl(10800)
+ *                 .negativeCaching(true)
+ *                 .signedUrlCacheMaxAgeSec(7200)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service Traffic Director Round Robin
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new HealthCheck(&#34;healthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new BackendService(&#34;default&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(healthCheck.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_SELF_MANAGED&#34;)
+ *             .localityLbPolicy(&#34;ROUND_ROBIN&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service Traffic Director Ring Hash
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new HealthCheck(&#34;healthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new BackendService(&#34;default&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(healthCheck.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_SELF_MANAGED&#34;)
+ *             .localityLbPolicy(&#34;RING_HASH&#34;)
+ *             .sessionAffinity(&#34;HTTP_COOKIE&#34;)
+ *             .circuitBreakers(BackendServiceCircuitBreakers.builder()
+ *                 .maxConnections(10)
+ *                 .build())
+ *             .consistentHash(BackendServiceConsistentHash.builder()
+ *                 .httpCookie(BackendServiceConsistentHashHttpCookie.builder()
+ *                     .ttl(BackendServiceConsistentHashHttpCookieTtl.builder()
+ *                         .seconds(11)
+ *                         .nanos(1111)
+ *                         .build())
+ *                     .name(&#34;mycookie&#34;)
+ *                     .build())
+ *                 .build())
+ *             .outlierDetection(BackendServiceOutlierDetection.builder()
+ *                 .consecutiveErrors(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service Network Endpoint
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var externalProxy = new GlobalNetworkEndpointGroup(&#34;externalProxy&#34;, GlobalNetworkEndpointGroupArgs.builder()        
+ *             .networkEndpointType(&#34;INTERNET_FQDN_PORT&#34;)
+ *             .defaultPort(&#34;443&#34;)
+ *             .build());
+ * 
+ *         var proxy = new GlobalNetworkEndpoint(&#34;proxy&#34;, GlobalNetworkEndpointArgs.builder()        
+ *             .globalNetworkEndpointGroup(externalProxy.getId())
+ *             .fqdn(&#34;test.example.com&#34;)
+ *             .port(externalProxy.getDefaultPort())
+ *             .build());
+ * 
+ *         var default_ = new BackendService(&#34;default&#34;, BackendServiceArgs.builder()        
+ *             .enableCdn(true)
+ *             .timeoutSec(10)
+ *             .connectionDrainingTimeoutSec(10)
+ *             .customRequestHeaders(proxy.getFqdn().apply(fqdn -&gt; String.format(&#34;host: %s&#34;, fqdn)))
+ *             .customResponseHeaders(&#34;X-Cache-Hit: {cdn_cache_status}&#34;)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(externalProxy.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Service External Managed
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .loadBalancingScheme(&#34;EXTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

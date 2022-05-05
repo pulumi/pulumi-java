@@ -27,6 +27,41 @@ import javax.annotation.Nullable;
  * &gt; Subnets IP ranges across peered VPC networks cannot overlap.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Network(&#34;default&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(&#34;false&#34;)
+ *             .build());
+ * 
+ *         var other = new Network(&#34;other&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(&#34;false&#34;)
+ *             .build());
+ * 
+ *         var peering1 = new NetworkPeering(&#34;peering1&#34;, NetworkPeeringArgs.builder()        
+ *             .network(default_.getSelfLink())
+ *             .peerNetwork(other.getSelfLink())
+ *             .build());
+ * 
+ *         var peering2 = new NetworkPeering(&#34;peering2&#34;, NetworkPeeringArgs.builder()        
+ *             .network(other.getSelfLink())
+ *             .peerNetwork(default_.getSelfLink())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

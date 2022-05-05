@@ -19,6 +19,27 @@ public final class SourcerepoFunctions {
      * [API](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-repo = Output.of(SourcerepoFunctions.getRepository(GetRepositoryArgs.builder()
+     *             .name(&#34;my-repository&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {

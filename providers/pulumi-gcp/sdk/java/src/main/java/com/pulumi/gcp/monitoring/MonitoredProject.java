@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * * [Understanding metrics scopes](https://cloud.google.com/monitoring/settings#concept-scope)
  * * [API notes](https://cloud.google.com/monitoring/settings/manage-api)
  * ## Example Usage
+ * ### Basic_monitored_project
+ * A basic example of a monitoring monitored project
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new MonitoredProject(&#34;primary&#34;, MonitoredProjectArgs.builder()        
+ *             .metricsScope(&#34;existing-metrics-scope-project&#34;)
+ *             .build());
+ * 
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;my-monitored-project&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

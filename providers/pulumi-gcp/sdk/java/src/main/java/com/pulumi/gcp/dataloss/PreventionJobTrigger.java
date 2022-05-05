@@ -27,6 +27,55 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-job-triggers)
  * 
  * ## Example Usage
+ * ### Dlp Job Trigger Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new PreventionJobTrigger(&#34;basic&#34;, PreventionJobTriggerArgs.builder()        
+ *             .description(&#34;Description&#34;)
+ *             .displayName(&#34;Displayname&#34;)
+ *             .inspectJob(PreventionJobTriggerInspectJob.builder()
+ *                 .actions(PreventionJobTriggerInspectJobAction.builder()
+ *                     .saveFindings(PreventionJobTriggerInspectJobActionSaveFindings.builder()
+ *                         .outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig.builder()
+ *                             .table(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable.builder()
+ *                                 .datasetId(&#34;asdf&#34;)
+ *                                 .projectId(&#34;asdf&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .inspectTemplateName(&#34;fake&#34;)
+ *                 .storageConfig(PreventionJobTriggerInspectJobStorageConfig.builder()
+ *                     .cloudStorageOptions(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions.builder()
+ *                         .fileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet.builder()
+ *                             .url(&#34;gs://mybucket/directory/&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .triggers(PreventionJobTriggerTrigger.builder()
+ *                 .schedule(PreventionJobTriggerTriggerSchedule.builder()
+ *                     .recurrencePeriodDuration(&#34;86400s&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

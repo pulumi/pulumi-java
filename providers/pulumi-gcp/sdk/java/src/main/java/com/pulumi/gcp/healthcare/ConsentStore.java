@@ -26,6 +26,99 @@ import javax.annotation.Nullable;
  *     * [Creating a Consent store](https://cloud.google.com/healthcare/docs/how-tos/consent)
  * 
  * ## Example Usage
+ * ### Healthcare Consent Store Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var my_consent = new ConsentStore(&#34;my-consent&#34;, ConsentStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Consent Store Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var my_consent = new ConsentStore(&#34;my-consent&#34;, ConsentStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .enableConsentCreateOnUpdate(true)
+ *             .defaultConsentTtl(&#34;90000s&#34;)
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Consent Store Iam
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var my_consent = new ConsentStore(&#34;my-consent&#34;, ConsentStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .build());
+ * 
+ *         var test_account = new Account(&#34;test-account&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-account&#34;)
+ *             .displayName(&#34;Test Service Account&#34;)
+ *             .build());
+ * 
+ *         var test_iam = new ConsentStoreIamMember(&#34;test-iam&#34;, ConsentStoreIamMemberArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .consentStoreId(my_consent.getName())
+ *             .role(&#34;roles/editor&#34;)
+ *             .member(test_account.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

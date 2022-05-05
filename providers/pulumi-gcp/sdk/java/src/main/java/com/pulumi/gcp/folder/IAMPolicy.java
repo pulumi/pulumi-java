@@ -37,18 +37,213 @@ import javax.annotation.Nullable;
  *    to avoid locking yourself out, and it should generally only be used with folders
  *    fully managed by this provider. If you do use this resource, it is recommended to **import** the policy before
  *    applying the change.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var folder = new IAMPolicy(&#34;folder&#34;, IAMPolicyArgs.builder()        
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .build())
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .role(&#34;roles/compute.admin&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var folder = new IAMPolicy(&#34;folder&#34;, IAMPolicyArgs.builder()        
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_folder\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var folder = new IAMBinding(&#34;folder&#34;, IAMBindingArgs.builder()        
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var folder = new IAMBinding(&#34;folder&#34;, IAMBindingArgs.builder()        
+ *             .condition(IAMBindingCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/container.admin&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_folder\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var folder = new IAMMember(&#34;folder&#34;, IAMMemberArgs.builder()        
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var folder = new IAMMember(&#34;folder&#34;, IAMMemberArgs.builder()        
+ *             .condition(IAMMemberCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/firebase.admin&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_folder\_iam\_audit\_config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var folder = new IamAuditConfig(&#34;folder&#34;, IamAuditConfigArgs.builder()        
+ *             .auditLogConfigs(            
+ *                 IamAuditConfigAuditLogConfig.builder()
+ *                     .logType(&#34;ADMIN_READ&#34;)
+ *                     .build(),
+ *                 IamAuditConfigAuditLogConfig.builder()
+ *                     .exemptedMembers(&#34;user:joebloggs@hashicorp.com&#34;)
+ *                     .logType(&#34;DATA_READ&#34;)
+ *                     .build())
+ *             .folder(&#34;folders/1234567&#34;)
+ *             .service(&#34;allServices&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,58 @@ import javax.annotation.Nullable;
  * This resource can be used to ensure that the GCS bucket exists prior to assigning permissions. For more information see the [access control page](https://cloud.google.com/container-registry/docs/access-control) for GCR.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registry = new Registry(&#34;registry&#34;, RegistryArgs.builder()        
+ *             .location(&#34;EU&#34;)
+ *             .project(&#34;my-project&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * The `id` field of the `gcp.container.Registry` is the identifier of the storage bucket that backs GCR and can be used to assign permissions to the bucket.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registry = new Registry(&#34;registry&#34;, RegistryArgs.builder()        
+ *             .project(&#34;my-project&#34;)
+ *             .location(&#34;EU&#34;)
+ *             .build());
+ * 
+ *         var viewer = new BucketIAMMember(&#34;viewer&#34;, BucketIAMMemberArgs.builder()        
+ *             .bucket(registry.getId())
+ *             .role(&#34;roles/storage.objectViewer&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

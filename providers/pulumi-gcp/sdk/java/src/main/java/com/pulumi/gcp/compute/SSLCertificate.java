@@ -30,6 +30,122 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Ssl Certificate Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new SSLCertificate(&#34;default&#34;, SSLCertificateArgs.builder()        
+ *             .namePrefix(&#34;my-certificate-&#34;)
+ *             .description(&#34;a description&#34;)
+ *             .privateKey(Files.readString(&#34;path/to/private.key&#34;))
+ *             .certificate(Files.readString(&#34;path/to/certificate.crt&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ssl Certificate Random Provider
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new SSLCertificate(&#34;default&#34;, SSLCertificateArgs.builder()        
+ *             .privateKey(Files.readString(&#34;path/to/private.key&#34;))
+ *             .certificate(Files.readString(&#34;path/to/certificate.crt&#34;))
+ *             .build());
+ * 
+ *         var certificate = new RandomId(&#34;certificate&#34;, RandomIdArgs.builder()        
+ *             .byteLength(4)
+ *             .prefix(&#34;my-certificate-&#34;)
+ *             .keepers(Map.ofEntries(
+ *                 Map.entry(&#34;private_key&#34;, computeFileBase64Sha256(&#34;path/to/private.key&#34;)),
+ *                 Map.entry(&#34;certificate&#34;, computeFileBase64Sha256(&#34;path/to/certificate.crt&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ssl Certificate Target Https Proxies
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultSSLCertificate = new SSLCertificate(&#34;defaultSSLCertificate&#34;, SSLCertificateArgs.builder()        
+ *             .namePrefix(&#34;my-certificate-&#34;)
+ *             .privateKey(Files.readString(&#34;path/to/private.key&#34;))
+ *             .certificate(Files.readString(&#34;path/to/certificate.crt&#34;))
+ *             .build());
+ * 
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpsProxy = new TargetHttpsProxy(&#34;defaultTargetHttpsProxy&#34;, TargetHttpsProxyArgs.builder()        
+ *             .urlMap(defaultURLMap.getId())
+ *             .sslCertificates(defaultSSLCertificate.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

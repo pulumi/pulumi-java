@@ -23,6 +23,88 @@ import javax.annotation.Nullable;
  * information, see Creating VLAN Attachments.
  * 
  * ## Example Usage
+ * ### Interconnect Attachment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobarNetwork = new Network(&#34;foobarNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var foobarRouter = new Router(&#34;foobarRouter&#34;, RouterArgs.builder()        
+ *             .network(foobarNetwork.getName())
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(16550)
+ *                 .build())
+ *             .build());
+ * 
+ *         var onPrem = new InterconnectAttachment(&#34;onPrem&#34;, InterconnectAttachmentArgs.builder()        
+ *             .edgeAvailabilityDomain(&#34;AVAILABILITY_DOMAIN_1&#34;)
+ *             .type(&#34;PARTNER&#34;)
+ *             .router(foobarRouter.getId())
+ *             .mtu(1500)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Compute Interconnect Attachment Ipsec Encryption
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var address = new Address(&#34;address&#34;, AddressArgs.builder()        
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;IPSEC_INTERCONNECT&#34;)
+ *             .address(&#34;192.168.1.0&#34;)
+ *             .prefixLength(29)
+ *             .network(network.getSelfLink())
+ *             .build());
+ * 
+ *         var router = new Router(&#34;router&#34;, RouterArgs.builder()        
+ *             .network(network.getName())
+ *             .encryptedInterconnectRouter(true)
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(16550)
+ *                 .build())
+ *             .build());
+ * 
+ *         var ipsec_encrypted_interconnect_attachment = new InterconnectAttachment(&#34;ipsec-encrypted-interconnect-attachment&#34;, InterconnectAttachmentArgs.builder()        
+ *             .edgeAvailabilityDomain(&#34;AVAILABILITY_DOMAIN_1&#34;)
+ *             .type(&#34;PARTNER&#34;)
+ *             .router(router.getId())
+ *             .encryption(&#34;IPSEC&#34;)
+ *             .ipsecInternalAddresses(address.getSelfLink())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

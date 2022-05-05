@@ -28,6 +28,85 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Example creating a nightly Transfer Job from an AWS S3 Bucket to a GCS bucket.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(StorageFunctions.getTransferProjectServieAccount(GetTransferProjectServieAccountArgs.builder()
+ *             .project(var_.getProject())
+ *             .build()));
+ * 
+ *         var s3_backup_bucketBucket = new Bucket(&#34;s3-backup-bucketBucket&#34;, BucketArgs.builder()        
+ *             .storageClass(&#34;NEARLINE&#34;)
+ *             .project(var_.getProject())
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var s3_backup_bucketBucketIAMMember = new BucketIAMMember(&#34;s3-backup-bucketBucketIAMMember&#34;, BucketIAMMemberArgs.builder()        
+ *             .bucket(s3_backup_bucketBucket.getName())
+ *             .role(&#34;roles/storage.admin&#34;)
+ *             .member(String.format(&#34;serviceAccount:%s&#34;, default_.getEmail()))
+ *             .build());
+ * 
+ *         var s3_bucket_nightly_backup = new TransferJob(&#34;s3-bucket-nightly-backup&#34;, TransferJobArgs.builder()        
+ *             .description(&#34;Nightly backup of S3 bucket&#34;)
+ *             .project(var_.getProject())
+ *             .transferSpec(TransferJobTransferSpec.builder()
+ *                 .objectConditions(TransferJobTransferSpecObjectConditions.builder()
+ *                     .maxTimeElapsedSinceLastModification(&#34;600s&#34;)
+ *                     .excludePrefixes(&#34;requests.gz&#34;)
+ *                     .build())
+ *                 .transferOptions(TransferJobTransferSpecTransferOptions.builder()
+ *                     .deleteObjectsUniqueInSink(false)
+ *                     .build())
+ *                 .awsS3DataSource(TransferJobTransferSpecAwsS3DataSource.builder()
+ *                     .bucketName(var_.getAws_s3_bucket())
+ *                     .awsAccessKey(TransferJobTransferSpecAwsS3DataSourceAwsAccessKey.builder()
+ *                         .accessKeyId(var_.getAws_access_key())
+ *                         .secretAccessKey(var_.getAws_secret_key())
+ *                         .build())
+ *                     .build())
+ *                 .gcsDataSink(TransferJobTransferSpecGcsDataSink.builder()
+ *                     .bucketName(s3_backup_bucketBucket.getName())
+ *                     .path(&#34;foo/bar/&#34;)
+ *                     .build())
+ *                 .build())
+ *             .schedule(TransferJobSchedule.builder()
+ *                 .scheduleStartDate(TransferJobScheduleScheduleStartDate.builder()
+ *                     .year(2018)
+ *                     .month(10)
+ *                     .day(1)
+ *                     .build())
+ *                 .scheduleEndDate(TransferJobScheduleScheduleEndDate.builder()
+ *                     .year(2019)
+ *                     .month(1)
+ *                     .day(15)
+ *                     .build())
+ *                 .startTimeOfDay(TransferJobScheduleStartTimeOfDay.builder()
+ *                     .hours(23)
+ *                     .minutes(30)
+ *                     .seconds(0)
+ *                     .nanos(0)
+ *                     .build())
+ *                 .repeatInterval(&#34;604800s&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Storage buckets can be imported using the Transfer Job&#39;s `project` and `name` without the `transferJob/` prefix, e.g.

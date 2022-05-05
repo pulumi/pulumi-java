@@ -23,6 +23,145 @@ import javax.annotation.Nullable;
  * * [The resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy)
  * * [All valid constraints](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints)
  * ## Example Usage
+ * ### Enforce_policy
+ * A test of an enforce orgpolicy policy for a project
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .orgId(&#34;123456789&#34;)
+ *             .projectId(&#34;id&#34;)
+ *             .build());
+ * 
+ *         var primary = new Policy(&#34;primary&#34;, PolicyArgs.builder()        
+ *             .parent(basic.getName().apply(name -&gt; String.format(&#34;projects/%s&#34;, name)))
+ *             .spec(PolicySpec.builder()
+ *                 .rules(PolicySpecRule.builder()
+ *                     .enforce(&#34;FALSE&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Folder_policy
+ * A test of an orgpolicy policy for a folder
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Folder(&#34;basic&#34;, FolderArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .displayName(&#34;folder&#34;)
+ *             .build());
+ * 
+ *         var primary = new Policy(&#34;primary&#34;, PolicyArgs.builder()        
+ *             .parent(basic.getName())
+ *             .spec(PolicySpec.builder()
+ *                 .inheritFromParent(true)
+ *                 .rules(PolicySpecRule.builder()
+ *                     .denyAll(&#34;TRUE&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Organization_policy
+ * A test of an orgpolicy policy for an organization
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Policy(&#34;primary&#34;, PolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .spec(PolicySpec.builder()
+ *                 .reset(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Project_policy
+ * A test of an orgpolicy policy for a project
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .orgId(&#34;123456789&#34;)
+ *             .projectId(&#34;id&#34;)
+ *             .build());
+ * 
+ *         var primary = new Policy(&#34;primary&#34;, PolicyArgs.builder()        
+ *             .parent(basic.getName().apply(name -&gt; String.format(&#34;projects/%s&#34;, name)))
+ *             .spec(PolicySpec.builder()
+ *                 .rules(                
+ *                     PolicySpecRule.builder()
+ *                         .condition(PolicySpecRuleCondition.builder()
+ *                             .description(&#34;A sample condition for the policy&#34;)
+ *                             .expression(&#34;resource.matchLabels(&#39;labelKeys/123&#39;, &#39;labelValues/345&#39;)&#34;)
+ *                             .location(&#34;sample-location.log&#34;)
+ *                             .title(&#34;sample-condition&#34;)
+ *                             .build())
+ *                         .values(PolicySpecRuleValues.builder()
+ *                             .allowedValues(&#34;projects/allowed-project&#34;)
+ *                             .deniedValues(&#34;projects/denied-project&#34;)
+ *                             .build())
+ *                         .build(),
+ *                     PolicySpecRule.builder()
+ *                         .allowAll(&#34;TRUE&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -36,6 +36,42 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Access Context Manager Service Perimeter Resource Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var service_perimeter_resourceServicePerimeter = new ServicePerimeter(&#34;service-perimeter-resourceServicePerimeter&#34;, ServicePerimeterArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .title(&#34;restrict_all&#34;)
+ *             .status(ServicePerimeterStatus.builder()
+ *                 .restrictedServices(&#34;storage.googleapis.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var service_perimeter_resourceServicePerimeterResource = new ServicePerimeterResource(&#34;service-perimeter-resourceServicePerimeterResource&#34;, ServicePerimeterResourceArgs.builder()        
+ *             .perimeterName(service_perimeter_resourceServicePerimeter.getName())
+ *             .resource(&#34;projects/987654321&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

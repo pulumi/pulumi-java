@@ -42,6 +42,387 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
  * 
  * ## Example Usage
+ * ### Region Health Check Tcp
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tcp_region_health_check = new RegionHealthCheck(&#34;tcp-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .tcpHealthCheck(RegionHealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Tcp Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tcp_region_health_check = new RegionHealthCheck(&#34;tcp-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .description(&#34;Health check via tcp&#34;)
+ *             .healthyThreshold(4)
+ *             .tcpHealthCheck(RegionHealthCheckTcpHealthCheck.builder()
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .proxyHeader(&#34;NONE&#34;)
+ *                 .request(&#34;ARE YOU HEALTHY?&#34;)
+ *                 .response(&#34;I AM HEALTHY&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .unhealthyThreshold(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Ssl
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ssl_region_health_check = new RegionHealthCheck(&#34;ssl-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .sslHealthCheck(RegionHealthCheckSslHealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Ssl Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ssl_region_health_check = new RegionHealthCheck(&#34;ssl-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .description(&#34;Health check via ssl&#34;)
+ *             .healthyThreshold(4)
+ *             .sslHealthCheck(RegionHealthCheckSslHealthCheck.builder()
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .proxyHeader(&#34;NONE&#34;)
+ *                 .request(&#34;ARE YOU HEALTHY?&#34;)
+ *                 .response(&#34;I AM HEALTHY&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .unhealthyThreshold(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Http
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http_region_health_check = new RegionHealthCheck(&#34;http-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Http Logs
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http_region_health_check = new RegionHealthCheck(&#34;http-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .timeoutSec(1)
+ *             .checkIntervalSec(1)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .logConfig(RegionHealthCheckLogConfig.builder()
+ *                 .enable(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Http Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http_region_health_check = new RegionHealthCheck(&#34;http-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .description(&#34;Health check via http&#34;)
+ *             .healthyThreshold(4)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .host(&#34;1.2.3.4&#34;)
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .proxyHeader(&#34;NONE&#34;)
+ *                 .requestPath(&#34;/mypath&#34;)
+ *                 .response(&#34;I AM HEALTHY&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .unhealthyThreshold(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Https
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var https_region_health_check = new RegionHealthCheck(&#34;https-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .httpsHealthCheck(RegionHealthCheckHttpsHealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Https Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var https_region_health_check = new RegionHealthCheck(&#34;https-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .description(&#34;Health check via https&#34;)
+ *             .healthyThreshold(4)
+ *             .httpsHealthCheck(RegionHealthCheckHttpsHealthCheck.builder()
+ *                 .host(&#34;1.2.3.4&#34;)
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .proxyHeader(&#34;NONE&#34;)
+ *                 .requestPath(&#34;/mypath&#34;)
+ *                 .response(&#34;I AM HEALTHY&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .unhealthyThreshold(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Http2
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http2_region_health_check = new RegionHealthCheck(&#34;http2-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .http2HealthCheck(RegionHealthCheckHttp2HealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Http2 Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http2_region_health_check = new RegionHealthCheck(&#34;http2-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .description(&#34;Health check via http2&#34;)
+ *             .healthyThreshold(4)
+ *             .http2HealthCheck(RegionHealthCheckHttp2HealthCheck.builder()
+ *                 .host(&#34;1.2.3.4&#34;)
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .proxyHeader(&#34;NONE&#34;)
+ *                 .requestPath(&#34;/mypath&#34;)
+ *                 .response(&#34;I AM HEALTHY&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .unhealthyThreshold(5)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Grpc
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var grpc_region_health_check = new RegionHealthCheck(&#34;grpc-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .grpcHealthCheck(RegionHealthCheckGrpcHealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Health Check Grpc Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var grpc_region_health_check = new RegionHealthCheck(&#34;grpc-region-health-check&#34;, RegionHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .grpcHealthCheck(RegionHealthCheckGrpcHealthCheck.builder()
+ *                 .grpcServiceName(&#34;testservice&#34;)
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .build())
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

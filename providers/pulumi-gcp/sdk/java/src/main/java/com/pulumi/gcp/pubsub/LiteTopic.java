@@ -27,6 +27,48 @@ import javax.annotation.Nullable;
  *     * [Managing Topics](https://cloud.google.com/pubsub/lite/docs/topics)
  * 
  * ## Example Usage
+ * ### Pubsub Lite Topic Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var exampleLiteReservation = new LiteReservation(&#34;exampleLiteReservation&#34;, LiteReservationArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getNumber()))
+ *             .throughputCapacity(2)
+ *             .build());
+ * 
+ *         var exampleLiteTopic = new LiteTopic(&#34;exampleLiteTopic&#34;, LiteTopicArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getNumber()))
+ *             .partitionConfig(LiteTopicPartitionConfig.builder()
+ *                 .count(1)
+ *                 .capacity(LiteTopicPartitionConfigCapacity.builder()
+ *                     .publishMibPerSec(4)
+ *                     .subscribeMibPerSec(8)
+ *                     .build())
+ *                 .build())
+ *             .retentionConfig(LiteTopicRetentionConfig.builder()
+ *                 .perPartitionBytes(32212254720)
+ *                 .build())
+ *             .reservationConfig(LiteTopicReservationConfig.builder()
+ *                 .throughputReservation(exampleLiteReservation.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

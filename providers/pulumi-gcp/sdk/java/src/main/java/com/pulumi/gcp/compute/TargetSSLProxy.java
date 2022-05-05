@@ -28,6 +28,47 @@ import javax.annotation.Nullable;
  *     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
  * 
  * ## Example Usage
+ * ### Target Ssl Proxy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultSSLCertificate = new SSLCertificate(&#34;defaultSSLCertificate&#34;, SSLCertificateArgs.builder()        
+ *             .privateKey(Files.readString(&#34;path/to/private.key&#34;))
+ *             .certificate(Files.readString(&#34;path/to/certificate.crt&#34;))
+ *             .build());
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .protocol(&#34;SSL&#34;)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultTargetSSLProxy = new TargetSSLProxy(&#34;defaultTargetSSLProxy&#34;, TargetSSLProxyArgs.builder()        
+ *             .backendService(defaultBackendService.getId())
+ *             .sslCertificates(defaultSSLCertificate.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

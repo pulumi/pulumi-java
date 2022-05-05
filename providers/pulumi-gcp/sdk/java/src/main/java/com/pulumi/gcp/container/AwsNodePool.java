@@ -25,6 +25,128 @@ import javax.annotation.Nullable;
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
  * ## Example Usage
+ * ### Basic_aws_cluster
+ * A basic example of a containeraws node pool
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var versions = Output.of(ContainerFunctions.getAwsVersions(GetAwsVersionsArgs.builder()
+ *             .project(&#34;my-project-name&#34;)
+ *             .location(&#34;us-west1&#34;)
+ *             .build()));
+ * 
+ *         var primaryAwsCluster = new AwsCluster(&#34;primaryAwsCluster&#34;, AwsClusterArgs.builder()        
+ *             .authorization(AwsClusterAuthorization.builder()
+ *                 .adminUsers(AwsClusterAuthorizationAdminUser.builder()
+ *                     .username(&#34;emailAddress:my@service-account.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .awsRegion(&#34;my-aws-region&#34;)
+ *             .controlPlane(AwsClusterControlPlane.builder()
+ *                 .awsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthentication.builder()
+ *                     .roleArn(&#34;arn:aws:iam::012345678910:role/my--1p-dev-oneplatform&#34;)
+ *                     .roleSessionName(&#34;my--1p-dev-session&#34;)
+ *                     .build())
+ *                 .configEncryption(AwsClusterControlPlaneConfigEncryption.builder()
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .build())
+ *                 .databaseEncryption(AwsClusterControlPlaneDatabaseEncryption.builder()
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .build())
+ *                 .iamInstanceProfile(&#34;my--1p-dev-controlplane&#34;)
+ *                 .subnetIds(&#34;subnet-00000000000000000&#34;)
+ *                 .version(versions.apply(getAwsVersionsResult -&gt; getAwsVersionsResult.getValidVersions()[0]))
+ *                 .instanceType(&#34;t3.medium&#34;)
+ *                 .mainVolume(AwsClusterControlPlaneMainVolume.builder()
+ *                     .iops(3000)
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .sizeGib(10)
+ *                     .volumeType(&#34;GP3&#34;)
+ *                     .build())
+ *                 .proxyConfig(AwsClusterControlPlaneProxyConfig.builder()
+ *                     .secretArn(&#34;arn:aws:secretsmanager:us-west-2:126285863215:secret:proxy_config20210824150329476300000001-ABCDEF&#34;)
+ *                     .secretVersion(&#34;12345678-ABCD-EFGH-IJKL-987654321098&#34;)
+ *                     .build())
+ *                 .rootVolume(AwsClusterControlPlaneRootVolume.builder()
+ *                     .iops(3000)
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .sizeGib(10)
+ *                     .volumeType(&#34;GP3&#34;)
+ *                     .build())
+ *                 .securityGroupIds(&#34;sg-00000000000000000&#34;)
+ *                 .sshConfig(AwsClusterControlPlaneSshConfig.builder()
+ *                     .ec2KeyPair(&#34;my--1p-dev-ssh&#34;)
+ *                     .build())
+ *                 .tags(Map.of(&#34;owner&#34;, &#34;emailAddress:my@service-account.com&#34;))
+ *                 .build())
+ *             .fleet(AwsClusterFleet.builder()
+ *                 .project(&#34;my-project-number&#34;)
+ *                 .build())
+ *             .location(&#34;us-west1&#34;)
+ *             .networking(AwsClusterNetworking.builder()
+ *                 .podAddressCidrBlocks(&#34;10.2.0.0/16&#34;)
+ *                 .serviceAddressCidrBlocks(&#34;10.1.0.0/16&#34;)
+ *                 .vpcId(&#34;vpc-00000000000000000&#34;)
+ *                 .build())
+ *             .annotations(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .description(&#34;A sample aws cluster&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         var primaryAwsNodePool = new AwsNodePool(&#34;primaryAwsNodePool&#34;, AwsNodePoolArgs.builder()        
+ *             .autoscaling(AwsNodePoolAutoscaling.builder()
+ *                 .maxNodeCount(5)
+ *                 .minNodeCount(1)
+ *                 .build())
+ *             .cluster(primaryAwsCluster.getName())
+ *             .config(AwsNodePoolConfig.builder()
+ *                 .configEncryption(AwsNodePoolConfigConfigEncryption.builder()
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .build())
+ *                 .iamInstanceProfile(&#34;my--1p-dev-nodepool&#34;)
+ *                 .instanceType(&#34;t3.medium&#34;)
+ *                 .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *                 .rootVolume(AwsNodePoolConfigRootVolume.builder()
+ *                     .iops(3000)
+ *                     .kmsKeyArn(&#34;arn:aws:kms:my-aws-region:012345678910:key/12345678-1234-1234-1234-123456789111&#34;)
+ *                     .sizeGib(10)
+ *                     .volumeType(&#34;GP3&#34;)
+ *                     .build())
+ *                 .securityGroupIds(&#34;sg-00000000000000000&#34;)
+ *                 .sshConfig(AwsNodePoolConfigSshConfig.builder()
+ *                     .ec2KeyPair(&#34;my--1p-dev-ssh&#34;)
+ *                     .build())
+ *                 .tags(Map.of(&#34;tag-one&#34;, &#34;value-one&#34;))
+ *                 .taints(AwsNodePoolConfigTaint.builder()
+ *                     .effect(&#34;PREFER_NO_SCHEDULE&#34;)
+ *                     .key(&#34;taint-key&#34;)
+ *                     .value(&#34;taint-value&#34;)
+ *                     .build())
+ *                 .build())
+ *             .location(&#34;us-west1&#34;)
+ *             .maxPodsConstraint(AwsNodePoolMaxPodsConstraint.builder()
+ *                 .maxPodsPerNode(110)
+ *                 .build())
+ *             .subnetId(&#34;subnet-00000000000000000&#34;)
+ *             .version(versions.apply(getAwsVersionsResult -&gt; getAwsVersionsResult.getValidVersions()[0]))
+ *             .annotations(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

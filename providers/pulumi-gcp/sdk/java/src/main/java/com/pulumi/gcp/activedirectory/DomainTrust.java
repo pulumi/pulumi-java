@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ### Active Directory Domain Trust Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ad_domain_trust = new DomainTrust(&#34;ad-domain-trust&#34;, DomainTrustArgs.builder()        
+ *             .domain(&#34;test-managed-ad.com&#34;)
+ *             .targetDnsIpAddresses(&#34;10.1.0.100&#34;)
+ *             .targetDomainName(&#34;example-gcp.com&#34;)
+ *             .trustDirection(&#34;OUTBOUND&#34;)
+ *             .trustHandshakeSecret(&#34;Testing1!&#34;)
+ *             .trustType(&#34;FOREST&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -32,6 +32,37 @@ import javax.annotation.Nullable;
  * Datastore location will be the same as the App Engine location specified.
  * 
  * ## Example Usage
+ * ### Datastore Index
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new DataStoreIndex(&#34;default&#34;, DataStoreIndexArgs.builder()        
+ *             .kind(&#34;foo&#34;)
+ *             .properties(            
+ *                 DataStoreIndexProperty.builder()
+ *                     .direction(&#34;ASCENDING&#34;)
+ *                     .name(&#34;property_a&#34;)
+ *                     .build(),
+ *                 DataStoreIndexProperty.builder()
+ *                     .direction(&#34;ASCENDING&#34;)
+ *                     .name(&#34;property_b&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

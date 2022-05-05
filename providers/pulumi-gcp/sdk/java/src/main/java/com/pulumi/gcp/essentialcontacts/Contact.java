@@ -30,6 +30,33 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Essential Contact
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var contact = new Contact(&#34;contact&#34;, ContactArgs.builder()        
+ *             .parent(project.apply(getProjectResult -&gt; getProjectResult.getId()))
+ *             .email(&#34;foo@bar.com&#34;)
+ *             .languageTag(&#34;en-GB&#34;)
+ *             .notificationCategorySubscriptions(&#34;ALL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -31,6 +31,36 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Example creating a default object ACL on a bucket with one owner, and one reader.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image_store = new Bucket(&#34;image-store&#34;, BucketArgs.builder()        
+ *             .location(&#34;EU&#34;)
+ *             .build());
+ * 
+ *         var image_store_default_acl = new DefaultObjectACL(&#34;image-store-default-acl&#34;, DefaultObjectACLArgs.builder()        
+ *             .bucket(image_store.getName())
+ *             .roleEntities(            
+ *                 &#34;OWNER:user-my.email@gmail.com&#34;,
+ *                 &#34;READER:group-mygroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * This resource does not support import.

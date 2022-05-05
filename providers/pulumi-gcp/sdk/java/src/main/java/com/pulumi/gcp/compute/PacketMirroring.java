@@ -31,6 +31,88 @@ import javax.annotation.Nullable;
  *     * [Using Packet Mirroring](https://cloud.google.com/vpc/docs/using-packet-mirroring#creating)
  * 
  * ## Example Usage
+ * ### Compute Packet Mirroring Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;);
+ * 
+ *         var mirror = new Instance(&#34;mirror&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(defaultNetwork.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .network(defaultNetwork.getId())
+ *             .ipCidrRange(&#34;10.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionBackendService = new RegionBackendService(&#34;defaultRegionBackendService&#34;, RegionBackendServiceArgs.builder()        
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultForwardingRule = new ForwardingRule(&#34;defaultForwardingRule&#34;, ForwardingRuleArgs.builder()        
+ *             .isMirroringCollector(true)
+ *             .ipProtocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL&#34;)
+ *             .backendService(defaultRegionBackendService.getId())
+ *             .allPorts(true)
+ *             .network(defaultNetwork.getId())
+ *             .subnetwork(defaultSubnetwork.getId())
+ *             .networkTier(&#34;PREMIUM&#34;)
+ *             .build());
+ * 
+ *         var foobar = new PacketMirroring(&#34;foobar&#34;, PacketMirroringArgs.builder()        
+ *             .description(&#34;bar&#34;)
+ *             .network(PacketMirroringNetwork.builder()
+ *                 .url(defaultNetwork.getId())
+ *                 .build())
+ *             .collectorIlb(PacketMirroringCollectorIlb.builder()
+ *                 .url(defaultForwardingRule.getId())
+ *                 .build())
+ *             .mirroredResources(PacketMirroringMirroredResources.builder()
+ *                 .tags(&#34;foo&#34;)
+ *                 .instances(PacketMirroringMirroredResourcesInstance.builder()
+ *                     .url(mirror.getId())
+ *                     .build())
+ *                 .build())
+ *             .filter(PacketMirroringFilter.builder()
+ *                 .ipProtocols(&#34;tcp&#34;)
+ *                 .cidrRanges(&#34;0.0.0.0/0&#34;)
+ *                 .direction(&#34;BOTH&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -32,6 +32,53 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Kms Secret Ciphertext Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyring = new KeyRing(&#34;keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         var cryptokey = new CryptoKey(&#34;cryptokey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyring.getId())
+ *             .rotationPeriod(&#34;100000s&#34;)
+ *             .build());
+ * 
+ *         var myPassword = new SecretCiphertext(&#34;myPassword&#34;, SecretCiphertextArgs.builder()        
+ *             .cryptoKey(cryptokey.getId())
+ *             .plaintext(&#34;my-secret-password&#34;)
+ *             .build());
+ * 
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .accessConfigs()
+ *                 .build())
+ *             .metadata(Map.of(&#34;password&#34;, myPassword.getCiphertext()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

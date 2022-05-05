@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_GCP_PROVIDER_SDK_VERSION") ?: "6.21.0";
+version = System.getenv("PULUMI_GCP_PROVIDER_SDK_VERSION") ?: "6.23.0";
 
 java {
     toolchain {

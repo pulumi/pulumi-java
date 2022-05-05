@@ -28,6 +28,58 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/monitoring/groups/)
  * 
  * ## Example Usage
+ * ### Monitoring Group Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Group(&#34;basic&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;tf-test MonitoringGroup&#34;)
+ *             .filter(&#34;resource.metadata.region=\&#34;europe-west2\&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Monitoring Group Subgroup
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var parent = new Group(&#34;parent&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;tf-test MonitoringParentGroup&#34;)
+ *             .filter(&#34;resource.metadata.region=\&#34;europe-west2\&#34;&#34;)
+ *             .build());
+ * 
+ *         var subgroup = new Group(&#34;subgroup&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;tf-test MonitoringSubGroup&#34;)
+ *             .filter(&#34;resource.metadata.region=\&#34;europe-west2\&#34;&#34;)
+ *             .parentName(parent.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

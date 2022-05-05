@@ -34,6 +34,203 @@ import javax.annotation.Nullable;
  *   * [Managing Zones](https://cloud.google.com/dns/zones/)
  * 
  * ## Example Usage
+ * ### Dns Managed Zone Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example_zone = new ManagedZone(&#34;example-zone&#34;, ManagedZoneArgs.builder()        
+ *             .description(&#34;Example DNS zone&#34;)
+ *             .dnsName(&#34;my-domain.com.&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dns Managed Zone Private
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network_1 = new Network(&#34;network-1&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_2 = new Network(&#34;network-2&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var private_zone = new ManagedZone(&#34;private-zone&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;private.example.com.&#34;)
+ *             .description(&#34;Example private DNS zone&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .visibility(&#34;private&#34;)
+ *             .privateVisibilityConfig(ManagedZonePrivateVisibilityConfig.builder()
+ *                 .networks(                
+ *                     ManagedZonePrivateVisibilityConfigNetwork.builder()
+ *                         .networkUrl(network_1.getId())
+ *                         .build(),
+ *                     ManagedZonePrivateVisibilityConfigNetwork.builder()
+ *                         .networkUrl(network_2.getId())
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dns Managed Zone Private Forwarding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network_1 = new Network(&#34;network-1&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_2 = new Network(&#34;network-2&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var private_zone = new ManagedZone(&#34;private-zone&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;private.example.com.&#34;)
+ *             .description(&#34;Example private DNS zone&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .visibility(&#34;private&#34;)
+ *             .privateVisibilityConfig(ManagedZonePrivateVisibilityConfig.builder()
+ *                 .networks(                
+ *                     ManagedZonePrivateVisibilityConfigNetwork.builder()
+ *                         .networkUrl(network_1.getId())
+ *                         .build(),
+ *                     ManagedZonePrivateVisibilityConfigNetwork.builder()
+ *                         .networkUrl(network_2.getId())
+ *                         .build())
+ *                 .build())
+ *             .forwardingConfig(ManagedZoneForwardingConfig.builder()
+ *                 .targetNameServers(                
+ *                     ManagedZoneForwardingConfigTargetNameServer.builder()
+ *                         .ipv4Address(&#34;172.16.1.10&#34;)
+ *                         .build(),
+ *                     ManagedZoneForwardingConfigTargetNameServer.builder()
+ *                         .ipv4Address(&#34;172.16.1.20&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dns Managed Zone Private Peering
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network_source = new Network(&#34;network-source&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_target = new Network(&#34;network-target&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var peering_zone = new ManagedZone(&#34;peering-zone&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;peering.example.com.&#34;)
+ *             .description(&#34;Example private DNS peering zone&#34;)
+ *             .visibility(&#34;private&#34;)
+ *             .privateVisibilityConfig(ManagedZonePrivateVisibilityConfig.builder()
+ *                 .networks(ManagedZonePrivateVisibilityConfigNetwork.builder()
+ *                     .networkUrl(network_source.getId())
+ *                     .build())
+ *                 .build())
+ *             .peeringConfig(ManagedZonePeeringConfig.builder()
+ *                 .targetNetwork(ManagedZonePeeringConfigTargetNetwork.builder()
+ *                     .networkUrl(network_target.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dns Managed Zone Service Directory
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Namespace(&#34;example&#34;, NamespaceArgs.builder()        
+ *             .namespaceId(&#34;example&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var sd_zone = new ManagedZone(&#34;sd-zone&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;services.example.com.&#34;)
+ *             .description(&#34;Example private DNS Service Directory zone&#34;)
+ *             .visibility(&#34;private&#34;)
+ *             .serviceDirectoryConfig(ManagedZoneServiceDirectoryConfig.builder()
+ *                 .namespace(ManagedZoneServiceDirectoryConfigNamespace.builder()
+ *                     .namespaceUrl(example.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

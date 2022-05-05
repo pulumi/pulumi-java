@@ -27,6 +27,31 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
  * 
  * ## Example Usage
+ * ### App Engine Domain Mapping Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var domainMapping = new DomainMapping(&#34;domainMapping&#34;, DomainMappingArgs.builder()        
+ *             .domainName(&#34;verified-domain.com&#34;)
+ *             .sslSettings(DomainMappingSslSettings.builder()
+ *                 .sslManagementType(&#34;AUTOMATIC&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

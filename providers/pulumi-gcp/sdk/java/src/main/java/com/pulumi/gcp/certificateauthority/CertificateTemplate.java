@@ -25,6 +25,97 @@ import javax.annotation.Nullable;
  * * [Understanding Certificate Templates](https://cloud.google.com/certificate-authority-service/docs/certificate-template)
  * * [Common configurations and Certificate Profiles](https://cloud.google.com/certificate-authority-service/docs/certificate-profile)
  * ## Example Usage
+ * ### Basic_certificate_template
+ * An example of a basic privateca certificate template
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new CertificateTemplate(&#34;primary&#34;, CertificateTemplateArgs.builder()        
+ *             .description(&#34;An updated sample certificate template&#34;)
+ *             .identityConstraints(CertificateTemplateIdentityConstraints.builder()
+ *                 .allowSubjectAltNamesPassthrough(true)
+ *                 .allowSubjectPassthrough(true)
+ *                 .celExpression(CertificateTemplateIdentityConstraintsCelExpression.builder()
+ *                     .description(&#34;Always true&#34;)
+ *                     .expression(&#34;true&#34;)
+ *                     .location(&#34;any.file.anywhere&#34;)
+ *                     .title(&#34;Sample expression&#34;)
+ *                     .build())
+ *                 .build())
+ *             .labels(Map.of(&#34;label-two&#34;, &#34;value-two&#34;))
+ *             .location(&#34;us-west1&#34;)
+ *             .passthroughExtensions(CertificateTemplatePassthroughExtensions.builder()
+ *                 .additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtension.builder()
+ *                     .objectIdPath(                    
+ *                         1,
+ *                         6)
+ *                     .build())
+ *                 .knownExtensions(&#34;EXTENDED_KEY_USAGE&#34;)
+ *                 .build())
+ *             .predefinedValues(CertificateTemplatePredefinedValues.builder()
+ *                 .additionalExtensions(CertificateTemplatePredefinedValuesAdditionalExtension.builder()
+ *                     .critical(true)
+ *                     .objectId(CertificateTemplatePredefinedValuesAdditionalExtensionObjectId.builder()
+ *                         .objectIdPath(                        
+ *                             1,
+ *                             6)
+ *                         .build())
+ *                     .value(&#34;c3RyaW5nCg==&#34;)
+ *                     .build())
+ *                 .aiaOcspServers(&#34;string&#34;)
+ *                 .caOptions(CertificateTemplatePredefinedValuesCaOptions.builder()
+ *                     .isCa(false)
+ *                     .maxIssuerPathLength(6)
+ *                     .build())
+ *                 .keyUsage(CertificateTemplatePredefinedValuesKeyUsage.builder()
+ *                     .baseKeyUsage(CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage.builder()
+ *                         .certSign(false)
+ *                         .contentCommitment(true)
+ *                         .crlSign(false)
+ *                         .dataEncipherment(true)
+ *                         .decipherOnly(true)
+ *                         .digitalSignature(true)
+ *                         .encipherOnly(true)
+ *                         .keyAgreement(true)
+ *                         .keyEncipherment(true)
+ *                         .build())
+ *                     .extendedKeyUsage(CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage.builder()
+ *                         .clientAuth(true)
+ *                         .codeSigning(true)
+ *                         .emailProtection(true)
+ *                         .ocspSigning(true)
+ *                         .serverAuth(true)
+ *                         .timeStamping(true)
+ *                         .build())
+ *                     .unknownExtendedKeyUsages(CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage.builder()
+ *                         .objectIdPath(                        
+ *                             1,
+ *                             6)
+ *                         .build())
+ *                     .build())
+ *                 .policyIds(CertificateTemplatePredefinedValuesPolicyId.builder()
+ *                     .objectIdPath(                    
+ *                         1,
+ *                         6)
+ *                     .build())
+ *                 .build())
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

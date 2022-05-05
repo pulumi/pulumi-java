@@ -26,6 +26,29 @@ import javax.annotation.Nullable;
  * the Cloud Console prior to creating tenants.
  * 
  * ## Example Usage
+ * ### Identity Platform Tenant Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tenant = new Tenant(&#34;tenant&#34;, TenantArgs.builder()        
+ *             .allowPasswordSignup(true)
+ *             .displayName(&#34;tenant&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

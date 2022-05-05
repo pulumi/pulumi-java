@@ -32,6 +32,33 @@ public final class KmsFunctions {
      * Google Cloud KMS KeyRing.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .name(&#34;my-key-ring&#34;)
+     *             .location(&#34;us-central1&#34;)
+     *             .build()));
+     * 
+     *         final var myCryptoKey = Output.of(KmsFunctions.getKMSCryptoKey(GetKMSCryptoKeyArgs.builder()
+     *             .name(&#34;my-crypto-key&#34;)
+     *             .keyRing(myKeyRing.apply(getKMSKeyRingResult -&gt; getKMSKeyRingResult.getId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKMSCryptoKeyResult> getKMSCryptoKey(GetKMSCryptoKeyArgs args) {
@@ -49,6 +76,37 @@ public final class KmsFunctions {
      * A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .name(&#34;my-key-ring&#34;)
+     *             .location(&#34;us-central1&#34;)
+     *             .build()));
+     * 
+     *         final var myCryptoKey = Output.of(KmsFunctions.getKMSCryptoKey(GetKMSCryptoKeyArgs.builder()
+     *             .name(&#34;my-crypto-key&#34;)
+     *             .keyRing(myKeyRing.apply(getKMSKeyRingResult -&gt; getKMSKeyRingResult.getId()))
+     *             .build()));
+     * 
+     *         final var myCryptoKeyVersion = Output.of(KmsFunctions.getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs.builder()
+     *             .cryptoKey(data.getGoogle_kms_crypto_key().getMy_key().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKMSCryptoKeyVersionResult> getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs args) {
@@ -67,6 +125,28 @@ public final class KmsFunctions {
      * and resides in a specific location.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myKeyRing = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+     *             .location(&#34;us-central1&#34;)
+     *             .name(&#34;my-key-ring&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKMSKeyRingResult> getKMSKeyRing(GetKMSKeyRingArgs args) {

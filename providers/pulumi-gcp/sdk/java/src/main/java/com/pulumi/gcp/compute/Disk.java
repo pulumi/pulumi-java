@@ -48,6 +48,32 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Disk Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Disk(&#34;default&#34;, DiskArgs.builder()        
+ *             .image(&#34;debian-8-jessie-v20170523&#34;)
+ *             .labels(Map.of(&#34;environment&#34;, &#34;dev&#34;))
+ *             .physicalBlockSizeBytes(4096)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

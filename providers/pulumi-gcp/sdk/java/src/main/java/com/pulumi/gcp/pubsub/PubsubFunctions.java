@@ -18,6 +18,27 @@ public final class PubsubFunctions {
      * and [API](https://cloud.google.com/pubsub/docs/apis).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-pubsub-topic = Output.of(PubsubFunctions.getTopic(GetTopicArgs.builder()
+     *             .name(&#34;my-pubsub-topic&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {

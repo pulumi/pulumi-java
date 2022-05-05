@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  *     * [Creating a dataset](https://cloud.google.com/healthcare/docs/how-tos/datasets)
  * 
  * ## Example Usage
+ * ### Healthcare Dataset Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Dataset(&#34;default&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .timeZone(&#34;UTC&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

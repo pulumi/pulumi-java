@@ -29,6 +29,32 @@ import javax.annotation.Nullable;
  *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
  * 
  * ## Example Usage
+ * ### Monitoring Service Custom
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom = new CustomService(&#34;custom&#34;, CustomServiceArgs.builder()        
+ *             .displayName(&#34;My Custom Service custom-srv&#34;)
+ *             .serviceId(&#34;custom-srv&#34;)
+ *             .telemetry(CustomServiceTelemetry.builder()
+ *                 .resourceName(&#34;//product.googleapis.com/foo/foo/services/test&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

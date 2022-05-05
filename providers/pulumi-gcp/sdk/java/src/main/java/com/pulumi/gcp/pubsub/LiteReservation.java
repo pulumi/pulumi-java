@@ -25,6 +25,31 @@ import javax.annotation.Nullable;
  *     * [Managing Reservations](https://cloud.google.com/pubsub/lite/docs/reservations)
  * 
  * ## Example Usage
+ * ### Pubsub Lite Reservation Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var example = new LiteReservation(&#34;example&#34;, LiteReservationArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getNumber()))
+ *             .throughputCapacity(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,16 +21,205 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * A CertificateAuthority represents an individual Certificate Authority. A
- * CertificateAuthority can be used to create Certificates.
- * 
- * To get more information about CertificateAuthority, see:
- * 
- * * [API documentation](https://cloud.google.com/certificate-authority-service/docs/reference/rest)
- * * How-to Guides
- *     * [Official Documentation](https://cloud.google.com/certificate-authority-service)
- * 
  * ## Example Usage
+ * ### Privateca Certificate Authority Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Authority(&#34;default&#34;, AuthorityArgs.builder()        
+ *             .certificateAuthorityId(&#34;my-certificate-authority&#34;)
+ *             .config(AuthorityConfig.builder()
+ *                 .subjectConfig(AuthorityConfigSubjectConfig.builder()
+ *                     .subject(AuthorityConfigSubjectConfigSubject.builder()
+ *                         .commonName(&#34;my-certificate-authority&#34;)
+ *                         .organization(&#34;HashiCorp&#34;)
+ *                         .build())
+ *                     .subjectAltName(AuthorityConfigSubjectConfigSubjectAltName.builder()
+ *                         .dnsNames(&#34;hashicorp.com&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .x509Config(AuthorityConfigX509Config.builder()
+ *                     .caOptions(AuthorityConfigX509ConfigCaOptions.builder()
+ *                         .isCa(true)
+ *                         .maxIssuerPathLength(10)
+ *                         .build())
+ *                     .keyUsage(AuthorityConfigX509ConfigKeyUsage.builder()
+ *                         .baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsage.builder()
+ *                             .certSign(true)
+ *                             .contentCommitment(true)
+ *                             .crlSign(true)
+ *                             .dataEncipherment(true)
+ *                             .decipherOnly(true)
+ *                             .digitalSignature(true)
+ *                             .keyAgreement(true)
+ *                             .keyEncipherment(false)
+ *                             .build())
+ *                         .extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage.builder()
+ *                             .clientAuth(false)
+ *                             .codeSigning(true)
+ *                             .emailProtection(true)
+ *                             .serverAuth(true)
+ *                             .timeStamping(true)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .keySpec(AuthorityKeySpec.builder()
+ *                 .algorithm(&#34;RSA_PKCS1_4096_SHA256&#34;)
+ *                 .build())
+ *             .lifetime(&#34;86400s&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .pool(&#34;ca-pool&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Privateca Certificate Authority Subordinate
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Authority(&#34;default&#34;, AuthorityArgs.builder()        
+ *             .certificateAuthorityId(&#34;my-certificate-authority&#34;)
+ *             .config(AuthorityConfig.builder()
+ *                 .subjectConfig(AuthorityConfigSubjectConfig.builder()
+ *                     .subject(AuthorityConfigSubjectConfigSubject.builder()
+ *                         .commonName(&#34;my-subordinate-authority&#34;)
+ *                         .organization(&#34;HashiCorp&#34;)
+ *                         .build())
+ *                     .subjectAltName(AuthorityConfigSubjectConfigSubjectAltName.builder()
+ *                         .dnsNames(&#34;hashicorp.com&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .x509Config(AuthorityConfigX509Config.builder()
+ *                     .caOptions(AuthorityConfigX509ConfigCaOptions.builder()
+ *                         .isCa(true)
+ *                         .maxIssuerPathLength(0)
+ *                         .build())
+ *                     .keyUsage(AuthorityConfigX509ConfigKeyUsage.builder()
+ *                         .baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsage.builder()
+ *                             .certSign(true)
+ *                             .contentCommitment(true)
+ *                             .crlSign(true)
+ *                             .dataEncipherment(true)
+ *                             .decipherOnly(true)
+ *                             .digitalSignature(true)
+ *                             .keyAgreement(true)
+ *                             .keyEncipherment(false)
+ *                             .build())
+ *                         .extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage.builder()
+ *                             .clientAuth(false)
+ *                             .codeSigning(true)
+ *                             .emailProtection(true)
+ *                             .serverAuth(true)
+ *                             .timeStamping(true)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .keySpec(AuthorityKeySpec.builder()
+ *                 .algorithm(&#34;RSA_PKCS1_4096_SHA256&#34;)
+ *                 .build())
+ *             .lifetime(&#34;86400s&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .pool(&#34;ca-pool&#34;)
+ *             .type(&#34;SUBORDINATE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Privateca Certificate Authority Byo Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privatecaSa = new ServiceIdentity(&#34;privatecaSa&#34;, ServiceIdentityArgs.builder()        
+ *             .service(&#34;privateca.googleapis.com&#34;)
+ *             .build());
+ * 
+ *         var privatecaSaKeyuserSignerverifier = new CryptoKeyIAMBinding(&#34;privatecaSaKeyuserSignerverifier&#34;, CryptoKeyIAMBindingArgs.builder()        
+ *             .cryptoKeyId(&#34;projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key&#34;)
+ *             .role(&#34;roles/cloudkms.signerVerifier&#34;)
+ *             .members(privatecaSa.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         var privatecaSaKeyuserViewer = new CryptoKeyIAMBinding(&#34;privatecaSaKeyuserViewer&#34;, CryptoKeyIAMBindingArgs.builder()        
+ *             .cryptoKeyId(&#34;projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key&#34;)
+ *             .role(&#34;roles/viewer&#34;)
+ *             .members(privatecaSa.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         var default_ = new Authority(&#34;default&#34;, AuthorityArgs.builder()        
+ *             .pool(&#34;ca-pool&#34;)
+ *             .certificateAuthorityId(&#34;my-certificate-authority&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .deletionProtection(&#34;true&#34;)
+ *             .keySpec(AuthorityKeySpec.builder()
+ *                 .cloudKmsKeyVersion(&#34;projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key/cryptoKeyVersions/1&#34;)
+ *                 .build())
+ *             .config(AuthorityConfig.builder()
+ *                 .subjectConfig(AuthorityConfigSubjectConfig.builder()
+ *                     .subject(AuthorityConfigSubjectConfigSubject.builder()
+ *                         .organization(&#34;Example, Org.&#34;)
+ *                         .commonName(&#34;Example Authority&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .x509Config(AuthorityConfigX509Config.builder()
+ *                     .caOptions(AuthorityConfigX509ConfigCaOptions.builder()
+ *                         .isCa(true)
+ *                         .maxIssuerPathLength(10)
+ *                         .build())
+ *                     .keyUsage(AuthorityConfigX509ConfigKeyUsage.builder()
+ *                         .baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsage.builder()
+ *                             .certSign(true)
+ *                             .crlSign(true)
+ *                             .build())
+ *                         .extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage.builder()
+ *                             .serverAuth(false)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -110,6 +299,12 @@ public class Authority extends com.pulumi.resources.CustomResource {
      */
     public Output<String> createTime() {
         return this.createTime;
+    }
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
+    private Output</* @Nullable */ Boolean> deletionProtection;
+
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,

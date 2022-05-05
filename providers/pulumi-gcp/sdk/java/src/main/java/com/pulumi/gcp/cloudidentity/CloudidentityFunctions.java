@@ -20,6 +20,27 @@ public final class CloudidentityFunctions {
      * https://cloud.google.com/identity/docs/concepts/overview#memberships
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var members = Output.of(CloudidentityFunctions.getGroupMemberships(GetGroupMembershipsArgs.builder()
+     *             .group(&#34;groups/123eab45c6defghi&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGroupMembershipsResult> getGroupMemberships(GetGroupMembershipsArgs args) {
@@ -34,6 +55,27 @@ public final class CloudidentityFunctions {
      * https://cloud.google.com/identity/docs/concepts/overview#groups
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var groups = Output.of(CloudidentityFunctions.getGroups(GetGroupsArgs.builder()
+     *             .parent(&#34;customers/A01b123xz&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGroupsResult> getGroups(GetGroupsArgs args) {

@@ -21,7 +21,7 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
     private final @Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings;
     /**
      * @return True if binary logging is enabled.
-     * Cannot be used with Postgres.
+     * Can only be used with MySQL.
      * 
      */
     private final @Nullable Boolean binaryLogEnabled;
@@ -79,7 +79,7 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
     }
     /**
      * @return True if binary logging is enabled.
-     * Cannot be used with Postgres.
+     * Can only be used with MySQL.
      * 
      */
     public Optional<Boolean> binaryLogEnabled() {

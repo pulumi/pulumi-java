@@ -45,6 +45,100 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/appengine/docs/flexible)
  * 
  * ## Example Usage
+ * ### App Engine Flexible App Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;appeng-flex&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .billingAccount(&#34;000000-0000000-0000000-000000&#34;)
+ *             .build());
+ * 
+ *         var app = new Application(&#34;app&#34;, ApplicationArgs.builder()        
+ *             .project(myProject.getProjectId())
+ *             .locationId(&#34;us-central&#34;)
+ *             .build());
+ * 
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .project(myProject.getProjectId())
+ *             .service(&#34;appengineflex.googleapis.com&#34;)
+ *             .disableDependentServices(false)
+ *             .build());
+ * 
+ *         var gaeApi = new IAMMember(&#34;gaeApi&#34;, IAMMemberArgs.builder()        
+ *             .project(service.getProject())
+ *             .role(&#34;roles/compute.networkUser&#34;)
+ *             .member(myProject.getNumber().apply(number -&gt; String.format(&#34;serviceAccount:service-%s@gae-api-prod.google.com.iam.gserviceaccount.com&#34;, number)))
+ *             .build());
+ * 
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .project(myProject.getProjectId())
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./test-fixtures/appengine/hello-world.zip&#34;))
+ *             .build());
+ * 
+ *         var myappV1 = new FlexibleAppVersion(&#34;myappV1&#34;, FlexibleAppVersionArgs.builder()        
+ *             .versionId(&#34;v1&#34;)
+ *             .project(gaeApi.getProject())
+ *             .service(&#34;default&#34;)
+ *             .runtime(&#34;nodejs&#34;)
+ *             .entrypoint(FlexibleAppVersionEntrypoint.builder()
+ *                 .shell(&#34;node ./app.js&#34;)
+ *                 .build())
+ *             .deployment(FlexibleAppVersionDeployment.builder()
+ *                 .zip(FlexibleAppVersionDeploymentZip.builder()
+ *                     .sourceUrl(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+ *                         var bucketName = values.t1;
+ *                         var objectName = values.t2;
+ *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, bucketName,objectName);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .livenessCheck(FlexibleAppVersionLivenessCheck.builder()
+ *                 .path(&#34;/&#34;)
+ *                 .build())
+ *             .readinessCheck(FlexibleAppVersionReadinessCheck.builder()
+ *                 .path(&#34;/&#34;)
+ *                 .build())
+ *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+ *             .handlers(FlexibleAppVersionHandler.builder()
+ *                 .urlRegex(&#34;.*\\/my-path\\/*&#34;)
+ *                 .securityLevel(&#34;SECURE_ALWAYS&#34;)
+ *                 .login(&#34;LOGIN_REQUIRED&#34;)
+ *                 .authFailAction(&#34;AUTH_FAIL_ACTION_REDIRECT&#34;)
+ *                 .staticFiles(FlexibleAppVersionHandlerStaticFiles.builder()
+ *                     .path(&#34;my-other-path&#34;)
+ *                     .uploadPathRegex(&#34;.*\\/my-path\\/*&#34;)
+ *                     .build())
+ *                 .build())
+ *             .automaticScaling(FlexibleAppVersionAutomaticScaling.builder()
+ *                 .coolDownPeriod(&#34;120s&#34;)
+ *                 .cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization.builder()
+ *                     .targetUtilization(0.5)
+ *                     .build())
+ *                 .build())
+ *             .noopOnDestroy(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

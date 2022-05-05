@@ -47,6 +47,170 @@ import javax.annotation.Nullable;
  *     * [Using Routes](https://cloud.google.com/vpc/docs/using-routes)
  * 
  * ## Example Usage
+ * ### Route Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;);
+ * 
+ *         var defaultRoute = new Route(&#34;defaultRoute&#34;, RouteArgs.builder()        
+ *             .destRange(&#34;15.0.0.0/24&#34;)
+ *             .network(defaultNetwork.getName())
+ *             .nextHopIp(&#34;10.132.1.5&#34;)
+ *             .priority(100)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Route Ilb
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.1.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var hc = new HealthCheck(&#34;hc&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var backend = new RegionBackendService(&#34;backend&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(hc.getId())
+ *             .build());
+ * 
+ *         var defaultForwardingRule = new ForwardingRule(&#34;defaultForwardingRule&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL&#34;)
+ *             .backendService(backend.getId())
+ *             .allPorts(true)
+ *             .network(defaultNetwork.getName())
+ *             .subnetwork(defaultSubnetwork.getName())
+ *             .build());
+ * 
+ *         var route_ilb = new Route(&#34;route-ilb&#34;, RouteArgs.builder()        
+ *             .destRange(&#34;0.0.0.0/0&#34;)
+ *             .network(defaultNetwork.getName())
+ *             .nextHopIlb(defaultForwardingRule.getId())
+ *             .priority(2000)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Route Ilb Vip
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var producerNetwork = new Network(&#34;producerNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var producerSubnetwork = new Subnetwork(&#34;producerSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.1.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(producerNetwork.getId())
+ *             .build());
+ * 
+ *         var consumerNetwork = new Network(&#34;consumerNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var consumerSubnetwork = new Subnetwork(&#34;consumerSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.2.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(consumerNetwork.getId())
+ *             .build());
+ * 
+ *         var peering1 = new NetworkPeering(&#34;peering1&#34;, NetworkPeeringArgs.builder()        
+ *             .network(consumerNetwork.getId())
+ *             .peerNetwork(producerNetwork.getId())
+ *             .build());
+ * 
+ *         var peering2 = new NetworkPeering(&#34;peering2&#34;, NetworkPeeringArgs.builder()        
+ *             .network(producerNetwork.getId())
+ *             .peerNetwork(consumerNetwork.getId())
+ *             .build());
+ * 
+ *         var hc = new HealthCheck(&#34;hc&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var backend = new RegionBackendService(&#34;backend&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(hc.getId())
+ *             .build());
+ * 
+ *         var default_ = new ForwardingRule(&#34;default&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL&#34;)
+ *             .backendService(backend.getId())
+ *             .allPorts(true)
+ *             .network(producerNetwork.getName())
+ *             .subnetwork(producerSubnetwork.getName())
+ *             .build());
+ * 
+ *         var route_ilb = new Route(&#34;route-ilb&#34;, RouteArgs.builder()        
+ *             .destRange(&#34;0.0.0.0/0&#34;)
+ *             .network(consumerNetwork.getName())
+ *             .nextHopIlb(default_.getIpAddress())
+ *             .priority(2000)
+ *             .tags(            
+ *                 &#34;tag1&#34;,
+ *                 &#34;tag2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,48 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
  * 
  * ## Example Usage
+ * ### Cloud Run Domain Mapping Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultService = new Service(&#34;defaultService&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .metadata(ServiceMetadata.builder()
+ *                 .namespace(&#34;my-project-name&#34;)
+ *                 .build())
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultDomainMapping = new DomainMapping(&#34;defaultDomainMapping&#34;, DomainMappingArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .metadata(DomainMappingMetadata.builder()
+ *                 .namespace(&#34;my-project-name&#34;)
+ *                 .build())
+ *             .spec(DomainMappingSpec.builder()
+ *                 .routeName(defaultService.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

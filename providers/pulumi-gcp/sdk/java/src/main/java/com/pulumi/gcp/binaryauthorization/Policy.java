@@ -28,6 +28,95 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/binary-authorization/)
  * 
  * ## Example Usage
+ * ### Binary Authorization Policy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var note = new Note(&#34;note&#34;, NoteArgs.builder()        
+ *             .attestationAuthority(NoteAttestationAuthority.builder()
+ *                 .hint(NoteAttestationAuthorityHint.builder()
+ *                     .humanReadableName(&#34;My attestor&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var attestor = new Attestor(&#34;attestor&#34;, AttestorArgs.builder()        
+ *             .attestationAuthorityNote(AttestorAttestationAuthorityNote.builder()
+ *                 .noteReference(note.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .admissionWhitelistPatterns(PolicyAdmissionWhitelistPattern.builder()
+ *                 .namePattern(&#34;gcr.io/google_containers/*&#34;)
+ *                 .build())
+ *             .defaultAdmissionRule(PolicyDefaultAdmissionRule.builder()
+ *                 .evaluationMode(&#34;ALWAYS_ALLOW&#34;)
+ *                 .enforcementMode(&#34;ENFORCED_BLOCK_AND_AUDIT_LOG&#34;)
+ *                 .build())
+ *             .clusterAdmissionRules(PolicyClusterAdmissionRule.builder()
+ *                 .cluster(&#34;us-central1-a.prod-cluster&#34;)
+ *                 .evaluationMode(&#34;REQUIRE_ATTESTATION&#34;)
+ *                 .enforcementMode(&#34;ENFORCED_BLOCK_AND_AUDIT_LOG&#34;)
+ *                 .requireAttestationsBies(attestor.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Binary Authorization Policy Global Evaluation
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var note = new Note(&#34;note&#34;, NoteArgs.builder()        
+ *             .attestationAuthority(NoteAttestationAuthority.builder()
+ *                 .hint(NoteAttestationAuthorityHint.builder()
+ *                     .humanReadableName(&#34;My attestor&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var attestor = new Attestor(&#34;attestor&#34;, AttestorArgs.builder()        
+ *             .attestationAuthorityNote(AttestorAttestationAuthorityNote.builder()
+ *                 .noteReference(note.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .defaultAdmissionRule(PolicyDefaultAdmissionRule.builder()
+ *                 .evaluationMode(&#34;REQUIRE_ATTESTATION&#34;)
+ *                 .enforcementMode(&#34;ENFORCED_BLOCK_AND_AUDIT_LOG&#34;)
+ *                 .requireAttestationsBies(attestor.getName())
+ *                 .build())
+ *             .globalPolicyEvaluationMode(&#34;ENABLE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

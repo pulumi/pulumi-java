@@ -23,6 +23,46 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)
  * 
  * ## Example Usage
+ * ### Tag Binding Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Project(&#34;project&#34;, ProjectArgs.builder()        
+ *             .orgId(&#34;123456789&#34;)
+ *             .projectId(&#34;project_id&#34;)
+ *             .build());
+ * 
+ *         var key = new TagKey(&#34;key&#34;, TagKeyArgs.builder()        
+ *             .description(&#34;For keyname resources.&#34;)
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .shortName(&#34;keyname&#34;)
+ *             .build());
+ * 
+ *         var value = new TagValue(&#34;value&#34;, TagValueArgs.builder()        
+ *             .description(&#34;For valuename resources.&#34;)
+ *             .parent(key.getName().apply(name -&gt; String.format(&#34;tagKeys/%s&#34;, name)))
+ *             .shortName(&#34;valuename&#34;)
+ *             .build());
+ * 
+ *         var binding = new TagBinding(&#34;binding&#34;, TagBindingArgs.builder()        
+ *             .parent(project.getNumber().apply(number -&gt; String.format(&#34;//cloudresourcemanager.googleapis.com/projects/%s&#34;, number)))
+ *             .tagValue(value.getName().apply(name -&gt; String.format(&#34;tagValues/%s&#34;, name)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -37,6 +37,139 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
  * 
  * ## Example Usage
+ * ### Notebook Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .location(&#34;us-west1-a&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .vmImage(InstanceVmImage.builder()
+ *                 .imageFamily(&#34;tf-latest-cpu&#34;)
+ *                 .project(&#34;deeplearning-platform-release&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notebook Instance Basic Container
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .containerImage(InstanceContainerImage.builder()
+ *                 .repository(&#34;gcr.io/deeplearning-platform-release/base-cpu&#34;)
+ *                 .tag(&#34;latest&#34;)
+ *                 .build())
+ *             .location(&#34;us-west1-a&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .metadata(Map.of(&#34;proxy-mode&#34;, &#34;service_account&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notebook Instance Basic Gpu
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .acceleratorConfig(InstanceAcceleratorConfig.builder()
+ *                 .coreCount(1)
+ *                 .type(&#34;NVIDIA_TESLA_T4&#34;)
+ *                 .build())
+ *             .installGpuDriver(true)
+ *             .location(&#34;us-west1-a&#34;)
+ *             .machineType(&#34;n1-standard-1&#34;)
+ *             .vmImage(InstanceVmImage.builder()
+ *                 .imageFamily(&#34;tf-latest-gpu&#34;)
+ *                 .project(&#34;deeplearning-platform-release&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notebook Instance Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var myNetwork = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;default&#34;)
+ *             .build()));
+ * 
+ *         final var mySubnetwork = Output.of(ComputeFunctions.getSubnetwork(GetSubnetworkArgs.builder()
+ *             .name(&#34;default&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build()));
+ * 
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .vmImage(InstanceVmImage.builder()
+ *                 .project(&#34;deeplearning-platform-release&#34;)
+ *                 .imageFamily(&#34;tf-latest-cpu&#34;)
+ *                 .build())
+ *             .instanceOwners(&#34;admin@hashicorptest.com&#34;)
+ *             .serviceAccount(&#34;emailAddress:my@service-account.com&#34;)
+ *             .installGpuDriver(true)
+ *             .bootDiskType(&#34;PD_SSD&#34;)
+ *             .bootDiskSizeGb(110)
+ *             .noPublicIp(true)
+ *             .noProxyAccess(true)
+ *             .network(myNetwork.apply(getNetworkResult -&gt; getNetworkResult.getId()))
+ *             .subnet(mySubnetwork.apply(getSubnetworkResult -&gt; getSubnetworkResult.getId()))
+ *             .labels(Map.of(&#34;k&#34;, &#34;val&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;your-project-id&#34;)
+ *             .orgId(&#34;1234567&#34;)
+ *             .build());
+ * 
+ *         var app = new Application(&#34;app&#34;, ApplicationArgs.builder()        
+ *             .project(myProject.getProjectId())
+ *             .locationId(&#34;us-central&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

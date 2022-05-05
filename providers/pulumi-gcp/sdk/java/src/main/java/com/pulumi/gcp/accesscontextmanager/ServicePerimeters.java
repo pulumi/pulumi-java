@@ -28,6 +28,67 @@ import javax.annotation.Nullable;
  *     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
  * 
  * ## Example Usage
+ * ### Access Context Manager Service Perimeters Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var service_perimeter = new ServicePerimeters(&#34;service-perimeter&#34;, ServicePerimetersArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .servicePerimeters(            
+ *                 ServicePerimetersServicePerimeter.builder()
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/servicePerimeters/&#34;, name)))
+ *                     .status(ServicePerimetersServicePerimeterStatus.builder()
+ *                         .restrictedServices(&#34;storage.googleapis.com&#34;)
+ *                         .build())
+ *                     .title(&#34;&#34;)
+ *                     .build(),
+ *                 ServicePerimetersServicePerimeter.builder()
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/servicePerimeters/&#34;, name)))
+ *                     .status(ServicePerimetersServicePerimeterStatus.builder()
+ *                         .restrictedServices(&#34;bigtable.googleapis.com&#34;)
+ *                         .build())
+ *                     .title(&#34;&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var access_level = new AccessLevel(&#34;access-level&#34;, AccessLevelArgs.builder()        
+ *             .basic(AccessLevelBasic.builder()
+ *                 .conditions(AccessLevelBasicCondition.builder()
+ *                     .devicePolicy(AccessLevelBasicConditionDevicePolicy.builder()
+ *                         .osConstraints(AccessLevelBasicConditionDevicePolicyOsConstraint.builder()
+ *                             .osType(&#34;DESKTOP_CHROME_OS&#34;)
+ *                             .build())
+ *                         .requireScreenLock(false)
+ *                         .build())
+ *                     .regions(                    
+ *                         &#34;CH&#34;,
+ *                         &#34;IT&#34;,
+ *                         &#34;US&#34;)
+ *                     .build())
+ *                 .build())
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .title(&#34;chromeos_no_lock&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

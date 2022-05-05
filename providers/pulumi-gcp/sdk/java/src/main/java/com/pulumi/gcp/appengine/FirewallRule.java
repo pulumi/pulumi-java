@@ -26,6 +26,41 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/creating-firewalls#creating_firewall_rules)
  * 
  * ## Example Usage
+ * ### App Engine Firewall Rule Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;ae-project&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var app = new Application(&#34;app&#34;, ApplicationArgs.builder()        
+ *             .project(myProject.getProjectId())
+ *             .locationId(&#34;us-central&#34;)
+ *             .build());
+ * 
+ *         var rule = new FirewallRule(&#34;rule&#34;, FirewallRuleArgs.builder()        
+ *             .project(app.getProject())
+ *             .priority(1000)
+ *             .action(&#34;ALLOW&#34;)
+ *             .sourceRange(&#34;*&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

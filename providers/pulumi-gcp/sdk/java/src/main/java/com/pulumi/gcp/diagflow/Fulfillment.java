@@ -28,6 +28,41 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/es/docs/fulfillment-overview)
  * 
  * ## Example Usage
+ * ### Dialogflow Fulfillment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicAgent = new Agent(&#34;basicAgent&#34;, AgentArgs.builder()        
+ *             .displayName(&#34;example_agent&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .build());
+ * 
+ *         var basicFulfillment = new Fulfillment(&#34;basicFulfillment&#34;, FulfillmentArgs.builder()        
+ *             .displayName(&#34;basic-fulfillment&#34;)
+ *             .enabled(true)
+ *             .genericWebService(FulfillmentGenericWebService.builder()
+ *                 .uri(&#34;https://google.com&#34;)
+ *                 .username(&#34;admin&#34;)
+ *                 .password(&#34;password&#34;)
+ *                 .requestHeaders(Map.of(&#34;name&#34;, &#34;wrench&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

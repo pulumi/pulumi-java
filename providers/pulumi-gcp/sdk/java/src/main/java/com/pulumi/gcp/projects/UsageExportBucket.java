@@ -34,6 +34,57 @@ import javax.annotation.Nullable;
  *     * [Creating and managing projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new Project(&#34;myProject&#34;, ProjectArgs.builder()        
+ *             .orgId(&#34;1234567&#34;)
+ *             .projectId(&#34;your-project-id&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To create a project under a specific folder
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var department1 = new Folder(&#34;department1&#34;, FolderArgs.builder()        
+ *             .displayName(&#34;Department 1&#34;)
+ *             .parent(&#34;organizations/1234567&#34;)
+ *             .build());
+ * 
+ *         var myProject_in_a_folder = new Project(&#34;myProject-in-a-folder&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;your-project-id&#34;)
+ *             .folderId(department1.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

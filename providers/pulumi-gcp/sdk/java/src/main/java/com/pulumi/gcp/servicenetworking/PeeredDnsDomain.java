@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * When using Google Cloud DNS to manage internal DNS, create peered DNS domains to make your DNS available to services like Google Cloud Build.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var name = new PeeredDnsDomain(&#34;name&#34;, PeeredDnsDomainArgs.builder()        
+ *             .dnsSuffix(&#34;example.com.&#34;)
+ *             .network(&#34;default&#34;)
+ *             .project(10000000)
+ *             .service(&#34;peering-service&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

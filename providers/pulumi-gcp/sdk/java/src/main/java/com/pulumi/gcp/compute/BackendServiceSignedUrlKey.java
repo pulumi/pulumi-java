@@ -26,6 +26,73 @@ import javax.annotation.Nullable;
  * state as plain-text.
  * 
  * ## Example Usage
+ * ### Backend Service Signed Url Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var urlSignature = new RandomId(&#34;urlSignature&#34;, RandomIdArgs.builder()        
+ *             .byteLength(16)
+ *             .build());
+ * 
+ *         var webserver = new InstanceTemplate(&#34;webserver&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-9&#34;)
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var webservers = new InstanceGroupManager(&#34;webservers&#34;, InstanceGroupManagerArgs.builder()        
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(webserver.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;webserver&#34;)
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .targetSize(1)
+ *             .build());
+ * 
+ *         var default_ = new HttpHealthCheck(&#34;default&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var exampleBackend = new BackendService(&#34;exampleBackend&#34;, BackendServiceArgs.builder()        
+ *             .description(&#34;Our company website&#34;)
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .enableCdn(true)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(webservers.getInstanceGroup())
+ *                 .build())
+ *             .healthChecks(default_.getId())
+ *             .build());
+ * 
+ *         var backendKey = new BackendServiceSignedUrlKey(&#34;backendKey&#34;, BackendServiceSignedUrlKeyArgs.builder()        
+ *             .keyValue(urlSignature.getB64Url())
+ *             .backendService(exampleBackend.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

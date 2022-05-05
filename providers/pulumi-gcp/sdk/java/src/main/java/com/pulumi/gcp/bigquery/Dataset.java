@@ -22,6 +22,150 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Bigquery Dataset Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bqowner = new Account(&#34;bqowner&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;bqowner&#34;)
+ *             .build());
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;EU&#34;)
+ *             .defaultTableExpirationMs(3600000)
+ *             .labels(Map.of(&#34;env&#34;, &#34;default&#34;))
+ *             .accesses(            
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;OWNER&#34;)
+ *                     .userByEmail(bqowner.getEmail())
+ *                     .build(),
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;READER&#34;)
+ *                     .domain(&#34;hashicorp.com&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Dataset Cmek
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRing(&#34;keyRing&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;us&#34;)
+ *             .build());
+ * 
+ *         var cryptoKey = new CryptoKey(&#34;cryptoKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyRing.getId())
+ *             .build());
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .defaultTableExpirationMs(3600000)
+ *             .defaultEncryptionConfiguration(DatasetDefaultEncryptionConfiguration.builder()
+ *                 .kmsKeyName(cryptoKey.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Dataset Authorized Dataset
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bqowner = new Account(&#34;bqowner&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;bqowner&#34;)
+ *             .build());
+ * 
+ *         var public_ = new Dataset(&#34;public&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;public&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This dataset is public&#34;)
+ *             .location(&#34;EU&#34;)
+ *             .defaultTableExpirationMs(3600000)
+ *             .labels(Map.of(&#34;env&#34;, &#34;default&#34;))
+ *             .accesses(            
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;OWNER&#34;)
+ *                     .userByEmail(bqowner.getEmail())
+ *                     .build(),
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;READER&#34;)
+ *                     .domain(&#34;hashicorp.com&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;private&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This dataset is private&#34;)
+ *             .location(&#34;EU&#34;)
+ *             .defaultTableExpirationMs(3600000)
+ *             .labels(Map.of(&#34;env&#34;, &#34;default&#34;))
+ *             .accesses(            
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;OWNER&#34;)
+ *                     .userByEmail(bqowner.getEmail())
+ *                     .build(),
+ *                 DatasetAccess.builder()
+ *                     .role(&#34;READER&#34;)
+ *                     .domain(&#34;hashicorp.com&#34;)
+ *                     .build(),
+ *                 DatasetAccess.builder()
+ *                     .dataset(DatasetAccessDataset.builder()
+ *                         .dataset(DatasetAccessDatasetDataset.builder()
+ *                             .projectId(public_.getProject())
+ *                             .datasetId(public_.getDatasetId())
+ *                             .build())
+ *                         .targetTypes(&#34;VIEWS&#34;)
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,82 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
  * ## Example Usage
+ * ### Data Catalog Taxonomies Policy Tag Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myTaxonomy = new Taxonomy(&#34;myTaxonomy&#34;, TaxonomyArgs.builder()        
+ *             .region(&#34;us&#34;)
+ *             .displayName(&#34;taxonomy_display_name&#34;)
+ *             .description(&#34;A collection of policy tags&#34;)
+ *             .activatedPolicyTypes(&#34;FINE_GRAINED_ACCESS_CONTROL&#34;)
+ *             .build());
+ * 
+ *         var basicPolicyTag = new PolicyTag(&#34;basicPolicyTag&#34;, PolicyTagArgs.builder()        
+ *             .taxonomy(myTaxonomy.getId())
+ *             .displayName(&#34;Low security&#34;)
+ *             .description(&#34;A policy tag normally associated with low security items&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Taxonomies Policy Tag Child Policies
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myTaxonomy = new Taxonomy(&#34;myTaxonomy&#34;, TaxonomyArgs.builder()        
+ *             .region(&#34;us&#34;)
+ *             .displayName(&#34;taxonomy_display_name&#34;)
+ *             .description(&#34;A collection of policy tags&#34;)
+ *             .activatedPolicyTypes(&#34;FINE_GRAINED_ACCESS_CONTROL&#34;)
+ *             .build());
+ * 
+ *         var parentPolicy = new PolicyTag(&#34;parentPolicy&#34;, PolicyTagArgs.builder()        
+ *             .taxonomy(myTaxonomy.getId())
+ *             .displayName(&#34;High&#34;)
+ *             .description(&#34;A policy tag category used for high security access&#34;)
+ *             .build());
+ * 
+ *         var childPolicy = new PolicyTag(&#34;childPolicy&#34;, PolicyTagArgs.builder()        
+ *             .taxonomy(myTaxonomy.getId())
+ *             .displayName(&#34;ssn&#34;)
+ *             .description(&#34;A hash of the users ssn&#34;)
+ *             .parentPolicyTag(parentPolicy.getId())
+ *             .build());
+ * 
+ *         var childPolicy2 = new PolicyTag(&#34;childPolicy2&#34;, PolicyTagArgs.builder()        
+ *             .taxonomy(myTaxonomy.getId())
+ *             .displayName(&#34;dob&#34;)
+ *             .description(&#34;The users date of birth&#34;)
+ *             .parentPolicyTag(parentPolicy.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

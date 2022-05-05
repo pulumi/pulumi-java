@@ -30,6 +30,32 @@ import javax.annotation.Nullable;
  * On import, the `secret` value will not be retrieved.
  * 
  * ## Example Usage
+ * ### Storage Hmac Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceAccount = new Account(&#34;serviceAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-svc-acc&#34;)
+ *             .build());
+ * 
+ *         var key = new HmacKey(&#34;key&#34;, HmacKeyArgs.builder()        
+ *             .serviceAccountEmail(serviceAccount.getEmail())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

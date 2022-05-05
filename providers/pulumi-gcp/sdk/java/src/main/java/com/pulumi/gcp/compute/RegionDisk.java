@@ -46,6 +46,46 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Region Disk Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .image(&#34;debian-cloud/debian-9&#34;)
+ *             .size(50)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var snapdisk = new Snapshot(&#34;snapdisk&#34;, SnapshotArgs.builder()        
+ *             .sourceDisk(disk.getName())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var regiondisk = new RegionDisk(&#34;regiondisk&#34;, RegionDiskArgs.builder()        
+ *             .snapshot(snapdisk.getId())
+ *             .type(&#34;pd-ssd&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .physicalBlockSizeBytes(4096)
+ *             .replicaZones(            
+ *                 &#34;us-central1-a&#34;,
+ *                 &#34;us-central1-f&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

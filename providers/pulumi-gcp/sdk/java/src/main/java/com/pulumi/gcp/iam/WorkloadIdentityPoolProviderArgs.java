@@ -32,6 +32,23 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      *   unspecified, all valid authentication credential are accepted.
      *   The following example shows how to only allow credentials with a mapped `google.groups`
      *   value of `admins`:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     @Import(name="attributeCondition")
@@ -50,6 +67,23 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      *   unspecified, all valid authentication credential are accepted.
      *   The following example shows how to only allow credentials with a mapped `google.groups`
      *   value of `admins`:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public Optional<Output<String>> attributeCondition() {
@@ -88,12 +122,46 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      *   the total size of all mapped attributes must not exceed 8KB.
      *   For AWS providers, the following rules apply:
      * - If no attribute mapping is defined, the following default mapping applies:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * - If any custom attribute mappings are defined, they must include a mapping to the
      *   `google.subject` attribute.
      *   For OIDC providers, the following rules apply:
      * - Custom attribute mappings must be defined, and must include a mapping to the
      *   `google.subject` attribute. For example, the following maps the `sub` claim of the
      *   incoming credential to the `subject` attribute on a Google token.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     @Import(name="attributeMapping")
@@ -131,12 +199,46 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      *   the total size of all mapped attributes must not exceed 8KB.
      *   For AWS providers, the following rules apply:
      * - If no attribute mapping is defined, the following default mapping applies:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * - If any custom attribute mappings are defined, they must include a mapping to the
      *   `google.subject` attribute.
      *   For OIDC providers, the following rules apply:
      * - Custom attribute mappings must be defined, and must include a mapping to the
      *   `google.subject` attribute. For example, the following maps the `sub` claim of the
      *   incoming credential to the `subject` attribute on a Google token.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public Optional<Output<Map<String,String>>> attributeMapping() {
@@ -325,6 +427,23 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
          *   unspecified, all valid authentication credential are accepted.
          *   The following example shows how to only allow credentials with a mapped `google.groups`
          *   value of `admins`:
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * 
          * @return builder
          * 
@@ -347,6 +466,23 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
          *   unspecified, all valid authentication credential are accepted.
          *   The following example shows how to only allow credentials with a mapped `google.groups`
          *   value of `admins`:
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * 
          * @return builder
          * 
@@ -387,12 +523,46 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
          *   the total size of all mapped attributes must not exceed 8KB.
          *   For AWS providers, the following rules apply:
          * - If no attribute mapping is defined, the following default mapping applies:
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * - If any custom attribute mappings are defined, they must include a mapping to the
          *   `google.subject` attribute.
          *   For OIDC providers, the following rules apply:
          * - Custom attribute mappings must be defined, and must include a mapping to the
          *   `google.subject` attribute. For example, the following maps the `sub` claim of the
          *   incoming credential to the `subject` attribute on a Google token.
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * 
          * @return builder
          * 
@@ -434,12 +604,46 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
          *   the total size of all mapped attributes must not exceed 8KB.
          *   For AWS providers, the following rules apply:
          * - If no attribute mapping is defined, the following default mapping applies:
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * - If any custom attribute mappings are defined, they must include a mapping to the
          *   `google.subject` attribute.
          *   For OIDC providers, the following rules apply:
          * - Custom attribute mappings must be defined, and must include a mapping to the
          *   `google.subject` attribute. For example, the following maps the `sub` claim of the
          *   incoming credential to the `subject` attribute on a Google token.
+         * ```java
+         * package generated_program;
+         * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * 
          * @return builder
          * 

@@ -24,6 +24,48 @@ import javax.annotation.Nullable;
  * For more information see the [official documentation](https://cloud.google.com/vpc/docs/using-firewall-policies#create-rules)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultFirewallPolicy = new FirewallPolicy(&#34;defaultFirewallPolicy&#34;, FirewallPolicyArgs.builder()        
+ *             .parent(&#34;organizations/12345&#34;)
+ *             .shortName(&#34;my-policy&#34;)
+ *             .description(&#34;Example Resource&#34;)
+ *             .build());
+ * 
+ *         var defaultFirewallPolicyRule = new FirewallPolicyRule(&#34;defaultFirewallPolicyRule&#34;, FirewallPolicyRuleArgs.builder()        
+ *             .firewallPolicy(defaultFirewallPolicy.getId())
+ *             .description(&#34;Example Resource&#34;)
+ *             .priority(9000)
+ *             .enableLogging(true)
+ *             .action(&#34;allow&#34;)
+ *             .direction(&#34;EGRESS&#34;)
+ *             .disabled(false)
+ *             .match(FirewallPolicyRuleMatch.builder()
+ *                 .layer4Configs(FirewallPolicyRuleMatchLayer4Config.builder()
+ *                     .ipProtocol(&#34;tcp&#34;)
+ *                     .ports(                    
+ *                         80,
+ *                         8080)
+ *                     .build())
+ *                 .destIpRanges(&#34;11.100.0.1/32&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

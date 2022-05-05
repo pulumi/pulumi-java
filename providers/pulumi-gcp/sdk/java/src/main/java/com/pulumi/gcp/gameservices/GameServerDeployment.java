@@ -25,6 +25,29 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/game-servers/docs)
  * 
  * ## Example Usage
+ * ### Game Service Deployment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new GameServerDeployment(&#34;default&#34;, GameServerDeploymentArgs.builder()        
+ *             .deploymentId(&#34;tf-test-deployment&#34;)
+ *             .description(&#34;a deployment description&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

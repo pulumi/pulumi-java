@@ -28,6 +28,34 @@ public final class ComposerFunctions {
      * Provides access to available Cloud Composer versions in a region for a given project.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(ComposerFunctions.getImageVersions());
+     * 
+     *         var test = new Environment(&#34;test&#34;, EnvironmentArgs.builder()        
+     *             .region(&#34;us-central1&#34;)
+     *             .config(EnvironmentConfig.builder()
+     *                 .softwareConfig(EnvironmentConfigSoftwareConfig.builder()
+     *                     .imageVersion(all.apply(getImageVersionsResult -&gt; getImageVersionsResult.getImageVersions()[0].getImageVersionId()))
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetImageVersionsResult> getImageVersions() {

@@ -6,6 +6,7 @@ package com.pulumi.gcp.apigee;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,6 +15,27 @@ import javax.annotation.Nullable;
 public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
+
+    /**
+     * Optional. Customer accept list represents the list of projects (id/number) on customer
+     * side that can privately connect to the service attachment. It is an optional field
+     * which the customers can provide during the instance creation. By default, the customer
+     * project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    @Import(name="consumerAcceptLists")
+    private @Nullable Output<List<String>> consumerAcceptLists;
+
+    /**
+     * @return Optional. Customer accept list represents the list of projects (id/number) on customer
+     * side that can privately connect to the service attachment. It is an optional field
+     * which the customers can provide during the instance creation. By default, the customer
+     * project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    public Optional<Output<List<String>>> consumerAcceptLists() {
+        return Optional.ofNullable(this.consumerAcceptLists);
+    }
 
     /**
      * Description of the instance.
@@ -156,6 +178,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     private InstanceArgs() {}
 
     private InstanceArgs(InstanceArgs $) {
+        this.consumerAcceptLists = $.consumerAcceptLists;
         this.description = $.description;
         this.diskEncryptionKeyName = $.diskEncryptionKeyName;
         this.displayName = $.displayName;
@@ -182,6 +205,46 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder(InstanceArgs defaults) {
             $ = new InstanceArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param consumerAcceptLists Optional. Customer accept list represents the list of projects (id/number) on customer
+         * side that can privately connect to the service attachment. It is an optional field
+         * which the customers can provide during the instance creation. By default, the customer
+         * project associated with the Apigee organization will be included to the list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerAcceptLists(@Nullable Output<List<String>> consumerAcceptLists) {
+            $.consumerAcceptLists = consumerAcceptLists;
+            return this;
+        }
+
+        /**
+         * @param consumerAcceptLists Optional. Customer accept list represents the list of projects (id/number) on customer
+         * side that can privately connect to the service attachment. It is an optional field
+         * which the customers can provide during the instance creation. By default, the customer
+         * project associated with the Apigee organization will be included to the list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerAcceptLists(List<String> consumerAcceptLists) {
+            return consumerAcceptLists(Output.of(consumerAcceptLists));
+        }
+
+        /**
+         * @param consumerAcceptLists Optional. Customer accept list represents the list of projects (id/number) on customer
+         * side that can privately connect to the service attachment. It is an optional field
+         * which the customers can provide during the instance creation. By default, the customer
+         * project associated with the Apigee organization will be included to the list.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder consumerAcceptLists(String... consumerAcceptLists) {
+            return consumerAcceptLists(List.of(consumerAcceptLists));
         }
 
         /**

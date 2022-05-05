@@ -39,6 +39,45 @@ import javax.annotation.Nullable;
  * `gcp.compute.Instance` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tplInstanceTemplate = new InstanceTemplate(&#34;tplInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-9&#34;)
+ *                 .autoDelete(true)
+ *                 .diskSizeGb(100)
+ *                 .boot(true)
+ *                 .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .canIpForward(true)
+ *             .build());
+ * 
+ *         var tplInstanceFromTemplate = new InstanceFromTemplate(&#34;tplInstanceFromTemplate&#34;, InstanceFromTemplateArgs.builder()        
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .sourceInstanceTemplate(tplInstanceTemplate.getId())
+ *             .canIpForward(false)
+ *             .labels(Map.of(&#34;my_key&#34;, &#34;my_value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

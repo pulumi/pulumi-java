@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * where the Shared VPC feature is referred to by its former name &#34;XPN&#34;.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var host = new SharedVPCHostProject(&#34;host&#34;, SharedVPCHostProjectArgs.builder()        
+ *             .project(&#34;host-project-id&#34;)
+ *             .build());
+ * 
+ *         var service1 = new SharedVPCServiceProject(&#34;service1&#34;, SharedVPCServiceProjectArgs.builder()        
+ *             .hostProject(host.getProject())
+ *             .serviceProject(&#34;service-project-id-1&#34;)
+ *             .build());
+ * 
+ *         var service2 = new SharedVPCServiceProject(&#34;service2&#34;, SharedVPCServiceProjectArgs.builder()        
+ *             .hostProject(host.getProject())
+ *             .serviceProject(&#34;service-project-id-2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

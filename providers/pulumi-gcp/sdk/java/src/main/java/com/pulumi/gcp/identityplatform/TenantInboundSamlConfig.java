@@ -25,6 +25,45 @@ import javax.annotation.Nullable;
  * the marketplace prior to using this resource.
  * 
  * ## Example Usage
+ * ### Identity Platform Tenant Inbound Saml Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tenant = new Tenant(&#34;tenant&#34;, TenantArgs.builder()        
+ *             .displayName(&#34;tenant&#34;)
+ *             .build());
+ * 
+ *         var tenantSamlConfig = new TenantInboundSamlConfig(&#34;tenantSamlConfig&#34;, TenantInboundSamlConfigArgs.builder()        
+ *             .displayName(&#34;Display Name&#34;)
+ *             .tenant(tenant.getName())
+ *             .idpConfig(TenantInboundSamlConfigIdpConfig.builder()
+ *                 .idpEntityId(&#34;tf-idp&#34;)
+ *                 .signRequest(true)
+ *                 .ssoUrl(&#34;https://example.com&#34;)
+ *                 .idpCertificates(TenantInboundSamlConfigIdpConfigIdpCertificate.builder()
+ *                     .x509Certificate(Files.readString(&#34;test-fixtures/rsa_cert.pem&#34;))
+ *                     .build())
+ *                 .build())
+ *             .spConfig(TenantInboundSamlConfigSpConfig.builder()
+ *                 .spEntityId(&#34;tf-sp&#34;)
+ *                 .callbackUri(&#34;https://example.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

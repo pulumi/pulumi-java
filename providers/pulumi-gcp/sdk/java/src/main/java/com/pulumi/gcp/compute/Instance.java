@@ -36,6 +36,54 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/compute/docs/reference/latest/instances).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultAccount = new Account(&#34;defaultAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service_account_id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var defaultInstance = new Instance(&#34;defaultInstance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .scratchDisks(InstanceScratchDisk.builder()
+ *                 .interface_(&#34;SCSI&#34;)
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .accessConfigs()
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .metadataStartupScript(&#34;echo hi &gt; /test.txt&#34;)
+ *             .serviceAccount(InstanceServiceAccount.builder()
+ *                 .email(defaultAccount.getEmail())
+ *                 .scopes(&#34;cloud-platform&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

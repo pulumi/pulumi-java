@@ -17,6 +17,65 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Example creating a RuntimeConfig variable.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_runtime_config = new Config(&#34;my-runtime-config&#34;, ConfigArgs.builder()        
+ *             .description(&#34;Runtime configuration values for my service&#34;)
+ *             .build());
+ * 
+ *         var environment = new Variable(&#34;environment&#34;, VariableArgs.builder()        
+ *             .parent(my_runtime_config.getName())
+ *             .text(&#34;example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * You can also encode binary content using the `value` argument instead. The
+ * value must be base64 encoded.
+ * 
+ * Example of using the `value` argument.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_runtime_config = new Config(&#34;my-runtime-config&#34;, ConfigArgs.builder()        
+ *             .description(&#34;Runtime configuration values for my service&#34;)
+ *             .build());
+ * 
+ *         var my_secret = new Variable(&#34;my-secret&#34;, VariableArgs.builder()        
+ *             .parent(my_runtime_config.getName())
+ *             .value(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;my-encrypted-secret.dat&#34;))))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Runtime Config Variables can be imported using the `name` or full variable name, e.g.

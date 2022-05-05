@@ -30,6 +30,122 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/network-intelligence-center/docs)
  * 
  * ## Example Usage
+ * ### Network Management Connectivity Test Instances
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpc = new Network(&#34;vpc&#34;);
+ * 
+ *         final var debian9 = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var source = new Instance(&#34;source&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(debian9.apply(getImageResult -&gt; getImageResult.getId()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(vpc.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .build());
+ * 
+ *         var destination = new Instance(&#34;destination&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(debian9.apply(getImageResult -&gt; getImageResult.getId()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(vpc.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .build());
+ * 
+ *         var instance_test = new ConnectivityTest(&#34;instance-test&#34;, ConnectivityTestArgs.builder()        
+ *             .source(ConnectivityTestSource.builder()
+ *                 .instance(source.getId())
+ *                 .build())
+ *             .destination(ConnectivityTestDestination.builder()
+ *                 .instance(destination.getId())
+ *                 .build())
+ *             .protocol(&#34;TCP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network Management Connectivity Test Addresses
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpc = new Network(&#34;vpc&#34;);
+ * 
+ *         var subnet = new Subnetwork(&#34;subnet&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(vpc.getId())
+ *             .build());
+ * 
+ *         var source_addr = new Address(&#34;source-addr&#34;, AddressArgs.builder()        
+ *             .subnetwork(subnet.getId())
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .address(&#34;10.0.42.42&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var dest_addr = new Address(&#34;dest-addr&#34;, AddressArgs.builder()        
+ *             .subnetwork(subnet.getId())
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .address(&#34;10.0.43.43&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var address_test = new ConnectivityTest(&#34;address-test&#34;, ConnectivityTestArgs.builder()        
+ *             .source(ConnectivityTestSource.builder()
+ *                 .ipAddress(source_addr.getAddress())
+ *                 .projectId(source_addr.getProject())
+ *                 .network(vpc.getId())
+ *                 .networkType(&#34;GCP_NETWORK&#34;)
+ *                 .build())
+ *             .destination(ConnectivityTestDestination.builder()
+ *                 .ipAddress(dest_addr.getAddress())
+ *                 .projectId(dest_addr.getProject())
+ *                 .network(vpc.getId())
+ *                 .build())
+ *             .protocol(&#34;UDP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

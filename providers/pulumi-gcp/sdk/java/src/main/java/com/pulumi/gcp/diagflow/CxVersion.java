@@ -27,6 +27,48 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
  * ## Example Usage
+ * ### Dialogflowcx Version Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agent = new CxAgent(&#34;agent&#34;, CxAgentArgs.builder()        
+ *             .displayName(&#34;dialogflowcx-agent&#34;)
+ *             .location(&#34;global&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .supportedLanguageCodes(            
+ *                 &#34;fr&#34;,
+ *                 &#34;de&#34;,
+ *                 &#34;es&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .description(&#34;Example description.&#34;)
+ *             .avatarUri(&#34;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&#34;)
+ *             .enableStackdriverLogging(true)
+ *             .enableSpellCorrection(true)
+ *             .speechToTextSettings(CxAgentSpeechToTextSettings.builder()
+ *                 .enableSpeechAdaptation(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var version1 = new CxVersion(&#34;version1&#34;, CxVersionArgs.builder()        
+ *             .parent(agent.getStartFlow())
+ *             .displayName(&#34;1.0.0&#34;)
+ *             .description(&#34;version 1.0.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

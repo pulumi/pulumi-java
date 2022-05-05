@@ -108,6 +108,23 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * The resource name of the issuing CertificateAuthority in the format
+     * projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*.
+     * 
+     */
+    @Import(name="issuerCertificateAuthority")
+    private @Nullable Output<String> issuerCertificateAuthority;
+
+    /**
+     * @return The resource name of the issuing CertificateAuthority in the format
+     * projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*.
+     * 
+     */
+    public Optional<Output<String>> issuerCertificateAuthority() {
+        return Optional.ofNullable(this.issuerCertificateAuthority);
+    }
+
+    /**
      * Labels with user-defined metadata to apply to this resource.
      * 
      */
@@ -189,16 +206,41 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Required. Expected to be in leaf-to-root order according to RFC 5246.
+     * The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC
+     * 5246.
      * 
      */
+    @Import(name="pemCertificateChains")
+    private @Nullable Output<List<String>> pemCertificateChains;
+
+    /**
+     * @return The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC
+     * 5246.
+     * 
+     */
+    public Optional<Output<List<String>>> pemCertificateChains() {
+        return Optional.ofNullable(this.pemCertificateChains);
+    }
+
+    /**
+     * Required. Expected to be in leaf-to-root order according to RFC 5246.
+     * 
+     * @deprecated
+     * Deprecated in favor of `pem_certificate_chain`.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of `pem_certificate_chain`. */
     @Import(name="pemCertificates")
     private @Nullable Output<List<String>> pemCertificates;
 
     /**
      * @return Required. Expected to be in leaf-to-root order according to RFC 5246.
      * 
+     * @deprecated
+     * Deprecated in favor of `pem_certificate_chain`.
+     * 
      */
+    @Deprecated /* Deprecated in favor of `pem_certificate_chain`. */
     public Optional<Output<List<String>>> pemCertificates() {
         return Optional.ofNullable(this.pemCertificates);
     }
@@ -290,11 +332,13 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         this.certificateTemplate = $.certificateTemplate;
         this.config = $.config;
         this.createTime = $.createTime;
+        this.issuerCertificateAuthority = $.issuerCertificateAuthority;
         this.labels = $.labels;
         this.lifetime = $.lifetime;
         this.location = $.location;
         this.name = $.name;
         this.pemCertificate = $.pemCertificate;
+        this.pemCertificateChains = $.pemCertificateChains;
         this.pemCertificates = $.pemCertificates;
         this.pemCsr = $.pemCsr;
         this.pool = $.pool;
@@ -450,6 +494,29 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param issuerCertificateAuthority The resource name of the issuing CertificateAuthority in the format
+         * projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder issuerCertificateAuthority(@Nullable Output<String> issuerCertificateAuthority) {
+            $.issuerCertificateAuthority = issuerCertificateAuthority;
+            return this;
+        }
+
+        /**
+         * @param issuerCertificateAuthority The resource name of the issuing CertificateAuthority in the format
+         * projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder issuerCertificateAuthority(String issuerCertificateAuthority) {
+            return issuerCertificateAuthority(Output.of(issuerCertificateAuthority));
+        }
+
+        /**
          * @param labels Labels with user-defined metadata to apply to this resource.
          * 
          * @return builder
@@ -561,11 +628,49 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param pemCertificates Required. Expected to be in leaf-to-root order according to RFC 5246.
+         * @param pemCertificateChains The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC
+         * 5246.
          * 
          * @return builder
          * 
          */
+        public Builder pemCertificateChains(@Nullable Output<List<String>> pemCertificateChains) {
+            $.pemCertificateChains = pemCertificateChains;
+            return this;
+        }
+
+        /**
+         * @param pemCertificateChains The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC
+         * 5246.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pemCertificateChains(List<String> pemCertificateChains) {
+            return pemCertificateChains(Output.of(pemCertificateChains));
+        }
+
+        /**
+         * @param pemCertificateChains The chain that may be used to verify the X.509 certificate. Expected to be in issuer-to-root order according to RFC
+         * 5246.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pemCertificateChains(String... pemCertificateChains) {
+            return pemCertificateChains(List.of(pemCertificateChains));
+        }
+
+        /**
+         * @param pemCertificates Required. Expected to be in leaf-to-root order according to RFC 5246.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `pem_certificate_chain`.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `pem_certificate_chain`. */
         public Builder pemCertificates(@Nullable Output<List<String>> pemCertificates) {
             $.pemCertificates = pemCertificates;
             return this;
@@ -576,7 +681,11 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Deprecated in favor of `pem_certificate_chain`.
+         * 
          */
+        @Deprecated /* Deprecated in favor of `pem_certificate_chain`. */
         public Builder pemCertificates(List<String> pemCertificates) {
             return pemCertificates(Output.of(pemCertificates));
         }
@@ -586,7 +695,11 @@ public final class CertificateState extends com.pulumi.resources.ResourceArgs {
          * 
          * @return builder
          * 
+         * @deprecated
+         * Deprecated in favor of `pem_certificate_chain`.
+         * 
          */
+        @Deprecated /* Deprecated in favor of `pem_certificate_chain`. */
         public Builder pemCertificates(String... pemCertificates) {
             return pemCertificates(List.of(pemCertificates));
         }

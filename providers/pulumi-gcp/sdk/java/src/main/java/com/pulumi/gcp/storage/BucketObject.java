@@ -28,6 +28,30 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Example creating a public object in an existing `image-store` bucket.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var picture = new BucketObject(&#34;picture&#34;, BucketObjectArgs.builder()        
+ *             .bucket(&#34;image-store&#34;)
+ *             .source(new FileAsset(&#34;/images/nature/garden-tiger-moth.jpg&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * This resource does not support import.

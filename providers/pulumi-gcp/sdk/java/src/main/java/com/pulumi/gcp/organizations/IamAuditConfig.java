@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var config = new IamAuditConfig(&#34;config&#34;, IamAuditConfigArgs.builder()        
+ *             .auditLogConfigs(IamAuditConfigAuditLogConfig.builder()
+ *                 .exemptedMembers(&#34;user:joebloggs@hashicorp.com&#34;)
+ *                 .logType(&#34;DATA_READ&#34;)
+ *                 .build())
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .service(&#34;allServices&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -39,6 +39,34 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/lists)
  * 
  * ## Example Usage
+ * ### Storage Bucket Access Control Public Bucket
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var publicRule = new BucketAccessControl(&#34;publicRule&#34;, BucketAccessControlArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .role(&#34;READER&#34;)
+ *             .entity(&#34;allUsers&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

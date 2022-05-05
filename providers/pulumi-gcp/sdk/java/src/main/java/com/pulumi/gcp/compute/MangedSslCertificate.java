@@ -45,6 +45,82 @@ import javax.annotation.Nullable;
  * In conclusion: Be extremely cautious.
  * 
  * ## Example Usage
+ * ### Managed Ssl Certificate Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultManagedSslCertificate = new ManagedSslCertificate(&#34;defaultManagedSslCertificate&#34;, ManagedSslCertificateArgs.builder()        
+ *             .managed(ManagedSslCertificateManaged.builder()
+ *                 .domains(&#34;sslcert.tf-test.club.&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;sslcert.tf-test.club&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpsProxy = new TargetHttpsProxy(&#34;defaultTargetHttpsProxy&#34;, TargetHttpsProxyArgs.builder()        
+ *             .urlMap(defaultURLMap.getId())
+ *             .sslCertificates(defaultManagedSslCertificate.getId())
+ *             .build());
+ * 
+ *         var zone = new ManagedZone(&#34;zone&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;sslcert.tf-test.club.&#34;)
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .target(defaultTargetHttpsProxy.getId())
+ *             .portRange(443)
+ *             .build());
+ * 
+ *         var set = new RecordSet(&#34;set&#34;, RecordSetArgs.builder()        
+ *             .name(&#34;sslcert.tf-test.club.&#34;)
+ *             .type(&#34;A&#34;)
+ *             .ttl(3600)
+ *             .managedZone(zone.getName())
+ *             .rrdatas(defaultGlobalForwardingRule.getIpAddress())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

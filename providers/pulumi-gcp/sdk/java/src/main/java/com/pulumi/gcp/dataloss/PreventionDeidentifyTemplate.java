@@ -25,6 +25,112 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/concepts-templates)
  * 
  * ## Example Usage
+ * ### Dlp Deidentify Template Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new PreventionDeidentifyTemplate(&#34;basic&#34;, PreventionDeidentifyTemplateArgs.builder()        
+ *             .deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfig.builder()
+ *                 .infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations.builder()
+ *                     .transformations(                    
+ *                         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation.builder()
+ *                             .infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                 .name(&#34;FIRST_NAME&#34;)
+ *                                 .build())
+ *                             .primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation.builder()
+ *                                 .replaceWithInfoTypeConfig(true)
+ *                                 .build())
+ *                             .build(),
+ *                         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation.builder()
+ *                             .infoTypes(                            
+ *                                 PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                     .name(&#34;PHONE_NUMBER&#34;)
+ *                                     .build(),
+ *                                 PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                     .name(&#34;AGE&#34;)
+ *                                     .build())
+ *                             .primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation.builder()
+ *                                 .replaceConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig.builder()
+ *                                     .newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue.builder()
+ *                                         .integerValue(9)
+ *                                         .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build(),
+ *                         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation.builder()
+ *                             .infoTypes(                            
+ *                                 PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                     .name(&#34;EMAIL_ADDRESS&#34;)
+ *                                     .build(),
+ *                                 PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                     .name(&#34;LAST_NAME&#34;)
+ *                                     .build())
+ *                             .primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation.builder()
+ *                                 .characterMaskConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig.builder()
+ *                                     .charactersToIgnore(Map.of(&#34;commonCharactersToIgnore&#34;, &#34;PUNCTUATION&#34;))
+ *                                     .maskingCharacter(&#34;X&#34;)
+ *                                     .numberToMask(4)
+ *                                     .reverseOrder(true)
+ *                                     .build())
+ *                                 .build())
+ *                             .build(),
+ *                         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation.builder()
+ *                             .infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                 .name(&#34;DATE_OF_BIRTH&#34;)
+ *                                 .build())
+ *                             .primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation.builder()
+ *                                 .replaceConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfig.builder()
+ *                                     .newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue.builder()
+ *                                         .dateValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue.builder()
+ *                                             .day(1)
+ *                                             .month(1)
+ *                                             .year(2020)
+ *                                             .build())
+ *                                         .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build(),
+ *                         PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation.builder()
+ *                             .infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType.builder()
+ *                                 .name(&#34;CREDIT_CARD_NUMBER&#34;)
+ *                                 .build())
+ *                             .primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation.builder()
+ *                                 .cryptoDeterministicConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfig.builder()
+ *                                     .context(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContext.builder()
+ *                                         .name(&#34;sometweak&#34;)
+ *                                         .build())
+ *                                     .cryptoKey(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKey.builder()
+ *                                         .transient_(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransient.builder()
+ *                                             .name(&#34;beep&#34;)
+ *                                             .build())
+ *                                         .build())
+ *                                     .surrogateInfoType(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType.builder()
+ *                                         .name(&#34;abc&#34;)
+ *                                         .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .description(&#34;Description&#34;)
+ *             .displayName(&#34;Displayname&#34;)
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

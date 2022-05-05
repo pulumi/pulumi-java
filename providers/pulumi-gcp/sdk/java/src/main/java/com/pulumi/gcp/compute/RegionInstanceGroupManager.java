@@ -37,6 +37,90 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a zonal instance group manager.
  * 
  * ## Example Usage
+ * ### With Top Level Instance Template (`Google` Provider)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var autohealing = new HealthCheck(&#34;autohealing&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(5)
+ *             .timeoutSec(5)
+ *             .healthyThreshold(2)
+ *             .unhealthyThreshold(10)
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .requestPath(&#34;/healthz&#34;)
+ *                 .port(&#34;8080&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var appserver = new RegionInstanceGroupManager(&#34;appserver&#34;, RegionInstanceGroupManagerArgs.builder()        
+ *             .baseInstanceName(&#34;app&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .distributionPolicyZones(            
+ *                 &#34;us-central1-a&#34;,
+ *                 &#34;us-central1-f&#34;)
+ *             .versions(RegionInstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(google_compute_instance_template.getAppserver().getId())
+ *                 .build())
+ *             .targetPools(google_compute_target_pool.getAppserver().getId())
+ *             .targetSize(2)
+ *             .namedPorts(RegionInstanceGroupManagerNamedPort.builder()
+ *                 .name(&#34;custom&#34;)
+ *                 .port(8888)
+ *                 .build())
+ *             .autoHealingPolicies(RegionInstanceGroupManagerAutoHealingPolicies.builder()
+ *                 .healthCheck(autohealing.getId())
+ *                 .initialDelaySec(300)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Multiple Versions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var appserver = new RegionInstanceGroupManager(&#34;appserver&#34;, RegionInstanceGroupManagerArgs.builder()        
+ *             .baseInstanceName(&#34;app&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .targetSize(5)
+ *             .versions(            
+ *                 RegionInstanceGroupManagerVersion.builder()
+ *                     .instanceTemplate(google_compute_instance_template.getAppserver().getId())
+ *                     .build(),
+ *                 RegionInstanceGroupManagerVersion.builder()
+ *                     .instanceTemplate(google_compute_instance_template.getAppserver-canary().getId())
+ *                     .targetSize(RegionInstanceGroupManagerVersionTargetSize.builder()
+ *                         .fixed(1)
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

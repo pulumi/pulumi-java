@@ -26,6 +26,94 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/artifact-registry/docs/overview)
  * 
  * ## Example Usage
+ * ### Artifact Registry Repository Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_repo = new Repository(&#34;my-repo&#34;, RepositoryArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .repositoryId(&#34;my-repository&#34;)
+ *             .description(&#34;example docker repository&#34;)
+ *             .format(&#34;DOCKER&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Artifact Registry Repository Cmek
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_repo = new Repository(&#34;my-repo&#34;, RepositoryArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .repositoryId(&#34;my-repository&#34;)
+ *             .description(&#34;example docker repository with cmek&#34;)
+ *             .format(&#34;DOCKER&#34;)
+ *             .kmsKeyName(&#34;kms-key&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Artifact Registry Repository Iam
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_repo = new Repository(&#34;my-repo&#34;, RepositoryArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .repositoryId(&#34;my-repository&#34;)
+ *             .description(&#34;example docker repository with iam&#34;)
+ *             .format(&#34;DOCKER&#34;)
+ *             .build());
+ * 
+ *         var test_account = new Account(&#34;test-account&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-account&#34;)
+ *             .displayName(&#34;Test Service Account&#34;)
+ *             .build());
+ * 
+ *         var test_iam = new RepositoryIamMember(&#34;test-iam&#34;, RepositoryIamMemberArgs.builder()        
+ *             .location(my_repo.getLocation())
+ *             .repository(my_repo.getName())
+ *             .role(&#34;roles/artifactregistry.reader&#34;)
+ *             .member(test_account.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

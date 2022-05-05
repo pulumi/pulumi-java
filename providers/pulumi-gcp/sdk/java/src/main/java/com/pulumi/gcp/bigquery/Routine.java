@@ -27,6 +27,36 @@ import javax.annotation.Nullable;
  *     * [Routines Intro](https://cloud.google.com/bigquery/docs/reference/rest/v2/routines)
  * 
  * ## Example Usage
+ * ### Big Query Routine Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Dataset(&#34;test&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;dataset_id&#34;)
+ *             .build());
+ * 
+ *         var sproc = new Routine(&#34;sproc&#34;, RoutineArgs.builder()        
+ *             .datasetId(test.getDatasetId())
+ *             .routineId(&#34;routine_id&#34;)
+ *             .routineType(&#34;PROCEDURE&#34;)
+ *             .language(&#34;SQL&#34;)
+ *             .definitionBody(&#34;CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

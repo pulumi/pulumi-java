@@ -31,6 +31,32 @@ import javax.annotation.Nullable;
  * state as plain-text.[Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets)
  * 
  * ## Example Usage
+ * ### Scan Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scannerStaticIp = new Address(&#34;scannerStaticIp&#34;);
+ * 
+ *         var scan_config = new SecurityScanConfig(&#34;scan-config&#34;, SecurityScanConfigArgs.builder()        
+ *             .displayName(&#34;scan-config&#34;)
+ *             .startingUrls(scannerStaticIp.getAddress().apply(address -&gt; String.format(&#34;http://%s&#34;, address)))
+ *             .targetPlatforms(&#34;COMPUTE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

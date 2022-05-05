@@ -23,6 +23,76 @@ import javax.annotation.Nullable;
  * A managed metastore service that serves metadata queries.
  * 
  * ## Example Usage
+ * ### Dataproc Metastore Service Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new MetastoreService(&#34;default&#34;, MetastoreServiceArgs.builder()        
+ *             .serviceId(&#34;metastore-srv&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .port(9080)
+ *             .tier(&#34;DEVELOPER&#34;)
+ *             .maintenanceWindow(MetastoreServiceMaintenanceWindow.builder()
+ *                 .hourOfDay(2)
+ *                 .dayOfWeek(&#34;SUNDAY&#34;)
+ *                 .build())
+ *             .hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfig.builder()
+ *                 .version(&#34;2.3.6&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dataproc Metastore Service Cmek Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRing(&#34;keyRing&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var cryptoKey = new CryptoKey(&#34;cryptoKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyRing.getId())
+ *             .purpose(&#34;ENCRYPT_DECRYPT&#34;)
+ *             .build());
+ * 
+ *         var default_ = new MetastoreService(&#34;default&#34;, MetastoreServiceArgs.builder()        
+ *             .serviceId(&#34;example-service&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .encryptionConfig(MetastoreServiceEncryptionConfig.builder()
+ *                 .kmsKey(cryptoKey.getId())
+ *                 .build())
+ *             .hiveMetastoreConfig(MetastoreServiceHiveMetastoreConfig.builder()
+ *                 .version(&#34;3.1.2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

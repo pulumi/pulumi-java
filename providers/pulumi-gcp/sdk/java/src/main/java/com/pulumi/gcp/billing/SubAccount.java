@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Allows creation and management of a Google Cloud Billing Subaccount.
  * 
  * !&gt; **WARNING:** Deleting this resource will not delete or close the billing subaccount.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subaccount = new SubAccount(&#34;subaccount&#34;, SubAccountArgs.builder()        
+ *             .displayName(&#34;My Billing Account&#34;)
+ *             .masterBillingAccount(&#34;012345-567890-ABCDEF&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,44 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/api-gateway/docs/quickstart)
  * 
  * ## Example Usage
+ * ### Apigateway Gateway Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiGwApi = new Api(&#34;apiGwApi&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;api-gw&#34;)
+ *             .build());
+ * 
+ *         var apiGwApiConfig = new ApiConfig(&#34;apiGwApiConfig&#34;, ApiConfigArgs.builder()        
+ *             .api(apiGwApi.getApiId())
+ *             .apiConfigId(&#34;config&#34;)
+ *             .openapiDocuments(ApiConfigOpenapiDocument.builder()
+ *                 .document(ApiConfigOpenapiDocumentDocument.builder()
+ *                     .path(&#34;spec.yaml&#34;)
+ *                     .contents(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;test-fixtures/apigateway/openapi.yaml&#34;))))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var apiGwGateway = new Gateway(&#34;apiGwGateway&#34;, GatewayArgs.builder()        
+ *             .apiConfig(apiGwApiConfig.getId())
+ *             .gatewayId(&#34;api-gw&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

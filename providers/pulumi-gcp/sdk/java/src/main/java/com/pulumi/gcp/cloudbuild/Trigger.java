@@ -37,6 +37,308 @@ import javax.annotation.Nullable;
  * &gt; **Note:** You can retrieve the email of the Cloud Build Service Account used in jobs by using the `gcp.projects.ServiceIdentity` resource.
  * 
  * ## Example Usage
+ * ### Cloudbuild Trigger Filename
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var filename_trigger = new Trigger(&#34;filename-trigger&#34;, TriggerArgs.builder()        
+ *             .filename(&#34;cloudbuild.yaml&#34;)
+ *             .substitutions(Map.ofEntries(
+ *                 Map.entry(&#34;_BAZ&#34;, &#34;qux&#34;),
+ *                 Map.entry(&#34;_FOO&#34;, &#34;bar&#34;)
+ *             ))
+ *             .triggerTemplate(TriggerTriggerTemplate.builder()
+ *                 .branchName(&#34;main&#34;)
+ *                 .repoName(&#34;my-repo&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudbuild Trigger Build
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var build_trigger = new Trigger(&#34;build-trigger&#34;, TriggerArgs.builder()        
+ *             .build(TriggerBuild.builder()
+ *                 .artifacts(TriggerBuildArtifacts.builder()
+ *                     .images(&#34;gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA&#34;)
+ *                     .objects(TriggerBuildArtifactsObjects.builder()
+ *                         .location(&#34;gs://bucket/path/to/somewhere/&#34;)
+ *                         .paths(&#34;path&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .availableSecrets(TriggerBuildAvailableSecrets.builder()
+ *                     .secretManager(Map.ofEntries(
+ *                         Map.entry(&#34;env&#34;, &#34;MY_SECRET&#34;),
+ *                         Map.entry(&#34;versionName&#34;, &#34;projects/myProject/secrets/mySecret/versions/latest&#34;)
+ *                     ))
+ *                     .build())
+ *                 .logsBucket(&#34;gs://mybucket/logs&#34;)
+ *                 .options(TriggerBuildOptions.builder()
+ *                     .diskSizeGb(100)
+ *                     .dynamicSubstitutions(true)
+ *                     .env(&#34;ekey = evalue&#34;)
+ *                     .logStreamingOption(&#34;STREAM_OFF&#34;)
+ *                     .logging(&#34;LEGACY&#34;)
+ *                     .machineType(&#34;N1_HIGHCPU_8&#34;)
+ *                     .requestedVerifyOption(&#34;VERIFIED&#34;)
+ *                     .secretEnv(&#34;secretenv = svalue&#34;)
+ *                     .sourceProvenanceHash(&#34;MD5&#34;)
+ *                     .substitutionOption(&#34;ALLOW_LOOSE&#34;)
+ *                     .volumes(TriggerBuildOptionsVolume.builder()
+ *                         .name(&#34;v1&#34;)
+ *                         .path(&#34;v1&#34;)
+ *                         .build())
+ *                     .workerPool(&#34;pool&#34;)
+ *                     .build())
+ *                 .queueTtl(&#34;20s&#34;)
+ *                 .secrets(TriggerBuildSecret.builder()
+ *                     .kmsKeyName(&#34;projects/myProject/locations/global/keyRings/keyring-name/cryptoKeys/key-name&#34;)
+ *                     .secretEnv(Map.of(&#34;PASSWORD&#34;, &#34;ZW5jcnlwdGVkLXBhc3N3b3JkCg==&#34;))
+ *                     .build())
+ *                 .source(TriggerBuildSource.builder()
+ *                     .storageSource(TriggerBuildSourceStorageSource.builder()
+ *                         .bucket(&#34;mybucket&#34;)
+ *                         .object(&#34;source_code.tar.gz&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .steps(TriggerBuildStep.builder()
+ *                     .args(                    
+ *                         &#34;cp&#34;,
+ *                         &#34;gs://mybucket/remotefile.zip&#34;,
+ *                         &#34;localfile.zip&#34;)
+ *                     .name(&#34;gcr.io/cloud-builders/gsutil&#34;)
+ *                     .secretEnv(&#34;MY_SECRET&#34;)
+ *                     .timeout(&#34;120s&#34;)
+ *                     .build())
+ *                 .substitutions(Map.ofEntries(
+ *                     Map.entry(&#34;_BAZ&#34;, &#34;qux&#34;),
+ *                     Map.entry(&#34;_FOO&#34;, &#34;bar&#34;)
+ *                 ))
+ *                 .tags(                
+ *                     &#34;build&#34;,
+ *                     &#34;newFeature&#34;)
+ *                 .build())
+ *             .triggerTemplate(TriggerTriggerTemplate.builder()
+ *                 .branchName(&#34;main&#34;)
+ *                 .repoName(&#34;my-repo&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudbuild Trigger Service Account
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var cloudbuildServiceAccount = new Account(&#34;cloudbuildServiceAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .build());
+ * 
+ *         var actAs = new IAMMember(&#34;actAs&#34;, IAMMemberArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .member(cloudbuildServiceAccount.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         var logsWriter = new IAMMember(&#34;logsWriter&#34;, IAMMemberArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .role(&#34;roles/logging.logWriter&#34;)
+ *             .member(cloudbuildServiceAccount.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         var service_account_trigger = new Trigger(&#34;service-account-trigger&#34;, TriggerArgs.builder()        
+ *             .triggerTemplate(TriggerTriggerTemplate.builder()
+ *                 .branchName(&#34;main&#34;)
+ *                 .repoName(&#34;my-repo&#34;)
+ *                 .build())
+ *             .serviceAccount(cloudbuildServiceAccount.getId())
+ *             .filename(&#34;cloudbuild.yaml&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudbuild Trigger Pubsub Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mytopic = new Topic(&#34;mytopic&#34;);
+ * 
+ *         var pubsub_config_trigger = new Trigger(&#34;pubsub-config-trigger&#34;, TriggerArgs.builder()        
+ *             .description(&#34;acceptance test example pubsub build trigger&#34;)
+ *             .pubsubConfig(TriggerPubsubConfig.builder()
+ *                 .topic(mytopic.getId())
+ *                 .build())
+ *             .sourceToBuild(TriggerSourceToBuild.builder()
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .ref(&#34;refs/heads/main&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .build())
+ *             .gitFileSource(TriggerGitFileSource.builder()
+ *                 .path(&#34;cloudbuild.yaml&#34;)
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .revision(&#34;refs/heads/main&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .build())
+ *             .substitutions(Map.of(&#34;_ACTION&#34;, &#34;$(body.message.data.action)&#34;))
+ *             .filter(&#34;_ACTION.matches(&#39;INSERT&#39;)&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudbuild Trigger Webhook Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webhookTriggerSecretKey = new Secret(&#34;webhookTriggerSecretKey&#34;, SecretArgs.builder()        
+ *             .secretId(&#34;webhook_trigger-secret-key-1&#34;)
+ *             .replication(SecretReplication.builder()
+ *                 .userManaged(SecretReplicationUserManaged.builder()
+ *                     .replicas(SecretReplicationUserManagedReplica.builder()
+ *                         .location(&#34;us-central1&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var webhookTriggerSecretKeyData = new SecretVersion(&#34;webhookTriggerSecretKeyData&#34;, SecretVersionArgs.builder()        
+ *             .secret(webhookTriggerSecretKey.getId())
+ *             .secretData(&#34;secretkeygoeshere&#34;)
+ *             .build());
+ * 
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         final var secretAccessor = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/secretmanager.secretAccessor&#34;)
+ *                 .members(String.format(&#34;serviceAccount:service-%s@gcp-sa-cloudbuild.iam.gserviceaccount.com&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new SecretIamPolicy(&#34;policy&#34;, SecretIamPolicyArgs.builder()        
+ *             .project(webhookTriggerSecretKey.getProject())
+ *             .secretId(webhookTriggerSecretKey.getSecretId())
+ *             .policyData(secretAccessor.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         var webhook_config_trigger = new Trigger(&#34;webhook-config-trigger&#34;, TriggerArgs.builder()        
+ *             .description(&#34;acceptance test example webhook build trigger&#34;)
+ *             .webhookConfig(TriggerWebhookConfig.builder()
+ *                 .secret(webhookTriggerSecretKeyData.getId())
+ *                 .build())
+ *             .sourceToBuild(TriggerSourceToBuild.builder()
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .ref(&#34;refs/heads/main&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .build())
+ *             .gitFileSource(TriggerGitFileSource.builder()
+ *                 .path(&#34;cloudbuild.yaml&#34;)
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .revision(&#34;refs/heads/main&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudbuild Trigger Manual
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var manual_trigger = new Trigger(&#34;manual-trigger&#34;, TriggerArgs.builder()        
+ *             .approvalConfig(TriggerApprovalConfig.builder()
+ *                 .approvalRequired(true)
+ *                 .build())
+ *             .gitFileSource(TriggerGitFileSource.builder()
+ *                 .path(&#34;cloudbuild.yaml&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .revision(&#34;refs/heads/main&#34;)
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .build())
+ *             .sourceToBuild(TriggerSourceToBuild.builder()
+ *                 .ref(&#34;refs/heads/main&#34;)
+ *                 .repoType(&#34;GITHUB&#34;)
+ *                 .uri(&#34;https://hashicorp/terraform-provider-google-beta&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

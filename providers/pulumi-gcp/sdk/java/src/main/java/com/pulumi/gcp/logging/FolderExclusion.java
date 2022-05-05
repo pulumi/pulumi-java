@@ -25,6 +25,34 @@ import javax.annotation.Nullable;
  * &gt; You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.FolderSink`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_folder = new Folder(&#34;my-folder&#34;, FolderArgs.builder()        
+ *             .displayName(&#34;My folder&#34;)
+ *             .parent(&#34;organizations/123456&#34;)
+ *             .build());
+ * 
+ *         var my_exclusion = new FolderExclusion(&#34;my-exclusion&#34;, FolderExclusionArgs.builder()        
+ *             .folder(my_folder.getName())
+ *             .description(&#34;Exclude GCE instance debug logs&#34;)
+ *             .filter(&#34;resource.type = gce_instance AND severity &lt;= DEBUG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

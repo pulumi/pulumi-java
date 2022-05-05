@@ -18,6 +18,27 @@ public final class CloudfunctionsFunctions {
      * and [API](https://cloud.google.com/functions/docs/apis).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-function = Output.of(CloudfunctionsFunctions.getFunction(GetFunctionArgs.builder()
+     *             .name(&#34;function&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {

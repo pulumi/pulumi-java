@@ -29,6 +29,60 @@ import javax.annotation.Nullable;
  *     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
  * 
  * ## Example Usage
+ * ### Node Template Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var template = new NodeTemplate(&#34;template&#34;, NodeTemplateArgs.builder()        
+ *             .nodeType(&#34;n1-node-96-624&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Node Template Server Binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var central1a = Output.of(ComputeFunctions.getNodeTypes(GetNodeTypesArgs.builder()
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build()));
+ * 
+ *         var template = new NodeTemplate(&#34;template&#34;, NodeTemplateArgs.builder()        
+ *             .nodeAffinityLabels(Map.of(&#34;foo&#34;, &#34;baz&#34;))
+ *             .nodeType(&#34;n1-node-96-624&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .serverBinding(NodeTemplateServerBinding.builder()
+ *                 .type(&#34;RESTART_NODE_ON_MINIMAL_SERVERS&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

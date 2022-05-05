@@ -39,6 +39,30 @@ import javax.annotation.Nullable;
  * `gcp.compute.Instance` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tpl = new InstanceFromMachineImage(&#34;tpl&#34;, InstanceFromMachineImageArgs.builder()        
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .sourceMachineImage(&#34;projects/PROJECT-ID/global/machineImages/NAME&#34;)
+ *             .canIpForward(false)
+ *             .labels(Map.of(&#34;my_key&#34;, &#34;my_value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="gcp:compute/instanceFromMachineImage:InstanceFromMachineImage")

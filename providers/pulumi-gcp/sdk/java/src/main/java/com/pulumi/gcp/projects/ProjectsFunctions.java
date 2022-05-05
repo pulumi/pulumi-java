@@ -20,6 +20,29 @@ public final class ProjectsFunctions {
      * documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policy = Output.of(ProjectsFunctions.getOrganizationPolicy(GetOrganizationPolicyArgs.builder()
+     *             .project(&#34;project-id&#34;)
+     *             .constraint(&#34;constraints/serviceuser.services&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;version&#34;, policy.apply(getOrganizationPolicyResult -&gt; getOrganizationPolicyResult.getVersion()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOrganizationPolicyResult> getOrganizationPolicy(GetOrganizationPolicyArgs args) {
@@ -34,6 +57,32 @@ public final class ProjectsFunctions {
      * for more details.
      * 
      * ## Example Usage
+     * ### Searching For Projects About To Be Deleted In An Org
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-org-projects = Output.of(ProjectsFunctions.getProject(GetProjectArgs.builder()
+     *             .filter(&#34;parent.id:012345678910 lifecycleState:DELETE_REQUESTED&#34;)
+     *             .build()));
+     * 
+     *         final var deletion-candidate = Output.of(OrganizationsFunctions.getProject(GetProjectArgs.builder()
+     *             .projectId(my_org_projects.getProjects()[0].getProjectId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetProjectResult> getProject(GetProjectArgs args) {

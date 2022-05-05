@@ -19,6 +19,38 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Spanner Database Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Instance(&#34;main&#34;, InstanceArgs.builder()        
+ *             .config(&#34;regional-europe-west1&#34;)
+ *             .displayName(&#34;main-instance&#34;)
+ *             .numNodes(1)
+ *             .build());
+ * 
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .instance(main.getName())
+ *             .ddls(            
+ *                 &#34;CREATE TABLE t1 (t1 INT64 NOT NULL,) PRIMARY KEY(t1)&#34;,
+ *                 &#34;CREATE TABLE t2 (t2 INT64 NOT NULL,) PRIMARY KEY(t2)&#34;)
+ *             .deletionProtection(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

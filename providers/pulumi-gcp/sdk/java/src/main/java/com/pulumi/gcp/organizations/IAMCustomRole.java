@@ -31,6 +31,36 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * This snippet creates a customized IAM organization role.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_custom_role = new IAMCustomRole(&#34;my-custom-role&#34;, IAMCustomRoleArgs.builder()        
+ *             .description(&#34;A description&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .permissions(            
+ *                 &#34;iam.roles.list&#34;,
+ *                 &#34;iam.roles.create&#34;,
+ *                 &#34;iam.roles.delete&#34;)
+ *             .roleId(&#34;myCustomRole&#34;)
+ *             .title(&#34;My Custom Role&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Customized IAM organization role can be imported using their URI, e.g.

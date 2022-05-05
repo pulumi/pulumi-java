@@ -29,6 +29,87 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
  * ## Example Usage
+ * ### Dialogflowcx Page Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agent = new CxAgent(&#34;agent&#34;, CxAgentArgs.builder()        
+ *             .displayName(&#34;dialogflowcx-agent&#34;)
+ *             .location(&#34;global&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .supportedLanguageCodes(            
+ *                 &#34;fr&#34;,
+ *                 &#34;de&#34;,
+ *                 &#34;es&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .description(&#34;Example description.&#34;)
+ *             .avatarUri(&#34;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&#34;)
+ *             .enableStackdriverLogging(true)
+ *             .enableSpellCorrection(true)
+ *             .speechToTextSettings(CxAgentSpeechToTextSettings.builder()
+ *                 .enableSpeechAdaptation(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var myPage2 = new CxPage(&#34;myPage2&#34;, CxPageArgs.builder()        
+ *             .parent(agent.getStartFlow())
+ *             .displayName(&#34;MyPage2&#34;)
+ *             .build());
+ * 
+ *         var basicPage = new CxPage(&#34;basicPage&#34;, CxPageArgs.builder()        
+ *             .parent(agent.getStartFlow())
+ *             .displayName(&#34;MyPage&#34;)
+ *             .entryFulfillment(CxPageEntryFulfillment.builder()
+ *                 .messages(CxPageEntryFulfillmentMessage.builder()
+ *                     .text(CxPageEntryFulfillmentMessageText.builder()
+ *                         .texts(&#34;Welcome to page&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .form(CxPageForm.builder()
+ *                 .parameters(CxPageFormParameter.builder()
+ *                     .displayName(&#34;param1&#34;)
+ *                     .entityType(&#34;projects/-/locations/-/agents/-/entityTypes/sys.date&#34;)
+ *                     .fillBehavior(CxPageFormParameterFillBehavior.builder()
+ *                         .initialPromptFulfillment(CxPageFormParameterFillBehaviorInitialPromptFulfillment.builder()
+ *                             .messages(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage.builder()
+ *                                 .text(CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText.builder()
+ *                                     .texts(&#34;Please provide param1&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .required(&#34;true&#34;)
+ *                     .redact(&#34;true&#34;)
+ *                     .build())
+ *                 .build())
+ *             .transitionRoutes(CxPageTransitionRoute.builder()
+ *                 .condition(&#34;$page.params.status = &#39;FINAL&#39;&#34;)
+ *                 .triggerFulfillment(CxPageTransitionRouteTriggerFulfillment.builder()
+ *                     .messages(CxPageTransitionRouteTriggerFulfillmentMessage.builder()
+ *                         .text(CxPageTransitionRouteTriggerFulfillmentMessageText.builder()
+ *                             .texts(&#34;information completed, navigating to page 2&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .targetPage(myPage2.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

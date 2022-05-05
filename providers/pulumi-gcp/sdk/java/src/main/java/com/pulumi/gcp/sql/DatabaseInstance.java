@@ -36,6 +36,82 @@ import javax.annotation.Nullable;
  * It is recommended to not set this field (or set it to true) until you&#39;re ready to destroy the instance and its databases.
  * 
  * ## Example Usage
+ * ### SQL Second Generation Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new DatabaseInstance(&#34;main&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;POSTGRES_11&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Private IP Instance
+ * &gt; **NOTE:** For private IP instance setup, note that the `gcp.sql.DatabaseInstance` does not actually interpolate values from `gcp.servicenetworking.Connection`. You must explicitly add a `depends_on`reference as shown below.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateNetwork = new Network(&#34;privateNetwork&#34;);
+ * 
+ *         var privateIpAddress = new GlobalAddress(&#34;privateIpAddress&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(privateNetwork.getId())
+ *             .build());
+ * 
+ *         var privateVpcConnection = new Connection(&#34;privateVpcConnection&#34;, ConnectionArgs.builder()        
+ *             .network(privateNetwork.getId())
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(privateIpAddress.getName())
+ *             .build());
+ * 
+ *         var dbNameSuffix = new RandomId(&#34;dbNameSuffix&#34;, RandomIdArgs.builder()        
+ *             .byteLength(4)
+ *             .build());
+ * 
+ *         var instance = new DatabaseInstance(&#34;instance&#34;, DatabaseInstanceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .databaseVersion(&#34;MYSQL_5_7&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .ipConfiguration(DatabaseInstanceSettingsIpConfiguration.builder()
+ *                     .ipv4Enabled(false)
+ *                     .privateNetwork(privateNetwork.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

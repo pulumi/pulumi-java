@@ -44,6 +44,61 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/images)
  * 
  * ## Example Usage
+ * ### Image Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Image(&#34;example&#34;, ImageArgs.builder()        
+ *             .rawDisk(ImageRawDisk.builder()
+ *                 .source(&#34;https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Image Guest Os
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Image(&#34;example&#34;, ImageArgs.builder()        
+ *             .guestOsFeatures(            
+ *                 ImageGuestOsFeature.builder()
+ *                     .type(&#34;SECURE_BOOT&#34;)
+ *                     .build(),
+ *                 ImageGuestOsFeature.builder()
+ *                     .type(&#34;MULTI_IP_SUBNET&#34;)
+ *                     .build())
+ *             .rawDisk(ImageRawDisk.builder()
+ *                 .source(&#34;https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

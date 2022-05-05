@@ -20,6 +20,53 @@ import javax.annotation.Nullable;
  * &gt; **Note:** This resource does not support regional disks (`gcp.compute.RegionDisk`). For regional disks, please refer to the `gcp.compute.RegionDiskResourcePolicyAttachment` resource.
  * 
  * ## Example Usage
+ * ### Disk Resource Policy Attachment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var ssd = new Disk(&#34;ssd&#34;, DiskArgs.builder()        
+ *             .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *             .size(50)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var attachment = new DiskResourcePolicyAttachment(&#34;attachment&#34;, DiskResourcePolicyAttachmentArgs.builder()        
+ *             .disk(ssd.getName())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var policy = new ResourcePolicy(&#34;policy&#34;, ResourcePolicyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy.builder()
+ *                 .schedule(ResourcePolicySnapshotSchedulePolicySchedule.builder()
+ *                     .dailySchedule(ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.builder()
+ *                         .daysInCycle(1)
+ *                         .startTime(&#34;04:00&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

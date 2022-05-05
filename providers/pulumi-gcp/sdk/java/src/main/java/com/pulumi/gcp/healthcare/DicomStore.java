@@ -29,6 +29,94 @@ import javax.annotation.Nullable;
  *     * [Creating a DICOM store](https://cloud.google.com/healthcare/docs/how-tos/dicom)
  * 
  * ## Example Usage
+ * ### Healthcare Dicom Store Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var default_ = new DicomStore(&#34;default&#34;, DicomStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .notificationConfig(DicomStoreNotificationConfig.builder()
+ *                 .pubsubTopic(topic.getId())
+ *                 .build())
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Dicom Store Bq Stream
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var bqDataset = new Dataset(&#34;bqDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;dicom_bq_ds&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .deleteContentsOnDestroy(true)
+ *             .build());
+ * 
+ *         var bqTable = new Table(&#34;bqTable&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(bqDataset.getDatasetId())
+ *             .tableId(&#34;dicom_bq_tb&#34;)
+ *             .build());
+ * 
+ *         var default_ = new DicomStore(&#34;default&#34;, DicomStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .notificationConfig(DicomStoreNotificationConfig.builder()
+ *                 .pubsubTopic(topic.getId())
+ *                 .build())
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .streamConfigs(DicomStoreStreamConfig.builder()
+ *                 .bigqueryDestination(DicomStoreStreamConfigBigqueryDestination.builder()
+ *                     .tableUri(Output.tuple(bqDataset.getProject(), bqDataset.getDatasetId(), bqTable.getTableId()).apply(values -&gt; {
+ *                         var project = values.t1;
+ *                         var datasetId = values.t2;
+ *                         var tableId = values.t3;
+ *                         return String.format(&#34;bq://%s.%s.%s&#34;, project,datasetId,tableId);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

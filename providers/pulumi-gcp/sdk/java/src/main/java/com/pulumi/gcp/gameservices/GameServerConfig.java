@@ -28,6 +28,88 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/game-servers/docs)
  * 
  * ## Example Usage
+ * ### Game Service Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultGameServerDeployment = new GameServerDeployment(&#34;defaultGameServerDeployment&#34;, GameServerDeploymentArgs.builder()        
+ *             .deploymentId(&#34;tf-test-deployment&#34;)
+ *             .description(&#34;a deployment description&#34;)
+ *             .build());
+ * 
+ *         var defaultGameServerConfig = new GameServerConfig(&#34;defaultGameServerConfig&#34;, GameServerConfigArgs.builder()        
+ *             .configId(&#34;tf-test-config&#34;)
+ *             .deploymentId(defaultGameServerDeployment.getDeploymentId())
+ *             .description(&#34;a config description&#34;)
+ *             .fleetConfigs(GameServerConfigFleetConfig.builder()
+ *                 .name(&#34;something-unique&#34;)
+ *                 .fleetSpec(serializeJson(
+ *                     jsonObject(
+ *                         jsonProperty(&#34;replicas&#34;, 1),
+ *                         jsonProperty(&#34;scheduling&#34;, &#34;Packed&#34;),
+ *                         jsonProperty(&#34;template&#34;, jsonObject(
+ *                             jsonProperty(&#34;metadata&#34;, jsonObject(
+ *                                 jsonProperty(&#34;name&#34;, &#34;tf-test-game-server-template&#34;)
+ *                             )),
+ *                             jsonProperty(&#34;spec&#34;, jsonObject(
+ *                                 jsonProperty(&#34;ports&#34;, jsonArray(jsonObject(
+ *                                     jsonProperty(&#34;name&#34;, &#34;default&#34;),
+ *                                     jsonProperty(&#34;portPolicy&#34;, &#34;Dynamic&#34;),
+ *                                     jsonProperty(&#34;containerPort&#34;, 7654),
+ *                                     jsonProperty(&#34;protocol&#34;, &#34;UDP&#34;)
+ *                                 ))),
+ *                                 jsonProperty(&#34;template&#34;, jsonObject(
+ *                                     jsonProperty(&#34;spec&#34;, jsonObject(
+ *                                         jsonProperty(&#34;containers&#34;, jsonArray(jsonObject(
+ *                                             jsonProperty(&#34;name&#34;, &#34;simple-udp-server&#34;),
+ *                                             jsonProperty(&#34;image&#34;, &#34;gcr.io/agones-images/udp-server:0.14&#34;)
+ *                                         )))
+ *                                     ))
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     )))
+ *                 .build())
+ *             .scalingConfigs(GameServerConfigScalingConfig.builder()
+ *                 .name(&#34;scaling-config-name&#34;)
+ *                 .fleetAutoscalerSpec(serializeJson(
+ *                     jsonObject(
+ *                         jsonProperty(&#34;policy&#34;, jsonObject(
+ *                             jsonProperty(&#34;type&#34;, &#34;Webhook&#34;),
+ *                             jsonProperty(&#34;webhook&#34;, jsonObject(
+ *                                 jsonProperty(&#34;service&#34;, jsonObject(
+ *                                     jsonProperty(&#34;name&#34;, &#34;autoscaler-webhook-service&#34;),
+ *                                     jsonProperty(&#34;namespace&#34;, &#34;default&#34;),
+ *                                     jsonProperty(&#34;path&#34;, &#34;scale&#34;)
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     )))
+ *                 .selectors(GameServerConfigScalingConfigSelector.builder()
+ *                     .labels(Map.of(&#34;one&#34;, &#34;two&#34;))
+ *                     .build())
+ *                 .schedules(GameServerConfigScalingConfigSchedule.builder()
+ *                     .cronJobDuration(&#34;3.500s&#34;)
+ *                     .cronSpec(&#34;0 0 * * 0&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

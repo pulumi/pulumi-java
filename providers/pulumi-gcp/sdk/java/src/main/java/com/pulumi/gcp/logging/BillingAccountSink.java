@@ -29,6 +29,39 @@ import javax.annotation.Nullable;
  * typical IAM roles granted on a project.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var log_bucket = new Bucket(&#34;log-bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var my_sink = new BillingAccountSink(&#34;my-sink&#34;, BillingAccountSinkArgs.builder()        
+ *             .description(&#34;some explanation on what this is&#34;)
+ *             .billingAccount(&#34;ABCDEF-012345-GHIJKL&#34;)
+ *             .destination(log_bucket.getName().apply(name -&gt; String.format(&#34;storage.googleapis.com/%s&#34;, name)))
+ *             .build());
+ * 
+ *         var log_writer = new IAMBinding(&#34;log-writer&#34;, IAMBindingArgs.builder()        
+ *             .project(&#34;your-project-id&#34;)
+ *             .role(&#34;roles/storage.objectCreator&#34;)
+ *             .members(my_sink.getWriterIdentity())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -86,7 +119,23 @@ public class BillingAccountSink extends com.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -96,7 +145,23 @@ public class BillingAccountSink extends com.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

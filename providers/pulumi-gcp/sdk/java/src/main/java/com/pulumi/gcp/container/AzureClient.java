@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
  * ## Example Usage
+ * ### Basic_azure_client
+ * A basic example of a containerazure azure client
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new AzureClient(&#34;primary&#34;, AzureClientArgs.builder()        
+ *             .applicationId(&#34;12345678-1234-1234-1234-123456789111&#34;)
+ *             .location(&#34;us-west1&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .tenantId(&#34;12345678-1234-1234-1234-123456789111&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

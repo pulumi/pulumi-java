@@ -24,6 +24,31 @@ public final class BigqueryFunctions {
      * [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bqSa = Output.of(BigqueryFunctions.getDefaultServiceAccount());
+     * 
+     *         var keySaUser = new CryptoKeyIAMMember(&#34;keySaUser&#34;, CryptoKeyIAMMemberArgs.builder()        
+     *             .cryptoKeyId(google_kms_crypto_key.getKey().getId())
+     *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+     *             .member(String.format(&#34;serviceAccount:%s&#34;, bqSa.apply(getDefaultServiceAccountResult -&gt; getDefaultServiceAccountResult.getEmail())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDefaultServiceAccountResult> getDefaultServiceAccount() {

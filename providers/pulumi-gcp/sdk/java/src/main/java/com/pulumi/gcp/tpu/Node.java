@@ -29,6 +29,33 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/tpu/docs/)
  * 
  * ## Example Usage
+ * ### TPU Node Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var available = Output.of(TpuFunctions.getTensorflowVersions());
+ * 
+ *         var tpu = new Node(&#34;tpu&#34;, NodeArgs.builder()        
+ *             .zone(&#34;us-central1-b&#34;)
+ *             .acceleratorType(&#34;v3-8&#34;)
+ *             .tensorflowVersion(available.apply(getTensorflowVersionsResult -&gt; getTensorflowVersionsResult.getVersions()[0]))
+ *             .cidrBlock(&#34;10.2.0.0/29&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

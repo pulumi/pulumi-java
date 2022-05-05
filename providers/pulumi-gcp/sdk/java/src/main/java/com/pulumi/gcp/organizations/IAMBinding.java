@@ -29,6 +29,29 @@ import javax.annotation.Nullable;
  *     your existing members are preserved.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new IAMBinding(&#34;binding&#34;, IAMBindingArgs.builder()        
+ *             .members(&#34;user:alice@gmail.com&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .role(&#34;roles/browser&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

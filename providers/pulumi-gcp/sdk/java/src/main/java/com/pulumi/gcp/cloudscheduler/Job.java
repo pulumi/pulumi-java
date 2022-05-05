@@ -29,6 +29,114 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/scheduler/)
  * 
  * ## Example Usage
+ * ### Scheduler Job App Engine
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .appEngineHttpTarget(JobAppEngineHttpTarget.builder()
+ *                 .appEngineRouting(JobAppEngineHttpTargetAppEngineRouting.builder()
+ *                     .instance(&#34;my-instance-001&#34;)
+ *                     .service(&#34;web&#34;)
+ *                     .version(&#34;prod&#34;)
+ *                     .build())
+ *                 .httpMethod(&#34;POST&#34;)
+ *                 .relativeUri(&#34;/ping&#34;)
+ *                 .build())
+ *             .attemptDeadline(&#34;320s&#34;)
+ *             .description(&#34;test app engine job&#34;)
+ *             .retryConfig(JobRetryConfig.builder()
+ *                 .maxDoublings(2)
+ *                 .maxRetryDuration(&#34;10s&#34;)
+ *                 .minBackoffDuration(&#34;1s&#34;)
+ *                 .retryCount(3)
+ *                 .build())
+ *             .schedule(&#34;*{@literal /}4 * * * *&#34;)
+ *             .timeZone(&#34;Europe/London&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Scheduler Job Oauth
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .description(&#34;test http job&#34;)
+ *             .schedule(&#34;*{@literal /}8 * * * *&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .attemptDeadline(&#34;320s&#34;)
+ *             .httpTarget(JobHttpTarget.builder()
+ *                 .httpMethod(&#34;GET&#34;)
+ *                 .uri(&#34;https://cloudscheduler.googleapis.com/v1/projects/my-project-name/locations/us-west1/jobs&#34;)
+ *                 .oauthToken(JobHttpTargetOauthToken.builder()
+ *                     .serviceAccountEmail(default_.getEmail())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Scheduler Job Oidc
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .description(&#34;test http job&#34;)
+ *             .schedule(&#34;*{@literal /}8 * * * *&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .attemptDeadline(&#34;320s&#34;)
+ *             .httpTarget(JobHttpTarget.builder()
+ *                 .httpMethod(&#34;GET&#34;)
+ *                 .uri(&#34;https://example.com/ping&#34;)
+ *                 .oidcToken(JobHttpTargetOidcToken.builder()
+ *                     .serviceAccountEmail(default_.getEmail())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

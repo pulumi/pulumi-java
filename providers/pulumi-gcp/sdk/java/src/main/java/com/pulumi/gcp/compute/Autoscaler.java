@@ -31,6 +31,146 @@ import javax.annotation.Nullable;
  *     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
  * 
  * ## Example Usage
+ * ### Autoscaler Single Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debian9 = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var defaultInstanceTemplate = new InstanceTemplate(&#34;defaultInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .canIpForward(false)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(debian9.apply(getImageResult -&gt; getImageResult.getId()))
+ *                 .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .serviceAccount(InstanceTemplateServiceAccount.builder()
+ *                 .scopes(                
+ *                     &#34;userinfo-email&#34;,
+ *                     &#34;compute-ro&#34;,
+ *                     &#34;storage-ro&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetPool = new TargetPool(&#34;defaultTargetPool&#34;);
+ * 
+ *         var defaultInstanceGroupManager = new InstanceGroupManager(&#34;defaultInstanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(defaultInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .targetPools(defaultTargetPool.getId())
+ *             .baseInstanceName(&#34;autoscaler-sample&#34;)
+ *             .build());
+ * 
+ *         var defaultAutoscaler = new Autoscaler(&#34;defaultAutoscaler&#34;, AutoscalerArgs.builder()        
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .target(defaultInstanceGroupManager.getId())
+ *             .autoscalingPolicy(AutoscalerAutoscalingPolicy.builder()
+ *                 .maxReplicas(5)
+ *                 .minReplicas(1)
+ *                 .cooldownPeriod(60)
+ *                 .metrics(AutoscalerAutoscalingPolicyMetric.builder()
+ *                     .name(&#34;pubsub.googleapis.com/subscription/num_undelivered_messages&#34;)
+ *                     .filter(&#34;resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription&#34;)
+ *                     .singleInstanceAssignment(65535)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Autoscaler Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debian9 = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var foobarInstanceTemplate = new InstanceTemplate(&#34;foobarInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .canIpForward(false)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(debian9.apply(getImageResult -&gt; getImageResult.getId()))
+ *                 .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .serviceAccount(InstanceTemplateServiceAccount.builder()
+ *                 .scopes(                
+ *                     &#34;userinfo-email&#34;,
+ *                     &#34;compute-ro&#34;,
+ *                     &#34;storage-ro&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var foobarTargetPool = new TargetPool(&#34;foobarTargetPool&#34;);
+ * 
+ *         var foobarInstanceGroupManager = new InstanceGroupManager(&#34;foobarInstanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(foobarInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .targetPools(foobarTargetPool.getId())
+ *             .baseInstanceName(&#34;foobar&#34;)
+ *             .build());
+ * 
+ *         var foobarAutoscaler = new Autoscaler(&#34;foobarAutoscaler&#34;, AutoscalerArgs.builder()        
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .target(foobarInstanceGroupManager.getId())
+ *             .autoscalingPolicy(AutoscalerAutoscalingPolicy.builder()
+ *                 .maxReplicas(5)
+ *                 .minReplicas(1)
+ *                 .cooldownPeriod(60)
+ *                 .cpuUtilization(AutoscalerAutoscalingPolicyCpuUtilization.builder()
+ *                     .target(0.5)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

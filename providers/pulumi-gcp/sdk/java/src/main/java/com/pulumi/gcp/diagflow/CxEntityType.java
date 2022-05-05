@@ -29,6 +29,62 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
  * ## Example Usage
+ * ### Dialogflowcx Entity Type Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agent = new CxAgent(&#34;agent&#34;, CxAgentArgs.builder()        
+ *             .displayName(&#34;dialogflowcx-agent&#34;)
+ *             .location(&#34;global&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .supportedLanguageCodes(            
+ *                 &#34;fr&#34;,
+ *                 &#34;de&#34;,
+ *                 &#34;es&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .description(&#34;Example description.&#34;)
+ *             .avatarUri(&#34;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&#34;)
+ *             .enableStackdriverLogging(true)
+ *             .enableSpellCorrection(true)
+ *             .speechToTextSettings(CxAgentSpeechToTextSettings.builder()
+ *                 .enableSpeechAdaptation(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var basicEntityType = new CxEntityType(&#34;basicEntityType&#34;, CxEntityTypeArgs.builder()        
+ *             .parent(agent.getId())
+ *             .displayName(&#34;MyEntity&#34;)
+ *             .kind(&#34;KIND_MAP&#34;)
+ *             .entities(            
+ *                 CxEntityTypeEntity.builder()
+ *                     .value(&#34;value1&#34;)
+ *                     .synonyms(                    
+ *                         &#34;synonym1&#34;,
+ *                         &#34;synonym2&#34;)
+ *                     .build(),
+ *                 CxEntityTypeEntity.builder()
+ *                     .value(&#34;value2&#34;)
+ *                     .synonyms(                    
+ *                         &#34;synonym3&#34;,
+ *                         &#34;synonym4&#34;)
+ *                     .build())
+ *             .enableFuzzyExtraction(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

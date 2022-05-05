@@ -28,6 +28,86 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/cx/docs)
  * 
  * ## Example Usage
+ * ### Dialogflowcx Flow Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agent = new CxAgent(&#34;agent&#34;, CxAgentArgs.builder()        
+ *             .displayName(&#34;dialogflowcx-agent&#34;)
+ *             .location(&#34;global&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .supportedLanguageCodes(            
+ *                 &#34;fr&#34;,
+ *                 &#34;de&#34;,
+ *                 &#34;es&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .description(&#34;Example description.&#34;)
+ *             .avatarUri(&#34;https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png&#34;)
+ *             .enableStackdriverLogging(true)
+ *             .enableSpellCorrection(true)
+ *             .speechToTextSettings(CxAgentSpeechToTextSettings.builder()
+ *                 .enableSpeechAdaptation(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var basicFlow = new CxFlow(&#34;basicFlow&#34;, CxFlowArgs.builder()        
+ *             .parent(agent.getId())
+ *             .displayName(&#34;MyFlow&#34;)
+ *             .description(&#34;Test Flow&#34;)
+ *             .nluSettings(CxFlowNluSettings.builder()
+ *                 .classificationThreshold(0.3)
+ *                 .modelType(&#34;MODEL_TYPE_STANDARD&#34;)
+ *                 .build())
+ *             .eventHandlers(            
+ *                 CxFlowEventHandler.builder()
+ *                     .event(&#34;custom-event&#34;)
+ *                     .triggerFulfillment(CxFlowEventHandlerTriggerFulfillment.builder()
+ *                         .returnPartialResponses(false)
+ *                         .messages(CxFlowEventHandlerTriggerFulfillmentMessage.builder()
+ *                             .text(CxFlowEventHandlerTriggerFulfillmentMessageText.builder()
+ *                                 .texts(&#34;I didn&#39;t get that. Can you say it again?&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build(),
+ *                 CxFlowEventHandler.builder()
+ *                     .event(&#34;sys.no-match-default&#34;)
+ *                     .triggerFulfillment(CxFlowEventHandlerTriggerFulfillment.builder()
+ *                         .returnPartialResponses(false)
+ *                         .messages(CxFlowEventHandlerTriggerFulfillmentMessage.builder()
+ *                             .text(CxFlowEventHandlerTriggerFulfillmentMessageText.builder()
+ *                                 .texts(&#34;Sorry, could you say that again?&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build(),
+ *                 CxFlowEventHandler.builder()
+ *                     .event(&#34;sys.no-input-default&#34;)
+ *                     .triggerFulfillment(CxFlowEventHandlerTriggerFulfillment.builder()
+ *                         .returnPartialResponses(false)
+ *                         .messages(CxFlowEventHandlerTriggerFulfillmentMessage.builder()
+ *                             .text(CxFlowEventHandlerTriggerFulfillmentMessageText.builder()
+ *                                 .texts(&#34;One more time?&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

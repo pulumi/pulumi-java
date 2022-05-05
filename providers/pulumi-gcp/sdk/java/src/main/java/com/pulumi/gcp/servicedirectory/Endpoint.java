@@ -26,6 +26,89 @@ import javax.annotation.Nullable;
  *     * [Configuring an endpoint](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_an_endpoint)
  * 
  * ## Example Usage
+ * ### Service Directory Endpoint Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleNamespace = new Namespace(&#34;exampleNamespace&#34;, NamespaceArgs.builder()        
+ *             .namespaceId(&#34;example-namespace&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .serviceId(&#34;example-service&#34;)
+ *             .namespace(exampleNamespace.getId())
+ *             .build());
+ * 
+ *         var exampleEndpoint = new Endpoint(&#34;exampleEndpoint&#34;, EndpointArgs.builder()        
+ *             .endpointId(&#34;example-endpoint&#34;)
+ *             .service(exampleService.getId())
+ *             .metadata(Map.ofEntries(
+ *                 Map.entry(&#34;stage&#34;, &#34;prod&#34;),
+ *                 Map.entry(&#34;region&#34;, &#34;us-central1&#34;)
+ *             ))
+ *             .address(&#34;1.2.3.4&#34;)
+ *             .port(5353)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Service Directory Endpoint With Network
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var exampleNetwork = new Network(&#34;exampleNetwork&#34;);
+ * 
+ *         var exampleNamespace = new Namespace(&#34;exampleNamespace&#34;, NamespaceArgs.builder()        
+ *             .namespaceId(&#34;example-namespace&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .serviceId(&#34;example-service&#34;)
+ *             .namespace(exampleNamespace.getId())
+ *             .build());
+ * 
+ *         var exampleEndpoint = new Endpoint(&#34;exampleEndpoint&#34;, EndpointArgs.builder()        
+ *             .endpointId(&#34;example-endpoint&#34;)
+ *             .service(exampleService.getId())
+ *             .metadata(Map.ofEntries(
+ *                 Map.entry(&#34;stage&#34;, &#34;prod&#34;),
+ *                 Map.entry(&#34;region&#34;, &#34;us-central1&#34;)
+ *             ))
+ *             .network(exampleNetwork.getName().apply(name -&gt; String.format(&#34;projects/%s/locations/global/networks/%s&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber()),name)))
+ *             .address(&#34;1.2.3.4&#34;)
+ *             .port(5353)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

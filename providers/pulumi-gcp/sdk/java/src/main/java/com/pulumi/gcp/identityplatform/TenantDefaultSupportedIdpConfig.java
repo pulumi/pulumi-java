@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * the marketplace prior to using this resource.
  * 
  * ## Example Usage
+ * ### Identity Platform Tenant Default Supported Idp Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tenant = new Tenant(&#34;tenant&#34;, TenantArgs.builder()        
+ *             .displayName(&#34;tenant&#34;)
+ *             .build());
+ * 
+ *         var idpConfig = new TenantDefaultSupportedIdpConfig(&#34;idpConfig&#34;, TenantDefaultSupportedIdpConfigArgs.builder()        
+ *             .enabled(true)
+ *             .tenant(tenant.getName())
+ *             .idpId(&#34;playgames.google.com&#34;)
+ *             .clientId(&#34;my-client-id&#34;)
+ *             .clientSecret(&#34;secret&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

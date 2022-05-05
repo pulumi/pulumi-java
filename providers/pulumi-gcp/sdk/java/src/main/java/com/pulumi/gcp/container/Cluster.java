@@ -53,6 +53,120 @@ import javax.annotation.Nullable;
  * plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### With A Separately Managed Node Pool (Recommended)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .removeDefaultNodePool(true)
+ *             .initialNodeCount(1)
+ *             .build());
+ * 
+ *         var primaryPreemptibleNodes = new NodePool(&#34;primaryPreemptibleNodes&#34;, NodePoolArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .cluster(primary.getName())
+ *             .nodeCount(1)
+ *             .nodeConfig(NodePoolNodeConfig.builder()
+ *                 .preemptible(true)
+ *                 .machineType(&#34;e2-medium&#34;)
+ *                 .serviceAccount(default_.getEmail())
+ *                 .oauthScopes(&#34;https://www.googleapis.com/auth/cloud-platform&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **Note:** It is recommended that node pools be created and managed as separate resources as in the example above.
+ * This allows node pools to be added and removed without recreating the cluster.  Node pools defined directly in the
+ * `gcp.container.Cluster` resource cannot be removed without re-creating the cluster.
+ * ### With The Default Node Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .initialNodeCount(3)
+ *             .nodeConfig(ClusterNodeConfig.builder()
+ *                 .serviceAccount(default_.getEmail())
+ *                 .oauthScopes(&#34;https://www.googleapis.com/auth/cloud-platform&#34;)
+ *                 .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *                 .tags(                
+ *                     &#34;foo&#34;,
+ *                     &#34;bar&#34;)
+ *                 .build())
+ *             .timeouts(Map.ofEntries(
+ *                 Map.entry(&#34;create&#34;, &#34;30m&#34;),
+ *                 Map.entry(&#34;update&#34;, &#34;40m&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Autopilot
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .enableAutopilot(true)
+ *             .location(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

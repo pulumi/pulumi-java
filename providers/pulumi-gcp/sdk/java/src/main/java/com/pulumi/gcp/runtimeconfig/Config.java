@@ -17,6 +17,29 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Example creating a RuntimeConfig resource.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_runtime_config = new Config(&#34;my-runtime-config&#34;, ConfigArgs.builder()        
+ *             .description(&#34;Runtime configuration values for my service&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Runtime Configs can be imported using the `name` or full config name, e.g.

@@ -32,6 +32,161 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/memorystore/docs/redis/)
  * 
  * ## Example Usage
+ * ### Redis Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cache = new Instance(&#34;cache&#34;, InstanceArgs.builder()        
+ *             .memorySizeGb(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Instance Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var redis-network = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;redis-test-network&#34;)
+ *             .build()));
+ * 
+ *         var cache = new Instance(&#34;cache&#34;, InstanceArgs.builder()        
+ *             .tier(&#34;STANDARD_HA&#34;)
+ *             .memorySizeGb(1)
+ *             .locationId(&#34;us-central1-a&#34;)
+ *             .alternativeLocationId(&#34;us-central1-f&#34;)
+ *             .authorizedNetwork(redis_network.getId())
+ *             .redisVersion(&#34;REDIS_4_0&#34;)
+ *             .displayName(&#34;Test Instance&#34;)
+ *             .reservedIpRange(&#34;192.168.0.0/29&#34;)
+ *             .labels(Map.ofEntries(
+ *                 Map.entry(&#34;my_key&#34;, &#34;my_val&#34;),
+ *                 Map.entry(&#34;other_key&#34;, &#34;other_val&#34;)
+ *             ))
+ *             .maintenancePolicy(InstanceMaintenancePolicy.builder()
+ *                 .weeklyMaintenanceWindows(InstanceMaintenancePolicyWeeklyMaintenanceWindow.builder()
+ *                     .day(&#34;TUESDAY&#34;)
+ *                     .startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime.builder()
+ *                         .hours(0)
+ *                         .minutes(30)
+ *                         .seconds(0)
+ *                         .nanos(0)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Instance Private Service
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var redis-network = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;redis-test-network&#34;)
+ *             .build()));
+ * 
+ *         var serviceRange = new GlobalAddress(&#34;serviceRange&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(redis_network.getId())
+ *             .build());
+ * 
+ *         var privateServiceConnection = new Connection(&#34;privateServiceConnection&#34;, ConnectionArgs.builder()        
+ *             .network(redis_network.getId())
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(serviceRange.getName())
+ *             .build());
+ * 
+ *         var cache = new Instance(&#34;cache&#34;, InstanceArgs.builder()        
+ *             .tier(&#34;STANDARD_HA&#34;)
+ *             .memorySizeGb(1)
+ *             .locationId(&#34;us-central1-a&#34;)
+ *             .alternativeLocationId(&#34;us-central1-f&#34;)
+ *             .authorizedNetwork(redis_network.getId())
+ *             .connectMode(&#34;PRIVATE_SERVICE_ACCESS&#34;)
+ *             .redisVersion(&#34;REDIS_4_0&#34;)
+ *             .displayName(&#34;Test Instance&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Instance Mrr
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var redis-network = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;redis-test-network&#34;)
+ *             .build()));
+ * 
+ *         var cache = new Instance(&#34;cache&#34;, InstanceArgs.builder()        
+ *             .tier(&#34;STANDARD_HA&#34;)
+ *             .memorySizeGb(5)
+ *             .locationId(&#34;us-central1-a&#34;)
+ *             .alternativeLocationId(&#34;us-central1-f&#34;)
+ *             .authorizedNetwork(redis_network.getId())
+ *             .redisVersion(&#34;REDIS_6_X&#34;)
+ *             .displayName(&#34;Terraform Test Instance&#34;)
+ *             .reservedIpRange(&#34;192.168.0.0/28&#34;)
+ *             .replicaCount(5)
+ *             .readReplicasMode(&#34;READ_REPLICAS_ENABLED&#34;)
+ *             .labels(Map.ofEntries(
+ *                 Map.entry(&#34;my_key&#34;, &#34;my_val&#34;),
+ *                 Map.entry(&#34;other_key&#34;, &#34;other_val&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -519,6 +674,26 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> reservedIpRange() {
         return this.reservedIpRange;
+    }
+    /**
+     * Optional. Additional IP range for node placement. Required when enabling read replicas on
+     * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+     * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+     * range associated with the private service access connection, or &#34;auto&#34;.
+     * 
+     */
+    @Export(name="secondaryIpRange", type=String.class, parameters={})
+    private Output<String> secondaryIpRange;
+
+    /**
+     * @return Optional. Additional IP range for node placement. Required when enabling read replicas on
+     * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+     * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+     * range associated with the private service access connection, or &#34;auto&#34;.
+     * 
+     */
+    public Output<String> secondaryIpRange() {
+        return this.secondaryIpRange;
     }
     /**
      * List of server CA certificates for the instance.

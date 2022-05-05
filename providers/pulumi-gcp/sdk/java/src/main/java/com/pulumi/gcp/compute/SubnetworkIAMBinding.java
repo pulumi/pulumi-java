@@ -28,14 +28,191 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.compute.SubnetworkIAMBinding` resources **can be** used in conjunction with `gcp.compute.SubnetworkIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_compute\_subnetwork\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/compute.networkUser&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new SubnetworkIAMPolicy(&#34;policy&#34;, SubnetworkIAMPolicyArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/compute.networkUser&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new SubnetworkIAMPolicy(&#34;policy&#34;, SubnetworkIAMPolicyArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_compute\_subnetwork\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new SubnetworkIAMBinding(&#34;binding&#34;, SubnetworkIAMBindingArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .role(&#34;roles/compute.networkUser&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new SubnetworkIAMBinding(&#34;binding&#34;, SubnetworkIAMBindingArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .role(&#34;roles/compute.networkUser&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .condition(SubnetworkIAMBindingCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_compute\_subnetwork\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new SubnetworkIAMMember(&#34;member&#34;, SubnetworkIAMMemberArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .role(&#34;roles/compute.networkUser&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new SubnetworkIAMMember(&#34;member&#34;, SubnetworkIAMMemberArgs.builder()        
+ *             .project(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getProject())
+ *             .region(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getRegion())
+ *             .subnetwork(google_compute_subnetwork.getNetwork-with-private-secondary-ip-ranges().getName())
+ *             .role(&#34;roles/compute.networkUser&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .condition(SubnetworkIAMMemberCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

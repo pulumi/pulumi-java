@@ -29,6 +29,108 @@ import javax.annotation.Nullable;
  *     * [Cloud VPN Overview](https://cloud.google.com/vpn/docs/concepts/overview)
  * 
  * ## Example Usage
+ * ### Ha Vpn Gateway Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network1 = new Network(&#34;network1&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var haGateway1 = new HaVpnGateway(&#34;haGateway1&#34;, HaVpnGatewayArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .network(network1.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Compute Ha Vpn Gateway Encrypted Interconnect
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var address1 = new Address(&#34;address1&#34;, AddressArgs.builder()        
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;IPSEC_INTERCONNECT&#34;)
+ *             .address(&#34;192.168.1.0&#34;)
+ *             .prefixLength(29)
+ *             .network(network.getSelfLink())
+ *             .build());
+ * 
+ *         var router = new Router(&#34;router&#34;, RouterArgs.builder()        
+ *             .network(network.getName())
+ *             .encryptedInterconnectRouter(true)
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(16550)
+ *                 .build())
+ *             .build());
+ * 
+ *         var attachment1 = new InterconnectAttachment(&#34;attachment1&#34;, InterconnectAttachmentArgs.builder()        
+ *             .edgeAvailabilityDomain(&#34;AVAILABILITY_DOMAIN_1&#34;)
+ *             .type(&#34;PARTNER&#34;)
+ *             .router(router.getId())
+ *             .encryption(&#34;IPSEC&#34;)
+ *             .ipsecInternalAddresses(address1.getSelfLink())
+ *             .build());
+ * 
+ *         var address2 = new Address(&#34;address2&#34;, AddressArgs.builder()        
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;IPSEC_INTERCONNECT&#34;)
+ *             .address(&#34;192.168.2.0&#34;)
+ *             .prefixLength(29)
+ *             .network(network.getSelfLink())
+ *             .build());
+ * 
+ *         var attachment2 = new InterconnectAttachment(&#34;attachment2&#34;, InterconnectAttachmentArgs.builder()        
+ *             .edgeAvailabilityDomain(&#34;AVAILABILITY_DOMAIN_2&#34;)
+ *             .type(&#34;PARTNER&#34;)
+ *             .router(router.getId())
+ *             .encryption(&#34;IPSEC&#34;)
+ *             .ipsecInternalAddresses(address2.getSelfLink())
+ *             .build());
+ * 
+ *         var vpn_gateway = new HaVpnGateway(&#34;vpn-gateway&#34;, HaVpnGatewayArgs.builder()        
+ *             .network(network.getId())
+ *             .vpnInterfaces(            
+ *                 HaVpnGatewayVpnInterface.builder()
+ *                     .id(0)
+ *                     .interconnectAttachment(attachment1.getSelfLink())
+ *                     .build(),
+ *                 HaVpnGatewayVpnInterface.builder()
+ *                     .id(1)
+ *                     .interconnectAttachment(attachment2.getSelfLink())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

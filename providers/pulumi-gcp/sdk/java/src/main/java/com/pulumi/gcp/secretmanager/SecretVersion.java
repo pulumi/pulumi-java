@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * state as plain-text.
  * 
  * ## Example Usage
+ * ### Secret Version Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var secret_basic = new Secret(&#34;secret-basic&#34;, SecretArgs.builder()        
+ *             .secretId(&#34;secret-version&#34;)
+ *             .labels(Map.of(&#34;label&#34;, &#34;my-label&#34;))
+ *             .replication(SecretReplication.builder()
+ *                 .automatic(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var secret_version_basic = new SecretVersion(&#34;secret-version-basic&#34;, SecretVersionArgs.builder()        
+ *             .secret(secret_basic.getId())
+ *             .secretData(&#34;secret-data&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,93 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/machine-images)
  * 
  * ## Example Usage
+ * ### Machine Image Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vm = new Instance(&#34;vm&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var image = new MachineImage(&#34;image&#34;, MachineImageArgs.builder()        
+ *             .sourceInstance(vm.getSelfLink())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Compute Machine Image Kms
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vm = new Instance(&#34;vm&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var keyRing = new KeyRing(&#34;keyRing&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;us&#34;)
+ *             .build());
+ * 
+ *         var cryptoKey = new CryptoKey(&#34;cryptoKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyRing.getId())
+ *             .build());
+ * 
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var kms_project_binding = new IAMMember(&#34;kms-project-binding&#34;, IAMMemberArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+ *             .member(String.format(&#34;serviceAccount:service-%s@compute-system.iam.gserviceaccount.com&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         var image = new MachineImage(&#34;image&#34;, MachineImageArgs.builder()        
+ *             .sourceInstance(vm.getSelfLink())
+ *             .machineImageEncryptionKey(MachineImageMachineImageEncryptionKey.builder()
+ *                 .kmsKeyName(cryptoKey.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

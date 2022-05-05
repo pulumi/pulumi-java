@@ -29,6 +29,27 @@ public final class StorageFunctions {
      * [API](https://cloud.google.com/storage/docs/json_api/v1/buckets).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-bucket = Output.of(StorageFunctions.getBucket(GetBucketArgs.builder()
+     *             .name(&#34;my-bucket&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
@@ -44,6 +65,30 @@ public final class StorageFunctions {
      * [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
      * 
      * ## Example Usage
+     * 
+     * Example picture stored within a folder.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var picture = Output.of(StorageFunctions.getBucketObject(GetBucketObjectArgs.builder()
+     *             .bucket(&#34;image-store&#34;)
+     *             .name(&#34;folder/butterfly01.jpg&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBucketObjectResult> getBucketObject() {
@@ -65,6 +110,31 @@ public final class StorageFunctions {
      * 
      * ## Example Usage
      * 
+     * Example file object  stored within a folder.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var key = Output.of(StorageFunctions.getBucketObjectContent(GetBucketObjectContentArgs.builder()
+     *             .name(&#34;encryptedkey&#34;)
+     *             .bucket(&#34;keystore&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;encrypted&#34;, key.apply(getBucketObjectContentResult -&gt; getBucketObjectContentResult.getContent()));
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetBucketObjectContentResult> getBucketObjectContent(GetBucketObjectContentArgs args) {
         return getBucketObjectContent(args, InvokeOptions.Empty);
@@ -78,7 +148,58 @@ public final class StorageFunctions {
      * For more info about signed URL&#39;s is available [here](https://cloud.google.com/storage/docs/access-control/signed-urls).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var artifact = Output.of(StorageFunctions.getObjectSignedUrl(GetObjectSignedUrlArgs.builder()
+     *             .bucket(&#34;install_binaries&#34;)
+     *             .path(&#34;path/to/install_file.bin&#34;)
+     *             .build()));
+     * 
+     *         var vm = new Instance(&#34;vm&#34;);
+     * 
+     *         }
+     * }
+     * ```
      * ## Full Example
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var getUrl = Output.of(StorageFunctions.getObjectSignedUrl(GetObjectSignedUrlArgs.builder()
+     *             .bucket(&#34;fried_chicken&#34;)
+     *             .path(&#34;path/to/file&#34;)
+     *             .contentMd5(&#34;pRviqwS4c4OTJRTe03FD1w==&#34;)
+     *             .contentType(&#34;text/plain&#34;)
+     *             .duration(&#34;2d&#34;)
+     *             .credentials(Files.readString(&#34;path/to/credentials.json&#34;))
+     *             .extensionHeaders(Map.of(&#34;x-goog-if-generation-match&#34;, 1))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetObjectSignedUrlResult> getObjectSignedUrl(GetObjectSignedUrlArgs args) {
@@ -122,6 +243,65 @@ public final class StorageFunctions {
      * [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
      * 
      * ## Example Usage
+     * ### Pub/Sub Notifications
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var gcsAccount = Output.of(StorageFunctions.getProjectServiceAccount());
+     * 
+     *         var binding = new TopicIAMBinding(&#34;binding&#34;, TopicIAMBindingArgs.builder()        
+     *             .topic(google_pubsub_topic.getTopic().getName())
+     *             .role(&#34;roles/pubsub.publisher&#34;)
+     *             .members(String.format(&#34;serviceAccount:%s&#34;, gcsAccount.apply(getProjectServiceAccountResult -&gt; getProjectServiceAccountResult.getEmailAddress())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Cloud KMS Keys
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var gcsAccount = Output.of(StorageFunctions.getProjectServiceAccount());
+     * 
+     *         var binding = new CryptoKeyIAMBinding(&#34;binding&#34;, CryptoKeyIAMBindingArgs.builder()        
+     *             .cryptoKeyId(&#34;your-crypto-key-id&#34;)
+     *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+     *             .members(String.format(&#34;serviceAccount:%s&#34;, gcsAccount.apply(getProjectServiceAccountResult -&gt; getProjectServiceAccountResult.getEmailAddress())))
+     *             .build());
+     * 
+     *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+     *             .location(&#34;US&#34;)
+     *             .encryption(BucketEncryption.builder()
+     *                 .defaultKmsKeyName(&#34;your-crypto-key-id&#34;)
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetProjectServiceAccountResult> getProjectServiceAccount() {
@@ -137,6 +317,26 @@ public final class StorageFunctions {
      * Use this data source to retrieve Storage Transfer service account for this project
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var default = Output.of(StorageFunctions.getTransferProjectServieAccount());
+     * 
+     *         ctx.export(&#34;defaultAccount&#34;, default_.getEmail());
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetTransferProjectServieAccountResult> getTransferProjectServieAccount() {

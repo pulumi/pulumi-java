@@ -20,6 +20,28 @@ public final class SqlFunctions {
      * Use this data source to get information about a Cloud SQL instance backup run.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var backup = Output.of(SqlFunctions.getBackupRun(GetBackupRunArgs.builder()
+     *             .instance(google_sql_database_instance.getMain().getName())
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBackupRunResult> getBackupRun(GetBackupRunArgs args) {
@@ -45,6 +67,27 @@ public final class SqlFunctions {
      * Use this data source to get information about a Cloud SQL instance.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var qa = Output.of(SqlFunctions.getDatabaseInstance(GetDatabaseInstanceArgs.builder()
+     *             .name(&#34;test-sql-instance&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDatabaseInstanceResult> getDatabaseInstance(GetDatabaseInstanceArgs args) {

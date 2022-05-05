@@ -26,6 +26,74 @@ import javax.annotation.Nullable;
  *     * [Google Cloud Router](https://cloud.google.com/router/docs/)
  * 
  * ## Example Usage
+ * ### Router Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobarNetwork = new Network(&#34;foobarNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var foobarRouter = new Router(&#34;foobarRouter&#34;, RouterArgs.builder()        
+ *             .network(foobarNetwork.getName())
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(64514)
+ *                 .advertiseMode(&#34;CUSTOM&#34;)
+ *                 .advertisedGroups(&#34;ALL_SUBNETS&#34;)
+ *                 .advertisedIpRanges(                
+ *                     RouterBgpAdvertisedIpRange.builder()
+ *                         .range(&#34;1.2.3.4&#34;)
+ *                         .build(),
+ *                     RouterBgpAdvertisedIpRange.builder()
+ *                         .range(&#34;6.7.0.0/16&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Compute Router Encrypted Interconnect
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var encrypted_interconnect_router = new Router(&#34;encrypted-interconnect-router&#34;, RouterArgs.builder()        
+ *             .network(network.getName())
+ *             .encryptedInterconnectRouter(true)
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(64514)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

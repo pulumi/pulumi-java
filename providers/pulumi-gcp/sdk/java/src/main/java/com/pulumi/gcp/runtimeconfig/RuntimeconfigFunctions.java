@@ -16,6 +16,27 @@ import java.util.concurrent.CompletableFuture;
 public final class RuntimeconfigFunctions {
     /**
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getConfig(GetConfigArgs.builder()
+     *             .name(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConfigResult> getConfig(GetConfigArgs args) {
@@ -26,6 +47,28 @@ public final class RuntimeconfigFunctions {
     }
     /**
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var run-service = Output.of(RuntimeconfigFunctions.getVariable(GetVariableArgs.builder()
+     *             .name(&#34;prod-variables/hostname&#34;)
+     *             .parent(&#34;my-service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVariableResult> getVariable(GetVariableArgs args) {

@@ -29,6 +29,118 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ### Bigquery Connection Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new DatabaseInstance(&#34;instance&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;POSTGRES_11&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var db = new Database(&#34;db&#34;, DatabaseArgs.builder()        
+ *             .instance(instance.getName())
+ *             .build());
+ * 
+ *         var pwd = new RandomPassword(&#34;pwd&#34;, RandomPasswordArgs.builder()        
+ *             .length(16)
+ *             .special(false)
+ *             .build());
+ * 
+ *         var user = new User(&#34;user&#34;, UserArgs.builder()        
+ *             .instance(instance.getName())
+ *             .password(pwd.getResult())
+ *             .build());
+ * 
+ *         var connection = new Connection(&#34;connection&#34;, ConnectionArgs.builder()        
+ *             .friendlyName(&#34;👋&#34;)
+ *             .description(&#34;a riveting description&#34;)
+ *             .cloudSql(ConnectionCloudSql.builder()
+ *                 .instanceId(instance.getConnectionName())
+ *                 .database(db.getName())
+ *                 .type(&#34;POSTGRES&#34;)
+ *                 .credential(ConnectionCloudSqlCredential.builder()
+ *                     .username(user.getName())
+ *                     .password(user.getPassword())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Connection Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new DatabaseInstance(&#34;instance&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;POSTGRES_11&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var db = new Database(&#34;db&#34;, DatabaseArgs.builder()        
+ *             .instance(instance.getName())
+ *             .build());
+ * 
+ *         var pwd = new RandomPassword(&#34;pwd&#34;, RandomPasswordArgs.builder()        
+ *             .length(16)
+ *             .special(false)
+ *             .build());
+ * 
+ *         var user = new User(&#34;user&#34;, UserArgs.builder()        
+ *             .instance(instance.getName())
+ *             .password(pwd.getResult())
+ *             .build());
+ * 
+ *         var connection = new Connection(&#34;connection&#34;, ConnectionArgs.builder()        
+ *             .connectionId(&#34;my-connection&#34;)
+ *             .location(&#34;US&#34;)
+ *             .friendlyName(&#34;👋&#34;)
+ *             .description(&#34;a riveting description&#34;)
+ *             .cloudSql(ConnectionCloudSql.builder()
+ *                 .instanceId(instance.getConnectionName())
+ *                 .database(db.getName())
+ *                 .type(&#34;POSTGRES&#34;)
+ *                 .credential(ConnectionCloudSqlCredential.builder()
+ *                     .username(user.getName())
+ *                     .password(user.getPassword())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

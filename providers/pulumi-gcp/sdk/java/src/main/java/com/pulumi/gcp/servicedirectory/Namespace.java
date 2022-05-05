@@ -26,6 +26,33 @@ import javax.annotation.Nullable;
  *     * [Configuring a namespace](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_namespace)
  * 
  * ## Example Usage
+ * ### Service Directory Namespace Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Namespace(&#34;example&#34;, NamespaceArgs.builder()        
+ *             .namespaceId(&#34;example-namespace&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .labels(Map.ofEntries(
+ *                 Map.entry(&#34;key&#34;, &#34;value&#34;),
+ *                 Map.entry(&#34;foo&#34;, &#34;bar&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

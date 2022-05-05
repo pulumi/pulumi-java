@@ -27,6 +27,83 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/monitoring/custom-metrics/)
  * 
  * ## Example Usage
+ * ### Monitoring Metric Descriptor Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new MetricDescriptor(&#34;basic&#34;, MetricDescriptorArgs.builder()        
+ *             .description(&#34;Daily sales records from all branch stores.&#34;)
+ *             .displayName(&#34;metric-descriptor&#34;)
+ *             .labels(MetricDescriptorLabel.builder()
+ *                 .description(&#34;The ID of the store.&#34;)
+ *                 .key(&#34;store_id&#34;)
+ *                 .valueType(&#34;STRING&#34;)
+ *                 .build())
+ *             .launchStage(&#34;BETA&#34;)
+ *             .metadata(MetricDescriptorMetadata.builder()
+ *                 .ingestDelay(&#34;30s&#34;)
+ *                 .samplePeriod(&#34;60s&#34;)
+ *                 .build())
+ *             .metricKind(&#34;GAUGE&#34;)
+ *             .type(&#34;custom.googleapis.com/stores/daily_sales&#34;)
+ *             .unit(&#34;{USD}&#34;)
+ *             .valueType(&#34;DOUBLE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Monitoring Metric Descriptor Alert
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var withAlert = new MetricDescriptor(&#34;withAlert&#34;, MetricDescriptorArgs.builder()        
+ *             .description(&#34;Daily sales records from all branch stores.&#34;)
+ *             .displayName(&#34;metric-descriptor&#34;)
+ *             .metricKind(&#34;GAUGE&#34;)
+ *             .type(&#34;custom.googleapis.com/stores/daily_sales&#34;)
+ *             .unit(&#34;{USD}&#34;)
+ *             .valueType(&#34;DOUBLE&#34;)
+ *             .build());
+ * 
+ *         var alertPolicy = new AlertPolicy(&#34;alertPolicy&#34;, AlertPolicyArgs.builder()        
+ *             .combiner(&#34;OR&#34;)
+ *             .conditions(AlertPolicyCondition.builder()
+ *                 .conditionThreshold(AlertPolicyConditionConditionThreshold.builder()
+ *                     .comparison(&#34;COMPARISON_GT&#34;)
+ *                     .duration(&#34;60s&#34;)
+ *                     .filter(withAlert.getType().apply(type -&gt; String.format(&#34;metric.type=\&#34;%s\&#34; AND resource.type=\&#34;gce_instance\&#34;&#34;, type)))
+ *                     .build())
+ *                 .displayName(&#34;test condition&#34;)
+ *                 .build())
+ *             .displayName(&#34;metric-descriptor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

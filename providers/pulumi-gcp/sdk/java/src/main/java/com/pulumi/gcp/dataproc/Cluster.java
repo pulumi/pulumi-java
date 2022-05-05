@@ -28,6 +28,128 @@ import javax.annotation.Nullable;
  * whole cluster!
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var simplecluster = new Cluster(&#34;simplecluster&#34;, ClusterArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Advanced
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var mycluster = new Cluster(&#34;mycluster&#34;, ClusterArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .gracefulDecommissionTimeout(&#34;120s&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .clusterConfig(ClusterClusterConfig.builder()
+ *                 .stagingBucket(&#34;dataproc-staging-bucket&#34;)
+ *                 .masterConfig(ClusterClusterConfigMasterConfig.builder()
+ *                     .numInstances(1)
+ *                     .machineType(&#34;e2-medium&#34;)
+ *                     .diskConfig(ClusterClusterConfigMasterConfigDiskConfig.builder()
+ *                         .bootDiskType(&#34;pd-ssd&#34;)
+ *                         .bootDiskSizeGb(30)
+ *                         .build())
+ *                     .build())
+ *                 .workerConfig(ClusterClusterConfigWorkerConfig.builder()
+ *                     .numInstances(2)
+ *                     .machineType(&#34;e2-medium&#34;)
+ *                     .minCpuPlatform(&#34;Intel Skylake&#34;)
+ *                     .diskConfig(ClusterClusterConfigWorkerConfigDiskConfig.builder()
+ *                         .bootDiskSizeGb(30)
+ *                         .numLocalSsds(1)
+ *                         .build())
+ *                     .build())
+ *                 .preemptibleWorkerConfig(ClusterClusterConfigPreemptibleWorkerConfig.builder()
+ *                     .numInstances(0)
+ *                     .build())
+ *                 .softwareConfig(ClusterClusterConfigSoftwareConfig.builder()
+ *                     .imageVersion(&#34;2.0.35-debian10&#34;)
+ *                     .overrideProperties(Map.of(&#34;dataproc:dataproc.allow.zero.workers&#34;, &#34;true&#34;))
+ *                     .build())
+ *                 .gceClusterConfig(ClusterClusterConfigGceClusterConfig.builder()
+ *                     .tags(                    
+ *                         &#34;foo&#34;,
+ *                         &#34;bar&#34;)
+ *                     .serviceAccount(default_.getEmail())
+ *                     .serviceAccountScopes(&#34;cloud-platform&#34;)
+ *                     .build())
+ *                 .initializationActions(ClusterClusterConfigInitializationAction.builder()
+ *                     .script(&#34;gs://dataproc-initialization-actions/stackdriver/stackdriver.sh&#34;)
+ *                     .timeoutSec(500)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using A GPU Accelerator
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var acceleratedCluster = new Cluster(&#34;acceleratedCluster&#34;, ClusterArgs.builder()        
+ *             .clusterConfig(ClusterClusterConfig.builder()
+ *                 .gceClusterConfig(ClusterClusterConfigGceClusterConfig.builder()
+ *                     .zone(&#34;us-central1-a&#34;)
+ *                     .build())
+ *                 .masterConfig(ClusterClusterConfigMasterConfig.builder()
+ *                     .accelerators(ClusterClusterConfigMasterConfigAccelerator.builder()
+ *                         .acceleratorCount(&#34;1&#34;)
+ *                         .acceleratorType(&#34;nvidia-tesla-k80&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

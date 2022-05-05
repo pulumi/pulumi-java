@@ -32,6 +32,89 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Use [gcp.compute.RegionInstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_region_instance_group_manager.html) to create a regional (multi-zone) instance group manager.
  * 
  * ## Example Usage
+ * ### With Top Level Instance Template (`Google` Provider)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var autohealing = new HealthCheck(&#34;autohealing&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(5)
+ *             .timeoutSec(5)
+ *             .healthyThreshold(2)
+ *             .unhealthyThreshold(10)
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .requestPath(&#34;/healthz&#34;)
+ *                 .port(&#34;8080&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var appserver = new InstanceGroupManager(&#34;appserver&#34;, InstanceGroupManagerArgs.builder()        
+ *             .baseInstanceName(&#34;app&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(google_compute_instance_template.getAppserver().getId())
+ *                 .build())
+ *             .targetPools(google_compute_target_pool.getAppserver().getId())
+ *             .targetSize(2)
+ *             .namedPorts(InstanceGroupManagerNamedPort.builder()
+ *                 .name(&#34;customHTTP&#34;)
+ *                 .port(8888)
+ *                 .build())
+ *             .autoHealingPolicies(InstanceGroupManagerAutoHealingPolicies.builder()
+ *                 .healthCheck(autohealing.getId())
+ *                 .initialDelaySec(300)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Multiple Versions (`Google-Beta` Provider)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var appserver = new InstanceGroupManager(&#34;appserver&#34;, InstanceGroupManagerArgs.builder()        
+ *             .baseInstanceName(&#34;app&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .targetSize(5)
+ *             .versions(            
+ *                 InstanceGroupManagerVersion.builder()
+ *                     .name(&#34;appserver&#34;)
+ *                     .instanceTemplate(google_compute_instance_template.getAppserver().getId())
+ *                     .build(),
+ *                 InstanceGroupManagerVersion.builder()
+ *                     .name(&#34;appserver-canary&#34;)
+ *                     .instanceTemplate(google_compute_instance_template.getAppserver-canary().getId())
+ *                     .targetSize(InstanceGroupManagerVersionTargetSize.builder()
+ *                         .fixed(1)
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

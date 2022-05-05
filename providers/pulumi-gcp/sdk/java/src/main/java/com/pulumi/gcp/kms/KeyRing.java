@@ -27,6 +27,28 @@ import javax.annotation.Nullable;
  *     * [Creating a key ring](https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring)
  * 
  * ## Example Usage
+ * ### Kms Key Ring Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example_keyring = new KeyRing(&#34;example-keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

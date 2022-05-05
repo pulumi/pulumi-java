@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * The NetworkConnectivity Hub resource
  * 
  * ## Example Usage
+ * ### Basic_hub
+ * A basic test of a networkconnectivity hub
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Hub(&#34;primary&#34;, HubArgs.builder()        
+ *             .description(&#34;A sample hub&#34;)
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

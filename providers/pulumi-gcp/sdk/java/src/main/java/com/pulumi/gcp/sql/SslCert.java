@@ -18,6 +18,41 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Example creating a SQL Client Certificate.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dbNameSuffix = new RandomId(&#34;dbNameSuffix&#34;, RandomIdArgs.builder()        
+ *             .byteLength(4)
+ *             .build());
+ * 
+ *         var main = new DatabaseInstance(&#34;main&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;MYSQL_5_7&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var clientCert = new SslCert(&#34;clientCert&#34;, SslCertArgs.builder()        
+ *             .commonName(&#34;client-name&#34;)
+ *             .instance(main.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Since the contents of the certificate cannot be accessed after its creation, this resource cannot be imported.

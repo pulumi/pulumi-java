@@ -26,6 +26,71 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/container-analysis/)
  * 
  * ## Example Usage
+ * ### Container Analysis Occurrence Kms
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var note = new Note(&#34;note&#34;, NoteArgs.builder()        
+ *             .attestationAuthority(NoteAttestationAuthority.builder()
+ *                 .hint(NoteAttestationAuthorityHint.builder()
+ *                     .humanReadableName(&#34;Attestor Note&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         final var keyring = Output.of(KmsFunctions.getKMSKeyRing(GetKMSKeyRingArgs.builder()
+ *             .name(&#34;my-key-ring&#34;)
+ *             .location(&#34;global&#34;)
+ *             .build()));
+ * 
+ *         final var crypto-key = Output.of(KmsFunctions.getKMSCryptoKey(GetKMSCryptoKeyArgs.builder()
+ *             .name(&#34;my-key&#34;)
+ *             .keyRing(keyring.apply(getKMSKeyRingResult -&gt; getKMSKeyRingResult.getId()))
+ *             .build()));
+ * 
+ *         final var version = Output.of(KmsFunctions.getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs.builder()
+ *             .cryptoKey(crypto_key.getId())
+ *             .build()));
+ * 
+ *         var attestor = new Attestor(&#34;attestor&#34;, AttestorArgs.builder()        
+ *             .attestationAuthorityNote(AttestorAttestationAuthorityNote.builder()
+ *                 .noteReference(note.getName())
+ *                 .publicKeys(AttestorAttestationAuthorityNotePublicKey.builder()
+ *                     .id(version.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult.getId()))
+ *                     .pkixPublicKey(AttestorAttestationAuthorityNotePublicKeyPkixPublicKey.builder()
+ *                         .publicKeyPem(version.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult.getPublicKeys()[0].getPem()))
+ *                         .signatureAlgorithm(version.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult.getPublicKeys()[0].getAlgorithm()))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var occurrence = new Occurence(&#34;occurrence&#34;, OccurenceArgs.builder()        
+ *             .resourceUri(&#34;gcr.io/my-project/my-image&#34;)
+ *             .noteName(note.getId())
+ *             .attestation(OccurenceAttestation.builder()
+ *                 .serializedPayload(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;path/to/my/payload.json&#34;))))
+ *                 .signatures(OccurenceAttestationSignature.builder()
+ *                     .publicKeyId(version.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult.getId()))
+ *                     .serializedPayload(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;path/to/my/payload.json.sig&#34;))))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -32,6 +32,30 @@ import javax.annotation.Nullable;
  *     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
  * 
  * ## Example Usage
+ * ### Https Health Check Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new HttpsHealthCheck(&#34;default&#34;, HttpsHealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .requestPath(&#34;/health_check&#34;)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

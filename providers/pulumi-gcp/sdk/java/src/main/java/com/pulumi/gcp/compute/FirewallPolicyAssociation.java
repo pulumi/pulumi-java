@@ -19,6 +19,34 @@ import javax.annotation.Nullable;
  * For more information on applying hierarchical firewall policies see the [official documentation](https://cloud.google.com/vpc/docs/firewall-policies#managing_hierarchical_firewall_policy_resources)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultFirewallPolicy = new FirewallPolicy(&#34;defaultFirewallPolicy&#34;, FirewallPolicyArgs.builder()        
+ *             .parent(&#34;organizations/12345&#34;)
+ *             .shortName(&#34;my-policy&#34;)
+ *             .description(&#34;Example Resource&#34;)
+ *             .build());
+ * 
+ *         var defaultFirewallPolicyAssociation = new FirewallPolicyAssociation(&#34;defaultFirewallPolicyAssociation&#34;, FirewallPolicyAssociationArgs.builder()        
+ *             .firewallPolicy(defaultFirewallPolicy.getId())
+ *             .attachmentTarget(google_folder.getFolder().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

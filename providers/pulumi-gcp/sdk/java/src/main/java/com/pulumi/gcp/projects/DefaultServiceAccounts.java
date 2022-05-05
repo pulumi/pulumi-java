@@ -33,6 +33,53 @@ import javax.annotation.Nullable;
  * or additional service accounts are added, this resource will need to be updated.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new DefaultServiceAccounts(&#34;myProject&#34;, DefaultServiceAccountsArgs.builder()        
+ *             .action(&#34;DELETE&#34;)
+ *             .project(&#34;my-project-id&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To enable the default service accounts on the resource destroy:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProject = new DefaultServiceAccounts(&#34;myProject&#34;, DefaultServiceAccountsArgs.builder()        
+ *             .action(&#34;DISABLE&#34;)
+ *             .project(&#34;my-project-id&#34;)
+ *             .restorePolicy(&#34;REVERT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

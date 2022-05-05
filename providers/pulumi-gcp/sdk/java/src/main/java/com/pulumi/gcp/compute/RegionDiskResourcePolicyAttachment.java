@@ -20,6 +20,68 @@ import javax.annotation.Nullable;
  * &gt; **Note:** This resource does not support zonal disks (`gcp.compute.Disk`). For zonal disks, please refer to the `gcp.compute.DiskResourcePolicyAttachment` resource.
  * 
  * ## Example Usage
+ * ### Region Disk Resource Policy Attachment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disk = new Disk(&#34;disk&#34;, DiskArgs.builder()        
+ *             .image(&#34;debian-cloud/debian-9&#34;)
+ *             .size(50)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var snapdisk = new Snapshot(&#34;snapdisk&#34;, SnapshotArgs.builder()        
+ *             .sourceDisk(disk.getName())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var ssd = new RegionDisk(&#34;ssd&#34;, RegionDiskArgs.builder()        
+ *             .replicaZones(            
+ *                 &#34;us-central1-a&#34;,
+ *                 &#34;us-central1-f&#34;)
+ *             .snapshot(snapdisk.getId())
+ *             .size(50)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var attachment = new RegionDiskResourcePolicyAttachment(&#34;attachment&#34;, RegionDiskResourcePolicyAttachmentArgs.builder()        
+ *             .disk(ssd.getName())
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var policy = new ResourcePolicy(&#34;policy&#34;, ResourcePolicyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy.builder()
+ *                 .schedule(ResourcePolicySnapshotSchedulePolicySchedule.builder()
+ *                     .dailySchedule(ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.builder()
+ *                         .daysInCycle(1)
+ *                         .startTime(&#34;04:00&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

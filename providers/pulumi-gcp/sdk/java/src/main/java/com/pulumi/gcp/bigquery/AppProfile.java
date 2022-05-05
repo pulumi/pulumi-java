@@ -25,6 +25,143 @@ import javax.annotation.Nullable;
  * * [API documentation](https://cloud.google.com/bigtable/docs/reference/admin/rest/v2/projects.instances.appProfiles)
  * 
  * ## Example Usage
+ * ### Bigtable App Profile Anycluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(            
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-1&#34;)
+ *                     .zone(&#34;us-central1-a&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build(),
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-2&#34;)
+ *                     .zone(&#34;us-central1-b&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build(),
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-3&#34;)
+ *                     .zone(&#34;us-central1-c&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var ap = new AppProfile(&#34;ap&#34;, AppProfileArgs.builder()        
+ *             .instance(instance.getName())
+ *             .appProfileId(&#34;bt-profile&#34;)
+ *             .multiClusterRoutingUseAny(true)
+ *             .ignoreWarnings(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigtable App Profile Singlecluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(InstanceCluster.builder()
+ *                 .clusterId(&#34;cluster-1&#34;)
+ *                 .zone(&#34;us-central1-b&#34;)
+ *                 .numNodes(3)
+ *                 .storageType(&#34;HDD&#34;)
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var ap = new AppProfile(&#34;ap&#34;, AppProfileArgs.builder()        
+ *             .instance(instance.getName())
+ *             .appProfileId(&#34;bt-profile&#34;)
+ *             .singleClusterRouting(AppProfileSingleClusterRouting.builder()
+ *                 .clusterId(&#34;cluster-1&#34;)
+ *                 .allowTransactionalWrites(true)
+ *                 .build())
+ *             .ignoreWarnings(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigtable App Profile Multicluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(            
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-1&#34;)
+ *                     .zone(&#34;us-central1-a&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build(),
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-2&#34;)
+ *                     .zone(&#34;us-central1-b&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build(),
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;cluster-3&#34;)
+ *                     .zone(&#34;us-central1-c&#34;)
+ *                     .numNodes(3)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var ap = new AppProfile(&#34;ap&#34;, AppProfileArgs.builder()        
+ *             .instance(instance.getName())
+ *             .appProfileId(&#34;bt-profile&#34;)
+ *             .multiClusterRoutingUseAny(true)
+ *             .multiClusterRoutingClusterIds(            
+ *                 &#34;cluster-1&#34;,
+ *                 &#34;cluster-2&#34;)
+ *             .ignoreWarnings(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

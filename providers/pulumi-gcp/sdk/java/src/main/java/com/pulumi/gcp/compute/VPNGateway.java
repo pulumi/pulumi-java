@@ -27,6 +27,65 @@ import javax.annotation.Nullable;
  * see the [Classic VPN partial deprecation page](https://cloud.google.com/network-connectivity/docs/vpn/deprecations/classic-vpn-deprecation).
  * 
  * ## Example Usage
+ * ### Target Vpn Gateway Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network1 = new Network(&#34;network1&#34;);
+ * 
+ *         var targetGateway = new VPNGateway(&#34;targetGateway&#34;, VPNGatewayArgs.builder()        
+ *             .network(network1.getId())
+ *             .build());
+ * 
+ *         var vpnStaticIp = new Address(&#34;vpnStaticIp&#34;);
+ * 
+ *         var frEsp = new ForwardingRule(&#34;frEsp&#34;, ForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;ESP&#34;)
+ *             .ipAddress(vpnStaticIp.getAddress())
+ *             .target(targetGateway.getId())
+ *             .build());
+ * 
+ *         var frUdp500 = new ForwardingRule(&#34;frUdp500&#34;, ForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;UDP&#34;)
+ *             .portRange(&#34;500&#34;)
+ *             .ipAddress(vpnStaticIp.getAddress())
+ *             .target(targetGateway.getId())
+ *             .build());
+ * 
+ *         var frUdp4500 = new ForwardingRule(&#34;frUdp4500&#34;, ForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;UDP&#34;)
+ *             .portRange(&#34;4500&#34;)
+ *             .ipAddress(vpnStaticIp.getAddress())
+ *             .target(targetGateway.getId())
+ *             .build());
+ * 
+ *         var tunnel1 = new VPNTunnel(&#34;tunnel1&#34;, VPNTunnelArgs.builder()        
+ *             .peerIp(&#34;15.0.0.120&#34;)
+ *             .sharedSecret(&#34;a secret message&#34;)
+ *             .targetVpnGateway(targetGateway.getId())
+ *             .build());
+ * 
+ *         var route1 = new Route(&#34;route1&#34;, RouteArgs.builder()        
+ *             .network(network1.getName())
+ *             .destRange(&#34;15.0.0.0/24&#34;)
+ *             .priority(1000)
+ *             .nextHopVpnTunnel(tunnel1.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

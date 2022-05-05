@@ -46,6 +46,451 @@ import javax.annotation.Nullable;
  * Have a look at the Cloud Run Anthos example below.
  * 
  * ## Example Usage
+ * ### Cloud Run Service Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .latestRevision(true)
+ *                 .percent(100)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Sql
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new DatabaseInstance(&#34;instance&#34;, DatabaseInstanceArgs.builder()        
+ *             .region(&#34;us-east1&#34;)
+ *             .databaseVersion(&#34;MYSQL_5_7&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .metadata(ServiceTemplateMetadata.builder()
+ *                     .annotations(Map.ofEntries(
+ *                         Map.entry(&#34;autoscaling.knative.dev/maxScale&#34;, &#34;1000&#34;),
+ *                         Map.entry(&#34;run.googleapis.com/cloudsql-instances&#34;, instance.getConnectionName()),
+ *                         Map.entry(&#34;run.googleapis.com/client-name&#34;, &#34;demo&#34;)
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .autogenerateRevisionName(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Noauth
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         final var noauthIAMPolicy = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/run.invoker&#34;)
+ *                 .members(&#34;allUsers&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var noauthIamPolicy = new IamPolicy(&#34;noauthIamPolicy&#34;, IamPolicyArgs.builder()        
+ *             .location(default_.getLocation())
+ *             .project(default_.getProject())
+ *             .service(default_.getName())
+ *             .policyData(noauthIAMPolicy.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Multiple Environment Variables
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .envs(                        
+ *                             ServiceTemplateSpecContainerEnv.builder()
+ *                                 .name(&#34;SOURCE&#34;)
+ *                                 .value(&#34;remote&#34;)
+ *                                 .build(),
+ *                             ServiceTemplateSpecContainerEnv.builder()
+ *                                 .name(&#34;TARGET&#34;)
+ *                                 .value(&#34;home&#34;)
+ *                                 .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .metadata(ServiceMetadata.builder()
+ *                 .annotations(Map.of(&#34;generated-by&#34;, &#34;magic-modules&#34;))
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .autogenerateRevisionName(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Traffic Split
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .metadata(ServiceTemplateMetadata.builder()
+ *                     .name(&#34;cloudrun-srv-green&#34;)
+ *                     .build())
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .traffics(            
+ *                 ServiceTraffic.builder()
+ *                     .percent(25)
+ *                     .revisionName(&#34;cloudrun-srv-green&#34;)
+ *                     .build(),
+ *                 ServiceTraffic.builder()
+ *                     .percent(75)
+ *                     .revisionName(&#34;cloudrun-srv-blue&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Secret Environment Variables
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var secret = new Secret(&#34;secret&#34;, SecretArgs.builder()        
+ *             .secretId(&#34;secret&#34;)
+ *             .replication(SecretReplication.builder()
+ *                 .automatic(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var secret_version_data = new SecretVersion(&#34;secret-version-data&#34;, SecretVersionArgs.builder()        
+ *             .secret(secret.getName())
+ *             .secretData(&#34;secret-data&#34;)
+ *             .build());
+ * 
+ *         var secret_access = new SecretIamMember(&#34;secret-access&#34;, SecretIamMemberArgs.builder()        
+ *             .secretId(secret.getId())
+ *             .role(&#34;roles/secretmanager.secretAccessor&#34;)
+ *             .member(String.format(&#34;serviceAccount:%s-compute@developer.gserviceaccount.com&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;gcr.io/cloudrun/hello&#34;)
+ *                         .envs(ServiceTemplateSpecContainerEnv.builder()
+ *                             .name(&#34;SECRET_ENV_VAR&#34;)
+ *                             .valueFrom(ServiceTemplateSpecContainerEnvValueFrom.builder()
+ *                                 .secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef.builder()
+ *                                     .name(secret.getSecretId())
+ *                                     .key(&#34;1&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .metadata(ServiceMetadata.builder()
+ *                 .annotations(Map.of(&#34;generated-by&#34;, &#34;magic-modules&#34;))
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .autogenerateRevisionName(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Run Service Secret Volumes
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var secret = new Secret(&#34;secret&#34;, SecretArgs.builder()        
+ *             .secretId(&#34;secret&#34;)
+ *             .replication(SecretReplication.builder()
+ *                 .automatic(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var secret_version_data = new SecretVersion(&#34;secret-version-data&#34;, SecretVersionArgs.builder()        
+ *             .secret(secret.getName())
+ *             .secretData(&#34;secret-data&#34;)
+ *             .build());
+ * 
+ *         var secret_access = new SecretIamMember(&#34;secret-access&#34;, SecretIamMemberArgs.builder()        
+ *             .secretId(secret.getId())
+ *             .role(&#34;roles/secretmanager.secretAccessor&#34;)
+ *             .member(String.format(&#34;serviceAccount:%s-compute@developer.gserviceaccount.com&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;gcr.io/cloudrun/hello&#34;)
+ *                         .volumeMounts(ServiceTemplateSpecContainerVolumeMount.builder()
+ *                             .name(&#34;a-volume&#34;)
+ *                             .mountPath(&#34;/secrets&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .volumes(ServiceTemplateSpecVolume.builder()
+ *                         .name(&#34;a-volume&#34;)
+ *                         .secret(ServiceTemplateSpecVolumeSecret.builder()
+ *                             .secretName(secret.getSecretId())
+ *                             .defaultMode(292)
+ *                             .items(ServiceTemplateSpecVolumeSecretItem.builder()
+ *                                 .key(&#34;1&#34;)
+ *                                 .path(&#34;my-secret&#34;)
+ *                                 .mode(256)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .metadata(ServiceMetadata.builder()
+ *                 .annotations(Map.of(&#34;generated-by&#34;, &#34;magic-modules&#34;))
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .autogenerateRevisionName(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Eventarc Basic Tf
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var projectProject = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var run = new Service(&#34;run&#34;, ServiceArgs.builder()        
+ *             .service(&#34;run.googleapis.com&#34;)
+ *             .disableOnDestroy(false)
+ *             .build());
+ * 
+ *         var eventarc = new Service(&#34;eventarc&#34;, ServiceArgs.builder()        
+ *             .service(&#34;eventarc.googleapis.com&#34;)
+ *             .disableOnDestroy(false)
+ *             .build());
+ * 
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-east1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;gcr.io/cloudrun/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var allUsers = new IamMember(&#34;allUsers&#34;, IamMemberArgs.builder()        
+ *             .service(default_.getName())
+ *             .location(default_.getLocation())
+ *             .role(&#34;roles/run.invoker&#34;)
+ *             .member(&#34;allUsers&#34;)
+ *             .build());
+ * 
+ *         var trigger_pubsub_tf = new Trigger(&#34;trigger-pubsub-tf&#34;, TriggerArgs.builder()        
+ *             .location(default_.getLocation())
+ *             .matchingCriterias(TriggerMatchingCriteria.builder()
+ *                 .attribute(&#34;type&#34;)
+ *                 .value(&#34;google.cloud.pubsub.topic.v1.messagePublished&#34;)
+ *                 .build())
+ *             .destination(TriggerDestination.builder()
+ *                 .cloudRunService(TriggerDestinationCloudRunService.builder()
+ *                     .service(default_.getName())
+ *                     .region(default_.getLocation())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var projectIAMBinding = new IAMBinding(&#34;projectIAMBinding&#34;, IAMBindingArgs.builder()        
+ *             .project(projectProject.apply(getProjectResult -&gt; getProjectResult.getId()))
+ *             .role(&#34;roles/eventarc.eventReceiver&#34;)
+ *             .members(String.format(&#34;serviceAccount:%s-compute@developer.gserviceaccount.com&#34;, projectProject.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         var trigger_auditlog_tf = new Trigger(&#34;trigger-auditlog-tf&#34;, TriggerArgs.builder()        
+ *             .location(default_.getLocation())
+ *             .project(projectProject.apply(getProjectResult -&gt; getProjectResult.getId()))
+ *             .matchingCriterias(            
+ *                 TriggerMatchingCriteria.builder()
+ *                     .attribute(&#34;type&#34;)
+ *                     .value(&#34;google.cloud.audit.log.v1.written&#34;)
+ *                     .build(),
+ *                 TriggerMatchingCriteria.builder()
+ *                     .attribute(&#34;serviceName&#34;)
+ *                     .value(&#34;storage.googleapis.com&#34;)
+ *                     .build(),
+ *                 TriggerMatchingCriteria.builder()
+ *                     .attribute(&#34;methodName&#34;)
+ *                     .value(&#34;storage.objects.create&#34;)
+ *                     .build())
+ *             .destination(TriggerDestination.builder()
+ *                 .cloudRunService(TriggerDestinationCloudRunService.builder()
+ *                     .service(default_.getName())
+ *                     .region(default_.getLocation())
+ *                     .build())
+ *                 .build())
+ *             .serviceAccount(String.format(&#34;%s-compute@developer.gserviceaccount.com&#34;, projectProject.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

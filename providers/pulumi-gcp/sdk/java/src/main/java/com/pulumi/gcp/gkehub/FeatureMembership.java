@@ -16,6 +16,80 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Config Management
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .initialNodeCount(1)
+ *             .build());
+ * 
+ *         var membership = new Membership(&#34;membership&#34;, MembershipArgs.builder()        
+ *             .membershipId(&#34;my-membership&#34;)
+ *             .endpoint(MembershipEndpoint.builder()
+ *                 .gkeCluster(MembershipEndpointGkeCluster.builder()
+ *                     .resourceLink(cluster.getId().apply(id -&gt; String.format(&#34;//container.googleapis.com/%s&#34;, id)))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var feature = new Feature(&#34;feature&#34;, FeatureArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         var featureMember = new FeatureMembership(&#34;featureMember&#34;, FeatureMembershipArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .feature(feature.getName())
+ *             .membership(membership.getMembershipId())
+ *             .configmanagement(FeatureMembershipConfigmanagement.builder()
+ *                 .version(&#34;1.6.2&#34;)
+ *                 .configSync(FeatureMembershipConfigmanagementConfigSync.builder()
+ *                     .git(FeatureMembershipConfigmanagementConfigSyncGit.builder()
+ *                         .syncRepo(&#34;https://github.com/hashicorp/terraform&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Multi Cluster Service Discovery
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var feature = new Feature(&#34;feature&#34;, FeatureArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

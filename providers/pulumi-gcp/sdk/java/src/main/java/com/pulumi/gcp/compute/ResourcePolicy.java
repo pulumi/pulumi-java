@@ -21,6 +21,133 @@ import javax.annotation.Nullable;
  * A policy that can be attached to a resource to specify or schedule actions on that resource.
  * 
  * ## Example Usage
+ * ### Resource Policy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new ResourcePolicy(&#34;foo&#34;, ResourcePolicyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy.builder()
+ *                 .schedule(ResourcePolicySnapshotSchedulePolicySchedule.builder()
+ *                     .dailySchedule(ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.builder()
+ *                         .daysInCycle(1)
+ *                         .startTime(&#34;04:00&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resource Policy Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new ResourcePolicy(&#34;bar&#34;, ResourcePolicyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy.builder()
+ *                 .retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicy.builder()
+ *                     .maxRetentionDays(10)
+ *                     .onSourceDiskDelete(&#34;KEEP_AUTO_SNAPSHOTS&#34;)
+ *                     .build())
+ *                 .schedule(ResourcePolicySnapshotSchedulePolicySchedule.builder()
+ *                     .hourlySchedule(ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule.builder()
+ *                         .hoursInCycle(20)
+ *                         .startTime(&#34;23:00&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotProperties.builder()
+ *                     .guestFlush(true)
+ *                     .labels(Map.of(&#34;myLabel&#34;, &#34;value&#34;))
+ *                     .storageLocations(&#34;us&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resource Policy Placement Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var baz = new ResourcePolicy(&#34;baz&#34;, ResourcePolicyArgs.builder()        
+ *             .groupPlacementPolicy(ResourcePolicyGroupPlacementPolicy.builder()
+ *                 .collocation(&#34;COLLOCATED&#34;)
+ *                 .vmCount(2)
+ *                 .build())
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resource Policy Instance Schedule Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hourly = new ResourcePolicy(&#34;hourly&#34;, ResourcePolicyArgs.builder()        
+ *             .description(&#34;Start and stop instances&#34;)
+ *             .instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicy.builder()
+ *                 .timeZone(&#34;US/Central&#34;)
+ *                 .vmStartSchedule(ResourcePolicyInstanceSchedulePolicyVmStartSchedule.builder()
+ *                     .schedule(&#34;0 * * * *&#34;)
+ *                     .build())
+ *                 .vmStopSchedule(ResourcePolicyInstanceSchedulePolicyVmStopSchedule.builder()
+ *                     .schedule(&#34;15 * * * *&#34;)
+ *                     .build())
+ *                 .build())
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

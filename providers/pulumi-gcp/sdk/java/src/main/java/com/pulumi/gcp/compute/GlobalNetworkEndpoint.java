@@ -27,6 +27,35 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
  * 
  * ## Example Usage
+ * ### Global Network Endpoint
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var neg = new GlobalNetworkEndpointGroup(&#34;neg&#34;, GlobalNetworkEndpointGroupArgs.builder()        
+ *             .defaultPort(&#34;90&#34;)
+ *             .networkEndpointType(&#34;INTERNET_FQDN_PORT&#34;)
+ *             .build());
+ * 
+ *         var default_endpoint = new GlobalNetworkEndpoint(&#34;default-endpoint&#34;, GlobalNetworkEndpointArgs.builder()        
+ *             .globalNetworkEndpointGroup(neg.getName())
+ *             .fqdn(&#34;www.example.com&#34;)
+ *             .port(90)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

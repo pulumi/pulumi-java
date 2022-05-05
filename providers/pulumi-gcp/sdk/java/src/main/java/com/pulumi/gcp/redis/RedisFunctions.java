@@ -16,6 +16,30 @@ public final class RedisFunctions {
      * Get info about a Google Cloud Redis instance.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myInstance = Output.of(RedisFunctions.getInstance(GetInstanceArgs.builder()
+     *             .name(&#34;my-redis-instance&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;instanceMemorySizeGb&#34;, myInstance.apply(getInstanceResult -&gt; getInstanceResult.getMemorySizeGb()));
+     *         ctx.export(&#34;instanceConnectMode&#34;, myInstance.apply(getInstanceResult -&gt; getInstanceResult.getConnectMode()));
+     *         ctx.export(&#34;instanceAuthorizedNetwork&#34;, myInstance.apply(getInstanceResult -&gt; getInstanceResult.getAuthorizedNetwork()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {

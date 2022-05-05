@@ -21,6 +21,7 @@ public final class GetAuthorityResult {
     private final @Nullable String certificateAuthorityId;
     private final List<GetAuthorityConfig> configs;
     private final String createTime;
+    private final Boolean deletionProtection;
     private final String gcsBucket;
     /**
      * @return The provider-assigned unique ID for this managed resource.
@@ -51,6 +52,7 @@ public final class GetAuthorityResult {
         @CustomType.Parameter("certificateAuthorityId") @Nullable String certificateAuthorityId,
         @CustomType.Parameter("configs") List<GetAuthorityConfig> configs,
         @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
         @CustomType.Parameter("gcsBucket") String gcsBucket,
         @CustomType.Parameter("id") String id,
         @CustomType.Parameter("ignoreActiveCertificatesOnDeletion") Boolean ignoreActiveCertificatesOnDeletion,
@@ -70,6 +72,7 @@ public final class GetAuthorityResult {
         this.certificateAuthorityId = certificateAuthorityId;
         this.configs = configs;
         this.createTime = createTime;
+        this.deletionProtection = deletionProtection;
         this.gcsBucket = gcsBucket;
         this.id = id;
         this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
@@ -98,6 +101,9 @@ public final class GetAuthorityResult {
     }
     public String createTime() {
         return this.createTime;
+    }
+    public Boolean deletionProtection() {
+        return this.deletionProtection;
     }
     public String gcsBucket() {
         return this.gcsBucket;
@@ -166,6 +172,7 @@ public final class GetAuthorityResult {
         private @Nullable String certificateAuthorityId;
         private List<GetAuthorityConfig> configs;
         private String createTime;
+        private Boolean deletionProtection;
         private String gcsBucket;
         private String id;
         private Boolean ignoreActiveCertificatesOnDeletion;
@@ -192,6 +199,7 @@ public final class GetAuthorityResult {
     	      this.certificateAuthorityId = defaults.certificateAuthorityId;
     	      this.configs = defaults.configs;
     	      this.createTime = defaults.createTime;
+    	      this.deletionProtection = defaults.deletionProtection;
     	      this.gcsBucket = defaults.gcsBucket;
     	      this.id = defaults.id;
     	      this.ignoreActiveCertificatesOnDeletion = defaults.ignoreActiveCertificatesOnDeletion;
@@ -229,6 +237,10 @@ public final class GetAuthorityResult {
         }
         public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
+            return this;
+        }
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
         public Builder gcsBucket(String gcsBucket) {
@@ -297,7 +309,7 @@ public final class GetAuthorityResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }        public GetAuthorityResult build() {
-            return new GetAuthorityResult(accessUrls, certificateAuthorityId, configs, createTime, gcsBucket, id, ignoreActiveCertificatesOnDeletion, keySpecs, labels, lifetime, location, name, pemCaCertificates, pemCsr, pool, project, state, type, updateTime);
+            return new GetAuthorityResult(accessUrls, certificateAuthorityId, configs, createTime, deletionProtection, gcsBucket, id, ignoreActiveCertificatesOnDeletion, keySpecs, labels, lifetime, location, name, pemCaCertificates, pemCsr, pool, project, state, type, updateTime);
         }
     }
 }

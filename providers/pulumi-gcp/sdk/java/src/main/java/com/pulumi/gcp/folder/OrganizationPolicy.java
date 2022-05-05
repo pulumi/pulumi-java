@@ -31,6 +31,119 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To set policy with a [boolean constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-boolean-constraints):
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serialPortPolicy = new OrganizationPolicy(&#34;serialPortPolicy&#34;, OrganizationPolicyArgs.builder()        
+ *             .booleanPolicy(OrganizationPolicyBooleanPolicy.builder()
+ *                 .enforced(true)
+ *                 .build())
+ *             .constraint(&#34;compute.disableSerialPortAccess&#34;)
+ *             .folder(&#34;folders/123456789&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To set a policy with a [list constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicesPolicy = new OrganizationPolicy(&#34;servicesPolicy&#34;, OrganizationPolicyArgs.builder()        
+ *             .constraint(&#34;serviceuser.services&#34;)
+ *             .folder(&#34;folders/123456789&#34;)
+ *             .listPolicy(OrganizationPolicyListPolicy.builder()
+ *                 .allow(OrganizationPolicyListPolicyAllow.builder()
+ *                     .all(true)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Or to deny some services, use the following instead:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicesPolicy = new OrganizationPolicy(&#34;servicesPolicy&#34;, OrganizationPolicyArgs.builder()        
+ *             .constraint(&#34;serviceuser.services&#34;)
+ *             .folder(&#34;folders/123456789&#34;)
+ *             .listPolicy(OrganizationPolicyListPolicy.builder()
+ *                 .deny(OrganizationPolicyListPolicyDeny.builder()
+ *                     .values(&#34;cloudresourcemanager.googleapis.com&#34;)
+ *                     .build())
+ *                 .suggestedValue(&#34;compute.googleapis.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To restore the default folder organization policy, use the following instead:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicesPolicy = new OrganizationPolicy(&#34;servicesPolicy&#34;, OrganizationPolicyArgs.builder()        
+ *             .constraint(&#34;serviceuser.services&#34;)
+ *             .folder(&#34;folders/123456789&#34;)
+ *             .restorePolicy(OrganizationPolicyRestorePolicy.builder()
+ *                 .default_(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Folder organization policies can be imported using any of the follow formats

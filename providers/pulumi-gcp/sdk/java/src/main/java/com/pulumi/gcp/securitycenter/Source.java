@@ -27,6 +27,30 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/security-command-center/docs)
  * 
  * ## Example Usage
+ * ### Scc Source Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customSource = new Source(&#34;customSource&#34;, SourceArgs.builder()        
+ *             .description(&#34;My custom Cloud Security Command Center Finding Source&#34;)
+ *             .displayName(&#34;My Source&#34;)
+ *             .organization(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

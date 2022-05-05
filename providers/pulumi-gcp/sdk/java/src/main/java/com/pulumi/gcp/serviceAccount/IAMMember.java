@@ -29,14 +29,178 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.serviceAccount.IAMBinding` resources **can be** used in conjunction with `gcp.serviceAccount.IAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_service\_account\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var sa = new Account(&#34;sa&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .displayName(&#34;A service account that only Jane can interact with&#34;)
+ *             .build());
+ * 
+ *         var admin_account_iam = new IAMPolicy(&#34;admin-account-iam&#34;, IAMPolicyArgs.builder()        
+ *             .serviceAccountId(sa.getName())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_service\_account\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sa = new Account(&#34;sa&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .displayName(&#34;A service account that only Jane can use&#34;)
+ *             .build());
+ * 
+ *         var admin_account_iam = new IAMBinding(&#34;admin-account-iam&#34;, IAMBindingArgs.builder()        
+ *             .serviceAccountId(sa.getName())
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sa = new Account(&#34;sa&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .displayName(&#34;A service account that only Jane can use&#34;)
+ *             .build());
+ * 
+ *         var admin_account_iam = new IAMBinding(&#34;admin-account-iam&#34;, IAMBindingArgs.builder()        
+ *             .serviceAccountId(sa.getName())
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .condition(IAMBindingCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_service\_account\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+ * 
+ *         var sa = new Account(&#34;sa&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .displayName(&#34;A service account that Jane can use&#34;)
+ *             .build());
+ * 
+ *         var admin_account_iam = new IAMMember(&#34;admin-account-iam&#34;, IAMMemberArgs.builder()        
+ *             .serviceAccountId(sa.getName())
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         var gce_default_account_iam = new IAMMember(&#34;gce-default-account-iam&#34;, IAMMemberArgs.builder()        
+ *             .serviceAccountId(default_.getName())
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .member(sa.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sa = new Account(&#34;sa&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-service-account&#34;)
+ *             .displayName(&#34;A service account that Jane can use&#34;)
+ *             .build());
+ * 
+ *         var admin_account_iam = new IAMMember(&#34;admin-account-iam&#34;, IAMMemberArgs.builder()        
+ *             .serviceAccountId(sa.getName())
+ *             .role(&#34;roles/iam.serviceAccountUser&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .condition(IAMMemberCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
