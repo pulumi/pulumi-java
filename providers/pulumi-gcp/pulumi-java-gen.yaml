@@ -3,6 +3,6 @@ out: sdk/java
 overlays:
 - ../build-templates
 pluginFile: src/main/resources/com/pulumi/gcp/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-gcp/v6.21.0/provider/cmd/pulumi-resource-gcp/schema.json
-version: 6.21.0
+schema: https://raw.githubusercontent.com/pulumi/pulumi-gcp/v6.23.0/provider/cmd/pulumi-resource-gcp/schema.json
+version: 6.23.0
 versionFile: src/main/resources/com/pulumi/gcp/version.txt
