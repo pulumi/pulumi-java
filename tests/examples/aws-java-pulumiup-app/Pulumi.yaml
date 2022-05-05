@@ -1,0 +1,3 @@
+name: pulumiup-app-stack
+runtime: java
+description: A minimal AWS Java Pulumi program

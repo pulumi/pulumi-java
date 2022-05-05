@@ -15,5 +15,5 @@ public class App {
             .masterPassword(Output.ofSecret("foobar"))
             .build());
 
-        }
+    }
 }

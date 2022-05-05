@@ -1,0 +1,2 @@
+rootProject.name = 'aws-java-pulumiup-platform'
+include('app')

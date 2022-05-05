@@ -17,5 +17,5 @@ public class App {
 
         var bucket1 = new Bucket("bucket1");
 
-        }
+    }
 }
