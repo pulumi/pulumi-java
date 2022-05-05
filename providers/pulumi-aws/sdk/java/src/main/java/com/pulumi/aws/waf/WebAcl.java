@@ -24,6 +24,92 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * This example blocks requests coming from `192.0.7.0/24` and allows everything else.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafrule = new Rule(&#34;wafrule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .predicates(RulePredicate.builder()
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafAcl = new WebAcl(&#34;wafAcl&#34;, WebAclArgs.builder()        
+ *             .metricName(&#34;tfWebACL&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .type(&#34;ALLOW&#34;)
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .action(WebAclRuleAction.builder()
+ *                     .type(&#34;BLOCK&#34;)
+ *                     .build())
+ *                 .priority(1)
+ *                 .ruleId(wafrule.getId())
+ *                 .type(&#34;REGULAR&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging
+ * 
+ * &gt; *NOTE:* The Kinesis Firehose Delivery Stream name must begin with `aws-waf-logs-` and be located in `us-east-1` region. See the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) for more information about enabling WAF logging.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAcl(&#34;example&#34;, WebAclArgs.builder()        
+ *             .loggingConfiguration(WebAclLoggingConfiguration.builder()
+ *                 .logDestination(aws_kinesis_firehose_delivery_stream.getExample().getArn())
+ *                 .redactedFields(WebAclLoggingConfigurationRedactedFields.builder()
+ *                     .fieldToMatches(                    
+ *                         WebAclLoggingConfigurationRedactedFieldsFieldToMatch.builder()
+ *                             .type(&#34;URI&#34;)
+ *                             .build(),
+ *                         WebAclLoggingConfigurationRedactedFieldsFieldToMatch.builder()
+ *                             .data(&#34;referer&#34;)
+ *                             .type(&#34;HEADER&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * WAF Web ACL can be imported using the `id`, e.g.,

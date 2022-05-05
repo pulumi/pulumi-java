@@ -15,6 +15,50 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new User(&#34;default&#34;, UserArgs.builder()        
+ *             .userId(&#34;defaultUserID&#34;)
+ *             .userName(&#34;default&#34;)
+ *             .accessString(&#34;on ~app::* -@all +@read +@hash +@bitmap +@geo -setbit -bitfield -hset -hsetnx -hmset -hincrby -hincrbyfloat -hdel -bitop -geoadd -georadius -georadiusbymember&#34;)
+ *             .engine(&#34;REDIS&#34;)
+ *             .passwords(&#34;password123456789&#34;)
+ *             .build());
+ * 
+ *         var exampleUserGroup = new UserGroup(&#34;exampleUserGroup&#34;, UserGroupArgs.builder()        
+ *             .engine(&#34;REDIS&#34;)
+ *             .userGroupId(&#34;userGroupId&#34;)
+ *             .userIds(default_.getUserId())
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .userId(&#34;exampleUserID&#34;)
+ *             .userName(&#34;exampleuser&#34;)
+ *             .accessString(&#34;on ~app::* -@all +@read +@hash +@bitmap +@geo -setbit -bitfield -hset -hsetnx -hmset -hincrby -hincrbyfloat -hdel -bitop -geoadd -georadius -georadiusbymember&#34;)
+ *             .engine(&#34;REDIS&#34;)
+ *             .passwords(&#34;password123456789&#34;)
+ *             .build());
+ * 
+ *         var exampleUserGroupAssociation = new UserGroupAssociation(&#34;exampleUserGroupAssociation&#34;, UserGroupAssociationArgs.builder()        
+ *             .userGroupId(exampleUserGroup.getUserGroupId())
+ *             .userId(exampleUser.getUserId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

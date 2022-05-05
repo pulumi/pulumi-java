@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * Provides an Elastic Transcoder pipeline resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Pipeline(&#34;bar&#34;, PipelineArgs.builder()        
+ *             .inputBucket(aws_s3_bucket.getInput_bucket().getBucket())
+ *             .role(aws_iam_role.getTest_role().getArn())
+ *             .contentConfig(PipelineContentConfig.builder()
+ *                 .bucket(aws_s3_bucket.getContent_bucket().getBucket())
+ *                 .storageClass(&#34;Standard&#34;)
+ *                 .build())
+ *             .thumbnailConfig(PipelineThumbnailConfig.builder()
+ *                 .bucket(aws_s3_bucket.getThumb_bucket().getBucket())
+ *                 .storageClass(&#34;Standard&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

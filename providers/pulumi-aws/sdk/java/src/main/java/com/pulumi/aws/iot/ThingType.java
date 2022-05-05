@@ -21,6 +21,25 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS IoT Thing Type.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new ThingType(&#34;foo&#34;);
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

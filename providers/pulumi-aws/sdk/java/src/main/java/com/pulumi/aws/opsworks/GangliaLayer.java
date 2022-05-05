@@ -24,6 +24,28 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks Ganglia layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var monitor = new GangliaLayer(&#34;monitor&#34;, GangliaLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .password(&#34;foobarbaz&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/gangliaLayer:GangliaLayer")

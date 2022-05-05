@@ -16,6 +16,25 @@ public final class EcrpublicFunctions {
      * The Public ECR Authorization Token data source allows the authorization token, token expiration date, user name and password to be retrieved for a Public ECR repository.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var token = Output.of(EcrpublicFunctions.getAuthorizationToken());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {

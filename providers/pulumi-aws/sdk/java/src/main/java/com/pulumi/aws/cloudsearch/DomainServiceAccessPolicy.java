@@ -15,6 +15,44 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;);
+ * 
+ *         var exampleDomainServiceAccessPolicy = new DomainServiceAccessPolicy(&#34;exampleDomainServiceAccessPolicy&#34;, DomainServiceAccessPolicyArgs.builder()        
+ *             .domainName(exampleDomain.getId())
+ *             .accessPolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;:&#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;:[{
+ *     &#34;Sid&#34;:&#34;search_only&#34;,
+ *     &#34;Effect&#34;:&#34;Allow&#34;,
+ *     &#34;Principal&#34;:&#34;*&#34;,
+ *     &#34;Action&#34;:[
+ *       &#34;cloudsearch:search&#34;,
+ *       &#34;cloudsearch:document&#34;
+ *     ],
+ *     &#34;Condition&#34;:{&#34;IpAddress&#34;:{&#34;aws:SourceIp&#34;:&#34;192.0.2.0/32&#34;}}
+ *   }]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

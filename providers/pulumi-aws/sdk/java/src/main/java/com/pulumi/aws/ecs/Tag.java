@@ -15,6 +15,35 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleComputeEnvironment = new ComputeEnvironment(&#34;exampleComputeEnvironment&#34;, ComputeEnvironmentArgs.builder()        
+ *             .computeEnvironmentName(&#34;example&#34;)
+ *             .serviceRole(aws_iam_role.getExample().getArn())
+ *             .type(&#34;UNMANAGED&#34;)
+ *             .build());
+ * 
+ *         var exampleTag = new Tag(&#34;exampleTag&#34;, TagArgs.builder()        
+ *             .resourceArn(exampleComputeEnvironment.getEcsClusterArn())
+ *             .key(&#34;Name&#34;)
+ *             .value(&#34;Hello World&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

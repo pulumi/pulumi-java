@@ -19,15 +19,139 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .delaySeconds(90)
+ *             .maxMessageSize(2048)
+ *             .messageRetentionSeconds(86400)
+ *             .receiveWaitTimeSeconds(10)
+ *             .redrivePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;deadLetterTargetArn&#34;, aws_sqs_queue.getQueue_deadletter().getArn()),
+ *                     jsonProperty(&#34;maxReceiveCount&#34;, 4)
+ *                 )))
+ *             .redriveAllowPolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;redrivePermission&#34;, &#34;byQueue&#34;),
+ *                     jsonProperty(&#34;sourceQueueArns&#34;, jsonArray(aws_sqs_queue.getTerraform_queue_deadletter().getArn()))
+ *                 )))
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;production&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## FIFO queue
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .contentBasedDeduplication(true)
+ *             .fifoQueue(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## High-throughput FIFO queue
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var terraformQueue = new Queue(&#34;terraformQueue&#34;, QueueArgs.builder()        
+ *             .deduplicationScope(&#34;messageGroup&#34;)
+ *             .fifoQueue(true)
+ *             .fifoThroughputLimit(&#34;perMessageGroupId&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Server-side encryption (SSE)
  * 
  * Using [SSE-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html):
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var terraformQueue = new Queue(&#34;terraformQueue&#34;, QueueArgs.builder()        
+ *             .sqsManagedSseEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * Using [SSE-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html):
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .kmsDataKeyReusePeriodSeconds(300)
+ *             .kmsMasterKeyId(&#34;alias/aws/sqs&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

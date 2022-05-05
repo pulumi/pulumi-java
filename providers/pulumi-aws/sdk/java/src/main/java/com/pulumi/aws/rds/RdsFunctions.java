@@ -34,6 +34,27 @@ public final class RdsFunctions {
      * Information about an RDS Certificate.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(RdsFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .latestValidTill(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCertificateResult> getCertificate() {
@@ -49,6 +70,27 @@ public final class RdsFunctions {
      * Provides information about an RDS cluster.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var clusterName = Output.of(RdsFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterIdentifier(&#34;clusterName&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
@@ -64,6 +106,40 @@ public final class RdsFunctions {
      * See the `aws.rds.Snapshot` data source for DB Instance snapshots.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var developmentFinalSnapshot = Output.of(RdsFunctions.getClusterSnapshot(GetClusterSnapshotArgs.builder()
+     *             .dbClusterIdentifier(&#34;development_cluster&#34;)
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         var auroraCluster = new Cluster(&#34;auroraCluster&#34;, ClusterArgs.builder()        
+     *             .clusterIdentifier(&#34;development_cluster&#34;)
+     *             .snapshotIdentifier(developmentFinalSnapshot.apply(getClusterSnapshotResult -&gt; getClusterSnapshotResult.getId()))
+     *             .dbSubnetGroupName(&#34;my_db_subnet_group&#34;)
+     *             .build());
+     * 
+     *         var auroraClusterInstance = new ClusterInstance(&#34;auroraClusterInstance&#34;, ClusterInstanceArgs.builder()        
+     *             .clusterIdentifier(auroraCluster.getId())
+     *             .instanceClass(&#34;db.t2.small&#34;)
+     *             .dbSubnetGroupName(&#34;my_db_subnet_group&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterSnapshotResult> getClusterSnapshot() {
@@ -79,6 +155,31 @@ public final class RdsFunctions {
      * Information about an RDS engine version.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(RdsFunctions.getEngineVersion(GetEngineVersionArgs.builder()
+     *             .engine(&#34;mysql&#34;)
+     *             .preferredVersions(            
+     *                 &#34;5.7.42&#34;,
+     *                 &#34;5.7.19&#34;,
+     *                 &#34;5.7.17&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEngineVersionResult> getEngineVersion(GetEngineVersionArgs args) {
@@ -89,6 +190,52 @@ public final class RdsFunctions {
     }
     /**
      * ## Example Usage
+     * 
+     * List the event categories of all the RDS resources.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleEventCategories = Output.of(RdsFunctions.getEventCategories());
+     * 
+     *         ctx.export(&#34;example&#34;, exampleEventCategories.apply(getEventCategoriesResult -&gt; getEventCategoriesResult.getEventCategories()));
+     *         }
+     * }
+     * ```
+     * 
+     * List the event categories specific to the RDS resource `db-snapshot`.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleEventCategories = Output.of(RdsFunctions.getEventCategories(GetEventCategoriesArgs.builder()
+     *             .sourceType(&#34;db-snapshot&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;example&#34;, exampleEventCategories.apply(getEventCategoriesResult -&gt; getEventCategoriesResult.getEventCategories()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEventCategoriesResult> getEventCategories() {
@@ -104,6 +251,27 @@ public final class RdsFunctions {
      * Use this data source to get information about an RDS instance
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var database = Output.of(RdsFunctions.getInstance(GetInstanceArgs.builder()
+     *             .dbInstanceIdentifier(&#34;my-test-database&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetInstanceResult> getInstance(GetInstanceArgs args) {
@@ -116,6 +284,66 @@ public final class RdsFunctions {
      * Information about RDS orderable DB instances and valid parameter combinations.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(RdsFunctions.getOrderableDbInstance(GetOrderableDbInstanceArgs.builder()
+     *             .engine(&#34;mysql&#34;)
+     *             .engineVersion(&#34;5.7.22&#34;)
+     *             .licenseModel(&#34;general-public-license&#34;)
+     *             .preferredInstanceClasses(            
+     *                 &#34;db.r6.xlarge&#34;,
+     *                 &#34;db.m4.large&#34;,
+     *                 &#34;db.t3.small&#34;)
+     *             .storageType(&#34;standard&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * Valid parameter combinations can also be found with `preferred_engine_versions` and/or `preferred_instance_classes`.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(RdsFunctions.getOrderableDbInstance(GetOrderableDbInstanceArgs.builder()
+     *             .engine(&#34;mysql&#34;)
+     *             .licenseModel(&#34;general-public-license&#34;)
+     *             .preferredEngineVersions(            
+     *                 &#34;5.6.35&#34;,
+     *                 &#34;5.6.41&#34;,
+     *                 &#34;5.6.44&#34;)
+     *             .preferredInstanceClasses(            
+     *                 &#34;db.t2.small&#34;,
+     *                 &#34;db.t3.medium&#34;,
+     *                 &#34;db.t3.large&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOrderableDbInstanceResult> getOrderableDbInstance(GetOrderableDbInstanceArgs args) {
@@ -128,6 +356,27 @@ public final class RdsFunctions {
      * Use this data source to get information about a DB Proxy.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var proxy = Output.of(RdsFunctions.getProxy(GetProxyArgs.builder()
+     *             .name(&#34;my-test-db-proxy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetProxyResult> getProxy(GetProxyArgs args) {
@@ -143,6 +392,46 @@ public final class RdsFunctions {
      * See the `aws.rds.ClusterSnapshot` data source for DB Cluster snapshots.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var prod = new Instance(&#34;prod&#34;, InstanceArgs.builder()        
+     *             .allocatedStorage(10)
+     *             .engine(&#34;mysql&#34;)
+     *             .engineVersion(&#34;5.6.17&#34;)
+     *             .instanceClass(&#34;db.t2.micro&#34;)
+     *             .name(&#34;mydb&#34;)
+     *             .username(&#34;foo&#34;)
+     *             .password(&#34;bar&#34;)
+     *             .dbSubnetGroupName(&#34;my_database_subnet_group&#34;)
+     *             .parameterGroupName(&#34;default.mysql5.6&#34;)
+     *             .build());
+     * 
+     *         final var latestProdSnapshot = RdsFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .dbInstanceIdentifier(prod.getId())
+     *             .mostRecent(true)
+     *             .build());
+     * 
+     *         var dev = new Instance(&#34;dev&#34;, InstanceArgs.builder()        
+     *             .instanceClass(&#34;db.t2.micro&#34;)
+     *             .name(&#34;mydbdev&#34;)
+     *             .snapshotIdentifier(latestProdSnapshot.apply(getSnapshotResult -&gt; getSnapshotResult).apply(latestProdSnapshot -&gt; latestProdSnapshot.apply(getSnapshotResult -&gt; getSnapshotResult.getId())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSnapshotResult> getSnapshot() {
@@ -158,6 +447,27 @@ public final class RdsFunctions {
      * Use this data source to get information about an RDS subnet group.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var database = Output.of(RdsFunctions.getSubnetGroup(GetSubnetGroupArgs.builder()
+     *             .name(&#34;my-test-database-subnet-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {

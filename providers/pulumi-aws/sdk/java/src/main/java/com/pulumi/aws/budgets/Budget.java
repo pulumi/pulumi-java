@@ -23,6 +23,171 @@ import javax.annotation.Nullable;
  * Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ec2 = new Budget(&#34;ec2&#34;, BudgetArgs.builder()        
+ *             .budgetType(&#34;COST&#34;)
+ *             .costFilters(BudgetCostFilter.builder()
+ *                 .name(&#34;Service&#34;)
+ *                 .values(&#34;Amazon Elastic Compute Cloud - Compute&#34;)
+ *                 .build())
+ *             .limitAmount(&#34;1200&#34;)
+ *             .limitUnit(&#34;USD&#34;)
+ *             .notifications(BudgetNotification.builder()
+ *                 .comparisonOperator(&#34;GREATER_THAN&#34;)
+ *                 .notificationType(&#34;FORECASTED&#34;)
+ *                 .subscriberEmailAddresses(&#34;test@example.com&#34;)
+ *                 .threshold(100)
+ *                 .thresholdType(&#34;PERCENTAGE&#34;)
+ *                 .build())
+ *             .timePeriodEnd(&#34;2087-06-15_00:00&#34;)
+ *             .timePeriodStart(&#34;2017-07-01_00:00&#34;)
+ *             .timeUnit(&#34;MONTHLY&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Create a budget for *$100*.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cost = new Budget(&#34;cost&#34;, BudgetArgs.builder()        
+ *             .budgetType(&#34;COST&#34;)
+ *             .limitAmount(&#34;100&#34;)
+ *             .limitUnit(&#34;USD&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Create a budget for s3 with a limit of *3 GB* of storage.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var s3 = new Budget(&#34;s3&#34;, BudgetArgs.builder()        
+ *             .budgetType(&#34;USAGE&#34;)
+ *             .limitAmount(&#34;3&#34;)
+ *             .limitUnit(&#34;GB&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Create a Savings Plan Utilization Budget
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var savingsPlanUtilization = new Budget(&#34;savingsPlanUtilization&#34;, BudgetArgs.builder()        
+ *             .budgetType(&#34;SAVINGS_PLANS_UTILIZATION&#34;)
+ *             .costTypes(BudgetCostTypes.builder()
+ *                 .includeCredit(false)
+ *                 .includeDiscount(false)
+ *                 .includeOtherSubscription(false)
+ *                 .includeRecurring(false)
+ *                 .includeRefund(false)
+ *                 .includeSubscription(true)
+ *                 .includeSupport(false)
+ *                 .includeTax(false)
+ *                 .includeUpfront(false)
+ *                 .useBlended(false)
+ *                 .build())
+ *             .limitAmount(&#34;100.0&#34;)
+ *             .limitUnit(&#34;PERCENTAGE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Create a RI Utilization Budget
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var riUtilization = new Budget(&#34;riUtilization&#34;, BudgetArgs.builder()        
+ *             .budgetType(&#34;RI_UTILIZATION&#34;)
+ *             .costFilters(BudgetCostFilter.builder()
+ *                 .name(&#34;Service&#34;)
+ *                 .values(&#34;Amazon Relational Database Service&#34;)
+ *                 .build())
+ *             .costTypes(BudgetCostTypes.builder()
+ *                 .includeCredit(false)
+ *                 .includeDiscount(false)
+ *                 .includeOtherSubscription(false)
+ *                 .includeRecurring(false)
+ *                 .includeRefund(false)
+ *                 .includeSubscription(true)
+ *                 .includeSupport(false)
+ *                 .includeTax(false)
+ *                 .includeUpfront(false)
+ *                 .useBlended(false)
+ *                 .build())
+ *             .limitAmount(&#34;100.0&#34;)
+ *             .limitUnit(&#34;PERCENTAGE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

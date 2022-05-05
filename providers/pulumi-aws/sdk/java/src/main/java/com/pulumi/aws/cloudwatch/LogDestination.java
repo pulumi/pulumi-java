@@ -17,6 +17,28 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Logs destination resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testDestination = new LogDestination(&#34;testDestination&#34;, LogDestinationArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_cloudwatch().getArn())
+ *             .targetArn(aws_kinesis_stream.getKinesis_for_cloudwatch().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

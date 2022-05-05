@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * to an existing VPC by setting the `vpc_id` attribute accordingly.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Vpc(&#34;network&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var vpn = new VpnGateway(&#34;vpn&#34;, VpnGatewayArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-vpn-gateway&#34;))
+ *             .build());
+ * 
+ *         var vpnAttachment = new VpnGatewayAttachment(&#34;vpnAttachment&#34;, VpnGatewayAttachmentArgs.builder()        
+ *             .vpcId(network.getId())
+ *             .vpnGatewayId(vpn.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * See [Virtual Private Cloud](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html)
+ * and [Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html) user
+ * guides for more information.
  * 
  * ## Import
  * 

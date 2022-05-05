@@ -20,6 +20,31 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS IoT Authorizer.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Authorizer(&#34;example&#34;, AuthorizerArgs.builder()        
+ *             .authorizerFunctionArn(aws_lambda_function.getExample().getArn())
+ *             .signingDisabled(false)
+ *             .status(&#34;ACTIVE&#34;)
+ *             .tokenKeyName(&#34;Token-Header&#34;)
+ *             .tokenSigningPublicKeys(Map.of(&#34;Key1&#34;, Files.readString(&#34;test-fixtures/iot-authorizer-signing-key.pem&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

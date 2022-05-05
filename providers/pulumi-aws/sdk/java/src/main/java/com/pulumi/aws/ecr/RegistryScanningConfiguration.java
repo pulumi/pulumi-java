@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
  * Provides an Elastic Container Registry Scanning Configuration. Can&#39;t be completely deleted, instead reverts to the default `BASIC` scanning configuration without rules.
  * 
  * ## Example Usage
+ * ### Basic example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configuration = new RegistryScanningConfiguration(&#34;configuration&#34;, RegistryScanningConfigurationArgs.builder()        
+ *             .rules(RegistryScanningConfigurationRule.builder()
+ *                 .repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilter.builder()
+ *                     .filter(&#34;example&#34;)
+ *                     .filterType(&#34;WILDCARD&#34;)
+ *                     .build())
+ *                 .scanFrequency(&#34;CONTINUOUS_SCAN&#34;)
+ *                 .build())
+ *             .scanType(&#34;ENHANCED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Multiple rules
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new RegistryScanningConfiguration(&#34;test&#34;, RegistryScanningConfigurationArgs.builder()        
+ *             .rules(            
+ *                 RegistryScanningConfigurationRule.builder()
+ *                     .repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilter.builder()
+ *                         .filter(&#34;*&#34;)
+ *                         .filterType(&#34;WILDCARD&#34;)
+ *                         .build())
+ *                     .scanFrequency(&#34;SCAN_ON_PUSH&#34;)
+ *                     .build(),
+ *                 RegistryScanningConfigurationRule.builder()
+ *                     .repositoryFilters(RegistryScanningConfigurationRuleRepositoryFilter.builder()
+ *                         .filter(&#34;example&#34;)
+ *                         .filterType(&#34;WILDCARD&#34;)
+ *                         .build())
+ *                     .scanFrequency(&#34;CONTINUOUS_SCAN&#34;)
+ *                     .build())
+ *             .scanType(&#34;ENHANCED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

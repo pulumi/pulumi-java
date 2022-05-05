@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks instance resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_instance = new Instance(&#34;my-instance&#34;, InstanceArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .layerIds(aws_opsworks_custom_layer.getMy-layer().getId())
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .os(&#34;Amazon Linux 2015.09&#34;)
+ *             .state(&#34;stopped&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Block devices
  * 
  * Each of the `*_block_device` attributes controls a portion of the AWS

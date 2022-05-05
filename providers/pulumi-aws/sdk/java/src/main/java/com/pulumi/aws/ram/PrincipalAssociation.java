@@ -27,6 +27,56 @@ import javax.annotation.Nullable;
  * - For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the `aws.ram.ResourceShareAccepter` resource to accept these invitations.
  * 
  * ## Example Usage
+ * ### AWS Account ID
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleResourceShare = new ResourceShare(&#34;exampleResourceShare&#34;, ResourceShareArgs.builder()        
+ *             .allowExternalPrincipals(true)
+ *             .build());
+ * 
+ *         var examplePrincipalAssociation = new PrincipalAssociation(&#34;examplePrincipalAssociation&#34;, PrincipalAssociationArgs.builder()        
+ *             .principal(&#34;111111111111&#34;)
+ *             .resourceShareArn(exampleResourceShare.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Organization
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PrincipalAssociation(&#34;example&#34;, PrincipalAssociationArgs.builder()        
+ *             .principal(aws_organizations_organization.getExample().getArn())
+ *             .resourceShareArn(aws_ram_resource_share.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

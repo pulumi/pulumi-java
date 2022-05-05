@@ -21,7 +21,69 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `aws.alb.TargetGroupAttachment` is known as `aws.lb.TargetGroupAttachment`. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testTargetGroup = new TargetGroup(&#34;testTargetGroup&#34;);
+ * 
+ *         var testInstance = new Instance(&#34;testInstance&#34;);
+ * 
+ *         var testTargetGroupAttachment = new TargetGroupAttachment(&#34;testTargetGroupAttachment&#34;, TargetGroupAttachmentArgs.builder()        
+ *             .targetGroupArn(testTargetGroup.getArn())
+ *             .targetId(testInstance.getId())
+ *             .port(80)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Usage with lambda
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testTargetGroup = new TargetGroup(&#34;testTargetGroup&#34;, TargetGroupArgs.builder()        
+ *             .targetType(&#34;lambda&#34;)
+ *             .build());
+ * 
+ *         var testFunction = new Function(&#34;testFunction&#34;);
+ * 
+ *         var withLb = new Permission(&#34;withLb&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(testFunction.getArn())
+ *             .principal(&#34;elasticloadbalancing.amazonaws.com&#34;)
+ *             .sourceArn(testTargetGroup.getArn())
+ *             .build());
+ * 
+ *         var testTargetGroupAttachment = new TargetGroupAttachment(&#34;testTargetGroupAttachment&#34;, TargetGroupAttachmentArgs.builder()        
+ *             .targetGroupArn(testTargetGroup.getArn())
+ *             .targetId(testFunction.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

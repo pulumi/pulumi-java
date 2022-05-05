@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * Provides an GameLift Game Session Queue resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new GameSessionQueue(&#34;test&#34;, GameSessionQueueArgs.builder()        
+ *             .destinations(            
+ *                 aws_gamelift_fleet.getUs_west_2_fleet().getArn(),
+ *                 aws_gamelift_fleet.getEu_central_1_fleet().getArn())
+ *             .playerLatencyPolicies(            
+ *                 GameSessionQueuePlayerLatencyPolicy.builder()
+ *                     .maximumIndividualPlayerLatencyMilliseconds(100)
+ *                     .policyDurationSeconds(5)
+ *                     .build(),
+ *                 GameSessionQueuePlayerLatencyPolicy.builder()
+ *                     .maximumIndividualPlayerLatencyMilliseconds(200)
+ *                     .build())
+ *             .timeoutInSeconds(60)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

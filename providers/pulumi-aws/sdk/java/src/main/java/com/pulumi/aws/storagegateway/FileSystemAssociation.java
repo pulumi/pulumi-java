@@ -22,7 +22,93 @@ import javax.annotation.Nullable;
  * [FSx File Gateway requirements](https://docs.aws.amazon.com/filegateway/latest/filefsxw/Requirements.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FileSystemAssociation(&#34;example&#34;, FileSystemAssociationArgs.builder()        
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .locationArn(aws_fsx_windows_file_system.getExample().getArn())
+ *             .username(&#34;Admin&#34;)
+ *             .password(&#34;avoid-plaintext-passwords&#34;)
+ *             .auditDestinationArn(aws_s3_bucket.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Required Services Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var awsServiceStoragegatewayAmiFILES3Latest = Output.of(SsmFunctions.getParameter(GetParameterArgs.builder()
+ *             .name(&#34;/aws/service/storagegateway/ami/FILE_S3/latest&#34;)
+ *             .build()));
+ * 
+ *         var testInstance = new Instance(&#34;testInstance&#34;, InstanceArgs.builder()        
+ *             .ami(awsServiceStoragegatewayAmiFILES3Latest.apply(getParameterResult -&gt; getParameterResult.getValue()))
+ *             .associatePublicIpAddress(true)
+ *             .instanceType(data.getAws_ec2_instance_type_offering().getAvailable().getInstance_type())
+ *             .vpcSecurityGroupIds(aws_security_group.getTest().getId())
+ *             .subnetId(aws_subnet.getTest()[0].getId())
+ *             .build());
+ * 
+ *         var testGateway = new Gateway(&#34;testGateway&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(testInstance.getPublicIp())
+ *             .gatewayName(&#34;test-sgw&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;FILE_FSX_SMB&#34;)
+ *             .smbActiveDirectorySettings(GatewaySmbActiveDirectorySettings.builder()
+ *                 .domainName(aws_directory_service_directory.getTest().getName())
+ *                 .password(aws_directory_service_directory.getTest().getPassword())
+ *                 .username(&#34;Admin&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var testWindowsFileSystem = new WindowsFileSystem(&#34;testWindowsFileSystem&#34;, WindowsFileSystemArgs.builder()        
+ *             .activeDirectoryId(aws_directory_service_directory.getTest().getId())
+ *             .securityGroupIds(aws_security_group.getTest().getId())
+ *             .skipFinalBackup(true)
+ *             .storageCapacity(32)
+ *             .subnetIds(aws_subnet.getTest()[0].getId())
+ *             .throughputCapacity(8)
+ *             .build());
+ * 
+ *         var fsx = new FileSystemAssociation(&#34;fsx&#34;, FileSystemAssociationArgs.builder()        
+ *             .gatewayArn(testGateway.getArn())
+ *             .locationArn(testWindowsFileSystem.getArn())
+ *             .username(&#34;Admin&#34;)
+ *             .password(aws_directory_service_directory.getTest().getPassword())
+ *             .cacheAttributes(FileSystemAssociationCacheAttributes.builder()
+ *                 .cacheStaleTimeoutInSeconds(400)
+ *                 .build())
+ *             .auditDestinationArn(aws_cloudwatch_log_group.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

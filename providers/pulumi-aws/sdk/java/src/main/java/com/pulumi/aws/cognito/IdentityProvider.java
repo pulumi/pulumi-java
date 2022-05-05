@@ -20,6 +20,42 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Identity Provider resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserPool(&#34;example&#34;, UserPoolArgs.builder()        
+ *             .autoVerifiedAttributes(&#34;email&#34;)
+ *             .build());
+ * 
+ *         var exampleProvider = new IdentityProvider(&#34;exampleProvider&#34;, IdentityProviderArgs.builder()        
+ *             .userPoolId(example.getId())
+ *             .providerName(&#34;Google&#34;)
+ *             .providerType(&#34;Google&#34;)
+ *             .providerDetails(Map.ofEntries(
+ *                 Map.entry(&#34;authorize_scopes&#34;, &#34;email&#34;),
+ *                 Map.entry(&#34;client_id&#34;, &#34;your client_id&#34;),
+ *                 Map.entry(&#34;client_secret&#34;, &#34;your client_secret&#34;)
+ *             ))
+ *             .attributeMapping(Map.ofEntries(
+ *                 Map.entry(&#34;email&#34;, &#34;email&#34;),
+ *                 Map.entry(&#34;username&#34;, &#34;sub&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

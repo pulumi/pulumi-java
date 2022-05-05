@@ -18,6 +18,49 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.
  * 
  * ## Example Usage
+ * ### Multiple AWS Buckets in Different Regions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primaryRegion = new Provider(&#34;primaryRegion&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var secondaryRegion = new Provider(&#34;secondaryRegion&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-west-2&#34;)
+ *             .build());
+ * 
+ *         var fooBucket = new BucketV2(&#34;fooBucket&#34;);
+ * 
+ *         var barBucket = new BucketV2(&#34;barBucket&#34;);
+ * 
+ *         var example = new MultiRegionAccessPoint(&#34;example&#34;, MultiRegionAccessPointArgs.builder()        
+ *             .details(MultiRegionAccessPointDetails.builder()
+ *                 .name(&#34;example&#34;)
+ *                 .regions(                
+ *                     MultiRegionAccessPointDetailsRegion.builder()
+ *                         .bucket(fooBucket.getId())
+ *                         .build(),
+ *                     MultiRegionAccessPointDetailsRegion.builder()
+ *                         .bucket(barBucket.getId())
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

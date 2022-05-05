@@ -22,6 +22,25 @@ public final class EcrFunctions {
      * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var token = Output.of(EcrFunctions.getAuthorizationToken());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken() {
@@ -43,6 +62,28 @@ public final class EcrFunctions {
      * The ECR Image data source allows the details of an image with a particular tag or digest to be retrieved.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var serviceImage = Output.of(EcrFunctions.getImage(GetImageArgs.builder()
+     *             .imageTag(&#34;latest&#34;)
+     *             .repositoryName(&#34;my/service&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetImageResult> getImage(GetImageArgs args) {
@@ -55,6 +96,27 @@ public final class EcrFunctions {
      * The ECR Repository data source allows the ARN, Repository URI and Registry ID to be retrieved for an ECR repository.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var service = Output.of(EcrFunctions.getRepository(GetRepositoryArgs.builder()
+     *             .name(&#34;ecr-repository&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {

@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Attempting to remove the `reserved-memory` parameter when `family` is set to `redis2.6` or `redis2.8` may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new ParameterGroup(&#34;default&#34;, ParameterGroupArgs.builder()        
+ *             .family(&#34;redis2.8&#34;)
+ *             .parameters(            
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;activerehashing&#34;)
+ *                     .value(&#34;yes&#34;)
+ *                     .build(),
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;min-slaves-to-write&#34;)
+ *                     .value(&#34;2&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,39 @@ import javax.annotation.Nullable;
  * Provides a Glue User Defined Function Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCatalogDatabase = new CatalogDatabase(&#34;exampleCatalogDatabase&#34;, CatalogDatabaseArgs.builder()        
+ *             .name(&#34;my_database&#34;)
+ *             .build());
+ * 
+ *         var exampleUserDefinedFunction = new UserDefinedFunction(&#34;exampleUserDefinedFunction&#34;, UserDefinedFunctionArgs.builder()        
+ *             .catalogId(exampleCatalogDatabase.getCatalogId())
+ *             .databaseName(exampleCatalogDatabase.getName())
+ *             .className(&#34;class&#34;)
+ *             .ownerName(&#34;owner&#34;)
+ *             .ownerType(&#34;GROUP&#34;)
+ *             .resourceUris(UserDefinedFunctionResourceUri.builder()
+ *                 .resourceType(&#34;ARCHIVE&#34;)
+ *                 .uri(&#34;uri&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

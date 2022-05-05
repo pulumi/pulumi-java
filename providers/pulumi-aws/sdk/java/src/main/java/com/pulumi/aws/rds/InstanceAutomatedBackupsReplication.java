@@ -23,9 +23,97 @@ import javax.annotation.Nullable;
  * &gt; **Note:** This resource has to be created in the destination region.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new InstanceAutomatedBackupsReplication(&#34;default&#34;, InstanceAutomatedBackupsReplicationArgs.builder()        
+ *             .retentionPeriod(14)
+ *             .sourceDbInstanceArn(&#34;arn:aws:rds:us-west-2:123456789012:db:mydatabase&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Encrypting the automated backup with KMS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new InstanceAutomatedBackupsReplication(&#34;default&#34;, InstanceAutomatedBackupsReplicationArgs.builder()        
+ *             .kmsKeyId(&#34;arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012&#34;)
+ *             .sourceDbInstanceArn(&#34;arn:aws:rds:us-west-2:123456789012:db:mydatabase&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example including a RDS DB instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replica = new Provider(&#34;replica&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-west-2&#34;)
+ *             .build());
+ * 
+ *         var defaultInstance = new Instance(&#34;defaultInstance&#34;, InstanceArgs.builder()        
+ *             .allocatedStorage(10)
+ *             .identifier(&#34;mydb&#34;)
+ *             .engine(&#34;postgres&#34;)
+ *             .engineVersion(&#34;13.4&#34;)
+ *             .instanceClass(&#34;db.t3.micro&#34;)
+ *             .name(&#34;mydb&#34;)
+ *             .username(&#34;masterusername&#34;)
+ *             .password(&#34;mustbeeightcharacters&#34;)
+ *             .backupRetentionPeriod(7)
+ *             .storageEncrypted(true)
+ *             .skipFinalSnapshot(true)
+ *             .build());
+ * 
+ *         var defaultKey = new Key(&#34;defaultKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;Encryption key for automated backups&#34;)
+ *             .build());
+ * 
+ *         var defaultInstanceAutomatedBackupsReplication = new InstanceAutomatedBackupsReplication(&#34;defaultInstanceAutomatedBackupsReplication&#34;, InstanceAutomatedBackupsReplicationArgs.builder()        
+ *             .sourceDbInstanceArn(defaultInstance.getArn())
+ *             .kmsKeyId(defaultKey.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

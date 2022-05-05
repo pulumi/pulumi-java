@@ -17,6 +17,36 @@ import javax.annotation.Nullable;
  * Manages an Amazon Managed Service for Prometheus (AMP) Alert Manager Definition
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var demoWorkspace = new Workspace(&#34;demoWorkspace&#34;);
+ * 
+ *         var demoAlertManagerDefinition = new AlertManagerDefinition(&#34;demoAlertManagerDefinition&#34;, AlertManagerDefinitionArgs.builder()        
+ *             .workspaceId(demoWorkspace.getId())
+ *             .definition(&#34;&#34;&#34;
+ * alertmanager_config: |
+ *   route:
+ *     receiver: &#39;default&#39;
+ *   receivers:
+ *     - name: &#39;default&#39;
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

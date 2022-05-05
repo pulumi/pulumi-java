@@ -26,6 +26,295 @@ import javax.annotation.Nullable;
  * Provides an AppSync GraphQL API.
  * 
  * ## Example Usage
+ * ### API Key Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS IAM Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;AWS_IAM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Cognito User Pool Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;AMAZON_COGNITO_USER_POOLS&#34;)
+ *             .userPoolConfig(GraphQLApiUserPoolConfig.builder()
+ *                 .awsRegion(data.getAws_region().getCurrent().getName())
+ *                 .defaultAction(&#34;DENY&#34;)
+ *                 .userPoolId(aws_cognito_user_pool.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### OpenID Connect Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;OPENID_CONNECT&#34;)
+ *             .openidConnectConfig(GraphQLApiOpenidConnectConfig.builder()
+ *                 .issuer(&#34;https://example.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Lambda Authorizer Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;AWS_LAMBDA&#34;)
+ *             .lambdaAuthorizerConfig(GraphQLApiLambdaAuthorizerConfig.builder()
+ *                 .authorizerUri(&#34;arn:aws:lambda:us-east-1:123456789012:function:custom_lambda_authorizer&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var appsyncLambdaAuthorizer = new Permission(&#34;appsyncLambdaAuthorizer&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(&#34;custom_lambda_authorizer&#34;)
+ *             .principal(&#34;appsync.amazonaws.com&#34;)
+ *             .sourceArn(example.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Multiple Authentication Providers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProvider.builder()
+ *                 .authenticationType(&#34;AWS_IAM&#34;)
+ *                 .build())
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Schema
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GraphQLApi(&#34;example&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;AWS_IAM&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * schema {
+ * 	query: Query
+ * }
+ * type Query {
+ *   test: Int
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enabling Logging
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *         &#34;Effect&#34;: &#34;Allow&#34;,
+ *         &#34;Principal&#34;: {
+ *             &#34;Service&#34;: &#34;appsync.amazonaws.com&#34;
+ *         },
+ *         &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleRolePolicyAttachment = new RolePolicyAttachment(&#34;exampleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs&#34;)
+ *             .role(exampleRole.getName())
+ *             .build());
+ * 
+ *         var exampleGraphQLApi = new GraphQLApi(&#34;exampleGraphQLApi&#34;, GraphQLApiArgs.builder()        
+ *             .logConfig(GraphQLApiLogConfig.builder()
+ *                 .cloudwatchLogsRoleArn(exampleRole.getArn())
+ *                 .fieldLogLevel(&#34;ERROR&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Associate Web ACL (v2)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGraphQLApi = new GraphQLApi(&#34;exampleGraphQLApi&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .build());
+ * 
+ *         var exampleWebAcl = new WebAcl(&#34;exampleWebAcl&#34;, WebAclArgs.builder()        
+ *             .description(&#34;Example of a managed rule.&#34;)
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .allow()
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .name(&#34;rule-1&#34;)
+ *                 .priority(1)
+ *                 .overrideAction(WebAclRuleOverrideAction.builder()
+ *                     .block()
+ *                     .build())
+ *                 .statement(WebAclRuleStatement.builder()
+ *                     .managedRuleGroupStatement(WebAclRuleStatementManagedRuleGroupStatement.builder()
+ *                         .name(&#34;AWSManagedRulesCommonRuleSet&#34;)
+ *                         .vendorName(&#34;AWS&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .visibilityConfig(WebAclRuleVisibilityConfig.builder()
+ *                     .cloudwatchMetricsEnabled(false)
+ *                     .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                     .sampledRequestsEnabled(false)
+ *                     .build())
+ *                 .build())
+ *             .visibilityConfig(WebAclVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleWebAclAssociation = new WebAclAssociation(&#34;exampleWebAclAssociation&#34;, WebAclAssociationArgs.builder()        
+ *             .resourceArn(exampleGraphQLApi.getArn())
+ *             .webAclArn(exampleWebAcl.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

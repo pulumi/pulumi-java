@@ -22,6 +22,123 @@ import javax.annotation.Nullable;
  * Provides a Route53 health check.
  * 
  * ## Example Usage
+ * ### Connectivity and HTTP Status Code Check
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HealthCheck(&#34;example&#34;, HealthCheckArgs.builder()        
+ *             .failureThreshold(&#34;5&#34;)
+ *             .fqdn(&#34;example.com&#34;)
+ *             .port(80)
+ *             .requestInterval(&#34;30&#34;)
+ *             .resourcePath(&#34;/&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;tf-test-health-check&#34;))
+ *             .type(&#34;HTTP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Connectivity and String Matching Check
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HealthCheck(&#34;example&#34;, HealthCheckArgs.builder()        
+ *             .failureThreshold(&#34;5&#34;)
+ *             .fqdn(&#34;example.com&#34;)
+ *             .port(443)
+ *             .requestInterval(&#34;30&#34;)
+ *             .resourcePath(&#34;/&#34;)
+ *             .searchString(&#34;example&#34;)
+ *             .type(&#34;HTTPS_STR_MATCH&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aggregate Check
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var parent = new HealthCheck(&#34;parent&#34;, HealthCheckArgs.builder()        
+ *             .type(&#34;CALCULATED&#34;)
+ *             .childHealthThreshold(1)
+ *             .childHealthchecks(aws_route53_health_check.getChild().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;tf-test-calculated-health-check&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### CloudWatch Alarm Check
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobar = new MetricAlarm(&#34;foobar&#34;, MetricAlarmArgs.builder()        
+ *             .comparisonOperator(&#34;GreaterThanOrEqualToThreshold&#34;)
+ *             .evaluationPeriods(&#34;2&#34;)
+ *             .metricName(&#34;CPUUtilization&#34;)
+ *             .namespace(&#34;AWS/EC2&#34;)
+ *             .period(&#34;120&#34;)
+ *             .statistic(&#34;Average&#34;)
+ *             .threshold(&#34;80&#34;)
+ *             .alarmDescription(&#34;This metric monitors ec2 cpu utilization&#34;)
+ *             .build());
+ * 
+ *         var foo = new HealthCheck(&#34;foo&#34;, HealthCheckArgs.builder()        
+ *             .type(&#34;CLOUDWATCH_METRIC&#34;)
+ *             .cloudwatchAlarmName(foobar.getName())
+ *             .cloudwatchAlarmRegion(&#34;us-west-2&#34;)
+ *             .insufficientDataHealthStatus(&#34;Healthy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

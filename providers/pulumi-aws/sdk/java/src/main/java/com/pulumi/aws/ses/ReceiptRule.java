@@ -27,6 +27,39 @@ import javax.annotation.Nullable;
  * Provides an SES receipt rule resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var store = new ReceiptRule(&#34;store&#34;, ReceiptRuleArgs.builder()        
+ *             .addHeaderActions(ReceiptRuleAddHeaderAction.builder()
+ *                 .headerName(&#34;Custom-Header&#34;)
+ *                 .headerValue(&#34;Added by SES&#34;)
+ *                 .position(1)
+ *                 .build())
+ *             .enabled(true)
+ *             .recipients(&#34;karen@example.com&#34;)
+ *             .ruleSetName(&#34;default-rule-set&#34;)
+ *             .s3Actions(ReceiptRuleS3Action.builder()
+ *                 .bucketName(&#34;emails&#34;)
+ *                 .position(2)
+ *                 .build())
+ *             .scanEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

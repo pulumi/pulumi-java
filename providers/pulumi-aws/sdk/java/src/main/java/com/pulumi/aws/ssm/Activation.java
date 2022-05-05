@@ -21,6 +21,47 @@ import javax.annotation.Nullable;
  * Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testRole = new Role(&#34;testRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ *   {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {&#34;Service&#34;: &#34;ssm.amazonaws.com&#34;},
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testAttach = new RolePolicyAttachment(&#34;testAttach&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(testRole.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore&#34;)
+ *             .build());
+ * 
+ *         var foo = new Activation(&#34;foo&#34;, ActivationArgs.builder()        
+ *             .description(&#34;Test&#34;)
+ *             .iamRole(testRole.getId())
+ *             .registrationLimit(&#34;5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

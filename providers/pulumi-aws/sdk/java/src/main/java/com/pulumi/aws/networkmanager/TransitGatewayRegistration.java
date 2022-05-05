@@ -19,6 +19,34 @@ import javax.annotation.Nullable;
  * You cannot register a transit gateway in more than one global network.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGlobalNetwork = new GlobalNetwork(&#34;exampleGlobalNetwork&#34;, GlobalNetworkArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;);
+ * 
+ *         var exampleTransitGatewayRegistration = new TransitGatewayRegistration(&#34;exampleTransitGatewayRegistration&#34;, TransitGatewayRegistrationArgs.builder()        
+ *             .globalNetworkId(exampleGlobalNetwork.getId())
+ *             .transitGatewayArn(exampleTransitGateway.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

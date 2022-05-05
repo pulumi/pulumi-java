@@ -21,6 +21,284 @@ import javax.annotation.Nullable;
  * Provides an AWS Network Firewall Rule Group Resource
  * 
  * ## Example Usage
+ * ### Stateful Inspection for denying access to a domain
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(100)
+ *             .ruleGroup(RuleGroupRuleGroup.builder()
+ *                 .rulesSource(RuleGroupRuleGroupRulesSource.builder()
+ *                     .rulesSourceList(RuleGroupRuleGroupRulesSourceRulesSourceList.builder()
+ *                         .generatedRulesType(&#34;DENYLIST&#34;)
+ *                         .targetTypes(&#34;HTTP_HOST&#34;)
+ *                         .targets(&#34;test.example.com&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .type(&#34;STATEFUL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stateful Inspection for permitting packets from a source IP address
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ips =         
+ *             &#34;1.1.1.1/32&#34;,
+ *             &#34;1.0.0.1/32&#34;;
+ * 
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(50)
+ *             .description(&#34;Permits http traffic from source&#34;)
+ *             .type(&#34;STATEFUL&#34;)
+ *             .ruleGroup(RuleGroupRuleGroup.builder()
+ *                 .rulesSource(RuleGroupRuleGroupRulesSource.builder()
+ *                     .dynamic(Map.ofEntries(
+ *                         Map.entry(&#34;forEach&#34;, ips),
+ *                         Map.entry(&#34;content&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;action&#34;, &#34;PASS&#34;),
+ *                             Map.entry(&#34;header&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;destination&#34;, &#34;ANY&#34;),
+ *                                 Map.entry(&#34;destinationPort&#34;, &#34;ANY&#34;),
+ *                                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;),
+ *                                 Map.entry(&#34;direction&#34;, &#34;ANY&#34;),
+ *                                 Map.entry(&#34;sourcePort&#34;, &#34;ANY&#34;),
+ *                                 Map.entry(&#34;source&#34;, stateful_rule.getValue())
+ *                             )),
+ *                             Map.entry(&#34;ruleOption&#34;, Map.of(&#34;keyword&#34;, &#34;sid:1&#34;))
+ *                         ))
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;permit HTTP from source&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stateful Inspection for blocking packets from going to an intended destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(100)
+ *             .ruleGroup(RuleGroupRuleGroup.builder()
+ *                 .rulesSource(RuleGroupRuleGroupRulesSource.builder()
+ *                     .statefulRule(Map.ofEntries(
+ *                         Map.entry(&#34;action&#34;, &#34;DROP&#34;),
+ *                         Map.entry(&#34;header&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;destination&#34;, &#34;124.1.1.24/32&#34;),
+ *                             Map.entry(&#34;destinationPort&#34;, 53),
+ *                             Map.entry(&#34;direction&#34;, &#34;ANY&#34;),
+ *                             Map.entry(&#34;protocol&#34;, &#34;TCP&#34;),
+ *                             Map.entry(&#34;source&#34;, &#34;1.2.3.4/32&#34;),
+ *                             Map.entry(&#34;sourcePort&#34;, 53)
+ *                         )),
+ *                         Map.entry(&#34;ruleOption&#34;, Map.of(&#34;keyword&#34;, &#34;sid:1&#34;))
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .type(&#34;STATEFUL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stateful Inspection from rules specifications defined in Suricata flat format
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(100)
+ *             .type(&#34;STATEFUL&#34;)
+ *             .rules(Files.readString(&#34;example.rules&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stateful Inspection from rule group specifications using rule variables and Suricata format rules
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(100)
+ *             .type(&#34;STATEFUL&#34;)
+ *             .ruleGroup(RuleGroupRuleGroup.builder()
+ *                 .ruleVariables(RuleGroupRuleGroupRuleVariables.builder()
+ *                     .ipSets(                    
+ *                         RuleGroupRuleGroupRuleVariablesIpSet.builder()
+ *                             .key(&#34;WEBSERVERS_HOSTS&#34;)
+ *                             .ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSet.builder()
+ *                                 .definitions(                                
+ *                                     &#34;10.0.0.0/16&#34;,
+ *                                     &#34;10.0.1.0/24&#34;,
+ *                                     &#34;192.168.0.0/16&#34;)
+ *                                 .build())
+ *                             .build(),
+ *                         RuleGroupRuleGroupRuleVariablesIpSet.builder()
+ *                             .key(&#34;EXTERNAL_HOST&#34;)
+ *                             .ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSet.builder()
+ *                                 .definitions(&#34;1.2.3.4/32&#34;)
+ *                                 .build())
+ *                             .build())
+ *                     .portSets(RuleGroupRuleGroupRuleVariablesPortSet.builder()
+ *                         .key(&#34;HTTP_PORTS&#34;)
+ *                         .portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet.builder()
+ *                             .definitions(                            
+ *                                 &#34;443&#34;,
+ *                                 &#34;80&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .rulesSource(RuleGroupRuleGroupRulesSource.builder()
+ *                     .rulesString(Files.readString(&#34;suricata_rules_file&#34;))
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stateless Inspection with a Custom Action
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(100)
+ *             .description(&#34;Stateless Rate Limiting Rule&#34;)
+ *             .ruleGroup(RuleGroupRuleGroup.builder()
+ *                 .rulesSource(RuleGroupRuleGroupRulesSource.builder()
+ *                     .statelessRulesAndCustomActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions.builder()
+ *                         .customAction(Map.ofEntries(
+ *                             Map.entry(&#34;actionDefinition&#34;, Map.of(&#34;publishMetricAction&#34;, Map.of(&#34;dimension&#34;, Map.of(&#34;value&#34;, &#34;2&#34;)))),
+ *                             Map.entry(&#34;actionName&#34;, &#34;ExampleMetricsAction&#34;)
+ *                         ))
+ *                         .statelessRule(Map.ofEntries(
+ *                             Map.entry(&#34;priority&#34;, 1),
+ *                             Map.entry(&#34;ruleDefinition&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;actions&#34;,                                 
+ *                                     &#34;aws:pass&#34;,
+ *                                     &#34;ExampleMetricsAction&#34;),
+ *                                 Map.entry(&#34;matchAttributes&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;destination&#34;, Map.of(&#34;addressDefinition&#34;, &#34;124.1.1.5/32&#34;)),
+ *                                     Map.entry(&#34;destinationPort&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;fromPort&#34;, 443),
+ *                                         Map.entry(&#34;toPort&#34;, 443)
+ *                                     )),
+ *                                     Map.entry(&#34;protocols&#34;, 6),
+ *                                     Map.entry(&#34;source&#34;, Map.of(&#34;addressDefinition&#34;, &#34;1.2.3.4/32&#34;)),
+ *                                     Map.entry(&#34;sourcePort&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;fromPort&#34;, 443),
+ *                                         Map.entry(&#34;toPort&#34;, 443)
+ *                                     )),
+ *                                     Map.entry(&#34;tcpFlag&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;flags&#34;, &#34;SYN&#34;),
+ *                                         Map.entry(&#34;masks&#34;,                                         
+ *                                             &#34;SYN&#34;,
+ *                                             &#34;ACK&#34;)
+ *                                     ))
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .type(&#34;STATELESS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

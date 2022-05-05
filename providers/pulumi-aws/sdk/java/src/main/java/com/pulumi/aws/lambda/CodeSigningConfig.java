@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var newCsc = new CodeSigningConfig(&#34;newCsc&#34;, CodeSigningConfigArgs.builder()        
+ *             .allowedPublishers(CodeSigningConfigAllowedPublishers.builder()
+ *                 .signingProfileVersionArns(                
+ *                     aws_signer_signing_profile.getExample1().getArn(),
+ *                     aws_signer_signing_profile.getExample2().getArn())
+ *                 .build())
+ *             .policies(CodeSigningConfigPolicies.builder()
+ *                 .untrustedArtifactOnDeployment(&#34;Warn&#34;)
+ *                 .build())
+ *             .description(&#34;My awesome code signing config.&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -34,6 +34,62 @@ import javax.annotation.Nullable;
  * conflict and will overwrite attachments.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new LoadBalancer(&#34;bar&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .accessLogs(LoadBalancerAccessLogs.builder()
+ *                 .bucket(&#34;foo&#34;)
+ *                 .bucketPrefix(&#34;bar&#34;)
+ *                 .interval(60)
+ *                 .build())
+ *             .listeners(            
+ *                 LoadBalancerListener.builder()
+ *                     .instancePort(8000)
+ *                     .instanceProtocol(&#34;http&#34;)
+ *                     .lbPort(80)
+ *                     .lbProtocol(&#34;http&#34;)
+ *                     .build(),
+ *                 LoadBalancerListener.builder()
+ *                     .instancePort(8000)
+ *                     .instanceProtocol(&#34;http&#34;)
+ *                     .lbPort(443)
+ *                     .lbProtocol(&#34;https&#34;)
+ *                     .sslCertificateId(&#34;arn:aws:iam::123456789012:server-certificate/certName&#34;)
+ *                     .build())
+ *             .healthCheck(LoadBalancerHealthCheck.builder()
+ *                 .healthyThreshold(2)
+ *                 .unhealthyThreshold(2)
+ *                 .timeout(3)
+ *                 .target(&#34;HTTP:8000/&#34;)
+ *                 .interval(30)
+ *                 .build())
+ *             .instances(aws_instance.getFoo().getId())
+ *             .crossZoneLoadBalancing(true)
+ *             .idleTimeout(400)
+ *             .connectionDraining(true)
+ *             .connectionDrainingTimeout(400)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foobar-elb&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Note on ECDSA Key Algorithm
  * 
  * If the ARN of the `ssl_certificate_id` that is pointed to references a

@@ -22,6 +22,69 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To store a basic string parameter:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Parameter(&#34;foo&#34;, ParameterArgs.builder()        
+ *             .type(&#34;String&#34;)
+ *             .value(&#34;bar&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To store an encrypted string using the default SSM KMS key:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Instance(&#34;default&#34;, InstanceArgs.builder()        
+ *             .allocatedStorage(10)
+ *             .storageType(&#34;gp2&#34;)
+ *             .engine(&#34;mysql&#34;)
+ *             .engineVersion(&#34;5.7.16&#34;)
+ *             .instanceClass(&#34;db.t2.micro&#34;)
+ *             .name(&#34;mydb&#34;)
+ *             .username(&#34;foo&#34;)
+ *             .password(var_.getDatabase_master_password())
+ *             .dbSubnetGroupName(&#34;my_database_subnet_group&#34;)
+ *             .parameterGroupName(&#34;default.mysql5.7&#34;)
+ *             .build());
+ * 
+ *         var secret = new Parameter(&#34;secret&#34;, ParameterArgs.builder()        
+ *             .description(&#34;The parameter description&#34;)
+ *             .type(&#34;SecureString&#34;)
+ *             .value(var_.getDatabase_master_password())
+ *             .tags(Map.of(&#34;environment&#34;, &#34;production&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * SSM Parameters can be imported using the `parameter store name`, e.g.,

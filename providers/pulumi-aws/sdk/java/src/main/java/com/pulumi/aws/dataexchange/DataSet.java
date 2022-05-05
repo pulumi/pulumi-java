@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a resource to manage AWS Data Exchange DataSets.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DataSet(&#34;example&#34;, DataSetArgs.builder()        
+ *             .assetType(&#34;S3_SNAPSHOT&#34;)
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

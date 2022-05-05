@@ -23,6 +23,79 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Create required roles and then create a DMS instance, setting the depends_on to the required role policy attachments.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var dmsAssumeRole = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(&#34;dms.amazonaws.com&#34;)
+ *                     .type(&#34;Service&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var dms_access_for_endpoint = new Role(&#34;dms-access-for-endpoint&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(dmsAssumeRole.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var dms_access_for_endpoint_AmazonDMSRedshiftS3Role = new RolePolicyAttachment(&#34;dms-access-for-endpoint-AmazonDMSRedshiftS3Role&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role&#34;)
+ *             .role(dms_access_for_endpoint.getName())
+ *             .build());
+ * 
+ *         var dms_cloudwatch_logs_role = new Role(&#34;dms-cloudwatch-logs-role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(dmsAssumeRole.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var dms_cloudwatch_logs_role_AmazonDMSCloudWatchLogsRole = new RolePolicyAttachment(&#34;dms-cloudwatch-logs-role-AmazonDMSCloudWatchLogsRole&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole&#34;)
+ *             .role(dms_cloudwatch_logs_role.getName())
+ *             .build());
+ * 
+ *         var dms_vpc_role = new Role(&#34;dms-vpc-role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(dmsAssumeRole.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var dms_vpc_role_AmazonDMSVPCManagementRole = new RolePolicyAttachment(&#34;dms-vpc-role-AmazonDMSVPCManagementRole&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole&#34;)
+ *             .role(dms_vpc_role.getName())
+ *             .build());
+ * 
+ *         var test = new ReplicationInstance(&#34;test&#34;, ReplicationInstanceArgs.builder()        
+ *             .allocatedStorage(20)
+ *             .applyImmediately(true)
+ *             .autoMinorVersionUpgrade(true)
+ *             .availabilityZone(&#34;us-west-2c&#34;)
+ *             .engineVersion(&#34;3.1.4&#34;)
+ *             .kmsKeyArn(&#34;arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012&#34;)
+ *             .multiAz(false)
+ *             .preferredMaintenanceWindow(&#34;sun:10:30-sun:14:30&#34;)
+ *             .publiclyAccessible(true)
+ *             .replicationInstanceClass(&#34;dms.t2.micro&#34;)
+ *             .replicationInstanceId(&#34;test-dms-replication-instance-tf&#34;)
+ *             .replicationSubnetGroupId(aws_dms_replication_subnet_group.getTest-dms-replication-subnet-group-tf().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;test&#34;))
+ *             .vpcSecurityGroupIds(&#34;sg-12345678&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Replication instances can be imported using the `replication_instance_id`, e.g.,

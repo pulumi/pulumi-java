@@ -26,6 +26,140 @@ import javax.annotation.Nullable;
  * Manages AWS Managed Streaming for Kafka cluster
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpc = new Vpc(&#34;vpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;192.168.0.0/22&#34;)
+ *             .build());
+ * 
+ *         final var azs = Output.of(AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+ *             .state(&#34;available&#34;)
+ *             .build()));
+ * 
+ *         var subnetAz1 = new Subnet(&#34;subnetAz1&#34;, SubnetArgs.builder()        
+ *             .availabilityZone(azs.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[0]))
+ *             .cidrBlock(&#34;192.168.0.0/24&#34;)
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var subnetAz2 = new Subnet(&#34;subnetAz2&#34;, SubnetArgs.builder()        
+ *             .availabilityZone(azs.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[1]))
+ *             .cidrBlock(&#34;192.168.1.0/24&#34;)
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var subnetAz3 = new Subnet(&#34;subnetAz3&#34;, SubnetArgs.builder()        
+ *             .availabilityZone(azs.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[2]))
+ *             .cidrBlock(&#34;192.168.2.0/24&#34;)
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var sg = new SecurityGroup(&#34;sg&#34;, SecurityGroupArgs.builder()        
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var kms = new Key(&#34;kms&#34;, KeyArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var test = new LogGroup(&#34;test&#34;);
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var bucketAcl = new BucketAclV2(&#34;bucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var firehoseRole = new Role(&#34;firehoseRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ * &#34;Version&#34;: &#34;2012-10-17&#34;,
+ * &#34;Statement&#34;: [
+ *   {
+ *     &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *     &#34;Principal&#34;: {
+ *       &#34;Service&#34;: &#34;firehose.amazonaws.com&#34;
+ *     },
+ *     &#34;Effect&#34;: &#34;Allow&#34;,
+ *     &#34;Sid&#34;: &#34;&#34;
+ *   }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;s3&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(firehoseRole.getArn())
+ *                 .bucketArn(bucket.getArn())
+ *                 .build())
+ *             .tags(Map.of(&#34;LogDeliveryEnabled&#34;, &#34;placeholder&#34;))
+ *             .build());
+ * 
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .kafkaVersion(&#34;2.4.1&#34;)
+ *             .numberOfBrokerNodes(3)
+ *             .brokerNodeGroupInfo(ClusterBrokerNodeGroupInfo.builder()
+ *                 .instanceType(&#34;kafka.m5.large&#34;)
+ *                 .ebsVolumeSize(1000)
+ *                 .clientSubnets(                
+ *                     subnetAz1.getId(),
+ *                     subnetAz2.getId(),
+ *                     subnetAz3.getId())
+ *                 .securityGroups(sg.getId())
+ *                 .build())
+ *             .encryptionInfo(ClusterEncryptionInfo.builder()
+ *                 .encryptionAtRestKmsKeyArn(kms.getArn())
+ *                 .build())
+ *             .openMonitoring(ClusterOpenMonitoring.builder()
+ *                 .prometheus(ClusterOpenMonitoringPrometheus.builder()
+ *                     .jmxExporter(ClusterOpenMonitoringPrometheusJmxExporter.builder()
+ *                         .enabledInBroker(true)
+ *                         .build())
+ *                     .nodeExporter(ClusterOpenMonitoringPrometheusNodeExporter.builder()
+ *                         .enabledInBroker(true)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .loggingInfo(ClusterLoggingInfo.builder()
+ *                 .brokerLogs(ClusterLoggingInfoBrokerLogs.builder()
+ *                     .cloudwatchLogs(ClusterLoggingInfoBrokerLogsCloudwatchLogs.builder()
+ *                         .enabled(true)
+ *                         .logGroup(test.getName())
+ *                         .build())
+ *                     .firehose(ClusterLoggingInfoBrokerLogsFirehose.builder()
+ *                         .enabled(true)
+ *                         .deliveryStream(testStream.getName())
+ *                         .build())
+ *                     .s3(ClusterLoggingInfoBrokerLogsS3.builder()
+ *                         .enabled(true)
+ *                         .bucket(bucket.getId())
+ *                         .prefix(&#34;logs/msk-&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         ctx.export(&#34;zookeeperConnectString&#34;, example.getZookeeperConnectString());
+ *         ctx.export(&#34;bootstrapBrokersTls&#34;, example.getBootstrapBrokersTls());
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

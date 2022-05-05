@@ -17,6 +17,27 @@ import javax.annotation.Nullable;
  * Provides an SES receipt rule set resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new ReceiptRuleSet(&#34;main&#34;, ReceiptRuleSetArgs.builder()        
+ *             .ruleSetName(&#34;primary-rules&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

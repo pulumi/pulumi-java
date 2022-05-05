@@ -23,6 +23,56 @@ import javax.annotation.Nullable;
  * See [Configuring Logging for DNS Queries](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring) for additional details.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var us_east_1 = new Provider(&#34;us-east-1&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var awsRoute53ExampleCom = new LogGroup(&#34;awsRoute53ExampleCom&#34;, LogGroupArgs.builder()        
+ *             .retentionInDays(30)
+ *             .build());
+ * 
+ *         final var route53-query-logging-policyPolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(                
+ *                     &#34;logs:CreateLogStream&#34;,
+ *                     &#34;logs:PutLogEvents&#34;)
+ *                 .resources(&#34;arn:aws:logs:*:*:log-group:/aws/route53/*&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(&#34;route53.amazonaws.com&#34;)
+ *                     .type(&#34;Service&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var route53_query_logging_policyLogResourcePolicy = new LogResourcePolicy(&#34;route53-query-logging-policyLogResourcePolicy&#34;, LogResourcePolicyArgs.builder()        
+ *             .policyDocument(route53_query_logging_policyPolicyDocument.getJson())
+ *             .policyName(&#34;route53-query-logging-policy&#34;)
+ *             .build());
+ * 
+ *         var exampleComZone = new Zone(&#34;exampleComZone&#34;);
+ * 
+ *         var exampleComQueryLog = new QueryLog(&#34;exampleComQueryLog&#34;, QueryLogArgs.builder()        
+ *             .cloudwatchLogGroupArn(awsRoute53ExampleCom.getArn())
+ *             .zoneId(exampleComZone.getZoneId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

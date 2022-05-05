@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
  * application with the same configuration settings.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tftest = new Application(&#34;tftest&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;tf-test-desc&#34;)
+ *             .build());
+ * 
+ *         var tfTemplate = new ConfigurationTemplate(&#34;tfTemplate&#34;, ConfigurationTemplateArgs.builder()        
+ *             .application(tftest.getName())
+ *             .solutionStackName(&#34;64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Option Settings
  * 
  * The `setting` field supports the following format:

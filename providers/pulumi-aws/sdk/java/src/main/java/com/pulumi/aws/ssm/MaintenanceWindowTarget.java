@@ -20,6 +20,74 @@ import javax.annotation.Nullable;
  * Provides an SSM Maintenance Window Target resource
  * 
  * ## Example Usage
+ * ### Instance Target
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var window = new MaintenanceWindow(&#34;window&#34;, MaintenanceWindowArgs.builder()        
+ *             .schedule(&#34;cron(0 16 ? * TUE *)&#34;)
+ *             .duration(3)
+ *             .cutoff(1)
+ *             .build());
+ * 
+ *         var target1 = new MaintenanceWindowTarget(&#34;target1&#34;, MaintenanceWindowTargetArgs.builder()        
+ *             .windowId(window.getId())
+ *             .description(&#34;This is a maintenance window target&#34;)
+ *             .resourceType(&#34;INSTANCE&#34;)
+ *             .targets(MaintenanceWindowTargetTarget.builder()
+ *                 .key(&#34;tag:Name&#34;)
+ *                 .values(&#34;acceptance_test&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resource Group Target
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var window = new MaintenanceWindow(&#34;window&#34;, MaintenanceWindowArgs.builder()        
+ *             .schedule(&#34;cron(0 16 ? * TUE *)&#34;)
+ *             .duration(3)
+ *             .cutoff(1)
+ *             .build());
+ * 
+ *         var target1 = new MaintenanceWindowTarget(&#34;target1&#34;, MaintenanceWindowTargetArgs.builder()        
+ *             .windowId(window.getId())
+ *             .description(&#34;This is a maintenance window target&#34;)
+ *             .resourceType(&#34;RESOURCE_GROUP&#34;)
+ *             .targets(MaintenanceWindowTargetTarget.builder()
+ *                 .key(&#34;resource-groups:ResourceTypeFilters&#34;)
+ *                 .values(&#34;AWS::EC2::Instance&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

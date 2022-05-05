@@ -22,6 +22,27 @@ public final class EfsFunctions {
      * Provides information about an Elastic File System (EFS) Access Point.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(EfsFunctions.getAccessPoint(GetAccessPointArgs.builder()
+     *             .accessPointId(&#34;fsap-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAccessPointResult> getAccessPoint(GetAccessPointArgs args) {
@@ -34,6 +55,27 @@ public final class EfsFunctions {
      * Provides information about multiple Elastic File System (EFS) Access Points.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(EfsFunctions.getAccessPoints(GetAccessPointsArgs.builder()
+     *             .fileSystemId(&#34;fs-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAccessPointsResult> getAccessPoints(GetAccessPointsArgs args) {
@@ -46,6 +88,33 @@ public final class EfsFunctions {
      * Provides information about an Elastic File System (EFS) File System.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var fileSystemId = config.get(&#34;fileSystemId&#34;).orElse(&#34;&#34;);
+     *         final var byId = Output.of(EfsFunctions.getFileSystem(GetFileSystemArgs.builder()
+     *             .fileSystemId(fileSystemId)
+     *             .build()));
+     * 
+     *         final var byTag = Output.of(EfsFunctions.getFileSystem(GetFileSystemArgs.builder()
+     *             .tags(Map.of(&#34;Environment&#34;, &#34;dev&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFileSystemResult> getFileSystem() {
@@ -61,6 +130,29 @@ public final class EfsFunctions {
      * Provides information about an Elastic File System Mount Target (EFS).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var mountTargetId = config.get(&#34;mountTargetId&#34;).orElse(&#34;&#34;);
+     *         final var byId = Output.of(EfsFunctions.getMountTarget(GetMountTargetArgs.builder()
+     *             .mountTargetId(mountTargetId)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetMountTargetResult> getMountTarget() {

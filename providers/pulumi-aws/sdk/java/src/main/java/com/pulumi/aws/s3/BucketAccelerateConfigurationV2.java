@@ -18,6 +18,30 @@ import javax.annotation.Nullable;
  * Provides an S3 bucket accelerate configuration resource. See the [Requirements for using Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/userguide/transfer-acceleration.html#transfer-acceleration-requirements) for more details.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mybucket = new BucketV2(&#34;mybucket&#34;);
+ * 
+ *         var example = new BucketAccelerateConfigurationV2(&#34;example&#34;, BucketAccelerateConfigurationV2Args.builder()        
+ *             .bucket(mybucket.getBucket())
+ *             .status(&#34;Enabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

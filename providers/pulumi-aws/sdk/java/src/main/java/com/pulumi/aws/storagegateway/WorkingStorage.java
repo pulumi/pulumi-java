@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The Storage Gateway API provides no method to remove a working storage disk. Destroying this resource does not perform any Storage Gateway actions.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WorkingStorage(&#34;example&#34;, WorkingStorageArgs.builder()        
+ *             .diskId(data.getAws_storagegateway_local_disk().getExample().getId())
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

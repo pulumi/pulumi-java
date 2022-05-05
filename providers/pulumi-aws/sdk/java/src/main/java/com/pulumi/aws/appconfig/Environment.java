@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * Provides an AppConfig Environment resource for an `aws.appconfig.Application` resource. One or more environments can be defined for an application.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;Example AppConfig Application&#34;)
+ *             .tags(Map.of(&#34;Type&#34;, &#34;AppConfig Application&#34;))
+ *             .build());
+ * 
+ *         var exampleEnvironment = new Environment(&#34;exampleEnvironment&#34;, EnvironmentArgs.builder()        
+ *             .description(&#34;Example AppConfig Environment&#34;)
+ *             .applicationId(exampleApplication.getId())
+ *             .monitors(EnvironmentMonitor.builder()
+ *                 .alarmArn(aws_cloudwatch_metric_alarm.getExample().getArn())
+ *                 .alarmRoleArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .tags(Map.of(&#34;Type&#34;, &#34;AppConfig Environment&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

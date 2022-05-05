@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * Manages an EKS Identity Provider Configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new IdentityProviderConfig(&#34;example&#34;, IdentityProviderConfigArgs.builder()        
+ *             .clusterName(aws_eks_cluster.getExample().getName())
+ *             .oidc(IdentityProviderConfigOidc.builder()
+ *                 .clientId(&#34;your client_id&#34;)
+ *                 .identityProviderConfigName(&#34;example&#34;)
+ *                 .issuerUrl(&#34;your issuer_url&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

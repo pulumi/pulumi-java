@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * Manages an S3 Location within AWS DataSync.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new S3Location(&#34;example&#34;, S3LocationArgs.builder()        
+ *             .s3BucketArn(aws_s3_bucket.getExample().getArn())
+ *             .subdirectory(&#34;/example/prefix&#34;)
+ *             .s3Config(S3LocationS3Config.builder()
+ *                 .bucketAccessRoleArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

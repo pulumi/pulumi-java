@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker User Profile resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserProfile(&#34;example&#34;, UserProfileArgs.builder()        
+ *             .domainId(aws_sagemaker_domain.getTest().getId())
+ *             .userProfileName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

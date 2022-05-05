@@ -40,6 +40,62 @@ import javax.annotation.Nullable;
  * the separate resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RouteTable(&#34;example&#34;, RouteTableArgs.builder()        
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .routes(            
+ *                 RouteTableRoute.builder()
+ *                     .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *                     .gatewayId(aws_internet_gateway.getExample().getId())
+ *                     .build(),
+ *                 RouteTableRoute.builder()
+ *                     .ipv6CidrBlock(&#34;::/0&#34;)
+ *                     .egressOnlyGatewayId(aws_egress_only_internet_gateway.getExample().getId())
+ *                     .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To subsequently remove all managed routes:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RouteTable(&#34;example&#34;, RouteTableArgs.builder()        
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .routes()
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

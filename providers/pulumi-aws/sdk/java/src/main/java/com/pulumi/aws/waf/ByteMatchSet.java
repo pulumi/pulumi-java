@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides a WAF Byte Match Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var byteSet = new ByteMatchSet(&#34;byteSet&#34;, ByteMatchSetArgs.builder()        
+ *             .byteMatchTuples(ByteMatchSetByteMatchTuple.builder()
+ *                 .fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatch.builder()
+ *                     .data(&#34;referer&#34;)
+ *                     .type(&#34;HEADER&#34;)
+ *                     .build())
+ *                 .positionalConstraint(&#34;CONTAINS&#34;)
+ *                 .targetString(&#34;badrefer1&#34;)
+ *                 .textTransformation(&#34;NONE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

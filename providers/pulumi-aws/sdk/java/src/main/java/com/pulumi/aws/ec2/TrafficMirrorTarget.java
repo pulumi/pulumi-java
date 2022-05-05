@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To create a basic traffic mirror session
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var nlb = new TrafficMirrorTarget(&#34;nlb&#34;, TrafficMirrorTargetArgs.builder()        
+ *             .description(&#34;NLB target&#34;)
+ *             .networkLoadBalancerArn(aws_lb.getLb().getArn())
+ *             .build());
+ * 
+ *         var eni = new TrafficMirrorTarget(&#34;eni&#34;, TrafficMirrorTargetArgs.builder()        
+ *             .description(&#34;ENI target&#34;)
+ *             .networkInterfaceId(aws_instance.getTest().getPrimary_network_interface_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Traffic mirror targets can be imported using the `id`, e.g.,

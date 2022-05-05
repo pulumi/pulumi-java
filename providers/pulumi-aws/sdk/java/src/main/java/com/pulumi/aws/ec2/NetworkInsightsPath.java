@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * Provides a Network Insights Path resource. Part of the &#34;Reachability Analyzer&#34; service in the AWS VPC console.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new NetworkInsightsPath(&#34;test&#34;, NetworkInsightsPathArgs.builder()        
+ *             .source(aws_network_interface.getSource().getId())
+ *             .destination(aws_network_interface.getDestination().getId())
+ *             .protocol(&#34;tcp&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

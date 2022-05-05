@@ -24,6 +24,135 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Do not use `network_interface` to associate the EIP to `aws.lb.LoadBalancer` or `aws.ec2.NatGateway` resources. Instead use the `allocation_id` available in those resources to allow AWS to manage the association, otherwise you will see `AuthFailure` errors.
  * 
  * ## Example Usage
+ * ### Single EIP associated with an instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lb = new Eip(&#34;lb&#34;, EipArgs.builder()        
+ *             .instance(aws_instance.getWeb().getId())
+ *             .vpc(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Multiple EIPs associated with a single network interface
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var multi_ip = new NetworkInterface(&#34;multi-ip&#34;, NetworkInterfaceArgs.builder()        
+ *             .subnetId(aws_subnet.getMain().getId())
+ *             .privateIps(            
+ *                 &#34;10.0.0.10&#34;,
+ *                 &#34;10.0.0.11&#34;)
+ *             .build());
+ * 
+ *         var one = new Eip(&#34;one&#34;, EipArgs.builder()        
+ *             .vpc(true)
+ *             .networkInterface(multi_ip.getId())
+ *             .associateWithPrivateIp(&#34;10.0.0.10&#34;)
+ *             .build());
+ * 
+ *         var two = new Eip(&#34;two&#34;, EipArgs.builder()        
+ *             .vpc(true)
+ *             .networkInterface(multi_ip.getId())
+ *             .associateWithPrivateIp(&#34;10.0.0.11&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Attaching an EIP to an Instance with a pre-assigned private ip (VPC Only)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Vpc(&#34;default&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         var gw = new InternetGateway(&#34;gw&#34;, InternetGatewayArgs.builder()        
+ *             .vpcId(default_.getId())
+ *             .build());
+ * 
+ *         var tfTestSubnet = new Subnet(&#34;tfTestSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(default_.getId())
+ *             .cidrBlock(&#34;10.0.0.0/24&#34;)
+ *             .mapPublicIpOnLaunch(true)
+ *             .build());
+ * 
+ *         var foo = new Instance(&#34;foo&#34;, InstanceArgs.builder()        
+ *             .ami(&#34;ami-5189a661&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .privateIp(&#34;10.0.0.12&#34;)
+ *             .subnetId(tfTestSubnet.getId())
+ *             .build());
+ * 
+ *         var bar = new Eip(&#34;bar&#34;, EipArgs.builder()        
+ *             .vpc(true)
+ *             .instance(foo.getId())
+ *             .associateWithPrivateIp(&#34;10.0.0.12&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Allocating EIP from the BYOIP pool
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var byoip_ip = new Eip(&#34;byoip-ip&#34;, EipArgs.builder()        
+ *             .publicIpv4Pool(&#34;ipv4pool-ec2-012345&#34;)
+ *             .vpc(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

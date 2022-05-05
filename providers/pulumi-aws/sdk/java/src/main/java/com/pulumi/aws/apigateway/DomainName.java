@@ -46,6 +46,154 @@ import javax.annotation.Nullable;
  * `regional_certificate_arn = aws_acm_certificate_validation.cert.certificate_arn`.
  * 
  * ## Example Usage
+ * ### Edge Optimized (ACM Certificate)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .certificateArn(aws_acm_certificate_validation.getExample().getCertificate_arn())
+ *             .domainName(&#34;api.example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .name(exampleDomainName.getDomainName())
+ *             .type(&#34;A&#34;)
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .aliases(RecordAlias.builder()
+ *                 .evaluateTargetHealth(true)
+ *                 .name(exampleDomainName.getCloudfrontDomainName())
+ *                 .zoneId(exampleDomainName.getCloudfrontZoneId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Edge Optimized (IAM Certificate)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;api.example.com&#34;)
+ *             .certificateName(&#34;example-api&#34;)
+ *             .certificateBody(Files.readString(String.format(&#34;%s/example.com/example.crt&#34;, path.getModule())))
+ *             .certificateChain(Files.readString(String.format(&#34;%s/example.com/ca.crt&#34;, path.getModule())))
+ *             .certificatePrivateKey(Files.readString(String.format(&#34;%s/example.com/example.key&#34;, path.getModule())))
+ *             .build());
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .name(exampleDomainName.getDomainName())
+ *             .type(&#34;A&#34;)
+ *             .aliases(RecordAlias.builder()
+ *                 .name(exampleDomainName.getCloudfrontDomainName())
+ *                 .zoneId(exampleDomainName.getCloudfrontZoneId())
+ *                 .evaluateTargetHealth(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Regional (ACM Certificate)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;api.example.com&#34;)
+ *             .regionalCertificateArn(aws_acm_certificate_validation.getExample().getCertificate_arn())
+ *             .endpointConfiguration(DomainNameEndpointConfiguration.builder()
+ *                 .types(&#34;REGIONAL&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .name(exampleDomainName.getDomainName())
+ *             .type(&#34;A&#34;)
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .aliases(RecordAlias.builder()
+ *                 .evaluateTargetHealth(true)
+ *                 .name(exampleDomainName.getRegionalDomainName())
+ *                 .zoneId(exampleDomainName.getRegionalZoneId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Regional (IAM Certificate)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .certificateBody(Files.readString(String.format(&#34;%s/example.com/example.crt&#34;, path.getModule())))
+ *             .certificateChain(Files.readString(String.format(&#34;%s/example.com/ca.crt&#34;, path.getModule())))
+ *             .certificatePrivateKey(Files.readString(String.format(&#34;%s/example.com/example.key&#34;, path.getModule())))
+ *             .domainName(&#34;api.example.com&#34;)
+ *             .regionalCertificateName(&#34;example-api&#34;)
+ *             .endpointConfiguration(DomainNameEndpointConfiguration.builder()
+ *                 .types(&#34;REGIONAL&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .name(exampleDomainName.getDomainName())
+ *             .type(&#34;A&#34;)
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .aliases(RecordAlias.builder()
+ *                 .evaluateTargetHealth(true)
+ *                 .name(exampleDomainName.getRegionalDomainName())
+ *                 .zoneId(exampleDomainName.getRegionalZoneId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

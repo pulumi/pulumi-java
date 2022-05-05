@@ -23,6 +23,27 @@ public final class EcsFunctions {
      * cluster within an AWS ECS service.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ecs-mongo = Output.of(EcsFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterName(&#34;ecs-mongo-production&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
@@ -36,6 +57,28 @@ public final class EcsFunctions {
      * a specific container within an AWS ECS service.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ecs-mongo = Output.of(EcsFunctions.getContainerDefinition(GetContainerDefinitionArgs.builder()
+     *             .taskDefinition(aws_ecs_task_definition.getMongo().getId())
+     *             .containerName(&#34;mongodb&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetContainerDefinitionResult> getContainerDefinition(GetContainerDefinitionArgs args) {
@@ -49,6 +92,28 @@ public final class EcsFunctions {
      * Service within a AWS ECS Cluster.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(EcsFunctions.getService(GetServiceArgs.builder()
+     *             .serviceName(&#34;example&#34;)
+     *             .clusterArn(data.getAws_ecs_cluster().getExample().getArn())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetServiceResult> getService(GetServiceArgs args) {
@@ -62,6 +127,55 @@ public final class EcsFunctions {
      * a specific AWS ECS task definition.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var mongoTaskDefinition = Output.of(EcsFunctions.getTaskDefinition(GetTaskDefinitionArgs.builder()
+     *             .taskDefinition(mongoEcs / taskDefinitionTaskDefinition.getFamily())
+     *             .build()));
+     * 
+     *         var foo = new Cluster(&#34;foo&#34;);
+     * 
+     *         var mongoEcs_taskDefinitionTaskDefinition = new TaskDefinition(&#34;mongoEcs/taskDefinitionTaskDefinition&#34;, TaskDefinitionArgs.builder()        
+     *             .family(&#34;mongodb&#34;)
+     *             .containerDefinitions(&#34;&#34;&#34;
+     * [
+     *   {
+     *     &#34;cpu&#34;: 128,
+     *     &#34;environment&#34;: [{
+     *       &#34;name&#34;: &#34;SECRET&#34;,
+     *       &#34;value&#34;: &#34;KEY&#34;
+     *     }],
+     *     &#34;essential&#34;: true,
+     *     &#34;image&#34;: &#34;mongo:latest&#34;,
+     *     &#34;memory&#34;: 128,
+     *     &#34;memoryReservation&#34;: 64,
+     *     &#34;name&#34;: &#34;mongodb&#34;
+     *   }
+     * ]
+     *             &#34;&#34;&#34;)
+     *             .build());
+     * 
+     *         var mongoService = new Service(&#34;mongoService&#34;, ServiceArgs.builder()        
+     *             .cluster(foo.getId())
+     *             .desiredCount(2)
+     *             .taskDefinition(mongoEcs / taskDefinitionTaskDefinition.getArn())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetTaskDefinitionResult> getTaskDefinition(GetTaskDefinitionArgs args) {

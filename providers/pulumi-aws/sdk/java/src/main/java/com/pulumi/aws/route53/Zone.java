@@ -22,6 +22,90 @@ import javax.annotation.Nullable;
  * Manages a Route53 Hosted Zone. For managing Domain Name System Security Extensions (DNSSEC), see the `aws.route53.KeySigningKey` and `aws.route53.HostedZoneDnsSec` resources.
  * 
  * ## Example Usage
+ * ### Public Zone
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Zone(&#34;primary&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Public Subdomain Zone
+ * 
+ * For use in subdomains, note that you need to create a
+ * `aws.route53.Record` of type `NS` as well as the subdomain
+ * zone.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Zone(&#34;main&#34;);
+ * 
+ *         var dev = new Zone(&#34;dev&#34;, ZoneArgs.builder()        
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;dev&#34;))
+ *             .build());
+ * 
+ *         var dev_ns = new Record(&#34;dev-ns&#34;, RecordArgs.builder()        
+ *             .zoneId(main.getZoneId())
+ *             .name(&#34;dev.example.com&#34;)
+ *             .type(&#34;NS&#34;)
+ *             .ttl(&#34;30&#34;)
+ *             .records(dev.getNameServers())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Private Zone
+ * 
+ * &gt; **NOTE:** This provider provides both exclusive VPC associations defined in-line in this resource via `vpc` configuration blocks and a separate ` Zone VPC Association resource. At this time, you cannot use in-line VPC associations in conjunction with any  `aws.route53.ZoneAssociation`  resources with the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [ `ignoreChanges` ](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to manage additional associations via the  `aws.route53.ZoneAssociation` resource.
+ * 
+ * &gt; **NOTE:** Private zones require at least one VPC association at all times.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var private_ = new Zone(&#34;private&#34;, ZoneArgs.builder()        
+ *             .vpcs(ZoneVpc.builder()
+ *                 .vpcId(aws_vpc.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

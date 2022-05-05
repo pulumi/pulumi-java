@@ -28,6 +28,309 @@ import javax.annotation.Nullable;
  * Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new TaskDefinition(&#34;service&#34;, TaskDefinitionArgs.builder()        
+ *             .family(&#34;service&#34;)
+ *             .containerDefinitions(serializeJson(
+ *                 jsonArray(
+ *                     jsonObject(
+ *                         jsonProperty(&#34;name&#34;, &#34;first&#34;),
+ *                         jsonProperty(&#34;image&#34;, &#34;service-first&#34;),
+ *                         jsonProperty(&#34;cpu&#34;, 10),
+ *                         jsonProperty(&#34;memory&#34;, 512),
+ *                         jsonProperty(&#34;essential&#34;, true),
+ *                         jsonProperty(&#34;portMappings&#34;, jsonArray(jsonObject(
+ *                             jsonProperty(&#34;containerPort&#34;, 80),
+ *                             jsonProperty(&#34;hostPort&#34;, 80)
+ *                         )))
+ *                     ), 
+ *                     jsonObject(
+ *                         jsonProperty(&#34;name&#34;, &#34;second&#34;),
+ *                         jsonProperty(&#34;image&#34;, &#34;service-second&#34;),
+ *                         jsonProperty(&#34;cpu&#34;, 10),
+ *                         jsonProperty(&#34;memory&#34;, 256),
+ *                         jsonProperty(&#34;essential&#34;, true),
+ *                         jsonProperty(&#34;portMappings&#34;, jsonArray(jsonObject(
+ *                             jsonProperty(&#34;containerPort&#34;, 443),
+ *                             jsonProperty(&#34;hostPort&#34;, 443)
+ *                         )))
+ *                     )
+ *                 )))
+ *             .volumes(TaskDefinitionVolume.builder()
+ *                 .name(&#34;service-storage&#34;)
+ *                 .hostPath(&#34;/ecs/service-storage&#34;)
+ *                 .build())
+ *             .placementConstraints(TaskDefinitionPlacementConstraint.builder()
+ *                 .type(&#34;memberOf&#34;)
+ *                 .expression(&#34;attribute:ecs.availability-zone in [us-west-2a, us-west-2b]&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With AppMesh Proxy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new TaskDefinition(&#34;service&#34;, TaskDefinitionArgs.builder()        
+ *             .family(&#34;service&#34;)
+ *             .containerDefinitions(Files.readString(&#34;task-definitions/service.json&#34;))
+ *             .proxyConfiguration(TaskDefinitionProxyConfiguration.builder()
+ *                 .type(&#34;APPMESH&#34;)
+ *                 .containerName(&#34;applicationContainerName&#34;)
+ *                 .properties(Map.ofEntries(
+ *                     Map.entry(&#34;AppPorts&#34;, &#34;8080&#34;),
+ *                     Map.entry(&#34;EgressIgnoredIPs&#34;, &#34;169.254.170.2,169.254.169.254&#34;),
+ *                     Map.entry(&#34;IgnoredUID&#34;, &#34;1337&#34;),
+ *                     Map.entry(&#34;ProxyEgressPort&#34;, 15001),
+ *                     Map.entry(&#34;ProxyIngressPort&#34;, 15000)
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Using `docker_volume_configuration`
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new TaskDefinition(&#34;service&#34;, TaskDefinitionArgs.builder()        
+ *             .family(&#34;service&#34;)
+ *             .containerDefinitions(Files.readString(&#34;task-definitions/service.json&#34;))
+ *             .volumes(TaskDefinitionVolume.builder()
+ *                 .name(&#34;service-storage&#34;)
+ *                 .dockerVolumeConfiguration(TaskDefinitionVolumeDockerVolumeConfiguration.builder()
+ *                     .scope(&#34;shared&#34;)
+ *                     .autoprovision(true)
+ *                     .driver(&#34;local&#34;)
+ *                     .driverOpts(Map.ofEntries(
+ *                         Map.entry(&#34;type&#34;, &#34;nfs&#34;),
+ *                         Map.entry(&#34;device&#34;, String.format(&#34;%s:/&#34;, aws_efs_file_system.getFs().getDns_name())),
+ *                         Map.entry(&#34;o&#34;, String.format(&#34;addr=%s,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport&#34;, aws_efs_file_system.getFs().getDns_name()))
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Using `efs_volume_configuration`
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new TaskDefinition(&#34;service&#34;, TaskDefinitionArgs.builder()        
+ *             .family(&#34;service&#34;)
+ *             .containerDefinitions(Files.readString(&#34;task-definitions/service.json&#34;))
+ *             .volumes(TaskDefinitionVolume.builder()
+ *                 .name(&#34;service-storage&#34;)
+ *                 .efsVolumeConfiguration(TaskDefinitionVolumeEfsVolumeConfiguration.builder()
+ *                     .fileSystemId(aws_efs_file_system.getFs().getId())
+ *                     .rootDirectory(&#34;/opt/data&#34;)
+ *                     .transitEncryption(&#34;ENABLED&#34;)
+ *                     .transitEncryptionPort(2999)
+ *                     .authorizationConfig(TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig.builder()
+ *                         .accessPointId(aws_efs_access_point.getTest().getId())
+ *                         .iam(&#34;ENABLED&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Using `fsx_windows_file_server_volume_configuration`
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new SecretVersion(&#34;test&#34;, SecretVersionArgs.builder()        
+ *             .secretId(aws_secretsmanager_secret.getTest().getId())
+ *             .secretString(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;username&#34;, &#34;admin&#34;),
+ *                     jsonProperty(&#34;password&#34;, aws_directory_service_directory.getTest().getPassword())
+ *                 )))
+ *             .build());
+ * 
+ *         var service = new TaskDefinition(&#34;service&#34;, TaskDefinitionArgs.builder()        
+ *             .family(&#34;service&#34;)
+ *             .containerDefinitions(Files.readString(&#34;task-definitions/service.json&#34;))
+ *             .volumes(TaskDefinitionVolume.builder()
+ *                 .name(&#34;service-storage&#34;)
+ *                 .fsxWindowsFileServerVolumeConfiguration(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration.builder()
+ *                     .fileSystemId(aws_fsx_windows_file_system.getTest().getId())
+ *                     .rootDirectory(&#34;\\data&#34;)
+ *                     .authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig.builder()
+ *                         .credentialsParameter(test.getArn())
+ *                         .domain(aws_directory_service_directory.getTest().getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Using `container_definitions` and `inference_accelerator`
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new TaskDefinition(&#34;test&#34;, TaskDefinitionArgs.builder()        
+ *             .containerDefinitions(&#34;&#34;&#34;
+ * [
+ *   {
+ *     &#34;cpu&#34;: 10,
+ *     &#34;command&#34;: [&#34;sleep&#34;, &#34;10&#34;],
+ *     &#34;entryPoint&#34;: [&#34;/&#34;],
+ *     &#34;environment&#34;: [
+ *       {&#34;name&#34;: &#34;VARNAME&#34;, &#34;value&#34;: &#34;VARVAL&#34;}
+ *     ],
+ *     &#34;essential&#34;: true,
+ *     &#34;image&#34;: &#34;jenkins&#34;,
+ *     &#34;memory&#34;: 128,
+ *     &#34;name&#34;: &#34;jenkins&#34;,
+ *     &#34;portMappings&#34;: [
+ *       {
+ *         &#34;containerPort&#34;: 80,
+ *         &#34;hostPort&#34;: 8080
+ *       }
+ *     ],
+ *         &#34;resourceRequirements&#34;:[
+ *             {
+ *                 &#34;type&#34;:&#34;InferenceAccelerator&#34;,
+ *                 &#34;value&#34;:&#34;device_1&#34;
+ *             }
+ *         ]
+ *   }
+ * ]
+ * 
+ *             &#34;&#34;&#34;)
+ *             .family(&#34;test&#34;)
+ *             .inferenceAccelerators(TaskDefinitionInferenceAccelerator.builder()
+ *                 .deviceName(&#34;device_1&#34;)
+ *                 .deviceType(&#34;eia1.medium&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Using `runtime_platform` and `fargate`
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new TaskDefinition(&#34;test&#34;, TaskDefinitionArgs.builder()        
+ *             .containerDefinitions(&#34;&#34;&#34;
+ * [
+ *   {
+ *     &#34;name&#34;: &#34;iis&#34;,
+ *     &#34;image&#34;: &#34;mcr.microsoft.com/windows/servercore/iis&#34;,
+ *     &#34;cpu&#34;: 1024,
+ *     &#34;memory&#34;: 2048,
+ *     &#34;essential&#34;: true
+ *   }
+ * ]
+ * 
+ *             &#34;&#34;&#34;)
+ *             .cpu(1024)
+ *             .family(&#34;test&#34;)
+ *             .memory(2048)
+ *             .networkMode(&#34;awsvpc&#34;)
+ *             .requiresCompatibilities(&#34;FARGATE&#34;)
+ *             .runtimePlatform(TaskDefinitionRuntimePlatform.builder()
+ *                 .cpuArchitecture(&#34;X86_64&#34;)
+ *                 .operatingSystemFamily(&#34;WINDOWS_SERVER_2019_CORE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

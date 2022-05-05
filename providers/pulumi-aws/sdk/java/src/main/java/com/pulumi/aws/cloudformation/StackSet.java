@@ -26,6 +26,78 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .effect(&#34;Allow&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(&#34;cloudformation.amazonaws.com&#34;)
+ *                     .type(&#34;Service&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var aWSCloudFormationStackSetAdministrationRole = new Role(&#34;aWSCloudFormationStackSetAdministrationRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var example = new StackSet(&#34;example&#34;, StackSetArgs.builder()        
+ *             .administrationRoleArn(aWSCloudFormationStackSetAdministrationRole.getArn())
+ *             .parameters(Map.of(&#34;VPCCidr&#34;, &#34;10.0.0.0/16&#34;))
+ *             .templateBody(&#34;&#34;&#34;
+ * {
+ *   &#34;Parameters&#34; : {
+ *     &#34;VPCCidr&#34; : {
+ *       &#34;Type&#34; : &#34;String&#34;,
+ *       &#34;Default&#34; : &#34;10.0.0.0/16&#34;,
+ *       &#34;Description&#34; : &#34;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&#34;
+ *     }
+ *   },
+ *   &#34;Resources&#34; : {
+ *     &#34;myVpc&#34;: {
+ *       &#34;Type&#34; : &#34;AWS::EC2::VPC&#34;,
+ *       &#34;Properties&#34; : {
+ *         &#34;CidrBlock&#34; : { &#34;Ref&#34; : &#34;VPCCidr&#34; },
+ *         &#34;Tags&#34; : [
+ *           {&#34;Key&#34;: &#34;Name&#34;, &#34;Value&#34;: &#34;Primary_CF_VPC&#34;}
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         final var aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .effect(&#34;Allow&#34;)
+ *                 .resources(example.getExecutionRoleName().apply(executionRoleName -&gt; String.format(&#34;arn:aws:iam::*:role/%s&#34;, executionRoleName)))
+ *                 .build())
+ *             .build());
+ * 
+ *         var aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy = new RolePolicy(&#34;aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .policy(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument -&gt; aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .role(aWSCloudFormationStackSetAdministrationRole.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

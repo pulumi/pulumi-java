@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * The devices can be a physical or virtual appliance that connects to a third-party appliance in a VPC, or a physical appliance that connects to another physical appliance in an on-premises network.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connection(&#34;example&#34;, ConnectionArgs.builder()        
+ *             .globalNetworkId(aws_networkmanager_global_network.getExample().getId())
+ *             .deviceId(aws_networkmanager_device.getExample1().getId())
+ *             .connectedDeviceId(aws_networkmanager_device.getExample2().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

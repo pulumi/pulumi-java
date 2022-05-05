@@ -19,6 +19,74 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS IoT certificate.
  * 
  * ## Example Usage
+ * ### With CSR
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cert = new Certificate(&#34;cert&#34;, CertificateArgs.builder()        
+ *             .csr(Files.readString(&#34;/my/csr.pem&#34;))
+ *             .active(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Without CSR
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cert = new Certificate(&#34;cert&#34;, CertificateArgs.builder()        
+ *             .active(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### From existing certificate without a CA
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cert = new Certificate(&#34;cert&#34;, CertificateArgs.builder()        
+ *             .certificatePem(Files.readString(&#34;/my/cert.pem&#34;))
+ *             .active(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:iot/certificate:Certificate")

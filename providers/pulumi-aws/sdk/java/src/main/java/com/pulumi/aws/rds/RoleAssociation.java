@@ -22,6 +22,29 @@ import javax.annotation.Nullable;
  * &gt; To manage the RDS DB Instance IAM Role for [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html), see the `aws.rds.Instance` resource `monitoring_role_arn` argument instead.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RoleAssociation(&#34;example&#34;, RoleAssociationArgs.builder()        
+ *             .dbInstanceIdentifier(aws_db_instance.getExample().getId())
+ *             .featureName(&#34;S3_INTEGRATION&#34;)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

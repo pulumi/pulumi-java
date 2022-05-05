@@ -21,6 +21,93 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleVpcIpam = new VpcIpam(&#34;exampleVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVpcIpamPool = new VpcIpamPool(&#34;exampleVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(exampleVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;exampleVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidrAllocation = new VpcIpamPoolCidrAllocation(&#34;exampleVpcIpamPoolCidrAllocation&#34;, VpcIpamPoolCidrAllocationArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/24&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * With the `disallowed_cidrs` attribute:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleVpcIpam = new VpcIpam(&#34;exampleVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVpcIpamPool = new VpcIpamPool(&#34;exampleVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(exampleVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;exampleVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidrAllocation = new VpcIpamPoolCidrAllocation(&#34;exampleVpcIpamPoolCidrAllocation&#34;, VpcIpamPoolCidrAllocationArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .netmaskLength(28)
+ *             .disallowedCidrs(&#34;172.2.0.0/28&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IPAMs can be imported using the `allocation id`, e.g.

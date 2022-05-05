@@ -20,6 +20,54 @@ import javax.annotation.Nullable;
  * The `aws.rds.ProxyDefaultTargetGroup` behaves differently from normal resources, in that the provider does not _create_ or _destroy_ this resource, since it implicitly exists as part of an RDS DB Proxy. On the provider resource creation it is automatically imported and on resource destruction, the provider performs no actions in RDS.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleProxy = new Proxy(&#34;exampleProxy&#34;, ProxyArgs.builder()        
+ *             .debugLogging(false)
+ *             .engineFamily(&#34;MYSQL&#34;)
+ *             .idleClientTimeout(1800)
+ *             .requireTls(true)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .vpcSecurityGroupIds(aws_security_group.getExample().getId())
+ *             .vpcSubnetIds(aws_subnet.getExample().getId())
+ *             .auths(ProxyAuth.builder()
+ *                 .authScheme(&#34;SECRETS&#34;)
+ *                 .description(&#34;example&#34;)
+ *                 .iamAuth(&#34;DISABLED&#34;)
+ *                 .secretArn(aws_secretsmanager_secret.getExample().getArn())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;example&#34;),
+ *                 Map.entry(&#34;Key&#34;, &#34;value&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         var exampleProxyDefaultTargetGroup = new ProxyDefaultTargetGroup(&#34;exampleProxyDefaultTargetGroup&#34;, ProxyDefaultTargetGroupArgs.builder()        
+ *             .dbProxyName(exampleProxy.getName())
+ *             .connectionPoolConfig(ProxyDefaultTargetGroupConnectionPoolConfig.builder()
+ *                 .connectionBorrowTimeout(120)
+ *                 .initQuery(&#34;SET x=1, y=2&#34;)
+ *                 .maxConnectionsPercent(100)
+ *                 .maxIdleConnectionsPercent(50)
+ *                 .sessionPinningFilters(&#34;EXCLUDE_VARIABLE_SETS&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

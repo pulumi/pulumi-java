@@ -22,6 +22,203 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** S3 Buckets only support a single replication configuration. Declaring multiple `aws.s3.BucketReplicationConfig` resources to the same S3 Bucket will cause a perpetual difference in configuration.
  * 
  * ## Example Usage
+ * ### Using replication configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var central = new Provider(&#34;central&#34;, ProviderArgs.builder()        
+ *             .region(&#34;eu-central-1&#34;)
+ *             .build());
+ * 
+ *         var replicationRole = new Role(&#34;replicationRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;s3.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var destinationBucketV2 = new BucketV2(&#34;destinationBucketV2&#34;);
+ * 
+ *         var sourceBucketV2 = new BucketV2(&#34;sourceBucketV2&#34;);
+ * 
+ *         var replicationPolicy = new Policy(&#34;replicationPolicy&#34;, PolicyArgs.builder()        
+ *             .policy(Output.tuple(sourceBucketV2.getArn(), sourceBucketV2.getArn(), destinationBucketV2.getArn()).apply(values -&gt; {
+ *                 var sourceBucketV2Arn = values.t1;
+ *                 var sourceBucketV2Arn1 = values.t2;
+ *                 var destinationBucketV2Arn = values.t3;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:GetReplicationConfiguration&#34;,
+ *         &#34;s3:ListBucket&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:GetObjectVersionForReplication&#34;,
+ *         &#34;s3:GetObjectVersionAcl&#34;,
+ *          &#34;s3:GetObjectVersionTagging&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;%s/*&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:ReplicateObject&#34;,
+ *         &#34;s3:ReplicateDelete&#34;,
+ *         &#34;s3:ReplicateTags&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;%s/*&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, sourceBucketV2Arn,sourceBucketV2Arn1,destinationBucketV2Arn);
+ *             }))
+ *             .build());
+ * 
+ *         var replicationRolePolicyAttachment = new RolePolicyAttachment(&#34;replicationRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(replicationRole.getName())
+ *             .policyArn(replicationPolicy.getArn())
+ *             .build());
+ * 
+ *         var destinationBucketVersioningV2 = new BucketVersioningV2(&#34;destinationBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(destinationBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var sourceBucketAcl = new BucketAclV2(&#34;sourceBucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(sourceBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var sourceBucketVersioningV2 = new BucketVersioningV2(&#34;sourceBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(sourceBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var replicationBucketReplicationConfig = new BucketReplicationConfig(&#34;replicationBucketReplicationConfig&#34;, BucketReplicationConfigArgs.builder()        
+ *             .role(replicationRole.getArn())
+ *             .bucket(sourceBucketV2.getId())
+ *             .rules(BucketReplicationConfigRule.builder()
+ *                 .id(&#34;foobar&#34;)
+ *                 .filter(BucketReplicationConfigRuleFilter.builder()
+ *                     .prefix(&#34;foo&#34;)
+ *                     .build())
+ *                 .status(&#34;Enabled&#34;)
+ *                 .destination(BucketReplicationConfigRuleDestination.builder()
+ *                     .bucket(destinationBucketV2.getArn())
+ *                     .storageClass(&#34;STANDARD&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bi-Directional Replication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eastBucketV2 = new BucketV2(&#34;eastBucketV2&#34;);
+ * 
+ *         var eastBucketVersioningV2 = new BucketVersioningV2(&#34;eastBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(eastBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var westBucketV2 = new BucketV2(&#34;westBucketV2&#34;);
+ * 
+ *         var westBucketVersioningV2 = new BucketVersioningV2(&#34;westBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(westBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var eastToWest = new BucketReplicationConfig(&#34;eastToWest&#34;, BucketReplicationConfigArgs.builder()        
+ *             .role(aws_iam_role.getEast_replication().getArn())
+ *             .bucket(eastBucketV2.getId())
+ *             .rules(BucketReplicationConfigRule.builder()
+ *                 .id(&#34;foobar&#34;)
+ *                 .filter(BucketReplicationConfigRuleFilter.builder()
+ *                     .prefix(&#34;foo&#34;)
+ *                     .build())
+ *                 .status(&#34;Enabled&#34;)
+ *                 .destination(BucketReplicationConfigRuleDestination.builder()
+ *                     .bucket(westBucketV2.getArn())
+ *                     .storageClass(&#34;STANDARD&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var westToEast = new BucketReplicationConfig(&#34;westToEast&#34;, BucketReplicationConfigArgs.builder()        
+ *             .role(aws_iam_role.getWest_replication().getArn())
+ *             .bucket(westBucketV2.getId())
+ *             .rules(BucketReplicationConfigRule.builder()
+ *                 .id(&#34;foobar&#34;)
+ *                 .filter(BucketReplicationConfigRuleFilter.builder()
+ *                     .prefix(&#34;foo&#34;)
+ *                     .build())
+ *                 .status(&#34;Enabled&#34;)
+ *                 .destination(BucketReplicationConfigRuleDestination.builder()
+ *                     .bucket(eastBucketV2.getArn())
+ *                     .storageClass(&#34;STANDARD&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

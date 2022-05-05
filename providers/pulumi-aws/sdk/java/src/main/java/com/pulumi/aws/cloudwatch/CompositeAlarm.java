@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** An alarm (composite or metric) cannot be destroyed when there are other composite alarms depending on it. This can lead to a cyclical dependency on update, as the provider will unsuccessfully attempt to destroy alarms before updating the rule. Consider using `depends_on`, references to alarm names, and two-stage updates.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CompositeAlarm(&#34;example&#34;, CompositeAlarmArgs.builder()        
+ *             .alarmDescription(&#34;This is a composite alarm!&#34;)
+ *             .alarmName(&#34;example-composite-alarm&#34;)
+ *             .alarmActions(aws_sns_topic.getExample().getArn())
+ *             .okActions(aws_sns_topic.getExample().getArn())
+ *             .alarmRule(&#34;&#34;&#34;
+ * ALARM(%s) OR
+ * ALARM(%s)
+ * &#34;, aws_cloudwatch_metric_alarm.getAlpha().getAlarm_name(),aws_cloudwatch_metric_alarm.getBravo().getAlarm_name()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource can only be used with `us-east-1` region.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var usEast1 = new Provider(&#34;usEast1&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var foo = new Repository(&#34;foo&#34;, RepositoryArgs.builder()        
+ *             .repositoryName(&#34;bar&#34;)
+ *             .catalogData(RepositoryCatalogData.builder()
+ *                 .aboutText(&#34;About Text&#34;)
+ *                 .architectures(&#34;ARM&#34;)
+ *                 .description(&#34;Description&#34;)
+ *                 .logoImageBlob(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(image.getPng()))))
+ *                 .operatingSystems(&#34;Linux&#34;)
+ *                 .usageText(&#34;Usage Text&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

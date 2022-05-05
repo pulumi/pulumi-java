@@ -20,6 +20,61 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker App Image Config resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new AppImageConfig(&#34;test&#34;, AppImageConfigArgs.builder()        
+ *             .appImageConfigName(&#34;example&#34;)
+ *             .kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfig.builder()
+ *                 .kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec.builder()
+ *                     .name(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Default File System Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new AppImageConfig(&#34;test&#34;, AppImageConfigArgs.builder()        
+ *             .appImageConfigName(&#34;example&#34;)
+ *             .kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfig.builder()
+ *                 .fileSystemConfig()
+ *                 .kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec.builder()
+ *                     .name(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

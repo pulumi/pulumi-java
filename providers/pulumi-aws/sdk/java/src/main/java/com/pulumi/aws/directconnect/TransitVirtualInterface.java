@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * A transit virtual interface is a VLAN that transports traffic from a Direct Connect gateway to one or more transit gateways.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGateway = new Gateway(&#34;exampleGateway&#34;, GatewayArgs.builder()        
+ *             .amazonSideAsn(64512)
+ *             .build());
+ * 
+ *         var exampleTransitVirtualInterface = new TransitVirtualInterface(&#34;exampleTransitVirtualInterface&#34;, TransitVirtualInterfaceArgs.builder()        
+ *             .connectionId(aws_dx_connection.getExample().getId())
+ *             .dxGatewayId(exampleGateway.getId())
+ *             .vlan(4094)
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .bgpAsn(65352)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,32 @@ import javax.annotation.Nullable;
  * More information about MemoryDB can be found in the [Developer Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/what-is-memorydb-for-redis.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .aclName(&#34;open-access&#34;)
+ *             .nodeType(&#34;db.t4g.small&#34;)
+ *             .numShards(2)
+ *             .securityGroupIds(aws_security_group.getExample().getId())
+ *             .snapshotRetentionLimit(7)
+ *             .subnetGroupName(aws_memorydb_subnet_group.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,31 @@ import javax.annotation.Nullable;
  * Manages a Service Catalog self-service action.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceAction(&#34;example&#34;, ServiceActionArgs.builder()        
+ *             .definition(ServiceActionDefinition.builder()
+ *                 .name(&#34;AWS-RestartEC2Instance&#34;)
+ *                 .build())
+ *             .description(&#34;Motor generator unit&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

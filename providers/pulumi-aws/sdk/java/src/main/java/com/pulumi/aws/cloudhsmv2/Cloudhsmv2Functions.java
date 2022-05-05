@@ -16,6 +16,27 @@ public final class Cloudhsmv2Functions {
      * Use this data source to get information about a CloudHSM v2 cluster
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var cluster = Output.of(Cloudhsmv2Functions.getCluster(GetClusterArgs.builder()
+     *             .clusterId(&#34;cluster-testclusterid&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {

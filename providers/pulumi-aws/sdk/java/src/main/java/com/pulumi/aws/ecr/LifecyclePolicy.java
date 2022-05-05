@@ -21,6 +21,92 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The AWS ECR API seems to reorder rules based on `rulePriority`. If you define multiple rules that are not sorted in ascending `rulePriority` order in the this provider code, the resource will be flagged for recreation every deployment.
  * 
  * ## Example Usage
+ * ### Policy on untagged image
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Repository(&#34;foo&#34;);
+ * 
+ *         var foopolicy = new LifecyclePolicy(&#34;foopolicy&#34;, LifecyclePolicyArgs.builder()        
+ *             .repository(foo.getName())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;rules&#34;: [
+ *         {
+ *             &#34;rulePriority&#34;: 1,
+ *             &#34;description&#34;: &#34;Expire images older than 14 days&#34;,
+ *             &#34;selection&#34;: {
+ *                 &#34;tagStatus&#34;: &#34;untagged&#34;,
+ *                 &#34;countType&#34;: &#34;sinceImagePushed&#34;,
+ *                 &#34;countUnit&#34;: &#34;days&#34;,
+ *                 &#34;countNumber&#34;: 14
+ *             },
+ *             &#34;action&#34;: {
+ *                 &#34;type&#34;: &#34;expire&#34;
+ *             }
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Policy on tagged image
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Repository(&#34;foo&#34;);
+ * 
+ *         var foopolicy = new LifecyclePolicy(&#34;foopolicy&#34;, LifecyclePolicyArgs.builder()        
+ *             .repository(foo.getName())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;rules&#34;: [
+ *         {
+ *             &#34;rulePriority&#34;: 1,
+ *             &#34;description&#34;: &#34;Keep last 30 images&#34;,
+ *             &#34;selection&#34;: {
+ *                 &#34;tagStatus&#34;: &#34;tagged&#34;,
+ *                 &#34;tagPrefixList&#34;: [&#34;v&#34;],
+ *                 &#34;countType&#34;: &#34;imageCountMoreThan&#34;,
+ *                 &#34;countNumber&#34;: 30
+ *             },
+ *             &#34;action&#34;: {
+ *                 &#34;type&#34;: &#34;expire&#34;
+ *             }
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

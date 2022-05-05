@@ -20,6 +20,52 @@ import javax.annotation.Nullable;
  * Provides an AWS App Mesh service mesh resource.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var simple = new Mesh(&#34;simple&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Egress Filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var simple = new Mesh(&#34;simple&#34;, MeshArgs.builder()        
+ *             .spec(MeshSpec.builder()
+ *                 .egressFilter(MeshSpecEgressFilter.builder()
+ *                     .type(&#34;ALLOW_ALL&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

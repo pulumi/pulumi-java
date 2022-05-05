@@ -18,6 +18,49 @@ import javax.annotation.Nullable;
  * Managing [IoT Thing indexing](https://docs.aws.amazon.com/iot/latest/developerguide/managing-index.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new IndexingConfiguration(&#34;example&#34;, IndexingConfigurationArgs.builder()        
+ *             .thingIndexingConfiguration(IndexingConfigurationThingIndexingConfiguration.builder()
+ *                 .customFields(                
+ *                     IndexingConfigurationThingIndexingConfigurationCustomField.builder()
+ *                         .name(&#34;shadow.desired.power&#34;)
+ *                         .type(&#34;Boolean&#34;)
+ *                         .build(),
+ *                     IndexingConfigurationThingIndexingConfigurationCustomField.builder()
+ *                         .name(&#34;attributes.version&#34;)
+ *                         .type(&#34;Number&#34;)
+ *                         .build(),
+ *                     IndexingConfigurationThingIndexingConfigurationCustomField.builder()
+ *                         .name(&#34;shadow.name.thing1shadow.desired.DefaultDesired&#34;)
+ *                         .type(&#34;String&#34;)
+ *                         .build(),
+ *                     IndexingConfigurationThingIndexingConfigurationCustomField.builder()
+ *                         .name(&#34;deviceDefender.securityProfile1.NUMBER_VALUE_BEHAVIOR.lastViolationValue.number&#34;)
+ *                         .type(&#34;Number&#34;)
+ *                         .build())
+ *                 .deviceDefenderIndexingMode(&#34;VIOLATIONS&#34;)
+ *                 .namedShadowIndexingMode(&#34;ON&#34;)
+ *                 .thingConnectivityIndexingMode(&#34;STATUS&#34;)
+ *                 .thingIndexingMode(&#34;REGISTRY_AND_SHADOW&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:iot/indexingConfiguration:IndexingConfiguration")

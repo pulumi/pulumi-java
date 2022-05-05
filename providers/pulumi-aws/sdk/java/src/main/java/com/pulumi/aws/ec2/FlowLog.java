@@ -22,6 +22,131 @@ import javax.annotation.Nullable;
  * interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.
  * 
  * ## Example Usage
+ * ### CloudWatch Logging
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;);
+ * 
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;vpc-flow-logs.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleFlowLog = new FlowLog(&#34;exampleFlowLog&#34;, FlowLogArgs.builder()        
+ *             .iamRoleArn(exampleRole.getArn())
+ *             .logDestination(exampleLogGroup.getArn())
+ *             .trafficType(&#34;ALL&#34;)
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         var exampleRolePolicy = new RolePolicy(&#34;exampleRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(exampleRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;logs:CreateLogGroup&#34;,
+ *         &#34;logs:CreateLogStream&#34;,
+ *         &#34;logs:PutLogEvents&#34;,
+ *         &#34;logs:DescribeLogGroups&#34;,
+ *         &#34;logs:DescribeLogStreams&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 Logging
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleFlowLog = new FlowLog(&#34;exampleFlowLog&#34;, FlowLogArgs.builder()        
+ *             .logDestination(exampleBucketV2.getArn())
+ *             .logDestinationType(&#34;s3&#34;)
+ *             .trafficType(&#34;ALL&#34;)
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 Logging in Apache Parquet format with per-hour partitions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleFlowLog = new FlowLog(&#34;exampleFlowLog&#34;, FlowLogArgs.builder()        
+ *             .logDestination(exampleBucketV2.getArn())
+ *             .logDestinationType(&#34;s3&#34;)
+ *             .trafficType(&#34;ALL&#34;)
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .destinationOptions(FlowLogDestinationOptions.builder()
+ *                 .fileFormat(&#34;parquet&#34;)
+ *                 .perHourPartition(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

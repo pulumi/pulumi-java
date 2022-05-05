@@ -18,6 +18,53 @@ import javax.annotation.Nullable;
  * Provides an SNS platform application resource
  * 
  * ## Example Usage
+ * ### Apple Push Notification Service (APNS)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apnsApplication = new PlatformApplication(&#34;apnsApplication&#34;, PlatformApplicationArgs.builder()        
+ *             .platform(&#34;APNS&#34;)
+ *             .platformCredential(&#34;&lt;APNS PRIVATE KEY&gt;&#34;)
+ *             .platformPrincipal(&#34;&lt;APNS CERTIFICATE&gt;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Google Cloud Messaging (GCM)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gcmApplication = new PlatformApplication(&#34;gcmApplication&#34;, PlatformApplicationArgs.builder()        
+ *             .platform(&#34;GCM&#34;)
+ *             .platformCredential(&#34;&lt;GCM API KEY&gt;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

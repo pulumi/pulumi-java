@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * Provides an RDS DB proxy endpoint resource. For additional information, see the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy-endpoints).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ProxyEndpoint(&#34;example&#34;, ProxyEndpointArgs.builder()        
+ *             .dbProxyName(aws_db_proxy.getTest().getName())
+ *             .dbProxyEndpointName(&#34;example&#34;)
+ *             .vpcSubnetIds(aws_subnet.getTest().stream().map(element -&gt; element.getId()).collect(toList()))
+ *             .targetRole(&#34;READ_ONLY&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

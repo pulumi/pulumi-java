@@ -22,6 +22,97 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Basic usage with tags:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .instanceTenancy(&#34;default&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;main&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * VPC with CIDR from AWS IPAM:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var testVpcIpam = new VpcIpam(&#34;testVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var testVpcIpamPool = new VpcIpamPool(&#34;testVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(testVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         var testVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;testVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(testVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var testVpc = new Vpc(&#34;testVpc&#34;, VpcArgs.builder()        
+ *             .ipv4IpamPoolId(testVpcIpamPool.getId())
+ *             .ipv4NetmaskLength(28)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * VPCs can be imported using the `vpc id`, e.g.,

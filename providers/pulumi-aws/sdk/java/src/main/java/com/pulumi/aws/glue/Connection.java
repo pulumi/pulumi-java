@@ -21,6 +21,65 @@ import javax.annotation.Nullable;
  * Provides a Glue Connection resource.
  * 
  * ## Example Usage
+ * ### Non-VPC Connection
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connection(&#34;example&#34;, ConnectionArgs.builder()        
+ *             .connectionProperties(Map.ofEntries(
+ *                 Map.entry(&#34;JDBC_CONNECTION_URL&#34;, &#34;jdbc:mysql://example.com/exampledatabase&#34;),
+ *                 Map.entry(&#34;PASSWORD&#34;, &#34;examplepassword&#34;),
+ *                 Map.entry(&#34;USERNAME&#34;, &#34;exampleusername&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### VPC Connection
+ * 
+ * For more information, see the [AWS Documentation](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html#connection-JDBC-VPC).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connection(&#34;example&#34;, ConnectionArgs.builder()        
+ *             .connectionProperties(Map.ofEntries(
+ *                 Map.entry(&#34;JDBC_CONNECTION_URL&#34;, String.format(&#34;jdbc:mysql://%s/exampledatabase&#34;, aws_rds_cluster.getExample().getEndpoint())),
+ *                 Map.entry(&#34;PASSWORD&#34;, &#34;examplepassword&#34;),
+ *                 Map.entry(&#34;USERNAME&#34;, &#34;exampleusername&#34;)
+ *             ))
+ *             .physicalConnectionRequirements(ConnectionPhysicalConnectionRequirements.builder()
+ *                 .availabilityZone(aws_subnet.getExample().getAvailability_zone())
+ *                 .securityGroupIdLists(aws_security_group.getExample().getId())
+ *                 .subnetId(aws_subnet.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

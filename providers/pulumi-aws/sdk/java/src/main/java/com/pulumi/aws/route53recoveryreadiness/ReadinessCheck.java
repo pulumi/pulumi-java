@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides an AWS Route 53 Recovery Readiness Readiness Check.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ReadinessCheck(&#34;example&#34;, ReadinessCheckArgs.builder()        
+ *             .readinessCheckName(my_cw_alarm_check)
+ *             .resourceSetName(my_cw_alarm_set)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

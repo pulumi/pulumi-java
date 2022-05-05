@@ -19,6 +19,52 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * The following example below creates a CloudFront cache policy.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CachePolicy(&#34;example&#34;, CachePolicyArgs.builder()        
+ *             .comment(&#34;test comment&#34;)
+ *             .defaultTtl(50)
+ *             .maxTtl(100)
+ *             .minTtl(1)
+ *             .parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOrigin.builder()
+ *                 .cookiesConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig.builder()
+ *                     .cookieBehavior(&#34;whitelist&#34;)
+ *                     .cookies(CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies.builder()
+ *                         .items(&#34;example&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .headersConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig.builder()
+ *                     .headerBehavior(&#34;whitelist&#34;)
+ *                     .headers(CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders.builder()
+ *                         .items(&#34;example&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .queryStringsConfig(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig.builder()
+ *                     .queryStringBehavior(&#34;whitelist&#34;)
+ *                     .queryStrings(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings.builder()
+ *                         .items(&#34;example&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Cloudfront Cache Policies can be imported using the `id`, e.g.,

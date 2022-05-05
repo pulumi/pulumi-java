@@ -24,6 +24,30 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snEc2 = new VpcEndpointSubnetAssociation(&#34;snEc2&#34;, VpcEndpointSubnetAssociationArgs.builder()        
+ *             .vpcEndpointId(aws_vpc_endpoint.getEc2().getId())
+ *             .subnetId(aws_subnet.getSn().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * VPC Endpoint Subnet Associations can be imported using `vpc_endpoint_id` together with `subnet_id`, e.g.,

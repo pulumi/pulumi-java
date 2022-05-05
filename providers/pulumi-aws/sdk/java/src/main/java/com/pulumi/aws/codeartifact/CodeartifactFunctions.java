@@ -18,6 +18,27 @@ public final class CodeartifactFunctions {
      * The CodeArtifact Authorization Token data source generates a temporary authentication token for accessing repositories in a CodeArtifact domain.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CodeartifactFunctions.getAuthorizationToken(GetAuthorizationTokenArgs.builder()
+     *             .domain(aws_codeartifact_domain.getTest().getDomain())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAuthorizationTokenResult> getAuthorizationToken(GetAuthorizationTokenArgs args) {
@@ -30,6 +51,29 @@ public final class CodeartifactFunctions {
      * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CodeartifactFunctions.getRepositoryEndpoint(GetRepositoryEndpointArgs.builder()
+     *             .domain(aws_codeartifact_domain.getTest().getDomain())
+     *             .repository(aws_codeartifact_repository.getTest().getRepository())
+     *             .format(&#34;npm&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRepositoryEndpointResult> getRepositoryEndpoint(GetRepositoryEndpointArgs args) {

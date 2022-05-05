@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * For more information on Amazon MQ, see [Amazon MQ documentation](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/welcome.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Configuration(&#34;example&#34;, ConfigurationArgs.builder()        
+ *             .data(&#34;&#34;&#34;
+ * &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
+ * &lt;broker xmlns=&#34;http://activemq.apache.org/schema/core&#34;&gt;
+ *   &lt;plugins&gt;
+ *     &lt;forcePersistencyModeBrokerPlugin persistenceFlag=&#34;true&#34;/&gt;
+ *     &lt;statisticsBrokerPlugin/&gt;
+ *     &lt;timeStampingBrokerPlugin ttlCeiling=&#34;86400000&#34; zeroExpirationOverride=&#34;86400000&#34;/&gt;
+ *   &lt;/plugins&gt;
+ * &lt;/broker&gt;
+ * 
+ *             &#34;&#34;&#34;)
+ *             .description(&#34;Example Configuration&#34;)
+ *             .engineType(&#34;ActiveMQ&#34;)
+ *             .engineVersion(&#34;5.15.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

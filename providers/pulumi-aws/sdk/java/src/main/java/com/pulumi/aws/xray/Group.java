@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS XRay Group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Group(&#34;example&#34;, GroupArgs.builder()        
+ *             .filterExpression(&#34;responsetime &gt; 5&#34;)
+ *             .groupName(&#34;example&#34;)
+ *             .insightsConfiguration(GroupInsightsConfiguration.builder()
+ *                 .insightsEnabled(true)
+ *                 .notificationsEnabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

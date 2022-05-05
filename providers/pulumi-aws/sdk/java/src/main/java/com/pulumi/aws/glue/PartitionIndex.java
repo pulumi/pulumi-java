@@ -16,6 +16,95 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCatalogDatabase = new CatalogDatabase(&#34;exampleCatalogDatabase&#34;, CatalogDatabaseArgs.builder()        
+ *             .name(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleCatalogTable = new CatalogTable(&#34;exampleCatalogTable&#34;, CatalogTableArgs.builder()        
+ *             .name(&#34;example&#34;)
+ *             .databaseName(exampleCatalogDatabase.getName())
+ *             .owner(&#34;my_owner&#34;)
+ *             .retention(1)
+ *             .tableType(&#34;VIRTUAL_VIEW&#34;)
+ *             .viewExpandedText(&#34;view_expanded_text_1&#34;)
+ *             .viewOriginalText(&#34;view_original_text_1&#34;)
+ *             .storageDescriptor(CatalogTableStorageDescriptor.builder()
+ *                 .bucketColumns(&#34;bucket_column_1&#34;)
+ *                 .compressed(false)
+ *                 .inputFormat(&#34;SequenceFileInputFormat&#34;)
+ *                 .location(&#34;my_location&#34;)
+ *                 .numberOfBuckets(1)
+ *                 .outputFormat(&#34;SequenceFileInputFormat&#34;)
+ *                 .storedAsSubDirectories(false)
+ *                 .parameters(Map.of(&#34;param1&#34;, &#34;param1_val&#34;))
+ *                 .columns(                
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .name(&#34;my_column_1&#34;)
+ *                         .type(&#34;int&#34;)
+ *                         .comment(&#34;my_column1_comment&#34;)
+ *                         .build(),
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .name(&#34;my_column_2&#34;)
+ *                         .type(&#34;string&#34;)
+ *                         .comment(&#34;my_column2_comment&#34;)
+ *                         .build())
+ *                 .serDeInfo(CatalogTableStorageDescriptorSerDeInfo.builder()
+ *                     .name(&#34;ser_de_name&#34;)
+ *                     .parameters(Map.of(&#34;param1&#34;, &#34;param_val_1&#34;))
+ *                     .serializationLibrary(&#34;org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe&#34;)
+ *                     .build())
+ *                 .sortColumns(CatalogTableStorageDescriptorSortColumn.builder()
+ *                     .column(&#34;my_column_1&#34;)
+ *                     .sortOrder(1)
+ *                     .build())
+ *                 .skewedInfo(CatalogTableStorageDescriptorSkewedInfo.builder()
+ *                     .skewedColumnNames(&#34;my_column_1&#34;)
+ *                     .skewedColumnValueLocationMaps(Map.of(&#34;my_column_1&#34;, &#34;my_column_1_val_loc_map&#34;))
+ *                     .skewedColumnValues(&#34;skewed_val_1&#34;)
+ *                     .build())
+ *                 .build())
+ *             .partitionKeys(            
+ *                 CatalogTablePartitionKey.builder()
+ *                     .name(&#34;my_column_1&#34;)
+ *                     .type(&#34;int&#34;)
+ *                     .comment(&#34;my_column_1_comment&#34;)
+ *                     .build(),
+ *                 CatalogTablePartitionKey.builder()
+ *                     .name(&#34;my_column_2&#34;)
+ *                     .type(&#34;string&#34;)
+ *                     .comment(&#34;my_column_2_comment&#34;)
+ *                     .build())
+ *             .parameters(Map.of(&#34;param1&#34;, &#34;param1_val&#34;))
+ *             .build());
+ * 
+ *         var examplePartitionIndex = new PartitionIndex(&#34;examplePartitionIndex&#34;, PartitionIndexArgs.builder()        
+ *             .databaseName(exampleCatalogDatabase.getName())
+ *             .tableName(exampleCatalogTable.getName())
+ *             .partitionIndex(PartitionIndexPartitionIndex.builder()
+ *                 .indexName(&#34;example&#34;)
+ *                 .keys(                
+ *                     &#34;my_column_1&#34;,
+ *                     &#34;my_column_2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

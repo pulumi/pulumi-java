@@ -26,6 +26,122 @@ import javax.annotation.Nullable;
  * !&gt; **WARNING:** It is recommended to use the `aws.apigateway.Stage` resource instead of managing an API Gateway Stage via the `stage_name` argument of this resource. When this resource is recreated (REST API redeployment) with the `stage_name` configured, the stage is deleted and recreated. This will cause a temporary service interruption, increase provide plan differences, and can require a second apply to recreate any downstream stage configuration such as associated `aws_api_method_settings` resources.
  * 
  * ## Example Usage
+ * ### OpenAPI Specification
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;, RestApiArgs.builder()        
+ *             .body(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;openapi&#34;, &#34;3.0.1&#34;),
+ *                     jsonProperty(&#34;info&#34;, jsonObject(
+ *                         jsonProperty(&#34;title&#34;, &#34;example&#34;),
+ *                         jsonProperty(&#34;version&#34;, &#34;1.0&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;paths&#34;, jsonObject(
+ *                         jsonProperty(&#34;/path1&#34;, jsonObject(
+ *                             jsonProperty(&#34;get&#34;, jsonObject(
+ *                                 jsonProperty(&#34;x-amazon-apigateway-integration&#34;, jsonObject(
+ *                                     jsonProperty(&#34;httpMethod&#34;, &#34;GET&#34;),
+ *                                     jsonProperty(&#34;payloadFormatVersion&#34;, &#34;1.0&#34;),
+ *                                     jsonProperty(&#34;type&#34;, &#34;HTTP_PROXY&#34;),
+ *                                     jsonProperty(&#34;uri&#34;, &#34;https://ip-ranges.amazonaws.com/ip-ranges.json&#34;)
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     ))
+ *                 )))
+ *             .build());
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(exampleRestApi.getId())
+ *             .triggers(Map.of(&#34;redeployment&#34;, exampleRestApi.getBody().apply(body -&gt; serializeJson(
+ *                 body)).apply(toJSON -&gt; computeSHA1(toJSON))))
+ *             .build());
+ * 
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resources
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;);
+ * 
+ *         var exampleResource = new Resource(&#34;exampleResource&#34;, ResourceArgs.builder()        
+ *             .parentId(exampleRestApi.getRootResourceId())
+ *             .pathPart(&#34;example&#34;)
+ *             .restApi(exampleRestApi.getId())
+ *             .build());
+ * 
+ *         var exampleMethod = new Method(&#34;exampleMethod&#34;, MethodArgs.builder()        
+ *             .authorization(&#34;NONE&#34;)
+ *             .httpMethod(&#34;GET&#34;)
+ *             .resourceId(exampleResource.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .build());
+ * 
+ *         var exampleIntegration = new Integration(&#34;exampleIntegration&#34;, IntegrationArgs.builder()        
+ *             .httpMethod(exampleMethod.getHttpMethod())
+ *             .resourceId(exampleResource.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .type(&#34;MOCK&#34;)
+ *             .build());
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(exampleRestApi.getId())
+ *             .triggers(Map.of(&#34;redeployment&#34;, Output.tuple(exampleResource.getId(), exampleMethod.getId(), exampleIntegration.getId()).apply(values -&gt; {
+ *                 var exampleResourceId = values.t1;
+ *                 var exampleMethodId = values.t2;
+ *                 var exampleIntegrationId = values.t3;
+ *                 return serializeJson(
+ *                     jsonArray(
+ *                         exampleResourceId, 
+ *                         exampleMethodId, 
+ *                         exampleIntegrationId
+ *                     ));
+ *             }).apply(toJSON -&gt; computeSHA1(toJSON))))
+ *             .build());
+ * 
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:apigateway/deployment:Deployment")

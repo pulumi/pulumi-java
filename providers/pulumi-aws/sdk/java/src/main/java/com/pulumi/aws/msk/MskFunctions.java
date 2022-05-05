@@ -22,6 +22,27 @@ public final class MskFunctions {
      * Get information on an Amazon MSK Broker Nodes.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskFunctions.getBrokerNodes(GetBrokerNodesArgs.builder()
+     *             .clusterArn(aws_msk_cluster.getExample().getArn())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBrokerNodesResult> getBrokerNodes(GetBrokerNodesArgs args) {
@@ -34,6 +55,27 @@ public final class MskFunctions {
      * Get information on an Amazon MSK Cluster.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterName(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
@@ -46,6 +88,27 @@ public final class MskFunctions {
      * Get information on an Amazon MSK Configuration.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskFunctions.getConfiguration(GetConfigurationArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConfigurationResult> getConfiguration(GetConfigurationArgs args) {
@@ -58,6 +121,34 @@ public final class MskFunctions {
      * Get information on a Amazon MSK Kafka Version
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var preferred = Output.of(MskFunctions.getKafkaVersion(GetKafkaVersionArgs.builder()
+     *             .preferredVersions(            
+     *                 &#34;2.4.1.1&#34;,
+     *                 &#34;2.4.1&#34;,
+     *                 &#34;2.2.1&#34;)
+     *             .build()));
+     * 
+     *         final var example = Output.of(MskFunctions.getKafkaVersion(GetKafkaVersionArgs.builder()
+     *             .version(&#34;2.8.0&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKafkaVersionResult> getKafkaVersion() {

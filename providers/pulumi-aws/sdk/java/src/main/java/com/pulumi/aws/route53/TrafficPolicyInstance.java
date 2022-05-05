@@ -18,6 +18,30 @@ import javax.annotation.Nullable;
  * Provides a Route53 traffic policy instance resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new TrafficPolicyInstance(&#34;test&#34;, TrafficPolicyInstanceArgs.builder()        
+ *             .hostedZoneId(&#34;Z033120931TAQO548OGJC&#34;)
+ *             .trafficPolicyId(&#34;b3gb108f-ea6f-45a5-baab-9d112d8b4037&#34;)
+ *             .trafficPolicyVersion(1)
+ *             .ttl(360)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

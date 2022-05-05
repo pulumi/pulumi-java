@@ -22,6 +22,50 @@ import javax.annotation.Nullable;
  * Provides a CloudFormation Stack resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Stack(&#34;network&#34;, StackArgs.builder()        
+ *             .parameters(Map.of(&#34;VPCCidr&#34;, &#34;10.0.0.0/16&#34;))
+ *             .templateBody(&#34;&#34;&#34;
+ * {
+ *   &#34;Parameters&#34; : {
+ *     &#34;VPCCidr&#34; : {
+ *       &#34;Type&#34; : &#34;String&#34;,
+ *       &#34;Default&#34; : &#34;10.0.0.0/16&#34;,
+ *       &#34;Description&#34; : &#34;Enter the CIDR block for the VPC. Default is 10.0.0.0/16.&#34;
+ *     }
+ *   },
+ *   &#34;Resources&#34; : {
+ *     &#34;myVpc&#34;: {
+ *       &#34;Type&#34; : &#34;AWS::EC2::VPC&#34;,
+ *       &#34;Properties&#34; : {
+ *         &#34;CidrBlock&#34; : { &#34;Ref&#34; : &#34;VPCCidr&#34; },
+ *         &#34;Tags&#34; : [
+ *           {&#34;Key&#34;: &#34;Name&#34;, &#34;Value&#34;: &#34;Primary_CF_VPC&#34;}
+ *         ]
+ *       }
+ *     }
+ *   }
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

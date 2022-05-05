@@ -21,6 +21,70 @@ import javax.annotation.Nullable;
  * Provides a Batch Job Queue resource.
  * 
  * ## Example Usage
+ * ### Basic Job Queue
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testQueue = new JobQueue(&#34;testQueue&#34;, JobQueueArgs.builder()        
+ *             .state(&#34;ENABLED&#34;)
+ *             .priority(1)
+ *             .computeEnvironments(            
+ *                 aws_batch_compute_environment.getTest_environment_1().getArn(),
+ *                 aws_batch_compute_environment.getTest_environment_2().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Job Queue with a fair share scheduling policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleSchedulingPolicy = new SchedulingPolicy(&#34;exampleSchedulingPolicy&#34;, SchedulingPolicyArgs.builder()        
+ *             .fairSharePolicy(SchedulingPolicyFairSharePolicy.builder()
+ *                 .computeReservation(1)
+ *                 .shareDecaySeconds(3600)
+ *                 .shareDistributions(SchedulingPolicyFairSharePolicyShareDistribution.builder()
+ *                     .shareIdentifier(&#34;A1*&#34;)
+ *                     .weightFactor(0.1)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleJobQueue = new JobQueue(&#34;exampleJobQueue&#34;, JobQueueArgs.builder()        
+ *             .schedulingPolicyArn(exampleSchedulingPolicy.getArn())
+ *             .state(&#34;ENABLED&#34;)
+ *             .priority(1)
+ *             .computeEnvironments(            
+ *                 aws_batch_compute_environment.getTest_environment_1().getArn(),
+ *                 aws_batch_compute_environment.getTest_environment_2().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

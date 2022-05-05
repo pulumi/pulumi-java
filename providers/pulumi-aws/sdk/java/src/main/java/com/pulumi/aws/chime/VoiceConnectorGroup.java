@@ -22,6 +22,45 @@ import javax.annotation.Nullable;
  * You can include Amazon Chime Voice Connectors from different AWS Regions in your group. This creates a fault tolerant mechanism for fallback in case of availability events.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vc1 = new VoiceConnector(&#34;vc1&#34;, VoiceConnectorArgs.builder()        
+ *             .requireEncryption(true)
+ *             .awsRegion(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var vc2 = new VoiceConnector(&#34;vc2&#34;, VoiceConnectorArgs.builder()        
+ *             .requireEncryption(true)
+ *             .awsRegion(&#34;us-west-2&#34;)
+ *             .build());
+ * 
+ *         var group = new VoiceConnectorGroup(&#34;group&#34;, VoiceConnectorGroupArgs.builder()        
+ *             .connectors(            
+ *                 VoiceConnectorGroupConnector.builder()
+ *                     .voiceConnectorId(vc1.getId())
+ *                     .priority(1)
+ *                     .build(),
+ *                 VoiceConnectorGroupConnector.builder()
+ *                     .voiceConnectorId(vc2.getId())
+ *                     .priority(3)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

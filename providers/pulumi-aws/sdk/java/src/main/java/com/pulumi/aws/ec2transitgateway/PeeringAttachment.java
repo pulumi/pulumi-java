@@ -20,6 +20,49 @@ import javax.annotation.Nullable;
  * For examples of custom route table association and propagation, see the [EC2 Transit Gateway Networking Examples Guide](https://docs.aws.amazon.com/vpc/latest/tgw/TGW_Scenarios.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var local = new Provider(&#34;local&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var peer = new Provider(&#34;peer&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-west-2&#34;)
+ *             .build());
+ * 
+ *         final var peerRegion = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var localTransitGateway = new TransitGateway(&#34;localTransitGateway&#34;, TransitGatewayArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Local TGW&#34;))
+ *             .build());
+ * 
+ *         var peerTransitGateway = new TransitGateway(&#34;peerTransitGateway&#34;, TransitGatewayArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Peer TGW&#34;))
+ *             .build());
+ * 
+ *         var example = new PeeringAttachment(&#34;example&#34;, PeeringAttachmentArgs.builder()        
+ *             .peerAccountId(peerTransitGateway.getOwnerId())
+ *             .peerRegion(peerRegion.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .peerTransitGatewayId(peerTransitGateway.getId())
+ *             .transitGatewayId(localTransitGateway.getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;TGW Peering Requestor&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

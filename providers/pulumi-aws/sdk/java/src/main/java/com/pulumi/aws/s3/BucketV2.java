@@ -85,6 +85,457 @@ import javax.annotation.Nullable;
  * Configuring with both will cause inconsistencies and may overwrite configuration.
  * 
  * ## Example Usage
+ * ### Private Bucket w/ Tags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;My bucket&#34;),
+ *                 Map.entry(&#34;Environment&#34;, &#34;Dev&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         var example = new BucketAclV2(&#34;example&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Static Website Hosting
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;public-read&#34;)
+ *             .policy(Files.readString(&#34;policy.json&#34;))
+ *             .websites(BucketV2Website.builder()
+ *                 .indexDocument(&#34;index.html&#34;)
+ *                 .errorDocument(&#34;error.html&#34;)
+ *                 .routingRules(&#34;&#34;&#34;
+ * [{
+ *     &#34;Condition&#34;: {
+ *         &#34;KeyPrefixEquals&#34;: &#34;docs/&#34;
+ *     },
+ *     &#34;Redirect&#34;: {
+ *         &#34;ReplaceKeyPrefixWith&#34;: &#34;documents/&#34;
+ *     }
+ * }]
+ *                 &#34;&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using CORS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;public-read&#34;)
+ *             .corsRules(BucketV2CorsRule.builder()
+ *                 .allowedHeaders(&#34;*&#34;)
+ *                 .allowedMethods(                
+ *                     &#34;PUT&#34;,
+ *                     &#34;POST&#34;)
+ *                 .allowedOrigins(&#34;https://s3-website-test.hashicorp.com&#34;)
+ *                 .exposeHeaders(&#34;ETag&#34;)
+ *                 .maxAgeSeconds(3000)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using versioning
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;private&#34;)
+ *             .versionings(BucketV2Versioning.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enable Logging
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var logBucket = new BucketV2(&#34;logBucket&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;log-delivery-write&#34;)
+ *             .build());
+ * 
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;private&#34;)
+ *             .loggings(BucketV2Logging.builder()
+ *                 .targetBucket(logBucket.getId())
+ *                 .targetPrefix(&#34;log/&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using object lifecycle
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;private&#34;)
+ *             .lifecycleRules(            
+ *                 BucketV2LifecycleRule.builder()
+ *                     .enabled(true)
+ *                     .expirations(BucketV2LifecycleRuleExpiration.builder()
+ *                         .days(90)
+ *                         .build())
+ *                     .id(&#34;log&#34;)
+ *                     .prefix(&#34;log/&#34;)
+ *                     .tags(Map.ofEntries(
+ *                         Map.entry(&#34;autoclean&#34;, &#34;true&#34;),
+ *                         Map.entry(&#34;rule&#34;, &#34;log&#34;)
+ *                     ))
+ *                     .transitions(                    
+ *                         BucketV2LifecycleRuleTransition.builder()
+ *                             .days(30)
+ *                             .storageClass(&#34;STANDARD_IA&#34;)
+ *                             .build(),
+ *                         BucketV2LifecycleRuleTransition.builder()
+ *                             .days(60)
+ *                             .storageClass(&#34;GLACIER&#34;)
+ *                             .build())
+ *                     .build(),
+ *                 BucketV2LifecycleRule.builder()
+ *                     .enabled(true)
+ *                     .expirations(BucketV2LifecycleRuleExpiration.builder()
+ *                         .date(&#34;2016-01-12&#34;)
+ *                         .build())
+ *                     .id(&#34;tmp&#34;)
+ *                     .prefix(&#34;tmp/&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var versioningBucket = new BucketV2(&#34;versioningBucket&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;private&#34;)
+ *             .lifecycleRules(BucketV2LifecycleRule.builder()
+ *                 .enabled(true)
+ *                 .noncurrentVersionExpirations(BucketV2LifecycleRuleNoncurrentVersionExpiration.builder()
+ *                     .days(90)
+ *                     .build())
+ *                 .noncurrentVersionTransitions(                
+ *                     BucketV2LifecycleRuleNoncurrentVersionTransition.builder()
+ *                         .days(30)
+ *                         .storageClass(&#34;STANDARD_IA&#34;)
+ *                         .build(),
+ *                     BucketV2LifecycleRuleNoncurrentVersionTransition.builder()
+ *                         .days(60)
+ *                         .storageClass(&#34;GLACIER&#34;)
+ *                         .build())
+ *                 .prefix(&#34;config/&#34;)
+ *                 .build())
+ *             .versionings(BucketV2Versioning.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using object lock configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;, BucketV2Args.builder()        
+ *             .objectLockConfiguration(BucketV2ObjectLockConfiguration.builder()
+ *                 .objectLockEnabled(&#34;Enabled&#34;)
+ *                 .rule(Map.of(&#34;defaultRetention&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;days&#34;, 5),
+ *                     Map.entry(&#34;mode&#34;, &#34;COMPLIANCE&#34;)
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using replication configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var central = new Provider(&#34;central&#34;, ProviderArgs.builder()        
+ *             .region(&#34;eu-central-1&#34;)
+ *             .build());
+ * 
+ *         var replicationRole = new Role(&#34;replicationRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;s3.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var destination = new BucketV2(&#34;destination&#34;, BucketV2Args.builder()        
+ *             .versionings(BucketV2Versioning.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var source = new BucketV2(&#34;source&#34;, BucketV2Args.builder()        
+ *             .acl(&#34;private&#34;)
+ *             .versionings(BucketV2Versioning.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .replicationConfigurations(BucketV2ReplicationConfiguration.builder()
+ *                 .role(replicationRole.getArn())
+ *                 .rules(BucketV2ReplicationConfigurationRule.builder()
+ *                     .id(&#34;foobar&#34;)
+ *                     .status(&#34;Enabled&#34;)
+ *                     .filters(BucketV2ReplicationConfigurationRuleFilter.builder()
+ *                         .tags()
+ *                         .build())
+ *                     .destinations(BucketV2ReplicationConfigurationRuleDestination.builder()
+ *                         .bucket(destination.getArn())
+ *                         .storageClass(&#34;STANDARD&#34;)
+ *                         .replicationTimes(BucketV2ReplicationConfigurationRuleDestinationReplicationTime.builder()
+ *                             .status(&#34;Enabled&#34;)
+ *                             .minutes(15)
+ *                             .build())
+ *                         .metrics(BucketV2ReplicationConfigurationRuleDestinationMetric.builder()
+ *                             .status(&#34;Enabled&#34;)
+ *                             .minutes(15)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var replicationPolicy = new Policy(&#34;replicationPolicy&#34;, PolicyArgs.builder()        
+ *             .policy(Output.tuple(source.getArn(), source.getArn(), destination.getArn()).apply(values -&gt; {
+ *                 var sourceArn = values.t1;
+ *                 var sourceArn1 = values.t2;
+ *                 var destinationArn = values.t3;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:GetReplicationConfiguration&#34;,
+ *         &#34;s3:ListBucket&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:GetObjectVersionForReplication&#34;,
+ *         &#34;s3:GetObjectVersionAcl&#34;,
+ *          &#34;s3:GetObjectVersionTagging&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;%s/*&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:ReplicateObject&#34;,
+ *         &#34;s3:ReplicateDelete&#34;,
+ *         &#34;s3:ReplicateTags&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;%s/*&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, sourceArn,sourceArn1,destinationArn);
+ *             }))
+ *             .build());
+ * 
+ *         var replicationRolePolicyAttachment = new RolePolicyAttachment(&#34;replicationRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(replicationRole.getName())
+ *             .policyArn(replicationPolicy.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enable Default Server Side Encryption
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mykey = new Key(&#34;mykey&#34;, KeyArgs.builder()        
+ *             .description(&#34;This key is used to encrypt bucket objects&#34;)
+ *             .deletionWindowInDays(10)
+ *             .build());
+ * 
+ *         var mybucket = new BucketV2(&#34;mybucket&#34;, BucketV2Args.builder()        
+ *             .serverSideEncryptionConfigurations(BucketV2ServerSideEncryptionConfiguration.builder()
+ *                 .rules(BucketV2ServerSideEncryptionConfigurationRule.builder()
+ *                     .applyServerSideEncryptionByDefaults(BucketV2ServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault.builder()
+ *                         .kmsMasterKeyId(mykey.getArn())
+ *                         .sseAlgorithm(&#34;aws:kms&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using ACL policy grants
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var currentUser = Output.of(S3Functions.getCanonicalUserId());
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;, BucketV2Args.builder()        
+ *             .grants(            
+ *                 BucketV2Grant.builder()
+ *                     .id(currentUser.apply(getCanonicalUserIdResult -&gt; getCanonicalUserIdResult.getId()))
+ *                     .type(&#34;CanonicalUser&#34;)
+ *                     .permissions(&#34;FULL_CONTROL&#34;)
+ *                     .build(),
+ *                 BucketV2Grant.builder()
+ *                     .type(&#34;Group&#34;)
+ *                     .permissions(                    
+ *                         &#34;READ_ACP&#34;,
+ *                         &#34;WRITE&#34;)
+ *                     .uri(&#34;http://acs.amazonaws.com/groups/s3/LogDelivery&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

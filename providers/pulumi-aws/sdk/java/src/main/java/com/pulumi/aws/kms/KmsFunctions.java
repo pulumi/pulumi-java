@@ -28,6 +28,27 @@ public final class KmsFunctions {
      * without having to hard code the ARN as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var s3 = Output.of(KmsFunctions.getAlias(GetAliasArgs.builder()
+     *             .name(&#34;alias/aws/s3&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
@@ -43,6 +64,38 @@ public final class KmsFunctions {
      * resource.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var oauthConfig = new Key(&#34;oauthConfig&#34;, KeyArgs.builder()        
+     *             .description(&#34;oauth config&#34;)
+     *             .isEnabled(true)
+     *             .build());
+     * 
+     *         final var oauth = KmsFunctions.getCipherText(GetCipherTextArgs.builder()
+     *             .keyId(oauthConfig.getKeyId())
+     *             .plaintext(&#34;&#34;&#34;
+     * {
+     *   &#34;client_id&#34;: &#34;e587dbae22222f55da22&#34;,
+     *   &#34;client_secret&#34;: &#34;8289575d00000ace55e1815ec13673955721b8a5&#34;
+     * }
+     *             &#34;&#34;&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCipherTextResult> getCipherText(GetCipherTextArgs args) {
@@ -58,6 +111,39 @@ public final class KmsFunctions {
      * without having to hard code the ARN as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byAlias = Output.of(KmsFunctions.getKey(GetKeyArgs.builder()
+     *             .keyId(&#34;alias/my-key&#34;)
+     *             .build()));
+     * 
+     *         final var byId = Output.of(KmsFunctions.getKey(GetKeyArgs.builder()
+     *             .keyId(&#34;1234abcd-12ab-34cd-56ef-1234567890ab&#34;)
+     *             .build()));
+     * 
+     *         final var byAliasArn = Output.of(KmsFunctions.getKey(GetKeyArgs.builder()
+     *             .keyId(&#34;arn:aws:kms:us-east-1:111122223333:alias/my-key&#34;)
+     *             .build()));
+     * 
+     *         final var byKeyArn = Output.of(KmsFunctions.getKey(GetKeyArgs.builder()
+     *             .keyId(&#34;arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
@@ -70,6 +156,39 @@ public final class KmsFunctions {
      * Use this data source to get the public key about the specified KMS Key with flexible key id input. This can be useful to reference key alias without having to hard code the ARN as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byAlias = Output.of(KmsFunctions.getPublicKey(GetPublicKeyArgs.builder()
+     *             .keyId(&#34;alias/my-key&#34;)
+     *             .build()));
+     * 
+     *         final var byId = Output.of(KmsFunctions.getPublicKey(GetPublicKeyArgs.builder()
+     *             .keyId(&#34;1234abcd-12ab-34cd-56ef-1234567890ab&#34;)
+     *             .build()));
+     * 
+     *         final var byAliasArn = Output.of(KmsFunctions.getPublicKey(GetPublicKeyArgs.builder()
+     *             .keyId(&#34;arn:aws:kms:us-east-1:111122223333:alias/my-key&#34;)
+     *             .build()));
+     * 
+     *         final var byKeyArn = Output.of(KmsFunctions.getPublicKey(GetPublicKeyArgs.builder()
+     *             .keyId(&#34;arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPublicKeyResult> getPublicKey(GetPublicKeyArgs args) {

@@ -25,6 +25,33 @@ import javax.annotation.Nullable;
  * &gt; A &#34;provisioning artifact&#34; is also referred to as a &#34;version.&#34; A &#34;distributor&#34; is also referred to as a &#34;vendor.&#34;
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Product(&#34;example&#34;, ProductArgs.builder()        
+ *             .owner(aws_security_group.getExample().getId())
+ *             .type(aws_subnet.getMain().getId())
+ *             .provisioningArtifactParameters(ProductProvisioningArtifactParameters.builder()
+ *                 .templateUrl(&#34;https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * Provides a WAF Size Constraint Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sizeConstraintSet = new SizeConstraintSet(&#34;sizeConstraintSet&#34;, SizeConstraintSetArgs.builder()        
+ *             .sizeConstraints(SizeConstraintSetSizeConstraint.builder()
+ *                 .comparisonOperator(&#34;EQ&#34;)
+ *                 .fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatch.builder()
+ *                     .type(&#34;BODY&#34;)
+ *                     .build())
+ *                 .size(&#34;4096&#34;)
+ *                 .textTransformation(&#34;NONE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

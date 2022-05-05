@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS XRay Sampling Rule.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SamplingRule(&#34;example&#34;, SamplingRuleArgs.builder()        
+ *             .attributes(Map.of(&#34;Hello&#34;, &#34;Tris&#34;))
+ *             .fixedRate(0.05)
+ *             .host(&#34;*&#34;)
+ *             .httpMethod(&#34;*&#34;)
+ *             .priority(10000)
+ *             .reservoirSize(1)
+ *             .resourceArn(&#34;*&#34;)
+ *             .ruleName(&#34;example&#34;)
+ *             .serviceName(&#34;*&#34;)
+ *             .serviceType(&#34;*&#34;)
+ *             .urlPath(&#34;*&#34;)
+ *             .version(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  * To enable private integration for REST APIs, use the `Amazon API Gateway Version 1 VPC Link` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpcLink(&#34;example&#34;, VpcLinkArgs.builder()        
+ *             .securityGroupIds(data.getAws_security_group().getExample().getId())
+ *             .subnetIds(data.getAws_subnet_ids().getExample().getIds())
+ *             .tags(Map.of(&#34;Usage&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

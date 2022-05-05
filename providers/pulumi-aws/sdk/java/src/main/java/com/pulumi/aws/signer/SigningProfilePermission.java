@@ -18,6 +18,57 @@ import javax.annotation.Nullable;
  * Creates a Signer Signing Profile Permission. That is, a cross-account permission for a signing profile.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prodSp = new SigningProfile(&#34;prodSp&#34;, SigningProfileArgs.builder()        
+ *             .platformId(&#34;AWSLambda-SHA384-ECDSA&#34;)
+ *             .namePrefix(&#34;prod_sp_&#34;)
+ *             .signatureValidityPeriod(SigningProfileSignatureValidityPeriod.builder()
+ *                 .value(5)
+ *                 .type(&#34;YEARS&#34;)
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         var spPermission1 = new SigningProfilePermission(&#34;spPermission1&#34;, SigningProfilePermissionArgs.builder()        
+ *             .profileName(prodSp.getName())
+ *             .action(&#34;signer:StartSigningJob&#34;)
+ *             .principal(var_.getAws_account())
+ *             .build());
+ * 
+ *         var spPermission2 = new SigningProfilePermission(&#34;spPermission2&#34;, SigningProfilePermissionArgs.builder()        
+ *             .profileName(prodSp.getName())
+ *             .action(&#34;signer:GetSigningProfile&#34;)
+ *             .principal(var_.getAws_team_role_arn())
+ *             .statementId(&#34;ProdAccountStartSigningJob_StatementId&#34;)
+ *             .build());
+ * 
+ *         var spPermission3 = new SigningProfilePermission(&#34;spPermission3&#34;, SigningProfilePermissionArgs.builder()        
+ *             .profileName(prodSp.getName())
+ *             .action(&#34;signer:RevokeSignature&#34;)
+ *             .principal(&#34;123456789012&#34;)
+ *             .profileVersion(prodSp.getVersion())
+ *             .statementIdPrefix(&#34;version-permission-&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

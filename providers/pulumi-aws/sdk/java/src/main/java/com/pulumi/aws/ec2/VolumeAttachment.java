@@ -22,6 +22,41 @@ import javax.annotation.Nullable;
  * &gt; **NOTE on EBS block devices:** If you use `ebs_block_device` on an `aws.ec2.Instance`, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, `ebs_block_device` cannot be mixed with external `aws.ebs.Volume` + `aws.ec2.VolumeAttachment` resources for a given instance.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var web = new Instance(&#34;web&#34;, InstanceArgs.builder()        
+ *             .ami(&#34;ami-21f78e11&#34;)
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .size(1)
+ *             .build());
+ * 
+ *         var ebsAtt = new VolumeAttachment(&#34;ebsAtt&#34;, VolumeAttachmentArgs.builder()        
+ *             .deviceName(&#34;/dev/sdh&#34;)
+ *             .volumeId(example.getId())
+ *             .instanceId(web.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

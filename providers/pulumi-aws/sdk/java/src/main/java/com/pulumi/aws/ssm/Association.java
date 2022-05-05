@@ -24,6 +24,85 @@ import javax.annotation.Nullable;
  * Associates an SSM Document to an instance or EC2 tag.
  * 
  * ## Example Usage
+ * ### Create an association for a specific instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Association(&#34;example&#34;, AssociationArgs.builder()        
+ *             .targets(AssociationTarget.builder()
+ *                 .key(&#34;InstanceIds&#34;)
+ *                 .values(aws_instance.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create an association for all managed instances in an AWS account
+ * 
+ * To target all managed instances in an AWS account, set the `key` as `&#34;InstanceIds&#34;` with `values` set as `[&#34;*&#34;]`. This example also illustrates how to use an Amazon owned SSM document named `AmazonCloudWatch-ManageAgent`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Association(&#34;example&#34;, AssociationArgs.builder()        
+ *             .targets(AssociationTarget.builder()
+ *                 .key(&#34;InstanceIds&#34;)
+ *                 .values(&#34;*&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create an association for a specific tag
+ * 
+ * This example shows how to target all managed instances that are assigned a tag key of `Environment` and value of `Development`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Association(&#34;example&#34;, AssociationArgs.builder()        
+ *             .targets(AssociationTarget.builder()
+ *                 .key(&#34;tag:Environment&#34;)
+ *                 .values(&#34;Development&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * Provides an Amazon MSK Connect Worker Configuration Resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WorkerConfiguration(&#34;example&#34;, WorkerConfigurationArgs.builder()        
+ *             .propertiesFileContent(&#34;&#34;&#34;
+ * key.converter=org.apache.kafka.connect.storage.StringConverter
+ * value.converter=org.apache.kafka.connect.storage.StringConverter
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,7 +21,60 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderEventBus = new EventBus(&#34;orderEventBus&#34;);
+ * 
+ *         var orderEventArchive = new EventArchive(&#34;orderEventArchive&#34;, EventArchiveArgs.builder()        
+ *             .eventSourceArn(orderEventBus.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Example all optional arguments
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderEventBus = new EventBus(&#34;orderEventBus&#34;);
+ * 
+ *         var orderEventArchive = new EventArchive(&#34;orderEventArchive&#34;, EventArchiveArgs.builder()        
+ *             .description(&#34;Archived events from order service&#34;)
+ *             .eventSourceArn(orderEventBus.getArn())
+ *             .retentionDays(7)
+ *             .eventPattern(&#34;&#34;&#34;
+ * {
+ *   &#34;source&#34;: [&#34;company.team.order&#34;]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

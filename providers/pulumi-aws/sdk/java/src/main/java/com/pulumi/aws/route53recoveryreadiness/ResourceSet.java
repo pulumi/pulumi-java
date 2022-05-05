@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * Provides an AWS Route 53 Recovery Readiness Resource Set.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResourceSet(&#34;example&#34;, ResourceSetArgs.builder()        
+ *             .resourceSetName(my_cw_alarm_set)
+ *             .resourceSetType(&#34;AWS::CloudWatch::Alarm&#34;)
+ *             .resources(ResourceSetResource.builder()
+ *                 .resourceArn(aws_cloudwatch_metric_alarm.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides an AWS Quantum Ledger Database (QLDB) Stream resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Stream(&#34;example&#34;, StreamArgs.builder()        
+ *             .inclusiveStartTime(&#34;2021-01-01T00:00:00Z&#34;)
+ *             .kinesisConfiguration(StreamKinesisConfiguration.builder()
+ *                 .aggegationEnabled(false)
+ *                 .streamArn(&#34;arn:aws:kinesis:us-east-1:xxxxxxxxxxxx:stream/example-kinesis-stream&#34;)
+ *                 .build())
+ *             .ledgerName(&#34;existing-ledger-name&#34;)
+ *             .roleArn(&#34;sample-role-arn&#34;)
+ *             .streamName(&#34;sample-ledger-stream&#34;)
+ *             .tags(Map.of(&#34;example&#34;, &#34;tag&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:qldb/stream:Stream")

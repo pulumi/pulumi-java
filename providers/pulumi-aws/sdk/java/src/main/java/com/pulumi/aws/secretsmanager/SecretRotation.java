@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * Provides a resource to manage AWS Secrets Manager secret rotation. To manage a secret, see the `aws.secretsmanager.Secret` resource. To manage a secret value, see the `aws.secretsmanager.SecretVersion` resource.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecretRotation(&#34;example&#34;, SecretRotationArgs.builder()        
+ *             .secretId(aws_secretsmanager_secret.getExample().getId())
+ *             .rotationLambdaArn(aws_lambda_function.getExample().getArn())
+ *             .rotationRules(SecretRotationRotationRules.builder()
+ *                 .automaticallyAfterDays(30)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ### Rotation Configuration
  * 
  * To enable automatic secret rotation, the Secrets Manager service requires usage of a Lambda function. The [Rotate Secrets section in the Secrets Manager User Guide](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html) provides additional information about deploying a prebuilt Lambda functions for supported credential rotation (e.g., RDS) or deploying a custom Lambda function.

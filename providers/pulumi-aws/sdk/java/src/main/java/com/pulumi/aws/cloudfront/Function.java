@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** You cannot delete a function if it’s associated with a cache behavior. First, update your distributions to remove the function association from all cache behaviors, then delete the function.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Function(&#34;test&#34;, FunctionArgs.builder()        
+ *             .runtime(&#34;cloudfront-js-1.0&#34;)
+ *             .comment(&#34;my function&#34;)
+ *             .publish(true)
+ *             .code(Files.readString(String.format(&#34;%s/function.js&#34;, path.getModule())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

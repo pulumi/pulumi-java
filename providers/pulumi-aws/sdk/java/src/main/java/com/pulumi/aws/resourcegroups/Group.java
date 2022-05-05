@@ -20,6 +20,42 @@ import javax.annotation.Nullable;
  * Provides a Resource Group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Group(&#34;test&#34;, GroupArgs.builder()        
+ *             .resourceQuery(GroupResourceQuery.builder()
+ *                 .query(&#34;&#34;&#34;
+ * {
+ *   &#34;ResourceTypeFilters&#34;: [
+ *     &#34;AWS::EC2::Instance&#34;
+ *   ],
+ *   &#34;TagFilters&#34;: [
+ *     {
+ *       &#34;Key&#34;: &#34;Stage&#34;,
+ *       &#34;Values&#34;: [&#34;Test&#34;]
+ *     }
+ *   ]
+ * }
+ * 
+ *                 &#34;&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

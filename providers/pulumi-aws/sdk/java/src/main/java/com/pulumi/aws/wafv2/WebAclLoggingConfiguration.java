@@ -25,6 +25,85 @@ import javax.annotation.Nullable;
  * Be sure to give the data firehose, cloudwatch log group, and/or s3 bucket a name that starts with the prefix `aws-waf-logs-`.
  * 
  * ## Example Usage
+ * ### With Redacted Fields
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAclLoggingConfiguration(&#34;example&#34;, WebAclLoggingConfigurationArgs.builder()        
+ *             .logDestinationConfigs(aws_kinesis_firehose_delivery_stream.getExample().getArn())
+ *             .resourceArn(aws_wafv2_web_acl.getExample().getArn())
+ *             .redactedFields(WebAclLoggingConfigurationRedactedField.builder()
+ *                 .singleHeader(WebAclLoggingConfigurationRedactedFieldSingleHeader.builder()
+ *                     .name(&#34;user-agent&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Logging Filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAclLoggingConfiguration(&#34;example&#34;, WebAclLoggingConfigurationArgs.builder()        
+ *             .logDestinationConfigs(aws_kinesis_firehose_delivery_stream.getExample().getArn())
+ *             .resourceArn(aws_wafv2_web_acl.getExample().getArn())
+ *             .loggingFilter(WebAclLoggingConfigurationLoggingFilter.builder()
+ *                 .defaultBehavior(&#34;KEEP&#34;)
+ *                 .filters(                
+ *                     WebAclLoggingConfigurationLoggingFilterFilter.builder()
+ *                         .behavior(&#34;DROP&#34;)
+ *                         .conditions(                        
+ *                             WebAclLoggingConfigurationLoggingFilterFilterCondition.builder()
+ *                                 .actionCondition(WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition.builder()
+ *                                     .action(&#34;COUNT&#34;)
+ *                                     .build())
+ *                                 .build(),
+ *                             WebAclLoggingConfigurationLoggingFilterFilterCondition.builder()
+ *                                 .labelNameCondition(WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition.builder()
+ *                                     .labelName(&#34;awswaf:111122223333:rulegroup:testRules:LabelNameZ&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                         .requirement(&#34;MEETS_ALL&#34;)
+ *                         .build(),
+ *                     WebAclLoggingConfigurationLoggingFilterFilter.builder()
+ *                         .behavior(&#34;KEEP&#34;)
+ *                         .conditions(WebAclLoggingConfigurationLoggingFilterFilterCondition.builder()
+ *                             .actionCondition(WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition.builder()
+ *                                 .action(&#34;ALLOW&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .requirement(&#34;MEETS_ANY&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

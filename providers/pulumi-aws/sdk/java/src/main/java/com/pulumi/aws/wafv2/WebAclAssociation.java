@@ -22,6 +22,76 @@ import javax.annotation.Nullable;
  * [2]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;, RestApiArgs.builder()        
+ *             .body(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;openapi&#34;, &#34;3.0.1&#34;),
+ *                     jsonProperty(&#34;info&#34;, jsonObject(
+ *                         jsonProperty(&#34;title&#34;, &#34;example&#34;),
+ *                         jsonProperty(&#34;version&#34;, &#34;1.0&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;paths&#34;, jsonObject(
+ *                         jsonProperty(&#34;/path1&#34;, jsonObject(
+ *                             jsonProperty(&#34;get&#34;, jsonObject(
+ *                                 jsonProperty(&#34;x-amazon-apigateway-integration&#34;, jsonObject(
+ *                                     jsonProperty(&#34;httpMethod&#34;, &#34;GET&#34;),
+ *                                     jsonProperty(&#34;payloadFormatVersion&#34;, &#34;1.0&#34;),
+ *                                     jsonProperty(&#34;type&#34;, &#34;HTTP_PROXY&#34;),
+ *                                     jsonProperty(&#34;uri&#34;, &#34;https://ip-ranges.amazonaws.com/ip-ranges.json&#34;)
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     ))
+ *                 )))
+ *             .build());
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(exampleRestApi.getId())
+ *             .triggers(Map.of(&#34;redeployment&#34;, exampleRestApi.getBody().apply(body -&gt; serializeJson(
+ *                 body)).apply(toJSON -&gt; computeSHA1(toJSON))))
+ *             .build());
+ * 
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleWebAcl = new WebAcl(&#34;exampleWebAcl&#34;, WebAclArgs.builder()        
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .allow()
+ *                 .build())
+ *             .visibilityConfig(WebAclVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleWebAclAssociation = new WebAclAssociation(&#34;exampleWebAclAssociation&#34;, WebAclAssociationArgs.builder()        
+ *             .resourceArn(exampleStage.getArn())
+ *             .webAclArn(exampleWebAcl.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

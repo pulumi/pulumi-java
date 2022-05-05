@@ -22,6 +22,131 @@ import javax.annotation.Nullable;
  * Provides an SSM Maintenance Window Task resource
  * 
  * ## Example Usage
+ * ### Automation Tasks
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MaintenanceWindowTask(&#34;example&#34;, MaintenanceWindowTaskArgs.builder()        
+ *             .maxConcurrency(2)
+ *             .maxErrors(1)
+ *             .priority(1)
+ *             .taskArn(&#34;AWS-RestartEC2Instance&#34;)
+ *             .taskType(&#34;AUTOMATION&#34;)
+ *             .windowId(aws_ssm_maintenance_window.getExample().getId())
+ *             .targets(MaintenanceWindowTaskTarget.builder()
+ *                 .key(&#34;InstanceIds&#34;)
+ *                 .values(aws_instance.getExample().getId())
+ *                 .build())
+ *             .taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParameters.builder()
+ *                 .automationParameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParameters.builder()
+ *                     .documentVersion(&#34;$LATEST&#34;)
+ *                     .parameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter.builder()
+ *                         .name(&#34;InstanceId&#34;)
+ *                         .values(aws_instance.getExample().getId())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Run Command Tasks
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MaintenanceWindowTask(&#34;example&#34;, MaintenanceWindowTaskArgs.builder()        
+ *             .maxConcurrency(2)
+ *             .maxErrors(1)
+ *             .priority(1)
+ *             .taskArn(&#34;AWS-RunShellScript&#34;)
+ *             .taskType(&#34;RUN_COMMAND&#34;)
+ *             .windowId(aws_ssm_maintenance_window.getExample().getId())
+ *             .targets(MaintenanceWindowTaskTarget.builder()
+ *                 .key(&#34;InstanceIds&#34;)
+ *                 .values(aws_instance.getExample().getId())
+ *                 .build())
+ *             .taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParameters.builder()
+ *                 .runCommandParameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters.builder()
+ *                     .outputS3Bucket(aws_s3_bucket.getExample().getBucket())
+ *                     .outputS3KeyPrefix(&#34;output&#34;)
+ *                     .serviceRoleArn(aws_iam_role.getExample().getArn())
+ *                     .timeoutSeconds(600)
+ *                     .notificationConfig(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig.builder()
+ *                         .notificationArn(aws_sns_topic.getExample().getArn())
+ *                         .notificationEvents(&#34;All&#34;)
+ *                         .notificationType(&#34;Command&#34;)
+ *                         .build())
+ *                     .parameters(MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter.builder()
+ *                         .name(&#34;commands&#34;)
+ *                         .values(&#34;date&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Step Function Tasks
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MaintenanceWindowTask(&#34;example&#34;, MaintenanceWindowTaskArgs.builder()        
+ *             .maxConcurrency(2)
+ *             .maxErrors(1)
+ *             .priority(1)
+ *             .taskArn(aws_sfn_activity.getExample().getId())
+ *             .taskType(&#34;STEP_FUNCTIONS&#34;)
+ *             .windowId(aws_ssm_maintenance_window.getExample().getId())
+ *             .targets(MaintenanceWindowTaskTarget.builder()
+ *                 .key(&#34;InstanceIds&#34;)
+ *                 .values(aws_instance.getExample().getId())
+ *                 .build())
+ *             .taskInvocationParameters(MaintenanceWindowTaskTaskInvocationParameters.builder()
+ *                 .stepFunctionsParameters(MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters.builder()
+ *                     .input(&#34;{\&#34;key1\&#34;:\&#34;value1\&#34;}&#34;)
+ *                     .name(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

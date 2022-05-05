@@ -30,6 +30,36 @@ import javax.annotation.Nullable;
  * (see documentation below).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .applyImmediately(true)
+ *             .backupRetentionPeriod(5)
+ *             .clusterIdentifier(&#34;neptune-cluster-demo&#34;)
+ *             .engine(&#34;neptune&#34;)
+ *             .iamDatabaseAuthenticationEnabled(true)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .skipFinalSnapshot(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **Note:** AWS Neptune does not support user name/password–based access control.
+ * See the AWS [Docs](https://docs.aws.amazon.com/neptune/latest/userguide/limits.html) for more information.
  * 
  * ## Import
  * 

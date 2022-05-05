@@ -22,6 +22,30 @@ import javax.annotation.Nullable;
  * A hosted virtual interface is a virtual interface that is owned by another AWS account.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HostedTransitVirtualInterface(&#34;example&#34;, HostedTransitVirtualInterfaceArgs.builder()        
+ *             .connectionId(aws_dx_connection.getExample().getId())
+ *             .vlan(4094)
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .bgpAsn(65352)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

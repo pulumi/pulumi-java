@@ -28,6 +28,27 @@ public final class ApigatewayFunctions {
      * Use this data source to get the custom domain name for use with AWS API Gateway.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ApigatewayFunctions.getDomainName(GetDomainNameArgs.builder()
+     *             .domainName(&#34;api.example.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
@@ -38,6 +59,29 @@ public final class ApigatewayFunctions {
     }
     /**
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ApigatewayFunctions.getExport(GetExportArgs.builder()
+     *             .restApiId(aws_api_gateway_stage.getExample().getRest_api_id())
+     *             .stageName(aws_api_gateway_stage.getExample().getStage_name())
+     *             .exportType(&#34;oas30&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetExportResult> getExport(GetExportArgs args) {
@@ -51,6 +95,27 @@ public final class ApigatewayFunctions {
      * example to supply credentials for a dependency microservice.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myApiKey = Output.of(ApigatewayFunctions.getKey(GetKeyArgs.builder()
+     *             .id(&#34;ru3mpjgse6&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKeyResult> getKey(GetKeyArgs args) {
@@ -64,6 +129,32 @@ public final class ApigatewayFunctions {
      * To fetch the Resource, you must provide the REST API id as well as the full path.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myRestApi = Output.of(ApigatewayFunctions.getRestApi(GetRestApiArgs.builder()
+     *             .name(&#34;my-rest-api&#34;)
+     *             .build()));
+     * 
+     *         final var myResource = Output.of(ApigatewayFunctions.getResource(GetResourceArgs.builder()
+     *             .restApiId(myRestApi.apply(getRestApiResult -&gt; getRestApiResult.getId()))
+     *             .path(&#34;/endpoint/path&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
@@ -79,6 +170,27 @@ public final class ApigatewayFunctions {
      * error if there is more than one match.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myRestApi = Output.of(ApigatewayFunctions.getRestApi(GetRestApiArgs.builder()
+     *             .name(&#34;my-rest-api&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRestApiResult> getRestApi(GetRestApiArgs args) {
@@ -89,6 +201,35 @@ public final class ApigatewayFunctions {
     }
     /**
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ApigatewayFunctions.getSdk(GetSdkArgs.builder()
+     *             .restApiId(aws_api_gateway_stage.getExample().getRest_api_id())
+     *             .stageName(aws_api_gateway_stage.getExample().getStage_name())
+     *             .sdkType(&#34;android&#34;)
+     *             .parameters(Map.ofEntries(
+     *                 Map.entry(&#34;groupId&#34;, &#34;example&#34;),
+     *                 Map.entry(&#34;artifactId&#34;, &#34;example&#34;),
+     *                 Map.entry(&#34;artifactVersion&#34;, &#34;example&#34;),
+     *                 Map.entry(&#34;invokerPackage&#34;, &#34;example&#34;)
+     *             ))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSdkResult> getSdk(GetSdkArgs args) {
@@ -104,6 +245,27 @@ public final class ApigatewayFunctions {
      * error if there is more than one match.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myApiGatewayVpcLink = Output.of(ApigatewayFunctions.getVpcLink(GetVpcLinkArgs.builder()
+     *             .name(&#34;my-vpc-link&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVpcLinkResult> getVpcLink(GetVpcLinkArgs args) {

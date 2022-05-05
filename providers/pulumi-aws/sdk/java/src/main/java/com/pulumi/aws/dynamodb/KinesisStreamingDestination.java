@@ -17,6 +17,40 @@ import javax.annotation.Nullable;
  * Enables a [Kinesis streaming destination](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/kds.html) for data replication of a DynamoDB table.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTable = new Table(&#34;exampleTable&#34;, TableArgs.builder()        
+ *             .hashKey(&#34;id&#34;)
+ *             .attributes(TableAttribute.builder()
+ *                 .name(&#34;id&#34;)
+ *                 .type(&#34;S&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleStream = new Stream(&#34;exampleStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var exampleKinesisStreamingDestination = new KinesisStreamingDestination(&#34;exampleKinesisStreamingDestination&#34;, KinesisStreamingDestinationArgs.builder()        
+ *             .streamArn(exampleStream.getArn())
+ *             .tableName(exampleTable.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

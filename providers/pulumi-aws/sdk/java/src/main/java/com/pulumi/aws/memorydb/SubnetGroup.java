@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * More information about subnet groups can be found in the [MemoryDB User Guide](https://docs.aws.amazon.com/memorydb/latest/devguide/subnetgroups.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleSubnet = new Subnet(&#34;exampleSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .cidrBlock(&#34;10.0.0.0/24&#34;)
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .build());
+ * 
+ *         var exampleSubnetGroup = new SubnetGroup(&#34;exampleSubnetGroup&#34;, SubnetGroupArgs.builder()        
+ *             .subnetIds(exampleSubnet.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

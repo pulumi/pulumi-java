@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks application resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo_app = new Application(&#34;foo-app&#34;, ApplicationArgs.builder()        
+ *             .shortName(&#34;foobar&#34;)
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .type(&#34;rails&#34;)
+ *             .description(&#34;This is a Rails application&#34;)
+ *             .domains(            
+ *                 &#34;example.com&#34;,
+ *                 &#34;sub.example.com&#34;)
+ *             .environments(ApplicationEnvironment.builder()
+ *                 .key(&#34;key&#34;)
+ *                 .value(&#34;value&#34;)
+ *                 .secure(false)
+ *                 .build())
+ *             .appSources(ApplicationAppSource.builder()
+ *                 .type(&#34;git&#34;)
+ *                 .revision(&#34;master&#34;)
+ *                 .url(&#34;https://github.com/example.git&#34;)
+ *                 .build())
+ *             .enableSsl(true)
+ *             .sslConfigurations(ApplicationSslConfiguration.builder()
+ *                 .privateKey(Files.readString(&#34;./foobar.key&#34;))
+ *                 .certificate(Files.readString(&#34;./foobar.crt&#34;))
+ *                 .build())
+ *             .documentRoot(&#34;public&#34;)
+ *             .autoBundleOnDeploy(true)
+ *             .railsEnv(&#34;staging&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

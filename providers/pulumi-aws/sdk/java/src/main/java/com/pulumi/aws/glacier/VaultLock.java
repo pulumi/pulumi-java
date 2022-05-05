@@ -23,6 +23,69 @@ import javax.annotation.Nullable;
  * !&gt; **WARNING:** Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the `ignore_deletion_error` argument to `true` and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider&#39;s management.
  * 
  * ## Example Usage
+ * ### Testing Glacier Vault Lock Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVault = new Vault(&#34;exampleVault&#34;);
+ * 
+ *         final var examplePolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;glacier:DeleteArchive&#34;)
+ *                 .effect(&#34;Deny&#34;)
+ *                 .resources(exampleVault.getArn())
+ *                 .conditions(GetPolicyDocumentStatementCondition.builder()
+ *                     .test(&#34;NumericLessThanEquals&#34;)
+ *                     .variable(&#34;glacier:ArchiveAgeinDays&#34;)
+ *                     .values(&#34;365&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVaultLock = new VaultLock(&#34;exampleVaultLock&#34;, VaultLockArgs.builder()        
+ *             .completeLock(false)
+ *             .policy(examplePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(examplePolicyDocument -&gt; examplePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .vaultName(exampleVault.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Permanently Applying Glacier Vault Lock Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VaultLock(&#34;example&#34;, VaultLockArgs.builder()        
+ *             .completeLock(true)
+ *             .policy(data.getAws_iam_policy_document().getExample().getJson())
+ *             .vaultName(aws_glacier_vault.getExample().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

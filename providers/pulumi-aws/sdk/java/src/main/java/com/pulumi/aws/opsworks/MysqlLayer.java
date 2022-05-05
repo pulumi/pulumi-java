@@ -24,6 +24,27 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks MySQL layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var db = new MysqlLayer(&#34;db&#34;, MysqlLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/mysqlLayer:MysqlLayer")

@@ -30,6 +30,42 @@ import javax.annotation.Nullable;
  * To work around this you can either create each environment in a separate AWS account or create your `aws.elasticbeanstalk.ApplicationVersion` resources with a unique names in your Elastic Beanstalk Application. For example &amp;lt;revision&amp;gt;-&amp;lt;environment&amp;gt;.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultBucketV2 = new BucketV2(&#34;defaultBucketV2&#34;);
+ * 
+ *         var defaultBucketObjectv2 = new BucketObjectv2(&#34;defaultBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(defaultBucketV2.getId())
+ *             .key(&#34;beanstalk/go-v1.zip&#34;)
+ *             .source(new FileAsset(&#34;go-v1.zip&#34;))
+ *             .build());
+ * 
+ *         var defaultApplication = new Application(&#34;defaultApplication&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;tf-test-desc&#34;)
+ *             .build());
+ * 
+ *         var defaultApplicationVersion = new ApplicationVersion(&#34;defaultApplicationVersion&#34;, ApplicationVersionArgs.builder()        
+ *             .application(&#34;tf-test-name&#34;)
+ *             .description(&#34;application version&#34;)
+ *             .bucket(defaultBucketV2.getId())
+ *             .key(defaultBucketObjectv2.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:elasticbeanstalk/applicationVersion:ApplicationVersion")

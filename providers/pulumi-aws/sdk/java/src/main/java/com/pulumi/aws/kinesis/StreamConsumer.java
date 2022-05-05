@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * For more details, see the [Amazon Kinesis Stream Consumer Documentation](https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleStream = new Stream(&#34;exampleStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var exampleStreamConsumer = new StreamConsumer(&#34;exampleStreamConsumer&#34;, StreamConsumerArgs.builder()        
+ *             .streamArn(exampleStream.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

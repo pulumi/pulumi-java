@@ -22,6 +22,60 @@ import javax.annotation.Nullable;
  * Manages an AWS Storage Gateway SMB File Share.
  * 
  * ## Example Usage
+ * ### Active Directory Authentication
+ * 
+ * &gt; **NOTE:** The gateway must have already joined the Active Directory domain prior to SMB file share creation. e.g. via &#34;SMB Settings&#34; in the AWS Storage Gateway console or `smb_active_directory_settings` in the `aws.storagegateway.Gateway` resource.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SmbFileShare(&#34;example&#34;, SmbFileShareArgs.builder()        
+ *             .authentication(&#34;ActiveDirectory&#34;)
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .locationArn(aws_s3_bucket.getExample().getArn())
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Guest Authentication
+ * 
+ * &gt; **NOTE:** The gateway must have already had the SMB guest password set prior to SMB file share creation. e.g. via &#34;SMB Settings&#34; in the AWS Storage Gateway console or `smb_guest_password` in the `aws.storagegateway.Gateway` resource.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SmbFileShare(&#34;example&#34;, SmbFileShareArgs.builder()        
+ *             .authentication(&#34;GuestAccess&#34;)
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .locationArn(aws_s3_bucket.getExample().getArn())
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

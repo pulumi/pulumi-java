@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
  * Attach an Elastic network interface (ENI) resource with EC2 instance.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new NetworkInterfaceAttachment(&#34;test&#34;, NetworkInterfaceAttachmentArgs.builder()        
+ *             .instanceId(aws_instance.getTest().getId())
+ *             .networkInterfaceId(aws_network_interface.getTest().getId())
+ *             .deviceIndex(0)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment")

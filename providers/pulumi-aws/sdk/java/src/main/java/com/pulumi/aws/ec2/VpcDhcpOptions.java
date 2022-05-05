@@ -20,6 +20,61 @@ import javax.annotation.Nullable;
  * Provides a VPC DHCP Options resource.
  * 
  * ## Example Usage
+ * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dnsResolver = new VpcDhcpOptions(&#34;dnsResolver&#34;, VpcDhcpOptionsArgs.builder()        
+ *             .domainNameServers(            
+ *                 &#34;8.8.8.8&#34;,
+ *                 &#34;8.8.4.4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Full usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new VpcDhcpOptions(&#34;foo&#34;, VpcDhcpOptionsArgs.builder()        
+ *             .domainName(&#34;service.consul&#34;)
+ *             .domainNameServers(            
+ *                 &#34;127.0.0.1&#34;,
+ *                 &#34;10.0.0.2&#34;)
+ *             .netbiosNameServers(&#34;127.0.0.1&#34;)
+ *             .netbiosNodeType(2)
+ *             .ntpServers(&#34;127.0.0.1&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foo-name&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Remarks
  * 
  * * Notice that all arguments are optional but you have to specify at least one argument.

@@ -20,6 +20,40 @@ import javax.annotation.Nullable;
  * Provides a WAF Regional Regex Match Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRegexPatternSet = new RegexPatternSet(&#34;exampleRegexPatternSet&#34;, RegexPatternSetArgs.builder()        
+ *             .regexPatternStrings(            
+ *                 &#34;one&#34;,
+ *                 &#34;two&#34;)
+ *             .build());
+ * 
+ *         var exampleRegexMatchSet = new RegexMatchSet(&#34;exampleRegexMatchSet&#34;, RegexMatchSetArgs.builder()        
+ *             .regexMatchTuples(RegexMatchSetRegexMatchTuple.builder()
+ *                 .fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatch.builder()
+ *                     .data(&#34;User-Agent&#34;)
+ *                     .type(&#34;HEADER&#34;)
+ *                     .build())
+ *                 .regexPatternSetId(exampleRegexPatternSet.getId())
+ *                 .textTransformation(&#34;NONE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

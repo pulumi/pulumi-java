@@ -20,6 +20,78 @@ import javax.annotation.Nullable;
  * Provides an AppSync Function.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGraphQLApi = new GraphQLApi(&#34;exampleGraphQLApi&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * type Mutation {
+ *   putPost(id: ID!, title: String!): Post
+ * }
+ * 
+ * type Post {
+ *   id: ID!
+ *   title: String!
+ * }
+ * 
+ * type Query {
+ *   singlePost(id: ID!): Post
+ * }
+ * 
+ * schema {
+ *   query: Query
+ *   mutation: Mutation
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleDataSource = new DataSource(&#34;exampleDataSource&#34;, DataSourceArgs.builder()        
+ *             .apiId(exampleGraphQLApi.getId())
+ *             .name(&#34;example&#34;)
+ *             .type(&#34;HTTP&#34;)
+ *             .httpConfig(DataSourceHttpConfig.builder()
+ *                 .endpoint(&#34;http://example.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleFunction = new Function(&#34;exampleFunction&#34;, FunctionArgs.builder()        
+ *             .apiId(exampleGraphQLApi.getId())
+ *             .dataSource(exampleDataSource.getName())
+ *             .name(&#34;example&#34;)
+ *             .requestMappingTemplate(&#34;&#34;&#34;
+ * {
+ *     &#34;version&#34;: &#34;2018-05-29&#34;,
+ *     &#34;method&#34;: &#34;GET&#34;,
+ *     &#34;resourcePath&#34;: &#34;/&#34;,
+ *     &#34;params&#34;:{
+ *         &#34;headers&#34;: $utils.http.copyheaders($ctx.request.headers)
+ *     }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .responseMappingTemplate(&#34;&#34;&#34;
+ * #if($ctx.result.statusCode == 200)
+ *     $ctx.result.body
+ * #else
+ *     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+ * #end
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

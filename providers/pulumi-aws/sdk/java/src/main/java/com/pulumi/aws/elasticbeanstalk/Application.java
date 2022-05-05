@@ -25,6 +25,32 @@ import javax.annotation.Nullable;
  * `default`, and no application versions
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tftest = new Application(&#34;tftest&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;tf-test-desc&#34;)
+ *             .appversionLifecycle(ApplicationAppversionLifecycle.builder()
+ *                 .serviceRole(aws_iam_role.getBeanstalk_service().getArn())
+ *                 .maxCount(128)
+ *                 .deleteSourceFromS3(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

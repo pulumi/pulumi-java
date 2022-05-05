@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Component.
  * 
  * ## Example Usage
+ * ### URI Document
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Component(&#34;example&#34;, ComponentArgs.builder()        
+ *             .platform(&#34;Linux&#34;)
+ *             .uri(String.format(&#34;s3://%s/%s&#34;, aws_s3_object.getExample().getBucket(),aws_s3_object.getExample().getKey()))
+ *             .version(&#34;1.0.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

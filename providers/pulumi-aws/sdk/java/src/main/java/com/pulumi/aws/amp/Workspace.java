@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This AWS functionality is in Preview and may change before General Availability release. Backwards compatibility is not guaranteed between provider releases.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var demo = new Workspace(&#34;demo&#34;, WorkspaceArgs.builder()        
+ *             .alias(&#34;prometheus-test&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Environment&#34;, &#34;production&#34;),
+ *                 Map.entry(&#34;Owner&#34;, &#34;abhi&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

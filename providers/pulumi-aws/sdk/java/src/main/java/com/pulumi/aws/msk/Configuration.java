@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * Manages an Amazon Managed Streaming for Kafka configuration. More information can be found on the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Configuration(&#34;example&#34;, ConfigurationArgs.builder()        
+ *             .kafkaVersions(&#34;2.1.0&#34;)
+ *             .serverProperties(&#34;&#34;&#34;
+ * auto.create.topics.enable = true
+ * delete.topic.enable = true
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

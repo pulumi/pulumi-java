@@ -19,6 +19,80 @@ import javax.annotation.Nullable;
  * Provides an Application AutoScaling ScheduledAction resource.
  * 
  * ## Example Usage
+ * ### DynamoDB Table Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dynamodbTarget = new Target(&#34;dynamodbTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(100)
+ *             .minCapacity(5)
+ *             .resourceId(&#34;table/tableName&#34;)
+ *             .scalableDimension(&#34;dynamodb:table:ReadCapacityUnits&#34;)
+ *             .serviceNamespace(&#34;dynamodb&#34;)
+ *             .build());
+ * 
+ *         var dynamodbScheduledAction = new ScheduledAction(&#34;dynamodbScheduledAction&#34;, ScheduledActionArgs.builder()        
+ *             .serviceNamespace(dynamodbTarget.getServiceNamespace())
+ *             .resourceId(dynamodbTarget.getResourceId())
+ *             .scalableDimension(dynamodbTarget.getScalableDimension())
+ *             .schedule(&#34;at(2006-01-02T15:04:05)&#34;)
+ *             .scalableTargetAction(ScheduledActionScalableTargetAction.builder()
+ *                 .minCapacity(1)
+ *                 .maxCapacity(200)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### ECS Service Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ecsTarget = new Target(&#34;ecsTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(4)
+ *             .minCapacity(1)
+ *             .resourceId(&#34;service/clusterName/serviceName&#34;)
+ *             .scalableDimension(&#34;ecs:service:DesiredCount&#34;)
+ *             .serviceNamespace(&#34;ecs&#34;)
+ *             .build());
+ * 
+ *         var ecsScheduledAction = new ScheduledAction(&#34;ecsScheduledAction&#34;, ScheduledActionArgs.builder()        
+ *             .serviceNamespace(ecsTarget.getServiceNamespace())
+ *             .resourceId(ecsTarget.getResourceId())
+ *             .scalableDimension(ecsTarget.getScalableDimension())
+ *             .schedule(&#34;at(2006-01-02T15:04:05)&#34;)
+ *             .scalableTargetAction(ScheduledActionScalableTargetAction.builder()
+ *                 .minCapacity(1)
+ *                 .maxCapacity(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:appautoscaling/scheduledAction:ScheduledAction")

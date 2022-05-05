@@ -19,6 +19,55 @@ import javax.annotation.Nullable;
  * Provides an Elastic File System (EFS) File System Policy resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fs = new FileSystem(&#34;fs&#34;);
+ * 
+ *         var policy = new FileSystemPolicy(&#34;policy&#34;, FileSystemPolicyArgs.builder()        
+ *             .fileSystemId(fs.getId())
+ *             .bypassPolicyLockoutSafetyCheck(true)
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Id&#34;: &#34;ExamplePolicy01&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Sid&#34;: &#34;ExampleStatement01&#34;,
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Principal&#34;: {
+ *                 &#34;AWS&#34;: &#34;*&#34;
+ *             },
+ *             &#34;Resource&#34;: &#34;%s&#34;,
+ *             &#34;Action&#34;: [
+ *                 &#34;elasticfilesystem:ClientMount&#34;,
+ *                 &#34;elasticfilesystem:ClientWrite&#34;
+ *             ],
+ *             &#34;Condition&#34;: {
+ *                 &#34;Bool&#34;: {
+ *                     &#34;aws:SecureTransport&#34;: &#34;true&#34;
+ *                 }
+ *             }
+ *         }
+ *     ]
+ * }
+ * &#34;, aws_efs_file_system.getTest().getArn()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

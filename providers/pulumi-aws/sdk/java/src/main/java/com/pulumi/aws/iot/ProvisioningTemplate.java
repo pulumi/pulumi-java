@@ -22,6 +22,85 @@ import javax.annotation.Nullable;
  * Manages an IoT fleet provisioning template. For more info, see the AWS documentation on [fleet provisioning](https://docs.aws.amazon.com/iot/latest/developerguide/provision-wo-cert.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var iotAssumeRolePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;iot.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var iotFleetProvisioning = new Role(&#34;iotFleetProvisioning&#34;, RoleArgs.builder()        
+ *             .path(&#34;/service-role/&#34;)
+ *             .assumeRolePolicy(iotAssumeRolePolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var iotFleetProvisioningRegistration = new RolePolicyAttachment(&#34;iotFleetProvisioningRegistration&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(iotFleetProvisioning.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AWSIoTThingsRegistration&#34;)
+ *             .build());
+ * 
+ *         final var devicePolicyPolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;iot:Subscribe&#34;)
+ *                 .resources(&#34;*&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var devicePolicyPolicy = new Policy(&#34;devicePolicyPolicy&#34;, PolicyArgs.builder()        
+ *             .policy(devicePolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var fleet = new ProvisioningTemplate(&#34;fleet&#34;, ProvisioningTemplateArgs.builder()        
+ *             .description(&#34;My provisioning template&#34;)
+ *             .provisioningRoleArn(iotFleetProvisioning.getArn())
+ *             .templateBody(devicePolicyPolicy.getName().apply(name -&gt; serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Parameters&#34;, jsonObject(
+ *                         jsonProperty(&#34;SerialNumber&#34;, jsonObject(
+ *                             jsonProperty(&#34;Type&#34;, &#34;String&#34;)
+ *                         ))
+ *                     )),
+ *                     jsonProperty(&#34;Resources&#34;, jsonObject(
+ *                         jsonProperty(&#34;certificate&#34;, jsonObject(
+ *                             jsonProperty(&#34;Properties&#34;, jsonObject(
+ *                                 jsonProperty(&#34;CertificateId&#34;, jsonObject(
+ *                                     jsonProperty(&#34;Ref&#34;, &#34;AWS::IoT::Certificate::Id&#34;)
+ *                                 )),
+ *                                 jsonProperty(&#34;Status&#34;, &#34;Active&#34;)
+ *                             )),
+ *                             jsonProperty(&#34;Type&#34;, &#34;AWS::IoT::Certificate&#34;)
+ *                         )),
+ *                         jsonProperty(&#34;policy&#34;, jsonObject(
+ *                             jsonProperty(&#34;Properties&#34;, jsonObject(
+ *                                 jsonProperty(&#34;PolicyName&#34;, name)
+ *                             )),
+ *                             jsonProperty(&#34;Type&#34;, &#34;AWS::IoT::Policy&#34;)
+ *                         ))
+ *                     ))
+ *                 ))))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

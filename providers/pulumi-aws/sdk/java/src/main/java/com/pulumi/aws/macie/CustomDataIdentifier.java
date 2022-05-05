@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [AWS Macie Custom Data Identifier](https://docs.aws.amazon.com/macie/latest/APIReference/custom-data-identifiers-id.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleCustomDataIdentifier = new CustomDataIdentifier(&#34;exampleCustomDataIdentifier&#34;, CustomDataIdentifierArgs.builder()        
+ *             .regex(&#34;[0-9]{3}-[0-9]{2}-[0-9]{4}&#34;)
+ *             .description(&#34;DESCRIPTION&#34;)
+ *             .maximumMatchDistance(10)
+ *             .keywords(&#34;keyword&#34;)
+ *             .ignoreWords(&#34;ignore&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

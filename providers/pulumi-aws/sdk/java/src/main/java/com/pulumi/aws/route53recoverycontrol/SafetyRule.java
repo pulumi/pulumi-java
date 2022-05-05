@@ -21,6 +21,63 @@ import javax.annotation.Nullable;
  * Provides an AWS Route 53 Recovery Control Config Safety Rule
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SafetyRule(&#34;example&#34;, SafetyRuleArgs.builder()        
+ *             .assertedControls(aws_route53recoverycontrolconfig_routing_control.getExample().getArn())
+ *             .controlPanelArn(&#34;arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8&#34;)
+ *             .waitPeriodMs(5000)
+ *             .ruleConfig(SafetyRuleRuleConfig.builder()
+ *                 .inverted(false)
+ *                 .threshold(1)
+ *                 .type(&#34;ATLEAST&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SafetyRule(&#34;example&#34;, SafetyRuleArgs.builder()        
+ *             .controlPanelArn(&#34;arn:aws:route53-recovery-control::313517334327:controlpanel/abd5fbfc052d4844a082dbf400f61da8&#34;)
+ *             .waitPeriodMs(5000)
+ *             .gatingControls(aws_route53recoverycontrolconfig_routing_control.getExample().getArn())
+ *             .targetControls(aws_route53recoverycontrolconfig_routing_control.getExample().getArn())
+ *             .ruleConfig(SafetyRuleRuleConfig.builder()
+ *                 .inverted(false)
+ *                 .threshold(1)
+ *                 .type(&#34;ATLEAST&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

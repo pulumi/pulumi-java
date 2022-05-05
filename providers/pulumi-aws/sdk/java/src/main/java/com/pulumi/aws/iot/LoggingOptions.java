@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a resource to manage [default logging options](https://docs.aws.amazon.com/iot/latest/developerguide/configure-logging.html#configure-logging-console).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingOptions(&#34;example&#34;, LoggingOptionsArgs.builder()        
+ *             .defaultLogLevel(&#34;WARN&#34;)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:iot/loggingOptions:LoggingOptions")

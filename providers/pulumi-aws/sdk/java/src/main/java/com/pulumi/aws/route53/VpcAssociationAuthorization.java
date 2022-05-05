@@ -17,6 +17,53 @@ import javax.annotation.Nullable;
  * Authorizes a VPC in a different account to be associated with a local Route53 Hosted Zone.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var alternate = new Provider(&#34;alternate&#34;);
+ * 
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.6.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .enableDnsSupport(true)
+ *             .build());
+ * 
+ *         var exampleZone = new Zone(&#34;exampleZone&#34;, ZoneArgs.builder()        
+ *             .vpcs(ZoneVpc.builder()
+ *                 .vpcId(exampleVpc.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var alternateVpc = new Vpc(&#34;alternateVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.7.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .enableDnsSupport(true)
+ *             .build());
+ * 
+ *         var exampleVpcAssociationAuthorization = new VpcAssociationAuthorization(&#34;exampleVpcAssociationAuthorization&#34;, VpcAssociationAuthorizationArgs.builder()        
+ *             .vpcId(alternateVpc.getId())
+ *             .zoneId(exampleZone.getId())
+ *             .build());
+ * 
+ *         var exampleZoneAssociation = new ZoneAssociation(&#34;exampleZoneAssociation&#34;, ZoneAssociationArgs.builder()        
+ *             .vpcId(exampleVpcAssociationAuthorization.getVpcId())
+ *             .zoneId(exampleVpcAssociationAuthorization.getZoneId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

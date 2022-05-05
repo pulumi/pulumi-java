@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderFlowersProd = new BotAlias(&#34;orderFlowersProd&#34;, BotAliasArgs.builder()        
+ *             .botName(&#34;OrderFlowers&#34;)
+ *             .botVersion(&#34;1&#34;)
+ *             .description(&#34;Production Version of the OrderFlowers Bot.&#34;)
+ *             .name(&#34;OrderFlowersProd&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

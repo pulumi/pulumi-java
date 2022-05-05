@@ -18,6 +18,27 @@ public final class SnsFunctions {
      * without having to hard code the ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SnsFunctions.getTopic(GetTopicArgs.builder()
+     *             .name(&#34;an_example_topic&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetTopicResult> getTopic(GetTopicArgs args) {

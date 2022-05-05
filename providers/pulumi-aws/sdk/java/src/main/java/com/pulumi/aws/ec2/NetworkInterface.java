@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * Provides an Elastic network interface (ENI) resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new NetworkInterface(&#34;test&#34;, NetworkInterfaceArgs.builder()        
+ *             .subnetId(aws_subnet.getPublic_a().getId())
+ *             .privateIps(&#34;10.0.0.50&#34;)
+ *             .securityGroups(aws_security_group.getWeb().getId())
+ *             .attachments(NetworkInterfaceAttachment.builder()
+ *                 .instance(aws_instance.getTest().getId())
+ *                 .deviceIndex(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ### Example of Managing Multiple IPs on a Network Interface
  * 
  * By default, private IPs are managed through the `private_ips` and `private_ips_count` arguments which manage IPs as a set of IPs that are configured without regard to order. For a new network interface, the same primary IP address is consistently selected from a given set of addresses, regardless of the order provided. However, modifications of the set of addresses of an existing interface will not alter the current primary IP address unless it has been removed from the set.

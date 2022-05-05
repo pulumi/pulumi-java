@@ -26,6 +26,136 @@ import javax.annotation.Nullable;
  * otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the `DELETING` state, see [Troubleshooting AWS Batch](http://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html) .
  * 
  * ## Example Usage
+ * ### EC2 Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ecsInstanceRoleRole = new Role(&#34;ecsInstanceRoleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ * 	{
+ * 	    &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ * 	    &#34;Effect&#34;: &#34;Allow&#34;,
+ * 	    &#34;Principal&#34;: {
+ * 	        &#34;Service&#34;: &#34;ec2.amazonaws.com&#34;
+ * 	    }
+ * 	}
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var ecsInstanceRoleRolePolicyAttachment = new RolePolicyAttachment(&#34;ecsInstanceRoleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(ecsInstanceRoleRole.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role&#34;)
+ *             .build());
+ * 
+ *         var ecsInstanceRoleInstanceProfile = new InstanceProfile(&#34;ecsInstanceRoleInstanceProfile&#34;, InstanceProfileArgs.builder()        
+ *             .role(ecsInstanceRoleRole.getName())
+ *             .build());
+ * 
+ *         var awsBatchServiceRoleRole = new Role(&#34;awsBatchServiceRoleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ * 	{
+ * 	    &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ * 	    &#34;Effect&#34;: &#34;Allow&#34;,
+ * 	    &#34;Principal&#34;: {
+ * 		&#34;Service&#34;: &#34;batch.amazonaws.com&#34;
+ * 	    }
+ * 	}
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var awsBatchServiceRoleRolePolicyAttachment = new RolePolicyAttachment(&#34;awsBatchServiceRoleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(awsBatchServiceRoleRole.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole&#34;)
+ *             .build());
+ * 
+ *         var sampleVpc = new Vpc(&#34;sampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var sampleSecurityGroup = new SecurityGroup(&#34;sampleSecurityGroup&#34;, SecurityGroupArgs.builder()        
+ *             .vpcId(sampleVpc.getId())
+ *             .egress(SecurityGroupEgress.builder()
+ *                 .fromPort(0)
+ *                 .toPort(0)
+ *                 .protocol(&#34;-1&#34;)
+ *                 .cidrBlocks(&#34;0.0.0.0/0&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var sampleSubnet = new Subnet(&#34;sampleSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(sampleVpc.getId())
+ *             .cidrBlock(&#34;10.1.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var sampleComputeEnvironment = new ComputeEnvironment(&#34;sampleComputeEnvironment&#34;, ComputeEnvironmentArgs.builder()        
+ *             .computeEnvironmentName(&#34;sample&#34;)
+ *             .computeResources(ComputeEnvironmentComputeResources.builder()
+ *                 .instanceRole(ecsInstanceRoleInstanceProfile.getArn())
+ *                 .instanceTypes(&#34;c4.large&#34;)
+ *                 .maxVcpus(16)
+ *                 .minVcpus(0)
+ *                 .securityGroupIds(sampleSecurityGroup.getId())
+ *                 .subnets(sampleSubnet.getId())
+ *                 .type(&#34;EC2&#34;)
+ *                 .build())
+ *             .serviceRole(awsBatchServiceRoleRole.getArn())
+ *             .type(&#34;MANAGED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Fargate Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sample = new ComputeEnvironment(&#34;sample&#34;, ComputeEnvironmentArgs.builder()        
+ *             .computeEnvironmentName(&#34;sample&#34;)
+ *             .computeResources(ComputeEnvironmentComputeResources.builder()
+ *                 .maxVcpus(16)
+ *                 .securityGroupIds(aws_security_group.getSample().getId())
+ *                 .subnets(aws_subnet.getSample().getId())
+ *                 .type(&#34;FARGATE&#34;)
+ *                 .build())
+ *             .serviceRole(aws_iam_role.getAws_batch_service_role().getArn())
+ *             .type(&#34;MANAGED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

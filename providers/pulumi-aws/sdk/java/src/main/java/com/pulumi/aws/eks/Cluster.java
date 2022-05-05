@@ -25,6 +25,114 @@ import javax.annotation.Nullable;
  * Manages an EKS Cluster.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .vpcConfig(ClusterVpcConfig.builder()
+ *                 .subnetIds(                
+ *                     aws_subnet.getExample1().getId(),
+ *                     aws_subnet.getExample2().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export(&#34;endpoint&#34;, example.getEndpoint());
+ *         ctx.export(&#34;kubeconfig-certificate-authority-data&#34;, example.getCertificateAuthority().apply(certificateAuthority -&gt; certificateAuthority.getData()));
+ *         }
+ * }
+ * ```
+ * ### Example IAM Role for EKS Cluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;eks.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var example_AmazonEKSClusterPolicy = new RolePolicyAttachment(&#34;example-AmazonEKSClusterPolicy&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEKSClusterPolicy&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         var example_AmazonEKSVPCResourceController = new RolePolicyAttachment(&#34;example-AmazonEKSVPCResourceController&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEKSVPCResourceController&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enabling Control Plane Logging
+ * 
+ * [EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) can be enabled via the `enabled_cluster_log_types` argument. To manage the CloudWatch Log Group retention period, the `aws.cloudwatch.LogGroup` resource can be used.
+ * 
+ * &gt; The below configuration uses [`dependsOn`](https://www.pulumi.com/docs/intro/concepts/programming-model/#dependson) to prevent ordering issues with EKS automatically creating the log group first and a variable for naming consistency. Other ordering and naming methodologies may be more appropriate for your environment.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var clusterName = config.get(&#34;clusterName&#34;).orElse(&#34;example&#34;);
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;, LogGroupArgs.builder()        
+ *             .retentionInDays(7)
+ *             .build());
+ * 
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;, ClusterArgs.builder()        
+ *             .enabledClusterLogTypes(            
+ *                 &#34;api&#34;,
+ *                 &#34;audit&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

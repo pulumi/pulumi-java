@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * Provides a WAF Regional SQL Injection Match Set Resource for use with Application Load Balancer.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlInjectionMatchSet = new SqlInjectionMatchSet(&#34;sqlInjectionMatchSet&#34;, SqlInjectionMatchSetArgs.builder()        
+ *             .sqlInjectionMatchTuples(SqlInjectionMatchSetSqlInjectionMatchTuple.builder()
+ *                 .fieldToMatch(SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch.builder()
+ *                     .type(&#34;QUERY_STRING&#34;)
+ *                     .build())
+ *                 .textTransformation(&#34;URL_DECODE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

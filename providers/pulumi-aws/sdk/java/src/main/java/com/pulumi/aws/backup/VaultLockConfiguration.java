@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup vault lock configuration resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new VaultLockConfiguration(&#34;test&#34;, VaultLockConfigurationArgs.builder()        
+ *             .backupVaultName(&#34;example_backup_vault&#34;)
+ *             .changeableForDays(3)
+ *             .maxRetentionDays(1200)
+ *             .minRetentionDays(7)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

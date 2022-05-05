@@ -25,6 +25,298 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example &#34;Trigger multiple Lambda functions&#34; for an option.
  * 
  * ## Example Usage
+ * ### Add notification configuration to SNS Topic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var topic = new Topic(&#34;topic&#34;, TopicArgs.builder()        
+ *             .policy(bucket.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;:&#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;:[{
+ *         &#34;Effect&#34;: &#34;Allow&#34;,
+ *         &#34;Principal&#34;: { &#34;Service&#34;: &#34;s3.amazonaws.com&#34; },
+ *         &#34;Action&#34;: &#34;SNS:Publish&#34;,
+ *         &#34;Resource&#34;: &#34;arn:aws:sns:*:*:s3-event-notification-topic&#34;,
+ *         &#34;Condition&#34;:{
+ *             &#34;ArnLike&#34;:{&#34;aws:SourceArn&#34;:&#34;%s&#34;}
+ *         }
+ *     }]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         var bucketNotification = new BucketNotification(&#34;bucketNotification&#34;, BucketNotificationArgs.builder()        
+ *             .bucket(bucket.getId())
+ *             .topics(BucketNotificationTopic.builder()
+ *                 .topicArn(topic.getArn())
+ *                 .events(&#34;s3:ObjectCreated:*&#34;)
+ *                 .filterSuffix(&#34;.log&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add notification configuration to SQS Queue
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .policy(bucket.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: &#34;*&#34;,
+ *       &#34;Action&#34;: &#34;sqs:SendMessage&#34;,
+ * 	  &#34;Resource&#34;: &#34;arn:aws:sqs:*:*:s3-event-notification-queue&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;ArnEquals&#34;: { &#34;aws:SourceArn&#34;: &#34;%s&#34; }
+ *       }
+ *     }
+ *   ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         var bucketNotification = new BucketNotification(&#34;bucketNotification&#34;, BucketNotificationArgs.builder()        
+ *             .bucket(bucket.getId())
+ *             .queues(BucketNotificationQueue.builder()
+ *                 .queueArn(queue.getArn())
+ *                 .events(&#34;s3:ObjectCreated:*&#34;)
+ *                 .filterSuffix(&#34;.log&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add notification configuration to Lambda Function
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var func = new Function(&#34;func&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;your-function.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;exports.example&#34;)
+ *             .runtime(&#34;go1.x&#34;)
+ *             .build());
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var allowBucket = new Permission(&#34;allowBucket&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(func.getArn())
+ *             .principal(&#34;s3.amazonaws.com&#34;)
+ *             .sourceArn(bucket.getArn())
+ *             .build());
+ * 
+ *         var bucketNotification = new BucketNotification(&#34;bucketNotification&#34;, BucketNotificationArgs.builder()        
+ *             .bucket(bucket.getId())
+ *             .lambdaFunctions(BucketNotificationLambdaFunction.builder()
+ *                 .lambdaFunctionArn(func.getArn())
+ *                 .events(&#34;s3:ObjectCreated:*&#34;)
+ *                 .filterPrefix(&#34;AWSLogs/&#34;)
+ *                 .filterSuffix(&#34;.log&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Trigger multiple Lambda functions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var func1 = new Function(&#34;func1&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;your-function1.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;exports.example&#34;)
+ *             .runtime(&#34;go1.x&#34;)
+ *             .build());
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var allowBucket1 = new Permission(&#34;allowBucket1&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(func1.getArn())
+ *             .principal(&#34;s3.amazonaws.com&#34;)
+ *             .sourceArn(bucket.getArn())
+ *             .build());
+ * 
+ *         var func2 = new Function(&#34;func2&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;your-function2.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;exports.example&#34;)
+ *             .build());
+ * 
+ *         var allowBucket2 = new Permission(&#34;allowBucket2&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(func2.getArn())
+ *             .principal(&#34;s3.amazonaws.com&#34;)
+ *             .sourceArn(bucket.getArn())
+ *             .build());
+ * 
+ *         var bucketNotification = new BucketNotification(&#34;bucketNotification&#34;, BucketNotificationArgs.builder()        
+ *             .bucket(bucket.getId())
+ *             .lambdaFunctions(            
+ *                 BucketNotificationLambdaFunction.builder()
+ *                     .lambdaFunctionArn(func1.getArn())
+ *                     .events(&#34;s3:ObjectCreated:*&#34;)
+ *                     .filterPrefix(&#34;AWSLogs/&#34;)
+ *                     .filterSuffix(&#34;.log&#34;)
+ *                     .build(),
+ *                 BucketNotificationLambdaFunction.builder()
+ *                     .lambdaFunctionArn(func2.getArn())
+ *                     .events(&#34;s3:ObjectCreated:*&#34;)
+ *                     .filterPrefix(&#34;OtherLogs/&#34;)
+ *                     .filterSuffix(&#34;.log&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add multiple notification configurations to SQS Queue
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .policy(bucket.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: &#34;*&#34;,
+ *       &#34;Action&#34;: &#34;sqs:SendMessage&#34;,
+ * 	  &#34;Resource&#34;: &#34;arn:aws:sqs:*:*:s3-event-notification-queue&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;ArnEquals&#34;: { &#34;aws:SourceArn&#34;: &#34;%s&#34; }
+ *       }
+ *     }
+ *   ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         var bucketNotification = new BucketNotification(&#34;bucketNotification&#34;, BucketNotificationArgs.builder()        
+ *             .bucket(bucket.getId())
+ *             .queues(            
+ *                 BucketNotificationQueue.builder()
+ *                     .id(&#34;image-upload-event&#34;)
+ *                     .queueArn(queue.getArn())
+ *                     .events(&#34;s3:ObjectCreated:*&#34;)
+ *                     .filterPrefix(&#34;images/&#34;)
+ *                     .build(),
+ *                 BucketNotificationQueue.builder()
+ *                     .id(&#34;video-upload-event&#34;)
+ *                     .queueArn(queue.getArn())
+ *                     .events(&#34;s3:ObjectCreated:*&#34;)
+ *                     .filterPrefix(&#34;videos/&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

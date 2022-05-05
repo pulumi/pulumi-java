@@ -25,6 +25,52 @@ import javax.annotation.Nullable;
  * Provides an Elastic File System (EFS) File System resource.
  * 
  * ## Example Usage
+ * ### EFS File System w/ tags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new FileSystem(&#34;foo&#34;, FileSystemArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;MyProduct&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using lifecycle policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooWithLifecylePolicy = new FileSystem(&#34;fooWithLifecylePolicy&#34;, FileSystemArgs.builder()        
+ *             .lifecyclePolicies(FileSystemLifecyclePolicy.builder()
+ *                 .transitionToIa(&#34;AFTER_30_DAYS&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

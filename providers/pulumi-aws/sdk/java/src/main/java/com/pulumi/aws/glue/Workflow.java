@@ -23,6 +23,47 @@ import javax.annotation.Nullable;
  * See the example below for creating a graph with four nodes (two triggers and two jobs).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workflow(&#34;example&#34;);
+ * 
+ *         var example_start = new Trigger(&#34;example-start&#34;, TriggerArgs.builder()        
+ *             .type(&#34;ON_DEMAND&#34;)
+ *             .workflowName(example.getName())
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(&#34;example-job&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var example_inner = new Trigger(&#34;example-inner&#34;, TriggerArgs.builder()        
+ *             .type(&#34;CONDITIONAL&#34;)
+ *             .workflowName(example.getName())
+ *             .predicate(TriggerPredicate.builder()
+ *                 .conditions(TriggerPredicateCondition.builder()
+ *                     .jobName(&#34;example-job&#34;)
+ *                     .state(&#34;SUCCEEDED&#34;)
+ *                     .build())
+ *                 .build())
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(&#34;another-example-job&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

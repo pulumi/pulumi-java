@@ -24,6 +24,140 @@ import javax.annotation.Nullable;
  * More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Integration(&#34;example&#34;, IntegrationArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .integrationType(&#34;MOCK&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Integration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleFunction = new Function(&#34;exampleFunction&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;example.zip&#34;))
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .handler(&#34;index.handler&#34;)
+ *             .runtime(&#34;nodejs12.x&#34;)
+ *             .build());
+ * 
+ *         var exampleIntegration = new Integration(&#34;exampleIntegration&#34;, IntegrationArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .integrationType(&#34;AWS&#34;)
+ *             .connectionType(&#34;INTERNET&#34;)
+ *             .contentHandlingStrategy(&#34;CONVERT_TO_TEXT&#34;)
+ *             .description(&#34;Lambda example&#34;)
+ *             .integrationMethod(&#34;POST&#34;)
+ *             .integrationUri(exampleFunction.getInvokeArn())
+ *             .passthroughBehavior(&#34;WHEN_NO_MATCH&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Service Integration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Integration(&#34;example&#34;, IntegrationArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .credentialsArn(aws_iam_role.getExample().getArn())
+ *             .description(&#34;SQS example&#34;)
+ *             .integrationType(&#34;AWS_PROXY&#34;)
+ *             .integrationSubtype(&#34;SQS-SendMessage&#34;)
+ *             .requestParameters(Map.ofEntries(
+ *                 Map.entry(&#34;QueueUrl&#34;, &#34;$request.header.queueUrl&#34;),
+ *                 Map.entry(&#34;MessageBody&#34;, &#34;$request.body.message&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Private Integration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Integration(&#34;example&#34;, IntegrationArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .credentialsArn(aws_iam_role.getExample().getArn())
+ *             .description(&#34;Example with a load balancer&#34;)
+ *             .integrationType(&#34;HTTP_PROXY&#34;)
+ *             .integrationUri(aws_lb_listener.getExample().getArn())
+ *             .integrationMethod(&#34;ANY&#34;)
+ *             .connectionType(&#34;VPC_LINK&#34;)
+ *             .connectionId(aws_apigatewayv2_vpc_link.getExample().getId())
+ *             .tlsConfig(IntegrationTlsConfig.builder()
+ *                 .serverNameToVerify(&#34;example.com&#34;)
+ *                 .build())
+ *             .requestParameters(Map.ofEntries(
+ *                 Map.entry(&#34;append:header.authforintegration&#34;, &#34;$context.authorizer.authorizerResponse&#34;),
+ *                 Map.entry(&#34;overwrite:path&#34;, &#34;staticValueForIntegration&#34;)
+ *             ))
+ *             .responseParameters(            
+ *                 IntegrationResponseParameter.builder()
+ *                     .statusCode(403)
+ *                     .mappings(Map.of(&#34;append:header.auth&#34;, &#34;$context.authorizer.authorizerResponse&#34;))
+ *                     .build(),
+ *                 IntegrationResponseParameter.builder()
+ *                     .statusCode(200)
+ *                     .mappings(Map.of(&#34;overwrite:statuscode&#34;, &#34;204&#34;))
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

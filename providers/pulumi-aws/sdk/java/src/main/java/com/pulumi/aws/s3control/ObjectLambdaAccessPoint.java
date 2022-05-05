@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
  * An Object Lambda access point is associated with exactly one standard access point and thus one Amazon S3 bucket.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleAccessPoint = new AccessPoint(&#34;exampleAccessPoint&#34;, AccessPointArgs.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .build());
+ * 
+ *         var exampleObjectLambdaAccessPoint = new ObjectLambdaAccessPoint(&#34;exampleObjectLambdaAccessPoint&#34;, ObjectLambdaAccessPointArgs.builder()        
+ *             .configuration(ObjectLambdaAccessPointConfiguration.builder()
+ *                 .supportingAccessPoint(exampleAccessPoint.getArn())
+ *                 .transformationConfigurations(ObjectLambdaAccessPointConfigurationTransformationConfiguration.builder()
+ *                     .actions(&#34;GetObject&#34;)
+ *                     .contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation.builder()
+ *                         .awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda.builder()
+ *                             .functionArn(aws_lambda_function.getExample().getArn())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

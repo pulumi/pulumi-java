@@ -22,6 +22,27 @@ public final class WafFunctions {
      * `aws.waf.IpSet` Retrieves a WAF IP Set Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafFunctions.getIpset(GetIpsetArgs.builder()
+     *             .name(&#34;tfWAFIPSet&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
@@ -34,6 +55,27 @@ public final class WafFunctions {
      * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafFunctions.getRateBasedRule(GetRateBasedRuleArgs.builder()
+     *             .name(&#34;tfWAFRateBasedRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRateBasedRuleResult> getRateBasedRule(GetRateBasedRuleArgs args) {
@@ -46,6 +88,27 @@ public final class WafFunctions {
      * `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafFunctions.getRule(GetRuleArgs.builder()
+     *             .name(&#34;tfWAFRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
@@ -58,6 +121,27 @@ public final class WafFunctions {
      * `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafFunctions.getWebAcl(GetWebAclArgs.builder()
+     *             .name(&#34;tfWAFWebACL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {

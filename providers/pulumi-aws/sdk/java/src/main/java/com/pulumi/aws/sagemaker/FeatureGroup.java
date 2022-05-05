@@ -24,6 +24,39 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FeatureGroup(&#34;example&#34;, FeatureGroupArgs.builder()        
+ *             .featureGroupName(&#34;example&#34;)
+ *             .recordIdentifierFeatureName(&#34;example&#34;)
+ *             .eventTimeFeatureName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getTest().getArn())
+ *             .featureDefinitions(FeatureGroupFeatureDefinition.builder()
+ *                 .featureName(&#34;example&#34;)
+ *                 .featureType(&#34;String&#34;)
+ *                 .build())
+ *             .onlineStoreConfig(FeatureGroupOnlineStoreConfig.builder()
+ *                 .enableOnlineStore(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Feature Groups can be imported using the `name`, e.g.,

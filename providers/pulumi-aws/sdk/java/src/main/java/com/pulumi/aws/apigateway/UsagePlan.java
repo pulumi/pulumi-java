@@ -23,6 +23,88 @@ import javax.annotation.Nullable;
  * Provides an API Gateway Usage Plan.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;, RestApiArgs.builder()        
+ *             .body(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;openapi&#34;, &#34;3.0.1&#34;),
+ *                     jsonProperty(&#34;info&#34;, jsonObject(
+ *                         jsonProperty(&#34;title&#34;, &#34;example&#34;),
+ *                         jsonProperty(&#34;version&#34;, &#34;1.0&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;paths&#34;, jsonObject(
+ *                         jsonProperty(&#34;/path1&#34;, jsonObject(
+ *                             jsonProperty(&#34;get&#34;, jsonObject(
+ *                                 jsonProperty(&#34;x-amazon-apigateway-integration&#34;, jsonObject(
+ *                                     jsonProperty(&#34;httpMethod&#34;, &#34;GET&#34;),
+ *                                     jsonProperty(&#34;payloadFormatVersion&#34;, &#34;1.0&#34;),
+ *                                     jsonProperty(&#34;type&#34;, &#34;HTTP_PROXY&#34;),
+ *                                     jsonProperty(&#34;uri&#34;, &#34;https://ip-ranges.amazonaws.com/ip-ranges.json&#34;)
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     ))
+ *                 )))
+ *             .build());
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(exampleRestApi.getId())
+ *             .triggers(Map.of(&#34;redeployment&#34;, exampleRestApi.getBody().apply(body -&gt; serializeJson(
+ *                 body)).apply(toJSON -&gt; computeSHA1(toJSON))))
+ *             .build());
+ * 
+ *         var development = new Stage(&#34;development&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;development&#34;)
+ *             .build());
+ * 
+ *         var production = new Stage(&#34;production&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;production&#34;)
+ *             .build());
+ * 
+ *         var exampleUsagePlan = new UsagePlan(&#34;exampleUsagePlan&#34;, UsagePlanArgs.builder()        
+ *             .description(&#34;my description&#34;)
+ *             .productCode(&#34;MYCODE&#34;)
+ *             .apiStages(            
+ *                 UsagePlanApiStage.builder()
+ *                     .apiId(exampleRestApi.getId())
+ *                     .stage(development.getStageName())
+ *                     .build(),
+ *                 UsagePlanApiStage.builder()
+ *                     .apiId(exampleRestApi.getId())
+ *                     .stage(production.getStageName())
+ *                     .build())
+ *             .quotaSettings(UsagePlanQuotaSettings.builder()
+ *                 .limit(20)
+ *                 .offset(2)
+ *                 .period(&#34;WEEK&#34;)
+ *                 .build())
+ *             .throttleSettings(UsagePlanThrottleSettings.builder()
+ *                 .burstLimit(5)
+ *                 .rateLimit(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

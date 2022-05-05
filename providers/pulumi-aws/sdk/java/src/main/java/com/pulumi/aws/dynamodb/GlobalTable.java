@@ -23,6 +23,65 @@ import javax.annotation.Nullable;
  * &gt; Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the [AWS DynamoDB Global Table Requirements](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var us_east_1 = new Provider(&#34;us-east-1&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var us_west_2 = new Provider(&#34;us-west-2&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-west-2&#34;)
+ *             .build());
+ * 
+ *         var us_east_1Table = new Table(&#34;us-east-1Table&#34;, TableArgs.builder()        
+ *             .hashKey(&#34;myAttribute&#34;)
+ *             .streamEnabled(true)
+ *             .streamViewType(&#34;NEW_AND_OLD_IMAGES&#34;)
+ *             .readCapacity(1)
+ *             .writeCapacity(1)
+ *             .attributes(TableAttribute.builder()
+ *                 .name(&#34;myAttribute&#34;)
+ *                 .type(&#34;S&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var us_west_2Table = new Table(&#34;us-west-2Table&#34;, TableArgs.builder()        
+ *             .hashKey(&#34;myAttribute&#34;)
+ *             .streamEnabled(true)
+ *             .streamViewType(&#34;NEW_AND_OLD_IMAGES&#34;)
+ *             .readCapacity(1)
+ *             .writeCapacity(1)
+ *             .attributes(TableAttribute.builder()
+ *                 .name(&#34;myAttribute&#34;)
+ *                 .type(&#34;S&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var myTable = new GlobalTable(&#34;myTable&#34;, GlobalTableArgs.builder()        
+ *             .replicas(            
+ *                 GlobalTableReplica.builder()
+ *                     .regionName(&#34;us-east-1&#34;)
+ *                     .build(),
+ *                 GlobalTableReplica.builder()
+ *                     .regionName(&#34;us-west-2&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -17,6 +17,72 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint Event Stream resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;);
+ * 
+ *         var testStream = new Stream(&#34;testStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var testRole = new Role(&#34;testRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;pinpoint.us-east-1.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var stream = new EventStream(&#34;stream&#34;, EventStreamArgs.builder()        
+ *             .applicationId(app.getApplicationId())
+ *             .destinationStreamArn(testStream.getArn())
+ *             .roleArn(testRole.getArn())
+ *             .build());
+ * 
+ *         var testRolePolicy = new RolePolicy(&#34;testRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(testRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: {
+ *     &#34;Action&#34;: [
+ *       &#34;kinesis:PutRecords&#34;,
+ *       &#34;kinesis:DescribeStream&#34;
+ *     ],
+ *     &#34;Effect&#34;: &#34;Allow&#34;,
+ *     &#34;Resource&#34;: [
+ *       &#34;arn:aws:kinesis:us-east-1:*:*{@literal /}*&#34;
+ *     ]
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

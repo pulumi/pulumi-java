@@ -16,6 +16,72 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;, ClusterArgs.builder()        
+ *             .clientAuthentication(ClusterClientAuthentication.builder()
+ *                 .sasl(ClusterClientAuthenticationSasl.builder()
+ *                     .scram(true)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;Example Key for MSK Cluster Scram Secret Association&#34;)
+ *             .build());
+ * 
+ *         var exampleSecret = new Secret(&#34;exampleSecret&#34;, SecretArgs.builder()        
+ *             .kmsKeyId(exampleKey.getKeyId())
+ *             .build());
+ * 
+ *         var exampleSecretVersion = new SecretVersion(&#34;exampleSecretVersion&#34;, SecretVersionArgs.builder()        
+ *             .secretId(exampleSecret.getId())
+ *             .secretString(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;username&#34;, &#34;user&#34;),
+ *                     jsonProperty(&#34;password&#34;, &#34;pass&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         var exampleScramSecretAssociation = new ScramSecretAssociation(&#34;exampleScramSecretAssociation&#34;, ScramSecretAssociationArgs.builder()        
+ *             .clusterArn(exampleCluster.getArn())
+ *             .secretArnLists(exampleSecret.getArn())
+ *             .build());
+ * 
+ *         var exampleSecretPolicy = new SecretPolicy(&#34;exampleSecretPolicy&#34;, SecretPolicyArgs.builder()        
+ *             .secretArn(exampleSecret.getArn())
+ *             .policy(exampleSecret.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34; : &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34; : [ {
+ *     &#34;Sid&#34;: &#34;AWSKafkaResourcePolicy&#34;,
+ *     &#34;Effect&#34; : &#34;Allow&#34;,
+ *     &#34;Principal&#34; : {
+ *       &#34;Service&#34; : &#34;kafka.amazonaws.com&#34;
+ *     },
+ *     &#34;Action&#34; : &#34;secretsmanager:getSecretValue&#34;,
+ *     &#34;Resource&#34; : &#34;%s&#34;
+ *   } ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

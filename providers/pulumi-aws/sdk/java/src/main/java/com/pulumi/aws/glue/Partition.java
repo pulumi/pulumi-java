@@ -21,6 +21,29 @@ import javax.annotation.Nullable;
  * Provides a Glue Partition Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Partition(&#34;example&#34;, PartitionArgs.builder()        
+ *             .databaseName(&#34;some-database&#34;)
+ *             .tableName(&#34;some-table&#34;)
+ *             .values(&#34;some-value&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

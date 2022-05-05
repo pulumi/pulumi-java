@@ -26,6 +26,35 @@ import javax.annotation.Nullable;
  * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testStream = new Stream(&#34;testStream&#34;, StreamArgs.builder()        
+ *             .retentionPeriod(48)
+ *             .shardCount(1)
+ *             .shardLevelMetrics(            
+ *                 &#34;IncomingBytes&#34;,
+ *                 &#34;OutgoingBytes&#34;)
+ *             .streamModeDetails(StreamStreamModeDetails.builder()
+ *                 .streamMode(&#34;PROVISIONED&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

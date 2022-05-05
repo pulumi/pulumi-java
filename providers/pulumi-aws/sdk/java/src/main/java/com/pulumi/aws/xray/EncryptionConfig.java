@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Removing this resource from the provider has no effect to the encryption configuration within X-Ray.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EncryptionConfig(&#34;example&#34;, EncryptionConfigArgs.builder()        
+ *             .type(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With KMS Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;Some Key&#34;)
+ *             .deletionWindowInDays(7)
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Id&#34;: &#34;kms-tf-1&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;Enable IAM User Permissions&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;AWS&#34;: &#34;*&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;kms:*&#34;,
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleEncryptionConfig = new EncryptionConfig(&#34;exampleEncryptionConfig&#34;, EncryptionConfigArgs.builder()        
+ *             .type(&#34;KMS&#34;)
+ *             .keyId(exampleKey.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

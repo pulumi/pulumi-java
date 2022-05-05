@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * Provides an ElastiCache user group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testUser = new User(&#34;testUser&#34;, UserArgs.builder()        
+ *             .userId(&#34;testUserId&#34;)
+ *             .userName(&#34;default&#34;)
+ *             .accessString(&#34;on ~app::* -@all +@read +@hash +@bitmap +@geo -setbit -bitfield -hset -hsetnx -hmset -hincrby -hincrbyfloat -hdel -bitop -geoadd -georadius -georadiusbymember&#34;)
+ *             .engine(&#34;REDIS&#34;)
+ *             .passwords(&#34;password123456789&#34;)
+ *             .build());
+ * 
+ *         var testUserGroup = new UserGroup(&#34;testUserGroup&#34;, UserGroupArgs.builder()        
+ *             .engine(&#34;REDIS&#34;)
+ *             .userGroupId(&#34;userGroupId&#34;)
+ *             .userIds(testUser.getUserId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

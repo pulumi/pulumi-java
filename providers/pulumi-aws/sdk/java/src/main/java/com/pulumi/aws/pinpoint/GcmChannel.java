@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint GCM Channel resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;);
+ * 
+ *         var gcm = new GcmChannel(&#34;gcm&#34;, GcmChannelArgs.builder()        
+ *             .applicationId(app.getApplicationId())
+ *             .apiKey(&#34;api_key&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

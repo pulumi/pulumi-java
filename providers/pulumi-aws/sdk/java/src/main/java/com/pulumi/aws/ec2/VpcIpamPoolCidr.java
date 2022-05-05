@@ -25,6 +25,90 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleVpcIpam = new VpcIpam(&#34;exampleVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVpcIpamPool = new VpcIpamPool(&#34;exampleVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(exampleVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;exampleVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Provision Public IPv6 Pool CIDRs:
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var example = new VpcIpam(&#34;example&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var ipv6TestPublicVpcIpamPool = new VpcIpamPool(&#34;ipv6TestPublicVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv6&#34;)
+ *             .ipamScopeId(example.getPublicDefaultScopeId())
+ *             .locale(&#34;us-east-1&#34;)
+ *             .description(&#34;public ipv6&#34;)
+ *             .advertisable(false)
+ *             .awsService(&#34;ec2&#34;)
+ *             .build());
+ * 
+ *         var ipv6TestPublicVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;ipv6TestPublicVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(ipv6TestPublicVpcIpamPool.getId())
+ *             .cidr(var_.getIpv6_cidr())
+ *             .cidrAuthorizationContext(VpcIpamPoolCidrCidrAuthorizationContext.builder()
+ *                 .message(var_.getMessage())
+ *                 .signature(var_.getSignature())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IPAMs can be imported using the `&lt;cidr&gt;_&lt;ipam-pool-id&gt;`, e.g.

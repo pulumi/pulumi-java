@@ -20,6 +20,75 @@ import javax.annotation.Nullable;
  * Provides a CloudFront real-time log configuration resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;cloudfront.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleRolePolicy = new RolePolicy(&#34;exampleRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(exampleRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *         &#34;Effect&#34;: &#34;Allow&#34;,
+ *         &#34;Action&#34;: [
+ *           &#34;kinesis:DescribeStreamSummary&#34;,
+ *           &#34;kinesis:DescribeStream&#34;,
+ *           &#34;kinesis:PutRecord&#34;,
+ *           &#34;kinesis:PutRecords&#34;
+ *         ],
+ *         &#34;Resource&#34;: &#34;%s&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, aws_kinesis_stream.getExample().getArn()))
+ *             .build());
+ * 
+ *         var exampleRealtimeLogConfig = new RealtimeLogConfig(&#34;exampleRealtimeLogConfig&#34;, RealtimeLogConfigArgs.builder()        
+ *             .samplingRate(75)
+ *             .fields(            
+ *                 &#34;timestamp&#34;,
+ *                 &#34;c-ip&#34;)
+ *             .endpoint(RealtimeLogConfigEndpoint.builder()
+ *                 .streamType(&#34;Kinesis&#34;)
+ *                 .kinesisStreamConfig(RealtimeLogConfigEndpointKinesisStreamConfig.builder()
+ *                     .roleArn(exampleRole.getArn())
+ *                     .streamArn(aws_kinesis_stream.getExample().getArn())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

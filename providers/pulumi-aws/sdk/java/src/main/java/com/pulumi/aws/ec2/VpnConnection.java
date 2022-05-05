@@ -28,6 +28,77 @@ import javax.annotation.Nullable;
  * [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
  * 
  * ## Example Usage
+ * ### EC2 Transit Gateway
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;);
+ * 
+ *         var exampleCustomerGateway = new CustomerGateway(&#34;exampleCustomerGateway&#34;, CustomerGatewayArgs.builder()        
+ *             .bgpAsn(65000)
+ *             .ipAddress(&#34;172.0.0.1&#34;)
+ *             .type(&#34;ipsec.1&#34;)
+ *             .build());
+ * 
+ *         var exampleVpnConnection = new VpnConnection(&#34;exampleVpnConnection&#34;, VpnConnectionArgs.builder()        
+ *             .customerGatewayId(exampleCustomerGateway.getId())
+ *             .transitGatewayId(exampleTransitGateway.getId())
+ *             .type(exampleCustomerGateway.getType())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Virtual Private Gateway
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpc = new Vpc(&#34;vpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var vpnGateway = new VpnGateway(&#34;vpnGateway&#34;, VpnGatewayArgs.builder()        
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var customerGateway = new CustomerGateway(&#34;customerGateway&#34;, CustomerGatewayArgs.builder()        
+ *             .bgpAsn(65000)
+ *             .ipAddress(&#34;172.0.0.1&#34;)
+ *             .type(&#34;ipsec.1&#34;)
+ *             .build());
+ * 
+ *         var main = new VpnConnection(&#34;main&#34;, VpnConnectionArgs.builder()        
+ *             .vpnGatewayId(vpnGateway.getId())
+ *             .customerGatewayId(customerGateway.getId())
+ *             .type(&#34;ipsec.1&#34;)
+ *             .staticRoutesOnly(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

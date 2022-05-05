@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * Manages a KMS multi-Region replica key.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Provider(&#34;primary&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var primaryKey = new Key(&#34;primaryKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;Multi-Region primary key&#34;)
+ *             .deletionWindowInDays(30)
+ *             .multiRegion(true)
+ *             .build());
+ * 
+ *         var replica = new ReplicaKey(&#34;replica&#34;, ReplicaKeyArgs.builder()        
+ *             .description(&#34;Multi-Region replica key&#34;)
+ *             .deletionWindowInDays(7)
+ *             .primaryKeyArn(primaryKey.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

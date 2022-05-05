@@ -22,6 +22,53 @@ import javax.annotation.Nullable;
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new HoursOfOperation(&#34;test&#34;, HoursOfOperationArgs.builder()        
+ *             .configs(            
+ *                 HoursOfOperationConfig.builder()
+ *                     .day(&#34;MONDAY&#34;)
+ *                     .endTime(HoursOfOperationConfigEndTime.builder()
+ *                         .hours(23)
+ *                         .minutes(8)
+ *                         .build())
+ *                     .startTime(HoursOfOperationConfigStartTime.builder()
+ *                         .hours(8)
+ *                         .minutes(0)
+ *                         .build())
+ *                     .build(),
+ *                 HoursOfOperationConfig.builder()
+ *                     .day(&#34;TUESDAY&#34;)
+ *                     .endTime(HoursOfOperationConfigEndTime.builder()
+ *                         .hours(21)
+ *                         .minutes(0)
+ *                         .build())
+ *                     .startTime(HoursOfOperationConfigStartTime.builder()
+ *                         .hours(9)
+ *                         .minutes(0)
+ *                         .build())
+ *                     .build())
+ *             .description(&#34;Monday office hours&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Hours of Operation&#34;))
+ *             .timeZone(&#34;EST&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

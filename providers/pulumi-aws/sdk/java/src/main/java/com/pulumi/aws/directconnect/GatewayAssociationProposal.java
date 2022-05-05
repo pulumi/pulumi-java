@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
  * Manages a Direct Connect Gateway Association Proposal, typically for enabling cross-account associations. For single account associations, see the `aws.directconnect.GatewayAssociation` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GatewayAssociationProposal(&#34;example&#34;, GatewayAssociationProposalArgs.builder()        
+ *             .dxGatewayId(aws_dx_gateway.getExample().getId())
+ *             .dxGatewayOwnerAccountId(aws_dx_gateway.getExample().getOwner_account_id())
+ *             .associatedGatewayId(aws_vpn_gateway.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

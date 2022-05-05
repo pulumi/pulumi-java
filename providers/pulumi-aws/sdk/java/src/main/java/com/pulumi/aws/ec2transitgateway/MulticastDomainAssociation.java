@@ -17,6 +17,43 @@ import javax.annotation.Nullable;
  * Associates the specified subnet and transit gateway attachment with the specified transit gateway multicast domain.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;, TransitGatewayArgs.builder()        
+ *             .multicastSupport(&#34;enable&#34;)
+ *             .build());
+ * 
+ *         var exampleVpcAttachment = new VpcAttachment(&#34;exampleVpcAttachment&#34;, VpcAttachmentArgs.builder()        
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .transitGatewayId(exampleTransitGateway.getId())
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         var exampleMulticastDomain = new MulticastDomain(&#34;exampleMulticastDomain&#34;, MulticastDomainArgs.builder()        
+ *             .transitGatewayId(exampleTransitGateway.getId())
+ *             .build());
+ * 
+ *         var exampleMulticastDomainAssociation = new MulticastDomainAssociation(&#34;exampleMulticastDomainAssociation&#34;, MulticastDomainAssociationArgs.builder()        
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .transitGatewayAttachmentId(exampleVpcAttachment.getId())
+ *             .transitGatewayMulticastDomainId(exampleMulticastDomain.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2transitgateway/multicastDomainAssociation:MulticastDomainAssociation")

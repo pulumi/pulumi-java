@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * Provides a resource to create a new launch configuration, used for autoscaling groups.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ubuntu = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .filters(            
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;name&#34;)
+ *                     .values(&#34;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&#34;)
+ *                     .build(),
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;virtualization-type&#34;)
+ *                     .values(&#34;hvm&#34;)
+ *                     .build())
+ *             .owners(&#34;099720109477&#34;)
+ *             .build()));
+ * 
+ *         var asConf = new LaunchConfiguration(&#34;asConf&#34;, LaunchConfigurationArgs.builder()        
+ *             .imageId(ubuntu.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Using with AutoScaling Groups
  * 
  * Launch Configurations cannot be updated after creation with the Amazon
@@ -33,6 +69,49 @@ import javax.annotation.Nullable;
  * it&#39;s recommended to specify `create_before_destroy` in a [lifecycle](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html) block.
  * Either omit the Launch Configuration `name` attribute, or specify a partial name
  * with `name_prefix`.  Example:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ubuntu = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .filters(            
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;name&#34;)
+ *                     .values(&#34;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&#34;)
+ *                     .build(),
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;virtualization-type&#34;)
+ *                     .values(&#34;hvm&#34;)
+ *                     .build())
+ *             .owners(&#34;099720109477&#34;)
+ *             .build()));
+ * 
+ *         var asConf = new LaunchConfiguration(&#34;asConf&#34;, LaunchConfigurationArgs.builder()        
+ *             .namePrefix(&#34;lc-example-&#34;)
+ *             .imageId(ubuntu.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         var bar = new Group(&#34;bar&#34;, GroupArgs.builder()        
+ *             .launchConfiguration(asConf.getName())
+ *             .minSize(1)
+ *             .maxSize(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With this setup this provider generates a unique name for your Launch
  * Configuration and can then update the AutoScaling Group without conflict before
@@ -46,6 +125,47 @@ import javax.annotation.Nullable;
  * reserve your instances at this price.  See the [AWS Spot Instance
  * documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
  * for more information or how to launch [Spot Instances](https://www.terraform.io/docs/providers/aws/r/spot_instance_request.html) with this provider.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ubuntu = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .filters(            
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;name&#34;)
+ *                     .values(&#34;ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*&#34;)
+ *                     .build(),
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;virtualization-type&#34;)
+ *                     .values(&#34;hvm&#34;)
+ *                     .build())
+ *             .owners(&#34;099720109477&#34;)
+ *             .build()));
+ * 
+ *         var asConf = new LaunchConfiguration(&#34;asConf&#34;, LaunchConfigurationArgs.builder()        
+ *             .imageId(ubuntu.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;m4.large&#34;)
+ *             .spotPrice(&#34;0.001&#34;)
+ *             .build());
+ * 
+ *         var bar = new Group(&#34;bar&#34;, GroupArgs.builder()        
+ *             .launchConfiguration(asConf.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Block devices
  * 

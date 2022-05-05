@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a resource to create a Service Catalog Portfolio.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var portfolio = new Portfolio(&#34;portfolio&#34;, PortfolioArgs.builder()        
+ *             .description(&#34;List of my organizations apps&#34;)
+ *             .providerName(&#34;Brett&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

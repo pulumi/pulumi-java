@@ -18,6 +18,31 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks permission resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myStackPermission = new Permission(&#34;myStackPermission&#34;, PermissionArgs.builder()        
+ *             .allowSsh(true)
+ *             .allowSudo(true)
+ *             .level(&#34;iam_only&#34;)
+ *             .userArn(aws_iam_user.getUser().getArn())
+ *             .stackId(aws_opsworks_stack.getStack().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/permission:Permission")

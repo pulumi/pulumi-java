@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * Provides a Redshift Cluster parameter group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new ParameterGroup(&#34;bar&#34;, ParameterGroupArgs.builder()        
+ *             .family(&#34;redshift-1.0&#34;)
+ *             .parameters(            
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;require_ssl&#34;)
+ *                     .value(&#34;true&#34;)
+ *                     .build(),
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;query_group&#34;)
+ *                     .value(&#34;example&#34;)
+ *                     .build(),
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;enable_user_activity_logging&#34;)
+ *                     .value(&#34;true&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -43,6 +43,26 @@ public final class IamFunctions {
      * for the effective account in which this provider is working.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(IamFunctions.getAccountAlias());
+     * 
+     *         ctx.export(&#34;accountId&#34;, current.apply(getAccountAliasResult -&gt; getAccountAliasResult.getAccountAlias()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAccountAliasResult> getAccountAlias() {
@@ -60,6 +80,27 @@ public final class IamFunctions {
      * properties without having to hard code ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getGroup(GetTargetGroupArgs.builder()
+     *             .groupName(&#34;an_example_group_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
@@ -74,6 +115,27 @@ public final class IamFunctions {
      * instance profile properties without having to hard code ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getInstanceProfile(GetInstanceProfileArgs.builder()
+     *             .name(&#34;an_example_instance_profile_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetInstanceProfileResult> getInstanceProfile(GetInstanceProfileArgs args) {
@@ -88,6 +150,48 @@ public final class IamFunctions {
      * the resource information by either its `arn` or `url`.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getOpenidConnectProvider(GetOpenidConnectProviderArgs.builder()
+     *             .arn(&#34;arn:aws:iam::123456789012:oidc-provider/accounts.google.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getOpenidConnectProvider(GetOpenidConnectProviderArgs.builder()
+     *             .url(&#34;https://accounts.google.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOpenidConnectProviderResult> getOpenidConnectProvider() {
@@ -104,6 +208,50 @@ public final class IamFunctions {
      * IAM policy.
      * 
      * ## Example Usage
+     * ### By ARN
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getPolicy(GetPolicyArgs.builder()
+     *             .arn(&#34;arn:aws:iam::123456789012:policy/UsersManageOwnCredentials&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getPolicy(GetPolicyArgs.builder()
+     *             .name(&#34;test_policy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPolicyResult> getPolicy() {
@@ -121,6 +269,435 @@ public final class IamFunctions {
      * Using this data source to generate policy documents is *optional*. It is also valid to use literal JSON strings in your configuration or to use the `file` interpolation function to read a raw JSON policy document from a file.
      * 
      * ## Example Usage
+     * ### Basic Example
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplePolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;1&#34;)
+     *                     .actions(                    
+     *                         &#34;s3:ListAllMyBuckets&#34;,
+     *                         &#34;s3:GetBucketLocation&#34;)
+     *                     .resources(&#34;arn:aws:s3:::*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;s3:ListBucket&#34;)
+     *                     .resources(String.format(&#34;arn:aws:s3:::%s&#34;, var_.getS3_bucket_name()))
+     *                     .conditions(GetPolicyDocumentStatementCondition.builder()
+     *                         .test(&#34;StringLike&#34;)
+     *                         .variable(&#34;s3:prefix&#34;)
+     *                         .values(                        
+     *                             &#34;&#34;,
+     *                             &#34;home/&#34;,
+     *                             &#34;home/&amp;{aws:username}/&#34;)
+     *                         .build())
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;s3:*&#34;)
+     *                     .resources(                    
+     *                         String.format(&#34;arn:aws:s3:::%s/home/&amp;{{aws:username}}&#34;, var_.getS3_bucket_name()),
+     *                         String.format(&#34;arn:aws:s3:::%s/home/&amp;{{aws:username}}/*&#34;, var_.getS3_bucket_name()))
+     *                     .build())
+     *             .build()));
+     * 
+     *         var examplePolicy = new Policy(&#34;examplePolicy&#34;, PolicyArgs.builder()        
+     *             .path(&#34;/&#34;)
+     *             .policy(examplePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Example Assume-Role Policy with Multiple Principals
+     * 
+     * You can specify multiple principal blocks with different types. You can also use this data source to generate an assume-role policy.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var eventStreamBucketRoleAssumeRolePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .actions(&#34;sts:AssumeRole&#34;)
+     *                 .principals(                
+     *                     GetPolicyDocumentStatementPrincipal.builder()
+     *                         .type(&#34;Service&#34;)
+     *                         .identifiers(&#34;firehose.amazonaws.com&#34;)
+     *                         .build(),
+     *                     GetPolicyDocumentStatementPrincipal.builder()
+     *                         .type(&#34;AWS&#34;)
+     *                         .identifiers(var_.getTrusted_role_arn())
+     *                         .build(),
+     *                     GetPolicyDocumentStatementPrincipal.builder()
+     *                         .type(&#34;Federated&#34;)
+     *                         .identifiers(                        
+     *                             String.format(&#34;arn:aws:iam::%s:saml-provider/%s&#34;, var_.getAccount_id(),var_.getProvider_name()),
+     *                             &#34;cognito-identity.amazonaws.com&#34;)
+     *                         .build())
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Example Using A Source Document
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var source = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;ec2:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;SidToOverride&#34;)
+     *                     .actions(&#34;s3:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         final var sourceDocumentExample = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .sourcePolicyDocuments(source.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;SidToOverride&#34;)
+     *                 .actions(&#34;s3:*&#34;)
+     *                 .resources(                
+     *                     &#34;arn:aws:s3:::somebucket&#34;,
+     *                     &#34;arn:aws:s3:::somebucket/*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * `data.aws_iam_policy_document.source_document_example.json` will evaluate to:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
+     * ### Example Using An Override Document
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var override = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;SidToOverride&#34;)
+     *                 .actions(&#34;s3:*&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         final var overridePolicyDocumentExample = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .overridePolicyDocuments(override.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;ec2:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;SidToOverride&#34;)
+     *                     .actions(&#34;s3:*&#34;)
+     *                     .resources(                    
+     *                         &#34;arn:aws:s3:::somebucket&#34;,
+     *                         &#34;arn:aws:s3:::somebucket/*&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * `data.aws_iam_policy_document.override_policy_document_example.json` will evaluate to:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
+     * ### Example with Both Source and Override Documents
+     * 
+     * You can also combine `source_policy_documents` and `override_policy_documents` in the same document.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var source = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;OverridePlaceholder&#34;)
+     *                 .actions(&#34;ec2:DescribeAccountAttributes&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         final var override = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;OverridePlaceholder&#34;)
+     *                 .actions(&#34;s3:GetObject&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         final var politik = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .sourcePolicyDocuments(source.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .overridePolicyDocuments(override.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * `data.aws_iam_policy_document.politik.json` will evaluate to:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
+     * ### Example of Merging Source Documents
+     * 
+     * Multiple documents can be combined using the `source_policy_documents` or `override_policy_documents` attributes. `source_policy_documents` requires that all documents have unique Sids, while `override_policy_documents` will iteratively override matching Sids.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sourceOne = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;ec2:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;UniqueSidOne&#34;)
+     *                     .actions(&#34;s3:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         final var sourceTwo = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;UniqueSidTwo&#34;)
+     *                     .actions(&#34;iam:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .actions(&#34;lambda:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         final var combined = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .sourcePolicyDocuments(            
+     *                 sourceOne.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()),
+     *                 sourceTwo.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * `data.aws_iam_policy_document.combined.json` will evaluate to:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
+     * ### Example of Merging Override Documents
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var policyOne = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;OverridePlaceHolderOne&#34;)
+     *                 .effect(&#34;Allow&#34;)
+     *                 .actions(&#34;s3:*&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         final var policyTwo = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(            
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .effect(&#34;Allow&#34;)
+     *                     .actions(&#34;ec2:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build(),
+     *                 GetPolicyDocumentStatement.builder()
+     *                     .sid(&#34;OverridePlaceHolderTwo&#34;)
+     *                     .effect(&#34;Allow&#34;)
+     *                     .actions(&#34;iam:*&#34;)
+     *                     .resources(&#34;*&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         final var policyThree = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;OverridePlaceHolderOne&#34;)
+     *                 .effect(&#34;Deny&#34;)
+     *                 .actions(&#34;logs:*&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         final var combined = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .overridePolicyDocuments(            
+     *                 policyOne.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()),
+     *                 policyTwo.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()),
+     *                 policyThree.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .sid(&#34;OverridePlaceHolderTwo&#34;)
+     *                 .effect(&#34;Deny&#34;)
+     *                 .actions(&#34;*&#34;)
+     *                 .resources(&#34;*&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * `data.aws_iam_policy_document.combined.json` will evaluate to:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPolicyDocumentResult> getPolicyDocument() {
@@ -138,6 +715,27 @@ public final class IamFunctions {
      * properties without having to hard code ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getRole(GetRoleArgs.builder()
+     *             .name(&#34;an_example_role_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRoleResult> getRole(GetRoleArgs args) {
@@ -150,6 +748,120 @@ public final class IamFunctions {
      * Use this data source to get the ARNs and Names of IAM Roles.
      * 
      * ## Example Usage
+     * ### All roles in an account
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var roles = Output.of(IamFunctions.getRoles());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Roles filtered by name regex
+     * 
+     * Roles whose role-name contains `project`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var roles = Output.of(IamFunctions.getRoles(GetRolesArgs.builder()
+     *             .nameRegex(&#34;.*project.*&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Roles filtered by path prefix
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var roles = Output.of(IamFunctions.getRoles(GetRolesArgs.builder()
+     *             .pathPrefix(&#34;/custom-path&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Roles provisioned by AWS SSO
+     * 
+     * Roles in the account filtered by path prefix
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var roles = Output.of(IamFunctions.getRoles(GetRolesArgs.builder()
+     *             .pathPrefix(&#34;/aws-reserved/sso.amazonaws.com/&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * Specific role in the account filtered by name regex and path prefix
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var roles = Output.of(IamFunctions.getRoles(GetRolesArgs.builder()
+     *             .nameRegex(&#34;AWSReservedSSO_permission_set_name_.*&#34;)
+     *             .pathPrefix(&#34;/aws-reserved/sso.amazonaws.com/&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRolesResult> getRoles() {
@@ -167,6 +879,27 @@ public final class IamFunctions {
      * document of an existing SAML provider.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getSamlProvider(GetSamlProviderArgs.builder()
+     *             .arn(&#34;arn:aws:iam::123456789:saml-provider/myprovider&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSamlProviderResult> getSamlProvider(GetSamlProviderArgs args) {
@@ -179,6 +912,38 @@ public final class IamFunctions {
      * Use this data source to lookup information about IAM Server Certificates.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var my-domain = Output.of(IamFunctions.getServerCertificate(GetServerCertificateArgs.builder()
+     *             .namePrefix(&#34;my-domain.org&#34;)
+     *             .latest(true)
+     *             .build()));
+     * 
+     *         var elb = new LoadBalancer(&#34;elb&#34;, LoadBalancerArgs.builder()        
+     *             .listeners(LoadBalancerListener.builder()
+     *                 .instancePort(8000)
+     *                 .instanceProtocol(&#34;https&#34;)
+     *                 .lbPort(443)
+     *                 .lbProtocol(&#34;https&#34;)
+     *                 .sslCertificateId(my_domain.getArn())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetServerCertificateResult> getServerCertificate() {
@@ -202,6 +967,27 @@ public final class IamFunctions {
      * properties without having to hard code ARNs or unique IDs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getUser(GetUserArgs.builder()
+     *             .userName(&#34;an_example_user_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {
@@ -214,6 +1000,29 @@ public final class IamFunctions {
      * Use this data source to get information about a SSH public key associated with the specified IAM user.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(IamFunctions.getUserSshKey(GetUserSshKeyArgs.builder()
+     *             .encoding(&#34;SSH&#34;)
+     *             .sshPublicKeyId(&#34;APKARUZ32GUTKIGARLXE&#34;)
+     *             .username(&#34;test-user&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserSshKeyResult> getUserSshKey(GetUserSshKeyArgs args) {
@@ -226,6 +1035,72 @@ public final class IamFunctions {
      * Use this data source to get the ARNs and Names of IAM Users.
      * 
      * ## Example Usage
+     * ### All users in an account
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(IamFunctions.getUsers());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Users filtered by name regex
+     * 
+     * Users whose username contains `abc`
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(IamFunctions.getUsers(GetUsersArgs.builder()
+     *             .nameRegex(&#34;.*abc.*&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Users filtered by path prefix
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(IamFunctions.getUsers(GetUsersArgs.builder()
+     *             .pathPrefix(&#34;/custom-path&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUsersResult> getUsers() {

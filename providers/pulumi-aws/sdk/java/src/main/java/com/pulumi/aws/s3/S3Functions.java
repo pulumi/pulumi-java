@@ -31,6 +31,71 @@ public final class S3Functions {
      * Distribution.
      * 
      * ## Example Usage
+     * ### Route53 Record
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var selected = Output.of(S3Functions.getBucket(GetBucketArgs.builder()
+     *             .bucket(&#34;bucket.test.com&#34;)
+     *             .build()));
+     * 
+     *         final var testZone = Output.of(Route53Functions.getZone(GetZoneArgs.builder()
+     *             .name(&#34;test.com.&#34;)
+     *             .build()));
+     * 
+     *         var example = new Record(&#34;example&#34;, RecordArgs.builder()        
+     *             .zoneId(testZone.apply(getZoneResult -&gt; getZoneResult.getId()))
+     *             .name(&#34;bucket&#34;)
+     *             .type(&#34;A&#34;)
+     *             .aliases(RecordAlias.builder()
+     *                 .name(selected.apply(getBucketResult -&gt; getBucketResult.getWebsiteDomain()))
+     *                 .zoneId(selected.apply(getBucketResult -&gt; getBucketResult.getHostedZoneId()))
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * ### CloudFront Origin
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var selected = Output.of(S3Functions.getBucket(GetBucketArgs.builder()
+     *             .bucket(&#34;a-test-bucket&#34;)
+     *             .build()));
+     * 
+     *         var test = new Distribution(&#34;test&#34;, DistributionArgs.builder()        
+     *             .origins(DistributionOrigin.builder()
+     *                 .domainName(selected.apply(getBucketResult -&gt; getBucketResult.getBucketDomainName()))
+     *                 .originId(&#34;s3-selected-bucket&#34;)
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBucketResult> getBucket(GetBucketArgs args) {
@@ -48,6 +113,73 @@ public final class S3Functions {
      * &gt; **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
      * 
      * ## Example Usage
+     * 
+     * The following example retrieves a text object (which must have a `Content-Type`
+     * value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bootstrapScript = Output.of(S3Functions.getBucketObject(GetBucketObjectArgs.builder()
+     *             .bucket(&#34;ourcorp-deploy-config&#34;)
+     *             .key(&#34;ec2-bootstrap-script.sh&#34;)
+     *             .build()));
+     * 
+     *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+     *             .instanceType(&#34;t2.micro&#34;)
+     *             .ami(&#34;ami-2757f631&#34;)
+     *             .userData(bootstrapScript.apply(getBucketObjectResult -&gt; getBucketObjectResult.getBody()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * The following, more-complex example retrieves only the metadata for a zip
+     * file stored in S3, which is then used to pass the most recent `version_id`
+     * to AWS Lambda for use as a function implementation. More information about
+     * Lambda functions is available in the documentation for
+     * `aws.lambda.Function`.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var lambda = Output.of(S3Functions.getBucketObject(GetBucketObjectArgs.builder()
+     *             .bucket(&#34;ourcorp-lambda-functions&#34;)
+     *             .key(&#34;hello-world.zip&#34;)
+     *             .build()));
+     * 
+     *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+     *             .s3Bucket(lambda.apply(getBucketObjectResult -&gt; getBucketObjectResult.getBucket()))
+     *             .s3Key(lambda.apply(getBucketObjectResult -&gt; getBucketObjectResult.getKey()))
+     *             .s3ObjectVersion(lambda.apply(getBucketObjectResult -&gt; getBucketObjectResult.getVersionId()))
+     *             .role(aws_iam_role.getIam_for_lambda().getArn())
+     *             .handler(&#34;exports.test&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBucketObjectResult> getBucketObject(GetBucketObjectArgs args) {
@@ -75,6 +207,30 @@ public final class S3Functions {
      * 
      * ## Example Usage
      * 
+     * The following example retrieves IAM policy of a specified S3 bucket.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(S3Functions.getBucketPolicy(GetBucketPolicyArgs.builder()
+     *             .bucket(&#34;example-bucket-name&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;foo&#34;, example.apply(getBucketPolicyResult -&gt; getBucketPolicyResult.getPolicy()));
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetBucketPolicyResult> getBucketPolicy(GetBucketPolicyArgs args) {
         return getBucketPolicy(args, InvokeOptions.Empty);
@@ -89,6 +245,26 @@ public final class S3Functions {
      * &gt; **NOTE:** To use this data source, you must have the `s3:ListAllMyBuckets` permission.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(S3Functions.getCanonicalUserId());
+     * 
+     *         ctx.export(&#34;canonicalUserId&#34;, current.apply(getCanonicalUserIdResult -&gt; getCanonicalUserIdResult.getId()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCanonicalUserIdResult> getCanonicalUserId() {
@@ -107,6 +283,73 @@ public final class S3Functions {
      * &gt; **Note:** The content of an object (`body` field) is available only for objects which have a human-readable `Content-Type` (`text/*` and `application/json`). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.
      * 
      * ## Example Usage
+     * 
+     * The following example retrieves a text object (which must have a `Content-Type`
+     * value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bootstrapScript = Output.of(S3Functions.getObject(GetObjectArgs.builder()
+     *             .bucket(&#34;ourcorp-deploy-config&#34;)
+     *             .key(&#34;ec2-bootstrap-script.sh&#34;)
+     *             .build()));
+     * 
+     *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+     *             .instanceType(&#34;t2.micro&#34;)
+     *             .ami(&#34;ami-2757f631&#34;)
+     *             .userData(bootstrapScript.apply(getObjectResult -&gt; getObjectResult.getBody()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * The following, more-complex example retrieves only the metadata for a zip
+     * file stored in S3, which is then used to pass the most recent `version_id`
+     * to AWS Lambda for use as a function implementation. More information about
+     * Lambda functions is available in the documentation for
+     * [`aws.lambda.Function`](https://www.terraform.io/docs/providers/aws/r/lambda_function.html).
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var lambda = Output.of(S3Functions.getObject(GetObjectArgs.builder()
+     *             .bucket(&#34;ourcorp-lambda-functions&#34;)
+     *             .key(&#34;hello-world.zip&#34;)
+     *             .build()));
+     * 
+     *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+     *             .s3Bucket(lambda.apply(getObjectResult -&gt; getObjectResult.getBucket()))
+     *             .s3Key(lambda.apply(getObjectResult -&gt; getObjectResult.getKey()))
+     *             .s3ObjectVersion(lambda.apply(getObjectResult -&gt; getObjectResult.getVersionId()))
+     *             .role(aws_iam_role.getIam_for_lambda().getArn())
+     *             .handler(&#34;exports.test&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetObjectResult> getObject(GetObjectArgs args) {

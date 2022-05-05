@@ -32,6 +32,102 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The following dynamodb table description models the table and GSI shown
+ * in the [AWS SDK example documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GSI.html)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic_dynamodb_table = new Table(&#34;basic-dynamodb-table&#34;, TableArgs.builder()        
+ *             .attributes(            
+ *                 TableAttribute.builder()
+ *                     .name(&#34;UserId&#34;)
+ *                     .type(&#34;S&#34;)
+ *                     .build(),
+ *                 TableAttribute.builder()
+ *                     .name(&#34;GameTitle&#34;)
+ *                     .type(&#34;S&#34;)
+ *                     .build(),
+ *                 TableAttribute.builder()
+ *                     .name(&#34;TopScore&#34;)
+ *                     .type(&#34;N&#34;)
+ *                     .build())
+ *             .billingMode(&#34;PROVISIONED&#34;)
+ *             .globalSecondaryIndexes(TableGlobalSecondaryIndex.builder()
+ *                 .hashKey(&#34;GameTitle&#34;)
+ *                 .name(&#34;GameTitleIndex&#34;)
+ *                 .nonKeyAttributes(&#34;UserId&#34;)
+ *                 .projectionType(&#34;INCLUDE&#34;)
+ *                 .rangeKey(&#34;TopScore&#34;)
+ *                 .readCapacity(10)
+ *                 .writeCapacity(10)
+ *                 .build())
+ *             .hashKey(&#34;UserId&#34;)
+ *             .rangeKey(&#34;GameTitle&#34;)
+ *             .readCapacity(20)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Environment&#34;, &#34;production&#34;),
+ *                 Map.entry(&#34;Name&#34;, &#34;dynamodb-table-1&#34;)
+ *             ))
+ *             .ttl(TableTtl.builder()
+ *                 .attributeName(&#34;TimeToExist&#34;)
+ *                 .enabled(false)
+ *                 .build())
+ *             .writeCapacity(20)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Tables
+ * 
+ * This resource implements support for [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) via `replica` configuration blocks. For working with [DynamoDB Global Tables V1 (version 2017.11.29)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html), see the `aws.dynamodb.GlobalTable` resource.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Table(&#34;example&#34;, TableArgs.builder()        
+ *             .attributes(TableAttribute.builder()
+ *                 .name(&#34;TestTableHashKey&#34;)
+ *                 .type(&#34;S&#34;)
+ *                 .build())
+ *             .billingMode(&#34;PAY_PER_REQUEST&#34;)
+ *             .hashKey(&#34;TestTableHashKey&#34;)
+ *             .replicas(            
+ *                 TableReplica.builder()
+ *                     .regionName(&#34;us-east-2&#34;)
+ *                     .build(),
+ *                 TableReplica.builder()
+ *                     .regionName(&#34;us-west-2&#34;)
+ *                     .build())
+ *             .streamEnabled(true)
+ *             .streamViewType(&#34;NEW_AND_OLD_IMAGES&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * DynamoDB tables can be imported using the `name`, e.g.,

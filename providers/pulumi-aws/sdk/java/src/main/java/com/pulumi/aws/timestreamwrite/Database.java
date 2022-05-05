@@ -20,6 +20,52 @@ import javax.annotation.Nullable;
  * Provides a Timestream database resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Database(&#34;example&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;database-example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Full usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Database(&#34;example&#34;, DatabaseArgs.builder()        
+ *             .databaseName(&#34;database-example&#34;)
+ *             .kmsKeyId(aws_kms_key.getExample().getArn())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

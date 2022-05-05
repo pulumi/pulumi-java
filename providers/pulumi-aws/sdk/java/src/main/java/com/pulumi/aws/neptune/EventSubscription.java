@@ -19,6 +19,62 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultCluster = new Cluster(&#34;defaultCluster&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;neptune-cluster-demo&#34;)
+ *             .engine(&#34;neptune&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .skipFinalSnapshot(true)
+ *             .iamDatabaseAuthenticationEnabled(&#34;true&#34;)
+ *             .applyImmediately(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var example = new ClusterInstance(&#34;example&#34;, ClusterInstanceArgs.builder()        
+ *             .clusterIdentifier(defaultCluster.getId())
+ *             .engine(&#34;neptune&#34;)
+ *             .instanceClass(&#34;db.r4.large&#34;)
+ *             .applyImmediately(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var defaultTopic = new Topic(&#34;defaultTopic&#34;);
+ * 
+ *         var defaultEventSubscription = new EventSubscription(&#34;defaultEventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .snsTopicArn(defaultTopic.getArn())
+ *             .sourceType(&#34;db-instance&#34;)
+ *             .sourceIds(example.getId())
+ *             .eventCategories(            
+ *                 &#34;maintenance&#34;,
+ *                 &#34;availability&#34;,
+ *                 &#34;creation&#34;,
+ *                 &#34;backup&#34;,
+ *                 &#34;restoration&#34;,
+ *                 &#34;recovery&#34;,
+ *                 &#34;deletion&#34;,
+ *                 &#34;failover&#34;,
+ *                 &#34;failure&#34;,
+ *                 &#34;notification&#34;,
+ *                 &#34;configuration change&#34;,
+ *                 &#34;read replica&#34;)
+ *             .tags(Map.of(&#34;env&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,102 @@ import javax.annotation.Nullable;
  * Provides a CodeDeploy deployment config for an application
  * 
  * ## Example Usage
+ * ### Server Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooDeploymentConfig = new DeploymentConfig(&#34;fooDeploymentConfig&#34;, DeploymentConfigArgs.builder()        
+ *             .deploymentConfigName(&#34;test-deployment-config&#34;)
+ *             .minimumHealthyHosts(DeploymentConfigMinimumHealthyHosts.builder()
+ *                 .type(&#34;HOST_COUNT&#34;)
+ *                 .value(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooDeploymentGroup = new DeploymentGroup(&#34;fooDeploymentGroup&#34;, DeploymentGroupArgs.builder()        
+ *             .appName(aws_codedeploy_app.getFoo_app().getName())
+ *             .deploymentGroupName(&#34;bar&#34;)
+ *             .serviceRoleArn(aws_iam_role.getFoo_role().getArn())
+ *             .deploymentConfigName(fooDeploymentConfig.getId())
+ *             .ec2TagFilters(DeploymentGroupEc2TagFilter.builder()
+ *                 .key(&#34;filterkey&#34;)
+ *                 .type(&#34;KEY_AND_VALUE&#34;)
+ *                 .value(&#34;filtervalue&#34;)
+ *                 .build())
+ *             .triggerConfigurations(DeploymentGroupTriggerConfiguration.builder()
+ *                 .triggerEvents(&#34;DeploymentFailure&#34;)
+ *                 .triggerName(&#34;foo-trigger&#34;)
+ *                 .triggerTargetArn(&#34;foo-topic-arn&#34;)
+ *                 .build())
+ *             .autoRollbackConfiguration(DeploymentGroupAutoRollbackConfiguration.builder()
+ *                 .enabled(true)
+ *                 .events(&#34;DEPLOYMENT_FAILURE&#34;)
+ *                 .build())
+ *             .alarmConfiguration(DeploymentGroupAlarmConfiguration.builder()
+ *                 .alarms(&#34;my-alarm-name&#34;)
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooDeploymentConfig = new DeploymentConfig(&#34;fooDeploymentConfig&#34;, DeploymentConfigArgs.builder()        
+ *             .deploymentConfigName(&#34;test-deployment-config&#34;)
+ *             .computePlatform(&#34;Lambda&#34;)
+ *             .trafficRoutingConfig(DeploymentConfigTrafficRoutingConfig.builder()
+ *                 .type(&#34;TimeBasedLinear&#34;)
+ *                 .timeBasedLinear(DeploymentConfigTrafficRoutingConfigTimeBasedLinear.builder()
+ *                     .interval(10)
+ *                     .percentage(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooDeploymentGroup = new DeploymentGroup(&#34;fooDeploymentGroup&#34;, DeploymentGroupArgs.builder()        
+ *             .appName(aws_codedeploy_app.getFoo_app().getName())
+ *             .deploymentGroupName(&#34;bar&#34;)
+ *             .serviceRoleArn(aws_iam_role.getFoo_role().getArn())
+ *             .deploymentConfigName(fooDeploymentConfig.getId())
+ *             .autoRollbackConfiguration(DeploymentGroupAutoRollbackConfiguration.builder()
+ *                 .enabled(true)
+ *                 .events(&#34;DEPLOYMENT_STOP_ON_ALARM&#34;)
+ *                 .build())
+ *             .alarmConfiguration(DeploymentGroupAlarmConfiguration.builder()
+ *                 .alarms(&#34;my-alarm-name&#34;)
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * custom domain name.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .deployment(aws_api_gateway_deployment.getExample().getId())
+ *             .restApi(aws_api_gateway_rest_api.getExample().getId())
+ *             .stageName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;example.com&#34;)
+ *             .certificateName(&#34;example-api&#34;)
+ *             .certificateBody(Files.readString(String.format(&#34;%s/example.com/example.crt&#34;, path.getModule())))
+ *             .certificateChain(Files.readString(String.format(&#34;%s/example.com/ca.crt&#34;, path.getModule())))
+ *             .certificatePrivateKey(Files.readString(String.format(&#34;%s/example.com/example.key&#34;, path.getModule())))
+ *             .build());
+ * 
+ *         var exampleBasePathMapping = new BasePathMapping(&#34;exampleBasePathMapping&#34;, BasePathMappingArgs.builder()        
+ *             .restApi(aws_api_gateway_rest_api.getExample().getId())
+ *             .stageName(exampleStage.getStageName())
+ *             .domainName(exampleDomainName.getDomainName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

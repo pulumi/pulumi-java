@@ -20,6 +20,47 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * The following example below creates a CloudFront origin request policy.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new OriginRequestPolicy(&#34;example&#34;, OriginRequestPolicyArgs.builder()        
+ *             .comment(&#34;example comment&#34;)
+ *             .cookiesConfig(OriginRequestPolicyCookiesConfig.builder()
+ *                 .cookieBehavior(&#34;whitelist&#34;)
+ *                 .cookies(OriginRequestPolicyCookiesConfigCookies.builder()
+ *                     .items(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .headersConfig(OriginRequestPolicyHeadersConfig.builder()
+ *                 .headerBehavior(&#34;whitelist&#34;)
+ *                 .headers(OriginRequestPolicyHeadersConfigHeaders.builder()
+ *                     .items(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .queryStringsConfig(OriginRequestPolicyQueryStringsConfig.builder()
+ *                 .queryStringBehavior(&#34;whitelist&#34;)
+ *                 .queryStrings(OriginRequestPolicyQueryStringsConfigQueryStrings.builder()
+ *                     .items(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:cloudfront/originRequestPolicy:OriginRequestPolicy")
 public class OriginRequestPolicy extends com.pulumi.resources.CustomResource {

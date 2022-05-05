@@ -24,6 +24,55 @@ import javax.annotation.Nullable;
  * Provides an AppStream stack.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Stack(&#34;example&#34;, StackArgs.builder()        
+ *             .applicationSettings(StackApplicationSettings.builder()
+ *                 .enabled(true)
+ *                 .settingsGroup(&#34;SettingsGroup&#34;)
+ *                 .build())
+ *             .description(&#34;stack description&#34;)
+ *             .displayName(&#34;stack display name&#34;)
+ *             .feedbackUrl(&#34;http://your-domain/feedback&#34;)
+ *             .redirectUrl(&#34;http://your-domain/redirect&#34;)
+ *             .storageConnectors(StackStorageConnector.builder()
+ *                 .connectorType(&#34;HOMEFOLDERS&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;TagName&#34;, &#34;TagValue&#34;))
+ *             .userSettings(            
+ *                 StackUserSetting.builder()
+ *                     .action(&#34;CLIPBOARD_COPY_FROM_LOCAL_DEVICE&#34;)
+ *                     .permission(&#34;ENABLED&#34;)
+ *                     .build(),
+ *                 StackUserSetting.builder()
+ *                     .action(&#34;CLIPBOARD_COPY_TO_LOCAL_DEVICE&#34;)
+ *                     .permission(&#34;ENABLED&#34;)
+ *                     .build(),
+ *                 StackUserSetting.builder()
+ *                     .action(&#34;FILE_UPLOAD&#34;)
+ *                     .permission(&#34;ENABLED&#34;)
+ *                     .build(),
+ *                 StackUserSetting.builder()
+ *                     .action(&#34;FILE_DOWNLOAD&#34;)
+ *                     .permission(&#34;ENABLED&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

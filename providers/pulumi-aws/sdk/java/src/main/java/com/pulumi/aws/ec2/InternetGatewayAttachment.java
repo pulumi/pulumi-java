@@ -17,6 +17,34 @@ import javax.annotation.Nullable;
  * Provides a resource to create a VPC Internet Gateway Attachment.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleInternetGateway = new InternetGateway(&#34;exampleInternetGateway&#34;);
+ * 
+ *         var exampleInternetGatewayAttachment = new InternetGatewayAttachment(&#34;exampleInternetGatewayAttachment&#34;, InternetGatewayAttachmentArgs.builder()        
+ *             .internetGatewayId(exampleInternetGateway.getId())
+ *             .vpcId(exampleVpc.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

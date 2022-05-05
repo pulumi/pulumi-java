@@ -17,6 +17,42 @@ import javax.annotation.Nullable;
  * Provides a resource to accept a pending VPC Endpoint Connection accept request to VPC Endpoint Service.
  * 
  * ## Example Usage
+ * ### Accept cross-account request
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpcEndpointService = new VpcEndpointService(&#34;exampleVpcEndpointService&#34;, VpcEndpointServiceArgs.builder()        
+ *             .acceptanceRequired(false)
+ *             .networkLoadBalancerArns(aws_lb.getExample().getArn())
+ *             .build());
+ * 
+ *         var exampleVpcEndpoint = new VpcEndpoint(&#34;exampleVpcEndpoint&#34;, VpcEndpointArgs.builder()        
+ *             .vpcId(aws_vpc.getTest_alternate().getId())
+ *             .serviceName(aws_vpc_endpoint_service.getTest().getService_name())
+ *             .vpcEndpointType(&#34;Interface&#34;)
+ *             .privateDnsEnabled(false)
+ *             .securityGroupIds(aws_security_group.getTest().getId())
+ *             .build());
+ * 
+ *         var exampleVpcEndpointConnectionAccepter = new VpcEndpointConnectionAccepter(&#34;exampleVpcEndpointConnectionAccepter&#34;, VpcEndpointConnectionAccepterArgs.builder()        
+ *             .vpcEndpointServiceId(exampleVpcEndpointService.getId())
+ *             .vpcEndpointId(exampleVpcEndpoint.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

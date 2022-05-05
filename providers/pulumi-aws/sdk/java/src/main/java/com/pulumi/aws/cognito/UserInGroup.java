@@ -17,6 +17,48 @@ import javax.annotation.Nullable;
  * Adds the specified user to the specified group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;, UserPoolArgs.builder()        
+ *             .passwordPolicy(UserPoolPasswordPolicy.builder()
+ *                 .temporaryPasswordValidityDays(7)
+ *                 .minimumLength(6)
+ *                 .requireUppercase(false)
+ *                 .requireSymbols(false)
+ *                 .requireNumbers(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .userPoolId(aws_cognito_user_pool.getTest().getId())
+ *             .username(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleUserGroup = new UserGroup(&#34;exampleUserGroup&#34;, UserGroupArgs.builder()        
+ *             .userPoolId(aws_cognito_user_pool.getTest().getId())
+ *             .build());
+ * 
+ *         var exampleUserInGroup = new UserInGroup(&#34;exampleUserInGroup&#34;, UserInGroupArgs.builder()        
+ *             .userPoolId(exampleUserPool.getId())
+ *             .groupName(exampleUserGroup.getName())
+ *             .username(exampleUser.getUsername())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:cognito/userInGroup:UserInGroup")

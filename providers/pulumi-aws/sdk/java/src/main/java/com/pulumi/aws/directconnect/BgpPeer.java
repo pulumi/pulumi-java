@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
  * Provides a Direct Connect BGP peer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peer = new BgpPeer(&#34;peer&#34;, BgpPeerArgs.builder()        
+ *             .virtualInterfaceId(aws_dx_private_virtual_interface.getFoo().getId())
+ *             .addressFamily(&#34;ipv6&#34;)
+ *             .bgpAsn(65351)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:directconnect/bgpPeer:BgpPeer")

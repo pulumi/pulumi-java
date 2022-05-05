@@ -27,6 +27,62 @@ import javax.annotation.Nullable;
  * For more information, see the Amazon VPC User Guide on [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html). For information about managing normal route tables in this provider, see `aws.ec2.RouteTable`.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DefaultRouteTable(&#34;example&#34;, DefaultRouteTableArgs.builder()        
+ *             .defaultRouteTableId(aws_vpc.getExample().getDefault_route_table_id())
+ *             .routes(            
+ *                 DefaultRouteTableRoute.builder()
+ *                     .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *                     .gatewayId(aws_internet_gateway.getExample().getId())
+ *                     .build(),
+ *                 DefaultRouteTableRoute.builder()
+ *                     .ipv6CidrBlock(&#34;::/0&#34;)
+ *                     .egressOnlyGatewayId(aws_egress_only_internet_gateway.getExample().getId())
+ *                     .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * To subsequently remove all managed routes:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DefaultRouteTable(&#34;example&#34;, DefaultRouteTableArgs.builder()        
+ *             .defaultRouteTableId(aws_vpc.getExample().getDefault_route_table_id())
+ *             .routes()
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

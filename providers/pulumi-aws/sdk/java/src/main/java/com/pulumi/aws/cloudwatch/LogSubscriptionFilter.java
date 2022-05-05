@@ -18,6 +18,31 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Logs subscription filter resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testLambdafunctionLogfilter = new LogSubscriptionFilter(&#34;testLambdafunctionLogfilter&#34;, LogSubscriptionFilterArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_lambda().getArn())
+ *             .logGroup(&#34;/aws/lambda/example_lambda_name&#34;)
+ *             .filterPattern(&#34;logtype test&#34;)
+ *             .destinationArn(aws_kinesis_stream.getTest_logstream().getArn())
+ *             .distribution(&#34;Random&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

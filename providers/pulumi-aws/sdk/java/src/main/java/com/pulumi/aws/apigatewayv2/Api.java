@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Amazon API Gateway Version 2 resources are used for creating and deploying WebSocket and HTTP APIs. To create and deploy REST APIs, use Amazon API Gateway Version 1.
  * 
  * ## Example Usage
+ * ### Basic WebSocket API
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Api(&#34;example&#34;, ApiArgs.builder()        
+ *             .protocolType(&#34;WEBSOCKET&#34;)
+ *             .routeSelectionExpression(&#34;$request.body.action&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic HTTP API
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Api(&#34;example&#34;, ApiArgs.builder()        
+ *             .protocolType(&#34;HTTP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

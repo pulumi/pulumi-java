@@ -17,6 +17,35 @@ import javax.annotation.Nullable;
  * Attaches Principal to AWS IoT Thing.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Thing(&#34;example&#34;);
+ * 
+ *         var cert = new Certificate(&#34;cert&#34;, CertificateArgs.builder()        
+ *             .csr(Files.readString(&#34;csr.pem&#34;))
+ *             .active(true)
+ *             .build());
+ * 
+ *         var att = new ThingPrincipalAttachment(&#34;att&#34;, ThingPrincipalAttachmentArgs.builder()        
+ *             .principal(cert.getArn())
+ *             .thing(example.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:iot/thingPrincipalAttachment:ThingPrincipalAttachment")

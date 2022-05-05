@@ -32,6 +32,193 @@ import javax.annotation.Nullable;
  * &gt; **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;codedeploy.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var aWSCodeDeployRole = new RolePolicyAttachment(&#34;aWSCodeDeployRole&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole&#34;)
+ *             .role(exampleRole.getName())
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;);
+ * 
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;);
+ * 
+ *         var exampleDeploymentGroup = new DeploymentGroup(&#34;exampleDeploymentGroup&#34;, DeploymentGroupArgs.builder()        
+ *             .appName(exampleApplication.getName())
+ *             .deploymentGroupName(&#34;example-group&#34;)
+ *             .serviceRoleArn(exampleRole.getArn())
+ *             .ec2TagSets(DeploymentGroupEc2TagSet.builder()
+ *                 .ec2TagFilters(                
+ *                     DeploymentGroupEc2TagSetEc2TagFilter.builder()
+ *                         .key(&#34;filterkey1&#34;)
+ *                         .type(&#34;KEY_AND_VALUE&#34;)
+ *                         .value(&#34;filtervalue&#34;)
+ *                         .build(),
+ *                     DeploymentGroupEc2TagSetEc2TagFilter.builder()
+ *                         .key(&#34;filterkey2&#34;)
+ *                         .type(&#34;KEY_AND_VALUE&#34;)
+ *                         .value(&#34;filtervalue&#34;)
+ *                         .build())
+ *                 .build())
+ *             .triggerConfigurations(DeploymentGroupTriggerConfiguration.builder()
+ *                 .triggerEvents(&#34;DeploymentFailure&#34;)
+ *                 .triggerName(&#34;example-trigger&#34;)
+ *                 .triggerTargetArn(exampleTopic.getArn())
+ *                 .build())
+ *             .autoRollbackConfiguration(DeploymentGroupAutoRollbackConfiguration.builder()
+ *                 .enabled(true)
+ *                 .events(&#34;DEPLOYMENT_FAILURE&#34;)
+ *                 .build())
+ *             .alarmConfiguration(DeploymentGroupAlarmConfiguration.builder()
+ *                 .alarms(&#34;my-alarm-name&#34;)
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Blue Green Deployments with ECS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .computePlatform(&#34;ECS&#34;)
+ *             .build());
+ * 
+ *         var exampleDeploymentGroup = new DeploymentGroup(&#34;exampleDeploymentGroup&#34;, DeploymentGroupArgs.builder()        
+ *             .appName(exampleApplication.getName())
+ *             .deploymentConfigName(&#34;CodeDeployDefault.ECSAllAtOnce&#34;)
+ *             .deploymentGroupName(&#34;example&#34;)
+ *             .serviceRoleArn(aws_iam_role.getExample().getArn())
+ *             .autoRollbackConfiguration(DeploymentGroupAutoRollbackConfiguration.builder()
+ *                 .enabled(true)
+ *                 .events(&#34;DEPLOYMENT_FAILURE&#34;)
+ *                 .build())
+ *             .blueGreenDeploymentConfig(DeploymentGroupBlueGreenDeploymentConfig.builder()
+ *                 .deploymentReadyOption(DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption.builder()
+ *                     .actionOnTimeout(&#34;CONTINUE_DEPLOYMENT&#34;)
+ *                     .build())
+ *                 .terminateBlueInstancesOnDeploymentSuccess(DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess.builder()
+ *                     .action(&#34;TERMINATE&#34;)
+ *                     .terminationWaitTimeInMinutes(5)
+ *                     .build())
+ *                 .build())
+ *             .deploymentStyle(DeploymentGroupDeploymentStyle.builder()
+ *                 .deploymentOption(&#34;WITH_TRAFFIC_CONTROL&#34;)
+ *                 .deploymentType(&#34;BLUE_GREEN&#34;)
+ *                 .build())
+ *             .ecsService(DeploymentGroupEcsService.builder()
+ *                 .clusterName(aws_ecs_cluster.getExample().getName())
+ *                 .serviceName(aws_ecs_service.getExample().getName())
+ *                 .build())
+ *             .loadBalancerInfo(DeploymentGroupLoadBalancerInfo.builder()
+ *                 .targetGroupPairInfo(DeploymentGroupLoadBalancerInfoTargetGroupPairInfo.builder()
+ *                     .prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute.builder()
+ *                         .listenerArns(aws_lb_listener.getExample().getArn())
+ *                         .build())
+ *                     .targetGroups(                    
+ *                         DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup.builder()
+ *                             .name(aws_lb_target_group.getBlue().getName())
+ *                             .build(),
+ *                         DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup.builder()
+ *                             .name(aws_lb_target_group.getGreen().getName())
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Blue Green Deployments with Servers and Classic ELB
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;);
+ * 
+ *         var exampleDeploymentGroup = new DeploymentGroup(&#34;exampleDeploymentGroup&#34;, DeploymentGroupArgs.builder()        
+ *             .appName(exampleApplication.getName())
+ *             .deploymentGroupName(&#34;example-group&#34;)
+ *             .serviceRoleArn(aws_iam_role.getExample().getArn())
+ *             .deploymentStyle(DeploymentGroupDeploymentStyle.builder()
+ *                 .deploymentOption(&#34;WITH_TRAFFIC_CONTROL&#34;)
+ *                 .deploymentType(&#34;BLUE_GREEN&#34;)
+ *                 .build())
+ *             .loadBalancerInfo(DeploymentGroupLoadBalancerInfo.builder()
+ *                 .elbInfos(DeploymentGroupLoadBalancerInfoElbInfo.builder()
+ *                     .name(aws_elb.getExample().getName())
+ *                     .build())
+ *                 .build())
+ *             .blueGreenDeploymentConfig(DeploymentGroupBlueGreenDeploymentConfig.builder()
+ *                 .deploymentReadyOption(DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption.builder()
+ *                     .actionOnTimeout(&#34;STOP_DEPLOYMENT&#34;)
+ *                     .waitTimeInMinutes(60)
+ *                     .build())
+ *                 .greenFleetProvisioningOption(DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption.builder()
+ *                     .action(&#34;DISCOVER_EXISTING&#34;)
+ *                     .build())
+ *                 .terminateBlueInstancesOnDeploymentSuccess(DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess.builder()
+ *                     .action(&#34;KEEP_ALIVE&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -18,6 +18,44 @@ import javax.annotation.Nullable;
  * Provides a resource to manage AWS EMR Security Configurations
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new SecurityConfiguration(&#34;foo&#34;, SecurityConfigurationArgs.builder()        
+ *             .configuration(&#34;&#34;&#34;
+ * {
+ *   &#34;EncryptionConfiguration&#34;: {
+ *     &#34;AtRestEncryptionConfiguration&#34;: {
+ *       &#34;S3EncryptionConfiguration&#34;: {
+ *         &#34;EncryptionMode&#34;: &#34;SSE-S3&#34;
+ *       },
+ *       &#34;LocalDiskEncryptionConfiguration&#34;: {
+ *         &#34;EncryptionKeyProviderType&#34;: &#34;AwsKms&#34;,
+ *         &#34;AwsKmsKey&#34;: &#34;arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key&#34;
+ *       }
+ *     },
+ *     &#34;EnableInTransitEncryption&#34;: false,
+ *     &#34;EnableAtRestEncryption&#34;: true
+ *   }
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

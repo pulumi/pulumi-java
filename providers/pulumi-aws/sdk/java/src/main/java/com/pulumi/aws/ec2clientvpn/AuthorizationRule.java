@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AuthorizationRule(&#34;example&#34;, AuthorizationRuleArgs.builder()        
+ *             .clientVpnEndpointId(aws_ec2_client_vpn_endpoint.getExample().getId())
+ *             .targetNetworkCidr(aws_subnet.getExample().getCidr_block())
+ *             .authorizeAllGroups(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

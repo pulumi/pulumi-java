@@ -20,6 +20,40 @@ import javax.annotation.Nullable;
  * Provides a S3 bucket server-side encryption configuration resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mykey = new Key(&#34;mykey&#34;, KeyArgs.builder()        
+ *             .description(&#34;This key is used to encrypt bucket objects&#34;)
+ *             .deletionWindowInDays(10)
+ *             .build());
+ * 
+ *         var mybucket = new BucketV2(&#34;mybucket&#34;);
+ * 
+ *         var example = new BucketServerSideEncryptionConfigurationV2(&#34;example&#34;, BucketServerSideEncryptionConfigurationV2Args.builder()        
+ *             .bucket(mybucket.getBucket())
+ *             .rules(BucketServerSideEncryptionConfigurationV2Rule.builder()
+ *                 .applyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationV2RuleApplyServerSideEncryptionByDefault.builder()
+ *                     .kmsMasterKeyId(mykey.getArn())
+ *                     .sseAlgorithm(&#34;aws:kms&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

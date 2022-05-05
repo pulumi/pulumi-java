@@ -22,6 +22,30 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To create a basic traffic mirror filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new TrafficMirrorFilter(&#34;foo&#34;, TrafficMirrorFilterArgs.builder()        
+ *             .description(&#34;traffic mirror filter - example&#34;)
+ *             .networkServices(&#34;amazon-dns&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Traffic mirror filter can be imported using the `id`, e.g.,

@@ -18,6 +18,36 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRandomPassword = new RandomPassword(&#34;exampleRandomPassword&#34;, RandomPasswordArgs.builder()        
+ *             .length(16)
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .userName(&#34;my-user&#34;)
+ *             .accessString(&#34;on ~* &amp;* +@all&#34;)
+ *             .authenticationMode(UserAuthenticationMode.builder()
+ *                 .type(&#34;password&#34;)
+ *                 .passwords(exampleRandomPassword.getResult())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

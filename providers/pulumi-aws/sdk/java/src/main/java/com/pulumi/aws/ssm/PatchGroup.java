@@ -17,6 +17,32 @@ import javax.annotation.Nullable;
  * Provides an SSM Patch Group resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production = new PatchBaseline(&#34;production&#34;, PatchBaselineArgs.builder()        
+ *             .approvedPatches(&#34;KB123456&#34;)
+ *             .build());
+ * 
+ *         var patchgroup = new PatchGroup(&#34;patchgroup&#34;, PatchGroupArgs.builder()        
+ *             .baselineId(production.getId())
+ *             .patchGroup(&#34;patch-group-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ssm/patchGroup:PatchGroup")

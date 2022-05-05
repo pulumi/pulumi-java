@@ -16,6 +16,27 @@ public final class ElasticsearchFunctions {
      * Use this data source to get information about an Elasticsearch Domain
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myDomain = Output.of(ElasticsearchFunctions.getDomain(GetDomainArgs.builder()
+     *             .domainName(&#34;my-domain-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {

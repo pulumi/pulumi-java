@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * &gt; **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DomainIdentity(&#34;example&#34;, DomainIdentityArgs.builder()        
+ *             .domain(&#34;example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleAmazonsesVerificationRecord = new Record(&#34;exampleAmazonsesVerificationRecord&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getExample().getZone_id())
+ *             .name(example.getId().apply(id -&gt; String.format(&#34;_amazonses.%s&#34;, id)))
+ *             .type(&#34;TXT&#34;)
+ *             .ttl(&#34;600&#34;)
+ *             .records(example.getVerificationToken())
+ *             .build());
+ * 
+ *         var exampleVerification = new DomainIdentityVerification(&#34;exampleVerification&#34;, DomainIdentityVerificationArgs.builder()        
+ *             .domain(example.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ses/domainIdentityVerification:DomainIdentityVerification")

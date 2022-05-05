@@ -18,6 +18,59 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an S3 Object Lambda Access Point resource policy.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleAccessPoint = new AccessPoint(&#34;exampleAccessPoint&#34;, AccessPointArgs.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .build());
+ * 
+ *         var exampleObjectLambdaAccessPoint = new ObjectLambdaAccessPoint(&#34;exampleObjectLambdaAccessPoint&#34;, ObjectLambdaAccessPointArgs.builder()        
+ *             .configuration(ObjectLambdaAccessPointConfiguration.builder()
+ *                 .supportingAccessPoint(exampleAccessPoint.getArn())
+ *                 .transformationConfigurations(ObjectLambdaAccessPointConfigurationTransformationConfiguration.builder()
+ *                     .actions(&#34;GetObject&#34;)
+ *                     .contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation.builder()
+ *                         .awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda.builder()
+ *                             .functionArn(aws_lambda_function.getExample().getArn())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleObjectLambdaAccessPointPolicy = new ObjectLambdaAccessPointPolicy(&#34;exampleObjectLambdaAccessPointPolicy&#34;, ObjectLambdaAccessPointPolicyArgs.builder()        
+ *             .policy(exampleObjectLambdaAccessPoint.getArn().apply(arn -&gt; serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2008-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Action&#34;, &#34;s3-object-lambda:GetObject&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;AWS&#34;, data.getAws_caller_identity().getCurrent().getAccount_id())
+ *                         )),
+ *                         jsonProperty(&#34;Resource&#34;, arn)
+ *                     )))
+ *                 ))))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

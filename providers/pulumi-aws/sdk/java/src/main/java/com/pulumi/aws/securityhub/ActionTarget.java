@@ -17,6 +17,30 @@ import javax.annotation.Nullable;
  * Creates Security Hub custom action.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleActionTarget = new ActionTarget(&#34;exampleActionTarget&#34;, ActionTargetArgs.builder()        
+ *             .identifier(&#34;SendToChat&#34;)
+ *             .description(&#34;This is custom action sends selected findings to chat&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

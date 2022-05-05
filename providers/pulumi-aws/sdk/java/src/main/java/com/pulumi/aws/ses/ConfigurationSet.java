@@ -22,6 +22,49 @@ import javax.annotation.Nullable;
  * Provides an SES configuration set resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ConfigurationSet(&#34;test&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Require TLS Connections
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ConfigurationSet(&#34;test&#34;, ConfigurationSetArgs.builder()        
+ *             .deliveryOptions(ConfigurationSetDeliveryOptions.builder()
+ *                 .tlsPolicy(&#34;Require&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

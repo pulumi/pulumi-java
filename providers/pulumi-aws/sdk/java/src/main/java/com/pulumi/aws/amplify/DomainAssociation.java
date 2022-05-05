@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * Provides an Amplify Domain Association resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApp = new App(&#34;exampleApp&#34;, AppArgs.builder()        
+ *             .customRules(AppCustomRule.builder()
+ *                 .source(&#34;https://example.com&#34;)
+ *                 .status(&#34;302&#34;)
+ *                 .target(&#34;https://www.example.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var master = new Branch(&#34;master&#34;, BranchArgs.builder()        
+ *             .appId(exampleApp.getId())
+ *             .branchName(&#34;master&#34;)
+ *             .build());
+ * 
+ *         var exampleDomainAssociation = new DomainAssociation(&#34;exampleDomainAssociation&#34;, DomainAssociationArgs.builder()        
+ *             .appId(exampleApp.getId())
+ *             .domainName(&#34;example.com&#34;)
+ *             .subDomains(            
+ *                 DomainAssociationSubDomain.builder()
+ *                     .branchName(master.getBranchName())
+ *                     .prefix(&#34;&#34;)
+ *                     .build(),
+ *                 DomainAssociationSubDomain.builder()
+ *                     .branchName(master.getBranchName())
+ *                     .prefix(&#34;www&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

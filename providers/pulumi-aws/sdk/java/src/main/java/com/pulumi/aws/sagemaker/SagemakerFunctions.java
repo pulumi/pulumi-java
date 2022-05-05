@@ -19,6 +19,30 @@ public final class SagemakerFunctions {
      * 
      * ## Example Usage
      * 
+     * Basic usage:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(SagemakerFunctions.getPrebuiltEcrImage(GetPrebuiltEcrImageArgs.builder()
+     *             .imageTag(&#34;2.2-1.0.11.0&#34;)
+     *             .repositoryName(&#34;sagemaker-scikit-learn&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetPrebuiltEcrImageResult> getPrebuiltEcrImage(GetPrebuiltEcrImageArgs args) {
         return getPrebuiltEcrImage(args, InvokeOptions.Empty);

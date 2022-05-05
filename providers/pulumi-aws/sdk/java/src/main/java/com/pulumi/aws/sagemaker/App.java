@@ -20,6 +20,31 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker App resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .domainId(aws_sagemaker_domain.getExample().getId())
+ *             .userProfileName(aws_sagemaker_user_profile.getExample().getUser_profile_name())
+ *             .appName(&#34;example&#34;)
+ *             .appType(&#34;JupyterServer&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

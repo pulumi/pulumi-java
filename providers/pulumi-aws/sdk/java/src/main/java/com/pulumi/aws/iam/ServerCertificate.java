@@ -29,6 +29,108 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * **Using certs on file:**
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCert = new ServerCertificate(&#34;testCert&#34;, ServerCertificateArgs.builder()        
+ *             .certificateBody(Files.readString(&#34;self-ca-cert.pem&#34;))
+ *             .privateKey(Files.readString(&#34;test-key.pem&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * **Example with cert in-line:**
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCertAlt = new ServerCertificate(&#34;testCertAlt&#34;, ServerCertificateArgs.builder()        
+ *             .certificateBody(&#34;&#34;&#34;
+ * -----BEGIN CERTIFICATE-----
+ * [......] # cert contents
+ * -----END CERTIFICATE-----
+ * 
+ *             &#34;&#34;&#34;)
+ *             .privateKey(&#34;&#34;&#34;
+ * -----BEGIN RSA PRIVATE KEY-----
+ * [......] # cert contents
+ * -----END RSA PRIVATE KEY-----
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * **Use in combination with an AWS ELB resource:**
+ * 
+ * Some properties of an IAM Server Certificates cannot be updated while they are
+ * in use. In order for this provider to effectively manage a Certificate in this situation, it is
+ * recommended you utilize the `name_prefix` attribute and enable the
+ * `create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
+ * to create a new, updated `aws.iam.ServerCertificate` resource and replace it in
+ * dependant resources before attempting to destroy the old version.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCert = new ServerCertificate(&#34;testCert&#34;, ServerCertificateArgs.builder()        
+ *             .namePrefix(&#34;example-cert&#34;)
+ *             .certificateBody(Files.readString(&#34;self-ca-cert.pem&#34;))
+ *             .privateKey(Files.readString(&#34;test-key.pem&#34;))
+ *             .build());
+ * 
+ *         var ourapp = new LoadBalancer(&#34;ourapp&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(&#34;us-west-2a&#34;)
+ *             .crossZoneLoadBalancing(true)
+ *             .listeners(LoadBalancerListener.builder()
+ *                 .instancePort(8000)
+ *                 .instanceProtocol(&#34;http&#34;)
+ *                 .lbPort(443)
+ *                 .lbProtocol(&#34;https&#34;)
+ *                 .sslCertificateId(testCert.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IAM Server Certificates can be imported using the `name`, e.g.,

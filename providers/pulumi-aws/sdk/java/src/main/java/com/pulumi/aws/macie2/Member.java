@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [Amazon Macie Member](https://docs.aws.amazon.com/macie/latest/APIReference/members-id.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleMember = new Member(&#34;exampleMember&#34;, MemberArgs.builder()        
+ *             .accountId(&#34;AWS ACCOUNT ID&#34;)
+ *             .email(&#34;EMAIL&#34;)
+ *             .invite(true)
+ *             .invitationMessage(&#34;Message of the invitation&#34;)
+ *             .invitationDisableEmailNotification(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

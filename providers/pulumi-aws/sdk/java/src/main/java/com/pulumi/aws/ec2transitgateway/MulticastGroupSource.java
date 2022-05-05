@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
  * A multicast source is a network interface attached to a supported instance that sends multicast traffic.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MulticastGroupSource(&#34;example&#34;, MulticastGroupSourceArgs.builder()        
+ *             .groupIpAddress(&#34;224.0.0.1&#34;)
+ *             .networkInterfaceId(aws_network_interface.getExample().getId())
+ *             .transitGatewayMulticastDomainId(aws_ec2_transit_gateway_multicast_domain.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2transitgateway/multicastGroupSource:MulticastGroupSource")

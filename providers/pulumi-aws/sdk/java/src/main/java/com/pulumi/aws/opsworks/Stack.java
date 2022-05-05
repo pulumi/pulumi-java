@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks stack resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Stack(&#34;main&#34;, StackArgs.builder()        
+ *             .region(&#34;us-west-1&#34;)
+ *             .serviceRoleArn(aws_iam_role.getOpsworks().getArn())
+ *             .defaultInstanceProfileArn(aws_iam_instance_profile.getOpsworks().getArn())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foobar-stack&#34;))
+ *             .customJson(&#34;&#34;&#34;
+ * {
+ *  &#34;foobar&#34;: {
+ *     &#34;version&#34;: &#34;1.0.0&#34;
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

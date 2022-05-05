@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var messenger = new EventBus(&#34;messenger&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var examplepartnerEventSource = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+ *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+ *             .build()));
+ * 
+ *         var examplepartnerEventBus = new EventBus(&#34;examplepartnerEventBus&#34;, EventBusArgs.builder()        
+ *             .eventSourceName(examplepartnerEventSource.apply(getEventSourceResult -&gt; getEventSourceResult.getName()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

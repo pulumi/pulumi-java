@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * Provides a Inspector assessment template
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AssessmentTemplate(&#34;example&#34;, AssessmentTemplateArgs.builder()        
+ *             .targetArn(aws_inspector_assessment_target.getExample().getArn())
+ *             .duration(3600)
+ *             .rulesPackageArns(            
+ *                 &#34;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-9hgA516p&#34;,
+ *                 &#34;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc&#34;,
+ *                 &#34;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-JJOtZiqQ&#34;,
+ *                 &#34;arn:aws:inspector:us-west-2:758058086616:rulespackage/0-vg5GGHSD&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

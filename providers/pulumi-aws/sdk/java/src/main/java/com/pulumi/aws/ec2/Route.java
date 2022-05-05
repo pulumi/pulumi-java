@@ -16,7 +16,62 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var route = new Route(&#34;route&#34;, RouteArgs.builder()        
+ *             .routeTableId(&#34;rtb-4fbb3ac4&#34;)
+ *             .destinationCidrBlock(&#34;10.0.1.0/22&#34;)
+ *             .vpcPeeringConnectionId(&#34;pcx-45ff3dc1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Example IPv6 Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpc = new Vpc(&#34;vpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .assignGeneratedIpv6CidrBlock(true)
+ *             .build());
+ * 
+ *         var egress = new EgressOnlyInternetGateway(&#34;egress&#34;, EgressOnlyInternetGatewayArgs.builder()        
+ *             .vpcId(vpc.getId())
+ *             .build());
+ * 
+ *         var route = new Route(&#34;route&#34;, RouteArgs.builder()        
+ *             .routeTableId(&#34;rtb-4fbb3ac4&#34;)
+ *             .destinationIpv6CidrBlock(&#34;::/0&#34;)
+ *             .egressOnlyGatewayId(egress.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

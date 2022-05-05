@@ -18,6 +18,39 @@ public final class InspectorFunctions {
      * configured in the provider.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var rules = Output.of(InspectorFunctions.getRulesPackages());
+     * 
+     *         var group = new ResourceGroup(&#34;group&#34;, ResourceGroupArgs.builder()        
+     *             .tags(Map.of(&#34;test&#34;, &#34;test&#34;))
+     *             .build());
+     * 
+     *         var assessmentAssessmentTarget = new AssessmentTarget(&#34;assessmentAssessmentTarget&#34;, AssessmentTargetArgs.builder()        
+     *             .resourceGroupArn(group.getArn())
+     *             .build());
+     * 
+     *         var assessmentAssessmentTemplate = new AssessmentTemplate(&#34;assessmentAssessmentTemplate&#34;, AssessmentTemplateArgs.builder()        
+     *             .targetArn(assessmentAssessmentTarget.getArn())
+     *             .duration(&#34;60&#34;)
+     *             .rulesPackageArns(rules.apply(getRulesPackagesResult -&gt; getRulesPackagesResult.getArns()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRulesPackagesResult> getRulesPackages() {

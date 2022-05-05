@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * Adds an IoT Thing to an IoT Thing Group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ThingGroupMembership(&#34;example&#34;, ThingGroupMembershipArgs.builder()        
+ *             .overrideDynamicGroup(true)
+ *             .thingGroupName(&#34;example-group&#34;)
+ *             .thingName(&#34;example-thing&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

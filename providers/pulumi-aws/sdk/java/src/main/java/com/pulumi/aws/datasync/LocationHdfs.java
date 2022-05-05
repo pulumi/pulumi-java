@@ -25,6 +25,33 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The DataSync Agents must be available before creating this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LocationHdfs(&#34;example&#34;, LocationHdfsArgs.builder()        
+ *             .agentArns(aws_datasync_agent.getExample().getArn())
+ *             .authenticationType(&#34;SIMPLE&#34;)
+ *             .simpleUser(&#34;example&#34;)
+ *             .nameNodes(LocationHdfsNameNode.builder()
+ *                 .hostname(aws_instance.getExample().getPrivate_dns())
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

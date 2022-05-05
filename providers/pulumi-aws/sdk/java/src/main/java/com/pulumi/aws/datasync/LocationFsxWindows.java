@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * Manages an AWS DataSync FSx Windows Location.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LocationFsxWindows(&#34;example&#34;, LocationFsxWindowsArgs.builder()        
+ *             .fsxFilesystemArn(aws_fsx_windows_file_system.getExample().getArn())
+ *             .user(&#34;SomeUser&#34;)
+ *             .password(&#34;SuperSecretPassw0rd&#34;)
+ *             .securityGroupArns(aws_security_group.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

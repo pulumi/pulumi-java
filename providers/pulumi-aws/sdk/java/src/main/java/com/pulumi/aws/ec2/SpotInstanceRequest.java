@@ -52,6 +52,30 @@ import javax.annotation.Nullable;
  * for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cheapWorker = new SpotInstanceRequest(&#34;cheapWorker&#34;, SpotInstanceRequestArgs.builder()        
+ *             .ami(&#34;ami-1234&#34;)
+ *             .instanceType(&#34;c4.xlarge&#34;)
+ *             .spotPrice(&#34;0.03&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;CheapWorker&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2/spotInstanceRequest:SpotInstanceRequest")

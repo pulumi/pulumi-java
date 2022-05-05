@@ -43,6 +43,201 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The following example below creates a CloudFront distribution with an S3 origin.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;, BucketV2Args.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;My bucket&#34;))
+ *             .build());
+ * 
+ *         var bAcl = new BucketAclV2(&#34;bAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         final var s3OriginId = &#34;myS3Origin&#34;;
+ * 
+ *         var s3Distribution = new Distribution(&#34;s3Distribution&#34;, DistributionArgs.builder()        
+ *             .origins(DistributionOrigin.builder()
+ *                 .domainName(bucketV2.getBucketRegionalDomainName())
+ *                 .originId(s3OriginId)
+ *                 .s3OriginConfig(DistributionOriginS3OriginConfig.builder()
+ *                     .originAccessIdentity(&#34;origin-access-identity/cloudfront/ABCDEFG1234567&#34;)
+ *                     .build())
+ *                 .build())
+ *             .enabled(true)
+ *             .isIpv6Enabled(true)
+ *             .comment(&#34;Some comment&#34;)
+ *             .defaultRootObject(&#34;index.html&#34;)
+ *             .loggingConfig(DistributionLoggingConfig.builder()
+ *                 .includeCookies(false)
+ *                 .bucket(&#34;mylogs.s3.amazonaws.com&#34;)
+ *                 .prefix(&#34;myprefix&#34;)
+ *                 .build())
+ *             .aliases(            
+ *                 &#34;mysite.example.com&#34;,
+ *                 &#34;yoursite.example.com&#34;)
+ *             .defaultCacheBehavior(DistributionDefaultCacheBehavior.builder()
+ *                 .allowedMethods(                
+ *                     &#34;DELETE&#34;,
+ *                     &#34;GET&#34;,
+ *                     &#34;HEAD&#34;,
+ *                     &#34;OPTIONS&#34;,
+ *                     &#34;PATCH&#34;,
+ *                     &#34;POST&#34;,
+ *                     &#34;PUT&#34;)
+ *                 .cachedMethods(                
+ *                     &#34;GET&#34;,
+ *                     &#34;HEAD&#34;)
+ *                 .targetOriginId(s3OriginId)
+ *                 .forwardedValues(DistributionDefaultCacheBehaviorForwardedValues.builder()
+ *                     .queryString(false)
+ *                     .cookies(DistributionDefaultCacheBehaviorForwardedValuesCookies.builder()
+ *                         .forward(&#34;none&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .viewerProtocolPolicy(&#34;allow-all&#34;)
+ *                 .minTtl(0)
+ *                 .defaultTtl(3600)
+ *                 .maxTtl(86400)
+ *                 .build())
+ *             .orderedCacheBehaviors(            
+ *                 DistributionOrderedCacheBehavior.builder()
+ *                     .pathPattern(&#34;/content/immutable/*&#34;)
+ *                     .allowedMethods(                    
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;,
+ *                         &#34;OPTIONS&#34;)
+ *                     .cachedMethods(                    
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;,
+ *                         &#34;OPTIONS&#34;)
+ *                     .targetOriginId(s3OriginId)
+ *                     .forwardedValues(DistributionOrderedCacheBehaviorForwardedValues.builder()
+ *                         .queryString(false)
+ *                         .headers(&#34;Origin&#34;)
+ *                         .cookies(DistributionOrderedCacheBehaviorForwardedValuesCookies.builder()
+ *                             .forward(&#34;none&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .minTtl(0)
+ *                     .defaultTtl(86400)
+ *                     .maxTtl(31536000)
+ *                     .compress(true)
+ *                     .viewerProtocolPolicy(&#34;redirect-to-https&#34;)
+ *                     .build(),
+ *                 DistributionOrderedCacheBehavior.builder()
+ *                     .pathPattern(&#34;/content/*&#34;)
+ *                     .allowedMethods(                    
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;,
+ *                         &#34;OPTIONS&#34;)
+ *                     .cachedMethods(                    
+ *                         &#34;GET&#34;,
+ *                         &#34;HEAD&#34;)
+ *                     .targetOriginId(s3OriginId)
+ *                     .forwardedValues(DistributionOrderedCacheBehaviorForwardedValues.builder()
+ *                         .queryString(false)
+ *                         .cookies(DistributionOrderedCacheBehaviorForwardedValuesCookies.builder()
+ *                             .forward(&#34;none&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .minTtl(0)
+ *                     .defaultTtl(3600)
+ *                     .maxTtl(86400)
+ *                     .compress(true)
+ *                     .viewerProtocolPolicy(&#34;redirect-to-https&#34;)
+ *                     .build())
+ *             .priceClass(&#34;PriceClass_200&#34;)
+ *             .restrictions(DistributionRestrictions.builder()
+ *                 .geoRestriction(DistributionRestrictionsGeoRestriction.builder()
+ *                     .restrictionType(&#34;whitelist&#34;)
+ *                     .locations(                    
+ *                         &#34;US&#34;,
+ *                         &#34;CA&#34;,
+ *                         &#34;GB&#34;,
+ *                         &#34;DE&#34;)
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;production&#34;))
+ *             .viewerCertificate(DistributionViewerCertificate.builder()
+ *                 .cloudfrontDefaultCertificate(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * The following example below creates a Cloudfront distribution with an origin group for failover routing:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var s3Distribution = new Distribution(&#34;s3Distribution&#34;, DistributionArgs.builder()        
+ *             .originGroups(DistributionOriginGroup.builder()
+ *                 .originId(&#34;groupS3&#34;)
+ *                 .failoverCriteria(DistributionOriginGroupFailoverCriteria.builder()
+ *                     .statusCodes(                    
+ *                         403,
+ *                         404,
+ *                         500,
+ *                         502)
+ *                     .build())
+ *                 .members(                
+ *                     DistributionOriginGroupMember.builder()
+ *                         .originId(&#34;primaryS3&#34;)
+ *                         .build(),
+ *                     DistributionOriginGroupMember.builder()
+ *                         .originId(&#34;failoverS3&#34;)
+ *                         .build())
+ *                 .build())
+ *             .origins(            
+ *                 DistributionOrigin.builder()
+ *                     .domainName(aws_s3_bucket.getPrimary().getBucket_regional_domain_name())
+ *                     .originId(&#34;primaryS3&#34;)
+ *                     .s3OriginConfig(DistributionOriginS3OriginConfig.builder()
+ *                         .originAccessIdentity(aws_cloudfront_origin_access_identity.getDefault().getCloudfront_access_identity_path())
+ *                         .build())
+ *                     .build(),
+ *                 DistributionOrigin.builder()
+ *                     .domainName(aws_s3_bucket.getFailover().getBucket_regional_domain_name())
+ *                     .originId(&#34;failoverS3&#34;)
+ *                     .s3OriginConfig(DistributionOriginS3OriginConfig.builder()
+ *                         .originAccessIdentity(aws_cloudfront_origin_access_identity.getDefault().getCloudfront_access_identity_path())
+ *                         .build())
+ *                     .build())
+ *             .defaultCacheBehavior(DistributionDefaultCacheBehavior.builder()
+ *                 .targetOriginId(&#34;groupS3&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Cloudfront Distributions can be imported using the `id`, e.g.,

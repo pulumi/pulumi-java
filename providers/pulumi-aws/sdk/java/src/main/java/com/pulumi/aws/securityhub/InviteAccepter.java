@@ -19,6 +19,37 @@ import javax.annotation.Nullable;
  * Accepts a Security Hub invitation.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleMember = new Member(&#34;exampleMember&#34;, MemberArgs.builder()        
+ *             .accountId(&#34;123456789012&#34;)
+ *             .email(&#34;example@example.com&#34;)
+ *             .invite(true)
+ *             .build());
+ * 
+ *         var inviteeAccount = new Account(&#34;inviteeAccount&#34;);
+ * 
+ *         var inviteeInviteAccepter = new InviteAccepter(&#34;inviteeInviteAccepter&#34;, InviteAccepterArgs.builder()        
+ *             .masterId(exampleMember.getMasterId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

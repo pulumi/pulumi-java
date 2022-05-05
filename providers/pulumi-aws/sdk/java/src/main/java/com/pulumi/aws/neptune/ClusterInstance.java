@@ -25,6 +25,46 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The following example will create a neptune cluster with two neptune instances(one writer and one reader).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import com.pulumi.codegen.internal.KeyedValue;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;neptune-cluster-demo&#34;)
+ *             .engine(&#34;neptune&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .skipFinalSnapshot(true)
+ *             .iamDatabaseAuthenticationEnabled(true)
+ *             .applyImmediately(true)
+ *             .build());
+ * 
+ *         for (var i = 0; i &lt; 2; i++) {
+ *             new ClusterInstance(&#34;example-&#34; + i, ClusterInstanceArgs.builder()            
+ *                 .clusterIdentifier(default_.getId())
+ *                 .engine(&#34;neptune&#34;)
+ *                 .instanceClass(&#34;db.r4.large&#34;)
+ *                 .applyImmediately(true)
+ *                 .build());
+ * 
+ *         
+ * }
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * `aws_neptune_cluster_instance` can be imported by using the instance identifier, e.g.,

@@ -17,6 +17,29 @@ import javax.annotation.Nullable;
  * Manages an EC2 Local Gateway Route. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LocalGatewayRoute(&#34;example&#34;, LocalGatewayRouteArgs.builder()        
+ *             .destinationCidrBlock(&#34;172.16.0.0/16&#34;)
+ *             .localGatewayRouteTableId(data.getAws_ec2_local_gateway_route_table().getExample().getId())
+ *             .localGatewayVirtualInterfaceGroupId(data.getAws_ec2_local_gateway_virtual_interface_group().getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

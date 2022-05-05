@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * Provides a [Route53 Delegation Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API-actions-by-function.html#actions-by-function-reusable-delegation-sets) resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new DelegationSet(&#34;main&#34;, DelegationSetArgs.builder()        
+ *             .referenceName(&#34;DynDNS&#34;)
+ *             .build());
+ * 
+ *         var primary = new Zone(&#34;primary&#34;, ZoneArgs.builder()        
+ *             .delegationSetId(main.getId())
+ *             .build());
+ * 
+ *         var secondary = new Zone(&#34;secondary&#34;, ZoneArgs.builder()        
+ *             .delegationSetId(main.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

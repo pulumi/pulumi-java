@@ -16,6 +16,28 @@ public final class GrafanaFunctions {
      * Provides an Amazon Managed Grafana workspace data source.
      * 
      * ## Example Usage
+     * ### Basic configuration
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(GrafanaFunctions.getWorkspace(GetWorkspaceArgs.builder()
+     *             .workspaceId(&#34;g-2054c75a02&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetWorkspaceResult> getWorkspace(GetWorkspaceArgs args) {

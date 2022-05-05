@@ -26,6 +26,69 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
  * 
  * ## Example Usage
+ * ### Using AWS Directory Service
+ * 
+ * Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/fsx-aws-managed-ad.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WindowsFileSystem(&#34;example&#34;, WindowsFileSystemArgs.builder()        
+ *             .activeDirectoryId(aws_directory_service_directory.getExample().getId())
+ *             .kmsKeyId(aws_kms_key.getExample().getArn())
+ *             .storageCapacity(300)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .throughputCapacity(1024)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using a Self-Managed Microsoft Active Directory
+ * 
+ * Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WindowsFileSystem(&#34;example&#34;, WindowsFileSystemArgs.builder()        
+ *             .kmsKeyId(aws_kms_key.getExample().getArn())
+ *             .storageCapacity(300)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .throughputCapacity(1024)
+ *             .selfManagedActiveDirectory(WindowsFileSystemSelfManagedActiveDirectory.builder()
+ *                 .dnsIps(                
+ *                     &#34;10.0.0.111&#34;,
+ *                     &#34;10.0.0.222&#34;)
+ *                 .domainName(&#34;corp.example.com&#34;)
+ *                 .password(&#34;avoid-plaintext-passwords&#34;)
+ *                 .username(&#34;Admin&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

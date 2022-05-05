@@ -24,6 +24,111 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.
  * 
  * ## Example Usage
+ * ### Csv Classifier
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Classifier(&#34;example&#34;, ClassifierArgs.builder()        
+ *             .csvClassifier(ClassifierCsvClassifier.builder()
+ *                 .allowSingleColumn(false)
+ *                 .containsHeader(&#34;PRESENT&#34;)
+ *                 .delimiter(&#34;,&#34;)
+ *                 .disableValueTrimming(false)
+ *                 .headers(                
+ *                     &#34;example1&#34;,
+ *                     &#34;example2&#34;)
+ *                 .quoteSymbol(&#34;&#39;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Grok Classifier
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Classifier(&#34;example&#34;, ClassifierArgs.builder()        
+ *             .grokClassifier(ClassifierGrokClassifier.builder()
+ *                 .classification(&#34;example&#34;)
+ *                 .grokPattern(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### JSON Classifier
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Classifier(&#34;example&#34;, ClassifierArgs.builder()        
+ *             .jsonClassifier(ClassifierJsonClassifier.builder()
+ *                 .jsonPath(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### XML Classifier
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Classifier(&#34;example&#34;, ClassifierArgs.builder()        
+ *             .xmlClassifier(ClassifierXmlClassifier.builder()
+ *                 .classification(&#34;example&#34;)
+ *                 .rowTag(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

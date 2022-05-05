@@ -27,6 +27,32 @@ import javax.annotation.Nullable;
  * `production`.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tftest = new Application(&#34;tftest&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;tf-test-desc&#34;)
+ *             .build());
+ * 
+ *         var tfenvtest = new Environment(&#34;tfenvtest&#34;, EnvironmentArgs.builder()        
+ *             .application(tftest.getName())
+ *             .solutionStackName(&#34;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Option Settings
  * 
  * Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -40,6 +66,43 @@ import javax.annotation.Nullable;
  * * `resource` - (Optional) resource name for [scheduled action](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction)
  * 
  * ### Example With Options
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tftest = new Application(&#34;tftest&#34;, ApplicationArgs.builder()        
+ *             .description(&#34;tf-test-desc&#34;)
+ *             .build());
+ * 
+ *         var tfenvtest = new Environment(&#34;tfenvtest&#34;, EnvironmentArgs.builder()        
+ *             .application(tftest.getName())
+ *             .solutionStackName(&#34;64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4&#34;)
+ *             .settings(            
+ *                 EnvironmentSetting.builder()
+ *                     .namespace(&#34;aws:ec2:vpc&#34;)
+ *                     .name(&#34;VPCId&#34;)
+ *                     .value(&#34;vpc-xxxxxxxx&#34;)
+ *                     .build(),
+ *                 EnvironmentSetting.builder()
+ *                     .namespace(&#34;aws:ec2:vpc&#34;)
+ *                     .name(&#34;Subnets&#34;)
+ *                     .value(&#34;subnet-xxxxxxxx&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

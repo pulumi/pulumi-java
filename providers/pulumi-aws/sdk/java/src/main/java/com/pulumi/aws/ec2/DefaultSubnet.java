@@ -27,6 +27,28 @@ import javax.annotation.Nullable;
  * Set the `force_destroy` argument to `true` to delete the default subnet.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultAz1 = new DefaultSubnet(&#34;defaultAz1&#34;, DefaultSubnetArgs.builder()        
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Default subnet for us-west-2a&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

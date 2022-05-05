@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * Provides a Global Accelerator endpoint group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EndpointGroup(&#34;example&#34;, EndpointGroupArgs.builder()        
+ *             .listenerArn(aws_globalaccelerator_listener.getExample().getId())
+ *             .endpointConfigurations(EndpointGroupEndpointConfiguration.builder()
+ *                 .endpointId(aws_lb.getExample().getArn())
+ *                 .weight(100)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

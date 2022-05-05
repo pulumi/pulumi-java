@@ -18,6 +18,31 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Device resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Device(&#34;example&#34;, DeviceArgs.builder()        
+ *             .deviceFleetName(aws_sagemaker_device_fleet.getExample().getDevice_fleet_name())
+ *             .device(DeviceDevice.builder()
+ *                 .deviceName(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

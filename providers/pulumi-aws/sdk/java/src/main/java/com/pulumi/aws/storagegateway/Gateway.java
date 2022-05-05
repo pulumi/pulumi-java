@@ -27,6 +27,172 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
  * 
  * ## Example Usage
+ * ### Local Cache
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testVolumeAttachment = new VolumeAttachment(&#34;testVolumeAttachment&#34;, VolumeAttachmentArgs.builder()        
+ *             .deviceName(&#34;/dev/xvdb&#34;)
+ *             .volumeId(aws_ebs_volume.getTest().getId())
+ *             .instanceId(aws_instance.getTest().getId())
+ *             .build());
+ * 
+ *         final var testLocalDisk = StoragegatewayFunctions.getLocalDisk(GetLocalDiskArgs.builder()
+ *             .diskNode(testVolumeAttachment.getDeviceName())
+ *             .gatewayArn(aws_storagegateway_gateway.getTest().getArn())
+ *             .build());
+ * 
+ *         var testCache = new Cache(&#34;testCache&#34;, CacheArgs.builder()        
+ *             .diskId(testLocalDisk.apply(getLocalDiskResult -&gt; getLocalDiskResult).apply(testLocalDisk -&gt; testLocalDisk.apply(getLocalDiskResult -&gt; getLocalDiskResult.getDiskId())))
+ *             .gatewayArn(aws_storagegateway_gateway.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### FSx File Gateway
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(&#34;1.2.3.4&#34;)
+ *             .gatewayName(&#34;example&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;FILE_FSX_SMB&#34;)
+ *             .smbActiveDirectorySettings(GatewaySmbActiveDirectorySettings.builder()
+ *                 .domainName(&#34;corp.example.com&#34;)
+ *                 .password(&#34;avoid-plaintext-passwords&#34;)
+ *                 .username(&#34;Admin&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 File Gateway
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(&#34;1.2.3.4&#34;)
+ *             .gatewayName(&#34;example&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;FILE_S3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Tape Gateway
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(&#34;1.2.3.4&#34;)
+ *             .gatewayName(&#34;example&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;VTL&#34;)
+ *             .mediumChangerType(&#34;AWS-Gateway-VTL&#34;)
+ *             .tapeDriveType(&#34;IBM-ULT3580-TD5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Volume Gateway (Cached)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(&#34;1.2.3.4&#34;)
+ *             .gatewayName(&#34;example&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;CACHED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Volume Gateway (Stored)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .gatewayIpAddress(&#34;1.2.3.4&#34;)
+ *             .gatewayName(&#34;example&#34;)
+ *             .gatewayTimezone(&#34;GMT&#34;)
+ *             .gatewayType(&#34;STORED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

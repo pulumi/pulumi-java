@@ -26,6 +26,104 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** To retain the Stack during resource destroy, ensure `retain_stack` has been set to `true` in the state first. This must be completed _before_ a deployment that would destroy the resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new StackSetInstance(&#34;example&#34;, StackSetInstanceArgs.builder()        
+ *             .accountId(&#34;123456789012&#34;)
+ *             .region(&#34;us-east-1&#34;)
+ *             .stackSetName(aws_cloudformation_stack_set.getExample().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example IAM Setup in Target Account
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .effect(&#34;Allow&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(aws_iam_role.getAWSCloudFormationStackSetAdministrationRole().getArn())
+ *                     .type(&#34;AWS&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var aWSCloudFormationStackSetExecutionRole = new Role(&#34;aWSCloudFormationStackSetExecutionRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(aWSCloudFormationStackSetExecutionRoleAssumeRolePolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         final var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(                
+ *                     &#34;cloudformation:*&#34;,
+ *                     &#34;s3:*&#34;,
+ *                     &#34;sns:*&#34;)
+ *                 .effect(&#34;Allow&#34;)
+ *                 .resources(&#34;*&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy = new RolePolicy(&#34;aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .policy(aWSCloudFormationStackSetExecutionRoleMinimumExecutionPolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .role(aWSCloudFormationStackSetExecutionRole.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Deployment across Organizations account
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new StackSetInstance(&#34;example&#34;, StackSetInstanceArgs.builder()        
+ *             .deploymentTargets(StackSetInstanceDeploymentTargets.builder()
+ *                 .organizationalUnitIds(aws_organizations_organization.getExample().getRoots()[0].getId())
+ *                 .build())
+ *             .region(&#34;us-east-1&#34;)
+ *             .stackSetName(aws_cloudformation_stack_set.getExample().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

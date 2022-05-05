@@ -17,6 +17,33 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver DNSSEC config resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .enableDnsSupport(true)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         var exampleResolverDnsSecConfig = new ResolverDnsSecConfig(&#34;exampleResolverDnsSecConfig&#34;, ResolverDnsSecConfigArgs.builder()        
+ *             .resourceId(exampleVpc.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

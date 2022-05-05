@@ -23,6 +23,63 @@ import javax.annotation.Nullable;
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) for more information.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OntapStorageVirtualMachine(&#34;test&#34;, OntapStorageVirtualMachineArgs.builder()        
+ *             .fileSystemId(aws_fsx_ontap_file_system.getTest().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using a Self-Managed Microsoft Active Directory
+ * 
+ * Additional information for using AWS Directory Service with ONTAP File Systems can be found in the [FSx ONTAP Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-managed-AD.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OntapStorageVirtualMachine(&#34;test&#34;, OntapStorageVirtualMachineArgs.builder()        
+ *             .fileSystemId(aws_fsx_ontap_file_system.getTest().getId())
+ *             .activeDirectoryConfiguration(OntapStorageVirtualMachineActiveDirectoryConfiguration.builder()
+ *                 .netbiosName(&#34;mysvm&#34;)
+ *                 .selfManagedActiveDirectoryConfiguration(OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration.builder()
+ *                     .dnsIps(                    
+ *                         &#34;10.0.0.111&#34;,
+ *                         &#34;10.0.0.222&#34;)
+ *                     .domainName(&#34;corp.example.com&#34;)
+ *                     .password(&#34;avoid-plaintext-passwords&#34;)
+ *                     .username(&#34;Admin&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

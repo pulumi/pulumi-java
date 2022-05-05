@@ -17,6 +17,35 @@ import javax.annotation.Nullable;
  * Provides an SES domain identity resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DomainIdentity(&#34;example&#34;, DomainIdentityArgs.builder()        
+ *             .domain(&#34;example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleAmazonsesVerificationRecord = new Record(&#34;exampleAmazonsesVerificationRecord&#34;, RecordArgs.builder()        
+ *             .zoneId(&#34;ABCDEFGHIJ123&#34;)
+ *             .name(&#34;_amazonses.example.com&#34;)
+ *             .type(&#34;TXT&#34;)
+ *             .ttl(&#34;600&#34;)
+ *             .records(example.getVerificationToken())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

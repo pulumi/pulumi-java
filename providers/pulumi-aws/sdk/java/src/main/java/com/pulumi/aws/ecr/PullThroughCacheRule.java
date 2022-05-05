@@ -20,6 +20,28 @@ import javax.annotation.Nullable;
  * upstream repositories, see [Using pull through cache rules](https://docs.aws.amazon.com/AmazonECR/latest/userguide/pull-through-cache.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PullThroughCacheRule(&#34;example&#34;, PullThroughCacheRuleArgs.builder()        
+ *             .ecrRepositoryPrefix(&#34;ecr-public&#34;)
+ *             .upstreamRegistryUrl(&#34;public.ecr.aws&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

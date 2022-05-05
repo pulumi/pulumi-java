@@ -17,6 +17,109 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### With Versioning Enabled
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var versioningExample = new BucketVersioningV2(&#34;versioningExample&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Versioning Disabled
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var versioningExample = new BucketVersioningV2(&#34;versioningExample&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Disabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Object Dependency On Versioning
+ * 
+ * When you create an object whose `version_id` you need and an `aws.s3.BucketVersioningV2` resource in the same configuration, you are more likely to have success by ensuring the `s3_object` depends either implicitly (see below) or explicitly (i.e., using `depends_on = [aws_s3_bucket_versioning.example]`) on the `aws.s3.BucketVersioningV2` resource.
+ * 
+ * &gt; **NOTE:** For critical and/or production S3 objects, do not create a bucket, enable versioning, and create an object in the bucket within the same configuration. Doing so will not allow the AWS-recommended 15 minutes between enabling versioning and writing to the bucket.
+ * 
+ * This example shows the `aws_s3_object.example` depending implicitly on the versioning resource through the reference to `aws_s3_bucket_versioning.example.bucket` to define `bucket`:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketVersioningV2 = new BucketVersioningV2(&#34;exampleBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(exampleBucketVersioningV2.getBucket())
+ *             .key(&#34;droeloe&#34;)
+ *             .source(new FileAsset(&#34;example.txt&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

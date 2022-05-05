@@ -17,6 +17,40 @@ import javax.annotation.Nullable;
  * Provides an API Gateway Usage Plan Key.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new RestApi(&#34;test&#34;);
+ * 
+ *         var myusageplan = new UsagePlan(&#34;myusageplan&#34;, UsagePlanArgs.builder()        
+ *             .apiStages(UsagePlanApiStage.builder()
+ *                 .apiId(test.getId())
+ *                 .stage(aws_api_gateway_deployment.getFoo().getStage_name())
+ *                 .build())
+ *             .build());
+ * 
+ *         var mykey = new ApiKey(&#34;mykey&#34;);
+ * 
+ *         var main = new UsagePlanKey(&#34;main&#34;, UsagePlanKeyArgs.builder()        
+ *             .keyId(mykey.getId())
+ *             .keyType(&#34;API_KEY&#34;)
+ *             .usagePlanId(myusageplan.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

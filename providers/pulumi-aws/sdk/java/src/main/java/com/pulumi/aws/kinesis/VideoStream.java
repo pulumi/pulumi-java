@@ -22,6 +22,30 @@ import javax.annotation.Nullable;
  * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new VideoStream(&#34;default&#34;, VideoStreamArgs.builder()        
+ *             .dataRetentionInHours(1)
+ *             .deviceName(&#34;kinesis-video-device-name&#34;)
+ *             .mediaType(&#34;video/h264&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;kinesis-video-stream&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

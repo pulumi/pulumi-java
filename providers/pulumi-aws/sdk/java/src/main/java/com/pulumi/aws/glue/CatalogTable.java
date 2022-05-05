@@ -25,6 +25,91 @@ import javax.annotation.Nullable;
  * Provides a Glue Catalog Table Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality.
  * 
  * ## Example Usage
+ * ### Basic Table
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var awsGlueCatalogTable = new CatalogTable(&#34;awsGlueCatalogTable&#34;, CatalogTableArgs.builder()        
+ *             .databaseName(&#34;MyCatalogDatabase&#34;)
+ *             .name(&#34;MyCatalogTable&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Parquet Table for Athena
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var awsGlueCatalogTable = new CatalogTable(&#34;awsGlueCatalogTable&#34;, CatalogTableArgs.builder()        
+ *             .databaseName(&#34;MyCatalogDatabase&#34;)
+ *             .name(&#34;MyCatalogTable&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;EXTERNAL&#34;, &#34;TRUE&#34;),
+ *                 Map.entry(&#34;parquet.compression&#34;, &#34;SNAPPY&#34;)
+ *             ))
+ *             .storageDescriptor(CatalogTableStorageDescriptor.builder()
+ *                 .columns(                
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .name(&#34;my_string&#34;)
+ *                         .type(&#34;string&#34;)
+ *                         .build(),
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .name(&#34;my_double&#34;)
+ *                         .type(&#34;double&#34;)
+ *                         .build(),
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .comment(&#34;&#34;)
+ *                         .name(&#34;my_date&#34;)
+ *                         .type(&#34;date&#34;)
+ *                         .build(),
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .comment(&#34;&#34;)
+ *                         .name(&#34;my_bigint&#34;)
+ *                         .type(&#34;bigint&#34;)
+ *                         .build(),
+ *                     CatalogTableStorageDescriptorColumn.builder()
+ *                         .comment(&#34;&#34;)
+ *                         .name(&#34;my_struct&#34;)
+ *                         .type(&#34;struct&lt;my_nested_string:string&gt;&#34;)
+ *                         .build())
+ *                 .inputFormat(&#34;org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat&#34;)
+ *                 .location(&#34;s3://my-bucket/event-streams/my-stream&#34;)
+ *                 .outputFormat(&#34;org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat&#34;)
+ *                 .serDeInfo(CatalogTableStorageDescriptorSerDeInfo.builder()
+ *                     .name(&#34;my-stream&#34;)
+ *                     .parameters(Map.of(&#34;serialization.format&#34;, 1))
+ *                     .serializationLibrary(&#34;org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe&#34;)
+ *                     .build())
+ *                 .build())
+ *             .tableType(&#34;EXTERNAL_TABLE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

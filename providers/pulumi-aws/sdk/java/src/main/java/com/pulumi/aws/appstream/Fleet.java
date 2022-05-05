@@ -24,6 +24,41 @@ import javax.annotation.Nullable;
  * Provides an AppStream fleet.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testFleet = new Fleet(&#34;testFleet&#34;, FleetArgs.builder()        
+ *             .computeCapacity(FleetComputeCapacity.builder()
+ *                 .desiredInstances(1)
+ *                 .build())
+ *             .description(&#34;test fleet&#34;)
+ *             .displayName(&#34;test-fleet&#34;)
+ *             .enableDefaultInternetAccess(false)
+ *             .fleetType(&#34;ON_DEMAND&#34;)
+ *             .idleDisconnectTimeoutInSeconds(60)
+ *             .imageName(&#34;Amazon-AppStream2-Sample-Image-02-04-2019&#34;)
+ *             .instanceType(&#34;stream.standard.large&#34;)
+ *             .maxUserDurationInSeconds(600)
+ *             .tags(Map.of(&#34;TagName&#34;, &#34;tag-value&#34;))
+ *             .vpcConfig(FleetVpcConfig.builder()
+ *                 .subnetIds(&#34;subnet-06e9b13400c225127&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

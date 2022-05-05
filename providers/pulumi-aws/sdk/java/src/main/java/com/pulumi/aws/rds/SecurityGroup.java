@@ -24,6 +24,29 @@ import javax.annotation.Nullable;
  * attribute instead.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new SecurityGroup(&#34;default&#34;, SecurityGroupArgs.builder()        
+ *             .ingress(SecurityGroupIngress.builder()
+ *                 .cidr(&#34;10.0.0.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

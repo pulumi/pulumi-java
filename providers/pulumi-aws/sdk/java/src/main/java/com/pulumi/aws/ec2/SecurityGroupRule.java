@@ -34,6 +34,106 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecurityGroupRule(&#34;example&#34;, SecurityGroupRuleArgs.builder()        
+ *             .type(&#34;ingress&#34;)
+ *             .fromPort(0)
+ *             .toPort(65535)
+ *             .protocol(&#34;tcp&#34;)
+ *             .cidrBlocks(aws_vpc.getExample().getCidr_block())
+ *             .ipv6CidrBlocks(aws_vpc.getExample().getIpv6_cidr_block())
+ *             .securityGroupId(&#34;sg-123456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Usage With Prefix List IDs
+ * 
+ * Prefix Lists are either managed by AWS internally, or created by the customer using a
+ * Managed Prefix List resource. Prefix Lists provided by
+ * AWS are associated with a prefix list name, or service name, that is linked to a specific region.
+ * 
+ * Prefix list IDs are exported on VPC Endpoints, so you can use this format:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myEndpoint = new VpcEndpoint(&#34;myEndpoint&#34;);
+ * 
+ *         var allowAll = new SecurityGroupRule(&#34;allowAll&#34;, SecurityGroupRuleArgs.builder()        
+ *             .type(&#34;egress&#34;)
+ *             .toPort(0)
+ *             .protocol(&#34;-1&#34;)
+ *             .prefixListIds(myEndpoint.getPrefixListId())
+ *             .fromPort(0)
+ *             .securityGroupId(&#34;sg-123456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * You can also find a specific Prefix List using the [`aws.ec2.getPrefixList`](https://www.terraform.io/docs/providers/aws/d/prefix_list.html)
+ * or [`ec2_managed_prefix_list`](https://www.terraform.io/docs/providers/aws/d/ec2_managed_prefix_list.html) data sources:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         final var s3 = Output.of(Ec2Functions.getPrefixList(GetPrefixListArgs.builder()
+ *             .name(String.format(&#34;com.amazonaws.%s.s3&#34;, current.apply(getRegionResult -&gt; getRegionResult.getName())))
+ *             .build()));
+ * 
+ *         var s3GatewayEgress = new SecurityGroupRule(&#34;s3GatewayEgress&#34;, SecurityGroupRuleArgs.builder()        
+ *             .description(&#34;S3 Gateway Egress&#34;)
+ *             .type(&#34;egress&#34;)
+ *             .securityGroupId(&#34;sg-123456&#34;)
+ *             .fromPort(443)
+ *             .toPort(443)
+ *             .protocol(&#34;tcp&#34;)
+ *             .prefixListIds(s3.apply(getPrefixListResult -&gt; getPrefixListResult.getId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Security Group Rules can be imported using the `security_group_id`, `type`, `protocol`, `from_port`, `to_port`, and source(s)/destination(s) (e.g., `cidr_block`) separated by underscores (`_`). All parts are required. Not all rule permissions (e.g., not all of a rule&#39;s CIDR blocks) need to be imported for this provider to manage rule permissions. However, importing some of a rule&#39;s permissions but not others, and then making changes to the rule will result in the creation of an additional rule to capture the updated permissions. Rule permissions that were not imported are left intact in the original rule. Import an ingress rule in security group `sg-6e616f6d69` for TCP port 8000 with an IPv4 destination CIDR of `10.0.3.0/24`console

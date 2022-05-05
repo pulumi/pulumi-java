@@ -26,6 +26,27 @@ public final class OutpostsFunctions {
      * Provides details about an Outposts Outpost.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutpost(GetOutpostArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOutpostResult> getOutpost() {
@@ -51,6 +72,27 @@ public final class OutpostsFunctions {
      * Information about Outposts Instance Types.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutpostInstanceTypes(GetOutpostInstanceTypesArgs.builder()
+     *             .arn(data.getAws_outposts_outpost().getExample().getArn())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOutpostInstanceTypesResult> getOutpostInstanceTypes(GetOutpostInstanceTypesArgs args) {
@@ -63,6 +105,27 @@ public final class OutpostsFunctions {
      * Provides details about multiple Outposts.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getOutposts(GetOutpostsArgs.builder()
+     *             .siteId(data.getAws_outposts_site().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetOutpostsResult> getOutposts() {
@@ -78,6 +141,27 @@ public final class OutpostsFunctions {
      * Provides details about an Outposts Site.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(OutpostsFunctions.getSite(GetSiteArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSiteResult> getSite() {
@@ -93,6 +177,25 @@ public final class OutpostsFunctions {
      * Provides details about multiple Outposts Sites.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(OutpostsFunctions.getSites());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSitesResult> getSites() {

@@ -31,6 +31,48 @@ import javax.annotation.Nullable;
  * but take care to not duplicate those hooks with this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobarGroup = new Group(&#34;foobarGroup&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-west-2a&#34;)
+ *             .healthCheckType(&#34;EC2&#34;)
+ *             .terminationPolicies(&#34;OldestInstance&#34;)
+ *             .tags(GroupTag.builder()
+ *                 .key(&#34;Foo&#34;)
+ *                 .value(&#34;foo-bar&#34;)
+ *                 .propagateAtLaunch(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var foobarLifecycleHook = new LifecycleHook(&#34;foobarLifecycleHook&#34;, LifecycleHookArgs.builder()        
+ *             .autoscalingGroupName(foobarGroup.getName())
+ *             .defaultResult(&#34;CONTINUE&#34;)
+ *             .heartbeatTimeout(2000)
+ *             .lifecycleTransition(&#34;autoscaling:EC2_INSTANCE_LAUNCHING&#34;)
+ *             .notificationMetadata(&#34;&#34;&#34;
+ * {
+ *   &#34;foo&#34;: &#34;bar&#34;
+ * }
+ *             &#34;&#34;&#34;)
+ *             .notificationTargetArn(&#34;arn:aws:sqs:us-east-1:444455556666:queue1*&#34;)
+ *             .roleArn(&#34;arn:aws:iam::123456789012:role/S3Access&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

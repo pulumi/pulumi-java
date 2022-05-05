@@ -46,6 +46,43 @@ public final class AwsFunctions {
      * resources.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+     *             .executableUsers(&#34;self&#34;)
+     *             .filters(            
+     *                 GetAmiFilter.builder()
+     *                     .name(&#34;name&#34;)
+     *                     .values(&#34;myami-*&#34;)
+     *                     .build(),
+     *                 GetAmiFilter.builder()
+     *                     .name(&#34;root-device-type&#34;)
+     *                     .values(&#34;ebs&#34;)
+     *                     .build(),
+     *                 GetAmiFilter.builder()
+     *                     .name(&#34;virtualization-type&#34;)
+     *                     .values(&#34;hvm&#34;)
+     *                     .build())
+     *             .mostRecent(true)
+     *             .nameRegex(&#34;^myami-\\d{3}&#34;)
+     *             .owners(&#34;self&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getAmi has been deprecated in favor of aws.ec2.getAmi
@@ -62,6 +99,31 @@ public final class AwsFunctions {
      * Use this data source to get a list of AMI IDs matching the specified criteria.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var ubuntu = Output.of(Ec2Functions.getAmiIds(GetAmiIdsArgs.builder()
+     *             .filters(GetAmiIdsFilter.builder()
+     *                 .name(&#34;name&#34;)
+     *                 .values(&#34;ubuntu/images/ubuntu-*-*-amd64-server-*&#34;)
+     *                 .build())
+     *             .owners(&#34;099720109477&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getAmiIds has been deprecated in favor of aws.ec2.getAmiIds
@@ -78,6 +140,27 @@ public final class AwsFunctions {
      * Parses an Amazon Resource Name (ARN) into its constituent parts.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var dbInstance = Output.of(AwsFunctions.getArn(GetArnArgs.builder()
+     *             .arn(&#34;arn:aws:rds:eu-west-1:123456789012:db:mysql-db&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetArnResult> getArn(GetArnArgs args) {
@@ -91,6 +174,45 @@ public final class AwsFunctions {
      * ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var groups = Output.of(AutoscalingFunctions.getAmiIds(GetAmiIdsArgs.builder()
+     *             .filters(            
+     *                 GetAmiIdsFilter.builder()
+     *                     .name(&#34;tag:Team&#34;)
+     *                     .values(&#34;Pets&#34;)
+     *                     .build(),
+     *                 GetAmiIdsFilter.builder()
+     *                     .name(&#34;tag-key&#34;)
+     *                     .values(&#34;Environment&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         var slackNotifications = new Notification(&#34;slackNotifications&#34;, NotificationArgs.builder()        
+     *             .groupNames(groups.apply(getAmiIdsResult -&gt; getAmiIdsResult.getNames()))
+     *             .notifications(            
+     *                 &#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;,
+     *                 &#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;,
+     *                 &#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;,
+     *                 &#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;)
+     *             .topicArn(&#34;TOPIC ARN&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds
@@ -140,6 +262,92 @@ public final class AwsFunctions {
      * &gt; When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
      * 
      * ## Example Usage
+     * ### By State
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+     *             .state(&#34;available&#34;)
+     *             .build()));
+     * 
+     *         var primary = new Subnet(&#34;primary&#34;, SubnetArgs.builder()        
+     *             .availabilityZone(available.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[0]))
+     *             .build());
+     * 
+     *         var secondary = new Subnet(&#34;secondary&#34;, SubnetArgs.builder()        
+     *             .availabilityZone(available.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[1]))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Filter
+     * 
+     * All Local Zones (regardless of opt-in status):
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+     *             .allAvailabilityZones(true)
+     *             .filters(GetAvailabilityZonesFilter.builder()
+     *                 .name(&#34;opt-in-status&#34;)
+     *                 .values(                
+     *                     &#34;not-opted-in&#34;,
+     *                     &#34;opted-in&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * Only Availability Zones (no Local Zones):
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
+     *             .filters(GetAvailabilityZonesFilter.builder()
+     *                 .name(&#34;opt-in-status&#34;)
+     *                 .values(&#34;opt-in-not-required&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAvailabilityZonesResult> getAvailabilityZones() {
@@ -155,6 +363,68 @@ public final class AwsFunctions {
      * Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of permitting in S3 bucket policy.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var main = Output.of(AwsFunctions.getBillingServiceAccount());
+     * 
+     *         var billingLogs = new BucketV2(&#34;billingLogs&#34;);
+     * 
+     *         var billingLogsAcl = new BucketAclV2(&#34;billingLogsAcl&#34;, BucketAclV2Args.builder()        
+     *             .bucket(billingLogs.getId())
+     *             .acl(&#34;private&#34;)
+     *             .build());
+     * 
+     *         var allowBillingLogging = new BucketPolicy(&#34;allowBillingLogging&#34;, BucketPolicyArgs.builder()        
+     *             .bucket(billingLogs.getId())
+     *             .policy(&#34;&#34;&#34;
+     * {
+     *   &#34;Id&#34;: &#34;Policy&#34;,
+     *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+     *   &#34;Statement&#34;: [
+     *     {
+     *       &#34;Action&#34;: [
+     *         &#34;s3:GetBucketAcl&#34;, &#34;s3:GetBucketPolicy&#34;
+     *       ],
+     *       &#34;Effect&#34;: &#34;Allow&#34;,
+     *       &#34;Resource&#34;: &#34;arn:aws:s3:::my-billing-tf-test-bucket&#34;,
+     *       &#34;Principal&#34;: {
+     *         &#34;AWS&#34;: [
+     *           &#34;%s&#34;
+     *         ]
+     *       }
+     *     },
+     *     {
+     *       &#34;Action&#34;: [
+     *         &#34;s3:PutObject&#34;
+     *       ],
+     *       &#34;Effect&#34;: &#34;Allow&#34;,
+     *       &#34;Resource&#34;: &#34;arn:aws:s3:::my-billing-tf-test-bucket/*&#34;,
+     *       &#34;Principal&#34;: {
+     *         &#34;AWS&#34;: [
+     *           &#34;%s&#34;
+     *         ]
+     *       }
+     *     }
+     *   ]
+     * }
+     * &#34;, main.apply(getBillingServiceAccountResult -&gt; getBillingServiceAccountResult.getArn()),main.apply(getBillingServiceAccountResult -&gt; getBillingServiceAccountResult.getArn())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetBillingServiceAccountResult> getBillingServiceAccount() {
@@ -171,6 +441,28 @@ public final class AwsFunctions {
      * which this provider is authorized.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+     * 
+     *         ctx.export(&#34;accountId&#34;, current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()));
+     *         ctx.export(&#34;callerArn&#34;, current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getArn()));
+     *         ctx.export(&#34;callerUser&#34;, current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getUserId()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCallerIdentityResult> getCallerIdentity() {
@@ -189,6 +481,26 @@ public final class AwsFunctions {
      * &gt; **NOTE:** To use this data source, you must have the `s3:ListAllMyBuckets` permission.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(S3Functions.getCanonicalUserId());
+     * 
+     *         ctx.export(&#34;canonicalUserId&#34;, current.apply(getCanonicalUserIdResult -&gt; getCanonicalUserIdResult.getId()));
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId
@@ -206,6 +518,58 @@ public final class AwsFunctions {
     }
     /**
      * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AwsFunctions.getDefaultTags());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Dynamically Apply Default Tags to Auto Scaling Group
+     * 
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleDefaultTags = Output.of(AwsFunctions.getDefaultTags());
+     * 
+     *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+     *             .dynamic(Map.ofEntries(
+     *                 Map.entry(&#34;forEach&#34;, exampleDefaultTags.apply(getDefaultTagsResult -&gt; getDefaultTagsResult.getTags())),
+     *                 Map.entry(&#34;content&#34;, Map.ofEntries(
+     *                     Map.entry(&#34;key&#34;, tag.getKey()),
+     *                     Map.entry(&#34;value&#34;, tag.getValue()),
+     *                     Map.entry(&#34;propagateAtLaunch&#34;, true)
+     *                 ))
+     *             ))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDefaultTagsResult> getDefaultTags() {
@@ -221,6 +585,97 @@ public final class AwsFunctions {
      * `aws.ec2.Eip` provides details about a specific Elastic IP.
      * 
      * ## Example Usage
+     * ### Search By Allocation ID (VPC only)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byAllocationId = Output.of(Ec2Functions.getElasticIp(GetElasticIpArgs.builder()
+     *             .id(&#34;eipalloc-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Search By Filters (EC2-Classic or VPC)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byFilter = Output.of(Ec2Functions.getElasticIp(GetElasticIpArgs.builder()
+     *             .filters(GetElasticIpFilter.builder()
+     *                 .name(&#34;tag:Name&#34;)
+     *                 .values(&#34;exampleNameTagValue&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Search By Public IP (EC2-Classic or VPC)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byPublicIp = Output.of(Ec2Functions.getElasticIp(GetElasticIpArgs.builder()
+     *             .publicIp(&#34;1.2.3.4&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Search By Tags (EC2-Classic or VPC)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var byTags = Output.of(Ec2Functions.getElasticIp(GetElasticIpArgs.builder()
+     *             .tags(Map.of(&#34;Name&#34;, &#34;exampleNameTagValue&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp
@@ -240,6 +695,44 @@ public final class AwsFunctions {
      * Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var europeanEc2 = Output.of(AwsFunctions.getIpRanges(GetIpRangesArgs.builder()
+     *             .regions(            
+     *                 &#34;eu-west-1&#34;,
+     *                 &#34;eu-central-1&#34;)
+     *             .services(&#34;ec2&#34;)
+     *             .build()));
+     * 
+     *         var fromEurope = new SecurityGroup(&#34;fromEurope&#34;, SecurityGroupArgs.builder()        
+     *             .ingress(SecurityGroupIngress.builder()
+     *                 .fromPort(&#34;443&#34;)
+     *                 .toPort(&#34;443&#34;)
+     *                 .protocol(&#34;tcp&#34;)
+     *                 .cidrBlocks(europeanEc2.apply(getIpRangesResult -&gt; getIpRangesResult.getCidrBlocks()))
+     *                 .ipv6CidrBlocks(europeanEc2.apply(getIpRangesResult -&gt; getIpRangesResult.getIpv6CidrBlocks()))
+     *                 .build())
+     *             .tags(Map.ofEntries(
+     *                 Map.entry(&#34;CreateDate&#34;, europeanEc2.apply(getIpRangesResult -&gt; getIpRangesResult.getCreateDate())),
+     *                 Map.entry(&#34;SyncToken&#34;, europeanEc2.apply(getIpRangesResult -&gt; getIpRangesResult.getSyncToken()))
+     *             ))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetIpRangesResult> getIpRanges(GetIpRangesArgs args) {
@@ -252,6 +745,33 @@ public final class AwsFunctions {
      * Use this data source to lookup current AWS partition in which this provider is working
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getPartition());
+     * 
+     *         final var s3Policy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+     *             .statements(GetPolicyDocumentStatement.builder()
+     *                 .actions(&#34;s3:ListBucket&#34;)
+     *                 .resources(String.format(&#34;arn:%s:s3:::my-bucket&#34;, current.apply(getPartitionResult -&gt; getPartitionResult.getPartition())))
+     *                 .sid(&#34;1&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPartitionResult> getPartition() {
@@ -265,6 +785,72 @@ public final class AwsFunctions {
     }
     /**
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var privateS3VpcEndpoint = new VpcEndpoint(&#34;privateS3VpcEndpoint&#34;, VpcEndpointArgs.builder()        
+     *             .vpcId(aws_vpc.getFoo().getId())
+     *             .serviceName(&#34;com.amazonaws.us-west-2.s3&#34;)
+     *             .build());
+     * 
+     *         final var privateS3PrefixList = Ec2Functions.getPrefixList(GetPrefixListArgs.builder()
+     *             .prefixListId(privateS3VpcEndpoint.getPrefixListId())
+     *             .build());
+     * 
+     *         var bar = new NetworkAcl(&#34;bar&#34;, NetworkAclArgs.builder()        
+     *             .vpcId(aws_vpc.getFoo().getId())
+     *             .build());
+     * 
+     *         var privateS3NetworkAclRule = new NetworkAclRule(&#34;privateS3NetworkAclRule&#34;, NetworkAclRuleArgs.builder()        
+     *             .networkAclId(bar.getId())
+     *             .ruleNumber(200)
+     *             .egress(false)
+     *             .protocol(&#34;tcp&#34;)
+     *             .ruleAction(&#34;allow&#34;)
+     *             .cidrBlock(privateS3PrefixList.apply(getPrefixListResult -&gt; getPrefixListResult).apply(privateS3PrefixList -&gt; privateS3PrefixList.apply(getPrefixListResult -&gt; getPrefixListResult.getCidrBlocks()[0])))
+     *             .fromPort(443)
+     *             .toPort(443)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(Ec2Functions.getPrefixList(GetPrefixListArgs.builder()
+     *             .filters(GetPrefixListFilter.builder()
+     *                 .name(&#34;prefix-list-id&#34;)
+     *                 .values(&#34;pl-68a54001&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.getPrefixList has been deprecated in favor of aws.ec2.getPrefixList
@@ -290,6 +876,28 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
+     * The following example shows how the resource might be used to obtain
+     * the name of the AWS region configured on the provider.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getRegion());
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetRegionResult> getRegion() {
         return getRegion(GetRegionArgs.Empty, InvokeOptions.Empty);
@@ -305,6 +913,77 @@ public final class AwsFunctions {
      * 
      * ## Example Usage
      * 
+     * Enabled AWS Regions:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getRegions());
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * All the regions regardless of the availability
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getRegions(GetRegionsArgs.builder()
+     *             .allRegions(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * To see regions that are filtered by `&#34;not-opted-in&#34;`, the `all_regions` argument needs to be set to `true` or no results will be returned.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getRegions(GetRegionsArgs.builder()
+     *             .allRegions(true)
+     *             .filters(GetRegionsFilter.builder()
+     *                 .name(&#34;opt-in-status&#34;)
+     *                 .values(&#34;not-opted-in&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetRegionsResult> getRegions() {
         return getRegions(GetRegionsArgs.Empty, InvokeOptions.Empty);
@@ -319,6 +998,75 @@ public final class AwsFunctions {
      * Use this data source to compose and decompose AWS service DNS names.
      * 
      * ## Example Usage
+     * ### Get Service DNS Name
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getRegion());
+     * 
+     *         final var test = Output.of(AwsFunctions.getService(GetServiceArgs.builder()
+     *             .region(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+     *             .serviceId(&#34;ec2&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Use Service Reverse DNS Name to Get Components
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var s3 = Output.of(AwsFunctions.getService(GetServiceArgs.builder()
+     *             .reverseDnsName(&#34;cn.com.amazonaws.cn-north-1.s3&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Determine Regional Support for a Service
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var s3 = Output.of(AwsFunctions.getService(GetServiceArgs.builder()
+     *             .reverseDnsName(&#34;com.amazonaws.us-gov-west-1.waf&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetServiceResult> getService() {

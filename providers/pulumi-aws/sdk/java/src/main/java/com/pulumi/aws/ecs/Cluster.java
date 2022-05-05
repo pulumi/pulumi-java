@@ -25,6 +25,105 @@ import javax.annotation.Nullable;
  * &gt; **NOTE on Clusters and Cluster Capacity Providers:** this provider provides both a standalone `aws.ecs.ClusterCapacityProviders` resource, as well as allowing the capacity providers and default strategies to be managed in-line by the `aws.ecs.Cluster` resource. You cannot use a Cluster with in-line capacity providers in conjunction with the Capacity Providers resource, nor use more than one Capacity Providers resource with a single Cluster, as doing so will cause a conflict and will lead to mutual overwrites.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Cluster(&#34;foo&#34;, ClusterArgs.builder()        
+ *             .settings(ClusterSetting.builder()
+ *                 .name(&#34;containerInsights&#34;)
+ *                 .value(&#34;enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example with Log Configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .deletionWindowInDays(7)
+ *             .build());
+ * 
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;);
+ * 
+ *         var test = new Cluster(&#34;test&#34;, ClusterArgs.builder()        
+ *             .configuration(ClusterConfiguration.builder()
+ *                 .executeCommandConfiguration(ClusterConfigurationExecuteCommandConfiguration.builder()
+ *                     .kmsKeyId(exampleKey.getArn())
+ *                     .logging(&#34;OVERRIDE&#34;)
+ *                     .logConfiguration(ClusterConfigurationExecuteCommandConfigurationLogConfiguration.builder()
+ *                         .cloudWatchEncryptionEnabled(true)
+ *                         .cloudWatchLogGroupName(exampleLogGroup.getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example with Capacity Providers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;);
+ * 
+ *         var exampleCapacityProvider = new CapacityProvider(&#34;exampleCapacityProvider&#34;, CapacityProviderArgs.builder()        
+ *             .autoScalingGroupProvider(CapacityProviderAutoScalingGroupProvider.builder()
+ *                 .autoScalingGroupArn(aws_autoscaling_group.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleClusterCapacityProviders = new ClusterCapacityProviders(&#34;exampleClusterCapacityProviders&#34;, ClusterCapacityProvidersArgs.builder()        
+ *             .clusterName(exampleCluster.getName())
+ *             .capacityProviders(exampleCapacityProvider.getName())
+ *             .defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategy.builder()
+ *                 .base(1)
+ *                 .weight(100)
+ *                 .capacityProvider(exampleCapacityProvider.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

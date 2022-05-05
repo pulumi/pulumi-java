@@ -21,6 +21,59 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource can only be used with `us-east-1` region.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRepository = new Repository(&#34;exampleRepository&#34;, RepositoryArgs.builder()        
+ *             .repositoryName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleRepositoryPolicy = new RepositoryPolicy(&#34;exampleRepositoryPolicy&#34;, RepositoryPolicyArgs.builder()        
+ *             .repositoryName(exampleRepository.getRepositoryName())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2008-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Sid&#34;: &#34;new policy&#34;,
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Principal&#34;: &#34;*&#34;,
+ *             &#34;Action&#34;: [
+ *                 &#34;ecr:GetDownloadUrlForLayer&#34;,
+ *                 &#34;ecr:BatchGetImage&#34;,
+ *                 &#34;ecr:BatchCheckLayerAvailability&#34;,
+ *                 &#34;ecr:PutImage&#34;,
+ *                 &#34;ecr:InitiateLayerUpload&#34;,
+ *                 &#34;ecr:UploadLayerPart&#34;,
+ *                 &#34;ecr:CompleteLayerUpload&#34;,
+ *                 &#34;ecr:DescribeRepositories&#34;,
+ *                 &#34;ecr:GetRepositoryPolicy&#34;,
+ *                 &#34;ecr:ListImages&#34;,
+ *                 &#34;ecr:DeleteRepository&#34;,
+ *                 &#34;ecr:BatchDeleteImage&#34;,
+ *                 &#34;ecr:SetRepositoryPolicy&#34;,
+ *                 &#34;ecr:DeleteRepositoryPolicy&#34;
+ *             ]
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

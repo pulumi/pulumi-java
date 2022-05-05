@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGraphQLApi = new GraphQLApi(&#34;exampleGraphQLApi&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .build());
+ * 
+ *         var exampleApiCache = new ApiCache(&#34;exampleApiCache&#34;, ApiCacheArgs.builder()        
+ *             .apiId(exampleGraphQLApi.getId())
+ *             .expires(&#34;2018-05-03T04:00:00Z&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * `aws_appsync_api_cache` can be imported using the AppSync API ID, e.g.,

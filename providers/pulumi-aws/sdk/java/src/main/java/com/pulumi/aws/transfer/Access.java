@@ -21,6 +21,60 @@ import javax.annotation.Nullable;
  * Provides a AWS Transfer Access resource.
  * 
  * ## Example Usage
+ * ### Basic S3
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Access(&#34;example&#34;, AccessArgs.builder()        
+ *             .externalId(&#34;S-1-1-12-1234567890-123456789-1234567890-1234&#34;)
+ *             .serverId(aws_transfer_server.getExample().getId())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .homeDirectory(String.format(&#34;/%s/&#34;, aws_s3_bucket.getExample().getId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic EFS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Access(&#34;test&#34;, AccessArgs.builder()        
+ *             .externalId(&#34;S-1-1-12-1234567890-123456789-1234567890-1234&#34;)
+ *             .serverId(aws_transfer_server.getTest().getId())
+ *             .role(aws_iam_role.getTest().getArn())
+ *             .homeDirectory(String.format(&#34;/%s/&#34;, aws_efs_file_system.getTest().getId()))
+ *             .posixProfile(AccessPosixProfile.builder()
+ *                 .gid(1000)
+ *                 .uid(1000)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

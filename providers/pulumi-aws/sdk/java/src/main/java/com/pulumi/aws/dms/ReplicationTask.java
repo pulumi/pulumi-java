@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides a DMS (Data Migration Service) replication task resource. DMS replication tasks can be created, updated, deleted, and imported.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ReplicationTask(&#34;test&#34;, ReplicationTaskArgs.builder()        
+ *             .cdcStartTime(1484346880)
+ *             .migrationType(&#34;full-load&#34;)
+ *             .replicationInstanceArn(aws_dms_replication_instance.getTest-dms-replication-instance-tf().getReplication_instance_arn())
+ *             .replicationTaskId(&#34;test-dms-replication-task-tf&#34;)
+ *             .replicationTaskSettings(&#34;...&#34;)
+ *             .sourceEndpointArn(aws_dms_endpoint.getTest-dms-source-endpoint-tf().getEndpoint_arn())
+ *             .tableMappings(&#34;{\&#34;rules\&#34;:[{\&#34;rule-type\&#34;:\&#34;selection\&#34;,\&#34;rule-id\&#34;:\&#34;1\&#34;,\&#34;rule-name\&#34;:\&#34;1\&#34;,\&#34;object-locator\&#34;:{\&#34;schema-name\&#34;:\&#34;%\&#34;,\&#34;table-name\&#34;:\&#34;%\&#34;},\&#34;rule-action\&#34;:\&#34;include\&#34;}]}&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;test&#34;))
+ *             .targetEndpointArn(aws_dms_endpoint.getTest-dms-target-endpoint-tf().getEndpoint_arn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

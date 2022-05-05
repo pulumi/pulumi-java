@@ -22,6 +22,43 @@ import javax.annotation.Nullable;
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var flowerTypes = new SlotType(&#34;flowerTypes&#34;, SlotTypeArgs.builder()        
+ *             .createVersion(true)
+ *             .description(&#34;Types of flowers to order&#34;)
+ *             .enumerationValues(            
+ *                 SlotTypeEnumerationValue.builder()
+ *                     .synonyms(                    
+ *                         &#34;Lirium&#34;,
+ *                         &#34;Martagon&#34;)
+ *                     .value(&#34;lilies&#34;)
+ *                     .build(),
+ *                 SlotTypeEnumerationValue.builder()
+ *                     .synonyms(                    
+ *                         &#34;Eduardoregelia&#34;,
+ *                         &#34;Podonix&#34;)
+ *                     .value(&#34;tulips&#34;)
+ *                     .build())
+ *             .name(&#34;FlowerTypes&#34;)
+ *             .valueSelectionStrategy(&#34;ORIGINAL_VALUE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

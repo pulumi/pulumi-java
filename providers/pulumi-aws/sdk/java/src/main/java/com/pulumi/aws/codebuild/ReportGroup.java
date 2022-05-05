@@ -21,6 +21,61 @@ import javax.annotation.Nullable;
  * Provides a CodeBuild Report Groups Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;my test kms key&#34;)
+ *             .deletionWindowInDays(7)
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Id&#34;: &#34;kms-tf-1&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;Enable IAM User Permissions&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;AWS&#34;: &#34;*&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;kms:*&#34;,
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleReportGroup = new ReportGroup(&#34;exampleReportGroup&#34;, ReportGroupArgs.builder()        
+ *             .type(&#34;TEST&#34;)
+ *             .exportConfig(ReportGroupExportConfig.builder()
+ *                 .type(&#34;S3&#34;)
+ *                 .s3Destination(ReportGroupExportConfigS3Destination.builder()
+ *                     .bucket(exampleBucketV2.getId())
+ *                     .encryptionDisabled(false)
+ *                     .encryptionKey(exampleKey.getArn())
+ *                     .packaging(&#34;NONE&#34;)
+ *                     .path(&#34;/some&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

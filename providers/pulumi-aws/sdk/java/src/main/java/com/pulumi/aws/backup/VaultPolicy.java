@@ -17,6 +17,55 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup vault policy resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVault = new Vault(&#34;exampleVault&#34;);
+ * 
+ *         var exampleVaultPolicy = new VaultPolicy(&#34;exampleVaultPolicy&#34;, VaultPolicyArgs.builder()        
+ *             .backupVaultName(exampleVault.getName())
+ *             .policy(exampleVault.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Id&#34;: &#34;default&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;default&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;AWS&#34;: &#34;*&#34;
+ *       },
+ *       &#34;Action&#34;: [
+ * 		&#34;backup:DescribeBackupVault&#34;,
+ * 		&#34;backup:DeleteBackupVault&#34;,
+ * 		&#34;backup:PutBackupVaultAccessPolicy&#34;,
+ * 		&#34;backup:DeleteBackupVaultAccessPolicy&#34;,
+ * 		&#34;backup:GetBackupVaultAccessPolicy&#34;,
+ * 		&#34;backup:StartBackupJob&#34;,
+ * 		&#34;backup:GetBackupVaultNotifications&#34;,
+ * 		&#34;backup:PutBackupVaultNotifications&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;%s&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

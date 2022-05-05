@@ -22,6 +22,27 @@ public final class WafregionalFunctions {
      * `aws.wafregional.IpSet` Retrieves a WAF Regional IP Set Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getIpset(GetIpsetArgs.builder()
+     *             .name(&#34;tfWAFRegionalIPSet&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetIpsetResult> getIpset(GetIpsetArgs args) {
@@ -34,6 +55,27 @@ public final class WafregionalFunctions {
      * `aws.wafregional.RateBasedRule` Retrieves a WAF Regional Rate Based Rule Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRateBasedMod(GetRateBasedModArgs.builder()
+     *             .name(&#34;tfWAFRegionalRateBasedRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRateBasedModResult> getRateBasedMod(GetRateBasedModArgs args) {
@@ -46,6 +88,27 @@ public final class WafregionalFunctions {
      * `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getRule(GetRuleArgs.builder()
+     *             .name(&#34;tfWAFRegionalRule&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRuleResult> getRule(GetRuleArgs args) {
@@ -58,6 +121,27 @@ public final class WafregionalFunctions {
      * `aws.wafregional.WebAcl` Retrieves a WAF Regional Web ACL Resource Id.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(WafregionalFunctions.getWebAcl(GetWebAclArgs.builder()
+     *             .name(&#34;tfWAFRegionalWebACL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {

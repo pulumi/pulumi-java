@@ -22,6 +22,88 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleVpcIpam = new VpcIpam(&#34;exampleVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVpcIpamPool = new VpcIpamPool(&#34;exampleVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(exampleVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Nested Pools:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var example = new VpcIpam(&#34;example&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var parent = new VpcIpamPool(&#34;parent&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(example.getPrivateDefaultScopeId())
+ *             .build());
+ * 
+ *         var parentTest = new VpcIpamPoolCidr(&#34;parentTest&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(parent.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var child = new VpcIpamPool(&#34;child&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(example.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .sourceIpamPoolId(parent.getId())
+ *             .build());
+ * 
+ *         var childTest = new VpcIpamPoolCidr(&#34;childTest&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(child.getId())
+ *             .cidr(&#34;172.2.0.0/24&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IPAMs can be imported using the `ipam pool id`, e.g.

@@ -18,6 +18,27 @@ public final class CodecommitFunctions {
      * Provides details about a specific CodeCommit Approval Rule Template.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CodecommitFunctions.getApprovalRuleTemplate(GetApprovalRuleTemplateArgs.builder()
+     *             .name(&#34;MyExampleApprovalRuleTemplate&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetApprovalRuleTemplateResult> getApprovalRuleTemplate(GetApprovalRuleTemplateArgs args) {
@@ -30,6 +51,27 @@ public final class CodecommitFunctions {
      * The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CodecommitFunctions.getRepository(GetRepositoryArgs.builder()
+     *             .repositoryName(&#34;MyTestRepository&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRepositoryResult> getRepository(GetRepositoryArgs args) {

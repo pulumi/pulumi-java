@@ -19,6 +19,33 @@ import javax.annotation.Nullable;
  * Provides an API Gateway Gateway Response for a REST API Gateway.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new RestApi(&#34;main&#34;);
+ * 
+ *         var test = new Response(&#34;test&#34;, ResponseArgs.builder()        
+ *             .restApiId(main.getId())
+ *             .statusCode(&#34;401&#34;)
+ *             .responseType(&#34;UNAUTHORIZED&#34;)
+ *             .responseTemplates(Map.of(&#34;application/json&#34;, &#34;{\&#34;message\&#34;:$context.error.messageString}&#34;))
+ *             .responseParameters(Map.of(&#34;gatewayresponse.header.Authorization&#34;, &#34;&#39;Basic&#39;&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

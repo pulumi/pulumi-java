@@ -17,6 +17,38 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [Amazon Macie Invitation Accepter](https://docs.aws.amazon.com/macie/latest/APIReference/invitations-accept.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primaryAccount = new Account(&#34;primaryAccount&#34;);
+ * 
+ *         var memberAccount = new Account(&#34;memberAccount&#34;);
+ * 
+ *         var primaryMember = new Member(&#34;primaryMember&#34;, MemberArgs.builder()        
+ *             .accountId(&#34;ACCOUNT ID&#34;)
+ *             .email(&#34;EMAIL&#34;)
+ *             .invite(true)
+ *             .invitationMessage(&#34;Message of the invite&#34;)
+ *             .build());
+ * 
+ *         var memberInvitationAccepter = new InvitationAccepter(&#34;memberInvitationAccepter&#34;, InvitationAccepterArgs.builder()        
+ *             .administratorAccountId(&#34;ADMINISTRATOR ACCOUNT ID&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

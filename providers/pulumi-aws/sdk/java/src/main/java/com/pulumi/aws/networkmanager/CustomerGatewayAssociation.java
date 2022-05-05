@@ -19,6 +19,62 @@ import javax.annotation.Nullable;
  * If you specify a link, it must be associated with the specified device.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGlobalNetwork = new GlobalNetwork(&#34;exampleGlobalNetwork&#34;, GlobalNetworkArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleSite = new Site(&#34;exampleSite&#34;, SiteArgs.builder()        
+ *             .globalNetworkId(exampleGlobalNetwork.getId())
+ *             .build());
+ * 
+ *         var exampleDevice = new Device(&#34;exampleDevice&#34;, DeviceArgs.builder()        
+ *             .globalNetworkId(exampleGlobalNetwork.getId())
+ *             .siteId(exampleSite.getId())
+ *             .build());
+ * 
+ *         var exampleCustomerGateway = new CustomerGateway(&#34;exampleCustomerGateway&#34;, CustomerGatewayArgs.builder()        
+ *             .bgpAsn(65000)
+ *             .ipAddress(&#34;172.83.124.10&#34;)
+ *             .type(&#34;ipsec.1&#34;)
+ *             .build());
+ * 
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;);
+ * 
+ *         var exampleVpnConnection = new VpnConnection(&#34;exampleVpnConnection&#34;, VpnConnectionArgs.builder()        
+ *             .customerGatewayId(exampleCustomerGateway.getId())
+ *             .transitGatewayId(exampleTransitGateway.getId())
+ *             .type(exampleCustomerGateway.getType())
+ *             .staticRoutesOnly(true)
+ *             .build());
+ * 
+ *         var exampleTransitGatewayRegistration = new TransitGatewayRegistration(&#34;exampleTransitGatewayRegistration&#34;, TransitGatewayRegistrationArgs.builder()        
+ *             .globalNetworkId(exampleGlobalNetwork.getId())
+ *             .transitGatewayArn(exampleTransitGateway.getArn())
+ *             .build());
+ * 
+ *         var exampleCustomerGatewayAssociation = new CustomerGatewayAssociation(&#34;exampleCustomerGatewayAssociation&#34;, CustomerGatewayAssociationArgs.builder()        
+ *             .globalNetworkId(exampleGlobalNetwork.getId())
+ *             .customerGatewayArn(exampleCustomerGateway.getArn())
+ *             .deviceId(exampleDevice.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

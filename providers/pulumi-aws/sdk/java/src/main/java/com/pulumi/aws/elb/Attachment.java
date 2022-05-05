@@ -26,6 +26,28 @@ import javax.annotation.Nullable;
  * conflict and will overwrite attachments.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var baz = new Attachment(&#34;baz&#34;, AttachmentArgs.builder()        
+ *             .elb(aws_elb.getBar().getId())
+ *             .instance(aws_instance.getFoo().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:elb/attachment:Attachment")

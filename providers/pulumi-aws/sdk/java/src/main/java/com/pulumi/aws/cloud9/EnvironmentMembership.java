@@ -17,6 +17,35 @@ import javax.annotation.Nullable;
  * Provides an environment member to an AWS Cloud9 development environment.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testEnvironmentEC2 = new EnvironmentEC2(&#34;testEnvironmentEC2&#34;, EnvironmentEC2Args.builder()        
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         var testUser = new User(&#34;testUser&#34;);
+ * 
+ *         var testEnvironmentMembership = new EnvironmentMembership(&#34;testEnvironmentMembership&#34;, EnvironmentMembershipArgs.builder()        
+ *             .environmentId(testEnvironmentEC2.getId())
+ *             .permissions(&#34;read-only&#34;)
+ *             .userArn(testUser.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

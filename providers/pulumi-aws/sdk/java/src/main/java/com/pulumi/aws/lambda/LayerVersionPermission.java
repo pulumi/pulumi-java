@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * For information about Lambda Layer Permissions and how to use them, see [Using Resource-based Policies for AWS Lambda][1]
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lambdaLayerPermission = new LayerVersionPermission(&#34;lambdaLayerPermission&#34;, LayerVersionPermissionArgs.builder()        
+ *             .action(&#34;lambda:GetLayerVersion&#34;)
+ *             .layerName(&#34;arn:aws:lambda:us-west-2:123456654321:layer:test_layer1&#34;)
+ *             .principal(&#34;111111111111&#34;)
+ *             .statementId(&#34;dev-account&#34;)
+ *             .versionNumber(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

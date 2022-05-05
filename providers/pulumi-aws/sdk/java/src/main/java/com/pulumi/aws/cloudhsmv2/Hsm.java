@@ -18,6 +18,34 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The following example below creates an HSM module in CloudHSM cluster.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var cluster = Output.of(Cloudhsmv2Functions.getCluster(GetClusterArgs.builder()
+ *             .clusterId(var_.getCloudhsm_cluster_id())
+ *             .build()));
+ * 
+ *         var cloudhsmV2Hsm = new Hsm(&#34;cloudhsmV2Hsm&#34;, HsmArgs.builder()        
+ *             .subnetId(cluster.apply(getClusterResult -&gt; getClusterResult.getSubnetIds()[0]))
+ *             .clusterId(cluster.apply(getClusterResult -&gt; getClusterResult.getClusterId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * HSM modules can be imported using their HSM ID, e.g.,

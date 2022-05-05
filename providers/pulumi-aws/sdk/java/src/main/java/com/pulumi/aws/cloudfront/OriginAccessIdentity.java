@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  * [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
  * 
  * ## Example Usage
+ * 
+ * The following example below creates a CloudFront origin access identity.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new OriginAccessIdentity(&#34;example&#34;, OriginAccessIdentityArgs.builder()        
+ *             .comment(&#34;Some comment&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Using With CloudFront
  * 
  * Normally, when referencing an origin access identity in CloudFront, you need to
@@ -30,6 +53,31 @@ import javax.annotation.Nullable;
  * The `cloudfront_access_identity_path` allows this to be circumvented.
  * The below snippet demonstrates use with the `s3_origin_config` structure for the
  * `aws.cloudfront.Distribution` resource:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Distribution(&#34;example&#34;, DistributionArgs.builder()        
+ *             .origins(DistributionOrigin.builder()
+ *                 .s3OriginConfig(DistributionOriginS3OriginConfig.builder()
+ *                     .originAccessIdentity(aws_cloudfront_origin_access_identity.getExample().getCloudfront_access_identity_path())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ### Updating your bucket policy
  * 
@@ -37,6 +85,39 @@ import javax.annotation.Nullable;
  * principal into an `AWS` IAM ARN principal when supplied in an
  * `aws.s3.BucketV2` bucket policy, causing spurious diffs. If
  * you see this behaviour, use the `iam_arn` instead:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var s3Policy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;s3:GetObject&#34;)
+ *                 .resources(String.format(&#34;%s/*&#34;, aws_s3_bucket.getExample().getArn()))
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;AWS&#34;)
+ *                     .identifiers(aws_cloudfront_origin_access_identity.getExample().getIam_arn())
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var example = new BucketPolicy(&#34;example&#34;, BucketPolicyArgs.builder()        
+ *             .bucket(aws_s3_bucket.getExample().getId())
+ *             .policy(s3Policy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * [1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
  * [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html

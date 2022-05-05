@@ -29,6 +29,38 @@ import javax.annotation.Nullable;
  * &gt; **NOTE on Client VPN endpoint target network security groups:** this provider provides both a standalone Client VPN endpoint network association resource with a (deprecated) `security_groups` argument and a Client VPN endpoint resource with a `security_group_ids` argument. Do not specify security groups in both resources. Doing so will cause a conflict and will overwrite the target network security group association.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Endpoint(&#34;example&#34;, EndpointArgs.builder()        
+ *             .description(&#34;clientvpn-example&#34;)
+ *             .serverCertificateArn(aws_acm_certificate.getCert().getArn())
+ *             .clientCidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .authenticationOptions(EndpointAuthenticationOption.builder()
+ *                 .type(&#34;certificate-authentication&#34;)
+ *                 .rootCertificateChainArn(aws_acm_certificate.getRoot_cert().getArn())
+ *                 .build())
+ *             .connectionLogOptions(EndpointConnectionLogOptions.builder()
+ *                 .enabled(true)
+ *                 .cloudwatchLogGroup(aws_cloudwatch_log_group.getLg().getName())
+ *                 .cloudwatchLogStream(aws_cloudwatch_log_stream.getLs().getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

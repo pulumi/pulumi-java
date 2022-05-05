@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides a DAX Parameter Group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ParameterGroup(&#34;example&#34;, ParameterGroupArgs.builder()        
+ *             .parameters(            
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;query-ttl-millis&#34;)
+ *                     .value(&#34;100000&#34;)
+ *                     .build(),
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;record-ttl-millis&#34;)
+ *                     .value(&#34;100000&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

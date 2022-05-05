@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides an AppStream user.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new User(&#34;example&#34;, UserArgs.builder()        
+ *             .authenticationType(&#34;USERPOOL&#34;)
+ *             .firstName(&#34;FIRST NAME&#34;)
+ *             .lastName(&#34;LAST NAME&#34;)
+ *             .userName(&#34;EMAIL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

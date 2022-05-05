@@ -22,6 +22,63 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Grant Permissions For A Lake Formation S3 Resource
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Permissions(&#34;example&#34;, PermissionsArgs.builder()        
+ *             .principal(aws_iam_role.getWorkflow_role().getArn())
+ *             .permissions(&#34;ALL&#34;)
+ *             .dataLocation(PermissionsDataLocation.builder()
+ *                 .arn(aws_lakeformation_resource.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Grant Permissions For A Glue Catalog Database
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Permissions(&#34;example&#34;, PermissionsArgs.builder()        
+ *             .role(aws_iam_role.getWorkflow_role().getArn())
+ *             .permissions(            
+ *                 &#34;CREATE_TABLE&#34;,
+ *                 &#34;ALTER&#34;,
+ *                 &#34;DROP&#34;)
+ *             .database(PermissionsDatabase.builder()
+ *                 .name(aws_glue_catalog_database.getExample().getName())
+ *                 .catalogId(&#34;110376042874&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:lakeformation/permissions:Permissions")

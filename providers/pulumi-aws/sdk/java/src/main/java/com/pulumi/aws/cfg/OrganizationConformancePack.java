@@ -22,6 +22,97 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource must be created in the Organization master account or a delegated administrator account, and the Organization must have all features enabled. Every Organization account except those configured in the `excluded_accounts` argument must have a Configuration Recorder with proper IAM permissions before the Organization Conformance Pack will successfully create or update. See also the `aws.cfg.Recorder` resource.
  * 
  * ## Example Usage
+ * ### Using Template Body
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOrganization = new Organization(&#34;exampleOrganization&#34;, OrganizationArgs.builder()        
+ *             .awsServiceAccessPrincipals(&#34;config-multiaccountsetup.amazonaws.com&#34;)
+ *             .featureSet(&#34;ALL&#34;)
+ *             .build());
+ * 
+ *         var exampleOrganizationConformancePack = new OrganizationConformancePack(&#34;exampleOrganizationConformancePack&#34;, OrganizationConformancePackArgs.builder()        
+ *             .inputParameters(OrganizationConformancePackInputParameter.builder()
+ *                 .parameterName(&#34;AccessKeysRotatedParameterMaxAccessKeyAge&#34;)
+ *                 .parameterValue(&#34;90&#34;)
+ *                 .build())
+ *             .templateBody(&#34;&#34;&#34;
+ * Parameters:
+ *   AccessKeysRotatedParameterMaxAccessKeyAge:
+ *     Type: String
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using Template S3 URI
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOrganization = new Organization(&#34;exampleOrganization&#34;, OrganizationArgs.builder()        
+ *             .awsServiceAccessPrincipals(&#34;config-multiaccountsetup.amazonaws.com&#34;)
+ *             .featureSet(&#34;ALL&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .key(&#34;example-key&#34;)
+ *             .content(&#34;&#34;&#34;
+ * Resources:
+ *   IAMPasswordPolicy:
+ *     Properties:
+ *       ConfigRuleName: IAMPasswordPolicy
+ *       Source:
+ *         Owner: AWS
+ *         SourceIdentifier: IAM_PASSWORD_POLICY
+ *     Type: AWS::Config::ConfigRule
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleOrganizationConformancePack = new OrganizationConformancePack(&#34;exampleOrganizationConformancePack&#34;, OrganizationConformancePackArgs.builder()        
+ *             .templateS3Uri(Output.tuple(exampleBucketV2.getBucket(), exampleBucketObjectv2.getKey()).apply(values -&gt; {
+ *                 var bucket = values.t1;
+ *                 var key = values.t2;
+ *                 return String.format(&#34;s3://%s/%s&#34;, bucket,key);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

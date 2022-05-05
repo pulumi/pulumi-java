@@ -21,6 +21,28 @@ import javax.annotation.Nullable;
  * Manages a single-Region or multi-Region primary KMS key.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var key = new Key(&#34;key&#34;, KeyArgs.builder()        
+ *             .deletionWindowInDays(10)
+ *             .description(&#34;KMS key 1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

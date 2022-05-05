@@ -32,6 +32,35 @@ import javax.annotation.Nullable;
  * The state associated with existing resources will automatically be migrated.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceb = new VirtualRouter(&#34;serviceb&#34;, VirtualRouterArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .spec(VirtualRouterSpec.builder()
+ *                 .listener(VirtualRouterSpecListener.builder()
+ *                     .portMapping(VirtualRouterSpecListenerPortMapping.builder()
+ *                         .port(8080)
+ *                         .protocol(&#34;http&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

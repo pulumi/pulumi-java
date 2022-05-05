@@ -25,6 +25,77 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The example below creates a CloudFront response headers policy.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResponseHeadersPolicy(&#34;example&#34;, ResponseHeadersPolicyArgs.builder()        
+ *             .comment(&#34;test comment&#34;)
+ *             .corsConfig(ResponseHeadersPolicyCorsConfig.builder()
+ *                 .accessControlAllowCredentials(true)
+ *                 .accessControlAllowHeaders(ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders.builder()
+ *                     .items(&#34;test&#34;)
+ *                     .build())
+ *                 .accessControlAllowMethods(ResponseHeadersPolicyCorsConfigAccessControlAllowMethods.builder()
+ *                     .items(&#34;GET&#34;)
+ *                     .build())
+ *                 .accessControlAllowOrigins(ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins.builder()
+ *                     .items(&#34;test.example.comtest&#34;)
+ *                     .build())
+ *                 .originOverride(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * The example below creates a CloudFront response headers policy with a custom headers config.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResponseHeadersPolicy(&#34;example&#34;, ResponseHeadersPolicyArgs.builder()        
+ *             .customHeadersConfig(ResponseHeadersPolicyCustomHeadersConfig.builder()
+ *                 .items(                
+ *                     ResponseHeadersPolicyCustomHeadersConfigItem.builder()
+ *                         .header(&#34;X-Permitted-Cross-Domain-Policies&#34;)
+ *                         .override(true)
+ *                         .value(&#34;none&#34;)
+ *                         .build(),
+ *                     ResponseHeadersPolicyCustomHeadersConfigItem.builder()
+ *                         .header(&#34;X-Test&#34;)
+ *                         .override(true)
+ *                         .value(&#34;none&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Cloudfront Response Headers Policies can be imported using the `id`, e.g.

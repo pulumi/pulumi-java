@@ -21,6 +21,165 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new EventConnection(&#34;test&#34;, EventConnectionArgs.builder()        
+ *             .authParameters(EventConnectionAuthParameters.builder()
+ *                 .apiKey(EventConnectionAuthParametersApiKey.builder()
+ *                     .key(&#34;x-signature&#34;)
+ *                     .value(&#34;1234&#34;)
+ *                     .build())
+ *                 .build())
+ *             .authorizationType(&#34;API_KEY&#34;)
+ *             .description(&#34;A connection description&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic Authorization
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new EventConnection(&#34;test&#34;, EventConnectionArgs.builder()        
+ *             .authParameters(EventConnectionAuthParameters.builder()
+ *                 .basic(EventConnectionAuthParametersBasic.builder()
+ *                     .password(&#34;Pass1234!&#34;)
+ *                     .username(&#34;user&#34;)
+ *                     .build())
+ *                 .build())
+ *             .authorizationType(&#34;BASIC&#34;)
+ *             .description(&#34;A connection description&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### OAuth Authorization
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new EventConnection(&#34;test&#34;, EventConnectionArgs.builder()        
+ *             .authParameters(EventConnectionAuthParameters.builder()
+ *                 .oauth(EventConnectionAuthParametersOauth.builder()
+ *                     .authorizationEndpoint(&#34;https://auth.url.com/endpoint&#34;)
+ *                     .clientParameters(EventConnectionAuthParametersOauthClientParameters.builder()
+ *                         .clientId(&#34;1234567890&#34;)
+ *                         .clientSecret(&#34;Pass1234!&#34;)
+ *                         .build())
+ *                     .httpMethod(&#34;GET&#34;)
+ *                     .oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParameters.builder()
+ *                         .body(Map.ofEntries(
+ *                             Map.entry(&#34;isValueSecret&#34;, false),
+ *                             Map.entry(&#34;key&#34;, &#34;body-parameter-key&#34;),
+ *                             Map.entry(&#34;value&#34;, &#34;body-parameter-value&#34;)
+ *                         ))
+ *                         .header(Map.ofEntries(
+ *                             Map.entry(&#34;isValueSecret&#34;, false),
+ *                             Map.entry(&#34;key&#34;, &#34;header-parameter-key&#34;),
+ *                             Map.entry(&#34;value&#34;, &#34;header-parameter-value&#34;)
+ *                         ))
+ *                         .queryString(Map.ofEntries(
+ *                             Map.entry(&#34;isValueSecret&#34;, false),
+ *                             Map.entry(&#34;key&#34;, &#34;query-string-parameter-key&#34;),
+ *                             Map.entry(&#34;value&#34;, &#34;query-string-parameter-value&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .authorizationType(&#34;OAUTH_CLIENT_CREDENTIALS&#34;)
+ *             .description(&#34;A connection description&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Invocation Http Parameters
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new EventConnection(&#34;test&#34;, EventConnectionArgs.builder()        
+ *             .authParameters(EventConnectionAuthParameters.builder()
+ *                 .basic(EventConnectionAuthParametersBasic.builder()
+ *                     .password(&#34;Pass1234!&#34;)
+ *                     .username(&#34;user&#34;)
+ *                     .build())
+ *                 .invocationHttpParameters(EventConnectionAuthParametersInvocationHttpParameters.builder()
+ *                     .body(                    
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;isValueSecret&#34;, false),
+ *                             Map.entry(&#34;key&#34;, &#34;body-parameter-key&#34;),
+ *                             Map.entry(&#34;value&#34;, &#34;body-parameter-value&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;isValueSecret&#34;, true),
+ *                             Map.entry(&#34;key&#34;, &#34;body-parameter-key2&#34;),
+ *                             Map.entry(&#34;value&#34;, &#34;body-parameter-value2&#34;)
+ *                         ))
+ *                     .header(Map.ofEntries(
+ *                         Map.entry(&#34;isValueSecret&#34;, false),
+ *                         Map.entry(&#34;key&#34;, &#34;header-parameter-key&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;header-parameter-value&#34;)
+ *                     ))
+ *                     .queryString(Map.ofEntries(
+ *                         Map.entry(&#34;isValueSecret&#34;, false),
+ *                         Map.entry(&#34;key&#34;, &#34;query-string-parameter-key&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;query-string-parameter-value&#34;)
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .authorizationType(&#34;BASIC&#34;)
+ *             .description(&#34;A connection description&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

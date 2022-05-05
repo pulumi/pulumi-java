@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new CustomerGateway(&#34;main&#34;, CustomerGatewayArgs.builder()        
+ *             .bgpAsn(65000)
+ *             .ipAddress(&#34;172.83.124.10&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;main-customer-gateway&#34;))
+ *             .type(&#34;ipsec.1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -43,6 +43,196 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Be aware of the terminology collision around &#34;cluster&#34; for `aws.elasticache.ReplicationGroup`. For example, it is possible to create a [&#34;Cluster Mode Disabled [Redis] Cluster&#34;](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.CON.Redis.html). With &#34;Cluster Mode Enabled&#34;, the data will be stored in shards (called &#34;node groups&#34;). See [Redis Cluster Configuration](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/cluster-create-determine-requirements.html#redis-cluster-configuration) for a diagram of the differences. To enable cluster mode, use a parameter group that has cluster mode enabled. The default parameter groups provided by AWS end with &#34;.cluster.on&#34;, for example `default.redis6.x.cluster.on`.
  * 
  * ## Example Usage
+ * ### Redis Cluster Mode Disabled
+ * 
+ * To create a single shard primary with single read replica:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ReplicationGroup(&#34;example&#34;, ReplicationGroupArgs.builder()        
+ *             .automaticFailoverEnabled(true)
+ *             .description(&#34;example description&#34;)
+ *             .nodeType(&#34;cache.m4.large&#34;)
+ *             .numberCacheClusters(2)
+ *             .parameterGroupName(&#34;default.redis3.2&#34;)
+ *             .port(6379)
+ *             .preferredCacheClusterAzs(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * You have two options for adjusting the number of replicas:
+ * 
+ * * Adjusting `number_cache_clusters` directly. This will attempt to automatically add or remove replicas, but provides no granular control (e.g. preferred availability zone, cache cluster ID) for the added or removed replicas. This also currently expects cache cluster IDs in the form of `replication_group_id-00#`.
+ * * Otherwise for fine grained control of the underlying cache clusters, they can be added or removed with the `aws.elasticache.Cluster` resource and its `replication_group_id` attribute. In this situation, you will need to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to prevent perpetual differences with the `number_cache_cluster` attribute.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import com.pulumi.codegen.internal.KeyedValue;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ReplicationGroup(&#34;example&#34;, ReplicationGroupArgs.builder()        
+ *             .automaticFailoverEnabled(true)
+ *             .preferredCacheClusterAzs(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;)
+ *             .description(&#34;example description&#34;)
+ *             .nodeType(&#34;cache.m4.large&#34;)
+ *             .numberCacheClusters(2)
+ *             .parameterGroupName(&#34;default.redis3.2&#34;)
+ *             .port(6379)
+ *             .build());
+ * 
+ *         for (var i = 0; i &lt; (1 == true); i++) {
+ *             new Cluster(&#34;replica-&#34; + i, ClusterArgs.builder()            
+ *                 .replicationGroupId(example.getId())
+ *                 .build());
+ * 
+ *         
+ * }
+ *         }
+ * }
+ * ```
+ * ### Redis Cluster Mode Enabled
+ * 
+ * To create two shards with a primary and a single read replica each:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var baz = new ReplicationGroup(&#34;baz&#34;, ReplicationGroupArgs.builder()        
+ *             .automaticFailoverEnabled(true)
+ *             .description(&#34;example description&#34;)
+ *             .nodeType(&#34;cache.t2.small&#34;)
+ *             .numNodeGroups(2)
+ *             .parameterGroupName(&#34;default.redis3.2.cluster.on&#34;)
+ *             .port(6379)
+ *             .replicasPerNodeGroup(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Log Delivery configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ReplicationGroup(&#34;test&#34;, ReplicationGroupArgs.builder()        
+ *             .replicationGroupDescription(&#34;test description&#34;)
+ *             .nodeType(&#34;cache.t3.small&#34;)
+ *             .port(6379)
+ *             .applyImmediately(true)
+ *             .autoMinorVersionUpgrade(false)
+ *             .maintenanceWindow(&#34;tue:06:30-tue:07:30&#34;)
+ *             .snapshotWindow(&#34;01:00-02:00&#34;)
+ *             .logDeliveryConfigurations(            
+ *                 ReplicationGroupLogDeliveryConfiguration.builder()
+ *                     .destination(aws_cloudwatch_log_group.getExample().getName())
+ *                     .destinationType(&#34;cloudwatch-logs&#34;)
+ *                     .logFormat(&#34;text&#34;)
+ *                     .logType(&#34;slow-log&#34;)
+ *                     .build(),
+ *                 ReplicationGroupLogDeliveryConfiguration.builder()
+ *                     .destination(aws_kinesis_firehose_delivery_stream.getExample().getName())
+ *                     .destinationType(&#34;kinesis-firehose&#34;)
+ *                     .logFormat(&#34;json&#34;)
+ *                     .logType(&#34;engine-log&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **Note:** We currently do not support passing a `primary_cluster_id` in order to create the Replication Group.
+ * 
+ * &gt; **Note:** Automatic Failover is unavailable for Redis versions earlier than 2.8.6,
+ * and unavailable on T1 node types. For T2 node types, it is only available on Redis version 3.2.4 or later with cluster mode enabled. See the [High Availability Using Replication Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html) guide
+ * for full details on using Replication Groups.
+ * ### Creating a secondary replication group for a global replication group
+ * 
+ * A Global Replication Group can have one one two secondary Replication Groups in different regions. These are added to an existing Global Replication Group.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new ReplicationGroup(&#34;primary&#34;, ReplicationGroupArgs.builder()        
+ *             .description(&#34;primary replication group&#34;)
+ *             .engine(&#34;redis&#34;)
+ *             .engineVersion(&#34;5.0.6&#34;)
+ *             .nodeType(&#34;cache.m5.large&#34;)
+ *             .numberCacheClusters(1)
+ *             .build());
+ * 
+ *         var example = new GlobalReplicationGroup(&#34;example&#34;, GlobalReplicationGroupArgs.builder()        
+ *             .globalReplicationGroupIdSuffix(&#34;example&#34;)
+ *             .primaryReplicationGroupId(primary.getId())
+ *             .build());
+ * 
+ *         var secondary = new ReplicationGroup(&#34;secondary&#34;, ReplicationGroupArgs.builder()        
+ *             .description(&#34;secondary replication group&#34;)
+ *             .globalReplicationGroupId(example.getGlobalReplicationGroupId())
+ *             .numberCacheClusters(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

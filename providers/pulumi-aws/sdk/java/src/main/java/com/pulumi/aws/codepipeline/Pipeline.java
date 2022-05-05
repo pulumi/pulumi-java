@@ -22,6 +22,160 @@ import javax.annotation.Nullable;
  * Provides a CodePipeline.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connection(&#34;example&#34;, ConnectionArgs.builder()        
+ *             .providerType(&#34;GitHub&#34;)
+ *             .build());
+ * 
+ *         var codepipelineBucket = new BucketV2(&#34;codepipelineBucket&#34;);
+ * 
+ *         var codepipelineRole = new Role(&#34;codepipelineRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;codepipeline.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         final var s3kmskey = Output.of(KmsFunctions.getAlias(GetAliasArgs.builder()
+ *             .name(&#34;alias/myKmsKey&#34;)
+ *             .build()));
+ * 
+ *         var codepipeline = new Pipeline(&#34;codepipeline&#34;, PipelineArgs.builder()        
+ *             .roleArn(codepipelineRole.getArn())
+ *             .artifactStores(PipelineArtifactStore.builder()
+ *                 .location(codepipelineBucket.getBucket())
+ *                 .type(&#34;S3&#34;)
+ *                 .encryptionKey(PipelineArtifactStoreEncryptionKey.builder()
+ *                     .id(s3kmskey.apply(getAliasResult -&gt; getAliasResult.getArn()))
+ *                     .type(&#34;KMS&#34;)
+ *                     .build())
+ *                 .build())
+ *             .stages(            
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Source&#34;)
+ *                     .actions(PipelineStageAction.builder()
+ *                         .name(&#34;Source&#34;)
+ *                         .category(&#34;Source&#34;)
+ *                         .owner(&#34;AWS&#34;)
+ *                         .provider(&#34;CodeStarSourceConnection&#34;)
+ *                         .version(&#34;1&#34;)
+ *                         .outputArtifacts(&#34;source_output&#34;)
+ *                         .configuration(Map.ofEntries(
+ *                             Map.entry(&#34;ConnectionArn&#34;, example.getArn()),
+ *                             Map.entry(&#34;FullRepositoryId&#34;, &#34;my-organization/example&#34;),
+ *                             Map.entry(&#34;BranchName&#34;, &#34;main&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build(),
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Build&#34;)
+ *                     .actions(PipelineStageAction.builder()
+ *                         .name(&#34;Build&#34;)
+ *                         .category(&#34;Build&#34;)
+ *                         .owner(&#34;AWS&#34;)
+ *                         .provider(&#34;CodeBuild&#34;)
+ *                         .inputArtifacts(&#34;source_output&#34;)
+ *                         .outputArtifacts(&#34;build_output&#34;)
+ *                         .version(&#34;1&#34;)
+ *                         .configuration(Map.of(&#34;ProjectName&#34;, &#34;test&#34;))
+ *                         .build())
+ *                     .build(),
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Deploy&#34;)
+ *                     .actions(PipelineStageAction.builder()
+ *                         .name(&#34;Deploy&#34;)
+ *                         .category(&#34;Deploy&#34;)
+ *                         .owner(&#34;AWS&#34;)
+ *                         .provider(&#34;CloudFormation&#34;)
+ *                         .inputArtifacts(&#34;build_output&#34;)
+ *                         .version(&#34;1&#34;)
+ *                         .configuration(Map.ofEntries(
+ *                             Map.entry(&#34;ActionMode&#34;, &#34;REPLACE_ON_FAILURE&#34;),
+ *                             Map.entry(&#34;Capabilities&#34;, &#34;CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM&#34;),
+ *                             Map.entry(&#34;OutputFileName&#34;, &#34;CreateStackOutput.json&#34;),
+ *                             Map.entry(&#34;StackName&#34;, &#34;MyStack&#34;),
+ *                             Map.entry(&#34;TemplatePath&#34;, &#34;build_output::sam-templated.yaml&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         var codepipelineBucketAcl = new BucketAclV2(&#34;codepipelineBucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(codepipelineBucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var codepipelinePolicy = new RolePolicy(&#34;codepipelinePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(codepipelineRole.getId())
+ *             .policy(Output.tuple(codepipelineBucket.getArn(), codepipelineBucket.getArn(), example.getArn()).apply(values -&gt; {
+ *                 var codepipelineBucketArn = values.t1;
+ *                 var codepipelineBucketArn1 = values.t2;
+ *                 var exampleArn = values.t3;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;:&#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;s3:GetObject&#34;,
+ *         &#34;s3:GetObjectVersion&#34;,
+ *         &#34;s3:GetBucketVersioning&#34;,
+ *         &#34;s3:PutObjectAcl&#34;,
+ *         &#34;s3:PutObject&#34;
+ *       ],
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;,
+ *         &#34;%s/*&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;codestar-connections:UseConnection&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;%s&#34;
+ *     },
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;codebuild:BatchGetBuilds&#34;,
+ *         &#34;codebuild:StartBuild&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, codepipelineBucketArn,codepipelineBucketArn1,exampleArn);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

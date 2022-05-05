@@ -19,6 +19,41 @@ import javax.annotation.Nullable;
  * Provides a CloudFront Field-level Encryption Profile resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PublicKey(&#34;example&#34;, PublicKeyArgs.builder()        
+ *             .comment(&#34;test public key&#34;)
+ *             .encodedKey(Files.readString(&#34;public_key.pem&#34;))
+ *             .build());
+ * 
+ *         var test = new FieldLevelEncryptionProfile(&#34;test&#34;, FieldLevelEncryptionProfileArgs.builder()        
+ *             .comment(&#34;test comment&#34;)
+ *             .encryptionEntities(FieldLevelEncryptionProfileEncryptionEntities.builder()
+ *                 .items(FieldLevelEncryptionProfileEncryptionEntitiesItem.builder()
+ *                     .publicKeyId(example.getId())
+ *                     .providerId(&#34;test provider&#34;)
+ *                     .fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns.builder()
+ *                         .items(&#34;DateOfBirth&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

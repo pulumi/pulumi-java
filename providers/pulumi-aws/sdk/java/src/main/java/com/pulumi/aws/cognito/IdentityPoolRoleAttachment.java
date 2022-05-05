@@ -21,6 +21,92 @@ import javax.annotation.Nullable;
  * Provides an AWS Cognito Identity Pool Roles Attachment.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mainIdentityPool = new IdentityPool(&#34;mainIdentityPool&#34;, IdentityPoolArgs.builder()        
+ *             .identityPoolName(&#34;identity pool&#34;)
+ *             .allowUnauthenticatedIdentities(false)
+ *             .supportedLoginProviders(Map.of(&#34;graph.facebook.com&#34;, &#34;7346241598935555&#34;))
+ *             .build());
+ * 
+ *         var authenticatedRole = new Role(&#34;authenticatedRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(mainIdentityPool.getId().apply(id -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Federated&#34;: &#34;cognito-identity.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRoleWithWebIdentity&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;StringEquals&#34;: {
+ *           &#34;cognito-identity.amazonaws.com:aud&#34;: &#34;%s&#34;
+ *         },
+ *         &#34;ForAnyValue:StringLike&#34;: {
+ *           &#34;cognito-identity.amazonaws.com:amr&#34;: &#34;authenticated&#34;
+ *         }
+ *       }
+ *     }
+ *   ]
+ * }
+ * &#34;, id)))
+ *             .build());
+ * 
+ *         var authenticatedRolePolicy = new RolePolicy(&#34;authenticatedRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(authenticatedRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;mobileanalytics:PutEvents&#34;,
+ *         &#34;cognito-sync:*&#34;,
+ *         &#34;cognito-identity:*&#34;
+ *       ],
+ *       &#34;Resource&#34;: [
+ *         &#34;*&#34;
+ *       ]
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var mainIdentityPoolRoleAttachment = new IdentityPoolRoleAttachment(&#34;mainIdentityPoolRoleAttachment&#34;, IdentityPoolRoleAttachmentArgs.builder()        
+ *             .identityPoolId(mainIdentityPool.getId())
+ *             .roleMappings(IdentityPoolRoleAttachmentRoleMapping.builder()
+ *                 .identityProvider(&#34;graph.facebook.com&#34;)
+ *                 .ambiguousRoleResolution(&#34;AuthenticatedRole&#34;)
+ *                 .type(&#34;Rules&#34;)
+ *                 .mappingRules(IdentityPoolRoleAttachmentRoleMappingMappingRule.builder()
+ *                     .claim(&#34;isAdmin&#34;)
+ *                     .matchType(&#34;Equals&#34;)
+ *                     .roleArn(authenticatedRole.getArn())
+ *                     .value(&#34;paid&#34;)
+ *                     .build())
+ *                 .build())
+ *             .roles(Map.of(&#34;authenticated&#34;, authenticatedRole.getArn()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

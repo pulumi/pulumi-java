@@ -26,6 +26,62 @@ import javax.annotation.Nullable;
  * See example below which uses `jq` to extract the `Content` attribute and saves it to a local file.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ContactFlow(&#34;test&#34;, ContactFlowArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * 	{
+ * 		&#34;Version&#34;: &#34;2019-10-30&#34;,
+ * 		&#34;StartAction&#34;: &#34;12345678-1234-1234-1234-123456789012&#34;,
+ * 		&#34;Actions&#34;: [
+ * 			{
+ * 				&#34;Identifier&#34;: &#34;12345678-1234-1234-1234-123456789012&#34;,
+ * 				&#34;Type&#34;: &#34;MessageParticipant&#34;,
+ * 				&#34;Transitions&#34;: {
+ * 					&#34;NextAction&#34;: &#34;abcdef-abcd-abcd-abcd-abcdefghijkl&#34;,
+ * 					&#34;Errors&#34;: [],
+ * 					&#34;Conditions&#34;: []
+ * 				},
+ * 				&#34;Parameters&#34;: {
+ * 					&#34;Text&#34;: &#34;Thanks for calling the sample flow!&#34;
+ * 				}
+ * 			},
+ * 			{
+ * 				&#34;Identifier&#34;: &#34;abcdef-abcd-abcd-abcd-abcdefghijkl&#34;,
+ * 				&#34;Type&#34;: &#34;DisconnectParticipant&#34;,
+ * 				&#34;Transitions&#34;: {},
+ * 				&#34;Parameters&#34;: {}
+ * 			}
+ * 		]
+ * 	}
+ * 	
+ *             &#34;&#34;&#34;)
+ *             .description(&#34;Test Contact Flow Description&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Application&#34;, &#34;Terraform&#34;),
+ *                 Map.entry(&#34;Method&#34;, &#34;Create&#34;),
+ *                 Map.entry(&#34;Name&#34;, &#34;Test Contact Flow&#34;)
+ *             ))
+ *             .type(&#34;CONTACT_FLOW&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

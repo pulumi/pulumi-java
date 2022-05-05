@@ -20,6 +20,64 @@ import javax.annotation.Nullable;
  * Provides an AWS App Mesh virtual service resource.
  * 
  * ## Example Usage
+ * ### Virtual Node Provider
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicea = new VirtualService(&#34;servicea&#34;, VirtualServiceArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .spec(VirtualServiceSpec.builder()
+ *                 .provider(VirtualServiceSpecProvider.builder()
+ *                     .virtualNode(VirtualServiceSpecProviderVirtualNode.builder()
+ *                         .virtualNodeName(aws_appmesh_virtual_node.getServiceb1().getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Virtual Router Provider
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicea = new VirtualService(&#34;servicea&#34;, VirtualServiceArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .spec(VirtualServiceSpec.builder()
+ *                 .provider(VirtualServiceSpecProvider.builder()
+ *                     .virtualRouter(VirtualServiceSpecProviderVirtualRouter.builder()
+ *                         .virtualRouterName(aws_appmesh_virtual_router.getServiceb().getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

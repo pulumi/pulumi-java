@@ -18,6 +18,32 @@ import javax.annotation.Nullable;
  * Provides a CloudFront real-time log configuration resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new MonitoringSubscription(&#34;example&#34;, MonitoringSubscriptionArgs.builder()        
+ *             .distributionId(aws_cloudfront_distribution.getExample().getId())
+ *             .monitoringSubscription(MonitoringSubscriptionMonitoringSubscription.builder()
+ *                 .realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig.builder()
+ *                     .realtimeMetricsSubscriptionStatus(&#34;Enabled&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

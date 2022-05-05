@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * Manages a DocumentDB Cluster Parameter Group
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClusterParameterGroup(&#34;example&#34;, ClusterParameterGroupArgs.builder()        
+ *             .description(&#34;docdb cluster parameter group&#34;)
+ *             .family(&#34;docdb3.6&#34;)
+ *             .parameters(ClusterParameterGroupParameter.builder()
+ *                 .name(&#34;tls&#34;)
+ *                 .value(&#34;enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

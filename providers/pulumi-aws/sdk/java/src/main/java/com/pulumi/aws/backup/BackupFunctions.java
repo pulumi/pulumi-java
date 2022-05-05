@@ -24,6 +24,27 @@ public final class BackupFunctions {
      * Use this data source to get information on an existing backup framework.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getFramework(GetFrameworkArgs.builder()
+     *             .name(&#34;tf_example_backup_framework_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFrameworkResult> getFramework(GetFrameworkArgs args) {
@@ -36,6 +57,27 @@ public final class BackupFunctions {
      * Use this data source to get information on an existing backup plan.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getPlan(GetPlanArgs.builder()
+     *             .planId(&#34;tf_example_backup_plan_id&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPlanResult> getPlan(GetPlanArgs args) {
@@ -48,6 +90,27 @@ public final class BackupFunctions {
      * Use this data source to get information on an existing backup report plan.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getReportPlan(GetReportPlanArgs.builder()
+     *             .name(&#34;tf_example_backup_report_plan_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetReportPlanResult> getReportPlan(GetReportPlanArgs args) {
@@ -60,6 +123,28 @@ public final class BackupFunctions {
      * Use this data source to get information on an existing backup selection.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getSelection(GetSelectionArgs.builder()
+     *             .planId(data.getAws_backup_plan().getExample().getId())
+     *             .selectionId(&#34;selection-id-example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSelectionResult> getSelection(GetSelectionArgs args) {
@@ -72,6 +157,27 @@ public final class BackupFunctions {
      * Use this data source to get information on an existing backup vault.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(BackupFunctions.getVault(GetVaultArgs.builder()
+     *             .name(&#34;example_backup_vault&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVaultResult> getVault(GetVaultArgs args) {

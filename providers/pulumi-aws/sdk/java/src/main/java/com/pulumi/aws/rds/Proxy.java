@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * Provides an RDS DB proxy resource. For additional information, see the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Proxy(&#34;example&#34;, ProxyArgs.builder()        
+ *             .debugLogging(false)
+ *             .engineFamily(&#34;MYSQL&#34;)
+ *             .idleClientTimeout(1800)
+ *             .requireTls(true)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .vpcSecurityGroupIds(aws_security_group.getExample().getId())
+ *             .vpcSubnetIds(aws_subnet.getExample().getId())
+ *             .auths(ProxyAuth.builder()
+ *                 .authScheme(&#34;SECRETS&#34;)
+ *                 .description(&#34;example&#34;)
+ *                 .iamAuth(&#34;DISABLED&#34;)
+ *                 .secretArn(aws_secretsmanager_secret.getExample().getArn())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;example&#34;),
+ *                 Map.entry(&#34;Key&#34;, &#34;value&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

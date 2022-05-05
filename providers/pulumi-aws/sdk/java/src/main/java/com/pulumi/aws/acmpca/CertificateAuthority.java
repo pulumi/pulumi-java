@@ -25,6 +25,95 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Creating this resource will leave the certificate authority in a `PENDING_CERTIFICATE` status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the `certificate_signing_request` attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CertificateAuthority(&#34;example&#34;, CertificateAuthorityArgs.builder()        
+ *             .certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfiguration.builder()
+ *                 .keyAlgorithm(&#34;RSA_4096&#34;)
+ *                 .signingAlgorithm(&#34;SHA512WITHRSA&#34;)
+ *                 .subject(CertificateAuthorityCertificateAuthorityConfigurationSubject.builder()
+ *                     .commonName(&#34;example.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .permanentDeletionTimeInDays(7)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enable Certificate Revocation List
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         final var acmpcaBucketAccess = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(                
+ *                     &#34;s3:GetBucketAcl&#34;,
+ *                     &#34;s3:GetBucketLocation&#34;,
+ *                     &#34;s3:PutObject&#34;,
+ *                     &#34;s3:PutObjectAcl&#34;)
+ *                 .resources(                
+ *                     exampleBucketV2.getArn(),
+ *                     exampleBucketV2.getArn().apply(arn -&gt; String.format(&#34;%s/*&#34;, arn)))
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(&#34;acm-pca.amazonaws.com&#34;)
+ *                     .type(&#34;Service&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleBucketPolicy = new BucketPolicy(&#34;exampleBucketPolicy&#34;, BucketPolicyArgs.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .policy(acmpcaBucketAccess.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(acmpcaBucketAccess -&gt; acmpcaBucketAccess.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         var exampleCertificateAuthority = new CertificateAuthority(&#34;exampleCertificateAuthority&#34;, CertificateAuthorityArgs.builder()        
+ *             .certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfiguration.builder()
+ *                 .keyAlgorithm(&#34;RSA_4096&#34;)
+ *                 .signingAlgorithm(&#34;SHA512WITHRSA&#34;)
+ *                 .subject(CertificateAuthorityCertificateAuthorityConfigurationSubject.builder()
+ *                     .commonName(&#34;example.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .revocationConfiguration(CertificateAuthorityRevocationConfiguration.builder()
+ *                 .crlConfiguration(CertificateAuthorityRevocationConfigurationCrlConfiguration.builder()
+ *                     .customCname(&#34;crl.example.com&#34;)
+ *                     .enabled(true)
+ *                     .expirationInDays(7)
+ *                     .s3BucketName(exampleBucketV2.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,57 @@ import javax.annotation.Nullable;
  * &gt; **Note:** The EventBridge bus policy resource  (`aws.cloudwatch.EventBusPolicy`) is incompatible with the EventBridge permission resource (`aws.cloudwatch.EventPermission`) and will overwrite permissions.
  * 
  * ## Example Usage
+ * ### Account Access
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var devAccountAccess = new EventPermission(&#34;devAccountAccess&#34;, EventPermissionArgs.builder()        
+ *             .principal(&#34;123456789012&#34;)
+ *             .statementId(&#34;DevAccountAccess&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Organization Access
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organizationAccess = new EventPermission(&#34;organizationAccess&#34;, EventPermissionArgs.builder()        
+ *             .principal(&#34;*&#34;)
+ *             .statementId(&#34;OrganizationAccess&#34;)
+ *             .condition(EventPermissionCondition.builder()
+ *                 .key(&#34;aws:PrincipalOrgID&#34;)
+ *                 .type(&#34;StringEquals&#34;)
+ *                 .value(aws_organizations_organization.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

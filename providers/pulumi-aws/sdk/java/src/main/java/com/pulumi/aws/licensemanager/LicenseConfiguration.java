@@ -24,6 +24,32 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Removing the `license_count` attribute is not supported by the License Manager API - recreate the resource instead.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LicenseConfiguration(&#34;example&#34;, LicenseConfigurationArgs.builder()        
+ *             .description(&#34;Example&#34;)
+ *             .licenseCount(10)
+ *             .licenseCountHardLimit(true)
+ *             .licenseCountingType(&#34;Socket&#34;)
+ *             .licenseRules(&#34;#minimumSockets=2&#34;)
+ *             .tags(Map.of(&#34;foo&#34;, &#34;barr&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Rules
  * 
  * License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:

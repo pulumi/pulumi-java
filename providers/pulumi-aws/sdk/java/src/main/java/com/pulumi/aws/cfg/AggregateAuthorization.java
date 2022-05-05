@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Manages an AWS Config Aggregate Authorization
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AggregateAuthorization(&#34;example&#34;, AggregateAuthorizationArgs.builder()        
+ *             .accountId(&#34;123456789012&#34;)
+ *             .region(&#34;eu-west-2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

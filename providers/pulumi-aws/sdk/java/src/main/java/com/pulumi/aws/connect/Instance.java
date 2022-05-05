@@ -22,6 +22,81 @@ import javax.annotation.Nullable;
  * !&gt; **WARN:** There are limits to the number of Connect Instances that can be created in a specific AWS account, and those limits span the life of the account, not just active Instances. Minimize the number of times you create/delete an instance.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Instance(&#34;test&#34;, InstanceArgs.builder()        
+ *             .identityManagementType(&#34;CONNECT_MANAGED&#34;)
+ *             .inboundCallsEnabled(true)
+ *             .instanceAlias(&#34;friendly-name-connect&#34;)
+ *             .outboundCallsEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Existing Active Directory
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Instance(&#34;test&#34;, InstanceArgs.builder()        
+ *             .directoryId(aws_directory_service_directory.getTest().getId())
+ *             .identityManagementType(&#34;EXISTING_DIRECTORY&#34;)
+ *             .inboundCallsEnabled(true)
+ *             .instanceAlias(&#34;friendly-name-connect&#34;)
+ *             .outboundCallsEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With SAML
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Instance(&#34;test&#34;, InstanceArgs.builder()        
+ *             .identityManagementType(&#34;SAML&#34;)
+ *             .inboundCallsEnabled(true)
+ *             .instanceAlias(&#34;friendly-name-connect&#34;)
+ *             .outboundCallsEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

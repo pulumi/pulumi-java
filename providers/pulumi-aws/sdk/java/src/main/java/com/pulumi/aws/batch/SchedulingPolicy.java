@@ -20,6 +20,40 @@ import javax.annotation.Nullable;
  * Provides a Batch Scheduling Policy resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SchedulingPolicy(&#34;example&#34;, SchedulingPolicyArgs.builder()        
+ *             .fairSharePolicy(SchedulingPolicyFairSharePolicy.builder()
+ *                 .computeReservation(1)
+ *                 .shareDecaySeconds(3600)
+ *                 .shareDistributions(                
+ *                     SchedulingPolicyFairSharePolicyShareDistribution.builder()
+ *                         .shareIdentifier(&#34;A1*&#34;)
+ *                         .weightFactor(0.1)
+ *                         .build(),
+ *                     SchedulingPolicyFairSharePolicyShareDistribution.builder()
+ *                         .shareIdentifier(&#34;A2&#34;)
+ *                         .weightFactor(0.2)
+ *                         .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Batch Scheduling Policy&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

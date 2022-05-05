@@ -18,6 +18,96 @@ import javax.annotation.Nullable;
  * Provides an AWS Network Firewall Logging Configuration Resource
  * 
  * ## Example Usage
+ * ### Logging to S3
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingConfiguration(&#34;example&#34;, LoggingConfigurationArgs.builder()        
+ *             .firewallArn(aws_networkfirewall_firewall.getExample().getArn())
+ *             .loggingConfiguration(LoggingConfigurationLoggingConfiguration.builder()
+ *                 .logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfig.builder()
+ *                     .logDestination(Map.ofEntries(
+ *                         Map.entry(&#34;bucketName&#34;, aws_s3_bucket.getExample().getBucket()),
+ *                         Map.entry(&#34;prefix&#34;, &#34;/example&#34;)
+ *                     ))
+ *                     .logDestinationType(&#34;S3&#34;)
+ *                     .logType(&#34;FLOW&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging to CloudWatch
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingConfiguration(&#34;example&#34;, LoggingConfigurationArgs.builder()        
+ *             .firewallArn(aws_networkfirewall_firewall.getExample().getArn())
+ *             .loggingConfiguration(LoggingConfigurationLoggingConfiguration.builder()
+ *                 .logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfig.builder()
+ *                     .logDestination(Map.of(&#34;logGroup&#34;, aws_cloudwatch_log_group.getExample().getName()))
+ *                     .logDestinationType(&#34;CloudWatchLogs&#34;)
+ *                     .logType(&#34;ALERT&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging to Kinesis Data Firehose
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoggingConfiguration(&#34;example&#34;, LoggingConfigurationArgs.builder()        
+ *             .firewallArn(aws_networkfirewall_firewall.getExample().getArn())
+ *             .loggingConfiguration(LoggingConfigurationLoggingConfiguration.builder()
+ *                 .logDestinationConfigs(LoggingConfigurationLoggingConfigurationLogDestinationConfig.builder()
+ *                     .logDestination(Map.of(&#34;deliveryStream&#34;, aws_kinesis_firehose_delivery_stream.getExample().getName()))
+ *                     .logDestinationType(&#34;KinesisDataFirehose&#34;)
+ *                     .logType(&#34;ALERT&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

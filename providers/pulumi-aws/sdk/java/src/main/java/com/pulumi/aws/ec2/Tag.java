@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This tagging resource should not be combined with the providers resource for managing the parent resource. For example, using `aws.ec2.Vpc` and `aws.ec2.Tag` to manage tags of the same VPC will cause a perpetual difference where the `aws.ec2.Vpc` resource will try to remove the tag being added by the `aws.ec2.Tag` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;);
+ * 
+ *         var exampleCustomerGateway = new CustomerGateway(&#34;exampleCustomerGateway&#34;, CustomerGatewayArgs.builder()        
+ *             .bgpAsn(65000)
+ *             .ipAddress(&#34;172.0.0.1&#34;)
+ *             .type(&#34;ipsec.1&#34;)
+ *             .build());
+ * 
+ *         var exampleVpnConnection = new VpnConnection(&#34;exampleVpnConnection&#34;, VpnConnectionArgs.builder()        
+ *             .customerGatewayId(exampleCustomerGateway.getId())
+ *             .transitGatewayId(exampleTransitGateway.getId())
+ *             .type(exampleCustomerGateway.getType())
+ *             .build());
+ * 
+ *         var exampleTag = new Tag(&#34;exampleTag&#34;, TagArgs.builder()        
+ *             .resourceId(exampleVpnConnection.getTransitGatewayAttachmentId())
+ *             .key(&#34;Name&#34;)
+ *             .value(&#34;Hello World&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

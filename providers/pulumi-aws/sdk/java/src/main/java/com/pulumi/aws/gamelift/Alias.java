@@ -20,6 +20,31 @@ import javax.annotation.Nullable;
  * Provides a GameLift Alias resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Alias(&#34;example&#34;, AliasArgs.builder()        
+ *             .description(&#34;Example Description&#34;)
+ *             .routingStrategy(AliasRoutingStrategy.builder()
+ *                 .message(&#34;Example Message&#34;)
+ *                 .type(&#34;TERMINAL&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

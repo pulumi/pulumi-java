@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * Creates a Snapshot of a snapshot.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .size(40)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         var exampleSnapshot = new Snapshot(&#34;exampleSnapshot&#34;, SnapshotArgs.builder()        
+ *             .volumeId(example.getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld_snap&#34;))
+ *             .build());
+ * 
+ *         var exampleCopy = new SnapshotCopy(&#34;exampleCopy&#34;, SnapshotCopyArgs.builder()        
+ *             .sourceSnapshotId(exampleSnapshot.getId())
+ *             .sourceRegion(&#34;us-west-2&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld_copy_snap&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ebs/snapshotCopy:SnapshotCopy")

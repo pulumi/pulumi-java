@@ -19,6 +19,173 @@ import javax.annotation.Nullable;
  * &gt; **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
  * 
  * ## Example Usage
+ * ### Application Load Balancer Association
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooRule = new Rule(&#34;fooRule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .predicates(RulePredicate.builder()
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooWebAcl = new WebAcl(&#34;fooWebAcl&#34;, WebAclArgs.builder()        
+ *             .metricName(&#34;foo&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .type(&#34;ALLOW&#34;)
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .action(WebAclRuleAction.builder()
+ *                     .type(&#34;BLOCK&#34;)
+ *                     .build())
+ *                 .priority(1)
+ *                 .ruleId(fooRule.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooVpc = new Vpc(&#34;fooVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         final var available = Output.of(AwsFunctions.getAvailabilityZones());
+ * 
+ *         var fooSubnet = new Subnet(&#34;fooSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(fooVpc.getId())
+ *             .cidrBlock(&#34;10.1.1.0/24&#34;)
+ *             .availabilityZone(available.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[0]))
+ *             .build());
+ * 
+ *         var bar = new Subnet(&#34;bar&#34;, SubnetArgs.builder()        
+ *             .vpcId(fooVpc.getId())
+ *             .cidrBlock(&#34;10.1.2.0/24&#34;)
+ *             .availabilityZone(available.apply(getAvailabilityZonesResult -&gt; getAvailabilityZonesResult.getNames()[1]))
+ *             .build());
+ * 
+ *         var fooLoadBalancer = new LoadBalancer(&#34;fooLoadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .internal(true)
+ *             .subnets(            
+ *                 fooSubnet.getId(),
+ *                 bar.getId())
+ *             .build());
+ * 
+ *         var fooWebAclAssociation = new WebAclAssociation(&#34;fooWebAclAssociation&#34;, WebAclAssociationArgs.builder()        
+ *             .resourceArn(fooLoadBalancer.getArn())
+ *             .webAclId(fooWebAcl.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### API Gateway Association
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooRule = new Rule(&#34;fooRule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .predicates(RulePredicate.builder()
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var fooWebAcl = new WebAcl(&#34;fooWebAcl&#34;, WebAclArgs.builder()        
+ *             .metricName(&#34;foo&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .type(&#34;ALLOW&#34;)
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .action(WebAclRuleAction.builder()
+ *                     .type(&#34;BLOCK&#34;)
+ *                     .build())
+ *                 .priority(1)
+ *                 .ruleId(fooRule.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;, RestApiArgs.builder()        
+ *             .body(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;openapi&#34;, &#34;3.0.1&#34;),
+ *                     jsonProperty(&#34;info&#34;, jsonObject(
+ *                         jsonProperty(&#34;title&#34;, &#34;example&#34;),
+ *                         jsonProperty(&#34;version&#34;, &#34;1.0&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;paths&#34;, jsonObject(
+ *                         jsonProperty(&#34;/path1&#34;, jsonObject(
+ *                             jsonProperty(&#34;get&#34;, jsonObject(
+ *                                 jsonProperty(&#34;x-amazon-apigateway-integration&#34;, jsonObject(
+ *                                     jsonProperty(&#34;httpMethod&#34;, &#34;GET&#34;),
+ *                                     jsonProperty(&#34;payloadFormatVersion&#34;, &#34;1.0&#34;),
+ *                                     jsonProperty(&#34;type&#34;, &#34;HTTP_PROXY&#34;),
+ *                                     jsonProperty(&#34;uri&#34;, &#34;https://ip-ranges.amazonaws.com/ip-ranges.json&#34;)
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     ))
+ *                 )))
+ *             .build());
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(exampleRestApi.getId())
+ *             .triggers(Map.of(&#34;redeployment&#34;, exampleRestApi.getBody().apply(body -&gt; serializeJson(
+ *                 body)).apply(toJSON -&gt; computeSHA1(toJSON))))
+ *             .build());
+ * 
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .deployment(exampleDeployment.getId())
+ *             .restApi(exampleRestApi.getId())
+ *             .stageName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var association = new WebAclAssociation(&#34;association&#34;, WebAclAssociationArgs.builder()        
+ *             .resourceArn(exampleStage.getArn())
+ *             .webAclId(fooWebAcl.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

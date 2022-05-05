@@ -19,6 +19,62 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.
  * 
  * ## Example Usage
+ * ### Cached and VTL Gateway Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var testLocalDisk = Output.of(StoragegatewayFunctions.getLocalDisk(GetLocalDiskArgs.builder()
+ *             .diskNode(aws_volume_attachment.getTest().getDevice_name())
+ *             .gatewayArn(aws_storagegateway_gateway.getTest().getArn())
+ *             .build()));
+ * 
+ *         var testUploadBuffer = new UploadBuffer(&#34;testUploadBuffer&#34;, UploadBufferArgs.builder()        
+ *             .diskPath(testLocalDisk.apply(getLocalDiskResult -&gt; getLocalDiskResult.getDiskPath()))
+ *             .gatewayArn(aws_storagegateway_gateway.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Stored Gateway Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var test = Output.of(StoragegatewayFunctions.getLocalDisk(GetLocalDiskArgs.builder()
+ *             .diskNode(aws_volume_attachment.getTest().getDevice_name())
+ *             .gatewayArn(aws_storagegateway_gateway.getTest().getArn())
+ *             .build()));
+ * 
+ *         var example = new UploadBuffer(&#34;example&#34;, UploadBufferArgs.builder()        
+ *             .diskId(data.getAws_storagegateway_local_disk().getExample().getId())
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

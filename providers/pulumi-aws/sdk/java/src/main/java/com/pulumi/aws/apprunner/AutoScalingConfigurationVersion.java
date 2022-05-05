@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * Manages an App Runner AutoScaling Configuration Version.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AutoScalingConfigurationVersion(&#34;example&#34;, AutoScalingConfigurationVersionArgs.builder()        
+ *             .autoScalingConfigurationName(&#34;example&#34;)
+ *             .maxConcurrency(50)
+ *             .maxSize(10)
+ *             .minSize(2)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-apprunner-autoscaling&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

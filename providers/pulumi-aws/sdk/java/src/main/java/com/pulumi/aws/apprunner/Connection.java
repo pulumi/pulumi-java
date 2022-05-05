@@ -21,6 +21,29 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** After creation, you must complete the authentication handshake using the App Runner console.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connection(&#34;example&#34;, ConnectionArgs.builder()        
+ *             .connectionName(&#34;example&#34;)
+ *             .providerType(&#34;GITHUB&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-apprunner-connection&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

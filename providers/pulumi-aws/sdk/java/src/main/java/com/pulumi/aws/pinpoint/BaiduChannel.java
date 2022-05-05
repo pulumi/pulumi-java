@@ -19,6 +19,31 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint Baidu Channel resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;);
+ * 
+ *         var channel = new BaiduChannel(&#34;channel&#34;, BaiduChannelArgs.builder()        
+ *             .applicationId(app.getApplicationId())
+ *             .apiKey(&#34;&#34;)
+ *             .secretKey(&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

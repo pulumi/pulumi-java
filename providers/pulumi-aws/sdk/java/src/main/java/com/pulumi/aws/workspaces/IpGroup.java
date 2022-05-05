@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * Provides an IP access control group in AWS WorkSpaces Service
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contractors = new IpGroup(&#34;contractors&#34;, IpGroupArgs.builder()        
+ *             .description(&#34;Contractors IP access control group&#34;)
+ *             .rules(            
+ *                 IpGroupRule.builder()
+ *                     .description(&#34;NY&#34;)
+ *                     .source(&#34;150.24.14.0/24&#34;)
+ *                     .build(),
+ *                 IpGroupRule.builder()
+ *                     .description(&#34;LA&#34;)
+ *                     .source(&#34;125.191.14.85/32&#34;)
+ *                     .build(),
+ *                 IpGroupRule.builder()
+ *                     .description(&#34;STL&#34;)
+ *                     .source(&#34;44.98.100.0/24&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

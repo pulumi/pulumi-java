@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * Provides a Direct Connect private virtual interface resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new PrivateVirtualInterface(&#34;foo&#34;, PrivateVirtualInterfaceArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .bgpAsn(65352)
+ *             .connectionId(&#34;dxcon-zzzzzzzz&#34;)
+ *             .vlan(4094)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

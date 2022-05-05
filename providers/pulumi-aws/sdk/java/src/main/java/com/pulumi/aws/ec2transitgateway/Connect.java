@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connect(&#34;example&#34;, ConnectArgs.builder()        
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         var attachment = new Connect(&#34;attachment&#34;, ConnectArgs.builder()        
+ *             .transportAttachmentId(aws_ec2_transit_gateway_vpc_attachment.getExample().getId())
+ *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * `aws_ec2_transit_gateway_connect` can be imported by using the EC2 Transit Gateway Connect identifier, e.g.,

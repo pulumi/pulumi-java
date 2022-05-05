@@ -19,6 +19,58 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. `arn:aws:iam::123456789012:root`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Topic(&#34;test&#34;);
+ * 
+ *         final var snsTopicPolicy = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .policyId(&#34;__default_policy_ID&#34;)
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(                
+ *                     &#34;SNS:Subscribe&#34;,
+ *                     &#34;SNS:SetTopicAttributes&#34;,
+ *                     &#34;SNS:RemovePermission&#34;,
+ *                     &#34;SNS:Receive&#34;,
+ *                     &#34;SNS:Publish&#34;,
+ *                     &#34;SNS:ListSubscriptionsByTopic&#34;,
+ *                     &#34;SNS:GetTopicAttributes&#34;,
+ *                     &#34;SNS:DeleteTopic&#34;,
+ *                     &#34;SNS:AddPermission&#34;)
+ *                 .conditions(GetPolicyDocumentStatementCondition.builder()
+ *                     .test(&#34;StringEquals&#34;)
+ *                     .variable(&#34;AWS:SourceOwner&#34;)
+ *                     .values(var_.getAccount-id())
+ *                     .build())
+ *                 .effect(&#34;Allow&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;AWS&#34;)
+ *                     .identifiers(&#34;*&#34;)
+ *                     .build())
+ *                 .resources(test.getArn())
+ *                 .sid(&#34;__default_statement_ID&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new TopicPolicy(&#34;default&#34;, TopicPolicyArgs.builder()        
+ *             .arn(test.getArn())
+ *             .policy(snsTopicPolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(snsTopicPolicy -&gt; snsTopicPolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

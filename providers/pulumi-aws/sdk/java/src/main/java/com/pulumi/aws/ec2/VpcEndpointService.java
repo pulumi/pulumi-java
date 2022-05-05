@@ -29,6 +29,52 @@ import javax.annotation.Nullable;
  * and will overwrite the association.
  * 
  * ## Example Usage
+ * ### Network Load Balancers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpcEndpointService(&#34;example&#34;, VpcEndpointServiceArgs.builder()        
+ *             .acceptanceRequired(false)
+ *             .networkLoadBalancerArns(aws_lb.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Gateway Load Balancers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpcEndpointService(&#34;example&#34;, VpcEndpointServiceArgs.builder()        
+ *             .acceptanceRequired(false)
+ *             .gatewayLoadBalancerArns(aws_lb.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

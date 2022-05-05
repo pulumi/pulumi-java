@@ -24,6 +24,45 @@ import javax.annotation.Nullable;
  * Creates a Signer Signing Job.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testSp = new SigningProfile(&#34;testSp&#34;, SigningProfileArgs.builder()        
+ *             .platformId(&#34;AWSLambda-SHA384-ECDSA&#34;)
+ *             .build());
+ * 
+ *         var buildSigningJob = new SigningJob(&#34;buildSigningJob&#34;, SigningJobArgs.builder()        
+ *             .profileName(testSp.getName())
+ *             .source(SigningJobSource.builder()
+ *                 .s3(SigningJobSourceS3.builder()
+ *                     .bucket(&#34;s3-bucket-name&#34;)
+ *                     .key(&#34;object-to-be-signed.zip&#34;)
+ *                     .version(&#34;jADjFYYYEXAMPLETszPjOmCMFDzd9dN1&#34;)
+ *                     .build())
+ *                 .build())
+ *             .destination(SigningJobDestination.builder()
+ *                 .s3(SigningJobDestinationS3.builder()
+ *                     .bucket(&#34;s3-bucket-name&#34;)
+ *                     .prefix(&#34;signed/&#34;)
+ *                     .build())
+ *                 .build())
+ *             .ignoreSigningJobFailure(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

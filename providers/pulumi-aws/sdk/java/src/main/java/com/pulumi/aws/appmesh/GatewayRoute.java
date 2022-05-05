@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * Provides an AWS App Mesh gateway route resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GatewayRoute(&#34;example&#34;, GatewayRouteArgs.builder()        
+ *             .meshName(&#34;example-service-mesh&#34;)
+ *             .virtualGatewayName(aws_appmesh_virtual_gateway.getExample().getName())
+ *             .spec(GatewayRouteSpec.builder()
+ *                 .httpRoute(GatewayRouteSpecHttpRoute.builder()
+ *                     .action(GatewayRouteSpecHttpRouteAction.builder()
+ *                         .target(GatewayRouteSpecHttpRouteActionTarget.builder()
+ *                             .virtualService(GatewayRouteSpecHttpRouteActionTargetVirtualService.builder()
+ *                                 .virtualServiceName(aws_appmesh_virtual_service.getExample().getName())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .match(GatewayRouteSpecHttpRouteMatch.builder()
+ *                         .prefix(&#34;/&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

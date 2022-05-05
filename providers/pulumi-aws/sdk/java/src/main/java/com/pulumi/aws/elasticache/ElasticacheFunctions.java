@@ -20,6 +20,27 @@ public final class ElasticacheFunctions {
      * Use this data source to get information about an Elasticache Cluster
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var myCluster = Output.of(ElasticacheFunctions.getCluster(GetClusterArgs.builder()
+     *             .clusterId(&#34;my-cluster-id&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
@@ -32,6 +53,27 @@ public final class ElasticacheFunctions {
      * Use this data source to get information about an Elasticache Replication Group.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getReplicationGroup(GetReplicationGroupArgs.builder()
+     *             .replicationGroupId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetReplicationGroupResult> getReplicationGroup(GetReplicationGroupArgs args) {
@@ -44,6 +86,27 @@ public final class ElasticacheFunctions {
      * Use this data source to get information about an Elasticache User.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var bar = Output.of(ElasticacheFunctions.getUser(GetUserArgs.builder()
+     *             .userId(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {

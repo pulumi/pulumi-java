@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
  * [AWS Client VPN Administrator&#39;s Guide](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleEndpoint = new Endpoint(&#34;exampleEndpoint&#34;, EndpointArgs.builder()        
+ *             .description(&#34;Example Client VPN endpoint&#34;)
+ *             .serverCertificateArn(aws_acm_certificate.getExample().getArn())
+ *             .clientCidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .authenticationOptions(EndpointAuthenticationOption.builder()
+ *                 .type(&#34;certificate-authentication&#34;)
+ *                 .rootCertificateChainArn(aws_acm_certificate.getExample().getArn())
+ *                 .build())
+ *             .connectionLogOptions(EndpointConnectionLogOptions.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleNetworkAssociation = new NetworkAssociation(&#34;exampleNetworkAssociation&#34;, NetworkAssociationArgs.builder()        
+ *             .clientVpnEndpointId(exampleEndpoint.getId())
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .build());
+ * 
+ *         var exampleRoute = new Route(&#34;exampleRoute&#34;, RouteArgs.builder()        
+ *             .clientVpnEndpointId(exampleEndpoint.getId())
+ *             .destinationCidrBlock(&#34;0.0.0.0/0&#34;)
+ *             .targetVpcSubnetId(exampleNetworkAssociation.getSubnetId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,45 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** AWS allows a Direct Connect hosted transit virtual interface to be deleted from either the allocator&#39;s or accepter&#39;s side. However, this provider only allows the Direct Connect hosted transit virtual interface to be deleted from the allocator&#39;s side by removing the corresponding `aws.directconnect.HostedTransitVirtualInterface` resource from your configuration. Removing a `aws.directconnect.HostedTransitVirtualInterfaceAcceptor` resource from your configuration will remove it from your statefile and management, **but will not delete the Direct Connect virtual interface.**
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accepter = new Provider(&#34;accepter&#34;);
+ * 
+ *         final var accepterCallerIdentity = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var example = new Gateway(&#34;example&#34;, GatewayArgs.builder()        
+ *             .amazonSideAsn(64512)
+ *             .build());
+ * 
+ *         var creator = new HostedTransitVirtualInterface(&#34;creator&#34;, HostedTransitVirtualInterfaceArgs.builder()        
+ *             .connectionId(&#34;dxcon-zzzzzzzz&#34;)
+ *             .ownerAccountId(accepterCallerIdentity.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *             .vlan(4094)
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .bgpAsn(65352)
+ *             .build());
+ * 
+ *         var accepterHostedTransitVirtualInterfaceAcceptor = new HostedTransitVirtualInterfaceAcceptor(&#34;accepterHostedTransitVirtualInterfaceAcceptor&#34;, HostedTransitVirtualInterfaceAcceptorArgs.builder()        
+ *             .virtualInterfaceId(creator.getId())
+ *             .dxGatewayId(example.getId())
+ *             .tags(Map.of(&#34;Side&#34;, &#34;Accepter&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -17,6 +17,27 @@ import javax.annotation.Nullable;
  * Provides a confirmation of the creation of the specified hosted connection on an interconnect.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var confirmation = new ConnectionConfirmation(&#34;confirmation&#34;, ConnectionConfirmationArgs.builder()        
+ *             .connectionId(&#34;dxcon-ffabc123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:directconnect/connectionConfirmation:ConnectionConfirmation")

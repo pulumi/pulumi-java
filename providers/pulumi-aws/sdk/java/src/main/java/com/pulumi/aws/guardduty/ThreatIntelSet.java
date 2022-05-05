@@ -22,6 +22,54 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Currently in GuardDuty, users from member accounts cannot upload and further manage ThreatIntelSets. ThreatIntelSets that are uploaded by the primary account are imposed on GuardDuty functionality in its member accounts. See the [GuardDuty API Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/create-threat-intel-set.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Detector(&#34;primary&#34;, DetectorArgs.builder()        
+ *             .enable(true)
+ *             .build());
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var bucketAcl = new BucketAclV2(&#34;bucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var myThreatIntelSetBucketObjectv2 = new BucketObjectv2(&#34;myThreatIntelSetBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .acl(&#34;public-read&#34;)
+ *             .content(&#34;&#34;&#34;
+ * 10.0.0.0/8
+ *             &#34;&#34;&#34;)
+ *             .bucket(bucket.getId())
+ *             .key(&#34;MyThreatIntelSet&#34;)
+ *             .build());
+ * 
+ *         var myThreatIntelSetThreatIntelSet = new ThreatIntelSet(&#34;myThreatIntelSetThreatIntelSet&#34;, ThreatIntelSetArgs.builder()        
+ *             .activate(true)
+ *             .detectorId(primary.getId())
+ *             .format(&#34;TXT&#34;)
+ *             .location(Output.tuple(myThreatIntelSetBucketObjectv2.getBucket(), myThreatIntelSetBucketObjectv2.getKey()).apply(values -&gt; {
+ *                 var bucket = values.t1;
+ *                 var key = values.t2;
+ *                 return String.format(&#34;https://s3.amazonaws.com/%s/%s&#34;, bucket,key);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

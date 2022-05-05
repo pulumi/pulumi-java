@@ -19,6 +19,42 @@ import javax.annotation.Nullable;
  * &gt; This functionality is for managing [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html). To manage S3 Bucket Policies in an AWS Partition, see the `aws.s3.BucketPolicy` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketPolicy(&#34;example&#34;, BucketPolicyArgs.builder()        
+ *             .bucket(aws_s3control_bucket.getExample().getArn())
+ *             .policy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Id&#34;, &#34;testBucketPolicy&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;s3-outposts:PutBucketLifecycleConfiguration&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Deny&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;AWS&#34;, &#34;*&#34;)
+ *                         )),
+ *                         jsonProperty(&#34;Resource&#34;, aws_s3control_bucket.getExample().getArn()),
+ *                         jsonProperty(&#34;Sid&#34;, &#34;statement1&#34;)
+ *                     ))),
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

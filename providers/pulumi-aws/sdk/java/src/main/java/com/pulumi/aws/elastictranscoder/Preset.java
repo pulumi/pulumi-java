@@ -25,6 +25,78 @@ import javax.annotation.Nullable;
  * Provides an Elastic Transcoder preset resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Preset(&#34;bar&#34;, PresetArgs.builder()        
+ *             .audio(PresetAudio.builder()
+ *                 .audioPackingMode(&#34;SingleTrack&#34;)
+ *                 .bitRate(96)
+ *                 .channels(2)
+ *                 .codec(&#34;AAC&#34;)
+ *                 .sampleRate(44100)
+ *                 .build())
+ *             .audioCodecOptions(PresetAudioCodecOptions.builder()
+ *                 .profile(&#34;AAC-LC&#34;)
+ *                 .build())
+ *             .container(&#34;mp4&#34;)
+ *             .description(&#34;Sample Preset&#34;)
+ *             .thumbnails(PresetThumbnails.builder()
+ *                 .format(&#34;png&#34;)
+ *                 .interval(120)
+ *                 .maxHeight(&#34;auto&#34;)
+ *                 .maxWidth(&#34;auto&#34;)
+ *                 .paddingPolicy(&#34;Pad&#34;)
+ *                 .sizingPolicy(&#34;Fit&#34;)
+ *                 .build())
+ *             .video(PresetVideo.builder()
+ *                 .bitRate(&#34;1600&#34;)
+ *                 .codec(&#34;H.264&#34;)
+ *                 .displayAspectRatio(&#34;16:9&#34;)
+ *                 .fixedGop(&#34;false&#34;)
+ *                 .frameRate(&#34;auto&#34;)
+ *                 .keyframesMaxDist(240)
+ *                 .maxFrameRate(&#34;60&#34;)
+ *                 .maxHeight(&#34;auto&#34;)
+ *                 .maxWidth(&#34;auto&#34;)
+ *                 .paddingPolicy(&#34;Pad&#34;)
+ *                 .sizingPolicy(&#34;Fit&#34;)
+ *                 .build())
+ *             .videoCodecOptions(Map.ofEntries(
+ *                 Map.entry(&#34;ColorSpaceConversionMode&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;InterlacedMode&#34;, &#34;Progressive&#34;),
+ *                 Map.entry(&#34;Level&#34;, &#34;2.2&#34;),
+ *                 Map.entry(&#34;MaxReferenceFrames&#34;, 3),
+ *                 Map.entry(&#34;Profile&#34;, &#34;main&#34;)
+ *             ))
+ *             .videoWatermarks(PresetVideoWatermark.builder()
+ *                 .horizontalAlign(&#34;Right&#34;)
+ *                 .horizontalOffset(&#34;10px&#34;)
+ *                 .id(&#34;Test&#34;)
+ *                 .maxHeight(&#34;20%&#34;)
+ *                 .maxWidth(&#34;20%&#34;)
+ *                 .opacity(&#34;55.5&#34;)
+ *                 .sizingPolicy(&#34;ShrinkToFit&#34;)
+ *                 .target(&#34;Content&#34;)
+ *                 .verticalAlign(&#34;Bottom&#34;)
+ *                 .verticalOffset(&#34;10px&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

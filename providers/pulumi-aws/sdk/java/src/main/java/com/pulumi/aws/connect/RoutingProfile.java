@@ -24,6 +24,40 @@ import javax.annotation.Nullable;
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RoutingProfile(&#34;example&#34;, RoutingProfileArgs.builder()        
+ *             .defaultOutboundQueueId(&#34;12345678-1234-1234-1234-123456789012&#34;)
+ *             .description(&#34;example description&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .mediaConcurrencies(RoutingProfileMediaConcurrency.builder()
+ *                 .channel(&#34;VOICE&#34;)
+ *                 .concurrency(1)
+ *                 .build())
+ *             .queueConfigs(RoutingProfileQueueConfig.builder()
+ *                 .channel(&#34;VOICE&#34;)
+ *                 .delay(2)
+ *                 .priority(1)
+ *                 .queueId(&#34;12345678-1234-1234-1234-123456789012&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Routing Profile&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

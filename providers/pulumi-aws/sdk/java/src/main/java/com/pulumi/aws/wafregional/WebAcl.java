@@ -23,6 +23,124 @@ import javax.annotation.Nullable;
  * Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.
  * 
  * ## Example Usage
+ * ### Regular Rule
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafrule = new Rule(&#34;wafrule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .predicates(RulePredicate.builder()
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafacl = new WebAcl(&#34;wafacl&#34;, WebAclArgs.builder()        
+ *             .metricName(&#34;tfWebACL&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .type(&#34;ALLOW&#34;)
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .action(WebAclRuleAction.builder()
+ *                     .type(&#34;BLOCK&#34;)
+ *                     .build())
+ *                 .priority(1)
+ *                 .ruleId(wafrule.getId())
+ *                 .type(&#34;REGULAR&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Group Rule
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAcl(&#34;example&#34;, WebAclArgs.builder()        
+ *             .metricName(&#34;example&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .type(&#34;ALLOW&#34;)
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .priority(1)
+ *                 .ruleId(aws_wafregional_rule_group.getExample().getId())
+ *                 .type(&#34;GROUP&#34;)
+ *                 .overrideAction(WebAclRuleOverrideAction.builder()
+ *                     .type(&#34;NONE&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging
+ * 
+ * &gt; *NOTE:* The Kinesis Firehose Delivery Stream name must begin with `aws-waf-logs-`. See the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) for more information about enabling WAF logging.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAcl(&#34;example&#34;, WebAclArgs.builder()        
+ *             .loggingConfiguration(WebAclLoggingConfiguration.builder()
+ *                 .logDestination(aws_kinesis_firehose_delivery_stream.getExample().getArn())
+ *                 .redactedFields(WebAclLoggingConfigurationRedactedFields.builder()
+ *                     .fieldToMatches(                    
+ *                         WebAclLoggingConfigurationRedactedFieldsFieldToMatch.builder()
+ *                             .type(&#34;URI&#34;)
+ *                             .build(),
+ *                         WebAclLoggingConfigurationRedactedFieldsFieldToMatch.builder()
+ *                             .data(&#34;referer&#34;)
+ *                             .type(&#34;HEADER&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

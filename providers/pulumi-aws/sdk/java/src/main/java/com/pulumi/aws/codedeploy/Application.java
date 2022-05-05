@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
  * Provides a CodeDeploy application to be used as a basis for deployments
  * 
  * ## Example Usage
+ * ### ECS Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+ *             .computePlatform(&#34;ECS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+ *             .computePlatform(&#34;Lambda&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Server Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+ *             .computePlatform(&#34;Server&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,92 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource only currently supports Amazon Lex (V1) Associations.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BotAssociation(&#34;example&#34;, BotAssociationArgs.builder()        
+ *             .instanceId(aws_connect_instance.getExample().getId())
+ *             .lexBot(BotAssociationLexBot.builder()
+ *                 .lexRegion(&#34;us-west-2&#34;)
+ *                 .name(&#34;Test&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Including a sample Lex bot
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleIntent = new Intent(&#34;exampleIntent&#34;, IntentArgs.builder()        
+ *             .createVersion(true)
+ *             .name(&#34;connect_lex_intent&#34;)
+ *             .fulfillmentActivity(IntentFulfillmentActivity.builder()
+ *                 .type(&#34;ReturnIntent&#34;)
+ *                 .build())
+ *             .sampleUtterances(&#34;I would like to pick up flowers.&#34;)
+ *             .build());
+ * 
+ *         var exampleBot = new Bot(&#34;exampleBot&#34;, BotArgs.builder()        
+ *             .abortStatement(BotAbortStatement.builder()
+ *                 .messages(BotAbortStatementMessage.builder()
+ *                     .content(&#34;Sorry, I am not able to assist at this time.&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .clarificationPrompt(BotClarificationPrompt.builder()
+ *                 .maxAttempts(2)
+ *                 .messages(BotClarificationPromptMessage.builder()
+ *                     .content(&#34;I didn&#39;t understand you, what would you like to do?&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .intents(BotIntent.builder()
+ *                 .intentName(exampleIntent.getName())
+ *                 .intentVersion(&#34;1&#34;)
+ *                 .build())
+ *             .childDirected(false)
+ *             .name(&#34;connect_lex_bot&#34;)
+ *             .processBehavior(&#34;BUILD&#34;)
+ *             .build());
+ * 
+ *         var exampleBotAssociation = new BotAssociation(&#34;exampleBotAssociation&#34;, BotAssociationArgs.builder()        
+ *             .instanceId(aws_connect_instance.getExample().getId())
+ *             .lexBot(BotAssociationLexBot.builder()
+ *                 .lexRegion(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .name(exampleBot.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

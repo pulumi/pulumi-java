@@ -19,6 +19,36 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new ParameterGroup(&#34;default&#34;, ParameterGroupArgs.builder()        
+ *             .family(&#34;mysql5.6&#34;)
+ *             .parameters(            
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;character_set_server&#34;)
+ *                     .value(&#34;utf8&#34;)
+ *                     .build(),
+ *                 ParameterGroupParameter.builder()
+ *                     .name(&#34;character_set_client&#34;)
+ *                     .value(&#34;utf8&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

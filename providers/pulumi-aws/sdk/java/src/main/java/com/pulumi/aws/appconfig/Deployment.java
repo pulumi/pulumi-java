@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * Provides an AppConfig Deployment resource for an `aws.appconfig.Application` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Deployment(&#34;example&#34;, DeploymentArgs.builder()        
+ *             .applicationId(aws_appconfig_application.getExample().getId())
+ *             .configurationProfileId(aws_appconfig_configuration_profile.getExample().getConfiguration_profile_id())
+ *             .configurationVersion(aws_appconfig_hosted_configuration_version.getExample().getVersion_number())
+ *             .deploymentStrategyId(aws_appconfig_deployment_strategy.getExample().getId())
+ *             .description(&#34;My example deployment&#34;)
+ *             .environmentId(aws_appconfig_environment.getExample().getEnvironment_id())
+ *             .tags(Map.of(&#34;Type&#34;, &#34;AppConfig Deployment&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

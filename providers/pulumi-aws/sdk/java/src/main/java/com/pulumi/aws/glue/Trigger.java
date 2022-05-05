@@ -24,6 +24,154 @@ import javax.annotation.Nullable;
  * Manages a Glue Trigger resource.
  * 
  * ## Example Usage
+ * ### Conditional Trigger
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Trigger(&#34;example&#34;, TriggerArgs.builder()        
+ *             .type(&#34;CONDITIONAL&#34;)
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(aws_glue_job.getExample1().getName())
+ *                 .build())
+ *             .predicate(TriggerPredicate.builder()
+ *                 .conditions(TriggerPredicateCondition.builder()
+ *                     .jobName(aws_glue_job.getExample2().getName())
+ *                     .state(&#34;SUCCEEDED&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### On-Demand Trigger
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Trigger(&#34;example&#34;, TriggerArgs.builder()        
+ *             .type(&#34;ON_DEMAND&#34;)
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(aws_glue_job.getExample().getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Scheduled Trigger
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Trigger(&#34;example&#34;, TriggerArgs.builder()        
+ *             .schedule(&#34;cron(15 12 * * ? *)&#34;)
+ *             .type(&#34;SCHEDULED&#34;)
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(aws_glue_job.getExample().getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Conditional Trigger with Crawler Action
+ * 
+ * **Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Trigger(&#34;example&#34;, TriggerArgs.builder()        
+ *             .type(&#34;CONDITIONAL&#34;)
+ *             .actions(TriggerAction.builder()
+ *                 .crawlerName(aws_glue_crawler.getExample1().getName())
+ *                 .build())
+ *             .predicate(TriggerPredicate.builder()
+ *                 .conditions(TriggerPredicateCondition.builder()
+ *                     .jobName(aws_glue_job.getExample2().getName())
+ *                     .state(&#34;SUCCEEDED&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Conditional Trigger with Crawler Condition
+ * 
+ * **Note:** Triggers can have both a crawler action and a crawler condition, just no example provided.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Trigger(&#34;example&#34;, TriggerArgs.builder()        
+ *             .type(&#34;CONDITIONAL&#34;)
+ *             .actions(TriggerAction.builder()
+ *                 .jobName(aws_glue_job.getExample1().getName())
+ *                 .build())
+ *             .predicate(TriggerPredicate.builder()
+ *                 .conditions(TriggerPredicateCondition.builder()
+ *                     .crawlerName(aws_glue_crawler.getExample2().getName())
+ *                     .crawlState(&#34;SUCCEEDED&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

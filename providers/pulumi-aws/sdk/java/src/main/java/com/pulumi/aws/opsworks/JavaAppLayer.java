@@ -24,6 +24,27 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks Java application layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new JavaAppLayer(&#34;app&#34;, JavaAppLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/javaAppLayer:JavaAppLayer")

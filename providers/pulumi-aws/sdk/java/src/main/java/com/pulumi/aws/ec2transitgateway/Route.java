@@ -19,6 +19,54 @@ import javax.annotation.Nullable;
  * Manages an EC2 Transit Gateway Route.
  * 
  * ## Example Usage
+ * ### Standard usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Route(&#34;example&#34;, RouteArgs.builder()        
+ *             .destinationCidrBlock(&#34;0.0.0.0/0&#34;)
+ *             .transitGatewayAttachmentId(aws_ec2_transit_gateway_vpc_attachment.getExample().getId())
+ *             .transitGatewayRouteTableId(aws_ec2_transit_gateway.getExample().getAssociation_default_route_table_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Blackhole route
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Route(&#34;example&#34;, RouteArgs.builder()        
+ *             .destinationCidrBlock(&#34;0.0.0.0/0&#34;)
+ *             .blackhole(true)
+ *             .transitGatewayRouteTableId(aws_ec2_transit_gateway.getExample().getAssociation_default_route_table_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

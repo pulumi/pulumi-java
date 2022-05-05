@@ -17,6 +17,30 @@ import javax.annotation.Nullable;
  * Provides an Elastic MapReduce Studio Session Mapping.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new StudioSessionMapping(&#34;example&#34;, StudioSessionMappingArgs.builder()        
+ *             .studioId(aws_emr_studio.getExample().getId())
+ *             .identityType(&#34;USER&#34;)
+ *             .identityId(&#34;example&#34;)
+ *             .sessionPolicyArn(aws_iam_policy.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

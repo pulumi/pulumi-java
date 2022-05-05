@@ -20,6 +20,112 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var s3 = new VpcEndpoint(&#34;s3&#34;, VpcEndpointArgs.builder()        
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .serviceName(&#34;com.amazonaws.us-west-2.s3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic w/ Tags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var s3 = new VpcEndpoint(&#34;s3&#34;, VpcEndpointArgs.builder()        
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .serviceName(&#34;com.amazonaws.us-west-2.s3&#34;)
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Interface Endpoint Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ec2 = new VpcEndpoint(&#34;ec2&#34;, VpcEndpointArgs.builder()        
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .serviceName(&#34;com.amazonaws.us-west-2.ec2&#34;)
+ *             .vpcEndpointType(&#34;Interface&#34;)
+ *             .securityGroupIds(aws_security_group.getSg1().getId())
+ *             .privateDnsEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Gateway Load Balancer Endpoint Type
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var exampleVpcEndpointService = new VpcEndpointService(&#34;exampleVpcEndpointService&#34;, VpcEndpointServiceArgs.builder()        
+ *             .acceptanceRequired(false)
+ *             .allowedPrincipals(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getArn()))
+ *             .gatewayLoadBalancerArns(aws_lb.getExample().getArn())
+ *             .build());
+ * 
+ *         var exampleVpcEndpoint = new VpcEndpoint(&#34;exampleVpcEndpoint&#34;, VpcEndpointArgs.builder()        
+ *             .serviceName(exampleVpcEndpointService.getServiceName())
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .vpcEndpointType(exampleVpcEndpointService.getServiceType())
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

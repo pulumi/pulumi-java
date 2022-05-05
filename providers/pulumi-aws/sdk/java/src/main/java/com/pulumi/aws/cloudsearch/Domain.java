@@ -21,6 +21,47 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Domain(&#34;example&#34;, DomainArgs.builder()        
+ *             .indexFields(            
+ *                 DomainIndexField.builder()
+ *                     .analysisScheme(&#34;_en_default_&#34;)
+ *                     .highlight(false)
+ *                     .name(&#34;headline&#34;)
+ *                     .return_(true)
+ *                     .search(true)
+ *                     .sort(true)
+ *                     .type(&#34;text&#34;)
+ *                     .build(),
+ *                 DomainIndexField.builder()
+ *                     .facet(true)
+ *                     .name(&#34;price&#34;)
+ *                     .return_(true)
+ *                     .search(true)
+ *                     .sort(true)
+ *                     .type(&#34;double&#34;)
+ *                     .build())
+ *             .scalingParameters(DomainScalingParameters.builder()
+ *                 .desiredInstanceType(&#34;search.medium&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

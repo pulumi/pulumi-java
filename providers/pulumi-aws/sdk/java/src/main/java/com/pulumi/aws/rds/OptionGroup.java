@@ -26,6 +26,57 @@ import javax.annotation.Nullable;
  * * [Oracle Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new OptionGroup(&#34;example&#34;, OptionGroupArgs.builder()        
+ *             .optionGroupDescription(&#34;Option Group&#34;)
+ *             .engineName(&#34;sqlserver-ee&#34;)
+ *             .majorEngineVersion(&#34;11.00&#34;)
+ *             .options(            
+ *                 OptionGroupOption.builder()
+ *                     .optionName(&#34;Timezone&#34;)
+ *                     .optionSettings(OptionGroupOptionOptionSetting.builder()
+ *                         .name(&#34;TIME_ZONE&#34;)
+ *                         .value(&#34;UTC&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 OptionGroupOption.builder()
+ *                     .optionName(&#34;SQLSERVER_BACKUP_RESTORE&#34;)
+ *                     .optionSettings(OptionGroupOptionOptionSetting.builder()
+ *                         .name(&#34;IAM_ROLE_ARN&#34;)
+ *                         .value(aws_iam_role.getExample().getArn())
+ *                         .build())
+ *                     .build(),
+ *                 OptionGroupOption.builder()
+ *                     .optionName(&#34;TDE&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **Note**: Any modifications to the `aws.rds.OptionGroup` are set to happen immediately as we default to applying immediately.
+ * 
+ * &gt; **WARNING:** You can perform a destroy on a `aws.rds.OptionGroup`, as long as it is not associated with any Amazon RDS resource. An option group can be associated with a DB instance, a manual DB snapshot, or an automated DB snapshot.
+ * 
+ * If you try to delete an option group that is associated with an Amazon RDS resource, an error similar to the following is returned:
+ * 
+ * &gt; An error occurred (InvalidOptionGroupStateFault) when calling the DeleteOptionGroup operation: The option group &#39;optionGroupName&#39; cannot be deleted because it is in use.
+ * 
+ * More information about this can be found [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithOptionGroups.html#USER_WorkingWithOptionGroups.Delete).
  * 
  * ## Import
  * 

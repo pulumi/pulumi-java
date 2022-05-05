@@ -23,6 +23,62 @@ import javax.annotation.Nullable;
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html) for more information.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OntapVolume(&#34;test&#34;, OntapVolumeArgs.builder()        
+ *             .junctionPath(&#34;/test&#34;)
+ *             .sizeInMegabytes(1024)
+ *             .storageEfficiencyEnabled(true)
+ *             .storageVirtualMachineId(aws_fsx_ontap_storage_virtual_machine.getTest().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using Tiering Policy
+ * 
+ * Additional information on tiering policy with ONTAP Volumes can be found in the [FSx ONTAP Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-volumes.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OntapVolume(&#34;test&#34;, OntapVolumeArgs.builder()        
+ *             .junctionPath(&#34;/test&#34;)
+ *             .sizeInMegabytes(1024)
+ *             .storageEfficiencyEnabled(true)
+ *             .storageVirtualMachineId(aws_fsx_ontap_storage_virtual_machine.getTest().getId())
+ *             .tieringPolicy(OntapVolumeTieringPolicy.builder()
+ *                 .name(&#34;AUTO&#34;)
+ *                 .coolingPeriod(31)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

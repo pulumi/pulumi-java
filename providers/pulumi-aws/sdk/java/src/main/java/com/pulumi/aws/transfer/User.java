@@ -22,6 +22,75 @@ import javax.annotation.Nullable;
  * Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the `aws.transfer.SshKey` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooServer = new Server(&#34;fooServer&#34;, ServerArgs.builder()        
+ *             .identityProviderType(&#34;SERVICE_MANAGED&#34;)
+ *             .tags(Map.of(&#34;NAME&#34;, &#34;tf-acc-test-transfer-server&#34;))
+ *             .build());
+ * 
+ *         var fooRole = new Role(&#34;fooRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ * 	&#34;Version&#34;: &#34;2012-10-17&#34;,
+ * 	&#34;Statement&#34;: [
+ * 		{
+ * 		&#34;Effect&#34;: &#34;Allow&#34;,
+ * 		&#34;Principal&#34;: {
+ * 			&#34;Service&#34;: &#34;transfer.amazonaws.com&#34;
+ * 		},
+ * 		&#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ * 		}
+ * 	]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var fooRolePolicy = new RolePolicy(&#34;fooRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(fooRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ * 	&#34;Version&#34;: &#34;2012-10-17&#34;,
+ * 	&#34;Statement&#34;: [
+ * 		{
+ * 			&#34;Sid&#34;: &#34;AllowFullAccesstoS3&#34;,
+ * 			&#34;Effect&#34;: &#34;Allow&#34;,
+ * 			&#34;Action&#34;: [
+ * 				&#34;s3:*&#34;
+ * 			],
+ * 			&#34;Resource&#34;: &#34;*&#34;
+ * 		}
+ * 	]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var fooUser = new User(&#34;fooUser&#34;, UserArgs.builder()        
+ *             .serverId(fooServer.getId())
+ *             .userName(&#34;tftestuser&#34;)
+ *             .role(fooRole.getArn())
+ *             .homeDirectoryType(&#34;LOGICAL&#34;)
+ *             .homeDirectoryMappings(UserHomeDirectoryMapping.builder()
+ *                 .entry(&#34;/test.pdf&#34;)
+ *                 .target(&#34;/bucket3/test-path/tftestuser.pdf&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

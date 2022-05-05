@@ -22,6 +22,52 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** When removing a Glacier Vault, the Vault must be empty.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var awsSnsTopic = new Topic(&#34;awsSnsTopic&#34;);
+ * 
+ *         var myArchive = new Vault(&#34;myArchive&#34;, VaultArgs.builder()        
+ *             .notification(VaultNotification.builder()
+ *                 .snsTopic(awsSnsTopic.getArn())
+ *                 .events(                
+ *                     &#34;ArchiveRetrievalCompleted&#34;,
+ *                     &#34;InventoryRetrievalCompleted&#34;)
+ *                 .build())
+ *             .accessPolicy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;:&#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;:[
+ *        {
+ *           &#34;Sid&#34;: &#34;add-read-only-perm&#34;,
+ *           &#34;Principal&#34;: &#34;*&#34;,
+ *           &#34;Effect&#34;: &#34;Allow&#34;,
+ *           &#34;Action&#34;: [
+ *              &#34;glacier:InitiateJob&#34;,
+ *              &#34;glacier:GetJobOutput&#34;
+ *           ],
+ *           &#34;Resource&#34;: &#34;arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive&#34;
+ *        }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .tags(Map.of(&#34;Test&#34;, &#34;MyArchive&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -18,6 +18,54 @@ import javax.annotation.Nullable;
  * Manages a Lambda Provisioned Concurrency Configuration.
  * 
  * ## Example Usage
+ * ### Alias Name
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ProvisionedConcurrencyConfig(&#34;example&#34;, ProvisionedConcurrencyConfigArgs.builder()        
+ *             .functionName(aws_lambda_alias.getExample().getFunction_name())
+ *             .provisionedConcurrentExecutions(1)
+ *             .qualifier(aws_lambda_alias.getExample().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Function Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ProvisionedConcurrencyConfig(&#34;example&#34;, ProvisionedConcurrencyConfigArgs.builder()        
+ *             .functionName(aws_lambda_function.getExample().getFunction_name())
+ *             .provisionedConcurrentExecutions(1)
+ *             .qualifier(aws_lambda_function.getExample().getVersion())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

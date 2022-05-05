@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a CodeCommit Repository Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Repository(&#34;test&#34;, RepositoryArgs.builder()        
+ *             .description(&#34;This is the Sample App Repository&#34;)
+ *             .repositoryName(&#34;MyTestRepository&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

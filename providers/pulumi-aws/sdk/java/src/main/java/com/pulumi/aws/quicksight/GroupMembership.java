@@ -18,6 +18,28 @@ import javax.annotation.Nullable;
  * Resource for managing QuickSight Group Membership
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GroupMembership(&#34;example&#34;, GroupMembershipArgs.builder()        
+ *             .groupName(&#34;all-access-users&#34;)
+ *             .memberName(&#34;john_smith&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

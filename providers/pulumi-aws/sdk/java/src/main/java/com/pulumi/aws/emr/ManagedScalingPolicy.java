@@ -19,6 +19,44 @@ import javax.annotation.Nullable;
  * Provides a Managed Scaling policy for EMR Cluster. With Amazon EMR versions 5.30.0 and later (except for Amazon EMR 6.0.0), you can enable EMR managed scaling to automatically increase or decrease the number of instances or units in your cluster based on workload. See [Using EMR Managed Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-scaling.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sample = new Cluster(&#34;sample&#34;, ClusterArgs.builder()        
+ *             .releaseLabel(&#34;emr-5.30.0&#34;)
+ *             .masterInstanceGroup(ClusterMasterInstanceGroup.builder()
+ *                 .instanceType(&#34;m4.large&#34;)
+ *                 .build())
+ *             .coreInstanceGroup(ClusterCoreInstanceGroup.builder()
+ *                 .instanceType(&#34;c4.large&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var samplepolicy = new ManagedScalingPolicy(&#34;samplepolicy&#34;, ManagedScalingPolicyArgs.builder()        
+ *             .clusterId(sample.getId())
+ *             .computeLimits(ManagedScalingPolicyComputeLimit.builder()
+ *                 .unitType(&#34;Instances&#34;)
+ *                 .minimumCapacityUnits(2)
+ *                 .maximumCapacityUnits(10)
+ *                 .maximumOndemandCapacityUnits(2)
+ *                 .maximumCoreCapacityUnits(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

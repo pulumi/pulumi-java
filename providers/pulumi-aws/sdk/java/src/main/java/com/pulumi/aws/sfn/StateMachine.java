@@ -21,6 +21,119 @@ import javax.annotation.Nullable;
  * Provides a Step Function State Machine resource
  * 
  * ## Example Usage
+ * ### Basic (Standard Workflow)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sfnStateMachine = new StateMachine(&#34;sfnStateMachine&#34;, StateMachineArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_sfn().getArn())
+ *             .definition(&#34;&#34;&#34;
+ * {
+ *   &#34;Comment&#34;: &#34;A Hello World example of the Amazon States Language using an AWS Lambda Function&#34;,
+ *   &#34;StartAt&#34;: &#34;HelloWorld&#34;,
+ *   &#34;States&#34;: {
+ *     &#34;HelloWorld&#34;: {
+ *       &#34;Type&#34;: &#34;Task&#34;,
+ *       &#34;Resource&#34;: &#34;%s&#34;,
+ *       &#34;End&#34;: true
+ *     }
+ *   }
+ * }
+ * &#34;, aws_lambda_function.getLambda().getArn()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic (Express Workflow)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sfnStateMachine = new StateMachine(&#34;sfnStateMachine&#34;, StateMachineArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_sfn().getArn())
+ *             .type(&#34;EXPRESS&#34;)
+ *             .definition(&#34;&#34;&#34;
+ * {
+ *   &#34;Comment&#34;: &#34;A Hello World example of the Amazon States Language using an AWS Lambda Function&#34;,
+ *   &#34;StartAt&#34;: &#34;HelloWorld&#34;,
+ *   &#34;States&#34;: {
+ *     &#34;HelloWorld&#34;: {
+ *       &#34;Type&#34;: &#34;Task&#34;,
+ *       &#34;Resource&#34;: &#34;%s&#34;,
+ *       &#34;End&#34;: true
+ *     }
+ *   }
+ * }
+ * &#34;, aws_lambda_function.getLambda().getArn()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging
+ * 
+ * &gt; *NOTE:* See the [AWS Step Functions Developer Guide](https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html) for more information about enabling Step Function logging.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sfnStateMachine = new StateMachine(&#34;sfnStateMachine&#34;, StateMachineArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_sfn().getArn())
+ *             .definition(&#34;&#34;&#34;
+ * {
+ *   &#34;Comment&#34;: &#34;A Hello World example of the Amazon States Language using an AWS Lambda Function&#34;,
+ *   &#34;StartAt&#34;: &#34;HelloWorld&#34;,
+ *   &#34;States&#34;: {
+ *     &#34;HelloWorld&#34;: {
+ *       &#34;Type&#34;: &#34;Task&#34;,
+ *       &#34;Resource&#34;: &#34;%s&#34;,
+ *       &#34;End&#34;: true
+ *     }
+ *   }
+ * }
+ * &#34;, aws_lambda_function.getLambda().getArn()))
+ *             .loggingConfiguration(StateMachineLoggingConfiguration.builder()
+ *                 .logDestination(String.format(&#34;%s:*&#34;, aws_cloudwatch_log_group.getLog_group_for_sfn().getArn()))
+ *                 .includeExecutionData(true)
+ *                 .level(&#34;ERROR&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

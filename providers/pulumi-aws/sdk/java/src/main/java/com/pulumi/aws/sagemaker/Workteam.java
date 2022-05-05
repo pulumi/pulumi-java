@@ -22,6 +22,66 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Workteam resource.
  * 
  * ## Example Usage
+ * ### Cognito Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workteam(&#34;example&#34;, WorkteamArgs.builder()        
+ *             .workteamName(&#34;example&#34;)
+ *             .workforceName(aws_sagemaker_workforce.getExample().getId())
+ *             .description(&#34;example&#34;)
+ *             .memberDefinitions(WorkteamMemberDefinition.builder()
+ *                 .cognitoMemberDefinition(WorkteamMemberDefinitionCognitoMemberDefinition.builder()
+ *                     .clientId(aws_cognito_user_pool_client.getExample().getId())
+ *                     .userPool(aws_cognito_user_pool_domain.getExample().getUser_pool_id())
+ *                     .userGroup(aws_cognito_user_group.getExample().getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Oidc Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workteam(&#34;example&#34;, WorkteamArgs.builder()        
+ *             .workteamName(&#34;example&#34;)
+ *             .workforceName(aws_sagemaker_workforce.getExample().getId())
+ *             .description(&#34;example&#34;)
+ *             .memberDefinitions(WorkteamMemberDefinition.builder()
+ *                 .oidcMemberDefinition(WorkteamMemberDefinitionOidcMemberDefinition.builder()
+ *                     .groups(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

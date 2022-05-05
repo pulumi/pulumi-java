@@ -20,6 +20,31 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver DNS Firewall rule group association resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleResolverFirewallRuleGroup = new ResolverFirewallRuleGroup(&#34;exampleResolverFirewallRuleGroup&#34;);
+ * 
+ *         var exampleResolverFirewallRuleGroupAssociation = new ResolverFirewallRuleGroupAssociation(&#34;exampleResolverFirewallRuleGroupAssociation&#34;, ResolverFirewallRuleGroupAssociationArgs.builder()        
+ *             .firewallRuleGroupId(exampleResolverFirewallRuleGroup.getId())
+ *             .priority(100)
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

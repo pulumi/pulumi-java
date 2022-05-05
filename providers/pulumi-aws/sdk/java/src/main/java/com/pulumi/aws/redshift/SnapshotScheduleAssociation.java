@@ -15,6 +15,42 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultCluster = new Cluster(&#34;defaultCluster&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;tf-redshift-cluster&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .masterPassword(&#34;Mustbe8characters&#34;)
+ *             .nodeType(&#34;dc1.large&#34;)
+ *             .clusterType(&#34;single-node&#34;)
+ *             .build());
+ * 
+ *         var defaultSnapshotSchedule = new SnapshotSchedule(&#34;defaultSnapshotSchedule&#34;, SnapshotScheduleArgs.builder()        
+ *             .identifier(&#34;tf-redshift-snapshot-schedule&#34;)
+ *             .definitions(&#34;rate(12 hours)&#34;)
+ *             .build());
+ * 
+ *         var defaultSnapshotScheduleAssociation = new SnapshotScheduleAssociation(&#34;defaultSnapshotScheduleAssociation&#34;, SnapshotScheduleAssociationArgs.builder()        
+ *             .clusterIdentifier(defaultCluster.getId())
+ *             .scheduleIdentifier(defaultSnapshotSchedule.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

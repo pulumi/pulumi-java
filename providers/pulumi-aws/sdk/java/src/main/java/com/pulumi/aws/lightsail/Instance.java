@@ -27,6 +27,31 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see [&#34;Regions and Availability Zones in Amazon Lightsail&#34;](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gitlabTest = new Instance(&#34;gitlabTest&#34;, InstanceArgs.builder()        
+ *             .availabilityZone(&#34;us-east-1b&#34;)
+ *             .blueprintId(&#34;string&#34;)
+ *             .bundleId(&#34;string&#34;)
+ *             .keyPairName(&#34;some_key_name&#34;)
+ *             .tags(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Availability Zones
  * 
  * Lightsail currently supports the following Availability Zones (e.g., `us-east-1a`):

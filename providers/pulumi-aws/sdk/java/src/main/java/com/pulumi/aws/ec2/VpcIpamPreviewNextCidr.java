@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var exampleVpcIpam = new VpcIpam(&#34;exampleVpcIpam&#34;, VpcIpamArgs.builder()        
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleVpcIpamPool = new VpcIpamPool(&#34;exampleVpcIpamPool&#34;, VpcIpamPoolArgs.builder()        
+ *             .addressFamily(&#34;ipv4&#34;)
+ *             .ipamScopeId(exampleVpcIpam.getPrivateDefaultScopeId())
+ *             .locale(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *             .build());
+ * 
+ *         var exampleVpcIpamPoolCidr = new VpcIpamPoolCidr(&#34;exampleVpcIpamPoolCidr&#34;, VpcIpamPoolCidrArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .cidr(&#34;172.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleVpcIpamPreviewNextCidr = new VpcIpamPreviewNextCidr(&#34;exampleVpcIpamPreviewNextCidr&#34;, VpcIpamPreviewNextCidrArgs.builder()        
+ *             .ipamPoolId(exampleVpcIpamPool.getId())
+ *             .netmaskLength(28)
+ *             .disallowedCidrs(&#34;172.2.0.0/32&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:ec2/vpcIpamPreviewNextCidr:VpcIpamPreviewNextCidr")
 public class VpcIpamPreviewNextCidr extends com.pulumi.resources.CustomResource {

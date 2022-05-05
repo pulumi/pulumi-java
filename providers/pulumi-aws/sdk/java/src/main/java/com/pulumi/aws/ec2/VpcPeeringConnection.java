@@ -34,6 +34,129 @@ import javax.annotation.Nullable;
  * connection and use the `aws.ec2.VpcPeeringConnectionAccepter` resource to manage the accepter&#39;s side of the connection.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new VpcPeeringConnection(&#34;foo&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .peerOwnerId(var_.getPeer_owner_id())
+ *             .peerVpcId(aws_vpc.getBar().getId())
+ *             .vpcId(aws_vpc.getFoo().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Basic usage with connection options:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new VpcPeeringConnection(&#34;foo&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .peerOwnerId(var_.getPeer_owner_id())
+ *             .peerVpcId(aws_vpc.getBar().getId())
+ *             .vpcId(aws_vpc.getFoo().getId())
+ *             .accepter(VpcPeeringConnectionAccepter.builder()
+ *                 .allowRemoteVpcDnsResolution(true)
+ *                 .build())
+ *             .requester(VpcPeeringConnectionRequester.builder()
+ *                 .allowRemoteVpcDnsResolution(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Basic usage with tags:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooVpc = new Vpc(&#34;fooVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var bar = new Vpc(&#34;bar&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var fooVpcPeeringConnection = new VpcPeeringConnection(&#34;fooVpcPeeringConnection&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .peerOwnerId(var_.getPeer_owner_id())
+ *             .peerVpcId(bar.getId())
+ *             .vpcId(fooVpc.getId())
+ *             .autoAccept(true)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;VPC Peering between foo and bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Basic usage with region:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooVpc = new Vpc(&#34;fooVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var bar = new Vpc(&#34;bar&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.2.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var fooVpcPeeringConnection = new VpcPeeringConnection(&#34;fooVpcPeeringConnection&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .peerOwnerId(var_.getPeer_owner_id())
+ *             .peerVpcId(bar.getId())
+ *             .vpcId(fooVpc.getId())
+ *             .peerRegion(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Notes
  * 
  * If both VPCs are not in the same AWS account and region do not enable the `auto_accept` attribute.

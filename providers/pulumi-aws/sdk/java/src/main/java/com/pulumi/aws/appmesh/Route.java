@@ -20,6 +20,168 @@ import javax.annotation.Nullable;
  * Provides an AWS App Mesh route resource.
  * 
  * ## Example Usage
+ * ### HTTP Routing
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceb = new Route(&#34;serviceb&#34;, RouteArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .virtualRouterName(aws_appmesh_virtual_router.getServiceb().getName())
+ *             .spec(RouteSpec.builder()
+ *                 .httpRoute(RouteSpecHttpRoute.builder()
+ *                     .match(RouteSpecHttpRouteMatch.builder()
+ *                         .prefix(&#34;/&#34;)
+ *                         .build())
+ *                     .action(RouteSpecHttpRouteAction.builder()
+ *                         .weightedTargets(                        
+ *                             RouteSpecHttpRouteActionWeightedTarget.builder()
+ *                                 .virtualNode(aws_appmesh_virtual_node.getServiceb1().getName())
+ *                                 .weight(90)
+ *                                 .build(),
+ *                             RouteSpecHttpRouteActionWeightedTarget.builder()
+ *                                 .virtualNode(aws_appmesh_virtual_node.getServiceb2().getName())
+ *                                 .weight(10)
+ *                                 .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### HTTP Header Routing
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceb = new Route(&#34;serviceb&#34;, RouteArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .virtualRouterName(aws_appmesh_virtual_router.getServiceb().getName())
+ *             .spec(RouteSpec.builder()
+ *                 .httpRoute(RouteSpecHttpRoute.builder()
+ *                     .match(RouteSpecHttpRouteMatch.builder()
+ *                         .method(&#34;POST&#34;)
+ *                         .prefix(&#34;/&#34;)
+ *                         .scheme(&#34;https&#34;)
+ *                         .headers(RouteSpecHttpRouteMatchHeader.builder()
+ *                             .name(&#34;clientRequestId&#34;)
+ *                             .match(RouteSpecHttpRouteMatchHeaderMatch.builder()
+ *                                 .prefix(&#34;123&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .action(RouteSpecHttpRouteAction.builder()
+ *                         .weightedTargets(RouteSpecHttpRouteActionWeightedTarget.builder()
+ *                             .virtualNode(aws_appmesh_virtual_node.getServiceb().getName())
+ *                             .weight(100)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Retry Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceb = new Route(&#34;serviceb&#34;, RouteArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .virtualRouterName(aws_appmesh_virtual_router.getServiceb().getName())
+ *             .spec(RouteSpec.builder()
+ *                 .httpRoute(RouteSpecHttpRoute.builder()
+ *                     .match(RouteSpecHttpRouteMatch.builder()
+ *                         .prefix(&#34;/&#34;)
+ *                         .build())
+ *                     .retryPolicy(RouteSpecHttpRouteRetryPolicy.builder()
+ *                         .httpRetryEvents(&#34;server-error&#34;)
+ *                         .maxRetries(1)
+ *                         .perRetryTimeout(RouteSpecHttpRouteRetryPolicyPerRetryTimeout.builder()
+ *                             .unit(&#34;s&#34;)
+ *                             .value(15)
+ *                             .build())
+ *                         .build())
+ *                     .action(RouteSpecHttpRouteAction.builder()
+ *                         .weightedTargets(RouteSpecHttpRouteActionWeightedTarget.builder()
+ *                             .virtualNode(aws_appmesh_virtual_node.getServiceb().getName())
+ *                             .weight(100)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### TCP Routing
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceb = new Route(&#34;serviceb&#34;, RouteArgs.builder()        
+ *             .meshName(aws_appmesh_mesh.getSimple().getId())
+ *             .virtualRouterName(aws_appmesh_virtual_router.getServiceb().getName())
+ *             .spec(RouteSpec.builder()
+ *                 .tcpRoute(RouteSpecTcpRoute.builder()
+ *                     .action(RouteSpecTcpRouteAction.builder()
+ *                         .weightedTargets(RouteSpecTcpRouteActionWeightedTarget.builder()
+ *                             .virtualNode(aws_appmesh_virtual_node.getServiceb1().getName())
+ *                             .weight(100)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

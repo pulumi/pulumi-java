@@ -22,6 +22,28 @@ public final class CognitoFunctions {
      * Provides a Cognito User Pool Client resource.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var client = Output.of(CognitoFunctions.getUserPoolClient(GetUserPoolClientArgs.builder()
+     *             .clientId(&#34;38fjsnc484p94kpqsnet7mpld0&#34;)
+     *             .userPoolId(&#34;us-west-2_aaaaaaaaa&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserPoolClientResult> getUserPoolClient(GetUserPoolClientArgs args) {
@@ -34,6 +56,27 @@ public final class CognitoFunctions {
      * Use this data source to get a list of Cognito user pools clients for a Cognito IdP user pool.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var main = Output.of(CognitoFunctions.getUserPoolClients(GetUserPoolClientsArgs.builder()
+     *             .userPoolId(aws_cognito_user_pool.getMain().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserPoolClientsResult> getUserPoolClients(GetUserPoolClientsArgs args) {
@@ -46,6 +89,27 @@ public final class CognitoFunctions {
      * Use this data source to get the signing certificate for a Cognito IdP user pool.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sc = Output.of(CognitoFunctions.getUserPoolSigningCertificate(GetUserPoolSigningCertificateArgs.builder()
+     *             .userPoolId(aws_cognito_user_pool.getMy_pool().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserPoolSigningCertificateResult> getUserPoolSigningCertificate(GetUserPoolSigningCertificateArgs args) {
@@ -58,6 +122,37 @@ public final class CognitoFunctions {
      * Use this data source to get a list of cognito user pools.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var selectedRestApi = Output.of(ApigatewayFunctions.getRestApi(GetRestApiArgs.builder()
+     *             .name(var_.getApi_gateway_name())
+     *             .build()));
+     * 
+     *         final var selectedUserPools = Output.of(CognitoFunctions.getUserPools(GetUserPoolsArgs.builder()
+     *             .name(var_.getCognito_user_pool_name())
+     *             .build()));
+     * 
+     *         var cognito = new Authorizer(&#34;cognito&#34;, AuthorizerArgs.builder()        
+     *             .type(&#34;COGNITO_USER_POOLS&#34;)
+     *             .restApi(selectedRestApi.apply(getRestApiResult -&gt; getRestApiResult.getId()))
+     *             .providerArns(selectedUserPools.apply(getUserPoolsResult -&gt; getUserPoolsResult.getArns()))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserPoolsResult> getUserPools(GetUserPoolsArgs args) {

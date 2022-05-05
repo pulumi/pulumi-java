@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The usage of this resource conflicts with the `aws.iam.PolicyAttachment` resource and will permanently show a difference if both are defined.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var user = new User(&#34;user&#34;);
+ * 
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .description(&#34;A test policy&#34;)
+ *             .policy(&#34;{ ... policy JSON ... }&#34;)
+ *             .build());
+ * 
+ *         var test_attach = new UserPolicyAttachment(&#34;test-attach&#34;, UserPolicyAttachmentArgs.builder()        
+ *             .user(user.getName())
+ *             .policyArn(policy.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

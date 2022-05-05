@@ -20,6 +20,39 @@ import javax.annotation.Nullable;
  * Provides a WAF XSS Match Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var xssMatchSet = new XssMatchSet(&#34;xssMatchSet&#34;, XssMatchSetArgs.builder()        
+ *             .xssMatchTuples(            
+ *                 XssMatchSetXssMatchTuple.builder()
+ *                     .fieldToMatch(XssMatchSetXssMatchTupleFieldToMatch.builder()
+ *                         .type(&#34;URI&#34;)
+ *                         .build())
+ *                     .textTransformation(&#34;NONE&#34;)
+ *                     .build(),
+ *                 XssMatchSetXssMatchTuple.builder()
+ *                     .fieldToMatch(XssMatchSetXssMatchTupleFieldToMatch.builder()
+ *                         .type(&#34;QUERY_STRING&#34;)
+ *                         .build())
+ *                     .textTransformation(&#34;NONE&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

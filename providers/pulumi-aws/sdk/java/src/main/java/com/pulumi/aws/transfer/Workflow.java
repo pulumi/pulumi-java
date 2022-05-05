@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * Provides a AWS Transfer Workflow resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workflow(&#34;example&#34;, WorkflowArgs.builder()        
+ *             .steps(WorkflowStep.builder()
+ *                 .deleteStepDetails(WorkflowStepDeleteStepDetails.builder()
+ *                     .name(&#34;example&#34;)
+ *                     .sourceFileLocation(original.getFile())
+ *                     .build())
+ *                 .type(&#34;DELETE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

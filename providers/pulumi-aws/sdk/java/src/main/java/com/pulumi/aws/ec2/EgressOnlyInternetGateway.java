@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * outside of your VPC from initiating an IPv6 connection with your instance.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .assignGeneratedIpv6CidrBlock(true)
+ *             .build());
+ * 
+ *         var exampleEgressOnlyInternetGateway = new EgressOnlyInternetGateway(&#34;exampleEgressOnlyInternetGateway&#34;, EgressOnlyInternetGatewayArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;main&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

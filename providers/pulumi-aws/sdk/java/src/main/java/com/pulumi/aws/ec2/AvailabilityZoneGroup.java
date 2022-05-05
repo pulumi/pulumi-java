@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This is an advanced resource. The provider will automatically assume management of the EC2 Availability Zone Group without import and perform no actions on removal from configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AvailabilityZoneGroup(&#34;example&#34;, AvailabilityZoneGroupArgs.builder()        
+ *             .groupName(&#34;us-west-2-lax-1&#34;)
+ *             .optInStatus(&#34;opted-in&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

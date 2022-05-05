@@ -29,6 +29,191 @@ import javax.annotation.Nullable;
  * Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
  * 
  * ## Example Usage
+ * ### DynamoDB Target Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Crawler(&#34;example&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getExample().getName())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .dynamodbTargets(CrawlerDynamodbTarget.builder()
+ *                 .path(&#34;table-name&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### JDBC Target Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Crawler(&#34;example&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getExample().getName())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .jdbcTargets(CrawlerJdbcTarget.builder()
+ *                 .connectionName(aws_glue_connection.getExample().getName())
+ *                 .path(&#34;database-name/%&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 Target Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Crawler(&#34;example&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getExample().getName())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .s3Targets(CrawlerS3Target.builder()
+ *                 .path(String.format(&#34;s3://%s&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Catalog Target Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Crawler(&#34;example&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getExample().getName())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .catalogTargets(CrawlerCatalogTarget.builder()
+ *                 .databaseName(aws_glue_catalog_database.getExample().getName())
+ *                 .tables(aws_glue_catalog_table.getExample().getName())
+ *                 .build())
+ *             .schemaChangePolicy(CrawlerSchemaChangePolicy.builder()
+ *                 .deleteBehavior(&#34;LOG&#34;)
+ *                 .build())
+ *             .configuration(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;:1.0,
+ *   &#34;Grouping&#34;: {
+ *     &#34;TableGroupingPolicy&#34;: &#34;CombineCompatibleSchemas&#34;
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### MongoDB Target Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Crawler(&#34;example&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getExample().getName())
+ *             .role(aws_iam_role.getExample().getArn())
+ *             .mongodbTargets(CrawlerMongodbTarget.builder()
+ *                 .connectionName(aws_glue_connection.getExample().getName())
+ *                 .path(&#34;database-name/%&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Configuration Settings Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventsCrawler = new Crawler(&#34;eventsCrawler&#34;, CrawlerArgs.builder()        
+ *             .databaseName(aws_glue_catalog_database.getGlue_database().getName())
+ *             .schedule(&#34;cron(0 1 * * ? *)&#34;)
+ *             .role(aws_iam_role.getGlue_role().getArn())
+ *             .tags(var_.getTags())
+ *             .configuration(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Grouping&#34;, jsonObject(
+ *                         jsonProperty(&#34;TableGroupingPolicy&#34;, &#34;CombineCompatibleSchemas&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;CrawlerOutput&#34;, jsonObject(
+ *                         jsonProperty(&#34;Partitions&#34;, jsonObject(
+ *                             jsonProperty(&#34;AddOrUpdateBehavior&#34;, &#34;InheritFromTable&#34;)
+ *                         ))
+ *                     )),
+ *                     jsonProperty(&#34;Version&#34;, 1)
+ *                 )))
+ *             .s3Targets(CrawlerS3Target.builder()
+ *                 .path(String.format(&#34;s3://%s&#34;, aws_s3_bucket.getData_lake_bucket().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

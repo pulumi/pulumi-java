@@ -18,6 +18,32 @@ import javax.annotation.Nullable;
  * Provides a resource to create a SES template.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myTemplate = new Template(&#34;myTemplate&#34;, TemplateArgs.builder()        
+ *             .html(&#34;&lt;h1&gt;Hello {{name}},&lt;/h1&gt;&lt;p&gt;Your favorite animal is {{favoriteanimal}}.&lt;/p&gt;&#34;)
+ *             .subject(&#34;Greetings, {{name}}!&#34;)
+ *             .text(&#34;&#34;&#34;
+ * Hello {{name}},
+ * Your favorite animal is {{favoriteanimal}}.
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

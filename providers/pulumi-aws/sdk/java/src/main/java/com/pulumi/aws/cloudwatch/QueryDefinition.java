@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Logs query definition resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new QueryDefinition(&#34;example&#34;, QueryDefinitionArgs.builder()        
+ *             .logGroupNames(            
+ *                 &#34;/aws/logGroup1&#34;,
+ *                 &#34;/aws/logGroup2&#34;)
+ *             .queryString(&#34;&#34;&#34;
+ * fields @timestamp, @message
+ * | sort @timestamp desc
+ * | limit 25
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

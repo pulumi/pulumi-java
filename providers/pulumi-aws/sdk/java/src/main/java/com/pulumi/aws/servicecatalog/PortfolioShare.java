@@ -27,6 +27,30 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** You can&#39;t share a shared resource, including portfolios that contain a shared product.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PortfolioShare(&#34;example&#34;, PortfolioShareArgs.builder()        
+ *             .principalId(&#34;012128675309&#34;)
+ *             .portfolioId(aws_servicecatalog_portfolio.getExample().getId())
+ *             .type(&#34;ACCOUNT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

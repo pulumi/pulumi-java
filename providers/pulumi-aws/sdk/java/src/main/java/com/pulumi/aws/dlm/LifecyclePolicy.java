@@ -20,6 +20,167 @@ import javax.annotation.Nullable;
  * Provides a [Data Lifecycle Manager (DLM) lifecycle policy](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) for managing snapshots.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dlmLifecycleRole = new Role(&#34;dlmLifecycleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;dlm.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var dlmLifecycle = new RolePolicy(&#34;dlmLifecycle&#34;, RolePolicyArgs.builder()        
+ *             .role(dlmLifecycleRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *    &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *    &#34;Statement&#34;: [
+ *       {
+ *          &#34;Effect&#34;: &#34;Allow&#34;,
+ *          &#34;Action&#34;: [
+ *             &#34;ec2:CreateSnapshot&#34;,
+ *             &#34;ec2:CreateSnapshots&#34;,
+ *             &#34;ec2:DeleteSnapshot&#34;,
+ *             &#34;ec2:DescribeInstances&#34;,
+ *             &#34;ec2:DescribeVolumes&#34;,
+ *             &#34;ec2:DescribeSnapshots&#34;
+ *          ],
+ *          &#34;Resource&#34;: &#34;*&#34;
+ *       },
+ *       {
+ *          &#34;Effect&#34;: &#34;Allow&#34;,
+ *          &#34;Action&#34;: [
+ *             &#34;ec2:CreateTags&#34;
+ *          ],
+ *          &#34;Resource&#34;: &#34;arn:aws:ec2:*::snapshot/*&#34;
+ *       }
+ *    ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var example = new LifecyclePolicy(&#34;example&#34;, LifecyclePolicyArgs.builder()        
+ *             .description(&#34;example DLM lifecycle policy&#34;)
+ *             .executionRoleArn(dlmLifecycleRole.getArn())
+ *             .state(&#34;ENABLED&#34;)
+ *             .policyDetails(LifecyclePolicyPolicyDetails.builder()
+ *                 .resourceTypes(&#34;VOLUME&#34;)
+ *                 .schedules(LifecyclePolicyPolicyDetailsSchedule.builder()
+ *                     .name(&#34;2 weeks of daily snapshots&#34;)
+ *                     .createRule(LifecyclePolicyPolicyDetailsScheduleCreateRule.builder()
+ *                         .interval(24)
+ *                         .intervalUnit(&#34;HOURS&#34;)
+ *                         .times(&#34;23:45&#34;)
+ *                         .build())
+ *                     .retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRule.builder()
+ *                         .count(14)
+ *                         .build())
+ *                     .tagsToAdd(Map.of(&#34;SnapshotCreator&#34;, &#34;DLM&#34;))
+ *                     .copyTags(false)
+ *                     .build())
+ *                 .targetTags(Map.of(&#34;Snapshot&#34;, &#34;true&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Cross-Region Snapshot Copy Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dlmCrossRegionCopyCmk = new Key(&#34;dlmCrossRegionCopyCmk&#34;, KeyArgs.builder()        
+ *             .description(&#34;Example Alternate Region KMS Key&#34;)
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Id&#34;: &#34;dlm-cross-region-copy-cmk&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;Enable IAM User Permissions&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;AWS&#34;: &#34;*&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;kms:*&#34;,
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var example = new LifecyclePolicy(&#34;example&#34;, LifecyclePolicyArgs.builder()        
+ *             .description(&#34;example DLM lifecycle policy&#34;)
+ *             .executionRoleArn(aws_iam_role.getDlm_lifecycle_role().getArn())
+ *             .state(&#34;ENABLED&#34;)
+ *             .policyDetails(LifecyclePolicyPolicyDetails.builder()
+ *                 .resourceTypes(&#34;VOLUME&#34;)
+ *                 .schedules(LifecyclePolicyPolicyDetailsSchedule.builder()
+ *                     .name(&#34;2 weeks of daily snapshots&#34;)
+ *                     .createRule(LifecyclePolicyPolicyDetailsScheduleCreateRule.builder()
+ *                         .interval(24)
+ *                         .intervalUnit(&#34;HOURS&#34;)
+ *                         .times(&#34;23:45&#34;)
+ *                         .build())
+ *                     .retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRule.builder()
+ *                         .count(14)
+ *                         .build())
+ *                     .tagsToAdd(Map.of(&#34;SnapshotCreator&#34;, &#34;DLM&#34;))
+ *                     .copyTags(false)
+ *                     .crossRegionCopyRules(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule.builder()
+ *                         .target(&#34;us-west-2&#34;)
+ *                         .encrypted(true)
+ *                         .cmkArn(dlmCrossRegionCopyCmk.getArn())
+ *                         .copyTags(true)
+ *                         .retainRule(LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule.builder()
+ *                             .interval(30)
+ *                             .intervalUnit(&#34;DAYS&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .targetTags(Map.of(&#34;Snapshot&#34;, &#34;true&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

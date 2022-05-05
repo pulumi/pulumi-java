@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup Report Plan resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ReportPlan(&#34;example&#34;, ReportPlanArgs.builder()        
+ *             .description(&#34;example description&#34;)
+ *             .reportDeliveryChannel(ReportPlanReportDeliveryChannel.builder()
+ *                 .formats(                
+ *                     &#34;CSV&#34;,
+ *                     &#34;JSON&#34;)
+ *                 .s3BucketName(&#34;example-bucket-name&#34;)
+ *                 .build())
+ *             .reportSetting(ReportPlanReportSetting.builder()
+ *                 .reportTemplate(&#34;RESTORE_JOB_REPORT&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Report Plan&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

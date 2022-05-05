@@ -22,6 +22,102 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Domain resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;, DomainArgs.builder()        
+ *             .domainName(&#34;example&#34;)
+ *             .authMode(&#34;IAM&#34;)
+ *             .vpcId(aws_vpc.getTest().getId())
+ *             .subnetIds(aws_subnet.getTest().getId())
+ *             .defaultUserSettings(DomainDefaultUserSettings.builder()
+ *                 .executionRole(aws_iam_role.getTest().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         final var examplePolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;sagemaker.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .path(&#34;/&#34;)
+ *             .assumeRolePolicy(examplePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using Custom Images
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testImage = new Image(&#34;testImage&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getTest().getArn())
+ *             .build());
+ * 
+ *         var testAppImageConfig = new AppImageConfig(&#34;testAppImageConfig&#34;, AppImageConfigArgs.builder()        
+ *             .appImageConfigName(&#34;example&#34;)
+ *             .kernelGatewayImageConfig(AppImageConfigKernelGatewayImageConfig.builder()
+ *                 .kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec.builder()
+ *                     .name(&#34;example&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var testImageVersion = new ImageVersion(&#34;testImageVersion&#34;, ImageVersionArgs.builder()        
+ *             .imageName(testImage.getId())
+ *             .baseImage(&#34;base-image&#34;)
+ *             .build());
+ * 
+ *         var testDomain = new Domain(&#34;testDomain&#34;, DomainArgs.builder()        
+ *             .domainName(&#34;example&#34;)
+ *             .authMode(&#34;IAM&#34;)
+ *             .vpcId(aws_vpc.getTest().getId())
+ *             .subnetIds(aws_subnet.getTest().getId())
+ *             .defaultUserSettings(DomainDefaultUserSettings.builder()
+ *                 .executionRole(aws_iam_role.getTest().getArn())
+ *                 .kernelGatewayAppSettings(DomainDefaultUserSettingsKernelGatewayAppSettings.builder()
+ *                     .customImages(DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage.builder()
+ *                         .appImageConfigName(testAppImageConfig.getAppImageConfigName())
+ *                         .imageName(testImageVersion.getImageName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

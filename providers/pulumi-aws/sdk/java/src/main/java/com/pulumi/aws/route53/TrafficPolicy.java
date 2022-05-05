@@ -19,6 +19,41 @@ import javax.annotation.Nullable;
  * Manages a Route53 Traffic Policy.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TrafficPolicy(&#34;example&#34;, TrafficPolicyArgs.builder()        
+ *             .comment(&#34;example comment&#34;)
+ *             .document(&#34;&#34;&#34;
+ * {
+ *   &#34;AWSPolicyFormatVersion&#34;: &#34;2015-10-01&#34;,
+ *   &#34;RecordType&#34;: &#34;A&#34;,
+ *   &#34;Endpoints&#34;: {
+ *     &#34;endpoint-start-NkPh&#34;: {
+ *       &#34;Type&#34;: &#34;value&#34;,
+ *       &#34;Value&#34;: &#34;10.0.0.2&#34;
+ *     }
+ *   },
+ *   &#34;StartEndpoint&#34;: &#34;endpoint-start-NkPh&#34;
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

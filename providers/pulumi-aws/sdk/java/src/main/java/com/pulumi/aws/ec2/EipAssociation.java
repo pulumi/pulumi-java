@@ -25,6 +25,39 @@ import javax.annotation.Nullable;
  * pre-existing or distributed to customers or users and therefore cannot be changed.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var web = new Instance(&#34;web&#34;, InstanceArgs.builder()        
+ *             .ami(&#34;ami-21f78e11&#34;)
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         var example = new Eip(&#34;example&#34;, EipArgs.builder()        
+ *             .vpc(true)
+ *             .build());
+ * 
+ *         var eipAssoc = new EipAssociation(&#34;eipAssoc&#34;, EipAssociationArgs.builder()        
+ *             .instanceId(web.getId())
+ *             .allocationId(example.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

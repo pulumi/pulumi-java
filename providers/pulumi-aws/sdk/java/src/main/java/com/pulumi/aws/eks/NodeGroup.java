@@ -28,6 +28,111 @@ import javax.annotation.Nullable;
  * Manages an EKS Node Group, which can provision and optionally update an Auto Scaling Group of Kubernetes worker nodes compatible with EKS. Additional documentation about this functionality can be found in the [EKS User Guide](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NodeGroup(&#34;example&#34;, NodeGroupArgs.builder()        
+ *             .clusterName(aws_eks_cluster.getExample().getName())
+ *             .nodeRoleArn(aws_iam_role.getExample().getArn())
+ *             .subnetIds(aws_subnet.getExample().stream().map(element -&gt; element.getId()).collect(toList()))
+ *             .scalingConfig(NodeGroupScalingConfig.builder()
+ *                 .desiredSize(1)
+ *                 .maxSize(1)
+ *                 .minSize(1)
+ *                 .build())
+ *             .updateConfig(NodeGroupUpdateConfig.builder()
+ *                 .maxUnavailable(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ignoring Changes to Desired Size
+ * 
+ * You can utilize [ignoreChanges](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) create an EKS Node Group with an initial size of running instances, then ignore any changes to that count caused externally (e.g. Application Autoscaling).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NodeGroup(&#34;example&#34;, NodeGroupArgs.builder()        
+ *             .scalingConfig(NodeGroupScalingConfig.builder()
+ *                 .desiredSize(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example IAM Role for EKS Node Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;ec2.amazonaws.com&#34;)
+ *                         ))
+ *                     ))),
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         var example_AmazonEKSWorkerNodePolicy = new RolePolicyAttachment(&#34;example-AmazonEKSWorkerNodePolicy&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         var example_AmazonEKSCNIPolicy = new RolePolicyAttachment(&#34;example-AmazonEKSCNIPolicy&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         var example_AmazonEC2ContainerRegistryReadOnly = new RolePolicyAttachment(&#34;example-AmazonEC2ContainerRegistryReadOnly&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

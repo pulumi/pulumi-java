@@ -19,6 +19,72 @@ import javax.annotation.Nullable;
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html)
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserHierarchyStructure(&#34;example&#34;, UserHierarchyStructureArgs.builder()        
+ *             .hierarchyStructure(UserHierarchyStructureHierarchyStructure.builder()
+ *                 .levelOne(UserHierarchyStructureHierarchyStructureLevelOne.builder()
+ *                     .name(&#34;levelone&#34;)
+ *                     .build())
+ *                 .build())
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Five Levels
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserHierarchyStructure(&#34;example&#34;, UserHierarchyStructureArgs.builder()        
+ *             .hierarchyStructure(UserHierarchyStructureHierarchyStructure.builder()
+ *                 .levelFive(UserHierarchyStructureHierarchyStructureLevelFive.builder()
+ *                     .name(&#34;levelfive&#34;)
+ *                     .build())
+ *                 .levelFour(UserHierarchyStructureHierarchyStructureLevelFour.builder()
+ *                     .name(&#34;levelfour&#34;)
+ *                     .build())
+ *                 .levelOne(UserHierarchyStructureHierarchyStructureLevelOne.builder()
+ *                     .name(&#34;levelone&#34;)
+ *                     .build())
+ *                 .levelThree(UserHierarchyStructureHierarchyStructureLevelThree.builder()
+ *                     .name(&#34;levelthree&#34;)
+ *                     .build())
+ *                 .levelTwo(UserHierarchyStructureHierarchyStructureLevelTwo.builder()
+ *                     .name(&#34;leveltwo&#34;)
+ *                     .build())
+ *                 .build())
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

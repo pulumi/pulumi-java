@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * Provides an Athena Workgroup.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workgroup(&#34;example&#34;, WorkgroupArgs.builder()        
+ *             .configuration(WorkgroupConfiguration.builder()
+ *                 .enforceWorkgroupConfiguration(true)
+ *                 .publishCloudwatchMetricsEnabled(true)
+ *                 .resultConfiguration(WorkgroupConfigurationResultConfiguration.builder()
+ *                     .outputLocation(String.format(&#34;s3://%s/output/&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                     .encryptionConfiguration(WorkgroupConfigurationResultConfigurationEncryptionConfiguration.builder()
+ *                         .encryptionOption(&#34;SSE_KMS&#34;)
+ *                         .kmsKeyArn(aws_kms_key.getExample().getArn())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
