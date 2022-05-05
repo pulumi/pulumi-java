@@ -22,15 +22,15 @@ public class App {
             .build());
 
         var eksIgw = new InternetGateway("eksIgw", InternetGatewayArgs.builder()        
-            .vpcId(eksVpc.getId())
+            .vpcId(eksVpc.id())
             .tags(Map.of("Name", "pulumi-vpc-ig"))
             .build());
 
         var eksRouteTable = new RouteTable("eksRouteTable", RouteTableArgs.builder()        
-            .vpcId(eksVpc.getId())
-            .routes(RouteTableRoute.builder()
+            .vpcId(eksVpc.id())
+            .routes(RouteTableRouteArgs.builder()
                 .cidrBlock("0.0.0.0/0")
-                .gatewayId(eksIgw.getId())
+                .gatewayId(eksIgw.id())
                 .build())
             .tags(Map.of("Name", "pulumi-vpc-rt"))
             .build());
@@ -39,14 +39,14 @@ public class App {
 
         final var vpcSubnet = zones.apply(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
-            for (var range : KeyedValue.of(getAvailabilityZonesResult.getNames()) {
-                var resource = new Subnet("vpcSubnet-" + range.getKey(), SubnetArgs.builder()                
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
+                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                
                     .assignIpv6AddressOnCreation(false)
-                    .vpcId(eksVpc.getId())
+                    .vpcId(eksVpc.id())
                     .mapPublicIpOnLaunch(true)
-                    .cidrBlock(String.format("10.100.%s.0/24", range.getKey()))
-                    .availabilityZone(range.getValue())
-                    .tags(Map.of("Name", String.format("pulumi-sn-%s", range.getValue())))
+                    .cidrBlock(String.format("10.100.%s.0/24", range.key()))
+                    .availabilityZone(range.value())
+                    .tags(Map.of("Name", String.format("pulumi-sn-%s", range.value())))
                     .build());
 
                 resources.add(resource);
@@ -57,10 +57,10 @@ public class App {
 
         final var rta = zones.apply(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<RouteTableAssociation>();
-            for (var range : KeyedValue.of(getAvailabilityZonesResult.getNames()) {
-                var resource = new RouteTableAssociation("rta-" + range.getKey(), RouteTableAssociationArgs.builder()                
-                    .routeTableId(eksRouteTable.getId())
-                    .subnetId(vpcSubnet[range.getKey()].getId())
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
+                var resource = new RouteTableAssociation("rta-" + range.key(), RouteTableAssociationArgs.builder()                
+                    .routeTableId(eksRouteTable.id())
+                    .subnetId(vpcSubnet[range.key()].id())
                     .build());
 
                 resources.add(resource);
@@ -69,21 +69,21 @@ public class App {
             return resources;
         });
 
-        final var subnetIds = vpcSubnet.stream().map(element -> element.getId()).collect(toList());
+        final var subnetIds = vpcSubnet.stream().map(element -> element.id()).collect(toList());
 
         var eksSecurityGroup = new SecurityGroup("eksSecurityGroup", SecurityGroupArgs.builder()        
-            .vpcId(eksVpc.getId())
+            .vpcId(eksVpc.id())
             .description("Allow all HTTP(s) traffic to EKS Cluster")
             .tags(Map.of("Name", "pulumi-cluster-sg"))
             .ingress(            
-                SecurityGroupIngress.builder()
+                SecurityGroupIngressArgs.builder()
                     .cidrBlocks("0.0.0.0/0")
                     .fromPort(443)
                     .toPort(443)
                     .protocol("tcp")
                     .description("Allow pods to communicate with the cluster API Server.")
                     .build(),
-                SecurityGroupIngress.builder()
+                SecurityGroupIngressArgs.builder()
                     .cidrBlocks("0.0.0.0/0")
                     .fromPort(80)
                     .toPort(80)
@@ -108,12 +108,12 @@ public class App {
             .build());
 
         var servicePolicyAttachment = new RolePolicyAttachment("servicePolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(eksRole.getId())
+            .role(eksRole.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSServicePolicy")
             .build());
 
         var clusterPolicyAttachment = new RolePolicyAttachment("clusterPolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(eksRole.getId())
+            .role(eksRole.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy")
             .build());
 
@@ -133,45 +133,45 @@ public class App {
             .build());
 
         var workerNodePolicyAttachment = new RolePolicyAttachment("workerNodePolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(ec2Role.getId())
+            .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy")
             .build());
 
         var cniPolicyAttachment = new RolePolicyAttachment("cniPolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(ec2Role.getId())
+            .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEKSCNIPolicy")
             .build());
 
         var registryPolicyAttachment = new RolePolicyAttachment("registryPolicyAttachment", RolePolicyAttachmentArgs.builder()        
-            .role(ec2Role.getId())
+            .role(ec2Role.id())
             .policyArn("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly")
             .build());
 
         var eksCluster = new Cluster("eksCluster", ClusterArgs.builder()        
-            .roleArn(eksRole.getArn())
+            .roleArn(eksRole.arn())
             .tags(Map.of("Name", "pulumi-eks-cluster"))
-            .vpcConfig(ClusterVpcConfig.builder()
+            .vpcConfig(ClusterVpcConfigArgs.builder()
                 .publicAccessCidrs("0.0.0.0/0")
-                .securityGroupIds(eksSecurityGroup.getId())
+                .securityGroupIds(eksSecurityGroup.id())
                 .subnetIds(subnetIds)
                 .build())
             .build());
 
         var nodeGroup = new NodeGroup("nodeGroup", NodeGroupArgs.builder()        
-            .clusterName(eksCluster.getName())
+            .clusterName(eksCluster.name())
             .nodeGroupName("pulumi-eks-nodegroup")
-            .nodeRoleArn(ec2Role.getArn())
+            .nodeRoleArn(ec2Role.arn())
             .subnetIds(subnetIds)
             .tags(Map.of("Name", "pulumi-cluster-nodeGroup"))
-            .scalingConfig(NodeGroupScalingConfig.builder()
+            .scalingConfig(NodeGroupScalingConfigArgs.builder()
                 .desiredSize(2)
                 .maxSize(2)
                 .minSize(1)
                 .build())
             .build());
 
-        ctx.export("clusterName", eksCluster.getName());
-        ctx.export("kubeconfig", Output.tuple(eksCluster.getEndpoint(), eksCluster.getCertificateAuthority(), eksCluster.getName()).apply(values -> {
+        ctx.export("clusterName", eksCluster.name());
+        ctx.export("kubeconfig", Output.tuple(eksCluster.endpoint(), eksCluster.certificateAuthority(), eksCluster.name()).apply(values -> {
             var endpoint = values.t1;
             var certificateAuthority = values.t2;
             var name = values.t3;
@@ -181,7 +181,7 @@ public class App {
                     jsonProperty("clusters", jsonArray(jsonObject(
                         jsonProperty("cluster", jsonObject(
                             jsonProperty("server", endpoint),
-                            jsonProperty("certificate-authority-data", certificateAuthority.getData())
+                            jsonProperty("certificate-authority-data", certificateAuthority.data())
                         )),
                         jsonProperty("name", "kubernetes")
                     ))),
@@ -209,5 +209,5 @@ public class App {
                     )))
                 ));
         }));
-        }
+    }
 }

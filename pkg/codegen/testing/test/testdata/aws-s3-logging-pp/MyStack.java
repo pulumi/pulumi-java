@@ -14,11 +14,11 @@ public class App {
         var logs = new Bucket("logs");
 
         var bucket = new Bucket("bucket", BucketArgs.builder()        
-            .loggings(BucketLogging.builder()
-                .targetBucket(logs.getBucket())
+            .loggings(BucketLoggingArgs.builder()
+                .targetBucket(logs.bucket())
                 .build())
             .build());
 
-        ctx.export("targetBucket", bucket.getLoggings().apply(loggings -> loggings[0].getTargetBucket()));
-        }
+        ctx.export("targetBucket", bucket.loggings().apply(loggings -> loggings[0].targetBucket()));
+    }
 }

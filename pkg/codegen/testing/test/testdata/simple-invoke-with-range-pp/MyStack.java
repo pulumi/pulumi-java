@@ -16,13 +16,13 @@ public class App {
 
         final var vpcSubnet = zones.apply(getAvailabilityZonesResult -> {
             final var resources = new ArrayList<Subnet>();
-            for (var range : KeyedValue.of(getAvailabilityZonesResult.getNames()) {
-                var resource = new Subnet("vpcSubnet-" + range.getKey(), SubnetArgs.builder()                
+            for (var range : KeyedValue.of(getAvailabilityZonesResult.names()) {
+                var resource = new Subnet("vpcSubnet-" + range.key(), SubnetArgs.builder()                
                     .assignIpv6AddressOnCreation(false)
                     .mapPublicIpOnLaunch(true)
-                    .cidrBlock(String.format("10.100.%s.0/24", range.getKey()))
-                    .availabilityZone(range.getValue())
-                    .tags(Map.of("Name", String.format("pulumi-sn-%s", range.getValue())))
+                    .cidrBlock(String.format("10.100.%s.0/24", range.key()))
+                    .availabilityZone(range.value())
+                    .tags(Map.of("Name", String.format("pulumi-sn-%s", range.value())))
                     .build());
 
                 resources.add(resource);
@@ -31,5 +31,5 @@ public class App {
             return resources;
         });
 
-        }
+    }
 }

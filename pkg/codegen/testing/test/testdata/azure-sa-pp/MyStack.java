@@ -11,14 +11,14 @@ public class App {
     }
 
     public static void stack(Context ctx) {
-        final var config = Config.of();
+        final var config = ctx.config();
         final var storageAccountNameParam = config.get("storageAccountNameParam");
         final var resourceGroupNameParam = config.get("resourceGroupNameParam");
         final var resourceGroupVar = Output.of(CoreFunctions.getResourceGroup(GetResourceGroupArgs.builder()
             .name(resourceGroupNameParam)
             .build()));
 
-        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.apply(getResourceGroupResult -> getResourceGroupResult.getLocation()));
+        final var locationParam = config.get("locationParam").orElse(resourceGroupVar.apply(getResourceGroupResult -> getResourceGroupResult.location()));
         final var storageAccountTierParam = config.get("storageAccountTierParam").orElse("Standard");
         final var storageAccountTypeReplicationParam = config.get("storageAccountTypeReplicationParam").orElse("LRS");
         var storageAccountResource = new Account("storageAccountResource", AccountArgs.builder()        
@@ -30,6 +30,6 @@ public class App {
             .accountReplicationType(storageAccountTypeReplicationParam)
             .build());
 
-        ctx.export("storageAccountNameOut", storageAccountResource.getName());
-        }
+        ctx.export("storageAccountNameOut", storageAccountResource.name());
+    }
 }

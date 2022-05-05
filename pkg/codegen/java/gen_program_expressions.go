@@ -605,13 +605,22 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		return
 	}
 
+	destTypeName := typeName(destType)
 	switch destType.(type) {
 	case *schema.ObjectType:
 		objectProperties := make(map[string]schema.Type)
 		for _, property := range destType.(*schema.ObjectType).Properties {
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
 		}
-		g.Fgenf(w, "%s.builder()", typeName(destType))
+
+		if !strings.HasSuffix(destTypeName, "Args") {
+			// nested object builders require the "Args" suffix
+			// except for function arg types because
+			// they already have that suffix
+			destTypeName = destTypeName + "Args"
+		}
+
+		g.Fgenf(w, "%s.builder()", destTypeName)
 		g.genNewline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
@@ -683,7 +692,7 @@ func (g *generator) genRelativeTraversal(w io.Writer,
 
 		switch key.Type() {
 		case cty.String:
-			g.Fgenf(w, ".get%s()", names.Title(key.AsString()))
+			g.Fgenf(w, ".%s()", key.AsString())
 		case cty.Number:
 			idx, _ := key.AsBigFloat().Int64()
 			g.Fgenf(w, "[%d]", idx)

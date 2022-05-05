@@ -262,7 +262,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.genNewline(w)
 	g.Fprint(w, "    public static void stack(Context ctx) {\n")
 	if containConfigVariables(nodes) {
-		g.Fprint(w, "        final var config = Config.of();\n")
+		g.Fprint(w, "        final var config = ctx.config();\n")
 	}
 }
 
@@ -270,7 +270,7 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
 		g.genIndent(w)
-		g.Fprintf(w, "%s}\n", g.Indent)
+		g.Fgen(w, "}\n")
 	})
 	g.Fprint(w, "}\n")
 }
@@ -403,9 +403,9 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
 									g.Fgenf(w, "%sfinal var resources = new ArrayList<%s>();\n", g.Indent, resourceTypeName)
-									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.get%s()) {\n", g.Indent, resultTypeName, names.Title(part))
+									g.Fgenf(w, "%sfor (var range : KeyedValue.of(%s.%s()) {\n", g.Indent, resultTypeName, part)
 									g.Indented(func() {
-										suffix := "range.getKey()"
+										suffix := "range.key()"
 										g.Fgenf(w, "%svar resource = ", g.Indent)
 										instantiate(makeResourceName(resource.Name(), suffix))
 										g.Fgenf(w, ";\n\n")
@@ -438,7 +438,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			}
 
 			g.Indented(func() {
-				suffix := "range.getKey()"
+				suffix := "range.key()"
 				g.Fgenf(w, "%s", g.Indent)
 				instantiate(makeResourceName(resource.Name(), suffix))
 				g.Fgenf(w, ";\n")
