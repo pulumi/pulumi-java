@@ -29,6 +29,102 @@ import javax.annotation.Nullable;
  *     * [Google Cloud Router](https://cloud.google.com/router/docs/)
  * 
  * ## Example Usage
+ * ### Router Nat Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var net = new Network(&#34;net&#34;);
+ * 
+ *         var subnet = new Subnetwork(&#34;subnet&#34;, SubnetworkArgs.builder()        
+ *             .network(net.getId())
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var router = new Router(&#34;router&#34;, RouterArgs.builder()        
+ *             .region(subnet.getRegion())
+ *             .network(net.getId())
+ *             .bgp(RouterBgp.builder()
+ *                 .asn(64514)
+ *                 .build())
+ *             .build());
+ * 
+ *         var nat = new RouterNat(&#34;nat&#34;, RouterNatArgs.builder()        
+ *             .router(router.getName())
+ *             .region(router.getRegion())
+ *             .natIpAllocateOption(&#34;AUTO_ONLY&#34;)
+ *             .sourceSubnetworkIpRangesToNat(&#34;ALL_SUBNETWORKS_ALL_IP_RANGES&#34;)
+ *             .logConfig(RouterNatLogConfig.builder()
+ *                 .enable(true)
+ *                 .filter(&#34;ERRORS_ONLY&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Router Nat Manual Ips
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import com.pulumi.codegen.internal.KeyedValue;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var net = new Network(&#34;net&#34;);
+ * 
+ *         var subnet = new Subnetwork(&#34;subnet&#34;, SubnetworkArgs.builder()        
+ *             .network(net.getId())
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var router = new Router(&#34;router&#34;, RouterArgs.builder()        
+ *             .region(subnet.getRegion())
+ *             .network(net.getId())
+ *             .build());
+ * 
+ *         for (var i = 0; i &lt; 2; i++) {
+ *             new Address(&#34;address-&#34; + i, AddressArgs.builder()            
+ *                 .region(subnet.getRegion())
+ *                 .build());
+ * 
+ *         
+ * }
+ *         var natManual = new RouterNat(&#34;natManual&#34;, RouterNatArgs.builder()        
+ *             .router(router.getName())
+ *             .region(router.getRegion())
+ *             .natIpAllocateOption(&#34;MANUAL_ONLY&#34;)
+ *             .natIps(address.stream().map(element -&gt; element.getSelfLink()).collect(toList()))
+ *             .sourceSubnetworkIpRangesToNat(&#34;LIST_OF_SUBNETWORKS&#34;)
+ *             .subnetworks(RouterNatSubnetwork.builder()
+ *                 .name(subnet.getId())
+ *                 .sourceIpRangesToNats(&#34;ALL_IP_RANGES&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

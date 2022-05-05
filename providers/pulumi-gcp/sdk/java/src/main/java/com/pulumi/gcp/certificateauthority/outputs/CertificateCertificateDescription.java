@@ -10,6 +10,7 @@ import com.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescrip
 import com.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionPublicKey;
 import com.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescription;
 import com.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectKeyId;
+import com.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionX509Description;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,6 +21,12 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<String> aiaIssuingCertificateUrls;
     private final @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds;
     private final @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints;
+    /**
+     * @deprecated
+     * Deprecated in favor of `x509_description`.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of `x509_description`. */
     private final @Nullable List<CertificateCertificateDescriptionConfigValue> configValues;
     private final @Nullable List<String> crlDistributionPoints;
     /**
@@ -30,6 +37,7 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys;
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions;
     private final @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds;
+    private final @Nullable List<CertificateCertificateDescriptionX509Description> x509Descriptions;
 
     @CustomType.Constructor
     private CertificateCertificateDescription(
@@ -40,7 +48,8 @@ public final class CertificateCertificateDescription {
         @CustomType.Parameter("crlDistributionPoints") @Nullable List<String> crlDistributionPoints,
         @CustomType.Parameter("publicKeys") @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys,
         @CustomType.Parameter("subjectDescriptions") @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions,
-        @CustomType.Parameter("subjectKeyIds") @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
+        @CustomType.Parameter("subjectKeyIds") @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds,
+        @CustomType.Parameter("x509Descriptions") @Nullable List<CertificateCertificateDescriptionX509Description> x509Descriptions) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyIds = authorityKeyIds;
         this.certFingerprints = certFingerprints;
@@ -49,6 +58,7 @@ public final class CertificateCertificateDescription {
         this.publicKeys = publicKeys;
         this.subjectDescriptions = subjectDescriptions;
         this.subjectKeyIds = subjectKeyIds;
+        this.x509Descriptions = x509Descriptions;
     }
 
     public List<String> aiaIssuingCertificateUrls() {
@@ -60,6 +70,12 @@ public final class CertificateCertificateDescription {
     public List<CertificateCertificateDescriptionCertFingerprint> certFingerprints() {
         return this.certFingerprints == null ? List.of() : this.certFingerprints;
     }
+    /**
+     * @deprecated
+     * Deprecated in favor of `x509_description`.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of `x509_description`. */
     public List<CertificateCertificateDescriptionConfigValue> configValues() {
         return this.configValues == null ? List.of() : this.configValues;
     }
@@ -80,6 +96,9 @@ public final class CertificateCertificateDescription {
     public List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds() {
         return this.subjectKeyIds == null ? List.of() : this.subjectKeyIds;
     }
+    public List<CertificateCertificateDescriptionX509Description> x509Descriptions() {
+        return this.x509Descriptions == null ? List.of() : this.x509Descriptions;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -98,6 +117,7 @@ public final class CertificateCertificateDescription {
         private @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys;
         private @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions;
         private @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds;
+        private @Nullable List<CertificateCertificateDescriptionX509Description> x509Descriptions;
 
         public Builder() {
     	      // Empty
@@ -113,6 +133,7 @@ public final class CertificateCertificateDescription {
     	      this.publicKeys = defaults.publicKeys;
     	      this.subjectDescriptions = defaults.subjectDescriptions;
     	      this.subjectKeyIds = defaults.subjectKeyIds;
+    	      this.x509Descriptions = defaults.x509Descriptions;
         }
 
         public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
@@ -170,8 +191,15 @@ public final class CertificateCertificateDescription {
         }
         public Builder subjectKeyIds(CertificateCertificateDescriptionSubjectKeyId... subjectKeyIds) {
             return subjectKeyIds(List.of(subjectKeyIds));
+        }
+        public Builder x509Descriptions(@Nullable List<CertificateCertificateDescriptionX509Description> x509Descriptions) {
+            this.x509Descriptions = x509Descriptions;
+            return this;
+        }
+        public Builder x509Descriptions(CertificateCertificateDescriptionX509Description... x509Descriptions) {
+            return x509Descriptions(List.of(x509Descriptions));
         }        public CertificateCertificateDescription build() {
-            return new CertificateCertificateDescription(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds);
+            return new CertificateCertificateDescription(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds, x509Descriptions);
         }
     }
 }

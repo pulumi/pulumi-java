@@ -26,6 +26,134 @@ import javax.annotation.Nullable;
  *     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
  * 
  * ## Example Usage
+ * ### VPC Access Connector
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connector = new Connector(&#34;connector&#34;, ConnectorArgs.builder()        
+ *             .ipCidrRange(&#34;10.8.0.0/28&#34;)
+ *             .network(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### VPC Access Connector Shared VPC
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customTestNetwork = new Network(&#34;customTestNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var customTestSubnetwork = new Subnetwork(&#34;customTestSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.2.0.0/28&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(customTestNetwork.getId())
+ *             .build());
+ * 
+ *         var connector = new Connector(&#34;connector&#34;, ConnectorArgs.builder()        
+ *             .subnet(ConnectorSubnet.builder()
+ *                 .name(customTestSubnetwork.getName())
+ *                 .build())
+ *             .machineType(&#34;e2-standard-4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudrun VPC Access Connector
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpcaccessApi = new Service(&#34;vpcaccessApi&#34;, ServiceArgs.builder()        
+ *             .service(&#34;vpcaccess.googleapis.com&#34;)
+ *             .disableOnDestroy(false)
+ *             .build());
+ * 
+ *         var default_ = new Network(&#34;default&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var connector = new Connector(&#34;connector&#34;, ConnectorArgs.builder()        
+ *             .region(&#34;us-west1&#34;)
+ *             .ipCidrRange(&#34;10.8.0.0/28&#34;)
+ *             .network(default_.getName())
+ *             .build());
+ * 
+ *         var router = new Router(&#34;router&#34;, RouterArgs.builder()        
+ *             .region(&#34;us-west1&#34;)
+ *             .network(default_.getId())
+ *             .build());
+ * 
+ *         var routerNat = new RouterNat(&#34;routerNat&#34;, RouterNatArgs.builder()        
+ *             .region(&#34;us-west1&#34;)
+ *             .router(router.getName())
+ *             .sourceSubnetworkIpRangesToNat(&#34;ALL_SUBNETWORKS_ALL_IP_RANGES&#34;)
+ *             .natIpAllocateOption(&#34;AUTO_ONLY&#34;)
+ *             .build());
+ * 
+ *         var gcrService = new Service(&#34;gcrService&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-west1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .resources(ServiceTemplateSpecContainerResources.builder()
+ *                             .limits(Map.ofEntries(
+ *                                 Map.entry(&#34;cpu&#34;, &#34;1000m&#34;),
+ *                                 Map.entry(&#34;memory&#34;, &#34;512M&#34;)
+ *                             ))
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .metadata(ServiceTemplateMetadata.builder()
+ *                     .annotations(Map.ofEntries(
+ *                         Map.entry(&#34;autoscaling.knative.dev/maxScale&#34;, &#34;5&#34;),
+ *                         Map.entry(&#34;run.googleapis.com/vpc-access-connector&#34;, connector.getName()),
+ *                         Map.entry(&#34;run.googleapis.com/vpc-access-egress&#34;, &#34;all&#34;)
+ *                     ))
+ *                     .build())
+ *                 .build())
+ *             .autogenerateRevisionName(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,77 @@ import javax.annotation.Nullable;
  * EdgeCacheOrigin represents a HTTP-reachable backend for an EdgeCacheService.
  * 
  * ## Example Usage
+ * ### Network Services Edge Cache Origin Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new EdgeCacheOrigin(&#34;default&#34;, EdgeCacheOriginArgs.builder()        
+ *             .description(&#34;The default bucket for media edge test&#34;)
+ *             .originAddress(&#34;gs://media-edge-default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network Services Edge Cache Origin Advanced
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fallback = new EdgeCacheOrigin(&#34;fallback&#34;, EdgeCacheOriginArgs.builder()        
+ *             .originAddress(&#34;gs://media-edge-fallback&#34;)
+ *             .description(&#34;The default bucket for media edge test&#34;)
+ *             .maxAttempts(3)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .port(80)
+ *             .retryConditions(            
+ *                 &#34;CONNECT_FAILURE&#34;,
+ *                 &#34;NOT_FOUND&#34;,
+ *                 &#34;HTTP_5XX&#34;,
+ *                 &#34;FORBIDDEN&#34;)
+ *             .timeout(EdgeCacheOriginTimeout.builder()
+ *                 .connectTimeout(&#34;10s&#34;)
+ *                 .maxAttemptsTimeout(&#34;20s&#34;)
+ *                 .responseTimeout(&#34;60s&#34;)
+ *                 .readTimeout(&#34;5s&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new EdgeCacheOrigin(&#34;default&#34;, EdgeCacheOriginArgs.builder()        
+ *             .originAddress(&#34;gs://media-edge-default&#34;)
+ *             .failoverOrigin(fallback.getId())
+ *             .description(&#34;The default bucket for media edge test&#34;)
+ *             .maxAttempts(2)
+ *             .labels(Map.of(&#34;a&#34;, &#34;b&#34;))
+ *             .timeout(EdgeCacheOriginTimeout.builder()
+ *                 .connectTimeout(&#34;10s&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -17,6 +17,29 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_exclusion = new BillingAccountExclusion(&#34;my-exclusion&#34;, BillingAccountExclusionArgs.builder()        
+ *             .billingAccount(&#34;ABCDEF-012345-GHIJKL&#34;)
+ *             .description(&#34;Exclude GCE instance debug logs&#34;)
+ *             .filter(&#34;resource.type = gce_instance AND severity &lt;= DEBUG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,84 @@ import javax.annotation.Nullable;
  * Definition of custom Cloud Build WorkerPools for running jobs with custom configuration and custom networking.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new WorkerPool(&#34;pool&#34;, WorkerPoolArgs.builder()        
+ *             .location(&#34;europe-west1&#34;)
+ *             .workerConfig(WorkerPoolWorkerConfig.builder()
+ *                 .diskSizeGb(100)
+ *                 .machineType(&#34;e2-standard-4&#34;)
+ *                 .noExternalIp(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var servicenetworking = new Service(&#34;servicenetworking&#34;, ServiceArgs.builder()        
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .disableOnDestroy(false)
+ *             .build());
+ * 
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var workerRange = new GlobalAddress(&#34;workerRange&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(network.getId())
+ *             .build());
+ * 
+ *         var workerPoolConn = new Connection(&#34;workerPoolConn&#34;, ConnectionArgs.builder()        
+ *             .network(network.getId())
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(workerRange.getName())
+ *             .build());
+ * 
+ *         var pool = new WorkerPool(&#34;pool&#34;, WorkerPoolArgs.builder()        
+ *             .location(&#34;europe-west1&#34;)
+ *             .workerConfig(WorkerPoolWorkerConfig.builder()
+ *                 .diskSizeGb(100)
+ *                 .machineType(&#34;e2-standard-4&#34;)
+ *                 .noExternalIp(false)
+ *                 .build())
+ *             .networkConfig(WorkerPoolNetworkConfig.builder()
+ *                 .peeredNetwork(network.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

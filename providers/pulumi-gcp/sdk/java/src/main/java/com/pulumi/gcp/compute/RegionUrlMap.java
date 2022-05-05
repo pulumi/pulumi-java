@@ -25,6 +25,435 @@ import javax.annotation.Nullable;
  * that you define for the host and path of an incoming URL.
  * 
  * ## Example Usage
+ * ### Region Url Map Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new RegionHealthCheck(&#34;default&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .requestPath(&#34;/&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var login = new RegionBackendService(&#34;login&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .build());
+ * 
+ *         var home = new RegionBackendService(&#34;home&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .build());
+ * 
+ *         var regionurlmap = new RegionUrlMap(&#34;regionurlmap&#34;, RegionUrlMapArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .pathRules(                
+ *                     RegionUrlMapPathMatcherPathRule.builder()
+ *                         .paths(&#34;/home&#34;)
+ *                         .service(home.getId())
+ *                         .build(),
+ *                     RegionUrlMapPathMatcherPathRule.builder()
+ *                         .paths(&#34;/login&#34;)
+ *                         .service(login.getId())
+ *                         .build())
+ *                 .build())
+ *             .tests(RegionUrlMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Url Map L7 Ilb Path
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new RegionHealthCheck(&#34;default&#34;, RegionHealthCheckArgs.builder()        
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var home = new RegionBackendService(&#34;home&#34;, RegionBackendServiceArgs.builder()        
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var regionurlmap = new RegionUrlMap(&#34;regionurlmap&#34;, RegionUrlMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .pathRules(RegionUrlMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/home&#34;)
+ *                     .routeAction(RegionUrlMapPathMatcherPathRuleRouteAction.builder()
+ *                         .corsPolicy(RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy.builder()
+ *                             .allowCredentials(true)
+ *                             .allowHeaders(&#34;Allowed content&#34;)
+ *                             .allowMethods(&#34;GET&#34;)
+ *                             .allowOrigins(&#34;Allowed origin&#34;)
+ *                             .exposeHeaders(&#34;Exposed header&#34;)
+ *                             .maxAge(30)
+ *                             .disabled(false)
+ *                             .build())
+ *                         .faultInjectionPolicy(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy.builder()
+ *                             .abort(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort.builder()
+ *                                 .httpStatus(234)
+ *                                 .percentage(5.6)
+ *                                 .build())
+ *                             .delay(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay.builder()
+ *                                 .fixedDelay(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay.builder()
+ *                                     .seconds(0)
+ *                                     .nanos(50000)
+ *                                     .build())
+ *                                 .percentage(7.8)
+ *                                 .build())
+ *                             .build())
+ *                         .requestMirrorPolicy(RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy.builder()
+ *                             .backendService(home.getId())
+ *                             .build())
+ *                         .retryPolicy(RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy.builder()
+ *                             .numRetries(4)
+ *                             .perTryTimeout(RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout.builder()
+ *                                 .seconds(30)
+ *                                 .build())
+ *                             .retryConditions(                            
+ *                                 &#34;5xx&#34;,
+ *                                 &#34;deadline-exceeded&#34;)
+ *                             .build())
+ *                         .timeout(RegionUrlMapPathMatcherPathRuleRouteActionTimeout.builder()
+ *                             .seconds(20)
+ *                             .nanos(750000000)
+ *                             .build())
+ *                         .urlRewrite(RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite.builder()
+ *                             .hostRewrite(&#34;A replacement header&#34;)
+ *                             .pathPrefixRewrite(&#34;A replacement path&#34;)
+ *                             .build())
+ *                         .weightedBackendServices(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendService.builder()
+ *                             .backendService(home.getId())
+ *                             .weight(400)
+ *                             .headerAction(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction.builder()
+ *                                 .requestHeadersToRemoves(&#34;RemoveMe&#34;)
+ *                                 .requestHeadersToAdds(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd.builder()
+ *                                     .headerName(&#34;AddMe&#34;)
+ *                                     .headerValue(&#34;MyValue&#34;)
+ *                                     .replace(true)
+ *                                     .build())
+ *                                 .responseHeadersToRemoves(&#34;RemoveMe&#34;)
+ *                                 .responseHeadersToAdds(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd.builder()
+ *                                     .headerName(&#34;AddMe&#34;)
+ *                                     .headerValue(&#34;MyValue&#34;)
+ *                                     .replace(false)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tests(RegionUrlMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Url Map L7 Ilb Path Partial
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new RegionHealthCheck(&#34;default&#34;, RegionHealthCheckArgs.builder()        
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var home = new RegionBackendService(&#34;home&#34;, RegionBackendServiceArgs.builder()        
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var regionurlmap = new RegionUrlMap(&#34;regionurlmap&#34;, RegionUrlMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .pathRules(RegionUrlMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/home&#34;)
+ *                     .routeAction(RegionUrlMapPathMatcherPathRuleRouteAction.builder()
+ *                         .retryPolicy(RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicy.builder()
+ *                             .numRetries(4)
+ *                             .perTryTimeout(RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout.builder()
+ *                                 .seconds(30)
+ *                                 .build())
+ *                             .retryConditions(                            
+ *                                 &#34;5xx&#34;,
+ *                                 &#34;deadline-exceeded&#34;)
+ *                             .build())
+ *                         .timeout(RegionUrlMapPathMatcherPathRuleRouteActionTimeout.builder()
+ *                             .seconds(20)
+ *                             .nanos(750000000)
+ *                             .build())
+ *                         .urlRewrite(RegionUrlMapPathMatcherPathRuleRouteActionUrlRewrite.builder()
+ *                             .hostRewrite(&#34;A replacement header&#34;)
+ *                             .pathPrefixRewrite(&#34;A replacement path&#34;)
+ *                             .build())
+ *                         .weightedBackendServices(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendService.builder()
+ *                             .backendService(home.getId())
+ *                             .weight(400)
+ *                             .headerAction(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction.builder()
+ *                                 .responseHeadersToAdds(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd.builder()
+ *                                     .headerName(&#34;AddMe&#34;)
+ *                                     .headerValue(&#34;MyValue&#34;)
+ *                                     .replace(false)
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tests(RegionUrlMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Url Map L7 Ilb Route
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new RegionHealthCheck(&#34;default&#34;, RegionHealthCheckArgs.builder()        
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var home = new RegionBackendService(&#34;home&#34;, RegionBackendServiceArgs.builder()        
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var regionurlmap = new RegionUrlMap(&#34;regionurlmap&#34;, RegionUrlMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .routeRules(RegionUrlMapPathMatcherRouteRule.builder()
+ *                     .priority(1)
+ *                     .headerAction(RegionUrlMapPathMatcherRouteRuleHeaderAction.builder()
+ *                         .requestHeadersToRemoves(&#34;RemoveMe2&#34;)
+ *                         .requestHeadersToAdds(RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd.builder()
+ *                             .headerName(&#34;AddSomethingElse&#34;)
+ *                             .headerValue(&#34;MyOtherValue&#34;)
+ *                             .replace(true)
+ *                             .build())
+ *                         .responseHeadersToRemoves(&#34;RemoveMe3&#34;)
+ *                         .responseHeadersToAdds(RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd.builder()
+ *                             .headerName(&#34;AddMe&#34;)
+ *                             .headerValue(&#34;MyValue&#34;)
+ *                             .replace(false)
+ *                             .build())
+ *                         .build())
+ *                     .matchRules(RegionUrlMapPathMatcherRouteRuleMatchRule.builder()
+ *                         .fullPathMatch(&#34;a full path&#34;)
+ *                         .headerMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch.builder()
+ *                             .headerName(&#34;someheader&#34;)
+ *                             .exactMatch(&#34;match this exactly&#34;)
+ *                             .invertMatch(true)
+ *                             .build())
+ *                         .ignoreCase(true)
+ *                         .metadataFilters(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter.builder()
+ *                             .filterMatchCriteria(&#34;MATCH_ANY&#34;)
+ *                             .filterLabels(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel.builder()
+ *                                 .name(&#34;PLANET&#34;)
+ *                                 .value(&#34;MARS&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .queryParameterMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch.builder()
+ *                             .name(&#34;a query parameter&#34;)
+ *                             .presentMatch(true)
+ *                             .build())
+ *                         .build())
+ *                     .urlRedirect(RegionUrlMapPathMatcherRouteRuleUrlRedirect.builder()
+ *                         .hostRedirect(&#34;A host&#34;)
+ *                         .httpsRedirect(false)
+ *                         .pathRedirect(&#34;some/path&#34;)
+ *                         .redirectResponseCode(&#34;TEMPORARY_REDIRECT&#34;)
+ *                         .stripQuery(true)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tests(RegionUrlMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Url Map L7 Ilb Route Partial
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new RegionHealthCheck(&#34;default&#34;, RegionHealthCheckArgs.builder()        
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var home = new RegionBackendService(&#34;home&#34;, RegionBackendServiceArgs.builder()        
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(default_.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var regionurlmap = new RegionUrlMap(&#34;regionurlmap&#34;, RegionUrlMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .routeRules(RegionUrlMapPathMatcherRouteRule.builder()
+ *                     .priority(1)
+ *                     .service(home.getId())
+ *                     .headerAction(RegionUrlMapPathMatcherRouteRuleHeaderAction.builder()
+ *                         .requestHeadersToRemoves(&#34;RemoveMe2&#34;)
+ *                         .build())
+ *                     .matchRules(RegionUrlMapPathMatcherRouteRuleMatchRule.builder()
+ *                         .fullPathMatch(&#34;a full path&#34;)
+ *                         .headerMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch.builder()
+ *                             .headerName(&#34;someheader&#34;)
+ *                             .exactMatch(&#34;match this exactly&#34;)
+ *                             .invertMatch(true)
+ *                             .build())
+ *                         .queryParameterMatches(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch.builder()
+ *                             .name(&#34;a query parameter&#34;)
+ *                             .presentMatch(true)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tests(RegionUrlMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

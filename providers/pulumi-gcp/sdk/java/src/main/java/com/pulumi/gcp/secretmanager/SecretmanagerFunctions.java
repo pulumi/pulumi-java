@@ -18,6 +18,27 @@ public final class SecretmanagerFunctions {
      * Use this data source to get information about a Secret Manager Secret
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var qa = Output.of(SecretmanagerFunctions.getSecret(GetSecretArgs.builder()
+     *             .secretId(&#34;foobar&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSecretResult> getSecret(GetSecretArgs args) {
@@ -30,6 +51,27 @@ public final class SecretmanagerFunctions {
      * Get a Secret Manager secret&#39;s version. For more information see the [official documentation](https://cloud.google.com/secret-manager/docs/) and [API](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets.versions).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var basic = Output.of(SecretmanagerFunctions.getSecretVersion(GetSecretVersionArgs.builder()
+     *             .secret(&#34;my-secret&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSecretVersionResult> getSecretVersion(GetSecretVersionArgs args) {

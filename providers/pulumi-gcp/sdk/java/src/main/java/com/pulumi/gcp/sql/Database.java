@@ -18,6 +18,37 @@ import javax.annotation.Nullable;
  * Google&#39;s cloud.
  * 
  * ## Example Usage
+ * ### Sql Database Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new DatabaseInstance(&#34;instance&#34;, DatabaseInstanceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .databaseVersion(&#34;MYSQL_8_0&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .deletionProtection(&#34;true&#34;)
+ *             .build());
+ * 
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .instance(instance.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

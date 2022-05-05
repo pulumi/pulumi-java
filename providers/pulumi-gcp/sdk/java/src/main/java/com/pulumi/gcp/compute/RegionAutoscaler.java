@@ -29,6 +29,78 @@ import javax.annotation.Nullable;
  *     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
  * 
  * ## Example Usage
+ * ### Region Autoscaler Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobarInstanceTemplate = new InstanceTemplate(&#34;foobarInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-standard-4&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-9&#34;)
+ *                 .diskSizeGb(250)
+ *                 .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .accessConfigs(InstanceTemplateNetworkInterfaceAccessConfig.builder()
+ *                     .networkTier(&#34;PREMIUM&#34;)
+ *                     .build())
+ *                 .build())
+ *             .serviceAccount(InstanceTemplateServiceAccount.builder()
+ *                 .scopes(                
+ *                     &#34;https://www.googleapis.com/auth/devstorage.read_only&#34;,
+ *                     &#34;https://www.googleapis.com/auth/logging.write&#34;,
+ *                     &#34;https://www.googleapis.com/auth/monitoring.write&#34;,
+ *                     &#34;https://www.googleapis.com/auth/pubsub&#34;,
+ *                     &#34;https://www.googleapis.com/auth/service.management.readonly&#34;,
+ *                     &#34;https://www.googleapis.com/auth/servicecontrol&#34;,
+ *                     &#34;https://www.googleapis.com/auth/trace.append&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var foobarTargetPool = new TargetPool(&#34;foobarTargetPool&#34;);
+ * 
+ *         var foobarRegionInstanceGroupManager = new RegionInstanceGroupManager(&#34;foobarRegionInstanceGroupManager&#34;, RegionInstanceGroupManagerArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .versions(RegionInstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(foobarInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .targetPools(foobarTargetPool.getId())
+ *             .baseInstanceName(&#34;foobar&#34;)
+ *             .build());
+ * 
+ *         var foobarRegionAutoscaler = new RegionAutoscaler(&#34;foobarRegionAutoscaler&#34;, RegionAutoscalerArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .target(foobarRegionInstanceGroupManager.getId())
+ *             .autoscalingPolicy(RegionAutoscalerAutoscalingPolicy.builder()
+ *                 .maxReplicas(5)
+ *                 .minReplicas(1)
+ *                 .cooldownPeriod(60)
+ *                 .cpuUtilization(RegionAutoscalerAutoscalingPolicyCpuUtilization.builder()
+ *                     .target(0.5)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         final var debian9 = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

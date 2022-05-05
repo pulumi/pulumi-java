@@ -33,6 +33,68 @@ import javax.annotation.Nullable;
  *     * [Using a Cloud Storage bucket as a load balancer backend](https://cloud.google.com/compute/docs/load-balancing/http/backend-bucket)
  * 
  * ## Example Usage
+ * ### Backend Bucket Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var imageBucket = new Bucket(&#34;imageBucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;EU&#34;)
+ *             .build());
+ * 
+ *         var imageBackend = new BackendBucket(&#34;imageBackend&#34;, BackendBucketArgs.builder()        
+ *             .description(&#34;Contains beautiful images&#34;)
+ *             .bucketName(imageBucket.getName())
+ *             .enableCdn(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Backend Bucket Security Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var imageBackendBucket = new Bucket(&#34;imageBackendBucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;EU&#34;)
+ *             .build());
+ * 
+ *         var policy = new SecurityPolicy(&#34;policy&#34;, SecurityPolicyArgs.builder()        
+ *             .description(&#34;basic security policy&#34;)
+ *             .type(&#34;CLOUD_ARMOR_EDGE&#34;)
+ *             .build());
+ * 
+ *         var imageBackendBackendBucket = new BackendBucket(&#34;imageBackendBackendBucket&#34;, BackendBucketArgs.builder()        
+ *             .description(&#34;Contains beautiful images&#34;)
+ *             .bucketName(imageBackendBucket.getName())
+ *             .enableCdn(true)
+ *             .edgeSecurityPolicy(policy.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

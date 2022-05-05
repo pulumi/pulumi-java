@@ -35,6 +35,184 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Billing Budget Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var account = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+ *             .billingAccount(&#34;000000-0000000-0000000-000000&#34;)
+ *             .build()));
+ * 
+ *         var budget = new Budget(&#34;budget&#34;, BudgetArgs.builder()        
+ *             .billingAccount(account.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+ *             .displayName(&#34;Example Billing Budget&#34;)
+ *             .amount(BudgetAmount.builder()
+ *                 .specifiedAmount(BudgetAmountSpecifiedAmount.builder()
+ *                     .currencyCode(&#34;USD&#34;)
+ *                     .units(&#34;100000&#34;)
+ *                     .build())
+ *                 .build())
+ *             .thresholdRules(BudgetThresholdRule.builder()
+ *                 .thresholdPercent(0.5)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Billing Budget Lastperiod
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var account = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+ *             .billingAccount(&#34;000000-0000000-0000000-000000&#34;)
+ *             .build()));
+ * 
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var budget = new Budget(&#34;budget&#34;, BudgetArgs.builder()        
+ *             .billingAccount(account.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+ *             .displayName(&#34;Example Billing Budget&#34;)
+ *             .budgetFilter(BudgetBudgetFilter.builder()
+ *                 .projects(String.format(&#34;projects/%s&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *                 .build())
+ *             .amount(BudgetAmount.builder()
+ *                 .lastPeriodAmount(true)
+ *                 .build())
+ *             .thresholdRules(BudgetThresholdRule.builder()
+ *                 .thresholdPercent(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Billing Budget Filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var account = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+ *             .billingAccount(&#34;000000-0000000-0000000-000000&#34;)
+ *             .build()));
+ * 
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var budget = new Budget(&#34;budget&#34;, BudgetArgs.builder()        
+ *             .billingAccount(account.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+ *             .displayName(&#34;Example Billing Budget&#34;)
+ *             .budgetFilter(BudgetBudgetFilter.builder()
+ *                 .projects(String.format(&#34;projects/%s&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *                 .creditTypesTreatment(&#34;EXCLUDE_ALL_CREDITS&#34;)
+ *                 .services(&#34;services/24E6-581D-38E5&#34;)
+ *                 .build())
+ *             .amount(BudgetAmount.builder()
+ *                 .specifiedAmount(BudgetAmountSpecifiedAmount.builder()
+ *                     .currencyCode(&#34;USD&#34;)
+ *                     .units(&#34;100000&#34;)
+ *                     .build())
+ *                 .build())
+ *             .thresholdRules(            
+ *                 BudgetThresholdRule.builder()
+ *                     .thresholdPercent(0.5)
+ *                     .build(),
+ *                 BudgetThresholdRule.builder()
+ *                     .thresholdPercent(0.9)
+ *                     .spendBasis(&#34;FORECASTED_SPEND&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Billing Budget Notify
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var account = Output.of(OrganizationsFunctions.getBillingAccount(GetBillingAccountArgs.builder()
+ *             .billingAccount(&#34;000000-0000000-0000000-000000&#34;)
+ *             .build()));
+ * 
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var notificationChannel = new NotificationChannel(&#34;notificationChannel&#34;, NotificationChannelArgs.builder()        
+ *             .displayName(&#34;Example Notification Channel&#34;)
+ *             .type(&#34;email&#34;)
+ *             .labels(Map.of(&#34;email_address&#34;, &#34;address@example.com&#34;))
+ *             .build());
+ * 
+ *         var budget = new Budget(&#34;budget&#34;, BudgetArgs.builder()        
+ *             .billingAccount(account.apply(getBillingAccountResult -&gt; getBillingAccountResult.getId()))
+ *             .displayName(&#34;Example Billing Budget&#34;)
+ *             .budgetFilter(BudgetBudgetFilter.builder()
+ *                 .projects(String.format(&#34;projects/%s&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *                 .build())
+ *             .amount(BudgetAmount.builder()
+ *                 .specifiedAmount(BudgetAmountSpecifiedAmount.builder()
+ *                     .currencyCode(&#34;USD&#34;)
+ *                     .units(&#34;100000&#34;)
+ *                     .build())
+ *                 .build())
+ *             .thresholdRules(            
+ *                 BudgetThresholdRule.builder()
+ *                     .thresholdPercent(1)
+ *                     .build(),
+ *                 BudgetThresholdRule.builder()
+ *                     .thresholdPercent(1)
+ *                     .spendBasis(&#34;FORECASTED_SPEND&#34;)
+ *                     .build())
+ *             .allUpdatesRule(BudgetAllUpdatesRule.builder()
+ *                 .monitoringNotificationChannels(notificationChannel.getId())
+ *                 .disableDefaultIamRecipients(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

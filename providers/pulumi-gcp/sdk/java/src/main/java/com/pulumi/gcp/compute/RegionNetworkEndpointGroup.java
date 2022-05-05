@@ -28,6 +28,171 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts)
  * 
  * ## Example Usage
+ * ### Region Network Endpoint Group Functions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var archive = new BucketObject(&#34;archive&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;path/to/index.zip&#34;))
+ *             .build());
+ * 
+ *         var functionNegFunction = new Function(&#34;functionNegFunction&#34;, FunctionArgs.builder()        
+ *             .description(&#34;My function&#34;)
+ *             .runtime(&#34;nodejs10&#34;)
+ *             .availableMemoryMb(128)
+ *             .sourceArchiveBucket(bucket.getName())
+ *             .sourceArchiveObject(archive.getName())
+ *             .triggerHttp(true)
+ *             .timeout(60)
+ *             .entryPoint(&#34;helloGET&#34;)
+ *             .build());
+ * 
+ *         var functionNegRegionNetworkEndpointGroup = new RegionNetworkEndpointGroup(&#34;functionNegRegionNetworkEndpointGroup&#34;, RegionNetworkEndpointGroupArgs.builder()        
+ *             .networkEndpointType(&#34;SERVERLESS&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .cloudFunction(RegionNetworkEndpointGroupCloudFunction.builder()
+ *                 .function(functionNegFunction.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Network Endpoint Group Cloudrun
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudrunNegService = new Service(&#34;cloudrunNegService&#34;, ServiceArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;us-docker.pkg.dev/cloudrun/container/hello&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var cloudrunNegRegionNetworkEndpointGroup = new RegionNetworkEndpointGroup(&#34;cloudrunNegRegionNetworkEndpointGroup&#34;, RegionNetworkEndpointGroupArgs.builder()        
+ *             .networkEndpointType(&#34;SERVERLESS&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .cloudRun(RegionNetworkEndpointGroupCloudRun.builder()
+ *                 .service(cloudrunNegService.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Network Endpoint Group Appengine
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var appengineNegBucket = new Bucket(&#34;appengineNegBucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var appengineNegBucketObject = new BucketObject(&#34;appengineNegBucketObject&#34;, BucketObjectArgs.builder()        
+ *             .bucket(appengineNegBucket.getName())
+ *             .source(new FileAsset(&#34;./test-fixtures/appengine/hello-world.zip&#34;))
+ *             .build());
+ * 
+ *         var appengineNegFlexibleAppVersion = new FlexibleAppVersion(&#34;appengineNegFlexibleAppVersion&#34;, FlexibleAppVersionArgs.builder()        
+ *             .versionId(&#34;v1&#34;)
+ *             .service(&#34;appengine-network-endpoint-group&#34;)
+ *             .runtime(&#34;nodejs&#34;)
+ *             .entrypoint(FlexibleAppVersionEntrypoint.builder()
+ *                 .shell(&#34;node ./app.js&#34;)
+ *                 .build())
+ *             .deployment(FlexibleAppVersionDeployment.builder()
+ *                 .zip(FlexibleAppVersionDeploymentZip.builder()
+ *                     .sourceUrl(Output.tuple(appengineNegBucket.getName(), appengineNegBucketObject.getName()).apply(values -&gt; {
+ *                         var appengineNegBucketName = values.t1;
+ *                         var appengineNegBucketObjectName = values.t2;
+ *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, appengineNegBucketName,appengineNegBucketObjectName);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .livenessCheck(FlexibleAppVersionLivenessCheck.builder()
+ *                 .path(&#34;/&#34;)
+ *                 .build())
+ *             .readinessCheck(FlexibleAppVersionReadinessCheck.builder()
+ *                 .path(&#34;/&#34;)
+ *                 .build())
+ *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+ *             .handlers(FlexibleAppVersionHandler.builder()
+ *                 .urlRegex(&#34;.*\\/my-path\\/*&#34;)
+ *                 .securityLevel(&#34;SECURE_ALWAYS&#34;)
+ *                 .login(&#34;LOGIN_REQUIRED&#34;)
+ *                 .authFailAction(&#34;AUTH_FAIL_ACTION_REDIRECT&#34;)
+ *                 .staticFiles(FlexibleAppVersionHandlerStaticFiles.builder()
+ *                     .path(&#34;my-other-path&#34;)
+ *                     .uploadPathRegex(&#34;.*\\/my-path\\/*&#34;)
+ *                     .build())
+ *                 .build())
+ *             .automaticScaling(FlexibleAppVersionAutomaticScaling.builder()
+ *                 .coolDownPeriod(&#34;120s&#34;)
+ *                 .cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization.builder()
+ *                     .targetUtilization(0.5)
+ *                     .build())
+ *                 .build())
+ *             .noopOnDestroy(true)
+ *             .build());
+ * 
+ *         var appengineNegRegionNetworkEndpointGroup = new RegionNetworkEndpointGroup(&#34;appengineNegRegionNetworkEndpointGroup&#34;, RegionNetworkEndpointGroupArgs.builder()        
+ *             .networkEndpointType(&#34;SERVERLESS&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .appEngine(RegionNetworkEndpointGroupAppEngine.builder()
+ *                 .service(appengineNegFlexibleAppVersion.getService())
+ *                 .version(appengineNegFlexibleAppVersion.getVersionId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

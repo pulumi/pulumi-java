@@ -25,6 +25,40 @@ import javax.annotation.Nullable;
  *     * [Exporting Logs](https://cloud.google.com/logging/docs/export)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var log_bucket = new Bucket(&#34;log-bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var my_sink = new OrganizationSink(&#34;my-sink&#34;, OrganizationSinkArgs.builder()        
+ *             .description(&#34;some explanation on what this is&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .destination(log_bucket.getName().apply(name -&gt; String.format(&#34;storage.googleapis.com/%s&#34;, name)))
+ *             .filter(&#34;resource.type = gce_instance AND severity &gt;= WARNING&#34;)
+ *             .build());
+ * 
+ *         var log_writer = new IAMMember(&#34;log-writer&#34;, IAMMemberArgs.builder()        
+ *             .project(&#34;your-project-id&#34;)
+ *             .role(&#34;roles/storage.objectCreator&#34;)
+ *             .member(my_sink.getWriterIdentity())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -68,7 +102,23 @@ public class OrganizationSink extends com.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -78,7 +128,23 @@ public class OrganizationSink extends com.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

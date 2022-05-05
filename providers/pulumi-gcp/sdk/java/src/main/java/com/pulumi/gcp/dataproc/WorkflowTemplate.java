@@ -24,6 +24,76 @@ import javax.annotation.Nullable;
  * A Workflow Template is a reusable workflow configuration. It defines a graph of jobs with information on where to run those jobs.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var template = new WorkflowTemplate(&#34;template&#34;, WorkflowTemplateArgs.builder()        
+ *             .jobs(            
+ *                 WorkflowTemplateJob.builder()
+ *                     .sparkJob(WorkflowTemplateJobSparkJob.builder()
+ *                         .mainClass(&#34;SomeClass&#34;)
+ *                         .build())
+ *                     .stepId(&#34;someJob&#34;)
+ *                     .build(),
+ *                 WorkflowTemplateJob.builder()
+ *                     .prerequisiteStepIds(&#34;someJob&#34;)
+ *                     .prestoJob(WorkflowTemplateJobPrestoJob.builder()
+ *                         .queryFileUri(&#34;someuri&#34;)
+ *                         .build())
+ *                     .stepId(&#34;otherJob&#34;)
+ *                     .build())
+ *             .location(&#34;us-central1&#34;)
+ *             .placement(WorkflowTemplatePlacement.builder()
+ *                 .managedCluster(WorkflowTemplatePlacementManagedCluster.builder()
+ *                     .clusterName(&#34;my-cluster&#34;)
+ *                     .config(WorkflowTemplatePlacementManagedClusterConfig.builder()
+ *                         .gceClusterConfig(WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig.builder()
+ *                             .tags(                            
+ *                                 &#34;foo&#34;,
+ *                                 &#34;bar&#34;)
+ *                             .zone(&#34;us-central1-a&#34;)
+ *                             .build())
+ *                         .masterConfig(WorkflowTemplatePlacementManagedClusterConfigMasterConfig.builder()
+ *                             .diskConfig(WorkflowTemplatePlacementManagedClusterConfigMasterConfigDiskConfig.builder()
+ *                                 .bootDiskSizeGb(15)
+ *                                 .bootDiskType(&#34;pd-ssd&#34;)
+ *                                 .build())
+ *                             .machineType(&#34;n1-standard-1&#34;)
+ *                             .numInstances(1)
+ *                             .build())
+ *                         .secondaryWorkerConfig(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig.builder()
+ *                             .numInstances(2)
+ *                             .build())
+ *                         .softwareConfig(WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig.builder()
+ *                             .imageVersion(&#34;2.0.35-debian10&#34;)
+ *                             .build())
+ *                         .workerConfig(WorkflowTemplatePlacementManagedClusterConfigWorkerConfig.builder()
+ *                             .diskConfig(WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig.builder()
+ *                                 .bootDiskSizeGb(10)
+ *                                 .numLocalSsds(2)
+ *                                 .build())
+ *                             .machineType(&#34;n1-standard-2&#34;)
+ *                             .numInstances(3)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

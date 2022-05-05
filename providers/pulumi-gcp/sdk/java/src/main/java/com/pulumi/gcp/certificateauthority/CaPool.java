@@ -23,6 +23,242 @@ import javax.annotation.Nullable;
  * trust anchor.
  * 
  * ## Example Usage
+ * ### Privateca Capool Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new CaPool(&#34;default&#34;, CaPoolArgs.builder()        
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .location(&#34;us-central1&#34;)
+ *             .publishingOptions(CaPoolPublishingOptions.builder()
+ *                 .publishCaCert(true)
+ *                 .publishCrl(true)
+ *                 .build())
+ *             .tier(&#34;ENTERPRISE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Privateca Capool All Fields
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new CaPool(&#34;default&#34;, CaPoolArgs.builder()        
+ *             .issuancePolicy(CaPoolIssuancePolicy.builder()
+ *                 .allowedIssuanceModes(CaPoolIssuancePolicyAllowedIssuanceModes.builder()
+ *                     .allowConfigBasedIssuance(true)
+ *                     .allowCsrBasedIssuance(true)
+ *                     .build())
+ *                 .allowedKeyTypes(                
+ *                     CaPoolIssuancePolicyAllowedKeyType.builder()
+ *                         .ellipticCurve(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve.builder()
+ *                             .signatureAlgorithm(&#34;ECDSA_P256&#34;)
+ *                             .build())
+ *                         .build(),
+ *                     CaPoolIssuancePolicyAllowedKeyType.builder()
+ *                         .rsa(CaPoolIssuancePolicyAllowedKeyTypeRsa.builder()
+ *                             .maxModulusSize(10)
+ *                             .minModulusSize(5)
+ *                             .build())
+ *                         .build())
+ *                 .baselineValues(CaPoolIssuancePolicyBaselineValues.builder()
+ *                     .additionalExtensions(CaPoolIssuancePolicyBaselineValuesAdditionalExtension.builder()
+ *                         .critical(true)
+ *                         .objectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId.builder()
+ *                             .objectIdPath(                            
+ *                                 1,
+ *                                 7)
+ *                             .build())
+ *                         .value(&#34;asdf&#34;)
+ *                         .build())
+ *                     .aiaOcspServers(&#34;example.com&#34;)
+ *                     .caOptions(CaPoolIssuancePolicyBaselineValuesCaOptions.builder()
+ *                         .isCa(true)
+ *                         .maxIssuerPathLength(10)
+ *                         .build())
+ *                     .keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsage.builder()
+ *                         .baseKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage.builder()
+ *                             .certSign(false)
+ *                             .contentCommitment(true)
+ *                             .crlSign(true)
+ *                             .dataEncipherment(true)
+ *                             .decipherOnly(true)
+ *                             .digitalSignature(true)
+ *                             .keyAgreement(true)
+ *                             .keyEncipherment(false)
+ *                             .build())
+ *                         .extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage.builder()
+ *                             .clientAuth(false)
+ *                             .codeSigning(true)
+ *                             .emailProtection(true)
+ *                             .serverAuth(true)
+ *                             .timeStamping(true)
+ *                             .build())
+ *                         .build())
+ *                     .policyIds(                    
+ *                         CaPoolIssuancePolicyBaselineValuesPolicyId.builder()
+ *                             .objectIdPath(                            
+ *                                 1,
+ *                                 5)
+ *                             .build(),
+ *                         CaPoolIssuancePolicyBaselineValuesPolicyId.builder()
+ *                             .objectIdPath(                            
+ *                                 1,
+ *                                 5,
+ *                                 7)
+ *                             .build())
+ *                     .build())
+ *                 .identityConstraints(CaPoolIssuancePolicyIdentityConstraints.builder()
+ *                     .allowSubjectAltNamesPassthrough(true)
+ *                     .allowSubjectPassthrough(true)
+ *                     .celExpression(CaPoolIssuancePolicyIdentityConstraintsCelExpression.builder()
+ *                         .expression(&#34;subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )&#34;)
+ *                         .title(&#34;My title&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .maximumLifetime(&#34;50000s&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .location(&#34;us-central1&#34;)
+ *             .publishingOptions(CaPoolPublishingOptions.builder()
+ *                 .publishCaCert(false)
+ *                 .publishCrl(true)
+ *                 .build())
+ *             .tier(&#34;ENTERPRISE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Privateca Quickstart
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplePrivateKey = new PrivateKey(&#34;examplePrivateKey&#34;, PrivateKeyArgs.builder()        
+ *             .algorithm(&#34;RSA&#34;)
+ *             .build());
+ * 
+ *         var exampleCertRequest = new CertRequest(&#34;exampleCertRequest&#34;, CertRequestArgs.builder()        
+ *             .keyAlgorithm(&#34;RSA&#34;)
+ *             .privateKeyPem(examplePrivateKey.getPrivateKeyPem())
+ *             .subjects(CertRequestSubject.builder()
+ *                 .commonName(&#34;example.com&#34;)
+ *                 .organization(&#34;ACME Examples, Inc&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultCaPool = new CaPool(&#34;defaultCaPool&#34;, CaPoolArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .tier(&#34;ENTERPRISE&#34;)
+ *             .project(&#34;project-id&#34;)
+ *             .publishingOptions(CaPoolPublishingOptions.builder()
+ *                 .publishCaCert(true)
+ *                 .publishCrl(true)
+ *                 .build())
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .issuancePolicy(CaPoolIssuancePolicy.builder()
+ *                 .baselineValues(CaPoolIssuancePolicyBaselineValues.builder()
+ *                     .caOptions(CaPoolIssuancePolicyBaselineValuesCaOptions.builder()
+ *                         .isCa(false)
+ *                         .build())
+ *                     .keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsage.builder()
+ *                         .baseKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage.builder()
+ *                             .digitalSignature(true)
+ *                             .keyEncipherment(true)
+ *                             .build())
+ *                         .extendedKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage.builder()
+ *                             .serverAuth(true)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var test_ca = new Authority(&#34;test-ca&#34;, AuthorityArgs.builder()        
+ *             .certificateAuthorityId(&#34;my-authority&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .project(&#34;project-id&#34;)
+ *             .pool(google_privateca_ca_pool.getPool().getName())
+ *             .config(AuthorityConfig.builder()
+ *                 .subjectConfig(AuthorityConfigSubjectConfig.builder()
+ *                     .subject(AuthorityConfigSubjectConfigSubject.builder()
+ *                         .countryCode(&#34;us&#34;)
+ *                         .organization(&#34;google&#34;)
+ *                         .organizationalUnit(&#34;enterprise&#34;)
+ *                         .locality(&#34;mountain view&#34;)
+ *                         .province(&#34;california&#34;)
+ *                         .streetAddress(&#34;1600 amphitheatre parkway&#34;)
+ *                         .postalCode(&#34;94109&#34;)
+ *                         .commonName(&#34;my-certificate-authority&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .x509Config(AuthorityConfigX509Config.builder()
+ *                     .caOptions(AuthorityConfigX509ConfigCaOptions.builder()
+ *                         .isCa(true)
+ *                         .build())
+ *                     .keyUsage(AuthorityConfigX509ConfigKeyUsage.builder()
+ *                         .baseKeyUsage(AuthorityConfigX509ConfigKeyUsageBaseKeyUsage.builder()
+ *                             .certSign(true)
+ *                             .crlSign(true)
+ *                             .build())
+ *                         .extendedKeyUsage(AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage.builder()
+ *                             .serverAuth(true)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .type(&#34;SELF_SIGNED&#34;)
+ *             .keySpec(AuthorityKeySpec.builder()
+ *                 .algorithm(&#34;RSA_PKCS1_4096_SHA256&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultCertificate = new Certificate(&#34;defaultCertificate&#34;, CertificateArgs.builder()        
+ *             .pool(google_privateca_ca_pool.getPool().getName())
+ *             .certificateAuthority(test_ca.getCertificateAuthorityId())
+ *             .project(&#34;project-id&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .lifetime(&#34;860s&#34;)
+ *             .pemCsr(exampleCertRequest.getCertRequestPem())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

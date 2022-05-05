@@ -27,10 +27,85 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.healthcare.DatasetIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_healthcare\_dataset\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var dataset = new DatasetIamPolicy(&#34;dataset&#34;, DatasetIamPolicyArgs.builder()        
+ *             .datasetId(&#34;your-dataset-id&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_healthcare\_dataset\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new DatasetIamBinding(&#34;dataset&#34;, DatasetIamBindingArgs.builder()        
+ *             .datasetId(&#34;your-dataset-id&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_healthcare\_dataset\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new DatasetIamMember(&#34;dataset&#34;, DatasetIamMemberArgs.builder()        
+ *             .datasetId(&#34;your-dataset-id&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

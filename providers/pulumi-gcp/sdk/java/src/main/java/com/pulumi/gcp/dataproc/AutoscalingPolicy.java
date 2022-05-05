@@ -21,6 +21,48 @@ import javax.annotation.Nullable;
  * Describes an autoscaling policy for Dataproc cluster autoscaler.
  * 
  * ## Example Usage
+ * ### Dataproc Autoscaling Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var asp = new AutoscalingPolicy(&#34;asp&#34;, AutoscalingPolicyArgs.builder()        
+ *             .policyId(&#34;dataproc-policy&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .workerConfig(AutoscalingPolicyWorkerConfig.builder()
+ *                 .maxInstances(3)
+ *                 .build())
+ *             .basicAlgorithm(AutoscalingPolicyBasicAlgorithm.builder()
+ *                 .yarnConfig(AutoscalingPolicyBasicAlgorithmYarnConfig.builder()
+ *                     .gracefulDecommissionTimeout(&#34;30s&#34;)
+ *                     .scaleUpFactor(0.5)
+ *                     .scaleDownFactor(0.5)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var basic = new Cluster(&#34;basic&#34;, ClusterArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .clusterConfig(ClusterClusterConfig.builder()
+ *                 .autoscalingConfig(ClusterClusterConfigAutoscalingConfig.builder()
+ *                     .policyUri(asp.getName())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

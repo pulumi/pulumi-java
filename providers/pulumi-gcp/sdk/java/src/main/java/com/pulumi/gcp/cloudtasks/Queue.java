@@ -27,6 +27,69 @@ import javax.annotation.Nullable;
  * resource&#39;s location will be the same as the App Engine location specified.
  * 
  * ## Example Usage
+ * ### Queue Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Queue(&#34;default&#34;, QueueArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Tasks Queue Advanced
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var advancedConfiguration = new Queue(&#34;advancedConfiguration&#34;, QueueArgs.builder()        
+ *             .appEngineRoutingOverride(QueueAppEngineRoutingOverride.builder()
+ *                 .instance(&#34;test&#34;)
+ *                 .service(&#34;worker&#34;)
+ *                 .version(&#34;1.0&#34;)
+ *                 .build())
+ *             .location(&#34;us-central1&#34;)
+ *             .rateLimits(QueueRateLimits.builder()
+ *                 .maxConcurrentDispatches(3)
+ *                 .maxDispatchesPerSecond(2)
+ *                 .build())
+ *             .retryConfig(QueueRetryConfig.builder()
+ *                 .maxAttempts(5)
+ *                 .maxBackoff(&#34;3s&#34;)
+ *                 .maxDoublings(1)
+ *                 .maxRetryDuration(&#34;4s&#34;)
+ *                 .minBackoff(&#34;2s&#34;)
+ *                 .build())
+ *             .stackdriverLoggingConfig(QueueStackdriverLoggingConfig.builder()
+ *                 .samplingRatio(0.9)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

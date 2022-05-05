@@ -23,6 +23,32 @@ import javax.annotation.Nullable;
  * the marketplace prior to using this resource.
  * 
  * ## Example Usage
+ * ### Identity Platform Oauth Idp Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var oauthIdpConfig = new OauthIdpConfig(&#34;oauthIdpConfig&#34;, OauthIdpConfigArgs.builder()        
+ *             .clientId(&#34;client-id&#34;)
+ *             .clientSecret(&#34;secret&#34;)
+ *             .displayName(&#34;Display Name&#34;)
+ *             .enabled(true)
+ *             .issuer(&#34;issuer&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

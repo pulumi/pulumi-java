@@ -25,6 +25,62 @@ import javax.annotation.Nullable;
  *     * [Managing Workflows](https://cloud.google.com/workflows/docs/creating-updating-workflow)
  * 
  * ## Example Usage
+ * ### Workflow Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testAccount = new Account(&#34;testAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-account&#34;)
+ *             .displayName(&#34;Test Service Account&#34;)
+ *             .build());
+ * 
+ *         var example = new Workflow(&#34;example&#34;, WorkflowArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .description(&#34;Magic&#34;)
+ *             .serviceAccount(testAccount.getId())
+ *             .sourceContents(&#34;&#34;&#34;
+ * # This is a sample workflow, feel free to replace it with your source code
+ * #
+ * # This workflow does the following:
+ * # - reads current time and date information from an external API and stores
+ * #   the response in CurrentDateTime variable
+ * # - retrieves a list of Wikipedia articles related to the day of the week
+ * #   from CurrentDateTime
+ * # - returns the list of articles as an output of the workflow
+ * # FYI, In terraform you need to escape the $$ or it will cause errors.
+ * 
+ * - getCurrentTime:
+ *     call: http.get
+ *     args:
+ *         url: https://us-central1-workflowsample.cloudfunctions.net/datetime
+ *     result: CurrentDateTime
+ * - readWikipedia:
+ *     call: http.get
+ *     args:
+ *         url: https://en.wikipedia.org/w/api.php
+ *         query:
+ *             action: opensearch
+ *             search: %s
+ *     result: WikiResult
+ * - returnOutput:
+ *     return: %s
+ * &#34;, CurrentDateTime.getBody().getDayOfTheWeek(),WikiResult.getBody()[1]))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

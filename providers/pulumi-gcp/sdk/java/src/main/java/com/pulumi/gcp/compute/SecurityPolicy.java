@@ -23,6 +23,49 @@ import javax.annotation.Nullable;
  * and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policy = new SecurityPolicy(&#34;policy&#34;, SecurityPolicyArgs.builder()        
+ *             .rules(            
+ *                 SecurityPolicyRule.builder()
+ *                     .action(&#34;deny(403)&#34;)
+ *                     .description(&#34;Deny access to IPs in 9.9.9.0/24&#34;)
+ *                     .match(SecurityPolicyRuleMatch.builder()
+ *                         .config(SecurityPolicyRuleMatchConfig.builder()
+ *                             .srcIpRanges(&#34;9.9.9.0/24&#34;)
+ *                             .build())
+ *                         .versionedExpr(&#34;SRC_IPS_V1&#34;)
+ *                         .build())
+ *                     .priority(&#34;1000&#34;)
+ *                     .build(),
+ *                 SecurityPolicyRule.builder()
+ *                     .action(&#34;allow&#34;)
+ *                     .description(&#34;default rule&#34;)
+ *                     .match(SecurityPolicyRuleMatch.builder()
+ *                         .config(SecurityPolicyRuleMatchConfig.builder()
+ *                             .srcIpRanges(&#34;*&#34;)
+ *                             .build())
+ *                         .versionedExpr(&#34;SRC_IPS_V1&#34;)
+ *                         .build())
+ *                     .priority(&#34;2147483647&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="gcp:compute/securityPolicy:SecurityPolicy")

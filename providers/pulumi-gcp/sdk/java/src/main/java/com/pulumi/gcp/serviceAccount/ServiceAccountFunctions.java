@@ -23,6 +23,27 @@ public final class ServiceAccountFunctions {
      * the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var objectViewer = Output.of(ServiceAccountFunctions.getAccount(GetAccountArgs.builder()
+     *             .accountId(&#34;object-viewer&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
@@ -72,6 +93,36 @@ public final class ServiceAccountFunctions {
      * Get service account public key. For more information, see [the official documentation](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and [API](https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts.keys/get).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var myaccount = new Account(&#34;myaccount&#34;, AccountArgs.builder()        
+     *             .accountId(&#34;dev-foo-account&#34;)
+     *             .build());
+     * 
+     *         var mykeyKey = new Key(&#34;mykeyKey&#34;, KeyArgs.builder()        
+     *             .serviceAccountId(myaccount.getName())
+     *             .build());
+     * 
+     *         final var mykeyAccountKey = ServiceAccountFunctions.getAccountKey(GetAccountKeyArgs.builder()
+     *             .name(mykeyKey.getName())
+     *             .publicKeyType(&#34;TYPE_X509_PEM_FILE&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAccountKeyResult> getAccountKey(GetAccountKeyArgs args) {

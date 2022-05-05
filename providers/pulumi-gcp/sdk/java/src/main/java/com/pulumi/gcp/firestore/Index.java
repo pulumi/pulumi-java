@@ -34,6 +34,38 @@ import javax.annotation.Nullable;
  * the App Engine location specified.
  * 
  * ## Example Usage
+ * ### Firestore Index Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_index = new Index(&#34;my-index&#34;, IndexArgs.builder()        
+ *             .collection(&#34;chatrooms&#34;)
+ *             .fields(            
+ *                 IndexField.builder()
+ *                     .fieldPath(&#34;name&#34;)
+ *                     .order(&#34;ASCENDING&#34;)
+ *                     .build(),
+ *                 IndexField.builder()
+ *                     .fieldPath(&#34;description&#34;)
+ *                     .order(&#34;DESCENDING&#34;)
+ *                     .build())
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

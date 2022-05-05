@@ -44,10 +44,11 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
 
     /**
      * The availability type of the Cloud SQL
-     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-     * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-     * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-     * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+     * `settings.backup_configuration.enabled` is set to `true`.
+     * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+     * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+     * is set to `true`.
      * 
      */
     @Import(name="availabilityType")
@@ -55,10 +56,11 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
 
     /**
      * @return The availability type of the Cloud SQL
-     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-     * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-     * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-     * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+     * `settings.backup_configuration.enabled` is set to `true`.
+     * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+     * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+     * is set to `true`.
      * 
      */
     public Optional<Output<String>> availabilityType() {
@@ -295,10 +297,11 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
 
         /**
          * @param availabilityType The availability type of the Cloud SQL
-         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-         * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-         * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-         * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+         * `settings.backup_configuration.enabled` is set to `true`.
+         * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+         * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+         * is set to `true`.
          * 
          * @return builder
          * 
@@ -310,10 +313,11 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
 
         /**
          * @param availabilityType The availability type of the Cloud SQL
-         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-         * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-         * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-         * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+         * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+         * `settings.backup_configuration.enabled` is set to `true`.
+         * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+         * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+         * is set to `true`.
          * 
          * @return builder
          * 

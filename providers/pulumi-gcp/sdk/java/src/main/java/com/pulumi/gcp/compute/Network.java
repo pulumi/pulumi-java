@@ -26,6 +26,50 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
  * 
  * ## Example Usage
+ * ### Network Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpcNetwork = new Network(&#34;vpcNetwork&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network Custom Mtu
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpcNetwork = new Network(&#34;vpcNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(true)
+ *             .mtu(1460)
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

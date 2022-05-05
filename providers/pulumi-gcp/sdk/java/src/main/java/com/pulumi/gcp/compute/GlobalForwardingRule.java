@@ -27,7 +27,776 @@ import javax.annotation.Nullable;
  * &lt;https://cloud.google.com/compute/docs/load-balancing/http/&gt;
  * 
  * ## Example Usage
+ * ### External Ssl Proxy Lb Mig Backend
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.1.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalAddress = new GlobalAddress(&#34;defaultGlobalAddress&#34;);
+ * 
+ *         var defaultPrivateKey = new PrivateKey(&#34;defaultPrivateKey&#34;, PrivateKeyArgs.builder()        
+ *             .algorithm(&#34;RSA&#34;)
+ *             .rsaBits(2048)
+ *             .build());
+ * 
+ *         var defaultSelfSignedCert = new SelfSignedCert(&#34;defaultSelfSignedCert&#34;, SelfSignedCertArgs.builder()        
+ *             .keyAlgorithm(defaultPrivateKey.getAlgorithm())
+ *             .privateKeyPem(defaultPrivateKey.getPrivateKeyPem())
+ *             .validityPeriodHours(12)
+ *             .earlyRenewalHours(3)
+ *             .allowedUses(            
+ *                 &#34;key_encipherment&#34;,
+ *                 &#34;digital_signature&#34;,
+ *                 &#34;server_auth&#34;)
+ *             .dnsNames(&#34;example.com&#34;)
+ *             .subjects(SelfSignedCertSubject.builder()
+ *                 .commonName(&#34;example.com&#34;)
+ *                 .organization(&#34;ACME Examples, Inc&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultSSLCertificate = new SSLCertificate(&#34;defaultSSLCertificate&#34;, SSLCertificateArgs.builder()        
+ *             .privateKey(defaultPrivateKey.getPrivateKeyPem())
+ *             .certificate(defaultSelfSignedCert.getCertPem())
+ *             .build());
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .timeoutSec(1)
+ *             .checkIntervalSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;443&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultInstanceTemplate = new InstanceTemplate(&#34;defaultInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-small&#34;)
+ *             .tags(&#34;allow-health-check&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(defaultNetwork.getId())
+ *                 .subnetwork(defaultSubnetwork.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-10&#34;)
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .metadata(Map.of(&#34;startup-script&#34;, &#34;&#34;&#34;
+ * #! /bin/bash
+ * set -euo pipefail
+ * export DEBIAN_FRONTEND=noninteractive
+ * sudo apt-get update
+ * sudo apt-get install  -y apache2 jq
+ * sudo a2ensite default-ssl
+ * sudo a2enmod ssl
+ * sudo service apache2 restart
+ * NAME=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/hostname&#34;)
+ * IP=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip&#34;)
+ * METADATA=$(curl -f -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True&#34; | jq &#39;del(.[&#34;startup-script&#34;])&#39;)
+ * cat &lt;&lt;EOF &gt; /var/www/html/index.html
+ * &lt;h1&gt;SSL Load Balancer&lt;/h1&gt;
+ * &lt;pre&gt;
+ * Name: $NAME
+ * IP: $IP
+ * Metadata: $METADATA
+ * &lt;/pre&gt;
+ * EOF
+ *             &#34;&#34;&#34;))
+ *             .build());
+ * 
+ *         var defaultInstanceGroupManager = new InstanceGroupManager(&#34;defaultInstanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .zone(&#34;us-central1-c&#34;)
+ *             .namedPorts(InstanceGroupManagerNamedPort.builder()
+ *                 .name(&#34;tcp&#34;)
+ *                 .port(443)
+ *                 .build())
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(defaultInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;vm&#34;)
+ *             .targetSize(2)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .protocol(&#34;SSL&#34;)
+ *             .portName(&#34;tcp&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(defaultInstanceGroupManager.getInstanceGroup())
+ *                 .balancingMode(&#34;UTILIZATION&#34;)
+ *                 .maxUtilization(1)
+ *                 .capacityScaler(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetSSLProxy = new TargetSSLProxy(&#34;defaultTargetSSLProxy&#34;, TargetSSLProxyArgs.builder()        
+ *             .backendService(defaultBackendService.getId())
+ *             .sslCertificates(defaultSSLCertificate.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .portRange(&#34;443&#34;)
+ *             .target(defaultTargetSSLProxy.getId())
+ *             .ipAddress(defaultGlobalAddress.getId())
+ *             .build());
+ * 
+ *         var defaultFirewall = new Firewall(&#34;defaultFirewall&#34;, FirewallArgs.builder()        
+ *             .direction(&#34;INGRESS&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .sourceRanges(            
+ *                 &#34;130.211.0.0/22&#34;,
+ *                 &#34;35.191.0.0/16&#34;)
+ *             .allows(FirewallAllow.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .build())
+ *             .targetTags(&#34;allow-health-check&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### External Tcp Proxy Lb Mig Backend
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.1.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalAddress = new GlobalAddress(&#34;defaultGlobalAddress&#34;);
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .timeoutSec(1)
+ *             .checkIntervalSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultInstanceTemplate = new InstanceTemplate(&#34;defaultInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-small&#34;)
+ *             .tags(&#34;allow-health-check&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(defaultNetwork.getId())
+ *                 .subnetwork(defaultSubnetwork.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-10&#34;)
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .metadata(Map.of(&#34;startup-script&#34;, &#34;&#34;&#34;
+ * #! /bin/bash
+ * set -euo pipefail
+ * export DEBIAN_FRONTEND=noninteractive
+ * apt-get update
+ * apt-get install -y nginx-light jq
+ * NAME=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/hostname&#34;)
+ * IP=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip&#34;)
+ * METADATA=$(curl -f -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True&#34; | jq &#39;del(.[&#34;startup-script&#34;])&#39;)
+ * cat &lt;&lt;EOF &gt; /var/www/html/index.html
+ * &lt;pre&gt;
+ * Name: $NAME
+ * IP: $IP
+ * Metadata: $METADATA
+ * &lt;/pre&gt;
+ * EOF
+ *             &#34;&#34;&#34;))
+ *             .build());
+ * 
+ *         var defaultInstanceGroupManager = new InstanceGroupManager(&#34;defaultInstanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .zone(&#34;us-central1-c&#34;)
+ *             .namedPorts(InstanceGroupManagerNamedPort.builder()
+ *                 .name(&#34;tcp&#34;)
+ *                 .port(110)
+ *                 .build())
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(defaultInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;vm&#34;)
+ *             .targetSize(2)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .protocol(&#34;TCP&#34;)
+ *             .portName(&#34;tcp&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(defaultInstanceGroupManager.getInstanceGroup())
+ *                 .balancingMode(&#34;UTILIZATION&#34;)
+ *                 .maxUtilization(1)
+ *                 .capacityScaler(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetTCPProxy = new TargetTCPProxy(&#34;defaultTargetTCPProxy&#34;, TargetTCPProxyArgs.builder()        
+ *             .backendService(defaultBackendService.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .portRange(&#34;110&#34;)
+ *             .target(defaultTargetTCPProxy.getId())
+ *             .ipAddress(defaultGlobalAddress.getId())
+ *             .build());
+ * 
+ *         var defaultFirewall = new Firewall(&#34;defaultFirewall&#34;, FirewallArgs.builder()        
+ *             .direction(&#34;INGRESS&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .sourceRanges(            
+ *                 &#34;130.211.0.0/22&#34;,
+ *                 &#34;35.191.0.0/16&#34;)
+ *             .allows(FirewallAllow.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .build())
+ *             .targetTags(&#34;allow-health-check&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### External Http Lb Mig Backend Custom Header
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.1.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalAddress = new GlobalAddress(&#34;defaultGlobalAddress&#34;);
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .portSpecification(&#34;USE_SERVING_PORT&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultInstanceTemplate = new InstanceTemplate(&#34;defaultInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-small&#34;)
+ *             .tags(&#34;allow-health-check&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(defaultNetwork.getId())
+ *                 .subnetwork(defaultSubnetwork.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-10&#34;)
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .metadata(Map.of(&#34;startup-script&#34;, &#34;&#34;&#34;
+ * #! /bin/bash
+ * set -euo pipefail
+ * 
+ * export DEBIAN_FRONTEND=noninteractive
+ * apt-get update
+ * apt-get install -y nginx-light jq
+ * 
+ * NAME=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/hostname&#34;)
+ * IP=$(curl -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip&#34;)
+ * METADATA=$(curl -f -H &#34;Metadata-Flavor: Google&#34; &#34;http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True&#34; | jq &#39;del(.[&#34;startup-script&#34;])&#39;)
+ * 
+ * cat &lt;&lt;EOF &gt; /var/www/html/index.html
+ * &lt;pre&gt;
+ * Name: $NAME
+ * IP: $IP
+ * Metadata: $METADATA
+ * &lt;/pre&gt;
+ * EOF
+ *             &#34;&#34;&#34;))
+ *             .build());
+ * 
+ *         var defaultInstanceGroupManager = new InstanceGroupManager(&#34;defaultInstanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .zone(&#34;us-central1-c&#34;)
+ *             .namedPorts(InstanceGroupManagerNamedPort.builder()
+ *                 .name(&#34;http&#34;)
+ *                 .port(8080)
+ *                 .build())
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(defaultInstanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;vm&#34;)
+ *             .targetSize(2)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .protocol(&#34;HTTP&#34;)
+ *             .portName(&#34;my-port&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .timeoutSec(10)
+ *             .enableCdn(true)
+ *             .customRequestHeaders(&#34;X-Client-Geo-Location: {client_region_subdivision}, {client_city}&#34;)
+ *             .customResponseHeaders(&#34;X-Cache-Hit: {cdn_cache_status}&#34;)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(defaultInstanceGroupManager.getInstanceGroup())
+ *                 .balancingMode(&#34;UTILIZATION&#34;)
+ *                 .capacityScaler(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .defaultService(defaultBackendService.getId())
+ *             .build());
+ * 
+ *         var defaultTargetHttpProxy = new TargetHttpProxy(&#34;defaultTargetHttpProxy&#34;, TargetHttpProxyArgs.builder()        
+ *             .urlMap(defaultURLMap.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .ipProtocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .portRange(&#34;80&#34;)
+ *             .target(defaultTargetHttpProxy.getId())
+ *             .ipAddress(defaultGlobalAddress.getId())
+ *             .build());
+ * 
+ *         var defaultFirewall = new Firewall(&#34;defaultFirewall&#34;, FirewallArgs.builder()        
+ *             .direction(&#34;INGRESS&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .sourceRanges(            
+ *                 &#34;130.211.0.0/22&#34;,
+ *                 &#34;35.191.0.0/16&#34;)
+ *             .allows(FirewallAllow.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .build())
+ *             .targetTags(&#34;allow-health-check&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Forwarding Rule Http
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpProxy = new TargetHttpProxy(&#34;defaultTargetHttpProxy&#34;, TargetHttpProxyArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .urlMap(defaultURLMap.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .target(defaultTargetHttpProxy.getId())
+ *             .portRange(&#34;80&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Forwarding Rule Internal
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debianImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var instanceTemplate = new InstanceTemplate(&#34;instanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(debianImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var igm = new InstanceGroupManager(&#34;igm&#34;, InstanceGroupManagerArgs.builder()        
+ *             .versions(InstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(instanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;internal-glb&#34;)
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .targetSize(1)
+ *             .build());
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .loadBalancingScheme(&#34;INTERNAL_SELF_MANAGED&#34;)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(igm.getInstanceGroup())
+ *                 .balancingMode(&#34;RATE&#34;)
+ *                 .capacityScaler(0.4)
+ *                 .maxRatePerInstance(50)
+ *                 .build())
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpProxy = new TargetHttpProxy(&#34;defaultTargetHttpProxy&#34;, TargetHttpProxyArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .urlMap(defaultURLMap.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .target(defaultTargetHttpProxy.getId())
+ *             .portRange(&#34;80&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL_SELF_MANAGED&#34;)
+ *             .ipAddress(&#34;0.0.0.0&#34;)
+ *             .metadataFilters(GlobalForwardingRuleMetadataFilter.builder()
+ *                 .filterMatchCriteria(&#34;MATCH_ANY&#34;)
+ *                 .filterLabels(GlobalForwardingRuleMetadataFilterFilterLabel.builder()
+ *                     .name(&#34;PLANET&#34;)
+ *                     .value(&#34;MARS&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Forwarding Rule External Managed
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .loadBalancingScheme(&#34;EXTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpProxy = new TargetHttpProxy(&#34;defaultTargetHttpProxy&#34;, TargetHttpProxyArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .urlMap(defaultURLMap.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .target(defaultTargetHttpProxy.getId())
+ *             .portRange(&#34;80&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL_MANAGED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Forwarding Rule Hybrid
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;);
+ * 
+ *         var defaultNetworkEndpointGroup = new NetworkEndpointGroup(&#34;defaultNetworkEndpointGroup&#34;, NetworkEndpointGroupArgs.builder()        
+ *             .network(defaultNetwork.getId())
+ *             .defaultPort(&#34;90&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .networkEndpointType(&#34;GCE_VM_IP_PORT&#34;)
+ *             .build());
+ * 
+ *         var hybridNetworkEndpointGroup = new NetworkEndpointGroup(&#34;hybridNetworkEndpointGroup&#34;, NetworkEndpointGroupArgs.builder()        
+ *             .network(defaultNetwork.getId())
+ *             .defaultPort(&#34;90&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .networkEndpointType(&#34;NON_GCP_PRIVATE_IP_PORT&#34;)
+ *             .build());
+ * 
+ *         var hybrid_endpoint = new NetworkEndpoint(&#34;hybrid-endpoint&#34;, NetworkEndpointArgs.builder()        
+ *             .networkEndpointGroup(hybridNetworkEndpointGroup.getName())
+ *             .port(hybridNetworkEndpointGroup.getDefaultPort())
+ *             .ipAddress(&#34;127.0.0.1&#34;)
+ *             .build());
+ * 
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .timeoutSec(1)
+ *             .checkIntervalSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(defaultNetworkEndpointGroup.getId())
+ *                 .balancingMode(&#34;RATE&#34;)
+ *                 .maxRatePerEndpoint(10)
+ *                 .build())
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .build());
+ * 
+ *         var hybridBackendService = new BackendService(&#34;hybridBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(hybridNetworkEndpointGroup.getId())
+ *                 .balancingMode(&#34;RATE&#34;)
+ *                 .maxRatePerEndpoint(10)
+ *                 .build())
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(                
+ *                     URLMapPathMatcherPathRule.builder()
+ *                         .paths(&#34;/*&#34;)
+ *                         .service(defaultBackendService.getId())
+ *                         .build(),
+ *                     URLMapPathMatcherPathRule.builder()
+ *                         .paths(&#34;/hybrid&#34;)
+ *                         .service(hybridBackendService.getId())
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpProxy = new TargetHttpProxy(&#34;defaultTargetHttpProxy&#34;, TargetHttpProxyArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .urlMap(defaultURLMap.getId())
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .target(defaultTargetHttpProxy.getId())
+ *             .portRange(&#34;80&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ### Private Service Connect Google Apis
+ * ### Private Service Connect Google Apis
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var vpcSubnetwork = new Subnetwork(&#34;vpcSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .project(network.getProject())
+ *             .ipCidrRange(&#34;10.2.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(network.getId())
+ *             .privateIpGoogleAccess(true)
+ *             .build());
+ * 
+ *         var defaultGlobalAddress = new GlobalAddress(&#34;defaultGlobalAddress&#34;, GlobalAddressArgs.builder()        
+ *             .project(network.getProject())
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .purpose(&#34;PRIVATE_SERVICE_CONNECT&#34;)
+ *             .network(network.getId())
+ *             .address(&#34;100.100.100.106&#34;)
+ *             .build());
+ * 
+ *         var defaultGlobalForwardingRule = new GlobalForwardingRule(&#34;defaultGlobalForwardingRule&#34;, GlobalForwardingRuleArgs.builder()        
+ *             .project(network.getProject())
+ *             .target(&#34;all-apis&#34;)
+ *             .network(network.getId())
+ *             .ipAddress(defaultGlobalAddress.getId())
+ *             .loadBalancingScheme(&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

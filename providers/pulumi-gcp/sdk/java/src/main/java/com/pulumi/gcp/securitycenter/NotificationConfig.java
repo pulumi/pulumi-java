@@ -31,6 +31,36 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/security-command-center/docs)
  * 
  * ## Example Usage
+ * ### Scc Notification Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sccNotification = new Topic(&#34;sccNotification&#34;);
+ * 
+ *         var customNotificationConfig = new NotificationConfig(&#34;customNotificationConfig&#34;, NotificationConfigArgs.builder()        
+ *             .configId(&#34;my-config&#34;)
+ *             .organization(&#34;123456789&#34;)
+ *             .description(&#34;My custom Cloud Security Command Center Finding Notification Configuration&#34;)
+ *             .pubsubTopic(sccNotification.getId())
+ *             .streamingConfig(NotificationConfigStreamingConfig.builder()
+ *                 .filter(&#34;category = \&#34;OPEN_FIREWALL\&#34; AND state = \&#34;ACTIVE\&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

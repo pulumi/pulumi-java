@@ -26,6 +26,57 @@ import javax.annotation.Nullable;
  * google_compute_project_metadata_item.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new ProjectMetadata(&#34;default&#34;, ProjectMetadataArgs.builder()        
+ *             .metadata(Map.ofEntries(
+ *                 Map.entry(&#34;13&#34;, &#34;42&#34;),
+ *                 Map.entry(&#34;fizz&#34;, &#34;buzz&#34;),
+ *                 Map.entry(&#34;foo&#34;, &#34;bar&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Adding An SSH Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mySshKey = new ProjectMetadata(&#34;mySshKey&#34;, ProjectMetadataArgs.builder()        
+ *             .metadata(Map.of(&#34;ssh-keys&#34;, &#34;&#34;&#34;
+ *       dev:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT dev
+ *       foo:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILg6UtHDNyMNAh0GjaytsJdrUxjtLy3APXqZfNZhvCeT bar
+ *     
+ *             &#34;&#34;&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -51,6 +51,7 @@ public final class GetInstanceResult {
     private final @Nullable String region;
     private final Integer replicaCount;
     private final String reservedIpRange;
+    private final String secondaryIpRange;
     private final List<GetInstanceServerCaCert> serverCaCerts;
     private final String tier;
     private final String transitEncryptionMode;
@@ -85,6 +86,7 @@ public final class GetInstanceResult {
         @CustomType.Parameter("region") @Nullable String region,
         @CustomType.Parameter("replicaCount") Integer replicaCount,
         @CustomType.Parameter("reservedIpRange") String reservedIpRange,
+        @CustomType.Parameter("secondaryIpRange") String secondaryIpRange,
         @CustomType.Parameter("serverCaCerts") List<GetInstanceServerCaCert> serverCaCerts,
         @CustomType.Parameter("tier") String tier,
         @CustomType.Parameter("transitEncryptionMode") String transitEncryptionMode) {
@@ -116,6 +118,7 @@ public final class GetInstanceResult {
         this.region = region;
         this.replicaCount = replicaCount;
         this.reservedIpRange = reservedIpRange;
+        this.secondaryIpRange = secondaryIpRange;
         this.serverCaCerts = serverCaCerts;
         this.tier = tier;
         this.transitEncryptionMode = transitEncryptionMode;
@@ -209,6 +212,9 @@ public final class GetInstanceResult {
     public String reservedIpRange() {
         return this.reservedIpRange;
     }
+    public String secondaryIpRange() {
+        return this.secondaryIpRange;
+    }
     public List<GetInstanceServerCaCert> serverCaCerts() {
         return this.serverCaCerts;
     }
@@ -256,6 +262,7 @@ public final class GetInstanceResult {
         private @Nullable String region;
         private Integer replicaCount;
         private String reservedIpRange;
+        private String secondaryIpRange;
         private List<GetInstanceServerCaCert> serverCaCerts;
         private String tier;
         private String transitEncryptionMode;
@@ -294,6 +301,7 @@ public final class GetInstanceResult {
     	      this.region = defaults.region;
     	      this.replicaCount = defaults.replicaCount;
     	      this.reservedIpRange = defaults.reservedIpRange;
+    	      this.secondaryIpRange = defaults.secondaryIpRange;
     	      this.serverCaCerts = defaults.serverCaCerts;
     	      this.tier = defaults.tier;
     	      this.transitEncryptionMode = defaults.transitEncryptionMode;
@@ -420,6 +428,10 @@ public final class GetInstanceResult {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
+        public Builder secondaryIpRange(String secondaryIpRange) {
+            this.secondaryIpRange = Objects.requireNonNull(secondaryIpRange);
+            return this;
+        }
         public Builder serverCaCerts(List<GetInstanceServerCaCert> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
@@ -435,7 +447,7 @@ public final class GetInstanceResult {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
         }        public GetInstanceResult build() {
-            return new GetInstanceResult(alternativeLocationId, authEnabled, authString, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, id, labels, locationId, maintenancePolicies, maintenanceSchedules, memorySizeGb, name, nodes, persistenceIamIdentity, port, project, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, serverCaCerts, tier, transitEncryptionMode);
+            return new GetInstanceResult(alternativeLocationId, authEnabled, authString, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, id, labels, locationId, maintenancePolicies, maintenanceSchedules, memorySizeGb, name, nodes, persistenceIamIdentity, port, project, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, secondaryIpRange, serverCaCerts, tier, transitEncryptionMode);
         }
     }
 }

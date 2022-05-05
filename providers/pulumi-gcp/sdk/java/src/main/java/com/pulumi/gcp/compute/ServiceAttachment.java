@@ -28,6 +28,174 @@ import javax.annotation.Nullable;
  *     * [Configuring Private Service Connect to access services](https://cloud.google.com/vpc/docs/configure-private-service-connect-services)
  * 
  * ## Example Usage
+ * ### Service Attachment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var producerServiceHealthCheck = new HealthCheck(&#34;producerServiceHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var producerServiceBackend = new RegionBackendService(&#34;producerServiceBackend&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .healthChecks(producerServiceHealthCheck.getId())
+ *             .build());
+ * 
+ *         var pscIlbNetwork = new Network(&#34;pscIlbNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var pscIlbProducerSubnetwork = new Subnetwork(&#34;pscIlbProducerSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .network(pscIlbNetwork.getId())
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var pscIlbTargetService = new ForwardingRule(&#34;pscIlbTargetService&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL&#34;)
+ *             .backendService(producerServiceBackend.getId())
+ *             .allPorts(true)
+ *             .network(pscIlbNetwork.getName())
+ *             .subnetwork(pscIlbProducerSubnetwork.getName())
+ *             .build());
+ * 
+ *         var pscIlbNat = new Subnetwork(&#34;pscIlbNat&#34;, SubnetworkArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .network(pscIlbNetwork.getId())
+ *             .purpose(&#34;PRIVATE_SERVICE_CONNECT&#34;)
+ *             .ipCidrRange(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var pscIlbServiceAttachment = new ServiceAttachment(&#34;pscIlbServiceAttachment&#34;, ServiceAttachmentArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .description(&#34;A service attachment configured with Terraform&#34;)
+ *             .enableProxyProtocol(true)
+ *             .connectionPreference(&#34;ACCEPT_AUTOMATIC&#34;)
+ *             .natSubnets(pscIlbNat.getId())
+ *             .targetService(pscIlbTargetService.getId())
+ *             .build());
+ * 
+ *         var pscIlbConsumerAddress = new Address(&#34;pscIlbConsumerAddress&#34;, AddressArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .subnetwork(&#34;default&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .build());
+ * 
+ *         var pscIlbConsumer = new ForwardingRule(&#34;pscIlbConsumer&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .target(pscIlbServiceAttachment.getId())
+ *             .loadBalancingScheme(&#34;&#34;)
+ *             .network(&#34;default&#34;)
+ *             .ipAddress(pscIlbConsumerAddress.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Service Attachment Explicit Projects
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var producerServiceHealthCheck = new HealthCheck(&#34;producerServiceHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var producerServiceBackend = new RegionBackendService(&#34;producerServiceBackend&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .healthChecks(producerServiceHealthCheck.getId())
+ *             .build());
+ * 
+ *         var pscIlbNetwork = new Network(&#34;pscIlbNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var pscIlbProducerSubnetwork = new Subnetwork(&#34;pscIlbProducerSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .network(pscIlbNetwork.getId())
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var pscIlbTargetService = new ForwardingRule(&#34;pscIlbTargetService&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL&#34;)
+ *             .backendService(producerServiceBackend.getId())
+ *             .allPorts(true)
+ *             .network(pscIlbNetwork.getName())
+ *             .subnetwork(pscIlbProducerSubnetwork.getName())
+ *             .build());
+ * 
+ *         var pscIlbNat = new Subnetwork(&#34;pscIlbNat&#34;, SubnetworkArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .network(pscIlbNetwork.getId())
+ *             .purpose(&#34;PRIVATE_SERVICE_CONNECT&#34;)
+ *             .ipCidrRange(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var pscIlbServiceAttachment = new ServiceAttachment(&#34;pscIlbServiceAttachment&#34;, ServiceAttachmentArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .description(&#34;A service attachment configured with Terraform&#34;)
+ *             .enableProxyProtocol(true)
+ *             .connectionPreference(&#34;ACCEPT_MANUAL&#34;)
+ *             .natSubnets(pscIlbNat.getId())
+ *             .targetService(pscIlbTargetService.getId())
+ *             .consumerRejectLists(            
+ *                 &#34;673497134629&#34;,
+ *                 &#34;482878270665&#34;)
+ *             .consumerAcceptLists(ServiceAttachmentConsumerAcceptList.builder()
+ *                 .projectIdOrNum(&#34;658859330310&#34;)
+ *                 .connectionLimit(4)
+ *                 .build())
+ *             .build());
+ * 
+ *         var pscIlbConsumerAddress = new Address(&#34;pscIlbConsumerAddress&#34;, AddressArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .subnetwork(&#34;default&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .address(&#34;10.168.1.17&#34;)
+ *             .build());
+ * 
+ *         var pscIlbConsumer = new ForwardingRule(&#34;pscIlbConsumer&#34;, ForwardingRuleArgs.builder()        
+ *             .region(&#34;us-west2&#34;)
+ *             .target(pscIlbServiceAttachment.getId())
+ *             .loadBalancingScheme(&#34;&#34;)
+ *             .network(&#34;default&#34;)
+ *             .ipAddress(pscIlbConsumerAddress.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

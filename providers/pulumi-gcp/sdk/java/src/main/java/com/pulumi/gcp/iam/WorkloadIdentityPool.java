@@ -26,6 +26,53 @@ import javax.annotation.Nullable;
  *     * [Managing workload identity pools](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#pools)
  * 
  * ## Example Usage
+ * ### Iam Workload Identity Pool Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WorkloadIdentityPool(&#34;example&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Iam Workload Identity Pool Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WorkloadIdentityPool(&#34;example&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .displayName(&#34;Name of pool&#34;)
+ *             .description(&#34;Identity pool for automated test&#34;)
+ *             .disabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

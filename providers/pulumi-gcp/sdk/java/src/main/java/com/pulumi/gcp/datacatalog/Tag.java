@@ -28,6 +28,313 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
  * ## Example Usage
+ * ### Data Catalog Entry Tag Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_entry_group&#34;)
+ *             .build());
+ * 
+ *         var entry = new Entry(&#34;entry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;my_entry&#34;)
+ *             .userSpecifiedType(&#34;my_custom_type&#34;)
+ *             .userSpecifiedSystem(&#34;SomethingExternal&#34;)
+ *             .build());
+ * 
+ *         var tagTemplate = new TagTemplate(&#34;tagTemplate&#34;, TagTemplateArgs.builder()        
+ *             .tagTemplateId(&#34;my_template&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .displayName(&#34;Demo Tag Template&#34;)
+ *             .fields(            
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;source&#34;)
+ *                     .displayName(&#34;Source of data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;STRING&#34;)
+ *                         .build())
+ *                     .isRequired(true)
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;num_rows&#34;)
+ *                     .displayName(&#34;Number of rows in the data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;DOUBLE&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;pii_type&#34;)
+ *                     .displayName(&#34;PII type&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .enumType(TagTemplateFieldTypeEnumType.builder()
+ *                             .allowedValues(                            
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;EMAIL&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;SOCIAL SECURITY NUMBER&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;NONE&#34;)
+ *                                     .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *             .forceDelete(&#34;false&#34;)
+ *             .build());
+ * 
+ *         var basicTag = new Tag(&#34;basicTag&#34;, TagArgs.builder()        
+ *             .parent(entry.getId())
+ *             .template(tagTemplate.getId())
+ *             .fields(TagField.builder()
+ *                 .fieldName(&#34;source&#34;)
+ *                 .stringValue(&#34;my-string&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Entry Group Tag
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_entry_group&#34;)
+ *             .build());
+ * 
+ *         var firstEntry = new Entry(&#34;firstEntry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;first_entry&#34;)
+ *             .userSpecifiedType(&#34;my_custom_type&#34;)
+ *             .userSpecifiedSystem(&#34;SomethingExternal&#34;)
+ *             .build());
+ * 
+ *         var secondEntry = new Entry(&#34;secondEntry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;second_entry&#34;)
+ *             .userSpecifiedType(&#34;another_custom_type&#34;)
+ *             .userSpecifiedSystem(&#34;SomethingElseExternal&#34;)
+ *             .build());
+ * 
+ *         var tagTemplate = new TagTemplate(&#34;tagTemplate&#34;, TagTemplateArgs.builder()        
+ *             .tagTemplateId(&#34;my_template&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .displayName(&#34;Demo Tag Template&#34;)
+ *             .fields(            
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;source&#34;)
+ *                     .displayName(&#34;Source of data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;STRING&#34;)
+ *                         .build())
+ *                     .isRequired(true)
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;num_rows&#34;)
+ *                     .displayName(&#34;Number of rows in the data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;DOUBLE&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;pii_type&#34;)
+ *                     .displayName(&#34;PII type&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .enumType(TagTemplateFieldTypeEnumType.builder()
+ *                             .allowedValues(                            
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;EMAIL&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;SOCIAL SECURITY NUMBER&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;NONE&#34;)
+ *                                     .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *             .forceDelete(&#34;false&#34;)
+ *             .build());
+ * 
+ *         var entryGroupTag = new Tag(&#34;entryGroupTag&#34;, TagArgs.builder()        
+ *             .parent(entryGroup.getId())
+ *             .template(tagTemplate.getId())
+ *             .fields(TagField.builder()
+ *                 .fieldName(&#34;source&#34;)
+ *                 .stringValue(&#34;my-string&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Entry Tag Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_entry_group&#34;)
+ *             .build());
+ * 
+ *         var entry = new Entry(&#34;entry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;my_entry&#34;)
+ *             .userSpecifiedType(&#34;my_custom_type&#34;)
+ *             .userSpecifiedSystem(&#34;SomethingExternal&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * {
+ *   &#34;columns&#34;: [
+ *     {
+ *       &#34;column&#34;: &#34;first_name&#34;,
+ *       &#34;description&#34;: &#34;First name&#34;,
+ *       &#34;mode&#34;: &#34;REQUIRED&#34;,
+ *       &#34;type&#34;: &#34;STRING&#34;
+ *     },
+ *     {
+ *       &#34;column&#34;: &#34;last_name&#34;,
+ *       &#34;description&#34;: &#34;Last name&#34;,
+ *       &#34;mode&#34;: &#34;REQUIRED&#34;,
+ *       &#34;type&#34;: &#34;STRING&#34;
+ *     },
+ *     {
+ *       &#34;column&#34;: &#34;address&#34;,
+ *       &#34;description&#34;: &#34;Address&#34;,
+ *       &#34;mode&#34;: &#34;REPEATED&#34;,
+ *       &#34;subcolumns&#34;: [
+ *         {
+ *           &#34;column&#34;: &#34;city&#34;,
+ *           &#34;description&#34;: &#34;City&#34;,
+ *           &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *           &#34;type&#34;: &#34;STRING&#34;
+ *         },
+ *         {
+ *           &#34;column&#34;: &#34;state&#34;,
+ *           &#34;description&#34;: &#34;State&#34;,
+ *           &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *           &#34;type&#34;: &#34;STRING&#34;
+ *         }
+ *       ],
+ *       &#34;type&#34;: &#34;RECORD&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var tagTemplate = new TagTemplate(&#34;tagTemplate&#34;, TagTemplateArgs.builder()        
+ *             .tagTemplateId(&#34;my_template&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .displayName(&#34;Demo Tag Template&#34;)
+ *             .fields(            
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;source&#34;)
+ *                     .displayName(&#34;Source of data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;STRING&#34;)
+ *                         .build())
+ *                     .isRequired(true)
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;num_rows&#34;)
+ *                     .displayName(&#34;Number of rows in the data asset&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .primitiveType(&#34;DOUBLE&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 TagTemplateField.builder()
+ *                     .fieldId(&#34;pii_type&#34;)
+ *                     .displayName(&#34;PII type&#34;)
+ *                     .type(TagTemplateFieldType.builder()
+ *                         .enumType(TagTemplateFieldTypeEnumType.builder()
+ *                             .allowedValues(                            
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;EMAIL&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;SOCIAL SECURITY NUMBER&#34;)
+ *                                     .build(),
+ *                                 TagTemplateFieldTypeEnumTypeAllowedValue.builder()
+ *                                     .displayName(&#34;NONE&#34;)
+ *                                     .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *             .forceDelete(&#34;false&#34;)
+ *             .build());
+ * 
+ *         var basicTag = new Tag(&#34;basicTag&#34;, TagArgs.builder()        
+ *             .parent(entry.getId())
+ *             .template(tagTemplate.getId())
+ *             .fields(            
+ *                 TagField.builder()
+ *                     .fieldName(&#34;source&#34;)
+ *                     .stringValue(&#34;my-string&#34;)
+ *                     .build(),
+ *                 TagField.builder()
+ *                     .fieldName(&#34;num_rows&#34;)
+ *                     .doubleValue(5)
+ *                     .build(),
+ *                 TagField.builder()
+ *                     .fieldName(&#34;pii_type&#34;)
+ *                     .enumValue(&#34;EMAIL&#34;)
+ *                     .build())
+ *             .column(&#34;address&#34;)
+ *             .build());
+ * 
+ *         var second_tag = new Tag(&#34;second-tag&#34;, TagArgs.builder()        
+ *             .parent(entry.getId())
+ *             .template(tagTemplate.getId())
+ *             .fields(            
+ *                 TagField.builder()
+ *                     .fieldName(&#34;source&#34;)
+ *                     .stringValue(&#34;my-string&#34;)
+ *                     .build(),
+ *                 TagField.builder()
+ *                     .fieldName(&#34;pii_type&#34;)
+ *                     .enumValue(&#34;NONE&#34;)
+ *                     .build())
+ *             .column(&#34;first_name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

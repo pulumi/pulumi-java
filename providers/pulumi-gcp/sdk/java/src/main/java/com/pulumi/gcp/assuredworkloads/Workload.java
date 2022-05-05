@@ -23,6 +23,50 @@ import javax.annotation.Nullable;
  * The AssuredWorkloads Workload resource
  * 
  * ## Example Usage
+ * ### Basic_workload
+ * A basic test of a assuredworkloads api
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Workload(&#34;primary&#34;, WorkloadArgs.builder()        
+ *             .billingAccount(&#34;billingAccounts/000000-0000000-0000000-000000&#34;)
+ *             .complianceRegime(&#34;FEDRAMP_MODERATE&#34;)
+ *             .displayName(&#34;Workload Example&#34;)
+ *             .kmsSettings(WorkloadKmsSettings.builder()
+ *                 .nextRotationTime(&#34;9999-10-02T15:01:23Z&#34;)
+ *                 .rotationPeriod(&#34;10368000s&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .location(&#34;us-west1&#34;)
+ *             .organization(&#34;123456789&#34;)
+ *             .provisionedResourcesParent(&#34;folders/519620126891&#34;)
+ *             .resourceSettings(            
+ *                 WorkloadResourceSetting.builder()
+ *                     .resourceType(&#34;CONSUMER_PROJECT&#34;)
+ *                     .build(),
+ *                 WorkloadResourceSetting.builder()
+ *                     .resourceType(&#34;ENCRYPTION_KEYS_PROJECT&#34;)
+ *                     .build(),
+ *                 WorkloadResourceSetting.builder()
+ *                     .resourceId(&#34;ring&#34;)
+ *                     .resourceType(&#34;KEYRING&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -37,6 +37,76 @@ import javax.annotation.Nullable;
  * determined which will require enabling the compute api.
  * 
  * ## Example Usage
+ * ### Creating A Private Bucket In Standard Storage, In The EU Region. Bucket Configured As Static Website And CORS Configurations
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var static_site = new Bucket(&#34;static-site&#34;, BucketArgs.builder()        
+ *             .cors(BucketCor.builder()
+ *                 .maxAgeSeconds(3600)
+ *                 .methods(                
+ *                     &#34;GET&#34;,
+ *                     &#34;HEAD&#34;,
+ *                     &#34;PUT&#34;,
+ *                     &#34;POST&#34;,
+ *                     &#34;DELETE&#34;)
+ *                 .origins(&#34;http://image-store.com&#34;)
+ *                 .responseHeaders(&#34;*&#34;)
+ *                 .build())
+ *             .forceDestroy(true)
+ *             .location(&#34;EU&#34;)
+ *             .uniformBucketLevelAccess(true)
+ *             .website(BucketWebsite.builder()
+ *                 .mainPageSuffix(&#34;index.html&#34;)
+ *                 .notFoundPage(&#34;404.html&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Life Cycle Settings For Storage Bucket Objects
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var auto_expire = new Bucket(&#34;auto-expire&#34;, BucketArgs.builder()        
+ *             .forceDestroy(true)
+ *             .lifecycleRules(BucketLifecycleRule.builder()
+ *                 .action(BucketLifecycleRuleAction.builder()
+ *                     .type(&#34;Delete&#34;)
+ *                     .build())
+ *                 .condition(BucketLifecycleRuleCondition.builder()
+ *                     .age(3)
+ *                     .build())
+ *                 .build())
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

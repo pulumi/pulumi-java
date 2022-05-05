@@ -25,6 +25,38 @@ import javax.annotation.Nullable;
  *     * [Configuring a service](https://cloud.google.com/service-directory/docs/configuring-service-directory#configuring_a_service)
  * 
  * ## Example Usage
+ * ### Service Directory Service Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleNamespace = new Namespace(&#34;exampleNamespace&#34;, NamespaceArgs.builder()        
+ *             .namespaceId(&#34;example-namespace&#34;)
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .serviceId(&#34;example-service&#34;)
+ *             .namespace(exampleNamespace.getId())
+ *             .metadata(Map.ofEntries(
+ *                 Map.entry(&#34;stage&#34;, &#34;prod&#34;),
+ *                 Map.entry(&#34;region&#34;, &#34;us-central1&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

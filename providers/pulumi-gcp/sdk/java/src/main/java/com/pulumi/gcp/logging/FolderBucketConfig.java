@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Logging buckets are automatically created for a given folder, project, organization, billingAccount and cannot be deleted. Creating a resource of this type will acquire and update the resource that already exists at the desired location. These buckets cannot be removed so deleting this resource will remove the bucket config from your state but will leave the logging bucket unchanged. The buckets that are currently automatically created are &#34;_Default&#34; and &#34;_Required&#34;.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Folder(&#34;default&#34;, FolderArgs.builder()        
+ *             .displayName(&#34;some-folder-name&#34;)
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .build());
+ * 
+ *         var basic = new FolderBucketConfig(&#34;basic&#34;, FolderBucketConfigArgs.builder()        
+ *             .folder(default_.getName())
+ *             .location(&#34;global&#34;)
+ *             .retentionDays(30)
+ *             .bucketId(&#34;_Default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

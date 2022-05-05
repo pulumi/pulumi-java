@@ -30,6 +30,98 @@ import javax.annotation.Nullable;
  *     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
  * 
  * ## Example Usage
+ * ### Healthcare Fhir Store Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var default_ = new FhirStore(&#34;default&#34;, FhirStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .version(&#34;R4&#34;)
+ *             .enableUpdateCreate(false)
+ *             .disableReferentialIntegrity(false)
+ *             .disableResourceVersioning(false)
+ *             .enableHistoryImport(false)
+ *             .notificationConfig(FhirStoreNotificationConfig.builder()
+ *                 .pubsubTopic(topic.getId())
+ *                 .build())
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Fhir Store Streaming Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var bqDataset = new Dataset(&#34;bqDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;bq_example_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .deleteContentsOnDestroy(true)
+ *             .build());
+ * 
+ *         var default_ = new FhirStore(&#34;default&#34;, FhirStoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .version(&#34;R4&#34;)
+ *             .enableUpdateCreate(false)
+ *             .disableReferentialIntegrity(false)
+ *             .disableResourceVersioning(false)
+ *             .enableHistoryImport(false)
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .streamConfigs(FhirStoreStreamConfig.builder()
+ *                 .resourceTypes(&#34;Observation&#34;)
+ *                 .bigqueryDestination(FhirStoreStreamConfigBigqueryDestination.builder()
+ *                     .datasetUri(Output.tuple(bqDataset.getProject(), bqDataset.getDatasetId()).apply(values -&gt; {
+ *                         var project = values.t1;
+ *                         var datasetId = values.t2;
+ *                         return String.format(&#34;bq://%s.%s&#34;, project,datasetId);
+ *                     }))
+ *                     .schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfig.builder()
+ *                         .recursiveStructureDepth(3)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

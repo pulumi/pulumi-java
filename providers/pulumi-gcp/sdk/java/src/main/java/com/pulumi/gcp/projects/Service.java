@@ -31,6 +31,29 @@ import javax.annotation.Nullable;
  *     * [Enabling and Disabling Services](https://cloud.google.com/service-usage/docs/enable-disable)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Service(&#34;project&#34;, ServiceArgs.builder()        
+ *             .disableDependentServices(true)
+ *             .project(&#34;your-project-id&#34;)
+ *             .service(&#34;iam.googleapis.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

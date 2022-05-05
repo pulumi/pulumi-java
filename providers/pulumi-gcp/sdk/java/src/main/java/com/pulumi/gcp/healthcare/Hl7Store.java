@@ -30,6 +30,179 @@ import javax.annotation.Nullable;
  *     * [Creating a HL7v2 Store](https://cloud.google.com/healthcare/docs/how-tos/hl7v2)
  * 
  * ## Example Usage
+ * ### Healthcare Hl7 V2 Store Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var store = new Hl7Store(&#34;store&#34;, Hl7StoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .notificationConfigs(Hl7StoreNotificationConfigs.builder()
+ *                 .pubsubTopic(topic.getId())
+ *                 .build())
+ *             .labels(Map.of(&#34;label1&#34;, &#34;labelvalue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Hl7 V2 Store Parser Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var store = new Hl7Store(&#34;store&#34;, Hl7StoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .parserConfig(Hl7StoreParserConfig.builder()
+ *                 .allowNullHeader(false)
+ *                 .segmentTerminator(&#34;Jw==&#34;)
+ *                 .schema(&#34;&#34;&#34;
+ * {
+ *   &#34;schemas&#34;: [{
+ *     &#34;messageSchemaConfigs&#34;: {
+ *       &#34;ADT_A01&#34;: {
+ *         &#34;name&#34;: &#34;ADT_A01&#34;,
+ *         &#34;minOccurs&#34;: 1,
+ *         &#34;maxOccurs&#34;: 1,
+ *         &#34;members&#34;: [{
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;MSH&#34;,
+ *               &#34;minOccurs&#34;: 1,
+ *               &#34;maxOccurs&#34;: 1
+ *             }
+ *           },
+ *           {
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;EVN&#34;,
+ *               &#34;minOccurs&#34;: 1,
+ *               &#34;maxOccurs&#34;: 1
+ *             }
+ *           },
+ *           {
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;PID&#34;,
+ *               &#34;minOccurs&#34;: 1,
+ *               &#34;maxOccurs&#34;: 1
+ *             }
+ *           },
+ *           {
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;ZPD&#34;,
+ *               &#34;minOccurs&#34;: 1,
+ *               &#34;maxOccurs&#34;: 1
+ *             }
+ *           },
+ *           {
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;OBX&#34;
+ *             }
+ *           },
+ *           {
+ *             &#34;group&#34;: {
+ *               &#34;name&#34;: &#34;PROCEDURE&#34;,
+ *               &#34;members&#34;: [{
+ *                   &#34;segment&#34;: {
+ *                     &#34;type&#34;: &#34;PR1&#34;,
+ *                     &#34;minOccurs&#34;: 1,
+ *                     &#34;maxOccurs&#34;: 1
+ *                   }
+ *                 },
+ *                 {
+ *                   &#34;segment&#34;: {
+ *                     &#34;type&#34;: &#34;ROL&#34;
+ *                   }
+ *                 }
+ *               ]
+ *             }
+ *           },
+ *           {
+ *             &#34;segment&#34;: {
+ *               &#34;type&#34;: &#34;PDA&#34;,
+ *               &#34;maxOccurs&#34;: 1
+ *             }
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }],
+ *   &#34;types&#34;: [{
+ *     &#34;type&#34;: [{
+ *         &#34;name&#34;: &#34;ZPD&#34;,
+ *         &#34;primitive&#34;: &#34;VARIES&#34;
+ *       }
+ * 
+ *     ]
+ *   }],
+ *   &#34;ignoreMinOccurs&#34;: true
+ * }
+ *                 &#34;&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Healthcare Hl7 V2 Store Unschematized
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var store = new Hl7Store(&#34;store&#34;, Hl7StoreArgs.builder()        
+ *             .dataset(dataset.getId())
+ *             .parserConfig(Hl7StoreParserConfig.builder()
+ *                 .allowNullHeader(false)
+ *                 .segmentTerminator(&#34;Jw==&#34;)
+ *                 .version(&#34;V2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

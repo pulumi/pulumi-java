@@ -27,10 +27,88 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.healthcare.ConsentStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.ConsentStoreIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_healthcare\_consent\_store\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/viewer&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new ConsentStoreIamPolicy(&#34;policy&#34;, ConsentStoreIamPolicyArgs.builder()        
+ *             .dataset(google_healthcare_consent_store.getMy-consent().getDataset())
+ *             .consentStoreId(google_healthcare_consent_store.getMy-consent().getName())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_healthcare\_consent\_store\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new ConsentStoreIamBinding(&#34;binding&#34;, ConsentStoreIamBindingArgs.builder()        
+ *             .dataset(google_healthcare_consent_store.getMy-consent().getDataset())
+ *             .consentStoreId(google_healthcare_consent_store.getMy-consent().getName())
+ *             .role(&#34;roles/viewer&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_healthcare\_consent\_store\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new ConsentStoreIamMember(&#34;member&#34;, ConsentStoreIamMemberArgs.builder()        
+ *             .dataset(google_healthcare_consent_store.getMy-consent().getDataset())
+ *             .consentStoreId(google_healthcare_consent_store.getMy-consent().getName())
+ *             .role(&#34;roles/viewer&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

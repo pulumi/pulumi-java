@@ -85,6 +85,13 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.createTime);
     }
 
+    @Import(name="deletionProtection")
+    private @Nullable Output<Boolean> deletionProtection;
+
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
+    }
+
     /**
      * The name of a Cloud Storage bucket where this CertificateAuthority will publish content,
      * such as the CA certificate and CRLs. This must be a bucket name, without any prefixes
@@ -331,6 +338,7 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
         this.certificateAuthorityId = $.certificateAuthorityId;
         this.config = $.config;
         this.createTime = $.createTime;
+        this.deletionProtection = $.deletionProtection;
         this.gcsBucket = $.gcsBucket;
         this.ignoreActiveCertificatesOnDeletion = $.ignoreActiveCertificatesOnDeletion;
         this.keySpec = $.keySpec;
@@ -460,6 +468,15 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
+        }
+
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
+            $.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
 
         /**

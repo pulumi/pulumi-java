@@ -37,6 +37,99 @@ import javax.annotation.Nullable;
  * for Cloud Functions.
  * 
  * ## Example Usage
+ * ### Public Function
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var archive = new BucketObject(&#34;archive&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./path/to/zip/file/which/contains/code&#34;))
+ *             .build());
+ * 
+ *         var function = new Function(&#34;function&#34;, FunctionArgs.builder()        
+ *             .description(&#34;My function&#34;)
+ *             .runtime(&#34;nodejs14&#34;)
+ *             .availableMemoryMb(128)
+ *             .sourceArchiveBucket(bucket.getName())
+ *             .sourceArchiveObject(archive.getName())
+ *             .triggerHttp(true)
+ *             .entryPoint(&#34;helloGET&#34;)
+ *             .build());
+ * 
+ *         var invoker = new FunctionIamMember(&#34;invoker&#34;, FunctionIamMemberArgs.builder()        
+ *             .project(function.getProject())
+ *             .region(function.getRegion())
+ *             .cloudFunction(function.getName())
+ *             .role(&#34;roles/cloudfunctions.invoker&#34;)
+ *             .member(&#34;allUsers&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Single User
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var archive = new BucketObject(&#34;archive&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./path/to/zip/file/which/contains/code&#34;))
+ *             .build());
+ * 
+ *         var function = new Function(&#34;function&#34;, FunctionArgs.builder()        
+ *             .description(&#34;My function&#34;)
+ *             .runtime(&#34;nodejs14&#34;)
+ *             .availableMemoryMb(128)
+ *             .sourceArchiveBucket(bucket.getName())
+ *             .sourceArchiveObject(archive.getName())
+ *             .triggerHttp(true)
+ *             .timeout(60)
+ *             .entryPoint(&#34;helloGET&#34;)
+ *             .labels(Map.of(&#34;my-label&#34;, &#34;my-label-value&#34;))
+ *             .environmentVariables(Map.of(&#34;MY_ENV_VAR&#34;, &#34;my-env-var-value&#34;))
+ *             .build());
+ * 
+ *         var invoker = new FunctionIamMember(&#34;invoker&#34;, FunctionIamMemberArgs.builder()        
+ *             .project(function.getProject())
+ *             .region(function.getRegion())
+ *             .cloudFunction(function.getName())
+ *             .role(&#34;roles/cloudfunctions.invoker&#34;)
+ *             .member(&#34;user:myFunctionInvoker@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

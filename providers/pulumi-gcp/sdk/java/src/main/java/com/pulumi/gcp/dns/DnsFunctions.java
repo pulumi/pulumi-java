@@ -22,6 +22,36 @@ public final class DnsFunctions {
      * and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var foo = new ManagedZone(&#34;foo&#34;, ManagedZoneArgs.builder()        
+     *             .dnsName(&#34;foo.bar.&#34;)
+     *             .dnssecConfig(ManagedZoneDnssecConfig.builder()
+     *                 .state(&#34;on&#34;)
+     *                 .nonExistence(&#34;nsec3&#34;)
+     *                 .build())
+     *             .build());
+     * 
+     *         final var fooDnsKeys = DnsFunctions.getKeys(GetKeysArgs.builder()
+     *             .managedZone(foo.getId())
+     *             .build());
+     * 
+     *         ctx.export(&#34;fooDnsDsRecord&#34;, fooDnsKeys.apply(getKeysResult -&gt; getKeysResult).apply(fooDnsKeys -&gt; fooDnsKeys.apply(getKeysResult -&gt; getKeysResult.getKeySigningKeys()[0].getDsRecord())));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetKeysResult> getKeys(GetKeysArgs args) {
@@ -36,6 +66,35 @@ public final class DnsFunctions {
      * [the official documentation](https://cloud.google.com/dns/zones/)
      * and
      * [API](https://cloud.google.com/dns/api/v1/managedZones).
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var envDnsZone = Output.of(DnsFunctions.getManagedZone(GetManagedZoneArgs.builder()
+     *             .name(&#34;qa-zone&#34;)
+     *             .build()));
+     * 
+     *         var dns = new RecordSet(&#34;dns&#34;, RecordSetArgs.builder()        
+     *             .name(String.format(&#34;my-address.%s&#34;, envDnsZone.apply(getManagedZoneResult -&gt; getManagedZoneResult.getDnsName())))
+     *             .type(&#34;TXT&#34;)
+     *             .ttl(300)
+     *             .managedZone(envDnsZone.apply(getManagedZoneResult -&gt; getManagedZoneResult.getName()))
+     *             .rrdatas(&#34;test&#34;)
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetManagedZoneResult> getManagedZone(GetManagedZoneArgs args) {
@@ -52,6 +111,33 @@ public final class DnsFunctions {
      * [API](https://cloud.google.com/dns/docs/reference/v1/resourceRecordSets)
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sample = Output.of(DnsFunctions.getManagedZone(GetManagedZoneArgs.builder()
+     *             .name(&#34;sample-zone&#34;)
+     *             .build()));
+     * 
+     *         final var rs = Output.of(DnsFunctions.getRecordSet(GetRecordSetArgs.builder()
+     *             .managedZone(sample.apply(getManagedZoneResult -&gt; getManagedZoneResult.getName()))
+     *             .name(String.format(&#34;my-record.%s&#34;, sample.apply(getManagedZoneResult -&gt; getManagedZoneResult.getDnsName())))
+     *             .type(&#34;A&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRecordSetResult> getRecordSet(GetRecordSetArgs args) {

@@ -32,6 +32,94 @@ import javax.annotation.Nullable;
  *     * [Google Cloud Router](https://cloud.google.com/router/docs/)
  * 
  * ## Example Usage
+ * ### Router Peer Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peer = new RouterPeer(&#34;peer&#34;, RouterPeerArgs.builder()        
+ *             .advertisedRoutePriority(100)
+ *             .interface_(&#34;interface-1&#34;)
+ *             .peerAsn(65513)
+ *             .peerIpAddress(&#34;169.254.1.2&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .router(&#34;my-router&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Router Peer Disabled
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peer = new RouterPeer(&#34;peer&#34;, RouterPeerArgs.builder()        
+ *             .advertisedRoutePriority(100)
+ *             .enable(false)
+ *             .interface_(&#34;interface-1&#34;)
+ *             .peerAsn(65513)
+ *             .peerIpAddress(&#34;169.254.1.2&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .router(&#34;my-router&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Router Peer Bfd
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peer = new RouterPeer(&#34;peer&#34;, RouterPeerArgs.builder()        
+ *             .advertisedRoutePriority(100)
+ *             .bfd(RouterPeerBfd.builder()
+ *                 .minReceiveInterval(1000)
+ *                 .minTransmitInterval(1000)
+ *                 .multiplier(5)
+ *                 .sessionInitializationMode(&#34;ACTIVE&#34;)
+ *                 .build())
+ *             .interface_(&#34;interface-1&#34;)
+ *             .peerAsn(65513)
+ *             .peerIpAddress(&#34;169.254.1.2&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .router(&#34;my-router&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

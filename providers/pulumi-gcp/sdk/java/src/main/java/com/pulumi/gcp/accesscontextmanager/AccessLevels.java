@@ -28,6 +28,70 @@ import javax.annotation.Nullable;
  *     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
  * 
  * ## Example Usage
+ * ### Access Context Manager Access Levels Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var access_levels = new AccessLevels(&#34;access-levels&#34;, AccessLevelsArgs.builder()        
+ *             .accessLevels(            
+ *                 AccessLevelsAccessLevel.builder()
+ *                     .basic(AccessLevelsAccessLevelBasic.builder()
+ *                         .conditions(AccessLevelsAccessLevelBasicCondition.builder()
+ *                             .devicePolicy(AccessLevelsAccessLevelBasicConditionDevicePolicy.builder()
+ *                                 .osConstraints(AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint.builder()
+ *                                     .osType(&#34;DESKTOP_CHROME_OS&#34;)
+ *                                     .build())
+ *                                 .requireScreenLock(true)
+ *                                 .build())
+ *                             .regions(                            
+ *                                 &#34;CH&#34;,
+ *                                 &#34;IT&#34;,
+ *                                 &#34;US&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/accessLevels/chromeos_no_lock&#34;, name)))
+ *                     .title(&#34;chromeos_no_lock&#34;)
+ *                     .build(),
+ *                 AccessLevelsAccessLevel.builder()
+ *                     .basic(AccessLevelsAccessLevelBasic.builder()
+ *                         .conditions(AccessLevelsAccessLevelBasicCondition.builder()
+ *                             .devicePolicy(AccessLevelsAccessLevelBasicConditionDevicePolicy.builder()
+ *                                 .osConstraints(AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint.builder()
+ *                                     .osType(&#34;DESKTOP_MAC&#34;)
+ *                                     .build())
+ *                                 .requireScreenLock(true)
+ *                                 .build())
+ *                             .regions(                            
+ *                                 &#34;CH&#34;,
+ *                                 &#34;IT&#34;,
+ *                                 &#34;US&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/accessLevels/mac_no_lock&#34;, name)))
+ *                     .title(&#34;mac_no_lock&#34;)
+ *                     .build())
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

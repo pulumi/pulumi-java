@@ -32,6 +32,34 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Cloud Identity Groups Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudIdentityGroupBasic = new Group(&#34;cloudIdentityGroupBasic&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;my-identity-group&#34;)
+ *             .groupKey(GroupGroupKey.builder()
+ *                 .id(&#34;my-identity-group@example.com&#34;)
+ *                 .build())
+ *             .initialGroupConfig(&#34;WITH_INITIAL_OWNER&#34;)
+ *             .labels(Map.of(&#34;cloudidentity.googleapis.com/groups.discussion_forum&#34;, &#34;&#34;))
+ *             .parent(&#34;customers/A01b123xz&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

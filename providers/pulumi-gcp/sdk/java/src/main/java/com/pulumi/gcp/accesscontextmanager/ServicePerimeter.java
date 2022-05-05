@@ -41,6 +41,210 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Access Context Manager Service Perimeter Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var service_perimeter = new ServicePerimeter(&#34;service-perimeter&#34;, ServicePerimeterArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .status(ServicePerimeterStatus.builder()
+ *                 .restrictedServices(&#34;storage.googleapis.com&#34;)
+ *                 .build())
+ *             .title(&#34;restrict_storage&#34;)
+ *             .build());
+ * 
+ *         var access_level = new AccessLevel(&#34;access-level&#34;, AccessLevelArgs.builder()        
+ *             .basic(AccessLevelBasic.builder()
+ *                 .conditions(AccessLevelBasicCondition.builder()
+ *                     .devicePolicy(AccessLevelBasicConditionDevicePolicy.builder()
+ *                         .osConstraints(AccessLevelBasicConditionDevicePolicyOsConstraint.builder()
+ *                             .osType(&#34;DESKTOP_CHROME_OS&#34;)
+ *                             .build())
+ *                         .requireScreenLock(false)
+ *                         .build())
+ *                     .regions(                    
+ *                         &#34;CH&#34;,
+ *                         &#34;IT&#34;,
+ *                         &#34;US&#34;)
+ *                     .build())
+ *                 .build())
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .title(&#34;chromeos_no_lock&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Access Context Manager Service Perimeter Secure Data Exchange
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var secure_data_exchange = new ServicePerimeters(&#34;secure-data-exchange&#34;, ServicePerimetersArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .servicePerimeters(            
+ *                 ServicePerimetersServicePerimeter.builder()
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/servicePerimeters/&#34;, name)))
+ *                     .title(&#34;&#34;)
+ *                     .status(ServicePerimetersServicePerimeterStatus.builder()
+ *                         .restrictedServices(&#34;storage.googleapis.com&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 ServicePerimetersServicePerimeter.builder()
+ *                     .name(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s/servicePerimeters/&#34;, name)))
+ *                     .title(&#34;&#34;)
+ *                     .status(ServicePerimetersServicePerimeterStatus.builder()
+ *                         .restrictedServices(&#34;bigtable.googleapis.com&#34;)
+ *                         .vpcAccessibleServices(ServicePerimetersServicePerimeterStatusVpcAccessibleServices.builder()
+ *                             .enableRestriction(true)
+ *                             .allowedServices(&#34;bigquery.googleapis.com&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         var access_level = new AccessLevel(&#34;access-level&#34;, AccessLevelArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .title(&#34;secure_data_exchange&#34;)
+ *             .basic(AccessLevelBasic.builder()
+ *                 .conditions(AccessLevelBasicCondition.builder()
+ *                     .devicePolicy(AccessLevelBasicConditionDevicePolicy.builder()
+ *                         .requireScreenLock(false)
+ *                         .osConstraints(AccessLevelBasicConditionDevicePolicyOsConstraint.builder()
+ *                             .osType(&#34;DESKTOP_CHROME_OS&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .regions(                    
+ *                         &#34;CH&#34;,
+ *                         &#34;IT&#34;,
+ *                         &#34;US&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var test_access = new ServicePerimeter(&#34;test-access&#34;, ServicePerimeterArgs.builder()        
+ *             .parent(String.format(&#34;accessPolicies/%s&#34;, google_access_context_manager_access_policy.getTest-access().getName()))
+ *             .title(&#34;%s&#34;)
+ *             .perimeterType(&#34;PERIMETER_TYPE_REGULAR&#34;)
+ *             .status(ServicePerimeterStatus.builder()
+ *                 .restrictedServices(                
+ *                     &#34;bigquery.googleapis.com&#34;,
+ *                     &#34;storage.googleapis.com&#34;)
+ *                 .accessLevels(access_level.getName())
+ *                 .vpcAccessibleServices(ServicePerimeterStatusVpcAccessibleServices.builder()
+ *                     .enableRestriction(true)
+ *                     .allowedServices(                    
+ *                         &#34;bigquery.googleapis.com&#34;,
+ *                         &#34;storage.googleapis.com&#34;)
+ *                     .build())
+ *                 .ingressPolicies(ServicePerimeterStatusIngressPolicy.builder()
+ *                     .ingressFrom(ServicePerimeterStatusIngressPolicyIngressFrom.builder()
+ *                         .sources(ServicePerimeterStatusIngressPolicyIngressFromSource.builder()
+ *                             .accessLevel(google_access_context_manager_access_level.getTest-access().getName())
+ *                             .build())
+ *                         .identityType(&#34;ANY_IDENTITY&#34;)
+ *                         .build())
+ *                     .ingressTo(ServicePerimeterStatusIngressPolicyIngressTo.builder()
+ *                         .resources(&#34;*&#34;)
+ *                         .operations(                        
+ *                             ServicePerimeterStatusIngressPolicyIngressToOperation.builder()
+ *                                 .serviceName(&#34;bigquery.googleapis.com&#34;)
+ *                                 .methodSelectors(                                
+ *                                     ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector.builder()
+ *                                         .method(&#34;BigQueryStorage.ReadRows&#34;)
+ *                                         .build(),
+ *                                     ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector.builder()
+ *                                         .method(&#34;TableService.ListTables&#34;)
+ *                                         .build(),
+ *                                     ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector.builder()
+ *                                         .permission(&#34;bigquery.jobs.get&#34;)
+ *                                         .build())
+ *                                 .build(),
+ *                             ServicePerimeterStatusIngressPolicyIngressToOperation.builder()
+ *                                 .serviceName(&#34;storage.googleapis.com&#34;)
+ *                                 .methodSelectors(ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector.builder()
+ *                                     .method(&#34;google.storage.objects.create&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                         .build())
+ *                     .build())
+ *                 .egressPolicies(ServicePerimeterStatusEgressPolicy.builder()
+ *                     .egressFrom(ServicePerimeterStatusEgressPolicyEgressFrom.builder()
+ *                         .identityType(&#34;ANY_USER_ACCOUNT&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Access Context Manager Service Perimeter Dry Run
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var access_policy = new AccessPolicy(&#34;access-policy&#34;, AccessPolicyArgs.builder()        
+ *             .parent(&#34;organizations/123456789&#34;)
+ *             .title(&#34;my policy&#34;)
+ *             .build());
+ * 
+ *         var service_perimeter = new ServicePerimeter(&#34;service-perimeter&#34;, ServicePerimeterArgs.builder()        
+ *             .parent(access_policy.getName().apply(name -&gt; String.format(&#34;accessPolicies/%s&#34;, name)))
+ *             .spec(ServicePerimeterSpec.builder()
+ *                 .restrictedServices(&#34;storage.googleapis.com&#34;)
+ *                 .build())
+ *             .status(ServicePerimeterStatus.builder()
+ *                 .restrictedServices(&#34;bigquery.googleapis.com&#34;)
+ *                 .build())
+ *             .title(&#34;restrict_bigquery_dryrun_storage&#34;)
+ *             .useExplicitDryRunSpec(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

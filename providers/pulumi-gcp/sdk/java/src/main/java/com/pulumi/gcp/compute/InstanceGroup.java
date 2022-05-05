@@ -23,6 +23,131 @@ import javax.annotation.Nullable;
  * and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
  * 
  * ## Example Usage
+ * ### Empty Instance Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new InstanceGroup(&#34;test&#34;, InstanceGroupArgs.builder()        
+ *             .description(&#34;Test instance group&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .network(google_compute_network.getDefault().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Usage - With instances and named ports
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webservers = new InstanceGroup(&#34;webservers&#34;, InstanceGroupArgs.builder()        
+ *             .description(&#34;Test instance group&#34;)
+ *             .instances(            
+ *                 google_compute_instance.getTest().getId(),
+ *                 google_compute_instance.getTest2().getId())
+ *             .namedPorts(            
+ *                 InstanceGroupNamedPort.builder()
+ *                     .name(&#34;http&#34;)
+ *                     .port(&#34;8080&#34;)
+ *                     .build(),
+ *                 InstanceGroupNamedPort.builder()
+ *                     .name(&#34;https&#34;)
+ *                     .port(&#34;8443&#34;)
+ *                     .build())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example Usage - Recreating an instance group in use
+ * Recreating an instance group that&#39;s in use by another resource will give a
+ * `resourceInUseByAnotherResource` error. Use `lifecycle.create_before_destroy`
+ * as shown in this example to avoid this type of error.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debianImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var stagingVm = new Instance(&#34;stagingVm&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-c&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(debianImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var stagingGroup = new InstanceGroup(&#34;stagingGroup&#34;, InstanceGroupArgs.builder()        
+ *             .zone(&#34;us-central1-c&#34;)
+ *             .instances(stagingVm.getId())
+ *             .namedPorts(            
+ *                 InstanceGroupNamedPort.builder()
+ *                     .name(&#34;http&#34;)
+ *                     .port(&#34;8080&#34;)
+ *                     .build(),
+ *                 InstanceGroupNamedPort.builder()
+ *                     .name(&#34;https&#34;)
+ *                     .port(&#34;8443&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var stagingHealth = new HttpsHealthCheck(&#34;stagingHealth&#34;, HttpsHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/health_check&#34;)
+ *             .build());
+ * 
+ *         var stagingService = new BackendService(&#34;stagingService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;https&#34;)
+ *             .protocol(&#34;HTTPS&#34;)
+ *             .backends(BackendServiceBackend.builder()
+ *                 .group(stagingGroup.getId())
+ *                 .build())
+ *             .healthChecks(stagingHealth.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

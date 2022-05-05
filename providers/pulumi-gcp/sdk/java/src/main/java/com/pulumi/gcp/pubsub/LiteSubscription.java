@@ -26,6 +26,47 @@ import javax.annotation.Nullable;
  *     * [Managing Subscriptions](https://cloud.google.com/pubsub/lite/docs/subscriptions)
  * 
  * ## Example Usage
+ * ### Pubsub Lite Subscription Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var exampleLiteTopic = new LiteTopic(&#34;exampleLiteTopic&#34;, LiteTopicArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getNumber()))
+ *             .partitionConfig(LiteTopicPartitionConfig.builder()
+ *                 .count(1)
+ *                 .capacity(LiteTopicPartitionConfigCapacity.builder()
+ *                     .publishMibPerSec(4)
+ *                     .subscribeMibPerSec(8)
+ *                     .build())
+ *                 .build())
+ *             .retentionConfig(LiteTopicRetentionConfig.builder()
+ *                 .perPartitionBytes(32212254720)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleLiteSubscription = new LiteSubscription(&#34;exampleLiteSubscription&#34;, LiteSubscriptionArgs.builder()        
+ *             .topic(exampleLiteTopic.getName())
+ *             .deliveryConfig(LiteSubscriptionDeliveryConfig.builder()
+ *                 .deliveryRequirement(&#34;DELIVER_AFTER_STORED&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

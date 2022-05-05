@@ -38,6 +38,72 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/bigtable/docs)
  * 
  * ## Example Usage
+ * ### Simple Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production_instance = new Instance(&#34;production-instance&#34;, InstanceArgs.builder()        
+ *             .clusters(InstanceCluster.builder()
+ *                 .clusterId(&#34;tf-instance-cluster&#34;)
+ *                 .numNodes(1)
+ *                 .storageType(&#34;HDD&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;my-label&#34;, &#34;prod-label&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Replicated Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production_instance = new Instance(&#34;production-instance&#34;, InstanceArgs.builder()        
+ *             .clusters(            
+ *                 InstanceCluster.builder()
+ *                     .clusterId(&#34;tf-instance-cluster1&#34;)
+ *                     .numNodes(1)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .zone(&#34;us-central1-c&#34;)
+ *                     .build(),
+ *                 InstanceCluster.builder()
+ *                     .autoscalingConfig(InstanceClusterAutoscalingConfig.builder()
+ *                         .cpuTarget(50)
+ *                         .maxNodes(3)
+ *                         .minNodes(1)
+ *                         .build())
+ *                     .clusterId(&#34;tf-instance-cluster2&#34;)
+ *                     .storageType(&#34;HDD&#34;)
+ *                     .zone(&#34;us-central1-b&#34;)
+ *                     .build())
+ *             .labels(Map.of(&#34;my-label&#34;, &#34;prod-label&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -33,6 +33,133 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
  * 
  * ## Example Usage
+ * ### Notebook Runtime Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var runtime = new Runtime(&#34;runtime&#34;, RuntimeArgs.builder()        
+ *             .accessConfig(RuntimeAccessConfig.builder()
+ *                 .accessType(&#34;SINGLE_USER&#34;)
+ *                 .runtimeOwner(&#34;admin@hashicorptest.com&#34;)
+ *                 .build())
+ *             .location(&#34;us-central1&#34;)
+ *             .virtualMachine(RuntimeVirtualMachine.builder()
+ *                 .virtualMachineConfig(RuntimeVirtualMachineVirtualMachineConfig.builder()
+ *                     .dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk.builder()
+ *                         .initializeParams(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams.builder()
+ *                             .diskSizeGb(&#34;100&#34;)
+ *                             .diskType(&#34;PD_STANDARD&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .machineType(&#34;n1-standard-4&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notebook Runtime Basic Gpu
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var runtimeGpu = new Runtime(&#34;runtimeGpu&#34;, RuntimeArgs.builder()        
+ *             .accessConfig(RuntimeAccessConfig.builder()
+ *                 .accessType(&#34;SINGLE_USER&#34;)
+ *                 .runtimeOwner(&#34;admin@hashicorptest.com&#34;)
+ *                 .build())
+ *             .location(&#34;us-central1&#34;)
+ *             .softwareConfig(RuntimeSoftwareConfig.builder()
+ *                 .installGpuDriver(true)
+ *                 .build())
+ *             .virtualMachine(RuntimeVirtualMachine.builder()
+ *                 .virtualMachineConfig(RuntimeVirtualMachineVirtualMachineConfig.builder()
+ *                     .acceleratorConfig(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig.builder()
+ *                         .coreCount(&#34;1&#34;)
+ *                         .type(&#34;NVIDIA_TESLA_V100&#34;)
+ *                         .build())
+ *                     .dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk.builder()
+ *                         .initializeParams(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams.builder()
+ *                             .diskSizeGb(&#34;100&#34;)
+ *                             .diskType(&#34;PD_STANDARD&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .machineType(&#34;n1-standard-4&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notebook Runtime Basic Container
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var runtimeContainer = new Runtime(&#34;runtimeContainer&#34;, RuntimeArgs.builder()        
+ *             .accessConfig(RuntimeAccessConfig.builder()
+ *                 .accessType(&#34;SINGLE_USER&#34;)
+ *                 .runtimeOwner(&#34;admin@hashicorptest.com&#34;)
+ *                 .build())
+ *             .location(&#34;us-central1&#34;)
+ *             .virtualMachine(RuntimeVirtualMachine.builder()
+ *                 .virtualMachineConfig(RuntimeVirtualMachineVirtualMachineConfig.builder()
+ *                     .containerImages(                    
+ *                         RuntimeVirtualMachineVirtualMachineConfigContainerImage.builder()
+ *                             .repository(&#34;gcr.io/deeplearning-platform-release/base-cpu&#34;)
+ *                             .tag(&#34;latest&#34;)
+ *                             .build(),
+ *                         RuntimeVirtualMachineVirtualMachineConfigContainerImage.builder()
+ *                             .repository(&#34;gcr.io/deeplearning-platform-release/beam-notebooks&#34;)
+ *                             .tag(&#34;latest&#34;)
+ *                             .build())
+ *                     .dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk.builder()
+ *                         .initializeParams(RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams.builder()
+ *                             .diskSizeGb(&#34;100&#34;)
+ *                             .diskType(&#34;PD_STANDARD&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .machineType(&#34;n1-standard-4&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,40 @@ import javax.annotation.Nullable;
  * * [API documentation](https://cloud.google.com/secret-manager/docs/reference/rest/v1/projects.secrets)
  * 
  * ## Example Usage
+ * ### Secret Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var secret_basic = new Secret(&#34;secret-basic&#34;, SecretArgs.builder()        
+ *             .labels(Map.of(&#34;label&#34;, &#34;my-label&#34;))
+ *             .replication(SecretReplication.builder()
+ *                 .userManaged(SecretReplicationUserManaged.builder()
+ *                     .replicas(                    
+ *                         SecretReplicationUserManagedReplica.builder()
+ *                             .location(&#34;us-central1&#34;)
+ *                             .build(),
+ *                         SecretReplicationUserManagedReplica.builder()
+ *                             .location(&#34;us-east1&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .secretId(&#34;secret&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

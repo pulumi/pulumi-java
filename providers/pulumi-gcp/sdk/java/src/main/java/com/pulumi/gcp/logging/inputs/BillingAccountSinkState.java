@@ -67,7 +67,23 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -77,7 +93,23 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -262,7 +294,23 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
         /**
          * @param destination The destination of the sink (or, in other words, where logs are written to). Can be a
          * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+         * ```java
+         * package generated_program;
          * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * The writer associated with the sink must have access to write to the above resource.
          * 
          * @return builder
@@ -276,7 +324,23 @@ public final class BillingAccountSinkState extends com.pulumi.resources.Resource
         /**
          * @param destination The destination of the sink (or, in other words, where logs are written to). Can be a
          * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+         * ```java
+         * package generated_program;
          * 
+         * import java.util.*;
+         * import java.io.*;
+         * import java.nio.*;
+         * import com.pulumi.*;
+         * 
+         * public class App {
+         *     public static void main(String[] args) {
+         *         Pulumi.run(App::stack);
+         *     }
+         * 
+         *     public static void stack(Context ctx) {
+         *         }
+         * }
+         * ```
          * The writer associated with the sink must have access to write to the above resource.
          * 
          * @return builder

@@ -33,6 +33,120 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Uptime Check Config Http
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var http = new UptimeCheckConfig(&#34;http&#34;, UptimeCheckConfigArgs.builder()        
+ *             .contentMatchers(UptimeCheckConfigContentMatcher.builder()
+ *                 .content(&#34;example&#34;)
+ *                 .build())
+ *             .displayName(&#34;http-uptime-check&#34;)
+ *             .httpCheck(UptimeCheckConfigHttpCheck.builder()
+ *                 .body(&#34;Zm9vJTI1M0RiYXI=&#34;)
+ *                 .contentType(&#34;URL_ENCODED&#34;)
+ *                 .path(&#34;some-path&#34;)
+ *                 .port(&#34;8010&#34;)
+ *                 .requestMethod(&#34;POST&#34;)
+ *                 .build())
+ *             .monitoredResource(UptimeCheckConfigMonitoredResource.builder()
+ *                 .labels(Map.ofEntries(
+ *                     Map.entry(&#34;host&#34;, &#34;192.168.1.1&#34;),
+ *                     Map.entry(&#34;projectId&#34;, &#34;my-project-name&#34;)
+ *                 ))
+ *                 .type(&#34;uptime_url&#34;)
+ *                 .build())
+ *             .timeout(&#34;60s&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Uptime Check Config Https
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var https = new UptimeCheckConfig(&#34;https&#34;, UptimeCheckConfigArgs.builder()        
+ *             .contentMatchers(UptimeCheckConfigContentMatcher.builder()
+ *                 .content(&#34;example&#34;)
+ *                 .build())
+ *             .displayName(&#34;https-uptime-check&#34;)
+ *             .httpCheck(UptimeCheckConfigHttpCheck.builder()
+ *                 .path(&#34;/some-path&#34;)
+ *                 .port(&#34;443&#34;)
+ *                 .useSsl(true)
+ *                 .validateSsl(true)
+ *                 .build())
+ *             .monitoredResource(UptimeCheckConfigMonitoredResource.builder()
+ *                 .labels(Map.ofEntries(
+ *                     Map.entry(&#34;host&#34;, &#34;192.168.1.1&#34;),
+ *                     Map.entry(&#34;projectId&#34;, &#34;my-project-name&#34;)
+ *                 ))
+ *                 .type(&#34;uptime_url&#34;)
+ *                 .build())
+ *             .timeout(&#34;60s&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Uptime Check Tcp
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var check = new Group(&#34;check&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;uptime-check-group&#34;)
+ *             .filter(&#34;resource.metadata.name=has_substring(\&#34;foo\&#34;)&#34;)
+ *             .build());
+ * 
+ *         var tcpGroup = new UptimeCheckConfig(&#34;tcpGroup&#34;, UptimeCheckConfigArgs.builder()        
+ *             .displayName(&#34;tcp-uptime-check&#34;)
+ *             .timeout(&#34;60s&#34;)
+ *             .tcpCheck(UptimeCheckConfigTcpCheck.builder()
+ *                 .port(888)
+ *                 .build())
+ *             .resourceGroup(UptimeCheckConfigResourceGroup.builder()
+ *                 .resourceType(&#34;INSTANCE&#34;)
+ *                 .groupId(check.getName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

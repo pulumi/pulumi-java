@@ -33,6 +33,93 @@ import javax.annotation.Nullable;
  * `billing_project` you defined.
  * 
  * ## Example Usage
+ * ### Cloud Identity Group Membership
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var group = new Group(&#34;group&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;my-identity-group&#34;)
+ *             .parent(&#34;customers/A01b123xz&#34;)
+ *             .groupKey(GroupGroupKey.builder()
+ *                 .id(&#34;my-identity-group@example.com&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;cloudidentity.googleapis.com/groups.discussion_forum&#34;, &#34;&#34;))
+ *             .build());
+ * 
+ *         var child_group = new Group(&#34;child-group&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;my-identity-group-child&#34;)
+ *             .parent(&#34;customers/A01b123xz&#34;)
+ *             .groupKey(GroupGroupKey.builder()
+ *                 .id(&#34;my-identity-group-child@example.com&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;cloudidentity.googleapis.com/groups.discussion_forum&#34;, &#34;&#34;))
+ *             .build());
+ * 
+ *         var cloudIdentityGroupMembershipBasic = new GroupMembership(&#34;cloudIdentityGroupMembershipBasic&#34;, GroupMembershipArgs.builder()        
+ *             .group(group.getId())
+ *             .preferredMemberKey(GroupMembershipPreferredMemberKey.builder()
+ *                 .id(child_group.getGroupKey().apply(groupKey -&gt; groupKey.getId()))
+ *                 .build())
+ *             .roles(GroupMembershipRole.builder()
+ *                 .name(&#34;MEMBER&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloud Identity Group Membership User
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var group = new Group(&#34;group&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;my-identity-group&#34;)
+ *             .parent(&#34;customers/A01b123xz&#34;)
+ *             .groupKey(GroupGroupKey.builder()
+ *                 .id(&#34;my-identity-group@example.com&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;cloudidentity.googleapis.com/groups.discussion_forum&#34;, &#34;&#34;))
+ *             .build());
+ * 
+ *         var cloudIdentityGroupMembershipBasic = new GroupMembership(&#34;cloudIdentityGroupMembershipBasic&#34;, GroupMembershipArgs.builder()        
+ *             .group(group.getId())
+ *             .preferredMemberKey(GroupMembershipPreferredMemberKey.builder()
+ *                 .id(&#34;cloud_identity_user@example.com&#34;)
+ *                 .build())
+ *             .roles(            
+ *                 GroupMembershipRole.builder()
+ *                     .name(&#34;MEMBER&#34;)
+ *                     .build(),
+ *                 GroupMembershipRole.builder()
+ *                     .name(&#34;MANAGER&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

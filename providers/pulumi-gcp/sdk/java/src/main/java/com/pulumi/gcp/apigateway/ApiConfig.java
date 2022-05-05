@@ -28,6 +28,39 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/api-gateway/docs/creating-api-config)
  * 
  * ## Example Usage
+ * ### Apigateway Api Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiCfgApi = new Api(&#34;apiCfgApi&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;api-cfg&#34;)
+ *             .build());
+ * 
+ *         var apiCfgApiConfig = new ApiConfig(&#34;apiCfgApiConfig&#34;, ApiConfigArgs.builder()        
+ *             .api(apiCfgApi.getApiId())
+ *             .apiConfigId(&#34;cfg&#34;)
+ *             .openapiDocuments(ApiConfigOpenapiDocument.builder()
+ *                 .document(ApiConfigOpenapiDocumentDocument.builder()
+ *                     .path(&#34;spec.yaml&#34;)
+ *                     .contents(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;test-fixtures/apigateway/openapi.yaml&#34;))))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -38,6 +38,74 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
  * 
  * ## Example Usage
+ * ### Network Endpoint Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var neg = new NetworkEndpointGroup(&#34;neg&#34;, NetworkEndpointGroupArgs.builder()        
+ *             .network(defaultNetwork.getId())
+ *             .subnetwork(defaultSubnetwork.getId())
+ *             .defaultPort(&#34;90&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network Endpoint Group Non Gcp
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Network(&#34;default&#34;);
+ * 
+ *         var neg = new NetworkEndpointGroup(&#34;neg&#34;, NetworkEndpointGroupArgs.builder()        
+ *             .network(default_.getId())
+ *             .defaultPort(&#34;90&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .networkEndpointType(&#34;NON_GCP_PRIVATE_IP_PORT&#34;)
+ *             .build());
+ * 
+ *         var default_endpoint = new NetworkEndpoint(&#34;default-endpoint&#34;, NetworkEndpointArgs.builder()        
+ *             .networkEndpointGroup(neg.getName())
+ *             .port(neg.getDefaultPort())
+ *             .ipAddress(&#34;127.0.0.1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

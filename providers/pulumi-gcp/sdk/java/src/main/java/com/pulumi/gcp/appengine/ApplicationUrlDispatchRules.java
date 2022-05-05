@@ -23,6 +23,67 @@ import javax.annotation.Nullable;
  * * [API documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps#UrlDispatchRule)
  * 
  * ## Example Usage
+ * ### App Engine Application Url Dispatch Rules Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./test-fixtures/appengine/hello-world.zip&#34;))
+ *             .build());
+ * 
+ *         var adminV3 = new StandardAppVersion(&#34;adminV3&#34;, StandardAppVersionArgs.builder()        
+ *             .versionId(&#34;v3&#34;)
+ *             .service(&#34;admin&#34;)
+ *             .runtime(&#34;nodejs10&#34;)
+ *             .entrypoint(StandardAppVersionEntrypoint.builder()
+ *                 .shell(&#34;node ./app.js&#34;)
+ *                 .build())
+ *             .deployment(StandardAppVersionDeployment.builder()
+ *                 .zip(StandardAppVersionDeploymentZip.builder()
+ *                     .sourceUrl(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+ *                         var bucketName = values.t1;
+ *                         var objectName = values.t2;
+ *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, bucketName,objectName);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+ *             .noopOnDestroy(true)
+ *             .build());
+ * 
+ *         var webService = new ApplicationUrlDispatchRules(&#34;webService&#34;, ApplicationUrlDispatchRulesArgs.builder()        
+ *             .dispatchRules(            
+ *                 ApplicationUrlDispatchRulesDispatchRule.builder()
+ *                     .domain(&#34;*&#34;)
+ *                     .path(&#34;/*&#34;)
+ *                     .service(&#34;default&#34;)
+ *                     .build(),
+ *                 ApplicationUrlDispatchRulesDispatchRule.builder()
+ *                     .domain(&#34;*&#34;)
+ *                     .path(&#34;/admin/*&#34;)
+ *                     .service(adminV3.getService())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

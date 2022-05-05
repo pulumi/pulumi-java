@@ -25,6 +25,82 @@ import javax.annotation.Nullable;
  *     * [Creating and managing schemas](https://cloud.google.com/pubsub/docs/schemas)
  * 
  * ## Example Usage
+ * ### Pubsub Schema Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Schema(&#34;example&#34;, SchemaArgs.builder()        
+ *             .definition(&#34;&#34;&#34;
+ * {
+ *   &#34;type&#34; : &#34;record&#34;,
+ *   &#34;name&#34; : &#34;Avro&#34;,
+ *   &#34;fields&#34; : [
+ *     {
+ *       &#34;name&#34; : &#34;StringField&#34;,
+ *       &#34;type&#34; : &#34;string&#34;
+ *     },
+ *     {
+ *       &#34;name&#34; : &#34;IntField&#34;,
+ *       &#34;type&#34; : &#34;int&#34;
+ *     }
+ *   ]
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .type(&#34;AVRO&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Schema Protobuf
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleSchema = new Schema(&#34;exampleSchema&#34;, SchemaArgs.builder()        
+ *             .type(&#34;PROTOCOL_BUFFER&#34;)
+ *             .definition(&#34;&#34;&#34;
+ * syntax = &#34;proto3&#34;;
+ * message Results {
+ * string message_request = 1;
+ * string message_response = 2;
+ * string timestamp_request = 3;
+ * string timestamp_response = 4;
+ * }            &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;, TopicArgs.builder()        
+ *             .schemaSettings(TopicSchemaSettings.builder()
+ *                 .schema(&#34;projects/my-project-name/schemas/example&#34;)
+ *                 .encoding(&#34;JSON&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

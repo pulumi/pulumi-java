@@ -19,6 +19,7 @@ import com.pulumi.gcp.compute.outputs.RegionBackendServiceFailoverPolicy;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceIap;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceLogConfig;
 import com.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetection;
+import com.pulumi.gcp.compute.outputs.RegionBackendServiceSubsetting;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,6 +41,311 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ### Region Backend Service Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .tcpHealthCheck(HealthCheckTcpHealthCheck.builder()
+ *                 .port(&#34;80&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionBackendService = new RegionBackendService(&#34;defaultRegionBackendService&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .connectionDrainingTimeoutSec(10)
+ *             .sessionAffinity(&#34;CLIENT_IP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service Cache
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultRegionHealthCheck = new RegionHealthCheck(&#34;defaultRegionHealthCheck&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionBackendService = new RegionBackendService(&#34;defaultRegionBackendService&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(defaultRegionHealthCheck.getId())
+ *             .enableCdn(true)
+ *             .cdnPolicy(RegionBackendServiceCdnPolicy.builder()
+ *                 .cacheMode(&#34;CACHE_ALL_STATIC&#34;)
+ *                 .defaultTtl(3600)
+ *                 .clientTtl(7200)
+ *                 .maxTtl(10800)
+ *                 .negativeCaching(true)
+ *                 .signedUrlCacheMaxAgeSec(7200)
+ *                 .build())
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service Ilb Round Robin
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new HealthCheck(&#34;healthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new RegionBackendService(&#34;default&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(healthCheck.getId())
+ *             .protocol(&#34;HTTP&#34;)
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .localityLbPolicy(&#34;ROUND_ROBIN&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service External
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new RegionHealthCheck(&#34;healthCheck&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .tcpHealthCheck(RegionHealthCheckTcpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new RegionBackendService(&#34;default&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(healthCheck.getId())
+ *             .protocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service Ilb Ring Hash
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new HealthCheck(&#34;healthCheck&#34;, HealthCheckArgs.builder()        
+ *             .httpHealthCheck(HealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new RegionBackendService(&#34;default&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(healthCheck.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .localityLbPolicy(&#34;RING_HASH&#34;)
+ *             .sessionAffinity(&#34;HTTP_COOKIE&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .circuitBreakers(RegionBackendServiceCircuitBreakers.builder()
+ *                 .maxConnections(10)
+ *                 .build())
+ *             .consistentHash(RegionBackendServiceConsistentHash.builder()
+ *                 .httpCookie(RegionBackendServiceConsistentHashHttpCookie.builder()
+ *                     .ttl(RegionBackendServiceConsistentHashHttpCookieTtl.builder()
+ *                         .seconds(11)
+ *                         .nanos(1111)
+ *                         .build())
+ *                     .name(&#34;mycookie&#34;)
+ *                     .build())
+ *                 .build())
+ *             .outlierDetection(RegionBackendServiceOutlierDetection.builder()
+ *                 .consecutiveErrors(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service Balancing Mode
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debianImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .routingMode(&#34;REGIONAL&#34;)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.1.2.0/24&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var instanceTemplate = new InstanceTemplate(&#34;instanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(defaultNetwork.getId())
+ *                 .subnetwork(defaultSubnetwork.getId())
+ *                 .build())
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(debianImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .tags(            
+ *                 &#34;allow-ssh&#34;,
+ *                 &#34;load-balanced-backend&#34;)
+ *             .build());
+ * 
+ *         var rigm = new RegionInstanceGroupManager(&#34;rigm&#34;, RegionInstanceGroupManagerArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .versions(RegionInstanceGroupManagerVersion.builder()
+ *                 .instanceTemplate(instanceTemplate.getId())
+ *                 .name(&#34;primary&#34;)
+ *                 .build())
+ *             .baseInstanceName(&#34;internal-glb&#34;)
+ *             .targetSize(1)
+ *             .build());
+ * 
+ *         var defaultRegionHealthCheck = new RegionHealthCheck(&#34;defaultRegionHealthCheck&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .portSpecification(&#34;USE_SERVING_PORT&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionBackendService = new RegionBackendService(&#34;defaultRegionBackendService&#34;, RegionBackendServiceArgs.builder()        
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .backends(RegionBackendServiceBackend.builder()
+ *                 .group(rigm.getInstanceGroup())
+ *                 .balancingMode(&#34;UTILIZATION&#34;)
+ *                 .capacityScaler(1)
+ *                 .build())
+ *             .region(&#34;us-central1&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultRegionHealthCheck.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Backend Service Connection Tracking
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var healthCheck = new RegionHealthCheck(&#34;healthCheck&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .tcpHealthCheck(RegionHealthCheckTcpHealthCheck.builder()
+ *                 .port(22)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new RegionBackendService(&#34;default&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .healthChecks(healthCheck.getId())
+ *             .connectionDrainingTimeoutSec(10)
+ *             .sessionAffinity(&#34;CLIENT_IP&#34;)
+ *             .protocol(&#34;TCP&#34;)
+ *             .loadBalancingScheme(&#34;EXTERNAL&#34;)
+ *             .connectionTrackingPolicy(RegionBackendServiceConnectionTrackingPolicy.builder()
+ *                 .trackingMode(&#34;PER_SESSION&#34;)
+ *                 .connectionPersistenceOnUnhealthyBackends(&#34;NEVER_PERSIST&#34;)
+ *                 .idleTimeoutSec(60)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -565,6 +871,22 @@ public class RegionBackendService extends com.pulumi.resources.CustomResource {
      */
     public Output<String> sessionAffinity() {
         return this.sessionAffinity;
+    }
+    /**
+     * Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+     * and Internal HTTP(S) load balancing.
+     * 
+     */
+    @Export(name="subsetting", type=RegionBackendServiceSubsetting.class, parameters={})
+    private Output</* @Nullable */ RegionBackendServiceSubsetting> subsetting;
+
+    /**
+     * @return Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+     * and Internal HTTP(S) load balancing.
+     * 
+     */
+    public Output<Optional<RegionBackendServiceSubsetting>> subsetting() {
+        return Codegen.optional(this.subsetting);
     }
     /**
      * How many seconds to wait for the backend before considering it a

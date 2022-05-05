@@ -26,6 +26,30 @@ import javax.annotation.Nullable;
  *     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
  * 
  * ## Example Usage
+ * ### Bigquery Reservation Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var reservation = new Reservation(&#34;reservation&#34;, ReservationArgs.builder()        
+ *             .ignoreIdleSlots(false)
+ *             .location(&#34;asia-northeast1&#34;)
+ *             .slotCapacity(0)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

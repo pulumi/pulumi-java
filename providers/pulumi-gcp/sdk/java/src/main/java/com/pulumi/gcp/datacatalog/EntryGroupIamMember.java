@@ -27,10 +27,85 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.datacatalog.EntryGroupIamBinding` resources **can be** used in conjunction with `gcp.datacatalog.EntryGroupIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_data\_catalog\_entry\_group\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/viewer&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new EntryGroupIamPolicy(&#34;policy&#34;, EntryGroupIamPolicyArgs.builder()        
+ *             .entryGroup(google_data_catalog_entry_group.getBasic_entry_group().getName())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_data\_catalog\_entry\_group\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new EntryGroupIamBinding(&#34;binding&#34;, EntryGroupIamBindingArgs.builder()        
+ *             .entryGroup(google_data_catalog_entry_group.getBasic_entry_group().getName())
+ *             .role(&#34;roles/viewer&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_data\_catalog\_entry\_group\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new EntryGroupIamMember(&#34;member&#34;, EntryGroupIamMemberArgs.builder()        
+ *             .entryGroup(google_data_catalog_entry_group.getBasic_entry_group().getName())
+ *             .role(&#34;roles/viewer&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

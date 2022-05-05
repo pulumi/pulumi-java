@@ -27,6 +27,57 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
  * 
  * ## Example Usage
+ * ### Instance Group Named Port Gke
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerNetwork = new Network(&#34;containerNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var containerSubnetwork = new Subnetwork(&#34;containerSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .network(containerNetwork.getName())
+ *             .ipCidrRange(&#34;10.0.36.0/24&#34;)
+ *             .build());
+ * 
+ *         var myCluster = new Cluster(&#34;myCluster&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .initialNodeCount(1)
+ *             .network(containerNetwork.getName())
+ *             .subnetwork(containerSubnetwork.getName())
+ *             .ipAllocationPolicy(ClusterIpAllocationPolicy.builder()
+ *                 .clusterIpv4CidrBlock(&#34;/19&#34;)
+ *                 .servicesIpv4CidrBlock(&#34;/22&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var myPort = new InstanceGroupNamedPort(&#34;myPort&#34;, InstanceGroupNamedPortArgs.builder()        
+ *             .group(myCluster.getNodePools().apply(nodePools -&gt; nodePools[0].getInstanceGroupUrls()[0]))
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .port(8080)
+ *             .build());
+ * 
+ *         var myPorts = new InstanceGroupNamedPort(&#34;myPorts&#34;, InstanceGroupNamedPortArgs.builder()        
+ *             .group(myCluster.getNodePools().apply(nodePools -&gt; nodePools[0].getInstanceGroupUrls()[0]))
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .port(4443)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

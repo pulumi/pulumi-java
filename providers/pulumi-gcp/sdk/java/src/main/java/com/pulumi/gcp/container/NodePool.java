@@ -28,6 +28,97 @@ import javax.annotation.Nullable;
  * and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
  * 
  * ## Example Usage
+ * ### Using A Separately Managed Node Pool (Recommended)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .removeDefaultNodePool(true)
+ *             .initialNodeCount(1)
+ *             .build());
+ * 
+ *         var primaryPreemptibleNodes = new NodePool(&#34;primaryPreemptibleNodes&#34;, NodePoolArgs.builder()        
+ *             .cluster(primary.getId())
+ *             .nodeCount(1)
+ *             .nodeConfig(NodePoolNodeConfig.builder()
+ *                 .preemptible(true)
+ *                 .machineType(&#34;e2-medium&#34;)
+ *                 .serviceAccount(default_.getEmail())
+ *                 .oauthScopes(&#34;https://www.googleapis.com/auth/cloud-platform&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### 2 Node Pools, 1 Separately Managed + The Default Node Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Account(&#34;default&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .initialNodeCount(3)
+ *             .nodeLocations(&#34;us-central1-c&#34;)
+ *             .nodeConfig(ClusterNodeConfig.builder()
+ *                 .serviceAccount(default_.getEmail())
+ *                 .oauthScopes(&#34;https://www.googleapis.com/auth/cloud-platform&#34;)
+ *                 .guestAccelerators(ClusterNodeConfigGuestAccelerator.builder()
+ *                     .type(&#34;nvidia-tesla-k80&#34;)
+ *                     .count(1)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var np = new NodePool(&#34;np&#34;, NodePoolArgs.builder()        
+ *             .cluster(primary.getId())
+ *             .nodeConfig(NodePoolNodeConfig.builder()
+ *                 .machineType(&#34;e2-medium&#34;)
+ *                 .serviceAccount(default_.getEmail())
+ *                 .oauthScopes(&#34;https://www.googleapis.com/auth/cloud-platform&#34;)
+ *                 .build())
+ *             .timeouts(Map.ofEntries(
+ *                 Map.entry(&#34;create&#34;, &#34;30m&#34;),
+ *                 Map.entry(&#34;update&#34;, &#34;20m&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

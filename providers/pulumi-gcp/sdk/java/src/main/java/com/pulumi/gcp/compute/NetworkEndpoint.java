@@ -29,6 +29,66 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
  * 
  * ## Example Usage
+ * ### Network Endpoint
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var defaultSubnetwork = new Subnetwork(&#34;defaultSubnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.1/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(defaultNetwork.getId())
+ *             .build());
+ * 
+ *         var endpoint_instance = new Instance(&#34;endpoint-instance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .subnetwork(defaultSubnetwork.getId())
+ *                 .accessConfigs()
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_endpoint = new NetworkEndpoint(&#34;default-endpoint&#34;, NetworkEndpointArgs.builder()        
+ *             .networkEndpointGroup(google_compute_network_endpoint_group.getNeg().getName())
+ *             .instance(endpoint_instance.getName())
+ *             .port(google_compute_network_endpoint_group.getNeg().getDefault_port())
+ *             .ipAddress(endpoint_instance.getNetworkInterfaces().apply(networkInterfaces -&gt; networkInterfaces[0].getNetworkIp()))
+ *             .build());
+ * 
+ *         var group = new NetworkEndpointGroup(&#34;group&#34;, NetworkEndpointGroupArgs.builder()        
+ *             .network(defaultNetwork.getId())
+ *             .subnetwork(defaultSubnetwork.getId())
+ *             .defaultPort(&#34;90&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

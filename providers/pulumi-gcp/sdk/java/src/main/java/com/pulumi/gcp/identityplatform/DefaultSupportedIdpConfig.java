@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * the marketplace prior to using this resource.
  * 
  * ## Example Usage
+ * ### Identity Platform Default Supported Idp Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var idpConfig = new DefaultSupportedIdpConfig(&#34;idpConfig&#34;, DefaultSupportedIdpConfigArgs.builder()        
+ *             .clientId(&#34;client-id&#34;)
+ *             .clientSecret(&#34;secret&#34;)
+ *             .enabled(true)
+ *             .idpId(&#34;playgames.google.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

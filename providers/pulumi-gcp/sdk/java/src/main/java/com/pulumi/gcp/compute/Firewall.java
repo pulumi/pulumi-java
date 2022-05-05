@@ -41,6 +41,75 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
  * 
  * ## Example Usage
+ * ### Firewall Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultNetwork = new Network(&#34;defaultNetwork&#34;);
+ * 
+ *         var defaultFirewall = new Firewall(&#34;defaultFirewall&#34;, FirewallArgs.builder()        
+ *             .network(defaultNetwork.getName())
+ *             .allows(            
+ *                 FirewallAllow.builder()
+ *                     .protocol(&#34;icmp&#34;)
+ *                     .build(),
+ *                 FirewallAllow.builder()
+ *                     .protocol(&#34;tcp&#34;)
+ *                     .ports(                    
+ *                         &#34;80&#34;,
+ *                         &#34;8080&#34;,
+ *                         &#34;1000-2000&#34;)
+ *                     .build())
+ *             .sourceTags(&#34;web&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Firewall With Target Tags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rules = new Firewall(&#34;rules&#34;, FirewallArgs.builder()        
+ *             .allows(FirewallAllow.builder()
+ *                 .ports(                
+ *                     &#34;80&#34;,
+ *                     &#34;8080&#34;,
+ *                     &#34;1000-2000&#34;)
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .build())
+ *             .description(&#34;Creates firewall rule targeting tagged instances&#34;)
+ *             .network(&#34;default&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .sourceTags(&#34;foo&#34;)
+ *             .targetTags(&#34;web&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

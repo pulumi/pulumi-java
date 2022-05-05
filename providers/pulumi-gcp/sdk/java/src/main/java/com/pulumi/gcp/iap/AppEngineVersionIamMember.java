@@ -27,14 +27,197 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.iap.AppEngineVersionIamBinding` resources **can be** used in conjunction with `gcp.iap.AppEngineVersionIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_iap\_app\_engine\_version\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new AppEngineVersionIamPolicy(&#34;policy&#34;, AppEngineVersionIamPolicyArgs.builder()        
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new AppEngineVersionIamPolicy(&#34;policy&#34;, AppEngineVersionIamPolicyArgs.builder()        
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_iap\_app\_engine\_version\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new AppEngineVersionIamBinding(&#34;binding&#34;, AppEngineVersionIamBindingArgs.builder()        
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new AppEngineVersionIamBinding(&#34;binding&#34;, AppEngineVersionIamBindingArgs.builder()        
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .condition(AppEngineVersionIamBindingCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_iap\_app\_engine\_version\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new AppEngineVersionIamMember(&#34;member&#34;, AppEngineVersionIamMemberArgs.builder()        
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new AppEngineVersionIamMember(&#34;member&#34;, AppEngineVersionIamMemberArgs.builder()        
+ *             .appId(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .condition(AppEngineVersionIamMemberCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .project(google_app_engine_standard_app_version.getVersion().getProject())
+ *             .role(&#34;roles/iap.httpsResourceAccessor&#34;)
+ *             .service(google_app_engine_standard_app_version.getVersion().getService())
+ *             .versionId(google_app_engine_standard_app_version.getVersion().getVersion_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,65 @@ import javax.annotation.Nullable;
  *   * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
  * 
  * ## Example Usage
+ * ### Data Fusion Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicInstance = new Instance(&#34;basicInstance&#34;, InstanceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .type(&#34;BASIC&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Fusion Instance Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(AppengineFunctions.getDefaultServiceAccount());
+ * 
+ *         var extendedInstance = new Instance(&#34;extendedInstance&#34;, InstanceArgs.builder()        
+ *             .description(&#34;My Data Fusion instance&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .type(&#34;BASIC&#34;)
+ *             .enableStackdriverLogging(true)
+ *             .enableStackdriverMonitoring(true)
+ *             .labels(Map.of(&#34;example_key&#34;, &#34;example_value&#34;))
+ *             .privateInstance(true)
+ *             .networkConfig(InstanceNetworkConfig.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .ipAllocation(&#34;10.89.48.0/22&#34;)
+ *                 .build())
+ *             .version(&#34;6.3.0&#34;)
+ *             .dataprocServiceAccount(default_.getEmail())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

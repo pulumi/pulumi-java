@@ -27,10 +27,86 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigtable\_instance\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/bigtable.user&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var editor = new InstanceIamPolicy(&#34;editor&#34;, InstanceIamPolicyArgs.builder()        
+ *             .project(&#34;your-project&#34;)
+ *             .instance(&#34;your-bigtable-instance&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_bigtable\_instance\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var editor = new InstanceIamBinding(&#34;editor&#34;, InstanceIamBindingArgs.builder()        
+ *             .instance(&#34;your-bigtable-instance&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/bigtable.user&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_bigtable\_instance\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var editor = new InstanceIamMember(&#34;editor&#34;, InstanceIamMemberArgs.builder()        
+ *             .instance(&#34;your-bigtable-instance&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/bigtable.user&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

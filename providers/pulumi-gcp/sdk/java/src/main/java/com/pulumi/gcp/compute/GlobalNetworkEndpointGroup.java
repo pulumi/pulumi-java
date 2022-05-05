@@ -30,6 +30,52 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/internet-neg-concepts)
  * 
  * ## Example Usage
+ * ### Global Network Endpoint Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var neg = new GlobalNetworkEndpointGroup(&#34;neg&#34;, GlobalNetworkEndpointGroupArgs.builder()        
+ *             .defaultPort(&#34;90&#34;)
+ *             .networkEndpointType(&#34;INTERNET_FQDN_PORT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Global Network Endpoint Group Ip Address
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var neg = new GlobalNetworkEndpointGroup(&#34;neg&#34;, GlobalNetworkEndpointGroupArgs.builder()        
+ *             .defaultPort(90)
+ *             .networkEndpointType(&#34;INTERNET_IP_PORT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

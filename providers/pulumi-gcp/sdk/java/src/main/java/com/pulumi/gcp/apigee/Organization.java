@@ -24,6 +24,110 @@ import javax.annotation.Nullable;
  *     * [Creating an API organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org)
  * 
  * ## Example Usage
+ * ### Apigee Organization Cloud Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(OrganizationsFunctions.getClientConfig());
+ * 
+ *         var apigeeNetwork = new Network(&#34;apigeeNetwork&#34;);
+ * 
+ *         var apigeeRange = new GlobalAddress(&#34;apigeeRange&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(apigeeNetwork.getId())
+ *             .build());
+ * 
+ *         var apigeeVpcConnection = new Connection(&#34;apigeeVpcConnection&#34;, ConnectionArgs.builder()        
+ *             .network(apigeeNetwork.getId())
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(apigeeRange.getName())
+ *             .build());
+ * 
+ *         var org = new Organization(&#34;org&#34;, OrganizationArgs.builder()        
+ *             .analyticsRegion(&#34;us-central1&#34;)
+ *             .projectId(current.apply(getClientConfigResult -&gt; getClientConfigResult.getProject()))
+ *             .authorizedNetwork(apigeeNetwork.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Apigee Organization Cloud Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(OrganizationsFunctions.getClientConfig());
+ * 
+ *         var apigeeNetwork = new Network(&#34;apigeeNetwork&#34;);
+ * 
+ *         var apigeeRange = new GlobalAddress(&#34;apigeeRange&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(apigeeNetwork.getId())
+ *             .build());
+ * 
+ *         var apigeeVpcConnection = new Connection(&#34;apigeeVpcConnection&#34;, ConnectionArgs.builder()        
+ *             .network(apigeeNetwork.getId())
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(apigeeRange.getName())
+ *             .build());
+ * 
+ *         var apigeeKeyring = new KeyRing(&#34;apigeeKeyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var apigeeKey = new CryptoKey(&#34;apigeeKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(apigeeKeyring.getId())
+ *             .build());
+ * 
+ *         var apigeeSa = new ServiceIdentity(&#34;apigeeSa&#34;, ServiceIdentityArgs.builder()        
+ *             .project(google_project.getProject().getProject_id())
+ *             .service(google_project_service.getApigee().getService())
+ *             .build());
+ * 
+ *         var apigeeSaKeyuser = new CryptoKeyIAMBinding(&#34;apigeeSaKeyuser&#34;, CryptoKeyIAMBindingArgs.builder()        
+ *             .cryptoKeyId(apigeeKey.getId())
+ *             .role(&#34;roles/cloudkms.cryptoKeyEncrypterDecrypter&#34;)
+ *             .members(apigeeSa.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         var org = new Organization(&#34;org&#34;, OrganizationArgs.builder()        
+ *             .analyticsRegion(&#34;us-central1&#34;)
+ *             .displayName(&#34;apigee-org&#34;)
+ *             .description(&#34;Auto-provisioned Apigee Org.&#34;)
+ *             .projectId(current.apply(getClientConfigResult -&gt; getClientConfigResult.getProject()))
+ *             .authorizedNetwork(apigeeNetwork.getId())
+ *             .runtimeDatabaseEncryptionKeyName(apigeeKey.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

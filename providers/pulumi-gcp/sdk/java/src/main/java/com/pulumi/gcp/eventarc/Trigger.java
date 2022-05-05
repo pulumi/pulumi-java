@@ -23,6 +23,61 @@ import javax.annotation.Nullable;
  * The Eventarc Trigger resource
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Service(&#34;default&#34;, ServiceArgs.builder()        
+ *             .location(&#34;europe-west1&#34;)
+ *             .metadata(ServiceMetadata.builder()
+ *                 .namespace(&#34;my-project-name&#34;)
+ *                 .build())
+ *             .template(ServiceTemplate.builder()
+ *                 .spec(ServiceTemplateSpec.builder()
+ *                     .containers(ServiceTemplateSpecContainer.builder()
+ *                         .image(&#34;gcr.io/cloudrun/hello&#34;)
+ *                         .args(&#34;arrgs&#34;)
+ *                         .build())
+ *                     .containerConcurrency(50)
+ *                     .build())
+ *                 .build())
+ *             .traffics(ServiceTraffic.builder()
+ *                 .percent(100)
+ *                 .latestRevision(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var primary = new Trigger(&#34;primary&#34;, TriggerArgs.builder()        
+ *             .location(&#34;europe-west1&#34;)
+ *             .matchingCriterias(TriggerMatchingCriteria.builder()
+ *                 .attribute(&#34;type&#34;)
+ *                 .value(&#34;google.cloud.pubsub.topic.v1.messagePublished&#34;)
+ *                 .build())
+ *             .destination(TriggerDestination.builder()
+ *                 .cloudRunService(TriggerDestinationCloudRunService.builder()
+ *                     .service(default_.getName())
+ *                     .region(&#34;europe-west1&#34;)
+ *                     .build())
+ *                 .build())
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         var foo = new Topic(&#34;foo&#34;);
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

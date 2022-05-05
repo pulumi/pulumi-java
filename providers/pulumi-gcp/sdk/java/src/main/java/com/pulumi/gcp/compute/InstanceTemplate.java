@@ -35,6 +35,172 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/compute/docs/reference/latest/instanceTemplates).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultAccount = new Account(&#34;defaultAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;service-account-id&#34;)
+ *             .displayName(&#34;Service Account&#34;)
+ *             .build());
+ * 
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var foobar = new Disk(&#34;foobar&#34;, DiskArgs.builder()        
+ *             .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *             .size(10)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var dailyBackup = new ResourcePolicy(&#34;dailyBackup&#34;, ResourcePolicyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy.builder()
+ *                 .schedule(ResourcePolicySnapshotSchedulePolicySchedule.builder()
+ *                     .dailySchedule(ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.builder()
+ *                         .daysInCycle(1)
+ *                         .startTime(&#34;04:00&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultInstanceTemplate = new InstanceTemplate(&#34;defaultInstanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .description(&#34;This template is used to create app server instances.&#34;)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .labels(Map.of(&#34;environment&#34;, &#34;dev&#34;))
+ *             .instanceDescription(&#34;description assigned to instances&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .canIpForward(false)
+ *             .scheduling(InstanceTemplateScheduling.builder()
+ *                 .automaticRestart(true)
+ *                 .onHostMaintenance(&#34;MIGRATE&#34;)
+ *                 .build())
+ *             .disks(            
+ *                 InstanceTemplateDisk.builder()
+ *                     .sourceImage(&#34;debian-cloud/debian-9&#34;)
+ *                     .autoDelete(true)
+ *                     .boot(true)
+ *                     .resourcePolicies(dailyBackup.getId())
+ *                     .build(),
+ *                 InstanceTemplateDisk.builder()
+ *                     .source(foobar.getName())
+ *                     .autoDelete(false)
+ *                     .boot(false)
+ *                     .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .serviceAccount(InstanceTemplateServiceAccount.builder()
+ *                 .email(defaultAccount.getEmail())
+ *                 .scopes(&#34;cloud-platform&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Automatic Envoy Deployment
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(ComputeFunctions.getDefaultServiceAccount());
+ * 
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var foobar = new InstanceTemplate(&#34;foobar&#34;, InstanceTemplateArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .canIpForward(false)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                 .autoDelete(true)
+ *                 .boot(true)
+ *                 .build())
+ *             .networkInterfaces(InstanceTemplateNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .scheduling(InstanceTemplateScheduling.builder()
+ *                 .preemptible(false)
+ *                 .automaticRestart(true)
+ *                 .build())
+ *             .metadata(Map.ofEntries(
+ *                 Map.entry(&#34;gce-software-declaration&#34;, &#34;&#34;&#34;
+ * {
+ *   &#34;softwareRecipes&#34;: [{
+ *     &#34;name&#34;: &#34;install-gce-service-proxy-agent&#34;,
+ *     &#34;desired_state&#34;: &#34;INSTALLED&#34;,
+ *     &#34;installSteps&#34;: [{
+ *       &#34;scriptRun&#34;: {
+ *         &#34;script&#34;: &#34;#! /bin/bash\nZONE=$(curl --silent http://metadata.google.internal/computeMetadata/v1/instance/zone -H Metadata-Flavor:Google | cut -d/ -f4 )\nexport SERVICE_PROXY_AGENT_DIRECTORY=$(mktemp -d)\nsudo gsutil cp   gs://gce-service-proxy-&#34;$ZONE&#34;/service-proxy-agent/releases/service-proxy-agent-0.2.tgz   &#34;$SERVICE_PROXY_AGENT_DIRECTORY&#34;   || sudo gsutil cp     gs://gce-service-proxy/service-proxy-agent/releases/service-proxy-agent-0.2.tgz     &#34;$SERVICE_PROXY_AGENT_DIRECTORY&#34;\nsudo tar -xzf &#34;$SERVICE_PROXY_AGENT_DIRECTORY&#34;/service-proxy-agent-0.2.tgz -C &#34;$SERVICE_PROXY_AGENT_DIRECTORY&#34;\n&#34;$SERVICE_PROXY_AGENT_DIRECTORY&#34;/service-proxy-agent/service-proxy-agent-bootstrap.sh&#34;
+ *       }
+ *     }]
+ *   }]
+ * }
+ *                 &#34;&#34;&#34;),
+ *                 Map.entry(&#34;gce-service-proxy&#34;, &#34;&#34;&#34;
+ * {
+ *   &#34;api-version&#34;: &#34;0.2&#34;,
+ *   &#34;proxy-spec&#34;: {
+ *     &#34;proxy-port&#34;: 15001,
+ *     &#34;network&#34;: &#34;my-network&#34;,
+ *     &#34;tracing&#34;: &#34;ON&#34;,
+ *     &#34;access-log&#34;: &#34;/var/log/envoy/access.log&#34;
+ *   }
+ *   &#34;service&#34;: {
+ *     &#34;serving-ports&#34;: [80, 81]
+ *   },
+ *  &#34;labels&#34;: {
+ *    &#34;app_name&#34;: &#34;bookserver_app&#34;,
+ *    &#34;app_version&#34;: &#34;STABLE&#34;
+ *   }
+ * }
+ *                 &#34;&#34;&#34;),
+ *                 Map.entry(&#34;enable-guest-attributes&#34;, &#34;true&#34;),
+ *                 Map.entry(&#34;enable-osconfig&#34;, &#34;true&#34;)
+ *             ))
+ *             .serviceAccount(InstanceTemplateServiceAccount.builder()
+ *                 .email(default_.getEmail())
+ *                 .scopes(&#34;cloud-platform&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;gce-service-proxy&#34;, &#34;on&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Using with Instance Group Manager
  * 
  * Instance Templates cannot be updated after creation with the Google
@@ -43,6 +209,39 @@ import javax.annotation.Nullable;
  * use an Instance Template resource with an [Instance Group Manager resource](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html).
  * Either omit the Instance Template `name` attribute, or specify a partial name
  * with `name_prefix`. Example:
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instanceTemplate = new InstanceTemplate(&#34;instanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .namePrefix(&#34;instance-template-&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .disks()
+ *             .networkInterfaces()
+ *             .build());
+ * 
+ *         var instanceGroupManager = new InstanceGroupManager(&#34;instanceGroupManager&#34;, InstanceGroupManagerArgs.builder()        
+ *             .instanceTemplate(instanceTemplate.getId())
+ *             .baseInstanceName(&#34;instance-group-manager&#34;)
+ *             .zone(&#34;us-central1-f&#34;)
+ *             .targetSize(&#34;1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With this setup, this provider generates a unique name for your Instance
  * Template and can then update the Instance Group manager without conflict before
@@ -64,10 +263,67 @@ import javax.annotation.Nullable;
  * You can achieve this by using the `gcp.compute.Image`
  * data source, which will retrieve the latest image on every `pulumi apply`, and will update
  * the template to use that specific image:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var instanceTemplate = new InstanceTemplate(&#34;instanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .namePrefix(&#34;instance-template-&#34;)
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(google_compute_image.getMy_image().getSelf_link())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * To have instances update to the latest on every scaling event or instance re-creation,
  * use the family as the image for the disk, and it will use GCP&#39;s default behavior, setting
  * the image for the template to the family:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instanceTemplate = new InstanceTemplate(&#34;instanceTemplate&#34;, InstanceTemplateArgs.builder()        
+ *             .disks(InstanceTemplateDisk.builder()
+ *                 .sourceImage(&#34;debian-cloud/debian-9&#34;)
+ *                 .build())
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .namePrefix(&#34;instance-template-&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -27,14 +27,191 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.bigquery.IamBinding` resources **can be** used in conjunction with `gcp.bigquery.IamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigquery\_table\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/bigquery.dataOwner&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new IamPolicy(&#34;policy&#34;, IamPolicyArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/bigquery.dataOwner&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var policy = new IamPolicy(&#34;policy&#34;, IamPolicyArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_bigquery\_table\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new IamBinding(&#34;binding&#34;, IamBindingArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .role(&#34;roles/bigquery.dataOwner&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var binding = new IamBinding(&#34;binding&#34;, IamBindingArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .role(&#34;roles/bigquery.dataOwner&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .condition(IamBindingCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## google\_bigquery\_table\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new IamMember(&#34;member&#34;, IamMemberArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .role(&#34;roles/bigquery.dataOwner&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var member = new IamMember(&#34;member&#34;, IamMemberArgs.builder()        
+ *             .project(google_bigquery_table.getTest().getProject())
+ *             .datasetId(google_bigquery_table.getTest().getDataset_id())
+ *             .tableId(google_bigquery_table.getTest().getTable_id())
+ *             .role(&#34;roles/bigquery.dataOwner&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .condition(IamMemberCondition.builder()
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -38,6 +38,89 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
  * 
  * ## Example Usage
+ * ### App Engine Standard App Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./test-fixtures/appengine/hello-world.zip&#34;))
+ *             .build());
+ * 
+ *         var myappV1 = new StandardAppVersion(&#34;myappV1&#34;, StandardAppVersionArgs.builder()        
+ *             .versionId(&#34;v1&#34;)
+ *             .service(&#34;myapp&#34;)
+ *             .runtime(&#34;nodejs10&#34;)
+ *             .entrypoint(StandardAppVersionEntrypoint.builder()
+ *                 .shell(&#34;node ./app.js&#34;)
+ *                 .build())
+ *             .deployment(StandardAppVersionDeployment.builder()
+ *                 .zip(StandardAppVersionDeploymentZip.builder()
+ *                     .sourceUrl(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+ *                         var bucketName = values.t1;
+ *                         var objectName = values.t2;
+ *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, bucketName,objectName);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+ *             .automaticScaling(StandardAppVersionAutomaticScaling.builder()
+ *                 .maxConcurrentRequests(10)
+ *                 .minIdleInstances(1)
+ *                 .maxIdleInstances(3)
+ *                 .minPendingLatency(&#34;1s&#34;)
+ *                 .maxPendingLatency(&#34;5s&#34;)
+ *                 .standardSchedulerSettings(StandardAppVersionAutomaticScalingStandardSchedulerSettings.builder()
+ *                     .targetCpuUtilization(0.5)
+ *                     .targetThroughputUtilization(0.75)
+ *                     .minInstances(2)
+ *                     .maxInstances(10)
+ *                     .build())
+ *                 .build())
+ *             .deleteServiceOnDestroy(true)
+ *             .build());
+ * 
+ *         var myappV2 = new StandardAppVersion(&#34;myappV2&#34;, StandardAppVersionArgs.builder()        
+ *             .versionId(&#34;v2&#34;)
+ *             .service(&#34;myapp&#34;)
+ *             .runtime(&#34;nodejs10&#34;)
+ *             .entrypoint(StandardAppVersionEntrypoint.builder()
+ *                 .shell(&#34;node ./app.js&#34;)
+ *                 .build())
+ *             .deployment(StandardAppVersionDeployment.builder()
+ *                 .zip(StandardAppVersionDeploymentZip.builder()
+ *                     .sourceUrl(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+ *                         var bucketName = values.t1;
+ *                         var objectName = values.t2;
+ *                         return String.format(&#34;https://storage.googleapis.com/%s/%s&#34;, bucketName,objectName);
+ *                     }))
+ *                     .build())
+ *                 .build())
+ *             .envVariables(Map.of(&#34;port&#34;, &#34;8080&#34;))
+ *             .basicScaling(StandardAppVersionBasicScaling.builder()
+ *                 .maxInstances(5)
+ *                 .build())
+ *             .noopOnDestroy(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -35,6 +35,58 @@ import javax.annotation.Nullable;
  * !&gt; **Note:** This resource does not support &#39;update&#39; and changing any attributes will cause the resource to be recreated.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mycluster = new Cluster(&#34;mycluster&#34;, ClusterArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         var spark = new Job(&#34;spark&#34;, JobArgs.builder()        
+ *             .region(mycluster.getRegion())
+ *             .forceDelete(true)
+ *             .placement(JobPlacement.builder()
+ *                 .clusterName(mycluster.getName())
+ *                 .build())
+ *             .sparkConfig(JobSparkConfig.builder()
+ *                 .mainClass(&#34;org.apache.spark.examples.SparkPi&#34;)
+ *                 .jarFileUris(&#34;file:///usr/lib/spark/examples/jars/spark-examples.jar&#34;)
+ *                 .args(&#34;1000&#34;)
+ *                 .properties(Map.of(&#34;spark.logConf&#34;, &#34;true&#34;))
+ *                 .loggingConfig(JobSparkConfigLoggingConfig.builder()
+ *                     .driverLogLevels(Map.of(&#34;root&#34;, &#34;INFO&#34;))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var pyspark = new Job(&#34;pyspark&#34;, JobArgs.builder()        
+ *             .region(mycluster.getRegion())
+ *             .forceDelete(true)
+ *             .placement(JobPlacement.builder()
+ *                 .clusterName(mycluster.getName())
+ *                 .build())
+ *             .pysparkConfig(JobPysparkConfig.builder()
+ *                 .mainPythonFileUri(&#34;gs://dataproc-examples-2f10d78d114f6aaec76462e3c310f31f/src/pyspark/hello-world/hello-world.py&#34;)
+ *                 .properties(Map.of(&#34;spark.logConf&#34;, &#34;true&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export(&#34;sparkStatus&#34;, spark.getStatuses().apply(statuses -&gt; statuses[0].getState()));
+ *         ctx.export(&#34;pysparkStatus&#34;, pyspark.getStatuses().apply(statuses -&gt; statuses[0].getState()));
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

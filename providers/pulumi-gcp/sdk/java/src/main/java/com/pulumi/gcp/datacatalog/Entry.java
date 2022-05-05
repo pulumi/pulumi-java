@@ -33,6 +33,136 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
  * ## Example Usage
+ * ### Data Catalog Entry Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_group&#34;)
+ *             .build());
+ * 
+ *         var basicEntry = new Entry(&#34;basicEntry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;my_entry&#34;)
+ *             .userSpecifiedType(&#34;my_custom_type&#34;)
+ *             .userSpecifiedSystem(&#34;SomethingExternal&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Entry Fileset
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_group&#34;)
+ *             .build());
+ * 
+ *         var basicEntry = new Entry(&#34;basicEntry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;my_entry&#34;)
+ *             .type(&#34;FILESET&#34;)
+ *             .gcsFilesetSpec(EntryGcsFilesetSpec.builder()
+ *                 .filePatterns(&#34;gs://fake_bucket/dir/*&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Data Catalog Entry Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var entryGroup = new EntryGroup(&#34;entryGroup&#34;, EntryGroupArgs.builder()        
+ *             .entryGroupId(&#34;my_group&#34;)
+ *             .build());
+ * 
+ *         var basicEntry = new Entry(&#34;basicEntry&#34;, EntryArgs.builder()        
+ *             .entryGroup(entryGroup.getId())
+ *             .entryId(&#34;my_entry&#34;)
+ *             .userSpecifiedType(&#34;my_user_specified_type&#34;)
+ *             .userSpecifiedSystem(&#34;Something_custom&#34;)
+ *             .linkedResource(&#34;my/linked/resource&#34;)
+ *             .displayName(&#34;my custom type entry&#34;)
+ *             .description(&#34;a custom type entry for a user specified system&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * {
+ *   &#34;columns&#34;: [
+ *     {
+ *       &#34;column&#34;: &#34;first_name&#34;,
+ *       &#34;description&#34;: &#34;First name&#34;,
+ *       &#34;mode&#34;: &#34;REQUIRED&#34;,
+ *       &#34;type&#34;: &#34;STRING&#34;
+ *     },
+ *     {
+ *       &#34;column&#34;: &#34;last_name&#34;,
+ *       &#34;description&#34;: &#34;Last name&#34;,
+ *       &#34;mode&#34;: &#34;REQUIRED&#34;,
+ *       &#34;type&#34;: &#34;STRING&#34;
+ *     },
+ *     {
+ *       &#34;column&#34;: &#34;address&#34;,
+ *       &#34;description&#34;: &#34;Address&#34;,
+ *       &#34;mode&#34;: &#34;REPEATED&#34;,
+ *       &#34;subcolumns&#34;: [
+ *         {
+ *           &#34;column&#34;: &#34;city&#34;,
+ *           &#34;description&#34;: &#34;City&#34;,
+ *           &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *           &#34;type&#34;: &#34;STRING&#34;
+ *         },
+ *         {
+ *           &#34;column&#34;: &#34;state&#34;,
+ *           &#34;description&#34;: &#34;State&#34;,
+ *           &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *           &#34;type&#34;: &#34;STRING&#34;
+ *         }
+ *       ],
+ *       &#34;type&#34;: &#34;RECORD&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

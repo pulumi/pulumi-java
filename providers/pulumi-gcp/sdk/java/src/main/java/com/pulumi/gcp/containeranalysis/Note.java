@@ -29,6 +29,69 @@ import javax.annotation.Nullable;
  *     * [Creating Attestations (Occurrences)](https://cloud.google.com/binary-authorization/docs/making-attestations)
  * 
  * ## Example Usage
+ * ### Container Analysis Note Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var note = new Note(&#34;note&#34;, NoteArgs.builder()        
+ *             .attestationAuthority(NoteAttestationAuthority.builder()
+ *                 .hint(NoteAttestationAuthorityHint.builder()
+ *                     .humanReadableName(&#34;Attestor Note&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Container Analysis Note Attestation Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var note = new Note(&#34;note&#34;, NoteArgs.builder()        
+ *             .attestationAuthority(NoteAttestationAuthority.builder()
+ *                 .hint(NoteAttestationAuthorityHint.builder()
+ *                     .humanReadableName(&#34;Attestor Note&#34;)
+ *                     .build())
+ *                 .build())
+ *             .expirationTime(&#34;2120-10-02T15:01:23.045123456Z&#34;)
+ *             .longDescription(&#34;a longer description of test note&#34;)
+ *             .relatedUrls(            
+ *                 NoteRelatedUrl.builder()
+ *                     .label(&#34;foo&#34;)
+ *                     .url(&#34;some.url&#34;)
+ *                     .build(),
+ *                 NoteRelatedUrl.builder()
+ *                     .url(&#34;google.com&#34;)
+ *                     .build())
+ *             .shortDescription(&#34;test note&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

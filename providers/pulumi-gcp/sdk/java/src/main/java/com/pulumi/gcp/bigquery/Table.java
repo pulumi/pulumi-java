@@ -34,6 +34,70 @@ import javax.annotation.Nullable;
  * It is recommended to not set this field (or set it to true) until you&#39;re ready to destroy.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultDataset = new Dataset(&#34;defaultDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;foo&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;EU&#34;)
+ *             .defaultTableExpirationMs(3600000)
+ *             .labels(Map.of(&#34;env&#34;, &#34;default&#34;))
+ *             .build());
+ * 
+ *         var defaultTable = new Table(&#34;defaultTable&#34;, TableArgs.builder()        
+ *             .datasetId(defaultDataset.getDatasetId())
+ *             .tableId(&#34;bar&#34;)
+ *             .timePartitioning(TableTimePartitioning.builder()
+ *                 .type(&#34;DAY&#34;)
+ *                 .build())
+ *             .labels(Map.of(&#34;env&#34;, &#34;default&#34;))
+ *             .schema(&#34;&#34;&#34;
+ * [
+ *   {
+ *     &#34;name&#34;: &#34;permalink&#34;,
+ *     &#34;type&#34;: &#34;STRING&#34;,
+ *     &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *     &#34;description&#34;: &#34;The Permalink&#34;
+ *   },
+ *   {
+ *     &#34;name&#34;: &#34;state&#34;,
+ *     &#34;type&#34;: &#34;STRING&#34;,
+ *     &#34;mode&#34;: &#34;NULLABLE&#34;,
+ *     &#34;description&#34;: &#34;State where the head office is located&#34;
+ *   }
+ * ]
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var sheet = new Table(&#34;sheet&#34;, TableArgs.builder()        
+ *             .datasetId(defaultDataset.getDatasetId())
+ *             .tableId(&#34;sheet&#34;)
+ *             .externalDataConfiguration(TableExternalDataConfiguration.builder()
+ *                 .autodetect(true)
+ *                 .sourceFormat(&#34;GOOGLE_SHEETS&#34;)
+ *                 .googleSheetsOptions(TableExternalDataConfigurationGoogleSheetsOptions.builder()
+ *                     .skipLeadingRows(1)
+ *                     .build())
+ *                 .sourceUris(&#34;https://docs.google.com/spreadsheets/d/123456789012345&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

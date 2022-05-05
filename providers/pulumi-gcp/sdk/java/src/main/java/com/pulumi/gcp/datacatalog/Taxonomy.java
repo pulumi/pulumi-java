@@ -25,6 +25,31 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
  * 
  * ## Example Usage
+ * ### Data Catalog Taxonomy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicTaxonomy = new Taxonomy(&#34;basicTaxonomy&#34;, TaxonomyArgs.builder()        
+ *             .region(&#34;us&#34;)
+ *             .displayName(&#34;my_display_name&#34;)
+ *             .description(&#34;A collection of policy tags&#34;)
+ *             .activatedPolicyTypes(&#34;FINE_GRAINED_ACCESS_CONTROL&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

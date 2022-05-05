@@ -30,6 +30,99 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/iot/docs/)
  * 
  * ## Example Usage
+ * ### Cloudiot Device Registry Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test_registry = new Registry(&#34;test-registry&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudiot Device Registry Single Event Notification Configs
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_telemetry = new Topic(&#34;default-telemetry&#34;);
+ * 
+ *         var test_registry = new Registry(&#34;test-registry&#34;, RegistryArgs.builder()        
+ *             .eventNotificationConfigs(RegistryEventNotificationConfigItem.builder()
+ *                 .pubsubTopicName(default_telemetry.getId())
+ *                 .subfolderMatches(&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudiot Device Registry Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_devicestatus = new Topic(&#34;default-devicestatus&#34;);
+ * 
+ *         var default_telemetry = new Topic(&#34;default-telemetry&#34;);
+ * 
+ *         var additional_telemetry = new Topic(&#34;additional-telemetry&#34;);
+ * 
+ *         var test_registry = new Registry(&#34;test-registry&#34;, RegistryArgs.builder()        
+ *             .eventNotificationConfigs(            
+ *                 RegistryEventNotificationConfigItem.builder()
+ *                     .pubsubTopicName(additional_telemetry.getId())
+ *                     .subfolderMatches(&#34;test/path&#34;)
+ *                     .build(),
+ *                 RegistryEventNotificationConfigItem.builder()
+ *                     .pubsubTopicName(default_telemetry.getId())
+ *                     .subfolderMatches(&#34;&#34;)
+ *                     .build())
+ *             .stateNotificationConfig(Map.of(&#34;pubsub_topic_name&#34;, default_devicestatus.getId()))
+ *             .mqttConfig(Map.of(&#34;mqtt_enabled_state&#34;, &#34;MQTT_ENABLED&#34;))
+ *             .httpConfig(Map.of(&#34;http_enabled_state&#34;, &#34;HTTP_ENABLED&#34;))
+ *             .logLevel(&#34;INFO&#34;)
+ *             .credentials(RegistryCredential.builder()
+ *                 .publicKeyCertificate(Map.ofEntries(
+ *                     Map.entry(&#34;format&#34;, &#34;X509_CERTIFICATE_PEM&#34;),
+ *                     Map.entry(&#34;certificate&#34;, Files.readString(&#34;test-fixtures/rsa_cert.pem&#34;))
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -30,6 +30,175 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/os-patch-management)
  * 
  * ## Example Usage
+ * ### Os Config Patch Deployment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var patch = new PatchDeployment(&#34;patch&#34;, PatchDeploymentArgs.builder()        
+ *             .instanceFilter(PatchDeploymentInstanceFilter.builder()
+ *                 .all(true)
+ *                 .build())
+ *             .oneTimeSchedule(PatchDeploymentOneTimeSchedule.builder()
+ *                 .executeTime(&#34;2999-10-10T10:10:10.045123456Z&#34;)
+ *                 .build())
+ *             .patchDeploymentId(&#34;patch-deploy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Os Config Patch Deployment Daily
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var patch = new PatchDeployment(&#34;patch&#34;, PatchDeploymentArgs.builder()        
+ *             .instanceFilter(PatchDeploymentInstanceFilter.builder()
+ *                 .all(true)
+ *                 .build())
+ *             .patchDeploymentId(&#34;patch-deploy&#34;)
+ *             .recurringSchedule(PatchDeploymentRecurringSchedule.builder()
+ *                 .timeOfDay(PatchDeploymentRecurringScheduleTimeOfDay.builder()
+ *                     .hours(0)
+ *                     .minutes(30)
+ *                     .nanos(20)
+ *                     .seconds(30)
+ *                     .build())
+ *                 .timeZone(PatchDeploymentRecurringScheduleTimeZone.builder()
+ *                     .id(&#34;America/New_York&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Os Config Patch Deployment Daily Midnight
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var patch = new PatchDeployment(&#34;patch&#34;, PatchDeploymentArgs.builder()        
+ *             .instanceFilter(PatchDeploymentInstanceFilter.builder()
+ *                 .all(true)
+ *                 .build())
+ *             .patchDeploymentId(&#34;patch-deploy&#34;)
+ *             .recurringSchedule(PatchDeploymentRecurringSchedule.builder()
+ *                 .timeOfDay(PatchDeploymentRecurringScheduleTimeOfDay.builder()
+ *                     .hours(0)
+ *                     .minutes(0)
+ *                     .nanos(0)
+ *                     .seconds(0)
+ *                     .build())
+ *                 .timeZone(PatchDeploymentRecurringScheduleTimeZone.builder()
+ *                     .id(&#34;America/New_York&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Os Config Patch Deployment Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var myImage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var foobar = new Instance(&#34;foobar&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .canIpForward(false)
+ *             .tags(            
+ *                 &#34;foo&#34;,
+ *                 &#34;bar&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(myImage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .metadata(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         var patch = new PatchDeployment(&#34;patch&#34;, PatchDeploymentArgs.builder()        
+ *             .patchDeploymentId(&#34;patch-deploy&#34;)
+ *             .instanceFilter(PatchDeploymentInstanceFilter.builder()
+ *                 .instances(foobar.getId())
+ *                 .build())
+ *             .patchConfig(PatchDeploymentPatchConfig.builder()
+ *                 .yum(PatchDeploymentPatchConfigYum.builder()
+ *                     .security(true)
+ *                     .minimal(true)
+ *                     .excludes(&#34;bash&#34;)
+ *                     .build())
+ *                 .build())
+ *             .recurringSchedule(PatchDeploymentRecurringSchedule.builder()
+ *                 .timeZone(PatchDeploymentRecurringScheduleTimeZone.builder()
+ *                     .id(&#34;America/New_York&#34;)
+ *                     .build())
+ *                 .timeOfDay(PatchDeploymentRecurringScheduleTimeOfDay.builder()
+ *                     .hours(0)
+ *                     .minutes(30)
+ *                     .seconds(30)
+ *                     .nanos(20)
+ *                     .build())
+ *                 .monthly(PatchDeploymentRecurringScheduleMonthly.builder()
+ *                     .monthDay(1)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

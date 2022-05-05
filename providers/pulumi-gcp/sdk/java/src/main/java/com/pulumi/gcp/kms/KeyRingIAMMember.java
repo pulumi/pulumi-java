@@ -27,16 +27,189 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_kms\_key\_ring\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyring = new KeyRing(&#34;keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var keyRing = new KeyRingIAMPolicy(&#34;keyRing&#34;, KeyRingIAMPolicyArgs.builder()        
+ *             .keyRingId(keyring.getId())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyring = new KeyRing(&#34;keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var keyRing = new KeyRingIAMPolicy(&#34;keyRing&#34;, KeyRingIAMPolicyArgs.builder()        
+ *             .keyRingId(keyring.getId())
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_kms\_key\_ring\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRingIAMBinding(&#34;keyRing&#34;, KeyRingIAMBindingArgs.builder()        
+ *             .keyRingId(&#34;your-key-ring-id&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRingIAMBinding(&#34;keyRing&#34;, KeyRingIAMBindingArgs.builder()        
+ *             .condition(KeyRingIAMBindingCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .keyRingId(&#34;your-key-ring-id&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_kms\_key\_ring\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRingIAMMember(&#34;keyRing&#34;, KeyRingIAMMemberArgs.builder()        
+ *             .keyRingId(&#34;your-key-ring-id&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRingIAMMember(&#34;keyRing&#34;, KeyRingIAMMemberArgs.builder()        
+ *             .condition(KeyRingIAMMemberCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .keyRingId(&#34;your-key-ring-id&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,34 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
  * 
  * ## Example Usage
+ * ### Dialogflow Intent Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicAgent = new Agent(&#34;basicAgent&#34;, AgentArgs.builder()        
+ *             .displayName(&#34;example_agent&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .build());
+ * 
+ *         var basicIntent = new Intent(&#34;basicIntent&#34;, IntentArgs.builder()        
+ *             .displayName(&#34;basic-intent&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

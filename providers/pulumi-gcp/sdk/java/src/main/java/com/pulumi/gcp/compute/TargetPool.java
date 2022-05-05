@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * and [API](https://cloud.google.com/compute/docs/reference/latest/targetPools).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultTargetPool = new TargetPool(&#34;defaultTargetPool&#34;, TargetPoolArgs.builder()        
+ *             .instances(            
+ *                 &#34;us-central1-a/myinstance1&#34;,
+ *                 &#34;us-central1-b/myinstance2&#34;)
+ *             .healthChecks(defaultHttpHealthCheck.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

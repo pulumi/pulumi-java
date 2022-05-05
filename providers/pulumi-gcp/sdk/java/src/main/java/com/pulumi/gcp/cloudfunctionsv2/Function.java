@@ -20,6 +20,115 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Cloudfunctions2 Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .uniformBucketLevelAccess(true)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;path/to/index.zip&#34;))
+ *             .build());
+ * 
+ *         var terraform_test2 = new Function(&#34;terraform-test2&#34;, FunctionArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .description(&#34;a new function&#34;)
+ *             .buildConfig(FunctionBuildConfig.builder()
+ *                 .runtime(&#34;nodejs12&#34;)
+ *                 .entryPoint(&#34;helloHttp&#34;)
+ *                 .source(FunctionBuildConfigSource.builder()
+ *                     .storageSource(FunctionBuildConfigSourceStorageSource.builder()
+ *                         .bucket(bucket.getName())
+ *                         .object(object.getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .serviceConfig(FunctionServiceConfig.builder()
+ *                 .maxInstanceCount(1)
+ *                 .availableMemory(&#34;256M&#34;)
+ *                 .timeoutSeconds(60)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudfunctions2 Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sub = new Topic(&#34;sub&#34;);
+ * 
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .uniformBucketLevelAccess(true)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;path/to/index.zip&#34;))
+ *             .build());
+ * 
+ *         var terraform_test = new Function(&#34;terraform-test&#34;, FunctionArgs.builder()        
+ *             .location(&#34;us-central1&#34;)
+ *             .description(&#34;a new function&#34;)
+ *             .buildConfig(FunctionBuildConfig.builder()
+ *                 .runtime(&#34;nodejs12&#34;)
+ *                 .entryPoint(&#34;helloHttp&#34;)
+ *                 .environmentVariables(Map.of(&#34;BUILD_CONFIG_TEST&#34;, &#34;build_test&#34;))
+ *                 .source(FunctionBuildConfigSource.builder()
+ *                     .storageSource(FunctionBuildConfigSourceStorageSource.builder()
+ *                         .bucket(bucket.getName())
+ *                         .object(object.getName())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .serviceConfig(FunctionServiceConfig.builder()
+ *                 .maxInstanceCount(3)
+ *                 .minInstanceCount(1)
+ *                 .availableMemory(&#34;256M&#34;)
+ *                 .timeoutSeconds(60)
+ *                 .environmentVariables(Map.of(&#34;SERVICE_CONFIG_TEST&#34;, &#34;config_test&#34;))
+ *                 .ingressSettings(&#34;ALLOW_INTERNAL_ONLY&#34;)
+ *                 .allTrafficOnLatestRevision(true)
+ *                 .build())
+ *             .eventTrigger(FunctionEventTrigger.builder()
+ *                 .triggerRegion(&#34;us-central1&#34;)
+ *                 .eventType(&#34;google.cloud.pubsub.topic.v1.messagePublished&#34;)
+ *                 .pubsubTopic(sub.getId())
+ *                 .retryPolicy(&#34;RETRY_POLICY_RETRY&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

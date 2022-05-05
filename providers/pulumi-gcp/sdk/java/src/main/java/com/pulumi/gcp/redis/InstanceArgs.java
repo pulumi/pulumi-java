@@ -357,6 +357,27 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Optional. Additional IP range for node placement. Required when enabling read replicas on
+     * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+     * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+     * range associated with the private service access connection, or &#34;auto&#34;.
+     * 
+     */
+    @Import(name="secondaryIpRange")
+    private @Nullable Output<String> secondaryIpRange;
+
+    /**
+     * @return Optional. Additional IP range for node placement. Required when enabling read replicas on
+     * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+     * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+     * range associated with the private service access connection, or &#34;auto&#34;.
+     * 
+     */
+    public Optional<Output<String>> secondaryIpRange() {
+        return Optional.ofNullable(this.secondaryIpRange);
+    }
+
+    /**
      * The service tier of the instance. Must be one of these values:
      * - BASIC: standalone instance
      * - STANDARD_HA: highly available primary/replica instances
@@ -421,6 +442,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
         this.region = $.region;
         this.replicaCount = $.replicaCount;
         this.reservedIpRange = $.reservedIpRange;
+        this.secondaryIpRange = $.secondaryIpRange;
         this.tier = $.tier;
         this.transitEncryptionMode = $.transitEncryptionMode;
     }
@@ -885,6 +907,33 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder reservedIpRange(String reservedIpRange) {
             return reservedIpRange(Output.of(reservedIpRange));
+        }
+
+        /**
+         * @param secondaryIpRange Optional. Additional IP range for node placement. Required when enabling read replicas on
+         * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+         * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+         * range associated with the private service access connection, or &#34;auto&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secondaryIpRange(@Nullable Output<String> secondaryIpRange) {
+            $.secondaryIpRange = secondaryIpRange;
+            return this;
+        }
+
+        /**
+         * @param secondaryIpRange Optional. Additional IP range for node placement. Required when enabling read replicas on
+         * an existing instance. For DIRECT_PEERING mode value must be a CIDR range of size /28, or
+         * &#34;auto&#34;. For PRIVATE_SERVICE_ACCESS mode value must be the name of an allocated address
+         * range associated with the private service access connection, or &#34;auto&#34;.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secondaryIpRange(String secondaryIpRange) {
+            return secondaryIpRange(Output.of(secondaryIpRange));
         }
 
         /**

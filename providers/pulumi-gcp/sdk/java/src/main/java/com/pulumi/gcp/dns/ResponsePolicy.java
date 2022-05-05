@@ -18,6 +18,43 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Dns Response Policy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network_1 = new Network(&#34;network-1&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_2 = new Network(&#34;network-2&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var example_response_policy = new ResponsePolicy(&#34;example-response-policy&#34;, ResponsePolicyArgs.builder()        
+ *             .responsePolicyName(&#34;example-response-policy&#34;)
+ *             .networks(            
+ *                 ResponsePolicyNetwork.builder()
+ *                     .networkUrl(network_1.getId())
+ *                     .build(),
+ *                 ResponsePolicyNetwork.builder()
+ *                     .networkUrl(network_2.getId())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

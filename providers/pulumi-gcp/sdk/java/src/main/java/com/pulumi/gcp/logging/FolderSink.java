@@ -25,6 +25,45 @@ import javax.annotation.Nullable;
  *     * [Exporting Logs](https://cloud.google.com/logging/docs/export)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var log_bucket = new Bucket(&#34;log-bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var my_folder = new Folder(&#34;my-folder&#34;, FolderArgs.builder()        
+ *             .displayName(&#34;My folder&#34;)
+ *             .parent(&#34;organizations/123456&#34;)
+ *             .build());
+ * 
+ *         var my_sink = new FolderSink(&#34;my-sink&#34;, FolderSinkArgs.builder()        
+ *             .description(&#34;some explanation on what this is&#34;)
+ *             .folder(my_folder.getName())
+ *             .destination(log_bucket.getName().apply(name -&gt; String.format(&#34;storage.googleapis.com/%s&#34;, name)))
+ *             .filter(&#34;resource.type = gce_instance AND severity &gt;= WARNING&#34;)
+ *             .build());
+ * 
+ *         var log_writer = new IAMBinding(&#34;log-writer&#34;, IAMBindingArgs.builder()        
+ *             .project(&#34;your-project-id&#34;)
+ *             .role(&#34;roles/storage.objectCreator&#34;)
+ *             .members(my_sink.getWriterIdentity())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -68,7 +107,23 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
     /**
      * The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
@@ -78,7 +133,23 @@ public class FolderSink extends com.pulumi.resources.CustomResource {
     /**
      * @return The destination of the sink (or, in other words, where logs are written to). Can be a
      * Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
+     * ```java
+     * package generated_program;
      * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */

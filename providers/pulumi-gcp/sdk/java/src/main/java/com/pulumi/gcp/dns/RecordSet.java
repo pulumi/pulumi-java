@@ -18,6 +18,179 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Binding a DNS name to the ephemeral IP of a new instance:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var frontendInstance = new Instance(&#34;frontendInstance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;g1-small&#34;)
+ *             .zone(&#34;us-central1-b&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;debian-cloud/debian-9&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .accessConfigs()
+ *                 .build())
+ *             .build());
+ * 
+ *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;prod.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         var frontendRecordSet = new RecordSet(&#34;frontendRecordSet&#34;, RecordSetArgs.builder()        
+ *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;frontend.%s&#34;, dnsName)))
+ *             .type(&#34;A&#34;)
+ *             .ttl(300)
+ *             .managedZone(prod.getName())
+ *             .rrdatas(frontendInstance.getNetworkInterfaces().apply(networkInterfaces -&gt; networkInterfaces[0].getAccessConfigs()[0].getNatIp()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Adding an A record
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;prod.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         var recordSet = new RecordSet(&#34;recordSet&#34;, RecordSetArgs.builder()        
+ *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;backend.%s&#34;, dnsName)))
+ *             .managedZone(prod.getName())
+ *             .type(&#34;A&#34;)
+ *             .ttl(300)
+ *             .rrdatas(&#34;8.8.8.8&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Adding an MX record
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;prod.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         var mx = new RecordSet(&#34;mx&#34;, RecordSetArgs.builder()        
+ *             .name(prod.getDnsName())
+ *             .managedZone(prod.getName())
+ *             .type(&#34;MX&#34;)
+ *             .ttl(3600)
+ *             .rrdatas(            
+ *                 &#34;1 aspmx.l.google.com.&#34;,
+ *                 &#34;5 alt1.aspmx.l.google.com.&#34;,
+ *                 &#34;5 alt2.aspmx.l.google.com.&#34;,
+ *                 &#34;10 alt3.aspmx.l.google.com.&#34;,
+ *                 &#34;10 alt4.aspmx.l.google.com.&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Adding an SPF record
+ * 
+ * Quotes (`&#34;&#34;`) must be added around your `rrdatas` for a SPF record. Otherwise `rrdatas` string gets split on spaces.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;prod.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         var spf = new RecordSet(&#34;spf&#34;, RecordSetArgs.builder()        
+ *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;frontend.%s&#34;, dnsName)))
+ *             .managedZone(prod.getName())
+ *             .type(&#34;TXT&#34;)
+ *             .ttl(300)
+ *             .rrdatas(&#34;\&#34;v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Adding a CNAME record
+ * 
+ *  The list of `rrdatas` should only contain a single string corresponding to the Canonical Name intended.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prod = new ManagedZone(&#34;prod&#34;, ManagedZoneArgs.builder()        
+ *             .dnsName(&#34;prod.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         var cname = new RecordSet(&#34;cname&#34;, RecordSetArgs.builder()        
+ *             .name(prod.getDnsName().apply(dnsName -&gt; String.format(&#34;frontend.%s&#34;, dnsName)))
+ *             .managedZone(prod.getName())
+ *             .type(&#34;CNAME&#34;)
+ *             .ttl(300)
+ *             .rrdatas(&#34;frontend.mydomain.com.&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,30 @@ import javax.annotation.Nullable;
  *     * [Managed Microsoft Active Directory Quickstart](https://cloud.google.com/managed-microsoft-ad/docs/quickstarts)
  * 
  * ## Example Usage
+ * ### Active Directory Domain Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ad_domain = new Domain(&#34;ad-domain&#34;, DomainArgs.builder()        
+ *             .domainName(&#34;tfgen.org.com&#34;)
+ *             .locations(&#34;us-central1&#34;)
+ *             .reservedIpRange(&#34;192.168.255.0/24&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

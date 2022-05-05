@@ -26,6 +26,31 @@ import javax.annotation.Nullable;
  * &gt; **Note:** If Shared VPC Admin role is set at the folder level, use the google-beta provider. The google provider only supports this permission at project or organizational level currently. [[0]](https://cloud.google.com/vpc/docs/provisioning-shared-vpc#enable-shared-vpc-host)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service1 = new SharedVPCServiceProject(&#34;service1&#34;, SharedVPCServiceProjectArgs.builder()        
+ *             .hostProject(&#34;host-project-id&#34;)
+ *             .serviceProject(&#34;service-project-id-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * For a complete Shared VPC example with both host and service projects, see
+ * [`gcp.compute.SharedVPCHostProject`](https://www.terraform.io/docs/providers/google/r/compute_shared_vpc_host_project.html).
  * 
  * ## Import
  * 

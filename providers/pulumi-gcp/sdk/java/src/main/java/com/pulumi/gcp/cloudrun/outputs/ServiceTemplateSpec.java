@@ -41,6 +41,7 @@ public final class ServiceTemplateSpec {
     private final @Nullable String serviceAccountName;
     /**
      * @return -
+     * (Deprecated)
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -112,6 +113,7 @@ public final class ServiceTemplateSpec {
     }
     /**
      * @return -
+     * (Deprecated)
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected

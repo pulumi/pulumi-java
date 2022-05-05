@@ -34,6 +34,35 @@ import javax.annotation.Nullable;
  *     * [Reserving zonal resources](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
  * 
  * ## Example Usage
+ * ### Reservation Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gceReservation = new Reservation(&#34;gceReservation&#34;, ReservationArgs.builder()        
+ *             .specificReservation(ReservationSpecificReservation.builder()
+ *                 .count(1)
+ *                 .instanceProperties(ReservationSpecificReservationInstanceProperties.builder()
+ *                     .machineType(&#34;n2-standard-2&#34;)
+ *                     .minCpuPlatform(&#34;Intel Cascade Lake&#34;)
+ *                     .build())
+ *                 .build())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

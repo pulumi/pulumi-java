@@ -22,6 +22,71 @@ import javax.annotation.Nullable;
  * The NetworkConnectivity Spoke resource
  * 
  * ## Example Usage
+ * ### Router_appliance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network = new Network(&#34;network&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var subnetwork = new Subnetwork(&#34;subnetwork&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/28&#34;)
+ *             .region(&#34;us-west1&#34;)
+ *             .network(network.getSelfLink())
+ *             .build());
+ * 
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .canIpForward(true)
+ *             .zone(&#34;us-west1-a&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(&#34;projects/debian-cloud/global/images/debian-10-buster-v20210817&#34;)
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .subnetwork(subnetwork.getName())
+ *                 .networkIp(&#34;10.0.0.2&#34;)
+ *                 .accessConfigs(InstanceNetworkInterfaceAccessConfig.builder()
+ *                     .networkTier(&#34;PREMIUM&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var basicHub = new Hub(&#34;basicHub&#34;, HubArgs.builder()        
+ *             .description(&#34;A sample hub&#34;)
+ *             .labels(Map.of(&#34;label-two&#34;, &#34;value-one&#34;))
+ *             .build());
+ * 
+ *         var primary = new Spoke(&#34;primary&#34;, SpokeArgs.builder()        
+ *             .location(&#34;us-west1&#34;)
+ *             .description(&#34;A sample spoke with a linked routher appliance instance&#34;)
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .hub(basicHub.getId())
+ *             .linkedRouterApplianceInstances(SpokeLinkedRouterApplianceInstances.builder()
+ *                 .instances(SpokeLinkedRouterApplianceInstancesInstance.builder()
+ *                     .virtualMachine(instance.getSelfLink())
+ *                     .ipAddress(&#34;10.0.0.2&#34;)
+ *                     .build())
+ *                 .siteToSiteDataTransfer(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

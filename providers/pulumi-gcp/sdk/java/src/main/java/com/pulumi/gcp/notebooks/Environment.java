@@ -26,6 +26,31 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
  * 
  * ## Example Usage
+ * ### Notebook Environment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var environment = new Environment(&#34;environment&#34;, EnvironmentArgs.builder()        
+ *             .containerImage(EnvironmentContainerImage.builder()
+ *                 .repository(&#34;gcr.io/deeplearning-platform-release/base-cpu&#34;)
+ *                 .build())
+ *             .location(&#34;us-west1-a&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

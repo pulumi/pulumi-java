@@ -27,6 +27,76 @@ import javax.annotation.Nullable;
  *     * [Registering a Cluster](https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster#register_cluster)
  * 
  * ## Example Usage
+ * ### Gkehub Membership Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .initialNodeCount(1)
+ *             .location(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var membership = new Membership(&#34;membership&#34;, MembershipArgs.builder()        
+ *             .endpoint(MembershipEndpoint.builder()
+ *                 .gkeCluster(MembershipEndpointGkeCluster.builder()
+ *                     .resourceLink(primary.getId().apply(id -&gt; String.format(&#34;//container.googleapis.com/%s&#34;, id)))
+ *                     .build())
+ *                 .build())
+ *             .membershipId(&#34;basic&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Gkehub Membership Issuer
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Cluster(&#34;primary&#34;, ClusterArgs.builder()        
+ *             .location(&#34;us-central1-a&#34;)
+ *             .initialNodeCount(1)
+ *             .workloadIdentityConfig(ClusterWorkloadIdentityConfig.builder()
+ *                 .workloadPool(&#34;my-project-name.svc.id.goog&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var membership = new Membership(&#34;membership&#34;, MembershipArgs.builder()        
+ *             .membershipId(&#34;basic&#34;)
+ *             .endpoint(MembershipEndpoint.builder()
+ *                 .gkeCluster(MembershipEndpointGkeCluster.builder()
+ *                     .resourceLink(primary.getId())
+ *                     .build())
+ *                 .build())
+ *             .authority(MembershipAuthority.builder()
+ *                 .issuer(primary.getId().apply(id -&gt; String.format(&#34;https://container.googleapis.com/v1/%s&#34;, id)))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

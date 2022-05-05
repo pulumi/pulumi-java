@@ -29,6 +29,115 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
  * 
  * ## Example Usage
+ * ### Logging Metric Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loggingMetric = new Metric(&#34;loggingMetric&#34;, MetricArgs.builder()        
+ *             .bucketOptions(MetricBucketOptions.builder()
+ *                 .linearBuckets(MetricBucketOptionsLinearBuckets.builder()
+ *                     .numFiniteBuckets(3)
+ *                     .offset(1)
+ *                     .width(1)
+ *                     .build())
+ *                 .build())
+ *             .filter(&#34;resource.type=gae_app AND severity&gt;=ERROR&#34;)
+ *             .labelExtractors(Map.ofEntries(
+ *                 Map.entry(&#34;mass&#34;, &#34;EXTRACT(jsonPayload.request)&#34;),
+ *                 Map.entry(&#34;sku&#34;, &#34;EXTRACT(jsonPayload.id)&#34;)
+ *             ))
+ *             .metricDescriptor(MetricMetricDescriptor.builder()
+ *                 .displayName(&#34;My metric&#34;)
+ *                 .labels(                
+ *                     MetricMetricDescriptorLabel.builder()
+ *                         .description(&#34;amount of matter&#34;)
+ *                         .key(&#34;mass&#34;)
+ *                         .valueType(&#34;STRING&#34;)
+ *                         .build(),
+ *                     MetricMetricDescriptorLabel.builder()
+ *                         .description(&#34;Identifying number for item&#34;)
+ *                         .key(&#34;sku&#34;)
+ *                         .valueType(&#34;INT64&#34;)
+ *                         .build())
+ *                 .metricKind(&#34;DELTA&#34;)
+ *                 .unit(&#34;1&#34;)
+ *                 .valueType(&#34;DISTRIBUTION&#34;)
+ *                 .build())
+ *             .valueExtractor(&#34;EXTRACT(jsonPayload.request)&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging Metric Counter Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loggingMetric = new Metric(&#34;loggingMetric&#34;, MetricArgs.builder()        
+ *             .filter(&#34;resource.type=gae_app AND severity&gt;=ERROR&#34;)
+ *             .metricDescriptor(MetricMetricDescriptor.builder()
+ *                 .metricKind(&#34;DELTA&#34;)
+ *                 .valueType(&#34;INT64&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Logging Metric Counter Labels
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var loggingMetric = new Metric(&#34;loggingMetric&#34;, MetricArgs.builder()        
+ *             .filter(&#34;resource.type=gae_app AND severity&gt;=ERROR&#34;)
+ *             .labelExtractors(Map.of(&#34;mass&#34;, &#34;EXTRACT(jsonPayload.request)&#34;))
+ *             .metricDescriptor(MetricMetricDescriptor.builder()
+ *                 .labels(MetricMetricDescriptorLabel.builder()
+ *                     .description(&#34;amount of matter&#34;)
+ *                     .key(&#34;mass&#34;)
+ *                     .valueType(&#34;STRING&#34;)
+ *                     .build())
+ *                 .metricKind(&#34;DELTA&#34;)
+ *                 .valueType(&#34;INT64&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

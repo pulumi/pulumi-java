@@ -28,6 +28,153 @@ import javax.annotation.Nullable;
  *     * [Managing workload identity providers](https://cloud.google.com/iam/docs/manage-workload-identity-pools-providers#managing_workload_identity_providers)
  * 
  * ## Example Usage
+ * ### Iam Workload Identity Pool Provider Aws Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new WorkloadIdentityPool(&#34;pool&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .build());
+ * 
+ *         var example = new WorkloadIdentityPoolProvider(&#34;example&#34;, WorkloadIdentityPoolProviderArgs.builder()        
+ *             .workloadIdentityPoolId(pool.getWorkloadIdentityPoolId())
+ *             .workloadIdentityPoolProviderId(&#34;example-prvdr&#34;)
+ *             .aws(WorkloadIdentityPoolProviderAws.builder()
+ *                 .accountId(&#34;999999999999&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Iam Workload Identity Pool Provider Aws Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new WorkloadIdentityPool(&#34;pool&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .build());
+ * 
+ *         var example = new WorkloadIdentityPoolProvider(&#34;example&#34;, WorkloadIdentityPoolProviderArgs.builder()        
+ *             .workloadIdentityPoolId(pool.getWorkloadIdentityPoolId())
+ *             .workloadIdentityPoolProviderId(&#34;example-prvdr&#34;)
+ *             .displayName(&#34;Name of provider&#34;)
+ *             .description(&#34;AWS identity pool provider for automated test&#34;)
+ *             .disabled(true)
+ *             .attributeCondition(&#34;attribute.aws_role==\&#34;arn:aws:sts::999999999999:assumed-role/stack-eu-central-1-lambdaRole\&#34;&#34;)
+ *             .attributeMapping(Map.ofEntries(
+ *                 Map.entry(&#34;google.subject&#34;, &#34;assertion.arn&#34;),
+ *                 Map.entry(&#34;attribute.aws_account&#34;, &#34;assertion.account&#34;),
+ *                 Map.entry(&#34;attribute.environment&#34;, &#34;assertion.arn.contains(\&#34;:instance-profile/Production\&#34;) ? \&#34;prod\&#34; : \&#34;test\&#34;&#34;)
+ *             ))
+ *             .aws(WorkloadIdentityPoolProviderAws.builder()
+ *                 .accountId(&#34;999999999999&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Iam Workload Identity Pool Provider Oidc Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new WorkloadIdentityPool(&#34;pool&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .build());
+ * 
+ *         var example = new WorkloadIdentityPoolProvider(&#34;example&#34;, WorkloadIdentityPoolProviderArgs.builder()        
+ *             .workloadIdentityPoolId(pool.getWorkloadIdentityPoolId())
+ *             .workloadIdentityPoolProviderId(&#34;example-prvdr&#34;)
+ *             .attributeMapping(Map.of(&#34;google.subject&#34;, &#34;assertion.sub&#34;))
+ *             .oidc(WorkloadIdentityPoolProviderOidc.builder()
+ *                 .issuerUri(&#34;https://sts.windows.net/azure-tenant-id&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Iam Workload Identity Pool Provider Oidc Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new WorkloadIdentityPool(&#34;pool&#34;, WorkloadIdentityPoolArgs.builder()        
+ *             .workloadIdentityPoolId(&#34;example-pool&#34;)
+ *             .build());
+ * 
+ *         var example = new WorkloadIdentityPoolProvider(&#34;example&#34;, WorkloadIdentityPoolProviderArgs.builder()        
+ *             .workloadIdentityPoolId(pool.getWorkloadIdentityPoolId())
+ *             .workloadIdentityPoolProviderId(&#34;example-prvdr&#34;)
+ *             .displayName(&#34;Name of provider&#34;)
+ *             .description(&#34;OIDC identity pool provider for automated test&#34;)
+ *             .disabled(true)
+ *             .attributeCondition(&#34;\&#34;e968c2ef-047c-498d-8d79-16ca1b61e77e\&#34; in assertion.groups&#34;)
+ *             .attributeMapping(Map.ofEntries(
+ *                 Map.entry(&#34;google.subject&#34;, &#34;\&#34;azure::\&#34; + assertion.tid + \&#34;::\&#34; + assertion.sub&#34;),
+ *                 Map.entry(&#34;attribute.tid&#34;, &#34;assertion.tid&#34;),
+ *                 Map.entry(&#34;attribute.managed_identity_name&#34;, &#34;&#34;&#34;
+ *       {
+ *         &#34;8bb39bdb-1cc5-4447-b7db-a19e920eb111&#34;:&#34;workload1&#34;,
+ *         &#34;55d36609-9bcf-48e0-a366-a3cf19027d2a&#34;:&#34;workload2&#34;
+ *       }[assertion.oid]
+ *                 &#34;&#34;&#34;)
+ *             ))
+ *             .oidc(WorkloadIdentityPoolProviderOidc.builder()
+ *                 .allowedAudiences(                
+ *                     &#34;https://example.com/gcp-oidc-federation&#34;,
+ *                     &#34;example.com/gcp-oidc-federation&#34;)
+ *                 .issuerUri(&#34;https://sts.windows.net/azure-tenant-id&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
@@ -61,6 +208,23 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   unspecified, all valid authentication credential are accepted.
      *   The following example shows how to only allow credentials with a mapped `google.groups`
      *   value of `admins`:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     @Export(name="attributeCondition", type=String.class, parameters={})
@@ -79,6 +243,23 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   unspecified, all valid authentication credential are accepted.
      *   The following example shows how to only allow credentials with a mapped `google.groups`
      *   value of `admins`:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public Output<Optional<String>> attributeCondition() {
@@ -116,12 +297,46 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   the total size of all mapped attributes must not exceed 8KB.
      *   For AWS providers, the following rules apply:
      * - If no attribute mapping is defined, the following default mapping applies:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * - If any custom attribute mappings are defined, they must include a mapping to the
      *   `google.subject` attribute.
      *   For OIDC providers, the following rules apply:
      * - Custom attribute mappings must be defined, and must include a mapping to the
      *   `google.subject` attribute. For example, the following maps the `sub` claim of the
      *   incoming credential to the `subject` attribute on a Google token.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     @Export(name="attributeMapping", type=Map.class, parameters={String.class, String.class})
@@ -159,12 +374,46 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   the total size of all mapped attributes must not exceed 8KB.
      *   For AWS providers, the following rules apply:
      * - If no attribute mapping is defined, the following default mapping applies:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * - If any custom attribute mappings are defined, they must include a mapping to the
      *   `google.subject` attribute.
      *   For OIDC providers, the following rules apply:
      * - Custom attribute mappings must be defined, and must include a mapping to the
      *   `google.subject` attribute. For example, the following maps the `sub` claim of the
      *   incoming credential to the `subject` attribute on a Google token.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public Output<Optional<Map<String,String>>> attributeMapping() {

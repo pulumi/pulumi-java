@@ -35,6 +35,128 @@ import javax.annotation.Nullable;
  * by using the `gcp.projects.ServiceIdentity` resource.
  * 
  * ## Example Usage
+ * ### Pubsub Subscription Push
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;);
+ * 
+ *         var exampleSubscription = new Subscription(&#34;exampleSubscription&#34;, SubscriptionArgs.builder()        
+ *             .topic(exampleTopic.getName())
+ *             .ackDeadlineSeconds(20)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .pushConfig(SubscriptionPushConfig.builder()
+ *                 .pushEndpoint(&#34;https://example.com/push&#34;)
+ *                 .attributes(Map.of(&#34;x-goog-version&#34;, &#34;v1&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Subscription Pull
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;);
+ * 
+ *         var exampleSubscription = new Subscription(&#34;exampleSubscription&#34;, SubscriptionArgs.builder()        
+ *             .topic(exampleTopic.getName())
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .messageRetentionDuration(&#34;1200s&#34;)
+ *             .retainAckedMessages(true)
+ *             .ackDeadlineSeconds(20)
+ *             .expirationPolicy(SubscriptionExpirationPolicy.builder()
+ *                 .ttl(&#34;300000.5s&#34;)
+ *                 .build())
+ *             .retryPolicy(SubscriptionRetryPolicy.builder()
+ *                 .minimumBackoff(&#34;10s&#34;)
+ *                 .build())
+ *             .enableMessageOrdering(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Subscription Different Project
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;, TopicArgs.builder()        
+ *             .project(&#34;topic-project&#34;)
+ *             .build());
+ * 
+ *         var exampleSubscription = new Subscription(&#34;exampleSubscription&#34;, SubscriptionArgs.builder()        
+ *             .project(&#34;subscription-project&#34;)
+ *             .topic(exampleTopic.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Subscription Dead Letter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;);
+ * 
+ *         var exampleDeadLetter = new Topic(&#34;exampleDeadLetter&#34;);
+ * 
+ *         var exampleSubscription = new Subscription(&#34;exampleSubscription&#34;, SubscriptionArgs.builder()        
+ *             .topic(exampleTopic.getName())
+ *             .deadLetterPolicy(SubscriptionDeadLetterPolicy.builder()
+ *                 .deadLetterTopic(exampleDeadLetter.getId())
+ *                 .maxDeliveryAttempts(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

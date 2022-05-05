@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.RegionBackendServiceFailoverPolicyArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceIapArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionArgs;
+import com.pulumi.gcp.compute.inputs.RegionBackendServiceSubsettingArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -511,6 +512,23 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+     * and Internal HTTP(S) load balancing.
+     * 
+     */
+    @Import(name="subsetting")
+    private @Nullable Output<RegionBackendServiceSubsettingArgs> subsetting;
+
+    /**
+     * @return Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+     * and Internal HTTP(S) load balancing.
+     * 
+     */
+    public Optional<Output<RegionBackendServiceSubsettingArgs>> subsetting() {
+        return Optional.ofNullable(this.subsetting);
+    }
+
+    /**
      * How many seconds to wait for the backend before considering it a
      * failed request. Default is 30 seconds. Valid range is [1, 86400].
      * 
@@ -553,6 +571,7 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
         this.protocol = $.protocol;
         this.region = $.region;
         this.sessionAffinity = $.sessionAffinity;
+        this.subsetting = $.subsetting;
         this.timeoutSec = $.timeoutSec;
     }
 
@@ -1204,6 +1223,29 @@ public final class RegionBackendServiceArgs extends com.pulumi.resources.Resourc
          */
         public Builder sessionAffinity(String sessionAffinity) {
             return sessionAffinity(Output.of(sessionAffinity));
+        }
+
+        /**
+         * @param subsetting Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+         * and Internal HTTP(S) load balancing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subsetting(@Nullable Output<RegionBackendServiceSubsettingArgs> subsetting) {
+            $.subsetting = subsetting;
+            return this;
+        }
+
+        /**
+         * @param subsetting Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing
+         * and Internal HTTP(S) load balancing.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder subsetting(RegionBackendServiceSubsettingArgs subsetting) {
+            return subsetting(Output.of(subsetting));
         }
 
         /**

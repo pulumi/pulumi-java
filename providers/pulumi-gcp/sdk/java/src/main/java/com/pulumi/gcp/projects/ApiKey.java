@@ -19,6 +19,190 @@ import javax.annotation.Nullable;
  * The Apikeys Key resource
  * 
  * ## Example Usage
+ * ### Android_key
+ * A basic example of a android api keys key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;app&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var primary = new ApiKey(&#34;primary&#34;, ApiKeyArgs.builder()        
+ *             .displayName(&#34;sample-key&#34;)
+ *             .project(basic.getName())
+ *             .restrictions(ApiKeyRestrictions.builder()
+ *                 .androidKeyRestrictions(ApiKeyRestrictionsAndroidKeyRestrictions.builder()
+ *                     .allowedApplications(ApiKeyRestrictionsAndroidKeyRestrictionsAllowedApplication.builder()
+ *                         .packageName(&#34;com.example.app123&#34;)
+ *                         .sha1Fingerprint(&#34;1699466a142d4682a5f91b50fdf400f2358e2b0b&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .apiTargets(ApiKeyRestrictionsApiTarget.builder()
+ *                     .service(&#34;translate.googleapis.com&#34;)
+ *                     .methods(&#34;GET*&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic_key
+ * A basic example of a api keys key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;app&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var primary = new ApiKey(&#34;primary&#34;, ApiKeyArgs.builder()        
+ *             .displayName(&#34;sample-key&#34;)
+ *             .project(basic.getName())
+ *             .restrictions(ApiKeyRestrictions.builder()
+ *                 .apiTargets(ApiKeyRestrictionsApiTarget.builder()
+ *                     .service(&#34;translate.googleapis.com&#34;)
+ *                     .methods(&#34;GET*&#34;)
+ *                     .build())
+ *                 .browserKeyRestrictions(ApiKeyRestrictionsBrowserKeyRestrictions.builder()
+ *                     .allowedReferrers(&#34;.*&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ios_key
+ * A basic example of a ios api keys key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;app&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var primary = new ApiKey(&#34;primary&#34;, ApiKeyArgs.builder()        
+ *             .displayName(&#34;sample-key&#34;)
+ *             .project(basic.getName())
+ *             .restrictions(ApiKeyRestrictions.builder()
+ *                 .apiTargets(ApiKeyRestrictionsApiTarget.builder()
+ *                     .service(&#34;translate.googleapis.com&#34;)
+ *                     .methods(&#34;GET*&#34;)
+ *                     .build())
+ *                 .iosKeyRestrictions(ApiKeyRestrictionsIosKeyRestrictions.builder()
+ *                     .allowedBundleIds(&#34;com.google.app.macos&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Minimal_key
+ * A minimal example of a api keys key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;app&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var primary = new ApiKey(&#34;primary&#34;, ApiKeyArgs.builder()        
+ *             .displayName(&#34;sample-key&#34;)
+ *             .project(basic.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Server_key
+ * A basic example of a server api keys key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Project(&#34;basic&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;app&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         var primary = new ApiKey(&#34;primary&#34;, ApiKeyArgs.builder()        
+ *             .displayName(&#34;sample-key&#34;)
+ *             .project(basic.getName())
+ *             .restrictions(ApiKeyRestrictions.builder()
+ *                 .apiTargets(ApiKeyRestrictionsApiTarget.builder()
+ *                     .service(&#34;translate.googleapis.com&#34;)
+ *                     .methods(&#34;GET*&#34;)
+ *                     .build())
+ *                 .serverKeyRestrictions(ApiKeyRestrictionsServerKeyRestrictions.builder()
+ *                     .allowedIps(&#34;127.0.0.1&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

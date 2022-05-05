@@ -43,6 +43,57 @@ import javax.annotation.Nullable;
  *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
  * 
  * ## Example Usage
+ * ### Notification Channel Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new NotificationChannel(&#34;basic&#34;, NotificationChannelArgs.builder()        
+ *             .displayName(&#34;Test Notification Channel&#34;)
+ *             .labels(Map.of(&#34;email_address&#34;, &#34;fake_email@blahblah.com&#34;))
+ *             .type(&#34;email&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notification Channel Sensitive
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new NotificationChannel(&#34;default&#34;, NotificationChannelArgs.builder()        
+ *             .displayName(&#34;Test Slack Channel&#34;)
+ *             .labels(Map.of(&#34;channel_name&#34;, &#34;#foobar&#34;))
+ *             .sensitiveLabels(NotificationChannelSensitiveLabels.builder()
+ *                 .authToken(&#34;one&#34;)
+ *                 .build())
+ *             .type(&#34;slack&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

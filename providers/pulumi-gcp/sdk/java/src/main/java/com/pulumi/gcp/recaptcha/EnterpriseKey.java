@@ -23,6 +23,168 @@ import javax.annotation.Nullable;
  * The RecaptchaEnterprise Key resource
  * 
  * ## Example Usage
+ * ### Android_key
+ * A basic test of recaptcha enterprise key that can be used by Android apps
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new EnterpriseKey(&#34;primary&#34;, EnterpriseKeyArgs.builder()        
+ *             .androidSettings(EnterpriseKeyAndroidSettings.builder()
+ *                 .allowAllPackageNames(true)
+ *                 .allowedPackageNames()
+ *                 .build())
+ *             .displayName(&#34;display-name-one&#34;)
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .testingOptions(EnterpriseKeyTestingOptions.builder()
+ *                 .testingScore(0.8)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ios_key
+ * A basic test of recaptcha enterprise key that can be used by iOS apps
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new EnterpriseKey(&#34;primary&#34;, EnterpriseKeyArgs.builder()        
+ *             .displayName(&#34;display-name-one&#34;)
+ *             .iosSettings(EnterpriseKeyIosSettings.builder()
+ *                 .allowAllBundleIds(true)
+ *                 .allowedBundleIds()
+ *                 .build())
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .testingOptions(EnterpriseKeyTestingOptions.builder()
+ *                 .testingScore(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Minimal_key
+ * A minimal test of recaptcha enterprise key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new EnterpriseKey(&#34;primary&#34;, EnterpriseKeyArgs.builder()        
+ *             .displayName(&#34;display-name-one&#34;)
+ *             .labels()
+ *             .project(&#34;my-project-name&#34;)
+ *             .webSettings(EnterpriseKeyWebSettings.builder()
+ *                 .allowAllDomains(true)
+ *                 .integrationType(&#34;SCORE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Web_key
+ * A basic test of recaptcha enterprise key that can be used by websites
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new EnterpriseKey(&#34;primary&#34;, EnterpriseKeyArgs.builder()        
+ *             .displayName(&#34;display-name-one&#34;)
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .testingOptions(EnterpriseKeyTestingOptions.builder()
+ *                 .testingChallenge(&#34;NOCAPTCHA&#34;)
+ *                 .testingScore(0.5)
+ *                 .build())
+ *             .webSettings(EnterpriseKeyWebSettings.builder()
+ *                 .allowAllDomains(true)
+ *                 .allowedDomains()
+ *                 .challengeSecurityPreference(&#34;USABILITY&#34;)
+ *                 .integrationType(&#34;CHECKBOX&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Web_score_key
+ * A basic test of recaptcha enterprise key with score integration type that can be used by websites
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new EnterpriseKey(&#34;primary&#34;, EnterpriseKeyArgs.builder()        
+ *             .displayName(&#34;display-name-one&#34;)
+ *             .labels(Map.of(&#34;label-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .testingOptions(EnterpriseKeyTestingOptions.builder()
+ *                 .testingScore(0.5)
+ *                 .build())
+ *             .webSettings(EnterpriseKeyWebSettings.builder()
+ *                 .allowAllDomains(true)
+ *                 .allowAmpTraffic(false)
+ *                 .allowedDomains()
+ *                 .integrationType(&#34;SCORE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

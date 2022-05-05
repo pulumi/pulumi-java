@@ -43,6 +43,43 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
  * 
  * ## Example Usage
+ * ### Snapshot Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var debian = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var persistent = new Disk(&#34;persistent&#34;, DiskArgs.builder()        
+ *             .image(debian.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *             .size(10)
+ *             .type(&#34;pd-ssd&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .build());
+ * 
+ *         var snapshot = new Snapshot(&#34;snapshot&#34;, SnapshotArgs.builder()        
+ *             .sourceDisk(persistent.getId())
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .labels(Map.of(&#34;my_label&#34;, &#34;value&#34;))
+ *             .storageLocations(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,81 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/spanner/)
  * 
  * ## Example Usage
+ * ### Spanner Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+ *             .config(&#34;regional-us-central1&#34;)
+ *             .displayName(&#34;Test Spanner Instance&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .numNodes(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Spanner Instance Processing Units
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+ *             .config(&#34;regional-us-central1&#34;)
+ *             .displayName(&#34;Test Spanner Instance&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .processingUnits(200)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Spanner Instance Multi Regional
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Instance(&#34;example&#34;, InstanceArgs.builder()        
+ *             .config(&#34;nam-eur-asia1&#34;)
+ *             .displayName(&#34;Multi Regional Instance&#34;)
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .numNodes(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,10 +29,11 @@ public final class DatabaseInstanceSettings {
     private final @Nullable String activationPolicy;
     /**
      * @return The availability type of the Cloud SQL
-     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-     * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-     * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-     * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+     * `settings.backup_configuration.enabled` is set to `true`.
+     * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+     * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+     * is set to `true`.
      * 
      */
     private final @Nullable String availabilityType;
@@ -130,10 +131,11 @@ public final class DatabaseInstanceSettings {
     }
     /**
      * @return The availability type of the Cloud SQL
-     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For MySQL and SQL Server instances,
-     * ensure that `settings.backup_configuration.enabled` and `settings.backup_configuration.binary_log_enabled`
-     * are both set to `true`. For Postgres instances, ensure that `settings.backup_configuration.enabled`
-     * and `settings.backup_configuration.point_in_time_recovery_enabled` are both set to `true`.
+     * instance, high availability (`REGIONAL`) or single zone (`ZONAL`).&#39; For all instances, ensure that
+     * `settings.backup_configuration.enabled` is set to `true`.
+     * For MySQL instances, ensure that `settings.backup_configuration.binary_log_enabled` is set to `true`.
+     * For Postgres instances, ensure that `settings.backup_configuration.point_in_time_recovery_enabled`
+     * is set to `true`.
      * 
      */
     public Optional<String> availabilityType() {

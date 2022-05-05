@@ -26,6 +26,92 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
  * 
  * ## Example Usage
+ * ### Region Target Http Proxy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultRegionHealthCheck = new RegionHealthCheck(&#34;defaultRegionHealthCheck&#34;, RegionHealthCheckArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .httpHealthCheck(RegionHealthCheckHttpHealthCheck.builder()
+ *                 .port(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionBackendService = new RegionBackendService(&#34;defaultRegionBackendService&#34;, RegionBackendServiceArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .loadBalancingScheme(&#34;INTERNAL_MANAGED&#34;)
+ *             .healthChecks(defaultRegionHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultRegionUrlMap = new RegionUrlMap(&#34;defaultRegionUrlMap&#34;, RegionUrlMapArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .defaultService(defaultRegionBackendService.getId())
+ *             .hostRules(RegionUrlMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(RegionUrlMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultRegionBackendService.getId())
+ *                 .pathRules(RegionUrlMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultRegionBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionTargetHttpProxy = new RegionTargetHttpProxy(&#34;defaultRegionTargetHttpProxy&#34;, RegionTargetHttpProxyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .urlMap(defaultRegionUrlMap.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Region Target Http Proxy Https Redirect
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultRegionUrlMap = new RegionUrlMap(&#34;defaultRegionUrlMap&#34;, RegionUrlMapArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .defaultUrlRedirect(RegionUrlMapDefaultUrlRedirect.builder()
+ *                 .httpsRedirect(true)
+ *                 .stripQuery(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultRegionTargetHttpProxy = new RegionTargetHttpProxy(&#34;defaultRegionTargetHttpProxy&#34;, RegionTargetHttpProxyArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .urlMap(defaultRegionUrlMap.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

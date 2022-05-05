@@ -35,6 +35,47 @@ import javax.annotation.Nullable;
  * making this resource dependent on those IAM resources via `depends_on`. This will safeguard against errors due to IAM race conditions.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var gcsAccount = Output.of(StorageFunctions.getProjectServiceAccount());
+ * 
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var binding = new TopicIAMBinding(&#34;binding&#34;, TopicIAMBindingArgs.builder()        
+ *             .topic(topic.getId())
+ *             .role(&#34;roles/pubsub.publisher&#34;)
+ *             .members(String.format(&#34;serviceAccount:%s&#34;, gcsAccount.apply(getProjectServiceAccountResult -&gt; getProjectServiceAccountResult.getEmailAddress())))
+ *             .build());
+ * 
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var notification = new Notification(&#34;notification&#34;, NotificationArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .payloadFormat(&#34;JSON_API_V1&#34;)
+ *             .topic(topic.getId())
+ *             .eventTypes(            
+ *                 &#34;OBJECT_FINALIZE&#34;,
+ *                 &#34;OBJECT_METADATA_UPDATE&#34;)
+ *             .customAttributes(Map.of(&#34;new-attribute&#34;, &#34;new-attribute-value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

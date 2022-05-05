@@ -18,6 +18,35 @@ import javax.annotation.Nullable;
  * A Lien represents an encumbrance on the actions that can be performed on a resource.
  * 
  * ## Example Usage
+ * ### Resource Manager Lien
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Project(&#34;project&#34;, ProjectArgs.builder()        
+ *             .projectId(&#34;staging-project&#34;)
+ *             .build());
+ * 
+ *         var lien = new Lien(&#34;lien&#34;, LienArgs.builder()        
+ *             .origin(&#34;machine-readable-explanation&#34;)
+ *             .parent(project.getNumber().apply(number -&gt; String.format(&#34;projects/%s&#34;, number)))
+ *             .reason(&#34;This project is an important environment&#34;)
+ *             .restrictions(&#34;resourcemanager.projects.delete&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

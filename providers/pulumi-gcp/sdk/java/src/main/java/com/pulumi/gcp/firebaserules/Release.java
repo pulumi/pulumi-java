@@ -18,6 +18,86 @@ import javax.annotation.Nullable;
  * The Firebaserules Release resource
  * 
  * ## Example Usage
+ * ### Basic_release
+ * Creates a basic Firebase Rules Release
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new Ruleset(&#34;basic&#34;, RulesetArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .source(RulesetSource.builder()
+ *                 .files(RulesetSourceFile.builder()
+ *                     .content(&#34;service cloud.firestore {match /databases/{database}/documents { match /{document=**} { allow read, write: if false; } } }&#34;)
+ *                     .fingerprint(&#34;&#34;)
+ *                     .name(&#34;firestore.rules&#34;)
+ *                     .build())
+ *                 .language(&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var primary = new Release(&#34;primary&#34;, ReleaseArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .rulesetName(basic.getName().apply(name -&gt; String.format(&#34;projects/my-project-name/rulesets/%s&#34;, name)))
+ *             .build());
+ * 
+ *         var minimal = new Ruleset(&#34;minimal&#34;, RulesetArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .source(RulesetSource.builder()
+ *                 .files(RulesetSourceFile.builder()
+ *                     .content(&#34;service cloud.firestore {match /databases/{database}/documents { match /{document=**} { allow read, write: if false; } } }&#34;)
+ *                     .name(&#34;firestore.rules&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Minimal_release
+ * Creates a minimal Firebase Rules Release
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var minimal = new Ruleset(&#34;minimal&#34;, RulesetArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .source(RulesetSource.builder()
+ *                 .files(RulesetSourceFile.builder()
+ *                     .content(&#34;service cloud.firestore {match /databases/{database}/documents { match /{document=**} { allow read, write: if false; } } }&#34;)
+ *                     .name(&#34;firestore.rules&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var primary = new Release(&#34;primary&#34;, ReleaseArgs.builder()        
+ *             .project(&#34;my-project-name&#34;)
+ *             .rulesetName(minimal.getName().apply(name -&gt; String.format(&#34;projects/my-project-name/rulesets/%s&#34;, name)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

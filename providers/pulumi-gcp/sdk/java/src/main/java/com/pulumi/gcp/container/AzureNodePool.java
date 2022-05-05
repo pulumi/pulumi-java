@@ -25,6 +25,91 @@ import javax.annotation.Nullable;
  * For more information, see:
  * * [Multicloud overview](https://cloud.google.com/anthos/clusters/docs/multi-cloud)
  * ## Example Usage
+ * ### Basic_azure_node_pool
+ * A basic example of a containerazure azure node pool
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var versions = Output.of(ContainerFunctions.getAzureVersions(GetAzureVersionsArgs.builder()
+ *             .project(&#34;my-project-name&#34;)
+ *             .location(&#34;us-west1&#34;)
+ *             .build()));
+ * 
+ *         var basic = new AzureClient(&#34;basic&#34;, AzureClientArgs.builder()        
+ *             .applicationId(&#34;12345678-1234-1234-1234-123456789111&#34;)
+ *             .location(&#34;us-west1&#34;)
+ *             .tenantId(&#34;12345678-1234-1234-1234-123456789111&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         var primaryAzureCluster = new AzureCluster(&#34;primaryAzureCluster&#34;, AzureClusterArgs.builder()        
+ *             .authorization(AzureClusterAuthorization.builder()
+ *                 .adminUsers(AzureClusterAuthorizationAdminUser.builder()
+ *                     .username(&#34;mmv2@google.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .azureRegion(&#34;westus2&#34;)
+ *             .client(basic.getName().apply(name -&gt; String.format(&#34;projects/my-project-number/locations/us-west1/azureClients/%s&#34;, name)))
+ *             .controlPlane(AzureClusterControlPlane.builder()
+ *                 .sshConfig(AzureClusterControlPlaneSshConfig.builder()
+ *                     .authorizedKey(&#34;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers&#34;)
+ *                     .build())
+ *                 .subnetId(&#34;/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default&#34;)
+ *                 .version(versions.apply(getAzureVersionsResult -&gt; getAzureVersionsResult.getValidVersions()[0]))
+ *                 .build())
+ *             .fleet(AzureClusterFleet.builder()
+ *                 .project(&#34;my-project-number&#34;)
+ *                 .build())
+ *             .location(&#34;us-west1&#34;)
+ *             .networking(AzureClusterNetworking.builder()
+ *                 .podAddressCidrBlocks(&#34;10.200.0.0/16&#34;)
+ *                 .serviceAddressCidrBlocks(&#34;10.32.0.0/24&#34;)
+ *                 .virtualNetworkId(&#34;/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet&#34;)
+ *                 .build())
+ *             .resourceGroupId(&#34;/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-cluster&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         var primaryAzureNodePool = new AzureNodePool(&#34;primaryAzureNodePool&#34;, AzureNodePoolArgs.builder()        
+ *             .autoscaling(AzureNodePoolAutoscaling.builder()
+ *                 .maxNodeCount(3)
+ *                 .minNodeCount(2)
+ *                 .build())
+ *             .cluster(primaryAzureCluster.getName())
+ *             .config(AzureNodePoolConfig.builder()
+ *                 .sshConfig(AzureNodePoolConfigSshConfig.builder()
+ *                     .authorizedKey(&#34;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC8yaayO6lnb2v+SedxUMa2c8vtIEzCzBjM3EJJsv8Vm9zUDWR7dXWKoNGARUb2mNGXASvI6mFIDXTIlkQ0poDEPpMaXR0g2cb5xT8jAAJq7fqXL3+0rcJhY/uigQ+MrT6s+ub0BFVbsmGHNrMQttXX9gtmwkeAEvj3mra9e5pkNf90qlKnZz6U0SVArxVsLx07vHPHDIYrl0OPG4zUREF52igbBPiNrHJFDQJT/4YlDMJmo/QT/A1D6n9ocemvZSzhRx15/Arjowhr+VVKSbaxzPtEfY0oIg2SrqJnnr/l3Du5qIefwh5VmCZe4xopPUaDDoOIEFriZ88sB+3zz8ib8sk8zJJQCgeP78tQvXCgS+4e5W3TUg9mxjB6KjXTyHIVhDZqhqde0OI3Fy1UuVzRUwnBaLjBnAwP5EoFQGRmDYk/rEYe7HTmovLeEBUDQocBQKT4Ripm/xJkkWY7B07K/tfo56dGUCkvyIVXKBInCh+dLK7gZapnd4UWkY0xBYcwo1geMLRq58iFTLA2j/JmpmHXp7m0l7jJii7d44uD3tTIFYThn7NlOnvhLim/YcBK07GMGIN7XwrrKZKmxXaspw6KBWVhzuw1UPxctxshYEaMLfFg/bwOw8HvMPr9VtrElpSB7oiOh91PDIPdPBgHCi7N2QgQ5l/ZDBHieSpNrQ== thomasrodgers&#34;)
+ *                     .build())
+ *                 .rootVolume(AzureNodePoolConfigRootVolume.builder()
+ *                     .sizeGib(32)
+ *                     .build())
+ *                 .tags(Map.of(&#34;owner&#34;, &#34;mmv2&#34;))
+ *                 .vmSize(&#34;Standard_DS2_v2&#34;)
+ *                 .build())
+ *             .location(&#34;us-west1&#34;)
+ *             .maxPodsConstraint(AzureNodePoolMaxPodsConstraint.builder()
+ *                 .maxPodsPerNode(110)
+ *                 .build())
+ *             .subnetId(&#34;/subscriptions/12345678-1234-1234-1234-123456789111/resourceGroups/my--dev-byo/providers/Microsoft.Network/virtualNetworks/my--dev-vnet/subnets/default&#34;)
+ *             .version(versions.apply(getAzureVersionsResult -&gt; getAzureVersionsResult.getValidVersions()[0]))
+ *             .annotations(Map.of(&#34;annotation-one&#34;, &#34;value-one&#34;))
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

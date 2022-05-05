@@ -33,6 +33,42 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
  * 
  * ## Example Usage
+ * ### Monitoring Alert Policy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var alertPolicy = new AlertPolicy(&#34;alertPolicy&#34;, AlertPolicyArgs.builder()        
+ *             .combiner(&#34;OR&#34;)
+ *             .conditions(AlertPolicyCondition.builder()
+ *                 .conditionThreshold(AlertPolicyConditionConditionThreshold.builder()
+ *                     .aggregations(AlertPolicyConditionConditionThresholdAggregation.builder()
+ *                         .alignmentPeriod(&#34;60s&#34;)
+ *                         .perSeriesAligner(&#34;ALIGN_RATE&#34;)
+ *                         .build())
+ *                     .comparison(&#34;COMPARISON_GT&#34;)
+ *                     .duration(&#34;60s&#34;)
+ *                     .filter(&#34;metric.type=\&#34;compute.googleapis.com/instance/disk/write_bytes_count\&#34; AND resource.type=\&#34;gce_instance\&#34;&#34;)
+ *                     .build())
+ *                 .displayName(&#34;test condition&#34;)
+ *                 .build())
+ *             .displayName(&#34;My Alert Policy&#34;)
+ *             .userLabels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,29 @@ import javax.annotation.Nullable;
  * &gt; You can specify exclusions for log sinks created by the provider by using the exclusions field of `gcp.logging.OrganizationSink`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_exclusion = new OrganizationExclusion(&#34;my-exclusion&#34;, OrganizationExclusionArgs.builder()        
+ *             .description(&#34;Exclude GCE instance debug logs&#34;)
+ *             .filter(&#34;resource.type = gce_instance AND severity &lt;= DEBUG&#34;)
+ *             .orgId(&#34;123456789&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

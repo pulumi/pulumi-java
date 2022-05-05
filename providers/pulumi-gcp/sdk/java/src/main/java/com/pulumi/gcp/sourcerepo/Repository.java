@@ -27,6 +27,59 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/source-repositories/)
  * 
  * ## Example Usage
+ * ### Sourcerepo Repository Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var my_repo = new Repository(&#34;my-repo&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Sourcerepo Repository Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testAccount = new Account(&#34;testAccount&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;my-account&#34;)
+ *             .displayName(&#34;Test Service Account&#34;)
+ *             .build());
+ * 
+ *         var topic = new Topic(&#34;topic&#34;);
+ * 
+ *         var my_repo = new Repository(&#34;my-repo&#34;, RepositoryArgs.builder()        
+ *             .pubsubConfigs(RepositoryPubsubConfig.builder()
+ *                 .topic(topic.getId())
+ *                 .messageFormat(&#34;JSON&#34;)
+ *                 .serviceAccountEmail(testAccount.getEmail())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

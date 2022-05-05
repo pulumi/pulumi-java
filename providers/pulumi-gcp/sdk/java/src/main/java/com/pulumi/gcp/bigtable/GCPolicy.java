@@ -23,6 +23,161 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/bigtable/docs/go/reference).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(InstanceCluster.builder()
+ *                 .clusterId(&#34;tf-instance-cluster&#34;)
+ *                 .numNodes(3)
+ *                 .storageType(&#34;HDD&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var table = new Table(&#34;table&#34;, TableArgs.builder()        
+ *             .instanceName(instance.getName())
+ *             .columnFamilies(TableColumnFamily.builder()
+ *                 .family(&#34;name&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var policy = new GCPolicy(&#34;policy&#34;, GCPolicyArgs.builder()        
+ *             .instanceName(instance.getName())
+ *             .table(table.getName())
+ *             .columnFamily(&#34;name&#34;)
+ *             .maxAge(GCPolicyMaxAge.builder()
+ *                 .duration(&#34;168h&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Multiple conditions is also supported. `UNION` when any of its sub-policies apply (OR). `INTERSECTION` when all its sub-policies apply (AND)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policy = new GCPolicy(&#34;policy&#34;, GCPolicyArgs.builder()        
+ *             .instanceName(google_bigtable_instance.getInstance().getName())
+ *             .table(google_bigtable_table.getTable().getName())
+ *             .columnFamily(&#34;name&#34;)
+ *             .mode(&#34;UNION&#34;)
+ *             .maxAge(GCPolicyMaxAge.builder()
+ *                 .duration(&#34;168h&#34;)
+ *                 .build())
+ *             .maxVersions(GCPolicyMaxVersion.builder()
+ *                 .number(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * For complex, nested policies, an optional `gc_rules` field are supported. This field
+ * conflicts with `mode`, `max_age` and `max_version`. This field is a serialized JSON
+ * string. Example:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(InstanceCluster.builder()
+ *                 .clusterId(&#34;cid&#34;)
+ *                 .zone(&#34;us-central1-b&#34;)
+ *                 .build())
+ *             .instanceType(&#34;DEVELOPMENT&#34;)
+ *             .deletionProtection(false)
+ *             .build());
+ * 
+ *         var table = new Table(&#34;table&#34;, TableArgs.builder()        
+ *             .instanceName(instance.getId())
+ *             .columnFamilies(TableColumnFamily.builder()
+ *                 .family(&#34;cf1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var policy = new GCPolicy(&#34;policy&#34;, GCPolicyArgs.builder()        
+ *             .instanceName(instance.getId())
+ *             .table(table.getName())
+ *             .columnFamily(&#34;cf1&#34;)
+ *             .gcRules(&#34;&#34;&#34;
+ * {
+ *   &#34;mode&#34;: &#34;union&#34;,
+ *   &#34;rules&#34;: [
+ *     {
+ *       &#34;max_age&#34;: &#34;10h&#34;
+ *     },
+ *     {
+ *       &#34;mode&#34;: &#34;intersection&#34;,
+ *       &#34;rules&#34;: [
+ *         {
+ *           &#34;max_age&#34;: &#34;2h&#34;
+ *         },
+ *         {
+ *           &#34;max_version&#34;: 2
+ *         }
+ *       ]
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * This is equivalent to running the following `cbt` command:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

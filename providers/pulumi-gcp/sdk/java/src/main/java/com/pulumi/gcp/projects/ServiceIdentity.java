@@ -28,6 +28,37 @@ import javax.annotation.Nullable;
  * * [API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services/generateServiceIdentity)
  * 
  * ## Example Usage
+ * ### Service Identity Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var hcSa = new ServiceIdentity(&#34;hcSa&#34;, ServiceIdentityArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .service(&#34;healthcare.googleapis.com&#34;)
+ *             .build());
+ * 
+ *         var hcSaBqJobuser = new IAMMember(&#34;hcSaBqJobuser&#34;, IAMMemberArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .role(&#34;roles/bigquery.jobUser&#34;)
+ *             .member(hcSa.getEmail().apply(email -&gt; String.format(&#34;serviceAccount:%s&#34;, email)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

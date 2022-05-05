@@ -28,6 +28,64 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
  * 
  * ## Example Usage
+ * ### Target Https Proxy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultSSLCertificate = new SSLCertificate(&#34;defaultSSLCertificate&#34;, SSLCertificateArgs.builder()        
+ *             .privateKey(Files.readString(&#34;path/to/private.key&#34;))
+ *             .certificate(Files.readString(&#34;path/to/certificate.crt&#34;))
+ *             .build());
+ * 
+ *         var defaultHttpHealthCheck = new HttpHealthCheck(&#34;defaultHttpHealthCheck&#34;, HttpHealthCheckArgs.builder()        
+ *             .requestPath(&#34;/&#34;)
+ *             .checkIntervalSec(1)
+ *             .timeoutSec(1)
+ *             .build());
+ * 
+ *         var defaultBackendService = new BackendService(&#34;defaultBackendService&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;http&#34;)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHttpHealthCheck.getId())
+ *             .build());
+ * 
+ *         var defaultURLMap = new URLMap(&#34;defaultURLMap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(defaultBackendService.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(defaultBackendService.getId())
+ *                 .pathRules(URLMapPathMatcherPathRule.builder()
+ *                     .paths(&#34;/*&#34;)
+ *                     .service(defaultBackendService.getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetHttpsProxy = new TargetHttpsProxy(&#34;defaultTargetHttpsProxy&#34;, TargetHttpsProxyArgs.builder()        
+ *             .urlMap(defaultURLMap.getId())
+ *             .sslCertificates(defaultSSLCertificate.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

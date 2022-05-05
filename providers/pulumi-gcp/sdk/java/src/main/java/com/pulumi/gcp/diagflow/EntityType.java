@@ -27,6 +27,48 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
  * 
  * ## Example Usage
+ * ### Dialogflow Entity Type Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basicAgent = new Agent(&#34;basicAgent&#34;, AgentArgs.builder()        
+ *             .displayName(&#34;example_agent&#34;)
+ *             .defaultLanguageCode(&#34;en&#34;)
+ *             .timeZone(&#34;America/New_York&#34;)
+ *             .build());
+ * 
+ *         var basicEntityType = new EntityType(&#34;basicEntityType&#34;, EntityTypeArgs.builder()        
+ *             .displayName(&#34;&#34;)
+ *             .kind(&#34;KIND_MAP&#34;)
+ *             .entities(            
+ *                 EntityTypeEntity.builder()
+ *                     .value(&#34;value1&#34;)
+ *                     .synonyms(                    
+ *                         &#34;synonym1&#34;,
+ *                         &#34;synonym2&#34;)
+ *                     .build(),
+ *                 EntityTypeEntity.builder()
+ *                     .value(&#34;value2&#34;)
+ *                     .synonyms(                    
+ *                         &#34;synonym3&#34;,
+ *                         &#34;synonym4&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

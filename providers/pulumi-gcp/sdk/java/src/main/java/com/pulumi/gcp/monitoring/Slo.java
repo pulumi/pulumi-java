@@ -36,6 +36,80 @@ import javax.annotation.Nullable;
  *     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
  * 
  * ## Example Usage
+ * ### Monitoring Slo Appengine
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var default = Output.of(MonitoringFunctions.getAppEngineService(GetAppEngineServiceArgs.builder()
+ *             .moduleId(&#34;default&#34;)
+ *             .build()));
+ * 
+ *         var appengSlo = new Slo(&#34;appengSlo&#34;, SloArgs.builder()        
+ *             .service(default_.getServiceId())
+ *             .sloId(&#34;ae-slo&#34;)
+ *             .displayName(&#34;Test SLO for App Engine&#34;)
+ *             .goal(0.9)
+ *             .calendarPeriod(&#34;DAY&#34;)
+ *             .basicSli(SloBasicSli.builder()
+ *                 .latency(SloBasicSliLatency.builder()
+ *                     .threshold(&#34;1s&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Monitoring Slo Request Based
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customsrv = new CustomService(&#34;customsrv&#34;, CustomServiceArgs.builder()        
+ *             .serviceId(&#34;custom-srv-request-slos&#34;)
+ *             .displayName(&#34;My Custom Service&#34;)
+ *             .build());
+ * 
+ *         var requestBasedSlo = new Slo(&#34;requestBasedSlo&#34;, SloArgs.builder()        
+ *             .service(customsrv.getServiceId())
+ *             .sloId(&#34;consumed-api-slo&#34;)
+ *             .displayName(&#34;Test SLO with request based SLI (good total ratio)&#34;)
+ *             .goal(0.9)
+ *             .rollingPeriodDays(30)
+ *             .requestBasedSli(SloRequestBasedSli.builder()
+ *                 .distributionCut(SloRequestBasedSliDistributionCut.builder()
+ *                     .distributionFilter(&#34;metric.type=\&#34;serviceruntime.googleapis.com/api/request_latencies\&#34; resource.type=\&#34;api\&#34;  &#34;)
+ *                     .range(SloRequestBasedSliDistributionCutRange.builder()
+ *                         .max(0.5)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

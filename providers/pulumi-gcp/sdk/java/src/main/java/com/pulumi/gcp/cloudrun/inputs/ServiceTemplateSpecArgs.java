@@ -84,6 +84,7 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
 
     /**
      * - 
+     * (Deprecated)
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -99,6 +100,7 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
 
     /**
      * @return -
+     * (Deprecated)
      * ServingState holds a value describing the state the resources
      * are in for this Revision.
      * It is expected
@@ -272,6 +274,7 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
 
         /**
          * @param servingState -
+         * (Deprecated)
          * ServingState holds a value describing the state the resources
          * are in for this Revision.
          * It is expected
@@ -291,6 +294,7 @@ public final class ServiceTemplateSpecArgs extends com.pulumi.resources.Resource
 
         /**
          * @param servingState -
+         * (Deprecated)
          * ServingState holds a value describing the state the resources
          * are in for this Revision.
          * It is expected

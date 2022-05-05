@@ -32,6 +32,75 @@ import javax.annotation.Nullable;
  * the provider to delete and recreate the node group.
  * 
  * ## Example Usage
+ * ### Node Group Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var soletenant_tmpl = new NodeTemplate(&#34;soletenant-tmpl&#34;, NodeTemplateArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .nodeType(&#34;n1-node-96-624&#34;)
+ *             .build());
+ * 
+ *         var nodes = new NodeGroup(&#34;nodes&#34;, NodeGroupArgs.builder()        
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .description(&#34;example google_compute_node_group for the Google Provider&#34;)
+ *             .size(1)
+ *             .nodeTemplate(soletenant_tmpl.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Node Group Autoscaling Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var soletenant_tmpl = new NodeTemplate(&#34;soletenant-tmpl&#34;, NodeTemplateArgs.builder()        
+ *             .region(&#34;us-central1&#34;)
+ *             .nodeType(&#34;n1-node-96-624&#34;)
+ *             .build());
+ * 
+ *         var nodes = new NodeGroup(&#34;nodes&#34;, NodeGroupArgs.builder()        
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .description(&#34;example google_compute_node_group for Google Provider&#34;)
+ *             .maintenancePolicy(&#34;RESTART_IN_PLACE&#34;)
+ *             .maintenanceWindow(NodeGroupMaintenanceWindow.builder()
+ *                 .startTime(&#34;08:00&#34;)
+ *                 .build())
+ *             .initialSize(1)
+ *             .nodeTemplate(soletenant_tmpl.getId())
+ *             .autoscalingPolicy(NodeGroupAutoscalingPolicy.builder()
+ *                 .mode(&#34;ONLY_SCALE_OUT&#34;)
+ *                 .minNodes(1)
+ *                 .maxNodes(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

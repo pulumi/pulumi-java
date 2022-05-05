@@ -19,6 +19,81 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Example creating a SQL User.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dbNameSuffix = new RandomId(&#34;dbNameSuffix&#34;, RandomIdArgs.builder()        
+ *             .byteLength(4)
+ *             .build());
+ * 
+ *         var main = new DatabaseInstance(&#34;main&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;MYSQL_5_7&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var users = new User(&#34;users&#34;, UserArgs.builder()        
+ *             .instance(main.getName())
+ *             .host(&#34;me.com&#34;)
+ *             .password(&#34;changeme&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Example creating a Cloud IAM User. (For MySQL, specify `cloudsql_iam_authentication`)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dbNameSuffix = new RandomId(&#34;dbNameSuffix&#34;, RandomIdArgs.builder()        
+ *             .byteLength(4)
+ *             .build());
+ * 
+ *         var main = new DatabaseInstance(&#34;main&#34;, DatabaseInstanceArgs.builder()        
+ *             .databaseVersion(&#34;POSTGRES_9_6&#34;)
+ *             .settings(DatabaseInstanceSettings.builder()
+ *                 .tier(&#34;db-f1-micro&#34;)
+ *                 .databaseFlags(DatabaseInstanceSettingsDatabaseFlag.builder()
+ *                     .name(&#34;cloudsql.iam_authentication&#34;)
+ *                     .value(&#34;on&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var users = new User(&#34;users&#34;, UserArgs.builder()        
+ *             .instance(main.getName())
+ *             .type(&#34;CLOUD_IAM_USER&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * SQL users for MySQL databases can be imported using the `project`, `instance`, `host` and `name`, e.g.

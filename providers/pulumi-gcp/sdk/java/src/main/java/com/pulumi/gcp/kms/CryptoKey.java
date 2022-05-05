@@ -35,6 +35,63 @@ import javax.annotation.Nullable;
  *     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
  * 
  * ## Example Usage
+ * ### Kms Crypto Key Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyring = new KeyRing(&#34;keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         var example_key = new CryptoKey(&#34;example-key&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyring.getId())
+ *             .rotationPeriod(&#34;100000s&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Kms Crypto Key Asymmetric Sign
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyring = new KeyRing(&#34;keyring&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         var example_asymmetric_sign_key = new CryptoKey(&#34;example-asymmetric-sign-key&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyring.getId())
+ *             .purpose(&#34;ASYMMETRIC_SIGN&#34;)
+ *             .versionTemplate(CryptoKeyVersionTemplate.builder()
+ *                 .algorithm(&#34;EC_SIGN_P384_SHA384&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

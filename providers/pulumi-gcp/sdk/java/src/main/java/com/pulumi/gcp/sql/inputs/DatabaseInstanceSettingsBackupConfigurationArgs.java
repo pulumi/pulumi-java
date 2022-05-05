@@ -35,7 +35,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
 
     /**
      * True if binary logging is enabled.
-     * Cannot be used with Postgres.
+     * Can only be used with MySQL.
      * 
      */
     @Import(name="binaryLogEnabled")
@@ -43,7 +43,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
 
     /**
      * @return True if binary logging is enabled.
-     * Cannot be used with Postgres.
+     * Can only be used with MySQL.
      * 
      */
     public Optional<Output<Boolean>> binaryLogEnabled() {
@@ -180,7 +180,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
 
         /**
          * @param binaryLogEnabled True if binary logging is enabled.
-         * Cannot be used with Postgres.
+         * Can only be used with MySQL.
          * 
          * @return builder
          * 
@@ -192,7 +192,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationArgs extends com.p
 
         /**
          * @param binaryLogEnabled True if binary logging is enabled.
-         * Cannot be used with Postgres.
+         * Can only be used with MySQL.
          * 
          * @return builder
          * 

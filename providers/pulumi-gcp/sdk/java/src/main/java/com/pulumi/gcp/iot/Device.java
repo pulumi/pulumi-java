@@ -31,6 +31,66 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/iot/docs/)
  * 
  * ## Example Usage
+ * ### Cloudiot Device Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registry = new Registry(&#34;registry&#34;);
+ * 
+ *         var test_device = new Device(&#34;test-device&#34;, DeviceArgs.builder()        
+ *             .registry(registry.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cloudiot Device Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registry = new Registry(&#34;registry&#34;);
+ * 
+ *         var test_device = new Device(&#34;test-device&#34;, DeviceArgs.builder()        
+ *             .registry(registry.getId())
+ *             .credentials(DeviceCredential.builder()
+ *                 .publicKey(DeviceCredentialPublicKey.builder()
+ *                     .format(&#34;RSA_PEM&#34;)
+ *                     .key(Files.readString(&#34;test-fixtures/rsa_public.pem&#34;))
+ *                     .build())
+ *                 .build())
+ *             .blocked(false)
+ *             .logLevel(&#34;INFO&#34;)
+ *             .metadata(Map.of(&#34;test_key_1&#34;, &#34;test_value_1&#34;))
+ *             .gatewayConfig(DeviceGatewayConfig.builder()
+ *                 .gatewayType(&#34;NON_GATEWAY&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

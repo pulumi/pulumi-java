@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * affect billing. You cannot update the source representation instance.
  * 
  * ## Example Usage
+ * ### Sql Source Representation Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new SourceRepresentationInstance(&#34;instance&#34;, SourceRepresentationInstanceArgs.builder()        
+ *             .databaseVersion(&#34;MYSQL_8_0&#34;)
+ *             .host(&#34;10.20.30.40&#34;)
+ *             .port(3306)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

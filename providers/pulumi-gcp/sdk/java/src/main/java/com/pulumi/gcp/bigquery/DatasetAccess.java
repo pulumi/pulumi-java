@@ -19,6 +19,120 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Bigquery Dataset Access Basic User
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .build());
+ * 
+ *         var bqowner = new Account(&#34;bqowner&#34;, AccountArgs.builder()        
+ *             .accountId(&#34;bqowner&#34;)
+ *             .build());
+ * 
+ *         var access = new DatasetAccess(&#34;access&#34;, DatasetAccessArgs.builder()        
+ *             .datasetId(dataset.getDatasetId())
+ *             .role(&#34;OWNER&#34;)
+ *             .userByEmail(bqowner.getEmail())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Dataset Access View
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var private_ = new Dataset(&#34;private&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .build());
+ * 
+ *         var publicDataset = new Dataset(&#34;publicDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset2&#34;)
+ *             .build());
+ * 
+ *         var publicTable = new Table(&#34;publicTable&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(publicDataset.getDatasetId())
+ *             .tableId(&#34;example_table&#34;)
+ *             .view(TableView.builder()
+ *                 .query(&#34;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&#34;)
+ *                 .useLegacySql(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var access = new DatasetAccess(&#34;access&#34;, DatasetAccessArgs.builder()        
+ *             .datasetId(private_.getDatasetId())
+ *             .view(DatasetAccessView.builder()
+ *                 .projectId(publicTable.getProject())
+ *                 .datasetId(publicDataset.getDatasetId())
+ *                 .tableId(publicTable.getTableId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Dataset Access Authorized Dataset
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var private_ = new Dataset(&#34;private&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var public_ = new Dataset(&#34;public&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;public&#34;)
+ *             .build());
+ * 
+ *         var access = new DatasetAccess(&#34;access&#34;, DatasetAccessArgs.builder()        
+ *             .datasetId(private_.getDatasetId())
+ *             .authorizedDataset(DatasetAccessAuthorizedDataset.builder()
+ *                 .dataset(DatasetAccessAuthorizedDatasetDataset.builder()
+ *                     .projectId(public_.getProject())
+ *                     .datasetId(public_.getDatasetId())
+ *                     .build())
+ *                 .targetTypes(&#34;VIEWS&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

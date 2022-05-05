@@ -32,6 +32,224 @@ import javax.annotation.Nullable;
  *     * [BigQuery Jobs Intro](https://cloud.google.com/bigquery/docs/jobs-overview)
  * 
  * ## Example Usage
+ * ### Bigquery Job Query
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Dataset(&#34;bar&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;job_query_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var foo = new Table(&#34;foo&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(bar.getDatasetId())
+ *             .tableId(&#34;job_query_table&#34;)
+ *             .build());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobId(&#34;job_query&#34;)
+ *             .labels(Map.of(&#34;example-label&#34;, &#34;example-value&#34;))
+ *             .query(JobQuery.builder()
+ *                 .query(&#34;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&#34;)
+ *                 .destinationTable(JobQueryDestinationTable.builder()
+ *                     .projectId(foo.getProject())
+ *                     .datasetId(foo.getDatasetId())
+ *                     .tableId(foo.getTableId())
+ *                     .build())
+ *                 .allowLargeResults(true)
+ *                 .flattenResults(true)
+ *                 .scriptOptions(JobQueryScriptOptions.builder()
+ *                     .keyResultStatement(&#34;LAST&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Job Query Table Reference
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Dataset(&#34;bar&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;job_query_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var foo = new Table(&#34;foo&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(bar.getDatasetId())
+ *             .tableId(&#34;job_query_table&#34;)
+ *             .build());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobId(&#34;job_query&#34;)
+ *             .labels(Map.of(&#34;example-label&#34;, &#34;example-value&#34;))
+ *             .query(JobQuery.builder()
+ *                 .query(&#34;SELECT state FROM [lookerdata:cdc.project_tycho_reports]&#34;)
+ *                 .destinationTable(JobQueryDestinationTable.builder()
+ *                     .tableId(foo.getId())
+ *                     .build())
+ *                 .defaultDataset(JobQueryDefaultDataset.builder()
+ *                     .datasetId(bar.getId())
+ *                     .build())
+ *                 .allowLargeResults(true)
+ *                 .flattenResults(true)
+ *                 .scriptOptions(JobQueryScriptOptions.builder()
+ *                     .keyResultStatement(&#34;LAST&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Job Load
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Dataset(&#34;bar&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;job_load_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var foo = new Table(&#34;foo&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(bar.getDatasetId())
+ *             .tableId(&#34;job_load_table&#34;)
+ *             .build());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobId(&#34;job_load&#34;)
+ *             .labels(Map.of(&#34;my_job&#34;, &#34;load&#34;))
+ *             .load(JobLoad.builder()
+ *                 .sourceUris(&#34;gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv&#34;)
+ *                 .destinationTable(JobLoadDestinationTable.builder()
+ *                     .projectId(foo.getProject())
+ *                     .datasetId(foo.getDatasetId())
+ *                     .tableId(foo.getTableId())
+ *                     .build())
+ *                 .skipLeadingRows(1)
+ *                 .schemaUpdateOptions(                
+ *                     &#34;ALLOW_FIELD_RELAXATION&#34;,
+ *                     &#34;ALLOW_FIELD_ADDITION&#34;)
+ *                 .writeDisposition(&#34;WRITE_APPEND&#34;)
+ *                 .autodetect(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bigquery Job Extract
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var source_oneDataset = new Dataset(&#34;source-oneDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;job_extract_dataset&#34;)
+ *             .friendlyName(&#34;test&#34;)
+ *             .description(&#34;This is a test description&#34;)
+ *             .location(&#34;US&#34;)
+ *             .build());
+ * 
+ *         var source_oneTable = new Table(&#34;source-oneTable&#34;, TableArgs.builder()        
+ *             .deletionProtection(false)
+ *             .datasetId(source_oneDataset.getDatasetId())
+ *             .tableId(&#34;job_extract_table&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * [
+ *   {
+ *     &#34;name&#34;: &#34;name&#34;,
+ *     &#34;type&#34;: &#34;STRING&#34;,
+ *     &#34;mode&#34;: &#34;NULLABLE&#34;
+ *   },
+ *   {
+ *     &#34;name&#34;: &#34;post_abbr&#34;,
+ *     &#34;type&#34;: &#34;STRING&#34;,
+ *     &#34;mode&#34;: &#34;NULLABLE&#34;
+ *   },
+ *   {
+ *     &#34;name&#34;: &#34;date&#34;,
+ *     &#34;type&#34;: &#34;DATE&#34;,
+ *     &#34;mode&#34;: &#34;NULLABLE&#34;
+ *   }
+ * ]
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var dest = new Bucket(&#34;dest&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .forceDestroy(true)
+ *             .build());
+ * 
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobId(&#34;job_extract&#34;)
+ *             .extract(JobExtract.builder()
+ *                 .destinationUris(dest.getUrl().apply(url -&gt; String.format(&#34;%s/extract&#34;, url)))
+ *                 .sourceTable(JobExtractSourceTable.builder()
+ *                     .projectId(source_oneTable.getProject())
+ *                     .datasetId(source_oneTable.getDatasetId())
+ *                     .tableId(source_oneTable.getTableId())
+ *                     .build())
+ *                 .destinationFormat(&#34;NEWLINE_DELIMITED_JSON&#34;)
+ *                 .compression(&#34;GZIP&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -34,6 +34,36 @@ import javax.annotation.Nullable;
  * `preview=false`).
  * 
  * ## Example Usage
+ * ### Deployment Manager Deployment Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deployment = new Deployment(&#34;deployment&#34;, DeploymentArgs.builder()        
+ *             .target(DeploymentTarget.builder()
+ *                 .config(DeploymentTargetConfig.builder()
+ *                     .content(Files.readString(&#34;path/to/config.yml&#34;))
+ *                     .build())
+ *                 .build())
+ *             .labels(DeploymentLabel.builder()
+ *                 .key(&#34;foo&#34;)
+ *                 .value(&#34;bar&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

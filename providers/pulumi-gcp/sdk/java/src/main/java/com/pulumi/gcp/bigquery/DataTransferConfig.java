@@ -34,6 +34,52 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ### Bigquerydatatransfer Config Scheduled Query
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var project = Output.of(OrganizationsFunctions.getProject());
+ * 
+ *         var permissions = new IAMMember(&#34;permissions&#34;, IAMMemberArgs.builder()        
+ *             .project(project.apply(getProjectResult -&gt; getProjectResult.getProjectId()))
+ *             .role(&#34;roles/iam.serviceAccountShortTermTokenMinter&#34;)
+ *             .member(String.format(&#34;serviceAccount:service-%s@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com&#34;, project.apply(getProjectResult -&gt; getProjectResult.getNumber())))
+ *             .build());
+ * 
+ *         var myDataset = new Dataset(&#34;myDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;my_dataset&#34;)
+ *             .friendlyName(&#34;foo&#34;)
+ *             .description(&#34;bar&#34;)
+ *             .location(&#34;asia-northeast1&#34;)
+ *             .build());
+ * 
+ *         var queryConfig = new DataTransferConfig(&#34;queryConfig&#34;, DataTransferConfigArgs.builder()        
+ *             .displayName(&#34;my-query&#34;)
+ *             .location(&#34;asia-northeast1&#34;)
+ *             .dataSourceId(&#34;scheduled_query&#34;)
+ *             .schedule(&#34;first sunday of quarter 00:00&#34;)
+ *             .destinationDatasetId(myDataset.getDatasetId())
+ *             .params(Map.ofEntries(
+ *                 Map.entry(&#34;destination_table_name_template&#34;, &#34;my_table&#34;),
+ *                 Map.entry(&#34;write_disposition&#34;, &#34;WRITE_APPEND&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;SELECT name FROM tabl WHERE x = &#39;y&#39;&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,54 @@ import javax.annotation.Nullable;
  *     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
  * 
  * ## Example Usage
+ * ### Dns Policy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var network_1 = new Network(&#34;network-1&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_2 = new Network(&#34;network-2&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var example_policy = new Policy(&#34;example-policy&#34;, PolicyArgs.builder()        
+ *             .enableInboundForwarding(true)
+ *             .enableLogging(true)
+ *             .alternativeNameServerConfig(PolicyAlternativeNameServerConfig.builder()
+ *                 .targetNameServers(                
+ *                     PolicyAlternativeNameServerConfigTargetNameServer.builder()
+ *                         .ipv4Address(&#34;172.16.1.10&#34;)
+ *                         .forwardingPath(&#34;private&#34;)
+ *                         .build(),
+ *                     PolicyAlternativeNameServerConfigTargetNameServer.builder()
+ *                         .ipv4Address(&#34;172.16.1.20&#34;)
+ *                         .build())
+ *                 .build())
+ *             .networks(            
+ *                 PolicyNetwork.builder()
+ *                     .networkUrl(network_1.getId())
+ *                     .build(),
+ *                 PolicyNetwork.builder()
+ *                     .networkUrl(network_2.getId())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

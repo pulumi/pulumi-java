@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * the marketplace prior to using this resource.
  * 
  * ## Example Usage
+ * ### Identity Platform Tenant Oauth Idp Config Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tenant = new Tenant(&#34;tenant&#34;, TenantArgs.builder()        
+ *             .displayName(&#34;tenant&#34;)
+ *             .build());
+ * 
+ *         var tenantOauthIdpConfig = new TenantOauthIdpConfig(&#34;tenantOauthIdpConfig&#34;, TenantOauthIdpConfigArgs.builder()        
+ *             .tenant(tenant.getName())
+ *             .displayName(&#34;Display Name&#34;)
+ *             .clientId(&#34;client-id&#34;)
+ *             .issuer(&#34;issuer&#34;)
+ *             .enabled(true)
+ *             .clientSecret(&#34;secret&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

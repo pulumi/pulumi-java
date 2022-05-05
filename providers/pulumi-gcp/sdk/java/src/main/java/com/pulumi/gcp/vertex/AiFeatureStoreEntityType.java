@@ -18,6 +18,43 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Vertex Ai Featurestore Entitytype
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var featurestore = new AiFeatureStore(&#34;featurestore&#34;, AiFeatureStoreArgs.builder()        
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .region(&#34;us-central1&#34;)
+ *             .onlineServingConfig(AiFeatureStoreOnlineServingConfig.builder()
+ *                 .fixedNodeCount(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         var entity = new AiFeatureStoreEntityType(&#34;entity&#34;, AiFeatureStoreEntityTypeArgs.builder()        
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .featurestore(featurestore.getId())
+ *             .monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfig.builder()
+ *                 .snapshotAnalysis(AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis.builder()
+ *                     .disabled(false)
+ *                     .monitoringInterval(&#34;86400s&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

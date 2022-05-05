@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/language/state/sensitive-data.html).
  * 
  * ## Example Usage
+ * ### Network Services Edge Cache Keyset Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new EdgeCacheKeyset(&#34;default&#34;, EdgeCacheKeysetArgs.builder()        
+ *             .description(&#34;The default keyset&#34;)
+ *             .publicKeys(            
+ *                 EdgeCacheKeysetPublicKey.builder()
+ *                     .id(&#34;my-public-key&#34;)
+ *                     .value(&#34;FHsTyFHNmvNpw4o7-rp-M1yqMyBF8vXSBRkZtkQ0RKY&#34;)
+ *                     .build(),
+ *                 EdgeCacheKeysetPublicKey.builder()
+ *                     .id(&#34;my-public-key-2&#34;)
+ *                     .value(&#34;hzd03llxB1u5FOLKFkZ6_wCJqC7jtN0bg7xlBqS6WVM&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

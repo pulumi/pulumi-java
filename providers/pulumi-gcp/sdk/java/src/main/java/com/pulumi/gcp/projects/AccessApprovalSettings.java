@@ -25,6 +25,88 @@ import javax.annotation.Nullable;
  * * [API documentation](https://cloud.google.com/access-approval/docs/reference/rest/v1/projects)
  * 
  * ## Example Usage
+ * ### Project Access Approval Full
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var projectAccessApproval = new AccessApprovalSettings(&#34;projectAccessApproval&#34;, AccessApprovalSettingsArgs.builder()        
+ *             .enrolledServices(AccessApprovalSettingsEnrolledService.builder()
+ *                 .cloudProduct(&#34;all&#34;)
+ *                 .enrollmentLevel(&#34;BLOCK_ALL&#34;)
+ *                 .build())
+ *             .notificationEmails(            
+ *                 &#34;testuser@example.com&#34;,
+ *                 &#34;example.user@example.com&#34;)
+ *             .projectId(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Project Access Approval Active Key Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRing(&#34;keyRing&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .project(&#34;my-project-name&#34;)
+ *             .build());
+ * 
+ *         var cryptoKey = new CryptoKey(&#34;cryptoKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyRing.getId())
+ *             .purpose(&#34;ASYMMETRIC_SIGN&#34;)
+ *             .versionTemplate(CryptoKeyVersionTemplate.builder()
+ *                 .algorithm(&#34;EC_SIGN_P384_SHA384&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         final var serviceAccount = Output.of(AccessapprovalFunctions.getProjectServiceAccount(GetProjectServiceAccountArgs.builder()
+ *             .projectId(&#34;my-project-name&#34;)
+ *             .build()));
+ * 
+ *         var iam = new CryptoKeyIAMMember(&#34;iam&#34;, CryptoKeyIAMMemberArgs.builder()        
+ *             .cryptoKeyId(cryptoKey.getId())
+ *             .role(&#34;roles/cloudkms.signerVerifier&#34;)
+ *             .member(String.format(&#34;serviceAccount:%s&#34;, serviceAccount.apply(getProjectServiceAccountResult -&gt; getProjectServiceAccountResult.getAccountEmail())))
+ *             .build());
+ * 
+ *         final var cryptoKeyVersion = KmsFunctions.getKMSCryptoKeyVersion(GetKMSCryptoKeyVersionArgs.builder()
+ *             .cryptoKey(cryptoKey.getId())
+ *             .build());
+ * 
+ *         var projectAccessApproval = new AccessApprovalSettings(&#34;projectAccessApproval&#34;, AccessApprovalSettingsArgs.builder()        
+ *             .projectId(&#34;my-project-name&#34;)
+ *             .activeKeyVersion(cryptoKeyVersion.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult).apply(cryptoKeyVersion -&gt; cryptoKeyVersion.apply(getKMSCryptoKeyVersionResult -&gt; getKMSCryptoKeyVersionResult.getName())))
+ *             .enrolledServices(AccessApprovalSettingsEnrolledService.builder()
+ *                 .cloudProduct(&#34;all&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

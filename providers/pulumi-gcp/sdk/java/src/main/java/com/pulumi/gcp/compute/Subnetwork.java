@@ -50,6 +50,131 @@ import javax.annotation.Nullable;
  *     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
  * 
  * ## Example Usage
+ * ### Subnetwork Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom_test = new Network(&#34;custom-test&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_with_private_secondary_ip_ranges = new Subnetwork(&#34;network-with-private-secondary-ip-ranges&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.2.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(custom_test.getId())
+ *             .secondaryIpRanges(SubnetworkSecondaryIpRange.builder()
+ *                 .rangeName(&#34;tf-test-secondary-range-update1&#34;)
+ *                 .ipCidrRange(&#34;192.168.10.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Subnetwork Logging Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom_test = new Network(&#34;custom-test&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var subnet_with_logging = new Subnetwork(&#34;subnet-with-logging&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.2.0.0/16&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .network(custom_test.getId())
+ *             .logConfig(SubnetworkLogConfig.builder()
+ *                 .aggregationInterval(&#34;INTERVAL_10_MIN&#34;)
+ *                 .flowSampling(0.5)
+ *                 .metadata(&#34;INCLUDE_ALL_METADATA&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Subnetwork Internal L7lb
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom_test = new Network(&#34;custom-test&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var network_for_l7lb = new Subnetwork(&#34;network-for-l7lb&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/22&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .purpose(&#34;INTERNAL_HTTPS_LOAD_BALANCER&#34;)
+ *             .role(&#34;ACTIVE&#34;)
+ *             .network(custom_test.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Subnetwork Ipv6
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custom_test = new Network(&#34;custom-test&#34;, NetworkArgs.builder()        
+ *             .autoCreateSubnetworks(false)
+ *             .build());
+ * 
+ *         var subnetwork_ipv6 = new Subnetwork(&#34;subnetwork-ipv6&#34;, SubnetworkArgs.builder()        
+ *             .ipCidrRange(&#34;10.0.0.0/22&#34;)
+ *             .region(&#34;us-west2&#34;)
+ *             .stackType(&#34;IPV4_IPV6&#34;)
+ *             .ipv6AccessType(&#34;EXTERNAL&#34;)
+ *             .network(custom_test.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

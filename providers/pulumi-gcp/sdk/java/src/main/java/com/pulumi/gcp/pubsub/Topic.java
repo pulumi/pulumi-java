@@ -30,6 +30,128 @@ import javax.annotation.Nullable;
  * by using the `gcp.projects.ServiceIdentity` resource.
  * 
  * ## Example Usage
+ * ### Pubsub Topic Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Topic(&#34;example&#34;, TopicArgs.builder()        
+ *             .labels(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .messageRetentionDuration(&#34;86600s&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Topic Cmek
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var keyRing = new KeyRing(&#34;keyRing&#34;, KeyRingArgs.builder()        
+ *             .location(&#34;global&#34;)
+ *             .build());
+ * 
+ *         var cryptoKey = new CryptoKey(&#34;cryptoKey&#34;, CryptoKeyArgs.builder()        
+ *             .keyRing(keyRing.getId())
+ *             .build());
+ * 
+ *         var example = new Topic(&#34;example&#34;, TopicArgs.builder()        
+ *             .kmsKeyName(cryptoKey.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Topic Geo Restricted
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Topic(&#34;example&#34;, TopicArgs.builder()        
+ *             .messageStoragePolicy(TopicMessageStoragePolicy.builder()
+ *                 .allowedPersistenceRegions(&#34;europe-west3&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Pubsub Topic Schema Settings
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleSchema = new Schema(&#34;exampleSchema&#34;, SchemaArgs.builder()        
+ *             .type(&#34;AVRO&#34;)
+ *             .definition(&#34;&#34;&#34;
+ * {
+ *   &#34;type&#34; : &#34;record&#34;,
+ *   &#34;name&#34; : &#34;Avro&#34;,
+ *   &#34;fields&#34; : [
+ *     {
+ *       &#34;name&#34; : &#34;StringField&#34;,
+ *       &#34;type&#34; : &#34;string&#34;
+ *     },
+ *     {
+ *       &#34;name&#34; : &#34;IntField&#34;,
+ *       &#34;type&#34; : &#34;int&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleTopic = new Topic(&#34;exampleTopic&#34;, TopicArgs.builder()        
+ *             .schemaSettings(TopicSchemaSettings.builder()
+ *                 .schema(&#34;projects/my-project-name/schemas/example&#34;)
+ *                 .encoding(&#34;JSON&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

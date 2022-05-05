@@ -26,6 +26,30 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/vertex-ai/docs)
  * 
  * ## Example Usage
+ * ### Vertex Ai Dataset
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new AiDataset(&#34;dataset&#34;, AiDatasetArgs.builder()        
+ *             .displayName(&#34;terraform&#34;)
+ *             .metadataSchemaUri(&#34;gs://google-cloud-aiplatform/schema/dataset/metadata/image_1.0.0.yaml&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,111 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-stored-infotypes)
  * 
  * ## Example Usage
+ * ### Dlp Stored Info Type Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var basic = new PreventionStoredInfoType(&#34;basic&#34;, PreventionStoredInfoTypeArgs.builder()        
+ *             .description(&#34;Description&#34;)
+ *             .displayName(&#34;Displayname&#34;)
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .regex(PreventionStoredInfoTypeRegex.builder()
+ *                 .groupIndexes(2)
+ *                 .pattern(&#34;patient&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dlp Stored Info Type Dictionary
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dictionary = new PreventionStoredInfoType(&#34;dictionary&#34;, PreventionStoredInfoTypeArgs.builder()        
+ *             .description(&#34;Description&#34;)
+ *             .dictionary(PreventionStoredInfoTypeDictionary.builder()
+ *                 .wordList(PreventionStoredInfoTypeDictionaryWordList.builder()
+ *                     .words(                    
+ *                         &#34;word&#34;,
+ *                         &#34;word2&#34;)
+ *                     .build())
+ *                 .build())
+ *             .displayName(&#34;Displayname&#34;)
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Dlp Stored Info Type Large Custom Dictionary
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;US&#34;)
+ *             .forceDestroy(true)
+ *             .build());
+ * 
+ *         var object = new BucketObject(&#34;object&#34;, BucketObjectArgs.builder()        
+ *             .bucket(bucket.getName())
+ *             .source(new FileAsset(&#34;./test-fixtures/dlp/words.txt&#34;))
+ *             .build());
+ * 
+ *         var large = new PreventionStoredInfoType(&#34;large&#34;, PreventionStoredInfoTypeArgs.builder()        
+ *             .parent(&#34;projects/my-project-name&#34;)
+ *             .description(&#34;Description&#34;)
+ *             .displayName(&#34;Displayname&#34;)
+ *             .largeCustomDictionary(PreventionStoredInfoTypeLargeCustomDictionary.builder()
+ *                 .cloudStorageFileSet(PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet.builder()
+ *                     .url(Output.tuple(bucket.getName(), object.getName()).apply(values -&gt; {
+ *                         var bucketName = values.t1;
+ *                         var objectName = values.t2;
+ *                         return String.format(&#34;gs://%s/%s&#34;, bucketName,objectName);
+ *                     }))
+ *                     .build())
+ *                 .outputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPath.builder()
+ *                     .path(bucket.getName().apply(name -&gt; String.format(&#34;gs://%s/output/dictionary.txt&#34;, name)))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

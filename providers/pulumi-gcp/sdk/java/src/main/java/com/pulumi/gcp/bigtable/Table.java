@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/bigtable/docs/go/reference).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .clusters(InstanceCluster.builder()
+ *                 .clusterId(&#34;tf-instance-cluster&#34;)
+ *                 .zone(&#34;us-central1-b&#34;)
+ *                 .numNodes(3)
+ *                 .storageType(&#34;HDD&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var table = new Table(&#34;table&#34;, TableArgs.builder()        
+ *             .instanceName(instance.getName())
+ *             .splitKeys(            
+ *                 &#34;a&#34;,
+ *                 &#34;b&#34;,
+ *                 &#34;c&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

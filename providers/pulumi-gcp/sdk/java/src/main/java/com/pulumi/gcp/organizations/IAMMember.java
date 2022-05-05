@@ -40,20 +40,215 @@ import javax.annotation.Nullable;
  *    fully managed by this provider.I f you do use this resource,
  *    the best way to be sure that you are not making dangerous changes is to start
  *    by **importing** your existing policy, and examining the diff very closely.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var organization = new IAMPolicy(&#34;organization&#34;, IAMPolicyArgs.builder()        
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var admin = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .condition(GetIAMPolicyBindingCondition.builder()
+ *                     .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                     .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                     .title(&#34;expires_after_2019_12_31&#34;)
+ *                     .build())
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .role(&#34;roles/editor&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var organization = new IAMPolicy(&#34;organization&#34;, IAMPolicyArgs.builder()        
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .policyData(admin.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_organization\_iam\_binding
  * 
  * &gt; **Note:** If `role` is set to `roles/owner` and you don&#39;t specify a user or service account you have access to in `members`, you can lock yourself out of your organization.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new IAMBinding(&#34;organization&#34;, IAMBindingArgs.builder()        
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new IAMBinding(&#34;organization&#34;, IAMBindingArgs.builder()        
+ *             .condition(IAMBindingCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_organization\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new IAMMember(&#34;organization&#34;, IAMMemberArgs.builder()        
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * With IAM Conditions:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new IAMMember(&#34;organization&#34;, IAMMemberArgs.builder()        
+ *             .condition(IAMMemberCondition.builder()
+ *                 .description(&#34;Expiring at midnight of 2019-12-31&#34;)
+ *                 .expression(&#34;request.time &lt; timestamp(\&#34;2020-01-01T00:00:00Z\&#34;)&#34;)
+ *                 .title(&#34;expires_after_2019_12_31&#34;)
+ *                 .build())
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .role(&#34;roles/editor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_organization\_iam\_audit\_config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var organization = new IamAuditConfig(&#34;organization&#34;, IamAuditConfigArgs.builder()        
+ *             .auditLogConfigs(            
+ *                 IamAuditConfigAuditLogConfig.builder()
+ *                     .logType(&#34;ADMIN_READ&#34;)
+ *                     .build(),
+ *                 IamAuditConfigAuditLogConfig.builder()
+ *                     .exemptedMembers(&#34;user:joebloggs@hashicorp.com&#34;)
+ *                     .logType(&#34;DATA_READ&#34;)
+ *                     .build())
+ *             .orgId(&#34;your-organization-id&#34;)
+ *             .service(&#34;allServices&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

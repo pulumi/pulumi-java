@@ -30,6 +30,51 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/memcache/docs/creating-instances)
  * 
  * ## Example Usage
+ * ### Memcache Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var memcacheNetwork = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;test-network&#34;)
+ *             .build()));
+ * 
+ *         var serviceRange = new GlobalAddress(&#34;serviceRange&#34;, GlobalAddressArgs.builder()        
+ *             .purpose(&#34;VPC_PEERING&#34;)
+ *             .addressType(&#34;INTERNAL&#34;)
+ *             .prefixLength(16)
+ *             .network(memcacheNetwork.apply(getNetworkResult -&gt; getNetworkResult.getId()))
+ *             .build());
+ * 
+ *         var privateServiceConnection = new Connection(&#34;privateServiceConnection&#34;, ConnectionArgs.builder()        
+ *             .network(memcacheNetwork.apply(getNetworkResult -&gt; getNetworkResult.getId()))
+ *             .service(&#34;servicenetworking.googleapis.com&#34;)
+ *             .reservedPeeringRanges(serviceRange.getName())
+ *             .build());
+ * 
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .authorizedNetwork(privateServiceConnection.getNetwork())
+ *             .nodeConfig(InstanceNodeConfig.builder()
+ *                 .cpuCount(1)
+ *                 .memorySizeMb(1024)
+ *                 .build())
+ *             .nodeCount(1)
+ *             .memcacheVersion(&#34;MEMCACHE_1_5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

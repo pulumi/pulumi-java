@@ -19,6 +19,23 @@ public final class WorkloadIdentityPoolProviderOidc {
      * If this list is empty, the OIDC token audience must be equal to the full canonical
      * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
      * For example:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     private final @Nullable List<String> allowedAudiences;
@@ -44,6 +61,23 @@ public final class WorkloadIdentityPoolProviderOidc {
      * If this list is empty, the OIDC token audience must be equal to the full canonical
      * resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix.
      * For example:
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         }
+     * }
+     * ```
      * 
      */
     public List<String> allowedAudiences() {

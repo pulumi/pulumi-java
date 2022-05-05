@@ -35,10 +35,97 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `gcp.bigquery.DatasetIamBinding` resources **can be** used in conjunction with `gcp.bigquery.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
  * 
  * ## google\_bigquery\_dataset\_iam\_policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var owner = Output.of(OrganizationsFunctions.getIAMPolicy(GetIAMPolicyArgs.builder()
+ *             .bindings(GetIAMPolicyBinding.builder()
+ *                 .role(&#34;roles/bigquery.dataOwner&#34;)
+ *                 .members(&#34;user:jane@example.com&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var datasetDataset = new Dataset(&#34;datasetDataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .build());
+ * 
+ *         var datasetDatasetIamPolicy = new DatasetIamPolicy(&#34;datasetDatasetIamPolicy&#34;, DatasetIamPolicyArgs.builder()        
+ *             .datasetId(datasetDataset.getDatasetId())
+ *             .policyData(owner.apply(getIAMPolicyResult -&gt; getIAMPolicyResult.getPolicyData()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_bigquery\_dataset\_iam\_binding
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .build());
+ * 
+ *         var reader = new DatasetIamBinding(&#34;reader&#34;, DatasetIamBindingArgs.builder()        
+ *             .datasetId(dataset.getDatasetId())
+ *             .role(&#34;roles/bigquery.dataViewer&#34;)
+ *             .members(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## google\_bigquery\_dataset\_iam\_member
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataset = new Dataset(&#34;dataset&#34;, DatasetArgs.builder()        
+ *             .datasetId(&#34;example_dataset&#34;)
+ *             .build());
+ * 
+ *         var editor = new DatasetIamMember(&#34;editor&#34;, DatasetIamMemberArgs.builder()        
+ *             .datasetId(dataset.getDatasetId())
+ *             .role(&#34;roles/bigquery.dataEditor&#34;)
+ *             .member(&#34;user:jane@example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

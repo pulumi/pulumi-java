@@ -11,6 +11,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescript
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionPublicKeyArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectKeyIdArgs;
+import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionX509DescriptionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,9 +44,21 @@ public final class CertificateCertificateDescriptionArgs extends com.pulumi.reso
         return Optional.ofNullable(this.certFingerprints);
     }
 
+    /**
+     * @deprecated
+     * Deprecated in favor of `x509_description`.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of `x509_description`. */
     @Import(name="configValues")
     private @Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues;
 
+    /**
+     * @deprecated
+     * Deprecated in favor of `x509_description`.
+     * 
+     */
+    @Deprecated /* Deprecated in favor of `x509_description`. */
     public Optional<Output<List<CertificateCertificateDescriptionConfigValueArgs>>> configValues() {
         return Optional.ofNullable(this.configValues);
     }
@@ -88,6 +101,13 @@ public final class CertificateCertificateDescriptionArgs extends com.pulumi.reso
         return Optional.ofNullable(this.subjectKeyIds);
     }
 
+    @Import(name="x509Descriptions")
+    private @Nullable Output<List<CertificateCertificateDescriptionX509DescriptionArgs>> x509Descriptions;
+
+    public Optional<Output<List<CertificateCertificateDescriptionX509DescriptionArgs>>> x509Descriptions() {
+        return Optional.ofNullable(this.x509Descriptions);
+    }
+
     private CertificateCertificateDescriptionArgs() {}
 
     private CertificateCertificateDescriptionArgs(CertificateCertificateDescriptionArgs $) {
@@ -99,6 +119,7 @@ public final class CertificateCertificateDescriptionArgs extends com.pulumi.reso
         this.publicKeys = $.publicKeys;
         this.subjectDescriptions = $.subjectDescriptions;
         this.subjectKeyIds = $.subjectKeyIds;
+        this.x509Descriptions = $.x509Descriptions;
     }
 
     public static Builder builder() {
@@ -158,15 +179,39 @@ public final class CertificateCertificateDescriptionArgs extends com.pulumi.reso
             return certFingerprints(List.of(certFingerprints));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `x509_description`.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `x509_description`. */
         public Builder configValues(@Nullable Output<List<CertificateCertificateDescriptionConfigValueArgs>> configValues) {
             $.configValues = configValues;
             return this;
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `x509_description`.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `x509_description`. */
         public Builder configValues(List<CertificateCertificateDescriptionConfigValueArgs> configValues) {
             return configValues(Output.of(configValues));
         }
 
+        /**
+         * @return builder
+         * 
+         * @deprecated
+         * Deprecated in favor of `x509_description`.
+         * 
+         */
+        @Deprecated /* Deprecated in favor of `x509_description`. */
         public Builder configValues(CertificateCertificateDescriptionConfigValueArgs... configValues) {
             return configValues(List.of(configValues));
         }
@@ -242,6 +287,19 @@ public final class CertificateCertificateDescriptionArgs extends com.pulumi.reso
 
         public Builder subjectKeyIds(CertificateCertificateDescriptionSubjectKeyIdArgs... subjectKeyIds) {
             return subjectKeyIds(List.of(subjectKeyIds));
+        }
+
+        public Builder x509Descriptions(@Nullable Output<List<CertificateCertificateDescriptionX509DescriptionArgs>> x509Descriptions) {
+            $.x509Descriptions = x509Descriptions;
+            return this;
+        }
+
+        public Builder x509Descriptions(List<CertificateCertificateDescriptionX509DescriptionArgs> x509Descriptions) {
+            return x509Descriptions(Output.of(x509Descriptions));
+        }
+
+        public Builder x509Descriptions(CertificateCertificateDescriptionX509DescriptionArgs... x509Descriptions) {
+            return x509Descriptions(List.of(x509Descriptions));
         }
 
         public CertificateCertificateDescriptionArgs build() {

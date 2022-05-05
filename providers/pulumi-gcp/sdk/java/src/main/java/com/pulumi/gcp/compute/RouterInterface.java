@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * [API](https://cloud.google.com/compute/docs/reference/latest/routers).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobar = new RouterInterface(&#34;foobar&#34;, RouterInterfaceArgs.builder()        
+ *             .ipRange(&#34;169.254.1.1/30&#34;)
+ *             .region(&#34;us-central1&#34;)
+ *             .router(&#34;router-1&#34;)
+ *             .vpnTunnel(&#34;tunnel-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

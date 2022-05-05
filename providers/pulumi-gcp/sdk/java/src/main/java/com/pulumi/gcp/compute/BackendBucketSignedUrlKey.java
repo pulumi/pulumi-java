@@ -26,6 +26,43 @@ import javax.annotation.Nullable;
  * state as plain-text.
  * 
  * ## Example Usage
+ * ### Backend Bucket Signed Url Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var urlSignature = new RandomId(&#34;urlSignature&#34;, RandomIdArgs.builder()        
+ *             .byteLength(16)
+ *             .build());
+ * 
+ *         var bucket = new Bucket(&#34;bucket&#34;, BucketArgs.builder()        
+ *             .location(&#34;EU&#34;)
+ *             .build());
+ * 
+ *         var testBackend = new BackendBucket(&#34;testBackend&#34;, BackendBucketArgs.builder()        
+ *             .description(&#34;Contains beautiful images&#34;)
+ *             .bucketName(bucket.getName())
+ *             .enableCdn(true)
+ *             .build());
+ * 
+ *         var backendKey = new BackendBucketSignedUrlKey(&#34;backendKey&#34;, BackendBucketSignedUrlKeyArgs.builder()        
+ *             .keyValue(urlSignature.getB64Url())
+ *             .backendBucket(testBackend.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -29,6 +29,91 @@ import javax.annotation.Nullable;
  *     * [Using Protocol Forwarding](https://cloud.google.com/compute/docs/protocol-forwarding)
  * 
  * ## Example Usage
+ * ### Target Instance Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var vmimage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-9&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var target_vm = new Instance(&#34;target-vm&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(vmimage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new TargetInstance(&#34;default&#34;, TargetInstanceArgs.builder()        
+ *             .instance(target_vm.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Target Instance Custom Network
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var target-vmNetwork = Output.of(ComputeFunctions.getNetwork(GetNetworkArgs.builder()
+ *             .name(&#34;default&#34;)
+ *             .build()));
+ * 
+ *         final var vmimage = Output.of(ComputeFunctions.getImage(GetImageArgs.builder()
+ *             .family(&#34;debian-10&#34;)
+ *             .project(&#34;debian-cloud&#34;)
+ *             .build()));
+ * 
+ *         var target_vmInstance = new Instance(&#34;target-vmInstance&#34;, InstanceArgs.builder()        
+ *             .machineType(&#34;e2-medium&#34;)
+ *             .zone(&#34;us-central1-a&#34;)
+ *             .bootDisk(InstanceBootDisk.builder()
+ *                 .initializeParams(InstanceBootDiskInitializeParams.builder()
+ *                     .image(vmimage.apply(getImageResult -&gt; getImageResult.getSelfLink()))
+ *                     .build())
+ *                 .build())
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .network(&#34;default&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var customNetwork = new TargetInstance(&#34;customNetwork&#34;, TargetInstanceArgs.builder()        
+ *             .instance(target_vmInstance.getId())
+ *             .network(target_vmNetwork.getSelfLink())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

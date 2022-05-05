@@ -25,6 +25,28 @@ import javax.annotation.Nullable;
  *     * [Official Documentation](https://cloud.google.com/api-gateway/docs/quickstart)
  * 
  * ## Example Usage
+ * ### Apigateway Api Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var api = new Api(&#34;api&#34;, ApiArgs.builder()        
+ *             .apiId(&#34;api&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,109 @@ import javax.annotation.Nullable;
  *     * [Using Target gRPC Proxies](https://cloud.google.com/traffic-director/docs/proxyless-overview)
  * 
  * ## Example Usage
+ * ### Target Grpc Proxy Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultHealthCheck = new HealthCheck(&#34;defaultHealthCheck&#34;, HealthCheckArgs.builder()        
+ *             .timeoutSec(1)
+ *             .checkIntervalSec(1)
+ *             .grpcHealthCheck(HealthCheckGrpcHealthCheck.builder()
+ *                 .portName(&#34;health-check-port&#34;)
+ *                 .portSpecification(&#34;USE_NAMED_PORT&#34;)
+ *                 .grpcServiceName(&#34;testservice&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var home = new BackendService(&#34;home&#34;, BackendServiceArgs.builder()        
+ *             .portName(&#34;grpc&#34;)
+ *             .protocol(&#34;GRPC&#34;)
+ *             .timeoutSec(10)
+ *             .healthChecks(defaultHealthCheck.getId())
+ *             .loadBalancingScheme(&#34;INTERNAL_SELF_MANAGED&#34;)
+ *             .build());
+ * 
+ *         var urlmap = new URLMap(&#34;urlmap&#34;, URLMapArgs.builder()        
+ *             .description(&#34;a description&#34;)
+ *             .defaultService(home.getId())
+ *             .hostRules(URLMapHostRule.builder()
+ *                 .hosts(&#34;mysite.com&#34;)
+ *                 .pathMatcher(&#34;allpaths&#34;)
+ *                 .build())
+ *             .pathMatchers(URLMapPathMatcher.builder()
+ *                 .name(&#34;allpaths&#34;)
+ *                 .defaultService(home.getId())
+ *                 .routeRules(URLMapPathMatcherRouteRule.builder()
+ *                     .priority(1)
+ *                     .headerAction(URLMapPathMatcherRouteRuleHeaderAction.builder()
+ *                         .requestHeadersToRemoves(&#34;RemoveMe2&#34;)
+ *                         .requestHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd.builder()
+ *                             .headerName(&#34;AddSomethingElse&#34;)
+ *                             .headerValue(&#34;MyOtherValue&#34;)
+ *                             .replace(true)
+ *                             .build())
+ *                         .responseHeadersToRemoves(&#34;RemoveMe3&#34;)
+ *                         .responseHeadersToAdds(URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd.builder()
+ *                             .headerName(&#34;AddMe&#34;)
+ *                             .headerValue(&#34;MyValue&#34;)
+ *                             .replace(false)
+ *                             .build())
+ *                         .build())
+ *                     .matchRules(URLMapPathMatcherRouteRuleMatchRule.builder()
+ *                         .fullPathMatch(&#34;a full path&#34;)
+ *                         .headerMatches(URLMapPathMatcherRouteRuleMatchRuleHeaderMatch.builder()
+ *                             .headerName(&#34;someheader&#34;)
+ *                             .exactMatch(&#34;match this exactly&#34;)
+ *                             .invertMatch(true)
+ *                             .build())
+ *                         .ignoreCase(true)
+ *                         .metadataFilters(URLMapPathMatcherRouteRuleMatchRuleMetadataFilter.builder()
+ *                             .filterMatchCriteria(&#34;MATCH_ANY&#34;)
+ *                             .filterLabels(URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel.builder()
+ *                                 .name(&#34;PLANET&#34;)
+ *                                 .value(&#34;MARS&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .queryParameterMatches(URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch.builder()
+ *                             .name(&#34;a query parameter&#34;)
+ *                             .presentMatch(true)
+ *                             .build())
+ *                         .build())
+ *                     .urlRedirect(URLMapPathMatcherRouteRuleUrlRedirect.builder()
+ *                         .hostRedirect(&#34;A host&#34;)
+ *                         .httpsRedirect(false)
+ *                         .pathRedirect(&#34;some/path&#34;)
+ *                         .redirectResponseCode(&#34;TEMPORARY_REDIRECT&#34;)
+ *                         .stripQuery(true)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tests(URLMapTest.builder()
+ *                 .service(home.getId())
+ *                 .host(&#34;hi.com&#34;)
+ *                 .path(&#34;/home&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var defaultTargetGrpcProxy = new TargetGrpcProxy(&#34;defaultTargetGrpcProxy&#34;, TargetGrpcProxyArgs.builder()        
+ *             .urlMap(urlmap.getId())
+ *             .validateForProxyless(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

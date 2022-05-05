@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.apigee.InstanceArgs;
 import com.pulumi.gcp.apigee.inputs.InstanceState;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
@@ -40,6 +41,26 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:apigee/instance:Instance")
 public class Instance extends com.pulumi.resources.CustomResource {
+    /**
+     * Optional. Customer accept list represents the list of projects (id/number) on customer
+     * side that can privately connect to the service attachment. It is an optional field
+     * which the customers can provide during the instance creation. By default, the customer
+     * project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    @Export(name="consumerAcceptLists", type=List.class, parameters={String.class})
+    private Output<List<String>> consumerAcceptLists;
+
+    /**
+     * @return Optional. Customer accept list represents the list of projects (id/number) on customer
+     * side that can privately connect to the service attachment. It is an optional field
+     * which the customers can provide during the instance creation. By default, the customer
+     * project associated with the Apigee organization will be included to the list.
+     * 
+     */
+    public Output<List<String>> consumerAcceptLists() {
+        return this.consumerAcceptLists;
+    }
     /**
      * Description of the instance.
      * 
@@ -197,6 +218,24 @@ public class Instance extends com.pulumi.resources.CustomResource {
      */
     public Output<String> port() {
         return this.port;
+    }
+    /**
+     * Output only. Resource name of the service attachment created for the instance in the format:
+     * projects/*{@literal /}regions/*{@literal /}serviceAttachments/* Apigee customers can privately forward traffic to this service attachment
+     * using the PSC endpoints.
+     * 
+     */
+    @Export(name="serviceAttachment", type=String.class, parameters={})
+    private Output<String> serviceAttachment;
+
+    /**
+     * @return Output only. Resource name of the service attachment created for the instance in the format:
+     * projects/*{@literal /}regions/*{@literal /}serviceAttachments/* Apigee customers can privately forward traffic to this service attachment
+     * using the PSC endpoints.
+     * 
+     */
+    public Output<String> serviceAttachment() {
+        return this.serviceAttachment;
     }
 
     /**
