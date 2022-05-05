@@ -33,7 +33,8 @@ import java.util.StringJoiner;
          * What if triple quotes &#34;&#34;&#34; are used in the description
          * 
          */
-        Synthetic("SYNTHETIC");
+        Synthetic("SYNTHETIC"),
+        _NO_NAME("_NO_NAME");
 
         private final String value;
 
