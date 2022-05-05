@@ -8,6 +8,8 @@
 - Fix #476: add examples from PulumiUp
 [#542](https://github.com/pulumi/pulumi-java/pull/542)
 
+- GitHub Actions: JDK 'adopt' -> 'temurin'
+
 ### Bug Fixes
 
 - Programgen adapted to latest changes in SDK

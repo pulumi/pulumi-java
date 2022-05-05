@@ -85,7 +85,7 @@ jobs:
         if: startsWith(github.ref, format('refs/tags/{0}/v', matrix.provider))
         with:
           java-version: '11'
-          distribution: 'adopt'
+          distribution: 'temurin'
           cache: 'gradle'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
