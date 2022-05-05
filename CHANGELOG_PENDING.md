@@ -7,6 +7,8 @@
 [#539](https://github.com/pulumi/pulumi-java/pull/539)
 - Fix #476: add examples from PulumiUp
 [#542](https://github.com/pulumi/pulumi-java/pull/542)
+- Fix #546: generated Java programs from PCL now also generate custom resource options
+[#558](https://github.com/pulumi/pulumi-java/pull/558)
 
 ### Bug Fixes
 
