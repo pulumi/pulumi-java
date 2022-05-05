@@ -76,6 +76,8 @@ func adaptTest(t *test.SDKTest) *test.SDKTest {
 		t.Skip = codegen.NewStringSet("java/any") // TODO
 	case "internal-dependencies-go":
 		t.Skip = codegen.NewStringSet("java/any") // go-only
+	case "go-plain-ref-repro":
+		t.Skip = codegen.NewStringSet("java/any") // go-only
 	}
 	return t
 }
