@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * The resource `random.RandomShuffle` generates a random permutation of a list of strings given as an argument.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var az = new RandomShuffle(&#34;az&#34;, RandomShuffleArgs.builder()        
+ *             .inputs(            
+ *                 &#34;us-west-1a&#34;,
+ *                 &#34;us-west-1c&#34;,
+ *                 &#34;us-west-1d&#34;,
+ *                 &#34;us-west-1e&#34;)
+ *             .resultCount(2)
+ *             .build());
+ * 
+ *         var example = new LoadBalancer(&#34;example&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(az.getResults())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="random:index/randomShuffle:RandomShuffle")

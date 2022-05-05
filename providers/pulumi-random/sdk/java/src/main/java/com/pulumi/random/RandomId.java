@@ -32,6 +32,33 @@ import javax.annotation.Nullable;
  * exist concurrently.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverRandomId = new RandomId(&#34;serverRandomId&#34;, RandomIdArgs.builder()        
+ *             .keepers(Map.of(&#34;ami_id&#34;, var_.getAmi_id()))
+ *             .byteLength(8)
+ *             .build());
+ * 
+ *         var serverInstance = new Instance(&#34;serverInstance&#34;, InstanceArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, serverRandomId.getHex().apply(hex -&gt; String.format(&#34;web-server %s&#34;, hex))))
+ *             .ami(serverRandomId.getKeepers().apply(keepers -&gt; keepers.getAmiId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
