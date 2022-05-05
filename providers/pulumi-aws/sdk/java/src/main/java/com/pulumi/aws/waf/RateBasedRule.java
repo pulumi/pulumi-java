@@ -22,6 +22,41 @@ import javax.annotation.Nullable;
  * Provides a WAF Rate Based Rule Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafrule = new RateBasedRule(&#34;wafrule&#34;, RateBasedRuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .rateKey(&#34;IP&#34;)
+ *             .rateLimit(100)
+ *             .predicates(RateBasedRulePredicate.builder()
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

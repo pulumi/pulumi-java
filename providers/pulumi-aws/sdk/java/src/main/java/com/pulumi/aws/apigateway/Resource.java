@@ -17,6 +17,33 @@ import javax.annotation.Nullable;
  * Provides an API Gateway Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var myDemoResource = new Resource(&#34;myDemoResource&#34;, ResourceArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .parentId(myDemoAPI.getRootResourceId())
+ *             .pathPart(&#34;mydemoresource&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

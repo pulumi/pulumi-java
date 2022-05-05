@@ -21,6 +21,28 @@ import javax.annotation.Nullable;
  * Provides an AWS Elemental MediaPackage Channel.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var kittens = new Channel(&#34;kittens&#34;, ChannelArgs.builder()        
+ *             .channelId(&#34;kitten-channel&#34;)
+ *             .description(&#34;A channel dedicated to amusing videos of kittens.&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,35 @@ import javax.annotation.Nullable;
  * Provides an AppStream image builder.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testFleet = new ImageBuilder(&#34;testFleet&#34;, ImageBuilderArgs.builder()        
+ *             .description(&#34;Description of a ImageBuilder&#34;)
+ *             .displayName(&#34;Display name of a ImageBuilder&#34;)
+ *             .enableDefaultInternetAccess(false)
+ *             .imageName(&#34;AppStream-WinServer2012R2-07-19-2021&#34;)
+ *             .instanceType(&#34;stream.standard.large&#34;)
+ *             .vpcConfig(ImageBuilderVpcConfig.builder()
+ *                 .subnetIds(aws_subnet.getExample().getId())
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Image Builder&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,133 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Flow Definition resource.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FlowDefinition(&#34;example&#34;, FlowDefinitionArgs.builder()        
+ *             .flowDefinitionName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .humanLoopConfig(FlowDefinitionHumanLoopConfig.builder()
+ *                 .humanTaskUiArn(aws_sagemaker_human_task_ui.getExample().getArn())
+ *                 .taskAvailabilityLifetimeInSeconds(1)
+ *                 .taskCount(1)
+ *                 .taskDescription(&#34;example&#34;)
+ *                 .taskTitle(&#34;example&#34;)
+ *                 .workteamArn(aws_sagemaker_workteam.getExample().getArn())
+ *                 .build())
+ *             .outputConfig(FlowDefinitionOutputConfig.builder()
+ *                 .s3OutputPath(String.format(&#34;s3://%s/&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Public Workteam Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FlowDefinition(&#34;example&#34;, FlowDefinitionArgs.builder()        
+ *             .flowDefinitionName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .humanLoopConfig(FlowDefinitionHumanLoopConfig.builder()
+ *                 .humanTaskUiArn(aws_sagemaker_human_task_ui.getExample().getArn())
+ *                 .taskAvailabilityLifetimeInSeconds(1)
+ *                 .taskCount(1)
+ *                 .taskDescription(&#34;example&#34;)
+ *                 .taskTitle(&#34;example&#34;)
+ *                 .workteamArn(String.format(&#34;arn:aws:sagemaker:%s:394669845002:workteam/public-crowd/default&#34;, data.getAws_region().getCurrent().getName()))
+ *                 .publicWorkforceTaskPrice(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice.builder()
+ *                     .amountInUsd(FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd.builder()
+ *                         .cents(1)
+ *                         .tenthFractionsOfACent(2)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .outputConfig(FlowDefinitionOutputConfig.builder()
+ *                 .s3OutputPath(String.format(&#34;s3://%s/&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Human Loop Activation Config Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FlowDefinition(&#34;example&#34;, FlowDefinitionArgs.builder()        
+ *             .flowDefinitionName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .humanLoopConfig(FlowDefinitionHumanLoopConfig.builder()
+ *                 .humanTaskUiArn(aws_sagemaker_human_task_ui.getExample().getArn())
+ *                 .taskAvailabilityLifetimeInSeconds(1)
+ *                 .taskCount(1)
+ *                 .taskDescription(&#34;example&#34;)
+ *                 .taskTitle(&#34;example&#34;)
+ *                 .workteamArn(aws_sagemaker_workteam.getExample().getArn())
+ *                 .build())
+ *             .humanLoopRequestSource(FlowDefinitionHumanLoopRequestSource.builder()
+ *                 .awsManagedHumanLoopRequestSource(&#34;AWS/Textract/AnalyzeDocument/Forms/V1&#34;)
+ *                 .build())
+ *             .humanLoopActivationConfig(FlowDefinitionHumanLoopActivationConfig.builder()
+ *                 .humanLoopActivationConditionsConfig(FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig.builder()
+ *                     .humanLoopActivationConditions(&#34;&#34;&#34;
+ *         {
+ * 			&#34;Conditions&#34;: [
+ * 			  {
+ * 				&#34;ConditionType&#34;: &#34;Sampling&#34;,
+ * 				&#34;ConditionParameters&#34;: {
+ * 				  &#34;RandomSamplingPercentage&#34;: 5
+ * 				}
+ * 			  }
+ * 			]
+ * 		}
+ *                     &#34;&#34;&#34;)
+ *                     .build())
+ *                 .build())
+ *             .outputConfig(FlowDefinitionOutputConfig.builder()
+ *                 .s3OutputPath(String.format(&#34;s3://%s/&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

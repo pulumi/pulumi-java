@@ -16,6 +16,53 @@ public final class Ec2clientvpnFunctions {
      * Get information on an EC2 Client VPN endpoint.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2clientvpnFunctions.getEndpoint(GetEndpointArgs.builder()
+     *             .filters(GetEndpointFilter.builder()
+     *                 .name(&#34;tag:Name&#34;)
+     *                 .values(&#34;ExampleVpn&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2clientvpnFunctions.getEndpoint(GetEndpointArgs.builder()
+     *             .clientVpnEndpointId(&#34;cvpn-endpoint-083cf50d6eb314f21&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEndpointResult> getEndpoint() {

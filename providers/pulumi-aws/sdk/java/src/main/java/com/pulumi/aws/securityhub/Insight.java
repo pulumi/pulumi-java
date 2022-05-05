@@ -18,6 +18,162 @@ import javax.annotation.Nullable;
  * Provides a Security Hub custom insight resource. See the [Managing custom insights section](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-custom-insights.html) of the AWS User Guide for more information.
  * 
  * ## Example Usage
+ * ### Filter by AWS account ID
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleInsight = new Insight(&#34;exampleInsight&#34;, InsightArgs.builder()        
+ *             .filters(InsightFilters.builder()
+ *                 .awsAccountIds(                
+ *                     InsightFiltersAwsAccountId.builder()
+ *                         .comparison(&#34;EQUALS&#34;)
+ *                         .value(&#34;1234567890&#34;)
+ *                         .build(),
+ *                     InsightFiltersAwsAccountId.builder()
+ *                         .comparison(&#34;EQUALS&#34;)
+ *                         .value(&#34;09876543210&#34;)
+ *                         .build())
+ *                 .build())
+ *             .groupByAttribute(&#34;AwsAccountId&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Filter by date range
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleInsight = new Insight(&#34;exampleInsight&#34;, InsightArgs.builder()        
+ *             .filters(InsightFilters.builder()
+ *                 .createdAts(InsightFiltersCreatedAt.builder()
+ *                     .dateRange(InsightFiltersCreatedAtDateRange.builder()
+ *                         .unit(&#34;DAYS&#34;)
+ *                         .value(5)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .groupByAttribute(&#34;CreatedAt&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Filter by destination IPv4 address
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleInsight = new Insight(&#34;exampleInsight&#34;, InsightArgs.builder()        
+ *             .filters(InsightFilters.builder()
+ *                 .networkDestinationIpv4s(InsightFiltersNetworkDestinationIpv4.builder()
+ *                     .cidr(&#34;10.0.0.0/16&#34;)
+ *                     .build())
+ *                 .build())
+ *             .groupByAttribute(&#34;NetworkDestinationIpV4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Filter by finding&#39;s confidence
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleInsight = new Insight(&#34;exampleInsight&#34;, InsightArgs.builder()        
+ *             .filters(InsightFilters.builder()
+ *                 .confidences(InsightFiltersConfidence.builder()
+ *                     .gte(&#34;80&#34;)
+ *                     .build())
+ *                 .build())
+ *             .groupByAttribute(&#34;Confidence&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Filter by resource tags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleInsight = new Insight(&#34;exampleInsight&#34;, InsightArgs.builder()        
+ *             .filters(InsightFilters.builder()
+ *                 .resourceTags(InsightFiltersResourceTag.builder()
+ *                     .comparison(&#34;EQUALS&#34;)
+ *                     .key(&#34;Environment&#34;)
+ *                     .value(&#34;Production&#34;)
+ *                     .build())
+ *                 .build())
+ *             .groupByAttribute(&#34;ResourceTags&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

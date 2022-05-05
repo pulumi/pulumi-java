@@ -19,6 +19,56 @@ import javax.annotation.Nullable;
  * Provides a resource to issue a certificate using AWS Certificate Manager Private Certificate Authority (ACM PCA).
  * 
  * ## Example Usage
+ * ### Basic
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCertificateAuthority = new CertificateAuthority(&#34;exampleCertificateAuthority&#34;, CertificateAuthorityArgs.builder()        
+ *             .privateCertificateConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;keyAlgorithm&#34;, &#34;RSA_4096&#34;),
+ *                 Map.entry(&#34;signingAlgorithm&#34;, &#34;SHA512WITHRSA&#34;),
+ *                 Map.entry(&#34;subject&#34;, Map.of(&#34;commonName&#34;, &#34;example.com&#34;))
+ *             ))
+ *             .permanentDeletionTimeInDays(7)
+ *             .build());
+ * 
+ *         var key = new PrivateKey(&#34;key&#34;, PrivateKeyArgs.builder()        
+ *             .algorithm(&#34;RSA&#34;)
+ *             .build());
+ * 
+ *         var csr = new CertRequest(&#34;csr&#34;, CertRequestArgs.builder()        
+ *             .keyAlgorithm(&#34;RSA&#34;)
+ *             .privateKeyPem(key.getPrivateKeyPem())
+ *             .subjects(CertRequestSubject.builder()
+ *                 .commonName(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleCertificate = new Certificate(&#34;exampleCertificate&#34;, CertificateArgs.builder()        
+ *             .certificateAuthorityArn(exampleCertificateAuthority.getArn())
+ *             .certificateSigningRequest(csr.getCertRequestPem())
+ *             .signingAlgorithm(&#34;SHA256WITHRSA&#34;)
+ *             .validity(CertificateValidity.builder()
+ *                 .type(&#34;YEARS&#34;)
+ *                 .value(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

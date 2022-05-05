@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver DNS Firewall rule resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleResolverFirewallDomainList = new ResolverFirewallDomainList(&#34;exampleResolverFirewallDomainList&#34;, ResolverFirewallDomainListArgs.builder()        
+ *             .domains(&#34;example.com&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         var exampleResolverFirewallRuleGroup = new ResolverFirewallRuleGroup(&#34;exampleResolverFirewallRuleGroup&#34;, ResolverFirewallRuleGroupArgs.builder()        
+ *             .tags()
+ *             .build());
+ * 
+ *         var exampleResolverFirewallRule = new ResolverFirewallRule(&#34;exampleResolverFirewallRule&#34;, ResolverFirewallRuleArgs.builder()        
+ *             .action(&#34;BLOCK&#34;)
+ *             .blockOverrideDnsType(&#34;CNAME&#34;)
+ *             .blockOverrideDomain(&#34;example.com&#34;)
+ *             .blockOverrideTtl(1)
+ *             .blockResponse(&#34;OVERRIDE&#34;)
+ *             .firewallDomainListId(exampleResolverFirewallDomainList.getId())
+ *             .firewallRuleGroupId(exampleResolverFirewallRuleGroup.getId())
+ *             .priority(100)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

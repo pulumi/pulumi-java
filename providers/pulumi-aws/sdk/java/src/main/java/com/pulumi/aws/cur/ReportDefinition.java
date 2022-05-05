@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * &gt; *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCurReportDefinition = new ReportDefinition(&#34;exampleCurReportDefinition&#34;, ReportDefinitionArgs.builder()        
+ *             .additionalArtifacts(            
+ *                 &#34;REDSHIFT&#34;,
+ *                 &#34;QUICKSIGHT&#34;)
+ *             .additionalSchemaElements(&#34;RESOURCES&#34;)
+ *             .compression(&#34;GZIP&#34;)
+ *             .format(&#34;textORcsv&#34;)
+ *             .reportName(&#34;example-cur-report-definition&#34;)
+ *             .s3Bucket(&#34;example-bucket-name&#34;)
+ *             .s3Region(&#34;us-east-1&#34;)
+ *             .timeUnit(&#34;HOURLY&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

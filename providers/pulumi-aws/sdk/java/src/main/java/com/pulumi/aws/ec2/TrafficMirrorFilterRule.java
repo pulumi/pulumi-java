@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To create a basic traffic mirror session
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var filter = new TrafficMirrorFilter(&#34;filter&#34;, TrafficMirrorFilterArgs.builder()        
+ *             .description(&#34;traffic mirror filter - example&#34;)
+ *             .networkServices(&#34;amazon-dns&#34;)
+ *             .build());
+ * 
+ *         var ruleout = new TrafficMirrorFilterRule(&#34;ruleout&#34;, TrafficMirrorFilterRuleArgs.builder()        
+ *             .description(&#34;test rule&#34;)
+ *             .trafficMirrorFilterId(filter.getId())
+ *             .destinationCidrBlock(&#34;10.0.0.0/8&#34;)
+ *             .sourceCidrBlock(&#34;10.0.0.0/8&#34;)
+ *             .ruleNumber(1)
+ *             .ruleAction(&#34;accept&#34;)
+ *             .trafficDirection(&#34;egress&#34;)
+ *             .build());
+ * 
+ *         var rulein = new TrafficMirrorFilterRule(&#34;rulein&#34;, TrafficMirrorFilterRuleArgs.builder()        
+ *             .description(&#34;test rule&#34;)
+ *             .trafficMirrorFilterId(filter.getId())
+ *             .destinationCidrBlock(&#34;10.0.0.0/8&#34;)
+ *             .sourceCidrBlock(&#34;10.0.0.0/8&#34;)
+ *             .ruleNumber(1)
+ *             .ruleAction(&#34;accept&#34;)
+ *             .trafficDirection(&#34;ingress&#34;)
+ *             .protocol(6)
+ *             .destinationPortRange(TrafficMirrorFilterRuleDestinationPortRange.builder()
+ *                 .fromPort(22)
+ *                 .toPort(53)
+ *                 .build())
+ *             .sourcePortRange(TrafficMirrorFilterRuleSourcePortRange.builder()
+ *                 .fromPort(0)
+ *                 .toPort(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Traffic mirror rules can be imported using the `traffic_mirror_filter_id` and `id` separated by `:` e.g.,

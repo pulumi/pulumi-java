@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides a hosted connection on the specified interconnect or a link aggregation group (LAG) of interconnects. Intended for use by AWS Direct Connect Partners only.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hosted = new HostedConnection(&#34;hosted&#34;, HostedConnectionArgs.builder()        
+ *             .bandwidth(&#34;100Mbps&#34;)
+ *             .connectionId(&#34;dxcon-ffabc123&#34;)
+ *             .ownerAccountId(&#34;123456789012&#34;)
+ *             .vlan(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:directconnect/hostedConnection:HostedConnection")

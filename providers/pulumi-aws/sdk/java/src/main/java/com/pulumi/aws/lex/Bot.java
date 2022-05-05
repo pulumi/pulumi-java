@@ -26,6 +26,51 @@ import javax.annotation.Nullable;
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderFlowersBot = new Bot(&#34;orderFlowersBot&#34;, BotArgs.builder()        
+ *             .abortStatement(BotAbortStatement.builder()
+ *                 .messages(BotAbortStatementMessage.builder()
+ *                     .content(&#34;Sorry, I am not able to assist at this time&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .childDirected(false)
+ *             .clarificationPrompt(BotClarificationPrompt.builder()
+ *                 .maxAttempts(2)
+ *                 .messages(BotClarificationPromptMessage.builder()
+ *                     .content(&#34;I didn&#39;t understand you, what would you like to do?&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .createVersion(false)
+ *             .description(&#34;Bot to order flowers on the behalf of a user&#34;)
+ *             .idleSessionTtlInSeconds(600)
+ *             .intents(BotIntent.builder()
+ *                 .intentName(&#34;OrderFlowers&#34;)
+ *                 .intentVersion(&#34;1&#34;)
+ *                 .build())
+ *             .locale(&#34;en-US&#34;)
+ *             .name(&#34;OrderFlowers&#34;)
+ *             .processBehavior(&#34;BUILD&#34;)
+ *             .voiceId(&#34;Salli&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

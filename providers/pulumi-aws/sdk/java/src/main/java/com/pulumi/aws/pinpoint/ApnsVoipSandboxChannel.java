@@ -19,6 +19,31 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint APNs VoIP Sandbox Channel resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;);
+ * 
+ *         var apnsVoipSandbox = new ApnsVoipSandboxChannel(&#34;apnsVoipSandbox&#34;, ApnsVoipSandboxChannelArgs.builder()        
+ *             .applicationId(app.getApplicationId())
+ *             .certificate(Files.readString(&#34;./certificate.pem&#34;))
+ *             .privateKey(Files.readString(&#34;./private_key.key&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

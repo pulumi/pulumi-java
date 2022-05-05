@@ -20,6 +20,45 @@ import javax.annotation.Nullable;
  * Provides a CloudFront Field-level Encryption Config resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new FieldLevelEncryptionConfig(&#34;test&#34;, FieldLevelEncryptionConfigArgs.builder()        
+ *             .comment(&#34;test comment&#34;)
+ *             .contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfig.builder()
+ *                 .forwardWhenContentTypeIsUnknown(true)
+ *                 .contentTypeProfiles(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles.builder()
+ *                     .items(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem.builder()
+ *                         .contentType(&#34;application/x-www-form-urlencoded&#34;)
+ *                         .format(&#34;URLEncoded&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfig.builder()
+ *                 .forwardWhenQueryArgProfileIsUnknown(true)
+ *                 .queryArgProfiles(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles.builder()
+ *                     .items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem.builder()
+ *                         .profileId(aws_cloudfront_field_level_encryption_profile.getTest().getId())
+ *                         .queryArg(&#34;Arg1&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

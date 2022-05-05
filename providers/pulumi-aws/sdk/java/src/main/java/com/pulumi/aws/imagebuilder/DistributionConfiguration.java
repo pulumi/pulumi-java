@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Distribution Configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DistributionConfiguration(&#34;example&#34;, DistributionConfigurationArgs.builder()        
+ *             .distributions(DistributionConfigurationDistribution.builder()
+ *                 .amiDistributionConfiguration(DistributionConfigurationDistributionAmiDistributionConfiguration.builder()
+ *                     .amiTags(Map.of(&#34;CostCenter&#34;, &#34;IT&#34;))
+ *                     .launchPermission(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission.builder()
+ *                         .userIds(&#34;123456789012&#34;)
+ *                         .build())
+ *                     .launchTemplateConfiguration(Map.of(&#34;launchTemplateId&#34;, &#34;lt-0aaa1bcde2ff3456&#34;))
+ *                     .name(&#34;example-{{ imagebuilder:buildDate }}&#34;)
+ *                     .build())
+ *                 .region(&#34;us-east-1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

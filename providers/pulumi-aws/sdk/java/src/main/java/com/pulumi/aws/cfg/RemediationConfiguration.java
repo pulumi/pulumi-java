@@ -26,6 +26,62 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * AWS managed rules can be used by setting the source owner to `AWS` and the source identifier to the name of the managed rule. More information about AWS managed rules can be found in the [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var thisRule = new Rule(&#34;thisRule&#34;, RuleArgs.builder()        
+ *             .source(RuleSource.builder()
+ *                 .owner(&#34;AWS&#34;)
+ *                 .sourceIdentifier(&#34;S3_BUCKET_VERSIONING_ENABLED&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var thisRemediationConfiguration = new RemediationConfiguration(&#34;thisRemediationConfiguration&#34;, RemediationConfigurationArgs.builder()        
+ *             .configRuleName(thisRule.getName())
+ *             .resourceType(&#34;AWS::S3::Bucket&#34;)
+ *             .targetType(&#34;SSM_DOCUMENT&#34;)
+ *             .targetId(&#34;AWS-EnableS3BucketEncryption&#34;)
+ *             .targetVersion(&#34;1&#34;)
+ *             .parameters(            
+ *                 RemediationConfigurationParameter.builder()
+ *                     .name(&#34;AutomationAssumeRole&#34;)
+ *                     .staticValue(&#34;arn:aws:iam::875924563244:role/security_config&#34;)
+ *                     .build(),
+ *                 RemediationConfigurationParameter.builder()
+ *                     .name(&#34;BucketName&#34;)
+ *                     .resourceValue(&#34;RESOURCE_ID&#34;)
+ *                     .build(),
+ *                 RemediationConfigurationParameter.builder()
+ *                     .name(&#34;SSEAlgorithm&#34;)
+ *                     .staticValue(&#34;AES256&#34;)
+ *                     .build())
+ *             .automatic(true)
+ *             .maximumAutomaticAttempts(10)
+ *             .retryAttemptSeconds(600)
+ *             .executionControls(RemediationConfigurationExecutionControls.builder()
+ *                 .ssmControls(RemediationConfigurationExecutionControlsSsmControls.builder()
+ *                     .concurrentExecutionRatePercentage(25)
+ *                     .errorPercentage(20)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Remediation Configurations can be imported using the name config_rule_name, e.g.,

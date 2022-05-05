@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * Provides an Elastic MapReduce Studio.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Studio(&#34;example&#34;, StudioArgs.builder()        
+ *             .authMode(&#34;SSO&#34;)
+ *             .defaultS3Location(String.format(&#34;s3://%s/test&#34;, aws_s3_bucket.getTest().getBucket()))
+ *             .engineSecurityGroupId(aws_security_group.getTest().getId())
+ *             .serviceRole(aws_iam_role.getTest().getArn())
+ *             .subnetIds(aws_subnet.getTest().getId())
+ *             .userRole(aws_iam_role.getTest().getArn())
+ *             .vpcId(aws_vpc.getTest().getId())
+ *             .workspaceSecurityGroupId(aws_security_group.getTest().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

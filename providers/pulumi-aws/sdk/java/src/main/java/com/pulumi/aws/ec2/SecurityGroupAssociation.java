@@ -18,6 +18,30 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sgEc2 = new SecurityGroupAssociation(&#34;sgEc2&#34;, SecurityGroupAssociationArgs.builder()        
+ *             .vpcEndpointId(aws_vpc_endpoint.getEc2().getId())
+ *             .securityGroupId(aws_security_group.getSg().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:ec2/securityGroupAssociation:SecurityGroupAssociation")
 public class SecurityGroupAssociation extends com.pulumi.resources.CustomResource {

@@ -18,6 +18,35 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;);
+ * 
+ *         var exampleClusterCapacityProviders = new ClusterCapacityProviders(&#34;exampleClusterCapacityProviders&#34;, ClusterCapacityProvidersArgs.builder()        
+ *             .clusterName(exampleCluster.getName())
+ *             .capacityProviders(&#34;FARGATE&#34;)
+ *             .defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategy.builder()
+ *                 .base(1)
+ *                 .weight(100)
+ *                 .capacityProvider(&#34;FARGATE&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

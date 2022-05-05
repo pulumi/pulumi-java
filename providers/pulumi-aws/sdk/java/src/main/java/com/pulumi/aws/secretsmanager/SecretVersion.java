@@ -21,6 +21,61 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** If the `AWSCURRENT` staging label is present on this version during resource deletion, that label cannot be removed and will be skipped to prevent errors when fully deleting the secret. That label will leave this secret version active even after the resource is deleted from this provider unless the secret itself is deleted. Move the `AWSCURRENT` staging label before or after deleting this resource from this provider to fully trigger version deprecation if necessary.
  * 
  * ## Example Usage
+ * ### Simple String Value
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecretVersion(&#34;example&#34;, SecretVersionArgs.builder()        
+ *             .secretId(aws_secretsmanager_secret.getExample().getId())
+ *             .secretString(&#34;example-string-to-protect&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Key-Value Pairs
+ * 
+ * Secrets Manager also accepts key-value pairs in JSON.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var example = config.get(&#34;example&#34;).orElse(Map.ofEntries(
+ *             Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *             Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *         ));
+ *         var exampleSecretVersion = new SecretVersion(&#34;exampleSecretVersion&#34;, SecretVersionArgs.builder()        
+ *             .secretId(aws_secretsmanager_secret.getExample().getId())
+ *             .secretString(serializeJson(
+ *                 example))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

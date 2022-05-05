@@ -23,6 +23,111 @@ import javax.annotation.Nullable;
  * by creating an `aws.directconnect.GatewayAssociation` resource with the `proposal_id` and `associated_gateway_owner_account_id` attributes set.
  * 
  * ## Example Usage
+ * ### VPN Gateway Association
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGateway = new Gateway(&#34;exampleGateway&#34;, GatewayArgs.builder()        
+ *             .amazonSideAsn(&#34;64512&#34;)
+ *             .build());
+ * 
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.255.255.0/28&#34;)
+ *             .build());
+ * 
+ *         var exampleVpnGateway = new VpnGateway(&#34;exampleVpnGateway&#34;, VpnGatewayArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .build());
+ * 
+ *         var exampleGatewayAssociation = new GatewayAssociation(&#34;exampleGatewayAssociation&#34;, GatewayAssociationArgs.builder()        
+ *             .dxGatewayId(exampleGateway.getId())
+ *             .associatedGatewayId(exampleVpnGateway.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Transit Gateway Association
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGateway = new Gateway(&#34;exampleGateway&#34;, GatewayArgs.builder()        
+ *             .amazonSideAsn(&#34;64512&#34;)
+ *             .build());
+ * 
+ *         var exampleTransitGateway = new TransitGateway(&#34;exampleTransitGateway&#34;);
+ * 
+ *         var exampleGatewayAssociation = new GatewayAssociation(&#34;exampleGatewayAssociation&#34;, GatewayAssociationArgs.builder()        
+ *             .dxGatewayId(exampleGateway.getId())
+ *             .associatedGatewayId(exampleTransitGateway.getId())
+ *             .allowedPrefixes(            
+ *                 &#34;10.255.255.0/30&#34;,
+ *                 &#34;10.255.255.8/30&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Allowed Prefixes
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleGateway = new Gateway(&#34;exampleGateway&#34;, GatewayArgs.builder()        
+ *             .amazonSideAsn(&#34;64512&#34;)
+ *             .build());
+ * 
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.255.255.0/28&#34;)
+ *             .build());
+ * 
+ *         var exampleVpnGateway = new VpnGateway(&#34;exampleVpnGateway&#34;, VpnGatewayArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .build());
+ * 
+ *         var exampleGatewayAssociation = new GatewayAssociation(&#34;exampleGatewayAssociation&#34;, GatewayAssociationArgs.builder()        
+ *             .dxGatewayId(exampleGateway.getId())
+ *             .associatedGatewayId(exampleVpnGateway.getId())
+ *             .allowedPrefixes(            
+ *                 &#34;210.52.109.0/24&#34;,
+ *                 &#34;175.45.176.0/22&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,44 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Associating an ECS Capacity Provider to an Auto Scaling Group will automatically add the `AmazonECSManaged` tag to the Auto Scaling Group. This tag should be included in the `aws.autoscaling.Group` resource configuration to prevent the provider from removing it in subsequent executions as well as ensuring the `AmazonECSManaged` tag is propagated to all EC2 Instances in the Auto Scaling Group if `min_size` is above 0 on creation. Any EC2 Instances in the Auto Scaling Group without this tag must be manually be updated, otherwise they may cause unexpected scaling behavior and metrics.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testGroup = new Group(&#34;testGroup&#34;, GroupArgs.builder()        
+ *             .tags(GroupTag.builder()
+ *                 .key(&#34;AmazonECSManaged&#34;)
+ *                 .value(true)
+ *                 .propagateAtLaunch(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var testCapacityProvider = new CapacityProvider(&#34;testCapacityProvider&#34;, CapacityProviderArgs.builder()        
+ *             .autoScalingGroupProvider(CapacityProviderAutoScalingGroupProvider.builder()
+ *                 .autoScalingGroupArn(testGroup.getArn())
+ *                 .managedTerminationProtection(&#34;ENABLED&#34;)
+ *                 .managedScaling(CapacityProviderAutoScalingGroupProviderManagedScaling.builder()
+ *                     .maximumScalingStepSize(1000)
+ *                     .minimumScalingStepSize(1)
+ *                     .status(&#34;ENABLED&#34;)
+ *                     .targetCapacity(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

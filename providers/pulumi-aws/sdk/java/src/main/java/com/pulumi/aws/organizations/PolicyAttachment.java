@@ -17,6 +17,75 @@ import javax.annotation.Nullable;
  * Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.
  * 
  * ## Example Usage
+ * ### Organization Account
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new PolicyAttachment(&#34;account&#34;, PolicyAttachmentArgs.builder()        
+ *             .policyId(aws_organizations_policy.getExample().getId())
+ *             .targetId(&#34;123456789012&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Organization Root
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var root = new PolicyAttachment(&#34;root&#34;, PolicyAttachmentArgs.builder()        
+ *             .policyId(aws_organizations_policy.getExample().getId())
+ *             .targetId(aws_organizations_organization.getExample().getRoots()[0].getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Organization Unit
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var unit = new PolicyAttachment(&#34;unit&#34;, PolicyAttachmentArgs.builder()        
+ *             .policyId(aws_organizations_policy.getExample().getId())
+ *             .targetId(aws_organizations_organizational_unit.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

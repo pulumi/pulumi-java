@@ -19,6 +19,45 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Logs destination policy resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testDestination = new LogDestination(&#34;testDestination&#34;, LogDestinationArgs.builder()        
+ *             .roleArn(aws_iam_role.getIam_for_cloudwatch().getArn())
+ *             .targetArn(aws_kinesis_stream.getKinesis_for_cloudwatch().getArn())
+ *             .build());
+ * 
+ *         final var testDestinationPolicyPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .effect(&#34;Allow&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;AWS&#34;)
+ *                     .identifiers(&#34;123456789012&#34;)
+ *                     .build())
+ *                 .actions(&#34;logs:PutSubscriptionFilter&#34;)
+ *                 .resources(testDestination.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var testDestinationPolicyLogDestinationPolicy = new LogDestinationPolicy(&#34;testDestinationPolicyLogDestinationPolicy&#34;, LogDestinationPolicyArgs.builder()        
+ *             .destinationName(testDestination.getName())
+ *             .accessPolicy(testDestinationPolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(testDestinationPolicyPolicyDocument -&gt; testDestinationPolicyPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

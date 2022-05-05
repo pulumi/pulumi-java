@@ -19,6 +19,25 @@ import javax.annotation.Nullable;
  * Provides a way to set SNS SMS preferences.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var updateSmsPrefs = new SmsPreferences(&#34;updateSmsPrefs&#34;);
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:sns/smsPreferences:SmsPreferences")

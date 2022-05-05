@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * Backup policies turn automatic backups on or off for an existing file system.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fs = new FileSystem(&#34;fs&#34;);
+ * 
+ *         var policy = new BackupPolicy(&#34;policy&#34;, BackupPolicyArgs.builder()        
+ *             .fileSystemId(fs.getId())
+ *             .backupPolicy(BackupPolicyBackupPolicy.builder()
+ *                 .status(&#34;ENABLED&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

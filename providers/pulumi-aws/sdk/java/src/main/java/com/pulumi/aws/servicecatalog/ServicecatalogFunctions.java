@@ -24,6 +24,29 @@ public final class ServicecatalogFunctions {
      * Provides information on a Service Catalog Constraint.
      * 
      * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getConstraint(GetConstraintArgs.builder()
+     *             .acceptLanguage(&#34;en&#34;)
+     *             .id(&#34;cons-hrvy0335&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args) {
@@ -36,6 +59,28 @@ public final class ServicecatalogFunctions {
      * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.
      * 
      * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getLaunchPaths(GetLaunchPathsArgs.builder()
+     *             .productId(&#34;prod-yakog5pdriver&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args) {
@@ -48,6 +93,27 @@ public final class ServicecatalogFunctions {
      * Provides information for a Service Catalog Portfolio.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var portfolio = Output.of(ServicecatalogFunctions.getPortfolio(GetPortfolioArgs.builder()
+     *             .id(&#34;port-07052002&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args) {
@@ -60,6 +126,28 @@ public final class ServicecatalogFunctions {
      * Provides information on Service Catalog Portfolio Constraints.
      * 
      * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getPortfolioConstraints(GetPortfolioConstraintsArgs.builder()
+     *             .portfolioId(&#34;port-3lli3b3an&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args) {
@@ -74,6 +162,28 @@ public final class ServicecatalogFunctions {
      * &gt; **Tip:** A &#34;provisioning artifact&#34; is also referred to as a &#34;version.&#34; A &#34;distributor&#34; is also referred to as a &#34;vendor.&#34;
      * 
      * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getProduct(GetProductArgs.builder()
+     *             .id(&#34;prod-dnigbtea24ste&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {

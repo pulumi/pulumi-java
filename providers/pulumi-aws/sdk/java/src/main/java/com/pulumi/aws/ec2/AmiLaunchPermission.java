@@ -18,6 +18,77 @@ import javax.annotation.Nullable;
  * Adds a launch permission to an Amazon Machine Image (AMI).
  * 
  * ## Example Usage
+ * ### AWS Account ID
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AmiLaunchPermission(&#34;example&#34;, AmiLaunchPermissionArgs.builder()        
+ *             .accountId(&#34;123456789012&#34;)
+ *             .imageId(&#34;ami-12345678&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Public Access
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AmiLaunchPermission(&#34;example&#34;, AmiLaunchPermissionArgs.builder()        
+ *             .group(&#34;all&#34;)
+ *             .imageId(&#34;ami-12345678&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Organization Access
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(OrganizationsFunctions.getOrganization());
+ * 
+ *         var example = new AmiLaunchPermission(&#34;example&#34;, AmiLaunchPermissionArgs.builder()        
+ *             .imageId(&#34;ami-12345678&#34;)
+ *             .organizationArn(current.apply(getOrganizationResult -&gt; getOrganizationResult.getArn()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

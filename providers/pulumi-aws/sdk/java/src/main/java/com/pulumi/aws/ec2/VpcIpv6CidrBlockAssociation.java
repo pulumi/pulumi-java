@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * The `aws.ec2.VpcIpv6CidrBlockAssociation` resource allows IPv6 CIDR blocks to be added to the VPC.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testVpc = new Vpc(&#34;testVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var testVpcIpv6CidrBlockAssociation = new VpcIpv6CidrBlockAssociation(&#34;testVpcIpv6CidrBlockAssociation&#34;, VpcIpv6CidrBlockAssociationArgs.builder()        
+ *             .ipv6IpamPoolId(aws_vpc_ipam_pool.getTest().getId())
+ *             .vpcId(testVpc.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

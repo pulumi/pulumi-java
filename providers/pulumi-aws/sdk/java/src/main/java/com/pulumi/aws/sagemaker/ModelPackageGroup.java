@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Model Package Group resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ModelPackageGroup(&#34;example&#34;, ModelPackageGroupArgs.builder()        
+ *             .modelPackageGroupName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

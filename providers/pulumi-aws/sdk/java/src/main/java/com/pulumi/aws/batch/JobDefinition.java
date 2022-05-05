@@ -24,6 +24,117 @@ import javax.annotation.Nullable;
  * Provides a Batch Job Definition resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new JobDefinition(&#34;test&#34;, JobDefinitionArgs.builder()        
+ *             .containerProperties(&#34;&#34;&#34;
+ * {
+ * 	&#34;command&#34;: [&#34;ls&#34;, &#34;-la&#34;],
+ * 	&#34;image&#34;: &#34;busybox&#34;,
+ * 	&#34;memory&#34;: 1024,
+ * 	&#34;vcpus&#34;: 1,
+ * 	&#34;volumes&#34;: [
+ *       {
+ *         &#34;host&#34;: {
+ *           &#34;sourcePath&#34;: &#34;/tmp&#34;
+ *         },
+ *         &#34;name&#34;: &#34;tmp&#34;
+ *       }
+ *     ],
+ * 	&#34;environment&#34;: [
+ * 		{&#34;name&#34;: &#34;VARNAME&#34;, &#34;value&#34;: &#34;VARVAL&#34;}
+ * 	],
+ * 	&#34;mountPoints&#34;: [
+ * 		{
+ *           &#34;sourceVolume&#34;: &#34;tmp&#34;,
+ *           &#34;containerPath&#34;: &#34;/tmp&#34;,
+ *           &#34;readOnly&#34;: false
+ *         }
+ * 	],
+ *     &#34;ulimits&#34;: [
+ *       {
+ *         &#34;hardLimit&#34;: 1024,
+ *         &#34;name&#34;: &#34;nofile&#34;,
+ *         &#34;softLimit&#34;: 1024
+ *       }
+ *     ]
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .type(&#34;container&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Fargate Platform Capability
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var assumeRolePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;ecs-tasks.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var ecsTaskExecutionRole = new Role(&#34;ecsTaskExecutionRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(assumeRolePolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var ecsTaskExecutionRolePolicy = new RolePolicyAttachment(&#34;ecsTaskExecutionRolePolicy&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(ecsTaskExecutionRole.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy&#34;)
+ *             .build());
+ * 
+ *         var test = new JobDefinition(&#34;test&#34;, JobDefinitionArgs.builder()        
+ *             .type(&#34;container&#34;)
+ *             .platformCapabilities(&#34;FARGATE&#34;)
+ *             .containerProperties(ecsTaskExecutionRole.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;command&#34;: [&#34;echo&#34;, &#34;test&#34;],
+ *   &#34;image&#34;: &#34;busybox&#34;,
+ *   &#34;fargatePlatformConfiguration&#34;: {
+ *     &#34;platformVersion&#34;: &#34;LATEST&#34;
+ *   },
+ *   &#34;resourceRequirements&#34;: [
+ *     {&#34;type&#34;: &#34;VCPU&#34;, &#34;value&#34;: &#34;0.25&#34;},
+ *     {&#34;type&#34;: &#34;MEMORY&#34;, &#34;value&#34;: &#34;512&#34;}
+ *   ],
+ *   &#34;executionRoleArn&#34;: &#34;%s&#34;
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

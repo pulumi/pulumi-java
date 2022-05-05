@@ -23,6 +23,41 @@ import javax.annotation.Nullable;
  * Provides an S3 bucket website configuration resource. For more information, see [Hosting Websites on S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketWebsiteConfigurationV2(&#34;example&#34;, BucketWebsiteConfigurationV2Args.builder()        
+ *             .bucket(aws_s3_bucket.getExample().getBucket())
+ *             .indexDocument(BucketWebsiteConfigurationV2IndexDocument.builder()
+ *                 .suffix(&#34;index.html&#34;)
+ *                 .build())
+ *             .errorDocument(BucketWebsiteConfigurationV2ErrorDocument.builder()
+ *                 .key(&#34;error.html&#34;)
+ *                 .build())
+ *             .routingRules(BucketWebsiteConfigurationV2RoutingRule.builder()
+ *                 .condition(BucketWebsiteConfigurationV2RoutingRuleCondition.builder()
+ *                     .keyPrefixEquals(&#34;docs/&#34;)
+ *                     .build())
+ *                 .redirect(BucketWebsiteConfigurationV2RoutingRuleRedirect.builder()
+ *                     .replaceKeyPrefixWith(&#34;documents/&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

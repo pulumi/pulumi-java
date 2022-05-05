@@ -17,6 +17,28 @@ import javax.annotation.Nullable;
  * Manages a VPC Endpoint Route Table Association
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpcEndpointRouteTableAssociation(&#34;example&#34;, VpcEndpointRouteTableAssociationArgs.builder()        
+ *             .routeTableId(aws_route_table.getExample().getId())
+ *             .vpcEndpointId(aws_vpc_endpoint.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

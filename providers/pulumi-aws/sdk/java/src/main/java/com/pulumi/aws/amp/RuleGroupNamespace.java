@@ -17,6 +17,36 @@ import javax.annotation.Nullable;
  * Manages an Amazon Managed Service for Prometheus (AMP) Rule Group Namespace
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var demoWorkspace = new Workspace(&#34;demoWorkspace&#34;);
+ * 
+ *         var demoRuleGroupNamespace = new RuleGroupNamespace(&#34;demoRuleGroupNamespace&#34;, RuleGroupNamespaceArgs.builder()        
+ *             .workspaceId(demoWorkspace.getId())
+ *             .data(&#34;&#34;&#34;
+ * groups:
+ *   - name: test
+ *     rules:
+ *     - record: metric:recording_rule
+ *       expr: avg(rate(container_cpu_usage_seconds_total[5m]))
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

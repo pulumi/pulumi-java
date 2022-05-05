@@ -24,6 +24,28 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks custom layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var custlayer = new CustomLayer(&#34;custlayer&#34;, CustomLayerArgs.builder()        
+ *             .shortName(&#34;awesome&#34;)
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * Manages a Neptune Parameter Group
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ParameterGroup(&#34;example&#34;, ParameterGroupArgs.builder()        
+ *             .family(&#34;neptune1&#34;)
+ *             .parameters(ParameterGroupParameter.builder()
+ *                 .name(&#34;neptune_query_timeout&#34;)
+ *                 .value(&#34;25&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

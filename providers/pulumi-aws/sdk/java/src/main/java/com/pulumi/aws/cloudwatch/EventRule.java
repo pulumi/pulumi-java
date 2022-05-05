@@ -22,6 +22,58 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var console = new EventRule(&#34;console&#34;, EventRuleArgs.builder()        
+ *             .description(&#34;Capture each AWS Console Sign In&#34;)
+ *             .eventPattern(&#34;&#34;&#34;
+ * {
+ *   &#34;detail-type&#34;: [
+ *     &#34;AWS Console Sign In via CloudTrail&#34;
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var awsLogins = new Topic(&#34;awsLogins&#34;);
+ * 
+ *         var sns = new EventTarget(&#34;sns&#34;, EventTargetArgs.builder()        
+ *             .rule(console.getName())
+ *             .arn(awsLogins.getArn())
+ *             .build());
+ * 
+ *         final var snsTopicPolicy = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .effect(&#34;Allow&#34;)
+ *                 .actions(&#34;SNS:Publish&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;events.amazonaws.com&#34;)
+ *                     .build())
+ *                 .resources(awsLogins.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new TopicPolicy(&#34;default&#34;, TopicPolicyArgs.builder()        
+ *             .arn(awsLogins.getArn())
+ *             .policy(snsTopicPolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(snsTopicPolicy -&gt; snsTopicPolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

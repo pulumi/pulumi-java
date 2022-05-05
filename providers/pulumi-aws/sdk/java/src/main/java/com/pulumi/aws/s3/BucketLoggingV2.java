@@ -24,6 +24,43 @@ import javax.annotation.Nullable;
  * to decide which method meets your requirements.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var logBucket = new BucketV2(&#34;logBucket&#34;);
+ * 
+ *         var logBucketAcl = new BucketAclV2(&#34;logBucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(logBucket.getId())
+ *             .acl(&#34;log-delivery-write&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketLoggingV2 = new BucketLoggingV2(&#34;exampleBucketLoggingV2&#34;, BucketLoggingV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .targetBucket(logBucket.getId())
+ *             .targetPrefix(&#34;log/&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

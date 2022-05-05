@@ -21,6 +21,150 @@ import javax.annotation.Nullable;
  * Provides an Amplify Branch resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;);
+ * 
+ *         var master = new Branch(&#34;master&#34;, BranchArgs.builder()        
+ *             .appId(example.getId())
+ *             .branchName(&#34;master&#34;)
+ *             .framework(&#34;React&#34;)
+ *             .stage(&#34;PRODUCTION&#34;)
+ *             .environmentVariables(Map.of(&#34;REACT_APP_API_SERVER&#34;, &#34;https://api.example.com&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic Authentication
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;);
+ * 
+ *         var master = new Branch(&#34;master&#34;, BranchArgs.builder()        
+ *             .appId(example.getId())
+ *             .branchName(&#34;master&#34;)
+ *             .basicAuthConfig(Map.ofEntries(
+ *                 Map.entry(&#34;enableBasicAuth&#34;, true),
+ *                 Map.entry(&#34;username&#34;, &#34;username&#34;),
+ *                 Map.entry(&#34;password&#34;, &#34;password&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Notifications
+ * 
+ * Amplify Console uses EventBridge (formerly known as CloudWatch Events) and SNS for email notifications.  To implement the same functionality, you need to set `enable_notification` in a `aws.amplify.Branch` resource, as well as creating an EventBridge Rule, an SNS topic, and SNS subscriptions.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;);
+ * 
+ *         var master = new Branch(&#34;master&#34;, BranchArgs.builder()        
+ *             .appId(example.getId())
+ *             .branchName(&#34;master&#34;)
+ *             .enableNotification(true)
+ *             .build());
+ * 
+ *         var amplifyAppMasterEventRule = new EventRule(&#34;amplifyAppMasterEventRule&#34;, EventRuleArgs.builder()        
+ *             .description(master.getBranchName().apply(branchName -&gt; String.format(&#34;AWS Amplify build notifications for :  App: %s Branch: %s&#34;, aws_amplify_app.getApp().getId(),branchName)))
+ *             .eventPattern(Output.tuple(example.getId(), master.getBranchName()).apply(values -&gt; {
+ *                 var id = values.t1;
+ *                 var branchName = values.t2;
+ *                 return serializeJson(
+ *                     jsonObject(
+ *                         jsonProperty(&#34;detail&#34;, jsonObject(
+ *                             jsonProperty(&#34;appId&#34;, jsonArray(id)),
+ *                             jsonProperty(&#34;branchName&#34;, jsonArray(branchName)),
+ *                             jsonProperty(&#34;jobStatus&#34;, jsonArray(
+ *                                 &#34;SUCCEED&#34;, 
+ *                                 &#34;FAILED&#34;, 
+ *                                 &#34;STARTED&#34;
+ *                             ))
+ *                         )),
+ *                         jsonProperty(&#34;detail-type&#34;, jsonArray(&#34;Amplify Deployment Status Change&#34;)),
+ *                         jsonProperty(&#34;source&#34;, jsonArray(&#34;aws.amplify&#34;))
+ *                     ));
+ *             }))
+ *             .build());
+ * 
+ *         var amplifyAppMasterTopic = new Topic(&#34;amplifyAppMasterTopic&#34;);
+ * 
+ *         var amplifyAppMasterEventTarget = new EventTarget(&#34;amplifyAppMasterEventTarget&#34;, EventTargetArgs.builder()        
+ *             .rule(amplifyAppMasterEventRule.getName())
+ *             .arn(amplifyAppMasterTopic.getArn())
+ *             .inputTransformer(EventTargetInputTransformer.builder()
+ *                 .inputPaths(Map.ofEntries(
+ *                     Map.entry(&#34;jobId&#34;, &#34;$.detail.jobId&#34;),
+ *                     Map.entry(&#34;appId&#34;, &#34;$.detail.appId&#34;),
+ *                     Map.entry(&#34;region&#34;, &#34;$.region&#34;),
+ *                     Map.entry(&#34;branch&#34;, &#34;$.detail.branchName&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;$.detail.jobStatus&#34;)
+ *                 ))
+ *                 .inputTemplate(&#34;\&#34;Build notification from the AWS Amplify Console for app: https://&lt;branch&gt;.&lt;appId&gt;.amplifyapp.com/. Your build status is &lt;status&gt;. Go to https://console.aws.amazon.com/amplify/home?region=&lt;region&gt;#&lt;appId&gt;/&lt;branch&gt;/&lt;jobId&gt; to view details on your build. \&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         final var amplifyAppMasterPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .sid(master.getArn().apply(arn -&gt; String.format(&#34;Allow_Publish_Events %s&#34;, arn)))
+ *                 .effect(&#34;Allow&#34;)
+ *                 .actions(&#34;SNS:Publish&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;events.amazonaws.com&#34;)
+ *                     .build())
+ *                 .resources(amplifyAppMasterTopic.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var amplifyAppMasterTopicPolicy = new TopicPolicy(&#34;amplifyAppMasterTopicPolicy&#34;, TopicPolicyArgs.builder()        
+ *             .arn(amplifyAppMasterTopic.getArn())
+ *             .policy(amplifyAppMasterPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(amplifyAppMasterPolicyDocument -&gt; amplifyAppMasterPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

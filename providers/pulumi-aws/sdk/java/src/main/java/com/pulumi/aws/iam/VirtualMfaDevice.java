@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * **Using certs on file:**
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VirtualMfaDevice(&#34;example&#34;, VirtualMfaDeviceArgs.builder()        
+ *             .virtualMfaDeviceName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IAM Virtual MFA Devices can be imported using the `arn`, e.g.,

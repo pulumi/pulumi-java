@@ -21,6 +21,29 @@ import javax.annotation.Nullable;
  * Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpcAttachment(&#34;example&#34;, VpcAttachmentArgs.builder()        
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

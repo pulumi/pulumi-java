@@ -19,6 +19,27 @@ import javax.annotation.Nullable;
  * Provides an [IAM service-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var elasticbeanstalk = new ServiceLinkedRole(&#34;elasticbeanstalk&#34;, ServiceLinkedRoleArgs.builder()        
+ *             .awsServiceName(&#34;elasticbeanstalk.amazonaws.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

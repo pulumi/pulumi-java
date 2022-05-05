@@ -22,6 +22,100 @@ import javax.annotation.Nullable;
  * Provides an AppSync Resolver.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testGraphQLApi = new GraphQLApi(&#34;testGraphQLApi&#34;, GraphQLApiArgs.builder()        
+ *             .authenticationType(&#34;API_KEY&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * type Mutation {
+ * 	putPost(id: ID!, title: String!): Post
+ * }
+ * 
+ * type Post {
+ * 	id: ID!
+ * 	title: String!
+ * }
+ * 
+ * type Query {
+ * 	singlePost(id: ID!): Post
+ * }
+ * 
+ * schema {
+ * 	query: Query
+ * 	mutation: Mutation
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testDataSource = new DataSource(&#34;testDataSource&#34;, DataSourceArgs.builder()        
+ *             .apiId(testGraphQLApi.getId())
+ *             .name(&#34;tf_example&#34;)
+ *             .type(&#34;HTTP&#34;)
+ *             .httpConfig(DataSourceHttpConfig.builder()
+ *                 .endpoint(&#34;http://example.com&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var testResolver = new Resolver(&#34;testResolver&#34;, ResolverArgs.builder()        
+ *             .apiId(testGraphQLApi.getId())
+ *             .field(&#34;singlePost&#34;)
+ *             .type(&#34;Query&#34;)
+ *             .dataSource(testDataSource.getName())
+ *             .requestTemplate(&#34;&#34;&#34;
+ * {
+ *     &#34;version&#34;: &#34;2018-05-29&#34;,
+ *     &#34;method&#34;: &#34;GET&#34;,
+ *     &#34;resourcePath&#34;: &#34;/&#34;,
+ *     &#34;params&#34;:{
+ *         &#34;headers&#34;: $utils.http.copyheaders($ctx.request.headers)
+ *     }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .responseTemplate(&#34;&#34;&#34;
+ * #if($ctx.result.statusCode == 200)
+ *     $ctx.result.body
+ * #else
+ *     $utils.appendError($ctx.result.body, $ctx.result.statusCode)
+ * #end
+ *             &#34;&#34;&#34;)
+ *             .cachingConfig(ResolverCachingConfig.builder()
+ *                 .cachingKeys(                
+ *                     &#34;$context.identity.sub&#34;,
+ *                     &#34;$context.arguments.id&#34;)
+ *                 .ttl(60)
+ *                 .build())
+ *             .build());
+ * 
+ *         var mutationPipelineTest = new Resolver(&#34;mutationPipelineTest&#34;, ResolverArgs.builder()        
+ *             .type(&#34;Mutation&#34;)
+ *             .apiId(testGraphQLApi.getId())
+ *             .field(&#34;pipelineTest&#34;)
+ *             .requestTemplate(&#34;{}&#34;)
+ *             .responseTemplate(&#34;$util.toJson($ctx.result)&#34;)
+ *             .kind(&#34;PIPELINE&#34;)
+ *             .pipelineConfig(ResolverPipelineConfig.builder()
+ *                 .functions(                
+ *                     aws_appsync_function.getTest1().getFunction_id(),
+ *                     aws_appsync_function.getTest2().getFunction_id(),
+ *                     aws_appsync_function.getTest3().getFunction_id())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

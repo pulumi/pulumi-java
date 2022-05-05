@@ -38,6 +38,284 @@ import javax.annotation.Nullable;
  * &gt; To give an external source (like an EventBridge Rule, SNS, or S3) permission to access the Lambda function, use the `aws.lambda.Permission` resource. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details. On the other hand, the `role` argument of this resource is the function&#39;s execution role for identity and access to AWS services and resources.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambda_function_payload.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;index.test&#34;)
+ *             .runtime(&#34;nodejs12.x&#34;)
+ *             .environment(FunctionEnvironment.builder()
+ *                 .variables(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Layers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLayerVersion = new LayerVersion(&#34;exampleLayerVersion&#34;);
+ * 
+ *         var exampleFunction = new Function(&#34;exampleFunction&#34;, FunctionArgs.builder()        
+ *             .layers(exampleLayerVersion.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Ephemeral Storage
+ * 
+ * Lambda Function Ephemeral Storage(`/tmp`) allows you to configure the storage upto `10` GB. The default value set to `512` MB.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambda_function_payload.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;index.test&#34;)
+ *             .runtime(&#34;nodejs14.x&#34;)
+ *             .ephemeralStorage(FunctionEphemeralStorage.builder()
+ *                 .size(10240)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda File Systems
+ * 
+ * Lambda File Systems allow you to connect an Amazon Elastic File System (EFS) file system to a Lambda function to share data across function invocations, access existing data including large files, and save function state.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var efsForLambda = new FileSystem(&#34;efsForLambda&#34;, FileSystemArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;efs_for_lambda&#34;))
+ *             .build());
+ * 
+ *         var alpha = new MountTarget(&#34;alpha&#34;, MountTargetArgs.builder()        
+ *             .fileSystemId(efsForLambda.getId())
+ *             .subnetId(aws_subnet.getSubnet_for_lambda().getId())
+ *             .securityGroups(aws_security_group.getSg_for_lambda().getId())
+ *             .build());
+ * 
+ *         var accessPointForLambda = new AccessPoint(&#34;accessPointForLambda&#34;, AccessPointArgs.builder()        
+ *             .fileSystemId(efsForLambda.getId())
+ *             .rootDirectory(AccessPointRootDirectory.builder()
+ *                 .path(&#34;/lambda&#34;)
+ *                 .creationInfo(AccessPointRootDirectoryCreationInfo.builder()
+ *                     .ownerGid(1000)
+ *                     .ownerUid(1000)
+ *                     .permissions(&#34;777&#34;)
+ *                     .build())
+ *                 .build())
+ *             .posixUser(AccessPointPosixUser.builder()
+ *                 .gid(1000)
+ *                 .uid(1000)
+ *                 .build())
+ *             .build());
+ * 
+ *         var example = new Function(&#34;example&#34;, FunctionArgs.builder()        
+ *             .fileSystemConfig(FunctionFileSystemConfig.builder()
+ *                 .arn(accessPointForLambda.getArn())
+ *                 .localMountPath(&#34;/mnt/efs&#34;)
+ *                 .build())
+ *             .vpcConfig(FunctionVpcConfig.builder()
+ *                 .subnetIds(aws_subnet.getSubnet_for_lambda().getId())
+ *                 .securityGroupIds(aws_security_group.getSg_for_lambda().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### CloudWatch Logging and Permissions
+ * 
+ * For more information about CloudWatch Logs for Lambda, see the [Lambda User Guide](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var lambdaFunctionName = config.get(&#34;lambdaFunctionName&#34;).orElse(&#34;lambda_function_name&#34;);
+ *         var example = new LogGroup(&#34;example&#34;, LogGroupArgs.builder()        
+ *             .retentionInDays(14)
+ *             .build());
+ * 
+ *         var lambdaLogging = new Policy(&#34;lambdaLogging&#34;, PolicyArgs.builder()        
+ *             .path(&#34;/&#34;)
+ *             .description(&#34;IAM policy for logging from a lambda&#34;)
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;logs:CreateLogGroup&#34;,
+ *         &#34;logs:CreateLogStream&#34;,
+ *         &#34;logs:PutLogEvents&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;arn:aws:logs:*:*:*&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var lambdaLogs = new RolePolicyAttachment(&#34;lambdaLogs&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(aws_iam_role.getIam_for_lambda().getName())
+ *             .policyArn(lambdaLogging.getArn())
+ *             .build());
+ * 
+ *         var testLambda = new Function(&#34;testLambda&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda with Targetted Architecture
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambda_function_payload.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;index.test&#34;)
+ *             .runtime(&#34;nodejs12.x&#34;)
+ *             .architectures(&#34;arm64&#34;)
+ *             .environment(FunctionEnvironment.builder()
+ *                 .variables(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or indirectly via Amazon S3 (using the `s3_bucket`, `s3_key` and `s3_object_version` arguments). When providing the deployment package via S3 it may be useful to use the `aws.s3.BucketObjectv2` resource to upload it.
  * 
  * ## Import
  * 

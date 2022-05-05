@@ -23,6 +23,48 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Image Recipe.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ImageRecipe(&#34;example&#34;, ImageRecipeArgs.builder()        
+ *             .blockDeviceMappings(ImageRecipeBlockDeviceMapping.builder()
+ *                 .deviceName(&#34;/dev/xvdb&#34;)
+ *                 .ebs(ImageRecipeBlockDeviceMappingEbs.builder()
+ *                     .deleteOnTermination(true)
+ *                     .volumeSize(100)
+ *                     .volumeType(&#34;gp2&#34;)
+ *                     .build())
+ *                 .build())
+ *             .components(ImageRecipeComponent.builder()
+ *                 .componentArn(aws_imagebuilder_component.getExample().getArn())
+ *                 .parameters(                
+ *                     ImageRecipeComponentParameter.builder()
+ *                         .name(&#34;Parameter1&#34;)
+ *                         .value(&#34;Value1&#34;)
+ *                         .build(),
+ *                     ImageRecipeComponentParameter.builder()
+ *                         .name(&#34;Parameter2&#34;)
+ *                         .value(&#34;Value2&#34;)
+ *                         .build())
+ *                 .build())
+ *             .parentImage(String.format(&#34;arn:%s:imagebuilder:%s:aws:image/amazon-linux-2-x86/x.x.x&#34;, data.getAws_partition().getCurrent().getPartition(),data.getAws_region().getCurrent().getName()))
+ *             .version(&#34;1.0.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

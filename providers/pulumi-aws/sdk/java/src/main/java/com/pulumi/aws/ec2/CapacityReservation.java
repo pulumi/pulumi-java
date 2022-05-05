@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new CapacityReservation(&#34;default&#34;, CapacityReservationArgs.builder()        
+ *             .availabilityZone(&#34;eu-west-1a&#34;)
+ *             .instanceCount(1)
+ *             .instancePlatform(&#34;Linux/UNIX&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

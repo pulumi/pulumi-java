@@ -27,6 +27,87 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * The following provides a very basic example of setting up an instance (provided
+ * by `instance`) in the default security group, creating a security group
+ * (provided by `sg`) and then attaching the security group to the instance&#39;s
+ * primary network interface via the `aws.ec2.NetworkInterfaceSecurityGroupAttachment` resource,
+ * named `sg_attachment`:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ami = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .filters(GetAmiFilter.builder()
+ *                 .name(&#34;name&#34;)
+ *                 .values(&#34;amzn-ami-hvm-*&#34;)
+ *                 .build())
+ *             .owners(&#34;amazon&#34;)
+ *             .build()));
+ * 
+ *         var instance = new Instance(&#34;instance&#34;, InstanceArgs.builder()        
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .ami(ami.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .tags(Map.of(&#34;type&#34;, &#34;test-instance&#34;))
+ *             .build());
+ * 
+ *         var sg = new SecurityGroup(&#34;sg&#34;, SecurityGroupArgs.builder()        
+ *             .tags(Map.of(&#34;type&#34;, &#34;test-security-group&#34;))
+ *             .build());
+ * 
+ *         var sgAttachment = new NetworkInterfaceSecurityGroupAttachment(&#34;sgAttachment&#34;, NetworkInterfaceSecurityGroupAttachmentArgs.builder()        
+ *             .securityGroupId(sg.getId())
+ *             .networkInterfaceId(instance.getPrimaryNetworkInterfaceId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * In this example, `instance` is provided by the `aws.ec2.Instance` data source,
+ * fetching an external instance, possibly not managed by this provider.
+ * `sg_attachment` then attaches to the output instance&#39;s `network_interface_id`:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var instance = Output.of(Ec2Functions.getInstance(GetInstanceArgs.builder()
+ *             .instanceId(&#34;i-1234567890abcdef0&#34;)
+ *             .build()));
+ * 
+ *         var sg = new SecurityGroup(&#34;sg&#34;, SecurityGroupArgs.builder()        
+ *             .tags(Map.of(&#34;type&#34;, &#34;test-security-group&#34;))
+ *             .build());
+ * 
+ *         var sgAttachment = new NetworkInterfaceSecurityGroupAttachment(&#34;sgAttachment&#34;, NetworkInterfaceSecurityGroupAttachmentArgs.builder()        
+ *             .securityGroupId(sg.getId())
+ *             .networkInterfaceId(instance.apply(getInstanceResult -&gt; getInstanceResult.getNetworkInterfaceId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:ec2/networkInterfaceSecurityGroupAttachment:NetworkInterfaceSecurityGroupAttachment")
 public class NetworkInterfaceSecurityGroupAttachment extends com.pulumi.resources.CustomResource {

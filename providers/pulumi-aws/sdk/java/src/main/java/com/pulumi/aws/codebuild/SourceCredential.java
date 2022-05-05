@@ -21,6 +21,54 @@ import javax.annotation.Nullable;
  * [Codebuild only allows a single credential per given server type in a given region](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.GitHubSourceCredentials.html). Therefore, when you define `aws.codebuild.SourceCredential`, `aws.codebuild.Project` resource defined in the same module will use it.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SourceCredential(&#34;example&#34;, SourceCredentialArgs.builder()        
+ *             .authType(&#34;PERSONAL_ACCESS_TOKEN&#34;)
+ *             .serverType(&#34;GITHUB&#34;)
+ *             .token(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bitbucket Server Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SourceCredential(&#34;example&#34;, SourceCredentialArgs.builder()        
+ *             .authType(&#34;BASIC_AUTH&#34;)
+ *             .serverType(&#34;BITBUCKET&#34;)
+ *             .token(&#34;example&#34;)
+ *             .userName(&#34;test-user&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

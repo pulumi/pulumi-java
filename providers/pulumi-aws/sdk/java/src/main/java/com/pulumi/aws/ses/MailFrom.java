@@ -20,6 +20,76 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** For the MAIL FROM domain to be fully usable, this resource should be paired with the aws.ses.DomainIdentity resource. To validate the MAIL FROM domain, a DNS MX record is required. To pass SPF checks, a DNS TXT record may also be required. See the [Amazon SES MAIL FROM documentation](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html) for more information.
  * 
  * ## Example Usage
+ * ### Domain Identity MAIL FROM
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainIdentity = new DomainIdentity(&#34;exampleDomainIdentity&#34;, DomainIdentityArgs.builder()        
+ *             .domain(&#34;example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleMailFrom = new MailFrom(&#34;exampleMailFrom&#34;, MailFromArgs.builder()        
+ *             .domain(exampleDomainIdentity.getDomain())
+ *             .mailFromDomain(exampleDomainIdentity.getDomain().apply(domain -&gt; String.format(&#34;bounce.%s&#34;, domain)))
+ *             .build());
+ * 
+ *         var exampleSesDomainMailFromMx = new Record(&#34;exampleSesDomainMailFromMx&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .name(exampleMailFrom.getMailFromDomain())
+ *             .type(&#34;MX&#34;)
+ *             .ttl(&#34;600&#34;)
+ *             .records(&#34;10 feedback-smtp.us-east-1.amazonses.com&#34;)
+ *             .build());
+ * 
+ *         var exampleSesDomainMailFromTxt = new Record(&#34;exampleSesDomainMailFromTxt&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getExample().getId())
+ *             .name(exampleMailFrom.getMailFromDomain())
+ *             .type(&#34;TXT&#34;)
+ *             .ttl(&#34;600&#34;)
+ *             .records(&#34;v=spf1 include:amazonses.com -all&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Email Identity MAIL FROM
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleEmailIdentity = new EmailIdentity(&#34;exampleEmailIdentity&#34;, EmailIdentityArgs.builder()        
+ *             .email(&#34;user@example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleMailFrom = new MailFrom(&#34;exampleMailFrom&#34;, MailFromArgs.builder()        
+ *             .domain(exampleEmailIdentity.getEmail())
+ *             .mailFromDomain(&#34;mail.example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

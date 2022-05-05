@@ -18,6 +18,30 @@ import javax.annotation.Nullable;
  * Manages the specified alternate contact attached to an AWS Account.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var operations = new AlternativeContact(&#34;operations&#34;, AlternativeContactArgs.builder()        
+ *             .alternateContactType(&#34;OPERATIONS&#34;)
+ *             .emailAddress(&#34;test@example.com&#34;)
+ *             .phoneNumber(&#34;+1234567890&#34;)
+ *             .title(&#34;Example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

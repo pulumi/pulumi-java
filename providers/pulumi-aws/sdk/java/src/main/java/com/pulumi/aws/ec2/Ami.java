@@ -30,6 +30,33 @@ import javax.annotation.Nullable;
  * it&#39;s better to use `aws.ec2.AmiLaunchPermission` instead.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ami(&#34;example&#34;, AmiArgs.builder()        
+ *             .ebsBlockDevices(AmiEbsBlockDevice.builder()
+ *                 .deviceName(&#34;/dev/xvda&#34;)
+ *                 .snapshotId(&#34;snap-xxxxxxxx&#34;)
+ *                 .volumeSize(8)
+ *                 .build())
+ *             .rootDeviceName(&#34;/dev/xvda&#34;)
+ *             .virtualizationType(&#34;hvm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

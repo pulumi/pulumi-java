@@ -20,6 +20,82 @@ import javax.annotation.Nullable;
  * Provides an AWS App Mesh virtual gateway resource.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VirtualGateway(&#34;example&#34;, VirtualGatewayArgs.builder()        
+ *             .meshName(&#34;example-service-mesh&#34;)
+ *             .spec(VirtualGatewaySpec.builder()
+ *                 .listener(VirtualGatewaySpecListener.builder()
+ *                     .portMapping(VirtualGatewaySpecListenerPortMapping.builder()
+ *                         .port(8080)
+ *                         .protocol(&#34;http&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Access Logs and TLS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VirtualGateway(&#34;example&#34;, VirtualGatewayArgs.builder()        
+ *             .meshName(&#34;example-service-mesh&#34;)
+ *             .spec(VirtualGatewaySpec.builder()
+ *                 .listener(VirtualGatewaySpecListener.builder()
+ *                     .portMapping(VirtualGatewaySpecListenerPortMapping.builder()
+ *                         .port(8080)
+ *                         .protocol(&#34;http&#34;)
+ *                         .build())
+ *                     .tls(VirtualGatewaySpecListenerTls.builder()
+ *                         .certificate(VirtualGatewaySpecListenerTlsCertificate.builder()
+ *                             .acm(VirtualGatewaySpecListenerTlsCertificateAcm.builder()
+ *                                 .certificateArn(aws_acm_certificate.getExample().getArn())
+ *                                 .build())
+ *                             .build())
+ *                         .mode(&#34;STRICT&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .logging(VirtualGatewaySpecLogging.builder()
+ *                     .accessLog(VirtualGatewaySpecLoggingAccessLog.builder()
+ *                         .file(VirtualGatewaySpecLoggingAccessLogFile.builder()
+ *                             .path(&#34;/var/log/access.log&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * Provides an RDS DB subnet group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new SubnetGroup(&#34;default&#34;, SubnetGroupArgs.builder()        
+ *             .subnetIds(            
+ *                 aws_subnet.getFrontend().getId(),
+ *                 aws_subnet.getBackend().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;My DB subnet group&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

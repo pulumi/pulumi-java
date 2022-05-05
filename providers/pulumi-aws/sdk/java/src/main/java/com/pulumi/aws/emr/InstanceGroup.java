@@ -27,6 +27,29 @@ import javax.annotation.Nullable;
  * this provider will resize any Instance Group to zero when destroying the resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new InstanceGroup(&#34;task&#34;, InstanceGroupArgs.builder()        
+ *             .clusterId(aws_emr_cluster.getTf-test-cluster().getId())
+ *             .instanceCount(1)
+ *             .instanceType(&#34;m5.xlarge&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * Provides an Neptune Cluster Endpoint Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClusterEndpoint(&#34;example&#34;, ClusterEndpointArgs.builder()        
+ *             .clusterIdentifier(aws_neptune_cluster.getTest().getCluster_identifier())
+ *             .clusterEndpointIdentifier(&#34;example&#34;)
+ *             .endpointType(&#34;READER&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

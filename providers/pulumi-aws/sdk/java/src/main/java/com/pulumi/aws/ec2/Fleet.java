@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * Provides a resource to manage EC2 Fleets.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Fleet(&#34;example&#34;, FleetArgs.builder()        
+ *             .launchTemplateConfig(FleetLaunchTemplateConfig.builder()
+ *                 .launchTemplateSpecification(FleetLaunchTemplateConfigLaunchTemplateSpecification.builder()
+ *                     .launchTemplateId(aws_launch_template.getExample().getId())
+ *                     .version(aws_launch_template.getExample().getLatest_version())
+ *                     .build())
+ *                 .build())
+ *             .targetCapacitySpecification(FleetTargetCapacitySpecification.builder()
+ *                 .defaultTargetCapacityType(&#34;spot&#34;)
+ *                 .totalTargetCapacity(5)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

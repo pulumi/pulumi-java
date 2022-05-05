@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Human Task UI resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HumanTaskUI(&#34;example&#34;, HumanTaskUIArgs.builder()        
+ *             .humanTaskUiName(&#34;example&#34;)
+ *             .uiTemplate(HumanTaskUIUiTemplate.builder()
+ *                 .content(Files.readString(&#34;sagemaker-human-task-ui-template.html&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

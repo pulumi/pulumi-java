@@ -23,6 +23,150 @@ import javax.annotation.Nullable;
  * Provides a Simple or Managed Microsoft directory in AWS Directory Service.
  * 
  * ## Example Usage
+ * ### SimpleAD
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var foo = new Subnet(&#34;foo&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var barSubnet = new Subnet(&#34;barSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2b&#34;)
+ *             .cidrBlock(&#34;10.0.2.0/24&#34;)
+ *             .build());
+ * 
+ *         var barDirectory = new Directory(&#34;barDirectory&#34;, DirectoryArgs.builder()        
+ *             .name(&#34;corp.notexample.com&#34;)
+ *             .password(&#34;SuperSecretPassw0rd&#34;)
+ *             .size(&#34;Small&#34;)
+ *             .vpcSettings(DirectoryVpcSettings.builder()
+ *                 .vpcId(main.getId())
+ *                 .subnetIds(                
+ *                     foo.getId(),
+ *                     barSubnet.getId())
+ *                 .build())
+ *             .tags(Map.of(&#34;Project&#34;, &#34;foo&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Microsoft Active Directory (MicrosoftAD)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var foo = new Subnet(&#34;foo&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var barSubnet = new Subnet(&#34;barSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2b&#34;)
+ *             .cidrBlock(&#34;10.0.2.0/24&#34;)
+ *             .build());
+ * 
+ *         var barDirectory = new Directory(&#34;barDirectory&#34;, DirectoryArgs.builder()        
+ *             .name(&#34;corp.notexample.com&#34;)
+ *             .password(&#34;SuperSecretPassw0rd&#34;)
+ *             .edition(&#34;Standard&#34;)
+ *             .type(&#34;MicrosoftAD&#34;)
+ *             .vpcSettings(DirectoryVpcSettings.builder()
+ *                 .vpcId(main.getId())
+ *                 .subnetIds(                
+ *                     foo.getId(),
+ *                     barSubnet.getId())
+ *                 .build())
+ *             .tags(Map.of(&#34;Project&#34;, &#34;foo&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Microsoft Active Directory Connector (ADConnector)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var foo = new Subnet(&#34;foo&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var bar = new Subnet(&#34;bar&#34;, SubnetArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .availabilityZone(&#34;us-west-2b&#34;)
+ *             .cidrBlock(&#34;10.0.2.0/24&#34;)
+ *             .build());
+ * 
+ *         var connector = new Directory(&#34;connector&#34;, DirectoryArgs.builder()        
+ *             .name(&#34;corp.notexample.com&#34;)
+ *             .password(&#34;SuperSecretPassw0rd&#34;)
+ *             .size(&#34;Small&#34;)
+ *             .type(&#34;ADConnector&#34;)
+ *             .connectSettings(DirectoryConnectSettings.builder()
+ *                 .customerDnsIps(&#34;A.B.C.D&#34;)
+ *                 .customerUsername(&#34;Admin&#34;)
+ *                 .subnetIds(                
+ *                     foo.getId(),
+ *                     bar.getId())
+ *                 .vpcId(main.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

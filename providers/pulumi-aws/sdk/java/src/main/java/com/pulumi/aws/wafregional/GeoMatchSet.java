@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides a WAF Regional Geo Match Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var geoMatchSet = new GeoMatchSet(&#34;geoMatchSet&#34;, GeoMatchSetArgs.builder()        
+ *             .geoMatchConstraints(            
+ *                 GeoMatchSetGeoMatchConstraint.builder()
+ *                     .type(&#34;Country&#34;)
+ *                     .value(&#34;US&#34;)
+ *                     .build(),
+ *                 GeoMatchSetGeoMatchConstraint.builder()
+ *                     .type(&#34;Country&#34;)
+ *                     .value(&#34;CA&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

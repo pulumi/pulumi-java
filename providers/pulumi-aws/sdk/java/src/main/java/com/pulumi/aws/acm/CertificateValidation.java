@@ -26,6 +26,35 @@ import javax.annotation.Nullable;
  * &gt; **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
  * 
  * ## Example Usage
+ * ### Email Validation
+ * 
+ * In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCertificate = new Certificate(&#34;exampleCertificate&#34;, CertificateArgs.builder()        
+ *             .domainName(&#34;example.com&#34;)
+ *             .validationMethod(&#34;EMAIL&#34;)
+ *             .build());
+ * 
+ *         var exampleCertificateValidation = new CertificateValidation(&#34;exampleCertificateValidation&#34;, CertificateValidationArgs.builder()        
+ *             .certificateArn(exampleCertificate.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:acm/certificateValidation:CertificateValidation")

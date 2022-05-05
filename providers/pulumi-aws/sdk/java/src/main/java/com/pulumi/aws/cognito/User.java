@@ -21,6 +21,79 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;);
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .userPoolId(exampleUserPool.getId())
+ *             .username(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Setting user attributes
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;, UserPoolArgs.builder()        
+ *             .schemas(            
+ *                 UserPoolSchema.builder()
+ *                     .name(&#34;terraform&#34;)
+ *                     .attributeDataType(&#34;Boolean&#34;)
+ *                     .mutable(false)
+ *                     .required(false)
+ *                     .developerOnlyAttribute(false)
+ *                     .build(),
+ *                 UserPoolSchema.builder()
+ *                     .name(&#34;foo&#34;)
+ *                     .attributeDataType(&#34;String&#34;)
+ *                     .mutable(false)
+ *                     .required(false)
+ *                     .developerOnlyAttribute(false)
+ *                     .stringAttributeConstraints()
+ *                     .build())
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .userPoolId(exampleUserPool.getId())
+ *             .username(&#34;example&#34;)
+ *             .attributes(Map.ofEntries(
+ *                 Map.entry(&#34;terraform&#34;, true),
+ *                 Map.entry(&#34;foo&#34;, &#34;bar&#34;),
+ *                 Map.entry(&#34;email&#34;, &#34;no-reply@hashicorp.com&#34;),
+ *                 Map.entry(&#34;email_verified&#34;, true)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

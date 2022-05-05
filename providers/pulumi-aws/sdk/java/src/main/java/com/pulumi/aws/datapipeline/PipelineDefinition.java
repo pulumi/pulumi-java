@@ -22,6 +22,80 @@ import javax.annotation.Nullable;
  * Provides a DataPipeline Pipeline Definition resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Pipeline(&#34;default&#34;);
+ * 
+ *         var example = new PipelineDefinition(&#34;example&#34;, PipelineDefinitionArgs.builder()        
+ *             .pipelineId(default_.getId())
+ *             .pipelineObjects(            
+ *                 PipelineDefinitionPipelineObject.builder()
+ *                     .id(&#34;Default&#34;)
+ *                     .name(&#34;Default&#34;)
+ *                     .fields(PipelineDefinitionPipelineObjectField.builder()
+ *                         .key(&#34;workerGroup&#34;)
+ *                         .stringValue(&#34;workerGroup&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 PipelineDefinitionPipelineObject.builder()
+ *                     .id(&#34;Schedule&#34;)
+ *                     .name(&#34;Schedule&#34;)
+ *                     .fields(                    
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;startDateTime&#34;)
+ *                             .stringValue(&#34;2012-12-12T00:00:00&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;type&#34;)
+ *                             .stringValue(&#34;Schedule&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;period&#34;)
+ *                             .stringValue(&#34;1 hour&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;endDateTime&#34;)
+ *                             .stringValue(&#34;2012-12-21T18:00:00&#34;)
+ *                             .build())
+ *                     .build(),
+ *                 PipelineDefinitionPipelineObject.builder()
+ *                     .id(&#34;SayHello&#34;)
+ *                     .name(&#34;SayHello&#34;)
+ *                     .fields(                    
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;type&#34;)
+ *                             .stringValue(&#34;ShellCommandActivity&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;command&#34;)
+ *                             .stringValue(&#34;echo hello&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;parent&#34;)
+ *                             .stringValue(&#34;Default&#34;)
+ *                             .build(),
+ *                         PipelineDefinitionPipelineObjectField.builder()
+ *                             .key(&#34;schedule&#34;)
+ *                             .stringValue(&#34;Schedule&#34;)
+ *                             .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

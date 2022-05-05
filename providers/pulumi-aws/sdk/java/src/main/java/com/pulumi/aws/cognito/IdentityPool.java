@@ -22,6 +22,50 @@ import javax.annotation.Nullable;
  * Provides an AWS Cognito Identity Pool.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new SamlProvider(&#34;default&#34;, SamlProviderArgs.builder()        
+ *             .samlMetadataDocument(Files.readString(&#34;saml-metadata.xml&#34;))
+ *             .build());
+ * 
+ *         var main = new IdentityPool(&#34;main&#34;, IdentityPoolArgs.builder()        
+ *             .identityPoolName(&#34;identity pool&#34;)
+ *             .allowUnauthenticatedIdentities(false)
+ *             .allowClassicFlow(false)
+ *             .cognitoIdentityProviders(            
+ *                 IdentityPoolCognitoIdentityProvider.builder()
+ *                     .clientId(&#34;6lhlkkfbfb4q5kpp90urffae&#34;)
+ *                     .providerName(&#34;cognito-idp.us-east-1.amazonaws.com/us-east-1_Tv0493apJ&#34;)
+ *                     .serverSideTokenCheck(false)
+ *                     .build(),
+ *                 IdentityPoolCognitoIdentityProvider.builder()
+ *                     .clientId(&#34;7kodkvfqfb4qfkp39eurffae&#34;)
+ *                     .providerName(&#34;cognito-idp.us-east-1.amazonaws.com/eu-west-1_Zr231apJu&#34;)
+ *                     .serverSideTokenCheck(false)
+ *                     .build())
+ *             .supportedLoginProviders(Map.ofEntries(
+ *                 Map.entry(&#34;graph.facebook.com&#34;, &#34;7346241598935552&#34;),
+ *                 Map.entry(&#34;accounts.google.com&#34;, &#34;123456789012.apps.googleusercontent.com&#34;)
+ *             ))
+ *             .samlProviderArns(default_.getArn())
+ *             .openidConnectProviderArns(&#34;arn:aws:iam::123456789012:oidc-provider/id.example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

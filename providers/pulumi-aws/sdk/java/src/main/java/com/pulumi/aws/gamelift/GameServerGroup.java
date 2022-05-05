@@ -24,6 +24,136 @@ import javax.annotation.Nullable;
  * Provides an GameLift Game Server Group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GameServerGroup(&#34;example&#34;, GameServerGroupArgs.builder()        
+ *             .gameServerGroupName(&#34;example&#34;)
+ *             .instanceDefinitions(            
+ *                 GameServerGroupInstanceDefinition.builder()
+ *                     .instanceType(&#34;c5.large&#34;)
+ *                     .build(),
+ *                 GameServerGroupInstanceDefinition.builder()
+ *                     .instanceType(&#34;c5a.large&#34;)
+ *                     .build())
+ *             .launchTemplate(GameServerGroupLaunchTemplate.builder()
+ *                 .id(aws_launch_template.getExample().getId())
+ *                 .build())
+ *             .maxSize(1)
+ *             .minSize(1)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Full usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GameServerGroup(&#34;example&#34;, GameServerGroupArgs.builder()        
+ *             .autoScalingPolicy(GameServerGroupAutoScalingPolicy.builder()
+ *                 .estimatedInstanceWarmup(60)
+ *                 .targetTrackingConfiguration(GameServerGroupAutoScalingPolicyTargetTrackingConfiguration.builder()
+ *                     .targetValue(75)
+ *                     .build())
+ *                 .build())
+ *             .balancingStrategy(&#34;SPOT_ONLY&#34;)
+ *             .gameServerGroupName(&#34;example&#34;)
+ *             .gameServerProtectionPolicy(&#34;FULL_PROTECTION&#34;)
+ *             .instanceDefinitions(            
+ *                 GameServerGroupInstanceDefinition.builder()
+ *                     .instanceType(&#34;c5.large&#34;)
+ *                     .weightedCapacity(&#34;1&#34;)
+ *                     .build(),
+ *                 GameServerGroupInstanceDefinition.builder()
+ *                     .instanceType(&#34;c5.2xlarge&#34;)
+ *                     .weightedCapacity(&#34;2&#34;)
+ *                     .build())
+ *             .launchTemplate(GameServerGroupLaunchTemplate.builder()
+ *                 .id(aws_launch_template.getExample().getId())
+ *                 .version(&#34;1&#34;)
+ *                 .build())
+ *             .maxSize(1)
+ *             .minSize(1)
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .vpcSubnets(            
+ *                 &#34;subnet-12345678&#34;,
+ *                 &#34;subnet-23456789&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example IAM Role for GameLift Game Server Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getPartition());
+ * 
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: [
+ *           &#34;autoscaling.amazonaws.com&#34;,
+ *           &#34;gamelift.amazonaws.com&#34;
+ *         ]
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleRolePolicyAttachment = new RolePolicyAttachment(&#34;exampleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(String.format(&#34;arn:%s:iam::aws:policy/GameLiftGameServerGroupPolicy&#34;, current.apply(getPartitionResult -&gt; getPartitionResult.getPartition())))
+ *             .role(exampleRole.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

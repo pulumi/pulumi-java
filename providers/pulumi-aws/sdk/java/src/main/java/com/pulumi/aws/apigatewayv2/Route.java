@@ -23,6 +23,69 @@ import javax.annotation.Nullable;
  * More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) for [WebSocket](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html) and [HTTP](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html) APIs.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApi = new Api(&#34;exampleApi&#34;, ApiArgs.builder()        
+ *             .protocolType(&#34;WEBSOCKET&#34;)
+ *             .routeSelectionExpression(&#34;$request.body.action&#34;)
+ *             .build());
+ * 
+ *         var exampleRoute = new Route(&#34;exampleRoute&#34;, RouteArgs.builder()        
+ *             .apiId(exampleApi.getId())
+ *             .routeKey(&#34;$default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### HTTP Proxy Integration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApi = new Api(&#34;exampleApi&#34;, ApiArgs.builder()        
+ *             .protocolType(&#34;HTTP&#34;)
+ *             .build());
+ * 
+ *         var exampleIntegration = new Integration(&#34;exampleIntegration&#34;, IntegrationArgs.builder()        
+ *             .apiId(exampleApi.getId())
+ *             .integrationType(&#34;HTTP_PROXY&#34;)
+ *             .integrationMethod(&#34;ANY&#34;)
+ *             .integrationUri(&#34;https://example.com/{proxy}&#34;)
+ *             .build());
+ * 
+ *         var exampleRoute = new Route(&#34;exampleRoute&#34;, RouteArgs.builder()        
+ *             .apiId(exampleApi.getId())
+ *             .routeKey(&#34;ANY /example/{proxy+}&#34;)
+ *             .target(exampleIntegration.getId().apply(id -&gt; String.format(&#34;integrations/%s&#34;, id)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

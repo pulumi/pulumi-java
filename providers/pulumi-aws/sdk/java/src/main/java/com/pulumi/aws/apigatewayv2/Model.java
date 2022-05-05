@@ -18,6 +18,39 @@ import javax.annotation.Nullable;
  * Manages an Amazon API Gateway Version 2 [model](https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models).
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Model(&#34;example&#34;, ModelArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .contentType(&#34;application/json&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * {
+ *   &#34;$schema&#34;: &#34;http://json-schema.org/draft-04/schema#&#34;,
+ *   &#34;title&#34;: &#34;ExampleModel&#34;,
+ *   &#34;type&#34;: &#34;object&#34;,
+ *   &#34;properties&#34;: {
+ *     &#34;id&#34;: { &#34;type&#34;: &#34;string&#34; }
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

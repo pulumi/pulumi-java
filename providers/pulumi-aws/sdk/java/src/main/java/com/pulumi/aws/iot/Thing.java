@@ -20,6 +20,27 @@ import javax.annotation.Nullable;
  * Creates and manages an AWS IoT Thing.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Thing(&#34;example&#34;, ThingArgs.builder()        
+ *             .attributes(Map.of(&#34;First&#34;, &#34;examplevalue&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

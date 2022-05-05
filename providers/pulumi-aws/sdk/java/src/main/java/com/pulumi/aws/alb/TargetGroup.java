@@ -27,6 +27,110 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
  * 
  * ## Example Usage
+ * ### Instance Target Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var test = new TargetGroup(&#34;test&#34;, TargetGroupArgs.builder()        
+ *             .port(80)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .vpcId(main.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### IP Target Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var ip_example = new TargetGroup(&#34;ip-example&#34;, TargetGroupArgs.builder()        
+ *             .port(80)
+ *             .protocol(&#34;HTTP&#34;)
+ *             .targetType(&#34;ip&#34;)
+ *             .vpcId(main.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Target Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lambda_example = new TargetGroup(&#34;lambda-example&#34;, TargetGroupArgs.builder()        
+ *             .targetType(&#34;lambda&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### ALB Target Group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lambda_example = new TargetGroup(&#34;lambda-example&#34;, TargetGroupArgs.builder()        
+ *             .targetType(&#34;alb&#34;)
+ *             .port(80)
+ *             .protocol(&#34;TCP&#34;)
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

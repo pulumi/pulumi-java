@@ -20,6 +20,28 @@ import javax.annotation.Nullable;
  * Manages a DocDB database cluster snapshot for DocDB clusters.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClusterSnapshot(&#34;example&#34;, ClusterSnapshotArgs.builder()        
+ *             .dbClusterIdentifier(aws_docdb_cluster.getExample().getId())
+ *             .dbClusterSnapshotIdentifier(&#34;resourcetestsnapshot1234&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

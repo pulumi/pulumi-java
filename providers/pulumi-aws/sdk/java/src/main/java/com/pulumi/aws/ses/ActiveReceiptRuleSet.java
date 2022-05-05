@@ -17,6 +17,27 @@ import javax.annotation.Nullable;
  * Provides a resource to designate the active SES receipt rule set
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new ActiveReceiptRuleSet(&#34;main&#34;, ActiveReceiptRuleSetArgs.builder()        
+ *             .ruleSetName(&#34;primary-rules&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ses/activeReceiptRuleSet:ActiveReceiptRuleSet")

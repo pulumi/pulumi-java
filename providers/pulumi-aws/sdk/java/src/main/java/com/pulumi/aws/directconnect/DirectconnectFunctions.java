@@ -22,6 +22,27 @@ public final class DirectconnectFunctions {
      * Retrieve information about a Direct Connect Connection.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DirectconnectFunctions.getConnection(GetConnectionArgs.builder()
+     *             .name(&#34;tf-dx-connection&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
@@ -34,6 +55,27 @@ public final class DirectconnectFunctions {
      * Retrieve information about a Direct Connect Gateway.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DirectconnectFunctions.getGateway(GetGatewayArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGatewayResult> getGateway(GetGatewayArgs args) {
@@ -49,6 +91,27 @@ public final class DirectconnectFunctions {
      * &gt; **Note:** This data source is different from the [`aws.directconnect.getLocations`](https://www.terraform.io/docs/providers/aws/d/dx_locations.html) data source which retrieves information about all the AWS Direct Connect locations in the current AWS Region.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DirectconnectFunctions.getLocation(GetLocationArgs.builder()
+     *             .locationCode(&#34;CS32A-24FL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLocationResult> getLocation(GetLocationArgs args) {
@@ -64,6 +127,25 @@ public final class DirectconnectFunctions {
      * &gt; **Note:** This data source is different from the [`aws.directconnect.getLocation`](https://www.terraform.io/docs/providers/aws/d/dx_location.html) data source which retrieves information about a specific AWS Direct Connect location in the current AWS Region.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var available = Output.of(DirectconnectFunctions.getLocations());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLocationsResult> getLocations() {

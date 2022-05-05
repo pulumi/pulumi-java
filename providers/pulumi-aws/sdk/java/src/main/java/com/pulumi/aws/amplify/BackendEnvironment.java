@@ -17,6 +17,32 @@ import javax.annotation.Nullable;
  * Provides an Amplify Backend Environment resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApp = new App(&#34;exampleApp&#34;);
+ * 
+ *         var exampleBackendEnvironment = new BackendEnvironment(&#34;exampleBackendEnvironment&#34;, BackendEnvironmentArgs.builder()        
+ *             .appId(exampleApp.getId())
+ *             .environmentName(&#34;example&#34;)
+ *             .deploymentArtifacts(&#34;app-example-deployment&#34;)
+ *             .stackName(&#34;amplify-app-example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

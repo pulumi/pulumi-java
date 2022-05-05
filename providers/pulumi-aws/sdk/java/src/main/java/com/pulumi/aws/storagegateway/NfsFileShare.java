@@ -23,6 +23,30 @@ import javax.annotation.Nullable;
  * Manages an AWS Storage Gateway NFS File Share.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NfsFileShare(&#34;example&#34;, NfsFileShareArgs.builder()        
+ *             .clientLists(&#34;0.0.0.0/0&#34;)
+ *             .gatewayArn(aws_storagegateway_gateway.getExample().getArn())
+ *             .locationArn(aws_s3_bucket.getExample().getArn())
+ *             .roleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

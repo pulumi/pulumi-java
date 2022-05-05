@@ -19,6 +19,45 @@ import javax.annotation.Nullable;
  * Provides an ElastiCache Global Replication Group resource, which manages replication between two or more Replication Groups in different regions. For more information, see the [ElastiCache User Guide](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html).
  * 
  * ## Example Usage
+ * ### Global replication group with one secondary replication group
+ * 
+ * The global replication group depends on the primary group existing. Secondary replication groups depend on the global replication group. the provider dependency management will handle this transparently using resource value references.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new ReplicationGroup(&#34;primary&#34;, ReplicationGroupArgs.builder()        
+ *             .replicationGroupDescription(&#34;primary replication group&#34;)
+ *             .engine(&#34;redis&#34;)
+ *             .engineVersion(&#34;5.0.6&#34;)
+ *             .nodeType(&#34;cache.m5.large&#34;)
+ *             .numberCacheClusters(1)
+ *             .build());
+ * 
+ *         var example = new GlobalReplicationGroup(&#34;example&#34;, GlobalReplicationGroupArgs.builder()        
+ *             .globalReplicationGroupIdSuffix(&#34;example&#34;)
+ *             .primaryReplicationGroupId(primary.getId())
+ *             .build());
+ * 
+ *         var secondary = new ReplicationGroup(&#34;secondary&#34;, ReplicationGroupArgs.builder()        
+ *             .replicationGroupDescription(&#34;secondary replication group&#34;)
+ *             .globalReplicationGroupId(example.getGlobalReplicationGroupId())
+ *             .numberCacheClusters(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,50 @@ import javax.annotation.Nullable;
  * internet gateway or virtual private gateway.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routeTableAssociation = new RouteTableAssociation(&#34;routeTableAssociation&#34;, RouteTableAssociationArgs.builder()        
+ *             .subnetId(aws_subnet.getFoo().getId())
+ *             .routeTableId(aws_route_table.getBar().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routeTableAssociation = new RouteTableAssociation(&#34;routeTableAssociation&#34;, RouteTableAssociationArgs.builder()        
+ *             .gatewayId(aws_internet_gateway.getFoo().getId())
+ *             .routeTableId(aws_route_table.getBar().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

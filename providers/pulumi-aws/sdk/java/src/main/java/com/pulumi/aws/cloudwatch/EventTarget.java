@@ -31,17 +31,365 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var console = new EventRule(&#34;console&#34;, EventRuleArgs.builder()        
+ *             .description(&#34;Capture all EC2 scaling events&#34;)
+ *             .eventPattern(&#34;&#34;&#34;
+ * {
+ *   &#34;source&#34;: [
+ *     &#34;aws.autoscaling&#34;
+ *   ],
+ *   &#34;detail-type&#34;: [
+ *     &#34;EC2 Instance Launch Successful&#34;,
+ *     &#34;EC2 Instance Terminate Successful&#34;,
+ *     &#34;EC2 Instance Launch Unsuccessful&#34;,
+ *     &#34;EC2 Instance Terminate Unsuccessful&#34;
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testStream = new Stream(&#34;testStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var yada = new EventTarget(&#34;yada&#34;, EventTargetArgs.builder()        
+ *             .rule(console.getName())
+ *             .arn(testStream.getArn())
+ *             .runCommandTargets(            
+ *                 EventTargetRunCommandTarget.builder()
+ *                     .key(&#34;tag:Name&#34;)
+ *                     .values(&#34;FooBar&#34;)
+ *                     .build(),
+ *                 EventTargetRunCommandTarget.builder()
+ *                     .key(&#34;InstanceIds&#34;)
+ *                     .values(&#34;i-162058cd308bffec2&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Example SSM Document Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ssmLifecycleTrust = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;events.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var stopInstance = new Document(&#34;stopInstance&#34;, DocumentArgs.builder()        
+ *             .documentType(&#34;Command&#34;)
+ *             .content(&#34;&#34;&#34;
+ *   {
+ *     &#34;schemaVersion&#34;: &#34;1.2&#34;,
+ *     &#34;description&#34;: &#34;Stop an instance&#34;,
+ *     &#34;parameters&#34;: {
+ * 
+ *     },
+ *     &#34;runtimeConfig&#34;: {
+ *       &#34;aws:runShellScript&#34;: {
+ *         &#34;properties&#34;: [
+ *           {
+ *             &#34;id&#34;: &#34;0.aws:runShellScript&#34;,
+ *             &#34;runCommand&#34;: [&#34;halt&#34;]
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         final var ssmLifecyclePolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(            
+ *                 GetPolicyDocumentStatement.builder()
+ *                     .effect(&#34;Allow&#34;)
+ *                     .actions(&#34;ssm:SendCommand&#34;)
+ *                     .resources(&#34;arn:aws:ec2:eu-west-1:1234567890:instance/*&#34;)
+ *                     .conditions(GetPolicyDocumentStatementCondition.builder()
+ *                         .test(&#34;StringEquals&#34;)
+ *                         .variable(&#34;ec2:ResourceTag/Terminate&#34;)
+ *                         .values(&#34;*&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 GetPolicyDocumentStatement.builder()
+ *                     .effect(&#34;Allow&#34;)
+ *                     .actions(&#34;ssm:SendCommand&#34;)
+ *                     .resources(stopInstance.getArn())
+ *                     .build())
+ *             .build());
+ * 
+ *         var ssmLifecycleRole = new Role(&#34;ssmLifecycleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(ssmLifecycleTrust.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var ssmLifecyclePolicy = new Policy(&#34;ssmLifecyclePolicy&#34;, PolicyArgs.builder()        
+ *             .policy(ssmLifecyclePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(ssmLifecyclePolicyDocument -&gt; ssmLifecyclePolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         var ssmLifecycleRolePolicyAttachment = new RolePolicyAttachment(&#34;ssmLifecycleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(ssmLifecyclePolicy.getArn())
+ *             .role(ssmLifecycleRole.getName())
+ *             .build());
+ * 
+ *         var stopInstancesEventRule = new EventRule(&#34;stopInstancesEventRule&#34;, EventRuleArgs.builder()        
+ *             .description(&#34;Stop instances nightly&#34;)
+ *             .scheduleExpression(&#34;cron(0 0 * * ? *)&#34;)
+ *             .build());
+ * 
+ *         var stopInstancesEventTarget = new EventTarget(&#34;stopInstancesEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(stopInstance.getArn())
+ *             .rule(stopInstancesEventRule.getName())
+ *             .roleArn(ssmLifecycleRole.getArn())
+ *             .runCommandTargets(EventTargetRunCommandTarget.builder()
+ *                 .key(&#34;tag:Terminate&#34;)
+ *                 .values(&#34;midnight&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example RunCommand Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var stopInstancesEventRule = new EventRule(&#34;stopInstancesEventRule&#34;, EventRuleArgs.builder()        
+ *             .description(&#34;Stop instances nightly&#34;)
+ *             .scheduleExpression(&#34;cron(0 0 * * ? *)&#34;)
+ *             .build());
+ * 
+ *         var stopInstancesEventTarget = new EventTarget(&#34;stopInstancesEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(String.format(&#34;arn:aws:ssm:%s::document/AWS-RunShellScript&#34;, var_.getAws_region()))
+ *             .input(&#34;{\&#34;commands\&#34;:[\&#34;halt\&#34;]}&#34;)
+ *             .rule(stopInstancesEventRule.getName())
+ *             .roleArn(aws_iam_role.getSsm_lifecycle().getArn())
+ *             .runCommandTargets(EventTargetRunCommandTarget.builder()
+ *                 .key(&#34;tag:Terminate&#34;)
+ *                 .values(&#34;midnight&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example API Gateway target
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleEventRule = new EventRule(&#34;exampleEventRule&#34;);
+ * 
+ *         var exampleDeployment = new Deployment(&#34;exampleDeployment&#34;, DeploymentArgs.builder()        
+ *             .restApi(aws_api_gateway_rest_api.getExample().getId())
+ *             .build());
+ * 
+ *         var exampleStage = new Stage(&#34;exampleStage&#34;, StageArgs.builder()        
+ *             .restApi(aws_api_gateway_rest_api.getExample().getId())
+ *             .deployment(exampleDeployment.getId())
+ *             .build());
+ * 
+ *         var exampleEventTarget = new EventTarget(&#34;exampleEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(exampleStage.getExecutionArn().apply(executionArn -&gt; String.format(&#34;%s/GET&#34;, executionArn)))
+ *             .rule(exampleEventRule.getId())
+ *             .httpTarget(EventTargetHttpTarget.builder()
+ *                 .queryStringParameters(Map.of(&#34;Body&#34;, &#34;$.detail.body&#34;))
+ *                 .headerParameters(Map.of(&#34;Env&#34;, &#34;Test&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example Cross-Account Event Bus target
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventBusInvokeRemoteEventBusRole = new Role(&#34;eventBusInvokeRemoteEventBusRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;events.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         final var eventBusInvokeRemoteEventBusPolicyDocument = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .effect(&#34;Allow&#34;)
+ *                 .actions(&#34;events:PutEvents&#34;)
+ *                 .resources(&#34;arn:aws:events:eu-west-1:1234567890:event-bus/My-Event-Bus&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var eventBusInvokeRemoteEventBusPolicy = new Policy(&#34;eventBusInvokeRemoteEventBusPolicy&#34;, PolicyArgs.builder()        
+ *             .policy(eventBusInvokeRemoteEventBusPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var eventBusInvokeRemoteEventBusRolePolicyAttachment = new RolePolicyAttachment(&#34;eventBusInvokeRemoteEventBusRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(eventBusInvokeRemoteEventBusRole.getName())
+ *             .policyArn(eventBusInvokeRemoteEventBusPolicy.getArn())
+ *             .build());
+ * 
+ *         var stopInstancesEventRule = new EventRule(&#34;stopInstancesEventRule&#34;, EventRuleArgs.builder()        
+ *             .description(&#34;Stop instances nightly&#34;)
+ *             .scheduleExpression(&#34;cron(0 0 * * ? *)&#34;)
+ *             .build());
+ * 
+ *         var stopInstancesEventTarget = new EventTarget(&#34;stopInstancesEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(&#34;arn:aws:events:eu-west-1:1234567890:event-bus/My-Event-Bus&#34;)
+ *             .rule(stopInstancesEventRule.getName())
+ *             .roleArn(eventBusInvokeRemoteEventBusRole.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example Input Transformer Usage - JSON Object
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleEventRule = new EventRule(&#34;exampleEventRule&#34;);
+ * 
+ *         var exampleEventTarget = new EventTarget(&#34;exampleEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(aws_lambda_function.getExample().getArn())
+ *             .rule(exampleEventRule.getId())
+ *             .inputTransformer(EventTargetInputTransformer.builder()
+ *                 .inputPaths(Map.ofEntries(
+ *                     Map.entry(&#34;instance&#34;, &#34;$.detail.instance&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;$.detail.status&#34;)
+ *                 ))
+ *                 .inputTemplate(&#34;&#34;&#34;
+ * {
+ *   &#34;instance_id&#34;: &lt;instance&gt;,
+ *   &#34;instance_status&#34;: &lt;status&gt;
+ * }
+ *                 &#34;&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Example Input Transformer Usage - Simple String
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleEventRule = new EventRule(&#34;exampleEventRule&#34;);
+ * 
+ *         var exampleEventTarget = new EventTarget(&#34;exampleEventTarget&#34;, EventTargetArgs.builder()        
+ *             .arn(aws_lambda_function.getExample().getArn())
+ *             .rule(exampleEventRule.getId())
+ *             .inputTransformer(EventTargetInputTransformer.builder()
+ *                 .inputPaths(Map.ofEntries(
+ *                     Map.entry(&#34;instance&#34;, &#34;$.detail.instance&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;$.detail.status&#34;)
+ *                 ))
+ *                 .inputTemplate(&#34;\&#34;&lt;instance&gt; is in state &lt;status&gt;\&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

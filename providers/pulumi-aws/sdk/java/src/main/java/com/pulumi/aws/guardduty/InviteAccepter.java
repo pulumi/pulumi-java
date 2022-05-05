@@ -17,6 +17,43 @@ import javax.annotation.Nullable;
  * Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct primary account on read, and disassociate with the primary account upon removal.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Provider(&#34;primary&#34;);
+ * 
+ *         var member = new Provider(&#34;member&#34;);
+ * 
+ *         var primaryDetector = new Detector(&#34;primaryDetector&#34;);
+ * 
+ *         var memberDetector = new Detector(&#34;memberDetector&#34;);
+ * 
+ *         var memberMember = new Member(&#34;memberMember&#34;, MemberArgs.builder()        
+ *             .accountId(memberDetector.getAccountId())
+ *             .detectorId(primaryDetector.getId())
+ *             .email(&#34;required@example.com&#34;)
+ *             .invite(true)
+ *             .build());
+ * 
+ *         var memberInviteAccepter = new InviteAccepter(&#34;memberInviteAccepter&#34;, InviteAccepterArgs.builder()        
+ *             .detectorId(memberDetector.getId())
+ *             .masterAccountId(primaryDetector.getAccountId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

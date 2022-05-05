@@ -19,6 +19,90 @@ import javax.annotation.Nullable;
  * Manages a Security Hub finding aggregator. Security Hub needs to be enabled in a region in order for the aggregator to pull through findings.
  * 
  * ## Example Usage
+ * ### All Regions Usage
+ * 
+ * The following example will enable the aggregator for every region.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleFindingAggregator = new FindingAggregator(&#34;exampleFindingAggregator&#34;, FindingAggregatorArgs.builder()        
+ *             .linkingMode(&#34;ALL_REGIONS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### All Regions Except Specified Regions Usage
+ * 
+ * The following example will enable the aggregator for every region except those specified in `specified_regions`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleFindingAggregator = new FindingAggregator(&#34;exampleFindingAggregator&#34;, FindingAggregatorArgs.builder()        
+ *             .linkingMode(&#34;ALL_REGIONS_EXCEPT_SPECIFIED&#34;)
+ *             .specifiedRegions(            
+ *                 &#34;eu-west-1&#34;,
+ *                 &#34;eu-west-2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Specified Regions Usage
+ * 
+ * The following example will enable the aggregator for every region specified in `specified_regions`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccount = new Account(&#34;exampleAccount&#34;);
+ * 
+ *         var exampleFindingAggregator = new FindingAggregator(&#34;exampleFindingAggregator&#34;, FindingAggregatorArgs.builder()        
+ *             .linkingMode(&#34;SPECIFIED_REGIONS&#34;)
+ *             .specifiedRegions(            
+ *                 &#34;eu-west-1&#34;,
+ *                 &#34;eu-west-2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * the `aws.kms.Ciphertext` data source.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var oauthConfig = new Key(&#34;oauthConfig&#34;, KeyArgs.builder()        
+ *             .description(&#34;oauth config&#34;)
+ *             .isEnabled(true)
+ *             .build());
+ * 
+ *         var oauth = new Ciphertext(&#34;oauth&#34;, CiphertextArgs.builder()        
+ *             .keyId(oauthConfig.getKeyId())
+ *             .plaintext(&#34;&#34;&#34;
+ * {
+ *   &#34;client_id&#34;: &#34;e587dbae22222f55da22&#34;,
+ *   &#34;client_secret&#34;: &#34;8289575d00000ace55e1815ec13673955721b8a5&#34;
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:kms/ciphertext:Ciphertext")

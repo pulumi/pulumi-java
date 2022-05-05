@@ -21,6 +21,57 @@ import javax.annotation.Nullable;
  * Provides a Route53 Resolver rule.
  * 
  * ## Example Usage
+ * ### System rule
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sys = new ResolverRule(&#34;sys&#34;, ResolverRuleArgs.builder()        
+ *             .domainName(&#34;subdomain.example.com&#34;)
+ *             .ruleType(&#34;SYSTEM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Forward rule
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fwd = new ResolverRule(&#34;fwd&#34;, ResolverRuleArgs.builder()        
+ *             .domainName(&#34;example.com&#34;)
+ *             .ruleType(&#34;FORWARD&#34;)
+ *             .resolverEndpointId(aws_route53_resolver_endpoint.getFoo().getId())
+ *             .targetIps(ResolverRuleTargetIp.builder()
+ *                 .ip(&#34;123.45.67.89&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Prod&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

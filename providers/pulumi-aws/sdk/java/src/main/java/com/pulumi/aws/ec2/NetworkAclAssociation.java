@@ -15,6 +15,28 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new NetworkAclAssociation(&#34;main&#34;, NetworkAclAssociationArgs.builder()        
+ *             .networkAclId(aws_network_acl.getMain().getId())
+ *             .subnetId(aws_subnet.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2/networkAclAssociation:NetworkAclAssociation")

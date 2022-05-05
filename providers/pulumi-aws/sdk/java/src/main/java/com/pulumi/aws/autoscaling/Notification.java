@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Topic(&#34;example&#34;);
+ * 
+ *         var bar = new Group(&#34;bar&#34;);
+ * 
+ *         var foo = new Group(&#34;foo&#34;);
+ * 
+ *         var exampleNotifications = new Notification(&#34;exampleNotifications&#34;, NotificationArgs.builder()        
+ *             .groupNames(            
+ *                 bar.getName(),
+ *                 foo.getName())
+ *             .notifications(            
+ *                 &#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;,
+ *                 &#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;,
+ *                 &#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;,
+ *                 &#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;)
+ *             .topicArn(example.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:autoscaling/notification:Notification")
 public class Notification extends com.pulumi.resources.CustomResource {

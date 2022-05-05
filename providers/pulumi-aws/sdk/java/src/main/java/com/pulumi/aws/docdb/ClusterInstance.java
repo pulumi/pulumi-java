@@ -28,6 +28,43 @@ import javax.annotation.Nullable;
  * `instance_class` sizes.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import com.pulumi.codegen.internal.KeyedValue;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;docdb-cluster-demo&#34;)
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .masterPassword(&#34;barbut8chars&#34;)
+ *             .build());
+ * 
+ *         for (var i = 0; i &lt; 2; i++) {
+ *             new ClusterInstance(&#34;clusterInstances-&#34; + i, ClusterInstanceArgs.builder()            
+ *                 .identifier(String.format(&#34;docdb-cluster-demo-%s&#34;, range.getValue()))
+ *                 .clusterIdentifier(default_.getId())
+ *                 .instanceClass(&#34;db.r5.large&#34;)
+ *                 .build());
+ * 
+ *         
+ * }
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

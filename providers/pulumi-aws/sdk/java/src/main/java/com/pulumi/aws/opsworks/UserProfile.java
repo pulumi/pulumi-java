@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks User Profile resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myProfile = new UserProfile(&#34;myProfile&#34;, UserProfileArgs.builder()        
+ *             .userArn(aws_iam_user.getUser().getArn())
+ *             .sshUsername(&#34;my_user&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/userProfile:UserProfile")

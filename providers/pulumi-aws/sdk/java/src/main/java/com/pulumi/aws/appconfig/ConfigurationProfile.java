@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * Provides an AppConfig Configuration Profile resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ConfigurationProfile(&#34;example&#34;, ConfigurationProfileArgs.builder()        
+ *             .applicationId(aws_appconfig_application.getExample().getId())
+ *             .description(&#34;Example Configuration Profile&#34;)
+ *             .locationUri(&#34;hosted&#34;)
+ *             .validators(ConfigurationProfileValidator.builder()
+ *                 .content(aws_lambda_function.getExample().getArn())
+ *                 .type(&#34;LAMBDA&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Type&#34;, &#34;AppConfig Configuration Profile&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

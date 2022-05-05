@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
  * Provides an Amazon Managed Grafana workspace resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assume = new Role(&#34;assume&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Sid&#34;, &#34;&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;grafana.amazonaws.com&#34;)
+ *                         ))
+ *                     )))
+ *                 )))
+ *             .build());
+ * 
+ *         var example = new Workspace(&#34;example&#34;, WorkspaceArgs.builder()        
+ *             .accountAccessType(&#34;CURRENT_ACCOUNT&#34;)
+ *             .authenticationProviders(&#34;SAML&#34;)
+ *             .permissionType(&#34;SERVICE_MANAGED&#34;)
+ *             .roleArn(assume.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

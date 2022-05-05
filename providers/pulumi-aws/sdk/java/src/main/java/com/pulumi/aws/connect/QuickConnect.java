@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * [Amazon Connect: Getting Started](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new QuickConnect(&#34;test&#34;, QuickConnectArgs.builder()        
+ *             .description(&#34;quick connect phone number&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .quickConnectConfig(QuickConnectQuickConnectConfig.builder()
+ *                 .phoneConfigs(QuickConnectQuickConnectConfigPhoneConfig.builder()
+ *                     .phoneNumber(&#34;+12345678912&#34;)
+ *                     .build())
+ *                 .quickConnectType(&#34;PHONE_NUMBER&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Quick Connect&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

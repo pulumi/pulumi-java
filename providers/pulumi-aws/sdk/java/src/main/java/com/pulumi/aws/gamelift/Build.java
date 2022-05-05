@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * Provides an GameLift Build resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Build(&#34;test&#34;, BuildArgs.builder()        
+ *             .operatingSystem(&#34;WINDOWS_2012&#34;)
+ *             .storageLocation(BuildStorageLocation.builder()
+ *                 .bucket(aws_s3_bucket.getTest().getBucket())
+ *                 .key(aws_s3_object.getTest().getKey())
+ *                 .roleArn(aws_iam_role.getTest().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

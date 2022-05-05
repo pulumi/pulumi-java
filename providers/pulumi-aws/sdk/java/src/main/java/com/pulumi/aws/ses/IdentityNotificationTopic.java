@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Resource for managing SES Identity Notification Topics
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new IdentityNotificationTopic(&#34;test&#34;, IdentityNotificationTopicArgs.builder()        
+ *             .topicArn(aws_sns_topic.getExample().getArn())
+ *             .notificationType(&#34;Bounce&#34;)
+ *             .identity(aws_ses_domain_identity.getExample().getDomain())
+ *             .includeOriginalHeaders(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

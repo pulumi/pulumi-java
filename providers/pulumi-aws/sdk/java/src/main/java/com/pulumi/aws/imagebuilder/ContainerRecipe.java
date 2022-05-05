@@ -24,6 +24,50 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Container Recipe.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ContainerRecipe(&#34;example&#34;, ContainerRecipeArgs.builder()        
+ *             .version(&#34;1.0.0&#34;)
+ *             .containerType(&#34;DOCKER&#34;)
+ *             .parentImage(&#34;arn:aws:imagebuilder:eu-central-1:aws:image/amazon-linux-x86-latest/x.x.x&#34;)
+ *             .targetRepository(ContainerRecipeTargetRepository.builder()
+ *                 .repositoryName(aws_ecr_repository.getExample().getName())
+ *                 .service(&#34;ECR&#34;)
+ *                 .build())
+ *             .components(ContainerRecipeComponent.builder()
+ *                 .componentArn(aws_imagebuilder_component.getExample().getArn())
+ *                 .parameters(                
+ *                     ContainerRecipeComponentParameter.builder()
+ *                         .name(&#34;Parameter1&#34;)
+ *                         .value(&#34;Value1&#34;)
+ *                         .build(),
+ *                     ContainerRecipeComponentParameter.builder()
+ *                         .name(&#34;Parameter2&#34;)
+ *                         .value(&#34;Value2&#34;)
+ *                         .build())
+ *                 .build())
+ *             .dockerfileTemplateData(&#34;&#34;&#34;
+ * FROM {{{ imagebuilder:parentImage }}}
+ * {{{ imagebuilder:environments }}}
+ * {{{ imagebuilder:components }}}
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

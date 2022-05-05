@@ -22,6 +22,139 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .buildSpec(&#34;&#34;&#34;
+ *   version: 0.1
+ *   frontend:
+ *     phases:
+ *       preBuild:
+ *         commands:
+ *           - yarn install
+ *       build:
+ *         commands:
+ *           - yarn run build
+ *     artifacts:
+ *       baseDirectory: build
+ *       files:
+ *         - &#39;**{@literal /}*&#39;
+ *     cache:
+ *       paths:
+ *         - node_modules/**{@literal /}*
+ * 
+ *             &#34;&#34;&#34;)
+ *             .customRules(AppCustomRule.builder()
+ *                 .source(&#34;/&lt;*&gt;&#34;)
+ *                 .status(&#34;404&#34;)
+ *                 .target(&#34;/index.html&#34;)
+ *                 .build())
+ *             .environmentVariables(Map.of(&#34;ENV&#34;, &#34;test&#34;))
+ *             .repository(&#34;https://github.com/example/app&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Repository with Tokens
+ * 
+ * If you create a new Amplify App with the `repository` argument, you also need to set `oauth_token` or `access_token` for authentication. For GitHub, get a [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and set `access_token` as follows:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .accessToken(&#34;...&#34;)
+ *             .repository(&#34;https://github.com/example/app&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * You can omit `access_token` if you import an existing Amplify App created by the Amplify Console (using OAuth for authentication).
+ * ### Auto Branch Creation
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .autoBranchCreationConfig(AppAutoBranchCreationConfig.builder()
+ *                 .enableAutoBuild(true)
+ *                 .build())
+ *             .autoBranchCreationPatterns(            
+ *                 &#34;*&#34;,
+ *                 &#34;*{@literal /}**&#34;)
+ *             .enableAutoBranchCreation(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Rewrites and Redirects
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .customRules(            
+ *                 AppCustomRule.builder()
+ *                     .source(&#34;/api/&lt;*&gt;&#34;)
+ *                     .status(&#34;200&#34;)
+ *                     .target(&#34;https://api.example.com/api/&lt;*&gt;&#34;)
+ *                     .build(),
+ *                 AppCustomRule.builder()
+ *                     .source(&#34;&lt;/^[^.]+$|\\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/&gt;&#34;)
+ *                     .status(&#34;200&#34;)
+ *                     .target(&#34;/index.html&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

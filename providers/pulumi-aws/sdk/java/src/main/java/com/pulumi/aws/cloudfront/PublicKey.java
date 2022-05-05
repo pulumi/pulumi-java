@@ -17,6 +17,30 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * The following example below creates a CloudFront public key.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PublicKey(&#34;example&#34;, PublicKeyArgs.builder()        
+ *             .comment(&#34;test public key&#34;)
+ *             .encodedKey(Files.readString(&#34;public_key.pem&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * CloudFront Public Key can be imported using the `id`, e.g.,

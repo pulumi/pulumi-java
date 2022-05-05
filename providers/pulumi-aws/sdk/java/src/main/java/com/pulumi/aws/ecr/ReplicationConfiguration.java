@@ -19,9 +19,114 @@ import javax.annotation.Nullable;
  * Provides an Elastic Container Registry Replication Configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         final var exampleRegions = Output.of(AwsFunctions.getRegions());
+ * 
+ *         var exampleReplicationConfiguration = new ReplicationConfiguration(&#34;exampleReplicationConfiguration&#34;, ReplicationConfigurationArgs.builder()        
+ *             .replicationConfiguration(ReplicationConfigurationReplicationConfiguration.builder()
+ *                 .rules(ReplicationConfigurationReplicationConfigurationRule.builder()
+ *                     .destinations(ReplicationConfigurationReplicationConfigurationRuleDestination.builder()
+ *                         .region(exampleRegions.apply(getRegionsResult -&gt; getRegionsResult.getNames()[0]))
+ *                         .registryId(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Multiple Region Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         final var exampleRegions = Output.of(AwsFunctions.getRegions());
+ * 
+ *         var exampleReplicationConfiguration = new ReplicationConfiguration(&#34;exampleReplicationConfiguration&#34;, ReplicationConfigurationArgs.builder()        
+ *             .replicationConfiguration(ReplicationConfigurationReplicationConfiguration.builder()
+ *                 .rules(ReplicationConfigurationReplicationConfigurationRule.builder()
+ *                     .destinations(                    
+ *                         ReplicationConfigurationReplicationConfigurationRuleDestination.builder()
+ *                             .region(exampleRegions.apply(getRegionsResult -&gt; getRegionsResult.getNames()[0]))
+ *                             .registryId(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *                             .build(),
+ *                         ReplicationConfigurationReplicationConfigurationRuleDestination.builder()
+ *                             .region(exampleRegions.apply(getRegionsResult -&gt; getRegionsResult.getNames()[1]))
+ *                             .registryId(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Repository Filter Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         final var exampleRegions = Output.of(AwsFunctions.getRegions());
+ * 
+ *         var exampleReplicationConfiguration = new ReplicationConfiguration(&#34;exampleReplicationConfiguration&#34;, ReplicationConfigurationArgs.builder()        
+ *             .replicationConfiguration(ReplicationConfigurationReplicationConfiguration.builder()
+ *                 .rules(ReplicationConfigurationReplicationConfigurationRule.builder()
+ *                     .destinations(ReplicationConfigurationReplicationConfigurationRuleDestination.builder()
+ *                         .region(exampleRegions.apply(getRegionsResult -&gt; getRegionsResult.getNames()[0]))
+ *                         .registryId(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *                         .build())
+ *                     .repositoryFilters(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter.builder()
+ *                         .filter(&#34;prod-microservice&#34;)
+ *                         .filterType(&#34;PREFIX_MATCH&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,47 @@ import javax.annotation.Nullable;
  *   You should perform **regular backups** of all data in the table, see [AWS docs for more](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTable = new Table(&#34;exampleTable&#34;, TableArgs.builder()        
+ *             .readCapacity(10)
+ *             .writeCapacity(10)
+ *             .hashKey(&#34;exampleHashKey&#34;)
+ *             .attributes(TableAttribute.builder()
+ *                 .name(&#34;exampleHashKey&#34;)
+ *                 .type(&#34;S&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleTableItem = new TableItem(&#34;exampleTableItem&#34;, TableItemArgs.builder()        
+ *             .tableName(exampleTable.getName())
+ *             .hashKey(exampleTable.getHashKey())
+ *             .item(&#34;&#34;&#34;
+ * {
+ *   &#34;exampleHashKey&#34;: {&#34;S&#34;: &#34;something&#34;},
+ *   &#34;one&#34;: {&#34;N&#34;: &#34;11111&#34;},
+ *   &#34;two&#34;: {&#34;N&#34;: &#34;22222&#34;},
+ *   &#34;three&#34;: {&#34;N&#34;: &#34;33333&#34;},
+ *   &#34;four&#34;: {&#34;N&#34;: &#34;44444&#34;}
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,31 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The DataSync Agents must be available before creating this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NfsLocation(&#34;example&#34;, NfsLocationArgs.builder()        
+ *             .serverHostname(&#34;nfs.example.com&#34;)
+ *             .subdirectory(&#34;/exported/path&#34;)
+ *             .onPremConfig(NfsLocationOnPremConfig.builder()
+ *                 .agentArns(aws_datasync_agent.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

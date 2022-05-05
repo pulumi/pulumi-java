@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * Domain ownership needs to be confirmed first using `aws.ses.DomainIdentity` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import com.pulumi.codegen.internal.KeyedValue;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainIdentity = new DomainIdentity(&#34;exampleDomainIdentity&#34;, DomainIdentityArgs.builder()        
+ *             .domain(&#34;example.com&#34;)
+ *             .build());
+ * 
+ *         var exampleDomainDkim = new DomainDkim(&#34;exampleDomainDkim&#34;, DomainDkimArgs.builder()        
+ *             .domain(exampleDomainIdentity.getDomain())
+ *             .build());
+ * 
+ *         for (var i = 0; i &lt; 3; i++) {
+ *             new Record(&#34;exampleAmazonsesDkimRecord-&#34; + i, RecordArgs.builder()            
+ *                 .zoneId(&#34;ABCDEFGHIJ123&#34;)
+ *                 .name(exampleDomainDkim.getDkimTokens()[range.getValue()].apply(dkimTokens -&gt; String.format(&#34;%s._domainkey&#34;, dkimTokens)))
+ *                 .type(&#34;CNAME&#34;)
+ *                 .ttl(&#34;600&#34;)
+ *                 .records(exampleDomainDkim.getDkimTokens()[range.getValue()].apply(dkimTokens -&gt; String.format(&#34;%s.dkim.amazonses.com&#34;, dkimTokens)))
+ *                 .build());
+ * 
+ *         
+ * }
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

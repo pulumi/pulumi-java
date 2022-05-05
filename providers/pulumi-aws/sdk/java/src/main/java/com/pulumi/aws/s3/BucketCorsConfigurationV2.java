@@ -22,6 +22,43 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** S3 Buckets only support a single CORS configuration. Declaring multiple `aws.s3.BucketCorsConfigurationV2` resources to the same S3 Bucket will cause a perpetual difference in configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketCorsConfigurationV2 = new BucketCorsConfigurationV2(&#34;exampleBucketCorsConfigurationV2&#34;, BucketCorsConfigurationV2Args.builder()        
+ *             .bucket(exampleBucketV2.getBucket())
+ *             .corsRules(            
+ *                 BucketCorsConfigurationV2CorsRule.builder()
+ *                     .allowedHeaders(&#34;*&#34;)
+ *                     .allowedMethods(                    
+ *                         &#34;PUT&#34;,
+ *                         &#34;POST&#34;)
+ *                     .allowedOrigins(&#34;https://s3-website-test.hashicorp.com&#34;)
+ *                     .exposeHeaders(&#34;ETag&#34;)
+ *                     .maxAgeSeconds(3000)
+ *                     .build(),
+ *                 BucketCorsConfigurationV2CorsRule.builder()
+ *                     .allowedMethods(&#34;GET&#34;)
+ *                     .allowedOrigins(&#34;*&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

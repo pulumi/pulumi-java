@@ -22,6 +22,99 @@ import javax.annotation.Nullable;
  * Provides a CodeArtifact Repository Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;domain key&#34;)
+ *             .build());
+ * 
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;, DomainArgs.builder()        
+ *             .domain(&#34;example&#34;)
+ *             .encryptionKey(exampleKey.getArn())
+ *             .build());
+ * 
+ *         var test = new Repository(&#34;test&#34;, RepositoryArgs.builder()        
+ *             .repository(&#34;example&#34;)
+ *             .domain(exampleDomain.getDomain())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Upstream Repository
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var upstream = new Repository(&#34;upstream&#34;, RepositoryArgs.builder()        
+ *             .repository(&#34;upstream&#34;)
+ *             .domain(aws_codeartifact_domain.getTest().getDomain())
+ *             .build());
+ * 
+ *         var test = new Repository(&#34;test&#34;, RepositoryArgs.builder()        
+ *             .repository(&#34;example&#34;)
+ *             .domain(aws_codeartifact_domain.getExample().getDomain())
+ *             .upstreams(RepositoryUpstream.builder()
+ *                 .repositoryName(upstream.getRepository())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With External Connection
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var upstream = new Repository(&#34;upstream&#34;, RepositoryArgs.builder()        
+ *             .repository(&#34;upstream&#34;)
+ *             .domain(aws_codeartifact_domain.getTest().getDomain())
+ *             .build());
+ * 
+ *         var test = new Repository(&#34;test&#34;, RepositoryArgs.builder()        
+ *             .repository(&#34;example&#34;)
+ *             .domain(aws_codeartifact_domain.getExample().getDomain())
+ *             .externalConnections(RepositoryExternalConnections.builder()
+ *                 .externalConnectionName(&#34;public:npmjs&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

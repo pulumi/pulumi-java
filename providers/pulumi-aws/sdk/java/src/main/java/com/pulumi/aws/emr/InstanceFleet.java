@@ -27,6 +27,58 @@ import javax.annotation.Nullable;
  * the provider will resize any Instance Fleet to zero when destroying the resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new InstanceFleet(&#34;task&#34;, InstanceFleetArgs.builder()        
+ *             .clusterId(aws_emr_cluster.getCluster().getId())
+ *             .instanceTypeConfigs(            
+ *                 InstanceFleetInstanceTypeConfig.builder()
+ *                     .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                     .ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                         .size(100)
+ *                         .type(&#34;gp2&#34;)
+ *                         .volumesPerInstance(1)
+ *                         .build())
+ *                     .instanceType(&#34;m4.xlarge&#34;)
+ *                     .weightedCapacity(1)
+ *                     .build(),
+ *                 InstanceFleetInstanceTypeConfig.builder()
+ *                     .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                     .ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                         .size(100)
+ *                         .type(&#34;gp2&#34;)
+ *                         .volumesPerInstance(1)
+ *                         .build())
+ *                     .instanceType(&#34;m4.2xlarge&#34;)
+ *                     .weightedCapacity(2)
+ *                     .build())
+ *             .launchSpecifications(InstanceFleetLaunchSpecifications.builder()
+ *                 .spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecification.builder()
+ *                     .allocationStrategy(&#34;capacity-optimized&#34;)
+ *                     .blockDurationMinutes(0)
+ *                     .timeoutAction(&#34;TERMINATE_CLUSTER&#34;)
+ *                     .timeoutDurationMinutes(10)
+ *                     .build())
+ *                 .build())
+ *             .targetOnDemandCapacity(1)
+ *             .targetSpotCapacity(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

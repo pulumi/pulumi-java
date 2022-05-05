@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Enables you to connect your phone system to the telephone network at a substantial cost savings by using SIP trunking.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new VoiceConnector(&#34;test&#34;, VoiceConnectorArgs.builder()        
+ *             .awsRegion(&#34;us-east-1&#34;)
+ *             .requireEncryption(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

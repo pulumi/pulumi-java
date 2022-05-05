@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The proper Lambda permission to allow the AWS Config service invoke the Lambda Function must be in place before the rule will successfully create or update. See also the `aws.lambda.Permission` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplePermission = new Permission(&#34;examplePermission&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(aws_lambda_function.getExample().getArn())
+ *             .principal(&#34;config.amazonaws.com&#34;)
+ *             .build());
+ * 
+ *         var exampleOrganization = new Organization(&#34;exampleOrganization&#34;, OrganizationArgs.builder()        
+ *             .awsServiceAccessPrincipals(&#34;config-multiaccountsetup.amazonaws.com&#34;)
+ *             .featureSet(&#34;ALL&#34;)
+ *             .build());
+ * 
+ *         var exampleOrganizationCustomRule = new OrganizationCustomRule(&#34;exampleOrganizationCustomRule&#34;, OrganizationCustomRuleArgs.builder()        
+ *             .lambdaFunctionArn(aws_lambda_function.getExample().getArn())
+ *             .triggerTypes(&#34;ConfigurationItemChangeNotification&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

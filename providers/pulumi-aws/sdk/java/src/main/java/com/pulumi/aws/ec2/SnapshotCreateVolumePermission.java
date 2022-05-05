@@ -17,6 +17,37 @@ import javax.annotation.Nullable;
  * Adds permission to create volumes off of a given EBS Snapshot.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .size(40)
+ *             .build());
+ * 
+ *         var exampleSnapshot = new Snapshot(&#34;exampleSnapshot&#34;, SnapshotArgs.builder()        
+ *             .volumeId(example.getId())
+ *             .build());
+ * 
+ *         var examplePerm = new SnapshotCreateVolumePermission(&#34;examplePerm&#34;, SnapshotCreateVolumePermissionArgs.builder()        
+ *             .snapshotId(exampleSnapshot.getId())
+ *             .accountId(&#34;12345678&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2/snapshotCreateVolumePermission:SnapshotCreateVolumePermission")

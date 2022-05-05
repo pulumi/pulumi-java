@@ -20,6 +20,107 @@ import javax.annotation.Nullable;
  * Attaches a load balancer policy to an ELB Listener.
  * 
  * ## Example Usage
+ * ### Custom Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var wu_tang = new LoadBalancer(&#34;wu-tang&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .listeners(LoadBalancerListener.builder()
+ *                 .instancePort(443)
+ *                 .instanceProtocol(&#34;http&#34;)
+ *                 .lbPort(443)
+ *                 .lbProtocol(&#34;https&#34;)
+ *                 .sslCertificateId(&#34;arn:aws:iam::000000000000:server-certificate/wu-tang.net&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;wu-tang&#34;))
+ *             .build());
+ * 
+ *         var wu_tang_ssl = new LoadBalancerPolicy(&#34;wu-tang-ssl&#34;, LoadBalancerPolicyArgs.builder()        
+ *             .loadBalancerName(wu_tang.getName())
+ *             .policyName(&#34;wu-tang-ssl&#34;)
+ *             .policyTypeName(&#34;SSLNegotiationPolicyType&#34;)
+ *             .policyAttributes(            
+ *                 LoadBalancerPolicyPolicyAttribute.builder()
+ *                     .name(&#34;ECDHE-ECDSA-AES128-GCM-SHA256&#34;)
+ *                     .value(&#34;true&#34;)
+ *                     .build(),
+ *                 LoadBalancerPolicyPolicyAttribute.builder()
+ *                     .name(&#34;Protocol-TLSv1.2&#34;)
+ *                     .value(&#34;true&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var wu_tang_listener_policies_443 = new ListenerPolicy(&#34;wu-tang-listener-policies-443&#34;, ListenerPolicyArgs.builder()        
+ *             .loadBalancerName(wu_tang.getName())
+ *             .loadBalancerPort(443)
+ *             .policyNames(wu_tang_ssl.getPolicyName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * This example shows how to customize the TLS settings of an HTTPS listener.
+ * ### AWS Predefined Security Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var wu_tang = new LoadBalancer(&#34;wu-tang&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .listeners(LoadBalancerListener.builder()
+ *                 .instancePort(443)
+ *                 .instanceProtocol(&#34;http&#34;)
+ *                 .lbPort(443)
+ *                 .lbProtocol(&#34;https&#34;)
+ *                 .sslCertificateId(&#34;arn:aws:iam::000000000000:server-certificate/wu-tang.net&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;wu-tang&#34;))
+ *             .build());
+ * 
+ *         var wu_tang_ssl_tls_1_1 = new LoadBalancerPolicy(&#34;wu-tang-ssl-tls-1-1&#34;, LoadBalancerPolicyArgs.builder()        
+ *             .loadBalancerName(wu_tang.getName())
+ *             .policyName(&#34;wu-tang-ssl&#34;)
+ *             .policyTypeName(&#34;SSLNegotiationPolicyType&#34;)
+ *             .policyAttributes(LoadBalancerPolicyPolicyAttribute.builder()
+ *                 .name(&#34;Reference-Security-Policy&#34;)
+ *                 .value(&#34;ELBSecurityPolicy-TLS-1-1-2017-01&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wu_tang_listener_policies_443 = new ListenerPolicy(&#34;wu-tang-listener-policies-443&#34;, ListenerPolicyArgs.builder()        
+ *             .loadBalancerName(wu_tang.getName())
+ *             .loadBalancerPort(443)
+ *             .policyNames(wu_tang_ssl_tls_1_1.getPolicyName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * This example shows how to add a [Predefined Security Policy for ELBs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html)
  * 
  * @deprecated
  * aws.elasticloadbalancing.ListenerPolicy has been deprecated in favor of aws.elb.ListenerPolicy

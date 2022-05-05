@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
  * Manages SAML authentication options for an AWS OpenSearch Domain.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;, DomainArgs.builder()        
+ *             .domainName(&#34;example&#34;)
+ *             .engineVersion(&#34;OpenSearch_1.1&#34;)
+ *             .clusterConfig(DomainClusterConfig.builder()
+ *                 .instanceType(&#34;r4.large.search&#34;)
+ *                 .build())
+ *             .snapshotOptions(DomainSnapshotOptions.builder()
+ *                 .automatedSnapshotStartHour(23)
+ *                 .build())
+ *             .tags(Map.of(&#34;Domain&#34;, &#34;TestDomain&#34;))
+ *             .build());
+ * 
+ *         var exampleDomainSamlOptions = new DomainSamlOptions(&#34;exampleDomainSamlOptions&#34;, DomainSamlOptionsArgs.builder()        
+ *             .domainName(exampleDomain.getDomainName())
+ *             .samlOptions(DomainSamlOptionsSamlOptions.builder()
+ *                 .enabled(true)
+ *                 .idp(DomainSamlOptionsSamlOptionsIdp.builder()
+ *                     .entityId(&#34;https://example.com&#34;)
+ *                     .metadataContent(Files.readString(&#34;./saml-metadata.xml&#34;))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

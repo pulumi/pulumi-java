@@ -27,6 +27,71 @@ import javax.annotation.Nullable;
  * Provides an Amazon MSK Connect Connector resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Connector(&#34;example&#34;, ConnectorArgs.builder()        
+ *             .kafkaconnectVersion(&#34;2.7.1&#34;)
+ *             .capacity(ConnectorCapacity.builder()
+ *                 .autoscaling(ConnectorCapacityAutoscaling.builder()
+ *                     .mcuCount(1)
+ *                     .minWorkerCount(1)
+ *                     .maxWorkerCount(2)
+ *                     .scaleInPolicy(ConnectorCapacityAutoscalingScaleInPolicy.builder()
+ *                         .cpuUtilizationPercentage(20)
+ *                         .build())
+ *                     .scaleOutPolicy(ConnectorCapacityAutoscalingScaleOutPolicy.builder()
+ *                         .cpuUtilizationPercentage(80)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .connectorConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;connector.class&#34;, &#34;com.github.jcustenborder.kafka.connect.simulator.SimulatorSinkConnector&#34;),
+ *                 Map.entry(&#34;tasks.max&#34;, &#34;1&#34;),
+ *                 Map.entry(&#34;topics&#34;, &#34;example&#34;)
+ *             ))
+ *             .kafkaCluster(ConnectorKafkaCluster.builder()
+ *                 .apacheKafkaCluster(ConnectorKafkaClusterApacheKafkaCluster.builder()
+ *                     .bootstrapServers(aws_msk_cluster.getExample().getBootstrap_brokers_tls())
+ *                     .vpc(ConnectorKafkaClusterApacheKafkaClusterVpc.builder()
+ *                         .securityGroups(aws_security_group.getExample().getId())
+ *                         .subnets(                        
+ *                             aws_subnet.getExample1().getId(),
+ *                             aws_subnet.getExample2().getId(),
+ *                             aws_subnet.getExample3().getId())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .kafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthentication.builder()
+ *                 .authenticationType(&#34;NONE&#34;)
+ *                 .build())
+ *             .kafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransit.builder()
+ *                 .encryptionType(&#34;TLS&#34;)
+ *                 .build())
+ *             .plugins(ConnectorPlugin.builder()
+ *                 .customPlugin(ConnectorPluginCustomPlugin.builder()
+ *                     .arn(aws_mskconnect_custom_plugin.getExample().getArn())
+ *                     .revision(aws_mskconnect_custom_plugin.getExample().getLatest_revision())
+ *                     .build())
+ *                 .build())
+ *             .serviceExecutionRoleArn(aws_iam_role.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

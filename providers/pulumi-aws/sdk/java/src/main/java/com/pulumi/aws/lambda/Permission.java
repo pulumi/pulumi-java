@@ -18,7 +18,204 @@ import javax.annotation.Nullable;
  * Gives an external source (like an EventBridge Rule, SNS, or S3) permission to access the Lambda function.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iamForLambda = new Role(&#34;iamForLambda&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Sid&#34;, &#34;&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;lambda.amazonaws.com&#34;)
+ *                         ))
+ *                     )))
+ *                 )))
+ *             .build());
+ * 
+ *         var testLambda = new Function(&#34;testLambda&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambdatest.zip&#34;))
+ *             .role(iamForLambda.getArn())
+ *             .handler(&#34;exports.handler&#34;)
+ *             .runtime(&#34;nodejs12.x&#34;)
+ *             .build());
+ * 
+ *         var testAlias = new Alias(&#34;testAlias&#34;, AliasArgs.builder()        
+ *             .description(&#34;a sample description&#34;)
+ *             .functionName(testLambda.getName())
+ *             .functionVersion(&#34;$LATEST&#34;)
+ *             .build());
+ * 
+ *         var allowCloudwatch = new Permission(&#34;allowCloudwatch&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(testLambda.getName())
+ *             .principal(&#34;events.amazonaws.com&#34;)
+ *             .sourceArn(&#34;arn:aws:events:eu-west-1:111122223333:rule/RunDaily&#34;)
+ *             .qualifier(testAlias.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Usage with SNS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultTopic = new Topic(&#34;defaultTopic&#34;);
+ * 
+ *         var defaultRole = new Role(&#34;defaultRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Sid&#34;, &#34;&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;lambda.amazonaws.com&#34;)
+ *                         ))
+ *                     )))
+ *                 )))
+ *             .build());
+ * 
+ *         var func = new Function(&#34;func&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambdatest.zip&#34;))
+ *             .role(defaultRole.getArn())
+ *             .handler(&#34;exports.handler&#34;)
+ *             .runtime(&#34;python3.6&#34;)
+ *             .build());
+ * 
+ *         var withSns = new Permission(&#34;withSns&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(func.getName())
+ *             .principal(&#34;sns.amazonaws.com&#34;)
+ *             .sourceArn(defaultTopic.getArn())
+ *             .build());
+ * 
+ *         var lambda = new TopicSubscription(&#34;lambda&#34;, TopicSubscriptionArgs.builder()        
+ *             .topic(defaultTopic.getArn())
+ *             .protocol(&#34;lambda&#34;)
+ *             .endpoint(func.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Specify Lambda permissions for API Gateway REST API
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var lambdaPermission = new Permission(&#34;lambdaPermission&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(&#34;MyDemoFunction&#34;)
+ *             .principal(&#34;apigateway.amazonaws.com&#34;)
+ *             .sourceArn(myDemoAPI.getExecutionArn().apply(executionArn -&gt; String.format(&#34;%s/*{@literal /}*{@literal /}*&#34;, executionArn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Usage with CloudWatch log group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultLogGroup = new LogGroup(&#34;defaultLogGroup&#34;);
+ * 
+ *         var defaultRole = new Role(&#34;defaultRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var loggingFunction = new Function(&#34;loggingFunction&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lamba_logging.zip&#34;))
+ *             .handler(&#34;exports.handler&#34;)
+ *             .role(defaultRole.getArn())
+ *             .runtime(&#34;python3.6&#34;)
+ *             .build());
+ * 
+ *         var loggingPermission = new Permission(&#34;loggingPermission&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(loggingFunction.getName())
+ *             .principal(&#34;logs.eu-west-1.amazonaws.com&#34;)
+ *             .sourceArn(defaultLogGroup.getArn().apply(arn -&gt; String.format(&#34;%s:*&#34;, arn)))
+ *             .build());
+ * 
+ *         var loggingLogSubscriptionFilter = new LogSubscriptionFilter(&#34;loggingLogSubscriptionFilter&#34;, LogSubscriptionFilterArgs.builder()        
+ *             .destinationArn(loggingFunction.getArn())
+ *             .filterPattern(&#34;&#34;)
+ *             .logGroup(defaultLogGroup.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

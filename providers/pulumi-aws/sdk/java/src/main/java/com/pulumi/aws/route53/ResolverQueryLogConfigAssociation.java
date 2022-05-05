@@ -17,6 +17,28 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver query logging configuration association resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResolverQueryLogConfigAssociation(&#34;example&#34;, ResolverQueryLogConfigAssociationArgs.builder()        
+ *             .resolverQueryLogConfigId(aws_route53_resolver_query_log_config.getExample().getId())
+ *             .resourceId(aws_vpc.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

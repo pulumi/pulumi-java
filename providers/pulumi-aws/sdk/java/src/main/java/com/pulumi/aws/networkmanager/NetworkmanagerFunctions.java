@@ -34,6 +34,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about a connection.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnection(GetConnectionArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .connectionId(var_.getConnection_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConnectionResult> getConnection(GetConnectionArgs args) {
@@ -46,6 +68,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about connections.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getConnections(GetConnectionsArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConnectionsResult> getConnections(GetConnectionsArgs args) {
@@ -58,6 +102,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about a device.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevice(GetDeviceArgs.builder()
+     *             .globalNetworkIdId(var_.getGlobal_network_id())
+     *             .deviceId(var_.getDevice_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDeviceResult> getDevice(GetDeviceArgs args) {
@@ -70,6 +136,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about devices.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getDevices(GetDevicesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDevicesResult> getDevices(GetDevicesArgs args) {
@@ -82,6 +170,27 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about a global network.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetwork(GetGlobalNetworkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGlobalNetworkResult> getGlobalNetwork(GetGlobalNetworkArgs args) {
@@ -94,6 +203,27 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about global networks.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getGlobalNetworks(GetGlobalNetworksArgs.builder()
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGlobalNetworksResult> getGlobalNetworks() {
@@ -109,6 +239,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about a link.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLink(GetLinkArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .linkId(var_.getLink_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLinkResult> getLink(GetLinkArgs args) {
@@ -121,6 +273,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about link.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getLinks(GetLinksArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLinksResult> getLinks(GetLinksArgs args) {
@@ -133,6 +307,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about a site.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSite(GetSiteArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .siteId(var_.getSite_id())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSiteResult> getSite(GetSiteArgs args) {
@@ -145,6 +341,28 @@ public final class NetworkmanagerFunctions {
      * Retrieve information about sites.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(NetworkmanagerFunctions.getSites(GetSitesArgs.builder()
+     *             .globalNetworkId(var_.getGlobal_network_id())
+     *             .tags(Map.of(&#34;Env&#34;, &#34;test&#34;))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSitesResult> getSites(GetSitesArgs args) {

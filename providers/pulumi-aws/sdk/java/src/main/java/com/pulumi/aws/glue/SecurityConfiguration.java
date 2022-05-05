@@ -18,6 +18,38 @@ import javax.annotation.Nullable;
  * Manages a Glue Security Configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecurityConfiguration(&#34;example&#34;, SecurityConfigurationArgs.builder()        
+ *             .encryptionConfiguration(SecurityConfigurationEncryptionConfiguration.builder()
+ *                 .cloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryption.builder()
+ *                     .cloudwatchEncryptionMode(&#34;DISABLED&#34;)
+ *                     .build())
+ *                 .jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption.builder()
+ *                     .jobBookmarksEncryptionMode(&#34;DISABLED&#34;)
+ *                     .build())
+ *                 .s3Encryption(SecurityConfigurationEncryptionConfigurationS3Encryption.builder()
+ *                     .kmsKeyArn(data.getAws_kms_key().getExample().getArn())
+ *                     .s3EncryptionMode(&#34;SSE-KMS&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

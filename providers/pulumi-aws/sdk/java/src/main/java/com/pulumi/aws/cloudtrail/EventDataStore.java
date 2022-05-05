@@ -27,11 +27,80 @@ import javax.annotation.Nullable;
  * &gt; **Tip:** For an organization event data store you must create this resource in the management account.
  * 
  * ## Example Usage
+ * ### Basic
+ * 
+ * The most simple event data store configuration requires us to only set the `name` and `retention_period` attributes. The event data store will automatically capture all management events. To capture management events from all the regions, `multi_region_enabled` must be `true`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventDataStore(&#34;example&#34;, EventDataStoreArgs.builder()        
+ *             .retentionPeriod(7)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ### Data Event Logging
  * 
  * CloudTrail can log [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) for certain services such as S3 bucket objects and Lambda function invocations. Additional information about data event configuration can be found in the following links:
  * 
  * - [CloudTrail API AdvancedFieldSelector documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html)
+ * ### Log all DynamoDB PutEvent actions for a specific DynamoDB table
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var table = Output.of(DynamodbFunctions.getTable(GetTableArgs.builder()
+ *             .name(&#34;not-important-dynamodb-table&#34;)
+ *             .build()));
+ * 
+ *         var example = new EventDataStore(&#34;example&#34;, EventDataStoreArgs.builder()        
+ *             .advancedEventSelectors(EventDataStoreAdvancedEventSelector.builder()
+ *                 .name(&#34;Log all DynamoDB PutEvent actions for a specific DynamoDB table&#34;)
+ *                 .fieldSelectors(                
+ *                     EventDataStoreAdvancedEventSelectorFieldSelector.builder()
+ *                         .field(&#34;eventCategory&#34;)
+ *                         .equals(&#34;Data&#34;)
+ *                         .build(),
+ *                     EventDataStoreAdvancedEventSelectorFieldSelector.builder()
+ *                         .field(&#34;resources.type&#34;)
+ *                         .equals(&#34;AWS::DynamoDB::Table&#34;)
+ *                         .build(),
+ *                     EventDataStoreAdvancedEventSelectorFieldSelector.builder()
+ *                         .field(&#34;eventName&#34;)
+ *                         .equals(&#34;PutItem&#34;)
+ *                         .build(),
+ *                     EventDataStoreAdvancedEventSelectorFieldSelector.builder()
+ *                         .field(&#34;resources.ARN&#34;)
+ *                         .equals(table.apply(getTableResult -&gt; getTableResult.getArn()))
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

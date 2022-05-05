@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Basic usage with tags:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new DefaultVpc(&#34;default&#34;, DefaultVpcArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Default VPC&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Default VPCs can be imported using the `vpc id`, e.g.,

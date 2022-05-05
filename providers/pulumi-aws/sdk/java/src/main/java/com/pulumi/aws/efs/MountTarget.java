@@ -18,6 +18,38 @@ import javax.annotation.Nullable;
  * Provides an Elastic File System (EFS) mount target.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Vpc(&#34;foo&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var alphaSubnet = new Subnet(&#34;alphaSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(foo.getId())
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var alphaMountTarget = new MountTarget(&#34;alphaMountTarget&#34;, MountTargetArgs.builder()        
+ *             .fileSystemId(aws_efs_file_system.getFoo().getId())
+ *             .subnetId(alphaSubnet.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

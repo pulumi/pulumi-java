@@ -20,6 +20,85 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Starting Configuration Recorder requires a `Delivery Channel` to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucketV2 = new BucketV2(&#34;bucketV2&#34;);
+ * 
+ *         var fooDeliveryChannel = new DeliveryChannel(&#34;fooDeliveryChannel&#34;, DeliveryChannelArgs.builder()        
+ *             .s3BucketName(bucketV2.getBucket())
+ *             .build());
+ * 
+ *         var fooRecorderStatus = new RecorderStatus(&#34;fooRecorderStatus&#34;, RecorderStatusArgs.builder()        
+ *             .isEnabled(true)
+ *             .build());
+ * 
+ *         var role = new Role(&#34;role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;config.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var rolePolicyAttachment = new RolePolicyAttachment(&#34;rolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(role.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/service-role/AWSConfigRole&#34;)
+ *             .build());
+ * 
+ *         var fooRecorder = new Recorder(&#34;fooRecorder&#34;, RecorderArgs.builder()        
+ *             .roleArn(role.getArn())
+ *             .build());
+ * 
+ *         var rolePolicy = new RolePolicy(&#34;rolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(role.getId())
+ *             .policy(Output.tuple(bucketV2.getArn(), bucketV2.getArn()).apply(values -&gt; {
+ *                 var bucketV2Arn = values.t1;
+ *                 var bucketV2Arn1 = values.t2;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;s3:*&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;,
+ *         &#34;%s/*&#34;
+ *       ]
+ *     }
+ *   ]
+ * }
+ * &#34;, bucketV2Arn,bucketV2Arn1);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

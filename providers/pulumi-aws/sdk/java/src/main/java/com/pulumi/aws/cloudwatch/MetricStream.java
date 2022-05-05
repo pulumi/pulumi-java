@@ -22,6 +22,136 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Metric Stream resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricStreamToFirehoseRole = new Role(&#34;metricStreamToFirehoseRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;streams.metrics.cloudwatch.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var firehoseToS3Role = new Role(&#34;firehoseToS3Role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;firehose.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var s3Stream = new FirehoseDeliveryStream(&#34;s3Stream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;s3&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(firehoseToS3Role.getArn())
+ *                 .bucketArn(bucket.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var main = new MetricStream(&#34;main&#34;, MetricStreamArgs.builder()        
+ *             .roleArn(metricStreamToFirehoseRole.getArn())
+ *             .firehoseArn(s3Stream.getArn())
+ *             .outputFormat(&#34;json&#34;)
+ *             .includeFilters(            
+ *                 MetricStreamIncludeFilter.builder()
+ *                     .namespace(&#34;AWS/EC2&#34;)
+ *                     .build(),
+ *                 MetricStreamIncludeFilter.builder()
+ *                     .namespace(&#34;AWS/EBS&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         var metricStreamToFirehoseRolePolicy = new RolePolicy(&#34;metricStreamToFirehoseRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(metricStreamToFirehoseRole.getId())
+ *             .policy(s3Stream.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Action&#34;: [
+ *                 &#34;firehose:PutRecord&#34;,
+ *                 &#34;firehose:PutRecordBatch&#34;
+ *             ],
+ *             &#34;Resource&#34;: &#34;%s&#34;
+ *         }
+ *     ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         var bucketAcl = new BucketAclV2(&#34;bucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var firehoseToS3RolePolicy = new RolePolicy(&#34;firehoseToS3RolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(firehoseToS3Role.getId())
+ *             .policy(Output.tuple(bucket.getArn(), bucket.getArn()).apply(values -&gt; {
+ *                 var bucketArn = values.t1;
+ *                 var bucketArn1 = values.t2;
+ *                 return &#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Action&#34;: [
+ *                 &#34;s3:AbortMultipartUpload&#34;,
+ *                 &#34;s3:GetBucketLocation&#34;,
+ *                 &#34;s3:GetObject&#34;,
+ *                 &#34;s3:ListBucket&#34;,
+ *                 &#34;s3:ListBucketMultipartUploads&#34;,
+ *                 &#34;s3:PutObject&#34;
+ *             ],
+ *             &#34;Resource&#34;: [
+ *                 &#34;%s&#34;,
+ *                 &#34;%s/*&#34;
+ *             ]
+ *         }
+ *     ]
+ * }
+ * &#34;, bucketArn,bucketArn1);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

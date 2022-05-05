@@ -33,6 +33,204 @@ import javax.annotation.Nullable;
  * Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g., the &#34;rebuild every time a code change is pushed&#34; option in the CodeBuild web console).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;codebuild.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleRolePolicy = new RolePolicy(&#34;exampleRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(exampleRole.getName())
+ *             .policy(Output.tuple(exampleBucketV2.getArn(), exampleBucketV2.getArn()).apply(values -&gt; {
+ *                 var exampleBucketV2Arn = values.t1;
+ *                 var exampleBucketV2Arn1 = values.t2;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: [
+ *         &#34;*&#34;
+ *       ],
+ *       &#34;Action&#34;: [
+ *         &#34;logs:CreateLogGroup&#34;,
+ *         &#34;logs:CreateLogStream&#34;,
+ *         &#34;logs:PutLogEvents&#34;
+ *       ]
+ *     },
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;ec2:CreateNetworkInterface&#34;,
+ *         &#34;ec2:DescribeDhcpOptions&#34;,
+ *         &#34;ec2:DescribeNetworkInterfaces&#34;,
+ *         &#34;ec2:DeleteNetworkInterface&#34;,
+ *         &#34;ec2:DescribeSubnets&#34;,
+ *         &#34;ec2:DescribeSecurityGroups&#34;,
+ *         &#34;ec2:DescribeVpcs&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     },
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;ec2:CreateNetworkInterfacePermission&#34;
+ *       ],
+ *       &#34;Resource&#34;: [
+ *         &#34;arn:aws:ec2:us-east-1:123456789012:network-interface/*&#34;
+ *       ],
+ *       &#34;Condition&#34;: {
+ *         &#34;StringEquals&#34;: {
+ *           &#34;ec2:Subnet&#34;: [
+ *             &#34;%s&#34;,
+ *             &#34;%s&#34;
+ *           ],
+ *           &#34;ec2:AuthorizedService&#34;: &#34;codebuild.amazonaws.com&#34;
+ *         }
+ *       }
+ *     },
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;s3:*&#34;
+ *       ],
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;,
+ *         &#34;%s/*&#34;
+ *       ]
+ *     }
+ *   ]
+ * }
+ * &#34;, aws_subnet.getExample1().getArn(),aws_subnet.getExample2().getArn(),exampleBucketV2Arn,exampleBucketV2Arn1);
+ *             }))
+ *             .build());
+ * 
+ *         var exampleProject = new Project(&#34;exampleProject&#34;, ProjectArgs.builder()        
+ *             .description(&#34;test_codebuild_project&#34;)
+ *             .buildTimeout(&#34;5&#34;)
+ *             .serviceRole(exampleRole.getArn())
+ *             .artifacts(ProjectArtifacts.builder()
+ *                 .type(&#34;NO_ARTIFACTS&#34;)
+ *                 .build())
+ *             .cache(ProjectCache.builder()
+ *                 .type(&#34;S3&#34;)
+ *                 .location(exampleBucketV2.getBucket())
+ *                 .build())
+ *             .environment(ProjectEnvironment.builder()
+ *                 .computeType(&#34;BUILD_GENERAL1_SMALL&#34;)
+ *                 .image(&#34;aws/codebuild/standard:1.0&#34;)
+ *                 .type(&#34;LINUX_CONTAINER&#34;)
+ *                 .imagePullCredentialsType(&#34;CODEBUILD&#34;)
+ *                 .environmentVariables(                
+ *                     ProjectEnvironmentEnvironmentVariable.builder()
+ *                         .name(&#34;SOME_KEY1&#34;)
+ *                         .value(&#34;SOME_VALUE1&#34;)
+ *                         .build(),
+ *                     ProjectEnvironmentEnvironmentVariable.builder()
+ *                         .name(&#34;SOME_KEY2&#34;)
+ *                         .value(&#34;SOME_VALUE2&#34;)
+ *                         .type(&#34;PARAMETER_STORE&#34;)
+ *                         .build())
+ *                 .build())
+ *             .logsConfig(ProjectLogsConfig.builder()
+ *                 .cloudwatchLogs(ProjectLogsConfigCloudwatchLogs.builder()
+ *                     .groupName(&#34;log-group&#34;)
+ *                     .streamName(&#34;log-stream&#34;)
+ *                     .build())
+ *                 .s3Logs(ProjectLogsConfigS3Logs.builder()
+ *                     .status(&#34;ENABLED&#34;)
+ *                     .location(exampleBucketV2.getId().apply(id -&gt; String.format(&#34;%s/build-log&#34;, id)))
+ *                     .build())
+ *                 .build())
+ *             .source(ProjectSource.builder()
+ *                 .type(&#34;GITHUB&#34;)
+ *                 .location(&#34;https://github.com/mitchellh/packer.git&#34;)
+ *                 .gitCloneDepth(1)
+ *                 .gitSubmodulesConfig(ProjectSourceGitSubmodulesConfig.builder()
+ *                     .fetchSubmodules(true)
+ *                     .build())
+ *                 .build())
+ *             .sourceVersion(&#34;master&#34;)
+ *             .vpcConfig(ProjectVpcConfig.builder()
+ *                 .vpcId(aws_vpc.getExample().getId())
+ *                 .subnets(                
+ *                     aws_subnet.getExample1().getId(),
+ *                     aws_subnet.getExample2().getId())
+ *                 .securityGroupIds(                
+ *                     aws_security_group.getExample1().getId(),
+ *                     aws_security_group.getExample2().getId())
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Test&#34;))
+ *             .build());
+ * 
+ *         var project_with_cache = new Project(&#34;project-with-cache&#34;, ProjectArgs.builder()        
+ *             .description(&#34;test_codebuild_project_cache&#34;)
+ *             .buildTimeout(&#34;5&#34;)
+ *             .queuedTimeout(&#34;5&#34;)
+ *             .serviceRole(exampleRole.getArn())
+ *             .artifacts(ProjectArtifacts.builder()
+ *                 .type(&#34;NO_ARTIFACTS&#34;)
+ *                 .build())
+ *             .cache(ProjectCache.builder()
+ *                 .type(&#34;LOCAL&#34;)
+ *                 .modes(                
+ *                     &#34;LOCAL_DOCKER_LAYER_CACHE&#34;,
+ *                     &#34;LOCAL_SOURCE_CACHE&#34;)
+ *                 .build())
+ *             .environment(ProjectEnvironment.builder()
+ *                 .computeType(&#34;BUILD_GENERAL1_SMALL&#34;)
+ *                 .image(&#34;aws/codebuild/standard:1.0&#34;)
+ *                 .type(&#34;LINUX_CONTAINER&#34;)
+ *                 .imagePullCredentialsType(&#34;CODEBUILD&#34;)
+ *                 .environmentVariables(ProjectEnvironmentEnvironmentVariable.builder()
+ *                     .name(&#34;SOME_KEY1&#34;)
+ *                     .value(&#34;SOME_VALUE1&#34;)
+ *                     .build())
+ *                 .build())
+ *             .source(ProjectSource.builder()
+ *                 .type(&#34;GITHUB&#34;)
+ *                 .location(&#34;https://github.com/mitchellh/packer.git&#34;)
+ *                 .gitCloneDepth(1)
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

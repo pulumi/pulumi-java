@@ -21,6 +21,57 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The `aws.codestarconnections.Connection` resource is created in the state `PENDING`. Authentication with the connection provider must be completed in the AWS Console.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleConnection = new Connection(&#34;exampleConnection&#34;, ConnectionArgs.builder()        
+ *             .providerType(&#34;Bitbucket&#34;)
+ *             .build());
+ * 
+ *         var examplePipeline = new Pipeline(&#34;examplePipeline&#34;, PipelineArgs.builder()        
+ *             .roleArn(aws_iam_role.getCodepipeline_role().getArn())
+ *             .artifactStores()
+ *             .stages(            
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Source&#34;)
+ *                     .actions(PipelineStageAction.builder()
+ *                         .name(&#34;Source&#34;)
+ *                         .category(&#34;Source&#34;)
+ *                         .owner(&#34;AWS&#34;)
+ *                         .provider(&#34;CodeStarSourceConnection&#34;)
+ *                         .version(&#34;1&#34;)
+ *                         .outputArtifacts(&#34;source_output&#34;)
+ *                         .configuration(Map.ofEntries(
+ *                             Map.entry(&#34;ConnectionArn&#34;, exampleConnection.getArn()),
+ *                             Map.entry(&#34;FullRepositoryId&#34;, &#34;my-organization/test&#34;),
+ *                             Map.entry(&#34;BranchName&#34;, &#34;main&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build(),
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Build&#34;)
+ *                     .actions()
+ *                     .build(),
+ *                 PipelineStage.builder()
+ *                     .name(&#34;Deploy&#34;)
+ *                     .actions()
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

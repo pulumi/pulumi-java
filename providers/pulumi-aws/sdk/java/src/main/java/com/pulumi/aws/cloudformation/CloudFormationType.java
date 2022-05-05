@@ -18,6 +18,33 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CloudFormationType(&#34;example&#34;, CloudFormationTypeArgs.builder()        
+ *             .schemaHandlerPackage(String.format(&#34;s3://%s/%s&#34;, aws_s3_object.getExample().getBucket(),aws_s3_object.getExample().getKey()))
+ *             .type(&#34;RESOURCE&#34;)
+ *             .typeName(&#34;ExampleCompany::ExampleService::ExampleResource&#34;)
+ *             .loggingConfig(CloudFormationTypeLoggingConfig.builder()
+ *                 .logGroupName(aws_cloudwatch_log_group.getExample().getName())
+ *                 .logRoleArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

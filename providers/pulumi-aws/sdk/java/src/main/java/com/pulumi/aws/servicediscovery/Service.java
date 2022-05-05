@@ -23,6 +23,84 @@ import javax.annotation.Nullable;
  * Provides a Service Discovery Service resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .enableDnsSupport(true)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         var examplePrivateDnsNamespace = new PrivateDnsNamespace(&#34;examplePrivateDnsNamespace&#34;, PrivateDnsNamespaceArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .vpc(exampleVpc.getId())
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .dnsConfig(ServiceDnsConfig.builder()
+ *                 .namespaceId(examplePrivateDnsNamespace.getId())
+ *                 .dnsRecords(ServiceDnsConfigDnsRecord.builder()
+ *                     .ttl(10)
+ *                     .type(&#34;A&#34;)
+ *                     .build())
+ *                 .routingPolicy(&#34;MULTIVALUE&#34;)
+ *                 .build())
+ *             .healthCheckCustomConfig(ServiceHealthCheckCustomConfig.builder()
+ *                 .failureThreshold(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplePublicDnsNamespace = new PublicDnsNamespace(&#34;examplePublicDnsNamespace&#34;, PublicDnsNamespaceArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .dnsConfig(ServiceDnsConfig.builder()
+ *                 .namespaceId(examplePublicDnsNamespace.getId())
+ *                 .dnsRecords(ServiceDnsConfigDnsRecord.builder()
+ *                     .ttl(10)
+ *                     .type(&#34;A&#34;)
+ *                     .build())
+ *                 .build())
+ *             .healthCheckConfig(ServiceHealthCheckConfig.builder()
+ *                 .failureThreshold(10)
+ *                 .resourcePath(&#34;path&#34;)
+ *                 .type(&#34;HTTP&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

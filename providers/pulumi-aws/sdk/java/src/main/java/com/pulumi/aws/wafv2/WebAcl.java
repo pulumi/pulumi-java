@@ -27,6 +27,250 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * This resource is based on `aws.wafv2.RuleGroup`, check the documentation of the `aws.wafv2.RuleGroup` resource to see examples of the various available statements.
+ * ### Managed Rule
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAcl(&#34;example&#34;, WebAclArgs.builder()        
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .allow()
+ *                 .build())
+ *             .description(&#34;Example of a managed rule.&#34;)
+ *             .rules(WebAclRule.builder()
+ *                 .name(&#34;rule-1&#34;)
+ *                 .overrideAction(WebAclRuleOverrideAction.builder()
+ *                     .count()
+ *                     .build())
+ *                 .priority(1)
+ *                 .statement(WebAclRuleStatement.builder()
+ *                     .managedRuleGroupStatement(WebAclRuleStatementManagedRuleGroupStatement.builder()
+ *                         .excludedRule(                        
+ *                             Map.of(&#34;name&#34;, &#34;SizeRestrictions_QUERYSTRING&#34;),
+ *                             Map.of(&#34;name&#34;, &#34;NoUserAgent_HEADER&#34;))
+ *                         .name(&#34;AWSManagedRulesCommonRuleSet&#34;)
+ *                         .scopeDownStatement(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement.builder()
+ *                             .geoMatchStatement(WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGeoMatchStatement.builder()
+ *                                 .countryCodes(                                
+ *                                     &#34;US&#34;,
+ *                                     &#34;NL&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .vendorName(&#34;AWS&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .visibilityConfig(WebAclRuleVisibilityConfig.builder()
+ *                     .cloudwatchMetricsEnabled(false)
+ *                     .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                     .sampledRequestsEnabled(false)
+ *                     .build())
+ *                 .build())
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .visibilityConfig(WebAclVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Rate Based
+ * Rate-limit US and NL-based clients to 10,000 requests for every 5 minutes.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WebAcl(&#34;example&#34;, WebAclArgs.builder()        
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .allow()
+ *                 .build())
+ *             .description(&#34;Example of a Cloudfront rate based statement.&#34;)
+ *             .rules(WebAclRule.builder()
+ *                 .action(WebAclRuleAction.builder()
+ *                     .block()
+ *                     .build())
+ *                 .name(&#34;rule-1&#34;)
+ *                 .priority(1)
+ *                 .statement(WebAclRuleStatement.builder()
+ *                     .rateBasedStatement(WebAclRuleStatementRateBasedStatement.builder()
+ *                         .aggregateKeyType(&#34;IP&#34;)
+ *                         .limit(10000)
+ *                         .scopeDownStatement(WebAclRuleStatementRateBasedStatementScopeDownStatement.builder()
+ *                             .geoMatchStatement(WebAclRuleStatementRateBasedStatementScopeDownStatementGeoMatchStatement.builder()
+ *                                 .countryCodes(                                
+ *                                     &#34;US&#34;,
+ *                                     &#34;NL&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .visibilityConfig(WebAclRuleVisibilityConfig.builder()
+ *                     .cloudwatchMetricsEnabled(false)
+ *                     .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                     .sampledRequestsEnabled(false)
+ *                     .build())
+ *                 .build())
+ *             .scope(&#34;CLOUDFRONT&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .visibilityConfig(WebAclVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Rule Group Reference
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(10)
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .rules(            
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-1&#34;)
+ *                     .priority(1)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .count()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .geoMatchStatement(RuleGroupRuleStatementGeoMatchStatement.builder()
+ *                             .countryCodes(&#34;NL&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build(),
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-to-exclude-a&#34;)
+ *                     .priority(10)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .allow()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .geoMatchStatement(RuleGroupRuleStatementGeoMatchStatement.builder()
+ *                             .countryCodes(&#34;US&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build(),
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-to-exclude-b&#34;)
+ *                     .priority(15)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .allow()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .geoMatchStatement(RuleGroupRuleStatementGeoMatchStatement.builder()
+ *                             .countryCodes(&#34;GB&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build())
+ *             .visibilityConfig(RuleGroupVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var test = new WebAcl(&#34;test&#34;, WebAclArgs.builder()        
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .defaultAction(WebAclDefaultAction.builder()
+ *                 .block()
+ *                 .build())
+ *             .rules(WebAclRule.builder()
+ *                 .name(&#34;rule-1&#34;)
+ *                 .priority(1)
+ *                 .overrideAction(WebAclRuleOverrideAction.builder()
+ *                     .count()
+ *                     .build())
+ *                 .statement(WebAclRuleStatement.builder()
+ *                     .ruleGroupReferenceStatement(WebAclRuleStatementRuleGroupReferenceStatement.builder()
+ *                         .arn(example.getArn())
+ *                         .excludedRules(                        
+ *                             WebAclRuleStatementRuleGroupReferenceStatementExcludedRule.builder()
+ *                                 .name(&#34;rule-to-exclude-b&#34;)
+ *                                 .build(),
+ *                             WebAclRuleStatementRuleGroupReferenceStatementExcludedRule.builder()
+ *                                 .name(&#34;rule-to-exclude-a&#34;)
+ *                                 .build())
+ *                         .build())
+ *                     .build())
+ *                 .visibilityConfig(WebAclRuleVisibilityConfig.builder()
+ *                     .cloudwatchMetricsEnabled(false)
+ *                     .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                     .sampledRequestsEnabled(false)
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .visibilityConfig(WebAclVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,44 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** AWS WorkSpaces service requires [`workspaces_DefaultRole`](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-access-control.html#create-default-role) IAM role to operate normally.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var valueWindows10 = Output.of(WorkspacesFunctions.getBundle(GetBundleArgs.builder()
+ *             .bundleId(&#34;wsb-bh8rsxt14&#34;)
+ *             .build()));
+ * 
+ *         var example = new Workspace(&#34;example&#34;, WorkspaceArgs.builder()        
+ *             .directoryId(aws_workspaces_directory.getExample().getId())
+ *             .bundleId(valueWindows10.apply(getBundleResult -&gt; getBundleResult.getId()))
+ *             .userName(&#34;john.doe&#34;)
+ *             .rootVolumeEncryptionEnabled(true)
+ *             .userVolumeEncryptionEnabled(true)
+ *             .volumeEncryptionKey(&#34;alias/aws/workspaces&#34;)
+ *             .workspaceProperties(WorkspaceWorkspaceProperties.builder()
+ *                 .computeTypeName(&#34;VALUE&#34;)
+ *                 .userVolumeSizeGib(10)
+ *                 .rootVolumeSizeGib(80)
+ *                 .runningMode(&#34;AUTO_STOP&#34;)
+ *                 .runningModeAutoStopTimeoutInMinutes(60)
+ *                 .build())
+ *             .tags(Map.of(&#34;Department&#34;, &#34;IT&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

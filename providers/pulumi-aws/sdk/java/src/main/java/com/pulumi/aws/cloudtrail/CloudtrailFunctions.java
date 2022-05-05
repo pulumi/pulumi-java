@@ -18,6 +18,29 @@ public final class CloudtrailFunctions {
      * Provides information about a CloudFront Function.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var functionName = config.get(&#34;functionName&#34;);
+     *         final var existing = Output.of(CloudfrontFunctions.getFunction(GetFunctionArgs.builder()
+     *             .name(functionName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      * @deprecated
      * aws.cloudtrail.getFunction has been deprecated in favor of aws.cloudfront.getFunction
@@ -35,6 +58,58 @@ public final class CloudtrailFunctions {
      * in a given region for the purpose of allowing CloudTrail to store trail data in S3.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var main = Output.of(CloudtrailFunctions.getServiceAccount());
+     * 
+     *         var bucket = new BucketV2(&#34;bucket&#34;, BucketV2Args.builder()        
+     *             .forceDestroy(true)
+     *             .build());
+     * 
+     *         var allowCloudtrailLogging = new BucketPolicy(&#34;allowCloudtrailLogging&#34;, BucketPolicyArgs.builder()        
+     *             .bucket(bucket.getId())
+     *             .policy(&#34;&#34;&#34;
+     * {
+     *   &#34;Version&#34;: &#34;2008-10-17&#34;,
+     *   &#34;Statement&#34;: [
+     *     {
+     *       &#34;Sid&#34;: &#34;Put bucket policy needed for trails&#34;,
+     *       &#34;Effect&#34;: &#34;Allow&#34;,
+     *       &#34;Principal&#34;: {
+     *         &#34;AWS&#34;: &#34;%s&#34;
+     *       },
+     *       &#34;Action&#34;: &#34;s3:PutObject&#34;,
+     *       &#34;Resource&#34;: &#34;arn:aws:s3:::tf-cloudtrail-logging-test-bucket/*&#34;
+     *     },
+     *     {
+     *       &#34;Sid&#34;: &#34;Get bucket policy needed for trails&#34;,
+     *       &#34;Effect&#34;: &#34;Allow&#34;,
+     *       &#34;Principal&#34;: {
+     *         &#34;AWS&#34;: &#34;%s&#34;
+     *       },
+     *       &#34;Action&#34;: &#34;s3:GetBucketAcl&#34;,
+     *       &#34;Resource&#34;: &#34;arn:aws:s3:::tf-cloudtrail-logging-test-bucket&#34;
+     *     }
+     *   ]
+     * }
+     * &#34;, main.apply(getServiceAccountResult -&gt; getServiceAccountResult.getArn()),main.apply(getServiceAccountResult -&gt; getServiceAccountResult.getArn())))
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetServiceAccountResult> getServiceAccount() {

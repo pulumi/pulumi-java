@@ -26,6 +26,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB ACL.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getAcl(GetAclArgs.builder()
+     *             .name(&#34;my-acl&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAclResult> getAcl(GetAclArgs args) {
@@ -38,6 +59,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB Cluster.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;my-cluster&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
@@ -50,6 +92,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB Parameter Group.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getParameterGroup(GetParameterGroupArgs.builder()
+     *             .name(&#34;my-parameter-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetParameterGroupResult> getParameterGroup(GetParameterGroupArgs args) {
@@ -62,6 +125,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB Snapshot.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSnapshot(GetSnapshotArgs.builder()
+     *             .name(&#34;my-snapshot&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSnapshotResult> getSnapshot(GetSnapshotArgs args) {
@@ -74,6 +158,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB Subnet Group.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getSubnetGroup(GetSubnetGroupArgs.builder()
+     *             .name(&#34;my-subnet-group&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSubnetGroupResult> getSubnetGroup(GetSubnetGroupArgs args) {
@@ -86,6 +191,27 @@ public final class MemorydbFunctions {
      * Provides information about a MemoryDB User.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MemorydbFunctions.getUser(GetUserArgs.builder()
+     *             .userName(&#34;my-user&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserResult> getUser(GetUserArgs args) {

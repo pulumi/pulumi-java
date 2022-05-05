@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * &gt; **Tip:** A &#34;resource&#34; is either a Service Catalog portfolio or product.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TagOptionResourceAssociation(&#34;example&#34;, TagOptionResourceAssociationArgs.builder()        
+ *             .resourceId(&#34;prod-dnigbtea24ste&#34;)
+ *             .tagOptionId(&#34;tag-pjtvyakdlyo3m&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

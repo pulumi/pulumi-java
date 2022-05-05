@@ -33,6 +33,88 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Pool resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enabling SMS and Software Token Multi-Factor Authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserPool(&#34;example&#34;, UserPoolArgs.builder()        
+ *             .mfaConfiguration(&#34;ON&#34;)
+ *             .smsAuthenticationMessage(&#34;Your code is {####}&#34;)
+ *             .smsConfiguration(UserPoolSmsConfiguration.builder()
+ *                 .externalId(&#34;example&#34;)
+ *                 .snsCallerArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .softwareTokenMfaConfiguration(UserPoolSoftwareTokenMfaConfiguration.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using Account Recovery Setting
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new UserPool(&#34;test&#34;, UserPoolArgs.builder()        
+ *             .accountRecoverySetting(UserPoolAccountRecoverySetting.builder()
+ *                 .recoveryMechanisms(                
+ *                     UserPoolAccountRecoverySettingRecoveryMechanism.builder()
+ *                         .name(&#34;verified_email&#34;)
+ *                         .priority(1)
+ *                         .build(),
+ *                     UserPoolAccountRecoverySettingRecoveryMechanism.builder()
+ *                         .name(&#34;verified_phone_number&#34;)
+ *                         .priority(2)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

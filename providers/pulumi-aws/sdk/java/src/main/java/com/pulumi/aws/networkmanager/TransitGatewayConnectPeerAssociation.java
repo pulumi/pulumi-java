@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * If you specify a link, it must be associated with the specified device.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransitGatewayConnectPeerAssociation(&#34;example&#34;, TransitGatewayConnectPeerAssociationArgs.builder()        
+ *             .globalNetworkId(aws_networkmanager_global_network.getExample().getId())
+ *             .deviceId(aws_networkmanager_device.getExample().getId())
+ *             .transitGatewayConnectPeerArn(aws_ec2_transit_gateway_connect_peer.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * &gt; To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .path(&#34;/&#34;)
+ *             .forceDestroy(true)
+ *             .build());
+ * 
+ *         var exampleUserLoginProfile = new UserLoginProfile(&#34;exampleUserLoginProfile&#34;, UserLoginProfileArgs.builder()        
+ *             .user(exampleUser.getName())
+ *             .pgpKey(&#34;keybase:some_person_that_exists&#34;)
+ *             .build());
+ * 
+ *         ctx.export(&#34;password&#34;, exampleUserLoginProfile.getEncryptedPassword());
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

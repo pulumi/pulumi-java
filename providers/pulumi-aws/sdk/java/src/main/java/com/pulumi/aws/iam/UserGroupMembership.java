@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * `aws.iam.GroupMembership` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var user1 = new User(&#34;user1&#34;);
+ * 
+ *         var group1 = new Group(&#34;group1&#34;);
+ * 
+ *         var group2 = new Group(&#34;group2&#34;);
+ * 
+ *         var example1 = new UserGroupMembership(&#34;example1&#34;, UserGroupMembershipArgs.builder()        
+ *             .user(user1.getName())
+ *             .groups(            
+ *                 group1.getName(),
+ *                 group2.getName())
+ *             .build());
+ * 
+ *         var group3 = new Group(&#34;group3&#34;);
+ * 
+ *         var example2 = new UserGroupMembership(&#34;example2&#34;, UserGroupMembershipArgs.builder()        
+ *             .user(user1.getName())
+ *             .groups(group3.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

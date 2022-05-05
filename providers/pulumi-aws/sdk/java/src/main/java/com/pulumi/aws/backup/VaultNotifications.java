@@ -18,6 +18,52 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup vault notifications resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testTopic = new Topic(&#34;testTopic&#34;);
+ * 
+ *         final var testPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .policyId(&#34;__default_policy_ID&#34;)
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;SNS:Publish&#34;)
+ *                 .effect(&#34;Allow&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;backup.amazonaws.com&#34;)
+ *                     .build())
+ *                 .resources(testTopic.getArn())
+ *                 .sid(&#34;__default_statement_ID&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var testTopicPolicy = new TopicPolicy(&#34;testTopicPolicy&#34;, TopicPolicyArgs.builder()        
+ *             .arn(testTopic.getArn())
+ *             .policy(testPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(testPolicyDocument -&gt; testPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         var testVaultNotifications = new VaultNotifications(&#34;testVaultNotifications&#34;, VaultNotificationsArgs.builder()        
+ *             .backupVaultName(&#34;example_backup_vault&#34;)
+ *             .snsTopicArn(testTopic.getArn())
+ *             .backupVaultEvents(            
+ *                 &#34;BACKUP_JOB_STARTED&#34;,
+ *                 &#34;RESTORE_JOB_COMPLETED&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

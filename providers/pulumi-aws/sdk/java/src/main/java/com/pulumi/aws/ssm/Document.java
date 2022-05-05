@@ -25,6 +25,83 @@ import javax.annotation.Nullable;
  * or greater can update their content once created, see [SSM Schema Features](http://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#document-schemas-features). To update a document with an older schema version you must recreate the resource. Not all document types support a schema version of 2.0 or greater. Refer to [SSM document schema features and examples](https://docs.aws.amazon.com/systems-manager/latest/userguide/document-schemas-features.html) for information about which schema versions are supported for the respective `document_type`.
  * 
  * ## Example Usage
+ * ### Create an ssm document in JSON format
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Document(&#34;foo&#34;, DocumentArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ *   {
+ *     &#34;schemaVersion&#34;: &#34;1.2&#34;,
+ *     &#34;description&#34;: &#34;Check ip configuration of a Linux instance.&#34;,
+ *     &#34;parameters&#34;: {
+ * 
+ *     },
+ *     &#34;runtimeConfig&#34;: {
+ *       &#34;aws:runShellScript&#34;: {
+ *         &#34;properties&#34;: [
+ *           {
+ *             &#34;id&#34;: &#34;0.aws:runShellScript&#34;,
+ *             &#34;runCommand&#34;: [&#34;ifconfig&#34;]
+ *           }
+ *         ]
+ *       }
+ *     }
+ *   }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .documentType(&#34;Command&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create an ssm document in YAML format
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Document(&#34;foo&#34;, DocumentArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * schemaVersion: &#39;1.2&#39;
+ * description: Check ip configuration of a Linux instance.
+ * parameters: {}
+ * runtimeConfig:
+ *   &#39;aws:runShellScript&#39;:
+ *     properties:
+ *       - id: &#39;0.aws:runShellScript&#39;
+ *         runCommand:
+ *           - ifconfig
+ * 
+ *             &#34;&#34;&#34;)
+ *             .documentFormat(&#34;YAML&#34;)
+ *             .documentType(&#34;Command&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Permissions
  * 
  * The permissions attribute specifies how you want to share the document. If you share a document privately,

@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  * ElastiCache Subnet Group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var barSecurityGroup = new SecurityGroup(&#34;barSecurityGroup&#34;);
+ * 
+ *         var barElasticache_securityGroupSecurityGroup = new SecurityGroup(&#34;barElasticache/securityGroupSecurityGroup&#34;, SecurityGroupArgs.builder()        
+ *             .securityGroupNames(barSecurityGroup.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

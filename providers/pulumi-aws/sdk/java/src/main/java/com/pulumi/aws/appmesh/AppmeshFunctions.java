@@ -18,6 +18,51 @@ public final class AppmeshFunctions {
      * The App Mesh Mesh data source allows details of an App Mesh Mesh to be retrieved by its name and optionally the mesh_owner.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var simple = Output.of(AppmeshFunctions.getMesh(GetMeshArgs.builder()
+     *             .name(&#34;simpleapp&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+     * 
+     *         final var simple = Output.of(AppmeshFunctions.getMesh(GetMeshArgs.builder()
+     *             .name(&#34;simpleapp&#34;)
+     *             .meshOwner(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetMeshResult> getMesh(GetMeshArgs args) {
@@ -30,6 +75,53 @@ public final class AppmeshFunctions {
      * The App Mesh Virtual Service data source allows details of an App Mesh Virtual Service to be retrieved by its name, mesh_name, and optionally the mesh_owner.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(AppmeshFunctions.getVirtualService(GetVirtualServiceArgs.builder()
+     *             .meshName(&#34;example-mesh&#34;)
+     *             .name(&#34;example.mesh.local&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+     * 
+     *         final var test = Output.of(AppmeshFunctions.getVirtualService(GetVirtualServiceArgs.builder()
+     *             .name(&#34;example.mesh.local&#34;)
+     *             .meshName(&#34;example-mesh&#34;)
+     *             .meshOwner(current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVirtualServiceResult> getVirtualService(GetVirtualServiceArgs args) {

@@ -21,6 +21,55 @@ import javax.annotation.Nullable;
  * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testRegistry = new Registry(&#34;testRegistry&#34;);
+ * 
+ *         var testSchema = new Schema(&#34;testSchema&#34;, SchemaArgs.builder()        
+ *             .registryName(testRegistry.getName())
+ *             .type(&#34;OpenApi3&#34;)
+ *             .description(&#34;The schema definition for my event&#34;)
+ *             .content(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;openapi&#34;, &#34;3.0.0&#34;),
+ *                     jsonProperty(&#34;info&#34;, jsonObject(
+ *                         jsonProperty(&#34;version&#34;, &#34;1.0.0&#34;),
+ *                         jsonProperty(&#34;title&#34;, &#34;Event&#34;)
+ *                     )),
+ *                     jsonProperty(&#34;paths&#34;, jsonObject(
+ * 
+ *                     )),
+ *                     jsonProperty(&#34;components&#34;, jsonObject(
+ *                         jsonProperty(&#34;schemas&#34;, jsonObject(
+ *                             jsonProperty(&#34;Event&#34;, jsonObject(
+ *                                 jsonProperty(&#34;type&#34;, &#34;object&#34;),
+ *                                 jsonProperty(&#34;properties&#34;, jsonObject(
+ *                                     jsonProperty(&#34;name&#34;, jsonObject(
+ *                                         jsonProperty(&#34;type&#34;, &#34;string&#34;)
+ *                                     ))
+ *                                 ))
+ *                             ))
+ *                         ))
+ *                     ))
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

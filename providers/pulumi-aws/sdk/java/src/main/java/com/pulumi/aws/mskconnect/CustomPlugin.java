@@ -20,6 +20,42 @@ import javax.annotation.Nullable;
  * Provides an Amazon MSK Connect Custom Plugin Resource.
  * 
  * ## Example Usage
+ * ### Basic configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .key(&#34;debezium.zip&#34;)
+ *             .source(new FileAsset(&#34;debezium.zip&#34;))
+ *             .build());
+ * 
+ *         var exampleCustomPlugin = new CustomPlugin(&#34;exampleCustomPlugin&#34;, CustomPluginArgs.builder()        
+ *             .contentType(&#34;ZIP&#34;)
+ *             .location(CustomPluginLocation.builder()
+ *                 .s3(CustomPluginLocationS3.builder()
+ *                     .bucketArn(exampleBucketV2.getArn())
+ *                     .fileKey(exampleBucketObjectv2.getKey())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

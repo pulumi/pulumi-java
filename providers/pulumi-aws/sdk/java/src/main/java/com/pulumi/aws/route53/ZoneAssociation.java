@@ -21,6 +21,46 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This provider provides both this standalone Zone VPC Association resource and exclusive VPC associations defined in-line in the `aws.route53.Zone` resource via `vpc` configuration blocks. At this time, you cannot use those in-line VPC associations in conjunction with this resource and the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) in the `aws.route53.Zone` resource to manage additional associations via this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Vpc(&#34;primary&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.6.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .enableDnsSupport(true)
+ *             .build());
+ * 
+ *         var secondaryVpc = new Vpc(&#34;secondaryVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.7.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .enableDnsSupport(true)
+ *             .build());
+ * 
+ *         var example = new Zone(&#34;example&#34;, ZoneArgs.builder()        
+ *             .vpcs(ZoneVpc.builder()
+ *                 .vpcId(primary.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var secondaryZoneAssociation = new ZoneAssociation(&#34;secondaryZoneAssociation&#34;, ZoneAssociationArgs.builder()        
+ *             .zoneId(example.getZoneId())
+ *             .vpcId(secondaryVpc.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * Provides a WAF IPSet Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(            
+ *                 IpSetIpSetDescriptor.builder()
+ *                     .type(&#34;IPV4&#34;)
+ *                     .value(&#34;192.0.7.0/24&#34;)
+ *                     .build(),
+ *                 IpSetIpSetDescriptor.builder()
+ *                     .type(&#34;IPV4&#34;)
+ *                     .value(&#34;10.16.16.0/16&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,36 @@ import javax.annotation.Nullable;
  * Manages an AppStream User Stack association.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testStack = new Stack(&#34;testStack&#34;);
+ * 
+ *         var testUser = new User(&#34;testUser&#34;, UserArgs.builder()        
+ *             .authenticationType(&#34;USERPOOL&#34;)
+ *             .userName(&#34;EMAIL&#34;)
+ *             .build());
+ * 
+ *         var testUserStackAssociation = new UserStackAssociation(&#34;testUserStackAssociation&#34;, UserStackAssociationArgs.builder()        
+ *             .authenticationType(testUser.getAuthenticationType())
+ *             .stackName(testStack.getName())
+ *             .userName(testUser.getUserName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -18,6 +18,39 @@ public final class AcmFunctions {
      * it by domain without having to hard code the ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var issued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .statuses(&#34;ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var amazonIssued = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .mostRecent(true)
+     *             .types(&#34;AMAZON_ISSUED&#34;)
+     *             .build()));
+     * 
+     *         final var rsa4096 = Output.of(AcmFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .domain(&#34;tf.example.com&#34;)
+     *             .keyTypes(&#34;RSA_4096&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {

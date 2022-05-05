@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an S3 Outposts Endpoint.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Endpoint(&#34;example&#34;, EndpointArgs.builder()        
+ *             .outpostId(data.getAws_outposts_outpost().getExample().getId())
+ *             .securityGroupId(aws_security_group.getExample().getId())
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

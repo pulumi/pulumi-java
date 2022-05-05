@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
  * For information about function aliases, see [CreateAlias](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html) and [AliasRoutingConfiguration](https://docs.aws.amazon.com/lambda/latest/dg/API_AliasRoutingConfiguration.html) in the API docs.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testLambdaAlias = new Alias(&#34;testLambdaAlias&#34;, AliasArgs.builder()        
+ *             .description(&#34;a sample description&#34;)
+ *             .functionName(aws_lambda_function.getLambda_function_test().getArn())
+ *             .functionVersion(&#34;1&#34;)
+ *             .routingConfig(AliasRoutingConfig.builder()
+ *                 .additionalVersionWeights(Map.of(&#34;2&#34;, 0.5))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

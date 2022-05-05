@@ -27,6 +27,229 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** If you use this resource&#39;s `managed_policy_arns` argument or `inline_policy` configuration blocks, this resource will take over exclusive management of the role&#39;s respective policy types (e.g., both policy types if both arguments are used). These arguments are incompatible with other ways of managing a role&#39;s policies, such as `aws.iam.PolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.RolePolicy`. If you attempt to manage a role&#39;s policies by multiple means, you will get resource cycling and/or errors.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testRole = new Role(&#34;testRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Sid&#34;, &#34;&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;ec2.amazonaws.com&#34;)
+ *                         ))
+ *                     )))
+ *                 )))
+ *             .tags(Map.of(&#34;tag-key&#34;, &#34;tag-value&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example of Using Data Source for Assume Role Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var instance-assume-role-policy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;ec2.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var instance = new Role(&#34;instance&#34;, RoleArgs.builder()        
+ *             .path(&#34;/system/&#34;)
+ *             .assumeRolePolicy(instance_assume_role_policy.getJson())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example of Exclusive Inline Policies
+ * 
+ * This example creates an IAM role with two inline IAM policies. If someone adds another inline policy out-of-band, on the next apply, the provider will remove that policy. If someone deletes these policies out-of-band, the provider will recreate them.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var inlinePolicy = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;ec2:DescribeAccountAttributes&#34;)
+ *                 .resources(&#34;*&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(data.getAws_iam_policy_document().getInstance_assume_role_policy().getJson())
+ *             .inlinePolicies(            
+ *                 RoleInlinePolicy.builder()
+ *                     .name(&#34;my_inline_policy&#34;)
+ *                     .policy(serializeJson(
+ *                         jsonObject(
+ *                             jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                             jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                                 jsonProperty(&#34;Action&#34;, jsonArray(&#34;ec2:Describe*&#34;)),
+ *                                 jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                                 jsonProperty(&#34;Resource&#34;, &#34;*&#34;)
+ *                             )))
+ *                         )))
+ *                     .build(),
+ *                 RoleInlinePolicy.builder()
+ *                     .name(&#34;policy-8675309&#34;)
+ *                     .policy(inlinePolicy.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example of Removing Inline Policies
+ * 
+ * This example creates an IAM role with what appears to be empty IAM `inline_policy` argument instead of using `inline_policy` as a configuration block. The result is that if someone were to add an inline policy out-of-band, on the next apply, the provider will remove that policy.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(data.getAws_iam_policy_document().getInstance_assume_role_policy().getJson())
+ *             .inlinePolicies()
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example of Exclusive Managed Policies
+ * 
+ * This example creates an IAM role and attaches two managed IAM policies. If someone attaches another managed policy out-of-band, on the next apply, the provider will detach that policy. If someone detaches these policies out-of-band, the provider will attach them again.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyOne = new Policy(&#34;policyOne&#34;, PolicyArgs.builder()        
+ *             .policy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, jsonArray(&#34;ec2:Describe*&#34;)),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Resource&#34;, &#34;*&#34;)
+ *                     )))
+ *                 )))
+ *             .build());
+ * 
+ *         var policyTwo = new Policy(&#34;policyTwo&#34;, PolicyArgs.builder()        
+ *             .policy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;),
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, jsonArray(
+ *                             &#34;s3:ListAllMyBuckets&#34;, 
+ *                             &#34;s3:ListBucket&#34;, 
+ *                             &#34;s3:HeadBucket&#34;
+ *                         )),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Resource&#34;, &#34;*&#34;)
+ *                     )))
+ *                 )))
+ *             .build());
+ * 
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(data.getAws_iam_policy_document().getInstance_assume_role_policy().getJson())
+ *             .managedPolicyArns(            
+ *                 policyOne.getArn(),
+ *                 policyTwo.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example of Removing Managed Policies
+ * 
+ * This example creates an IAM role with an empty `managed_policy_arns` argument. If someone attaches a policy out-of-band, on the next apply, the provider will detach that policy.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(data.getAws_iam_policy_document().getInstance_assume_role_policy().getJson())
+ *             .managedPolicyArns()
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

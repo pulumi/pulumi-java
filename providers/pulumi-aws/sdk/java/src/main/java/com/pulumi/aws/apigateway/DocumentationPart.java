@@ -18,6 +18,35 @@ import javax.annotation.Nullable;
  * Provides a settings of an API Gateway Documentation Part.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRestApi = new RestApi(&#34;exampleRestApi&#34;);
+ * 
+ *         var exampleDocumentationPart = new DocumentationPart(&#34;exampleDocumentationPart&#34;, DocumentationPartArgs.builder()        
+ *             .location(DocumentationPartLocation.builder()
+ *                 .type(&#34;METHOD&#34;)
+ *                 .method(&#34;GET&#34;)
+ *                 .path(&#34;/example&#34;)
+ *                 .build())
+ *             .properties(&#34;{\&#34;description\&#34;:\&#34;Example description\&#34;}&#34;)
+ *             .restApiId(exampleRestApi.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

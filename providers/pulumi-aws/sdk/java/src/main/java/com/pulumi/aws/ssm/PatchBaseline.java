@@ -29,6 +29,201 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage using `approved_patches` only
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production = new PatchBaseline(&#34;production&#34;, PatchBaselineArgs.builder()        
+ *             .approvedPatches(&#34;KB123456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Advanced usage, specifying patch filters
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production = new PatchBaseline(&#34;production&#34;, PatchBaselineArgs.builder()        
+ *             .approvalRules(            
+ *                 PatchBaselineApprovalRule.builder()
+ *                     .approveAfterDays(7)
+ *                     .complianceLevel(&#34;HIGH&#34;)
+ *                     .patchFilters(                    
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;PRODUCT&#34;)
+ *                             .values(&#34;WindowsServer2016&#34;)
+ *                             .build(),
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;CLASSIFICATION&#34;)
+ *                             .values(                            
+ *                                 &#34;CriticalUpdates&#34;,
+ *                                 &#34;SecurityUpdates&#34;,
+ *                                 &#34;Updates&#34;)
+ *                             .build(),
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;MSRC_SEVERITY&#34;)
+ *                             .values(                            
+ *                                 &#34;Critical&#34;,
+ *                                 &#34;Important&#34;,
+ *                                 &#34;Moderate&#34;)
+ *                             .build())
+ *                     .build(),
+ *                 PatchBaselineApprovalRule.builder()
+ *                     .approveAfterDays(7)
+ *                     .patchFilters(PatchBaselineApprovalRulePatchFilter.builder()
+ *                         .key(&#34;PRODUCT&#34;)
+ *                         .values(&#34;WindowsServer2012&#34;)
+ *                         .build())
+ *                     .build())
+ *             .approvedPatches(            
+ *                 &#34;KB123456&#34;,
+ *                 &#34;KB456789&#34;)
+ *             .description(&#34;Patch Baseline Description&#34;)
+ *             .globalFilters(            
+ *                 PatchBaselineGlobalFilter.builder()
+ *                     .key(&#34;PRODUCT&#34;)
+ *                     .values(&#34;WindowsServer2008&#34;)
+ *                     .build(),
+ *                 PatchBaselineGlobalFilter.builder()
+ *                     .key(&#34;CLASSIFICATION&#34;)
+ *                     .values(&#34;ServicePacks&#34;)
+ *                     .build(),
+ *                 PatchBaselineGlobalFilter.builder()
+ *                     .key(&#34;MSRC_SEVERITY&#34;)
+ *                     .values(&#34;Low&#34;)
+ *                     .build())
+ *             .rejectedPatches(&#34;KB987654&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Advanced usage, specifying Microsoft application and Windows patch rules
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var windowsOsApps = new PatchBaseline(&#34;windowsOsApps&#34;, PatchBaselineArgs.builder()        
+ *             .approvalRules(            
+ *                 PatchBaselineApprovalRule.builder()
+ *                     .approveAfterDays(7)
+ *                     .patchFilters(                    
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;CLASSIFICATION&#34;)
+ *                             .values(                            
+ *                                 &#34;CriticalUpdates&#34;,
+ *                                 &#34;SecurityUpdates&#34;)
+ *                             .build(),
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;MSRC_SEVERITY&#34;)
+ *                             .values(                            
+ *                                 &#34;Critical&#34;,
+ *                                 &#34;Important&#34;)
+ *                             .build())
+ *                     .build(),
+ *                 PatchBaselineApprovalRule.builder()
+ *                     .approveAfterDays(7)
+ *                     .patchFilters(                    
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;PATCH_SET&#34;)
+ *                             .values(&#34;APPLICATION&#34;)
+ *                             .build(),
+ *                         PatchBaselineApprovalRulePatchFilter.builder()
+ *                             .key(&#34;PRODUCT&#34;)
+ *                             .values(                            
+ *                                 &#34;Office 2013&#34;,
+ *                                 &#34;Office 2016&#34;)
+ *                             .build())
+ *                     .build())
+ *             .description(&#34;Patch both Windows and Microsoft apps&#34;)
+ *             .operatingSystem(&#34;WINDOWS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Advanced usage, specifying alternate patch source repository
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var al201709 = new PatchBaseline(&#34;al201709&#34;, PatchBaselineArgs.builder()        
+ *             .approvalRules()
+ *             .description(&#34;My patch repository for Amazon Linux 2017.09&#34;)
+ *             .operatingSystem(&#34;AMAZON_LINUX&#34;)
+ *             .sources(PatchBaselineSource.builder()
+ *                 .configuration(&#34;&#34;&#34;
+ * [amzn-main]
+ * name=amzn-main-Base
+ * mirrorlist=http://repo./$awsregion./$awsdomain//$releasever/main/mirror.list
+ * mirrorlist_expire=300
+ * metadata_expire=300
+ * priority=10
+ * failovermethod=priority
+ * fastestmirror_enabled=0
+ * gpgcheck=1
+ * gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-ga
+ * enabled=1
+ * retries=3
+ * timeout=5
+ * report_instanceid=yes
+ * 
+ *                 &#34;&#34;&#34;)
+ *                 .name(&#34;My-AL2017.09&#34;)
+ *                 .products(&#34;AmazonLinux2017.09&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * SSM Patch Baselines can be imported by their baseline ID, e.g.,

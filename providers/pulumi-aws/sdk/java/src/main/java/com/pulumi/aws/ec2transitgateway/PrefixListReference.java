@@ -19,6 +19,54 @@ import javax.annotation.Nullable;
  * Manages an EC2 Transit Gateway Prefix List Reference.
  * 
  * ## Example Usage
+ * ### Attachment Routing
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PrefixListReference(&#34;example&#34;, PrefixListReferenceArgs.builder()        
+ *             .prefixListId(aws_ec2_managed_prefix_list.getExample().getId())
+ *             .transitGatewayAttachmentId(aws_ec2_transit_gateway_vpc_attachment.getExample().getId())
+ *             .transitGatewayRouteTableId(aws_ec2_transit_gateway.getExample().getAssociation_default_route_table_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Blackhole Routing
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PrefixListReference(&#34;example&#34;, PrefixListReferenceArgs.builder()        
+ *             .blackhole(true)
+ *             .prefixListId(aws_ec2_managed_prefix_list.getExample().getId())
+ *             .transitGatewayRouteTableId(aws_ec2_transit_gateway.getExample().getAssociation_default_route_table_id())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

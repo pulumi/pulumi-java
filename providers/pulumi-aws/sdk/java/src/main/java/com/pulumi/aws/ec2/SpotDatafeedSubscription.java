@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultBucketV2 = new BucketV2(&#34;defaultBucketV2&#34;);
+ * 
+ *         var defaultSpotDatafeedSubscription = new SpotDatafeedSubscription(&#34;defaultSpotDatafeedSubscription&#34;, SpotDatafeedSubscriptionArgs.builder()        
+ *             .bucket(defaultBucketV2.getBucket())
+ *             .prefix(&#34;my_subdirectory&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

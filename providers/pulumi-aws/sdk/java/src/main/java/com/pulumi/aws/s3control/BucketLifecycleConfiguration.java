@@ -23,6 +23,46 @@ import javax.annotation.Nullable;
  * &gt; This functionality is for managing [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html). To manage S3 Bucket Lifecycle Configurations in an AWS Partition, see the `aws.s3.BucketV2` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketLifecycleConfiguration(&#34;example&#34;, BucketLifecycleConfigurationArgs.builder()        
+ *             .bucket(aws_s3control_bucket.getExample().getArn())
+ *             .rules(            
+ *                 BucketLifecycleConfigurationRule.builder()
+ *                     .expiration(BucketLifecycleConfigurationRuleExpiration.builder()
+ *                         .days(365)
+ *                         .build())
+ *                     .filter(BucketLifecycleConfigurationRuleFilter.builder()
+ *                         .prefix(&#34;logs/&#34;)
+ *                         .build())
+ *                     .id(&#34;logs&#34;)
+ *                     .build(),
+ *                 BucketLifecycleConfigurationRule.builder()
+ *                     .expiration(BucketLifecycleConfigurationRuleExpiration.builder()
+ *                         .days(7)
+ *                         .build())
+ *                     .filter(BucketLifecycleConfigurationRuleFilter.builder()
+ *                         .prefix(&#34;temp/&#34;)
+ *                         .build())
+ *                     .id(&#34;temp&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

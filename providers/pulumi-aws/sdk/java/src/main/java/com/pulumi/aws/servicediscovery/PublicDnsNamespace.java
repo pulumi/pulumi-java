@@ -19,6 +19,27 @@ import javax.annotation.Nullable;
  * Provides a Service Discovery Public DNS Namespace resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PublicDnsNamespace(&#34;example&#34;, PublicDnsNamespaceArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

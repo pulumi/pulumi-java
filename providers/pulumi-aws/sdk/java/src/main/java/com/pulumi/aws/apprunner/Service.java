@@ -24,6 +24,88 @@ import javax.annotation.Nullable;
  * Manages an App Runner Service.
  * 
  * ## Example Usage
+ * ### Service with a Code Repository Source
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Service(&#34;example&#34;, ServiceArgs.builder()        
+ *             .serviceName(&#34;example&#34;)
+ *             .sourceConfiguration(ServiceSourceConfiguration.builder()
+ *                 .authenticationConfiguration(ServiceSourceConfigurationAuthenticationConfiguration.builder()
+ *                     .connectionArn(aws_apprunner_connection.getExample().getArn())
+ *                     .build())
+ *                 .codeRepository(ServiceSourceConfigurationCodeRepository.builder()
+ *                     .codeConfiguration(ServiceSourceConfigurationCodeRepositoryCodeConfiguration.builder()
+ *                         .codeConfigurationValues(ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues.builder()
+ *                             .buildCommand(&#34;python setup.py develop&#34;)
+ *                             .port(&#34;8000&#34;)
+ *                             .runtime(&#34;PYTHON_3&#34;)
+ *                             .startCommand(&#34;python runapp.py&#34;)
+ *                             .build())
+ *                         .configurationSource(&#34;API&#34;)
+ *                         .build())
+ *                     .repositoryUrl(&#34;https://github.com/example/my-example-python-app&#34;)
+ *                     .sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion.builder()
+ *                         .type(&#34;BRANCH&#34;)
+ *                         .value(&#34;main&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .networkConfiguration(ServiceNetworkConfiguration.builder()
+ *                 .egressConfiguration(ServiceNetworkConfigurationEgressConfiguration.builder()
+ *                     .egressType(&#34;VPC&#34;)
+ *                     .vpcConnectorArn(aws_apprunner_vpc_connector.getConnector().getArn())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-apprunner-service&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Service with an Image Repository Source
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Service(&#34;example&#34;, ServiceArgs.builder()        
+ *             .serviceName(&#34;example&#34;)
+ *             .sourceConfiguration(ServiceSourceConfiguration.builder()
+ *                 .imageRepository(ServiceSourceConfigurationImageRepository.builder()
+ *                     .imageConfiguration(ServiceSourceConfigurationImageRepositoryImageConfiguration.builder()
+ *                         .port(&#34;8000&#34;)
+ *                         .build())
+ *                     .imageIdentifier(&#34;public.ecr.aws/jg/hello:latest&#34;)
+ *                     .imageRepositoryType(&#34;ECR_PUBLIC&#34;)
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-apprunner-service&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

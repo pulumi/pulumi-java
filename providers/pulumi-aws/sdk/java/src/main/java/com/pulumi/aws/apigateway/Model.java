@@ -18,6 +18,38 @@ import javax.annotation.Nullable;
  * Provides a Model for a REST API Gateway.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var myDemoModel = new Model(&#34;myDemoModel&#34;, ModelArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .description(&#34;a JSON schema&#34;)
+ *             .contentType(&#34;application/json&#34;)
+ *             .schema(&#34;&#34;&#34;
+ * {
+ *   &#34;type&#34;: &#34;object&#34;
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

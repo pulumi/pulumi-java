@@ -21,6 +21,112 @@ import javax.annotation.Nullable;
  * Provides an SNS topic resource
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userUpdates = new Topic(&#34;userUpdates&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example with Delivery Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userUpdates = new Topic(&#34;userUpdates&#34;, TopicArgs.builder()        
+ *             .deliveryPolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;http&#34;: {
+ *     &#34;defaultHealthyRetryPolicy&#34;: {
+ *       &#34;minDelayTarget&#34;: 20,
+ *       &#34;maxDelayTarget&#34;: 20,
+ *       &#34;numRetries&#34;: 3,
+ *       &#34;numMaxDelayRetries&#34;: 0,
+ *       &#34;numNoDelayRetries&#34;: 0,
+ *       &#34;numMinDelayRetries&#34;: 0,
+ *       &#34;backoffFunction&#34;: &#34;linear&#34;
+ *     },
+ *     &#34;disableSubscriptionOverrides&#34;: false,
+ *     &#34;defaultThrottlePolicy&#34;: {
+ *       &#34;maxReceivesPerSecond&#34;: 1
+ *     }
+ *   }
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example with Server-side encryption (SSE)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userUpdates = new Topic(&#34;userUpdates&#34;, TopicArgs.builder()        
+ *             .kmsMasterKeyId(&#34;alias/aws/sns&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example with First-In-First-Out (FIFO)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userUpdates = new Topic(&#34;userUpdates&#34;, TopicArgs.builder()        
+ *             .contentBasedDeduplication(true)
+ *             .fifoTopic(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Message Delivery Status Arguments
  * 
  * The `&lt;endpoint&gt;_success_feedback_role_arn` and `&lt;endpoint&gt;_failure_feedback_role_arn` arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The `&lt;endpoint&gt;_success_feedback_sample_rate` argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  `&lt;endpoint&gt;_failure_feedback_role_arn` argument, then all failed message deliveries generate CloudWatch Logs.

@@ -19,6 +19,31 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint APNs VoIP Channel resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new App(&#34;app&#34;);
+ * 
+ *         var apnsVoip = new ApnsVoipChannel(&#34;apnsVoip&#34;, ApnsVoipChannelArgs.builder()        
+ *             .applicationId(app.getApplicationId())
+ *             .certificate(Files.readString(&#34;./certificate.pem&#34;))
+ *             .privateKey(Files.readString(&#34;./private_key.key&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

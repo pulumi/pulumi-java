@@ -19,6 +19,50 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2 resources.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testRestApi = new RestApi(&#34;testRestApi&#34;);
+ * 
+ *         var testRestApiPolicy = new RestApiPolicy(&#34;testRestApiPolicy&#34;, RestApiPolicyArgs.builder()        
+ *             .restApiId(testRestApi.getId())
+ *             .policy(testRestApi.getExecutionArn().apply(executionArn -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;AWS&#34;: &#34;*&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;execute-api:Invoke&#34;,
+ *       &#34;Resource&#34;: &#34;%s&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;IpAddress&#34;: {
+ *           &#34;aws:SourceIp&#34;: &#34;123.123.123.123/32&#34;
+ *         }
+ *       }
+ *     }
+ *   ]
+ * }
+ * &#34;, executionArn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

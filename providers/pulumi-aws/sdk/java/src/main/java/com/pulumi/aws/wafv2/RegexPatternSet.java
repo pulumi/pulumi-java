@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * Provides an AWS WAFv2 Regex Pattern Set Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RegexPatternSet(&#34;example&#34;, RegexPatternSetArgs.builder()        
+ *             .description(&#34;Example regex pattern set&#34;)
+ *             .regularExpressions(            
+ *                 RegexPatternSetRegularExpression.builder()
+ *                     .regexString(&#34;one&#34;)
+ *                     .build(),
+ *                 RegexPatternSetRegularExpression.builder()
+ *                     .regexString(&#34;two&#34;)
+ *                     .build())
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

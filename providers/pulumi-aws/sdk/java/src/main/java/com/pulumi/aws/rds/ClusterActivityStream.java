@@ -17,6 +17,53 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultCluster = new Cluster(&#34;defaultCluster&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;aurora-cluster-demo&#34;)
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .masterPassword(&#34;mustbeeightcharaters&#34;)
+ *             .engine(&#34;aurora-postgresql&#34;)
+ *             .engineVersion(&#34;13.4&#34;)
+ *             .build());
+ * 
+ *         var defaultClusterInstance = new ClusterInstance(&#34;defaultClusterInstance&#34;, ClusterInstanceArgs.builder()        
+ *             .identifier(&#34;aurora-instance-demo&#34;)
+ *             .clusterIdentifier(defaultCluster.getClusterIdentifier())
+ *             .engine(defaultCluster.getEngine())
+ *             .instanceClass(&#34;db.r6g.large&#34;)
+ *             .build());
+ * 
+ *         var defaultKey = new Key(&#34;defaultKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;AWS KMS Key to encrypt Database Activity Stream&#34;)
+ *             .build());
+ * 
+ *         var defaultClusterActivityStream = new ClusterActivityStream(&#34;defaultClusterActivityStream&#34;, ClusterActivityStreamArgs.builder()        
+ *             .resourceArn(defaultCluster.getArn())
+ *             .mode(&#34;async&#34;)
+ *             .kmsKeyId(defaultKey.getKeyId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

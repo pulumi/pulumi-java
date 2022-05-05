@@ -20,6 +20,73 @@ import javax.annotation.Nullable;
  * &gt; **Note:** To use this resource, the user pool must have a domain associated with it. For more information, see the Amazon Cognito Developer Guide on [Customizing the Built-in Sign-In and Sign-up Webpages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-ui-customization.html).
  * 
  * ## Example Usage
+ * ### UI customization settings for a single client
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;);
+ * 
+ *         var exampleUserPoolDomain = new UserPoolDomain(&#34;exampleUserPoolDomain&#34;, UserPoolDomainArgs.builder()        
+ *             .domain(&#34;example&#34;)
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         var exampleUserPoolClient = new UserPoolClient(&#34;exampleUserPoolClient&#34;, UserPoolClientArgs.builder()        
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         var exampleUserPoolUICustomization = new UserPoolUICustomization(&#34;exampleUserPoolUICustomization&#34;, UserPoolUICustomizationArgs.builder()        
+ *             .clientId(exampleUserPoolClient.getId())
+ *             .css(&#34;.label-customizable {font-weight: 400;}&#34;)
+ *             .imageFile(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;logo.png&#34;))))
+ *             .userPoolId(exampleUserPoolDomain.getUserPoolId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### UI customization settings for all clients
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;);
+ * 
+ *         var exampleUserPoolDomain = new UserPoolDomain(&#34;exampleUserPoolDomain&#34;, UserPoolDomainArgs.builder()        
+ *             .domain(&#34;example&#34;)
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         var exampleUserPoolUICustomization = new UserPoolUICustomization(&#34;exampleUserPoolUICustomization&#34;, UserPoolUICustomizationArgs.builder()        
+ *             .css(&#34;.label-customizable {font-weight: 400;}&#34;)
+ *             .imageFile(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;logo.png&#34;))))
+ *             .userPoolId(exampleUserPoolDomain.getUserPoolId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

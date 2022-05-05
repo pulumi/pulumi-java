@@ -18,6 +18,66 @@ import javax.annotation.Nullable;
  * Provides a SSM resource data sync.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hogeBucketV2 = new BucketV2(&#34;hogeBucketV2&#34;);
+ * 
+ *         var hogeBucketPolicy = new BucketPolicy(&#34;hogeBucketPolicy&#34;, BucketPolicyArgs.builder()        
+ *             .bucket(hogeBucketV2.getBucket())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Sid&#34;: &#34;SSMBucketPermissionsCheck&#34;,
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Principal&#34;: {
+ *                 &#34;Service&#34;: &#34;ssm.amazonaws.com&#34;
+ *             },
+ *             &#34;Action&#34;: &#34;s3:GetBucketAcl&#34;,
+ *             &#34;Resource&#34;: &#34;arn:aws:s3:::tf-test-bucket-1234&#34;
+ *         },
+ *         {
+ *             &#34;Sid&#34;: &#34; SSMBucketDelivery&#34;,
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Principal&#34;: {
+ *                 &#34;Service&#34;: &#34;ssm.amazonaws.com&#34;
+ *             },
+ *             &#34;Action&#34;: &#34;s3:PutObject&#34;,
+ *             &#34;Resource&#34;: [&#34;arn:aws:s3:::tf-test-bucket-1234/*&#34;],
+ *             &#34;Condition&#34;: {
+ *                 &#34;StringEquals&#34;: {
+ *                     &#34;s3:x-amz-acl&#34;: &#34;bucket-owner-full-control&#34;
+ *                 }
+ *             }
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var foo = new ResourceDataSync(&#34;foo&#34;, ResourceDataSyncArgs.builder()        
+ *             .s3Destination(ResourceDataSyncS3Destination.builder()
+ *                 .bucketName(hogeBucketV2.getBucket())
+ *                 .region(hogeBucketV2.getRegion())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

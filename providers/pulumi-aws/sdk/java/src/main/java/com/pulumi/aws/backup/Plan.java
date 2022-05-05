@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup plan resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Plan(&#34;example&#34;, PlanArgs.builder()        
+ *             .rules(PlanRule.builder()
+ *                 .ruleName(&#34;tf_example_backup_rule&#34;)
+ *                 .targetVaultName(aws_backup_vault.getTest().getName())
+ *                 .schedule(&#34;cron(0 12 * * ? *)&#34;)
+ *                 .lifecycle(PlanRuleLifecycle.builder()
+ *                     .deleteAfter(14)
+ *                     .build())
+ *                 .build())
+ *             .advancedBackupSettings(PlanAdvancedBackupSetting.builder()
+ *                 .backupOptions(Map.of(&#34;WindowsVSS&#34;, &#34;enabled&#34;))
+ *                 .resourceType(&#34;EC2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

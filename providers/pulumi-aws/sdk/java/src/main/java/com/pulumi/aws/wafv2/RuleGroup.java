@@ -24,6 +24,257 @@ import javax.annotation.Nullable;
  * Creates a WAFv2 Rule Group resource.
  * 
  * ## Example Usage
+ * ### Simple
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .capacity(2)
+ *             .rules(RuleGroupRule.builder()
+ *                 .action(RuleGroupRuleAction.builder()
+ *                     .allow()
+ *                     .build())
+ *                 .name(&#34;rule-1&#34;)
+ *                 .priority(1)
+ *                 .statement(RuleGroupRuleStatement.builder()
+ *                     .geoMatchStatement(RuleGroupRuleStatementGeoMatchStatement.builder()
+ *                         .countryCodes(                        
+ *                             &#34;US&#34;,
+ *                             &#34;NL&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                     .cloudwatchMetricsEnabled(false)
+ *                     .metricName(&#34;friendly-rule-metric-name&#34;)
+ *                     .sampledRequestsEnabled(false)
+ *                     .build())
+ *                 .build())
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .visibilityConfig(RuleGroupVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Complex
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testIpSet = new IpSet(&#34;testIpSet&#34;, IpSetArgs.builder()        
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .ipAddressVersion(&#34;IPV4&#34;)
+ *             .addresses(            
+ *                 &#34;1.1.1.1/32&#34;,
+ *                 &#34;2.2.2.2/32&#34;)
+ *             .build());
+ * 
+ *         var testRegexPatternSet = new RegexPatternSet(&#34;testRegexPatternSet&#34;, RegexPatternSetArgs.builder()        
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .regularExpressions(RegexPatternSetRegularExpression.builder()
+ *                 .regexString(&#34;one&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var example = new RuleGroup(&#34;example&#34;, RuleGroupArgs.builder()        
+ *             .description(&#34;An rule group containing all statements&#34;)
+ *             .scope(&#34;REGIONAL&#34;)
+ *             .capacity(500)
+ *             .rules(            
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-1&#34;)
+ *                     .priority(1)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .block()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .notStatement(RuleGroupRuleStatementNotStatement.builder()
+ *                             .statements(RuleGroupRuleStatementNotStatementStatement.builder()
+ *                                 .andStatement(RuleGroupRuleStatementNotStatementStatementAndStatement.builder()
+ *                                     .statements(                                    
+ *                                         RuleGroupRuleStatementNotStatementStatementAndStatementStatement.builder()
+ *                                             .geoMatchStatement(RuleGroupRuleStatementNotStatementStatementAndStatementStatementGeoMatchStatement.builder()
+ *                                                 .countryCodes(&#34;US&#34;)
+ *                                                 .build())
+ *                                             .build(),
+ *                                         RuleGroupRuleStatementNotStatementStatementAndStatementStatement.builder()
+ *                                             .byteMatchStatement(RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatement.builder()
+ *                                                 .positionalConstraint(&#34;CONTAINS&#34;)
+ *                                                 .searchString(&#34;word&#34;)
+ *                                                 .fieldToMatch(RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatch.builder()
+ *                                                     .allQueryArguments()
+ *                                                     .build())
+ *                                                 .textTransformations(                                                
+ *                                                     RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation.builder()
+ *                                                         .priority(5)
+ *                                                         .type(&#34;CMD_LINE&#34;)
+ *                                                         .build(),
+ *                                                     RuleGroupRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementTextTransformation.builder()
+ *                                                         .priority(2)
+ *                                                         .type(&#34;LOWERCASE&#34;)
+ *                                                         .build())
+ *                                                 .build())
+ *                                             .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;rule-1&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build(),
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-2&#34;)
+ *                     .priority(2)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .count()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .orStatement(RuleGroupRuleStatementOrStatement.builder()
+ *                             .statements(                            
+ *                                 RuleGroupRuleStatementOrStatementStatement.builder()
+ *                                     .sqliMatchStatement(RuleGroupRuleStatementOrStatementStatementSqliMatchStatement.builder()
+ *                                         .fieldToMatch(RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch.builder()
+ *                                             .body()
+ *                                             .build())
+ *                                         .textTransformations(                                        
+ *                                             RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation.builder()
+ *                                                 .priority(5)
+ *                                                 .type(&#34;URL_DECODE&#34;)
+ *                                                 .build(),
+ *                                             RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation.builder()
+ *                                                 .priority(4)
+ *                                                 .type(&#34;HTML_ENTITY_DECODE&#34;)
+ *                                                 .build(),
+ *                                             RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation.builder()
+ *                                                 .priority(3)
+ *                                                 .type(&#34;COMPRESS_WHITE_SPACE&#34;)
+ *                                                 .build())
+ *                                         .build())
+ *                                     .build(),
+ *                                 RuleGroupRuleStatementOrStatementStatement.builder()
+ *                                     .xssMatchStatement(RuleGroupRuleStatementOrStatementStatementXssMatchStatement.builder()
+ *                                         .fieldToMatch(RuleGroupRuleStatementOrStatementStatementXssMatchStatementFieldToMatch.builder()
+ *                                             .method()
+ *                                             .build())
+ *                                         .textTransformations(RuleGroupRuleStatementOrStatementStatementXssMatchStatementTextTransformation.builder()
+ *                                             .priority(2)
+ *                                             .type(&#34;NONE&#34;)
+ *                                             .build())
+ *                                         .build())
+ *                                     .build())
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;rule-2&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build(),
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-3&#34;)
+ *                     .priority(3)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .block()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .sizeConstraintStatement(RuleGroupRuleStatementSizeConstraintStatement.builder()
+ *                             .comparisonOperator(&#34;GT&#34;)
+ *                             .size(100)
+ *                             .fieldToMatch(RuleGroupRuleStatementSizeConstraintStatementFieldToMatch.builder()
+ *                                 .singleQueryArgument(RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgument.builder()
+ *                                     .name(&#34;username&#34;)
+ *                                     .build())
+ *                                 .build())
+ *                             .textTransformations(RuleGroupRuleStatementSizeConstraintStatementTextTransformation.builder()
+ *                                 .priority(5)
+ *                                 .type(&#34;NONE&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;rule-3&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build(),
+ *                 RuleGroupRule.builder()
+ *                     .name(&#34;rule-4&#34;)
+ *                     .priority(4)
+ *                     .action(RuleGroupRuleAction.builder()
+ *                         .block()
+ *                         .build())
+ *                     .statement(RuleGroupRuleStatement.builder()
+ *                         .orStatement(RuleGroupRuleStatementOrStatement.builder()
+ *                             .statements(                            
+ *                                 RuleGroupRuleStatementOrStatementStatement.builder()
+ *                                     .ipSetReferenceStatement(RuleGroupRuleStatementOrStatementStatementIpSetReferenceStatement.builder()
+ *                                         .arn(testIpSet.getArn())
+ *                                         .build())
+ *                                     .build(),
+ *                                 RuleGroupRuleStatementOrStatementStatement.builder()
+ *                                     .regexPatternSetReferenceStatement(RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatement.builder()
+ *                                         .arn(testRegexPatternSet.getArn())
+ *                                         .fieldToMatch(RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatch.builder()
+ *                                             .singleHeader(RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeader.builder()
+ *                                                 .name(&#34;referer&#34;)
+ *                                                 .build())
+ *                                             .build())
+ *                                         .textTransformations(RuleGroupRuleStatementOrStatementStatementRegexPatternSetReferenceStatementTextTransformation.builder()
+ *                                             .priority(2)
+ *                                             .type(&#34;NONE&#34;)
+ *                                             .build())
+ *                                         .build())
+ *                                     .build())
+ *                             .build())
+ *                         .build())
+ *                     .visibilityConfig(RuleGroupRuleVisibilityConfig.builder()
+ *                         .cloudwatchMetricsEnabled(false)
+ *                         .metricName(&#34;rule-4&#34;)
+ *                         .sampledRequestsEnabled(false)
+ *                         .build())
+ *                     .build())
+ *             .visibilityConfig(RuleGroupVisibilityConfig.builder()
+ *                 .cloudwatchMetricsEnabled(false)
+ *                 .metricName(&#34;friendly-metric-name&#34;)
+ *                 .sampledRequestsEnabled(false)
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;example-and-statement&#34;),
+ *                 Map.entry(&#34;Code&#34;, &#34;123456&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

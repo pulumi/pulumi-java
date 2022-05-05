@@ -20,6 +20,54 @@ import javax.annotation.Nullable;
  * Provides an HTTP Method Response for an API Gateway Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var myDemoResource = new Resource(&#34;myDemoResource&#34;, ResourceArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .parentId(myDemoAPI.getRootResourceId())
+ *             .pathPart(&#34;mydemoresource&#34;)
+ *             .build());
+ * 
+ *         var myDemoMethod = new Method(&#34;myDemoMethod&#34;, MethodArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(&#34;GET&#34;)
+ *             .authorization(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         var myDemoIntegration = new Integration(&#34;myDemoIntegration&#34;, IntegrationArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(myDemoMethod.getHttpMethod())
+ *             .type(&#34;MOCK&#34;)
+ *             .build());
+ * 
+ *         var response200 = new MethodResponse(&#34;response200&#34;, MethodResponseArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(myDemoMethod.getHttpMethod())
+ *             .statusCode(&#34;200&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

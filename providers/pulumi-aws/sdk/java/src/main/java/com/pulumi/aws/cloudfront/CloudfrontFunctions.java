@@ -30,6 +30,27 @@ public final class CloudfrontFunctions {
      * Use this data source to retrieve information about a CloudFront cache policy.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudfrontFunctions.getCachePolicy(GetCachePolicyArgs.builder()
+     *             .name(&#34;example-policy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCachePolicyResult> getCachePolicy() {
@@ -45,6 +66,27 @@ public final class CloudfrontFunctions {
      * Use this data source to retrieve information about a CloudFront distribution.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CloudfrontFunctions.getDistribution(GetDistributionArgs.builder()
+     *             .id(&#34;EDFDVBD632BHDS5&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDistributionResult> getDistribution(GetDistributionArgs args) {
@@ -57,6 +99,29 @@ public final class CloudfrontFunctions {
      * Provides information about a CloudFront Function.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var functionName = config.get(&#34;functionName&#34;);
+     *         final var existing = Output.of(CloudfrontFunctions.getFunction(GetFunctionArgs.builder()
+     *             .name(functionName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
@@ -70,6 +135,40 @@ public final class CloudfrontFunctions {
      * See the [Amazon CloudFront Developer Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) for more information.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var exampleLogDeliveryCanonicalUserId = Output.of(CloudfrontFunctions.getLogDeliveryCanonicalUserId());
+     * 
+     *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+     * 
+     *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+     *             .bucket(exampleBucketV2.getId())
+     *             .accessControlPolicy(BucketAclV2AccessControlPolicy.builder()
+     *                 .grants(BucketAclV2AccessControlPolicyGrant.builder()
+     *                     .grantee(BucketAclV2AccessControlPolicyGrantGrantee.builder()
+     *                         .id(exampleLogDeliveryCanonicalUserId.apply(getLogDeliveryCanonicalUserIdResult -&gt; getLogDeliveryCanonicalUserIdResult.getId()))
+     *                         .type(&#34;CanonicalUser&#34;)
+     *                         .build())
+     *                     .permission(&#34;FULL_CONTROL&#34;)
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLogDeliveryCanonicalUserIdResult> getLogDeliveryCanonicalUserId() {
@@ -90,6 +189,29 @@ public final class CloudfrontFunctions {
     /**
      * ## Example Usage
      * 
+     * The following example below creates a CloudFront origin request policy.
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudfrontFunctions.getOriginRequestPolicy(GetOriginRequestPolicyArgs.builder()
+     *             .name(&#34;example-policy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetOriginRequestPolicyResult> getOriginRequestPolicy() {
         return getOriginRequestPolicy(GetOriginRequestPolicyArgs.Empty, InvokeOptions.Empty);
@@ -104,6 +226,27 @@ public final class CloudfrontFunctions {
      * Provides a CloudFront real-time log configuration resource.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudfrontFunctions.getRealtimeLogConfig(GetRealtimeLogConfigArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRealtimeLogConfigResult> getRealtimeLogConfig(GetRealtimeLogConfigArgs args) {
@@ -116,6 +259,27 @@ public final class CloudfrontFunctions {
      * Use this data source to retrieve information about a CloudFront cache policy.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudfrontFunctions.getResponseHeadersPolicy(GetResponseHeadersPolicyArgs.builder()
+     *             .name(&#34;example-policy&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetResponseHeadersPolicyResult> getResponseHeadersPolicy() {

@@ -25,6 +25,155 @@ import javax.annotation.Nullable;
  * &gt; **NOTE on AWS IAM permissions:** If the `endpoint_type` is set to `VPC`, the `ec2:DescribeVpcEndpoints` and `ec2:ModifyVpcEndpoint` [actions](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html#amazonec2-actions-as-permissions) are used.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Security Policy Name
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .securityPolicyName(&#34;TransferSecurityPolicy-2020-06&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### VPC Endpoint
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .endpointType(&#34;VPC&#34;)
+ *             .endpointDetails(ServerEndpointDetails.builder()
+ *                 .addressAllocationIds(aws_eip.getExample().getId())
+ *                 .subnetIds(aws_subnet.getExample().getId())
+ *                 .vpcId(aws_vpc.getExample().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Directory authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .identityProviderType(&#34;AWS_DIRECTORY_SERVICE&#34;)
+ *             .directoryId(aws_directory_service_directory.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### AWS Lambda authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .identityProviderType(&#34;AWS_LAMBDA&#34;)
+ *             .function(aws_lambda_identity_provider.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Protocols
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Server(&#34;example&#34;, ServerArgs.builder()        
+ *             .endpointType(&#34;VPC&#34;)
+ *             .endpointDetails(ServerEndpointDetails.builder()
+ *                 .subnetIds(aws_subnet.getExample().getId())
+ *                 .vpcId(aws_vpc.getExample().getId())
+ *                 .build())
+ *             .protocols(            
+ *                 &#34;FTP&#34;,
+ *                 &#34;FTPS&#34;)
+ *             .certificate(aws_acm_certificate.getExample().getArn())
+ *             .identityProviderType(&#34;API_GATEWAY&#34;)
+ *             .url(String.format(&#34;%s%s&#34;, aws_api_gateway_deployment.getExample().getInvoke_url(),aws_api_gateway_resource.getExample().getPath()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

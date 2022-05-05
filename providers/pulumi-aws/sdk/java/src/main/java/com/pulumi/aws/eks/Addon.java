@@ -25,6 +25,28 @@ import javax.annotation.Nullable;
  * which is only available in Kubernetes 1.18 and later.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Addon(&#34;example&#34;, AddonArgs.builder()        
+ *             .clusterName(aws_eks_cluster.getExample().getName())
+ *             .addonName(&#34;vpc-cni&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

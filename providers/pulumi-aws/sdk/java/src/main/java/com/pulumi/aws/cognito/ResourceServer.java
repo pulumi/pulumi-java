@@ -20,6 +20,60 @@ import javax.annotation.Nullable;
  * Provides a Cognito Resource Server.
  * 
  * ## Example Usage
+ * ### Create a basic resource server
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         var resource = new ResourceServer(&#34;resource&#34;, ResourceServerArgs.builder()        
+ *             .identifier(&#34;https://example.com&#34;)
+ *             .userPoolId(pool.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create a resource server with sample-scope
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         var resource = new ResourceServer(&#34;resource&#34;, ResourceServerArgs.builder()        
+ *             .identifier(&#34;https://example.com&#34;)
+ *             .scopes(ResourceServerScope.builder()
+ *                 .scopeName(&#34;sample-scope&#34;)
+ *                 .scopeDescription(&#34;a Sample Scope Description&#34;)
+ *                 .build())
+ *             .userPoolId(pool.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

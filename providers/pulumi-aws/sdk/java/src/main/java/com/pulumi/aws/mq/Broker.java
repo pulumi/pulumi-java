@@ -34,6 +34,75 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Changes to an MQ Broker can occur when you change a parameter, such as `configuration` or `user`, and are reflected in the next maintenance window. Because of this, the provider may report a difference in its planning phase because a modification has not yet taken place. You can use the `apply_immediately` flag to instruct the service to apply the change immediately (see documentation below). Using `apply_immediately` can result in a brief downtime as the broker reboots.
  * 
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Broker(&#34;example&#34;, BrokerArgs.builder()        
+ *             .configuration(BrokerConfiguration.builder()
+ *                 .id(aws_mq_configuration.getTest().getId())
+ *                 .revision(aws_mq_configuration.getTest().getLatest_revision())
+ *                 .build())
+ *             .engineType(&#34;ActiveMQ&#34;)
+ *             .engineVersion(&#34;5.15.9&#34;)
+ *             .hostInstanceType(&#34;mq.t2.micro&#34;)
+ *             .securityGroups(aws_security_group.getTest().getId())
+ *             .users(BrokerUser.builder()
+ *                 .username(&#34;ExampleUser&#34;)
+ *                 .password(&#34;MindTheGap&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### High-throughput Optimized Example
+ * 
+ * This example shows the use of EBS storage for high-throughput optimized performance.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Broker(&#34;example&#34;, BrokerArgs.builder()        
+ *             .configuration(BrokerConfiguration.builder()
+ *                 .id(aws_mq_configuration.getTest().getId())
+ *                 .revision(aws_mq_configuration.getTest().getLatest_revision())
+ *                 .build())
+ *             .engineType(&#34;ActiveMQ&#34;)
+ *             .engineVersion(&#34;5.15.9&#34;)
+ *             .storageType(&#34;ebs&#34;)
+ *             .hostInstanceType(&#34;mq.m5.large&#34;)
+ *             .securityGroups(aws_security_group.getTest().getId())
+ *             .users(BrokerUser.builder()
+ *                 .username(&#34;ExampleUser&#34;)
+ *                 .password(&#34;MindTheGap&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

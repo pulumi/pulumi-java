@@ -21,6 +21,75 @@ import javax.annotation.Nullable;
  * Provides an [S3 Intelligent-Tiering](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intelligent-tiering.html) configuration resource.
  * 
  * ## Example Usage
+ * ### Add intelligent tiering configuration for entire S3 bucket
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var example_entire_bucket = new BucketIntelligentTieringConfiguration(&#34;example-entire-bucket&#34;, BucketIntelligentTieringConfigurationArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .tierings(            
+ *                 BucketIntelligentTieringConfigurationTiering.builder()
+ *                     .accessTier(&#34;DEEP_ARCHIVE_ACCESS&#34;)
+ *                     .days(180)
+ *                     .build(),
+ *                 BucketIntelligentTieringConfigurationTiering.builder()
+ *                     .accessTier(&#34;ARCHIVE_ACCESS&#34;)
+ *                     .days(125)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add intelligent tiering configuration with S3 object filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var example_filtered = new BucketIntelligentTieringConfiguration(&#34;example-filtered&#34;, BucketIntelligentTieringConfigurationArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .status(&#34;Disabled&#34;)
+ *             .filter(BucketIntelligentTieringConfigurationFilter.builder()
+ *                 .prefix(&#34;documents/&#34;)
+ *                 .tags(Map.ofEntries(
+ *                     Map.entry(&#34;priority&#34;, &#34;high&#34;),
+ *                     Map.entry(&#34;class&#34;, &#34;blue&#34;)
+ *                 ))
+ *                 .build())
+ *             .tierings(BucketIntelligentTieringConfigurationTiering.builder()
+ *                 .accessTier(&#34;ARCHIVE_ACCESS&#34;)
+ *                 .days(125)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

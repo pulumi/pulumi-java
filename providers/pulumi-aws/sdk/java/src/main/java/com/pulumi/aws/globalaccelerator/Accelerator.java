@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * Creates a Global Accelerator accelerator.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Accelerator(&#34;example&#34;, AcceleratorArgs.builder()        
+ *             .attributes(AcceleratorAttributes.builder()
+ *                 .flowLogsEnabled(true)
+ *                 .flowLogsS3Bucket(&#34;example-bucket&#34;)
+ *                 .flowLogsS3Prefix(&#34;flow-logs/&#34;)
+ *                 .build())
+ *             .enabled(true)
+ *             .ipAddressType(&#34;IPV4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

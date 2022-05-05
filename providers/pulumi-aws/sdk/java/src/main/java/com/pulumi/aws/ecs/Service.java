@@ -34,6 +34,116 @@ import javax.annotation.Nullable;
  * See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mongo = new Service(&#34;mongo&#34;, ServiceArgs.builder()        
+ *             .cluster(aws_ecs_cluster.getFoo().getId())
+ *             .taskDefinition(aws_ecs_task_definition.getMongo().getArn())
+ *             .desiredCount(3)
+ *             .iamRole(aws_iam_role.getFoo().getArn())
+ *             .orderedPlacementStrategies(ServiceOrderedPlacementStrategy.builder()
+ *                 .type(&#34;binpack&#34;)
+ *                 .field(&#34;cpu&#34;)
+ *                 .build())
+ *             .loadBalancers(ServiceLoadBalancer.builder()
+ *                 .targetGroupArn(aws_lb_target_group.getFoo().getArn())
+ *                 .containerName(&#34;mongo&#34;)
+ *                 .containerPort(8080)
+ *                 .build())
+ *             .placementConstraints(ServicePlacementConstraint.builder()
+ *                 .type(&#34;memberOf&#34;)
+ *                 .expression(&#34;attribute:ecs.availability-zone in [us-west-2a, us-west-2b]&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Ignoring Changes to Desired Count
+ * 
+ * You can use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to create an ECS service with an initial count of running instances, then ignore any changes to that count caused externally (e.g. Application Autoscaling).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Service(&#34;example&#34;, ServiceArgs.builder()        
+ *             .desiredCount(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Daemon Scheduling Strategy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Service(&#34;bar&#34;, ServiceArgs.builder()        
+ *             .cluster(aws_ecs_cluster.getFoo().getId())
+ *             .taskDefinition(aws_ecs_task_definition.getBar().getArn())
+ *             .schedulingStrategy(&#34;DAEMON&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### External Deployment Controller
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Service(&#34;example&#34;, ServiceArgs.builder()        
+ *             .cluster(aws_ecs_cluster.getExample().getId())
+ *             .deploymentController(ServiceDeploymentController.builder()
+ *                 .type(&#34;EXTERNAL&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

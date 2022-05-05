@@ -17,6 +17,65 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Dashboard resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new Dashboard(&#34;main&#34;, DashboardArgs.builder()        
+ *             .dashboardBody(&#34;&#34;&#34;
+ * {
+ *   &#34;widgets&#34;: [
+ *     {
+ *       &#34;type&#34;: &#34;metric&#34;,
+ *       &#34;x&#34;: 0,
+ *       &#34;y&#34;: 0,
+ *       &#34;width&#34;: 12,
+ *       &#34;height&#34;: 6,
+ *       &#34;properties&#34;: {
+ *         &#34;metrics&#34;: [
+ *           [
+ *             &#34;AWS/EC2&#34;,
+ *             &#34;CPUUtilization&#34;,
+ *             &#34;InstanceId&#34;,
+ *             &#34;i-012345&#34;
+ *           ]
+ *         ],
+ *         &#34;period&#34;: 300,
+ *         &#34;stat&#34;: &#34;Average&#34;,
+ *         &#34;region&#34;: &#34;us-east-1&#34;,
+ *         &#34;title&#34;: &#34;EC2 Instance CPU&#34;
+ *       }
+ *     },
+ *     {
+ *       &#34;type&#34;: &#34;text&#34;,
+ *       &#34;x&#34;: 0,
+ *       &#34;y&#34;: 7,
+ *       &#34;width&#34;: 3,
+ *       &#34;height&#34;: 3,
+ *       &#34;properties&#34;: {
+ *         &#34;markdown&#34;: &#34;Hello world&#34;
+ *       }
+ *     }
+ *   ]
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .dashboardName(&#34;my-dashboard&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,294 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### With Latest Version Of Launch Template
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foobar = new LaunchTemplate(&#34;foobar&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;foobar&#34;)
+ *             .imageId(&#34;ami-1a2b3c&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         var bar = new Group(&#34;bar&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .desiredCapacity(1)
+ *             .maxSize(1)
+ *             .minSize(1)
+ *             .launchTemplate(GroupLaunchTemplate.builder()
+ *                 .id(foobar.getId())
+ *                 .version(&#34;$Latest&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Mixed Instances Policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLaunchTemplate = new LaunchTemplate(&#34;exampleLaunchTemplate&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;example&#34;)
+ *             .imageId(data.getAws_ami().getExample().getId())
+ *             .instanceType(&#34;c5.large&#34;)
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .desiredCapacity(1)
+ *             .maxSize(1)
+ *             .minSize(1)
+ *             .mixedInstancesPolicy(GroupMixedInstancesPolicy.builder()
+ *                 .launchTemplate(GroupMixedInstancesPolicyLaunchTemplate.builder()
+ *                     .launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.builder()
+ *                         .launchTemplateId(exampleLaunchTemplate.getId())
+ *                         .build())
+ *                     .overrides(                    
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c4.large&#34;)
+ *                             .weightedCapacity(&#34;3&#34;)
+ *                             .build(),
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c3.large&#34;)
+ *                             .weightedCapacity(&#34;2&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Mixed Instances Policy with Spot Instances and Capacity Rebalance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLaunchTemplate = new LaunchTemplate(&#34;exampleLaunchTemplate&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;example&#34;)
+ *             .imageId(data.getAws_ami().getExample().getId())
+ *             .instanceType(&#34;c5.large&#34;)
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .capacityRebalance(true)
+ *             .desiredCapacity(12)
+ *             .maxSize(15)
+ *             .minSize(12)
+ *             .vpcZoneIdentifiers(            
+ *                 aws_subnet.getExample1().getId(),
+ *                 aws_subnet.getExample2().getId())
+ *             .mixedInstancesPolicy(GroupMixedInstancesPolicy.builder()
+ *                 .instancesDistribution(GroupMixedInstancesPolicyInstancesDistribution.builder()
+ *                     .onDemandBaseCapacity(0)
+ *                     .onDemandPercentageAboveBaseCapacity(25)
+ *                     .spotAllocationStrategy(&#34;capacity-optimized&#34;)
+ *                     .build())
+ *                 .launchTemplate(GroupMixedInstancesPolicyLaunchTemplate.builder()
+ *                     .launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.builder()
+ *                         .launchTemplateId(exampleLaunchTemplate.getId())
+ *                         .build())
+ *                     .overrides(                    
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c4.large&#34;)
+ *                             .weightedCapacity(&#34;3&#34;)
+ *                             .build(),
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c3.large&#34;)
+ *                             .weightedCapacity(&#34;2&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Mixed Instances Policy with Instance level LaunchTemplateSpecification Overrides
+ * 
+ * When using a diverse instance set, some instance types might require a launch template with configuration values unique to that instance type such as a different AMI (Graviton2), architecture specific user data script, different EBS configuration, or different networking configuration.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLaunchTemplate = new LaunchTemplate(&#34;exampleLaunchTemplate&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;example&#34;)
+ *             .imageId(data.getAws_ami().getExample().getId())
+ *             .instanceType(&#34;c5.large&#34;)
+ *             .build());
+ * 
+ *         var example2 = new LaunchTemplate(&#34;example2&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;example2&#34;)
+ *             .imageId(data.getAws_ami().getExample2().getId())
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .desiredCapacity(1)
+ *             .maxSize(1)
+ *             .minSize(1)
+ *             .mixedInstancesPolicy(GroupMixedInstancesPolicy.builder()
+ *                 .launchTemplate(GroupMixedInstancesPolicyLaunchTemplate.builder()
+ *                     .launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification.builder()
+ *                         .launchTemplateId(exampleLaunchTemplate.getId())
+ *                         .build())
+ *                     .overrides(                    
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c4.large&#34;)
+ *                             .weightedCapacity(&#34;3&#34;)
+ *                             .build(),
+ *                         GroupMixedInstancesPolicyLaunchTemplateOverride.builder()
+ *                             .instanceType(&#34;c6g.large&#34;)
+ *                             .launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification.builder()
+ *                                 .launchTemplateId(example2.getId())
+ *                                 .build())
+ *                             .weightedCapacity(&#34;2&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Automatically refresh all instances after the group is updated
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleAmi = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .owners(&#34;amazon&#34;)
+ *             .filters(GetAmiFilter.builder()
+ *                 .name(&#34;name&#34;)
+ *                 .values(&#34;amzn-ami-hvm-*-x86_64-gp2&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var exampleLaunchTemplate = new LaunchTemplate(&#34;exampleLaunchTemplate&#34;, LaunchTemplateArgs.builder()        
+ *             .imageId(exampleAmi.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;t3.nano&#34;)
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .desiredCapacity(1)
+ *             .maxSize(2)
+ *             .minSize(1)
+ *             .launchTemplate(GroupLaunchTemplate.builder()
+ *                 .id(exampleLaunchTemplate.getId())
+ *                 .version(exampleLaunchTemplate.getLatestVersion())
+ *                 .build())
+ *             .tags(GroupTag.builder()
+ *                 .key(&#34;Key&#34;)
+ *                 .value(&#34;Value&#34;)
+ *                 .propagateAtLaunch(true)
+ *                 .build())
+ *             .instanceRefresh(GroupInstanceRefresh.builder()
+ *                 .strategy(&#34;Rolling&#34;)
+ *                 .preferences(GroupInstanceRefreshPreferences.builder()
+ *                     .minHealthyPercentage(50)
+ *                     .build())
+ *                 .triggers(&#34;tag&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Auto Scaling group with Warm Pool
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLaunchTemplate = new LaunchTemplate(&#34;exampleLaunchTemplate&#34;, LaunchTemplateArgs.builder()        
+ *             .namePrefix(&#34;example&#34;)
+ *             .imageId(data.getAws_ami().getExample().getId())
+ *             .instanceType(&#34;c5.large&#34;)
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .desiredCapacity(1)
+ *             .maxSize(5)
+ *             .minSize(1)
+ *             .warmPool(GroupWarmPool.builder()
+ *                 .poolState(&#34;Hibernated&#34;)
+ *                 .minSize(1)
+ *                 .maxGroupPreparedCapacity(10)
+ *                 .instanceReusePolicy(GroupWarmPoolInstanceReusePolicy.builder()
+ *                     .reuseOnScaleIn(true)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Waiting for Capacity
  * 
  * A newly-created ASG is initially empty and begins to scale to `min_size` (or

@@ -25,6 +25,30 @@ import javax.annotation.Nullable;
  * See the [FSx OpenZFS User Guide](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/what-is-fsx.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OpenZfsFileSystem(&#34;test&#34;, OpenZfsFileSystemArgs.builder()        
+ *             .storageCapacity(64)
+ *             .subnetIds(aws_subnet.getTest1().getId())
+ *             .deploymentType(&#34;SINGLE_AZ_1&#34;)
+ *             .throughputCapacity(64)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

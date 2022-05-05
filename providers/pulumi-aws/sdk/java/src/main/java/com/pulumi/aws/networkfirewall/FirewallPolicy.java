@@ -20,7 +20,73 @@ import javax.annotation.Nullable;
  * Provides an AWS Network Firewall Firewall Policy Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FirewallPolicy(&#34;example&#34;, FirewallPolicyArgs.builder()        
+ *             .firewallPolicy(FirewallPolicyFirewallPolicy.builder()
+ *                 .statelessDefaultActions(&#34;aws:pass&#34;)
+ *                 .statelessFragmentDefaultActions(&#34;aws:drop&#34;)
+ *                 .statelessRuleGroupReferences(FirewallPolicyFirewallPolicyStatelessRuleGroupReference.builder()
+ *                     .priority(1)
+ *                     .resourceArn(aws_networkfirewall_rule_group.getExample().getArn())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Policy with a Custom Action for Stateless Inspection
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new FirewallPolicy(&#34;test&#34;, FirewallPolicyArgs.builder()        
+ *             .firewallPolicy(FirewallPolicyFirewallPolicy.builder()
+ *                 .statelessCustomActions(FirewallPolicyFirewallPolicyStatelessCustomAction.builder()
+ *                     .actionDefinition(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition.builder()
+ *                         .publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction.builder()
+ *                             .dimension(Map.of(&#34;value&#34;, &#34;1&#34;))
+ *                             .build())
+ *                         .build())
+ *                     .actionName(&#34;ExampleCustomAction&#34;)
+ *                     .build())
+ *                 .statelessDefaultActions(                
+ *                     &#34;aws:pass&#34;,
+ *                     &#34;ExampleCustomAction&#34;)
+ *                 .statelessFragmentDefaultActions(&#34;aws:drop&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

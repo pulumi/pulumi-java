@@ -22,9 +22,209 @@ import javax.annotation.Nullable;
  * Provides an HTTP Method Integration for an API Gateway Integration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var myDemoResource = new Resource(&#34;myDemoResource&#34;, ResourceArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .parentId(myDemoAPI.getRootResourceId())
+ *             .pathPart(&#34;mydemoresource&#34;)
+ *             .build());
+ * 
+ *         var myDemoMethod = new Method(&#34;myDemoMethod&#34;, MethodArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(&#34;GET&#34;)
+ *             .authorization(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         var myDemoIntegration = new Integration(&#34;myDemoIntegration&#34;, IntegrationArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(myDemoMethod.getHttpMethod())
+ *             .type(&#34;MOCK&#34;)
+ *             .cacheKeyParameters(&#34;method.request.path.param&#34;)
+ *             .cacheNamespace(&#34;foobar&#34;)
+ *             .timeoutMilliseconds(29000)
+ *             .requestParameters(Map.of(&#34;integration.request.header.X-Authorization&#34;, &#34;&#39;static&#39;&#34;))
+ *             .requestTemplates(Map.of(&#34;application/xml&#34;, &#34;&#34;&#34;
+ * {
+ *    &#34;body&#34; : $input.json(&#39;$&#39;)
+ * }
+ *             &#34;&#34;&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Lambda integration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var myregion = config.get(&#34;myregion&#34;);
+ *         final var accountId = config.get(&#34;accountId&#34;);
+ *         var api = new RestApi(&#34;api&#34;);
+ * 
+ *         var resource = new Resource(&#34;resource&#34;, ResourceArgs.builder()        
+ *             .pathPart(&#34;resource&#34;)
+ *             .parentId(api.getRootResourceId())
+ *             .restApi(api.getId())
+ *             .build());
+ * 
+ *         var method = new Method(&#34;method&#34;, MethodArgs.builder()        
+ *             .restApi(api.getId())
+ *             .resourceId(resource.getId())
+ *             .httpMethod(&#34;GET&#34;)
+ *             .authorization(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         var role = new Role(&#34;role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var lambda = new Function(&#34;lambda&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambda.zip&#34;))
+ *             .role(role.getArn())
+ *             .handler(&#34;lambda.lambda_handler&#34;)
+ *             .runtime(&#34;python3.6&#34;)
+ *             .build());
+ * 
+ *         var integration = new Integration(&#34;integration&#34;, IntegrationArgs.builder()        
+ *             .restApi(api.getId())
+ *             .resourceId(resource.getId())
+ *             .httpMethod(method.getHttpMethod())
+ *             .integrationHttpMethod(&#34;POST&#34;)
+ *             .type(&#34;AWS_PROXY&#34;)
+ *             .uri(lambda.getInvokeArn())
+ *             .build());
+ * 
+ *         var apigwLambda = new Permission(&#34;apigwLambda&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(lambda.getName())
+ *             .principal(&#34;apigateway.amazonaws.com&#34;)
+ *             .sourceArn(Output.tuple(api.getId(), method.getHttpMethod(), resource.getPath()).apply(values -&gt; {
+ *                 var id = values.t1;
+ *                 var httpMethod = values.t2;
+ *                 var path = values.t3;
+ *                 return String.format(&#34;arn:aws:execute-api:%s:%s:%s/*{@literal /}%s%s&#34;, myregion,accountId,id,httpMethod,path);
+ *             }))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## VPC Link
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var name = config.get(&#34;name&#34;);
+ *         final var subnetId = config.get(&#34;subnetId&#34;);
+ *         var testLoadBalancer = new LoadBalancer(&#34;testLoadBalancer&#34;, LoadBalancerArgs.builder()        
+ *             .internal(true)
+ *             .loadBalancerType(&#34;network&#34;)
+ *             .subnets(subnetId)
+ *             .build());
+ * 
+ *         var testVpcLink = new VpcLink(&#34;testVpcLink&#34;, VpcLinkArgs.builder()        
+ *             .targetArn(testLoadBalancer.getArn())
+ *             .build());
+ * 
+ *         var testRestApi = new RestApi(&#34;testRestApi&#34;);
+ * 
+ *         var testResource = new Resource(&#34;testResource&#34;, ResourceArgs.builder()        
+ *             .restApi(testRestApi.getId())
+ *             .parentId(testRestApi.getRootResourceId())
+ *             .pathPart(&#34;test&#34;)
+ *             .build());
+ * 
+ *         var testMethod = new Method(&#34;testMethod&#34;, MethodArgs.builder()        
+ *             .restApi(testRestApi.getId())
+ *             .resourceId(testResource.getId())
+ *             .httpMethod(&#34;GET&#34;)
+ *             .authorization(&#34;NONE&#34;)
+ *             .requestModels(Map.of(&#34;application/json&#34;, &#34;Error&#34;))
+ *             .build());
+ * 
+ *         var testIntegration = new Integration(&#34;testIntegration&#34;, IntegrationArgs.builder()        
+ *             .restApi(testRestApi.getId())
+ *             .resourceId(testResource.getId())
+ *             .httpMethod(testMethod.getHttpMethod())
+ *             .requestTemplates(Map.ofEntries(
+ *                 Map.entry(&#34;application/json&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;application/xml&#34;, &#34;&#34;&#34;
+ * #set($inputRoot = $input.path(&#39;$&#39;))
+ * { }                &#34;&#34;&#34;)
+ *             ))
+ *             .requestParameters(Map.ofEntries(
+ *                 Map.entry(&#34;integration.request.header.X-Authorization&#34;, &#34;&#39;static&#39;&#34;),
+ *                 Map.entry(&#34;integration.request.header.X-Foo&#34;, &#34;&#39;Bar&#39;&#34;)
+ *             ))
+ *             .type(&#34;HTTP&#34;)
+ *             .uri(&#34;https://www.google.de&#34;)
+ *             .integrationHttpMethod(&#34;GET&#34;)
+ *             .passthroughBehavior(&#34;WHEN_NO_MATCH&#34;)
+ *             .contentHandling(&#34;CONVERT_TO_TEXT&#34;)
+ *             .connectionType(&#34;VPC_LINK&#34;)
+ *             .connectionId(testVpcLink.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

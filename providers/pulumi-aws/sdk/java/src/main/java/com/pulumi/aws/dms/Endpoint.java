@@ -25,6 +25,39 @@ import javax.annotation.Nullable;
  * Provides a DMS (Data Migration Service) endpoint resource. DMS endpoints can be created, updated, deleted, and imported.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Endpoint(&#34;test&#34;, EndpointArgs.builder()        
+ *             .certificateArn(&#34;arn:aws:acm:us-east-1:123456789012:certificate/12345678-1234-1234-1234-123456789012&#34;)
+ *             .databaseName(&#34;test&#34;)
+ *             .endpointId(&#34;test-dms-endpoint-tf&#34;)
+ *             .endpointType(&#34;source&#34;)
+ *             .engineName(&#34;aurora&#34;)
+ *             .extraConnectionAttributes(&#34;&#34;)
+ *             .kmsKeyArn(&#34;arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012&#34;)
+ *             .password(&#34;test&#34;)
+ *             .port(3306)
+ *             .serverName(&#34;test&#34;)
+ *             .sslMode(&#34;none&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;test&#34;))
+ *             .username(&#34;test&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

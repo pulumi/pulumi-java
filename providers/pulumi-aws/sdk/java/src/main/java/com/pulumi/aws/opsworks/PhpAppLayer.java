@@ -24,6 +24,27 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks PHP application layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new PhpAppLayer(&#34;app&#34;, PhpAppLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

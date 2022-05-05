@@ -19,6 +19,91 @@ import javax.annotation.Nullable;
  * Provides an AppConfig Hosted Configuration Version resource.
  * 
  * ## Example Usage
+ * ### Freeform
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HostedConfigurationVersion(&#34;example&#34;, HostedConfigurationVersionArgs.builder()        
+ *             .applicationId(aws_appconfig_application.getExample().getId())
+ *             .configurationProfileId(aws_appconfig_configuration_profile.getExample().getConfiguration_profile_id())
+ *             .description(&#34;Example Freeform Hosted Configuration Version&#34;)
+ *             .contentType(&#34;application/json&#34;)
+ *             .content(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;foo&#34;, &#34;bar&#34;),
+ *                     jsonProperty(&#34;fruit&#34;, jsonArray(
+ *                         &#34;apple&#34;, 
+ *                         &#34;pear&#34;, 
+ *                         &#34;orange&#34;
+ *                     )),
+ *                     jsonProperty(&#34;isThingEnabled&#34;, true)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Feature Flags
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new HostedConfigurationVersion(&#34;example&#34;, HostedConfigurationVersionArgs.builder()        
+ *             .applicationId(aws_appconfig_application.getExample().getId())
+ *             .configurationProfileId(aws_appconfig_configuration_profile.getExample().getConfiguration_profile_id())
+ *             .description(&#34;Example Freeform Hosted Configuration Version&#34;)
+ *             .contentType(&#34;application/json&#34;)
+ *             .content(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;flags&#34;, jsonObject(
+ *                         jsonProperty(&#34;foo&#34;, jsonObject(
+ *                             jsonProperty(&#34;name&#34;, &#34;foo&#34;),
+ *                             jsonProperty(&#34;_deprecation&#34;, jsonObject(
+ *                                 jsonProperty(&#34;status&#34;, &#34;planned&#34;)
+ *                             ))
+ *                         )),
+ *                         jsonProperty(&#34;bar&#34;, jsonObject(
+ *                             jsonProperty(&#34;name&#34;, &#34;bar&#34;)
+ *                         ))
+ *                     )),
+ *                     jsonProperty(&#34;values&#34;, jsonObject(
+ *                         jsonProperty(&#34;foo&#34;, jsonObject(
+ *                             jsonProperty(&#34;enabled&#34;, &#34;true&#34;)
+ *                         )),
+ *                         jsonProperty(&#34;bar&#34;, jsonObject(
+ *                             jsonProperty(&#34;enabled&#34;, &#34;true&#34;)
+ *                         ))
+ *                     )),
+ *                     jsonProperty(&#34;version&#34;, &#34;1&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

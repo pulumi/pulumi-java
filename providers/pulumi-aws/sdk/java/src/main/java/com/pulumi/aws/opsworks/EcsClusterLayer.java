@@ -24,6 +24,28 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks ECS Cluster layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EcsClusterLayer(&#34;example&#34;, EcsClusterLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getExample().getId())
+ *             .ecsClusterArn(aws_ecs_cluster.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/ecsClusterLayer:EcsClusterLayer")

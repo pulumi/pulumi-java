@@ -29,6 +29,34 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** When you create a canary, AWS creates supporting implicit resources. See the Amazon CloudWatch Synthetics documentation on [DeleteCanary](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DeleteCanary.html) for a full list. Neither AWS nor this provider deletes these implicit resources automatically when the canary is deleted. Before deleting a canary, ensure you have all the information about the canary that you need to delete the implicit resources using the AWS Console, or AWS CLI.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var some = new Canary(&#34;some&#34;, CanaryArgs.builder()        
+ *             .artifactS3Location(&#34;s3://some-bucket/&#34;)
+ *             .executionRoleArn(&#34;some-role&#34;)
+ *             .handler(&#34;exports.handler&#34;)
+ *             .runtimeVersion(&#34;syn-1.0&#34;)
+ *             .schedule(CanarySchedule.builder()
+ *                 .expression(&#34;rate(0 minute)&#34;)
+ *                 .build())
+ *             .zipFile(&#34;test-fixtures/lambdatest.zip&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

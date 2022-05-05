@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver query logging configuration resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResolverQueryLogConfig(&#34;example&#34;, ResolverQueryLogConfigArgs.builder()        
+ *             .destinationArn(aws_s3_bucket.getExample().getArn())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Prod&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

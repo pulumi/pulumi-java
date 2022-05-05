@@ -21,6 +21,81 @@ import javax.annotation.Nullable;
  * You can refer to the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;aurora-cluster-demo&#34;)
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .masterPassword(&#34;bar&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .build());
+ * 
+ *         var test1 = new ClusterInstance(&#34;test1&#34;, ClusterInstanceArgs.builder()        
+ *             .applyImmediately(true)
+ *             .clusterIdentifier(default_.getId())
+ *             .identifier(&#34;test1&#34;)
+ *             .instanceClass(&#34;db.t2.small&#34;)
+ *             .engine(default_.getEngine())
+ *             .engineVersion(default_.getEngineVersion())
+ *             .build());
+ * 
+ *         var test2 = new ClusterInstance(&#34;test2&#34;, ClusterInstanceArgs.builder()        
+ *             .applyImmediately(true)
+ *             .clusterIdentifier(default_.getId())
+ *             .identifier(&#34;test2&#34;)
+ *             .instanceClass(&#34;db.t2.small&#34;)
+ *             .engine(default_.getEngine())
+ *             .engineVersion(default_.getEngineVersion())
+ *             .build());
+ * 
+ *         var test3 = new ClusterInstance(&#34;test3&#34;, ClusterInstanceArgs.builder()        
+ *             .applyImmediately(true)
+ *             .clusterIdentifier(default_.getId())
+ *             .identifier(&#34;test3&#34;)
+ *             .instanceClass(&#34;db.t2.small&#34;)
+ *             .engine(default_.getEngine())
+ *             .engineVersion(default_.getEngineVersion())
+ *             .build());
+ * 
+ *         var eligible = new ClusterEndpoint(&#34;eligible&#34;, ClusterEndpointArgs.builder()        
+ *             .clusterIdentifier(default_.getId())
+ *             .clusterEndpointIdentifier(&#34;reader&#34;)
+ *             .customEndpointType(&#34;READER&#34;)
+ *             .excludedMembers(            
+ *                 test1.getId(),
+ *                 test2.getId())
+ *             .build());
+ * 
+ *         var static_ = new ClusterEndpoint(&#34;static&#34;, ClusterEndpointArgs.builder()        
+ *             .clusterIdentifier(default_.getId())
+ *             .clusterEndpointIdentifier(&#34;static&#34;)
+ *             .customEndpointType(&#34;READER&#34;)
+ *             .staticMembers(            
+ *                 test1.getId(),
+ *                 test3.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

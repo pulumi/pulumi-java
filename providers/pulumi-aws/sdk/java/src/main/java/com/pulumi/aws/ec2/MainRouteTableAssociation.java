@@ -15,6 +15,28 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mainRouteTableAssociation = new MainRouteTableAssociation(&#34;mainRouteTableAssociation&#34;, MainRouteTableAssociationArgs.builder()        
+ *             .vpcId(aws_vpc.getFoo().getId())
+ *             .routeTableId(aws_route_table.getBar().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Notes
  * 
  * On VPC creation, the AWS API always creates an initial Main Route Table. This

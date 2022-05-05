@@ -21,6 +21,36 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource _only_ invokes the function when the arguments call for a create or update. In other words, after an initial invocation on _apply_, if the arguments do not change, a subsequent _apply_ does not invoke the function again. To dynamically invoke the function, see the `triggers` example below. To always invoke a function on each _apply_, see the [`aws.lambda.Invocation`](https://www.terraform.io/docs/providers/aws/d/lambda_invocation.html) data source.
  * 
  * ## Example Usage
+ * ### Dynamic Invocation Example Using Triggers
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Invocation(&#34;example&#34;, InvocationArgs.builder()        
+ *             .functionName(aws_lambda_function.getLambda_function_test().getFunction_name())
+ *             .triggers(Map.of(&#34;redeployment&#34;, computeSHA1(serializeJson(
+ *                 jsonArray(aws_lambda_function.getExample().getEnvironment())))))
+ *             .input(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;key1&#34;, &#34;value1&#34;),
+ *                     jsonProperty(&#34;key2&#34;, &#34;value2&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:lambda/invocation:Invocation")

@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Device Fleet resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DeviceFleet(&#34;example&#34;, DeviceFleetArgs.builder()        
+ *             .deviceFleetName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getTest().getArn())
+ *             .outputConfig(DeviceFleetOutputConfig.builder()
+ *                 .s3OutputLocation(String.format(&#34;s3://%s/prefix/&#34;, aws_s3_bucket.getExample().getBucket()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,64 @@ import javax.annotation.Nullable;
  * &gt; **Note:** For the Deployment Status of the Framework to be successful, please turn on resource tracking to enable AWS Config recording to track configuration changes of your backup resources. This can be done from the AWS Console.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Framework(&#34;example&#34;, FrameworkArgs.builder()        
+ *             .controls(            
+ *                 FrameworkControl.builder()
+ *                     .inputParameters(FrameworkControlInputParameter.builder()
+ *                         .name(&#34;requiredRetentionDays&#34;)
+ *                         .value(&#34;35&#34;)
+ *                         .build())
+ *                     .name(&#34;BACKUP_RECOVERY_POINT_MINIMUM_RETENTION_CHECK&#34;)
+ *                     .build(),
+ *                 FrameworkControl.builder()
+ *                     .inputParameters(                    
+ *                         FrameworkControlInputParameter.builder()
+ *                             .name(&#34;requiredFrequencyUnit&#34;)
+ *                             .value(&#34;hours&#34;)
+ *                             .build(),
+ *                         FrameworkControlInputParameter.builder()
+ *                             .name(&#34;requiredRetentionDays&#34;)
+ *                             .value(&#34;35&#34;)
+ *                             .build(),
+ *                         FrameworkControlInputParameter.builder()
+ *                             .name(&#34;requiredFrequencyValue&#34;)
+ *                             .value(&#34;1&#34;)
+ *                             .build())
+ *                     .name(&#34;BACKUP_PLAN_MIN_FREQUENCY_AND_MIN_RETENTION_CHECK&#34;)
+ *                     .build(),
+ *                 FrameworkControl.builder()
+ *                     .name(&#34;BACKUP_RECOVERY_POINT_ENCRYPTED&#34;)
+ *                     .build(),
+ *                 FrameworkControl.builder()
+ *                     .name(&#34;BACKUP_RESOURCES_PROTECTED_BY_BACKUP_PLAN&#34;)
+ *                     .scope(FrameworkControlScope.builder()
+ *                         .complianceResourceTypes(&#34;EBS&#34;)
+ *                         .build())
+ *                     .build(),
+ *                 FrameworkControl.builder()
+ *                     .name(&#34;BACKUP_RECOVERY_POINT_MANUAL_DELETION_DISABLED&#34;)
+ *                     .build())
+ *             .description(&#34;this is an example framework&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Framework&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

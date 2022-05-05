@@ -17,6 +17,85 @@ import javax.annotation.Nullable;
  * Provides an AWS Network Firewall Resource Policy Resource for a rule group or firewall policy.
  * 
  * ## Example Usage
+ * ### For a Firewall Policy resource
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResourcePolicy(&#34;example&#34;, ResourcePolicyArgs.builder()        
+ *             .resourceArn(aws_networkfirewall_firewall_policy.getExample().getArn())
+ *             .policy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, jsonArray(
+ *                             &#34;network-firewall:ListFirewallPolicies&#34;, 
+ *                             &#34;network-firewall:CreateFirewall&#34;, 
+ *                             &#34;network-firewall:UpdateFirewall&#34;, 
+ *                             &#34;network-firewall:AssociateFirewallPolicy&#34;
+ *                         )),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Resource&#34;, aws_networkfirewall_firewall_policy.getExample().getArn()),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;AWS&#34;, &#34;arn:aws:iam::123456789012:root&#34;)
+ *                         ))
+ *                     ))),
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### For a Rule Group resource
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ResourcePolicy(&#34;example&#34;, ResourcePolicyArgs.builder()        
+ *             .resourceArn(aws_networkfirewall_rule_group.getExample().getArn())
+ *             .policy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, jsonArray(
+ *                             &#34;network-firewall:ListRuleGroups&#34;, 
+ *                             &#34;network-firewall:CreateFirewallPolicy&#34;, 
+ *                             &#34;network-firewall:UpdateFirewallPolicy&#34;
+ *                         )),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Resource&#34;, aws_networkfirewall_rule_group.getExample().getArn()),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;AWS&#34;, &#34;arn:aws:iam::123456789012:root&#34;)
+ *                         ))
+ *                     ))),
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

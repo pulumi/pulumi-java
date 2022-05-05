@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Provides a resource to create a VPC Internet Gateway.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gw = new InternetGateway(&#34;gw&#34;, InternetGatewayArgs.builder()        
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;main&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

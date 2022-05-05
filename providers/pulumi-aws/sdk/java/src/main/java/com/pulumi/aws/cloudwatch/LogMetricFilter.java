@@ -18,6 +18,35 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Log Metric Filter resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dada = new LogGroup(&#34;dada&#34;);
+ * 
+ *         var yada = new LogMetricFilter(&#34;yada&#34;, LogMetricFilterArgs.builder()        
+ *             .pattern(&#34;&#34;)
+ *             .logGroupName(dada.getName())
+ *             .metricTransformation(LogMetricFilterMetricTransformation.builder()
+ *                 .name(&#34;EventCount&#34;)
+ *                 .namespace(&#34;YourNamespace&#34;)
+ *                 .value(&#34;1&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

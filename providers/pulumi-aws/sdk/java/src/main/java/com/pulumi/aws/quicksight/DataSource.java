@@ -25,6 +25,36 @@ import javax.annotation.Nullable;
  * Resource for managing QuickSight Data Source
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new DataSource(&#34;default&#34;, DataSourceArgs.builder()        
+ *             .dataSourceId(&#34;example-id&#34;)
+ *             .parameters(DataSourceParameters.builder()
+ *                 .s3(DataSourceParametersS3.builder()
+ *                     .manifestFileLocation(DataSourceParametersS3ManifestFileLocation.builder()
+ *                         .bucket(&#34;my-bucket&#34;)
+ *                         .key(&#34;path/to/manifest.json&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .type(&#34;S3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

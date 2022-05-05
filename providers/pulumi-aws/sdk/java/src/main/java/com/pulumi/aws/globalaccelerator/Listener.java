@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * Provides a Global Accelerator listener.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleAccelerator = new Accelerator(&#34;exampleAccelerator&#34;, AcceleratorArgs.builder()        
+ *             .ipAddressType(&#34;IPV4&#34;)
+ *             .enabled(true)
+ *             .attributes(AcceleratorAttributes.builder()
+ *                 .flowLogsEnabled(true)
+ *                 .flowLogsS3Bucket(&#34;example-bucket&#34;)
+ *                 .flowLogsS3Prefix(&#34;flow-logs/&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleListener = new Listener(&#34;exampleListener&#34;, ListenerArgs.builder()        
+ *             .acceleratorArn(exampleAccelerator.getId())
+ *             .clientAffinity(&#34;SOURCE_IP&#34;)
+ *             .protocol(&#34;TCP&#34;)
+ *             .portRanges(ListenerPortRange.builder()
+ *                 .fromPort(80)
+ *                 .toPort(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

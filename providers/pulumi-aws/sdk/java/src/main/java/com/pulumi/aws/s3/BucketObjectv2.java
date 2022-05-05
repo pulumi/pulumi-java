@@ -21,6 +21,151 @@ import javax.annotation.Nullable;
  * Provides an S3 object resource.
  * 
  * ## Example Usage
+ * ### Encrypting with KMS Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplekms = new Key(&#34;examplekms&#34;, KeyArgs.builder()        
+ *             .description(&#34;KMS key 1&#34;)
+ *             .deletionWindowInDays(7)
+ *             .build());
+ * 
+ *         var examplebucket = new BucketV2(&#34;examplebucket&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(examplebucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .key(&#34;someobject&#34;)
+ *             .bucket(examplebucket.getId())
+ *             .source(new FileAsset(&#34;index.html&#34;))
+ *             .kmsKeyId(examplekms.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Server Side Encryption with S3 Default Master Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplebucket = new BucketV2(&#34;examplebucket&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(examplebucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .key(&#34;someobject&#34;)
+ *             .bucket(examplebucket.getId())
+ *             .source(new FileAsset(&#34;index.html&#34;))
+ *             .serverSideEncryption(&#34;aws:kms&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Server Side Encryption with AWS-Managed Key
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplebucket = new BucketV2(&#34;examplebucket&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(examplebucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .key(&#34;someobject&#34;)
+ *             .bucket(examplebucket.getId())
+ *             .source(new FileAsset(&#34;index.html&#34;))
+ *             .serverSideEncryption(&#34;AES256&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 Object Lock
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplebucket = new BucketV2(&#34;examplebucket&#34;, BucketV2Args.builder()        
+ *             .objectLockEnabled(true)
+ *             .build());
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(examplebucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleBucketVersioningV2 = new BucketVersioningV2(&#34;exampleBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(examplebucket.getId())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var examplebucketObject = new BucketObjectv2(&#34;examplebucketObject&#34;, BucketObjectv2Args.builder()        
+ *             .key(&#34;someobject&#34;)
+ *             .bucket(examplebucket.getId())
+ *             .source(new FileAsset(&#34;important.txt&#34;))
+ *             .objectLockLegalHoldStatus(&#34;ON&#34;)
+ *             .objectLockMode(&#34;GOVERNANCE&#34;)
+ *             .objectLockRetainUntilDate(&#34;2021-12-31T23:59:60Z&#34;)
+ *             .forceDestroy(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

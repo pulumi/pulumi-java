@@ -17,6 +17,36 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testRepository = new Repository(&#34;testRepository&#34;, RepositoryArgs.builder()        
+ *             .repositoryName(&#34;test&#34;)
+ *             .build());
+ * 
+ *         var testTrigger = new Trigger(&#34;testTrigger&#34;, TriggerArgs.builder()        
+ *             .repositoryName(testRepository.getRepositoryName())
+ *             .triggers(TriggerTrigger.builder()
+ *                 .name(&#34;all&#34;)
+ *                 .events(&#34;all&#34;)
+ *                 .destinationArn(aws_sns_topic.getTest().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:codecommit/trigger:Trigger")

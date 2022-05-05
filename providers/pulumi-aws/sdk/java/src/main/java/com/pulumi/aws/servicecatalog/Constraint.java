@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** This resource does not associate a Service Catalog product and portfolio. However, the product and portfolio must be associated (see the `aws.servicecatalog.ProductPortfolioAssociation` resource) prior to creating a constraint or you will receive an error.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Constraint(&#34;example&#34;, ConstraintArgs.builder()        
+ *             .description(&#34;Back off, man. I&#39;m a scientist.&#34;)
+ *             .portfolioId(aws_servicecatalog_portfolio.getExample().getId())
+ *             .productId(aws_servicecatalog_product.getExample().getId())
+ *             .type(&#34;LAUNCH&#34;)
+ *             .parameters(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;RoleArn&#34;, &#34;arn:aws:iam::123456789012:role/LaunchRole&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

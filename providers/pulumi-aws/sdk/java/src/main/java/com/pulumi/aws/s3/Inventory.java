@@ -23,6 +23,82 @@ import javax.annotation.Nullable;
  * Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
  * 
  * ## Example Usage
+ * ### Add inventory configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testBucketV2 = new BucketV2(&#34;testBucketV2&#34;);
+ * 
+ *         var inventory = new BucketV2(&#34;inventory&#34;);
+ * 
+ *         var testInventory = new Inventory(&#34;testInventory&#34;, InventoryArgs.builder()        
+ *             .bucket(testBucketV2.getId())
+ *             .includedObjectVersions(&#34;All&#34;)
+ *             .schedule(InventorySchedule.builder()
+ *                 .frequency(&#34;Daily&#34;)
+ *                 .build())
+ *             .destination(InventoryDestination.builder()
+ *                 .bucket(InventoryDestinationBucket.builder()
+ *                     .format(&#34;ORC&#34;)
+ *                     .bucketArn(inventory.getArn())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add inventory configuration with S3 object prefix
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new BucketV2(&#34;test&#34;);
+ * 
+ *         var inventory = new BucketV2(&#34;inventory&#34;);
+ * 
+ *         var test_prefix = new Inventory(&#34;test-prefix&#34;, InventoryArgs.builder()        
+ *             .bucket(test.getId())
+ *             .includedObjectVersions(&#34;All&#34;)
+ *             .schedule(InventorySchedule.builder()
+ *                 .frequency(&#34;Daily&#34;)
+ *                 .build())
+ *             .filter(InventoryFilter.builder()
+ *                 .prefix(&#34;documents/&#34;)
+ *                 .build())
+ *             .destination(InventoryDestination.builder()
+ *                 .bucket(InventoryDestinationBucket.builder()
+ *                     .format(&#34;ORC&#34;)
+ *                     .bucketArn(inventory.getArn())
+ *                     .prefix(&#34;inventory&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

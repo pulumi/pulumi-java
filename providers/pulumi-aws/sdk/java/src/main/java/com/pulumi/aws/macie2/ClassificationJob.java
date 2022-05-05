@@ -25,6 +25,35 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [AWS Macie Classification Job](https://docs.aws.amazon.com/macie/latest/APIReference/jobs.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testAccount = new Account(&#34;testAccount&#34;);
+ * 
+ *         var testClassificationJob = new ClassificationJob(&#34;testClassificationJob&#34;, ClassificationJobArgs.builder()        
+ *             .jobType(&#34;ONE_TIME&#34;)
+ *             .s3JobDefinition(ClassificationJobS3JobDefinition.builder()
+ *                 .bucketDefinitions(ClassificationJobS3JobDefinitionBucketDefinition.builder()
+ *                     .accountId(&#34;ACCOUNT ID&#34;)
+ *                     .buckets(&#34;S3 BUCKET NAME&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

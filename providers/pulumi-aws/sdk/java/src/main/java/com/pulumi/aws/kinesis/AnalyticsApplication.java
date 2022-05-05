@@ -31,6 +31,134 @@ import javax.annotation.Nullable;
  * &gt; **Note:** To manage Amazon Kinesis Data Analytics for Apache Flink applications, use the `aws.kinesisanalyticsv2.Application` resource.
  * 
  * ## Example Usage
+ * ### Kinesis Stream Input
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testStream = new Stream(&#34;testStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var testApplication = new AnalyticsApplication(&#34;testApplication&#34;, AnalyticsApplicationArgs.builder()        
+ *             .inputs(AnalyticsApplicationInputs.builder()
+ *                 .namePrefix(&#34;test_prefix&#34;)
+ *                 .kinesisStream(AnalyticsApplicationInputsKinesisStream.builder()
+ *                     .resourceArn(testStream.getArn())
+ *                     .roleArn(aws_iam_role.getTest().getArn())
+ *                     .build())
+ *                 .parallelism(AnalyticsApplicationInputsParallelism.builder()
+ *                     .count(1)
+ *                     .build())
+ *                 .schema(AnalyticsApplicationInputsSchema.builder()
+ *                     .recordColumns(AnalyticsApplicationInputsSchemaRecordColumn.builder()
+ *                         .mapping(&#34;$.test&#34;)
+ *                         .name(&#34;test&#34;)
+ *                         .sqlType(&#34;VARCHAR(8)&#34;)
+ *                         .build())
+ *                     .recordEncoding(&#34;UTF-8&#34;)
+ *                     .recordFormat(AnalyticsApplicationInputsSchemaRecordFormat.builder()
+ *                         .mappingParameters(AnalyticsApplicationInputsSchemaRecordFormatMappingParameters.builder()
+ *                             .json(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson.builder()
+ *                                 .recordRowPath(&#34;$&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Starting An Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;);
+ * 
+ *         var exampleLogStream = new LogStream(&#34;exampleLogStream&#34;, LogStreamArgs.builder()        
+ *             .logGroupName(exampleLogGroup.getName())
+ *             .build());
+ * 
+ *         var exampleStream = new Stream(&#34;exampleStream&#34;, StreamArgs.builder()        
+ *             .shardCount(1)
+ *             .build());
+ * 
+ *         var exampleFirehoseDeliveryStream = new FirehoseDeliveryStream(&#34;exampleFirehoseDeliveryStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;extended_s3&#34;)
+ *             .extendedS3Configuration(FirehoseDeliveryStreamExtendedS3Configuration.builder()
+ *                 .bucketArn(aws_s3_bucket.getExample().getArn())
+ *                 .roleArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var test = new AnalyticsApplication(&#34;test&#34;, AnalyticsApplicationArgs.builder()        
+ *             .cloudwatchLoggingOptions(AnalyticsApplicationCloudwatchLoggingOptions.builder()
+ *                 .logStreamArn(exampleLogStream.getArn())
+ *                 .roleArn(aws_iam_role.getExample().getArn())
+ *                 .build())
+ *             .inputs(AnalyticsApplicationInputs.builder()
+ *                 .namePrefix(&#34;example_prefix&#34;)
+ *                 .schema(AnalyticsApplicationInputsSchema.builder()
+ *                     .recordColumns(AnalyticsApplicationInputsSchemaRecordColumn.builder()
+ *                         .name(&#34;COLUMN_1&#34;)
+ *                         .sqlType(&#34;INTEGER&#34;)
+ *                         .build())
+ *                     .recordFormat(AnalyticsApplicationInputsSchemaRecordFormat.builder()
+ *                         .mappingParameters(AnalyticsApplicationInputsSchemaRecordFormatMappingParameters.builder()
+ *                             .csv(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv.builder()
+ *                                 .recordColumnDelimiter(&#34;,&#34;)
+ *                                 .recordRowDelimiter(&#34;|&#34;)
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .kinesisStream(AnalyticsApplicationInputsKinesisStream.builder()
+ *                     .resourceArn(exampleStream.getArn())
+ *                     .roleArn(aws_iam_role.getExample().getArn())
+ *                     .build())
+ *                 .startingPositionConfigurations(AnalyticsApplicationInputsStartingPositionConfiguration.builder()
+ *                     .startingPosition(&#34;NOW&#34;)
+ *                     .build())
+ *                 .build())
+ *             .outputs(AnalyticsApplicationOutput.builder()
+ *                 .name(&#34;OUTPUT_1&#34;)
+ *                 .schema(AnalyticsApplicationOutputSchema.builder()
+ *                     .recordFormatType(&#34;CSV&#34;)
+ *                     .build())
+ *                 .kinesisFirehose(AnalyticsApplicationOutputKinesisFirehose.builder()
+ *                     .resourceArn(exampleFirehoseDeliveryStream.getArn())
+ *                     .roleArn(aws_iam_role.getExample().getArn())
+ *                     .build())
+ *                 .build())
+ *             .startApplication(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,67 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getRegion());
+ * 
+ *         var main = new VpcIpam(&#34;main&#34;, VpcIpamArgs.builder()        
+ *             .description(&#34;My IPAM&#34;)
+ *             .operatingRegions(VpcIpamOperatingRegion.builder()
+ *                 .regionName(current.apply(getRegionResult -&gt; getRegionResult.getName()))
+ *                 .build())
+ *             .tags(Map.of(&#34;Test&#34;, &#34;Main&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Shared with multiple operating_regions:
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var ipamRegions = config.get(&#34;ipamRegions&#34;).orElse(        
+ *             &#34;us-east-1&#34;,
+ *             &#34;us-west-2&#34;);
+ *         var example = new VpcIpam(&#34;example&#34;, VpcIpamArgs.builder()        
+ *             .description(&#34;test4&#34;)
+ *             .dynamic(Map.ofEntries(
+ *                 Map.entry(&#34;forEach&#34;, ipamRegions),
+ *                 Map.entry(&#34;content&#34;, Map.of(&#34;regionName&#34;, operating_regions.getValue()))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IPAMs can be imported using the `ipam id`, e.g.

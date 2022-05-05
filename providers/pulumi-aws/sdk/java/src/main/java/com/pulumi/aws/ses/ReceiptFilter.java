@@ -17,6 +17,28 @@ import javax.annotation.Nullable;
  * Provides an SES receipt filter resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var filter = new ReceiptFilter(&#34;filter&#34;, ReceiptFilterArgs.builder()        
+ *             .cidr(&#34;10.10.10.10&#34;)
+ *             .policy(&#34;Block&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

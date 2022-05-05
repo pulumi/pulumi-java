@@ -20,6 +20,149 @@ import javax.annotation.Nullable;
  * Provides an Application AutoScaling Policy resource.
  * 
  * ## Example Usage
+ * ### DynamoDB Table Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dynamodbTableReadTarget = new Target(&#34;dynamodbTableReadTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(100)
+ *             .minCapacity(5)
+ *             .resourceId(&#34;table/tableName&#34;)
+ *             .scalableDimension(&#34;dynamodb:table:ReadCapacityUnits&#34;)
+ *             .serviceNamespace(&#34;dynamodb&#34;)
+ *             .build());
+ * 
+ *         var dynamodbTableReadPolicy = new Policy(&#34;dynamodbTableReadPolicy&#34;, PolicyArgs.builder()        
+ *             .policyType(&#34;TargetTrackingScaling&#34;)
+ *             .resourceId(dynamodbTableReadTarget.getResourceId())
+ *             .scalableDimension(dynamodbTableReadTarget.getScalableDimension())
+ *             .serviceNamespace(dynamodbTableReadTarget.getServiceNamespace())
+ *             .targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfiguration.builder()
+ *                 .predefinedMetricSpecification(PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.builder()
+ *                     .predefinedMetricType(&#34;DynamoDBReadCapacityUtilization&#34;)
+ *                     .build())
+ *                 .targetValue(70)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Preserve desired count when updating an autoscaled ECS Service
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ecsService = new Service(&#34;ecsService&#34;, ServiceArgs.builder()        
+ *             .cluster(&#34;clusterName&#34;)
+ *             .taskDefinition(&#34;taskDefinitionFamily:1&#34;)
+ *             .desiredCount(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aurora Read Replica Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicasTarget = new Target(&#34;replicasTarget&#34;, TargetArgs.builder()        
+ *             .serviceNamespace(&#34;rds&#34;)
+ *             .scalableDimension(&#34;rds:cluster:ReadReplicaCount&#34;)
+ *             .resourceId(String.format(&#34;cluster:%s&#34;, aws_rds_cluster.getExample().getId()))
+ *             .minCapacity(1)
+ *             .maxCapacity(15)
+ *             .build());
+ * 
+ *         var replicasPolicy = new Policy(&#34;replicasPolicy&#34;, PolicyArgs.builder()        
+ *             .serviceNamespace(replicasTarget.getServiceNamespace())
+ *             .scalableDimension(replicasTarget.getScalableDimension())
+ *             .resourceId(replicasTarget.getResourceId())
+ *             .policyType(&#34;TargetTrackingScaling&#34;)
+ *             .targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfiguration.builder()
+ *                 .predefinedMetricSpecification(PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.builder()
+ *                     .predefinedMetricType(&#34;RDSReaderAverageCPUUtilization&#34;)
+ *                     .build())
+ *                 .targetValue(75)
+ *                 .scaleInCooldown(300)
+ *                 .scaleOutCooldown(300)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### MSK / Kafka Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mskTarget = new Target(&#34;mskTarget&#34;, TargetArgs.builder()        
+ *             .serviceNamespace(&#34;kafka&#34;)
+ *             .scalableDimension(&#34;kafka:broker-storage:VolumeSize&#34;)
+ *             .resourceId(aws_msk_cluster.getExample().getArn())
+ *             .minCapacity(1)
+ *             .maxCapacity(8)
+ *             .build());
+ * 
+ *         var targets = new Policy(&#34;targets&#34;, PolicyArgs.builder()        
+ *             .serviceNamespace(mskTarget.getServiceNamespace())
+ *             .scalableDimension(mskTarget.getScalableDimension())
+ *             .resourceId(mskTarget.getResourceId())
+ *             .policyType(&#34;TargetTrackingScaling&#34;)
+ *             .targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfiguration.builder()
+ *                 .predefinedMetricSpecification(PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.builder()
+ *                     .predefinedMetricType(&#34;KafkaBrokerStorageUtilization&#34;)
+ *                     .build())
+ *                 .targetValue(55)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ManagedPrefixList(&#34;example&#34;, ManagedPrefixListArgs.builder()        
+ *             .addressFamily(&#34;IPv4&#34;)
+ *             .maxEntries(5)
+ *             .entries(            
+ *                 ManagedPrefixListEntry.builder()
+ *                     .cidr(aws_vpc.getExample().getCidr_block())
+ *                     .description(&#34;Primary&#34;)
+ *                     .build(),
+ *                 ManagedPrefixListEntry.builder()
+ *                     .cidr(aws_vpc_ipv4_cidr_block_association.getExample().getCidr_block())
+ *                     .description(&#34;Secondary&#34;)
+ *                     .build())
+ *             .tags(Map.of(&#34;Env&#34;, &#34;live&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Prefix Lists can be imported using the `id`, e.g.,

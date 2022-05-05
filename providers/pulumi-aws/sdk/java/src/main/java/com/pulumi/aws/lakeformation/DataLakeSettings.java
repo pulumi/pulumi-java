@@ -23,6 +23,65 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Lake Formation introduces fine-grained access control for data in your data lake. Part of the changes include the `IAMAllowedPrincipals` principal in order to make Lake Formation backwards compatible with existing IAM and Glue permissions. For more information, see [Changing the Default Security Settings for Your Data Lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) and [Upgrading AWS Glue Data Permissions to the AWS Lake Formation Model](https://docs.aws.amazon.com/lake-formation/latest/dg/upgrade-glue-lake-formation.html).
  * 
  * ## Example Usage
+ * ### Data Lake Admins
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DataLakeSettings(&#34;example&#34;, DataLakeSettingsArgs.builder()        
+ *             .admins(            
+ *                 aws_iam_user.getTest().getArn(),
+ *                 aws_iam_role.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create Default Permissions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DataLakeSettings(&#34;example&#34;, DataLakeSettingsArgs.builder()        
+ *             .admins(            
+ *                 aws_iam_user.getTest().getArn(),
+ *                 aws_iam_role.getTest().getArn())
+ *             .createDatabaseDefaultPermissions(DataLakeSettingsCreateDatabaseDefaultPermission.builder()
+ *                 .permissions(                
+ *                     &#34;SELECT&#34;,
+ *                     &#34;ALTER&#34;,
+ *                     &#34;DROP&#34;)
+ *                 .principal(aws_iam_user.getTest().getArn())
+ *                 .build())
+ *             .createTableDefaultPermissions(DataLakeSettingsCreateTableDefaultPermission.builder()
+ *                 .permissions(&#34;ALL&#34;)
+ *                 .principal(aws_iam_role.getTest().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:lakeformation/dataLakeSettings:DataLakeSettings")

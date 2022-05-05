@@ -34,6 +34,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway Connect.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getConnect(GetConnectArgs.builder()
+     *             .filters(GetConnectFilter.builder()
+     *                 .name(&#34;transport-transit-gateway-attachment-id&#34;)
+     *                 .values(&#34;tgw-attach-12345678&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getConnect(GetConnectArgs.builder()
+     *             .transitGatewayConnectId(&#34;tgw-attach-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConnectResult> getConnect() {
@@ -49,6 +96,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway Connect Peer.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getConnectPeer(GetConnectPeerArgs.builder()
+     *             .filters(GetConnectPeerFilter.builder()
+     *                 .name(&#34;transit-gateway-attachment-id&#34;)
+     *                 .values(&#34;tgw-attach-12345678&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getConnectPeer(GetConnectPeerArgs.builder()
+     *             .transitGatewayConnectPeerId(&#34;tgw-connect-peer-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetConnectPeerResult> getConnectPeer() {
@@ -64,6 +158,29 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway&#39;s attachment to a Direct Connect Gateway.
      * 
      * ## Example Usage
+     * ### By Transit Gateway and Direct Connect Gateway Identifiers
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getDirectConnectGatewayAttachment(GetDirectConnectGatewayAttachmentArgs.builder()
+     *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+     *             .dxGatewayId(aws_dx_gateway.getExample().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> getDirectConnectGatewayAttachment() {
@@ -79,6 +196,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway Multicast Domain.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getMulticastDomain(GetMulticastDomainArgs.builder()
+     *             .filters(GetMulticastDomainFilter.builder()
+     *                 .name(&#34;transit-gateway-multicast-domain-id&#34;)
+     *                 .values(&#34;tgw-mcast-domain-12345678&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getMulticastDomain(GetMulticastDomainArgs.builder()
+     *             .transitGatewayMulticastDomainId(&#34;tgw-mcast-domain-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetMulticastDomainResult> getMulticastDomain() {
@@ -94,6 +258,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway Peering Attachment.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getPeeringAttachment(GetPeeringAttachmentArgs.builder()
+     *             .filters(GetPeeringAttachmentFilter.builder()
+     *                 .name(&#34;transit-gateway-attachment-id&#34;)
+     *                 .values(&#34;tgw-attach-12345678&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var attachment = Output.of(Ec2transitgatewayFunctions.getPeeringAttachment(GetPeeringAttachmentArgs.builder()
+     *             .id(&#34;tgw-attach-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPeeringAttachmentResult> getPeeringAttachment() {
@@ -109,6 +320,58 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway Route Table.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getRouteTable(GetRouteTableArgs.builder()
+     *             .filters(            
+     *                 GetRouteTableFilter.builder()
+     *                     .name(&#34;default-association-route-table&#34;)
+     *                     .values(&#34;true&#34;)
+     *                     .build(),
+     *                 GetRouteTableFilter.builder()
+     *                     .name(&#34;transit-gateway-id&#34;)
+     *                     .values(&#34;tgw-12345678&#34;)
+     *                     .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getRouteTable(GetRouteTableArgs.builder()
+     *             .id(&#34;tgw-rtb-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRouteTableResult> getRouteTable() {
@@ -124,6 +387,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getTransitGateway(GetTransitGatewayArgs.builder()
+     *             .filters(GetTransitGatewayFilter.builder()
+     *                 .name(&#34;options.amazon-side-asn&#34;)
+     *                 .values(&#34;64512&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getTransitGateway(GetTransitGatewayArgs.builder()
+     *             .id(&#34;tgw-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetTransitGatewayResult> getTransitGateway() {
@@ -139,6 +449,53 @@ public final class Ec2transitgatewayFunctions {
      * Get information on an EC2 Transit Gateway VPC Attachment.
      * 
      * ## Example Usage
+     * ### By Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getVpcAttachment(GetVpcAttachmentArgs.builder()
+     *             .filters(GetVpcAttachmentFilter.builder()
+     *                 .name(&#34;vpc-id&#34;)
+     *                 .values(&#34;vpc-12345678&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### By Identifier
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getVpcAttachment(GetVpcAttachmentArgs.builder()
+     *             .id(&#34;tgw-attach-12345678&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVpcAttachmentResult> getVpcAttachment() {
@@ -171,6 +528,54 @@ public final class Ec2transitgatewayFunctions {
      * &gt; EC2 Transit Gateway VPN Attachments are implicitly created by VPN Connections referencing an EC2 Transit Gateway so there is no managed resource. For ease, the `aws.ec2.VpnConnection` resource includes a `transit_gateway_attachment_id` attribute which can replace some usage of this data source. For tagging the attachment, see the `aws.ec2.Tag` resource.
      * 
      * ## Example Usage
+     * ### By Transit Gateway and VPN Connection Identifiers
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Ec2transitgatewayFunctions.getVpnAttachment(GetVpnAttachmentArgs.builder()
+     *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+     *             .vpnConnectionId(aws_vpn_connection.getExample().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(Ec2transitgatewayFunctions.getVpnAttachment(GetVpnAttachmentArgs.builder()
+     *             .filters(GetVpnAttachmentFilter.builder()
+     *                 .name(&#34;resource-id&#34;)
+     *                 .values(&#34;some-resource&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetVpnAttachmentResult> getVpnAttachment() {

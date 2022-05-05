@@ -19,6 +19,46 @@ import javax.annotation.Nullable;
  * &gt; **Note:** License configurations can also be associated with launch templates by specifying the `license_specifications` block for an `aws.ec2.LaunchTemplate`.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleAmi = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .owners(&#34;amazon&#34;)
+ *             .filters(GetAmiFilter.builder()
+ *                 .name(&#34;name&#34;)
+ *                 .values(&#34;amzn-ami-vpc-nat*&#34;)
+ *                 .build())
+ *             .build()));
+ * 
+ *         var exampleInstance = new Instance(&#34;exampleInstance&#34;, InstanceArgs.builder()        
+ *             .ami(exampleAmi.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         var exampleLicenseConfiguration = new LicenseConfiguration(&#34;exampleLicenseConfiguration&#34;, LicenseConfigurationArgs.builder()        
+ *             .licenseCountingType(&#34;Instance&#34;)
+ *             .build());
+ * 
+ *         var exampleAssociation = new Association(&#34;exampleAssociation&#34;, AssociationArgs.builder()        
+ *             .licenseConfigurationArn(exampleLicenseConfiguration.getArn())
+ *             .resourceArn(exampleInstance.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

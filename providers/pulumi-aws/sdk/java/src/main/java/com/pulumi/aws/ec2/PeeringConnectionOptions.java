@@ -28,6 +28,113 @@ import javax.annotation.Nullable;
  * cross-account scenarios.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fooVpc = new Vpc(&#34;fooVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var bar = new Vpc(&#34;bar&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var fooVpcPeeringConnection = new VpcPeeringConnection(&#34;fooVpcPeeringConnection&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .vpcId(fooVpc.getId())
+ *             .peerVpcId(bar.getId())
+ *             .autoAccept(true)
+ *             .build());
+ * 
+ *         var fooPeeringConnectionOptions = new PeeringConnectionOptions(&#34;fooPeeringConnectionOptions&#34;, PeeringConnectionOptionsArgs.builder()        
+ *             .vpcPeeringConnectionId(fooVpcPeeringConnection.getId())
+ *             .accepter(PeeringConnectionOptionsAccepter.builder()
+ *                 .allowRemoteVpcDnsResolution(true)
+ *                 .build())
+ *             .requester(PeeringConnectionOptionsRequester.builder()
+ *                 .allowVpcToRemoteClassicLink(true)
+ *                 .allowClassicLinkToRemoteVpc(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Cross-Account Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var requester = new Provider(&#34;requester&#34;);
+ * 
+ *         var accepter = new Provider(&#34;accepter&#34;);
+ * 
+ *         var main = new Vpc(&#34;main&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .enableDnsSupport(true)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         var peerVpc = new Vpc(&#34;peerVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.1.0.0/16&#34;)
+ *             .enableDnsSupport(true)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         final var peerCallerIdentity = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var peerVpcPeeringConnection = new VpcPeeringConnection(&#34;peerVpcPeeringConnection&#34;, VpcPeeringConnectionArgs.builder()        
+ *             .vpcId(main.getId())
+ *             .peerVpcId(peerVpc.getId())
+ *             .peerOwnerId(peerCallerIdentity.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()))
+ *             .autoAccept(false)
+ *             .tags(Map.of(&#34;Side&#34;, &#34;Requester&#34;))
+ *             .build());
+ * 
+ *         var peerVpcPeeringConnectionAccepter = new VpcPeeringConnectionAccepter(&#34;peerVpcPeeringConnectionAccepter&#34;, VpcPeeringConnectionAccepterArgs.builder()        
+ *             .vpcPeeringConnectionId(peerVpcPeeringConnection.getId())
+ *             .autoAccept(true)
+ *             .tags(Map.of(&#34;Side&#34;, &#34;Accepter&#34;))
+ *             .build());
+ * 
+ *         var requesterPeeringConnectionOptions = new PeeringConnectionOptions(&#34;requesterPeeringConnectionOptions&#34;, PeeringConnectionOptionsArgs.builder()        
+ *             .vpcPeeringConnectionId(peerVpcPeeringConnectionAccepter.getId())
+ *             .requester(PeeringConnectionOptionsRequester.builder()
+ *                 .allowRemoteVpcDnsResolution(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var accepterPeeringConnectionOptions = new PeeringConnectionOptions(&#34;accepterPeeringConnectionOptions&#34;, PeeringConnectionOptionsArgs.builder()        
+ *             .vpcPeeringConnectionId(peerVpcPeeringConnectionAccepter.getId())
+ *             .accepter(PeeringConnectionOptionsAccepter.builder()
+ *                 .allowRemoteVpcDnsResolution(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

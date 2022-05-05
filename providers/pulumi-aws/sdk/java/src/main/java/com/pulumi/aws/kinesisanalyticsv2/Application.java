@@ -26,6 +26,244 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Kinesis Data Analytics for SQL applications created using this resource cannot currently be viewed in the AWS Console. To manage Kinesis Data Analytics for SQL applications that can also be viewed in the AWS Console, use the `aws.kinesis.AnalyticsApplication`resource.
  * 
  * ## Example Usage
+ * ### Apache Flink Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(exampleBucketV2.getBucket())
+ *             .key(&#34;example-flink-application&#34;)
+ *             .source(new FileAsset(&#34;flink-app.jar&#34;))
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .runtimeEnvironment(&#34;FLINK-1_8&#34;)
+ *             .serviceExecutionRole(aws_iam_role.getExample().getArn())
+ *             .applicationConfiguration(ApplicationApplicationConfiguration.builder()
+ *                 .applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfiguration.builder()
+ *                     .codeContent(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent.builder()
+ *                         .s3ContentLocation(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation.builder()
+ *                             .bucketArn(exampleBucketV2.getArn())
+ *                             .fileKey(exampleBucketObjectv2.getKey())
+ *                             .build())
+ *                         .build())
+ *                     .codeContentType(&#34;ZIPFILE&#34;)
+ *                     .build())
+ *                 .environmentProperties(ApplicationApplicationConfigurationEnvironmentProperties.builder()
+ *                     .propertyGroups(                    
+ *                         ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup.builder()
+ *                             .propertyGroupId(&#34;PROPERTY-GROUP-1&#34;)
+ *                             .propertyMap(Map.of(&#34;Key1&#34;, &#34;Value1&#34;))
+ *                             .build(),
+ *                         ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup.builder()
+ *                             .propertyGroupId(&#34;PROPERTY-GROUP-2&#34;)
+ *                             .propertyMap(Map.ofEntries(
+ *                                 Map.entry(&#34;KeyA&#34;, &#34;ValueA&#34;),
+ *                                 Map.entry(&#34;KeyB&#34;, &#34;ValueB&#34;)
+ *                             ))
+ *                             .build())
+ *                     .build())
+ *                 .flinkApplicationConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfiguration.builder()
+ *                     .checkpointConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration.builder()
+ *                         .configurationType(&#34;DEFAULT&#34;)
+ *                         .build())
+ *                     .monitoringConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration.builder()
+ *                         .configurationType(&#34;CUSTOM&#34;)
+ *                         .logLevel(&#34;DEBUG&#34;)
+ *                         .metricsLevel(&#34;TASK&#34;)
+ *                         .build())
+ *                     .parallelismConfiguration(ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration.builder()
+ *                         .autoScalingEnabled(true)
+ *                         .configurationType(&#34;CUSTOM&#34;)
+ *                         .parallelism(10)
+ *                         .parallelismPerKpu(4)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### SQL Application
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;);
+ * 
+ *         var exampleLogStream = new LogStream(&#34;exampleLogStream&#34;, LogStreamArgs.builder()        
+ *             .logGroupName(exampleLogGroup.getName())
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .runtimeEnvironment(&#34;SQL-1_0&#34;)
+ *             .serviceExecutionRole(aws_iam_role.getExample().getArn())
+ *             .applicationConfiguration(ApplicationApplicationConfiguration.builder()
+ *                 .applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfiguration.builder()
+ *                     .codeContent(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent.builder()
+ *                         .textContent(&#34;&#34;&#34;
+ * SELECT 1;
+ *                         &#34;&#34;&#34;)
+ *                         .build())
+ *                     .codeContentType(&#34;PLAINTEXT&#34;)
+ *                     .build())
+ *                 .sqlApplicationConfiguration(ApplicationApplicationConfigurationSqlApplicationConfiguration.builder()
+ *                     .input(ApplicationApplicationConfigurationSqlApplicationConfigurationInput.builder()
+ *                         .namePrefix(&#34;PREFIX_1&#34;)
+ *                         .inputParallelism(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism.builder()
+ *                             .count(3)
+ *                             .build())
+ *                         .inputSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema.builder()
+ *                             .recordColumns(                            
+ *                                 ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn.builder()
+ *                                     .name(&#34;COLUMN_1&#34;)
+ *                                     .sqlType(&#34;VARCHAR(8)&#34;)
+ *                                     .mapping(&#34;MAPPING-1&#34;)
+ *                                     .build(),
+ *                                 ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn.builder()
+ *                                     .name(&#34;COLUMN_2&#34;)
+ *                                     .sqlType(&#34;DOUBLE&#34;)
+ *                                     .build())
+ *                             .recordEncoding(&#34;UTF-8&#34;)
+ *                             .recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat.builder()
+ *                                 .recordFormatType(&#34;CSV&#34;)
+ *                                 .mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters.builder()
+ *                                     .csvMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters.builder()
+ *                                         .recordColumnDelimiter(&#34;,&#34;)
+ *                                         .recordRowDelimiter(&#34;&#34;&#34;
+ * 
+ *                                         &#34;&#34;&#34;)
+ *                                         .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .kinesisStreamsInput(ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput.builder()
+ *                             .resourceArn(aws_kinesis_stream.getExample().getArn())
+ *                             .build())
+ *                         .build())
+ *                     .outputs(                    
+ *                         ApplicationApplicationConfigurationSqlApplicationConfigurationOutput.builder()
+ *                             .name(&#34;OUTPUT_1&#34;)
+ *                             .destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema.builder()
+ *                                 .recordFormatType(&#34;JSON&#34;)
+ *                                 .build())
+ *                             .lambdaOutput(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput.builder()
+ *                                 .resourceArn(aws_lambda_function.getExample().getArn())
+ *                                 .build())
+ *                             .build(),
+ *                         ApplicationApplicationConfigurationSqlApplicationConfigurationOutput.builder()
+ *                             .name(&#34;OUTPUT_2&#34;)
+ *                             .destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema.builder()
+ *                                 .recordFormatType(&#34;CSV&#34;)
+ *                                 .build())
+ *                             .kinesisFirehoseOutput(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput.builder()
+ *                                 .resourceArn(aws_kinesis_firehose_delivery_stream.getExample().getArn())
+ *                                 .build())
+ *                             .build())
+ *                     .referenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource.builder()
+ *                         .tableName(&#34;TABLE-1&#34;)
+ *                         .referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema.builder()
+ *                             .recordColumns(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn.builder()
+ *                                 .name(&#34;COLUMN_1&#34;)
+ *                                 .sqlType(&#34;INTEGER&#34;)
+ *                                 .build())
+ *                             .recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat.builder()
+ *                                 .recordFormatType(&#34;JSON&#34;)
+ *                                 .mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters.builder()
+ *                                     .jsonMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters.builder()
+ *                                         .recordRowPath(&#34;$&#34;)
+ *                                         .build())
+ *                                     .build())
+ *                                 .build())
+ *                             .build())
+ *                         .s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource.builder()
+ *                             .bucketArn(aws_s3_bucket.getExample().getArn())
+ *                             .fileKey(&#34;KEY-1&#34;)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .cloudwatchLoggingOptions(ApplicationCloudwatchLoggingOptions.builder()
+ *                 .logStreamArn(exampleLogStream.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### VPC Configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketObjectv2 = new BucketObjectv2(&#34;exampleBucketObjectv2&#34;, BucketObjectv2Args.builder()        
+ *             .bucket(exampleBucketV2.getBucket())
+ *             .key(&#34;example-flink-application&#34;)
+ *             .source(new FileAsset(&#34;flink-app.jar&#34;))
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .runtimeEnvironment(&#34;FLINK-1_8&#34;)
+ *             .serviceExecutionRole(aws_iam_role.getExample().getArn())
+ *             .applicationConfiguration(ApplicationApplicationConfiguration.builder()
+ *                 .applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfiguration.builder()
+ *                     .codeContent(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent.builder()
+ *                         .s3ContentLocation(ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation.builder()
+ *                             .bucketArn(exampleBucketV2.getArn())
+ *                             .fileKey(exampleBucketObjectv2.getKey())
+ *                             .build())
+ *                         .build())
+ *                     .codeContentType(&#34;ZIPFILE&#34;)
+ *                     .build())
+ *                 .vpcConfiguration(ApplicationApplicationConfigurationVpcConfiguration.builder()
+ *                     .securityGroupIds(                    
+ *                         aws_security_group.getExample()[0].getId(),
+ *                         aws_security_group.getExample()[1].getId())
+ *                     .subnetIds(aws_subnet.getExample().getId())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

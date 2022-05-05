@@ -24,6 +24,35 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ec = new EndpointConfiguration(&#34;ec&#34;, EndpointConfigurationArgs.builder()        
+ *             .productionVariants(EndpointConfigurationProductionVariant.builder()
+ *                 .variantName(&#34;variant-1&#34;)
+ *                 .modelName(aws_sagemaker_model.getM().getName())
+ *                 .initialInstanceCount(1)
+ *                 .instanceType(&#34;ml.t2.medium&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foo&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Endpoint configurations can be imported using the `name`, e.g.,

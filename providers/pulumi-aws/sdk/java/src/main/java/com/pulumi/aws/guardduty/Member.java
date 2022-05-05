@@ -19,6 +19,39 @@ import javax.annotation.Nullable;
  * Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the `aws.guardduty.InviteAccepter` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Detector(&#34;primary&#34;, DetectorArgs.builder()        
+ *             .enable(true)
+ *             .build());
+ * 
+ *         var memberDetector = new Detector(&#34;memberDetector&#34;, DetectorArgs.builder()        
+ *             .enable(true)
+ *             .build());
+ * 
+ *         var memberMember = new Member(&#34;memberMember&#34;, MemberArgs.builder()        
+ *             .accountId(memberDetector.getAccountId())
+ *             .detectorId(primary.getId())
+ *             .email(&#34;required@example.com&#34;)
+ *             .invite(true)
+ *             .invitationMessage(&#34;please accept guardduty invitation&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

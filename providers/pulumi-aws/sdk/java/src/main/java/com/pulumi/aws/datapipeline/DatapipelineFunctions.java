@@ -18,6 +18,27 @@ public final class DatapipelineFunctions {
      * Provides details about a specific DataPipeline Pipeline.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DatapipelineFunctions.getPipeline(GetPipelineArgs.builder()
+     *             .pipelineId(&#34;pipelineID&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPipelineResult> getPipeline(GetPipelineArgs args) {
@@ -30,6 +51,27 @@ public final class DatapipelineFunctions {
      * Provides details about a specific DataPipeline Pipeline Definition.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DatapipelineFunctions.getPipelineDefinition(GetPipelineDefinitionArgs.builder()
+     *             .pipelineId(&#34;pipelineID&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetPipelineDefinitionResult> getPipelineDefinition(GetPipelineDefinitionArgs args) {

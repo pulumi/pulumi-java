@@ -20,6 +20,44 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new NetworkAcl(&#34;main&#34;, NetworkAclArgs.builder()        
+ *             .vpcId(aws_vpc.getMain().getId())
+ *             .egress(NetworkAclEgress.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .ruleNo(200)
+ *                 .action(&#34;allow&#34;)
+ *                 .cidrBlock(&#34;10.3.0.0/18&#34;)
+ *                 .fromPort(443)
+ *                 .toPort(443)
+ *                 .build())
+ *             .ingress(NetworkAclIngress.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .ruleNo(100)
+ *                 .action(&#34;allow&#34;)
+ *                 .cidrBlock(&#34;10.3.0.0/18&#34;)
+ *                 .fromPort(80)
+ *                 .toPort(80)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;main&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

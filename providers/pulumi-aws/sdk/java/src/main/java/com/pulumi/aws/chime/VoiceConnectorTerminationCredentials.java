@@ -21,6 +21,45 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Voice Connector Termination Credentials requires a Voice Connector Termination to be present. Use of `depends_on` (as shown below) is recommended to avoid race conditions.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultVoiceConnector = new VoiceConnector(&#34;defaultVoiceConnector&#34;, VoiceConnectorArgs.builder()        
+ *             .requireEncryption(true)
+ *             .build());
+ * 
+ *         var defaultVoiceConnectorTermination = new VoiceConnectorTermination(&#34;defaultVoiceConnectorTermination&#34;, VoiceConnectorTerminationArgs.builder()        
+ *             .disabled(true)
+ *             .cpsLimit(1)
+ *             .cidrAllowLists(&#34;50.35.78.96/31&#34;)
+ *             .callingRegions(            
+ *                 &#34;US&#34;,
+ *                 &#34;CA&#34;)
+ *             .voiceConnectorId(defaultVoiceConnector.getId())
+ *             .build());
+ * 
+ *         var defaultVoiceConnectorTerminationCredentials = new VoiceConnectorTerminationCredentials(&#34;defaultVoiceConnectorTerminationCredentials&#34;, VoiceConnectorTerminationCredentialsArgs.builder()        
+ *             .voiceConnectorId(defaultVoiceConnector.getId())
+ *             .credentials(VoiceConnectorTerminationCredentialsCredential.builder()
+ *                 .username(&#34;test&#34;)
+ *                 .password(&#34;test!&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

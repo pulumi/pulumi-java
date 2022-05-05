@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * * [Aurora PostgreSQL Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new ClusterParameterGroup(&#34;default&#34;, ClusterParameterGroupArgs.builder()        
+ *             .description(&#34;RDS default cluster parameter group&#34;)
+ *             .family(&#34;aurora5.6&#34;)
+ *             .parameters(            
+ *                 ClusterParameterGroupParameter.builder()
+ *                     .name(&#34;character_set_server&#34;)
+ *                     .value(&#34;utf8&#34;)
+ *                     .build(),
+ *                 ClusterParameterGroupParameter.builder()
+ *                     .name(&#34;character_set_client&#34;)
+ *                     .value(&#34;utf8&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

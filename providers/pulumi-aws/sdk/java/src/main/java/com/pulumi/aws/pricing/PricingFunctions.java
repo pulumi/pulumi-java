@@ -17,6 +17,86 @@ public final class PricingFunctions {
      * This data source is only available in a us-east-1 or ap-south-1 provider.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PricingFunctions.getProduct(GetProductArgs.builder()
+     *             .filters(            
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;instanceType&#34;)
+     *                     .value(&#34;c5.xlarge&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;operatingSystem&#34;)
+     *                     .value(&#34;Linux&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;location&#34;)
+     *                     .value(&#34;US East (N. Virginia)&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;preInstalledSw&#34;)
+     *                     .value(&#34;NA&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;licenseModel&#34;)
+     *                     .value(&#34;No License required&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;tenancy&#34;)
+     *                     .value(&#34;Shared&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;capacitystatus&#34;)
+     *                     .value(&#34;Used&#34;)
+     *                     .build())
+     *             .serviceCode(&#34;AmazonEC2&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(PricingFunctions.getProduct(GetProductArgs.builder()
+     *             .filters(            
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;instanceType&#34;)
+     *                     .value(&#34;ds1.xlarge&#34;)
+     *                     .build(),
+     *                 GetProductFilter.builder()
+     *                     .field(&#34;location&#34;)
+     *                     .value(&#34;US East (N. Virginia)&#34;)
+     *                     .build())
+     *             .serviceCode(&#34;AmazonRedshift&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {

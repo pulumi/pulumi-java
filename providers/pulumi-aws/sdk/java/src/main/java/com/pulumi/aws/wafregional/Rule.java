@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * Provides an WAF Regional Rule Resource for use with Application Load Balancer.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipset = new IpSet(&#34;ipset&#34;, IpSetArgs.builder()        
+ *             .ipSetDescriptors(IpSetIpSetDescriptor.builder()
+ *                 .type(&#34;IPV4&#34;)
+ *                 .value(&#34;192.0.7.0/24&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var wafrule = new Rule(&#34;wafrule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;tfWAFRule&#34;)
+ *             .predicates(RulePredicate.builder()
+ *                 .type(&#34;IPMatch&#34;)
+ *                 .dataId(ipset.getId())
+ *                 .negated(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Nested Fields
  * 
  * ### `predicate`

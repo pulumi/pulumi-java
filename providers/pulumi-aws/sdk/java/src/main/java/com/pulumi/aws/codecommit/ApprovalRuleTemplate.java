@@ -18,6 +18,39 @@ import javax.annotation.Nullable;
  * Provides a CodeCommit Approval Rule Template Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApprovalRuleTemplate(&#34;example&#34;, ApprovalRuleTemplateArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2018-11-08&#34;,
+ *     &#34;DestinationReferences&#34;: [&#34;refs/heads/master&#34;],
+ *     &#34;Statements&#34;: [{
+ *         &#34;Type&#34;: &#34;Approvers&#34;,
+ *         &#34;NumberOfApprovalsNeeded&#34;: 2,
+ *         &#34;ApprovalPoolMembers&#34;: [&#34;arn:aws:sts::123456789012:assumed-role/CodeCommitReview/*&#34;]
+ *     }]
+ * }
+ * 
+ *             &#34;&#34;&#34;)
+ *             .description(&#34;This is an example approval rule template&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

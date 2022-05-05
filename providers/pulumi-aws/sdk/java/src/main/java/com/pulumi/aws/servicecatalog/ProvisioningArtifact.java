@@ -25,6 +25,30 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The user or role that use this resource must have the `cloudformation:GetTemplate` IAM policy permission. This policy permission is required when using the `template_physical_id` argument.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ProvisioningArtifact(&#34;example&#34;, ProvisioningArtifactArgs.builder()        
+ *             .productId(aws_servicecatalog_product.getExample().getId())
+ *             .type(&#34;CLOUD_FORMATION_TEMPLATE&#34;)
+ *             .templateUrl(String.format(&#34;https://%s/%s&#34;, aws_s3_bucket.getExample().getBucket_regional_domain_name(),aws_s3_object.getExample().getKey()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

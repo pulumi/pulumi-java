@@ -18,6 +18,31 @@ import javax.annotation.Nullable;
  * Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ConditionalForwader(&#34;example&#34;, ConditionalForwaderArgs.builder()        
+ *             .directoryId(aws_directory_service_directory.getAd().getId())
+ *             .remoteDomainName(&#34;example.com&#34;)
+ *             .dnsIps(            
+ *                 &#34;8.8.8.8&#34;,
+ *                 &#34;8.8.4.4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

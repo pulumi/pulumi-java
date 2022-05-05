@@ -33,6 +33,578 @@ import javax.annotation.Nullable;
  * To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for [task nodes](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-task), see the `aws.emr.InstanceGroup` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .releaseLabel(&#34;emr-4.6.0&#34;)
+ *             .applications(&#34;Spark&#34;)
+ *             .additionalInfo(&#34;&#34;&#34;
+ * {
+ *   &#34;instanceAwsClientConfiguration&#34;: {
+ *     &#34;proxyPort&#34;: 8099,
+ *     &#34;proxyHost&#34;: &#34;myproxy.example.com&#34;
+ *   }
+ * }
+ *             &#34;&#34;&#34;)
+ *             .terminationProtection(false)
+ *             .keepJobFlowAliveWhenNoSteps(true)
+ *             .ec2Attributes(ClusterEc2Attributes.builder()
+ *                 .subnetId(aws_subnet.getMain().getId())
+ *                 .emrManagedMasterSecurityGroup(aws_security_group.getSg().getId())
+ *                 .emrManagedSlaveSecurityGroup(aws_security_group.getSg().getId())
+ *                 .instanceProfile(aws_iam_instance_profile.getEmr_profile().getArn())
+ *                 .build())
+ *             .masterInstanceGroup(ClusterMasterInstanceGroup.builder()
+ *                 .instanceType(&#34;m4.large&#34;)
+ *                 .build())
+ *             .coreInstanceGroup(ClusterCoreInstanceGroup.builder()
+ *                 .instanceType(&#34;c4.large&#34;)
+ *                 .instanceCount(1)
+ *                 .ebsConfigs(ClusterCoreInstanceGroupEbsConfig.builder()
+ *                     .size(&#34;40&#34;)
+ *                     .type(&#34;gp2&#34;)
+ *                     .volumesPerInstance(1)
+ *                     .build())
+ *                 .bidPrice(&#34;0.30&#34;)
+ *                 .autoscalingPolicy(&#34;&#34;&#34;
+ * {
+ * &#34;Constraints&#34;: {
+ *   &#34;MinCapacity&#34;: 1,
+ *   &#34;MaxCapacity&#34;: 2
+ * },
+ * &#34;Rules&#34;: [
+ *   {
+ *     &#34;Name&#34;: &#34;ScaleOutMemoryPercentage&#34;,
+ *     &#34;Description&#34;: &#34;Scale out if YARNMemoryAvailablePercentage is less than 15&#34;,
+ *     &#34;Action&#34;: {
+ *       &#34;SimpleScalingPolicyConfiguration&#34;: {
+ *         &#34;AdjustmentType&#34;: &#34;CHANGE_IN_CAPACITY&#34;,
+ *         &#34;ScalingAdjustment&#34;: 1,
+ *         &#34;CoolDown&#34;: 300
+ *       }
+ *     },
+ *     &#34;Trigger&#34;: {
+ *       &#34;CloudWatchAlarmDefinition&#34;: {
+ *         &#34;ComparisonOperator&#34;: &#34;LESS_THAN&#34;,
+ *         &#34;EvaluationPeriods&#34;: 1,
+ *         &#34;MetricName&#34;: &#34;YARNMemoryAvailablePercentage&#34;,
+ *         &#34;Namespace&#34;: &#34;AWS/ElasticMapReduce&#34;,
+ *         &#34;Period&#34;: 300,
+ *         &#34;Statistic&#34;: &#34;AVERAGE&#34;,
+ *         &#34;Threshold&#34;: 15.0,
+ *         &#34;Unit&#34;: &#34;PERCENT&#34;
+ *       }
+ *     }
+ *   }
+ * ]
+ * }
+ *                 &#34;&#34;&#34;)
+ *                 .build())
+ *             .ebsRootVolumeSize(100)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;role&#34;, &#34;rolename&#34;),
+ *                 Map.entry(&#34;env&#34;, &#34;env&#34;)
+ *             ))
+ *             .bootstrapActions(ClusterBootstrapAction.builder()
+ *                 .path(&#34;s3://elasticmapreduce/bootstrap-actions/run-if&#34;)
+ *                 .name(&#34;runif&#34;)
+ *                 .args(                
+ *                     &#34;instance.isMaster=true&#34;,
+ *                     &#34;echo running on master node&#34;)
+ *                 .build())
+ *             .configurationsJson(&#34;&#34;&#34;
+ *   [
+ *     {
+ *       &#34;Classification&#34;: &#34;hadoop-env&#34;,
+ *       &#34;Configurations&#34;: [
+ *         {
+ *           &#34;Classification&#34;: &#34;export&#34;,
+ *           &#34;Properties&#34;: {
+ *             &#34;JAVA_HOME&#34;: &#34;/usr/lib/jvm/java-1.8.0&#34;
+ *           }
+ *         }
+ *       ],
+ *       &#34;Properties&#34;: {}
+ *     },
+ *     {
+ *       &#34;Classification&#34;: &#34;spark-env&#34;,
+ *       &#34;Configurations&#34;: [
+ *         {
+ *           &#34;Classification&#34;: &#34;export&#34;,
+ *           &#34;Properties&#34;: {
+ *             &#34;JAVA_HOME&#34;: &#34;/usr/lib/jvm/java-1.8.0&#34;
+ *           }
+ *         }
+ *       ],
+ *       &#34;Properties&#34;: {}
+ *     }
+ *   ]
+ *             &#34;&#34;&#34;)
+ *             .serviceRole(aws_iam_role.getIam_emr_service_role().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * The `aws.emr.Cluster` resource typically requires two IAM roles, one for the EMR Cluster to use as a service, and another to place on your Cluster Instances to interact with AWS from those instances. The suggested role policy template for the EMR service is `AmazonElasticMapReduceRole`, and `AmazonElasticMapReduceforEC2Role` for the EC2 profile. See the [Getting Started](https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr-gs-launch-sample-cluster.html) guide for more information on these IAM roles.
+ * ### Instance Fleet
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .masterInstanceFleet(ClusterMasterInstanceFleet.builder()
+ *                 .instanceTypeConfigs(ClusterMasterInstanceFleetInstanceTypeConfig.builder()
+ *                     .instanceType(&#34;m4.xlarge&#34;)
+ *                     .build())
+ *                 .targetOnDemandCapacity(1)
+ *                 .build())
+ *             .coreInstanceFleet(ClusterCoreInstanceFleet.builder()
+ *                 .instanceTypeConfigs(                
+ *                     ClusterCoreInstanceFleetInstanceTypeConfig.builder()
+ *                         .bidPriceAsPercentageOfOnDemandPrice(80)
+ *                         .ebsConfigs(ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                             .size(100)
+ *                             .type(&#34;gp2&#34;)
+ *                             .volumesPerInstance(1)
+ *                             .build())
+ *                         .instanceType(&#34;m3.xlarge&#34;)
+ *                         .weightedCapacity(1)
+ *                         .build(),
+ *                     ClusterCoreInstanceFleetInstanceTypeConfig.builder()
+ *                         .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                         .ebsConfigs(ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                             .size(100)
+ *                             .type(&#34;gp2&#34;)
+ *                             .volumesPerInstance(1)
+ *                             .build())
+ *                         .instanceType(&#34;m4.xlarge&#34;)
+ *                         .weightedCapacity(1)
+ *                         .build(),
+ *                     ClusterCoreInstanceFleetInstanceTypeConfig.builder()
+ *                         .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                         .ebsConfigs(ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                             .size(100)
+ *                             .type(&#34;gp2&#34;)
+ *                             .volumesPerInstance(1)
+ *                             .build())
+ *                         .instanceType(&#34;m4.2xlarge&#34;)
+ *                         .weightedCapacity(2)
+ *                         .build())
+ *                 .launchSpecifications(ClusterCoreInstanceFleetLaunchSpecifications.builder()
+ *                     .spotSpecifications(ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification.builder()
+ *                         .allocationStrategy(&#34;capacity-optimized&#34;)
+ *                         .blockDurationMinutes(0)
+ *                         .timeoutAction(&#34;SWITCH_TO_ON_DEMAND&#34;)
+ *                         .timeoutDurationMinutes(10)
+ *                         .build())
+ *                     .build())
+ *                 .name(&#34;core fleet&#34;)
+ *                 .targetOnDemandCapacity(2)
+ *                 .targetSpotCapacity(2)
+ *                 .build())
+ *             .build());
+ * 
+ *         var task = new InstanceFleet(&#34;task&#34;, InstanceFleetArgs.builder()        
+ *             .clusterId(example.getId())
+ *             .instanceTypeConfigs(            
+ *                 InstanceFleetInstanceTypeConfig.builder()
+ *                     .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                     .ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                         .size(100)
+ *                         .type(&#34;gp2&#34;)
+ *                         .volumesPerInstance(1)
+ *                         .build())
+ *                     .instanceType(&#34;m4.xlarge&#34;)
+ *                     .weightedCapacity(1)
+ *                     .build(),
+ *                 InstanceFleetInstanceTypeConfig.builder()
+ *                     .bidPriceAsPercentageOfOnDemandPrice(100)
+ *                     .ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfig.builder()
+ *                         .size(100)
+ *                         .type(&#34;gp2&#34;)
+ *                         .volumesPerInstance(1)
+ *                         .build())
+ *                     .instanceType(&#34;m4.2xlarge&#34;)
+ *                     .weightedCapacity(2)
+ *                     .build())
+ *             .launchSpecifications(InstanceFleetLaunchSpecifications.builder()
+ *                 .spotSpecifications(InstanceFleetLaunchSpecificationsSpotSpecification.builder()
+ *                     .allocationStrategy(&#34;capacity-optimized&#34;)
+ *                     .blockDurationMinutes(0)
+ *                     .timeoutAction(&#34;TERMINATE_CLUSTER&#34;)
+ *                     .timeoutDurationMinutes(10)
+ *                     .build())
+ *                 .build())
+ *             .targetOnDemandCapacity(1)
+ *             .targetSpotCapacity(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Enable Debug Logging
+ * 
+ * [Debug logging in EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html) is implemented as a step. It is highly recommended that you utilize the resource options configuration with `ignoreChanges` if other steps are being managed outside of this provider.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .steps(ClusterStep.builder()
+ *                 .actionOnFailure(&#34;TERMINATE_CLUSTER&#34;)
+ *                 .name(&#34;Setup Hadoop Debugging&#34;)
+ *                 .hadoopJarStep(ClusterStepHadoopJarStep.builder()
+ *                     .jar(&#34;command-runner.jar&#34;)
+ *                     .args(&#34;state-pusher-script&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Multiple Node Master Instance Group
+ * 
+ * Available in EMR version 5.23.0 and later, an EMR Cluster can be launched with three master nodes for high availability. Additional information about this functionality and its requirements can be found in the [EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-ha.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleSubnet = new Subnet(&#34;exampleSubnet&#34;, SubnetArgs.builder()        
+ *             .mapPublicIpOnLaunch(true)
+ *             .build());
+ * 
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;, ClusterArgs.builder()        
+ *             .releaseLabel(&#34;emr-5.24.1&#34;)
+ *             .terminationProtection(true)
+ *             .ec2Attributes(ClusterEc2Attributes.builder()
+ *                 .subnetId(exampleSubnet.getId())
+ *                 .build())
+ *             .masterInstanceGroup(ClusterMasterInstanceGroup.builder()
+ *                 .instanceCount(3)
+ *                 .build())
+ *             .coreInstanceGroup()
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Bootable Cluster
+ * 
+ * **NOTE:** This configuration demonstrates a minimal configuration needed to boot an example EMR Cluster. It is not meant to display best practices. As with all examples, use at your own risk.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mainVpc = new Vpc(&#34;mainVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;168.31.0.0/16&#34;)
+ *             .enableDnsHostnames(true)
+ *             .tags(Map.of(&#34;name&#34;, &#34;emr_test&#34;))
+ *             .build());
+ * 
+ *         var mainSubnet = new Subnet(&#34;mainSubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(mainVpc.getId())
+ *             .cidrBlock(&#34;168.31.0.0/20&#34;)
+ *             .tags(Map.of(&#34;name&#34;, &#34;emr_test&#34;))
+ *             .build());
+ * 
+ *         var allowAccess = new SecurityGroup(&#34;allowAccess&#34;, SecurityGroupArgs.builder()        
+ *             .description(&#34;Allow inbound traffic&#34;)
+ *             .vpcId(mainVpc.getId())
+ *             .ingress(SecurityGroupIngress.builder()
+ *                 .fromPort(0)
+ *                 .toPort(0)
+ *                 .protocol(&#34;-1&#34;)
+ *                 .cidrBlocks(mainVpc.getCidrBlock())
+ *                 .build())
+ *             .egress(SecurityGroupEgress.builder()
+ *                 .fromPort(0)
+ *                 .toPort(0)
+ *                 .protocol(&#34;-1&#34;)
+ *                 .cidrBlocks(&#34;0.0.0.0/0&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;name&#34;, &#34;emr_test&#34;))
+ *             .build());
+ * 
+ *         var iamEmrServiceRole = new Role(&#34;iamEmrServiceRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2008-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;elasticmapreduce.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var iamEmrProfileRole = new Role(&#34;iamEmrProfileRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2008-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;ec2.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var emrProfile = new InstanceProfile(&#34;emrProfile&#34;, InstanceProfileArgs.builder()        
+ *             .role(iamEmrProfileRole.getName())
+ *             .build());
+ * 
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .releaseLabel(&#34;emr-4.6.0&#34;)
+ *             .applications(&#34;Spark&#34;)
+ *             .ec2Attributes(ClusterEc2Attributes.builder()
+ *                 .subnetId(mainSubnet.getId())
+ *                 .emrManagedMasterSecurityGroup(allowAccess.getId())
+ *                 .emrManagedSlaveSecurityGroup(allowAccess.getId())
+ *                 .instanceProfile(emrProfile.getArn())
+ *                 .build())
+ *             .masterInstanceGroup(ClusterMasterInstanceGroup.builder()
+ *                 .instanceType(&#34;m5.xlarge&#34;)
+ *                 .build())
+ *             .coreInstanceGroup(ClusterCoreInstanceGroup.builder()
+ *                 .instanceCount(1)
+ *                 .instanceType(&#34;m5.xlarge&#34;)
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;role&#34;, &#34;rolename&#34;),
+ *                 Map.entry(&#34;dns_zone&#34;, &#34;env_zone&#34;),
+ *                 Map.entry(&#34;env&#34;, &#34;env&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;name-env&#34;)
+ *             ))
+ *             .bootstrapActions(ClusterBootstrapAction.builder()
+ *                 .path(&#34;s3://elasticmapreduce/bootstrap-actions/run-if&#34;)
+ *                 .name(&#34;runif&#34;)
+ *                 .args(                
+ *                     &#34;instance.isMaster=true&#34;,
+ *                     &#34;echo running on master node&#34;)
+ *                 .build())
+ *             .configurationsJson(&#34;&#34;&#34;
+ *   [
+ *     {
+ *       &#34;Classification&#34;: &#34;hadoop-env&#34;,
+ *       &#34;Configurations&#34;: [
+ *         {
+ *           &#34;Classification&#34;: &#34;export&#34;,
+ *           &#34;Properties&#34;: {
+ *             &#34;JAVA_HOME&#34;: &#34;/usr/lib/jvm/java-1.8.0&#34;
+ *           }
+ *         }
+ *       ],
+ *       &#34;Properties&#34;: {}
+ *     },
+ *     {
+ *       &#34;Classification&#34;: &#34;spark-env&#34;,
+ *       &#34;Configurations&#34;: [
+ *         {
+ *           &#34;Classification&#34;: &#34;export&#34;,
+ *           &#34;Properties&#34;: {
+ *             &#34;JAVA_HOME&#34;: &#34;/usr/lib/jvm/java-1.8.0&#34;
+ *           }
+ *         }
+ *       ],
+ *       &#34;Properties&#34;: {}
+ *     }
+ *   ]
+ *             &#34;&#34;&#34;)
+ *             .serviceRole(iamEmrServiceRole.getArn())
+ *             .build());
+ * 
+ *         var gw = new InternetGateway(&#34;gw&#34;, InternetGatewayArgs.builder()        
+ *             .vpcId(mainVpc.getId())
+ *             .build());
+ * 
+ *         var routeTable = new RouteTable(&#34;routeTable&#34;, RouteTableArgs.builder()        
+ *             .vpcId(mainVpc.getId())
+ *             .routes(RouteTableRoute.builder()
+ *                 .cidrBlock(&#34;0.0.0.0/0&#34;)
+ *                 .gatewayId(gw.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var mainRouteTableAssociation = new MainRouteTableAssociation(&#34;mainRouteTableAssociation&#34;, MainRouteTableAssociationArgs.builder()        
+ *             .vpcId(mainVpc.getId())
+ *             .routeTableId(routeTable.getId())
+ *             .build());
+ * 
+ *         var iamEmrServicePolicy = new RolePolicy(&#34;iamEmrServicePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(iamEmrServiceRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [{
+ *         &#34;Effect&#34;: &#34;Allow&#34;,
+ *         &#34;Resource&#34;: &#34;*&#34;,
+ *         &#34;Action&#34;: [
+ *             &#34;ec2:AuthorizeSecurityGroupEgress&#34;,
+ *             &#34;ec2:AuthorizeSecurityGroupIngress&#34;,
+ *             &#34;ec2:CancelSpotInstanceRequests&#34;,
+ *             &#34;ec2:CreateNetworkInterface&#34;,
+ *             &#34;ec2:CreateSecurityGroup&#34;,
+ *             &#34;ec2:CreateTags&#34;,
+ *             &#34;ec2:DeleteNetworkInterface&#34;,
+ *             &#34;ec2:DeleteSecurityGroup&#34;,
+ *             &#34;ec2:DeleteTags&#34;,
+ *             &#34;ec2:DescribeAvailabilityZones&#34;,
+ *             &#34;ec2:DescribeAccountAttributes&#34;,
+ *             &#34;ec2:DescribeDhcpOptions&#34;,
+ *             &#34;ec2:DescribeInstanceStatus&#34;,
+ *             &#34;ec2:DescribeInstances&#34;,
+ *             &#34;ec2:DescribeKeyPairs&#34;,
+ *             &#34;ec2:DescribeNetworkAcls&#34;,
+ *             &#34;ec2:DescribeNetworkInterfaces&#34;,
+ *             &#34;ec2:DescribePrefixLists&#34;,
+ *             &#34;ec2:DescribeRouteTables&#34;,
+ *             &#34;ec2:DescribeSecurityGroups&#34;,
+ *             &#34;ec2:DescribeSpotInstanceRequests&#34;,
+ *             &#34;ec2:DescribeSpotPriceHistory&#34;,
+ *             &#34;ec2:DescribeSubnets&#34;,
+ *             &#34;ec2:DescribeVpcAttribute&#34;,
+ *             &#34;ec2:DescribeVpcEndpoints&#34;,
+ *             &#34;ec2:DescribeVpcEndpointServices&#34;,
+ *             &#34;ec2:DescribeVpcs&#34;,
+ *             &#34;ec2:DetachNetworkInterface&#34;,
+ *             &#34;ec2:ModifyImageAttribute&#34;,
+ *             &#34;ec2:ModifyInstanceAttribute&#34;,
+ *             &#34;ec2:RequestSpotInstances&#34;,
+ *             &#34;ec2:RevokeSecurityGroupEgress&#34;,
+ *             &#34;ec2:RunInstances&#34;,
+ *             &#34;ec2:TerminateInstances&#34;,
+ *             &#34;ec2:DeleteVolume&#34;,
+ *             &#34;ec2:DescribeVolumeStatus&#34;,
+ *             &#34;ec2:DescribeVolumes&#34;,
+ *             &#34;ec2:DetachVolume&#34;,
+ *             &#34;iam:GetRole&#34;,
+ *             &#34;iam:GetRolePolicy&#34;,
+ *             &#34;iam:ListInstanceProfiles&#34;,
+ *             &#34;iam:ListRolePolicies&#34;,
+ *             &#34;iam:PassRole&#34;,
+ *             &#34;s3:CreateBucket&#34;,
+ *             &#34;s3:Get*&#34;,
+ *             &#34;s3:List*&#34;,
+ *             &#34;sdb:BatchPutAttributes&#34;,
+ *             &#34;sdb:Select&#34;,
+ *             &#34;sqs:CreateQueue&#34;,
+ *             &#34;sqs:Delete*&#34;,
+ *             &#34;sqs:GetQueue*&#34;,
+ *             &#34;sqs:PurgeQueue&#34;,
+ *             &#34;sqs:ReceiveMessage&#34;
+ *         ]
+ *     }]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var iamEmrProfilePolicy = new RolePolicy(&#34;iamEmrProfilePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(iamEmrProfileRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [{
+ *         &#34;Effect&#34;: &#34;Allow&#34;,
+ *         &#34;Resource&#34;: &#34;*&#34;,
+ *         &#34;Action&#34;: [
+ *             &#34;cloudwatch:*&#34;,
+ *             &#34;dynamodb:*&#34;,
+ *             &#34;ec2:Describe*&#34;,
+ *             &#34;elasticmapreduce:Describe*&#34;,
+ *             &#34;elasticmapreduce:ListBootstrapActions&#34;,
+ *             &#34;elasticmapreduce:ListClusters&#34;,
+ *             &#34;elasticmapreduce:ListInstanceGroups&#34;,
+ *             &#34;elasticmapreduce:ListInstances&#34;,
+ *             &#34;elasticmapreduce:ListSteps&#34;,
+ *             &#34;kinesis:CreateStream&#34;,
+ *             &#34;kinesis:DeleteStream&#34;,
+ *             &#34;kinesis:DescribeStream&#34;,
+ *             &#34;kinesis:GetRecords&#34;,
+ *             &#34;kinesis:GetShardIterator&#34;,
+ *             &#34;kinesis:MergeShards&#34;,
+ *             &#34;kinesis:PutRecord&#34;,
+ *             &#34;kinesis:SplitShard&#34;,
+ *             &#34;rds:Describe*&#34;,
+ *             &#34;s3:*&#34;,
+ *             &#34;sdb:*&#34;,
+ *             &#34;sns:*&#34;,
+ *             &#34;sqs:*&#34;
+ *         ]
+ *     }]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,29 @@ import javax.annotation.Nullable;
  * &gt; *NOTE:* When creating a LAG, if no existing connection is specified, Direct Connect will create a connection and this provider will remove this unmanaged connection during resource creation.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hoge = new LinkAggregationGroup(&#34;hoge&#34;, LinkAggregationGroupArgs.builder()        
+ *             .connectionsBandwidth(&#34;1Gbps&#34;)
+ *             .forceDestroy(true)
+ *             .location(&#34;EqDC2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

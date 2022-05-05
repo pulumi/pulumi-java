@@ -18,6 +18,36 @@ import javax.annotation.Nullable;
  * Provides a Glue Data Catalog Encryption Settings resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DataCatalogEncryptionSettings(&#34;example&#34;, DataCatalogEncryptionSettingsArgs.builder()        
+ *             .dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsDataCatalogEncryptionSettings.builder()
+ *                 .connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption.builder()
+ *                     .awsKmsKeyId(aws_kms_key.getTest().getArn())
+ *                     .returnConnectionPasswordEncrypted(true)
+ *                     .build())
+ *                 .encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest.builder()
+ *                     .catalogEncryptionMode(&#34;SSE-KMS&#34;)
+ *                     .sseAwsKmsKeyId(aws_kms_key.getTest().getArn())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

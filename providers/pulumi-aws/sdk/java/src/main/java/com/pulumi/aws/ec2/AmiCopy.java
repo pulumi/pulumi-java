@@ -33,6 +33,30 @@ import javax.annotation.Nullable;
  * block until the new AMI is available for use on new instances.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AmiCopy(&#34;example&#34;, AmiCopyArgs.builder()        
+ *             .description(&#34;A copy of ami-xxxxxxxx&#34;)
+ *             .sourceAmiId(&#34;ami-xxxxxxxx&#34;)
+ *             .sourceAmiRegion(&#34;us-west-1&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ec2/amiCopy:AmiCopy")

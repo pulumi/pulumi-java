@@ -17,6 +17,33 @@ import javax.annotation.Nullable;
  * Subscribes to a Security Hub standard.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Account(&#34;example&#34;);
+ * 
+ *         var cis = new StandardsSubscription(&#34;cis&#34;, StandardsSubscriptionArgs.builder()        
+ *             .standardsArn(&#34;arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0&#34;)
+ *             .build());
+ * 
+ *         var pci321 = new StandardsSubscription(&#34;pci321&#34;, StandardsSubscriptionArgs.builder()        
+ *             .standardsArn(&#34;arn:aws:securityhub:us-east-1::standards/pci-dss/v/3.2.1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * Manages an RDS database instance snapshot. For managing RDS database cluster snapshots, see the `aws.rds.ClusterSnapshot` resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Instance(&#34;bar&#34;, InstanceArgs.builder()        
+ *             .allocatedStorage(10)
+ *             .engine(&#34;mysql&#34;)
+ *             .engineVersion(&#34;5.6.21&#34;)
+ *             .instanceClass(&#34;db.t2.micro&#34;)
+ *             .name(&#34;baz&#34;)
+ *             .password(&#34;barbarbarbar&#34;)
+ *             .username(&#34;foo&#34;)
+ *             .maintenanceWindow(&#34;Fri:09:00-Fri:09:30&#34;)
+ *             .backupRetentionPeriod(0)
+ *             .parameterGroupName(&#34;default.mysql5.6&#34;)
+ *             .build());
+ * 
+ *         var test = new Snapshot(&#34;test&#34;, SnapshotArgs.builder()        
+ *             .dbInstanceIdentifier(bar.getId())
+ *             .dbSnapshotIdentifier(&#34;testsnapshot1234&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

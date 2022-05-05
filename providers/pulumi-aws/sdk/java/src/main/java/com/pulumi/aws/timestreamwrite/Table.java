@@ -21,6 +21,57 @@ import javax.annotation.Nullable;
  * Provides a Timestream table resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Table(&#34;example&#34;, TableArgs.builder()        
+ *             .databaseName(aws_timestreamwrite_database.getExample().getDatabase_name())
+ *             .tableName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Full usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Table(&#34;example&#34;, TableArgs.builder()        
+ *             .databaseName(aws_timestreamwrite_database.getExample().getDatabase_name())
+ *             .tableName(&#34;example&#34;)
+ *             .retentionProperties(TableRetentionProperties.builder()
+ *                 .magneticStoreRetentionPeriodInDays(30)
+ *                 .memoryStoreRetentionPeriodInHours(8)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-timestream-table&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

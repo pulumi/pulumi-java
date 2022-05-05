@@ -40,6 +40,168 @@ import javax.annotation.Nullable;
  * for more information.
  * 
  * ## Example Usage
+ * ### Aurora MySQL 2.x (MySQL 5.7)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .clusterIdentifier(&#34;aurora-cluster-demo&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .engine(&#34;aurora-mysql&#34;)
+ *             .engineVersion(&#34;5.7.mysql_aurora.2.03.2&#34;)
+ *             .masterPassword(&#34;bar&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aurora MySQL 1.x (MySQL 5.6)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new Cluster(&#34;default&#34;, ClusterArgs.builder()        
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .clusterIdentifier(&#34;aurora-cluster-demo&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .masterPassword(&#34;bar&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aurora with PostgreSQL engine
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var postgresql = new Cluster(&#34;postgresql&#34;, ClusterArgs.builder()        
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .backupRetentionPeriod(5)
+ *             .clusterIdentifier(&#34;aurora-cluster-demo&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .engine(&#34;aurora-postgresql&#34;)
+ *             .masterPassword(&#34;bar&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .preferredBackupWindow(&#34;07:00-09:00&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aurora Multi-Master Cluster
+ * 
+ * &gt; More information about Aurora Multi-Master Clusters can be found in the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;example&#34;)
+ *             .dbSubnetGroupName(aws_db_subnet_group.getExample().getName())
+ *             .engineMode(&#34;multimaster&#34;)
+ *             .masterPassword(&#34;barbarbarbar&#34;)
+ *             .masterUsername(&#34;foo&#34;)
+ *             .skipFinalSnapshot(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### RDS Multi-AZ Cluster
+ * 
+ * &gt; More information about RDS Multi-AZ Clusters can be found in the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html).
+ * 
+ * To create a Multi-AZ RDS cluster, you must additionally specify the `engine`, `storage_type`, `allocated_storage`, `iops` and `db_cluster_instance_class` attributes.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .allocatedStorage(100)
+ *             .availabilityZones(            
+ *                 &#34;us-west-2a&#34;,
+ *                 &#34;us-west-2b&#34;,
+ *                 &#34;us-west-2c&#34;)
+ *             .clusterIdentifier(&#34;example&#34;)
+ *             .dbClusterInstanceClass(&#34;db.r6gd.xlarge&#34;)
+ *             .engine(&#34;mysql&#34;)
+ *             .iops(1000)
+ *             .masterPassword(&#34;mustbeeightcharaters&#34;)
+ *             .masterUsername(&#34;test&#34;)
+ *             .storageType(&#34;io1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

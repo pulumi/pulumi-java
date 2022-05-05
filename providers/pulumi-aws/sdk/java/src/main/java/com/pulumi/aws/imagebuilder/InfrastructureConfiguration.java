@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Infrastructure Configuration.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new InfrastructureConfiguration(&#34;example&#34;, InfrastructureConfigurationArgs.builder()        
+ *             .description(&#34;example description&#34;)
+ *             .instanceProfileName(aws_iam_instance_profile.getExample().getName())
+ *             .instanceTypes(            
+ *                 &#34;t2.nano&#34;,
+ *                 &#34;t3.micro&#34;)
+ *             .keyPair(aws_key_pair.getExample().getKey_name())
+ *             .securityGroupIds(aws_security_group.getExample().getId())
+ *             .snsTopicArn(aws_sns_topic.getExample().getArn())
+ *             .subnetId(aws_subnet.getMain().getId())
+ *             .terminateInstanceOnFailure(true)
+ *             .logging(InfrastructureConfigurationLogging.builder()
+ *                 .s3Logs(InfrastructureConfigurationLoggingS3Logs.builder()
+ *                     .s3BucketName(aws_s3_bucket.getExample().getBucket())
+ *                     .s3KeyPrefix(&#34;logs&#34;)
+ *                     .build())
+ *                 .build())
+ *             .tags(Map.of(&#34;foo&#34;, &#34;bar&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

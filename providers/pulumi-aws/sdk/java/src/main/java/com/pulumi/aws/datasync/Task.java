@@ -22,6 +22,59 @@ import javax.annotation.Nullable;
  * Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.
  * 
  * ## Example Usage
+ * ### With Scheduling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Task(&#34;example&#34;, TaskArgs.builder()        
+ *             .destinationLocationArn(aws_datasync_location_s3.getDestination().getArn())
+ *             .sourceLocationArn(aws_datasync_location_nfs.getSource().getArn())
+ *             .schedule(TaskSchedule.builder()
+ *                 .scheduleExpression(&#34;cron(0 12 ? * SUN,WED *)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Filtering
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Task(&#34;example&#34;, TaskArgs.builder()        
+ *             .destinationLocationArn(aws_datasync_location_s3.getDestination().getArn())
+ *             .sourceLocationArn(aws_datasync_location_nfs.getSource().getArn())
+ *             .excludes(TaskExcludes.builder()
+ *                 .filterType(&#34;SIMPLE_PATTERN&#34;)
+ *                 .value(&#34;/folder1|/folder2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

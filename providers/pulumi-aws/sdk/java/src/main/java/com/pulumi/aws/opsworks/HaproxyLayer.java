@@ -24,6 +24,28 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks haproxy layer resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lb = new HaproxyLayer(&#34;lb&#34;, HaproxyLayerArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMain().getId())
+ *             .statsPassword(&#34;foobarbaz&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/haproxyLayer:HaproxyLayer")

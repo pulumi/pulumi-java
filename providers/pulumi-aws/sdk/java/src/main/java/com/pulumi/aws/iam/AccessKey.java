@@ -18,6 +18,77 @@ import javax.annotation.Nullable;
  * Provides an IAM access key. This is a set of credentials that allow API requests to be made as an IAM user.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lbUser = new User(&#34;lbUser&#34;, UserArgs.builder()        
+ *             .path(&#34;/system/&#34;)
+ *             .build());
+ * 
+ *         var lbAccessKey = new AccessKey(&#34;lbAccessKey&#34;, AccessKeyArgs.builder()        
+ *             .user(lbUser.getName())
+ *             .pgpKey(&#34;keybase:some_person_that_exists&#34;)
+ *             .build());
+ * 
+ *         var lbRo = new UserPolicy(&#34;lbRo&#34;, UserPolicyArgs.builder()        
+ *             .user(lbUser.getName())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;ec2:Describe*&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         ctx.export(&#34;secret&#34;, lbAccessKey.getEncryptedSecret());
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testUser = new User(&#34;testUser&#34;, UserArgs.builder()        
+ *             .path(&#34;/test/&#34;)
+ *             .build());
+ * 
+ *         var testAccessKey = new AccessKey(&#34;testAccessKey&#34;, AccessKeyArgs.builder()        
+ *             .user(testUser.getName())
+ *             .build());
+ * 
+ *         ctx.export(&#34;awsIamSmtpPasswordV4&#34;, testAccessKey.getSesSmtpPasswordV4());
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

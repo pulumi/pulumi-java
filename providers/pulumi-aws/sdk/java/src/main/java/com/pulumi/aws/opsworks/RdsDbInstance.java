@@ -17,6 +17,30 @@ import javax.annotation.Nullable;
  * Provides an OpsWorks RDS DB Instance resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myInstance = new RdsDbInstance(&#34;myInstance&#34;, RdsDbInstanceArgs.builder()        
+ *             .stackId(aws_opsworks_stack.getMy_stack().getId())
+ *             .rdsDbInstanceArn(aws_db_instance.getMy_instance().getArn())
+ *             .dbUser(&#34;someUser&#34;)
+ *             .dbPassword(&#34;somePass&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:opsworks/rdsDbInstance:RdsDbInstance")

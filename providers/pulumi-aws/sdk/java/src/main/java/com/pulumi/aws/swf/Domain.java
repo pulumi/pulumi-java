@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * To register a basic SWF domain:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Domain(&#34;foo&#34;, DomainArgs.builder()        
+ *             .description(&#34;SWF Domain&#34;)
+ *             .workflowExecutionRetentionPeriodInDays(30)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * SWF Domains can be imported using the `name`, e.g.,

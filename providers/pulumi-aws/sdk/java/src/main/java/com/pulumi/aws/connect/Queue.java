@@ -25,6 +25,87 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Due to The behaviour of Amazon Connect you cannot delete queues.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Queue(&#34;test&#34;, QueueArgs.builder()        
+ *             .description(&#34;Example Description&#34;)
+ *             .hoursOfOperationId(&#34;12345678-1234-1234-1234-123456789012&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Queue&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Quick Connect IDs
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Queue(&#34;test&#34;, QueueArgs.builder()        
+ *             .description(&#34;Example Description&#34;)
+ *             .hoursOfOperationId(&#34;12345678-1234-1234-1234-123456789012&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .quickConnectIds(&#34;12345678-abcd-1234-abcd-123456789012&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Queue with Quick Connect IDs&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### With Outbound Caller Config
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Queue(&#34;test&#34;, QueueArgs.builder()        
+ *             .description(&#34;Example Description&#34;)
+ *             .hoursOfOperationId(&#34;12345678-1234-1234-1234-123456789012&#34;)
+ *             .instanceId(&#34;aaaaaaaa-bbbb-cccc-dddd-111111111111&#34;)
+ *             .outboundCallerConfig(QueueOutboundCallerConfig.builder()
+ *                 .outboundCallerIdName(&#34;example&#34;)
+ *                 .outboundCallerIdNumberId(&#34;12345678-abcd-1234-abcd-123456789012&#34;)
+ *                 .outboundFlowId(&#34;87654321-defg-1234-defg-987654321234&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example Queue with Outbound Caller Config&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

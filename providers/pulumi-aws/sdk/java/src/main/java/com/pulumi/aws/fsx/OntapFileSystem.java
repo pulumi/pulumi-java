@@ -24,6 +24,33 @@ import javax.annotation.Nullable;
  * See the [FSx ONTAP User Guide](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new OntapFileSystem(&#34;test&#34;, OntapFileSystemArgs.builder()        
+ *             .storageCapacity(1024)
+ *             .subnetIds(            
+ *                 aws_subnet.getTest1().getId(),
+ *                 aws_subnet.getTest2().getId())
+ *             .deploymentType(&#34;MULTI_AZ_1&#34;)
+ *             .throughputCapacity(512)
+ *             .preferredSubnetId(aws_subnet.getTest1().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

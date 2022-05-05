@@ -25,6 +25,50 @@ import javax.annotation.Nullable;
  * Provides a SageMaker model resource.
  * 
  * ## Example Usage
+ * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var assumeRole = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;sagemaker.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(assumeRole.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         final var test = Output.of(SagemakerFunctions.getPrebuiltEcrImage(GetPrebuiltEcrImageArgs.builder()
+ *             .repositoryName(&#34;kmeans&#34;)
+ *             .build()));
+ * 
+ *         var exampleModel = new Model(&#34;exampleModel&#34;, ModelArgs.builder()        
+ *             .executionRoleArn(exampleRole.getArn())
+ *             .primaryContainer(ModelPrimaryContainer.builder()
+ *                 .image(test.apply(getPrebuiltEcrImageResult -&gt; getPrebuiltEcrImageResult.getRegistryPath()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Inference Execution Config
  * 
  * * `mode` - (Required) How containers in a multi-container are run. The following values are valid `Serial` and `Direct`.

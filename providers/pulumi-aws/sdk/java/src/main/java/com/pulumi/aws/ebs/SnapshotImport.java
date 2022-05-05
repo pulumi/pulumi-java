@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * Imports a disk image from S3 as a Snapshot.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SnapshotImport(&#34;example&#34;, SnapshotImportArgs.builder()        
+ *             .diskContainer(SnapshotImportDiskContainer.builder()
+ *                 .format(&#34;VHD&#34;)
+ *                 .userBucket(SnapshotImportDiskContainerUserBucket.builder()
+ *                     .s3Bucket(&#34;disk-images&#34;)
+ *                     .s3Key(&#34;source.vhd&#34;)
+ *                     .build())
+ *                 .build())
+ *             .roleName(&#34;disk-image-import&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:ebs/snapshotImport:SnapshotImport")

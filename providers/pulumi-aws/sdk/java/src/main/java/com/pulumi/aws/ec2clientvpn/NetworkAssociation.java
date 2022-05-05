@@ -16,6 +16,55 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Using default security group
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NetworkAssociation(&#34;example&#34;, NetworkAssociationArgs.builder()        
+ *             .clientVpnEndpointId(aws_ec2_client_vpn_endpoint.getExample().getId())
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Using custom security groups
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NetworkAssociation(&#34;example&#34;, NetworkAssociationArgs.builder()        
+ *             .clientVpnEndpointId(aws_ec2_client_vpn_endpoint.getExample().getId())
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .securityGroups(            
+ *                 aws_security_group.getExample1().getId(),
+ *                 aws_security_group.getExample2().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

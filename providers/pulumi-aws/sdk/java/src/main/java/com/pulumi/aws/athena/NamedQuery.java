@@ -18,6 +18,52 @@ import javax.annotation.Nullable;
  * Provides an Athena Named Query resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hogeBucketV2 = new BucketV2(&#34;hogeBucketV2&#34;);
+ * 
+ *         var testKey = new Key(&#34;testKey&#34;, KeyArgs.builder()        
+ *             .deletionWindowInDays(7)
+ *             .description(&#34;Athena KMS Key&#34;)
+ *             .build());
+ * 
+ *         var testWorkgroup = new Workgroup(&#34;testWorkgroup&#34;, WorkgroupArgs.builder()        
+ *             .configuration(WorkgroupConfiguration.builder()
+ *                 .resultConfiguration(WorkgroupConfigurationResultConfiguration.builder()
+ *                     .encryptionConfiguration(WorkgroupConfigurationResultConfigurationEncryptionConfiguration.builder()
+ *                         .encryptionOption(&#34;SSE_KMS&#34;)
+ *                         .kmsKeyArn(testKey.getArn())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var hogeDatabase = new Database(&#34;hogeDatabase&#34;, DatabaseArgs.builder()        
+ *             .name(&#34;users&#34;)
+ *             .bucket(hogeBucketV2.getId())
+ *             .build());
+ * 
+ *         var foo = new NamedQuery(&#34;foo&#34;, NamedQueryArgs.builder()        
+ *             .workgroup(testWorkgroup.getId())
+ *             .database(hogeDatabase.getName())
+ *             .query(hogeDatabase.getName().apply(name -&gt; String.format(&#34;SELECT * FROM %s limit 10;&#34;, name)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

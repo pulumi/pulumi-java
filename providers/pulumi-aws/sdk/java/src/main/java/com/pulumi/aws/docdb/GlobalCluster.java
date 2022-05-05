@@ -23,6 +23,100 @@ import javax.annotation.Nullable;
  * More information about DocumentDB Global Clusters can be found in the [DocumentDB Developer Guide](https://docs.aws.amazon.com/documentdb/latest/developerguide/global-clusters.html).
  * 
  * ## Example Usage
+ * ### New DocumentDB Global Cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Provider(&#34;primary&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-2&#34;)
+ *             .build());
+ * 
+ *         var secondary = new Provider(&#34;secondary&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var example = new GlobalCluster(&#34;example&#34;, GlobalClusterArgs.builder()        
+ *             .globalClusterIdentifier(&#34;global-test&#34;)
+ *             .engine(&#34;docdb&#34;)
+ *             .engineVersion(&#34;4.0.0&#34;)
+ *             .build());
+ * 
+ *         var primaryCluster = new Cluster(&#34;primaryCluster&#34;, ClusterArgs.builder()        
+ *             .engine(example.getEngine())
+ *             .engineVersion(example.getEngineVersion())
+ *             .clusterIdentifier(&#34;test-primary-cluster&#34;)
+ *             .masterUsername(&#34;username&#34;)
+ *             .masterPassword(&#34;somepass123&#34;)
+ *             .globalClusterIdentifier(example.getId())
+ *             .dbSubnetGroupName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         var primaryClusterInstance = new ClusterInstance(&#34;primaryClusterInstance&#34;, ClusterInstanceArgs.builder()        
+ *             .engine(example.getEngine())
+ *             .engineVersion(example.getEngineVersion())
+ *             .identifier(&#34;test-primary-cluster-instance&#34;)
+ *             .clusterIdentifier(primaryCluster.getId())
+ *             .instanceClass(&#34;db.r5.large&#34;)
+ *             .dbSubnetGroupName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         var secondaryCluster = new Cluster(&#34;secondaryCluster&#34;, ClusterArgs.builder()        
+ *             .engine(example.getEngine())
+ *             .engineVersion(example.getEngineVersion())
+ *             .clusterIdentifier(&#34;test-secondary-cluster&#34;)
+ *             .globalClusterIdentifier(example.getId())
+ *             .dbSubnetGroupName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         var secondaryClusterInstance = new ClusterInstance(&#34;secondaryClusterInstance&#34;, ClusterInstanceArgs.builder()        
+ *             .engine(example.getEngine())
+ *             .engineVersion(example.getEngineVersion())
+ *             .identifier(&#34;test-secondary-cluster-instance&#34;)
+ *             .clusterIdentifier(secondaryCluster.getId())
+ *             .instanceClass(&#34;db.r5.large&#34;)
+ *             .dbSubnetGroupName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### New Global Cluster From Existing DB Cluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleCluster = new Cluster(&#34;exampleCluster&#34;);
+ * 
+ *         var exampleGlobalCluster = new GlobalCluster(&#34;exampleGlobalCluster&#34;, GlobalClusterArgs.builder()        
+ *             .globalClusterIdentifier(&#34;example&#34;)
+ *             .sourceDbClusterIdentifier(exampleCluster.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

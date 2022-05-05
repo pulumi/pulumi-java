@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * Provides an EC2 Host resource. This allows Dedicated Hosts to be allocated, modified, and released.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new DedicatedHost(&#34;test&#34;, DedicatedHostArgs.builder()        
+ *             .autoPlacement(&#34;on&#34;)
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .hostRecovery(&#34;on&#34;)
+ *             .instanceType(&#34;c5.18xlarge&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,69 @@ import javax.annotation.Nullable;
  * &gt; **Note:** As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudwatchRole = new Role(&#34;cloudwatchRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;apigateway.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var demo = new Account(&#34;demo&#34;, AccountArgs.builder()        
+ *             .cloudwatchRoleArn(cloudwatchRole.getArn())
+ *             .build());
+ * 
+ *         var cloudwatchRolePolicy = new RolePolicy(&#34;cloudwatchRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(cloudwatchRole.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Action&#34;: [
+ *                 &#34;logs:CreateLogGroup&#34;,
+ *                 &#34;logs:CreateLogStream&#34;,
+ *                 &#34;logs:DescribeLogGroups&#34;,
+ *                 &#34;logs:DescribeLogStreams&#34;,
+ *                 &#34;logs:PutLogEvents&#34;,
+ *                 &#34;logs:GetLogEvents&#34;,
+ *                 &#34;logs:FilterLogEvents&#34;
+ *             ],
+ *             &#34;Resource&#34;: &#34;*&#34;
+ *         }
+ *     ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

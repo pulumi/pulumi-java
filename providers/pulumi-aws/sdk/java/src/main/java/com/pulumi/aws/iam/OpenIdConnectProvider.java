@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * Provides an IAM OpenID Connect provider.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var default_ = new OpenIdConnectProvider(&#34;default&#34;, OpenIdConnectProviderArgs.builder()        
+ *             .clientIdLists(&#34;266362248691-342342xasdasdasda-apps.googleusercontent.com&#34;)
+ *             .thumbprintLists()
+ *             .url(&#34;https://accounts.google.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

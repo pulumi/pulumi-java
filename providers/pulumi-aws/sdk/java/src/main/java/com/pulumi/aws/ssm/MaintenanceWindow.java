@@ -21,6 +21,29 @@ import javax.annotation.Nullable;
  * Provides an SSM Maintenance Window resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var production = new MaintenanceWindow(&#34;production&#34;, MaintenanceWindowArgs.builder()        
+ *             .cutoff(1)
+ *             .duration(3)
+ *             .schedule(&#34;cron(0 16 ? * TUE *)&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

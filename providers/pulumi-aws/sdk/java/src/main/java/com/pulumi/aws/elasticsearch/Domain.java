@@ -31,6 +31,205 @@ import javax.annotation.Nullable;
  * Manages an AWS Elasticsearch Domain.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Domain(&#34;example&#34;, DomainArgs.builder()        
+ *             .clusterConfig(DomainClusterConfig.builder()
+ *                 .instanceType(&#34;r4.large.elasticsearch&#34;)
+ *                 .build())
+ *             .elasticsearchVersion(&#34;7.10&#34;)
+ *             .tags(Map.of(&#34;Domain&#34;, &#34;TestDomain&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Access Policy
+ * 
+ * &gt; See also: `aws.elasticsearch.DomainPolicy` resource
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var domain = config.get(&#34;domain&#34;).orElse(&#34;tf-test&#34;);
+ *         final var currentRegion = Output.of(AwsFunctions.getRegion());
+ * 
+ *         final var currentCallerIdentity = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var example = new Domain(&#34;example&#34;, DomainArgs.builder()        
+ *             .accessPolicies(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;es:*&#34;,
+ *       &#34;Principal&#34;: &#34;*&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;arn:aws:es:%s:%s:domain/%s/*&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;IpAddress&#34;: {&#34;aws:SourceIp&#34;: [&#34;66.193.100.22/32&#34;]}
+ *       }
+ *     }
+ *   ]
+ * }
+ * &#34;, currentRegion.apply(getRegionResult -&gt; getRegionResult.getName()),currentCallerIdentity.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()),domain))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Log Publishing to CloudWatch Logs
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;);
+ * 
+ *         var exampleLogResourcePolicy = new LogResourcePolicy(&#34;exampleLogResourcePolicy&#34;, LogResourcePolicyArgs.builder()        
+ *             .policyName(&#34;example&#34;)
+ *             .policyDocument(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;es.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: [
+ *         &#34;logs:PutLogEvents&#34;,
+ *         &#34;logs:PutLogEventsBatch&#34;,
+ *         &#34;logs:CreateLogStream&#34;
+ *       ],
+ *       &#34;Resource&#34;: &#34;arn:aws:logs:*&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;, DomainArgs.builder()        
+ *             .logPublishingOptions(DomainLogPublishingOption.builder()
+ *                 .cloudwatchLogGroupArn(exampleLogGroup.getArn())
+ *                 .logType(&#34;INDEX_SLOW_LOGS&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### VPC based ES
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var vpc = config.get(&#34;vpc&#34;);
+ *         final var domain = config.get(&#34;domain&#34;).orElse(&#34;tf-test&#34;);
+ *         final var selectedVpc = Output.of(Ec2Functions.getVpc(GetVpcArgs.builder()
+ *             .tags(Map.of(&#34;Name&#34;, vpc))
+ *             .build()));
+ * 
+ *         final var selectedSubnetIds = Output.of(Ec2Functions.getSubnetIds(GetSubnetIdsArgs.builder()
+ *             .vpcId(selectedVpc.apply(getVpcResult -&gt; getVpcResult.getId()))
+ *             .tags(Map.of(&#34;Tier&#34;, &#34;private&#34;))
+ *             .build()));
+ * 
+ *         final var currentRegion = Output.of(AwsFunctions.getRegion());
+ * 
+ *         final var currentCallerIdentity = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var esSecurityGroup = new SecurityGroup(&#34;esSecurityGroup&#34;, SecurityGroupArgs.builder()        
+ *             .description(&#34;Managed by Pulumi&#34;)
+ *             .vpcId(selectedVpc.apply(getVpcResult -&gt; getVpcResult.getId()))
+ *             .ingress(SecurityGroupIngress.builder()
+ *                 .fromPort(443)
+ *                 .toPort(443)
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .cidrBlocks(selectedVpc.apply(getVpcResult -&gt; getVpcResult.getCidrBlock()))
+ *                 .build())
+ *             .build());
+ * 
+ *         var esServiceLinkedRole = new ServiceLinkedRole(&#34;esServiceLinkedRole&#34;, ServiceLinkedRoleArgs.builder()        
+ *             .awsServiceName(&#34;es.amazonaws.com&#34;)
+ *             .build());
+ * 
+ *         var esDomain = new Domain(&#34;esDomain&#34;, DomainArgs.builder()        
+ *             .elasticsearchVersion(&#34;6.3&#34;)
+ *             .clusterConfig(DomainClusterConfig.builder()
+ *                 .instanceType(&#34;m4.large.elasticsearch&#34;)
+ *                 .zoneAwarenessEnabled(true)
+ *                 .build())
+ *             .vpcOptions(DomainVpcOptions.builder()
+ *                 .subnetIds(                
+ *                     selectedSubnetIds.apply(getSubnetIdsResult -&gt; getSubnetIdsResult.getIds()[0]),
+ *                     selectedSubnetIds.apply(getSubnetIdsResult -&gt; getSubnetIdsResult.getIds()[1]))
+ *                 .securityGroupIds(esSecurityGroup.getId())
+ *                 .build())
+ *             .advancedOptions(Map.of(&#34;rest.action.multi.allow_explicit_index&#34;, &#34;true&#34;))
+ *             .accessPolicies(&#34;&#34;&#34;
+ * {
+ * 	&#34;Version&#34;: &#34;2012-10-17&#34;,
+ * 	&#34;Statement&#34;: [
+ * 		{
+ * 			&#34;Action&#34;: &#34;es:*&#34;,
+ * 			&#34;Principal&#34;: &#34;*&#34;,
+ * 			&#34;Effect&#34;: &#34;Allow&#34;,
+ * 			&#34;Resource&#34;: &#34;arn:aws:es:%s:%s:domain/%s/*&#34;
+ * 		}
+ * 	]
+ * }
+ * &#34;, currentRegion.apply(getRegionResult -&gt; getRegionResult.getName()),currentCallerIdentity.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()),domain))
+ *             .tags(Map.of(&#34;Domain&#34;, &#34;TestDomain&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

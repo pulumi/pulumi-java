@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Lightsail is currently only supported in a limited number of AWS Regions, please see [&#34;Regions and Availability Zones in Amazon Lightsail&#34;](https://lightsail.aws.amazon.com/ls/docs/overview/article/understanding-regions-and-availability-zones-in-amazon-lightsail) for more details.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testInstance = new Instance(&#34;testInstance&#34;, InstanceArgs.builder()        
+ *             .availabilityZone(data.getAws_availability_zones().getAvailable().getNames()[0])
+ *             .blueprintId(&#34;amazon_linux&#34;)
+ *             .bundleId(&#34;nano_1_0&#34;)
+ *             .build());
+ * 
+ *         var testInstancePublicPorts = new InstancePublicPorts(&#34;testInstancePublicPorts&#34;, InstancePublicPortsArgs.builder()        
+ *             .instanceName(testInstance.getName())
+ *             .portInfos(InstancePublicPortsPortInfo.builder()
+ *                 .protocol(&#34;tcp&#34;)
+ *                 .fromPort(80)
+ *                 .toPort(80)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:lightsail/instancePublicPorts:InstancePublicPorts")

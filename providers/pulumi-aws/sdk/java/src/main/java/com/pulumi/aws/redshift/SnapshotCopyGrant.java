@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * Note that the grant must exist in the destination region, and not in the region of the cluster.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testSnapshotCopyGrant = new SnapshotCopyGrant(&#34;testSnapshotCopyGrant&#34;, SnapshotCopyGrantArgs.builder()        
+ *             .snapshotCopyGrantName(&#34;my-grant&#34;)
+ *             .build());
+ * 
+ *         var testCluster = new Cluster(&#34;testCluster&#34;, ClusterArgs.builder()        
+ *             .snapshotCopy(ClusterSnapshotCopy.builder()
+ *                 .destinationRegion(&#34;us-east-2&#34;)
+ *                 .grantName(testSnapshotCopyGrant.getSnapshotCopyGrantName())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

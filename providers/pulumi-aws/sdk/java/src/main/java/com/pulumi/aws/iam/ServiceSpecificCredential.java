@@ -18,6 +18,30 @@ import javax.annotation.Nullable;
  * Provides an IAM Service Specific Credential.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUser = new User(&#34;exampleUser&#34;);
+ * 
+ *         var exampleServiceSpecificCredential = new ServiceSpecificCredential(&#34;exampleServiceSpecificCredential&#34;, ServiceSpecificCredentialArgs.builder()        
+ *             .serviceName(&#34;codecommit.amazonaws.com&#34;)
+ *             .userName(exampleUser.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

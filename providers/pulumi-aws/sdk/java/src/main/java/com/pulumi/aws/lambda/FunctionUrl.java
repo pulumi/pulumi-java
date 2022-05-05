@@ -21,6 +21,46 @@ import javax.annotation.Nullable;
  * See the [AWS Lambda documentation](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testLatest = new FunctionUrl(&#34;testLatest&#34;, FunctionUrlArgs.builder()        
+ *             .functionName(aws_lambda_function.getTest().getFunction_name())
+ *             .authorizationType(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         var testLive = new FunctionUrl(&#34;testLive&#34;, FunctionUrlArgs.builder()        
+ *             .functionName(aws_lambda_function.getTest().getFunction_name())
+ *             .qualifier(&#34;my_alias&#34;)
+ *             .authorizationType(&#34;AWS_IAM&#34;)
+ *             .cors(FunctionUrlCors.builder()
+ *                 .allowCredentials(true)
+ *                 .allowOrigins(&#34;*&#34;)
+ *                 .allowMethods(&#34;*&#34;)
+ *                 .allowHeaders(                
+ *                     &#34;date&#34;,
+ *                     &#34;keep-alive&#34;)
+ *                 .exposeHeaders(                
+ *                     &#34;keep-alive&#34;,
+ *                     &#34;date&#34;)
+ *                 .maxAge(86400)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

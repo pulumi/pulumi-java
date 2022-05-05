@@ -17,6 +17,51 @@ import javax.annotation.Nullable;
  * Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLogGroup = new LogGroup(&#34;exampleLogGroup&#34;, LogGroupArgs.builder()        
+ *             .retentionInDays(14)
+ *             .build());
+ * 
+ *         final var ad-log-policyPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(                
+ *                     &#34;logs:CreateLogStream&#34;,
+ *                     &#34;logs:PutLogEvents&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .identifiers(&#34;ds.amazonaws.com&#34;)
+ *                     .type(&#34;Service&#34;)
+ *                     .build())
+ *                 .resources(exampleLogGroup.getArn().apply(arn -&gt; String.format(&#34;%s:*&#34;, arn)))
+ *                 .effect(&#34;Allow&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var ad_log_policyLogResourcePolicy = new LogResourcePolicy(&#34;ad-log-policyLogResourcePolicy&#34;, LogResourcePolicyArgs.builder()        
+ *             .policyDocument(ad_log_policyPolicyDocument.apply(ad_log_policyPolicyDocument -&gt; ad_log_policyPolicyDocument.getJson()))
+ *             .policyName(&#34;ad-log-policy&#34;)
+ *             .build());
+ * 
+ *         var exampleLogService = new LogService(&#34;exampleLogService&#34;, LogServiceArgs.builder()        
+ *             .directoryId(aws_directory_service_directory.getExample().getId())
+ *             .logGroupName(exampleLogGroup.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

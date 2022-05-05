@@ -18,6 +18,29 @@ import javax.annotation.Nullable;
  * Manages a Service Catalog Principal Portfolio Association.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PrincipalPortfolioAssociation(&#34;example&#34;, PrincipalPortfolioAssociationArgs.builder()        
+ *             .portfolioId(&#34;port-68656c6c6f&#34;)
+ *             .principalArn(&#34;arn:aws:iam::123456789012:user/Eleanor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

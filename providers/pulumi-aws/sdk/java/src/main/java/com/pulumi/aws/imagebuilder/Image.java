@@ -23,6 +23,29 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Image.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Image(&#34;example&#34;, ImageArgs.builder()        
+ *             .distributionConfigurationArn(aws_imagebuilder_distribution_configuration.getExample().getArn())
+ *             .imageRecipeArn(aws_imagebuilder_image_recipe.getExample().getArn())
+ *             .infrastructureConfigurationArn(aws_imagebuilder_infrastructure_configuration.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -17,6 +17,29 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [Amazon Macie Organization Admin Account](https://docs.aws.amazon.com/macie/latest/APIReference/admin.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Account(&#34;example&#34;);
+ * 
+ *         var test = new OrganizationAdminAccount(&#34;test&#34;, OrganizationAdminAccountArgs.builder()        
+ *             .adminAccountId(&#34;ID OF THE ADMIN ACCOUNT&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

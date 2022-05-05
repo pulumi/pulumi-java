@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html).
  * 
  * ## Example Usage
+ * ### Basic WebSocket API
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Authorizer(&#34;example&#34;, AuthorizerArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .authorizerType(&#34;REQUEST&#34;)
+ *             .authorizerUri(aws_lambda_function.getExample().getInvoke_arn())
+ *             .identitySources(&#34;route.request.header.Auth&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Basic HTTP API
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Authorizer(&#34;example&#34;, AuthorizerArgs.builder()        
+ *             .apiId(aws_apigatewayv2_api.getExample().getId())
+ *             .authorizerType(&#34;JWT&#34;)
+ *             .identitySources(&#34;$request.header.Authorization&#34;)
+ *             .jwtConfiguration(AuthorizerJwtConfiguration.builder()
+ *                 .audiences(&#34;example&#34;)
+ *                 .issuer(String.format(&#34;https://%s&#34;, aws_cognito_user_pool.getExample().getEndpoint()))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Image resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Image(&#34;example&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;example&#34;)
+ *             .roleArn(aws_iam_role.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -18,6 +18,72 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Pool Domain resource.
  * 
  * ## Example Usage
+ * ### Amazon Cognito domain
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new UserPool(&#34;example&#34;);
+ * 
+ *         var main = new UserPoolDomain(&#34;main&#34;, UserPoolDomainArgs.builder()        
+ *             .domain(&#34;example-domain&#34;)
+ *             .userPoolId(example.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Custom Cognito domain
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;);
+ * 
+ *         var main = new UserPoolDomain(&#34;main&#34;, UserPoolDomainArgs.builder()        
+ *             .domain(&#34;example-domain&#34;)
+ *             .certificateArn(aws_acm_certificate.getCert().getArn())
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         final var exampleZone = Output.of(Route53Functions.getZone(GetZoneArgs.builder()
+ *             .name(&#34;example.com&#34;)
+ *             .build()));
+ * 
+ *         var auth_cognito_A = new Record(&#34;auth-cognito-A&#34;, RecordArgs.builder()        
+ *             .name(main.getDomain())
+ *             .type(&#34;A&#34;)
+ *             .zoneId(exampleZone.apply(getZoneResult -&gt; getZoneResult.getZoneId()))
+ *             .aliases(RecordAlias.builder()
+ *                 .evaluateTargetHealth(false)
+ *                 .name(main.getCloudfrontDistributionArn())
+ *                 .zoneId(&#34;Z2FDTNDATAQYW2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

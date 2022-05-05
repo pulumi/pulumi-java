@@ -19,12 +19,125 @@ import javax.annotation.Nullable;
  * Provides a FSx Backup resource.
  * 
  * ## Lustre Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleLustreFileSystem = new LustreFileSystem(&#34;exampleLustreFileSystem&#34;, LustreFileSystemArgs.builder()        
+ *             .storageCapacity(1200)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .deploymentType(&#34;PERSISTENT_1&#34;)
+ *             .perUnitStorageThroughput(50)
+ *             .build());
+ * 
+ *         var exampleBackup = new Backup(&#34;exampleBackup&#34;, BackupArgs.builder()        
+ *             .fileSystemId(exampleLustreFileSystem.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Windows Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleWindowsFileSystem = new WindowsFileSystem(&#34;exampleWindowsFileSystem&#34;, WindowsFileSystemArgs.builder()        
+ *             .activeDirectoryId(aws_directory_service_directory.getEample().getId())
+ *             .skipFinalBackup(true)
+ *             .storageCapacity(32)
+ *             .subnetIds(aws_subnet.getExample1().getId())
+ *             .throughputCapacity(8)
+ *             .build());
+ * 
+ *         var exampleBackup = new Backup(&#34;exampleBackup&#34;, BackupArgs.builder()        
+ *             .fileSystemId(exampleWindowsFileSystem.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## ONTAP Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOntapVolume = new OntapVolume(&#34;exampleOntapVolume&#34;, OntapVolumeArgs.builder()        
+ *             .junctionPath(&#34;/example&#34;)
+ *             .sizeInMegabytes(1024)
+ *             .storageEfficiencyEnabled(true)
+ *             .storageVirtualMachineId(aws_fsx_ontap_storage_virtual_machine.getTest().getId())
+ *             .build());
+ * 
+ *         var exampleBackup = new Backup(&#34;exampleBackup&#34;, BackupArgs.builder()        
+ *             .volumeId(exampleOntapVolume.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## OpenZFS Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOpenZfsFileSystem = new OpenZfsFileSystem(&#34;exampleOpenZfsFileSystem&#34;, OpenZfsFileSystemArgs.builder()        
+ *             .storageCapacity(64)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .deploymentType(&#34;SINGLE_AZ_1&#34;)
+ *             .throughputCapacity(64)
+ *             .build());
+ * 
+ *         var exampleBackup = new Backup(&#34;exampleBackup&#34;, BackupArgs.builder()        
+ *             .fileSystemId(exampleOpenZfsFileSystem.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

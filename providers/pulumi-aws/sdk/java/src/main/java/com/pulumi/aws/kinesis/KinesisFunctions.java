@@ -22,6 +22,27 @@ public final class KinesisFunctions {
      * For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var stream = Output.of(KinesisFunctions.getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs.builder()
+     *             .name(&#34;stream-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFirehoseDeliveryStreamResult> getFirehoseDeliveryStream(GetFirehoseDeliveryStreamArgs args) {
@@ -37,6 +58,27 @@ public final class KinesisFunctions {
      * For more details, see the [Amazon Kinesis Documentation](https://aws.amazon.com/documentation/kinesis/).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var stream = Output.of(KinesisFunctions.getStream(GetStreamArgs.builder()
+     *             .name(&#34;stream-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetStreamResult> getStream(GetStreamArgs args) {
@@ -51,6 +93,28 @@ public final class KinesisFunctions {
      * For more details, see the [Amazon Kinesis Stream Consumer Documentation](https://docs.aws.amazon.com/streams/latest/dev/amazon-kinesis-consumers.html).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(KinesisFunctions.getStreamConsumer(GetStreamConsumerArgs.builder()
+     *             .name(&#34;example-consumer&#34;)
+     *             .streamArn(aws_kinesis_stream.getExample().getArn())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetStreamConsumerResult> getStreamConsumer(GetStreamConsumerArgs args) {

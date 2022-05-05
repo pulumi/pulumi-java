@@ -21,6 +21,54 @@ import javax.annotation.Nullable;
  * Provides a CodeStar Notifications Rule.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var code = new Repository(&#34;code&#34;, RepositoryArgs.builder()        
+ *             .repositoryName(&#34;example-code-repo&#34;)
+ *             .build());
+ * 
+ *         var notif = new Topic(&#34;notif&#34;);
+ * 
+ *         final var notifAccess = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sns:Publish&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;codestar-notifications.amazonaws.com&#34;)
+ *                     .build())
+ *                 .resources(notif.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         var default_ = new TopicPolicy(&#34;default&#34;, TopicPolicyArgs.builder()        
+ *             .arn(notif.getArn())
+ *             .policy(notifAccess.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(notifAccess -&gt; notifAccess.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         var commits = new NotificationRule(&#34;commits&#34;, NotificationRuleArgs.builder()        
+ *             .detailType(&#34;BASIC&#34;)
+ *             .eventTypeIds(&#34;codecommit-repository-comments-on-commits&#34;)
+ *             .resource(code.getArn())
+ *             .targets(NotificationRuleTarget.builder()
+ *                 .address(notif.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

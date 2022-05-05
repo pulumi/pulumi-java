@@ -22,6 +22,31 @@ import javax.annotation.Nullable;
  * Manages an Image Builder Image Pipeline.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ImagePipeline(&#34;example&#34;, ImagePipelineArgs.builder()        
+ *             .imageRecipeArn(aws_imagebuilder_image_recipe.getExample().getArn())
+ *             .infrastructureConfigurationArn(aws_imagebuilder_infrastructure_configuration.getExample().getArn())
+ *             .schedule(ImagePipelineSchedule.builder()
+ *                 .scheduleExpression(&#34;cron(0 0 * * ? *)&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

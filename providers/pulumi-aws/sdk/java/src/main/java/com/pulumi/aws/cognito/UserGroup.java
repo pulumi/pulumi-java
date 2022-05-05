@@ -19,6 +19,58 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mainUserPool = new UserPool(&#34;mainUserPool&#34;);
+ * 
+ *         var groupRole = new Role(&#34;groupRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Sid&#34;: &#34;&#34;,
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Federated&#34;: &#34;cognito-identity.amazonaws.com&#34;
+ *       },
+ *       &#34;Action&#34;: &#34;sts:AssumeRoleWithWebIdentity&#34;,
+ *       &#34;Condition&#34;: {
+ *         &#34;StringEquals&#34;: {
+ *           &#34;cognito-identity.amazonaws.com:aud&#34;: &#34;us-east-1:12345678-dead-beef-cafe-123456790ab&#34;
+ *         },
+ *         &#34;ForAnyValue:StringLike&#34;: {
+ *           &#34;cognito-identity.amazonaws.com:amr&#34;: &#34;authenticated&#34;
+ *         }
+ *       }
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var mainUserGroup = new UserGroup(&#34;mainUserGroup&#34;, UserGroupArgs.builder()        
+ *             .userPoolId(mainUserPool.getId())
+ *             .description(&#34;Managed by Pulumi&#34;)
+ *             .precedence(42)
+ *             .roleArn(groupRole.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

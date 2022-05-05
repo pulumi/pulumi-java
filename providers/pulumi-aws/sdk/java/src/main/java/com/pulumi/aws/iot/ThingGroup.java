@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * Manages an AWS IoT Thing Group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var parent = new ThingGroup(&#34;parent&#34;);
+ * 
+ *         var example = new ThingGroup(&#34;example&#34;, ThingGroupArgs.builder()        
+ *             .parentGroupName(parent.getName())
+ *             .properties(ThingGroupProperties.builder()
+ *                 .attributePayload(ThingGroupPropertiesAttributePayload.builder()
+ *                     .attributes(Map.ofEntries(
+ *                         Map.entry(&#34;One&#34;, &#34;11111&#34;),
+ *                         Map.entry(&#34;Two&#34;, &#34;TwoTwo&#34;)
+ *                     ))
+ *                     .build())
+ *                 .description(&#34;This is my thing group&#34;)
+ *                 .build())
+ *             .tags(Map.of(&#34;terraform&#34;, &#34;true&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

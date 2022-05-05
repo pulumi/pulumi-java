@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * Provides an AppStream Directory Config.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DirectoryConfig(&#34;example&#34;, DirectoryConfigArgs.builder()        
+ *             .directoryName(&#34;NAME OF DIRECTORY&#34;)
+ *             .organizationalUnitDistinguishedNames(&#34;DISTINGUISHED NAME&#34;)
+ *             .serviceAccountCredentials(DirectoryConfigServiceAccountCredentials.builder()
+ *                 .accountName(&#34;NAME OF ACCOUNT&#34;)
+ *                 .accountPassword(&#34;PASSWORD OF ACCOUNT&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

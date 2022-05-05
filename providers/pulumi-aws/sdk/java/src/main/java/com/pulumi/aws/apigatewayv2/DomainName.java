@@ -25,6 +25,71 @@ import javax.annotation.Nullable;
  * a particular domain name. An API stage can be associated with the domain name using the `aws.apigatewayv2.ApiMapping` resource.
  * 
  * ## Example Usage
+ * ### Basic
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DomainName(&#34;example&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;ws-api.example.com&#34;)
+ *             .domainNameConfiguration(DomainNameDomainNameConfiguration.builder()
+ *                 .certificateArn(aws_acm_certificate.getExample().getArn())
+ *                 .endpointType(&#34;REGIONAL&#34;)
+ *                 .securityPolicy(&#34;TLS_1_2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Associated Route 53 Resource Record
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleDomainName = new DomainName(&#34;exampleDomainName&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;http-api.example.com&#34;)
+ *             .domainNameConfiguration(DomainNameDomainNameConfiguration.builder()
+ *                 .certificateArn(aws_acm_certificate.getExample().getArn())
+ *                 .endpointType(&#34;REGIONAL&#34;)
+ *                 .securityPolicy(&#34;TLS_1_2&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .name(exampleDomainName.getDomainName())
+ *             .type(&#34;A&#34;)
+ *             .zoneId(aws_route53_zone.getExample().getZone_id())
+ *             .aliases(RecordAlias.builder()
+ *                 .name(exampleDomainName.getDomainNameConfiguration().apply(domainNameConfiguration -&gt; domainNameConfiguration.getTargetDomainName()))
+ *                 .zoneId(exampleDomainName.getDomainNameConfiguration().apply(domainNameConfiguration -&gt; domainNameConfiguration.getHostedZoneId()))
+ *                 .evaluateTargetHealth(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

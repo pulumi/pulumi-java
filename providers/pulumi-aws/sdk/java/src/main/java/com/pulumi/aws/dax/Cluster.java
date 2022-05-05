@@ -23,6 +23,30 @@ import javax.annotation.Nullable;
  * Provides a DAX Cluster resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new Cluster(&#34;bar&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster-example&#34;)
+ *             .iamRoleArn(data.getAws_iam_role().getExample().getArn())
+ *             .nodeType(&#34;dax.r4.large&#34;)
+ *             .replicationFactor(1)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

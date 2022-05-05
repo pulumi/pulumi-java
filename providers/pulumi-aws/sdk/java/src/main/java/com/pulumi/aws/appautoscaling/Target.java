@@ -20,6 +20,136 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The [Application Auto Scaling service automatically attempts to manage IAM Service-Linked Roles](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles) when registering certain service namespaces for the first time. To manually manage this role, see the `aws.iam.ServiceLinkedRole` resource.
  * 
  * ## Example Usage
+ * ### DynamoDB Table Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dynamodbTableReadTarget = new Target(&#34;dynamodbTableReadTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(100)
+ *             .minCapacity(5)
+ *             .resourceId(String.format(&#34;table/%s&#34;, aws_dynamodb_table.getExample().getName()))
+ *             .scalableDimension(&#34;dynamodb:table:ReadCapacityUnits&#34;)
+ *             .serviceNamespace(&#34;dynamodb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### DynamoDB Index Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dynamodbIndexReadTarget = new Target(&#34;dynamodbIndexReadTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(100)
+ *             .minCapacity(5)
+ *             .resourceId(String.format(&#34;table/%s/index/%s&#34;, aws_dynamodb_table.getExample().getName(),var_.getIndex_name()))
+ *             .scalableDimension(&#34;dynamodb:index:ReadCapacityUnits&#34;)
+ *             .serviceNamespace(&#34;dynamodb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### ECS Service Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ecsTarget = new Target(&#34;ecsTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(4)
+ *             .minCapacity(1)
+ *             .resourceId(String.format(&#34;service/%s/%s&#34;, aws_ecs_cluster.getExample().getName(),aws_ecs_service.getExample().getName()))
+ *             .scalableDimension(&#34;ecs:service:DesiredCount&#34;)
+ *             .serviceNamespace(&#34;ecs&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Aurora Read Replica Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicas = new Target(&#34;replicas&#34;, TargetArgs.builder()        
+ *             .maxCapacity(15)
+ *             .minCapacity(1)
+ *             .resourceId(String.format(&#34;cluster:%s&#34;, aws_rds_cluster.getExample().getId()))
+ *             .scalableDimension(&#34;rds:cluster:ReadReplicaCount&#34;)
+ *             .serviceNamespace(&#34;rds&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### MSK / Kafka Autoscaling
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mskTarget = new Target(&#34;mskTarget&#34;, TargetArgs.builder()        
+ *             .maxCapacity(8)
+ *             .minCapacity(1)
+ *             .resourceId(aws_msk_cluster.getExample().getArn())
+ *             .scalableDimension(&#34;kafka:broker-storage:VolumeSize&#34;)
+ *             .serviceNamespace(&#34;kafka&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

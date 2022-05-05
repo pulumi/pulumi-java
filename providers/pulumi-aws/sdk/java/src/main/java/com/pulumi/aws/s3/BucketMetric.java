@@ -19,6 +19,61 @@ import javax.annotation.Nullable;
  * Provides a S3 bucket [metrics configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html) resource.
  * 
  * ## Example Usage
+ * ### Add metrics configuration for entire S3 bucket
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var example_entire_bucket = new BucketMetric(&#34;example-entire-bucket&#34;, BucketMetricArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add metrics configuration with S3 object filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var example_filtered = new BucketMetric(&#34;example-filtered&#34;, BucketMetricArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .filter(BucketMetricFilter.builder()
+ *                 .prefix(&#34;documents/&#34;)
+ *                 .tags(Map.ofEntries(
+ *                     Map.entry(&#34;priority&#34;, &#34;high&#34;),
+ *                     Map.entry(&#34;class&#34;, &#34;blue&#34;)
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

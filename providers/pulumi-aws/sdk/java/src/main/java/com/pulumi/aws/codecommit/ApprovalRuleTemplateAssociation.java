@@ -17,6 +17,28 @@ import javax.annotation.Nullable;
  * Associates a CodeCommit Approval Rule Template with a Repository.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApprovalRuleTemplateAssociation(&#34;example&#34;, ApprovalRuleTemplateAssociationArgs.builder()        
+ *             .approvalRuleTemplateName(aws_codecommit_approval_rule_template.getExample().getName())
+ *             .repositoryName(aws_codecommit_repository.getExample().getRepository_name())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

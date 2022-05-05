@@ -27,6 +27,68 @@ import javax.annotation.Nullable;
  * &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
  * 
  * ## Example Usage
+ * ### Specifying Elastic IPs
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoadBalancer(&#34;example&#34;, LoadBalancerArgs.builder()        
+ *             .loadBalancerType(&#34;network&#34;)
+ *             .subnetMappings(            
+ *                 LoadBalancerSubnetMapping.builder()
+ *                     .subnetId(aws_subnet.getExample1().getId())
+ *                     .allocationId(aws_eip.getExample1().getId())
+ *                     .build(),
+ *                 LoadBalancerSubnetMapping.builder()
+ *                     .subnetId(aws_subnet.getExample2().getId())
+ *                     .allocationId(aws_eip.getExample2().getId())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Specifying private IP addresses for an internal-facing load balancer
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoadBalancer(&#34;example&#34;, LoadBalancerArgs.builder()        
+ *             .loadBalancerType(&#34;network&#34;)
+ *             .subnetMappings(            
+ *                 LoadBalancerSubnetMapping.builder()
+ *                     .subnetId(aws_subnet.getExample1().getId())
+ *                     .privateIpv4Address(&#34;10.0.1.15&#34;)
+ *                     .build(),
+ *                 LoadBalancerSubnetMapping.builder()
+ *                     .subnetId(aws_subnet.getExample2().getId())
+ *                     .privateIpv4Address(&#34;10.0.2.15&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

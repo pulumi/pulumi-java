@@ -22,6 +22,25 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Since the API Gateway usage plans feature was launched on August 11, 2016, usage plans are now **required** to associate an API key with an API stage.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoApiKey = new ApiKey(&#34;myDemoApiKey&#34;);
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

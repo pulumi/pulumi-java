@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * Provides a CloudWatch Log Group resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var yada = new LogGroup(&#34;yada&#34;, LogGroupArgs.builder()        
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Application&#34;, &#34;serviceA&#34;),
+ *                 Map.entry(&#34;Environment&#34;, &#34;production&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

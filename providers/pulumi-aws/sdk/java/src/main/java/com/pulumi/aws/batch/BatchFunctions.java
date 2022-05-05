@@ -21,6 +21,27 @@ public final class BatchFunctions {
      * compute environment within AWS Batch.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var batch-mongo = Output.of(BatchFunctions.getComputeEnvironment(GetComputeEnvironmentArgs.builder()
+     *             .computeEnvironmentName(&#34;batch-mongo-production&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetComputeEnvironmentResult> getComputeEnvironment(GetComputeEnvironmentArgs args) {
@@ -34,6 +55,27 @@ public final class BatchFunctions {
      * job queue within AWS Batch.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test-queue = Output.of(BatchFunctions.getJobQueue(GetJobQueueArgs.builder()
+     *             .name(&#34;tf-test-batch-job-queue&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetJobQueueResult> getJobQueue(GetJobQueueArgs args) {
@@ -46,6 +88,27 @@ public final class BatchFunctions {
      * The Batch Scheduling Policy data source allows access to details of a specific Scheduling Policy within AWS Batch.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(BatchFunctions.getSchedulingPolicy(GetSchedulingPolicyArgs.builder()
+     *             .arn(&#34;arn:aws:batch:us-east-1:012345678910:scheduling-policy/example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetSchedulingPolicyResult> getSchedulingPolicy(GetSchedulingPolicyArgs args) {

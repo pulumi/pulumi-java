@@ -19,6 +19,39 @@ import javax.annotation.Nullable;
  * Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lb = new LoadBalancer(&#34;lb&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1a&#34;)
+ *             .listeners(LoadBalancerListener.builder()
+ *                 .instancePort(8000)
+ *                 .instanceProtocol(&#34;http&#34;)
+ *                 .lbPort(80)
+ *                 .lbProtocol(&#34;http&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var foo = new LoadBalancerCookieStickinessPolicy(&#34;foo&#34;, LoadBalancerCookieStickinessPolicyArgs.builder()        
+ *             .loadBalancer(lb.getId())
+ *             .lbPort(80)
+ *             .cookieExpirationPeriod(600)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * @deprecated
  * aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favor of aws.elb.LoadBalancerCookieStickinessPolicy

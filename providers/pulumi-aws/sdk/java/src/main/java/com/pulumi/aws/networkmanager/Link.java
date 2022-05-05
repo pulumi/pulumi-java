@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * Creates a link for a site.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Link(&#34;example&#34;, LinkArgs.builder()        
+ *             .globalNetworkId(aws_networkmanager_global_network.getExample().getId())
+ *             .siteId(aws_networkmanager_global_site.getExample().getId())
+ *             .bandwidth(LinkBandwidth.builder()
+ *                 .uploadSpeed(10)
+ *                 .downloadSpeed(50)
+ *                 .build())
+ *             .providerName(&#34;MegaCorp&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

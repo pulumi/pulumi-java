@@ -20,6 +20,131 @@ import javax.annotation.Nullable;
  * Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html).
  * 
  * ## Example Usage
+ * ### Destination Configuration
+ * 
+ * &gt; **NOTE:** Ensure the Lambda Function IAM Role has necessary permissions for the destination, such as `sqs:SendMessage` or `sns:Publish`, otherwise the API will return a generic `InvalidParameterValueException: The destination ARN arn:PARTITION:SERVICE:REGION:ACCOUNT:RESOURCE is invalid.` error.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FunctionEventInvokeConfig(&#34;example&#34;, FunctionEventInvokeConfigArgs.builder()        
+ *             .functionName(aws_lambda_alias.getExample().getFunction_name())
+ *             .destinationConfig(FunctionEventInvokeConfigDestinationConfig.builder()
+ *                 .onFailure(FunctionEventInvokeConfigDestinationConfigOnFailure.builder()
+ *                     .destination(aws_sqs_queue.getExample().getArn())
+ *                     .build())
+ *                 .onSuccess(FunctionEventInvokeConfigDestinationConfigOnSuccess.builder()
+ *                     .destination(aws_sns_topic.getExample().getArn())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Error Handling Configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FunctionEventInvokeConfig(&#34;example&#34;, FunctionEventInvokeConfigArgs.builder()        
+ *             .functionName(aws_lambda_alias.getExample().getFunction_name())
+ *             .maximumEventAgeInSeconds(60)
+ *             .maximumRetryAttempts(0)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Configuration for Alias Name
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FunctionEventInvokeConfig(&#34;example&#34;, FunctionEventInvokeConfigArgs.builder()        
+ *             .functionName(aws_lambda_alias.getExample().getFunction_name())
+ *             .qualifier(aws_lambda_alias.getExample().getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Configuration for Function Latest Unpublished Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FunctionEventInvokeConfig(&#34;example&#34;, FunctionEventInvokeConfigArgs.builder()        
+ *             .functionName(aws_lambda_function.getExample().getFunction_name())
+ *             .qualifier(&#34;$LATEST&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Configuration for Function Published Version
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FunctionEventInvokeConfig(&#34;example&#34;, FunctionEventInvokeConfigArgs.builder()        
+ *             .functionName(aws_lambda_function.getExample().getFunction_name())
+ *             .qualifier(aws_lambda_function.getExample().getVersion())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

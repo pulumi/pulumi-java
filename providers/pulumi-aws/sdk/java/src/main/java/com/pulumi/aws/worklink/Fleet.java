@@ -20,6 +20,80 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Fleet(&#34;example&#34;);
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Network Configuration Usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Fleet(&#34;example&#34;, FleetArgs.builder()        
+ *             .network(FleetNetwork.builder()
+ *                 .vpcId(aws_vpc.getTest().getId())
+ *                 .subnetIds(aws_subnet.getTest().stream().map(element -&gt; element.getId()).collect(toList()))
+ *                 .securityGroupIds(aws_security_group.getTest().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Identity Provider Configuration Usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Fleet(&#34;test&#34;, FleetArgs.builder()        
+ *             .identityProvider(FleetIdentityProvider.builder()
+ *                 .type(&#34;SAML&#34;)
+ *                 .samlMetadata(Files.readString(&#34;saml-metadata.xml&#34;))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * WorkLink can be imported using the ARN, e.g.,

@@ -24,6 +24,35 @@ import javax.annotation.Nullable;
  * Provides a GameLift Fleet resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Fleet(&#34;example&#34;, FleetArgs.builder()        
+ *             .buildId(aws_gamelift_build.getExample().getId())
+ *             .ec2InstanceType(&#34;t2.micro&#34;)
+ *             .fleetType(&#34;ON_DEMAND&#34;)
+ *             .runtimeConfiguration(FleetRuntimeConfiguration.builder()
+ *                 .serverProcesses(FleetRuntimeConfigurationServerProcess.builder()
+ *                     .concurrentExecutions(1)
+ *                     .launchPath(&#34;C:\\game\\GomokuServer.exe&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

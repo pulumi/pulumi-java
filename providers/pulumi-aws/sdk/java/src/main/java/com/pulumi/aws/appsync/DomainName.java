@@ -18,6 +18,28 @@ import javax.annotation.Nullable;
  * Provides an AppSync Domain Name.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DomainName(&#34;example&#34;, DomainNameArgs.builder()        
+ *             .domainName(&#34;api.example.com&#34;)
+ *             .certificateArn(aws_acm_certificate.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

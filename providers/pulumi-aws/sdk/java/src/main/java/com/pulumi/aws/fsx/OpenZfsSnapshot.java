@@ -19,6 +19,68 @@ import javax.annotation.Nullable;
  * See the [FSx OpenZFS User Guide](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/what-is-fsx.html) for more information.
  * 
  * ## Example Usage
+ * ### Root volume Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOpenZfsFileSystem = new OpenZfsFileSystem(&#34;exampleOpenZfsFileSystem&#34;, OpenZfsFileSystemArgs.builder()        
+ *             .storageCapacity(64)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .deploymentType(&#34;SINGLE_AZ_1&#34;)
+ *             .throughputCapacity(64)
+ *             .build());
+ * 
+ *         var exampleOpenZfsSnapshot = new OpenZfsSnapshot(&#34;exampleOpenZfsSnapshot&#34;, OpenZfsSnapshotArgs.builder()        
+ *             .volumeId(exampleOpenZfsFileSystem.getRootVolumeId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Child volume Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleOpenZfsFileSystem = new OpenZfsFileSystem(&#34;exampleOpenZfsFileSystem&#34;, OpenZfsFileSystemArgs.builder()        
+ *             .storageCapacity(64)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .deploymentType(&#34;SINGLE_AZ_1&#34;)
+ *             .throughputCapacity(64)
+ *             .build());
+ * 
+ *         var exampleOpenZfsVolume = new OpenZfsVolume(&#34;exampleOpenZfsVolume&#34;, OpenZfsVolumeArgs.builder()        
+ *             .parentVolumeId(exampleOpenZfsFileSystem.getRootVolumeId())
+ *             .build());
+ * 
+ *         var exampleOpenZfsSnapshot = new OpenZfsSnapshot(&#34;exampleOpenZfsSnapshot&#34;, OpenZfsSnapshotArgs.builder()        
+ *             .volumeId(exampleOpenZfsVolume.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,28 @@ public final class LambdaFunctions {
      * Provides information about a Lambda Alias.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var production = Output.of(LambdaFunctions.getAlias(GetAliasArgs.builder()
+     *             .functionName(&#34;my-lambda-func&#34;)
+     *             .name(&#34;production&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAliasResult> getAlias(GetAliasArgs args) {
@@ -40,6 +62,27 @@ public final class LambdaFunctions {
      * For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var existingCsc = Output.of(LambdaFunctions.getCodeSigningConfig(GetCodeSigningConfigArgs.builder()
+     *             .arn(String.format(&#34;arn:aws:lambda:%s:%s:code-signing-config:csc-0f6c334abcdea4d8b&#34;, var_.getAws_region(),var_.getAws_account()))
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCodeSigningConfigResult> getCodeSigningConfig(GetCodeSigningConfigArgs args) {
@@ -52,6 +95,29 @@ public final class LambdaFunctions {
      * Provides information about a Lambda Function.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var functionName = config.get(&#34;functionName&#34;);
+     *         final var existing = Output.of(LambdaFunctions.getFunction(GetFunctionArgs.builder()
+     *             .functionName(functionName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFunctionResult> getFunction(GetFunctionArgs args) {
@@ -64,6 +130,29 @@ public final class LambdaFunctions {
      * Provides information about a Lambda function URL.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var functionName = config.get(&#34;functionName&#34;);
+     *         final var existing = Output.of(LambdaFunctions.getFunctionUrl(GetFunctionUrlArgs.builder()
+     *             .functionName(functionName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetFunctionUrlResult> getFunctionUrl(GetFunctionUrlArgs args) {
@@ -88,6 +177,29 @@ public final class LambdaFunctions {
      * Provides information about a Lambda Layer Version.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var layerName = config.get(&#34;layerName&#34;);
+     *         final var existing = Output.of(LambdaFunctions.getLayerVersion(GetLayerVersionArgs.builder()
+     *             .layerName(layerName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLayerVersionResult> getLayerVersion(GetLayerVersionArgs args) {

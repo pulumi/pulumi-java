@@ -18,6 +18,88 @@ import javax.annotation.Nullable;
  * Provides a Service Discovery Instance resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .enableDnsSupport(true)
+ *             .enableDnsHostnames(true)
+ *             .build());
+ * 
+ *         var examplePrivateDnsNamespace = new PrivateDnsNamespace(&#34;examplePrivateDnsNamespace&#34;, PrivateDnsNamespaceArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .vpc(exampleVpc.getId())
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .dnsConfig(ServiceDnsConfig.builder()
+ *                 .namespaceId(examplePrivateDnsNamespace.getId())
+ *                 .dnsRecords(ServiceDnsConfigDnsRecord.builder()
+ *                     .ttl(10)
+ *                     .type(&#34;A&#34;)
+ *                     .build())
+ *                 .routingPolicy(&#34;MULTIVALUE&#34;)
+ *                 .build())
+ *             .healthCheckCustomConfig(ServiceHealthCheckCustomConfig.builder()
+ *                 .failureThreshold(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleInstance = new Instance(&#34;exampleInstance&#34;, InstanceArgs.builder()        
+ *             .instanceId(&#34;example-instance-id&#34;)
+ *             .serviceId(exampleService.getId())
+ *             .attributes(Map.ofEntries(
+ *                 Map.entry(&#34;AWS_INSTANCE_IPV4&#34;, &#34;172.18.0.1&#34;),
+ *                 Map.entry(&#34;custom_attribute&#34;, &#34;custom&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleHttpNamespace = new HttpNamespace(&#34;exampleHttpNamespace&#34;, HttpNamespaceArgs.builder()        
+ *             .description(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleService = new Service(&#34;exampleService&#34;, ServiceArgs.builder()        
+ *             .namespaceId(exampleHttpNamespace.getId())
+ *             .build());
+ * 
+ *         var exampleInstance = new Instance(&#34;exampleInstance&#34;, InstanceArgs.builder()        
+ *             .instanceId(&#34;example-instance-id&#34;)
+ *             .serviceId(exampleService.getId())
+ *             .attributes(Map.of(&#34;AWS_EC2_INSTANCE_ID&#34;, &#34;i-0abdg374kd892cj6dl&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -17,6 +17,38 @@ import javax.annotation.Nullable;
  * Manages an AppStream Fleet Stack association.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleFleet = new Fleet(&#34;exampleFleet&#34;, FleetArgs.builder()        
+ *             .imageName(&#34;Amazon-AppStream2-Sample-Image-02-04-2019&#34;)
+ *             .instanceType(&#34;stream.standard.small&#34;)
+ *             .computeCapacity(FleetComputeCapacity.builder()
+ *                 .desiredInstances(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleStack = new Stack(&#34;exampleStack&#34;);
+ * 
+ *         var exampleFleetStackAssociation = new FleetStackAssociation(&#34;exampleFleetStackAssociation&#34;, FleetStackAssociationArgs.builder()        
+ *             .fleetName(exampleFleet.getName())
+ *             .stackName(exampleStack.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

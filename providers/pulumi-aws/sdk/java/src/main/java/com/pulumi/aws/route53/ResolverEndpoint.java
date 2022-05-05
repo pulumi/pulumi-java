@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * Provides a Route 53 Resolver endpoint resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new ResolverEndpoint(&#34;foo&#34;, ResolverEndpointArgs.builder()        
+ *             .direction(&#34;INBOUND&#34;)
+ *             .securityGroupIds(            
+ *                 aws_security_group.getSg1().getId(),
+ *                 aws_security_group.getSg2().getId())
+ *             .ipAddresses(            
+ *                 ResolverEndpointIpAddress.builder()
+ *                     .subnetId(aws_subnet.getSn1().getId())
+ *                     .build(),
+ *                 ResolverEndpointIpAddress.builder()
+ *                     .subnetId(aws_subnet.getSn2().getId())
+ *                     .ip(&#34;10.0.64.4&#34;)
+ *                     .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;Prod&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,31 @@ import javax.annotation.Nullable;
  * Manages a single EBS volume.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Volume(&#34;example&#34;, VolumeArgs.builder()        
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .size(40)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **NOTE**: At least one of `size` or `snapshot_id` is required when specifying an EBS volume
  * 
  * ## Import
  * 

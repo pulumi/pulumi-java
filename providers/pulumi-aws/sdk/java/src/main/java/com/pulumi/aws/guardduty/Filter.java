@@ -21,6 +21,51 @@ import javax.annotation.Nullable;
  * Provides a resource to manage a GuardDuty filter.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myFilter = new Filter(&#34;myFilter&#34;, FilterArgs.builder()        
+ *             .action(&#34;ARCHIVE&#34;)
+ *             .detectorId(aws_guardduty_detector.getExample().getId())
+ *             .rank(1)
+ *             .findingCriteria(FilterFindingCriteria.builder()
+ *                 .criterions(                
+ *                     FilterFindingCriteriaCriterion.builder()
+ *                         .field(&#34;region&#34;)
+ *                         .equals(&#34;eu-west-1&#34;)
+ *                         .build(),
+ *                     FilterFindingCriteriaCriterion.builder()
+ *                         .field(&#34;service.additionalInfo.threatListName&#34;)
+ *                         .notEquals(                        
+ *                             &#34;some-threat&#34;,
+ *                             &#34;another-threat&#34;)
+ *                         .build(),
+ *                     FilterFindingCriteriaCriterion.builder()
+ *                         .field(&#34;updatedAt&#34;)
+ *                         .greaterThan(&#34;2020-01-01T00:00:00Z&#34;)
+ *                         .lessThan(&#34;2020-02-01T00:00:00Z&#34;)
+ *                         .build(),
+ *                     FilterFindingCriteriaCriterion.builder()
+ *                         .field(&#34;severity&#34;)
+ *                         .greaterThanOrEqual(&#34;4&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

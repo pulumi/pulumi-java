@@ -25,6 +25,32 @@ import javax.annotation.Nullable;
  * Provides a Redshift Cluster Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;tf-redshift-cluster&#34;)
+ *             .clusterType(&#34;single-node&#34;)
+ *             .databaseName(&#34;mydb&#34;)
+ *             .masterPassword(&#34;Mustbe8characters&#34;)
+ *             .masterUsername(&#34;exampleuser&#34;)
+ *             .nodeType(&#34;dc1.large&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

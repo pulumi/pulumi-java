@@ -42,6 +42,122 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
  * 
  * ## Example Usage
+ * ### Memcached Cluster
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .engine(&#34;memcached&#34;)
+ *             .nodeType(&#34;cache.m4.large&#34;)
+ *             .numCacheNodes(2)
+ *             .parameterGroupName(&#34;default.memcached1.4&#34;)
+ *             .port(11211)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Instance
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Cluster(&#34;example&#34;, ClusterArgs.builder()        
+ *             .engine(&#34;redis&#34;)
+ *             .engineVersion(&#34;3.2.10&#34;)
+ *             .nodeType(&#34;cache.m4.large&#34;)
+ *             .numCacheNodes(1)
+ *             .parameterGroupName(&#34;default.redis3.2&#34;)
+ *             .port(6379)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Cluster Mode Disabled Read Replica Instance
+ * 
+ * These inherit their settings from the replication group.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replica = new Cluster(&#34;replica&#34;, ClusterArgs.builder()        
+ *             .replicationGroupId(aws_elasticache_replication_group.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redis Log Delivery configuration
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new Cluster(&#34;test&#34;, ClusterArgs.builder()        
+ *             .engine(&#34;redis&#34;)
+ *             .nodeType(&#34;cache.t3.micro&#34;)
+ *             .numCacheNodes(1)
+ *             .port(6379)
+ *             .applyImmediately(true)
+ *             .logDeliveryConfigurations(            
+ *                 ClusterLogDeliveryConfiguration.builder()
+ *                     .destination(aws_cloudwatch_log_group.getExample().getName())
+ *                     .destinationType(&#34;cloudwatch-logs&#34;)
+ *                     .logFormat(&#34;text&#34;)
+ *                     .logType(&#34;slow-log&#34;)
+ *                     .build(),
+ *                 ClusterLogDeliveryConfiguration.builder()
+ *                     .destination(aws_kinesis_firehose_delivery_stream.getExample().getName())
+ *                     .destinationType(&#34;kinesis-firehose&#34;)
+ *                     .logFormat(&#34;json&#34;)
+ *                     .logType(&#34;engine-log&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

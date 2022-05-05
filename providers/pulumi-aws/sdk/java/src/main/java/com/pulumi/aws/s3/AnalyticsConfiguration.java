@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
  * Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource.
  * 
  * ## Example Usage
+ * ### Add analytics configuration for entire S3 bucket and export results to a second S3 bucket
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var analytics = new BucketV2(&#34;analytics&#34;);
+ * 
+ *         var example_entire_bucket = new AnalyticsConfiguration(&#34;example-entire-bucket&#34;, AnalyticsConfigurationArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .storageClassAnalysis(AnalyticsConfigurationStorageClassAnalysis.builder()
+ *                 .dataExport(AnalyticsConfigurationStorageClassAnalysisDataExport.builder()
+ *                     .destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestination.builder()
+ *                         .s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination.builder()
+ *                             .bucketArn(analytics.getArn())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Add analytics configuration with S3 object filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         var example_filtered = new AnalyticsConfiguration(&#34;example-filtered&#34;, AnalyticsConfigurationArgs.builder()        
+ *             .bucket(example.getBucket())
+ *             .filter(AnalyticsConfigurationFilter.builder()
+ *                 .prefix(&#34;documents/&#34;)
+ *                 .tags(Map.ofEntries(
+ *                     Map.entry(&#34;priority&#34;, &#34;high&#34;),
+ *                     Map.entry(&#34;class&#34;, &#34;blue&#34;)
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

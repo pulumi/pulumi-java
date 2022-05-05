@@ -22,6 +22,32 @@ import javax.annotation.Nullable;
  * Provides a resource to manage AWS Device Farm Device Pools.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DevicePool(&#34;example&#34;, DevicePoolArgs.builder()        
+ *             .projectArn(aws_devicefarm_project.getExample().getArn())
+ *             .rules(DevicePoolRule.builder()
+ *                 .attribute(&#34;OS_VERSION&#34;)
+ *                 .operator(&#34;EQUALS&#34;)
+ *                 .value(&#34;\&#34;AVAILABLE\&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

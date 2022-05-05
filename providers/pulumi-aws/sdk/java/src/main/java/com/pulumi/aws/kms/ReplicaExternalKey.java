@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * See the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-import.html) for more information on importing key material into multi-Region keys.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primary = new Provider(&#34;primary&#34;, ProviderArgs.builder()        
+ *             .region(&#34;us-east-1&#34;)
+ *             .build());
+ * 
+ *         var primaryExternalKey = new ExternalKey(&#34;primaryExternalKey&#34;, ExternalKeyArgs.builder()        
+ *             .description(&#34;Multi-Region primary key&#34;)
+ *             .deletionWindowInDays(30)
+ *             .multiRegion(true)
+ *             .enabled(true)
+ *             .keyMaterialBase64(&#34;...&#34;)
+ *             .build());
+ * 
+ *         var replica = new ReplicaExternalKey(&#34;replica&#34;, ReplicaExternalKeyArgs.builder()        
+ *             .description(&#34;Multi-Region replica key&#34;)
+ *             .deletionWindowInDays(7)
+ *             .primaryKeyArn(aws_kms_external.getPrimary().getArn())
+ *             .keyMaterialBase64(&#34;...&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

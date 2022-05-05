@@ -22,6 +22,55 @@ import javax.annotation.Nullable;
  * Provides a Glue Catalog Database Resource. You can refer to the [Glue Developer Guide](http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html) for a full explanation of the Glue Data Catalog functionality
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var awsGlueCatalogDatabase = new CatalogDatabase(&#34;awsGlueCatalogDatabase&#34;, CatalogDatabaseArgs.builder()        
+ *             .name(&#34;MyCatalogDatabase&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create Table Default Permissions
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var awsGlueCatalogDatabase = new CatalogDatabase(&#34;awsGlueCatalogDatabase&#34;, CatalogDatabaseArgs.builder()        
+ *             .createTableDefaultPermissions(CatalogDatabaseCreateTableDefaultPermission.builder()
+ *                 .permissions(&#34;SELECT&#34;)
+ *                 .principal(CatalogDatabaseCreateTableDefaultPermissionPrincipal.builder()
+ *                     .dataLakePrincipalIdentifier(&#34;IAM_ALLOWED_PRINCIPALS&#34;)
+ *                     .build())
+ *                 .build())
+ *             .name(&#34;MyCatalogDatabase&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

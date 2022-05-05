@@ -18,6 +18,35 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * The following example below creates a CloudFront key group.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var examplePublicKey = new PublicKey(&#34;examplePublicKey&#34;, PublicKeyArgs.builder()        
+ *             .comment(&#34;example public key&#34;)
+ *             .encodedKey(Files.readString(&#34;public_key.pem&#34;))
+ *             .build());
+ * 
+ *         var exampleKeyGroup = new KeyGroup(&#34;exampleKeyGroup&#34;, KeyGroupArgs.builder()        
+ *             .comment(&#34;example key group&#34;)
+ *             .items(examplePublicKey.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * CloudFront Key Group can be imported using the `id`, e.g.,

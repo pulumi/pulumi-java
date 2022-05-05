@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [Amazon Macie Findings Filter](https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters-id.html).
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Account(&#34;example&#34;);
+ * 
+ *         var test = new FindingsFilter(&#34;test&#34;, FindingsFilterArgs.builder()        
+ *             .description(&#34;DESCRIPTION&#34;)
+ *             .position(1)
+ *             .action(&#34;ARCHIVE&#34;)
+ *             .findingCriteria(FindingsFilterFindingCriteria.builder()
+ *                 .criterions(FindingsFilterFindingCriteriaCriterion.builder()
+ *                     .field(&#34;region&#34;)
+ *                     .eqs(data.getAws_region().getCurrent().getName())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

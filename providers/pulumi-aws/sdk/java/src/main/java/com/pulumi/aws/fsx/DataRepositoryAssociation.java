@@ -24,6 +24,57 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** Data Repository Associations are only compatible with AWS FSx for Lustre File Systems and `PERSISTENT_2` deployment type.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketAclV2 = new BucketAclV2(&#34;exampleBucketAclV2&#34;, BucketAclV2Args.builder()        
+ *             .bucket(exampleBucketV2.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var exampleLustreFileSystem = new LustreFileSystem(&#34;exampleLustreFileSystem&#34;, LustreFileSystemArgs.builder()        
+ *             .storageCapacity(1200)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .deploymentType(&#34;PERSISTENT_2&#34;)
+ *             .perUnitStorageThroughput(125)
+ *             .build());
+ * 
+ *         var exampleDataRepositoryAssociation = new DataRepositoryAssociation(&#34;exampleDataRepositoryAssociation&#34;, DataRepositoryAssociationArgs.builder()        
+ *             .fileSystemId(exampleLustreFileSystem.getId())
+ *             .dataRepositoryPath(exampleBucketV2.getId().apply(id -&gt; String.format(&#34;s3://%s&#34;, id)))
+ *             .fileSystemPath(&#34;/my-bucket&#34;)
+ *             .s3(DataRepositoryAssociationS3.builder()
+ *                 .autoExportPolicy(DataRepositoryAssociationS3AutoExportPolicy.builder()
+ *                     .events(                    
+ *                         &#34;NEW&#34;,
+ *                         &#34;CHANGED&#34;,
+ *                         &#34;DELETED&#34;)
+ *                     .build())
+ *                 .autoImportPolicy(DataRepositoryAssociationS3AutoImportPolicy.builder()
+ *                     .events(                    
+ *                         &#34;NEW&#34;,
+ *                         &#34;CHANGED&#34;,
+ *                         &#34;DELETED&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

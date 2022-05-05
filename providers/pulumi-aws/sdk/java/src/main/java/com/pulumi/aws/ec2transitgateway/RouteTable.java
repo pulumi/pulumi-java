@@ -20,6 +20,27 @@ import javax.annotation.Nullable;
  * Manages an EC2 Transit Gateway Route Table.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RouteTable(&#34;example&#34;, RouteTableArgs.builder()        
+ *             .transitGatewayId(aws_ec2_transit_gateway.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

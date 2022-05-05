@@ -19,6 +19,29 @@ import javax.annotation.Nullable;
  * The device and link must be in the same global network and the same site.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LinkAssociation(&#34;example&#34;, LinkAssociationArgs.builder()        
+ *             .globalNetworkId(aws_networkmanager_global_network.getExample().getId())
+ *             .linkId(aws_networkmanager_link.getExample().getId())
+ *             .deviceId(aws_networkmanager_device.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

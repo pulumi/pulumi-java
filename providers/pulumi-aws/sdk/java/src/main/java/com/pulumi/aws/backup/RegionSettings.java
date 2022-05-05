@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
  * Provides an AWS Backup Region Settings resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new RegionSettings(&#34;test&#34;, RegionSettingsArgs.builder()        
+ *             .resourceTypeManagementPreference(Map.ofEntries(
+ *                 Map.entry(&#34;DynamoDB&#34;, true),
+ *                 Map.entry(&#34;EFS&#34;, true)
+ *             ))
+ *             .resourceTypeOptInPreference(Map.ofEntries(
+ *                 Map.entry(&#34;Aurora&#34;, true),
+ *                 Map.entry(&#34;DocumentDB&#34;, true),
+ *                 Map.entry(&#34;DynamoDB&#34;, true),
+ *                 Map.entry(&#34;EBS&#34;, true),
+ *                 Map.entry(&#34;EC2&#34;, true),
+ *                 Map.entry(&#34;EFS&#34;, true),
+ *                 Map.entry(&#34;FSx&#34;, true),
+ *                 Map.entry(&#34;Neptune&#34;, true),
+ *                 Map.entry(&#34;RDS&#34;, true),
+ *                 Map.entry(&#34;Storage Gateway&#34;, true),
+ *                 Map.entry(&#34;VirtualMachine&#34;, true)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * Provides a Redshift event subscription resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultCluster = new Cluster(&#34;defaultCluster&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;default&#34;)
+ *             .databaseName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         var defaultTopic = new Topic(&#34;defaultTopic&#34;);
+ * 
+ *         var defaultEventSubscription = new EventSubscription(&#34;defaultEventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .snsTopicArn(defaultTopic.getArn())
+ *             .sourceType(&#34;cluster&#34;)
+ *             .sourceIds(defaultCluster.getId())
+ *             .severity(&#34;INFO&#34;)
+ *             .eventCategories(            
+ *                 &#34;configuration&#34;,
+ *                 &#34;management&#34;,
+ *                 &#34;monitoring&#34;,
+ *                 &#34;security&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;default&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

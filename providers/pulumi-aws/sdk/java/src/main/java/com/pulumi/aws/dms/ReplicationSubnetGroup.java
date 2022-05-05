@@ -20,6 +20,30 @@ import javax.annotation.Nullable;
  * Provides a DMS (Data Migration Service) replication subnet group resource. DMS replication subnet groups can be created, updated, deleted, and imported.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var test = new ReplicationSubnetGroup(&#34;test&#34;, ReplicationSubnetGroupArgs.builder()        
+ *             .replicationSubnetGroupDescription(&#34;Test replication subnet group&#34;)
+ *             .replicationSubnetGroupId(&#34;test-dms-replication-subnet-group-tf&#34;)
+ *             .subnetIds(&#34;subnet-12345678&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

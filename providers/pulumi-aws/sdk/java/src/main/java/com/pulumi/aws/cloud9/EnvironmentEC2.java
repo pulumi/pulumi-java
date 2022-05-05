@@ -21,6 +21,96 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * Basic usage:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EnvironmentEC2(&#34;example&#34;, EnvironmentEC2Args.builder()        
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * Get the URL of the Cloud9 environment after creation:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EnvironmentEC2(&#34;example&#34;, EnvironmentEC2Args.builder()        
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         final var cloud9Instance = Ec2Functions.getInstance(GetInstanceArgs.builder()
+ *             .filters(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;tag:aws:cloud9:environment&#34;),
+ *                 Map.entry(&#34;values&#34;, example.getId())
+ *             ))
+ *             .build());
+ * 
+ *         ctx.export(&#34;cloud9Url&#34;, example.getId().apply(id -&gt; String.format(&#34;https://%s.console.aws.amazon.com/cloud9/ide/%s&#34;, var_.getRegion(),id)));
+ *         }
+ * }
+ * ```
+ * 
+ * Allocate a static IP to the Cloud9 environment:
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EnvironmentEC2(&#34;example&#34;, EnvironmentEC2Args.builder()        
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .build());
+ * 
+ *         final var cloud9Instance = Ec2Functions.getInstance(GetInstanceArgs.builder()
+ *             .filters(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;tag:aws:cloud9:environment&#34;),
+ *                 Map.entry(&#34;values&#34;, example.getId())
+ *             ))
+ *             .build());
+ * 
+ *         var cloud9Eip = new Eip(&#34;cloud9Eip&#34;, EipArgs.builder()        
+ *             .instance(cloud9Instance.apply(getInstanceResult -&gt; getInstanceResult).apply(cloud9Instance -&gt; cloud9Instance.apply(getInstanceResult -&gt; getInstanceResult.getId())))
+ *             .vpc(true)
+ *             .build());
+ * 
+ *         ctx.export(&#34;cloud9PublicIp&#34;, cloud9Eip.getPublicIp());
+ *         }
+ * }
+ * ```
+ * 
  */
 @ResourceType(type="aws:cloud9/environmentEC2:EnvironmentEC2")
 public class EnvironmentEC2 extends com.pulumi.resources.CustomResource {

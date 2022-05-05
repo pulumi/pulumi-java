@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * Creates a Signer Signing Profile. A signing profile contains information about the code signing configuration parameters that can be used by a given code signing user.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testSp = new SigningProfile(&#34;testSp&#34;, SigningProfileArgs.builder()        
+ *             .platformId(&#34;AWSLambda-SHA384-ECDSA&#34;)
+ *             .build());
+ * 
+ *         var prodSp = new SigningProfile(&#34;prodSp&#34;, SigningProfileArgs.builder()        
+ *             .namePrefix(&#34;prod_sp_&#34;)
+ *             .platformId(&#34;AWSLambda-SHA384-ECDSA&#34;)
+ *             .signatureValidityPeriod(SigningProfileSignatureValidityPeriod.builder()
+ *                 .type(&#34;YEARS&#34;)
+ *                 .value(5)
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

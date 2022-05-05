@@ -18,6 +18,27 @@ public final class SfnFunctions {
      * Provides a Step Functions Activity data source
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sfnActivity = Output.of(SfnFunctions.getActivity(GetActivityArgs.builder()
+     *             .name(&#34;my-activity&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetActivityResult> getActivity() {
@@ -35,6 +56,27 @@ public final class SfnFunctions {
      * state machine without having to hard code the ARNs as input.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SfnFunctions.getStateMachine(GetStateMachineArgs.builder()
+     *             .name(&#34;an_example_sfn_name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetStateMachineResult> getStateMachine(GetStateMachineArgs args) {

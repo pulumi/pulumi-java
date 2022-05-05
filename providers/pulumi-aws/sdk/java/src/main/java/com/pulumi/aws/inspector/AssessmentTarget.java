@@ -18,6 +18,34 @@ import javax.annotation.Nullable;
  * Provides a Inspector assessment target
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bar = new ResourceGroup(&#34;bar&#34;, ResourceGroupArgs.builder()        
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Name&#34;, &#34;foo&#34;),
+ *                 Map.entry(&#34;Env&#34;, &#34;bar&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         var foo = new AssessmentTarget(&#34;foo&#34;, AssessmentTargetArgs.builder()        
+ *             .resourceGroupArn(bar.getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

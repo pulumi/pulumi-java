@@ -20,6 +20,29 @@ import javax.annotation.Nullable;
  * * [Importing Amazon S3 Data into an RDS PostgreSQL DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PostgreSQL.S3Import.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClusterRoleAssociation(&#34;example&#34;, ClusterRoleAssociationArgs.builder()        
+ *             .dbClusterIdentifier(aws_rds_cluster.getExample().getId())
+ *             .featureName(&#34;S3_INTEGRATION&#34;)
+ *             .roleArn(aws_iam_role.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

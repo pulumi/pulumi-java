@@ -20,6 +20,57 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Basic Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lambdaLayer = new LayerVersion(&#34;lambdaLayer&#34;, LayerVersionArgs.builder()        
+ *             .compatibleRuntimes(&#34;nodejs12.x&#34;)
+ *             .code(new FileArchive(&#34;lambda_layer_payload.zip&#34;))
+ *             .layerName(&#34;lambda_layer_name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Lambda Layer with Compatible Architectures
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lambdaLayer = new LayerVersion(&#34;lambdaLayer&#34;, LayerVersionArgs.builder()        
+ *             .compatibleArchitectures(            
+ *                 &#34;arm64&#34;,
+ *                 &#34;x86_64&#34;)
+ *             .compatibleRuntimes(&#34;nodejs12.x&#34;)
+ *             .code(new FileArchive(&#34;lambda_layer_payload.zip&#34;))
+ *             .layerName(&#34;lambda_layer_name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Specifying the Deployment Package
  * 
  * AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatible_runtimes` this layer specifies.

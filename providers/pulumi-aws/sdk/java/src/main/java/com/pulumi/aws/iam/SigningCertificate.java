@@ -17,6 +17,60 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * **Using certs on file:**
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCert = new SigningCertificate(&#34;testCert&#34;, SigningCertificateArgs.builder()        
+ *             .username(&#34;some_test_cert&#34;)
+ *             .certificateBody(Files.readString(&#34;self-ca-cert.pem&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * **Example with cert in-line:**
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCertAlt = new SigningCertificate(&#34;testCertAlt&#34;, SigningCertificateArgs.builder()        
+ *             .certificateBody(&#34;&#34;&#34;
+ * -----BEGIN CERTIFICATE-----
+ * [......] # cert contents
+ * -----END CERTIFICATE-----
+ * 
+ *             &#34;&#34;&#34;)
+ *             .username(&#34;some_test_cert&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * IAM Signing Certificates can be imported using the `id`, e.g.,

@@ -22,6 +22,30 @@ import javax.annotation.Nullable;
  * Provides an Elastic Container Registry Repository.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new Repository(&#34;foo&#34;, RepositoryArgs.builder()        
+ *             .imageScanningConfiguration(RepositoryImageScanningConfiguration.builder()
+ *                 .scanOnPush(true)
+ *                 .build())
+ *             .imageTagMutability(&#34;MUTABLE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

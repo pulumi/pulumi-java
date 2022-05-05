@@ -28,6 +28,274 @@ import javax.annotation.Nullable;
  * For information about event source mappings, see [CreateEventSourceMapping](http://docs.aws.amazon.com/lambda/latest/dg/API_CreateEventSourceMapping.html) in the API docs.
  * 
  * ## Example Usage
+ * ### DynamoDB
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_dynamodb_table.getExample().getStream_arn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .startingPosition(&#34;LATEST&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Kinesis
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_kinesis_stream.getExample().getArn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .startingPosition(&#34;LATEST&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Managed Streaming for Apache Kafka (MSK)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_msk_cluster.getExample().getArn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .topics(&#34;Example&#34;)
+ *             .startingPosition(&#34;TRIM_HORIZON&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Self Managed Apache Kafka
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .topics(&#34;Example&#34;)
+ *             .startingPosition(&#34;TRIM_HORIZON&#34;)
+ *             .selfManagedEventSource(EventSourceMappingSelfManagedEventSource.builder()
+ *                 .endpoints(Map.of(&#34;KAFKA_BOOTSTRAP_SERVERS&#34;, &#34;kafka1.example.com:9092,kafka2.example.com:9092&#34;))
+ *                 .build())
+ *             .sourceAccessConfigurations(            
+ *                 EventSourceMappingSourceAccessConfiguration.builder()
+ *                     .type(&#34;VPC_SUBNET&#34;)
+ *                     .uri(&#34;subnet:subnet-example1&#34;)
+ *                     .build(),
+ *                 EventSourceMappingSourceAccessConfiguration.builder()
+ *                     .type(&#34;VPC_SUBNET&#34;)
+ *                     .uri(&#34;subnet:subnet-example2&#34;)
+ *                     .build(),
+ *                 EventSourceMappingSourceAccessConfiguration.builder()
+ *                     .type(&#34;VPC_SECURITY_GROUP&#34;)
+ *                     .uri(&#34;security_group:sg-example&#34;)
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### SQS
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_sqs_queue.getSqs_queue_test().getArn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### SQS with event filter
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_sqs_queue.getSqs_queue_test().getArn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .filterCriteria(EventSourceMappingFilterCriteria.builder()
+ *                 .filters(EventSourceMappingFilterCriteriaFilter.builder()
+ *                     .pattern(serializeJson(
+ *                         jsonObject(
+ *                             jsonProperty(&#34;body&#34;, jsonObject(
+ *                                 jsonProperty(&#34;Temperature&#34;, jsonArray(jsonObject(
+ *                                     jsonProperty(&#34;numeric&#34;, jsonArray(
+ *                                         &#34;&gt;&#34;, 
+ *                                         0, 
+ *                                         &#34;&lt;=&#34;, 
+ *                                         100
+ *                                     ))
+ *                                 ))),
+ *                                 jsonProperty(&#34;Location&#34;, jsonArray(&#34;New York&#34;))
+ *                             ))
+ *                         )))
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Amazon MQ (ActiveMQ)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .batchSize(10)
+ *             .eventSourceArn(aws_mq_broker.getExample().getArn())
+ *             .enabled(true)
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .queues(&#34;example&#34;)
+ *             .sourceAccessConfigurations(EventSourceMappingSourceAccessConfiguration.builder()
+ *                 .type(&#34;BASIC_AUTH&#34;)
+ *                 .uri(aws_secretsmanager_secret_version.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Amazon MQ (RabbitMQ)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .batchSize(1)
+ *             .eventSourceArn(aws_mq_broker.getExample().getArn())
+ *             .enabled(true)
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .queues(&#34;example&#34;)
+ *             .sourceAccessConfigurations(            
+ *                 EventSourceMappingSourceAccessConfiguration.builder()
+ *                     .type(&#34;VIRTUAL_HOST&#34;)
+ *                     .uri(&#34;/example&#34;)
+ *                     .build(),
+ *                 EventSourceMappingSourceAccessConfiguration.builder()
+ *                     .type(&#34;BASIC_AUTH&#34;)
+ *                     .uri(aws_secretsmanager_secret_version.getExample().getArn())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Managed Streaming for Kafka (MSK)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSourceMapping(&#34;example&#34;, EventSourceMappingArgs.builder()        
+ *             .eventSourceArn(aws_msk_cluster.getExample().getArn())
+ *             .functionName(aws_lambda_function.getExample().getArn())
+ *             .topics(&#34;Example&#34;)
+ *             .startingPosition(&#34;TRIM_HORIZON&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,31 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** The EFS File System must have a mounted EFS Mount Target before creating this resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EfsLocation(&#34;example&#34;, EfsLocationArgs.builder()        
+ *             .efsFileSystemArn(aws_efs_mount_target.getExample().getFile_system_arn())
+ *             .ec2Config(EfsLocationEc2Config.builder()
+ *                 .securityGroupArns(aws_security_group.getExample().getArn())
+ *                 .subnetArn(aws_subnet.getExample().getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

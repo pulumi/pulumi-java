@@ -21,6 +21,70 @@ import javax.annotation.Nullable;
  * Manages an EKS Fargate Profile.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FargateProfile(&#34;example&#34;, FargateProfileArgs.builder()        
+ *             .clusterName(aws_eks_cluster.getExample().getName())
+ *             .podExecutionRoleArn(aws_iam_role.getExample().getArn())
+ *             .subnetIds(aws_subnet.getExample().stream().map(element -&gt; element.getId()).collect(toList()))
+ *             .selectors(FargateProfileSelector.builder()
+ *                 .namespace(&#34;example&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Example IAM Role for EKS Fargate Profile
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Role(&#34;example&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;Statement&#34;, jsonArray(jsonObject(
+ *                         jsonProperty(&#34;Action&#34;, &#34;sts:AssumeRole&#34;),
+ *                         jsonProperty(&#34;Effect&#34;, &#34;Allow&#34;),
+ *                         jsonProperty(&#34;Principal&#34;, jsonObject(
+ *                             jsonProperty(&#34;Service&#34;, &#34;eks-fargate-pods.amazonaws.com&#34;)
+ *                         ))
+ *                     ))),
+ *                     jsonProperty(&#34;Version&#34;, &#34;2012-10-17&#34;)
+ *                 )))
+ *             .build());
+ * 
+ *         var example_AmazonEKSFargatePodExecutionRolePolicy = new RolePolicyAttachment(&#34;example-AmazonEKSFargatePodExecutionRolePolicy&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy&#34;)
+ *             .role(example.getName())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

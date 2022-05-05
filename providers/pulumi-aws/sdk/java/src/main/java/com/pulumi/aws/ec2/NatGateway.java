@@ -19,6 +19,53 @@ import javax.annotation.Nullable;
  * Provides a resource to create a VPC NAT Gateway.
  * 
  * ## Example Usage
+ * ### Public NAT
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NatGateway(&#34;example&#34;, NatGatewayArgs.builder()        
+ *             .allocationId(aws_eip.getExample().getId())
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;gw NAT&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Private NAT
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NatGateway(&#34;example&#34;, NatGatewayArgs.builder()        
+ *             .connectivityType(&#34;private&#34;)
+ *             .subnetId(aws_subnet.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

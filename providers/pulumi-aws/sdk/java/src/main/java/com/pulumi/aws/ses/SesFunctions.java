@@ -20,6 +20,25 @@ public final class SesFunctions {
      * Retrieve the active SES receipt rule set
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var main = Output.of(SesFunctions.getActiveReceiptRuleSet());
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetActiveReceiptRuleSetResult> getActiveReceiptRuleSet() {
@@ -35,6 +54,27 @@ public final class SesFunctions {
      * Retrieve the SES domain identity
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SesFunctions.getDomainIdentity(GetDomainIdentityArgs.builder()
+     *             .domain(&#34;example.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDomainIdentityResult> getDomainIdentity(GetDomainIdentityArgs args) {
@@ -47,6 +87,27 @@ public final class SesFunctions {
      * Retrieve the active SES email identity
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SesFunctions.getEmailIdentity(GetEmailIdentityArgs.builder()
+     *             .email(&#34;awesome@example.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEmailIdentityResult> getEmailIdentity(GetEmailIdentityArgs args) {

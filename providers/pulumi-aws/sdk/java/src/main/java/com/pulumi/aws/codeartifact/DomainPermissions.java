@@ -17,6 +17,49 @@ import javax.annotation.Nullable;
  * Provides a CodeArtifact Domains Permissions Policy Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleKey = new Key(&#34;exampleKey&#34;, KeyArgs.builder()        
+ *             .description(&#34;domain key&#34;)
+ *             .build());
+ * 
+ *         var exampleDomain = new Domain(&#34;exampleDomain&#34;, DomainArgs.builder()        
+ *             .domain(&#34;example&#34;)
+ *             .encryptionKey(exampleKey.getArn())
+ *             .build());
+ * 
+ *         var test = new DomainPermissions(&#34;test&#34;, DomainPermissionsArgs.builder()        
+ *             .domain(exampleDomain.getDomain())
+ *             .policyDocument(exampleDomain.getArn().apply(arn -&gt; &#34;&#34;&#34;
+ * {
+ *     &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *     &#34;Statement&#34;: [
+ *         {
+ *             &#34;Action&#34;: &#34;codeartifact:CreateRepository&#34;,
+ *             &#34;Effect&#34;: &#34;Allow&#34;,
+ *             &#34;Principal&#34;: &#34;*&#34;,
+ *             &#34;Resource&#34;: &#34;%s&#34;
+ *         }
+ *     ]
+ * }
+ * &#34;, arn)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

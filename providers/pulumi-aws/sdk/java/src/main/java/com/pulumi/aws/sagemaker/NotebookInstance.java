@@ -21,6 +21,62 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Notebook Instance resource.
  * 
  * ## Example Usage
+ * ### Basic usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ni = new NotebookInstance(&#34;ni&#34;, NotebookInstanceArgs.builder()        
+ *             .roleArn(aws_iam_role.getRole().getArn())
+ *             .instanceType(&#34;ml.t2.medium&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foo&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Code repository usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CodeRepository(&#34;example&#34;, CodeRepositoryArgs.builder()        
+ *             .codeRepositoryName(&#34;my-notebook-instance-code-repo&#34;)
+ *             .gitConfig(CodeRepositoryGitConfig.builder()
+ *                 .repositoryUrl(&#34;https://github.com/hashicorp/terraform-provider-aws.git&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var ni = new NotebookInstance(&#34;ni&#34;, NotebookInstanceArgs.builder()        
+ *             .roleArn(aws_iam_role.getRole().getArn())
+ *             .instanceType(&#34;ml.t2.medium&#34;)
+ *             .defaultCodeRepository(example.getCodeRepositoryName())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;foo&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Manages an EC2 Carrier Gateway. See the AWS [documentation](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) for more information.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CarrierGateway(&#34;example&#34;, CarrierGatewayArgs.builder()        
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-carrier-gateway&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

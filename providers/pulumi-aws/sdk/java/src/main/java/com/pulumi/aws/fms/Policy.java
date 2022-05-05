@@ -24,6 +24,52 @@ import javax.annotation.Nullable;
  * Provides a resource to create an AWS Firewall Manager policy. You need to be using AWS organizations and have enabled the Firewall Manager administrator account.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRuleGroup = new RuleGroup(&#34;exampleRuleGroup&#34;, RuleGroupArgs.builder()        
+ *             .metricName(&#34;WAFRuleGroupExample&#34;)
+ *             .build());
+ * 
+ *         var examplePolicy = new Policy(&#34;examplePolicy&#34;, PolicyArgs.builder()        
+ *             .excludeResourceTags(false)
+ *             .remediationEnabled(false)
+ *             .resourceTypeLists(&#34;AWS::ElasticLoadBalancingV2::LoadBalancer&#34;)
+ *             .securityServicePolicyData(PolicySecurityServicePolicyData.builder()
+ *                 .type(&#34;WAF&#34;)
+ *                 .managedServiceData(exampleRuleGroup.getId().apply(id -&gt; serializeJson(
+ *                     jsonObject(
+ *                         jsonProperty(&#34;type&#34;, &#34;WAF&#34;),
+ *                         jsonProperty(&#34;ruleGroups&#34;, jsonArray(jsonObject(
+ *                             jsonProperty(&#34;id&#34;, id),
+ *                             jsonProperty(&#34;overrideAction&#34;, jsonObject(
+ *                                 jsonProperty(&#34;type&#34;, &#34;COUNT&#34;)
+ *                             ))
+ *                         ))),
+ *                         jsonProperty(&#34;defaultAction&#34;, jsonObject(
+ *                             jsonProperty(&#34;type&#34;, &#34;BLOCK&#34;)
+ *                         )),
+ *                         jsonProperty(&#34;overrideCustomerWebACLAssociation&#34;, false)
+ *                     ))))
+ *                 .build())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example-fms-policy&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

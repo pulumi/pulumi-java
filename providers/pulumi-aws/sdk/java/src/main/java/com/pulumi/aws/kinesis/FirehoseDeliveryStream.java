@@ -29,6 +29,433 @@ import javax.annotation.Nullable;
  * For more details, see the [Amazon Kinesis Firehose Documentation](https://aws.amazon.com/documentation/firehose/).
  * 
  * ## Example Usage
+ * ### Extended S3 Destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var firehoseRole = new Role(&#34;firehoseRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;firehose.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var lambdaIam = new Role(&#34;lambdaIam&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;lambda.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var lambdaProcessor = new Function(&#34;lambdaProcessor&#34;, FunctionArgs.builder()        
+ *             .code(new FileArchive(&#34;lambda.zip&#34;))
+ *             .role(lambdaIam.getArn())
+ *             .handler(&#34;exports.handler&#34;)
+ *             .runtime(&#34;nodejs12.x&#34;)
+ *             .build());
+ * 
+ *         var extendedS3Stream = new FirehoseDeliveryStream(&#34;extendedS3Stream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;extended_s3&#34;)
+ *             .extendedS3Configuration(FirehoseDeliveryStreamExtendedS3Configuration.builder()
+ *                 .roleArn(firehoseRole.getArn())
+ *                 .bucketArn(bucket.getArn())
+ *                 .processingConfiguration(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration.builder()
+ *                     .enabled(&#34;true&#34;)
+ *                     .processors(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor.builder()
+ *                         .type(&#34;Lambda&#34;)
+ *                         .parameters(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter.builder()
+ *                             .parameterName(&#34;LambdaArn&#34;)
+ *                             .parameterValue(lambdaProcessor.getArn().apply(arn -&gt; String.format(&#34;%s:$LATEST&#34;, arn)))
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var bucketAcl = new BucketAclV2(&#34;bucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### S3 Destination (deprecated)
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bucket = new BucketV2(&#34;bucket&#34;);
+ * 
+ *         var bucketAcl = new BucketAclV2(&#34;bucketAcl&#34;, BucketAclV2Args.builder()        
+ *             .bucket(bucket.getId())
+ *             .acl(&#34;private&#34;)
+ *             .build());
+ * 
+ *         var firehoseRole = new Role(&#34;firehoseRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;firehose.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;s3&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(firehoseRole.getArn())
+ *                 .bucketArn(bucket.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Redshift Destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCluster = new Cluster(&#34;testCluster&#34;, ClusterArgs.builder()        
+ *             .clusterIdentifier(&#34;tf-redshift-cluster&#34;)
+ *             .databaseName(&#34;test&#34;)
+ *             .masterUsername(&#34;testuser&#34;)
+ *             .masterPassword(&#34;T3stPass&#34;)
+ *             .nodeType(&#34;dc1.large&#34;)
+ *             .clusterType(&#34;single-node&#34;)
+ *             .build());
+ * 
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;redshift&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose_role().getArn())
+ *                 .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                 .bufferSize(10)
+ *                 .bufferInterval(400)
+ *                 .compressionFormat(&#34;GZIP&#34;)
+ *                 .build())
+ *             .redshiftConfiguration(FirehoseDeliveryStreamRedshiftConfiguration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose_role().getArn())
+ *                 .clusterJdbcurl(Output.tuple(testCluster.getEndpoint(), testCluster.getDatabaseName()).apply(values -&gt; {
+ *                     var endpoint = values.t1;
+ *                     var databaseName = values.t2;
+ *                     return String.format(&#34;jdbc:redshift://%s/%s&#34;, endpoint,databaseName);
+ *                 }))
+ *                 .username(&#34;testuser&#34;)
+ *                 .password(&#34;T3stPass&#34;)
+ *                 .dataTableName(&#34;test-table&#34;)
+ *                 .copyOptions(&#34;delimiter &#39;|&#39;&#34;)
+ *                 .dataTableColumns(&#34;test-col&#34;)
+ *                 .s3BackupMode(&#34;Enabled&#34;)
+ *                 .s3BackupConfiguration(FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration.builder()
+ *                     .roleArn(aws_iam_role.getFirehose_role().getArn())
+ *                     .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                     .bufferSize(15)
+ *                     .bufferInterval(300)
+ *                     .compressionFormat(&#34;GZIP&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Elasticsearch Destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCluster = new Domain(&#34;testCluster&#34;);
+ * 
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;elasticsearch&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose_role().getArn())
+ *                 .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                 .bufferSize(10)
+ *                 .bufferInterval(400)
+ *                 .compressionFormat(&#34;GZIP&#34;)
+ *                 .build())
+ *             .elasticsearchConfiguration(FirehoseDeliveryStreamElasticsearchConfiguration.builder()
+ *                 .domainArn(testCluster.getArn())
+ *                 .roleArn(aws_iam_role.getFirehose_role().getArn())
+ *                 .indexName(&#34;test&#34;)
+ *                 .typeName(&#34;test&#34;)
+ *                 .processingConfiguration(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration.builder()
+ *                     .enabled(&#34;true&#34;)
+ *                     .processors(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessor.builder()
+ *                         .type(&#34;Lambda&#34;)
+ *                         .parameters(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameter.builder()
+ *                             .parameterName(&#34;LambdaArn&#34;)
+ *                             .parameterValue(String.format(&#34;%s:$LATEST&#34;, aws_lambda_function.getLambda_processor().getArn()))
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Elasticsearch Destination With VPC
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testCluster = new Domain(&#34;testCluster&#34;, DomainArgs.builder()        
+ *             .clusterConfig(DomainClusterConfig.builder()
+ *                 .instanceCount(2)
+ *                 .zoneAwarenessEnabled(true)
+ *                 .instanceType(&#34;t2.small.elasticsearch&#34;)
+ *                 .build())
+ *             .ebsOptions(DomainEbsOptions.builder()
+ *                 .ebsEnabled(true)
+ *                 .volumeSize(10)
+ *                 .build())
+ *             .vpcOptions(DomainVpcOptions.builder()
+ *                 .securityGroupIds(aws_security_group.getFirst().getId())
+ *                 .subnetIds(                
+ *                     aws_subnet.getFirst().getId(),
+ *                     aws_subnet.getSecond().getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         var firehose_elasticsearch = new RolePolicy(&#34;firehose-elasticsearch&#34;, RolePolicyArgs.builder()        
+ *             .role(aws_iam_role.getFirehose().getId())
+ *             .policy(Output.tuple(testCluster.getArn(), testCluster.getArn()).apply(values -&gt; {
+ *                 var testClusterArn = values.t1;
+ *                 var testClusterArn1 = values.t2;
+ *                 return &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Action&#34;: [
+ *         &#34;es:*&#34;
+ *       ],
+ *       &#34;Resource&#34;: [
+ *         &#34;%s&#34;,
+ *         &#34;%s/*&#34;
+ *       ]
+ *         },
+ *         {
+ *           &#34;Effect&#34;: &#34;Allow&#34;,
+ *           &#34;Action&#34;: [
+ *             &#34;ec2:DescribeVpcs&#34;,
+ *             &#34;ec2:DescribeVpcAttribute&#34;,
+ *             &#34;ec2:DescribeSubnets&#34;,
+ *             &#34;ec2:DescribeSecurityGroups&#34;,
+ *             &#34;ec2:DescribeNetworkInterfaces&#34;,
+ *             &#34;ec2:CreateNetworkInterface&#34;,
+ *             &#34;ec2:CreateNetworkInterfacePermission&#34;,
+ *             &#34;ec2:DeleteNetworkInterface&#34;
+ *           ],
+ *           &#34;Resource&#34;: [
+ *             &#34;*&#34;
+ *           ]
+ *         }
+ *   ]
+ * }
+ * &#34;, testClusterArn,testClusterArn1);
+ *             }))
+ *             .build());
+ * 
+ *         var test = new FirehoseDeliveryStream(&#34;test&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;elasticsearch&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose().getArn())
+ *                 .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                 .build())
+ *             .elasticsearchConfiguration(FirehoseDeliveryStreamElasticsearchConfiguration.builder()
+ *                 .domainArn(testCluster.getArn())
+ *                 .roleArn(aws_iam_role.getFirehose().getArn())
+ *                 .indexName(&#34;test&#34;)
+ *                 .typeName(&#34;test&#34;)
+ *                 .vpcConfig(FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig.builder()
+ *                     .subnetIds(                    
+ *                         aws_subnet.getFirst().getId(),
+ *                         aws_subnet.getSecond().getId())
+ *                     .securityGroupIds(aws_security_group.getFirst().getId())
+ *                     .roleArn(aws_iam_role.getFirehose().getArn())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Splunk Destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;splunk&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose().getArn())
+ *                 .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                 .bufferSize(10)
+ *                 .bufferInterval(400)
+ *                 .compressionFormat(&#34;GZIP&#34;)
+ *                 .build())
+ *             .splunkConfiguration(FirehoseDeliveryStreamSplunkConfiguration.builder()
+ *                 .hecEndpoint(&#34;https://http-inputs-mydomain.splunkcloud.com:443&#34;)
+ *                 .hecToken(&#34;51D4DA16-C61B-4F5F-8EC7-ED4301342A4A&#34;)
+ *                 .hecAcknowledgmentTimeout(600)
+ *                 .hecEndpointType(&#34;Event&#34;)
+ *                 .s3BackupMode(&#34;FailedEventsOnly&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### HTTP Endpoint (e.g., New Relic) Destination
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testStream = new FirehoseDeliveryStream(&#34;testStream&#34;, FirehoseDeliveryStreamArgs.builder()        
+ *             .destination(&#34;http_endpoint&#34;)
+ *             .s3Configuration(FirehoseDeliveryStreamS3Configuration.builder()
+ *                 .roleArn(aws_iam_role.getFirehose().getArn())
+ *                 .bucketArn(aws_s3_bucket.getBucket().getArn())
+ *                 .bufferSize(10)
+ *                 .bufferInterval(400)
+ *                 .compressionFormat(&#34;GZIP&#34;)
+ *                 .build())
+ *             .httpEndpointConfiguration(FirehoseDeliveryStreamHttpEndpointConfiguration.builder()
+ *                 .url(&#34;https://aws-api.newrelic.com/firehose/v1&#34;)
+ *                 .name(&#34;New Relic&#34;)
+ *                 .accessKey(&#34;my-key&#34;)
+ *                 .bufferingSize(15)
+ *                 .bufferingInterval(600)
+ *                 .roleArn(aws_iam_role.getFirehose().getArn())
+ *                 .s3BackupMode(&#34;FailedDataOnly&#34;)
+ *                 .requestConfiguration(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration.builder()
+ *                     .contentEncoding(&#34;GZIP&#34;)
+ *                     .commonAttributes(                    
+ *                         FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute.builder()
+ *                             .name(&#34;testname&#34;)
+ *                             .value(&#34;testvalue&#34;)
+ *                             .build(),
+ *                         FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute.builder()
+ *                             .name(&#34;testname2&#34;)
+ *                             .value(&#34;testvalue2&#34;)
+ *                             .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

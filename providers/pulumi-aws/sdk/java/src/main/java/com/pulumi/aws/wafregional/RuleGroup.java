@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * Provides a WAF Regional Rule Group Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRule = new Rule(&#34;exampleRule&#34;, RuleArgs.builder()        
+ *             .metricName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleRuleGroup = new RuleGroup(&#34;exampleRuleGroup&#34;, RuleGroupArgs.builder()        
+ *             .metricName(&#34;example&#34;)
+ *             .activatedRules(RuleGroupActivatedRule.builder()
+ *                 .action(RuleGroupActivatedRuleAction.builder()
+ *                     .type(&#34;COUNT&#34;)
+ *                     .build())
+ *                 .priority(50)
+ *                 .ruleId(exampleRule.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

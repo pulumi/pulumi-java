@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RegisteredDomain(&#34;example&#34;, RegisteredDomainArgs.builder()        
+ *             .domainName(&#34;example.com&#34;)
+ *             .nameServers(            
+ *                 RegisteredDomainNameServer.builder()
+ *                     .name(&#34;ns-195.awsdns-24.com&#34;)
+ *                     .build(),
+ *                 RegisteredDomainNameServer.builder()
+ *                     .name(&#34;ns-874.awsdns-45.net&#34;)
+ *                     .build())
+ *             .tags(Map.of(&#34;Environment&#34;, &#34;test&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:route53domains/registeredDomain:RegisteredDomain")

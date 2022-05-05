@@ -26,7 +26,75 @@ import javax.annotation.Nullable;
  * to [ignore changes](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to the `load_balancers` and `target_group_arns` arguments.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var asgAttachmentBar = new Attachment(&#34;asgAttachmentBar&#34;, AttachmentArgs.builder()        
+ *             .autoscalingGroupName(aws_autoscaling_group.getAsg().getId())
+ *             .elb(aws_elb.getBar().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var asgAttachmentBar = new Attachment(&#34;asgAttachmentBar&#34;, AttachmentArgs.builder()        
+ *             .autoscalingGroupName(aws_autoscaling_group.getAsg().getId())
+ *             .lbTargetGroupArn(aws_lb_target_group.getTest().getArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## With An AutoScaling Group Resource
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var asg = new Group(&#34;asg&#34;);
+ * 
+ *         var asgAttachmentBar = new Attachment(&#34;asgAttachmentBar&#34;, AttachmentArgs.builder()        
+ *             .autoscalingGroupName(asg.getId())
+ *             .elb(aws_elb.getTest().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  */
 @ResourceType(type="aws:autoscaling/attachment:Attachment")

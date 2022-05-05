@@ -23,6 +23,107 @@ import javax.annotation.Nullable;
  * If you want to **enable** Object Lock for an **existing** bucket, contact AWS Support and see the Object Lock configuration for an existing bucket example below.
  * 
  * ## Example Usage
+ * ### Object Lock configuration for a new bucket
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;, BucketV2Args.builder()        
+ *             .objectLockEnabled(true)
+ *             .build());
+ * 
+ *         var exampleBucketObjectLockConfigurationV2 = new BucketObjectLockConfigurationV2(&#34;exampleBucketObjectLockConfigurationV2&#34;, BucketObjectLockConfigurationV2Args.builder()        
+ *             .bucket(exampleBucketV2.getBucket())
+ *             .rule(BucketObjectLockConfigurationV2Rule.builder()
+ *                 .defaultRetention(BucketObjectLockConfigurationV2RuleDefaultRetention.builder()
+ *                     .mode(&#34;COMPLIANCE&#34;)
+ *                     .days(5)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Object Lock configuration for an existing bucket
+ * 
+ * This is a multistep process that requires AWS Support intervention.
+ * 
+ * 1. Enable versioning on your S3 bucket, if you have not already done so.
+ *    Doing so will generate an &#34;Object Lock token&#34; in the back-end.
+ * 
+ * &lt;!-- markdownlint-disable MD029 --&gt;
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleBucketV2 = new BucketV2(&#34;exampleBucketV2&#34;);
+ * 
+ *         var exampleBucketVersioningV2 = new BucketVersioningV2(&#34;exampleBucketVersioningV2&#34;, BucketVersioningV2Args.builder()        
+ *             .bucket(exampleBucketV2.getBucket())
+ *             .versioningConfiguration(BucketVersioningV2VersioningConfiguration.builder()
+ *                 .status(&#34;Enabled&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * &lt;!-- markdownlint-disable MD029 --&gt;
+ * 
+ * 2. Contact AWS Support to provide you with the &#34;Object Lock token&#34; for the specified bucket and use the token (or token ID) within your new `aws.s3.BucketObjectLockConfigurationV2` resource.
+ *    Notice the `object_lock_enabled` argument does not need to be specified as it defaults to `Enabled`.
+ * 
+ * &lt;!-- markdownlint-disable MD029 --&gt;
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketObjectLockConfigurationV2(&#34;example&#34;, BucketObjectLockConfigurationV2Args.builder()        
+ *             .bucket(aws_s3_bucket.getExample().getBucket())
+ *             .rule(BucketObjectLockConfigurationV2Rule.builder()
+ *                 .defaultRetention(BucketObjectLockConfigurationV2RuleDefaultRetention.builder()
+ *                     .mode(&#34;COMPLIANCE&#34;)
+ *                     .days(5)
+ *                     .build())
+ *                 .build())
+ *             .token(&#34;NG2MKsfoLqV3A+aquXneSG4LOu/ekrlXkRXwIPFVfERT7XOPos+/k444d7RIH0E3W3p5QU6ml2exS2F/eYCFmMWHJ3hFZGk6al1sIJkmNhUMYmsv0jYVQyTTZNLM+DnfooA6SATt39mM1VW1yJh4E+XljMlWzaBwHKbss3/EjlGDjOmVhaSs4Z6427mMCaFD0RLwsYY7zX49gEc31YfOMJGxbXCXSeyNwAhhM/A8UH7gQf38RmjHjjAFbbbLtl8arsxTPW8F1IYohqwmKIr9DnotLLj8Tg44U2SPwujVaqmlKKP9s41rfgb4UbIm7khSafDBng0LGfxC4pMlT9Ny2w==&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * &lt;!-- markdownlint-disable MD029 --&gt;
  * 
  * ## Import
  * 

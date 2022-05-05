@@ -18,6 +18,32 @@ import javax.annotation.Nullable;
  * Resource for managing QuickSight User
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new User(&#34;example&#34;, UserArgs.builder()        
+ *             .email(&#34;author@example.com&#34;)
+ *             .iamArn(&#34;arn:aws:iam::123456789012:user/Example&#34;)
+ *             .identityType(&#34;IAM&#34;)
+ *             .namespace(&#34;foo&#34;)
+ *             .sessionName(&#34;an-author&#34;)
+ *             .userRole(&#34;AUTHOR&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

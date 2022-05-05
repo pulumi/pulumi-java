@@ -20,6 +20,27 @@ import javax.annotation.Nullable;
  * Provides an AWS Route 53 Recovery Readiness Recovery Group.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RecoveryGroup(&#34;example&#34;, RecoveryGroupArgs.builder()        
+ *             .recoveryGroupName(&#34;my-high-availability-app&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

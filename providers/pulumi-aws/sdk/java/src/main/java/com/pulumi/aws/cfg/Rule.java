@@ -23,6 +23,151 @@ import javax.annotation.Nullable;
  * &gt; **Note:** Config Rule requires an existing `Configuration Recorder` to be present. Use of `depends_on` is recommended (as shown below) to avoid race conditions.
  * 
  * ## Example Usage
+ * ### AWS Managed Rules
+ * 
+ * AWS managed rules can be used by setting the source owner to `AWS` and the source identifier to the name of the managed rule. More information about AWS managed rules can be found in the [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var role = new Role(&#34;role&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;config.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var foo = new Recorder(&#34;foo&#34;, RecorderArgs.builder()        
+ *             .roleArn(role.getArn())
+ *             .build());
+ * 
+ *         var rule = new Rule(&#34;rule&#34;, RuleArgs.builder()        
+ *             .source(RuleSource.builder()
+ *                 .owner(&#34;AWS&#34;)
+ *                 .sourceIdentifier(&#34;S3_BUCKET_VERSIONING_ENABLED&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var rolePolicy = new RolePolicy(&#34;rolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(role.getId())
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *   	{
+ *   		&#34;Action&#34;: &#34;config:Put*&#34;,
+ *   		&#34;Effect&#34;: &#34;Allow&#34;,
+ *   		&#34;Resource&#34;: &#34;*&#34;
+ * 
+ *   	}
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Custom Rules
+ * 
+ * Custom rules can be used by setting the source owner to `CUSTOM_LAMBDA` and the source identifier to the Amazon Resource Name (ARN) of the Lambda Function. The AWS Config service must have permissions to invoke the Lambda Function, e.g. via the `aws.lambda.Permission` resource. More information about custom rules can be found in the [AWS Config Developer Guide](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html).
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRecorder = new Recorder(&#34;exampleRecorder&#34;);
+ * 
+ *         var exampleFunction = new Function(&#34;exampleFunction&#34;);
+ * 
+ *         var examplePermission = new Permission(&#34;examplePermission&#34;, PermissionArgs.builder()        
+ *             .action(&#34;lambda:InvokeFunction&#34;)
+ *             .function(exampleFunction.getArn())
+ *             .principal(&#34;config.amazonaws.com&#34;)
+ *             .build());
+ * 
+ *         var exampleRule = new Rule(&#34;exampleRule&#34;, RuleArgs.builder()        
+ *             .source(RuleSource.builder()
+ *                 .owner(&#34;CUSTOM_LAMBDA&#34;)
+ *                 .sourceIdentifier(exampleFunction.getArn())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Custom Policies
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Rule(&#34;example&#34;, RuleArgs.builder()        
+ *             .source(RuleSource.builder()
+ *                 .owner(&#34;CUSTOM_POLICY&#34;)
+ *                 .sourceDetails(RuleSourceSourceDetail.builder()
+ *                     .messageType(&#34;ConfigurationItemChangeNotification&#34;)
+ *                     .build())
+ *                 .customPolicyDetails(RuleSourceCustomPolicyDetails.builder()
+ *                     .policyRuntime(&#34;guard-2.x.x&#34;)
+ *                     .policyText(&#34;&#34;&#34;
+ * 	  rule tableisactive when
+ * 		  resourceType == &#34;AWS::DynamoDB::Table&#34; {
+ * 		  configuration.tableStatus == [&#39;ACTIVE&#39;]
+ * 	  }
+ * 	  
+ * 	  rule checkcompliance when
+ * 		  resourceType == &#34;AWS::DynamoDB::Table&#34;
+ * 		  tableisactive {
+ * 			  supplementaryConfiguration.ContinuousBackupsDescription.pointInTimeRecoveryDescription.pointInTimeRecoveryStatus == &#34;ENABLED&#34;
+ * 	  }
+ *                     &#34;&#34;&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * Provides an AWS Network Firewall Firewall Resource
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Firewall(&#34;example&#34;, FirewallArgs.builder()        
+ *             .firewallPolicyArn(aws_networkfirewall_firewall_policy.getExample().getArn())
+ *             .vpcId(aws_vpc.getExample().getId())
+ *             .subnetMappings(FirewallSubnetMapping.builder()
+ *                 .subnetId(aws_subnet.getExample().getId())
+ *                 .build())
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;Tag1&#34;, &#34;Value1&#34;),
+ *                 Map.entry(&#34;Tag2&#34;, &#34;Value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

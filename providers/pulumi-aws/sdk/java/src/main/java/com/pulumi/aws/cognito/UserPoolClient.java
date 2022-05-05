@@ -23,6 +23,160 @@ import javax.annotation.Nullable;
  * Provides a Cognito User Pool Client resource.
  * 
  * ## Example Usage
+ * ### Create a basic user pool client
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         var client = new UserPoolClient(&#34;client&#34;, UserPoolClientArgs.builder()        
+ *             .userPoolId(pool.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create a user pool client with no SRP authentication
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         var client = new UserPoolClient(&#34;client&#34;, UserPoolClientArgs.builder()        
+ *             .userPoolId(pool.getId())
+ *             .generateSecret(true)
+ *             .explicitAuthFlows(&#34;ADMIN_NO_SRP_AUTH&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create a user pool client with pinpoint analytics
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AwsFunctions.getCallerIdentity());
+ * 
+ *         var testUserPool = new UserPool(&#34;testUserPool&#34;);
+ * 
+ *         var testApp = new App(&#34;testApp&#34;);
+ * 
+ *         var testRole = new Role(&#34;testRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: &#34;cognito-idp.amazonaws.com&#34;
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var testRolePolicy = new RolePolicy(&#34;testRolePolicy&#34;, RolePolicyArgs.builder()        
+ *             .role(testRole.getId())
+ *             .policy(testApp.getApplicationId().apply(applicationId -&gt; &#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: [
+ *         &#34;mobiletargeting:UpdateEndpoint&#34;,
+ *         &#34;mobiletargeting:PutItems&#34;
+ *       ],
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Resource&#34;: &#34;arn:aws:mobiletargeting:*:%s:apps/%s*&#34;
+ *     }
+ *   ]
+ * }
+ * &#34;, current.apply(getCallerIdentityResult -&gt; getCallerIdentityResult.getAccountId()),applicationId)))
+ *             .build());
+ * 
+ *         var testUserPoolClient = new UserPoolClient(&#34;testUserPoolClient&#34;, UserPoolClientArgs.builder()        
+ *             .userPoolId(testUserPool.getId())
+ *             .analyticsConfiguration(UserPoolClientAnalyticsConfiguration.builder()
+ *                 .applicationId(testApp.getApplicationId())
+ *                 .externalId(&#34;some_id&#34;)
+ *                 .roleArn(testRole.getArn())
+ *                 .userDataShared(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create a user pool client with Cognito as the identity provider
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new UserPool(&#34;pool&#34;);
+ * 
+ *         var userpoolClient = new UserPoolClient(&#34;userpoolClient&#34;, UserPoolClientArgs.builder()        
+ *             .userPoolId(pool.getId())
+ *             .callbackUrls(&#34;https://example.com&#34;)
+ *             .allowedOauthFlowsUserPoolClient(true)
+ *             .allowedOauthFlows(            
+ *                 &#34;code&#34;,
+ *                 &#34;implicit&#34;)
+ *             .allowedOauthScopes(            
+ *                 &#34;email&#34;,
+ *                 &#34;openid&#34;)
+ *             .supportedIdentityProviders(&#34;COGNITO&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

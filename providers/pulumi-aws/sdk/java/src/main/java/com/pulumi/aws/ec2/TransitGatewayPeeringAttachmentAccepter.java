@@ -19,6 +19,28 @@ import javax.annotation.Nullable;
  * Manages the accepter&#39;s side of an EC2 Transit Gateway Peering Attachment.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransitGatewayPeeringAttachmentAccepter(&#34;example&#34;, TransitGatewayPeeringAttachmentAccepterArgs.builder()        
+ *             .transitGatewayAttachmentId(aws_ec2_transit_gateway_peering_attachment.getExample().getId())
+ *             .tags(Map.of(&#34;Name&#34;, &#34;Example cross-account attachment&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * It also sets the retention period, in hours, for the Amazon Kinesis data.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultVoiceConnector = new VoiceConnector(&#34;defaultVoiceConnector&#34;, VoiceConnectorArgs.builder()        
+ *             .requireEncryption(true)
+ *             .build());
+ * 
+ *         var defaultVoiceConnectorStreaming = new VoiceConnectorStreaming(&#34;defaultVoiceConnectorStreaming&#34;, VoiceConnectorStreamingArgs.builder()        
+ *             .disabled(false)
+ *             .voiceConnectorId(defaultVoiceConnector.getId())
+ *             .dataRetention(7)
+ *             .streamingNotificationTargets(&#34;SQS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

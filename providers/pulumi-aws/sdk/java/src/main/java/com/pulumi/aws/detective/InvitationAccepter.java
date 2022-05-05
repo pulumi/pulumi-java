@@ -17,6 +17,36 @@ import javax.annotation.Nullable;
  * Provides a resource to manage an [Amazon Detective Invitation Accepter](https://docs.aws.amazon.com/detective/latest/APIReference/API_AcceptInvitation.html). Ensure that the accepter is configured to use the AWS account you wish to _accept_ the invitation from the primary graph owner account.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var primaryGraph = new Graph(&#34;primaryGraph&#34;);
+ * 
+ *         var primaryMember = new Member(&#34;primaryMember&#34;, MemberArgs.builder()        
+ *             .accountId(&#34;ACCOUNT ID&#34;)
+ *             .emailAddress(&#34;EMAIL&#34;)
+ *             .graphArn(primaryGraph.getId())
+ *             .message(&#34;Message of the invite&#34;)
+ *             .build());
+ * 
+ *         var member = new InvitationAccepter(&#34;member&#34;, InvitationAccepterArgs.builder()        
+ *             .graphArn(primaryGraph.getGraphArn())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

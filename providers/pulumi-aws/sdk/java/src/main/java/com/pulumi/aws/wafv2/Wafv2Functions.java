@@ -22,6 +22,28 @@ public final class Wafv2Functions {
      * Retrieves the summary of a WAFv2 IP Set.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Wafv2Functions.getIpSet(GetIpSetArgs.builder()
+     *             .name(&#34;some-ip-set&#34;)
+     *             .scope(&#34;REGIONAL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetIpSetResult> getIpSet(GetIpSetArgs args) {
@@ -34,6 +56,28 @@ public final class Wafv2Functions {
      * Retrieves the summary of a WAFv2 Regex Pattern Set.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Wafv2Functions.getRegexPatternSet(GetRegexPatternSetArgs.builder()
+     *             .name(&#34;some-regex-pattern-set&#34;)
+     *             .scope(&#34;REGIONAL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRegexPatternSetResult> getRegexPatternSet(GetRegexPatternSetArgs args) {
@@ -46,6 +90,28 @@ public final class Wafv2Functions {
      * Retrieves the summary of a WAFv2 Rule Group.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Wafv2Functions.getRuleGroup(GetRuleGroupArgs.builder()
+     *             .name(&#34;some-rule-group&#34;)
+     *             .scope(&#34;REGIONAL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetRuleGroupResult> getRuleGroup(GetRuleGroupArgs args) {
@@ -58,6 +124,28 @@ public final class Wafv2Functions {
      * Retrieves the summary of a WAFv2 Web ACL.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(Wafv2Functions.getWebAcl(GetWebAclArgs.builder()
+     *             .name(&#34;some-web-acl&#34;)
+     *             .scope(&#34;REGIONAL&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetWebAclResult> getWebAcl(GetWebAclArgs args) {

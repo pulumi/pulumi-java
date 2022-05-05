@@ -21,7 +21,87 @@ import javax.annotation.Nullable;
  * Provides a HTTP Method for an API Gateway Resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myDemoAPI = new RestApi(&#34;myDemoAPI&#34;, RestApiArgs.builder()        
+ *             .description(&#34;This is my API for demonstration purposes&#34;)
+ *             .build());
+ * 
+ *         var myDemoResource = new Resource(&#34;myDemoResource&#34;, ResourceArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .parentId(myDemoAPI.getRootResourceId())
+ *             .pathPart(&#34;mydemoresource&#34;)
+ *             .build());
+ * 
+ *         var myDemoMethod = new Method(&#34;myDemoMethod&#34;, MethodArgs.builder()        
+ *             .restApi(myDemoAPI.getId())
+ *             .resourceId(myDemoResource.getId())
+ *             .httpMethod(&#34;GET&#34;)
+ *             .authorization(&#34;NONE&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * ## Usage with Cognito User Pool Authorizer
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var config = Config.of();
+ *         final var cognitoUserPoolName = config.get(&#34;cognitoUserPoolName&#34;);
+ *         final var thisUserPools = Output.of(CognitoFunctions.getUserPools(GetUserPoolsArgs.builder()
+ *             .name(cognitoUserPoolName)
+ *             .build()));
+ * 
+ *         var thisRestApi = new RestApi(&#34;thisRestApi&#34;);
+ * 
+ *         var thisResource = new Resource(&#34;thisResource&#34;, ResourceArgs.builder()        
+ *             .restApi(thisRestApi.getId())
+ *             .parentId(thisRestApi.getRootResourceId())
+ *             .pathPart(&#34;{proxy+}&#34;)
+ *             .build());
+ * 
+ *         var thisAuthorizer = new Authorizer(&#34;thisAuthorizer&#34;, AuthorizerArgs.builder()        
+ *             .type(&#34;COGNITO_USER_POOLS&#34;)
+ *             .restApi(thisRestApi.getId())
+ *             .providerArns(thisUserPools.apply(getUserPoolsResult -&gt; getUserPoolsResult.getArns()))
+ *             .build());
+ * 
+ *         var any = new Method(&#34;any&#34;, MethodArgs.builder()        
+ *             .restApi(thisRestApi.getId())
+ *             .resourceId(thisResource.getId())
+ *             .httpMethod(&#34;ANY&#34;)
+ *             .authorization(&#34;COGNITO_USER_POOLS&#34;)
+ *             .authorizerId(thisAuthorizer.getId())
+ *             .requestParameters(Map.of(&#34;method.request.path.proxy&#34;, true))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

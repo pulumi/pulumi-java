@@ -20,6 +20,28 @@ import javax.annotation.Nullable;
  * Provides a Connection of Direct Connect.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hoge = new Connection(&#34;hoge&#34;, ConnectionArgs.builder()        
+ *             .bandwidth(&#34;1Gbps&#34;)
+ *             .location(&#34;EqDC2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

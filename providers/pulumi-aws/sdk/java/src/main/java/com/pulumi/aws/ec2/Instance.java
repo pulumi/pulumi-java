@@ -31,6 +31,92 @@ import javax.annotation.Nullable;
  * Provides an EC2 instance resource. This allows instances to be created, updated, and deleted.
  * 
  * ## Example Usage
+ * ### Basic Example Using AMI Lookup
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var ubuntu = Output.of(Ec2Functions.getAmi(GetAmiArgs.builder()
+ *             .mostRecent(true)
+ *             .filters(            
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;name&#34;)
+ *                     .values(&#34;ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*&#34;)
+ *                     .build(),
+ *                 GetAmiFilter.builder()
+ *                     .name(&#34;virtualization-type&#34;)
+ *                     .values(&#34;hvm&#34;)
+ *                     .build())
+ *             .owners(&#34;099720109477&#34;)
+ *             .build()));
+ * 
+ *         var web = new Instance(&#34;web&#34;, InstanceArgs.builder()        
+ *             .ami(ubuntu.apply(getAmiResult -&gt; getAmiResult.getId()))
+ *             .instanceType(&#34;t3.micro&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;HelloWorld&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Network and Credit Specification Example
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myVpc = new Vpc(&#34;myVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;172.16.0.0/16&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;tf-example&#34;))
+ *             .build());
+ * 
+ *         var mySubnet = new Subnet(&#34;mySubnet&#34;, SubnetArgs.builder()        
+ *             .vpcId(myVpc.getId())
+ *             .cidrBlock(&#34;172.16.10.0/24&#34;)
+ *             .availabilityZone(&#34;us-west-2a&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;tf-example&#34;))
+ *             .build());
+ * 
+ *         var fooNetworkInterface = new NetworkInterface(&#34;fooNetworkInterface&#34;, NetworkInterfaceArgs.builder()        
+ *             .subnetId(mySubnet.getId())
+ *             .privateIps(&#34;172.16.10.100&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;primary_network_interface&#34;))
+ *             .build());
+ * 
+ *         var fooInstance = new Instance(&#34;fooInstance&#34;, InstanceArgs.builder()        
+ *             .ami(&#34;ami-005e54dee72cc1d00&#34;)
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .networkInterfaces(InstanceNetworkInterface.builder()
+ *                 .networkInterfaceId(fooNetworkInterface.getId())
+ *                 .deviceIndex(0)
+ *                 .build())
+ *             .creditSpecification(InstanceCreditSpecification.builder()
+ *                 .cpuCredits(&#34;unlimited&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

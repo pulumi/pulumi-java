@@ -25,6 +25,144 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** AWS WorkSpaces service requires [`workspaces_DefaultRole`](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-access-control.html#create-default-role) IAM role to operate normally.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var workspaces = Output.of(IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .actions(&#34;sts:AssumeRole&#34;)
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;Service&#34;)
+ *                     .identifiers(&#34;workspaces.amazonaws.com&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build()));
+ * 
+ *         var workspacesDefault = new Role(&#34;workspacesDefault&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(workspaces.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson()))
+ *             .build());
+ * 
+ *         var workspacesDefaultServiceAccess = new RolePolicyAttachment(&#34;workspacesDefaultServiceAccess&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(workspacesDefault.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesServiceAccess&#34;)
+ *             .build());
+ * 
+ *         var workspacesDefaultSelfServiceAccess = new RolePolicyAttachment(&#34;workspacesDefaultSelfServiceAccess&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .role(workspacesDefault.getName())
+ *             .policyArn(&#34;arn:aws:iam::aws:policy/AmazonWorkSpacesSelfServiceAccess&#34;)
+ *             .build());
+ * 
+ *         var exampleVpc = new Vpc(&#34;exampleVpc&#34;, VpcArgs.builder()        
+ *             .cidrBlock(&#34;10.0.0.0/16&#34;)
+ *             .build());
+ * 
+ *         var exampleC = new Subnet(&#34;exampleC&#34;, SubnetArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .availabilityZone(&#34;us-east-1c&#34;)
+ *             .cidrBlock(&#34;10.0.2.0/24&#34;)
+ *             .build());
+ * 
+ *         var exampleD = new Subnet(&#34;exampleD&#34;, SubnetArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .availabilityZone(&#34;us-east-1d&#34;)
+ *             .cidrBlock(&#34;10.0.3.0/24&#34;)
+ *             .build());
+ * 
+ *         var exampleDirectory = new Directory(&#34;exampleDirectory&#34;, DirectoryArgs.builder()        
+ *             .directoryId(exampleDirectoryservice / directoryDirectory.getId())
+ *             .subnetIds(            
+ *                 exampleC.getId(),
+ *                 exampleD.getId())
+ *             .tags(Map.of(&#34;Example&#34;, true))
+ *             .selfServicePermissions(DirectorySelfServicePermissions.builder()
+ *                 .changeComputeType(true)
+ *                 .increaseVolumeSize(true)
+ *                 .rebuildWorkspace(true)
+ *                 .restartWorkspace(true)
+ *                 .switchRunningMode(true)
+ *                 .build())
+ *             .workspaceAccessProperties(DirectoryWorkspaceAccessProperties.builder()
+ *                 .deviceTypeAndroid(&#34;ALLOW&#34;)
+ *                 .deviceTypeChromeos(&#34;ALLOW&#34;)
+ *                 .deviceTypeIos(&#34;ALLOW&#34;)
+ *                 .deviceTypeLinux(&#34;DENY&#34;)
+ *                 .deviceTypeOsx(&#34;ALLOW&#34;)
+ *                 .deviceTypeWeb(&#34;DENY&#34;)
+ *                 .deviceTypeWindows(&#34;DENY&#34;)
+ *                 .deviceTypeZeroclient(&#34;DENY&#34;)
+ *                 .build())
+ *             .workspaceCreationProperties(DirectoryWorkspaceCreationProperties.builder()
+ *                 .customSecurityGroupId(aws_security_group.getExample().getId())
+ *                 .defaultOu(&#34;OU=AWS,DC=Workgroup,DC=Example,DC=com&#34;)
+ *                 .enableInternetAccess(true)
+ *                 .enableMaintenanceMode(true)
+ *                 .userEnabledAsLocalAdministrator(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleA = new Subnet(&#34;exampleA&#34;, SubnetArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .availabilityZone(&#34;us-east-1a&#34;)
+ *             .cidrBlock(&#34;10.0.0.0/24&#34;)
+ *             .build());
+ * 
+ *         var exampleB = new Subnet(&#34;exampleB&#34;, SubnetArgs.builder()        
+ *             .vpcId(exampleVpc.getId())
+ *             .availabilityZone(&#34;us-east-1b&#34;)
+ *             .cidrBlock(&#34;10.0.1.0/24&#34;)
+ *             .build());
+ * 
+ *         var exampleDirectoryservice_directoryDirectory = new Directory(&#34;exampleDirectoryservice/directoryDirectory&#34;, DirectoryArgs.builder()        
+ *             .name(&#34;corp.example.com&#34;)
+ *             .password(&#34;#S1ncerely&#34;)
+ *             .size(&#34;Small&#34;)
+ *             .vpcSettings(DirectoryVpcSettings.builder()
+ *                 .vpcId(exampleVpc.getId())
+ *                 .subnetIds(                
+ *                     exampleA.getId(),
+ *                     exampleB.getId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### IP Groups
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleIpGroup = new IpGroup(&#34;exampleIpGroup&#34;);
+ * 
+ *         var exampleDirectory = new Directory(&#34;exampleDirectory&#34;, DirectoryArgs.builder()        
+ *             .directoryId(aws_directory_service_directory.getExample().getId())
+ *             .ipGroupIds(exampleIpGroup.getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,97 @@ import javax.annotation.Nullable;
  * [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var orderFlowersIntent = new Intent(&#34;orderFlowersIntent&#34;, IntentArgs.builder()        
+ *             .confirmationPrompt(IntentConfirmationPrompt.builder()
+ *                 .maxAttempts(2)
+ *                 .messages(IntentConfirmationPromptMessage.builder()
+ *                     .content(&#34;Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .createVersion(false)
+ *             .description(&#34;Intent to order a bouquet of flowers for pick up&#34;)
+ *             .fulfillmentActivity(IntentFulfillmentActivity.builder()
+ *                 .type(&#34;ReturnIntent&#34;)
+ *                 .build())
+ *             .name(&#34;OrderFlowers&#34;)
+ *             .rejectionStatement(IntentRejectionStatement.builder()
+ *                 .messages(IntentRejectionStatementMessage.builder()
+ *                     .content(&#34;Okay, I will not place your order.&#34;)
+ *                     .contentType(&#34;PlainText&#34;)
+ *                     .build())
+ *                 .build())
+ *             .sampleUtterances(            
+ *                 &#34;I would like to order some flowers&#34;,
+ *                 &#34;I would like to pick up flowers&#34;)
+ *             .slots(            
+ *                 IntentSlot.builder()
+ *                     .description(&#34;The type of flowers to pick up&#34;)
+ *                     .name(&#34;FlowerType&#34;)
+ *                     .priority(1)
+ *                     .sampleUtterances(&#34;I would like to order {FlowerType}&#34;)
+ *                     .slotConstraint(&#34;Required&#34;)
+ *                     .slotType(&#34;FlowerTypes&#34;)
+ *                     .slotTypeVersion(&#34;$LATEST&#34;)
+ *                     .valueElicitationPrompt(IntentSlotValueElicitationPrompt.builder()
+ *                         .maxAttempts(2)
+ *                         .message(Map.ofEntries(
+ *                             Map.entry(&#34;content&#34;, &#34;What type of flowers would you like to order?&#34;),
+ *                             Map.entry(&#34;contentType&#34;, &#34;PlainText&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build(),
+ *                 IntentSlot.builder()
+ *                     .description(&#34;The date to pick up the flowers&#34;)
+ *                     .name(&#34;PickupDate&#34;)
+ *                     .priority(2)
+ *                     .sampleUtterances(&#34;I would like to order {FlowerType}&#34;)
+ *                     .slotConstraint(&#34;Required&#34;)
+ *                     .slotType(&#34;AMAZON.DATE&#34;)
+ *                     .slotTypeVersion(&#34;$LATEST&#34;)
+ *                     .valueElicitationPrompt(IntentSlotValueElicitationPrompt.builder()
+ *                         .maxAttempts(2)
+ *                         .message(Map.ofEntries(
+ *                             Map.entry(&#34;content&#34;, &#34;What day do you want the {FlowerType} to be picked up?&#34;),
+ *                             Map.entry(&#34;contentType&#34;, &#34;PlainText&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build(),
+ *                 IntentSlot.builder()
+ *                     .description(&#34;The time to pick up the flowers&#34;)
+ *                     .name(&#34;PickupTime&#34;)
+ *                     .priority(3)
+ *                     .sampleUtterances(&#34;I would like to order {FlowerType}&#34;)
+ *                     .slotConstraint(&#34;Required&#34;)
+ *                     .slotType(&#34;AMAZON.TIME&#34;)
+ *                     .slotTypeVersion(&#34;$LATEST&#34;)
+ *                     .valueElicitationPrompt(IntentSlotValueElicitationPrompt.builder()
+ *                         .maxAttempts(2)
+ *                         .message(Map.ofEntries(
+ *                             Map.entry(&#34;content&#34;, &#34;Pick up the {FlowerType} at what time on {PickupDate}?&#34;),
+ *                             Map.entry(&#34;contentType&#34;, &#34;PlainText&#34;)
+ *                         ))
+ *                         .build())
+ *                     .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,154 @@ import javax.annotation.Nullable;
  * Provides a Route53 record resource.
  * 
  * ## Example Usage
+ * ### Simple routing policy
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var www = new Record(&#34;www&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getPrimary().getZone_id())
+ *             .name(&#34;www.example.com&#34;)
+ *             .type(&#34;A&#34;)
+ *             .ttl(&#34;300&#34;)
+ *             .records(aws_eip.getLb().getPublic_ip())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Weighted routing policy
+ * Other routing policies are configured similarly. See [Amazon Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for details.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var www_dev = new Record(&#34;www-dev&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getPrimary().getZone_id())
+ *             .name(&#34;www&#34;)
+ *             .type(&#34;CNAME&#34;)
+ *             .ttl(&#34;5&#34;)
+ *             .weightedRoutingPolicies(RecordWeightedRoutingPolicy.builder()
+ *                 .weight(10)
+ *                 .build())
+ *             .setIdentifier(&#34;dev&#34;)
+ *             .records(&#34;dev.example.com&#34;)
+ *             .build());
+ * 
+ *         var www_live = new Record(&#34;www-live&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getPrimary().getZone_id())
+ *             .name(&#34;www&#34;)
+ *             .type(&#34;CNAME&#34;)
+ *             .ttl(&#34;5&#34;)
+ *             .weightedRoutingPolicies(RecordWeightedRoutingPolicy.builder()
+ *                 .weight(90)
+ *                 .build())
+ *             .setIdentifier(&#34;live&#34;)
+ *             .records(&#34;live.example.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Alias record
+ * See [related part of Amazon Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
+ * to understand differences between alias and non-alias records.
+ * 
+ * TTL for all alias records is [60 seconds](https://aws.amazon.com/route53/faqs/#dns_failover_do_i_need_to_adjust),
+ * you cannot change this, therefore `ttl` has to be omitted in alias records.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var main = new LoadBalancer(&#34;main&#34;, LoadBalancerArgs.builder()        
+ *             .availabilityZones(&#34;us-east-1c&#34;)
+ *             .listeners(LoadBalancerListener.builder()
+ *                 .instancePort(80)
+ *                 .instanceProtocol(&#34;http&#34;)
+ *                 .lbPort(80)
+ *                 .lbProtocol(&#34;http&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var www = new Record(&#34;www&#34;, RecordArgs.builder()        
+ *             .zoneId(aws_route53_zone.getPrimary().getZone_id())
+ *             .name(&#34;example.com&#34;)
+ *             .type(&#34;A&#34;)
+ *             .aliases(RecordAlias.builder()
+ *                 .name(main.getDnsName())
+ *                 .zoneId(main.getZoneId())
+ *                 .evaluateTargetHealth(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### NS and SOA Record Management
+ * 
+ * When creating Route 53 zones, the `NS` and `SOA` records for the zone are automatically created. Enabling the `allow_overwrite` argument will allow managing these records in a single deployment without the requirement for `import`.
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleZone = new Zone(&#34;exampleZone&#34;);
+ * 
+ *         var exampleRecord = new Record(&#34;exampleRecord&#34;, RecordArgs.builder()        
+ *             .allowOverwrite(true)
+ *             .name(&#34;test.example.com&#34;)
+ *             .ttl(172800)
+ *             .type(&#34;NS&#34;)
+ *             .zoneId(exampleZone.getZoneId())
+ *             .records(            
+ *                 exampleZone.getNameServers().apply(nameServers -&gt; nameServers[0]),
+ *                 exampleZone.getNameServers().apply(nameServers -&gt; nameServers[1]),
+ *                 exampleZone.getNameServers().apply(nameServers -&gt; nameServers[2]),
+ *                 exampleZone.getNameServers().apply(nameServers -&gt; nameServers[3]))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

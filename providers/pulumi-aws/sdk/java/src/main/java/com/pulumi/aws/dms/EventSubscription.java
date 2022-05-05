@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * Provides a DMS (Data Migration Service) event subscription resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EventSubscription(&#34;example&#34;, EventSubscriptionArgs.builder()        
+ *             .enabled(true)
+ *             .eventCategories(            
+ *                 &#34;creation&#34;,
+ *                 &#34;failure&#34;)
+ *             .snsTopicArn(aws_sns_topic.getExample().getArn())
+ *             .sourceIds(aws_dms_replication_task.getExample().getReplication_task_id())
+ *             .sourceType(&#34;replication-task&#34;)
+ *             .tags(Map.of(&#34;Name&#34;, &#34;example&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

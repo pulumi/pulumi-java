@@ -21,6 +21,76 @@ import javax.annotation.Nullable;
  * Provides a Sagemaker Workforce resource.
  * 
  * ## Example Usage
+ * ### Cognito Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleUserPool = new UserPool(&#34;exampleUserPool&#34;);
+ * 
+ *         var exampleUserPoolClient = new UserPoolClient(&#34;exampleUserPoolClient&#34;, UserPoolClientArgs.builder()        
+ *             .generateSecret(true)
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         var exampleUserPoolDomain = new UserPoolDomain(&#34;exampleUserPoolDomain&#34;, UserPoolDomainArgs.builder()        
+ *             .domain(&#34;example&#34;)
+ *             .userPoolId(exampleUserPool.getId())
+ *             .build());
+ * 
+ *         var exampleWorkforce = new Workforce(&#34;exampleWorkforce&#34;, WorkforceArgs.builder()        
+ *             .workforceName(&#34;example&#34;)
+ *             .cognitoConfig(WorkforceCognitoConfig.builder()
+ *                 .clientId(exampleUserPoolClient.getId())
+ *                 .userPool(exampleUserPoolDomain.getUserPoolId())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Oidc Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Workforce(&#34;example&#34;, WorkforceArgs.builder()        
+ *             .oidcConfig(WorkforceOidcConfig.builder()
+ *                 .authorizationEndpoint(&#34;https://example.com&#34;)
+ *                 .clientId(&#34;example&#34;)
+ *                 .clientSecret(&#34;example&#34;)
+ *                 .issuer(&#34;https://example.com&#34;)
+ *                 .jwksUri(&#34;https://example.com&#34;)
+ *                 .logoutEndpoint(&#34;https://example.com&#34;)
+ *                 .tokenEndpoint(&#34;https://example.com&#34;)
+ *                 .userInfoEndpoint(&#34;https://example.com&#34;)
+ *                 .build())
+ *             .workforceName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

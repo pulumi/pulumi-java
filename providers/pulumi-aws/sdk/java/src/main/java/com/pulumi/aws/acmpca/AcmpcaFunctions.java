@@ -18,6 +18,28 @@ public final class AcmpcaFunctions {
      * Get information on a Certificate issued by a AWS Certificate Manager Private Certificate Authority.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AcmpcaFunctions.getCertificate(GetCertificateArgs.builder()
+     *             .arn(&#34;arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012/certificate/1234b4a0d73e2056789bdbe77d5b1a23&#34;)
+     *             .certificateAuthorityArn(&#34;arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCertificateResult> getCertificate(GetCertificateArgs args) {
@@ -30,6 +52,27 @@ public final class AcmpcaFunctions {
      * Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AcmpcaFunctions.getCertificateAuthority(GetCertificateAuthorityArgs.builder()
+     *             .arn(&#34;arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetCertificateAuthorityResult> getCertificateAuthority(GetCertificateAuthorityArgs args) {

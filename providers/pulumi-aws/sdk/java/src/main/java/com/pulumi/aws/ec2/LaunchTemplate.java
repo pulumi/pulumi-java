@@ -39,6 +39,86 @@ import javax.annotation.Nullable;
  * Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var foo = new LaunchTemplate(&#34;foo&#34;, LaunchTemplateArgs.builder()        
+ *             .blockDeviceMappings(LaunchTemplateBlockDeviceMapping.builder()
+ *                 .deviceName(&#34;/dev/sda1&#34;)
+ *                 .ebs(LaunchTemplateBlockDeviceMappingEbs.builder()
+ *                     .volumeSize(20)
+ *                     .build())
+ *                 .build())
+ *             .capacityReservationSpecification(LaunchTemplateCapacityReservationSpecification.builder()
+ *                 .capacityReservationPreference(&#34;open&#34;)
+ *                 .build())
+ *             .cpuOptions(LaunchTemplateCpuOptions.builder()
+ *                 .coreCount(4)
+ *                 .threadsPerCore(2)
+ *                 .build())
+ *             .creditSpecification(LaunchTemplateCreditSpecification.builder()
+ *                 .cpuCredits(&#34;standard&#34;)
+ *                 .build())
+ *             .disableApiTermination(true)
+ *             .ebsOptimized(true)
+ *             .elasticGpuSpecifications(LaunchTemplateElasticGpuSpecification.builder()
+ *                 .type(&#34;test&#34;)
+ *                 .build())
+ *             .elasticInferenceAccelerator(LaunchTemplateElasticInferenceAccelerator.builder()
+ *                 .type(&#34;eia1.medium&#34;)
+ *                 .build())
+ *             .iamInstanceProfile(LaunchTemplateIamInstanceProfile.builder()
+ *                 .name(&#34;test&#34;)
+ *                 .build())
+ *             .imageId(&#34;ami-test&#34;)
+ *             .instanceInitiatedShutdownBehavior(&#34;terminate&#34;)
+ *             .instanceMarketOptions(LaunchTemplateInstanceMarketOptions.builder()
+ *                 .marketType(&#34;spot&#34;)
+ *                 .build())
+ *             .instanceType(&#34;t2.micro&#34;)
+ *             .kernelId(&#34;test&#34;)
+ *             .keyName(&#34;test&#34;)
+ *             .licenseSpecifications(LaunchTemplateLicenseSpecification.builder()
+ *                 .licenseConfigurationArn(&#34;arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef&#34;)
+ *                 .build())
+ *             .metadataOptions(LaunchTemplateMetadataOptions.builder()
+ *                 .httpEndpoint(&#34;enabled&#34;)
+ *                 .httpTokens(&#34;required&#34;)
+ *                 .httpPutResponseHopLimit(1)
+ *                 .instanceMetadataTags(&#34;enabled&#34;)
+ *                 .build())
+ *             .monitoring(LaunchTemplateMonitoring.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .networkInterfaces(LaunchTemplateNetworkInterface.builder()
+ *                 .associatePublicIpAddress(true)
+ *                 .build())
+ *             .placement(LaunchTemplatePlacement.builder()
+ *                 .availabilityZone(&#34;us-west-2a&#34;)
+ *                 .build())
+ *             .ramDiskId(&#34;test&#34;)
+ *             .vpcSecurityGroupIds(&#34;sg-12345678&#34;)
+ *             .tagSpecifications(LaunchTemplateTagSpecification.builder()
+ *                 .resourceType(&#34;instance&#34;)
+ *                 .tags(Map.of(&#34;Name&#34;, &#34;test&#34;))
+ *                 .build())
+ *             .userData(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(String.format(&#34;%s/example.sh&#34;, path.getModule())))))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

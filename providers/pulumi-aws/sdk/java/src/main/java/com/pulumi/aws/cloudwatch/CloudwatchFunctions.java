@@ -26,6 +26,27 @@ public final class CloudwatchFunctions {
      * an event bus, given the name of the bus.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getEventBus(GetEventBusArgs.builder()
+     *             .name(&#34;example-bus-name&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEventBusResult> getEventBus(GetEventBusArgs args) {
@@ -40,6 +61,27 @@ public final class CloudwatchFunctions {
      * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(CloudwatchFunctions.getEventConnection(GetEventConnectionArgs.builder()
+     *             .name(&#34;test&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEventConnectionResult> getEventConnection(GetEventConnectionArgs args) {
@@ -54,6 +96,27 @@ public final class CloudwatchFunctions {
      * &gt; **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var examplepartner = Output.of(CloudwatchFunctions.getEventSource(GetEventSourceArgs.builder()
+     *             .namePrefix(&#34;aws.partner/examplepartner.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetEventSourceResult> getEventSource() {
@@ -69,6 +132,27 @@ public final class CloudwatchFunctions {
      * Use this data source to get information about an AWS Cloudwatch Log Group
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroup(GetLogGroupArgs.builder()
+     *             .name(&#34;MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLogGroupResult> getLogGroup(GetLogGroupArgs args) {
@@ -81,6 +165,27 @@ public final class CloudwatchFunctions {
      * Use this data source to get a list of AWS Cloudwatch Log Groups
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(CloudwatchFunctions.getLogGroups(GetLogGroupsArgs.builder()
+     *             .logGroupNamePrefix(&#34;/MyImportantLogs&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetLogGroupsResult> getLogGroups(GetLogGroupsArgs args) {

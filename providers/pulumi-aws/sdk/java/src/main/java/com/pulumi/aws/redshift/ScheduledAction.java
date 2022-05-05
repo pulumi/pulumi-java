@@ -18,6 +18,110 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ### Pause Cluster Action
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleRole = new Role(&#34;exampleRole&#34;, RoleArgs.builder()        
+ *             .assumeRolePolicy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *     {
+ *       &#34;Action&#34;: &#34;sts:AssumeRole&#34;,
+ *       &#34;Principal&#34;: {
+ *         &#34;Service&#34;: [
+ *           &#34;scheduler.redshift.amazonaws.com&#34;
+ *         ]
+ *       },
+ *       &#34;Effect&#34;: &#34;Allow&#34;,
+ *       &#34;Sid&#34;: &#34;&#34;
+ *     }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var examplePolicy = new Policy(&#34;examplePolicy&#34;, PolicyArgs.builder()        
+ *             .policy(&#34;&#34;&#34;
+ * {
+ *   &#34;Version&#34;: &#34;2012-10-17&#34;,
+ *   &#34;Statement&#34;: [
+ *       {
+ *           &#34;Sid&#34;: &#34;VisualEditor0&#34;,
+ *           &#34;Effect&#34;: &#34;Allow&#34;,
+ *           &#34;Action&#34;: [
+ *               &#34;redshift:PauseCluster&#34;,
+ *               &#34;redshift:ResumeCluster&#34;,
+ *               &#34;redshift:ResizeCluster&#34;
+ *           ],
+ *           &#34;Resource&#34;: &#34;*&#34;
+ *       }
+ *   ]
+ * }
+ *             &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         var exampleRolePolicyAttachment = new RolePolicyAttachment(&#34;exampleRolePolicyAttachment&#34;, RolePolicyAttachmentArgs.builder()        
+ *             .policyArn(examplePolicy.getArn())
+ *             .role(exampleRole.getName())
+ *             .build());
+ * 
+ *         var exampleScheduledAction = new ScheduledAction(&#34;exampleScheduledAction&#34;, ScheduledActionArgs.builder()        
+ *             .schedule(&#34;cron(00 23 * * ? *)&#34;)
+ *             .iamRole(exampleRole.getArn())
+ *             .targetAction(ScheduledActionTargetAction.builder()
+ *                 .pauseCluster(ScheduledActionTargetActionPauseCluster.builder()
+ *                     .clusterIdentifier(&#34;tf-redshift001&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Resize Cluster Action
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ScheduledAction(&#34;example&#34;, ScheduledActionArgs.builder()        
+ *             .schedule(&#34;cron(00 23 * * ? *)&#34;)
+ *             .iamRole(aws_iam_role.getExample().getArn())
+ *             .targetAction(ScheduledActionTargetAction.builder()
+ *                 .resizeCluster(ScheduledActionTargetActionResizeCluster.builder()
+ *                     .clusterIdentifier(&#34;tf-redshift001&#34;)
+ *                     .clusterType(&#34;multi-node&#34;)
+ *                     .nodeType(&#34;dc1.large&#34;)
+ *                     .numberOfNodes(2)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

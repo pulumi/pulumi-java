@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * Provides a Pinpoint App resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new App(&#34;example&#34;, AppArgs.builder()        
+ *             .limits(AppLimits.builder()
+ *                 .maximumDuration(600)
+ *                 .build())
+ *             .quietTime(AppQuietTime.builder()
+ *                 .end(&#34;06:00&#34;)
+ *                 .start(&#34;00:00&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

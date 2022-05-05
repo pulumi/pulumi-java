@@ -26,6 +26,40 @@ import javax.annotation.Nullable;
  * a conflict of rule settings and will overwrite rules.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var barNetworkAcl = new NetworkAcl(&#34;barNetworkAcl&#34;, NetworkAclArgs.builder()        
+ *             .vpcId(aws_vpc.getFoo().getId())
+ *             .build());
+ * 
+ *         var barNetworkAclRule = new NetworkAclRule(&#34;barNetworkAclRule&#34;, NetworkAclRuleArgs.builder()        
+ *             .networkAclId(barNetworkAcl.getId())
+ *             .ruleNumber(200)
+ *             .egress(false)
+ *             .protocol(&#34;tcp&#34;)
+ *             .ruleAction(&#34;allow&#34;)
+ *             .cidrBlock(aws_vpc.getFoo().getCidr_block())
+ *             .fromPort(22)
+ *             .toPort(22)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * &gt; **Note:** One of either `cidr_block` or `ipv6_cidr_block` is required.
  * 
  * ## Import
  * 

@@ -16,6 +16,75 @@ public final class ResourcegroupstaggingapiFunctions {
      * Provides details about resource tagging.
      * 
      * ## Example Usage
+     * ### Get All Resource Tag Mappings
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources());
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Tag Key and Value
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .tagFilters(GetResourcesTagFilter.builder()
+     *                 .key(&#34;tag-key&#34;)
+     *                 .values(                
+     *                     &#34;tag-value-1&#34;,
+     *                     &#34;tag-value-2&#34;)
+     *                 .build())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ### Filter By Resource Type
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var test = Output.of(ResourcegroupstaggingapiFunctions.getResources(GetResourcesArgs.builder()
+     *             .resourceTypeFilters(&#34;ec2:instance&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetResourcesResult> getResources() {

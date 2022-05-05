@@ -21,6 +21,54 @@ import javax.annotation.Nullable;
  * Provides a DB event subscription resource.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultInstance = new Instance(&#34;defaultInstance&#34;, InstanceArgs.builder()        
+ *             .allocatedStorage(10)
+ *             .engine(&#34;mysql&#34;)
+ *             .engineVersion(&#34;5.6.17&#34;)
+ *             .instanceClass(&#34;db.t2.micro&#34;)
+ *             .name(&#34;mydb&#34;)
+ *             .username(&#34;foo&#34;)
+ *             .password(&#34;bar&#34;)
+ *             .dbSubnetGroupName(&#34;my_database_subnet_group&#34;)
+ *             .parameterGroupName(&#34;default.mysql5.6&#34;)
+ *             .build());
+ * 
+ *         var defaultTopic = new Topic(&#34;defaultTopic&#34;);
+ * 
+ *         var defaultEventSubscription = new EventSubscription(&#34;defaultEventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .snsTopic(defaultTopic.getArn())
+ *             .sourceType(&#34;db-instance&#34;)
+ *             .sourceIds(defaultInstance.getId())
+ *             .eventCategories(            
+ *                 &#34;availability&#34;,
+ *                 &#34;deletion&#34;,
+ *                 &#34;failover&#34;,
+ *                 &#34;failure&#34;,
+ *                 &#34;low storage&#34;,
+ *                 &#34;maintenance&#34;,
+ *                 &#34;notification&#34;,
+ *                 &#34;read replica&#34;,
+ *                 &#34;recovery&#34;,
+ *                 &#34;restoration&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

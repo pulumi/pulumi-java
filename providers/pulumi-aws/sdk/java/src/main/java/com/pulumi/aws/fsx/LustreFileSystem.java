@@ -25,6 +25,29 @@ import javax.annotation.Nullable;
  * &gt; **NOTE:** `auto_import_policy`, `export_path`, `import_path` and `imported_file_chunk_size` are not supported with the `PERSISTENT_2` deployment type. Use `aws.fsx.DataRepositoryAssociation` instead.
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LustreFileSystem(&#34;example&#34;, LustreFileSystemArgs.builder()        
+ *             .importPath(String.format(&#34;s3://%s&#34;, aws_s3_bucket.getExample().getBucket()))
+ *             .storageCapacity(1200)
+ *             .subnetIds(aws_subnet.getExample().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

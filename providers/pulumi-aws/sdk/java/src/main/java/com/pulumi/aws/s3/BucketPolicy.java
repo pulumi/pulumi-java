@@ -17,6 +17,46 @@ import javax.annotation.Nullable;
  * Attaches a policy to an S3 bucket resource.
  * 
  * ## Example Usage
+ * ### Basic Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BucketV2(&#34;example&#34;);
+ * 
+ *         final var allowAccessFromAnotherAccountPolicyDocument = IamFunctions.getPolicyDocument(GetPolicyDocumentArgs.builder()
+ *             .statements(GetPolicyDocumentStatement.builder()
+ *                 .principals(GetPolicyDocumentStatementPrincipal.builder()
+ *                     .type(&#34;AWS&#34;)
+ *                     .identifiers(&#34;123456789012&#34;)
+ *                     .build())
+ *                 .actions(                
+ *                     &#34;s3:GetObject&#34;,
+ *                     &#34;s3:ListBucket&#34;)
+ *                 .resources(                
+ *                     example.getArn(),
+ *                     example.getArn().apply(arn -&gt; String.format(&#34;%s/*&#34;, arn)))
+ *                 .build())
+ *             .build());
+ * 
+ *         var allowAccessFromAnotherAccountBucketPolicy = new BucketPolicy(&#34;allowAccessFromAnotherAccountBucketPolicy&#34;, BucketPolicyArgs.builder()        
+ *             .bucket(example.getId())
+ *             .policy(allowAccessFromAnotherAccountPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult).apply(allowAccessFromAnotherAccountPolicyDocument -&gt; allowAccessFromAnotherAccountPolicyDocument.apply(getPolicyDocumentResult -&gt; getPolicyDocumentResult.getJson())))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

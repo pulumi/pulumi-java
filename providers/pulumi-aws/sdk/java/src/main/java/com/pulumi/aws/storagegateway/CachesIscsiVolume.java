@@ -27,6 +27,83 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &gt; **NOTE:** These examples are referencing the `aws.storagegateway.Cache` resource `gateway_arn` attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via `depends_on = [aws_storagegateway_cache.example]`) to ensure proper ordering.
+ * ### Create Empty Cached iSCSI Volume
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CachesIscsiVolume(&#34;example&#34;, CachesIscsiVolumeArgs.builder()        
+ *             .gatewayArn(aws_storagegateway_cache.getExample().getGateway_arn())
+ *             .networkInterfaceId(aws_instance.getExample().getPrivate_ip())
+ *             .targetName(&#34;example&#34;)
+ *             .volumeSizeInBytes(5368709120)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create Cached iSCSI Volume From Snapshot
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CachesIscsiVolume(&#34;example&#34;, CachesIscsiVolumeArgs.builder()        
+ *             .gatewayArn(aws_storagegateway_cache.getExample().getGateway_arn())
+ *             .networkInterfaceId(aws_instance.getExample().getPrivate_ip())
+ *             .snapshotId(aws_ebs_snapshot.getExample().getId())
+ *             .targetName(&#34;example&#34;)
+ *             .volumeSizeInBytes(aws_ebs_snapshot.getExample().getVolume_size() * 1024 * 1024 * 1024)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * ### Create Cached iSCSI Volume From Source Volume
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CachesIscsiVolume(&#34;example&#34;, CachesIscsiVolumeArgs.builder()        
+ *             .gatewayArn(aws_storagegateway_cache.getExample().getGateway_arn())
+ *             .networkInterfaceId(aws_instance.getExample().getPrivate_ip())
+ *             .sourceVolumeArn(aws_storagegateway_cached_iscsi_volume.getExisting().getArn())
+ *             .targetName(&#34;example&#34;)
+ *             .volumeSizeInBytes(aws_storagegateway_cached_iscsi_volume.getExisting().getVolume_size_in_bytes())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

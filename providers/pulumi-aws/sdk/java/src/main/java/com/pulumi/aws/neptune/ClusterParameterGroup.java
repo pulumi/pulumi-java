@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * Manages a Neptune Cluster Parameter Group
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClusterParameterGroup(&#34;example&#34;, ClusterParameterGroupArgs.builder()        
+ *             .description(&#34;neptune cluster parameter group&#34;)
+ *             .family(&#34;neptune1&#34;)
+ *             .parameters(ClusterParameterGroupParameter.builder()
+ *                 .name(&#34;neptune_enable_audit_log&#34;)
+ *                 .value(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
