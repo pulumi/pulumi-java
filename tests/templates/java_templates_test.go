@@ -85,7 +85,7 @@ func templateDir(t *testing.T, templateName string) string {
 		t.Error(err)
 		t.FailNow()
 	}
-	return filepath.Join(repoRoot, "templates", templateName)
+	return filepath.Join(repoRoot, "..", "templates", templateName)
 }
 
 func previewOnlyOptions() integration.ProgramTestOptions {
