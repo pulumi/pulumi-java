@@ -5,6 +5,7 @@ package com.pulumi.googlenative.bigquery_v2.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
+import com.pulumi.googlenative.bigquery_v2.outputs.RemoteFunctionOptionsResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlTableTypeResponse;
@@ -61,6 +62,11 @@ public final class GetRoutineResult {
      */
     private final String lastModifiedTime;
     /**
+     * @return Optional. Remote function specific options.
+     * 
+     */
+    private final RemoteFunctionOptionsResponse remoteFunctionOptions;
+    /**
      * @return Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
      * 
      */
@@ -97,6 +103,7 @@ public final class GetRoutineResult {
         @CustomType.Parameter("importedLibraries") List<String> importedLibraries,
         @CustomType.Parameter("language") String language,
         @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("remoteFunctionOptions") RemoteFunctionOptionsResponse remoteFunctionOptions,
         @CustomType.Parameter("returnTableType") StandardSqlTableTypeResponse returnTableType,
         @CustomType.Parameter("returnType") StandardSqlDataTypeResponse returnType,
         @CustomType.Parameter("routineReference") RoutineReferenceResponse routineReference,
@@ -111,6 +118,7 @@ public final class GetRoutineResult {
         this.importedLibraries = importedLibraries;
         this.language = language;
         this.lastModifiedTime = lastModifiedTime;
+        this.remoteFunctionOptions = remoteFunctionOptions;
         this.returnTableType = returnTableType;
         this.returnType = returnType;
         this.routineReference = routineReference;
@@ -182,6 +190,13 @@ public final class GetRoutineResult {
         return this.lastModifiedTime;
     }
     /**
+     * @return Optional. Remote function specific options.
+     * 
+     */
+    public RemoteFunctionOptionsResponse remoteFunctionOptions() {
+        return this.remoteFunctionOptions;
+    }
+    /**
      * @return Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
      * 
      */
@@ -235,6 +250,7 @@ public final class GetRoutineResult {
         private List<String> importedLibraries;
         private String language;
         private String lastModifiedTime;
+        private RemoteFunctionOptionsResponse remoteFunctionOptions;
         private StandardSqlTableTypeResponse returnTableType;
         private StandardSqlDataTypeResponse returnType;
         private RoutineReferenceResponse routineReference;
@@ -256,6 +272,7 @@ public final class GetRoutineResult {
     	      this.importedLibraries = defaults.importedLibraries;
     	      this.language = defaults.language;
     	      this.lastModifiedTime = defaults.lastModifiedTime;
+    	      this.remoteFunctionOptions = defaults.remoteFunctionOptions;
     	      this.returnTableType = defaults.returnTableType;
     	      this.returnType = defaults.returnType;
     	      this.routineReference = defaults.routineReference;
@@ -305,6 +322,10 @@ public final class GetRoutineResult {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
+        public Builder remoteFunctionOptions(RemoteFunctionOptionsResponse remoteFunctionOptions) {
+            this.remoteFunctionOptions = Objects.requireNonNull(remoteFunctionOptions);
+            return this;
+        }
         public Builder returnTableType(StandardSqlTableTypeResponse returnTableType) {
             this.returnTableType = Objects.requireNonNull(returnTableType);
             return this;
@@ -325,7 +346,7 @@ public final class GetRoutineResult {
             this.strictMode = Objects.requireNonNull(strictMode);
             return this;
         }        public GetRoutineResult build() {
-            return new GetRoutineResult(arguments, creationTime, definitionBody, description, determinismLevel, etag, importedLibraries, language, lastModifiedTime, returnTableType, returnType, routineReference, routineType, strictMode);
+            return new GetRoutineResult(arguments, creationTime, definitionBody, description, determinismLevel, etag, importedLibraries, language, lastModifiedTime, remoteFunctionOptions, returnTableType, returnType, routineReference, routineType, strictMode);
         }
     }
 }

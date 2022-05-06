@@ -12,6 +12,7 @@ import com.pulumi.googlenative.dataproc_v1.ClusterArgs;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterConfigResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterMetricsResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterStatusResponse;
+import com.pulumi.googlenative.dataproc_v1.outputs.VirtualClusterConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -53,14 +54,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
         return this.clusterUuid;
     }
     /**
-     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     @Export(name="config", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> config;
 
     /**
-     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     public Output<ClusterConfigResponse> config() {
@@ -135,6 +136,20 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      */
     public Output<List<ClusterStatusResponse>> statusHistory() {
         return this.statusHistory;
+    }
+    /**
+     * Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    @Export(name="virtualClusterConfig", type=VirtualClusterConfigResponse.class, parameters={})
+    private Output<VirtualClusterConfigResponse> virtualClusterConfig;
+
+    /**
+     * @return Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    public Output<VirtualClusterConfigResponse> virtualClusterConfig() {
+        return this.virtualClusterConfig;
     }
 
     /**

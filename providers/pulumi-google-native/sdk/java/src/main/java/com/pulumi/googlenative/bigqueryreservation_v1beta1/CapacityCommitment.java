@@ -78,14 +78,14 @@ public class CapacityCommitment extends com.pulumi.resources.CustomResource {
         return this.multiRegionAuxiliary;
     }
     /**
-     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public Output<String> name() {

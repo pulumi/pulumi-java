@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterConfigResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterMetricsResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.ClusterStatusResponse;
+import com.pulumi.googlenative.dataproc_v1.outputs.VirtualClusterConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class GetClusterResult {
      */
     private final String clusterUuid;
     /**
-     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     private final ClusterConfigResponse config;
@@ -54,6 +55,11 @@ public final class GetClusterResult {
      * 
      */
     private final List<ClusterStatusResponse> statusHistory;
+    /**
+     * @return Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    private final VirtualClusterConfigResponse virtualClusterConfig;
 
     @CustomType.Constructor
     private GetClusterResult(
@@ -64,7 +70,8 @@ public final class GetClusterResult {
         @CustomType.Parameter("metrics") ClusterMetricsResponse metrics,
         @CustomType.Parameter("project") String project,
         @CustomType.Parameter("status") ClusterStatusResponse status,
-        @CustomType.Parameter("statusHistory") List<ClusterStatusResponse> statusHistory) {
+        @CustomType.Parameter("statusHistory") List<ClusterStatusResponse> statusHistory,
+        @CustomType.Parameter("virtualClusterConfig") VirtualClusterConfigResponse virtualClusterConfig) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
         this.config = config;
@@ -73,6 +80,7 @@ public final class GetClusterResult {
         this.project = project;
         this.status = status;
         this.statusHistory = statusHistory;
+        this.virtualClusterConfig = virtualClusterConfig;
     }
 
     /**
@@ -90,7 +98,7 @@ public final class GetClusterResult {
         return this.clusterUuid;
     }
     /**
-     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     public ClusterConfigResponse config() {
@@ -131,6 +139,13 @@ public final class GetClusterResult {
     public List<ClusterStatusResponse> statusHistory() {
         return this.statusHistory;
     }
+    /**
+     * @return Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    public VirtualClusterConfigResponse virtualClusterConfig() {
+        return this.virtualClusterConfig;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -149,6 +164,7 @@ public final class GetClusterResult {
         private String project;
         private ClusterStatusResponse status;
         private List<ClusterStatusResponse> statusHistory;
+        private VirtualClusterConfigResponse virtualClusterConfig;
 
         public Builder() {
     	      // Empty
@@ -164,6 +180,7 @@ public final class GetClusterResult {
     	      this.project = defaults.project;
     	      this.status = defaults.status;
     	      this.statusHistory = defaults.statusHistory;
+    	      this.virtualClusterConfig = defaults.virtualClusterConfig;
         }
 
         public Builder clusterName(String clusterName) {
@@ -200,8 +217,12 @@ public final class GetClusterResult {
         }
         public Builder statusHistory(ClusterStatusResponse... statusHistory) {
             return statusHistory(List.of(statusHistory));
+        }
+        public Builder virtualClusterConfig(VirtualClusterConfigResponse virtualClusterConfig) {
+            this.virtualClusterConfig = Objects.requireNonNull(virtualClusterConfig);
+            return this;
         }        public GetClusterResult build() {
-            return new GetClusterResult(clusterName, clusterUuid, config, labels, metrics, project, status, statusHistory);
+            return new GetClusterResult(clusterName, clusterUuid, config, labels, metrics, project, status, statusHistory, virtualClusterConfig);
         }
     }
 }

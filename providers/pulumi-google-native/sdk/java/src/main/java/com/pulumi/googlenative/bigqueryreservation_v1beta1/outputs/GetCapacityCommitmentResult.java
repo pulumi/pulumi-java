@@ -32,7 +32,7 @@ public final class GetCapacityCommitmentResult {
      */
     private final Boolean multiRegionAuxiliary;
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     private final String name;
@@ -108,7 +108,7 @@ public final class GetCapacityCommitmentResult {
         return this.multiRegionAuxiliary;
     }
     /**
-     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` For the commitment id, it must only contain lower case alphanumeric characters or dashes.It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
+     * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
      * 
      */
     public String name() {

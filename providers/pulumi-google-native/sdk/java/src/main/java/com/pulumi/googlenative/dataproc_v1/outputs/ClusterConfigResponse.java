@@ -53,9 +53,13 @@ public final class ClusterConfigResponse {
      */
     private final GceClusterConfigResponse gceClusterConfig;
     /**
-     * @return Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * @return Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * 
+     * @deprecated
+     * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
      * 
      */
+    @Deprecated /* Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config. */
     private final GkeClusterConfigResponse gkeClusterConfig;
     /**
      * @return Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node&#39;s role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[ &#34;${ROLE}&#34; == &#39;Master&#39; ]]; then ... master specific actions ... else ... worker specific actions ... fi
@@ -182,9 +186,13 @@ public final class ClusterConfigResponse {
         return this.gceClusterConfig;
     }
     /**
-     * @return Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * @return Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
+     * 
+     * @deprecated
+     * Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
      * 
      */
+    @Deprecated /* Optional. Deprecated. Use VirtualClusterConfig based clusters instead. BETA. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config. */
     public GkeClusterConfigResponse gkeClusterConfig() {
         return this.gkeClusterConfig;
     }

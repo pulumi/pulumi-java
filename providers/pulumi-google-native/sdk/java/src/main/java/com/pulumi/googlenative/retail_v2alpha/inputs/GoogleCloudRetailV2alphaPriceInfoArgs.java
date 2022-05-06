@@ -51,14 +51,14 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends com.pulumi.reso
     }
 
     /**
-     * Price of the product without any discount. If zero, by default set to be the price.
+     * Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
      * 
      */
     @Import(name="originalPrice")
     private @Nullable Output<Double> originalPrice;
 
     /**
-     * @return Price of the product without any discount. If zero, by default set to be the price.
+     * @return Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
      * 
      */
     public Optional<Output<Double>> originalPrice() {
@@ -182,7 +182,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends com.pulumi.reso
         }
 
         /**
-         * @param originalPrice Price of the product without any discount. If zero, by default set to be the price.
+         * @param originalPrice Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends com.pulumi.reso
         }
 
         /**
-         * @param originalPrice Price of the product without any discount. If zero, by default set to be the price.
+         * @param originalPrice Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
          * 
          * @return builder
          * 

@@ -6,6 +6,7 @@ package com.pulumi.googlenative.dataproc_v1;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.googlenative.dataproc_v1.inputs.ClusterConfigArgs;
+import com.pulumi.googlenative.dataproc_v1.inputs.VirtualClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -48,14 +49,14 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     @Import(name="config")
     private @Nullable Output<ClusterConfigArgs> config;
 
     /**
-     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+     * @return Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
      * 
      */
     public Optional<Output<ClusterConfigArgs>> config() {
@@ -114,6 +115,21 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.requestId);
     }
 
+    /**
+     * Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    @Import(name="virtualClusterConfig")
+    private @Nullable Output<VirtualClusterConfigArgs> virtualClusterConfig;
+
+    /**
+     * @return Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+     * 
+     */
+    public Optional<Output<VirtualClusterConfigArgs>> virtualClusterConfig() {
+        return Optional.ofNullable(this.virtualClusterConfig);
+    }
+
     private ClusterArgs() {}
 
     private ClusterArgs(ClusterArgs $) {
@@ -124,6 +140,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         this.project = $.project;
         this.region = $.region;
         this.requestId = $.requestId;
+        this.virtualClusterConfig = $.virtualClusterConfig;
     }
 
     public static Builder builder() {
@@ -187,7 +204,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
          * 
          * @return builder
          * 
@@ -198,7 +215,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
+         * @param config Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.Exactly one of ClusterConfig or VirtualClusterConfig must be specified.
          * 
          * @return builder
          * 
@@ -277,6 +294,27 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder requestId(String requestId) {
             return requestId(Output.of(requestId));
+        }
+
+        /**
+         * @param virtualClusterConfig Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualClusterConfig(@Nullable Output<VirtualClusterConfigArgs> virtualClusterConfig) {
+            $.virtualClusterConfig = virtualClusterConfig;
+            return this;
+        }
+
+        /**
+         * @param virtualClusterConfig Optional. The virtual cluster config, used when creating a Dataproc cluster that does not directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster). Note that Dataproc may set default values, and values may change when clusters are updated. Exactly one of config or virtualClusterConfig must be specified.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualClusterConfig(VirtualClusterConfigArgs virtualClusterConfig) {
+            return virtualClusterConfig(Output.of(virtualClusterConfig));
         }
 
         public ClusterArgs build() {
