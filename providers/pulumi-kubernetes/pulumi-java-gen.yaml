@@ -3,6 +3,6 @@ out: sdk/java
 overlays:
 - ../build-templates
 pluginFile: src/main/resources/com/pulumi/kubernetes/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/v3.18.3/provider/cmd/pulumi-resource-kubernetes/schema.json
-version: 3.18.3
+schema: https://raw.githubusercontent.com/pulumi/pulumi-kubernetes/v3.19.1/provider/cmd/pulumi-resource-kubernetes/schema.json
+version: 3.19.1
 versionFile: src/main/resources/com/pulumi/kubernetes/version.txt
