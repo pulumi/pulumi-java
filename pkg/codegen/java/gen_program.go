@@ -248,6 +248,10 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 		g.Fgen(w, "import com.pulumi.codegen.internal.KeyedValue;\n")
 	}
 
+	if requiresImportingCustomResourceOptions(nodes) {
+		g.genImport(w, "com.pulumi.resources.CustomResourceOptions")
+	}
+
 	if containsFunctionCall("readDir", nodes) {
 		g.Fgen(w, "import static com.pulumi.codegen.internal.Files.readDir;\n")
 	}
@@ -329,6 +333,91 @@ func getTraversalKey(traversal hcl.Traversal) string {
 	return ""
 }
 
+// Returns whether a resource has a custom resource option (other than range)
+func hasCustomResourceOptions(resource *pcl.Resource) bool {
+	if resource.Options == nil {
+		return false
+	}
+
+	return resource.Options.IgnoreChanges != nil ||
+		resource.Options.DependsOn != nil ||
+		resource.Options.Parent != nil ||
+		resource.Options.Protect != nil ||
+		resource.Options.Provider != nil
+}
+
+// Checks whether any resource within the program nodes has a custom resource option
+// in which case an import should be emitted
+func requiresImportingCustomResourceOptions(programNodes []pcl.Node) bool {
+	for _, node := range programNodes {
+		switch node.(type) {
+		case *pcl.Resource:
+			resource := node.(*pcl.Resource)
+			if hasCustomResourceOptions(resource) {
+				return true
+			}
+		}
+	}
+
+	return false
+}
+
+func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource) {
+	g.Fgen(w, "CustomResourceOptions.builder()")
+	g.Indented(func() {
+		g.genNewline(w)
+		if resource.Options.Provider != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".provider(%v)", resource.Options.Provider)
+			g.genNewline(w)
+		}
+		if resource.Options.Protect != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".protect(%v)", resource.Options.Protect)
+			g.genNewline(w)
+		}
+		if resource.Options.Parent != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".parent(%v)", resource.Options.Parent)
+			g.genNewline(w)
+		}
+		if resource.Options.DependsOn != nil {
+			g.genIndent(w)
+			g.Fgenf(w, ".dependsOn(%v)", resource.Options.DependsOn)
+			g.genNewline(w)
+		}
+		if resource.Options.IgnoreChanges != nil {
+			g.genIndent(w)
+			g.Fgen(w, ".ignoreChanges(")
+			switch resource.Options.IgnoreChanges.(type) {
+			case *model.TupleConsExpression:
+				// when we have a list of expressions
+				// write each one of them between quotes
+				ignoredChanges := resource.Options.IgnoreChanges.(*model.TupleConsExpression)
+				for index, ignoredChange := range ignoredChanges.Expressions {
+					g.Fgenf(w, "\"%v\"", ignoredChange)
+
+					// write a comma between elements
+					// if we did not reach last expression
+					if index != len(ignoredChanges.Expressions)-1 {
+						g.Fgen(w, ", ")
+					}
+				}
+			default:
+				// ignored changes expression was NOT a list
+				// which is not really expected here
+				// we will write the expression as-is anyway
+				g.Fgenf(w, "\"%v\"", resource.Options.IgnoreChanges)
+			}
+
+			g.Fgen(w, ")")
+			g.genNewline(w)
+		}
+		g.genIndent(w)
+		g.Fgen(w, ".build()")
+	})
+}
+
 func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceTypeName := resourceTypeName(resource)
 	resourceArgs := resourceArgsTypeName(resource)
@@ -344,8 +433,14 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 			}
 		}
 
-		if len(resource.Inputs) == 0 {
+		if len(resource.Inputs) == 0 && !hasCustomResourceOptions(resource) {
 			g.Fgenf(w, "new %s(%s)", resourceTypeName, resName)
+		} else if len(resource.Inputs) == 0 && hasCustomResourceOptions(resource) {
+			// generate empty resource args in this case
+			emptyArgs := resourceArgs + ".Empty"
+			g.Fgenf(w, "new %s(%s, %s, ", resourceTypeName, resName, emptyArgs)
+			g.genCustomResourceOptions(w, resource)
+			g.Fgen(w, ")")
 		} else {
 			g.Fgenf(w, "new %s(%s, %s.builder()", resourceTypeName, resName, resourceArgs)
 			g.Fgenf(w, "%s\n", g.Indent)
@@ -357,10 +452,14 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, attributeIdent, g.lowerExpression(attr.Value, attr.Type()))
 				}
 
-				g.Fgenf(w, "%s.build())", g.Indent)
+				if !hasCustomResourceOptions(resource) {
+					g.Fgenf(w, "%s.build())", g.Indent)
+				} else {
+					g.Fgenf(w, "%s.build(), ", g.Indent)
+					g.genCustomResourceOptions(w, resource)
+					g.Fgen(w, ")")
+				}
 			})
-			// resource options: TODO
-			//g.Fgenf(w, "%s}%s)", g.Indent, g.genResourceOptions(r.Options))
 		}
 	}
 
