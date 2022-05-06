@@ -388,7 +388,29 @@ func (g *generator) genCustomResourceOptions(w io.Writer, resource *pcl.Resource
 		}
 		if resource.Options.IgnoreChanges != nil {
 			g.genIndent(w)
-			g.Fgenf(w, ".ignoreChanges(%v)", resource.Options.IgnoreChanges)
+			g.Fgen(w, ".ignoreChanges(")
+			switch resource.Options.IgnoreChanges.(type) {
+			case *model.TupleConsExpression:
+				// when we have a list of expressions
+				// write each one of them between quotes
+				ignoredChanges := resource.Options.IgnoreChanges.(*model.TupleConsExpression)
+				for index, ignoredChange := range ignoredChanges.Expressions {
+					g.Fgenf(w, "\"%v\"", ignoredChange)
+
+					// write a comma between elements
+					// if we did not reach last expression
+					if index != len(ignoredChanges.Expressions)-1 {
+						g.Fgen(w, ", ")
+					}
+				}
+			default:
+				// ignored changes expression was NOT a list
+				// which is not really expected here
+				// we will write the expression as-is anyway
+				g.Fgenf(w, "\"%v\"", resource.Options.IgnoreChanges)
+			}
+
+			g.Fgen(w, ")")
 			g.genNewline(w)
 		}
 		g.genIndent(w)

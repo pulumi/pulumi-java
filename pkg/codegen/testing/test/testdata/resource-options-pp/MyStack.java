@@ -30,9 +30,7 @@ public class App {
             .provider(provider)
             .protect(true)
             .dependsOn(provider)
-            .ignoreChanges(            
-                bucket,
-                lifecycleRules[0])
+            .ignoreChanges("bucket", "lifecycleRules[0]")
             .build());
 
     }
