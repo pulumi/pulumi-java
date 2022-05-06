@@ -22,6 +22,53 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates a source control.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sourceControl = new SourceControl(&#34;sourceControl&#34;, SourceControlArgs.builder()        
+ *             .contentTypes(            
+ *                 &#34;AnalyticRules&#34;,
+ *                 &#34;Workbook&#34;)
+ *             .description(&#34;This is a source control&#34;)
+ *             .displayName(&#34;My Source Control&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .repoType(&#34;Github&#34;)
+ *             .repository(Map.ofEntries(
+ *                 Map.entry(&#34;branch&#34;, &#34;master&#34;),
+ *                 Map.entry(&#34;displayUrl&#34;, &#34;https://github.com/user/repo&#34;),
+ *                 Map.entry(&#34;pathMapping&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;contentType&#34;, &#34;AnalyticRules&#34;),
+ *                         Map.entry(&#34;path&#34;, &#34;path/to/rules&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;contentType&#34;, &#34;Workbook&#34;),
+ *                         Map.entry(&#34;path&#34;, &#34;path/to/workbooks&#34;)
+ *                     )),
+ *                 Map.entry(&#34;url&#34;, &#34;https://github.com/user/repo&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .sourceControlId(&#34;789e0c1f-4a3d-43ad-809c-e713b677b04a&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

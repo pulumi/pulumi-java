@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a virtual network rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkRule = new VirtualNetworkRule(&#34;virtualNetworkRule&#34;, VirtualNetworkRuleArgs.builder()        
+ *             .ignoreMissingVnetServiceEndpoint(false)
+ *             .resourceGroupName(&#34;Default&#34;)
+ *             .serverName(&#34;vnet-test-svr&#34;)
+ *             .virtualNetworkRuleName(&#34;vnet-firewall-rule&#34;)
+ *             .virtualNetworkSubnetId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Network/virtualNetworks/testvnet/subnets/testsubnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,99 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates a Fusion alert rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledAlertRule = new ScheduledAlertRule(&#34;scheduledAlertRule&#34;, ScheduledAlertRuleArgs.builder()        
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;myFirstFusionRule&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledAlertRule = new ScheduledAlertRule(&#34;scheduledAlertRule&#34;, ScheduledAlertRuleArgs.builder()        
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;microsoftSecurityIncidentCreationRuleExample&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a Scheduled alert rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledAlertRule = new ScheduledAlertRule(&#34;scheduledAlertRule&#34;, ScheduledAlertRuleArgs.builder()        
+ *             .description(&#34;&#34;)
+ *             .displayName(&#34;Rule2&#34;)
+ *             .enabled(true)
+ *             .kind(&#34;Scheduled&#34;)
+ *             .query(&#34;ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden&#34;)
+ *             .queryFrequency(&#34;PT1H&#34;)
+ *             .queryPeriod(&#34;P2DT1H30M&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .severity(&#34;High&#34;)
+ *             .suppressionDuration(&#34;PT1H&#34;)
+ *             .suppressionEnabled(false)
+ *             .tactics(            
+ *                 &#34;Persistence&#34;,
+ *                 &#34;LateralMovement&#34;)
+ *             .triggerOperator(&#34;GreaterThan&#34;)
+ *             .triggerThreshold(0)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

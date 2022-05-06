@@ -23,6 +23,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01.
  * 
  * ## Example Usage
+ * ### subAccount_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subAccount = new SubAccount(&#34;subAccount&#34;, SubAccountArgs.builder()        
+ *             .monitorName(&#34;myMonitor&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .subAccountName(&#34;SubAccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

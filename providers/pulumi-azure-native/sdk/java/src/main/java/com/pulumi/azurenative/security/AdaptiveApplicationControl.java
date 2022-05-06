@@ -23,6 +23,114 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Update an application control machine group by adding a new application
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adaptiveApplicationControl = new AdaptiveApplicationControl(&#34;adaptiveApplicationControl&#34;, AdaptiveApplicationControlArgs.builder()        
+ *             .ascLocation(&#34;centralus&#34;)
+ *             .enforcementMode(&#34;Audit&#34;)
+ *             .groupName(&#34;ERELGROUP1&#34;)
+ *             .pathRecommendations(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Recommended&#34;),
+ *                     Map.entry(&#34;common&#34;, true),
+ *                     Map.entry(&#34;configurationStatus&#34;, &#34;Configured&#34;),
+ *                     Map.entry(&#34;fileType&#34;, &#34;Exe&#34;),
+ *                     Map.entry(&#34;path&#34;, &#34;[Exe] O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US\\*\\*\\0.0.0.0&#34;),
+ *                     Map.entry(&#34;publisherInfo&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;binaryName&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;productName&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;publisherName&#34;, &#34;O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;0.0.0.0&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;PublisherSignature&#34;),
+ *                     Map.entry(&#34;userSids&#34;, &#34;S-1-1-0&#34;),
+ *                     Map.entry(&#34;usernames&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;recommendationAction&#34;, &#34;Recommended&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;Everyone&#34;)
+ *                     ))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Recommended&#34;),
+ *                     Map.entry(&#34;common&#34;, true),
+ *                     Map.entry(&#34;configurationStatus&#34;, &#34;Configured&#34;),
+ *                     Map.entry(&#34;fileType&#34;, &#34;Exe&#34;),
+ *                     Map.entry(&#34;path&#34;, &#34;%OSDRIVE%\\WINDOWSAZURE\\SECAGENT\\WASECAGENTPROV.EXE&#34;),
+ *                     Map.entry(&#34;publisherInfo&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;binaryName&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;productName&#34;, &#34;MICROSOFT® COREXT&#34;),
+ *                         Map.entry(&#34;publisherName&#34;, &#34;CN=MICROSOFT AZURE DEPENDENCY CODE SIGN&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;0.0.0.0&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;ProductSignature&#34;),
+ *                     Map.entry(&#34;userSids&#34;, &#34;S-1-1-0&#34;),
+ *                     Map.entry(&#34;usernames&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;recommendationAction&#34;, &#34;Recommended&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;NT AUTHORITY\\SYSTEM&#34;)
+ *                     ))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Recommended&#34;),
+ *                     Map.entry(&#34;common&#34;, true),
+ *                     Map.entry(&#34;configurationStatus&#34;, &#34;Configured&#34;),
+ *                     Map.entry(&#34;fileType&#34;, &#34;Exe&#34;),
+ *                     Map.entry(&#34;path&#34;, &#34;%OSDRIVE%\\WINDOWSAZURE\\PACKAGES_201973_7415\\COLLECTGUESTLOGS.EXE&#34;),
+ *                     Map.entry(&#34;publisherInfo&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;binaryName&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;productName&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;publisherName&#34;, &#34;CN=MICROSOFT AZURE DEPENDENCY CODE SIGN&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;0.0.0.0&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;PublisherSignature&#34;),
+ *                     Map.entry(&#34;userSids&#34;, &#34;S-1-1-0&#34;),
+ *                     Map.entry(&#34;usernames&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;recommendationAction&#34;, &#34;Recommended&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;NT AUTHORITY\\SYSTEM&#34;)
+ *                     ))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;action&#34;, &#34;Add&#34;),
+ *                     Map.entry(&#34;common&#34;, true),
+ *                     Map.entry(&#34;path&#34;, &#34;C:\\directory\\file.exe&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;File&#34;)
+ *                 ))
+ *             .protectionMode(Map.ofEntries(
+ *                 Map.entry(&#34;exe&#34;, &#34;Audit&#34;),
+ *                 Map.entry(&#34;msi&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;script&#34;, &#34;None&#34;)
+ *             ))
+ *             .vmRecommendations(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configurationStatus&#34;, &#34;Configured&#34;),
+ *                     Map.entry(&#34;enforcementSupport&#34;, &#34;Supported&#34;),
+ *                     Map.entry(&#34;recommendationAction&#34;, &#34;Recommended&#34;),
+ *                     Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/erelh-stable/providers/microsoft.compute/virtualmachines/erelh-16090&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configurationStatus&#34;, &#34;Configured&#34;),
+ *                     Map.entry(&#34;enforcementSupport&#34;, &#34;Supported&#34;),
+ *                     Map.entry(&#34;recommendationAction&#34;, &#34;Recommended&#34;),
+ *                     Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourcegroups/matanvs/providers/microsoft.compute/virtualmachines/matanvs19&#34;)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

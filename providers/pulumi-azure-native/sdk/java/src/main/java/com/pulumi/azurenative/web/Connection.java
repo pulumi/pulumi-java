@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2016-06-01.
  * 
  * ## Example Usage
+ * ### Replace a connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connection = new Connection(&#34;connection&#34;, ConnectionArgs.builder()        
+ *             .connectionName(&#34;testManagedApi&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;api&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/providers/Microsoft.Web/locations/centralus/managedApis/testManagedApi&#34;)),
+ *                 Map.entry(&#34;customParameterValues&#34;, ),
+ *                 Map.entry(&#34;displayName&#34;, &#34;testManagedApi&#34;),
+ *                 Map.entry(&#34;parameterValues&#34;, )
+ *             ))
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a credential
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var jobCredential = new JobCredential(&#34;jobCredential&#34;, JobCredentialArgs.builder()        
+ *             .credentialName(&#34;cred1&#34;)
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .serverName(&#34;server1&#34;)
+ *             .username(&#34;myuser&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Updates or creates a sensitivity label of a given column with all parameters in a managed database
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedDatabaseSensitivityLabel = new ManagedDatabaseSensitivityLabel(&#34;managedDatabaseSensitivityLabel&#34;, ManagedDatabaseSensitivityLabelArgs.builder()        
+ *             .columnName(&#34;myColumn&#34;)
+ *             .databaseName(&#34;myDatabase&#34;)
+ *             .informationType(&#34;PhoneNumber&#34;)
+ *             .informationTypeId(&#34;d22fa6e9-5ee4-3bde-4c2b-a409604c4646&#34;)
+ *             .labelId(&#34;bf91e08c-f4f0-478a-b016-25164b2a65ff&#34;)
+ *             .labelName(&#34;PII&#34;)
+ *             .managedInstanceName(&#34;myManagedInstanceName&#34;)
+ *             .rank(&#34;High&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .schemaName(&#34;dbo&#34;)
+ *             .sensitivityLabelSource(&#34;current&#34;)
+ *             .tableName(&#34;myTable&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

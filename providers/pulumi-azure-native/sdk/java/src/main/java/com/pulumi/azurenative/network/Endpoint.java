@@ -23,6 +23,153 @@ import javax.annotation.Nullable;
  * API Version: 2018-08-01.
  * 
  * ## Example Usage
+ * ### Endpoint-PUT-External-WithCustomHeaders
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .customHeaders(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;header-1&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value-1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;header-2&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value-2&#34;)
+ *                 ))
+ *             .endpointLocation(&#34;North Europe&#34;)
+ *             .endpointName(&#34;azsmnet7187&#34;)
+ *             .endpointStatus(&#34;Enabled&#34;)
+ *             .endpointType(&#34;ExternalEndpoints&#34;)
+ *             .name(&#34;azsmnet7187&#34;)
+ *             .profileName(&#34;azsmnet6386&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager1421&#34;)
+ *             .target(&#34;foobar.contoso.com&#34;)
+ *             .type(&#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Endpoint-PUT-External-WithGeoMapping
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .endpointName(&#34;My%20external%20endpoint&#34;)
+ *             .endpointStatus(&#34;Enabled&#34;)
+ *             .endpointType(&#34;ExternalEndpoints&#34;)
+ *             .geoMapping(            
+ *                 &#34;GEO-AS&#34;,
+ *                 &#34;GEO-AF&#34;)
+ *             .name(&#34;My external endpoint&#34;)
+ *             .profileName(&#34;azuresdkfornetautoresttrafficmanager8224&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager2191&#34;)
+ *             .target(&#34;foobar.contoso.com&#34;)
+ *             .type(&#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Endpoint-PUT-External-WithLocation
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .endpointLocation(&#34;North Europe&#34;)
+ *             .endpointName(&#34;azsmnet7187&#34;)
+ *             .endpointStatus(&#34;Enabled&#34;)
+ *             .endpointType(&#34;ExternalEndpoints&#34;)
+ *             .name(&#34;azsmnet7187&#34;)
+ *             .profileName(&#34;azsmnet6386&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager1421&#34;)
+ *             .target(&#34;foobar.contoso.com&#34;)
+ *             .type(&#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Endpoint-PUT-External-WithSubnetMapping
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var endpoint = new Endpoint(&#34;endpoint&#34;, EndpointArgs.builder()        
+ *             .endpointName(&#34;My%20external%20endpoint&#34;)
+ *             .endpointStatus(&#34;Enabled&#34;)
+ *             .endpointType(&#34;ExternalEndpoints&#34;)
+ *             .name(&#34;My external endpoint&#34;)
+ *             .profileName(&#34;azuresdkfornetautoresttrafficmanager8224&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager2191&#34;)
+ *             .subnets(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;first&#34;, &#34;1.2.3.0&#34;),
+ *                     Map.entry(&#34;scope&#34;, 24)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;first&#34;, &#34;25.26.27.28&#34;),
+ *                     Map.entry(&#34;last&#34;, &#34;29.30.31.32&#34;)
+ *                 ))
+ *             .target(&#34;foobar.contoso.com&#34;)
+ *             .type(&#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

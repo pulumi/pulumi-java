@@ -26,6 +26,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create NetworkVirtualAppliance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkVirtualAppliance = new NetworkVirtualAppliance(&#34;networkVirtualAppliance&#34;, NetworkVirtualApplianceArgs.builder()        
+ *             .bootStrapConfigurationBlobs(&#34;https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrbootstrapconfig&#34;)
+ *             .cloudInitConfigurationBlobs(&#34;https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1&#34;, ))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .networkVirtualApplianceName(&#34;nva&#34;)
+ *             .nvaSku(Map.ofEntries(
+ *                 Map.entry(&#34;bundledScaleUnit&#34;, &#34;1&#34;),
+ *                 Map.entry(&#34;marketPlaceVersion&#34;, &#34;12.1&#34;),
+ *                 Map.entry(&#34;vendor&#34;, &#34;Cisco SDWAN&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualApplianceAsn(10000)
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

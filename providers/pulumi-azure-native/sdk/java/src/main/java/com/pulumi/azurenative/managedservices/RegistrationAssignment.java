@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### Put Registration Assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registrationAssignment = new RegistrationAssignment(&#34;registrationAssignment&#34;, RegistrationAssignmentArgs.builder()        
+ *             .properties(Map.of(&#34;registrationDefinitionId&#34;, &#34;/subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2&#34;))
+ *             .registrationAssignmentId(&#34;26c128c2-fefa-4340-9bb1-6e081c90ada2&#34;)
+ *             .scope(&#34;subscription/0afefe50-734e-4610-8a82-a144ahf49dea&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

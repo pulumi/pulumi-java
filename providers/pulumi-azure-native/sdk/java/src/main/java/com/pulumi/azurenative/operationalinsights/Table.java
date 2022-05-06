@@ -26,6 +26,41 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01-preview.
  * 
  * ## Example Usage
+ * ### TablesUpsert
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var table = new Table(&#34;table&#34;, TableArgs.builder()        
+ *             .resourceGroupName(&#34;oiautorest6685&#34;)
+ *             .retentionInDays(45)
+ *             .schema(Map.ofEntries(
+ *                 Map.entry(&#34;columns&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;MyNewColumn&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;guid&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;AzureNetworkFlow&#34;)
+ *             ))
+ *             .tableName(&#34;AzureNetworkFlow&#34;)
+ *             .totalRetentionInDays(70)
+ *             .workspaceName(&#34;oiautorest6685&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### Create VirtualRouter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualRouter = new VirtualRouter(&#34;virtualRouter&#34;, VirtualRouterArgs.builder()        
+ *             .hostedGateway(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vnetGateway&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualRouterName(&#34;virtualRouter&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

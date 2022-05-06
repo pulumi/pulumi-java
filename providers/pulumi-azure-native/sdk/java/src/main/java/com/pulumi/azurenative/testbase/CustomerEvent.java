@@ -21,6 +21,44 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-16-preview.
  * 
  * ## Example Usage
+ * ### CustomerEventCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customerEvent = new CustomerEvent(&#34;customerEvent&#34;, CustomerEventArgs.builder()        
+ *             .customerEventName(&#34;WeeklySummary&#34;)
+ *             .eventName(&#34;WeeklySummary&#34;)
+ *             .receivers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;receiverType&#34;, &#34;UserObjects&#34;),
+ *                     Map.entry(&#34;receiverValue&#34;, Map.of(&#34;userObjectReceiverValue&#34;, Map.of(&#34;userObjectIds&#34;,                     
+ *                         &#34;245245245245325&#34;,
+ *                         &#34;365365365363565&#34;)))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;receiverType&#34;, &#34;DistributionGroup&#34;),
+ *                     Map.entry(&#34;receiverValue&#34;, Map.of(&#34;distributionGroupListReceiverValue&#34;, Map.of(&#34;distributionGroups&#34;, &#34;test@microsoft.com&#34;)))
+ *                 ))
+ *             .resourceGroupName(&#34;contoso-rg1&#34;)
+ *             .testBaseAccountName(&#34;contoso-testBaseAccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,66 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create administrator of managed instance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstanceAdministrator = new ManagedInstanceAdministrator(&#34;managedInstanceAdministrator&#34;, ManagedInstanceAdministratorArgs.builder()        
+ *             .administratorName(&#34;ActiveDirectory&#34;)
+ *             .administratorType(&#34;ActiveDirectory&#34;)
+ *             .login(&#34;bob@contoso.com&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .sid(&#34;44444444-3333-2222-1111-000000000000&#34;)
+ *             .tenantId(&#34;55555555-4444-3333-2222-111111111111&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update administrator of managed instance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstanceAdministrator = new ManagedInstanceAdministrator(&#34;managedInstanceAdministrator&#34;, ManagedInstanceAdministratorArgs.builder()        
+ *             .administratorName(&#34;ActiveDirectory&#34;)
+ *             .administratorType(&#34;ActiveDirectory&#34;)
+ *             .login(&#34;bob@contoso.com&#34;)
+ *             .managedInstanceName(&#34;managedInstance&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .sid(&#34;44444444-3333-2222-1111-000000000000&#34;)
+ *             .tenantId(&#34;55555555-4444-3333-2222-111111111111&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

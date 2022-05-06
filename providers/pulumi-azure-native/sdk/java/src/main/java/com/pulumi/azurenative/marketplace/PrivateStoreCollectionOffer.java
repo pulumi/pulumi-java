@@ -24,6 +24,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01.
  * 
  * ## Example Usage
+ * ### PrivateStoreOffer_update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateStoreCollectionOffer = new PrivateStoreCollectionOffer(&#34;privateStoreCollectionOffer&#34;, PrivateStoreCollectionOfferArgs.builder()        
+ *             .collectionId(&#34;56a1a02d-8cf8-45df-bf37-d5f7120fcb3d&#34;)
+ *             .eTag(&#34;\&#34;9301f4fd-0000-0100-0000-5e248b350666\&#34;&#34;)
+ *             .offerId(&#34;marketplacetestthirdparty.md-test-third-party-2&#34;)
+ *             .privateStoreId(&#34;a0e28e55-90c4-41d8-8e34-bb7ef7775406&#34;)
+ *             .specificPlanIdsLimitation(            
+ *                 &#34;0001&#34;,
+ *                 &#34;0002&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

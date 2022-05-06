@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2014-04-01.
  * 
  * ## Example Usage
+ * ### Update a disaster recovery configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disasterRecoveryConfiguration = new DisasterRecoveryConfiguration(&#34;disasterRecoveryConfiguration&#34;, DisasterRecoveryConfigurationArgs.builder()        
+ *             .disasterRecoveryConfigurationName(&#34;Default&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-4799&#34;)
+ *             .serverName(&#34;sqlcrudtest-5961&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

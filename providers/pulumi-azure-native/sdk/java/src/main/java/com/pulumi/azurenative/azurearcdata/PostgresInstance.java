@@ -25,6 +25,96 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a Postgres Instance.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var postgresInstance = new PostgresInstance(&#34;postgresInstance&#34;, PostgresInstanceArgs.builder()        
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;CustomLocation&#34;)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .postgresInstanceName(&#34;testpostgresInstance&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;admin&#34;, &#34;admin&#34;),
+ *                 Map.entry(&#34;basicLoginInformation&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;password&#34;, &#34;********&#34;),
+ *                     Map.entry(&#34;username&#34;, &#34;username&#34;)
+ *                 )),
+ *                 Map.entry(&#34;dataControllerId&#34;, &#34;dataControllerId&#34;),
+ *                 Map.entry(&#34;k8sRaw&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiVersion&#34;, &#34;apiVersion&#34;),
+ *                     Map.entry(&#34;kind&#34;, &#34;postgresql-12&#34;),
+ *                     Map.entry(&#34;metadata&#34;, PostgresInstanceProperties.builder()
+ *                         .creationTimestamp(&#34;2020-08-25T14:55:10Z&#34;)
+ *                         .generation(1)
+ *                         .name(&#34;pg1&#34;)
+ *                         .namespace(&#34;test&#34;)
+ *                         .resourceVersion(&#34;527780&#34;)
+ *                         .selfLink(&#34;/apis/arcdata.microsoft.com/v1alpha1/namespaces/test/postgresql-12s/pg1&#34;)
+ *                         .uid(&#34;1111aaaa-ffff-ffff-ffff-99999aaaaaaa&#34;)
+ *                         .build()),
+ *                     Map.entry(&#34;spec&#34;, PostgresInstanceProperties.builder()
+ *                         .backups(Map.ofEntries(
+ *                             Map.entry(&#34;deltaMinutes&#34;, 3),
+ *                             Map.entry(&#34;fullMinutes&#34;, 10),
+ *                             Map.entry(&#34;tiers&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;retention&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;maximums&#34;,                                     
+ *                                         &#34;6&#34;,
+ *                                         &#34;512MB&#34;),
+ *                                     Map.entry(&#34;minimums&#34;, &#34;3&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;storage&#34;, Map.of(&#34;volumeSize&#34;, &#34;1Gi&#34;))
+ *                             ))
+ *                         ))
+ *                         .engine(Map.of(&#34;extensions&#34;, Map.of(&#34;name&#34;, &#34;citus&#34;)))
+ *                         .scale(Map.of(&#34;shards&#34;, 3))
+ *                         .scheduling(Map.of(&#34;default&#34;, Map.of(&#34;resources&#34;, Map.of(&#34;requests&#34;, Map.of(&#34;memory&#34;, &#34;256Mi&#34;)))))
+ *                         .service(Map.of(&#34;type&#34;, &#34;NodePort&#34;))
+ *                         .storage(Map.ofEntries(
+ *                             Map.entry(&#34;data&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;className&#34;, &#34;local-storage&#34;),
+ *                                 Map.entry(&#34;size&#34;, &#34;5Gi&#34;)
+ *                             )),
+ *                             Map.entry(&#34;logs&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;className&#34;, &#34;local-storage&#34;),
+ *                                 Map.entry(&#34;size&#34;, &#34;5Gi&#34;)
+ *                             ))
+ *                         ))
+ *                         .build()),
+ *                     Map.entry(&#34;status&#34;, PostgresInstanceProperties.builder()
+ *                         .externalEndpoint(null)
+ *                         .readyPods(&#34;4/4&#34;)
+ *                         .state(&#34;Ready&#34;)
+ *                         .build())
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;dev&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;default&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Hyperscale&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

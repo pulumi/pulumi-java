@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### Put an application type version
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var applicationTypeVersion = new ApplicationTypeVersion(&#34;applicationTypeVersion&#34;, ApplicationTypeVersionArgs.builder()        
+ *             .appPackageUrl(&#34;http://fakelink.test.com/MyAppType&#34;)
+ *             .applicationTypeName(&#34;myAppType&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .version(&#34;1.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

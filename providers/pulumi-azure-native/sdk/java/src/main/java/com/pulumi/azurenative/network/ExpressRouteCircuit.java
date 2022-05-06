@@ -29,6 +29,78 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create ExpressRouteCircuit
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteCircuit = new ExpressRouteCircuit(&#34;expressRouteCircuit&#34;, ExpressRouteCircuitArgs.builder()        
+ *             .allowClassicOperations(false)
+ *             .authorizations()
+ *             .circuitName(&#34;circuitName&#34;)
+ *             .location(&#34;Brazil South&#34;)
+ *             .peerings()
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceProviderProperties(Map.ofEntries(
+ *                 Map.entry(&#34;bandwidthInMbps&#34;, 200),
+ *                 Map.entry(&#34;peeringLocation&#34;, &#34;Silicon Valley&#34;),
+ *                 Map.entry(&#34;serviceProviderName&#34;, &#34;Equinix&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;family&#34;, &#34;MeteredData&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_MeteredData&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create ExpressRouteCircuit on ExpressRoutePort
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteCircuit = new ExpressRouteCircuit(&#34;expressRouteCircuit&#34;, ExpressRouteCircuitArgs.builder()        
+ *             .bandwidthInGbps(10)
+ *             .circuitName(&#34;expressRouteCircuit1&#34;)
+ *             .expressRoutePort(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;family&#34;, &#34;MeteredData&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium_MeteredData&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

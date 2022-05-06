@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2019-01-01-preview.
  * 
  * ## Example Usage
+ * ### Update or create suppression rule for subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var alertsSuppressionRule = new AlertsSuppressionRule(&#34;alertsSuppressionRule&#34;, AlertsSuppressionRuleArgs.builder()        
+ *             .alertType(&#34;IpAnomaly&#34;)
+ *             .alertsSuppressionRuleName(&#34;dismissIpAnomalyAlerts&#34;)
+ *             .comment(&#34;Test VM&#34;)
+ *             .expirationDateUtc(&#34;2019-12-01T19:50:47.083633Z&#34;)
+ *             .reason(&#34;FalsePositive&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .suppressionAlertsScope(Map.of(&#34;allOf&#34;,             
+ *                 Map.of(&#34;field&#34;, &#34;entities.ip.address&#34;),
+ *                 Map.of(&#34;field&#34;, &#34;entities.process.commandline&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

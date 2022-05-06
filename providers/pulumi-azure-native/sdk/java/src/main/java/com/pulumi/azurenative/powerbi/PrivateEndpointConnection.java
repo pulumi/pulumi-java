@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### Updates status of private endpoint connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnection = new PrivateEndpointConnection(&#34;privateEndpointConnection&#34;, PrivateEndpointConnectionArgs.builder()        
+ *             .azureResourceName(&#34;azureResourceName&#34;)
+ *             .privateEndpoint(Map.of(&#34;id&#34;, &#34;/subscriptions/a0020869-4d28-422a-89f4-c2413130d73c/resourceGroups/resourceGroup/providers/Microsoft.Network/privateEndpoints/myPrivateEndpointName&#34;))
+ *             .privateEndpointName(&#34;myPrivateEndpointName&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;actionsRequired&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved &#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,13 +24,84 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-04-preview.
  * 
  * ## Example Usage
+ * ### Create a contact profile
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contactProfile = new ContactProfile(&#34;contactProfile&#34;, ContactProfileArgs.builder()        
+ *             .autoTrackingConfiguration(&#34;xBand&#34;)
+ *             .contactProfileName(&#34;AQUA_DIRECTPLAYBACK_WITH_UPLINK&#34;)
+ *             .eventHubUri(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.EventHub/namespaces/orbitalppewestus2-ns/eventhubs/telemetry-hub/&#34;)
+ *             .links(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;channels&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;bandwidthMHz&#34;, 0.036),
+ *                         Map.entry(&#34;centerFrequencyMHz&#34;, 2106.4063),
+ *                         Map.entry(&#34;decodingConfiguration&#34;, &#34;na&#34;),
+ *                         Map.entry(&#34;demodulationConfiguration&#34;, &#34;na&#34;),
+ *                         Map.entry(&#34;encodingConfiguration&#34;, &#34;AQUA_CMD_CCSDS&#34;),
+ *                         Map.entry(&#34;endPoint&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;endPointName&#34;, &#34;AQUA_command&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;10.0.1.0&#34;),
+ *                             Map.entry(&#34;port&#34;, &#34;4000&#34;),
+ *                             Map.entry(&#34;protocol&#34;, &#34;TCP&#34;)
+ *                         )),
+ *                         Map.entry(&#34;modulationConfiguration&#34;, &#34;AQUA_UPLINK_BPSK&#34;)
+ *                     )),
+ *                     Map.entry(&#34;direction&#34;, &#34;uplink&#34;),
+ *                     Map.entry(&#34;eirpdBW&#34;, 45),
+ *                     Map.entry(&#34;gainOverTemperature&#34;, 0),
+ *                     Map.entry(&#34;polarization&#34;, &#34;RHCP&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;channels&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;bandwidthMHz&#34;, 150),
+ *                         Map.entry(&#34;centerFrequencyMHz&#34;, 8160),
+ *                         Map.entry(&#34;decodingConfiguration&#34;, &#34;AQUA_DIRECTPLAYBACK_CCSDS&#34;),
+ *                         Map.entry(&#34;demodulationConfiguration&#34;, &#34;AQUA_DOWNLINK_QPSK&#34;),
+ *                         Map.entry(&#34;encodingConfiguration&#34;, &#34;na&#34;),
+ *                         Map.entry(&#34;endPoint&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;endPointName&#34;, &#34;AQUA_directplayback&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;10.0.2.0&#34;),
+ *                             Map.entry(&#34;port&#34;, &#34;4000&#34;),
+ *                             Map.entry(&#34;protocol&#34;, &#34;TCP&#34;)
+ *                         )),
+ *                         Map.entry(&#34;modulationConfiguration&#34;, &#34;na&#34;)
+ *                     )),
+ *                     Map.entry(&#34;direction&#34;, &#34;downlink&#34;),
+ *                     Map.entry(&#34;eirpdBW&#34;, 0),
+ *                     Map.entry(&#34;gainOverTemperature&#34;, 25),
+ *                     Map.entry(&#34;polarization&#34;, &#34;RHCP&#34;)
+ *                 ))
+ *             .location(&#34;westus&#34;)
+ *             .minimumElevationDegrees(10)
+ *             .minimumViableContactDuration(&#34;PT1M&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:orbital:ContactProfile AQUA_DIRECTPLAYBACK_WITH_UPLINK /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/contactProfiles/AQUA_DIRECTPLAYBACK_WITH_UPLINK 
+ * $ pulumi import azure-native:orbital:ContactProfile contactProfile1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/contactProfiles/contactProfile1 
  * ```
  * 
  */

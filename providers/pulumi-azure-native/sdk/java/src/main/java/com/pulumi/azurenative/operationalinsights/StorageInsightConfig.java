@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### StorageInsightsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageInsightConfig = new StorageInsightConfig(&#34;storageInsightConfig&#34;, StorageInsightConfigArgs.builder()        
+ *             .containers(&#34;wad-iis-logfiles&#34;)
+ *             .resourceGroupName(&#34;OIAutoRest5123&#34;)
+ *             .storageAccount(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/OIAutoRest6987/providers/microsoft.storage/storageaccounts/AzTestFakeSA9945&#34;),
+ *                 Map.entry(&#34;key&#34;, &#34;1234&#34;)
+ *             ))
+ *             .storageInsightName(&#34;AzTestSI1110&#34;)
+ *             .tables(            
+ *                 &#34;WADWindowsEventLogsTable&#34;,
+ *                 &#34;LinuxSyslogVer2v0&#34;)
+ *             .workspaceName(&#34;aztest5048&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

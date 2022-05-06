@@ -28,6 +28,97 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01.
  * 
  * ## Example Usage
+ * ### Triggers_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var trigger = new Trigger(&#34;trigger&#34;, TriggerArgs.builder()        
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;pipelines&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;parameters&#34;, BlobEventsTrigger.builder()
+ *                         .outputBlobNameList(&#34;exampleoutput.csv&#34;)
+ *                         .build()),
+ *                     Map.entry(&#34;pipelineReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;referenceName&#34;, &#34;examplePipeline&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;PipelineReference&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;recurrence&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endTime&#34;, &#34;2018-06-16T00:55:13.8441801Z&#34;),
+ *                     Map.entry(&#34;frequency&#34;, &#34;Minute&#34;),
+ *                     Map.entry(&#34;interval&#34;, 4),
+ *                     Map.entry(&#34;startTime&#34;, &#34;2018-06-16T00:39:13.8441801Z&#34;),
+ *                     Map.entry(&#34;timeZone&#34;, &#34;UTC&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;ScheduleTrigger&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .triggerName(&#34;exampleTrigger&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Triggers_Update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var trigger = new Trigger(&#34;trigger&#34;, TriggerArgs.builder()        
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Example description&#34;),
+ *                 Map.entry(&#34;pipelines&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;parameters&#34;, BlobEventsTrigger.builder()
+ *                         .outputBlobNameList(&#34;exampleoutput.csv&#34;)
+ *                         .build()),
+ *                     Map.entry(&#34;pipelineReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;referenceName&#34;, &#34;examplePipeline&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;PipelineReference&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;recurrence&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endTime&#34;, &#34;2018-06-16T00:55:14.905167Z&#34;),
+ *                     Map.entry(&#34;frequency&#34;, &#34;Minute&#34;),
+ *                     Map.entry(&#34;interval&#34;, 4),
+ *                     Map.entry(&#34;startTime&#34;, &#34;2018-06-16T00:39:14.905167Z&#34;),
+ *                     Map.entry(&#34;timeZone&#34;, &#34;UTC&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;ScheduleTrigger&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .triggerName(&#34;exampleTrigger&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

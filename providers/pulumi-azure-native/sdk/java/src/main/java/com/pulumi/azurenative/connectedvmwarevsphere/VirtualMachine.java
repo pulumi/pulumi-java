@@ -31,6 +31,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
+ * ### CreateVirtualMachine
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachine = new VirtualMachine(&#34;virtualMachine&#34;, VirtualMachineArgs.builder()        
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;customLocation&#34;)
+ *             ))
+ *             .hardwareProfile(Map.ofEntries(
+ *                 Map.entry(&#34;memorySizeMB&#34;, 4196),
+ *                 Map.entry(&#34;numCPUs&#34;, 4)
+ *             ))
+ *             .location(&#34;East US&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .resourcePoolId(&#34;/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/ResourcePools/HRPool&#34;)
+ *             .templateId(&#34;/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachineTemplates/WebFrontEndTemplate&#34;)
+ *             .vCenterId(&#34;/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter&#34;)
+ *             .virtualMachineName(&#34;DemoVM&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,64 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create a default user rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userRule = new UserRule(&#34;userRule&#34;, UserRuleArgs.builder()        
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .kind(&#34;Default&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionName(&#34;testRuleCollection&#34;)
+ *             .ruleName(&#34;SampleDefaultUserRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a user rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userRule = new UserRule(&#34;userRule&#34;, UserRuleArgs.builder()        
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .kind(&#34;Custom&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionName(&#34;testRuleCollection&#34;)
+ *             .ruleName(&#34;SampleUserRule&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -26,6 +26,63 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create Flux Configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fluxConfiguration = new FluxConfiguration(&#34;fluxConfiguration&#34;, FluxConfigurationArgs.builder()        
+ *             .clusterName(&#34;clusterName1&#34;)
+ *             .clusterResourceName(&#34;connectedClusters&#34;)
+ *             .clusterRp(&#34;Microsoft.Kubernetes&#34;)
+ *             .fluxConfigurationName(&#34;srs-fluxconfig&#34;)
+ *             .gitRepository(Map.ofEntries(
+ *                 Map.entry(&#34;httpsCAFile&#34;, &#34;ZXhhbXBsZWNlcnRpZmljYXRl&#34;),
+ *                 Map.entry(&#34;repositoryRef&#34;, Map.of(&#34;branch&#34;, &#34;master&#34;)),
+ *                 Map.entry(&#34;syncIntervalInSeconds&#34;, 600),
+ *                 Map.entry(&#34;timeoutInSeconds&#34;, 600),
+ *                 Map.entry(&#34;url&#34;, &#34;https://github.com/Azure/arc-k8s-demo&#34;)
+ *             ))
+ *             .kustomizations(Map.ofEntries(
+ *                 Map.entry(&#34;srs-kustomization1&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dependsOn&#34;, ),
+ *                     Map.entry(&#34;path&#34;, &#34;./test/path&#34;),
+ *                     Map.entry(&#34;syncIntervalInSeconds&#34;, 600),
+ *                     Map.entry(&#34;timeoutInSeconds&#34;, 600),
+ *                     Map.entry(&#34;validation&#34;, &#34;none&#34;)
+ *                 )),
+ *                 Map.entry(&#34;srs-kustomization2&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dependsOn&#34;, Map.of(&#34;kustomizationName&#34;, &#34;srs-kustomization1&#34;)),
+ *                     Map.entry(&#34;path&#34;, &#34;./other/test/path&#34;),
+ *                     Map.entry(&#34;prune&#34;, false),
+ *                     Map.entry(&#34;retryIntervalInSeconds&#34;, 600),
+ *                     Map.entry(&#34;syncIntervalInSeconds&#34;, 600),
+ *                     Map.entry(&#34;timeoutInSeconds&#34;, 600),
+ *                     Map.entry(&#34;validation&#34;, &#34;none&#34;)
+ *                 ))
+ *             ))
+ *             .namespace(&#34;srs-namespace&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .scope(&#34;cluster&#34;)
+ *             .sourceKind(&#34;GitRepository&#34;)
+ *             .suspend(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

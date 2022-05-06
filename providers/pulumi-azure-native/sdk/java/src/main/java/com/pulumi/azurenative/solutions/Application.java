@@ -32,6 +32,35 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-01.
  * 
  * ## Example Usage
+ * ### Create or update managed application
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .applicationDefinitionId(&#34;/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Solutions/applicationDefinitions/myAppDef&#34;)
+ *             .applicationName(&#34;myManagedApplication&#34;)
+ *             .kind(&#34;ServiceCatalog&#34;)
+ *             .location(&#34;East US 2&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

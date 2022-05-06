@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### ExpressRouteCircuitConnectionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteCircuitConnection = new ExpressRouteCircuitConnection(&#34;expressRouteCircuitConnection&#34;, ExpressRouteCircuitConnectionArgs.builder()        
+ *             .addressPrefix(&#34;10.0.0.0/29&#34;)
+ *             .authorizationKey(&#34;946a1918-b7a2-4917-b43c-8c4cdaee006a&#34;)
+ *             .circuitName(&#34;ExpressRouteARMCircuitA&#34;)
+ *             .connectionName(&#34;circuitConnectionUSAUS&#34;)
+ *             .expressRouteCircuitPeering(Map.of(&#34;id&#34;, &#34;/subscriptions/subid1/resourceGroups/dedharcktinit/providers/Microsoft.Network/expressRouteCircuits/dedharcktlocal/peerings/AzurePrivatePeering&#34;))
+ *             .ipv6CircuitConnectionConfig(Map.of(&#34;addressPrefix&#34;, &#34;aa:bb::/125&#34;))
+ *             .peerExpressRouteCircuitPeering(Map.of(&#34;id&#34;, &#34;/subscriptions/subid2/resourceGroups/dedharcktpeer/providers/Microsoft.Network/expressRouteCircuits/dedharcktremote/peerings/AzurePrivatePeering&#34;))
+ *             .peeringName(&#34;AzurePrivatePeering&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

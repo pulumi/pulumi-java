@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Relationships_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var relationship = new Relationship(&#34;relationship&#34;, RelationshipArgs.builder()        
+ *             .cardinality(&#34;OneToOne&#34;)
+ *             .description(Map.of(&#34;en-us&#34;, &#34;Relationship Description&#34;))
+ *             .displayName(Map.of(&#34;en-us&#34;, &#34;Relationship DisplayName&#34;))
+ *             .fields()
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .profileType(&#34;testProfile2326994&#34;)
+ *             .relatedProfileType(&#34;testProfile2326994&#34;)
+ *             .relationshipName(&#34;SomeRelationship&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

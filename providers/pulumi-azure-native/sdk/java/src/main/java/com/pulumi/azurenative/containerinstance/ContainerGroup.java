@@ -32,6 +32,109 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### ContainerGroupsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerGroup = new ContainerGroup(&#34;containerGroup&#34;, ContainerGroupArgs.builder()        
+ *             .containerGroupName(&#34;demo1&#34;)
+ *             .containers(Map.ofEntries(
+ *                 Map.entry(&#34;command&#34;, ),
+ *                 Map.entry(&#34;environmentVariables&#34;, ),
+ *                 Map.entry(&#34;image&#34;, &#34;nginx&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;demo1&#34;),
+ *                 Map.entry(&#34;ports&#34;, Map.of(&#34;port&#34;, 80)),
+ *                 Map.entry(&#34;resources&#34;, Map.of(&#34;requests&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cpu&#34;, 1),
+ *                     Map.entry(&#34;gpu&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;count&#34;, 1),
+ *                         Map.entry(&#34;sku&#34;, &#34;K80&#34;)
+ *                     )),
+ *                     Map.entry(&#34;memoryInGB&#34;, 1.5)
+ *                 ))),
+ *                 Map.entry(&#34;volumeMounts&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;mountPath&#34;, &#34;/mnt/volume1&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;volume1&#34;),
+ *                         Map.entry(&#34;readOnly&#34;, false)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;mountPath&#34;, &#34;/mnt/volume2&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;volume2&#34;),
+ *                         Map.entry(&#34;readOnly&#34;, false)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;mountPath&#34;, &#34;/mnt/volume3&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;volume3&#34;),
+ *                         Map.entry(&#34;readOnly&#34;, true)
+ *                     ))
+ *             ))
+ *             .diagnostics(Map.of(&#34;logAnalytics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;logType&#34;, &#34;ContainerInsights&#34;),
+ *                 Map.entry(&#34;metadata&#34;, Map.of(&#34;test-key&#34;, &#34;test-metadata-value&#34;)),
+ *                 Map.entry(&#34;workspaceId&#34;, &#34;workspaceid&#34;),
+ *                 Map.entry(&#34;workspaceKey&#34;, &#34;workspaceKey&#34;)
+ *             )))
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;nameServers&#34;, &#34;1.1.1.1&#34;),
+ *                 Map.entry(&#34;options&#34;, &#34;ndots:2&#34;),
+ *                 Map.entry(&#34;searchDomains&#34;, &#34;cluster.local svc.cluster.local&#34;)
+ *             ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;SystemAssigned, UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name&#34;, ))
+ *             ))
+ *             .imageRegistryCredentials()
+ *             .ipAddress(Map.ofEntries(
+ *                 Map.entry(&#34;dnsNameLabel&#34;, &#34;dnsnamelabel1&#34;),
+ *                 Map.entry(&#34;ports&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;port&#34;, 80),
+ *                     Map.entry(&#34;protocol&#34;, &#34;TCP&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Public&#34;)
+ *             ))
+ *             .location(&#34;west us&#34;)
+ *             .networkProfile(Map.of(&#34;id&#34;, &#34;test-network-profile-id&#34;))
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;demo&#34;)
+ *             .volumes(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;azureFile&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;shareName&#34;, &#34;shareName&#34;),
+ *                         Map.entry(&#34;storageAccountKey&#34;, &#34;accountKey&#34;),
+ *                         Map.entry(&#34;storageAccountName&#34;, &#34;accountName&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;volume1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;emptyDir&#34;, ),
+ *                     Map.entry(&#34;name&#34;, &#34;volume2&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;volume3&#34;),
+ *                     Map.entry(&#34;secret&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;secretKey1&#34;, &#34;SecretValue1InBase64&#34;),
+ *                         Map.entry(&#34;secretKey2&#34;, &#34;SecretValue2InBase64&#34;)
+ *                     ))
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

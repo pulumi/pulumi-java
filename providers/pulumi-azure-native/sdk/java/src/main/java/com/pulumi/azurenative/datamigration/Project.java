@@ -27,6 +27,35 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-19.
  * 
  * ## Example Usage
+ * ### Projects_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Project(&#34;project&#34;, ProjectArgs.builder()        
+ *             .groupName(&#34;DmsSdkRg&#34;)
+ *             .location(&#34;southcentralus&#34;)
+ *             .projectName(&#34;DmsSdkProject&#34;)
+ *             .serviceName(&#34;DmsSdkService&#34;)
+ *             .sourcePlatform(&#34;SQL&#34;)
+ *             .targetPlatform(&#34;SQLDB&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

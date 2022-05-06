@@ -24,6 +24,65 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create network function resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkFunction = new NetworkFunction(&#34;networkFunction&#34;, NetworkFunctionArgs.builder()        
+ *             .device(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourcegroups/rg/providers/Microsoft.HybridNetwork/devices/testDevice&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .managedApplicationParameters()
+ *             .networkFunctionName(&#34;testNf&#34;)
+ *             .networkFunctionUserConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;networkInterfaces&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;gateway&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                             Map.entry(&#34;ipVersion&#34;, &#34;IPv4&#34;),
+ *                             Map.entry(&#34;subnet&#34;, &#34;&#34;)
+ *                         )),
+ *                         Map.entry(&#34;macAddress&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;networkInterfaceName&#34;, &#34;nic1&#34;),
+ *                         Map.entry(&#34;vmSwitchType&#34;, &#34;Management&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;gateway&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                             Map.entry(&#34;ipVersion&#34;, &#34;IPv4&#34;),
+ *                             Map.entry(&#34;subnet&#34;, &#34;&#34;)
+ *                         )),
+ *                         Map.entry(&#34;macAddress&#34;, &#34;DC-97-F8-79-16-7D&#34;),
+ *                         Map.entry(&#34;networkInterfaceName&#34;, &#34;nic2&#34;),
+ *                         Map.entry(&#34;vmSwitchType&#34;, &#34;Wan&#34;)
+ *                     )),
+ *                 Map.entry(&#34;roleName&#34;, &#34;testRole&#34;),
+ *                 Map.entry(&#34;userDataParameters&#34;, )
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .skuName(&#34;testSku&#34;)
+ *             .vendorName(&#34;testVendor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

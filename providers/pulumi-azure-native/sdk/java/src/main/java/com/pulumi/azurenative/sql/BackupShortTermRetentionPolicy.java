@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Update the short term retention policy for the database.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupShortTermRetentionPolicy = new BackupShortTermRetentionPolicy(&#34;backupShortTermRetentionPolicy&#34;, BackupShortTermRetentionPolicyArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .policyName(&#34;default&#34;)
+ *             .resourceGroupName(&#34;resourceGroup&#34;)
+ *             .retentionDays(14)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

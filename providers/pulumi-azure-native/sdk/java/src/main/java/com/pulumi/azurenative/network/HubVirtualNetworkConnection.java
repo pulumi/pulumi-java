@@ -23,6 +23,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### HubVirtualNetworkConnectionPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hubVirtualNetworkConnection = new HubVirtualNetworkConnection(&#34;hubVirtualNetworkConnection&#34;, HubVirtualNetworkConnectionArgs.builder()        
+ *             .connectionName(&#34;connection1&#34;)
+ *             .enableInternetSecurity(false)
+ *             .remoteVirtualNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routingConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;associatedRouteTable&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1&#34;)),
+ *                 Map.entry(&#34;propagatedRouteTables&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;ids&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1&#34;)),
+ *                     Map.entry(&#34;labels&#34;,                     
+ *                         &#34;label1&#34;,
+ *                         &#34;label2&#34;)
+ *                 )),
+ *                 Map.entry(&#34;vnetRoutes&#34;, Map.of(&#34;staticRoutes&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;addressPrefixes&#34;,                         
+ *                             &#34;10.1.0.0/16&#34;,
+ *                             &#34;10.2.0.0/16&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;route1&#34;),
+ *                         Map.entry(&#34;nextHopIpAddress&#34;, &#34;10.0.0.68&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;addressPrefixes&#34;,                         
+ *                             &#34;10.3.0.0/16&#34;,
+ *                             &#34;10.4.0.0/16&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;route2&#34;),
+ *                         Map.entry(&#34;nextHopIpAddress&#34;, &#34;10.0.0.65&#34;)
+ *                     )))
+ *             ))
+ *             .virtualHubName(&#34;virtualHub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

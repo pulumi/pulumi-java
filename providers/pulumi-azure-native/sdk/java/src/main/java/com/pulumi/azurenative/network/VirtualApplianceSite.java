@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create Network Virtual Appliance Site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualApplianceSite = new VirtualApplianceSite(&#34;virtualApplianceSite&#34;, VirtualApplianceSiteArgs.builder()        
+ *             .addressPrefix(&#34;192.168.1.0/24&#34;)
+ *             .networkVirtualApplianceName(&#34;nva&#34;)
+ *             .o365Policy(Map.of(&#34;breakOutCategories&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;allow&#34;, true),
+ *                 Map.entry(&#34;default&#34;, true),
+ *                 Map.entry(&#34;optimize&#34;, true)
+ *             )))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .siteName(&#34;site1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

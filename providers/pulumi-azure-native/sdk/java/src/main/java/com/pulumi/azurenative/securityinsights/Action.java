@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates an action of alert rule.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var action = new Action(&#34;action&#34;, ActionArgs.builder()        
+ *             .actionId(&#34;912bec42-cb66-4c03-ac63-1761b6898c3e&#34;)
+ *             .logicAppResourceId(&#34;/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/MyAlerts&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .ruleId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .triggerUri(&#34;https://prod-31.northcentralus.logic.azure.com:443/workflows/cd3765391efd48549fd7681ded1d48d7/triggers/manual/paths/invoke?api-version=2016-10-01&amp;sp=%2Ftriggers%2Fmanual%2Frun&amp;sv=1.0&amp;sig=signature&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,73 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Update a server&#39;s blob auditing policy with all parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverBlobAuditingPolicy = new ServerBlobAuditingPolicy(&#34;serverBlobAuditingPolicy&#34;, ServerBlobAuditingPolicyArgs.builder()        
+ *             .auditActionsAndGroups(            
+ *                 &#34;SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP&#34;,
+ *                 &#34;FAILED_DATABASE_AUTHENTICATION_GROUP&#34;,
+ *                 &#34;BATCH_COMPLETED_GROUP&#34;)
+ *             .blobAuditingPolicyName(&#34;default&#34;)
+ *             .isAzureMonitorTargetEnabled(true)
+ *             .isStorageSecondaryKeyInUse(false)
+ *             .queueDelayMs(4000)
+ *             .resourceGroupName(&#34;blobauditingtest-4799&#34;)
+ *             .retentionDays(6)
+ *             .serverName(&#34;blobauditingtest-6440&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .storageAccountAccessKey(&#34;sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==&#34;)
+ *             .storageAccountSubscriptionId(&#34;00000000-1234-0000-5678-000000000000&#34;)
+ *             .storageEndpoint(&#34;https://mystorage.blob.core.windows.net&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a server&#39;s blob auditing policy with minimal parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverBlobAuditingPolicy = new ServerBlobAuditingPolicy(&#34;serverBlobAuditingPolicy&#34;, ServerBlobAuditingPolicyArgs.builder()        
+ *             .blobAuditingPolicyName(&#34;default&#34;)
+ *             .resourceGroupName(&#34;blobauditingtest-4799&#34;)
+ *             .serverName(&#34;blobauditingtest-6440&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .storageAccountAccessKey(&#34;sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==&#34;)
+ *             .storageEndpoint(&#34;https://mystorage.blob.core.windows.net&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

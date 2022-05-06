@@ -24,6 +24,69 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create an Account Filter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accountFilter = new AccountFilter(&#34;accountFilter&#34;, AccountFilterArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .filterName(&#34;newAccountFilter&#34;)
+ *             .firstQuality(Map.of(&#34;bitrate&#34;, 128000))
+ *             .presentationTimeRange(Map.ofEntries(
+ *                 Map.entry(&#34;endTimestamp&#34;, 170000000),
+ *                 Map.entry(&#34;forceEndTimestamp&#34;, false),
+ *                 Map.entry(&#34;liveBackoffDuration&#34;, 0),
+ *                 Map.entry(&#34;presentationWindowDuration&#34;, 9223372036854774784),
+ *                 Map.entry(&#34;startTimestamp&#34;, 0),
+ *                 Map.entry(&#34;timescale&#34;, 10000000)
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .tracks(            
+ *                 Map.of(&#34;trackSelections&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;operation&#34;, &#34;Equal&#34;),
+ *                         Map.entry(&#34;property&#34;, &#34;Type&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;Audio&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;operation&#34;, &#34;NotEqual&#34;),
+ *                         Map.entry(&#34;property&#34;, &#34;Language&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;en&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;operation&#34;, &#34;NotEqual&#34;),
+ *                         Map.entry(&#34;property&#34;, &#34;FourCC&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;EC-3&#34;)
+ *                     )),
+ *                 Map.of(&#34;trackSelections&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;operation&#34;, &#34;Equal&#34;),
+ *                         Map.entry(&#34;property&#34;, &#34;Type&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;Video&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;operation&#34;, &#34;Equal&#34;),
+ *                         Map.entry(&#34;property&#34;, &#34;Bitrate&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;3000000-5000000&#34;)
+ *                     )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,13 +22,75 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a guest diagnostic settings
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var guestDiagnosticsSetting = new GuestDiagnosticsSetting(&#34;guestDiagnosticsSetting&#34;, GuestDiagnosticsSettingArgs.builder()        
+ *             .dataSources(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;perfCounters&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;\\Process(_Total)\\%Processor Time&#34;),
+ *                             Map.entry(&#34;samplingPeriod&#34;, &#34;PT1M&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;\\Process(_Total)\\Working Set&#34;),
+ *                             Map.entry(&#34;samplingPeriod&#34;, &#34;PT1M&#34;)
+ *                         ))),
+ *                     Map.entry(&#34;kind&#34;, &#34;PerformanceCounter&#34;),
+ *                     Map.entry(&#34;sinks&#34;, Map.of(&#34;kind&#34;, &#34;LogAnalytics&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;providers&#34;,                     
+ *                         Map.of(&#34;id&#34;, &#34;1&#34;),
+ *                         Map.of(&#34;id&#34;, &#34;2&#34;))),
+ *                     Map.entry(&#34;kind&#34;, &#34;ETWProviders&#34;),
+ *                     Map.entry(&#34;sinks&#34;, Map.of(&#34;kind&#34;, &#34;LogAnalytics&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;eventLogs&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;filter&#34;, &#34;SourceName == Xyz AND EventId = \&#34;100\&#34; AND  $Xpath/Column=\&#34;DCName\&#34; = \&#34;CatWoman\&#34;&#34;),
+ *                             Map.entry(&#34;logName&#34;, &#34;Application&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;filter&#34;, &#34;SourceName == Xyz AND EventId = \&#34;100\&#34; AND  $Xpath/Column=\&#34;DCName\&#34; = \&#34;BatMan\&#34;&#34;),
+ *                             Map.entry(&#34;logName&#34;, &#34;Application&#34;)
+ *                         ))),
+ *                     Map.entry(&#34;kind&#34;, &#34;WindowsEventLogs&#34;),
+ *                     Map.entry(&#34;sinks&#34;, Map.of(&#34;kind&#34;, &#34;LogAnalytics&#34;))
+ *                 ))
+ *             .diagnosticSettingsName(&#34;SampleDiagSetting&#34;)
+ *             .location(&#34;Global&#34;)
+ *             .osType(&#34;Windows&#34;)
+ *             .resourceGroupName(&#34;Default-ResourceGroup&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:insights:guestDiagnosticsSetting SampleDiagSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
+ * $ pulumi import azure-native:insights:guestDiagnosticsSetting productionMachineSetting /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ResourceGroup/providers/microsoft.insights/guestDiagnosticSettings/SampleDiagSetting 
  * ```
  * 
  */

@@ -26,6 +26,54 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### SnapshotPolicies_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var snapshotPolicy = new SnapshotPolicy(&#34;snapshotPolicy&#34;, SnapshotPolicyArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .dailySchedule(Map.ofEntries(
+ *                 Map.entry(&#34;hour&#34;, 14),
+ *                 Map.entry(&#34;minute&#34;, 30),
+ *                 Map.entry(&#34;snapshotsToKeep&#34;, 4)
+ *             ))
+ *             .hourlySchedule(Map.ofEntries(
+ *                 Map.entry(&#34;minute&#34;, 50),
+ *                 Map.entry(&#34;snapshotsToKeep&#34;, 2)
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .monthlySchedule(Map.ofEntries(
+ *                 Map.entry(&#34;daysOfMonth&#34;, &#34;10,11,12&#34;),
+ *                 Map.entry(&#34;hour&#34;, 14),
+ *                 Map.entry(&#34;minute&#34;, 15),
+ *                 Map.entry(&#34;snapshotsToKeep&#34;, 5)
+ *             ))
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .snapshotPolicyName(&#34;snapshotPolicyName&#34;)
+ *             .weeklySchedule(Map.ofEntries(
+ *                 Map.entry(&#34;day&#34;, &#34;Wednesday&#34;),
+ *                 Map.entry(&#34;hour&#34;, 14),
+ *                 Map.entry(&#34;minute&#34;, 45),
+ *                 Map.entry(&#34;snapshotsToKeep&#34;, 3)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### LinkedStorageAccountsCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedStorageAccount = new LinkedStorageAccount(&#34;linkedStorageAccount&#34;, LinkedStorageAccountArgs.builder()        
+ *             .dataSourceType(&#34;CustomLogs&#34;)
+ *             .resourceGroupName(&#34;mms-eus&#34;)
+ *             .storageAccountIds(            
+ *                 &#34;/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA&#34;,
+ *                 &#34;/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB&#34;)
+ *             .workspaceName(&#34;testLinkStorageAccountsWS&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### RedisEnterpriseCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var redisEnterprise = new RedisEnterprise(&#34;redisEnterprise&#34;, RedisEnterpriseArgs.builder()        
+ *             .clusterName(&#34;cache1&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .minimumTlsVersion(&#34;1.2&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;EnterpriseFlash_F300&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;tag1&#34;, &#34;value1&#34;))
+ *             .zones(            
+ *                 &#34;1&#34;,
+ *                 &#34;2&#34;,
+ *                 &#34;3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

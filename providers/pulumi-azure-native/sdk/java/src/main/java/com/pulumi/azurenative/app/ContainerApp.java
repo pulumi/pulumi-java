@@ -25,6 +25,90 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or Update Container App
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerApp = new ContainerApp(&#34;containerApp&#34;, ContainerAppArgs.builder()        
+ *             .configuration(Map.ofEntries(
+ *                 Map.entry(&#34;dapr&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;appPort&#34;, 3000),
+ *                     Map.entry(&#34;appProtocol&#34;, &#34;http&#34;),
+ *                     Map.entry(&#34;enabled&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;ingress&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;customDomains&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;bindingType&#34;, &#34;SniEnabled&#34;),
+ *                             Map.entry(&#34;certificateId&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/managedEnvironments/demokube/certificates/my-certificate-for-my-name-dot-com&#34;),
+ *                             Map.entry(&#34;name&#34;, &#34;www.my-name.com&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;bindingType&#34;, &#34;SniEnabled&#34;),
+ *                             Map.entry(&#34;certificateId&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/managedEnvironments/demokube/certificates/my-certificate-for-my-other-name-dot-com&#34;),
+ *                             Map.entry(&#34;name&#34;, &#34;www.my-other-name.com&#34;)
+ *                         )),
+ *                     Map.entry(&#34;external&#34;, true),
+ *                     Map.entry(&#34;targetPort&#34;, 3000),
+ *                     Map.entry(&#34;traffic&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;label&#34;, &#34;production&#34;),
+ *                         Map.entry(&#34;revisionName&#34;, &#34;testcontainerApp0-ab1234&#34;),
+ *                         Map.entry(&#34;weight&#34;, 100)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .location(&#34;East US&#34;)
+ *             .managedEnvironmentId(&#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.App/managedEnvironments/demokube&#34;)
+ *             .name(&#34;testcontainerApp0&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .template(Map.ofEntries(
+ *                 Map.entry(&#34;containers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;image&#34;, &#34;repo/testcontainerApp0:v1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;testcontainerApp0&#34;),
+ *                     Map.entry(&#34;probes&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;httpGet&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;httpHeaders&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;name&#34;, &#34;Custom-Header&#34;),
+ *                                 Map.entry(&#34;value&#34;, &#34;Awesome&#34;)
+ *                             )),
+ *                             Map.entry(&#34;path&#34;, &#34;/health&#34;),
+ *                             Map.entry(&#34;port&#34;, 8080)
+ *                         )),
+ *                         Map.entry(&#34;initialDelaySeconds&#34;, 3),
+ *                         Map.entry(&#34;periodSeconds&#34;, 3),
+ *                         Map.entry(&#34;type&#34;, &#34;liveness&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;scale&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxReplicas&#34;, 5),
+ *                     Map.entry(&#34;minReplicas&#34;, 1),
+ *                     Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;custom&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;metadata&#34;, Map.of(&#34;concurrentRequests&#34;, &#34;50&#34;)),
+ *                             Map.entry(&#34;type&#34;, &#34;http&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;httpscalingrule&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

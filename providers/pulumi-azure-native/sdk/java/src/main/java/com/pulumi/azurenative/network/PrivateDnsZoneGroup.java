@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create private dns zone group
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateDnsZoneGroup = new PrivateDnsZoneGroup(&#34;privateDnsZoneGroup&#34;, PrivateDnsZoneGroupArgs.builder()        
+ *             .privateDnsZoneConfigs(Map.of(&#34;privateDnsZoneId&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com&#34;))
+ *             .privateDnsZoneGroupName(&#34;testPdnsgroup&#34;)
+ *             .privateEndpointName(&#34;testPe&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,44 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or Updates the management group diagnostic setting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementGroupDiagnosticSetting = new ManagementGroupDiagnosticSetting(&#34;managementGroupDiagnosticSetting&#34;, ManagementGroupDiagnosticSettingArgs.builder()        
+ *             .eventHubAuthorizationRuleId(&#34;/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule&#34;)
+ *             .eventHubName(&#34;myeventhub&#34;)
+ *             .logs(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;category&#34;, &#34;Administrative&#34;),
+ *                     Map.entry(&#34;enabled&#34;, true)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;category&#34;, &#34;Policy&#34;),
+ *                     Map.entry(&#34;enabled&#34;, true)
+ *                 ))
+ *             .managementGroupId(&#34;testChildMG7&#34;)
+ *             .name(&#34;setting1&#34;)
+ *             .storageAccountId(&#34;/subscriptions/bfaef57f-297e-4210-bfe5-27c18cc671f7/resourceGroups/FuncAppRunners/providers/Microsoft.Storage/storageAccounts/testpersonalb6a5&#34;)
+ *             .workspaceId(&#34;/subscriptions/9cf7cc0a-0ba1-4624-bc82-97e1ee25dc45/resourceGroups/mgTest/providers/Microsoft.OperationalInsights/workspaces/mgTestWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

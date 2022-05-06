@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### HyperVCollectors_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hyperVCollector = new HyperVCollector(&#34;hyperVCollector&#34;, HyperVCollectorArgs.builder()        
+ *             .eTag(&#34;\&#34;00000981-0000-0300-0000-5d74cd5f0000\&#34;&#34;)
+ *             .hyperVCollectorName(&#34;migrateprojectce73collector&#34;)
+ *             .projectName(&#34;migrateprojectce73project&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;agentProperties&#34;, Map.of(&#34;spnDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationId&#34;, &#34;827f1053-44dc-439f-b832-05416dcce12b&#34;),
+ *                     Map.entry(&#34;audience&#34;, &#34;https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp&#34;),
+ *                     Map.entry(&#34;authority&#34;, &#34;https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;be75098e-c0fc-4ac4-98c7-282ebbcf8370&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;discoverySiteId&#34;, &#34;/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;contosoithyperv&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

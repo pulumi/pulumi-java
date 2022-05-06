@@ -20,6 +20,69 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a workload classifier with all properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolWorkloadClassifier = new SqlPoolWorkloadClassifier(&#34;sqlPoolWorkloadClassifier&#34;, SqlPoolWorkloadClassifierArgs.builder()        
+ *             .context(&#34;test_context&#34;)
+ *             .endTime(&#34;14:00&#34;)
+ *             .importance(&#34;high&#34;)
+ *             .label(&#34;test_label&#34;)
+ *             .memberName(&#34;dbo&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-6852&#34;)
+ *             .sqlPoolName(&#34;sqlcrudtest-9187&#34;)
+ *             .startTime(&#34;12:00&#34;)
+ *             .workloadClassifierName(&#34;wlm_workloadclassifier&#34;)
+ *             .workloadGroupName(&#34;wlm_workloadgroup&#34;)
+ *             .workspaceName(&#34;sqlcrudtest-2080&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a workload classifier with the required properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolWorkloadClassifier = new SqlPoolWorkloadClassifier(&#34;sqlPoolWorkloadClassifier&#34;, SqlPoolWorkloadClassifierArgs.builder()        
+ *             .memberName(&#34;dbo&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-6852&#34;)
+ *             .sqlPoolName(&#34;sqlcrudtest-9187&#34;)
+ *             .workloadClassifierName(&#34;wlm_workloadclassifier&#34;)
+ *             .workloadGroupName(&#34;wlm_workloadgroup&#34;)
+ *             .workspaceName(&#34;sqlcrudtest-2080&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

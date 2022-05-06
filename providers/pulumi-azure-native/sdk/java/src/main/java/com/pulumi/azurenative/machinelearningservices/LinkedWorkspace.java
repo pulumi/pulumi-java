@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### CreateLinkedWorkspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedWorkspace = new LinkedWorkspace(&#34;linkedWorkspace&#34;, LinkedWorkspaceArgs.builder()        
+ *             .linkName(&#34;link-1&#34;)
+ *             .name(&#34;link-1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;linkedWorkspaceResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1&#34;),
+ *                 Map.entry(&#34;userAssignedIdentityResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup-1&#34;)
+ *             .workspaceName(&#34;workspace-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

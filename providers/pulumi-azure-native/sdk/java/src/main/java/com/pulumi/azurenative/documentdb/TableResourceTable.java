@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### CosmosDBTableReplace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tableResourceTable = new TableResourceTable(&#34;tableResourceTable&#34;, TableResourceTableArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .options()
+ *             .resource(Map.of(&#34;id&#34;, &#34;tableName&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tableName(&#34;tableName&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

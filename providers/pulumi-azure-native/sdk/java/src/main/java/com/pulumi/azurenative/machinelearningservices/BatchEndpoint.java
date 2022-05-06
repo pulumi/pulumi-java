@@ -23,6 +23,63 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Batch Endpoint.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchEndpoint = new BatchEndpoint(&#34;batchEndpoint&#34;, BatchEndpointArgs.builder()        
+ *             .endpointName(&#34;testBatchEndpoint&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;principalId&#34;, &#34;string&#34;)
+ *                 )))
+ *             ))
+ *             .kind(&#34;string&#34;)
+ *             .location(&#34;string&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authMode&#34;, &#34;AMLToken&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;keys&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;primaryKey&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;secondaryKey&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;traffic&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;myDeployment1&#34;, 0),
+ *                     Map.entry(&#34;myDeployment2&#34;, 1)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup-1234&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *             ))
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

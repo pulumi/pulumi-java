@@ -22,6 +22,52 @@ import javax.annotation.Nullable;
  * API Version: 2017-05-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or Updates the diagnostic setting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diagnosticSetting = new DiagnosticSetting(&#34;diagnosticSetting&#34;, DiagnosticSettingArgs.builder()        
+ *             .eventHubAuthorizationRuleId(&#34;/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule&#34;)
+ *             .eventHubName(&#34;myeventhub&#34;)
+ *             .logAnalyticsDestinationType(&#34;Dedicated&#34;)
+ *             .logs(Map.ofEntries(
+ *                 Map.entry(&#34;category&#34;, &#34;WorkflowRuntime&#34;),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;days&#34;, 0),
+ *                     Map.entry(&#34;enabled&#34;, false)
+ *                 ))
+ *             ))
+ *             .metrics(Map.ofEntries(
+ *                 Map.entry(&#34;category&#34;, &#34;WorkflowMetrics&#34;),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;retentionPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;days&#34;, 0),
+ *                     Map.entry(&#34;enabled&#34;, false)
+ *                 ))
+ *             ))
+ *             .name(&#34;mysetting&#34;)
+ *             .resourceUri(&#34;subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6&#34;)
+ *             .storageAccountId(&#34;/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/apptest/providers/Microsoft.Storage/storageAccounts/appteststorage1&#34;)
+ *             .workspaceId(&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

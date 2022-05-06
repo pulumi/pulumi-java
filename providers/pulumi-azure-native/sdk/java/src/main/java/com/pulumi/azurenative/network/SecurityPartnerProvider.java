@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create Security Partner Provider
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var securityPartnerProvider = new SecurityPartnerProvider(&#34;securityPartnerProvider&#34;, SecurityPartnerProviderArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .securityPartnerProviderName(&#34;securityPartnerProvider&#34;)
+ *             .securityProviderName(&#34;ZScaler&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualHub(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

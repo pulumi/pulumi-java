@@ -23,6 +23,44 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a SQL Analytics pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPool = new SqlPool(&#34;sqlPool&#34;, SqlPoolArgs.builder()        
+ *             .collation(&#34;&#34;)
+ *             .createMode(&#34;&#34;)
+ *             .location(&#34;Southeast Asia&#34;)
+ *             .maxSizeBytes(0)
+ *             .recoverableDatabaseId(&#34;&#34;)
+ *             .resourceGroupName(&#34;ExampleResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;&#34;)
+ *             ))
+ *             .sourceDatabaseId(&#34;&#34;)
+ *             .sqlPoolName(&#34;ExampleSqlPool&#34;)
+ *             .storageAccountType(&#34;LRS&#34;)
+ *             .tags()
+ *             .workspaceName(&#34;ExampleWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

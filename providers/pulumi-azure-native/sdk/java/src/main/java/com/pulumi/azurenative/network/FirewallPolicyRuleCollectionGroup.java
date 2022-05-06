@@ -24,13 +24,185 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create FirewallPolicyNatRuleCollectionGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleCollectionGroup = new FirewallPolicyRuleCollectionGroup(&#34;firewallPolicyRuleCollectionGroup&#34;, FirewallPolicyRuleCollectionGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(100)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionGroupName(&#34;ruleCollectionGroup1&#34;)
+ *             .ruleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;DNAT&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Nat-Rule-Collection&#34;),
+ *                 Map.entry(&#34;priority&#34;, 100),
+ *                 Map.entry(&#34;ruleCollectionType&#34;, &#34;FirewallPolicyNatRuleCollection&#34;),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;destinationAddresses&#34;, &#34;152.23.32.23&#34;),
+ *                     Map.entry(&#34;destinationPorts&#34;, &#34;8080&#34;),
+ *                     Map.entry(&#34;ipProtocols&#34;,                     
+ *                         &#34;TCP&#34;,
+ *                         &#34;UDP&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;nat-rule1&#34;),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;NatRule&#34;),
+ *                     Map.entry(&#34;sourceAddresses&#34;, &#34;2.2.2.2&#34;),
+ *                     Map.entry(&#34;sourceIpGroups&#34;, ),
+ *                     Map.entry(&#34;translatedFqdn&#34;, &#34;internalhttp.server.net&#34;),
+ *                     Map.entry(&#34;translatedPort&#34;, &#34;8080&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create FirewallPolicyRuleCollectionGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleCollectionGroup = new FirewallPolicyRuleCollectionGroup(&#34;firewallPolicyRuleCollectionGroup&#34;, FirewallPolicyRuleCollectionGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(100)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionGroupName(&#34;ruleCollectionGroup1&#34;)
+ *             .ruleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Filter-Rule-Collection&#34;),
+ *                 Map.entry(&#34;priority&#34;, 100),
+ *                 Map.entry(&#34;ruleCollectionType&#34;, &#34;FirewallPolicyFilterRuleCollection&#34;),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;destinationPorts&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;ipProtocols&#34;, &#34;TCP&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;network-rule1&#34;),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;NetworkRule&#34;),
+ *                     Map.entry(&#34;sourceAddresses&#34;, &#34;10.1.25.0/24&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create FirewallPolicyRuleCollectionGroup With IpGroups
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleCollectionGroup = new FirewallPolicyRuleCollectionGroup(&#34;firewallPolicyRuleCollectionGroup&#34;, FirewallPolicyRuleCollectionGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(110)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionGroupName(&#34;ruleCollectionGroup1&#34;)
+ *             .ruleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Filter-Rule-Collection&#34;),
+ *                 Map.entry(&#34;ruleCollectionType&#34;, &#34;FirewallPolicyFilterRuleCollection&#34;),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;destinationIpGroups&#34;, &#34;/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2&#34;),
+ *                     Map.entry(&#34;destinationPorts&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;ipProtocols&#34;, &#34;TCP&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;network-1&#34;),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;NetworkRule&#34;),
+ *                     Map.entry(&#34;sourceIpGroups&#34;, &#34;/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create FirewallPolicyRuleCollectionGroup With Web Categories
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleCollectionGroup = new FirewallPolicyRuleCollectionGroup(&#34;firewallPolicyRuleCollectionGroup&#34;, FirewallPolicyRuleCollectionGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(110)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionGroupName(&#34;ruleCollectionGroup1&#34;)
+ *             .ruleCollections(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Filter-Rule-Collection&#34;),
+ *                 Map.entry(&#34;ruleCollectionType&#34;, &#34;FirewallPolicyFilterRuleCollection&#34;),
+ *                 Map.entry(&#34;rules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Deny inbound rule&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rule1&#34;),
+ *                     Map.entry(&#34;protocols&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;port&#34;, 443),
+ *                         Map.entry(&#34;protocolType&#34;, &#34;Https&#34;)
+ *                     )),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;ApplicationRule&#34;),
+ *                     Map.entry(&#34;sourceAddresses&#34;,                     
+ *                         &#34;216.58.216.164&#34;,
+ *                         &#34;10.0.0.0/24&#34;),
+ *                     Map.entry(&#34;webCategories&#34;, &#34;Hacking&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup firewallPolicy /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+ * $ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
  * ```
  * 
  */

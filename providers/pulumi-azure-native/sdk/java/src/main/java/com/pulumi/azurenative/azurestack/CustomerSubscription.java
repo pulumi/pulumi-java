@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### Creates a new customer subscription under a registration.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customerSubscription = new CustomerSubscription(&#34;customerSubscription&#34;, CustomerSubscriptionArgs.builder()        
+ *             .customerSubscriptionName(&#34;E09A4E93-29A7-4EBA-A6D4-76202383F07F&#34;)
+ *             .registrationName(&#34;testregistration&#34;)
+ *             .resourceGroup(&#34;azurestack&#34;)
+ *             .tenantId(&#34;dbab3982-796f-4d03-9908-044c08aef8a2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

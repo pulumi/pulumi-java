@@ -22,6 +22,43 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a log profile
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var logProfile = new LogProfile(&#34;logProfile&#34;, LogProfileArgs.builder()        
+ *             .categories(            
+ *                 &#34;Write&#34;,
+ *                 &#34;Delete&#34;,
+ *                 &#34;Action&#34;)
+ *             .location(&#34;&#34;)
+ *             .locations(&#34;global&#34;)
+ *             .logProfileName(&#34;Rac46PostSwapRG&#34;)
+ *             .retentionPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;days&#34;, 3),
+ *                 Map.entry(&#34;enabled&#34;, true)
+ *             ))
+ *             .serviceBusRuleId(&#34;&#34;)
+ *             .storageAccountId(&#34;/subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/resourceGroups/JohnKemTest/providers/Microsoft.Storage/storageAccounts/johnkemtest8162&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

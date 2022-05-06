@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### Create a key
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var key = new Key(&#34;key&#34;, KeyArgs.builder()        
+ *             .keyName(&#34;sample-key-name&#34;)
+ *             .properties(Map.of(&#34;kty&#34;, &#34;RSA&#34;))
+ *             .resourceGroupName(&#34;sample-group&#34;)
+ *             .vaultName(&#34;sample-vault-name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

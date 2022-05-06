@@ -26,6 +26,95 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Put a node type with maximum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var nodeType = new NodeType(&#34;nodeType&#34;, NodeTypeArgs.builder()        
+ *             .capacities(Map.of(&#34;ClientConnections&#34;, &#34;65536&#34;))
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .dataDiskSizeGB(200)
+ *             .isPrimary(false)
+ *             .nodeTypeName(&#34;BE&#34;)
+ *             .placementProperties(Map.ofEntries(
+ *                 Map.entry(&#34;HasSSD&#34;, &#34;true&#34;),
+ *                 Map.entry(&#34;NodeColor&#34;, &#34;green&#34;),
+ *                 Map.entry(&#34;SomeProperty&#34;, &#34;5&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .vmExtensions(Map.ofEntries(
+ *                 Map.entry(&#34;autoUpgradeMinorVersion&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;Microsoft.Azure.Geneva.GenevaMonitoring&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;Microsoft.Azure.Geneva&#34;),
+ *                 Map.entry(&#34;settings&#34;, ),
+ *                 Map.entry(&#34;type&#34;, &#34;GenevaMonitoring&#34;),
+ *                 Map.entry(&#34;typeHandlerVersion&#34;, &#34;2.0&#34;)
+ *             ))
+ *             .vmImageOffer(&#34;WindowsServer&#34;)
+ *             .vmImagePublisher(&#34;MicrosoftWindowsServer&#34;)
+ *             .vmImageSku(&#34;2016-Datacenter-Server-Core&#34;)
+ *             .vmImageVersion(&#34;latest&#34;)
+ *             .vmInstanceCount(10)
+ *             .vmSecrets(Map.ofEntries(
+ *                 Map.entry(&#34;sourceVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault&#34;)),
+ *                 Map.entry(&#34;vaultCertificates&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;certificateStore&#34;, &#34;My&#34;),
+ *                     Map.entry(&#34;certificateUrl&#34;, &#34;https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c&#34;)
+ *                 ))
+ *             ))
+ *             .vmSize(&#34;Standard_D3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put a node type with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var nodeType = new NodeType(&#34;nodeType&#34;, NodeTypeArgs.builder()        
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .dataDiskSizeGB(200)
+ *             .isPrimary(false)
+ *             .nodeTypeName(&#34;BE&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .vmImageOffer(&#34;WindowsServer&#34;)
+ *             .vmImagePublisher(&#34;MicrosoftWindowsServer&#34;)
+ *             .vmImageSku(&#34;2016-Datacenter-Server-Core&#34;)
+ *             .vmImageVersion(&#34;latest&#34;)
+ *             .vmInstanceCount(10)
+ *             .vmSize(&#34;Standard_D3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

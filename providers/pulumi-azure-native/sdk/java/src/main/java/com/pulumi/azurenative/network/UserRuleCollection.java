@@ -22,13 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or Update a User Rule Collection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var userRuleCollection = new UserRuleCollection(&#34;userRuleCollection&#34;, UserRuleCollectionArgs.builder()        
+ *             .appliesToGroups(Map.of(&#34;networkGroupId&#34;, &#34;/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup&#34;))
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .description(&#34;A sample policy&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleCollectionName(&#34;testRuleCollection&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection 
+ * $ pulumi import azure-native:network:UserRuleCollection myTestSecurityConfig /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManager/testNetworkManager/securityUserConfigurations/myTestSecurityConfig 
  * ```
  * 
  */

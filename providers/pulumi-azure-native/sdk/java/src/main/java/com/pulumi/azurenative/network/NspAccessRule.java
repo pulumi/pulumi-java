@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### NspAccessRulePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var nspAccessRule = new NspAccessRule(&#34;nspAccessRule&#34;, NspAccessRuleArgs.builder()        
+ *             .accessRuleName(&#34;accessRule1&#34;)
+ *             .addressPrefixes(            
+ *                 &#34;10.11.0.0/16&#34;,
+ *                 &#34;10.10.1.0/24&#34;)
+ *             .direction(&#34;Inbound&#34;)
+ *             .networkSecurityPerimeterName(&#34;nsp1&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### ExpressRouteCrossConnectionBgpPeeringCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteCrossConnectionPeering = new ExpressRouteCrossConnectionPeering(&#34;expressRouteCrossConnectionPeering&#34;, ExpressRouteCrossConnectionPeeringArgs.builder()        
+ *             .crossConnectionName(&#34;&lt;circuitServiceKey&gt;&#34;)
+ *             .ipv6PeeringConfig(Map.ofEntries(
+ *                 Map.entry(&#34;primaryPeerAddressPrefix&#34;, &#34;3FFE:FFFF:0:CD30::/126&#34;),
+ *                 Map.entry(&#34;secondaryPeerAddressPrefix&#34;, &#34;3FFE:FFFF:0:CD30::4/126&#34;)
+ *             ))
+ *             .peerASN(200)
+ *             .peeringName(&#34;AzurePrivatePeering&#34;)
+ *             .primaryPeerAddressPrefix(&#34;192.168.16.252/30&#34;)
+ *             .resourceGroupName(&#34;CrossConnection-SiliconValley&#34;)
+ *             .secondaryPeerAddressPrefix(&#34;192.168.18.252/30&#34;)
+ *             .vlanId(200)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

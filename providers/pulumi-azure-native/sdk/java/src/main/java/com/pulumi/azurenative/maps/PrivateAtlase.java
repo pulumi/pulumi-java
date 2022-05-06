@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-02-01-preview.
  * 
  * ## Example Usage
+ * ### CreatePrivateAtlas
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateAtlase = new PrivateAtlase(&#34;privateAtlase&#34;, PrivateAtlaseArgs.builder()        
+ *             .accountName(&#34;myMapsAccount&#34;)
+ *             .location(&#34;unitedstates&#34;)
+ *             .privateAtlasName(&#34;myPrivateAtlas&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;test&#34;, &#34;true&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

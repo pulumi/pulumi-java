@@ -21,6 +21,48 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-25.
  * 
  * ## Example Usage
+ * ### Create or update guest configuration assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var guestConfigurationAssignment = new GuestConfigurationAssignment(&#34;guestConfigurationAssignment&#34;, GuestConfigurationAssignmentArgs.builder()        
+ *             .guestConfigurationAssignmentName(&#34;WhitelistedApplication&#34;)
+ *             .location(&#34;westcentralus&#34;)
+ *             .name(&#34;WhitelistedApplication&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;context&#34;, &#34;Azure policy&#34;),
+ *                 Map.entry(&#34;guestConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;assignmentType&#34;, &#34;ApplyAndAutoCorrect&#34;),
+ *                     Map.entry(&#34;configurationParameter&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;[InstalledApplication]bwhitelistedapp;Name&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;NotePad,sql&#34;)
+ *                     )),
+ *                     Map.entry(&#34;contentHash&#34;, &#34;123contenthash&#34;),
+ *                     Map.entry(&#34;contentUri&#34;, &#34;https://thisisfake/pacakge&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;WhitelistedApplication&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;1.*&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .vmName(&#34;myVMName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

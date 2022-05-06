@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create deployment at management group scope.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var deploymentAtManagementGroupScope = new DeploymentAtManagementGroupScope(&#34;deploymentAtManagementGroupScope&#34;, DeploymentAtManagementGroupScopeArgs.builder()        
+ *             .deploymentName(&#34;my-deployment&#34;)
+ *             .groupId(&#34;my-management-group-id&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;mode&#34;, &#34;Incremental&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;templateLink&#34;, Map.of(&#34;uri&#34;, &#34;https://example.com/exampleTemplate.json&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

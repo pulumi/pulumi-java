@@ -26,6 +26,157 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-01.
  * 
  * ## Example Usage
+ * ### Create a workspace which is ready for Customer-Managed Key (CMK) encryption
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .parameters(Map.of(&#34;prepareEncryption&#34;, Map.of(&#34;value&#34;, true)))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update workspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update workspace with custom parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;customPrivateSubnetName&#34;, Map.of(&#34;value&#34;, &#34;myPrivateSubnet&#34;)),
+ *                 Map.entry(&#34;customPublicSubnetName&#34;, Map.of(&#34;value&#34;, &#34;myPublicSubnet&#34;)),
+ *                 Map.entry(&#34;customVirtualNetworkId&#34;, Map.of(&#34;value&#34;, &#34;/subscriptions/subid/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myNetwork&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Enable Customer-Managed Key (CMK) encryption on a workspace which is prepared for encryption
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;encryption&#34;, Map.of(&#34;value&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keyName&#34;, &#34;myKeyName&#34;),
+ *                     Map.entry(&#34;keySource&#34;, &#34;Microsoft.Keyvault&#34;),
+ *                     Map.entry(&#34;keyVaultUri&#34;, &#34;https://myKeyVault.vault.azure.net/&#34;),
+ *                     Map.entry(&#34;keyVersion&#34;, &#34;00000000000000000000000000000000&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;prepareEncryption&#34;, Map.of(&#34;value&#34;, true))
+ *             ))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Revert Customer-Managed Key (CMK) encryption to Microsoft Managed Keys encryption on a workspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .managedResourceGroupId(&#34;/subscriptions/subid/resourceGroups/myManagedRG&#34;)
+ *             .parameters(Map.of(&#34;encryption&#34;, Map.of(&#34;value&#34;, Map.of(&#34;keySource&#34;, &#34;Default&#34;))))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01-preview.
  * 
  * ## Example Usage
+ * ### Accounts_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .location(&#34;West US 2&#34;)
+ *             .managedResourceGroupName(&#34;custom-rgname&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

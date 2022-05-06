@@ -33,6 +33,1654 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create a custom-image scale set from an unmanaged generalized os image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.of(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                     Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                     Map.entry(&#34;image&#34;, Map.of(&#34;uri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net/{existing-container-name}/{existing-generalized-os-image-blob-name}.vhd&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;osDisk&#34;)
+ *                 )))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a platform-image scale set with unmanaged os disks.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;osDisk&#34;),
+ *                         Map.entry(&#34;vhdContainers&#34;,                         
+ *                             &#34;http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer&#34;,
+ *                             &#34;http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer&#34;,
+ *                             &#34;http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer&#34;,
+ *                             &#34;http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer&#34;,
+ *                             &#34;http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set from a custom image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}&#34;)),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set from a generalized shared image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage&#34;)),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set from a specialized shared image.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/mySharedGallery/images/mySharedImage&#34;)),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with DiskEncryptionSet resource in os disk and data disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_DS1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataDisks&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                         Map.entry(&#34;lun&#34;, 0),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                             Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}&#34;)),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                             Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                         ))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with Fpga Network Interfaces.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                             Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;primary&#34;, true)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;enableAcceleratedNetworking&#34;, false),
+ *                         Map.entry(&#34;enableFpga&#34;, true),
+ *                         Map.entry(&#34;enableIPForwarding&#34;, false),
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;{fpgaNic-Name}&#34;),
+ *                             Map.entry(&#34;primary&#34;, true),
+ *                             Map.entry(&#34;privateIPAddressVersion&#34;, &#34;IPv4&#34;),
+ *                             Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}&#34;))
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;{fpgaNic-Name}&#34;),
+ *                         Map.entry(&#34;primary&#34;, false)
+ *                     ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}&#34;)),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with Host Encryption using encryptionAtHost property.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_DS1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;securityProfile&#34;, Map.of(&#34;encryptionAtHost&#34;, true)),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with Uefi Settings of secureBoot and vTPM.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D2s_v3&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;securityProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;securityType&#34;, &#34;TrustedLaunch&#34;),
+ *                     Map.entry(&#34;uefiSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;secureBootEnabled&#34;, true),
+ *                         Map.entry(&#34;vTpmEnabled&#34;, true)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;windowsserver-gen2preview-preview&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;windows10-tvm&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;18363.592.2001092016&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;StandardSSD_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with a marketplace image plan.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with an azure application gateway.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;applicationGatewayBackendAddressPools&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/applicationGateways/{existing-application-gateway-name}/backendAddressPools/{existing-backend-address-pool-name}&#34;)),
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with an azure load balancer.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;loadBalancerBackendAddressPools&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/backendAddressPools/{existing-backend-address-pool-name}&#34;)),
+ *                         Map.entry(&#34;loadBalancerInboundNatPools&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/loadBalancers/{existing-load-balancer-name}/inboundNatPools/{existing-nat-pool-name}&#34;)),
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;publicIPAddressConfiguration&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                             Map.entry(&#34;publicIPAddressVersion&#34;, &#34;IPv4&#34;)
+ *                         )),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with automatic repairs enabled
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .automaticRepairsPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;gracePeriod&#34;, &#34;PT30M&#34;)
+ *             ))
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with boot diagnostics.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;diagnosticsProfile&#34;, Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with empty data disks on each vm.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D2_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataDisks&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                             Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                             Map.entry(&#34;lun&#34;, 0)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                             Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                             Map.entry(&#34;lun&#34;, 1)
+ *                         )),
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 512),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with ephemeral os disks using placement property.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_DS1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;diffDiskSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;option&#34;, &#34;Local&#34;),
+ *                             Map.entry(&#34;placement&#34;, &#34;ResourceDisk&#34;)
+ *                         )),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with ephemeral os disks.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;windows2016&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;windows-data-science-vm&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_DS1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;windows-data-science-vm&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;microsoft-ads&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;windows2016&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadOnly&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;diffDiskSettings&#34;, Map.of(&#34;option&#34;, &#34;Local&#34;)),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with extension time budget.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;diagnosticsProfile&#34;, Map.of(&#34;bootDiagnostics&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;storageUri&#34;, &#34;http://{existing-storage-account-name}.blob.core.windows.net&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;extensionProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;extensions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;autoUpgradeMinorVersion&#34;, false),
+ *                         Map.entry(&#34;name&#34;, &#34;{extension-name}&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;{extension-Publisher}&#34;),
+ *                         Map.entry(&#34;settings&#34;, ),
+ *                         Map.entry(&#34;type&#34;, &#34;{extension-Type}&#34;),
+ *                         Map.entry(&#34;typeHandlerVersion&#34;, &#34;{handler-version}&#34;)
+ *                     )),
+ *                     Map.entry(&#34;extensionsTimeBudget&#34;, &#34;PT1H20M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with managed boot diagnostics.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;diagnosticsProfile&#34;, Map.of(&#34;bootDiagnostics&#34;, Map.of(&#34;enabled&#34;, true))),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with password authentication.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with premium storage.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with ssh authentication.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;linuxConfiguration&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;disablePasswordAuthentication&#34;, true),
+ *                         Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;keyData&#34;, &#34;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1&#34;),
+ *                             Map.entry(&#34;path&#34;, &#34;/home/{your-username}/.ssh/authorized_keys&#34;)
+ *                         )))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with terminate scheduled events enabled.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;scheduledEventsProfile&#34;, Map.of(&#34;terminateNotificationProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enable&#34;, true),
+ *                     Map.entry(&#34;notBeforeTimeout&#34;, &#34;PT5M&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with userData.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Manual&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;userData&#34;, &#34;RXhhbXBsZSBVc2VyRGF0YQ==&#34;)
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a scale set with virtual machines in different zones.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSet = new VirtualMachineScaleSet(&#34;virtualMachineScaleSet&#34;, VirtualMachineScaleSetArgs.builder()        
+ *             .location(&#34;centralus&#34;)
+ *             .overprovision(true)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_A1_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .upgradePolicy(Map.of(&#34;mode&#34;, &#34;Automatic&#34;))
+ *             .virtualMachineProfile(Map.ofEntries(
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;networkInterfaceConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;enableIPForwarding&#34;, true),
+ *                     Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                         Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;{vmss-name}&#34;),
+ *                     Map.entry(&#34;primary&#34;, true)
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminPassword&#34;, &#34;{your-password}&#34;),
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;{your-username}&#34;),
+ *                     Map.entry(&#34;computerNamePrefix&#34;, &#34;{vmss-name}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataDisks&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                             Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                             Map.entry(&#34;lun&#34;, 0)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                             Map.entry(&#34;diskSizeGB&#34;, 1023),
+ *                             Map.entry(&#34;lun&#34;, 1)
+ *                         )),
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;2016-Datacenter&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;createOption&#34;, &#34;FromImage&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 512),
+ *                         Map.entry(&#34;managedDisk&#34;, Map.of(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;))
+ *                     ))
+ *                 ))
+ *             ))
+ *             .vmScaleSetName(&#34;{vmss-name}&#34;)
+ *             .zones(            
+ *                 &#34;1&#34;,
+ *                 &#34;3&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

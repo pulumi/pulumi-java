@@ -24,6 +24,82 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-13-preview.
  * 
  * ## Example Usage
+ * ### Create a GitHub pipeline to deploy a sample ASP.Net application to Azure web-app
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipeline = new Pipeline(&#34;pipeline&#34;, PipelineArgs.builder()        
+ *             .bootstrapConfiguration(Map.of(&#34;template&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;appInsightLocation&#34;, &#34;South India&#34;),
+ *                     Map.entry(&#34;appServicePlan&#34;, &#34;S1 Standard&#34;),
+ *                     Map.entry(&#34;azureAuth&#34;, &#34;{\&#34;scheme\&#34;:\&#34;ServicePrincipal\&#34;,\&#34;parameters\&#34;:{\&#34;tenantid\&#34;:\&#34;{subscriptionTenantId}\&#34;,\&#34;objectid\&#34;:\&#34;{appObjectId}\&#34;,\&#34;serviceprincipalid\&#34;:\&#34;{appId}\&#34;,\&#34;serviceprincipalkey\&#34;:\&#34;{appSecret}\&#34;}}&#34;),
+ *                     Map.entry(&#34;location&#34;, &#34;South India&#34;),
+ *                     Map.entry(&#34;resourceGroup&#34;, &#34;myAspNetWebAppPipeline-rg&#34;),
+ *                     Map.entry(&#34;subscriptionId&#34;, &#34;{subscriptionId}&#34;),
+ *                     Map.entry(&#34;webAppName&#34;, &#34;myAspNetWebApp&#34;)
+ *                 ))
+ *             )))
+ *             .pipelineName(&#34;myAspNetWebAppPipeline&#34;)
+ *             .pipelineType(&#34;githubWorkflow&#34;)
+ *             .resourceGroupName(&#34;myAspNetWebAppPipeline-rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Azure pipeline to deploy a sample ASP.Net application to Azure web-app
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipeline = new Pipeline(&#34;pipeline&#34;, PipelineArgs.builder()        
+ *             .bootstrapConfiguration(Map.of(&#34;template&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;ms.vss-continuous-delivery-pipeline-templates.aspnet-windowswebapp&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;appInsightLocation&#34;, &#34;South India&#34;),
+ *                     Map.entry(&#34;appServicePlan&#34;, &#34;S1 Standard&#34;),
+ *                     Map.entry(&#34;azureAuth&#34;, &#34;{\&#34;scheme\&#34;:\&#34;ServicePrincipal\&#34;,\&#34;parameters\&#34;:{\&#34;tenantid\&#34;:\&#34;{subscriptionTenantId}\&#34;,\&#34;objectid\&#34;:\&#34;{appObjectId}\&#34;,\&#34;serviceprincipalid\&#34;:\&#34;{appId}\&#34;,\&#34;serviceprincipalkey\&#34;:\&#34;{appSecret}\&#34;}}&#34;),
+ *                     Map.entry(&#34;location&#34;, &#34;South India&#34;),
+ *                     Map.entry(&#34;resourceGroup&#34;, &#34;myAspNetWebAppPipeline-rg&#34;),
+ *                     Map.entry(&#34;subscriptionId&#34;, &#34;{subscriptionId}&#34;),
+ *                     Map.entry(&#34;webAppName&#34;, &#34;myAspNetWebApp&#34;)
+ *                 ))
+ *             )))
+ *             .pipelineName(&#34;myAspNetWebAppPipeline&#34;)
+ *             .pipelineType(&#34;azurePipeline&#34;)
+ *             .resourceGroupName(&#34;myAspNetWebAppPipeline-rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

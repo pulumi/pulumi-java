@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2018-05-01.
  * 
  * ## Example Usage
+ * ### Create a new serial port resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serialPort = new SerialPort(&#34;serialPort&#34;, SerialPortArgs.builder()        
+ *             .parentResource(&#34;myVM&#34;)
+ *             .parentResourceType(&#34;virtualMachines&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourceProviderNamespace(&#34;Microsoft.Compute&#34;)
+ *             .serialPort(&#34;0&#34;)
+ *             .state(&#34;enabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,166 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate K8S Online Deployment.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var onlineDeployment = new OnlineDeployment(&#34;onlineDeployment&#34;, OnlineDeploymentArgs.builder()        
+ *             .deploymentName(&#34;testDeployment&#34;)
+ *             .endpointName(&#34;testEndpoint&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;principalId&#34;, &#34;string&#34;)
+ *                 )))
+ *             ))
+ *             .kind(&#34;string&#34;)
+ *             .location(&#34;string&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;appInsightsEnabled&#34;, true),
+ *                 Map.entry(&#34;codeConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;codeId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1&#34;),
+ *                     Map.entry(&#34;scoringScript&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;containerResourceRequirements&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cpu&#34;, 4),
+ *                     Map.entry(&#34;cpuLimit&#34;, 4),
+ *                     Map.entry(&#34;memoryInGB&#34;, 64),
+ *                     Map.entry(&#34;memoryInGBLimit&#34;, 64)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;endpointComputeType&#34;, &#34;K8S&#34;),
+ *                 Map.entry(&#34;environmentId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123&#34;),
+ *                 Map.entry(&#34;livenessProbe&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;failureThreshold&#34;, 50),
+ *                     Map.entry(&#34;initialDelay&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;period&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;successThreshold&#34;, 50),
+ *                     Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;model&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;assetId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123&#34;),
+ *                     Map.entry(&#34;referenceType&#34;, &#34;Id&#34;)
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;requestSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxConcurrentRequestsPerInstance&#34;, 5),
+ *                     Map.entry(&#34;maxQueueWait&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;requestTimeout&#34;, &#34;PT1M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;scaleSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;pollingInterval&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;scaleType&#34;, &#34;Auto&#34;),
+ *                     Map.entry(&#34;targetUtilizationPercentage&#34;, 50)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *             ))
+ *             .workspaceName(&#34;workspace123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreateOrUpdate Managed Online Deployment.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var onlineDeployment = new OnlineDeployment(&#34;onlineDeployment&#34;, OnlineDeploymentArgs.builder()        
+ *             .deploymentName(&#34;testDeployment&#34;)
+ *             .endpointName(&#34;testEndpoint&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;principalId&#34;, &#34;string&#34;)
+ *                 )))
+ *             ))
+ *             .kind(&#34;string&#34;)
+ *             .location(&#34;string&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;appInsightsEnabled&#34;, true),
+ *                 Map.entry(&#34;codeConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;codeId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1&#34;),
+ *                     Map.entry(&#34;scoringScript&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;endpointComputeType&#34;, &#34;Managed&#34;),
+ *                 Map.entry(&#34;environmentId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123&#34;),
+ *                 Map.entry(&#34;livenessProbe&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;failureThreshold&#34;, 50),
+ *                     Map.entry(&#34;initialDelay&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;period&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;successThreshold&#34;, 50),
+ *                     Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;model&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;assetId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123&#34;),
+ *                     Map.entry(&#34;referenceType&#34;, &#34;Id&#34;)
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;requestSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;maxConcurrentRequestsPerInstance&#34;, 5),
+ *                     Map.entry(&#34;maxQueueWait&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;requestTimeout&#34;, &#34;PT1M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;scaleSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;pollingInterval&#34;, &#34;PT1M&#34;),
+ *                     Map.entry(&#34;scaleType&#34;, &#34;Auto&#34;),
+ *                     Map.entry(&#34;targetUtilizationPercentage&#34;, 50)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *             ))
+ *             .workspaceName(&#34;workspace123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

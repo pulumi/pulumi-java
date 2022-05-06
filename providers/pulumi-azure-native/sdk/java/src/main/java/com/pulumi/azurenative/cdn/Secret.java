@@ -25,6 +25,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Secrets_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var secret = new Secret(&#34;secret&#34;, SecretArgs.builder()        
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;certificateAuthority&#34;, &#34;Symantec&#34;),
+ *                 Map.entry(&#34;secretSource&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName&#34;)),
+ *                 Map.entry(&#34;secretVersion&#34;, &#34;67c452f83c804aed80aa3a21e523c226&#34;),
+ *                 Map.entry(&#34;subjectAlternativeNames&#34;,                 
+ *                     &#34;foo.contoso.com&#34;,
+ *                     &#34;www3.foo.contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;CustomerCertificate&#34;),
+ *                 Map.entry(&#34;useLatestVersion&#34;, false)
+ *             ))
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .secretName(&#34;secret1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

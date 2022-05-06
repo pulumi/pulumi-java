@@ -25,6 +25,53 @@ import javax.annotation.Nullable;
  * API Version: 2019-08-01.
  * 
  * ## Example Usage
+ * ### Create or update a IoT security solution
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotSecuritySolution = new IotSecuritySolution(&#34;iotSecuritySolution&#34;, IotSecuritySolutionArgs.builder()        
+ *             .disabledDataSources()
+ *             .displayName(&#34;Solution Default&#34;)
+ *             .export()
+ *             .iotHubs(&#34;/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub&#34;)
+ *             .location(&#34;East Us&#34;)
+ *             .recommendationsConfiguration(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;recommendationType&#34;, &#34;IoT_OpenPorts&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;Disabled&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;recommendationType&#34;, &#34;IoT_SharedCredentials&#34;),
+ *                     Map.entry(&#34;status&#34;, &#34;Disabled&#34;)
+ *                 ))
+ *             .resourceGroupName(&#34;MyGroup&#34;)
+ *             .solutionName(&#34;default&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .tags()
+ *             .unmaskedIpLoggingStatus(&#34;Enabled&#34;)
+ *             .userDefinedResources(Map.ofEntries(
+ *                 Map.entry(&#34;query&#34;, &#34;where type != \&#34;microsoft.devices/iothubs\&#34; | where name contains \&#34;iot\&#34;&#34;),
+ *                 Map.entry(&#34;querySubscriptions&#34;, &#34;075423e9-7d33-4166-8bdf-3920b04e3735&#34;)
+ *             ))
+ *             .workspace(&#34;/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

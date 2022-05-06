@@ -19,6 +19,30 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-15-preview.
  * 
  * ## Example Usage
+ * ### Create an ingestion setting for subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ingestionSetting = new IngestionSetting(&#34;ingestionSetting&#34;, IngestionSettingArgs.builder()        
+ *             .ingestionSettingName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

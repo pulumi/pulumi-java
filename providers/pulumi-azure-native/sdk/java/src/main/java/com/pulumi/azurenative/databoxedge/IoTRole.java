@@ -25,6 +25,54 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### RolePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ioTRole = new IoTRole(&#34;ioTRole&#34;, IoTRoleArgs.builder()        
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .hostPlatform(&#34;Linux&#34;)
+ *             .ioTDeviceDetails(Map.ofEntries(
+ *                 Map.entry(&#34;authentication&#34;, Map.of(&#34;symmetricKey&#34;, Map.of(&#34;connectionString&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encryptionAlgorithm&#34;, &#34;AES256&#34;),
+ *                     Map.entry(&#34;encryptionCertThumbprint&#34;, &#34;348586569999244&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;Encrypted&lt;&lt;HostName=iothub.azure-devices.net;DeviceId=iotDevice;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=&gt;&gt;&#34;)
+ *                 )))),
+ *                 Map.entry(&#34;deviceId&#34;, &#34;iotdevice&#34;),
+ *                 Map.entry(&#34;ioTHostHub&#34;, &#34;iothub.azure-devices.net&#34;)
+ *             ))
+ *             .ioTEdgeDeviceDetails(Map.ofEntries(
+ *                 Map.entry(&#34;authentication&#34;, Map.of(&#34;symmetricKey&#34;, Map.of(&#34;connectionString&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encryptionAlgorithm&#34;, &#34;AES256&#34;),
+ *                     Map.entry(&#34;encryptionCertThumbprint&#34;, &#34;1245475856069999244&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;Encrypted&lt;&lt;HostName=iothub.azure-devices.net;DeviceId=iotEdge;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=&gt;&gt;&#34;)
+ *                 )))),
+ *                 Map.entry(&#34;deviceId&#34;, &#34;iotEdge&#34;),
+ *                 Map.entry(&#34;ioTHostHub&#34;, &#34;iothub.azure-devices.net&#34;)
+ *             ))
+ *             .kind(&#34;IOT&#34;)
+ *             .name(&#34;IoTRole1&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .roleStatus(&#34;Enabled&#34;)
+ *             .shareMappings()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-22.
  * 
  * ## Example Usage
+ * ### Create or update automation account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var automationAccount = new AutomationAccount(&#34;automationAccount&#34;, AutomationAccountArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount9&#34;)
+ *             .location(&#34;East US 2&#34;)
+ *             .name(&#34;myAutomationAccount9&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Free&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

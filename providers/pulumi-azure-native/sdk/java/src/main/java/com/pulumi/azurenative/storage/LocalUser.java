@@ -24,6 +24,79 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### CreateLocalUser
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var localUser = new LocalUser(&#34;localUser&#34;, LocalUserArgs.builder()        
+ *             .accountName(&#34;sto2527&#34;)
+ *             .hasSshPassword(true)
+ *             .homeDirectory(&#34;homedirectory&#34;)
+ *             .permissionScopes(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;permissions&#34;, &#34;rwd&#34;),
+ *                     Map.entry(&#34;resourceName&#34;, &#34;share1&#34;),
+ *                     Map.entry(&#34;service&#34;, &#34;file&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;permissions&#34;, &#34;rw&#34;),
+ *                     Map.entry(&#34;resourceName&#34;, &#34;share2&#34;),
+ *                     Map.entry(&#34;service&#34;, &#34;file&#34;)
+ *                 ))
+ *             .resourceGroupName(&#34;res6977&#34;)
+ *             .sshAuthorizedKeys(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;key name&#34;),
+ *                 Map.entry(&#34;key&#34;, &#34;ssh-rsa keykeykeykeykey=&#34;)
+ *             ))
+ *             .username(&#34;user1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### UpdateLocalUser
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var localUser = new LocalUser(&#34;localUser&#34;, LocalUserArgs.builder()        
+ *             .accountName(&#34;sto2527&#34;)
+ *             .hasSharedKey(false)
+ *             .hasSshKey(false)
+ *             .hasSshPassword(false)
+ *             .homeDirectory(&#34;homedirectory2&#34;)
+ *             .resourceGroupName(&#34;res6977&#34;)
+ *             .username(&#34;user1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

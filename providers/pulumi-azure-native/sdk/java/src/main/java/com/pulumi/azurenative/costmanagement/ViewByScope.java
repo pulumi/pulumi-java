@@ -25,6 +25,73 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01.
  * 
  * ## Example Usage
+ * ### ResourceGroupCreateOrUpdateView
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var viewByScope = new ViewByScope(&#34;viewByScope&#34;, ViewByScopeArgs.builder()        
+ *             .accumulated(&#34;true&#34;)
+ *             .chart(&#34;Table&#34;)
+ *             .dataSet(Map.ofEntries(
+ *                 Map.entry(&#34;aggregation&#34;, Map.of(&#34;totalCost&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;function&#34;, &#34;Sum&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;PreTaxCost&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;granularity&#34;, &#34;Daily&#34;),
+ *                 Map.entry(&#34;grouping&#34;, ),
+ *                 Map.entry(&#34;sorting&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;direction&#34;, &#34;Ascending&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;UsageDate&#34;)
+ *                 ))
+ *             ))
+ *             .displayName(&#34;swagger Example&#34;)
+ *             .eTag(&#34;\&#34;1d4ff9fe66f1d10\&#34;&#34;)
+ *             .kpis(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;type&#34;, &#34;Forecast&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/swaggerDemo&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Budget&#34;)
+ *                 ))
+ *             .metric(&#34;ActualCost&#34;)
+ *             .pivots(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;ServiceName&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Dimension&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;MeterCategory&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Dimension&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;swaggerTagKey&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;TagKey&#34;)
+ *                 ))
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG&#34;)
+ *             .timeframe(&#34;MonthToDate&#34;)
+ *             .type(&#34;Usage&#34;)
+ *             .viewName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

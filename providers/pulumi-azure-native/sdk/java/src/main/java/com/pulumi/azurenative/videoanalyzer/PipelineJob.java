@@ -23,6 +23,43 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a pipeline job
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipelineJob = new PipelineJob(&#34;pipelineJob&#34;, PipelineJobArgs.builder()        
+ *             .accountName(&#34;testaccount2&#34;)
+ *             .description(&#34;Pipeline Job 1 Dsecription&#34;)
+ *             .parameters(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;timesequences&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;[[\&#34;2020-10-05T03:30:00Z\&#34;, \&#34;2020-10-05T04:30:00Z\&#34;]]&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;videoSourceName&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;camera001&#34;)
+ *                 ))
+ *             .pipelineJobName(&#34;pipelineJob1&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .topologyName(&#34;pipelinetopology1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

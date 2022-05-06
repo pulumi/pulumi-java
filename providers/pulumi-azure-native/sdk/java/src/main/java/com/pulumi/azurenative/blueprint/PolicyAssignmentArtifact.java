@@ -22,6 +22,176 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### MG-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .displayName(&#34;force costCenter tag on all resources&#34;)
+ *             .kind(&#34;policyAssignment&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;tagName&#34;, Map.of(&#34;value&#34;, &#34;costCenter&#34;)),
+ *                 Map.entry(&#34;tagValue&#34;, Map.of(&#34;value&#34;, &#34;[parameter(&#39;costCenter&#39;)]&#34;))
+ *             ))
+ *             .policyDefinitionId(&#34;/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .displayName(&#34;force costCenter tag on all resources&#34;)
+ *             .kind(&#34;policyAssignment&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;tagName&#34;, Map.of(&#34;value&#34;, &#34;costCenter&#34;)),
+ *                 Map.entry(&#34;tagValue&#34;, Map.of(&#34;value&#34;, &#34;[parameter(&#39;costCenter&#39;)]&#34;))
+ *             ))
+ *             .policyDefinitionId(&#34;/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignmentArtifact = new PolicyAssignmentArtifact(&#34;policyAssignmentArtifact&#34;, PolicyAssignmentArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

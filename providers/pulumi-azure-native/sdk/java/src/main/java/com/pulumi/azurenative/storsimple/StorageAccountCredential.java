@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### StorageAccountCredentialsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccountCredential = new StorageAccountCredential(&#34;storageAccountCredential&#34;, StorageAccountCredentialArgs.builder()        
+ *             .accessKey(Map.ofEntries(
+ *                 Map.entry(&#34;encryptionAlgorithm&#34;, &#34;RSAES_PKCS1_v_1_5&#34;),
+ *                 Map.entry(&#34;encryptionCertThumbprint&#34;, &#34;A872A2DF196AC7682EE24791E7DE2E2A360F5926&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==&#34;)
+ *             ))
+ *             .endPoint(&#34;blob.core.windows.net&#34;)
+ *             .managerName(&#34;ManagerForSDKTest1&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .sslStatus(&#34;Enabled&#34;)
+ *             .storageAccountCredentialName(&#34;SACForTest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

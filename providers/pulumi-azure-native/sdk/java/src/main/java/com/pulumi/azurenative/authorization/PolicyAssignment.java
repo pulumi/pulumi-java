@@ -25,6 +25,147 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Create or update a policy assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignment = new PolicyAssignment(&#34;policyAssignment&#34;, PolicyAssignmentArgs.builder()        
+ *             .description(&#34;Force resource names to begin with given DeptA and end with -LC&#34;)
+ *             .displayName(&#34;Enforce resource naming rules&#34;)
+ *             .metadata(Map.of(&#34;assignedBy&#34;, &#34;Special Someone&#34;))
+ *             .nonComplianceMessages(Map.of(&#34;message&#34;, &#34;Resource names must start with &#39;DeptA&#39; and end with &#39;-LC&#39;.&#34;))
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;prefix&#34;, Map.of(&#34;value&#34;, &#34;DeptA&#34;)),
+ *                 Map.entry(&#34;suffix&#34;, Map.of(&#34;value&#34;, &#34;-LC&#34;))
+ *             ))
+ *             .policyAssignmentName(&#34;EnforceNaming&#34;)
+ *             .policyDefinitionId(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming&#34;)
+ *             .scope(&#34;subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a policy assignment with a managed identity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignment = new PolicyAssignment(&#34;policyAssignment&#34;, PolicyAssignmentArgs.builder()        
+ *             .description(&#34;Force resource names to begin with given DeptA and end with -LC&#34;)
+ *             .displayName(&#34;Enforce resource naming rules&#34;)
+ *             .enforcementMode(&#34;Default&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .metadata(Map.of(&#34;assignedBy&#34;, &#34;Foo Bar&#34;))
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;prefix&#34;, Map.of(&#34;value&#34;, &#34;DeptA&#34;)),
+ *                 Map.entry(&#34;suffix&#34;, Map.of(&#34;value&#34;, &#34;-LC&#34;))
+ *             ))
+ *             .policyAssignmentName(&#34;EnforceNaming&#34;)
+ *             .policyDefinitionId(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming&#34;)
+ *             .scope(&#34;subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a policy assignment with multiple non-compliance messages
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignment = new PolicyAssignment(&#34;policyAssignment&#34;, PolicyAssignmentArgs.builder()        
+ *             .displayName(&#34;Enforce security policies&#34;)
+ *             .nonComplianceMessages(            
+ *                 Map.of(&#34;message&#34;, &#34;Resources must comply with all internal security policies. See &lt;internal site URL&gt; for more info.&#34;),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;message&#34;, &#34;Resource names must start with &#39;DeptA&#39; and end with &#39;-LC&#39;.&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;10420126870854049575&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;message&#34;, &#34;Storage accounts must have firewall rules configured.&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;8572513655450389710&#34;)
+ *                 ))
+ *             .policyAssignmentName(&#34;securityInitAssignment&#34;)
+ *             .policyDefinitionId(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/securityInitiative&#34;)
+ *             .scope(&#34;subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a policy assignment without enforcing policy effect during resource creation or update.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policyAssignment = new PolicyAssignment(&#34;policyAssignment&#34;, PolicyAssignmentArgs.builder()        
+ *             .description(&#34;Force resource names to begin with given DeptA and end with -LC&#34;)
+ *             .displayName(&#34;Enforce resource naming rules&#34;)
+ *             .enforcementMode(&#34;DoNotEnforce&#34;)
+ *             .metadata(Map.of(&#34;assignedBy&#34;, &#34;Special Someone&#34;))
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;prefix&#34;, Map.of(&#34;value&#34;, &#34;DeptA&#34;)),
+ *                 Map.entry(&#34;suffix&#34;, Map.of(&#34;value&#34;, &#34;-LC&#34;))
+ *             ))
+ *             .policyAssignmentName(&#34;EnforceNaming&#34;)
+ *             .policyDefinitionId(&#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming&#34;)
+ *             .scope(&#34;subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

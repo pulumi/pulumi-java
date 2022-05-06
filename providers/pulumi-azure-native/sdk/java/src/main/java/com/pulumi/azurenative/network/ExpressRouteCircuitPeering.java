@@ -29,6 +29,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create ExpressRouteCircuit Peerings
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteCircuitPeering = new ExpressRouteCircuitPeering(&#34;expressRouteCircuitPeering&#34;, ExpressRouteCircuitPeeringArgs.builder()        
+ *             .circuitName(&#34;circuitName&#34;)
+ *             .peerASN(200)
+ *             .peeringName(&#34;AzurePrivatePeering&#34;)
+ *             .primaryPeerAddressPrefix(&#34;192.168.16.252/30&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .secondaryPeerAddressPrefix(&#34;192.168.18.252/30&#34;)
+ *             .vlanId(200)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

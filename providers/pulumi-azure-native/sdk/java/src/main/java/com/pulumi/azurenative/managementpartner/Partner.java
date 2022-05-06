@@ -21,6 +21,30 @@ import javax.annotation.Nullable;
  * API Version: 2018-02-01.
  * 
  * ## Example Usage
+ * ### PutPartnerDetails
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var partner = new Partner(&#34;partner&#34;, PartnerArgs.builder()        
+ *             .partnerId(&#34;123456&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

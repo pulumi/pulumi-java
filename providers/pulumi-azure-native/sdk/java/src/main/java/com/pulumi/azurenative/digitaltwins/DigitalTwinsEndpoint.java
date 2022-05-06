@@ -23,6 +23,70 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Put a DigitalTwinsInstance resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var digitalTwinsEndpoint = new DigitalTwinsEndpoint(&#34;digitalTwinsEndpoint&#34;, DigitalTwinsEndpointArgs.builder()        
+ *             .endpointName(&#34;myServiceBus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authenticationType&#34;, &#34;KeyBased&#34;),
+ *                 Map.entry(&#34;endpointType&#34;, &#34;ServiceBus&#34;),
+ *                 Map.entry(&#34;primaryConnectionString&#34;, &#34;Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc&#34;),
+ *                 Map.entry(&#34;secondaryConnectionString&#34;, &#34;Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .resourceName(&#34;myDigitalTwinsService&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put a DigitalTwinsInstance resource with identity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var digitalTwinsEndpoint = new DigitalTwinsEndpoint(&#34;digitalTwinsEndpoint&#34;, DigitalTwinsEndpointArgs.builder()        
+ *             .endpointName(&#34;myServiceBus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authenticationType&#34;, &#34;IdentityBased&#34;),
+ *                 Map.entry(&#34;endpointType&#34;, &#34;ServiceBus&#34;),
+ *                 Map.entry(&#34;endpointUri&#34;, &#34;sb://mysb.servicebus.windows.net/&#34;),
+ *                 Map.entry(&#34;entityPath&#34;, &#34;mysbtopic&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .resourceName(&#34;myDigitalTwinsService&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

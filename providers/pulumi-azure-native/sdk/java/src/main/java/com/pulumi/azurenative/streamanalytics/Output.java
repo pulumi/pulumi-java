@@ -33,6 +33,350 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create a DocumentDB output
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;accountId&#34;, &#34;someAccountId&#34;),
+ *                 Map.entry(&#34;accountKey&#34;, &#34;accountKey==&#34;),
+ *                 Map.entry(&#34;collectionNamePattern&#34;, &#34;collection&#34;),
+ *                 Map.entry(&#34;database&#34;, &#34;db01&#34;),
+ *                 Map.entry(&#34;documentId&#34;, &#34;documentId&#34;),
+ *                 Map.entry(&#34;partitionKey&#34;, &#34;key&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/DocumentDB&#34;)
+ *             ))
+ *             .jobName(&#34;sj2331&#34;)
+ *             .outputName(&#34;output3022&#34;)
+ *             .resourceGroupName(&#34;sjrg7983&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Power BI output
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;dataset&#34;, &#34;someDataset&#34;),
+ *                 Map.entry(&#34;groupId&#34;, &#34;ac40305e-3e8d-43ac-8161-c33799f43e95&#34;),
+ *                 Map.entry(&#34;groupName&#34;, &#34;MyPowerBIGroup&#34;),
+ *                 Map.entry(&#34;refreshToken&#34;, &#34;someRefreshToken==&#34;),
+ *                 Map.entry(&#34;table&#34;, &#34;someTable&#34;),
+ *                 Map.entry(&#34;tokenUserDisplayName&#34;, &#34;Bob Smith&#34;),
+ *                 Map.entry(&#34;tokenUserPrincipalName&#34;, &#34;bobsmith@contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;PowerBI&#34;)
+ *             ))
+ *             .jobName(&#34;sj2331&#34;)
+ *             .outputName(&#34;output3022&#34;)
+ *             .resourceGroupName(&#34;sjrg7983&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Service Bus Queue output with Avro serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;propertyColumns&#34;,                 
+ *                     &#34;column1&#34;,
+ *                     &#34;column2&#34;),
+ *                 Map.entry(&#34;queueName&#34;, &#34;sdkqueue&#34;),
+ *                 Map.entry(&#34;serviceBusNamespace&#34;, &#34;sdktest&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyKey&#34;, &#34;sharedAccessPolicyKey=&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyName&#34;, &#34;RootManageSharedAccessKey&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.ServiceBus/Queue&#34;)
+ *             ))
+ *             .jobName(&#34;sj5095&#34;)
+ *             .outputName(&#34;output3456&#34;)
+ *             .resourceGroupName(&#34;sjrg3410&#34;)
+ *             .serialization(Map.of(&#34;type&#34;, &#34;Avro&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a Service Bus Topic output with CSV serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;propertyColumns&#34;,                 
+ *                     &#34;column1&#34;,
+ *                     &#34;column2&#34;),
+ *                 Map.entry(&#34;serviceBusNamespace&#34;, &#34;sdktest&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyKey&#34;, &#34;sharedAccessPolicyKey=&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyName&#34;, &#34;RootManageSharedAccessKey&#34;),
+ *                 Map.entry(&#34;topicName&#34;, &#34;sdktopic&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.ServiceBus/Topic&#34;)
+ *             ))
+ *             .jobName(&#34;sj7094&#34;)
+ *             .outputName(&#34;output7886&#34;)
+ *             .resourceGroupName(&#34;sjrg6450&#34;)
+ *             .serialization(Map.ofEntries(
+ *                 Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                 Map.entry(&#34;fieldDelimiter&#34;, &#34;,&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Csv&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a blob output with CSV serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;container&#34;, &#34;state&#34;),
+ *                 Map.entry(&#34;dateFormat&#34;, &#34;yyyy/MM/dd&#34;),
+ *                 Map.entry(&#34;pathPattern&#34;, &#34;{date}/{time}&#34;),
+ *                 Map.entry(&#34;storageAccounts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;accountKey&#34;, &#34;accountKey==&#34;),
+ *                     Map.entry(&#34;accountName&#34;, &#34;someAccountName&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeFormat&#34;, &#34;HH&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/Blob&#34;)
+ *             ))
+ *             .jobName(&#34;sj900&#34;)
+ *             .outputName(&#34;output1623&#34;)
+ *             .resourceGroupName(&#34;sjrg5023&#34;)
+ *             .serialization(Map.ofEntries(
+ *                 Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                 Map.entry(&#34;fieldDelimiter&#34;, &#34;,&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Csv&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Azure Data Lake Store output with JSON serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;accountName&#34;, &#34;someaccount&#34;),
+ *                 Map.entry(&#34;dateFormat&#34;, &#34;yyyy/MM/dd&#34;),
+ *                 Map.entry(&#34;filePathPrefix&#34;, &#34;{date}/{time}&#34;),
+ *                 Map.entry(&#34;refreshToken&#34;, &#34;someRefreshToken==&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;cea4e98b-c798-49e7-8c40-4a2b3beb47dd&#34;),
+ *                 Map.entry(&#34;timeFormat&#34;, &#34;HH&#34;),
+ *                 Map.entry(&#34;tokenUserDisplayName&#34;, &#34;Bob Smith&#34;),
+ *                 Map.entry(&#34;tokenUserPrincipalName&#34;, &#34;bobsmith@contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.DataLake/Accounts&#34;)
+ *             ))
+ *             .jobName(&#34;sj3310&#34;)
+ *             .outputName(&#34;output5195&#34;)
+ *             .resourceGroupName(&#34;sjrg6912&#34;)
+ *             .serialization(Map.ofEntries(
+ *                 Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                 Map.entry(&#34;format&#34;, &#34;Array&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Json&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Azure SQL database output
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;database&#34;, &#34;someDatabase&#34;),
+ *                 Map.entry(&#34;password&#34;, &#34;somePassword&#34;),
+ *                 Map.entry(&#34;server&#34;, &#34;someServer&#34;),
+ *                 Map.entry(&#34;table&#34;, &#34;someTable&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.Sql/Server/Database&#34;),
+ *                 Map.entry(&#34;user&#34;, &#34;&lt;user&gt;&#34;)
+ *             ))
+ *             .jobName(&#34;sj6458&#34;)
+ *             .outputName(&#34;output1755&#34;)
+ *             .resourceGroupName(&#34;sjrg2157&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Azure Table output
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;accountKey&#34;, &#34;accountKey==&#34;),
+ *                 Map.entry(&#34;accountName&#34;, &#34;someAccountName&#34;),
+ *                 Map.entry(&#34;batchSize&#34;, 25),
+ *                 Map.entry(&#34;columnsToRemove&#34;,                 
+ *                     &#34;column1&#34;,
+ *                     &#34;column2&#34;),
+ *                 Map.entry(&#34;partitionKey&#34;, &#34;partitionKey&#34;),
+ *                 Map.entry(&#34;rowKey&#34;, &#34;rowKey&#34;),
+ *                 Map.entry(&#34;table&#34;, &#34;samples&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/Table&#34;)
+ *             ))
+ *             .jobName(&#34;sj2790&#34;)
+ *             .outputName(&#34;output958&#34;)
+ *             .resourceGroupName(&#34;sjrg5176&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Event Hub output with JSON serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var output = new Output(&#34;output&#34;, OutputArgs.builder()        
+ *             .datasource(Map.ofEntries(
+ *                 Map.entry(&#34;eventHubName&#34;, &#34;sdkeventhub&#34;),
+ *                 Map.entry(&#34;partitionKey&#34;, &#34;partitionKey&#34;),
+ *                 Map.entry(&#34;serviceBusNamespace&#34;, &#34;sdktest&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyKey&#34;, &#34;sharedAccessPolicyKey=&#34;),
+ *                 Map.entry(&#34;sharedAccessPolicyName&#34;, &#34;RootManageSharedAccessKey&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.ServiceBus/EventHub&#34;)
+ *             ))
+ *             .jobName(&#34;sj3310&#34;)
+ *             .outputName(&#34;output5195&#34;)
+ *             .resourceGroupName(&#34;sjrg6912&#34;)
+ *             .serialization(Map.ofEntries(
+ *                 Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                 Map.entry(&#34;format&#34;, &#34;Array&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Json&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

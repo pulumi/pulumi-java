@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### ConfigurationServices_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configurationService = new ConfigurationService(&#34;configurationService&#34;, ConfigurationServiceArgs.builder()        
+ *             .configurationServiceName(&#34;default&#34;)
+ *             .properties(Map.of(&#34;settings&#34;, Map.of(&#34;gitProperty&#34;, Map.of(&#34;repositories&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;label&#34;, &#34;master&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;fake&#34;),
+ *                 Map.entry(&#34;patterns&#34;, &#34;app/dev&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://github.com/fake-user/fake-repository&#34;)
+ *             )))))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

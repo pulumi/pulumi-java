@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateVolume
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volume = new Volume(&#34;volume&#34;, VolumeArgs.builder()        
+ *             .azureFileParameters(Map.ofEntries(
+ *                 Map.entry(&#34;accountKey&#34;, &#34;provide-account-key-here&#34;),
+ *                 Map.entry(&#34;accountName&#34;, &#34;sbzdemoaccount&#34;),
+ *                 Map.entry(&#34;shareName&#34;, &#34;sharel&#34;)
+ *             ))
+ *             .description(&#34;Service Fabric Mesh sample volume.&#34;)
+ *             .location(&#34;EastUS&#34;)
+ *             .provider(&#34;SFAzureFile&#34;)
+ *             .resourceGroupName(&#34;sbz_demo&#34;)
+ *             .tags()
+ *             .volumeResourceName(&#34;sampleVolume&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

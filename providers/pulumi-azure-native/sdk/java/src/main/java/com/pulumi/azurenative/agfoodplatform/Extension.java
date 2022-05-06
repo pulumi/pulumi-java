@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-12-preview.
  * 
  * ## Example Usage
+ * ### Extensions_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var extension = new Extension(&#34;extension&#34;, ExtensionArgs.builder()        
+ *             .extensionId(&#34;provider.extension&#34;)
+ *             .farmBeatsResourceName(&#34;examples-farmbeatsResourceName&#34;)
+ *             .resourceGroupName(&#34;examples-rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

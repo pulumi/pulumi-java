@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### PrivateEndpointConnection_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotDpsResourcePrivateEndpointConnection = new IotDpsResourcePrivateEndpointConnection(&#34;iotDpsResourcePrivateEndpointConnection&#34;, IotDpsResourcePrivateEndpointConnectionArgs.builder()        
+ *             .privateEndpointConnectionName(&#34;myPrivateEndpointConnection&#34;)
+ *             .properties(Map.of(&#34;privateLinkServiceConnectionState&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Approved by johndoe@contoso.com&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourceName(&#34;myFirstProvisioningService&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -110,7 +140,8 @@ public class IotDpsResourcePrivateEndpointConnection extends com.pulumi.resource
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:devices/v20200301:IotDpsResourcePrivateEndpointConnection").build()),
                 Output.of(Alias.builder().type("azure-native:devices/v20200901preview:IotDpsResourcePrivateEndpointConnection").build()),
-                Output.of(Alias.builder().type("azure-native:devices/v20211015:IotDpsResourcePrivateEndpointConnection").build())
+                Output.of(Alias.builder().type("azure-native:devices/v20211015:IotDpsResourcePrivateEndpointConnection").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20220205:IotDpsResourcePrivateEndpointConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

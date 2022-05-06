@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create or Update Management Group Network Manager Connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementGroupNetworkManagerConnection = new ManagementGroupNetworkManagerConnection(&#34;managementGroupNetworkManagerConnection&#34;, ManagementGroupNetworkManagerConnectionArgs.builder()        
+ *             .managementGroupId(&#34;managementGroupA&#34;)
+ *             .networkManagerConnectionName(&#34;TestNMConnection&#34;)
+ *             .networkManagerId(&#34;/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

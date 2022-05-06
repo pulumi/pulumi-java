@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or update environments storage
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedEnvironmentsStorage = new ManagedEnvironmentsStorage(&#34;managedEnvironmentsStorage&#34;, ManagedEnvironmentsStorageArgs.builder()        
+ *             .envName(&#34;managedEnv&#34;)
+ *             .name(&#34;jlaw-demo1&#34;)
+ *             .properties(Map.of(&#34;azureFile&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;accessMode&#34;, &#34;ReadOnly&#34;),
+ *                 Map.entry(&#34;accountKey&#34;, &#34;key&#34;),
+ *                 Map.entry(&#34;accountName&#34;, &#34;account1&#34;),
+ *                 Map.entry(&#34;shareName&#34;, &#34;share1&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

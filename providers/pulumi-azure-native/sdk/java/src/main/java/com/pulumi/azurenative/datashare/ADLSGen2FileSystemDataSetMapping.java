@@ -20,13 +20,148 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### DataSetMappings_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FileSystemDataSetMapping = new ADLSGen2FileSystemDataSetMapping(&#34;adlsGen2FileSystemDataSetMapping&#34;, ADLSGen2FileSystemDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDB_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FileSystemDataSetMapping = new ADLSGen2FileSystemDataSetMapping(&#34;adlsGen2FileSystemDataSetMapping&#34;, ADLSGen2FileSystemDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FileSystemDataSetMapping = new ADLSGen2FileSystemDataSetMapping(&#34;adlsGen2FileSystemDataSetMapping&#34;, ADLSGen2FileSystemDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDW_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FileSystemDataSetMapping = new ADLSGen2FileSystemDataSetMapping(&#34;adlsGen2FileSystemDataSetMapping&#34;, ADLSGen2FileSystemDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FileSystemDataSetMapping = new ADLSGen2FileSystemDataSetMapping(&#34;adlsGen2FileSystemDataSetMapping&#34;, ADLSGen2FileSystemDataSetMappingArgs.builder()        
+ *             .accountName(&#34;consumerAccount&#34;)
+ *             .dataSetMappingName(&#34;datasetMappingName1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:datashare:ADLSGen2FileSystemDataSetMapping datasetMappingName /subscriptions/4e745bb7-c420-479b-b0d6-a0f92d48a227/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
+ * $ pulumi import azure-native:datashare:ADLSGen2FileSystemDataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
  * ```
  * 
  */

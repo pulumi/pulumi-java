@@ -24,6 +24,66 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .mobileNetworkName(&#34;testMobileNetwork&#34;)
+ *             .pccRules(Map.ofEntries(
+ *                 Map.entry(&#34;ruleName&#34;, &#34;default-rule&#34;),
+ *                 Map.entry(&#34;rulePrecedence&#34;, 255),
+ *                 Map.entry(&#34;ruleQosPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allocationAndRetentionPriorityLevel&#34;, 9),
+ *                     Map.entry(&#34;fiveQi&#34;, 9),
+ *                     Map.entry(&#34;maximumBitRate&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;downlink&#34;, &#34;1 Gbps&#34;),
+ *                         Map.entry(&#34;uplink&#34;, &#34;500 Mbps&#34;)
+ *                     )),
+ *                     Map.entry(&#34;preemptionCapability&#34;, &#34;NotPreempt&#34;),
+ *                     Map.entry(&#34;preemptionVulnerability&#34;, &#34;Preemptable&#34;)
+ *                 )),
+ *                 Map.entry(&#34;serviceDataFlowTemplates&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;direction&#34;, &#34;Uplink&#34;),
+ *                     Map.entry(&#34;ports&#34;, ),
+ *                     Map.entry(&#34;protocol&#34;, &#34;ip&#34;),
+ *                     Map.entry(&#34;remoteIpList&#34;, &#34;10.3.4.0/24&#34;),
+ *                     Map.entry(&#34;templateName&#34;, &#34;IP-to-server&#34;)
+ *                 )),
+ *                 Map.entry(&#34;trafficControl&#34;, &#34;Enabled&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;TestService&#34;)
+ *             .servicePrecedence(255)
+ *             .serviceQosPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;allocationAndRetentionPriorityLevel&#34;, 9),
+ *                 Map.entry(&#34;fiveQi&#34;, 9),
+ *                 Map.entry(&#34;maximumBitRate&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;downlink&#34;, &#34;1 Gbps&#34;),
+ *                     Map.entry(&#34;uplink&#34;, &#34;500 Mbps&#34;)
+ *                 )),
+ *                 Map.entry(&#34;preemptionCapability&#34;, &#34;NotPreempt&#34;),
+ *                 Map.entry(&#34;preemptionVulnerability&#34;, &#34;Preemptable&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

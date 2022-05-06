@@ -21,6 +21,163 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### StorageAccountCreateObjectReplicationPolicyOnDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var objectReplicationPolicy = new ObjectReplicationPolicy(&#34;objectReplicationPolicy&#34;, ObjectReplicationPolicyArgs.builder()        
+ *             .accountName(&#34;dst112&#34;)
+ *             .destinationAccount(&#34;dst112&#34;)
+ *             .objectReplicationPolicyId(&#34;default&#34;)
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .rules(Map.ofEntries(
+ *                 Map.entry(&#34;destinationContainer&#34;, &#34;dcont139&#34;),
+ *                 Map.entry(&#34;filters&#34;, Map.of(&#34;prefixMatch&#34;,                 
+ *                     &#34;blobA&#34;,
+ *                     &#34;blobB&#34;)),
+ *                 Map.entry(&#34;sourceContainer&#34;, &#34;scont139&#34;)
+ *             ))
+ *             .sourceAccount(&#34;src1122&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountCreateObjectReplicationPolicyOnSource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var objectReplicationPolicy = new ObjectReplicationPolicy(&#34;objectReplicationPolicy&#34;, ObjectReplicationPolicyArgs.builder()        
+ *             .accountName(&#34;src1122&#34;)
+ *             .destinationAccount(&#34;dst112&#34;)
+ *             .objectReplicationPolicyId(&#34;2a20bb73-5717-4635-985a-5d4cf777438f&#34;)
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .rules(Map.ofEntries(
+ *                 Map.entry(&#34;destinationContainer&#34;, &#34;dcont139&#34;),
+ *                 Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;minCreationTime&#34;, &#34;2020-02-19T16:05:00Z&#34;),
+ *                     Map.entry(&#34;prefixMatch&#34;,                     
+ *                         &#34;blobA&#34;,
+ *                         &#34;blobB&#34;)
+ *                 )),
+ *                 Map.entry(&#34;ruleId&#34;, &#34;d5d18a48-8801-4554-aeaa-74faf65f5ef9&#34;),
+ *                 Map.entry(&#34;sourceContainer&#34;, &#34;scont139&#34;)
+ *             ))
+ *             .sourceAccount(&#34;src1122&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountUpdateObjectReplicationPolicyOnDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var objectReplicationPolicy = new ObjectReplicationPolicy(&#34;objectReplicationPolicy&#34;, ObjectReplicationPolicyArgs.builder()        
+ *             .accountName(&#34;dst112&#34;)
+ *             .destinationAccount(&#34;dst112&#34;)
+ *             .objectReplicationPolicyId(&#34;2a20bb73-5717-4635-985a-5d4cf777438f&#34;)
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .rules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationContainer&#34;, &#34;dcont139&#34;),
+ *                     Map.entry(&#34;filters&#34;, Map.of(&#34;prefixMatch&#34;,                     
+ *                         &#34;blobA&#34;,
+ *                         &#34;blobB&#34;)),
+ *                     Map.entry(&#34;ruleId&#34;, &#34;d5d18a48-8801-4554-aeaa-74faf65f5ef9&#34;),
+ *                     Map.entry(&#34;sourceContainer&#34;, &#34;scont139&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationContainer&#34;, &#34;dcont179&#34;),
+ *                     Map.entry(&#34;sourceContainer&#34;, &#34;scont179&#34;)
+ *                 ))
+ *             .sourceAccount(&#34;src1122&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountUpdateObjectReplicationPolicyOnSource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var objectReplicationPolicy = new ObjectReplicationPolicy(&#34;objectReplicationPolicy&#34;, ObjectReplicationPolicyArgs.builder()        
+ *             .accountName(&#34;src1122&#34;)
+ *             .destinationAccount(&#34;dst112&#34;)
+ *             .objectReplicationPolicyId(&#34;2a20bb73-5717-4635-985a-5d4cf777438f&#34;)
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .rules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationContainer&#34;, &#34;dcont139&#34;),
+ *                     Map.entry(&#34;filters&#34;, Map.of(&#34;prefixMatch&#34;,                     
+ *                         &#34;blobA&#34;,
+ *                         &#34;blobB&#34;)),
+ *                     Map.entry(&#34;ruleId&#34;, &#34;d5d18a48-8801-4554-aeaa-74faf65f5ef9&#34;),
+ *                     Map.entry(&#34;sourceContainer&#34;, &#34;scont139&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinationContainer&#34;, &#34;dcont179&#34;),
+ *                     Map.entry(&#34;ruleId&#34;, &#34;cfbb4bc2-8b60-429f-b05a-d1e0942b33b2&#34;),
+ *                     Map.entry(&#34;sourceContainer&#34;, &#34;scont179&#34;)
+ *                 ))
+ *             .sourceAccount(&#34;src1122&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

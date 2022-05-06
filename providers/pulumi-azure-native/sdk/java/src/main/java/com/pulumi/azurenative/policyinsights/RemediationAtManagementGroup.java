@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-01.
  * 
  * ## Example Usage
+ * ### Create remediation at management group scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var remediationAtManagementGroup = new RemediationAtManagementGroup(&#34;remediationAtManagementGroup&#34;, RemediationAtManagementGroupArgs.builder()        
+ *             .managementGroupId(&#34;financeMg&#34;)
+ *             .managementGroupsNamespace(&#34;Microsoft.Management&#34;)
+ *             .policyAssignmentId(&#34;/providers/microsoft.management/managementGroups/financeMg/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5&#34;)
+ *             .remediationName(&#34;storageRemediation&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

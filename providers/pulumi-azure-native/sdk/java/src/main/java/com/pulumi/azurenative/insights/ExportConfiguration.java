@@ -20,6 +20,41 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### ExportConfigurationUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exportConfiguration = new ExportConfiguration(&#34;exportConfiguration&#34;, ExportConfigurationArgs.builder()        
+ *             .destinationAccountId(&#34;/subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.ClassicStorage/storageAccounts/mystorageblob&#34;)
+ *             .destinationAddress(&#34;https://mystorageblob.blob.core.windows.net/fchentest?sv=2015-04-05&amp;sr=c&amp;sig=token&#34;)
+ *             .destinationStorageLocationId(&#34;eastus&#34;)
+ *             .destinationStorageSubscriptionId(&#34;subid&#34;)
+ *             .destinationType(&#34;Blob&#34;)
+ *             .exportId(&#34;uGOoki0jQsyEs3IdQ83Q4QsNr4=&#34;)
+ *             .isEnabled(&#34;true&#34;)
+ *             .notificationQueueEnabled(&#34;false&#34;)
+ *             .notificationQueueUri(&#34;&#34;)
+ *             .recordTypes(&#34;Requests, Event, Exceptions, Metrics, PageViews, PageViewPerformance, Rdd, PerformanceCounters, Availability&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

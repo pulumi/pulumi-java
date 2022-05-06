@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01-preview.
  * 
  * ## Example Usage
+ * ### ComponentLinkedStorageAccountsCreateAndUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var componentLinkedStorageAccount = new ComponentLinkedStorageAccount(&#34;componentLinkedStorageAccount&#34;, ComponentLinkedStorageAccountArgs.builder()        
+ *             .linkedStorageAccount(&#34;/subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupName/providers/Microsoft.Storage/storageAccounts/storageaccountname&#34;)
+ *             .resourceGroupName(&#34;someResourceGroupName&#34;)
+ *             .resourceName(&#34;myComponent&#34;)
+ *             .storageType(&#34;ServiceProfiler&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

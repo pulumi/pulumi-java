@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2017-05-01-preview.
  * 
  * ## Example Usage
+ * ### AccountCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;accountcrud5678&#34;)
+ *             .keyVaultId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.KeyVault/vaults/testkv&#34;)
+ *             .location(&#34;East US&#34;)
+ *             .resourceGroupName(&#34;accountcrud-1234&#34;)
+ *             .storageAccount(Map.ofEntries(
+ *                 Map.entry(&#34;accessKey&#34;, &#34;key&#34;),
+ *                 Map.entry(&#34;storageAccountId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;tagKey1&#34;, &#34;TagValue1&#34;))
+ *             .vsoAccountId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/microsoft.visualstudio/account/vsotest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Update a database&#39;s threat detection policy with all parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseSecurityAlertPolicy = new DatabaseSecurityAlertPolicy(&#34;databaseSecurityAlertPolicy&#34;, DatabaseSecurityAlertPolicyArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .disabledAlerts(            
+ *                 &#34;Sql_Injection&#34;,
+ *                 &#34;Usage_Anomaly&#34;)
+ *             .emailAccountAdmins(true)
+ *             .emailAddresses(            
+ *                 &#34;test@microsoft.com&#34;,
+ *                 &#34;user@microsoft.com&#34;)
+ *             .resourceGroupName(&#34;securityalert-4799&#34;)
+ *             .retentionDays(6)
+ *             .securityAlertPolicyName(&#34;Default&#34;)
+ *             .serverName(&#34;securityalert-6440&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .storageAccountAccessKey(&#34;sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==&#34;)
+ *             .storageEndpoint(&#34;https://mystorage.blob.core.windows.net&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a database&#39;s threat detection policy with minimal parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseSecurityAlertPolicy = new DatabaseSecurityAlertPolicy(&#34;databaseSecurityAlertPolicy&#34;, DatabaseSecurityAlertPolicyArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .resourceGroupName(&#34;securityalert-4799&#34;)
+ *             .securityAlertPolicyName(&#34;Default&#34;)
+ *             .serverName(&#34;securityalert-6440&#34;)
+ *             .state(&#34;Enabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

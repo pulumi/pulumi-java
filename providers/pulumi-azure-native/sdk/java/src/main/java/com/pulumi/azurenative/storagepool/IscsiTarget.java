@@ -20,6 +20,49 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-15-preview.
  * 
  * ## Example Usage
+ * ### Create or Update iSCSI target
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iscsiTarget = new IscsiTarget(&#34;iscsiTarget&#34;, IscsiTargetArgs.builder()        
+ *             .diskPoolName(&#34;myDiskPool&#34;)
+ *             .iscsiTargetName(&#34;myIscsiTarget&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .targetIqn(&#34;iqn.2005-03.org.iscsi:server1&#34;)
+ *             .tpgs(Map.ofEntries(
+ *                 Map.entry(&#34;acls&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;initiatorIqn&#34;, &#34;iqn.2005-03.org.iscsi:client&#34;),
+ *                     Map.entry(&#34;mappedLuns&#34;, &#34;lun0&#34;),
+ *                     Map.entry(&#34;password&#34;, &#34;some_password&#34;),
+ *                     Map.entry(&#34;username&#34;, &#34;some_username&#34;)
+ *                 )),
+ *                 Map.entry(&#34;attributes&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, true),
+ *                     Map.entry(&#34;prodModeWriteProtect&#34;, false)
+ *                 )),
+ *                 Map.entry(&#34;luns&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;managedDiskAzureResourceId&#34;, &#34;/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;lun0&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

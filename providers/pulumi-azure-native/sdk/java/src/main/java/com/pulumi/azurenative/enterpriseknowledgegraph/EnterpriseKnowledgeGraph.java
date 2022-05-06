@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2018-12-03.
  * 
  * ## Example Usage
+ * ### Create EnterpriseKnowledgeGraph
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var enterpriseKnowledgeGraph = new EnterpriseKnowledgeGraph(&#34;enterpriseKnowledgeGraph&#34;, EnterpriseKnowledgeGraphArgs.builder()        
+ *             .location(&#34;West US&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;sampleekgname&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

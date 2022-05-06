@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-15.
  * 
  * ## Example Usage
+ * ### AccessPoliciesCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var accessPolicy = new AccessPolicy(&#34;accessPolicy&#34;, AccessPolicyArgs.builder()        
+ *             .accessPolicyName(&#34;ap1&#34;)
+ *             .description(&#34;some description&#34;)
+ *             .environmentName(&#34;env1&#34;)
+ *             .principalObjectId(&#34;aGuid&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .roles(&#34;Reader&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

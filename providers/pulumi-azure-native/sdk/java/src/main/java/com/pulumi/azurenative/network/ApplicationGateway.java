@@ -47,6 +47,176 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create Application Gateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var applicationGateway = new ApplicationGateway(&#34;applicationGateway&#34;, ApplicationGatewayArgs.builder()        
+ *             .applicationGatewayName(&#34;appgw&#34;)
+ *             .backendAddressPools(Map.ofEntries(
+ *                 Map.entry(&#34;backendAddresses&#34;,                 
+ *                     Map.of(&#34;ipAddress&#34;, &#34;10.0.1.1&#34;),
+ *                     Map.of(&#34;ipAddress&#34;, &#34;10.0.1.2&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;appgwpool&#34;)
+ *             ))
+ *             .backendHttpSettingsCollection(Map.ofEntries(
+ *                 Map.entry(&#34;cookieBasedAffinity&#34;, &#34;Disabled&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;appgwbhs&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;requestTimeout&#34;, 30)
+ *             ))
+ *             .frontendIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;appgwfip&#34;),
+ *                 Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/appgwpip&#34;))
+ *             ))
+ *             .frontendPorts(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;appgwfp&#34;),
+ *                     Map.entry(&#34;port&#34;, 443)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;appgwfp80&#34;),
+ *                     Map.entry(&#34;port&#34;, 80)
+ *                 ))
+ *             .gatewayIPConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;appgwipc&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet/subnets/appgwsubnet&#34;))
+ *             ))
+ *             .httpListeners(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip&#34;)),
+ *                     Map.entry(&#34;frontendPort&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;appgwhl&#34;),
+ *                     Map.entry(&#34;protocol&#34;, &#34;Https&#34;),
+ *                     Map.entry(&#34;requireServerNameIndication&#34;, false),
+ *                     Map.entry(&#34;sslCertificate&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslCertificates/sslcert&#34;)),
+ *                     Map.entry(&#34;sslProfile&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/sslProfiles/sslProfile1&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;frontendIPConfiguration&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip&#34;)),
+ *                     Map.entry(&#34;frontendPort&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendPorts/appgwfp80&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;appgwhttplistener&#34;),
+ *                     Map.entry(&#34;protocol&#34;, &#34;Http&#34;)
+ *                 ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1&#34;, ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .requestRoutingRules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool&#34;)),
+ *                     Map.entry(&#34;backendHttpSettings&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs&#34;)),
+ *                     Map.entry(&#34;httpListener&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhl&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;appgwrule&#34;),
+ *                     Map.entry(&#34;priority&#34;, 10),
+ *                     Map.entry(&#34;rewriteRuleSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1&#34;)),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;Basic&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;httpListener&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/httpListeners/appgwhttplistener&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;appgwPathBasedRule&#34;),
+ *                     Map.entry(&#34;priority&#34;, 20),
+ *                     Map.entry(&#34;ruleType&#34;, &#34;PathBasedRouting&#34;),
+ *                     Map.entry(&#34;urlPathMap&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/urlPathMaps/pathMap1&#34;))
+ *                 ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .rewriteRuleSets(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;rewriteRuleSet1&#34;),
+ *                 Map.entry(&#34;rewriteRules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actionSet&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;requestHeaderConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;headerName&#34;, &#34;X-Forwarded-For&#34;),
+ *                             Map.entry(&#34;headerValue&#34;, &#34;{var_add_x_forwarded_for_proxy}&#34;)
+ *                         )),
+ *                         Map.entry(&#34;responseHeaderConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;headerName&#34;, &#34;Strict-Transport-Security&#34;),
+ *                             Map.entry(&#34;headerValue&#34;, &#34;max-age=31536000&#34;)
+ *                         )),
+ *                         Map.entry(&#34;urlConfiguration&#34;, Map.of(&#34;modifiedPath&#34;, &#34;/abc&#34;))
+ *                     )),
+ *                     Map.entry(&#34;conditions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;ignoreCase&#34;, true),
+ *                         Map.entry(&#34;negate&#34;, false),
+ *                         Map.entry(&#34;pattern&#34;, &#34;^Bearer&#34;),
+ *                         Map.entry(&#34;variable&#34;, &#34;http_req_Authorization&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;Set X-Forwarded-For&#34;),
+ *                     Map.entry(&#34;ruleSequence&#34;, 102)
+ *                 ))
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_v2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard_v2&#34;)
+ *             ))
+ *             .sslCertificates(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;data&#34;, &#34;****&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;sslcert&#34;),
+ *                     Map.entry(&#34;password&#34;, &#34;****&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;keyVaultSecretId&#34;, &#34;https://kv/secret&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;sslcert2&#34;)
+ *                 ))
+ *             .sslProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;clientAuthConfiguration&#34;, Map.of(&#34;verifyClientCertIssuerDN&#34;, true)),
+ *                 Map.entry(&#34;name&#34;, &#34;sslProfile1&#34;),
+ *                 Map.entry(&#34;sslPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cipherSuites&#34;, &#34;TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&#34;),
+ *                     Map.entry(&#34;minProtocolVersion&#34;, &#34;TLSv1_1&#34;),
+ *                     Map.entry(&#34;policyType&#34;, &#34;Custom&#34;)
+ *                 )),
+ *                 Map.entry(&#34;trustedClientCertificates&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/trustedClientCertificates/clientcert&#34;))
+ *             ))
+ *             .trustedClientCertificates(Map.ofEntries(
+ *                 Map.entry(&#34;data&#34;, &#34;****&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;clientcert&#34;)
+ *             ))
+ *             .trustedRootCertificates(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;data&#34;, &#34;****&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rootcert&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;keyVaultSecretId&#34;, &#34;https://kv/secret&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rootcert1&#34;)
+ *                 ))
+ *             .urlPathMaps(Map.ofEntries(
+ *                 Map.entry(&#34;defaultBackendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool&#34;)),
+ *                 Map.entry(&#34;defaultBackendHttpSettings&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs&#34;)),
+ *                 Map.entry(&#34;defaultRewriteRuleSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;pathMap1&#34;),
+ *                 Map.entry(&#34;pathRules&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;backendAddressPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool&#34;)),
+ *                     Map.entry(&#34;backendHttpSettings&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendHttpSettingsCollection/appgwbhs&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;apiPaths&#34;),
+ *                     Map.entry(&#34;paths&#34;,                     
+ *                         &#34;/api&#34;,
+ *                         &#34;/v1/api&#34;),
+ *                     Map.entry(&#34;rewriteRuleSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/rewriteRuleSets/rewriteRuleSet1&#34;))
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

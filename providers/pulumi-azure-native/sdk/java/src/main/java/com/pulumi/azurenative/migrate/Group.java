@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### Groups_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var group = new Group(&#34;group&#34;, GroupArgs.builder()        
+ *             .eTag(&#34;\&#34;1e000c2c-0000-0d00-0000-5cdaa4190000\&#34;&#34;)
+ *             .groupName(&#34;Group2&#34;)
+ *             .projectName(&#34;abgoyalWEselfhostb72bproject&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;abgoyal-westEurope&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

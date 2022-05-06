@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### BuildServiceBuilder_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var buildServiceBuilder = new BuildServiceBuilder(&#34;buildServiceBuilder&#34;, BuildServiceBuilderArgs.builder()        
+ *             .buildServiceName(&#34;default&#34;)
+ *             .builderName(&#34;mybuilder&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;buildpackGroups&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;buildpacks&#34;, Map.of(&#34;id&#34;, &#34;tanzu-buildpacks/java-azure&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;mix&#34;)
+ *                 )),
+ *                 Map.entry(&#34;stack&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;io.buildpacks.stacks.bionic&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;base&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

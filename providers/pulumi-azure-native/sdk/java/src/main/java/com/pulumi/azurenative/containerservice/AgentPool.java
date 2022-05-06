@@ -28,6 +28,399 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Agent Pool with EncryptionAtHost enabled
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .enableEncryptionAtHost(true)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with Ephemeral OS Disk
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osDiskSizeGB(64)
+ *             .osDiskType(&#34;Ephemeral&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with FIPS enabled OS
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .enableFIPS(true)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with GPUMIG
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .gpuInstanceProfile(&#34;MIG2g&#34;)
+ *             .kubeletConfig(Map.ofEntries(
+ *                 Map.entry(&#34;allowedUnsafeSysctls&#34;,                 
+ *                     &#34;kernel.msg*&#34;,
+ *                     &#34;net.core.somaxconn&#34;),
+ *                 Map.entry(&#34;cpuCfsQuota&#34;, true),
+ *                 Map.entry(&#34;cpuCfsQuotaPeriod&#34;, &#34;200ms&#34;),
+ *                 Map.entry(&#34;cpuManagerPolicy&#34;, &#34;static&#34;),
+ *                 Map.entry(&#34;failSwapOn&#34;, false),
+ *                 Map.entry(&#34;imageGcHighThreshold&#34;, 90),
+ *                 Map.entry(&#34;imageGcLowThreshold&#34;, 70),
+ *                 Map.entry(&#34;topologyManagerPolicy&#34;, &#34;best-effort&#34;)
+ *             ))
+ *             .linuxOSConfig(Map.ofEntries(
+ *                 Map.entry(&#34;swapFileSizeMB&#34;, 1500),
+ *                 Map.entry(&#34;sysctls&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;kernelThreadsMax&#34;, 99999),
+ *                     Map.entry(&#34;netCoreWmemDefault&#34;, 12345),
+ *                     Map.entry(&#34;netIpv4IpLocalPortRange&#34;, &#34;20000 60000&#34;),
+ *                     Map.entry(&#34;netIpv4TcpTwReuse&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;transparentHugePageDefrag&#34;, &#34;madvise&#34;),
+ *                 Map.entry(&#34;transparentHugePageEnabled&#34;, &#34;always&#34;)
+ *             ))
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_ND96asr_v4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with KubeletConfig and LinuxOSConfig
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .kubeletConfig(Map.ofEntries(
+ *                 Map.entry(&#34;allowedUnsafeSysctls&#34;,                 
+ *                     &#34;kernel.msg*&#34;,
+ *                     &#34;net.core.somaxconn&#34;),
+ *                 Map.entry(&#34;cpuCfsQuota&#34;, true),
+ *                 Map.entry(&#34;cpuCfsQuotaPeriod&#34;, &#34;200ms&#34;),
+ *                 Map.entry(&#34;cpuManagerPolicy&#34;, &#34;static&#34;),
+ *                 Map.entry(&#34;failSwapOn&#34;, false),
+ *                 Map.entry(&#34;imageGcHighThreshold&#34;, 90),
+ *                 Map.entry(&#34;imageGcLowThreshold&#34;, 70),
+ *                 Map.entry(&#34;topologyManagerPolicy&#34;, &#34;best-effort&#34;)
+ *             ))
+ *             .linuxOSConfig(Map.ofEntries(
+ *                 Map.entry(&#34;swapFileSizeMB&#34;, 1500),
+ *                 Map.entry(&#34;sysctls&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;kernelThreadsMax&#34;, 99999),
+ *                     Map.entry(&#34;netCoreWmemDefault&#34;, 12345),
+ *                     Map.entry(&#34;netIpv4IpLocalPortRange&#34;, &#34;20000 60000&#34;),
+ *                     Map.entry(&#34;netIpv4TcpTwReuse&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;transparentHugePageDefrag&#34;, &#34;madvise&#34;),
+ *                 Map.entry(&#34;transparentHugePageEnabled&#34;, &#34;always&#34;)
+ *             ))
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with OSSKU
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .kubeletConfig(Map.ofEntries(
+ *                 Map.entry(&#34;allowedUnsafeSysctls&#34;,                 
+ *                     &#34;kernel.msg*&#34;,
+ *                     &#34;net.core.somaxconn&#34;),
+ *                 Map.entry(&#34;cpuCfsQuota&#34;, true),
+ *                 Map.entry(&#34;cpuCfsQuotaPeriod&#34;, &#34;200ms&#34;),
+ *                 Map.entry(&#34;cpuManagerPolicy&#34;, &#34;static&#34;),
+ *                 Map.entry(&#34;failSwapOn&#34;, false),
+ *                 Map.entry(&#34;imageGcHighThreshold&#34;, 90),
+ *                 Map.entry(&#34;imageGcLowThreshold&#34;, 70),
+ *                 Map.entry(&#34;topologyManagerPolicy&#34;, &#34;best-effort&#34;)
+ *             ))
+ *             .linuxOSConfig(Map.ofEntries(
+ *                 Map.entry(&#34;swapFileSizeMB&#34;, 1500),
+ *                 Map.entry(&#34;sysctls&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;kernelThreadsMax&#34;, 99999),
+ *                     Map.entry(&#34;netCoreWmemDefault&#34;, 12345),
+ *                     Map.entry(&#34;netIpv4IpLocalPortRange&#34;, &#34;20000 60000&#34;),
+ *                     Map.entry(&#34;netIpv4TcpTwReuse&#34;, true)
+ *                 )),
+ *                 Map.entry(&#34;transparentHugePageDefrag&#34;, &#34;madvise&#34;),
+ *                 Map.entry(&#34;transparentHugePageEnabled&#34;, &#34;always&#34;)
+ *             ))
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osSKU(&#34;CBLMariner&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Agent Pool with PPG
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .proximityPlacementGroupID(&#34;/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .vmSize(&#34;Standard_DS2_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Spot Agent Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .nodeLabels(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *             .nodeTaints(&#34;Key1=Value1:NoSchedule&#34;)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .scaleSetEvictionPolicy(&#34;Delete&#34;)
+ *             .scaleSetPriority(&#34;Spot&#34;)
+ *             .tags(Map.of(&#34;name1&#34;, &#34;val1&#34;))
+ *             .vmSize(&#34;Standard_DS1_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create/Update Agent Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .mode(&#34;User&#34;)
+ *             .nodeLabels(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *             .nodeTaints(&#34;Key1=Value1:NoSchedule&#34;)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .scaleSetEvictionPolicy(&#34;Delete&#34;)
+ *             .scaleSetPriority(&#34;Spot&#34;)
+ *             .tags(Map.of(&#34;name1&#34;, &#34;val1&#34;))
+ *             .vmSize(&#34;Standard_DS1_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update Agent Pool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;agentpool1&#34;)
+ *             .count(3)
+ *             .enableAutoScaling(true)
+ *             .maxCount(2)
+ *             .minCount(2)
+ *             .nodeTaints(&#34;Key1=Value1:NoSchedule&#34;)
+ *             .orchestratorVersion(&#34;&#34;)
+ *             .osType(&#34;Linux&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .scaleSetEvictionPolicy(&#34;Delete&#34;)
+ *             .scaleSetPriority(&#34;Spot&#34;)
+ *             .vmSize(&#34;Standard_DS1_v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

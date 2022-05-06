@@ -21,6 +21,60 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a new sync agent
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncAgent = new SyncAgent(&#34;syncAgent&#34;, SyncAgentArgs.builder()        
+ *             .resourceGroupName(&#34;syncagentcrud-65440&#34;)
+ *             .serverName(&#34;syncagentcrud-8475&#34;)
+ *             .syncAgentName(&#34;syncagentcrud-3187&#34;)
+ *             .syncDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Update a sync agent
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncAgent = new SyncAgent(&#34;syncAgent&#34;, SyncAgentArgs.builder()        
+ *             .resourceGroupName(&#34;syncagentcrud-65440&#34;)
+ *             .serverName(&#34;syncagentcrud-8475&#34;)
+ *             .syncAgentName(&#34;syncagentcrud-3187&#34;)
+ *             .syncDatabaseId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-Onebox/providers/Microsoft.Sql/servers/syncagentcrud-8475/databases/sync&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

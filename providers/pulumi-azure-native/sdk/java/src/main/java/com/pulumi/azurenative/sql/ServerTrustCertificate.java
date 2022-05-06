@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create server trust certificate.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverTrustCertificate = new ServerTrustCertificate(&#34;serverTrustCertificate&#34;, ServerTrustCertificateArgs.builder()        
+ *             .certificateName(&#34;customerCertificateName&#34;)
+ *             .managedInstanceName(&#34;testcl&#34;)
+ *             .publicBlob(&#34;308203AE30820296A0030201020210&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

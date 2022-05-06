@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01.
  * 
  * ## Example Usage
+ * ### SubAccountTagRules_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var subAccountTagRule = new SubAccountTagRule(&#34;subAccountTagRule&#34;, SubAccountTagRuleArgs.builder()        
+ *             .monitorName(&#34;myMonitor&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .ruleSetName(&#34;default&#34;)
+ *             .subAccountName(&#34;SubAccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

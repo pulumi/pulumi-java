@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create or update a registered prefix for the peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registeredPrefix = new RegisteredPrefix(&#34;registeredPrefix&#34;, RegisteredPrefixArgs.builder()        
+ *             .peeringName(&#34;peeringName&#34;)
+ *             .prefix(&#34;10.22.20.0/24&#34;)
+ *             .registeredPrefixName(&#34;registeredPrefixName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

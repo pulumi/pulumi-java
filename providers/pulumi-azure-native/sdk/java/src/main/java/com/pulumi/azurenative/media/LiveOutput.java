@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create a LiveOutput
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var liveOutput = new LiveOutput(&#34;liveOutput&#34;, LiveOutputArgs.builder()        
+ *             .accountName(&#34;slitestmedia10&#34;)
+ *             .archiveWindowLength(&#34;PT5M&#34;)
+ *             .assetName(&#34;6f3264f5-a189-48b4-a29a-a40f22575212&#34;)
+ *             .description(&#34;test live output 1&#34;)
+ *             .hls(Map.of(&#34;fragmentsPerTsSegment&#34;, 5))
+ *             .liveEventName(&#34;myLiveEvent1&#34;)
+ *             .liveOutputName(&#34;myLiveOutput1&#34;)
+ *             .manifestName(&#34;testmanifest&#34;)
+ *             .resourceGroupName(&#34;mediaresources&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

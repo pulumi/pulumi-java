@@ -30,6 +30,82 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create FirewallPolicy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicy = new FirewallPolicy(&#34;firewallPolicy&#34;, FirewallPolicyArgs.builder()        
+ *             .dnsSettings(Map.ofEntries(
+ *                 Map.entry(&#34;enableProxy&#34;, true),
+ *                 Map.entry(&#34;requireProxyForNetworkRules&#34;, false),
+ *                 Map.entry(&#34;servers&#34;, &#34;30.3.4.5&#34;)
+ *             ))
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .insights(Map.ofEntries(
+ *                 Map.entry(&#34;isEnabled&#34;, true),
+ *                 Map.entry(&#34;logAnalyticsResources&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;defaultWorkspaceId&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/defaultWorkspace&#34;)),
+ *                     Map.entry(&#34;workspaces&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;region&#34;, &#34;westus&#34;),
+ *                             Map.entry(&#34;workspaceId&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace1&#34;))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;region&#34;, &#34;eastus&#34;),
+ *                             Map.entry(&#34;workspaceId&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourcegroups/rg1/providers/microsoft.operationalinsights/workspaces/workspace2&#34;))
+ *                         ))
+ *                 )),
+ *                 Map.entry(&#34;retentionDays&#34;, 100)
+ *             ))
+ *             .intrusionDetection(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;bypassTrafficSettings&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;description&#34;, &#34;Rule 1&#34;),
+ *                         Map.entry(&#34;destinationAddresses&#34;, &#34;5.6.7.8&#34;),
+ *                         Map.entry(&#34;destinationPorts&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;bypassRule1&#34;),
+ *                         Map.entry(&#34;protocol&#34;, &#34;TCP&#34;),
+ *                         Map.entry(&#34;sourceAddresses&#34;, &#34;1.2.3.4&#34;)
+ *                     )),
+ *                     Map.entry(&#34;signatureOverrides&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;id&#34;, &#34;2525004&#34;),
+ *                         Map.entry(&#34;mode&#34;, &#34;Deny&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;mode&#34;, &#34;Alert&#34;)
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sku(Map.of(&#34;tier&#34;, &#34;Premium&#34;))
+ *             .snat(Map.of(&#34;privateRanges&#34;, &#34;IANAPrivateRanges&#34;))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .threatIntelMode(&#34;Alert&#34;)
+ *             .threatIntelWhitelist(Map.ofEntries(
+ *                 Map.entry(&#34;fqdns&#34;, &#34;*.microsoft.com&#34;),
+ *                 Map.entry(&#34;ipAddresses&#34;, &#34;20.3.4.5&#34;)
+ *             ))
+ *             .transportSecurity(Map.of(&#34;certificateAuthority&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultSecretId&#34;, &#34;https://kv/secret&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;clientcert&#34;)
+ *             )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

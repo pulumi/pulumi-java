@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### AgentPools_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var agentPool = new AgentPool(&#34;agentPool&#34;, AgentPoolArgs.builder()        
+ *             .agentPoolName(&#34;myAgentPool&#34;)
+ *             .count(1)
+ *             .location(&#34;WESTUS&#34;)
+ *             .os(&#34;Linux&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .tier(&#34;S1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

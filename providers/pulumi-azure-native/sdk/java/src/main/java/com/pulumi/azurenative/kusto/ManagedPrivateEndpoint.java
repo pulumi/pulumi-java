@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-27.
  * 
  * ## Example Usage
+ * ### KustoManagedPrivateEndpointsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedPrivateEndpoint = new ManagedPrivateEndpoint(&#34;managedPrivateEndpoint&#34;, ManagedPrivateEndpointArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .groupId(&#34;blob&#34;)
+ *             .managedPrivateEndpointName(&#34;kustoManagedPrivateEndpoint1&#34;)
+ *             .privateLinkResourceId(&#34;/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Storage/storageAccounts/storageAccountTest&#34;)
+ *             .requestMessage(&#34;Please Approve.&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### DefaultRollouts_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defaultRollout = new DefaultRollout(&#34;defaultRollout&#34;, DefaultRolloutArgs.builder()        
+ *             .properties(Map.of(&#34;specification&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;canary&#34;, Map.of(&#34;skipRegions&#34;, &#34;eastus2euap&#34;)),
+ *                 Map.entry(&#34;restOfTheWorldGroupTwo&#34;, Map.of(&#34;waitDuration&#34;, &#34;PT4H&#34;))
+ *             )))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .rolloutName(&#34;2020week10&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

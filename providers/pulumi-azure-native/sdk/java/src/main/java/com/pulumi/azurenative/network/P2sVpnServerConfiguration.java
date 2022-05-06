@@ -26,6 +26,61 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-01.
  * 
  * ## Example Usage
+ * ### P2SVpnServerConfigurationPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var p2sVpnServerConfiguration = new P2sVpnServerConfiguration(&#34;p2sVpnServerConfiguration&#34;, P2sVpnServerConfigurationArgs.builder()        
+ *             .p2SVpnServerConfigRadiusClientRootCertificates(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;p2sVpnServerConfigRadiusClientRootCert1&#34;),
+ *                 Map.entry(&#34;thumbprint&#34;, &#34;83FFBFC8848B5A5836C94D0112367E16148A286F&#34;)
+ *             ))
+ *             .p2SVpnServerConfigRadiusServerRootCertificates(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;p2sVpnServerConfigRadiusServerRootCert1&#34;),
+ *                 Map.entry(&#34;publicCertData&#34;, &#34;MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM&#34;)
+ *             ))
+ *             .p2SVpnServerConfigVpnClientRevokedCertificates(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;p2sVpnServerConfigVpnClientRevokedCert1&#34;),
+ *                 Map.entry(&#34;thumbprint&#34;, &#34;83FFBFC8848B5A5836C94D0112367E16148A286F&#34;)
+ *             ))
+ *             .p2SVpnServerConfigVpnClientRootCertificates(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;p2sVpnServerConfigVpnClientRootCert1&#34;),
+ *                 Map.entry(&#34;publicCertData&#34;, &#34;MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN&#34;)
+ *             ))
+ *             .p2SVpnServerConfigurationName(&#34;p2sVpnServerConfiguration1&#34;)
+ *             .radiusServerAddress(&#34;8.9.9.9&#34;)
+ *             .radiusServerSecret(&#34;&lt;radiusServerSecret&gt;&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .virtualWanName(&#34;virtualWan1&#34;)
+ *             .vpnClientIpsecPolicies(Map.ofEntries(
+ *                 Map.entry(&#34;dhGroup&#34;, &#34;DHGroup14&#34;),
+ *                 Map.entry(&#34;ikeEncryption&#34;, &#34;AES256&#34;),
+ *                 Map.entry(&#34;ikeIntegrity&#34;, &#34;SHA384&#34;),
+ *                 Map.entry(&#34;ipsecEncryption&#34;, &#34;AES256&#34;),
+ *                 Map.entry(&#34;ipsecIntegrity&#34;, &#34;SHA256&#34;),
+ *                 Map.entry(&#34;pfsGroup&#34;, &#34;PFS14&#34;),
+ *                 Map.entry(&#34;saDataSizeKilobytes&#34;, 429497),
+ *                 Map.entry(&#34;saLifeTimeSeconds&#34;, 86472)
+ *             ))
+ *             .vpnProtocols(&#34;IkeV2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

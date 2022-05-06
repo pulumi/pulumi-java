@@ -22,6 +22,68 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a job with all properties specified
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .description(&#34;my favourite job&#34;)
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .jobName(&#34;job1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;endTime&#34;, &#34;2015-09-24T23:59:59Z&#34;),
+ *                 Map.entry(&#34;interval&#34;, &#34;PT5M&#34;),
+ *                 Map.entry(&#34;startTime&#34;, &#34;2015-09-24T18:30:01Z&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Recurring&#34;)
+ *             ))
+ *             .serverName(&#34;server1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a job with default properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .jobAgentName(&#34;agent1&#34;)
+ *             .jobName(&#34;job1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .serverName(&#34;server1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

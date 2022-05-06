@@ -28,6 +28,113 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create or update specific Front Door
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var frontDoor = new FrontDoor(&#34;frontDoor&#34;, FrontDoorArgs.builder()        
+ *             .backendPools(Map.ofEntries(
+ *                 Map.entry(&#34;backends&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;address&#34;, &#34;w3.contoso.com&#34;),
+ *                         Map.entry(&#34;httpPort&#34;, 80),
+ *                         Map.entry(&#34;httpsPort&#34;, 443),
+ *                         Map.entry(&#34;priority&#34;, 2),
+ *                         Map.entry(&#34;weight&#34;, 1)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;address&#34;, &#34;contoso.com.website-us-west-2.othercloud.net&#34;),
+ *                         Map.entry(&#34;httpPort&#34;, 80),
+ *                         Map.entry(&#34;httpsPort&#34;, 443),
+ *                         Map.entry(&#34;priority&#34;, 1),
+ *                         Map.entry(&#34;privateLinkApprovalMessage&#34;, &#34;Please approve the connection request for this Private Link&#34;),
+ *                         Map.entry(&#34;privateLinkLocation&#34;, &#34;eastus&#34;),
+ *                         Map.entry(&#34;privateLinkResourceId&#34;, &#34;/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.Network/privateLinkServices/pls1&#34;),
+ *                         Map.entry(&#34;weight&#34;, 2)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;address&#34;, &#34;10.0.1.5&#34;),
+ *                         Map.entry(&#34;httpPort&#34;, 80),
+ *                         Map.entry(&#34;httpsPort&#34;, 443),
+ *                         Map.entry(&#34;priority&#34;, 1),
+ *                         Map.entry(&#34;privateLinkAlias&#34;, &#34;APPSERVER.d84e61f0-0870-4d24-9746-7438fa0019d1.westus2.azure.privatelinkservice&#34;),
+ *                         Map.entry(&#34;privateLinkApprovalMessage&#34;, &#34;Please approve this request to connect to the Private Link&#34;),
+ *                         Map.entry(&#34;weight&#34;, 1)
+ *                     )),
+ *                 Map.entry(&#34;healthProbeSettings&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/healthProbeSettings/healthProbeSettings1&#34;)),
+ *                 Map.entry(&#34;loadBalancingSettings&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/loadBalancingSettings/loadBalancingSettings1&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;backendPool1&#34;)
+ *             ))
+ *             .backendPoolsSettings(Map.ofEntries(
+ *                 Map.entry(&#34;enforceCertificateNameCheck&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;sendRecvTimeoutSeconds&#34;, 60)
+ *             ))
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .frontDoorName(&#34;frontDoor1&#34;)
+ *             .frontendEndpoints(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;hostName&#34;, &#34;www.contoso.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;frontendEndpoint1&#34;),
+ *                     Map.entry(&#34;sessionAffinityEnabledState&#34;, &#34;Enabled&#34;),
+ *                     Map.entry(&#34;sessionAffinityTtlSeconds&#34;, 60),
+ *                     Map.entry(&#34;webApplicationFirewallPolicyLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;hostName&#34;, &#34;frontDoor1.azurefd.net&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;default&#34;)
+ *                 ))
+ *             .healthProbeSettings(Map.ofEntries(
+ *                 Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;healthProbeMethod&#34;, &#34;HEAD&#34;),
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 120),
+ *                 Map.entry(&#34;name&#34;, &#34;healthProbeSettings1&#34;),
+ *                 Map.entry(&#34;path&#34;, &#34;/&#34;),
+ *                 Map.entry(&#34;protocol&#34;, &#34;Http&#34;)
+ *             ))
+ *             .loadBalancingSettings(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;loadBalancingSettings1&#34;),
+ *                 Map.entry(&#34;sampleSize&#34;, 4),
+ *                 Map.entry(&#34;successfulSamplesRequired&#34;, 2)
+ *             ))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routingRules(Map.ofEntries(
+ *                 Map.entry(&#34;acceptedProtocols&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;enabledState&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;frontendEndpoints&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/frontendEndpoint1&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/frontendEndpoints/default&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;routingRule1&#34;),
+ *                 Map.entry(&#34;patternsToMatch&#34;, &#34;/*&#34;),
+ *                 Map.entry(&#34;routeConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;backendPool&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1&#34;)),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#34;)
+ *                 )),
+ *                 Map.entry(&#34;rulesEngine&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1&#34;)),
+ *                 Map.entry(&#34;webApplicationFirewallPolicyLink&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/policy1&#34;))
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

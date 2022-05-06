@@ -22,6 +22,44 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01.
  * 
  * ## Example Usage
+ * ### PlacementPolicies_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var placementPolicy = new PlacementPolicy(&#34;placementPolicy&#34;, PlacementPolicyArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .placementPolicyName(&#34;policy1&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;affinityType&#34;, &#34;AntiAffinity&#34;),
+ *                 Map.entry(&#34;hostMembers&#34;,                 
+ *                     &#34;fakehost22.nyc1.kubernetes.center&#34;,
+ *                     &#34;fakehost23.nyc1.kubernetes.center&#34;,
+ *                     &#34;fakehost24.nyc1.kubernetes.center&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VmHost&#34;),
+ *                 Map.entry(&#34;vmMembers&#34;,                 
+ *                     &#34;/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-128&#34;,
+ *                     &#34;/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/virtualMachines/vm-256&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

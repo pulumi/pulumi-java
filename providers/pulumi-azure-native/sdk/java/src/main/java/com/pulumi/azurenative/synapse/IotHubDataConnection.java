@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### KustoPoolDataConnectionsCreateOrUpdate.json
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotHubDataConnection = new IotHubDataConnection(&#34;iotHubDataConnection&#34;, IotHubDataConnectionArgs.builder()        
+ *             .dataConnectionName(&#34;DataConnections8&#34;)
+ *             .databaseName(&#34;KustoDatabase8&#34;)
+ *             .kustoPoolName(&#34;kustoclusterrptest4&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .workspaceName(&#34;synapseWorkspaceName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

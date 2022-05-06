@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### ServerEndpoints_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverEndpoint = new ServerEndpoint(&#34;serverEndpoint&#34;, ServerEndpointArgs.builder()        
+ *             .cloudTiering(&#34;off&#34;)
+ *             .initialDownloadPolicy(&#34;NamespaceThenModifiedFiles&#34;)
+ *             .localCacheMode(&#34;UpdateLocallyCachedFiles&#34;)
+ *             .offlineDataTransfer(&#34;on&#34;)
+ *             .offlineDataTransferShareName(&#34;myfileshare&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup_1&#34;)
+ *             .serverEndpointName(&#34;SampleServerEndpoint_1&#34;)
+ *             .serverLocalPath(&#34;D:\\SampleServerEndpoint_1&#34;)
+ *             .serverResourceId(&#34;/subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/registeredServers/080d4133-bdb5-40a0-96a0-71a6057bfe9a&#34;)
+ *             .storageSyncServiceName(&#34;SampleStorageSyncService_1&#34;)
+ *             .syncGroupName(&#34;SampleSyncGroup_1&#34;)
+ *             .tierFilesOlderThanDays(0)
+ *             .volumeFreeSpacePercent(100)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create VirtualMachineScaleSet VM extension.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineScaleSetVMExtension = new VirtualMachineScaleSetVMExtension(&#34;virtualMachineScaleSetVMExtension&#34;, VirtualMachineScaleSetVMExtensionArgs.builder()        
+ *             .autoUpgradeMinorVersion(true)
+ *             .instanceId(&#34;0&#34;)
+ *             .publisher(&#34;extPublisher&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .settings(Map.of(&#34;UserName&#34;, &#34;xyz@microsoft.com&#34;))
+ *             .type(&#34;extType&#34;)
+ *             .typeHandlerVersion(&#34;1.2&#34;)
+ *             .vmExtensionName(&#34;myVMExtension&#34;)
+ *             .vmScaleSetName(&#34;myvmScaleSet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

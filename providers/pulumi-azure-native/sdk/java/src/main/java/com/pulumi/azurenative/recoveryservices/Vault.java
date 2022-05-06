@@ -25,6 +25,103 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create or Update Recovery Services vault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vault = new Vault(&#34;vault&#34;, VaultArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;Default-RecoveryServices-ResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .vaultName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update Vault with CustomerManagedKeys
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vault = new Vault(&#34;vault&#34;, VaultArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi&#34;, ))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.of(&#34;encryption&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;infrastructureEncryption&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;kekIdentity&#34;, Map.of(&#34;userAssignedIdentity&#34;, &#34;/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi&#34;)),
+ *                 Map.entry(&#34;keyVaultProperties&#34;, Map.of(&#34;keyUri&#34;, &#34;https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3&#34;))
+ *             )))
+ *             .resourceGroupName(&#34;Default-RecoveryServices-ResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .vaultName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update Vault with User Assigned Identity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vault = new Vault(&#34;vault&#34;, VaultArgs.builder()        
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi&#34;, ))
+ *             ))
+ *             .location(&#34;West US&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;Default-RecoveryServices-ResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard&#34;))
+ *             .vaultName(&#34;swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

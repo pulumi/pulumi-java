@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates an incident.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var incident = new Incident(&#34;incident&#34;, IncidentArgs.builder()        
+ *             .classification(&#34;FalsePositive&#34;)
+ *             .classificationComment(&#34;Not a malicious activity&#34;)
+ *             .classificationReason(&#34;IncorrectAlertLogic&#34;)
+ *             .description(&#34;This is a demo incident&#34;)
+ *             .firstActivityTimeUtc(&#34;2019-01-01T13:00:30Z&#34;)
+ *             .incidentId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .lastActivityTimeUtc(&#34;2019-01-01T13:05:30Z&#34;)
+ *             .owner(Map.of(&#34;objectId&#34;, &#34;2046feea-040d-4a46-9e2b-91c2941bfa70&#34;))
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .severity(&#34;High&#34;)
+ *             .status(&#34;Closed&#34;)
+ *             .title(&#34;My incident&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

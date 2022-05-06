@@ -23,6 +23,222 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### MG-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;template&#34;)
+ *             .parameters(Map.of(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;[parameters(&#39;storageAccountType&#39;)]&#34;)))
+ *             .resourceGroup(&#34;storageRG&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .template(Map.ofEntries(
+ *                 Map.entry(&#34;contentVersion&#34;, &#34;1.0.0.0&#34;),
+ *                 Map.entry(&#34;outputs&#34;, Map.of(&#34;storageAccountName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;[variables(&#39;storageAccountName&#39;)]&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;parameters&#34;, Map.of(&#34;storageAccountType&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowedValues&#34;,                     
+ *                         &#34;Standard_LRS&#34;,
+ *                         &#34;Standard_GRS&#34;,
+ *                         &#34;Standard_ZRS&#34;,
+ *                         &#34;Premium_LRS&#34;),
+ *                     Map.entry(&#34;defaultValue&#34;, &#34;Standard_LRS&#34;),
+ *                     Map.entry(&#34;metadata&#34;, Map.of(&#34;description&#34;, &#34;Storage Account type&#34;)),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;resources&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiVersion&#34;, &#34;2016-01-01&#34;),
+ *                     Map.entry(&#34;kind&#34;, &#34;Storage&#34;),
+ *                     Map.entry(&#34;location&#34;, &#34;[resourceGroup().location]&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;[variables(&#39;storageAccountName&#39;)]&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;sku&#34;, Map.of(&#34;name&#34;, &#34;[parameters(&#39;storageAccountType&#39;)]&#34;)),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/storageAccounts&#34;)
+ *                 )),
+ *                 Map.entry(&#34;variables&#34;, Map.of(&#34;storageAccountName&#34;, &#34;[concat(uniquestring(resourceGroup().id), &#39;standardsa&#39;)]&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;template&#34;)
+ *             .parameters(Map.of(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;[parameters(&#39;storageAccountType&#39;)]&#34;)))
+ *             .resourceGroup(&#34;storageRG&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .template(Map.ofEntries(
+ *                 Map.entry(&#34;contentVersion&#34;, &#34;1.0.0.0&#34;),
+ *                 Map.entry(&#34;outputs&#34;, Map.of(&#34;storageAccountName&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;[variables(&#39;storageAccountName&#39;)]&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;parameters&#34;, Map.of(&#34;storageAccountType&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allowedValues&#34;,                     
+ *                         &#34;Standard_LRS&#34;,
+ *                         &#34;Standard_GRS&#34;,
+ *                         &#34;Standard_ZRS&#34;,
+ *                         &#34;Premium_LRS&#34;),
+ *                     Map.entry(&#34;defaultValue&#34;, &#34;Standard_LRS&#34;),
+ *                     Map.entry(&#34;metadata&#34;, Map.of(&#34;description&#34;, &#34;Storage Account type&#34;)),
+ *                     Map.entry(&#34;type&#34;, &#34;string&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;resources&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiVersion&#34;, &#34;2016-01-01&#34;),
+ *                     Map.entry(&#34;kind&#34;, &#34;Storage&#34;),
+ *                     Map.entry(&#34;location&#34;, &#34;[resourceGroup().location]&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;[variables(&#39;storageAccountName&#39;)]&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;sku&#34;, Map.of(&#34;name&#34;, &#34;[parameters(&#39;storageAccountType&#39;)]&#34;)),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/storageAccounts&#34;)
+ *                 )),
+ *                 Map.entry(&#34;variables&#34;, Map.of(&#34;storageAccountName&#34;, &#34;[concat(uniquestring(resourceGroup().id), &#39;standardsa&#39;)]&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateArtifact = new TemplateArtifact(&#34;templateArtifact&#34;, TemplateArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

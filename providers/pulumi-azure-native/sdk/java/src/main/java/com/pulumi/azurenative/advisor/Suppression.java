@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### CreateSuppression
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var suppression = new Suppression(&#34;suppression&#34;, SuppressionArgs.builder()        
+ *             .name(&#34;suppressionName1&#34;)
+ *             .recommendationId(&#34;recommendationId&#34;)
+ *             .resourceUri(&#34;resourceUri&#34;)
+ *             .ttl(&#34;07:00:00:00&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

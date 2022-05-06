@@ -35,6 +35,41 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### DomainEventSubscriptions_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var domainEventSubscription = new DomainEventSubscription(&#34;domainEventSubscription&#34;, DomainEventSubscriptionArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;WebHook&#34;),
+ *                 Map.entry(&#34;endpointUrl&#34;, &#34;https://requestb.in/15ksip71&#34;)
+ *             ))
+ *             .domainName(&#34;exampleDomain1&#34;)
+ *             .eventSubscriptionName(&#34;exampleEventSubscriptionName1&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,92 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update the sku of vendor resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vendorSkus = new VendorSkus(&#34;vendorSkus&#34;, VendorSkusArgs.builder()        
+ *             .deploymentMode(&#34;PrivateEdgeZone&#34;)
+ *             .managedApplicationTemplate()
+ *             .networkFunctionTemplate(Map.of(&#34;networkFunctionRoleConfigurations&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;customProfile&#34;, Map.of(&#34;metadataConfigurationPath&#34;, &#34;/var/logs/network.cfg&#34;)),
+ *                 Map.entry(&#34;networkInterfaces&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;gateway&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                             Map.entry(&#34;ipVersion&#34;, &#34;IPv4&#34;),
+ *                             Map.entry(&#34;subnet&#34;, &#34;&#34;)
+ *                         )),
+ *                         Map.entry(&#34;macAddress&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;networkInterfaceName&#34;, &#34;nic1&#34;),
+ *                         Map.entry(&#34;vmSwitchType&#34;, &#34;Wan&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;gateway&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAddress&#34;, &#34;&#34;),
+ *                             Map.entry(&#34;ipAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                             Map.entry(&#34;ipVersion&#34;, &#34;IPv4&#34;),
+ *                             Map.entry(&#34;subnet&#34;, &#34;&#34;)
+ *                         )),
+ *                         Map.entry(&#34;macAddress&#34;, &#34;&#34;),
+ *                         Map.entry(&#34;networkInterfaceName&#34;, &#34;nic2&#34;),
+ *                         Map.entry(&#34;vmSwitchType&#34;, &#34;Management&#34;)
+ *                     )),
+ *                 Map.entry(&#34;osProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;adminUsername&#34;, &#34;dummyuser&#34;),
+ *                     Map.entry(&#34;customData&#34;, &#34;base-64 encoded string of custom data&#34;),
+ *                     Map.entry(&#34;linuxConfiguration&#34;, Map.of(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;keyData&#34;, &#34;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAwrr66r8n6B8Y0zMF3dOpXEapIQD9DiYQ6D6/zwor9o39jSkHNiMMER/GETBbzP83LOcekm02aRjo55ArO7gPPVvCXbrirJu9pkm4AC4BBre5xSLS= user@constoso-DSH&#34;),
+ *                         Map.entry(&#34;path&#34;, &#34;home/user/.ssh/authorized_keys&#34;)
+ *                     ))))
+ *                 )),
+ *                 Map.entry(&#34;roleName&#34;, &#34;test&#34;),
+ *                 Map.entry(&#34;roleType&#34;, &#34;VirtualMachine&#34;),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataDisks&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;createOption&#34;, &#34;Empty&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 10),
+ *                         Map.entry(&#34;name&#34;, &#34;DataDisk1&#34;)
+ *                     )),
+ *                     Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                         Map.entry(&#34;sku&#34;, &#34;18.04-LTS&#34;),
+ *                         Map.entry(&#34;version&#34;, &#34;18.04.201804262&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;diskSizeGB&#34;, 30),
+ *                         Map.entry(&#34;name&#34;, &#34;vhdName&#34;),
+ *                         Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                         Map.entry(&#34;vhd&#34;, Map.of(&#34;uri&#34;, &#34;https://contoso.net/link/vnd.vhd?sp=rl&amp;st=2020-10-08T20:38:19Z&amp;se=2020-12-09T19:38:00Z&amp;sv=2019-12-12&amp;sr=b&amp;sig=7BM2f4yOw%3D&#34;))
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;virtualMachineSize&#34;, &#34;Standard_D3_v2&#34;)
+ *             )))
+ *             .preview(true)
+ *             .skuName(&#34;TestSku&#34;)
+ *             .vendorName(&#34;TestVendor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

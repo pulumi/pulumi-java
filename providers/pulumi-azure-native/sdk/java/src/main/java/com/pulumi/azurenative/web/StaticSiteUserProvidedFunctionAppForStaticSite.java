@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Register a user provided function app with a static site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var staticSiteUserProvidedFunctionAppForStaticSite = new StaticSiteUserProvidedFunctionAppForStaticSite(&#34;staticSiteUserProvidedFunctionAppForStaticSite&#34;, StaticSiteUserProvidedFunctionAppForStaticSiteArgs.builder()        
+ *             .functionAppName(&#34;testFunctionApp&#34;)
+ *             .functionAppRegion(&#34;West US 2&#34;)
+ *             .functionAppResourceId(&#34;/subscription/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/functionRG/providers/Microsoft.Web/sites/testFunctionApp&#34;)
+ *             .isForced(true)
+ *             .name(&#34;testStaticSite0&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

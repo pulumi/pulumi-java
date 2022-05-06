@@ -23,6 +23,68 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### CosmosDBGremlinGraphCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gremlinResourceGremlinGraph = new GremlinResourceGremlinGraph(&#34;gremlinResourceGremlinGraph&#34;, GremlinResourceGremlinGraphArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .databaseName(&#34;databaseName&#34;)
+ *             .graphName(&#34;graphName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .options()
+ *             .resource(Map.ofEntries(
+ *                 Map.entry(&#34;conflictResolutionPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;conflictResolutionPath&#34;, &#34;/path&#34;),
+ *                     Map.entry(&#34;mode&#34;, &#34;LastWriterWins&#34;)
+ *                 )),
+ *                 Map.entry(&#34;defaultTtl&#34;, 100),
+ *                 Map.entry(&#34;id&#34;, &#34;graphName&#34;),
+ *                 Map.entry(&#34;indexingPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;automatic&#34;, true),
+ *                     Map.entry(&#34;excludedPaths&#34;, ),
+ *                     Map.entry(&#34;includedPaths&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;indexes&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;dataType&#34;, &#34;String&#34;),
+ *                                 Map.entry(&#34;kind&#34;, &#34;Range&#34;),
+ *                                 Map.entry(&#34;precision&#34;, &#34;TODO: GenUnaryOpExpression&#34;)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;dataType&#34;, &#34;Number&#34;),
+ *                                 Map.entry(&#34;kind&#34;, &#34;Range&#34;),
+ *                                 Map.entry(&#34;precision&#34;, &#34;TODO: GenUnaryOpExpression&#34;)
+ *                             )),
+ *                         Map.entry(&#34;path&#34;, &#34;/*&#34;)
+ *                     )),
+ *                     Map.entry(&#34;indexingMode&#34;, &#34;consistent&#34;)
+ *                 )),
+ *                 Map.entry(&#34;partitionKey&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;kind&#34;, &#34;Hash&#34;),
+ *                     Map.entry(&#34;paths&#34;, &#34;/AccountNumber&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uniqueKeyPolicy&#34;, Map.of(&#34;uniqueKeys&#34;, Map.of(&#34;paths&#34;, &#34;/testPath&#34;)))
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

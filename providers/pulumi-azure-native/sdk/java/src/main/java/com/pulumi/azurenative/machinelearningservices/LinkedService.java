@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01-preview.
  * 
  * ## Example Usage
+ * ### CreateLinkedService
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedService = new LinkedService(&#34;linkedService&#34;, LinkedServiceArgs.builder()        
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .linkName(&#34;link-1&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .name(&#34;link-1&#34;)
+ *             .properties(Map.of(&#34;linkedServiceResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/Syn-1&#34;))
+ *             .resourceGroupName(&#34;resourceGroup-1&#34;)
+ *             .workspaceName(&#34;workspace-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

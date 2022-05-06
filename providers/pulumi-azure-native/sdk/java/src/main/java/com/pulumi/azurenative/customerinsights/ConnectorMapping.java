@@ -21,6 +21,69 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### ConnectorMappings_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectorMapping = new ConnectorMapping(&#34;connectorMapping&#34;, ConnectorMappingArgs.builder()        
+ *             .connectorName(&#34;testConnector8858&#34;)
+ *             .description(&#34;Test mapping&#34;)
+ *             .displayName(&#34;testMapping12491&#34;)
+ *             .entityType(&#34;Interaction&#34;)
+ *             .entityTypeName(&#34;TestInteractionType2967&#34;)
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .mappingName(&#34;testMapping12491&#34;)
+ *             .mappingProperties(Map.ofEntries(
+ *                 Map.entry(&#34;availability&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;frequency&#34;, &#34;Hour&#34;),
+ *                     Map.entry(&#34;interval&#34;, 5)
+ *                 )),
+ *                 Map.entry(&#34;completeOperation&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;completionOperationType&#34;, &#34;DeleteFile&#34;),
+ *                     Map.entry(&#34;destinationFolder&#34;, &#34;fakePath&#34;)
+ *                 )),
+ *                 Map.entry(&#34;errorManagement&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;errorLimit&#34;, 10),
+ *                     Map.entry(&#34;errorManagementType&#34;, &#34;StopImport&#34;)
+ *                 )),
+ *                 Map.entry(&#34;fileFilter&#34;, &#34;unknown&#34;),
+ *                 Map.entry(&#34;folderPath&#34;, &#34;http://sample.dne/file&#34;),
+ *                 Map.entry(&#34;format&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;columnDelimiter&#34;, &#34;|&#34;),
+ *                     Map.entry(&#34;formatType&#34;, &#34;TextFormat&#34;)
+ *                 )),
+ *                 Map.entry(&#34;hasHeader&#34;, false),
+ *                 Map.entry(&#34;structure&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;columnName&#34;, &#34;unknown1&#34;),
+ *                         Map.entry(&#34;isEncrypted&#34;, false),
+ *                         Map.entry(&#34;propertyName&#34;, &#34;unknwon1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;columnName&#34;, &#34;unknown2&#34;),
+ *                         Map.entry(&#34;isEncrypted&#34;, true),
+ *                         Map.entry(&#34;propertyName&#34;, &#34;unknwon2&#34;)
+ *                     ))
+ *             ))
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

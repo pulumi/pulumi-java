@@ -24,6 +24,58 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### PublishedManagementGroupBlueprint_Publish
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var publishedBlueprint = new PublishedBlueprint(&#34;publishedBlueprint&#34;, PublishedBlueprintArgs.builder()        
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .versionId(&#34;v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PublishedSubscriptionBlueprint_Publish
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var publishedBlueprint = new PublishedBlueprint(&#34;publishedBlueprint&#34;, PublishedBlueprintArgs.builder()        
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .versionId(&#34;v2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-19.
  * 
  * ## Example Usage
+ * ### Services_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .groupName(&#34;DmsSdkRg&#34;)
+ *             .location(&#34;southcentralus&#34;)
+ *             .serviceName(&#34;DmsSdkService&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Basic_1vCore&#34;))
+ *             .virtualSubnetId(&#34;/subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkTestNetwork/providers/Microsoft.Network/virtualNetworks/DmsSdkTestNetwork/subnets/default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### BlockchainMembers_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var blockchainMember = new BlockchainMember(&#34;blockchainMember&#34;, BlockchainMemberArgs.builder()        
+ *             .blockchainMemberName(&#34;contosemember1&#34;)
+ *             .consortium(&#34;ContoseConsortium&#34;)
+ *             .consortiumManagementAccountPassword(&#34;&lt;consortiumManagementAccountPassword&gt;&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .protocol(&#34;Quorum&#34;)
+ *             .resourceGroupName(&#34;mygroup&#34;)
+ *             .validatorNodesSku(Map.of(&#34;capacity&#34;, 2))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### kustoPoolsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var kustoPool = new KustoPool(&#34;kustoPool&#34;, KustoPoolArgs.builder()        
+ *             .kustoPoolName(&#34;kustoclusterrptest4&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_L8s&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .workspaceName(&#34;synapseWorkspaceName&#34;)
+ *             .workspaceUid(&#34;11111111-2222-3333-444444444444&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

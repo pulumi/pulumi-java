@@ -25,6 +25,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-09-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update data collection endpoint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataCollectionEndpoint = new DataCollectionEndpoint(&#34;dataCollectionEndpoint&#34;, DataCollectionEndpointArgs.builder()        
+ *             .dataCollectionEndpointName(&#34;myCollectionEndpoint&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .networkAcls(Map.of(&#34;publicNetworkAccess&#34;, &#34;Enabled&#34;))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

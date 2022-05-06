@@ -29,6 +29,55 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Domain Service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var domainService = new DomainService(&#34;domainService&#34;, DomainServiceArgs.builder()        
+ *             .domainName(&#34;TestDomainService.com&#34;)
+ *             .domainSecuritySettings(Map.ofEntries(
+ *                 Map.entry(&#34;ntlmV1&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;syncNtlmPasswords&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;tlsV1&#34;, &#34;Disabled&#34;)
+ *             ))
+ *             .domainServiceName(&#34;TestDomainService.com&#34;)
+ *             .filteredSync(&#34;Enabled&#34;)
+ *             .ldapsSettings(Map.ofEntries(
+ *                 Map.entry(&#34;externalAccess&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;ldaps&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;pfxCertificate&#34;, &#34;MIIDPDCCAiSgAwIBAgIQQUI9P6tq2p9OFIJa7DLNvTANBgkqhkiG9w0BAQsFADAgMR4w...&#34;),
+ *                 Map.entry(&#34;pfxCertificatePassword&#34;, &#34;&lt;pfxCertificatePassword&gt;&#34;)
+ *             ))
+ *             .notificationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;additionalRecipients&#34;,                 
+ *                     &#34;jicha@microsoft.com&#34;,
+ *                     &#34;caalmont@microsoft.com&#34;),
+ *                 Map.entry(&#34;notifyDcAdmins&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;notifyGlobalAdmins&#34;, &#34;Enabled&#34;)
+ *             ))
+ *             .replicaSets(Map.ofEntries(
+ *                 Map.entry(&#34;location&#34;, &#34;West US&#34;),
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;TestResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

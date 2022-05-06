@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update preview subscription of vendor sku sub resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vendorSkuPreview = new VendorSkuPreview(&#34;vendorSkuPreview&#34;, VendorSkuPreviewArgs.builder()        
+ *             .previewSubscription(&#34;previewSub&#34;)
+ *             .skuName(&#34;TestSku&#34;)
+ *             .vendorName(&#34;TestVendor&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

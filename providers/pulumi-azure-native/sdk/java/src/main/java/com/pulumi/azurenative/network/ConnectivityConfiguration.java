@@ -23,6 +23,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### ConnectivityConfigurationsPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectivityConfiguration = new ConnectivityConfiguration(&#34;connectivityConfiguration&#34;, ConnectivityConfigurationArgs.builder()        
+ *             .appliesToGroups(Map.ofEntries(
+ *                 Map.entry(&#34;groupConnectivity&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;isGlobal&#34;, &#34;False&#34;),
+ *                 Map.entry(&#34;networkGroupId&#34;, &#34;subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/group1&#34;),
+ *                 Map.entry(&#34;useHubGateway&#34;, &#34;True&#34;)
+ *             ))
+ *             .configurationName(&#34;myTestConnectivityConfig&#34;)
+ *             .connectivityTopology(&#34;HubAndSpoke&#34;)
+ *             .deleteExistingPeering(&#34;True&#34;)
+ *             .description(&#34;Sample Configuration&#34;)
+ *             .displayName(&#34;myTestConnectivityConfig&#34;)
+ *             .hubs(Map.ofEntries(
+ *                 Map.entry(&#34;resourceId&#34;, &#34;subscriptions/subscriptionA/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myTestConnectivityConfig&#34;),
+ *                 Map.entry(&#34;resourceType&#34;, &#34;Microsoft.Network/virtualNetworks&#34;)
+ *             ))
+ *             .isGlobal(&#34;True&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

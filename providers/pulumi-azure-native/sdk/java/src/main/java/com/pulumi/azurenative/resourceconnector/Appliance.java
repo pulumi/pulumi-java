@@ -24,6 +24,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-31-preview.
  * 
  * ## Example Usage
+ * ### Create/Update Appliance
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var appliance = new Appliance(&#34;appliance&#34;, ApplianceArgs.builder()        
+ *             .distro(&#34;AKSEdge&#34;)
+ *             .infrastructureConfig(Map.of(&#34;provider&#34;, &#34;VMWare&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;testresourcegroup&#34;)
+ *             .resourceName(&#34;appliance01&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

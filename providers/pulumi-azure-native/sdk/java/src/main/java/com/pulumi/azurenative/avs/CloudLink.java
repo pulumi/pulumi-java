@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01.
  * 
  * ## Example Usage
+ * ### CloudLinks_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudLink = new CloudLink(&#34;cloudLink&#34;, CloudLinkArgs.builder()        
+ *             .cloudLinkName(&#34;cloudLink1&#34;)
+ *             .linkedCloud(&#34;/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.AVS/privateClouds/cloud2&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

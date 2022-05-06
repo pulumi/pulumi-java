@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateApiIssueComment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var apiIssueComment = new ApiIssueComment(&#34;apiIssueComment&#34;, ApiIssueCommentArgs.builder()        
+ *             .apiId(&#34;57d1f7558aa04f15146d9d8a&#34;)
+ *             .commentId(&#34;599e29ab193c3c0bd0b3e2fb&#34;)
+ *             .createdDate(&#34;2018-02-01T22:21:20.467Z&#34;)
+ *             .issueId(&#34;57d2ef278aa04f0ad01d6cdc&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .text(&#34;Issue comment.&#34;)
+ *             .userId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

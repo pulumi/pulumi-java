@@ -21,6 +21,62 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates an Office365 data connector.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tiDataConnector = new TIDataConnector(&#34;tiDataConnector&#34;, TIDataConnectorArgs.builder()        
+ *             .dataConnectorId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates an Threat Intelligence Platform data connector.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var tiDataConnector = new TIDataConnector(&#34;tiDataConnector&#34;, TIDataConnectorArgs.builder()        
+ *             .dataConnectorId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .dataTypes(Map.of(&#34;indicators&#34;, Map.of(&#34;state&#34;, &#34;Enabled&#34;)))
+ *             .kind(&#34;ThreatIntelligence&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .tenantId(&#34;06b3ccb8-1384-4bcc-aec7-852f6d57161b&#34;)
+ *             .tipLookbackPeriod(&#34;2020-01-01T13:00:30.123Z&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

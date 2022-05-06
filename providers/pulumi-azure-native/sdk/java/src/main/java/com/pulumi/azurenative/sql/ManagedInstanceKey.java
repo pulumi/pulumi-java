@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a managed instance key
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstanceKey = new ManagedInstanceKey(&#34;managedInstanceKey&#34;, ManagedInstanceKeyArgs.builder()        
+ *             .keyName(&#34;someVault_someKey_01234567890123456789012345678901&#34;)
+ *             .managedInstanceName(&#34;sqlcrudtest-4645&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-7398&#34;)
+ *             .serverKeyType(&#34;AzureKeyVault&#34;)
+ *             .uri(&#34;https://someVault.vault.azure.net/keys/someKey/01234567890123456789012345678901&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

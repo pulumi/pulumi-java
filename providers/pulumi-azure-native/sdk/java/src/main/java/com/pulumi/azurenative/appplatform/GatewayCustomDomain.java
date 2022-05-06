@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### GatewayCustomDomains_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gatewayCustomDomain = new GatewayCustomDomain(&#34;gatewayCustomDomain&#34;, GatewayCustomDomainArgs.builder()        
+ *             .domainName(&#34;myDomainName&#34;)
+ *             .gatewayName(&#34;default&#34;)
+ *             .properties(Map.of(&#34;thumbprint&#34;, &#34;*&#34;))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

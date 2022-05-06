@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-09-01-preview.
  * 
  * ## Example Usage
+ * ### Storages_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storage = new Storage(&#34;storage&#34;, StorageArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;accountKey&#34;, &#34;account-key-of-storage-account&#34;),
+ *                 Map.entry(&#34;accountName&#34;, &#34;storage-account-name&#34;),
+ *                 Map.entry(&#34;storageType&#34;, &#34;StorageAccount&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .storageName(&#34;mystorage&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

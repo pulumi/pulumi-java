@@ -22,6 +22,74 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### privateLinkPolicyCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkForAzureAd = new PrivateLinkForAzureAd(&#34;privateLinkForAzureAd&#34;, PrivateLinkForAzureAdArgs.builder()        
+ *             .allTenants(false)
+ *             .name(&#34;myOrgPrivateLinkPolicy&#34;)
+ *             .ownerTenantId(&#34;950f8bca-bf4d-4a41-ad10-034e792a243d&#34;)
+ *             .policyName(&#34;ddb1&#34;)
+ *             .resourceGroup(&#34;myOrgVnetRG&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;myOrgVnetPrivateLink&#34;)
+ *             .subscriptionId(&#34;57849194-ea1f-470b-abda-d195b25634c1&#34;)
+ *             .tenants(            
+ *                 &#34;3616657d-1c80-41ae-9d83-2a2776f2c9be&#34;,
+ *                 &#34;727b6ef1-18ab-4627-ac95-3f9cd945ed87&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### privateLinkPolicyMinCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkForAzureAd = new PrivateLinkForAzureAd(&#34;privateLinkForAzureAd&#34;, PrivateLinkForAzureAdArgs.builder()        
+ *             .allTenants(false)
+ *             .name(&#34;myOrgPrivateLinkPolicy&#34;)
+ *             .ownerTenantId(&#34;950f8bca-bf4d-4a41-ad10-034e792a243d&#34;)
+ *             .policyName(&#34;ddb1&#34;)
+ *             .resourceGroup(&#34;myOrgVnetRG&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;myOrgVnetPrivateLink&#34;)
+ *             .subscriptionId(&#34;57849194-ea1f-470b-abda-d195b25634c1&#34;)
+ *             .tenants(            
+ *                 &#34;3616657d-1c80-41ae-9d83-2a2776f2c9be&#34;,
+ *                 &#34;727b6ef1-18ab-4627-ac95-3f9cd945ed87&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

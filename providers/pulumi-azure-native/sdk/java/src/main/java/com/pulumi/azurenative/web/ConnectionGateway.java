@@ -22,6 +22,39 @@ import javax.annotation.Nullable;
  * API Version: 2016-06-01.
  * 
  * ## Example Usage
+ * ### Replace a connection gateway definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var connectionGateway = new ConnectionGateway(&#34;connectionGateway&#34;, ConnectionGatewayArgs.builder()        
+ *             .connectionGatewayName(&#34;test123&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;backendUri&#34;, &#34;https://WABI-WEST-US-redirect.analysis.windows.net&#34;),
+ *                 Map.entry(&#34;connectionGatewayInstallation&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/providers/Microsoft.Web/locations/westus/connectionGatewayInstallations/865dccd1-5d5c-45fe-b5a0-249d4de4134c&#34;)),
+ *                 Map.entry(&#34;contactInformation&#34;, &#34;test123@microsoft.com&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;test123&#34;),
+ *                 Map.entry(&#34;machineName&#34;, &#34;TEST123&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Installed&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

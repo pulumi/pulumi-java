@@ -28,6 +28,461 @@ import javax.annotation.Nullable;
  * API Version: 2018-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a dynamic alert rule for Multiple Resources
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;alertSensitivity&#34;, &#34;Medium&#34;),
+ *                     Map.entry(&#34;criterionType&#34;, &#34;DynamicThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;failingPeriods&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;minFailingPeriodsToAlert&#34;, 4),
+ *                         Map.entry(&#34;numberOfEvaluationPeriods&#34;, 4)
+ *                     )),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;microsoft.compute/virtualmachines&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterOrLessThan&#34;),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;MetricAlertOnMultipleResources&#34;)
+ *             .scopes(            
+ *                 &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme1&#34;,
+ *                 &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme2&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .targetResourceRegion(&#34;southcentralus&#34;)
+ *             .targetResourceType(&#34;Microsoft.Compute/virtualMachines&#34;)
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a dynamic alert rule for Single Resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;alertSensitivity&#34;, &#34;Medium&#34;),
+ *                     Map.entry(&#34;criterionType&#34;, &#34;DynamicThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;failingPeriods&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;minFailingPeriodsToAlert&#34;, 4),
+ *                         Map.entry(&#34;numberOfEvaluationPeriods&#34;, 4)
+ *                     )),
+ *                     Map.entry(&#34;ignoreDataBefore&#34;, &#34;2019-04-04T21:00:00.000Z&#34;),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;microsoft.compute/virtualmachines&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterOrLessThan&#34;),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;chiricutin&#34;)
+ *             .scopes(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a web test alert rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions()
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;componentId&#34;, &#34;/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example&#34;),
+ *                 Map.entry(&#34;failedLocationCount&#34;, 2),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria&#34;),
+ *                 Map.entry(&#34;webTestId&#34;, &#34;/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example&#34;)
+ *             ))
+ *             .description(&#34;Automatically created alert rule for availability test \&#34;component-example\&#34; a&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;rg-example&#34;)
+ *             .ruleName(&#34;webtest-name-example&#34;)
+ *             .scopes(            
+ *                 &#34;/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example&#34;,
+ *                 &#34;/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example&#34;)
+ *             .severity(4)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/components/webtest-name-example&#34;, &#34;Resource&#34;),
+ *                 Map.entry(&#34;hidden-link:/subscriptions/12345678-1234-1234-1234-123456789101/resourcegroups/rg-example/providers/microsoft.insights/webtests/component-example&#34;, &#34;Resource&#34;)
+ *             ))
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an alert rule for Multiple Resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;criterionType&#34;, &#34;StaticThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;microsoft.compute/virtualmachines&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                     Map.entry(&#34;threshold&#34;, 80.5),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;MetricAlertOnMultipleResources&#34;)
+ *             .scopes(            
+ *                 &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme1&#34;,
+ *                 &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme2&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .targetResourceRegion(&#34;southcentralus&#34;)
+ *             .targetResourceType(&#34;Microsoft.Compute/virtualMachines&#34;)
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an alert rule for Single Resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;criterionType&#34;, &#34;StaticThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;metricName&#34;, &#34;\\Processor(_Total)\\% Processor Time&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                     Map.entry(&#34;threshold&#34;, 80.5),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;Pt1m&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;chiricutin&#34;)
+ *             .scopes(&#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .windowSize(&#34;Pt15m&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an alert rule on Resource group(s)
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;criterionType&#34;, &#34;StaticThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;microsoft.compute/virtualmachines&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                     Map.entry(&#34;threshold&#34;, 80.5),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest1&#34;)
+ *             .ruleName(&#34;MetricAlertAtResourceGroupLevel&#34;)
+ *             .scopes(            
+ *                 &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest1&#34;,
+ *                 &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest2&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .targetResourceRegion(&#34;southcentralus&#34;)
+ *             .targetResourceType(&#34;Microsoft.Compute/virtualMachines&#34;)
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an alert rule on Subscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;criterionType&#34;, &#34;StaticThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Percentage CPU&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;microsoft.compute/virtualmachines&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;High_CPU_80&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                     Map.entry(&#34;threshold&#34;, 80.5),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1M&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;MetricAlertAtSubscriptionLevel&#34;)
+ *             .scopes(&#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .targetResourceRegion(&#34;southcentralus&#34;)
+ *             .targetResourceType(&#34;Microsoft.Compute/virtualMachines&#34;)
+ *             .windowSize(&#34;PT15M&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update an alert rules with dimensions
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var metricAlert = new MetricAlert(&#34;metricAlert&#34;, MetricAlertArgs.builder()        
+ *             .actions(Map.ofEntries(
+ *                 Map.entry(&#34;actionGroupId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2&#34;),
+ *                 Map.entry(&#34;webHookProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;key11&#34;, &#34;value11&#34;),
+ *                     Map.entry(&#34;key12&#34;, &#34;value12&#34;)
+ *                 ))
+ *             ))
+ *             .autoMitigate(true)
+ *             .criteria(Map.ofEntries(
+ *                 Map.entry(&#34;allOf&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;criterionType&#34;, &#34;StaticThresholdCriterion&#34;),
+ *                     Map.entry(&#34;dimensions&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;ActivityName&#34;),
+ *                             Map.entry(&#34;operator&#34;, &#34;Include&#34;),
+ *                             Map.entry(&#34;values&#34;, &#34;*&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;StatusCode&#34;),
+ *                             Map.entry(&#34;operator&#34;, &#34;Include&#34;),
+ *                             Map.entry(&#34;values&#34;, &#34;200&#34;)
+ *                         )),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Availability&#34;),
+ *                     Map.entry(&#34;metricNamespace&#34;, &#34;Microsoft.KeyVault/vaults&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Metric1&#34;),
+ *                     Map.entry(&#34;operator&#34;, &#34;GreaterThan&#34;),
+ *                     Map.entry(&#34;threshold&#34;, 55),
+ *                     Map.entry(&#34;timeAggregation&#34;, &#34;Average&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria&#34;)
+ *             ))
+ *             .description(&#34;This is the description of the rule1&#34;)
+ *             .enabled(true)
+ *             .evaluationFrequency(&#34;PT1H&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;gigtest&#34;)
+ *             .ruleName(&#34;MetricAlertOnMultipleDimensions&#34;)
+ *             .scopes(&#34;/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.KeyVault/vaults/keyVaultResource&#34;)
+ *             .severity(3)
+ *             .tags()
+ *             .windowSize(&#34;P1D&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

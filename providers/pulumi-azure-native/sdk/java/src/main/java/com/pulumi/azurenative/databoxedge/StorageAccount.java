@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### StorageAccountPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccount = new StorageAccount(&#34;storageAccount&#34;, StorageAccountArgs.builder()        
+ *             .dataPolicy(&#34;Cloud&#34;)
+ *             .description(&#34;It&#39;s an awesome storage account&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .storageAccountCredentialId(&#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/cisbvt&#34;)
+ *             .storageAccountName(&#34;blobstorageaccount1&#34;)
+ *             .storageAccountStatus(&#34;OK&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

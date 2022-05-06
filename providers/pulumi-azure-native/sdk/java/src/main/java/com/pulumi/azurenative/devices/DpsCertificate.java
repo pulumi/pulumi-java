@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### DPSCreateOrUpdateCertificate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dpsCertificate = new DpsCertificate(&#34;dpsCertificate&#34;, DpsCertificateArgs.builder()        
+ *             .certificate(&#34;############################################&#34;)
+ *             .certificateName(&#34;cert&#34;)
+ *             .provisioningServiceName(&#34;myFirstProvisioningService&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -128,7 +155,8 @@ public class DpsCertificate extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:devices/v20200101:DpsCertificate").build()),
                 Output.of(Alias.builder().type("azure-native:devices/v20200301:DpsCertificate").build()),
                 Output.of(Alias.builder().type("azure-native:devices/v20200901preview:DpsCertificate").build()),
-                Output.of(Alias.builder().type("azure-native:devices/v20211015:DpsCertificate").build())
+                Output.of(Alias.builder().type("azure-native:devices/v20211015:DpsCertificate").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20220205:DpsCertificate").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

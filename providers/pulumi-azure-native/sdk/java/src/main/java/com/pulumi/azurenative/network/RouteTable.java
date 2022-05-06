@@ -24,6 +24,64 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create route table
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routeTable = new RouteTable(&#34;routeTable&#34;, RouteTableArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeTableName(&#34;testrt&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create route table with route
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routeTable = new RouteTable(&#34;routeTable&#34;, RouteTableArgs.builder()        
+ *             .disableBgpRoutePropagation(true)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeTableName(&#34;testrt&#34;)
+ *             .routes(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.3.0/24&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;route1&#34;),
+ *                 Map.entry(&#34;nextHopType&#34;, &#34;VirtualNetworkGateway&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

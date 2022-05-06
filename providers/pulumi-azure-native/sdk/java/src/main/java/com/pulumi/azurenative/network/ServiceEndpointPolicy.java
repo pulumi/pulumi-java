@@ -23,6 +23,67 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create service endpoint policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceEndpointPolicy = new ServiceEndpointPolicy(&#34;serviceEndpointPolicy&#34;, ServiceEndpointPolicyArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceEndpointPolicyName(&#34;testPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create service endpoint policy with definition
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceEndpointPolicy = new ServiceEndpointPolicy(&#34;serviceEndpointPolicy&#34;, ServiceEndpointPolicyArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceEndpointPolicyDefinitions(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Storage Service EndpointPolicy Definition&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;StorageServiceEndpointPolicyDefinition&#34;),
+ *                 Map.entry(&#34;service&#34;, &#34;Microsoft.Storage&#34;),
+ *                 Map.entry(&#34;serviceResources&#34;,                 
+ *                     &#34;/subscriptions/subid1&#34;,
+ *                     &#34;/subscriptions/subid1/resourceGroups/storageRg&#34;,
+ *                     &#34;/subscriptions/subid1/resourceGroups/storageRg/providers/Microsoft.Storage/storageAccounts/stAccount&#34;)
+ *             ))
+ *             .serviceEndpointPolicyName(&#34;testPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

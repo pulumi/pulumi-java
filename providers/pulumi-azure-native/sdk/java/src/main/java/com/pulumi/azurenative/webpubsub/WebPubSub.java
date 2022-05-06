@@ -31,6 +31,84 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### WebPubSub_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webPubSub = new WebPubSub(&#34;webPubSub&#34;, WebPubSubArgs.builder()        
+ *             .eventHandler(Map.of(&#34;items&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;hub1&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;urlTemplate&#34;, &#34;https://example.com/chat/api/hub1&#34;),
+ *                     Map.entry(&#34;userEventPattern&#34;, &#34;*&#34;)
+ *                 )),
+ *                 Map.entry(&#34;hub2&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;urlTemplate&#34;, &#34;https://example.com/chat/api/hub2/example1&#34;),
+ *                         Map.entry(&#34;userEventPattern&#34;, &#34;example1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;urlTemplate&#34;, &#34;https://example.com/chat/api/hub2/example2&#34;),
+ *                         Map.entry(&#34;userEventPattern&#34;, &#34;example2&#34;)
+ *                     ))
+ *             )))
+ *             .features(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;ServiceMode&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;Serverless&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;EnableConnectivityLogs&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;True&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;EnableMessagingLogs&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;False&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;EnableLiveTrace&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;False&#34;)
+ *                 ))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .networkACLs(Map.ofEntries(
+ *                 Map.entry(&#34;defaultAction&#34;, &#34;Deny&#34;),
+ *                 Map.entry(&#34;privateEndpoints&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allow&#34;, &#34;ServerConnection&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e&#34;)
+ *                 )),
+ *                 Map.entry(&#34;publicNetwork&#34;, Map.of(&#34;allow&#34;, &#34;ClientConnection&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourceName(&#34;myWebPubSubService&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_S1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .tls(Map.of(&#34;clientCertEnabled&#34;, false))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,45 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### BuildpackBinding_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var buildpackBinding = new BuildpackBinding(&#34;buildpackBinding&#34;, BuildpackBindingArgs.builder()        
+ *             .buildServiceName(&#34;default&#34;)
+ *             .builderName(&#34;default&#34;)
+ *             .buildpackBindingName(&#34;myBuildpackBinding&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;bindingType&#34;, &#34;ApplicationInsights&#34;),
+ *                 Map.entry(&#34;launchProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;abc&#34;, &#34;def&#34;),
+ *                         Map.entry(&#34;any-string&#34;, &#34;any-string&#34;),
+ *                         Map.entry(&#34;sampling-rate&#34;, &#34;12.0&#34;)
+ *                     )),
+ *                     Map.entry(&#34;secrets&#34;, Map.of(&#34;connection-string&#34;, &#34;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXX;XXXXXXXXXXXXXXXXX=XXXXXXXXXXXXXXXXXXX&#34;))
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-01-preview.
  * 
  * ## Example Usage
+ * ### Upsert DNS forwarding ruleset
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dnsForwardingRuleset = new DnsForwardingRuleset(&#34;dnsForwardingRuleset&#34;, DnsForwardingRulesetArgs.builder()        
+ *             .dnsForwardingRulesetName(&#34;samplednsForwardingRuleset&#34;)
+ *             .dnsResolverOutboundEndpoints(            
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptions/abdd4249-9f34-4cc6-8e42-c2e32110603e/resourceGroups/sampleResourceGroup/providers/Microsoft.Network/dnsResolvers/sampleDnsResolver/outboundEndpoints/sampleOutboundEndpoint0&#34;),
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptions/abdd4249-9f34-4cc6-8e42-c2e32110603e/resourceGroups/sampleResourceGroup/providers/Microsoft.Network/dnsResolvers/sampleDnsResolver/outboundEndpoints/sampleOutboundEndpoint1&#34;))
+ *             .location(&#34;westus2&#34;)
+ *             .resourceGroupName(&#34;sampleResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,176 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create a reference blob input with CSV serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var input = new Input(&#34;input&#34;, InputArgs.builder()        
+ *             .inputName(&#34;input7225&#34;)
+ *             .jobName(&#34;sj9597&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;container&#34;, &#34;state&#34;),
+ *                     Map.entry(&#34;dateFormat&#34;, &#34;yyyy/MM/dd&#34;),
+ *                     Map.entry(&#34;pathPattern&#34;, &#34;{date}/{time}&#34;),
+ *                     Map.entry(&#34;storageAccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;accountKey&#34;, &#34;someAccountKey==&#34;),
+ *                         Map.entry(&#34;accountName&#34;, &#34;someAccountName&#34;)
+ *                     )),
+ *                     Map.entry(&#34;timeFormat&#34;, &#34;HH&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/Blob&#34;)
+ *                 )),
+ *                 Map.entry(&#34;serialization&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                     Map.entry(&#34;fieldDelimiter&#34;, &#34;,&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Csv&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Reference&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg8440&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a stream Event Hub input with JSON serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var input = new Input(&#34;input&#34;, InputArgs.builder()        
+ *             .inputName(&#34;input7425&#34;)
+ *             .jobName(&#34;sj197&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;consumerGroupName&#34;, &#34;sdkconsumergroup&#34;),
+ *                     Map.entry(&#34;eventHubName&#34;, &#34;sdkeventhub&#34;),
+ *                     Map.entry(&#34;serviceBusNamespace&#34;, &#34;sdktest&#34;),
+ *                     Map.entry(&#34;sharedAccessPolicyKey&#34;, &#34;someSharedAccessPolicyKey==&#34;),
+ *                     Map.entry(&#34;sharedAccessPolicyName&#34;, &#34;RootManageSharedAccessKey&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.ServiceBus/EventHub&#34;)
+ *                 )),
+ *                 Map.entry(&#34;serialization&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Json&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Stream&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg3139&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a stream IoT Hub input with Avro serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var input = new Input(&#34;input&#34;, InputArgs.builder()        
+ *             .inputName(&#34;input7970&#34;)
+ *             .jobName(&#34;sj9742&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;consumerGroupName&#34;, &#34;sdkconsumergroup&#34;),
+ *                     Map.entry(&#34;endpoint&#34;, &#34;messages/events&#34;),
+ *                     Map.entry(&#34;iotHubNamespace&#34;, &#34;iothub&#34;),
+ *                     Map.entry(&#34;sharedAccessPolicyKey&#34;, &#34;sharedAccessPolicyKey=&#34;),
+ *                     Map.entry(&#34;sharedAccessPolicyName&#34;, &#34;owner&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Devices/IotHubs&#34;)
+ *                 )),
+ *                 Map.entry(&#34;serialization&#34;, Map.of(&#34;type&#34;, &#34;Avro&#34;)),
+ *                 Map.entry(&#34;type&#34;, &#34;Stream&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg3467&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a stream blob input with CSV serialization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var input = new Input(&#34;input&#34;, InputArgs.builder()        
+ *             .inputName(&#34;input8899&#34;)
+ *             .jobName(&#34;sj6695&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datasource&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;container&#34;, &#34;state&#34;),
+ *                     Map.entry(&#34;dateFormat&#34;, &#34;yyyy/MM/dd&#34;),
+ *                     Map.entry(&#34;pathPattern&#34;, &#34;{date}/{time}&#34;),
+ *                     Map.entry(&#34;sourcePartitionCount&#34;, 16),
+ *                     Map.entry(&#34;storageAccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;accountKey&#34;, &#34;someAccountKey==&#34;),
+ *                         Map.entry(&#34;accountName&#34;, &#34;someAccountName&#34;)
+ *                     )),
+ *                     Map.entry(&#34;timeFormat&#34;, &#34;HH&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Storage/Blob&#34;)
+ *                 )),
+ *                 Map.entry(&#34;serialization&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encoding&#34;, &#34;UTF8&#34;),
+ *                     Map.entry(&#34;fieldDelimiter&#34;, &#34;,&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Csv&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Stream&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg8161&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

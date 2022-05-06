@@ -21,6 +21,64 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateCertificate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .certificateId(&#34;tempcert&#34;)
+ *             .data(&#34;****************Base 64 Encoded Certificate *******************************&#34;)
+ *             .password(&#34;****Certificate Password******&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateCertificateWithKeyVault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .certificateId(&#34;templateCertkv&#34;)
+ *             .keyVault(Map.ofEntries(
+ *                 Map.entry(&#34;identityClientId&#34;, &#34;ceaa6b06-c00f-43ef-99ac-f53d1fe876a0&#34;),
+ *                 Map.entry(&#34;secretIdentifier&#34;, &#34;https://rpbvtkeyvaultintegration.vault-int.azure-int.net/secrets/msitestingCert&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

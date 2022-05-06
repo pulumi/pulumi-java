@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### SyncGroups_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var syncGroup = new SyncGroup(&#34;syncGroup&#34;, SyncGroupArgs.builder()        
+ *             .resourceGroupName(&#34;SampleResourceGroup_1&#34;)
+ *             .storageSyncServiceName(&#34;SampleStorageSyncService_1&#34;)
+ *             .syncGroupName(&#34;SampleSyncGroup_1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

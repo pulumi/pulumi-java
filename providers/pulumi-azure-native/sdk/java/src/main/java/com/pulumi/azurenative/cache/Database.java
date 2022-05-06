@@ -23,6 +23,50 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### RedisEnterpriseDatabasesCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .clientProtocol(&#34;Encrypted&#34;)
+ *             .clusterName(&#34;cache1&#34;)
+ *             .clusteringPolicy(&#34;EnterpriseCluster&#34;)
+ *             .databaseName(&#34;default&#34;)
+ *             .evictionPolicy(&#34;AllKeysLRU&#34;)
+ *             .modules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;args&#34;, &#34;ERROR_RATE 0.00 INITIAL_SIZE 400&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;RedisBloom&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;args&#34;, &#34;RETENTION_POLICY 20&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;RedisTimeSeries&#34;)
+ *                 ),
+ *                 Map.of(&#34;name&#34;, &#34;RediSearch&#34;))
+ *             .persistence(Map.ofEntries(
+ *                 Map.entry(&#34;aofEnabled&#34;, true),
+ *                 Map.entry(&#34;aofFrequency&#34;, &#34;1s&#34;)
+ *             ))
+ *             .port(10000)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

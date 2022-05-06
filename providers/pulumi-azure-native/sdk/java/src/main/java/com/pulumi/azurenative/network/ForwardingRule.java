@@ -23,6 +23,44 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-01-preview.
  * 
  * ## Example Usage
+ * ### Upsert forwarding rule in a DNS forwarding ruleset
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var forwardingRule = new ForwardingRule(&#34;forwardingRule&#34;, ForwardingRuleArgs.builder()        
+ *             .dnsForwardingRulesetName(&#34;sampleDnsForwardingRuleset&#34;)
+ *             .domainName(&#34;contoso.com.&#34;)
+ *             .forwardingRuleName(&#34;sampleForwardingRule&#34;)
+ *             .forwardingRuleState(&#34;Enabled&#34;)
+ *             .metadata(Map.of(&#34;additionalProp1&#34;, &#34;value1&#34;))
+ *             .resourceGroupName(&#34;sampleResourceGroup&#34;)
+ *             .targetDnsServers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ipAddress&#34;, &#34;10.0.0.1&#34;),
+ *                     Map.entry(&#34;port&#34;, 53)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;ipAddress&#34;, &#34;10.0.0.2&#34;),
+ *                     Map.entry(&#34;port&#34;, 53)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

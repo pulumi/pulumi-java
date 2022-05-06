@@ -20,6 +20,41 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreatePolicy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policy = new Policy(&#34;policy&#34;, PolicyArgs.builder()        
+ *             .format(&#34;xml&#34;)
+ *             .policyId(&#34;policy&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .value(&#34;&#34;&#34;
+ * &lt;policies&gt;
+ *   &lt;inbound /&gt;
+ *   &lt;backend&gt;
+ *     &lt;forward-request /&gt;
+ *   &lt;/backend&gt;
+ *   &lt;outbound /&gt;
+ * &lt;/policies&gt;            &#34;&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

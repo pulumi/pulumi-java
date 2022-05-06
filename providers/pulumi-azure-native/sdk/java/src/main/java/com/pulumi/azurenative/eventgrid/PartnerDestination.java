@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### PartnerDestinations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var partnerDestination = new PartnerDestination(&#34;partnerDestination&#34;, PartnerDestinationArgs.builder()        
+ *             .endpointBaseUrl(&#34;https://www.example/endpoint&#34;)
+ *             .endpointServiceContext(&#34;This is an example&#34;)
+ *             .expirationTimeIfNotActivatedUtc(&#34;2022-03-14T19:33:43.430Z&#34;)
+ *             .location(&#34;westus2&#34;)
+ *             .messageForActivation(&#34;Sample Activation message&#34;)
+ *             .partnerDestinationName(&#34;examplePartnerDestinationName1&#34;)
+ *             .partnerRegistrationImmutableId(&#34;0bd70ee2-7d95-447e-ab1f-c4f320019404&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

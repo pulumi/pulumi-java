@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### ConsumerGroupCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var consumerGroup = new ConsumerGroup(&#34;consumerGroup&#34;, ConsumerGroupArgs.builder()        
+ *             .consumerGroupName(&#34;sdk-ConsumerGroup-5563&#34;)
+ *             .eventHubName(&#34;sdk-EventHub-6681&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-2661&#34;)
+ *             .resourceGroupName(&#34;ArunMonocle&#34;)
+ *             .userMetadata(&#34;New consumergroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

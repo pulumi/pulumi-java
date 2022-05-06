@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create an Asset
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var asset = new Asset(&#34;asset&#34;, AssetArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .assetName(&#34;ClimbingMountLogan&#34;)
+ *             .description(&#34;A documentary showing the ascent of Mount Logan&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .storageAccountName(&#34;storage0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

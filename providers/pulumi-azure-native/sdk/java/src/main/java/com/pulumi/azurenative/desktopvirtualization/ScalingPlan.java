@@ -27,6 +27,70 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### ScalingPlans_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scalingPlan = new ScalingPlan(&#34;scalingPlan&#34;, ScalingPlanArgs.builder()        
+ *             .description(&#34;des1&#34;)
+ *             .exclusionTag(&#34;value&#34;)
+ *             .friendlyName(&#34;friendly&#34;)
+ *             .hostPoolReferences(Map.ofEntries(
+ *                 Map.entry(&#34;hostPoolArmPath&#34;, &#34;/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1&#34;),
+ *                 Map.entry(&#34;scalingPlanEnabled&#34;, true)
+ *             ))
+ *             .hostPoolType(&#34;Personal&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .ring(1)
+ *             .scalingPlanName(&#34;scalingPlan1&#34;)
+ *             .schedules(Map.ofEntries(
+ *                 Map.entry(&#34;daysOfWeek&#34;,                 
+ *                     &#34;Monday&#34;,
+ *                     &#34;Tuesday&#34;,
+ *                     &#34;Wednesday&#34;,
+ *                     &#34;Thursday&#34;,
+ *                     &#34;Friday&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;schedule1&#34;),
+ *                 Map.entry(&#34;offPeakLoadBalancingAlgorithm&#34;, &#34;DepthFirst&#34;),
+ *                 Map.entry(&#34;offPeakStartTime&#34;, &#34;2020-11-10T20:00:00.000Z&#34;),
+ *                 Map.entry(&#34;peakLoadBalancingAlgorithm&#34;, &#34;BreadthFirst&#34;),
+ *                 Map.entry(&#34;peakStartTime&#34;, &#34;2020-11-10T08:00:00.000Z&#34;),
+ *                 Map.entry(&#34;rampDownCapacityThresholdPct&#34;, 50),
+ *                 Map.entry(&#34;rampDownForceLogoffUsers&#34;, true),
+ *                 Map.entry(&#34;rampDownLoadBalancingAlgorithm&#34;, &#34;DepthFirst&#34;),
+ *                 Map.entry(&#34;rampDownMinimumHostsPct&#34;, 20),
+ *                 Map.entry(&#34;rampDownNotificationMessage&#34;, &#34;message&#34;),
+ *                 Map.entry(&#34;rampDownStartTime&#34;, &#34;2020-11-10T18:00:00.000Z&#34;),
+ *                 Map.entry(&#34;rampDownWaitTimeMinutes&#34;, 30),
+ *                 Map.entry(&#34;rampUpCapacityThresholdPct&#34;, 80),
+ *                 Map.entry(&#34;rampUpLoadBalancingAlgorithm&#34;, &#34;DepthFirst&#34;),
+ *                 Map.entry(&#34;rampUpMinimumHostsPct&#34;, 20),
+ *                 Map.entry(&#34;rampUpStartTime&#34;, &#34;2020-11-10T06:00:00.000Z&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .timeZone(&#34;&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

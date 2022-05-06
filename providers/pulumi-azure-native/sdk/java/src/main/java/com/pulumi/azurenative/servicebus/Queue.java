@@ -24,6 +24,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### QueueCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var queue = new Queue(&#34;queue&#34;, QueueArgs.builder()        
+ *             .enablePartitioning(true)
+ *             .namespaceName(&#34;sdk-Namespace-3174&#34;)
+ *             .queueName(&#34;sdk-Queues-5647&#34;)
+ *             .resourceGroupName(&#34;ArunMonocle&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

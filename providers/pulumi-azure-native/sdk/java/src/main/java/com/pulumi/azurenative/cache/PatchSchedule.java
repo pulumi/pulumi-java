@@ -20,6 +20,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### RedisCachePatchSchedulesCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var patchSchedule = new PatchSchedule(&#34;patchSchedule&#34;, PatchScheduleArgs.builder()        
+ *             .default_(&#34;default&#34;)
+ *             .name(&#34;cache1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .scheduleEntries(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;dayOfWeek&#34;, &#34;Monday&#34;),
+ *                     Map.entry(&#34;maintenanceWindow&#34;, &#34;PT5H&#34;),
+ *                     Map.entry(&#34;startHourUtc&#34;, 12)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;dayOfWeek&#34;, &#34;Tuesday&#34;),
+ *                     Map.entry(&#34;startHourUtc&#34;, 12)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

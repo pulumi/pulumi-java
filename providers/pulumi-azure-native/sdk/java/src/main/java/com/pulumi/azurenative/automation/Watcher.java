@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update watcher
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var watcher = new Watcher(&#34;watcher&#34;, WatcherArgs.builder()        
+ *             .automationAccountName(&#34;MyTestAutomationAccount&#34;)
+ *             .description(&#34;This is a test watcher.&#34;)
+ *             .executionFrequencyInSeconds(60)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .scriptName(&#34;MyTestWatcherRunbook&#34;)
+ *             .scriptRunOn(&#34;MyTestHybridWorkerGroup&#34;)
+ *             .tags()
+ *             .watcherName(&#34;MyTestWatcher&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

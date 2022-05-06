@@ -22,6 +22,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create a  peering service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var peeringService = new PeeringService(&#34;peeringService&#34;, PeeringServiceArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .peeringServiceLocation(&#34;state1&#34;)
+ *             .peeringServiceName(&#34;peeringServiceName&#34;)
+ *             .peeringServiceProvider(&#34;serviceProvider1&#34;)
+ *             .providerBackupPeeringLocation(&#34;peeringLocation2&#34;)
+ *             .providerPrimaryPeeringLocation(&#34;peeringLocation1&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

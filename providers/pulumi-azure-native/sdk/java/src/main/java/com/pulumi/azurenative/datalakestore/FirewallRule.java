@@ -19,6 +19,34 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates or updates the specified firewall rule. During update, the firewall rule with the specified name will be replaced with this new firewall rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallRule = new FirewallRule(&#34;firewallRule&#34;, FirewallRuleArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .endIpAddress(&#34;2.2.2.2&#34;)
+ *             .firewallRuleName(&#34;test_rule&#34;)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .startIpAddress(&#34;1.1.1.1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

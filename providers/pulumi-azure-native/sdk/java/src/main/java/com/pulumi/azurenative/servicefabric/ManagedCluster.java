@@ -28,6 +28,103 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Put a cluster with maximum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .adminPassword(&#34;{vm-password}&#34;)
+ *             .adminUserName(&#34;vmadmin&#34;)
+ *             .clientConnectionPort(19000)
+ *             .clusterCodeVersion(&#34;7.1.168.9494&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .dnsName(&#34;myCluster&#34;)
+ *             .fabricSettings(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;ManagedIdentityTokenService&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;IsEnabled&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;true&#34;)
+ *                 ))
+ *             ))
+ *             .httpGatewayConnectionPort(19080)
+ *             .loadBalancingRules(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;backendPort&#34;, 80),
+ *                     Map.entry(&#34;frontendPort&#34;, 80),
+ *                     Map.entry(&#34;probeProtocol&#34;, &#34;http&#34;),
+ *                     Map.entry(&#34;protocol&#34;, &#34;http&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;backendPort&#34;, 443),
+ *                     Map.entry(&#34;frontendPort&#34;, 443),
+ *                     Map.entry(&#34;probeProtocol&#34;, &#34;http&#34;),
+ *                     Map.entry(&#34;protocol&#34;, &#34;http&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;backendPort&#34;, 10000),
+ *                     Map.entry(&#34;frontendPort&#34;, 10000),
+ *                     Map.entry(&#34;probeProtocol&#34;, &#34;http&#34;),
+ *                     Map.entry(&#34;protocol&#34;, &#34;tcp&#34;)
+ *                 ))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Basic&#34;))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put a cluster with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .adminPassword(&#34;{vm-password}&#34;)
+ *             .adminUserName(&#34;vmadmin&#34;)
+ *             .clusterCodeVersion(&#34;7.1.168.9494&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .dnsName(&#34;myCluster&#34;)
+ *             .fabricSettings(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;ManagedIdentityTokenService&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;IsEnabled&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;true&#34;)
+ *                 ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -31,6 +31,63 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create Workspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .applicationInsights(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/microsoft.insights/components/testinsights&#34;)
+ *             .containerRegistry(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ContainerRegistry/registries/testRegistry&#34;)
+ *             .description(&#34;test description&#34;)
+ *             .encryption(Map.ofEntries(
+ *                 Map.entry(&#34;identity&#34;, Map.of(&#34;userAssignedIdentity&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai&#34;)),
+ *                 Map.entry(&#34;keyVaultProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;identityClientId&#34;, &#34;&#34;),
+ *                     Map.entry(&#34;keyIdentifier&#34;, &#34;https://testkv.vault.azure.net/keys/testkey/aabbccddee112233445566778899aabb&#34;),
+ *                     Map.entry(&#34;keyVaultArmId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv&#34;)
+ *                 )),
+ *                 Map.entry(&#34;status&#34;, &#34;Enabled&#34;)
+ *             ))
+ *             .friendlyName(&#34;HelloName&#34;)
+ *             .hbiWorkspace(false)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;SystemAssigned,UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai&#34;, ))
+ *             ))
+ *             .keyVault(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv&#34;)
+ *             .location(&#34;eastus2euap&#34;)
+ *             .resourceGroupName(&#34;workspace-1234&#34;)
+ *             .sharedPrivateLinkResources(Map.ofEntries(
+ *                 Map.entry(&#34;groupId&#34;, &#34;Sql&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;testdbresource&#34;),
+ *                 Map.entry(&#34;privateLinkResourceId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.DocumentDB/databaseAccounts/testdbresource/privateLinkResources/Sql&#34;),
+ *                 Map.entry(&#34;requestMessage&#34;, &#34;Please approve&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Basic&#34;)
+ *             ))
+ *             .storageAccount(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.Storage/storageAccounts/testStorageAccount&#34;)
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

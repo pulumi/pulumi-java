@@ -20,6 +20,43 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### ServerCollectors_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverCollector = new ServerCollector(&#34;serverCollector&#34;, ServerCollectorArgs.builder()        
+ *             .eTag(&#34;\&#34;00000606-0000-0d00-0000-605999bf0000\&#34;&#34;)
+ *             .projectName(&#34;app11141project&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;agentProperties&#34;, Map.of(&#34;spnDetails&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationId&#34;, &#34;ad9f701a-cc08-4421-b51f-b5762d58e9ba&#34;),
+ *                     Map.entry(&#34;audience&#34;, &#34;https://72f988bf-86f1-41af-91ab-2d7cd011db47/app23df4authandaccessaadapp&#34;),
+ *                     Map.entry(&#34;authority&#34;, &#34;https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;b4975e42-9248-4a36-b99f-37eca377ea00&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;discoverySiteId&#34;, &#34;/subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/ServerSites/app21141site&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;pajindtest&#34;)
+ *             .serverCollectorName(&#34;app23df4collector&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

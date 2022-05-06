@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### RouteTablePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var routingIntent = new RoutingIntent(&#34;routingIntent&#34;, RoutingIntentArgs.builder()        
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routingIntentName(&#34;Intent1&#34;)
+ *             .routingPolicies(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinations&#34;, &#34;Internet&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;InternetTraffic&#34;),
+ *                     Map.entry(&#34;nextHop&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;destinations&#34;, &#34;PrivateTraffic&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;PrivateTrafficPolicy&#34;),
+ *                     Map.entry(&#34;nextHop&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/azureFirewalls/azfw1&#34;)
+ *                 ))
+ *             .virtualHubName(&#34;virtualHub1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

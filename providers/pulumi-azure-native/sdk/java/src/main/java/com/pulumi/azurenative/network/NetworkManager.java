@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Put Network Manager
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var networkManager = new NetworkManager(&#34;networkManager&#34;, NetworkManagerArgs.builder()        
+ *             .description(&#34;My Test Network Manager&#34;)
+ *             .displayName(&#34;TestNetworkManager&#34;)
+ *             .networkManagerName(&#34;TestNetworkManager&#34;)
+ *             .networkManagerScopeAccesses(&#34;Connectivity&#34;)
+ *             .networkManagerScopes(Map.ofEntries(
+ *                 Map.entry(&#34;managementGroups&#34;, &#34;/Microsoft.Management/testmg&#34;),
+ *                 Map.entry(&#34;subscriptions&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

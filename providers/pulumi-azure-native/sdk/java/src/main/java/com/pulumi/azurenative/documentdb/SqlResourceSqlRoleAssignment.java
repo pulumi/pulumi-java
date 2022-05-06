@@ -20,6 +20,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CosmosDBSqlRoleAssignmentCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlResourceSqlRoleAssignment = new SqlResourceSqlRoleAssignment(&#34;sqlResourceSqlRoleAssignment&#34;, SqlResourceSqlRoleAssignmentArgs.builder()        
+ *             .accountName(&#34;myAccountName&#34;)
+ *             .principalId(&#34;myPrincipalId&#34;)
+ *             .resourceGroupName(&#34;myResourceGroupName&#34;)
+ *             .roleAssignmentId(&#34;myRoleAssignmentId&#34;)
+ *             .roleDefinitionId(&#34;/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId&#34;)
+ *             .scope(&#34;/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases/colls/redmond-purchases&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

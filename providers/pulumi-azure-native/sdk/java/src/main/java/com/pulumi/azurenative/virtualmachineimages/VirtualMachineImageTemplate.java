@@ -38,6 +38,184 @@ import javax.annotation.Nullable;
  * API Version: 2020-02-14.
  * 
  * ## Example Usage
+ * ### Create an Image Template for Linux.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineImageTemplate = new VirtualMachineImageTemplate(&#34;virtualMachineImageTemplate&#34;, VirtualMachineImageTemplateArgs.builder()        
+ *             .customize(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Shell Customizer Example&#34;),
+ *                 Map.entry(&#34;scriptUri&#34;, &#34;https://example.com/path/to/script.sh&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Shell&#34;)
+ *             ))
+ *             .distribute(Map.ofEntries(
+ *                 Map.entry(&#34;artifactTags&#34;, ImageTemplateManagedImageDistributor.builder()
+ *                     .tagName(&#34;value&#34;)
+ *                     .build()),
+ *                 Map.entry(&#34;imageId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1&#34;),
+ *                 Map.entry(&#34;location&#34;, &#34;1_location&#34;),
+ *                 Map.entry(&#34;runOutputName&#34;, &#34;image_it_pir_1&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ManagedImage&#34;)
+ *             ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1&#34;, ))
+ *             ))
+ *             .imageTemplateName(&#34;myImageTemplate&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;imageId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ManagedImage&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;imagetemplate_tag1&#34;, &#34;IT_T1&#34;),
+ *                 Map.entry(&#34;imagetemplate_tag2&#34;, &#34;IT_T2&#34;)
+ *             ))
+ *             .vmProfile(Map.ofEntries(
+ *                 Map.entry(&#34;osDiskSizeGB&#34;, 64),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;),
+ *                 Map.entry(&#34;vnetConfig&#34;, Map.of(&#34;subnetId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Image Template for Windows.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualMachineImageTemplate = new VirtualMachineImageTemplate(&#34;virtualMachineImageTemplate&#34;, VirtualMachineImageTemplateArgs.builder()        
+ *             .customize(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;inline&#34;,                     
+ *                         &#34;Powershell command-1&#34;,
+ *                         &#34;Powershell command-2&#34;,
+ *                         &#34;Powershell command-3&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (inline) Customizer Example&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;inline&#34;,                     
+ *                         &#34;Powershell command-1&#34;,
+ *                         &#34;Powershell command-2&#34;,
+ *                         &#34;Powershell command-3&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (inline) Customizer Elevated user Example&#34;),
+ *                     Map.entry(&#34;runElevated&#34;, true),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;inline&#34;,                     
+ *                         &#34;Powershell command-1&#34;,
+ *                         &#34;Powershell command-2&#34;,
+ *                         &#34;Powershell command-3&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (inline) Customizer Elevated Local System user Example&#34;),
+ *                     Map.entry(&#34;runAsSystem&#34;, true),
+ *                     Map.entry(&#34;runElevated&#34;, true),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (script) Customizer Example&#34;),
+ *                     Map.entry(&#34;scriptUri&#34;, &#34;https://example.com/path/to/script.ps1&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;),
+ *                     Map.entry(&#34;validExitCodes&#34;,                     
+ *                         0,
+ *                         1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (script) Customizer Elevated Local System user Example&#34;),
+ *                     Map.entry(&#34;runElevated&#34;, true),
+ *                     Map.entry(&#34;scriptUri&#34;, &#34;https://example.com/path/to/script.ps1&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;),
+ *                     Map.entry(&#34;validExitCodes&#34;,                     
+ *                         0,
+ *                         1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;PowerShell (script) Customizer Elevated Local System user Example&#34;),
+ *                     Map.entry(&#34;runAsSystem&#34;, true),
+ *                     Map.entry(&#34;runElevated&#34;, true),
+ *                     Map.entry(&#34;scriptUri&#34;, &#34;https://example.com/path/to/script.ps1&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;PowerShell&#34;),
+ *                     Map.entry(&#34;validExitCodes&#34;,                     
+ *                         0,
+ *                         1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;Restart Customizer Example&#34;),
+ *                     Map.entry(&#34;restartCheckCommand&#34;, &#34;powershell -command \&#34;&amp; {Write-Output &#39;restarted.&#39;}\&#34;&#34;),
+ *                     Map.entry(&#34;restartCommand&#34;, &#34;shutdown /f /r /t 0 /c \&#34;packer restart\&#34;&#34;),
+ *                     Map.entry(&#34;restartTimeout&#34;, &#34;10m&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;WindowsRestart&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;filters&#34;, &#34;$_.BrowseOnly&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Windows Update Customizer Example&#34;),
+ *                     Map.entry(&#34;searchCriteria&#34;, &#34;BrowseOnly=0 and IsInstalled=0&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;WindowsUpdate&#34;),
+ *                     Map.entry(&#34;updateLimit&#34;, 100)
+ *                 ))
+ *             .distribute(Map.ofEntries(
+ *                 Map.entry(&#34;artifactTags&#34;, ImageTemplateManagedImageDistributor.builder()
+ *                     .tagName(&#34;value&#34;)
+ *                     .build()),
+ *                 Map.entry(&#34;imageId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1&#34;),
+ *                 Map.entry(&#34;location&#34;, &#34;1_location&#34;),
+ *                 Map.entry(&#34;runOutputName&#34;, &#34;image_it_pir_1&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ManagedImage&#34;)
+ *             ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1&#34;, ))
+ *             ))
+ *             .imageTemplateName(&#34;myImageTemplate&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;imageId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;ManagedImage&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;imagetemplate_tag1&#34;, &#34;IT_T1&#34;),
+ *                 Map.entry(&#34;imagetemplate_tag2&#34;, &#34;IT_T2&#34;)
+ *             ))
+ *             .vmProfile(Map.ofEntries(
+ *                 Map.entry(&#34;osDiskSizeGB&#34;, 64),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_D2s_v3&#34;),
+ *                 Map.entry(&#34;vnetConfig&#34;, Map.of(&#34;subnetId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name&#34;))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

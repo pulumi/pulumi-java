@@ -25,6 +25,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Source Control Configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sourceControlConfiguration = new SourceControlConfiguration(&#34;sourceControlConfiguration&#34;, SourceControlConfigurationArgs.builder()        
+ *             .clusterName(&#34;clusterName1&#34;)
+ *             .clusterResourceName(&#34;connectedClusters&#34;)
+ *             .clusterRp(&#34;Microsoft.Kubernetes&#34;)
+ *             .configurationProtectedSettings(Map.of(&#34;protectedSetting1Key&#34;, &#34;protectedSetting1Value&#34;))
+ *             .enableHelmOperator(true)
+ *             .helmOperatorProperties(Map.ofEntries(
+ *                 Map.entry(&#34;chartValues&#34;, &#34;--set git.ssh.secretName=flux-git-deploy --set tillerNamespace=kube-system&#34;),
+ *                 Map.entry(&#34;chartVersion&#34;, &#34;0.3.0&#34;)
+ *             ))
+ *             .operatorInstanceName(&#34;SRSGitHubFluxOp-01&#34;)
+ *             .operatorNamespace(&#34;SRS_Namespace&#34;)
+ *             .operatorParams(&#34;--git-email=xyzgituser@users.srs.github.com&#34;)
+ *             .operatorScope(&#34;namespace&#34;)
+ *             .operatorType(&#34;Flux&#34;)
+ *             .repositoryUrl(&#34;git@github.com:k8sdeveloper425/flux-get-started&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .sourceControlConfigurationName(&#34;SRS_GitHubConfig&#34;)
+ *             .sshKnownHostsContents(&#34;c3NoLmRldi5henVyZS5jb20gc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFCQVFDN0hyMW9UV3FOcU9sekdKT2ZHSjROYWtWeUl6ZjFyWFlkNGQ3d282akJsa0x2Q0E0b2RCbEwwbURVeVowL1FVZlRUcWV1K3RtMjJnT3N2K1ZyVlRNazZ2d1JVNzVnWS95OXV0NU1iM2JSNUJWNThkS1h5cTlBOVVlQjVDYWtlaG41WmdtNngxbUtvVnlmK0ZGbjI2aVlxWEpSZ3pJWlpjWjVWNmhyRTBRZzM5a1ptNGF6NDhvMEFVYmY2U3A0U0xkdm51TWEyc1ZOd0hCYm9TN0VKa201N1hRUFZVMy9RcHlOTEhiV0Rkend0cmxTK2V6MzBTM0FkWWhMS0VPeEFHOHdlT255cnRMSkFVZW45bVRrb2w4b0lJMWVkZjdtV1diV1ZmMG5CbWx5MjErblpjbUNUSVNRQnRkY3lQYUVubzdmRlFNREQyNi9zMGxmS29iNEt3OEg=&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

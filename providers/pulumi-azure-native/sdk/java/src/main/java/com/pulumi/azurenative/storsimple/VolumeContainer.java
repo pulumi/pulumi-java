@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### VolumeContainersCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volumeContainer = new VolumeContainer(&#34;volumeContainer&#34;, VolumeContainerArgs.builder()        
+ *             .bandwidthSettingId(&#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/bandwidthSettings/bandwidthSetting1&#34;)
+ *             .deviceName(&#34;Device05ForSDKTest&#34;)
+ *             .encryptionKey(Map.ofEntries(
+ *                 Map.entry(&#34;encryptionAlgorithm&#34;, &#34;RSAES_PKCS1_v_1_5&#34;),
+ *                 Map.entry(&#34;encryptionCertThumbprint&#34;, &#34;A872A2DF196AC7682EE24791E7DE2E2A360F5926&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;R//pyVLx/fn58ia098JiLgZB5RY7fVT+6o8a4fmsvjy+ls2UgJphMf25XVqEQCZnsp/5uxteN1M/9ArPIICdhM7M1+b/Ur7kJ0FH0ktxfk7CrPWWJLI4q20LZoduJGI56lREav1VpuLdqw5F9fRcq7zbfgPQ3B/SD0mfumNRiV+AnwbC6msfavIuWrhVDl9iSzEPE+zU06/kpsexnrS81yYT2QlVVUbvpY4F3zfH8TQPpAROTbv2pld6JO4eGOrZ5O1iOr6XCg2TY2W/jf+Ev4z5tqC9VWXE5kh65gjBfpWN0bDWXKekqEhor2crHAxZi4dybdY8Ok1MDWd1CSU8kw==&#34;)
+ *             ))
+ *             .managerName(&#34;ManagerForSDKTest1&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .storageAccountCredentialId(&#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/safortestrecording&#34;)
+ *             .volumeContainerName(&#34;VolumeContainerForSDKTest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

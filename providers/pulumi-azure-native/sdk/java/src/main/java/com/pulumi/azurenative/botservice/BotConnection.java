@@ -23,6 +23,48 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Connection Setting
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var botConnection = new BotConnection(&#34;botConnection&#34;, BotConnectionArgs.builder()        
+ *             .connectionName(&#34;sampleConnection&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;sampleclientid&#34;),
+ *                 Map.entry(&#34;clientSecret&#34;, &#34;samplesecret&#34;),
+ *                 Map.entry(&#34;parameters&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;key&#34;, &#34;key1&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;value1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;key&#34;, &#34;key2&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;value2&#34;)
+ *                     )),
+ *                 Map.entry(&#34;scopes&#34;, &#34;samplescope&#34;),
+ *                 Map.entry(&#34;serviceProviderId&#34;, &#34;serviceproviderid&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

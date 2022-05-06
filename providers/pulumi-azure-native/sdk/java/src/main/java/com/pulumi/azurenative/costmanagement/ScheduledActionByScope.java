@@ -24,6 +24,52 @@ import javax.annotation.Nullable;
  * API Version: 2022-04-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdateScheduledActionByScope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledActionByScope = new ScheduledActionByScope(&#34;scheduledActionByScope&#34;, ScheduledActionByScopeArgs.builder()        
+ *             .displayName(&#34;Monthly Cost By Resource&#34;)
+ *             .fileDestination(Map.of(&#34;fileFormats&#34;, &#34;Csv&#34;))
+ *             .kind(&#34;Email&#34;)
+ *             .name(&#34;monthlyCostByResource&#34;)
+ *             .notification(Map.ofEntries(
+ *                 Map.entry(&#34;subject&#34;, &#34;Cost by resource this month&#34;),
+ *                 Map.entry(&#34;to&#34;,                 
+ *                     &#34;user@gmail.com&#34;,
+ *                     &#34;team@gmail.com&#34;)
+ *             ))
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;daysOfWeek&#34;, &#34;Monday&#34;),
+ *                 Map.entry(&#34;endDate&#34;, &#34;2021-06-19T22:21:51.1287144Z&#34;),
+ *                 Map.entry(&#34;frequency&#34;, &#34;Monthly&#34;),
+ *                 Map.entry(&#34;hourOfDay&#34;, 10),
+ *                 Map.entry(&#34;startDate&#34;, &#34;2020-06-19T22:21:51.1287144Z&#34;),
+ *                 Map.entry(&#34;weeksOfMonth&#34;,                 
+ *                     &#34;First&#34;,
+ *                     &#34;Third&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .viewId(&#34;/providers/Microsoft.CostManagement/views/swaggerExample&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

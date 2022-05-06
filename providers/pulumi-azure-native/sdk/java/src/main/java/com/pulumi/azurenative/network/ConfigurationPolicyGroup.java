@@ -24,6 +24,45 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### ConfigurationPolicyGroupPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var configurationPolicyGroup = new ConfigurationPolicyGroup(&#34;configurationPolicyGroup&#34;, ConfigurationPolicyGroupArgs.builder()        
+ *             .configurationPolicyGroupName(&#34;policyGroup1&#34;)
+ *             .isDefault(true)
+ *             .policyMembers(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;attributeType&#34;, &#34;RadiusAzureGroupId&#34;),
+ *                     Map.entry(&#34;attributeValue&#34;, &#34;6ad1bd08&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;policy1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;attributeType&#34;, &#34;CertificateGroupId&#34;),
+ *                     Map.entry(&#34;attributeValue&#34;, &#34;red.com&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;policy2&#34;)
+ *                 ))
+ *             .priority(0)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .vpnServerConfigurationName(&#34;vpnServerConfiguration1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

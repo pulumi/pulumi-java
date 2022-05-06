@@ -26,6 +26,46 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### SharePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var share = new Share(&#34;share&#34;, ShareArgs.builder()        
+ *             .accessProtocol(&#34;SMB&#34;)
+ *             .azureContainerInfo(Map.ofEntries(
+ *                 Map.entry(&#34;containerName&#34;, &#34;testContainerSMB&#34;),
+ *                 Map.entry(&#34;dataFormat&#34;, &#34;BlockBlob&#34;),
+ *                 Map.entry(&#34;storageAccountCredentialId&#34;, &#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1&#34;)
+ *             ))
+ *             .dataPolicy(&#34;Cloud&#34;)
+ *             .description(&#34;&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .monitoringStatus(&#34;Enabled&#34;)
+ *             .name(&#34;smbshare&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .shareStatus(&#34;Online&#34;)
+ *             .userAccessRights(Map.ofEntries(
+ *                 Map.entry(&#34;accessType&#34;, &#34;Change&#34;),
+ *                 Map.entry(&#34;userId&#34;, &#34;/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

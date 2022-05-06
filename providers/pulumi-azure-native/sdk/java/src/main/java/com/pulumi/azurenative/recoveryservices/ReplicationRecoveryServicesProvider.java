@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Adds a recovery services provider.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationRecoveryServicesProvider = new ReplicationRecoveryServicesProvider(&#34;replicationRecoveryServicesProvider&#34;, ReplicationRecoveryServicesProviderArgs.builder()        
+ *             .fabricName(&#34;vmwarefabric1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;authenticationIdentityInput&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;aadAuthority&#34;, &#34;https://login.microsoftonline.com&#34;),
+ *                     Map.entry(&#34;applicationId&#34;, &#34;f66fce08-c0c6-47a1-beeb-0ede5ea94f90&#34;),
+ *                     Map.entry(&#34;audience&#34;, &#34;https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;141360b8-5686-4240-a027-5e24e6affeba&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *                 )),
+ *                 Map.entry(&#34;machineName&#34;, &#34;vmwareprovider1&#34;),
+ *                 Map.entry(&#34;resourceAccessIdentityInput&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;aadAuthority&#34;, &#34;https://login.microsoftonline.com&#34;),
+ *                     Map.entry(&#34;applicationId&#34;, &#34;f66fce08-c0c6-47a1-beeb-0ede5ea94f90&#34;),
+ *                     Map.entry(&#34;audience&#34;, &#34;https://microsoft.onmicrosoft.com/cf19e349-644c-4c6a-bcae-9c8f35357874&#34;),
+ *                     Map.entry(&#34;objectId&#34;, &#34;141360b8-5686-4240-a027-5e24e6affeba&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *                 ))
+ *             ))
+ *             .providerName(&#34;vmwareprovider1&#34;)
+ *             .resourceGroupName(&#34;resourcegroup1&#34;)
+ *             .resourceName(&#34;migrationvault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

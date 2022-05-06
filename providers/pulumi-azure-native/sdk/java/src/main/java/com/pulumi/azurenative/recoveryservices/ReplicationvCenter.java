@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Add vCenter.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationvCenter = new ReplicationvCenter(&#34;replicationvCenter&#34;, ReplicationvCenterArgs.builder()        
+ *             .fabricName(&#34;MadhaviFabric&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;friendlyName&#34;, &#34;esx-78&#34;),
+ *                 Map.entry(&#34;ipAddress&#34;, &#34;inmtest78&#34;),
+ *                 Map.entry(&#34;port&#34;, &#34;443&#34;),
+ *                 Map.entry(&#34;processServerId&#34;, &#34;5A720CAB-39CB-F445-BD1662B0B33164B5&#34;),
+ *                 Map.entry(&#34;runAsAccountId&#34;, &#34;2&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;MadhaviVRG&#34;)
+ *             .resourceName(&#34;MadhaviVault&#34;)
+ *             .vCenterName(&#34;esx-78&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

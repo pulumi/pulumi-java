@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Creates network mapping.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationNetworkMapping = new ReplicationNetworkMapping(&#34;replicationNetworkMapping&#34;, ReplicationNetworkMappingArgs.builder()        
+ *             .fabricName(&#34;b0cef6e9a4437b81803d0b55ada4f700ab66caae59c35d62723a1589c0cd13ac&#34;)
+ *             .networkMappingName(&#34;corpe2amap&#34;)
+ *             .networkName(&#34;e2267b5c-2650-49bd-ab3f-d66aae694c06&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;fabricSpecificDetails&#34;, Map.of(&#34;instanceType&#34;, &#34;VmmToAzure&#34;)),
+ *                 Map.entry(&#34;recoveryFabricName&#34;, &#34;Microsoft Azure&#34;),
+ *                 Map.entry(&#34;recoveryNetworkId&#34;, &#34;/subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/siterecoveryProd1/providers/Microsoft.Network/virtualNetworks/vnetavrai&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;srcBvte2a14C27&#34;)
+ *             .resourceName(&#34;srce2avaultbvtaC27&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

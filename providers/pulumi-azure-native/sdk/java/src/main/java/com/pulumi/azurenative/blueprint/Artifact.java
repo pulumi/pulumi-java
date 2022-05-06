@@ -19,6 +19,168 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### MG-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;template&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;policyAssignment&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### MG-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;roleAssignment&#34;)
+ *             .resourceScope(&#34;providers/Microsoft.Management/managementGroups/ContosoOnlineGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-ARMTemplateArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;storageTemplate&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;template&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-PolicyAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;costCenterPolicy&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;policyAssignment&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Sub-RoleAssignmentArtifact
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var artifact = new Artifact(&#34;artifact&#34;, ArtifactArgs.builder()        
+ *             .artifactName(&#34;ownerAssignment&#34;)
+ *             .blueprintName(&#34;simpleBlueprint&#34;)
+ *             .kind(&#34;roleAssignment&#34;)
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

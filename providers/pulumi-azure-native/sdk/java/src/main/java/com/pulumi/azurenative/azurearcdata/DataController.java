@@ -24,6 +24,62 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a Data Controller.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataController = new DataController(&#34;dataController&#34;, DataControllerArgs.builder()        
+ *             .dataControllerName(&#34;testdataController&#34;)
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/arclocation&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;CustomLocation&#34;)
+ *             ))
+ *             .location(&#34;northeurope&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;basicLoginInformation&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;password&#34;, &#34;********&#34;),
+ *                     Map.entry(&#34;username&#34;, &#34;username&#34;)
+ *                 )),
+ *                 Map.entry(&#34;logAnalyticsWorkspaceConfig&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;primaryKey&#34;, &#34;********&#34;),
+ *                     Map.entry(&#34;workspaceId&#34;, &#34;00000000-1111-2222-3333-444444444444&#34;)
+ *                 )),
+ *                 Map.entry(&#34;onPremiseProperty&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;12345678-1234-1234-ab12-1a2b3c4d5e6f&#34;),
+ *                     Map.entry(&#34;publicSigningKey&#34;, &#34;publicOnPremSigningKey&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uploadServicePrincipal&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authority&#34;, &#34;https://login.microsoftonline.com/&#34;),
+ *                     Map.entry(&#34;clientId&#34;, &#34;00000000-1111-2222-3333-444444444444&#34;),
+ *                     Map.entry(&#34;clientSecret&#34;, &#34;********&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;00000000-1111-2222-3333-444444444444&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uploadWatermark&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;logs&#34;, &#34;2020-01-01T17:18:19.1234567Z&#34;),
+ *                     Map.entry(&#34;metrics&#34;, &#34;2020-01-01T17:18:19.1234567Z&#34;),
+ *                     Map.entry(&#34;usages&#34;, &#34;2020-01-01T17:18:19.1234567Z&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .tags(Map.of(&#34;mytag&#34;, &#34;myval&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
