@@ -177,7 +177,7 @@ func (host *javaLanguageHost) determinePulumiPackages(
 	args := host.exec.pluginArgs
 	output, err := host.runJavaCommand(ctx, cmd, args)
 	if err != nil {
-		return nil, errors.Wrapf(err, "language host counld not run plugin discovery command successfully")
+		return nil, errors.Wrapf(err, "language host could not run plugin discovery command successfully")
 	}
 
 	logging.V(5).Infof("GetRequiredPlugins: bootstrap raw output=%v", output)
