@@ -32,6 +32,21 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
     }
 
     /**
+     * [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+     * 
+     */
+    @Import(name="maxStaleness")
+    private @Nullable Output<String> maxStaleness;
+
+    /**
+     * @return [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+     * 
+     */
+    public Optional<Output<String>> maxStaleness() {
+        return Optional.ofNullable(this.maxStaleness);
+    }
+
+    /**
      * [Required] A query whose result is persisted.
      * 
      */
@@ -65,6 +80,7 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
 
     private MaterializedViewDefinitionArgs(MaterializedViewDefinitionArgs $) {
         this.enableRefresh = $.enableRefresh;
+        this.maxStaleness = $.maxStaleness;
         this.query = $.query;
         this.refreshIntervalMs = $.refreshIntervalMs;
     }
@@ -106,6 +122,27 @@ public final class MaterializedViewDefinitionArgs extends com.pulumi.resources.R
          */
         public Builder enableRefresh(Boolean enableRefresh) {
             return enableRefresh(Output.of(enableRefresh));
+        }
+
+        /**
+         * @param maxStaleness [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxStaleness(@Nullable Output<String> maxStaleness) {
+            $.maxStaleness = maxStaleness;
+            return this;
+        }
+
+        /**
+         * @param maxStaleness [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxStaleness(String maxStaleness) {
+            return maxStaleness(Output.of(maxStaleness));
         }
 
         /**

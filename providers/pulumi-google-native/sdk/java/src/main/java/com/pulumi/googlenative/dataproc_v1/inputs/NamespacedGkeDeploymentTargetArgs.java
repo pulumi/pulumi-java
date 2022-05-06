@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 
 /**
- * A full, namespace-isolated deployment target for an existing GKE cluster.
+ * Deprecated. Used only for the deprecated beta. A full, namespace-isolated deployment target for an existing GKE cluster.
  * 
  */
 public final class NamespacedGkeDeploymentTargetArgs extends com.pulumi.resources.ResourceArgs {

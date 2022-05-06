@@ -21,6 +21,11 @@ public final class MaterializedViewDefinitionResponse {
      */
     private final String lastRefreshTime;
     /**
+     * @return [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+     * 
+     */
+    private final String maxStaleness;
+    /**
      * @return [Required] A query whose result is persisted.
      * 
      */
@@ -35,10 +40,12 @@ public final class MaterializedViewDefinitionResponse {
     private MaterializedViewDefinitionResponse(
         @CustomType.Parameter("enableRefresh") Boolean enableRefresh,
         @CustomType.Parameter("lastRefreshTime") String lastRefreshTime,
+        @CustomType.Parameter("maxStaleness") String maxStaleness,
         @CustomType.Parameter("query") String query,
         @CustomType.Parameter("refreshIntervalMs") String refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.lastRefreshTime = lastRefreshTime;
+        this.maxStaleness = maxStaleness;
         this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;
     }
@@ -56,6 +63,13 @@ public final class MaterializedViewDefinitionResponse {
      */
     public String lastRefreshTime() {
         return this.lastRefreshTime;
+    }
+    /**
+     * @return [Optional] Max staleness of data that could be returned when materizlized view is queried (formatted as Google SQL Interval type).
+     * 
+     */
+    public String maxStaleness() {
+        return this.maxStaleness;
     }
     /**
      * @return [Required] A query whose result is persisted.
@@ -83,6 +97,7 @@ public final class MaterializedViewDefinitionResponse {
     public static final class Builder {
         private Boolean enableRefresh;
         private String lastRefreshTime;
+        private String maxStaleness;
         private String query;
         private String refreshIntervalMs;
 
@@ -94,6 +109,7 @@ public final class MaterializedViewDefinitionResponse {
     	      Objects.requireNonNull(defaults);
     	      this.enableRefresh = defaults.enableRefresh;
     	      this.lastRefreshTime = defaults.lastRefreshTime;
+    	      this.maxStaleness = defaults.maxStaleness;
     	      this.query = defaults.query;
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
@@ -106,6 +122,10 @@ public final class MaterializedViewDefinitionResponse {
             this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime);
             return this;
         }
+        public Builder maxStaleness(String maxStaleness) {
+            this.maxStaleness = Objects.requireNonNull(maxStaleness);
+            return this;
+        }
         public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
@@ -114,7 +134,7 @@ public final class MaterializedViewDefinitionResponse {
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
         }        public MaterializedViewDefinitionResponse build() {
-            return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
+            return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, maxStaleness, query, refreshIntervalMs);
         }
     }
 }

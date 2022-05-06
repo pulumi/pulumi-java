@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse {
      */
     private final String currencyCode;
     /**
-     * @return Price of the product without any discount. If zero, by default set to be the price.
+     * @return Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
      * 
      */
     private final Double originalPrice;
@@ -80,7 +80,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse {
         return this.currencyCode;
     }
     /**
-     * @return Price of the product without any discount. If zero, by default set to be the price.
+     * @return Price of the product without any discount. If zero, by default set to be the price. If set, original_price should be greater than or equal to price, otherwise an INVALID_ARGUMENT error is thrown.
      * 
      */
     public Double originalPrice() {

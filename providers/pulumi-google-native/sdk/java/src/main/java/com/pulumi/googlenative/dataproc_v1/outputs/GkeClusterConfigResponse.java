@@ -4,28 +4,68 @@
 package com.pulumi.googlenative.dataproc_v1.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.googlenative.dataproc_v1.outputs.GkeNodePoolTargetResponse;
 import com.pulumi.googlenative.dataproc_v1.outputs.NamespacedGkeDeploymentTargetResponse;
+import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GkeClusterConfigResponse {
     /**
-     * @return Optional. A target for the deployment.
+     * @return Optional. A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional). Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
      */
+    private final String gkeClusterTarget;
+    /**
+     * @return Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment.
+     * 
+     * @deprecated
+     * Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment. */
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
+    /**
+     * @return Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be assigned the &#39;default&#39; role. Each role can be given to only a single NodePoolTarget. All NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc constructs a default nodePoolTarget.
+     * 
+     */
+    private final List<GkeNodePoolTargetResponse> nodePoolTarget;
 
     @CustomType.Constructor
-    private GkeClusterConfigResponse(@CustomType.Parameter("namespacedGkeDeploymentTarget") NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
+    private GkeClusterConfigResponse(
+        @CustomType.Parameter("gkeClusterTarget") String gkeClusterTarget,
+        @CustomType.Parameter("namespacedGkeDeploymentTarget") NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget,
+        @CustomType.Parameter("nodePoolTarget") List<GkeNodePoolTargetResponse> nodePoolTarget) {
+        this.gkeClusterTarget = gkeClusterTarget;
         this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
+        this.nodePoolTarget = nodePoolTarget;
     }
 
     /**
-     * @return Optional. A target for the deployment.
+     * @return Optional. A target GKE cluster to deploy to. It must be in the same project and region as the Dataproc cluster (the GKE cluster can be zonal or regional). Format: &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
      * 
      */
+    public String gkeClusterTarget() {
+        return this.gkeClusterTarget;
+    }
+    /**
+     * @return Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment.
+     * 
+     * @deprecated
+     * Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment.
+     * 
+     */
+    @Deprecated /* Optional. Deprecated. Use gkeClusterTarget. Used only for the deprecated beta. A target for the deployment. */
     public NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
+    }
+    /**
+     * @return Optional. GKE NodePools where workloads will be scheduled. At least one node pool must be assigned the &#39;default&#39; role. Each role can be given to only a single NodePoolTarget. All NodePools must have the same location settings. If a nodePoolTarget is not specified, Dataproc constructs a default nodePoolTarget.
+     * 
+     */
+    public List<GkeNodePoolTargetResponse> nodePoolTarget() {
+        return this.nodePoolTarget;
     }
 
     public static Builder builder() {
@@ -37,7 +77,9 @@ public final class GkeClusterConfigResponse {
     }
 
     public static final class Builder {
+        private String gkeClusterTarget;
         private NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
+        private List<GkeNodePoolTargetResponse> nodePoolTarget;
 
         public Builder() {
     	      // Empty
@@ -45,14 +87,27 @@ public final class GkeClusterConfigResponse {
 
         public Builder(GkeClusterConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.gkeClusterTarget = defaults.gkeClusterTarget;
     	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
+    	      this.nodePoolTarget = defaults.nodePoolTarget;
         }
 
+        public Builder gkeClusterTarget(String gkeClusterTarget) {
+            this.gkeClusterTarget = Objects.requireNonNull(gkeClusterTarget);
+            return this;
+        }
         public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
             return this;
+        }
+        public Builder nodePoolTarget(List<GkeNodePoolTargetResponse> nodePoolTarget) {
+            this.nodePoolTarget = Objects.requireNonNull(nodePoolTarget);
+            return this;
+        }
+        public Builder nodePoolTarget(GkeNodePoolTargetResponse... nodePoolTarget) {
+            return nodePoolTarget(List.of(nodePoolTarget));
         }        public GkeClusterConfigResponse build() {
-            return new GkeClusterConfigResponse(namespacedGkeDeploymentTarget);
+            return new GkeClusterConfigResponse(gkeClusterTarget, namespacedGkeDeploymentTarget, nodePoolTarget);
         }
     }
 }

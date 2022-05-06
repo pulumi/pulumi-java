@@ -52,14 +52,14 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * A query used to fetch time series with MQL.
+     * A query used to fetch time series.
      * 
      */
     @Import(name="timeSeriesQueryLanguage")
     private @Nullable Output<String> timeSeriesQueryLanguage;
 
     /**
-     * @return A query used to fetch time series with MQL.
+     * @return A query used to fetch time series.
      * 
      */
     public Optional<Output<String>> timeSeriesQueryLanguage() {
@@ -151,7 +151,7 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param timeSeriesQueryLanguage A query used to fetch time series with MQL.
+         * @param timeSeriesQueryLanguage A query used to fetch time series.
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param timeSeriesQueryLanguage A query used to fetch time series with MQL.
+         * @param timeSeriesQueryLanguage A query used to fetch time series.
          * 
          * @return builder
          * 

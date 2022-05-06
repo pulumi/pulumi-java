@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.Utilities;
 import com.pulumi.googlenative.bigquery_v2.RoutineArgs;
 import com.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
+import com.pulumi.googlenative.bigquery_v2.outputs.RemoteFunctionOptionsResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import com.pulumi.googlenative.bigquery_v2.outputs.StandardSqlTableTypeResponse;
@@ -150,6 +151,20 @@ public class Routine extends com.pulumi.resources.CustomResource {
      */
     public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
+    }
+    /**
+     * Optional. Remote function specific options.
+     * 
+     */
+    @Export(name="remoteFunctionOptions", type=RemoteFunctionOptionsResponse.class, parameters={})
+    private Output<RemoteFunctionOptionsResponse> remoteFunctionOptions;
+
+    /**
+     * @return Optional. Remote function specific options.
+     * 
+     */
+    public Output<RemoteFunctionOptionsResponse> remoteFunctionOptions() {
+        return this.remoteFunctionOptions;
     }
     /**
      * Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.

@@ -9,6 +9,7 @@ import com.pulumi.googlenative.bigquery_v2.enums.RoutineDeterminismLevel;
 import com.pulumi.googlenative.bigquery_v2.enums.RoutineLanguage;
 import com.pulumi.googlenative.bigquery_v2.enums.RoutineRoutineType;
 import com.pulumi.googlenative.bigquery_v2.inputs.ArgumentArgs;
+import com.pulumi.googlenative.bigquery_v2.inputs.RemoteFunctionOptionsArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlTableTypeArgs;
@@ -129,6 +130,21 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Optional. Remote function specific options.
+     * 
+     */
+    @Import(name="remoteFunctionOptions")
+    private @Nullable Output<RemoteFunctionOptionsArgs> remoteFunctionOptions;
+
+    /**
+     * @return Optional. Remote function specific options.
+     * 
+     */
+    public Optional<Output<RemoteFunctionOptionsArgs>> remoteFunctionOptions() {
+        return Optional.ofNullable(this.remoteFunctionOptions);
+    }
+
+    /**
      * Optional. Can be set only if routine_type = &#34;TABLE_VALUED_FUNCTION&#34;. If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
      * 
      */
@@ -214,6 +230,7 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
         this.importedLibraries = $.importedLibraries;
         this.language = $.language;
         this.project = $.project;
+        this.remoteFunctionOptions = $.remoteFunctionOptions;
         this.returnTableType = $.returnTableType;
         this.returnType = $.returnType;
         this.routineReference = $.routineReference;
@@ -401,6 +418,27 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder project(String project) {
             return project(Output.of(project));
+        }
+
+        /**
+         * @param remoteFunctionOptions Optional. Remote function specific options.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remoteFunctionOptions(@Nullable Output<RemoteFunctionOptionsArgs> remoteFunctionOptions) {
+            $.remoteFunctionOptions = remoteFunctionOptions;
+            return this;
+        }
+
+        /**
+         * @param remoteFunctionOptions Optional. Remote function specific options.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder remoteFunctionOptions(RemoteFunctionOptionsArgs remoteFunctionOptions) {
+            return remoteFunctionOptions(Output.of(remoteFunctionOptions));
         }
 
         /**
