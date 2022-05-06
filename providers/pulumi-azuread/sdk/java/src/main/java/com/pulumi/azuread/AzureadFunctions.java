@@ -45,6 +45,53 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ### By Group Display Name)
+     * 
+     * *Look up by display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .displayName(&#34;Example-AU&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getAdministrativeUnit(GetAdministrativeUnitArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetAdministrativeUnitResult> getAdministrativeUnit() {
@@ -68,6 +115,28 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplication(GetApplicationArgs.builder()
+     *             .displayName(&#34;My First AzureAD Application&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationObjectId&#34;, example.apply(getApplicationResult -&gt; getApplicationResult.getId()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetApplicationResult> getApplication() {
@@ -88,6 +157,70 @@ public final class AzureadFunctions {
      * 
      * ## Example Usage
      * 
+     * *Listing well-known application IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         ctx.export(&#34;publishedAppIds&#34;, wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult()));
+     *         }
+     * }
+     * ```
+     * 
+     * *Granting access to an application*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+     * 
+     *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+     *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *             .useExisting(true)
+     *             .build());
+     * 
+     *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+     *             .displayName(&#34;example&#34;)
+     *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+     *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+     *                 .resourceAccesses(                
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getUser.Read.All()))
+     *                         .type(&#34;Role&#34;)
+     *                         .build(),
+     *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+     *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.ReadWrite()))
+     *                         .type(&#34;Scope&#34;)
+     *                         .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetApplicationPublishedAppIdsResult> getApplicationPublishedAppIds() {
         return getApplicationPublishedAppIds(InvokeArgs.Empty, InvokeOptions.Empty);
@@ -106,6 +239,28 @@ public final class AzureadFunctions {
      * This data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getApplicationTemplate(GetApplicationTemplateArgs.builder()
+     *             .displayName(&#34;Marketo&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;applicationTemplateId&#34;, example.apply(getApplicationTemplateResult -&gt; getApplicationTemplateResult.getTemplateId()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetApplicationTemplateResult> getApplicationTemplate() {
@@ -125,6 +280,26 @@ public final class AzureadFunctions {
      * No additional roles are required to use this data source.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var current = Output.of(AzureadFunctions.getClientConfig());
+     * 
+     *         ctx.export(&#34;objectId&#34;, current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetClientConfigResult> getClientConfig() {
@@ -148,6 +323,26 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var aadDomains = Output.of(AzureadFunctions.getDomains());
+     * 
+     *         ctx.export(&#34;domainNames&#34;, aadDomains.apply(getDomainsResult -&gt; getDomainsResult.getDomains()).stream().map(element -&gt; element.getDomainName()).collect(toList()));
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetDomainsResult> getDomains() {
@@ -171,6 +366,29 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ### By Group Display Name)
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroup(GetGroupArgs.builder()
+     *             .displayName(&#34;MyGroupName&#34;)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetGroupResult> getGroup() {
@@ -195,6 +413,126 @@ public final class AzureadFunctions {
      * 
      * ## Example Usage
      * 
+     * *Look up by group name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;group-a&#34;,
+     *                 &#34;group-b&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by display name prefix*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var sales = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .displayNamePrefix(&#34;sales-&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var all = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all mail-enabled groups*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var mailEnabled = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(true)
+     *             .returnAll(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up all security-enabled groups that are not mail-enabled*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var securityOnly = Output.of(AzureadFunctions.getGroups(GetGroupsArgs.builder()
+     *             .mailEnabled(false)
+     *             .returnAll(true)
+     *             .securityEnabled(true)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetGroupsResult> getGroups() {
         return getGroups(GetGroupsArgs.Empty, InvokeOptions.Empty);
@@ -217,6 +555,75 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * 
+     * *Look up by application display name*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .displayName(&#34;my-awesome-application&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application ID (client ID)*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .applicationId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object ID*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipal(GetServicePrincipalArgs.builder()
+     *             .objectId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetServicePrincipalResult> getServicePrincipal() {
@@ -241,6 +648,83 @@ public final class AzureadFunctions {
      * 
      * ## Example Usage
      * 
+     * *Look up by application display names*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .displayNames(            
+     *                 &#34;example-app&#34;,
+     *                 &#34;another-app&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by application IDs (client IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .applicationIds(            
+     *                 &#34;11111111-0000-0000-0000-000000000000&#34;,
+     *                 &#34;22222222-0000-0000-0000-000000000000&#34;,
+     *                 &#34;33333333-0000-0000-0000-000000000000&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     * *Look up by service principal object IDs*
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getServicePrincipals(GetServicePrincipalsArgs.builder()
+     *             .objectIds(            
+     *                 &#34;00000000-0000-0000-0000-000000000000&#34;,
+     *                 &#34;00000000-0000-0000-0000-111111111111&#34;,
+     *                 &#34;00000000-0000-0000-0000-222222222222&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
      */
     public static CompletableFuture<GetServicePrincipalsResult> getServicePrincipals() {
         return getServicePrincipals(GetServicePrincipalsArgs.Empty, InvokeOptions.Empty);
@@ -263,6 +747,27 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(AzureadFunctions.getUser(GetUserArgs.builder()
+     *             .userPrincipalName(&#34;user@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUserResult> getUser() {
@@ -286,6 +791,29 @@ public final class AzureadFunctions {
      * When authenticated with a user principal, this data source does not require any additional roles.
      * 
      * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var users = Output.of(AzureadFunctions.getUsers(GetUsersArgs.builder()
+     *             .userPrincipalNames(            
+     *                 &#34;kat@hashicorp.com&#34;,
+     *                 &#34;byte@hashicorp.com&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
      * 
      */
     public static CompletableFuture<GetUsersResult> getUsers() {

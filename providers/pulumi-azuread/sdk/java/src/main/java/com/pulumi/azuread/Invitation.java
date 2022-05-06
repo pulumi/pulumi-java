@@ -28,6 +28,86 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * *Basic example*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Invitation(&#34;example&#34;, InvitationArgs.builder()        
+ *             .redirectUrl(&#34;https://portal.azure.com&#34;)
+ *             .userEmailAddress(&#34;jdoe@hashicorp.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Invitation with standard message*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Invitation(&#34;example&#34;, InvitationArgs.builder()        
+ *             .message(InvitationMessage.builder()
+ *                 .language(&#34;en-US&#34;)
+ *                 .build())
+ *             .redirectUrl(&#34;https://portal.azure.com&#34;)
+ *             .userEmailAddress(&#34;jdoe@hashicorp.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Invitation with custom message body and an additional recipient*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Invitation(&#34;example&#34;, InvitationArgs.builder()        
+ *             .message(InvitationMessage.builder()
+ *                 .additionalRecipients(&#34;aaliceberg@hashicorp.com&#34;)
+ *                 .body(&#34;Hello there! You are invited to join my Azure tenant!&#34;)
+ *                 .build())
+ *             .redirectUrl(&#34;https://portal.azure.com&#34;)
+ *             .userDisplayName(&#34;Bob Bobson&#34;)
+ *             .userEmailAddress(&#34;bbobson@hashicorp.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * This resource does not support importing.

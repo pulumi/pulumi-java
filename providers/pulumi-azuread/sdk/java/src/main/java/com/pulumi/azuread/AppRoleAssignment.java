@@ -26,6 +26,178 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * *App role assignment for accessing Microsoft Graph*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+ * 
+ *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+ *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *                 .resourceAccesses(                
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getUser.Read.All()))
+ *                         .type(&#34;Role&#34;)
+ *                         .build(),
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.ReadWrite()))
+ *                         .type(&#34;Scope&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleAppRoleAssignment = new AppRoleAssignment(&#34;exampleAppRoleAssignment&#34;, AppRoleAssignmentArgs.builder()        
+ *             .appRoleId(msgraph.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getUser.Read.All()))
+ *             .principalObjectId(exampleServicePrincipal.getObjectId())
+ *             .resourceObjectId(msgraph.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *App role assignment for internal application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var internalApplication = new Application(&#34;internalApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;internal&#34;)
+ *             .appRoles(ApplicationAppRole.builder()
+ *                 .allowedMemberTypes(&#34;Application&#34;)
+ *                 .description(&#34;Apps can query the database&#34;)
+ *                 .displayName(&#34;Query&#34;)
+ *                 .enabled(true)
+ *                 .id(&#34;00000000-0000-0000-0000-111111111111&#34;)
+ *                 .value(&#34;Query.All&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var internalServicePrincipal = new ServicePrincipal(&#34;internalServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(internalApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+ *                 .resourceAppId(internalApplication.getApplicationId())
+ *                 .resourceAccesses(ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                     .id(internalServicePrincipal.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getQuery.All()))
+ *                     .type(&#34;Role&#34;)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleAppRoleAssignment = new AppRoleAssignment(&#34;exampleAppRoleAssignment&#34;, AppRoleAssignmentArgs.builder()        
+ *             .appRoleId(internalServicePrincipal.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getQuery.All()))
+ *             .principalObjectId(exampleServicePrincipal.getObjectId())
+ *             .resourceObjectId(internalServicePrincipal.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Assign a user and group to an internal application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleDomains = Output.of(AzureadFunctions.getDomains(GetDomainsArgs.builder()
+ *             .onlyInitial(true)
+ *             .build()));
+ * 
+ *         var internalApplication = new Application(&#34;internalApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;internal&#34;)
+ *             .appRoles(ApplicationAppRole.builder()
+ *                 .allowedMemberTypes(                
+ *                     &#34;Application&#34;,
+ *                     &#34;User&#34;)
+ *                 .description(&#34;Admins can perform all task actions&#34;)
+ *                 .displayName(&#34;Admin&#34;)
+ *                 .enabled(true)
+ *                 .id(&#34;00000000-0000-0000-0000-222222222222&#34;)
+ *                 .value(&#34;Admin.All&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         var internalServicePrincipal = new ServicePrincipal(&#34;internalServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(internalApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .securityEnabled(true)
+ *             .build());
+ * 
+ *         var exampleAppRoleAssignment = new AppRoleAssignment(&#34;exampleAppRoleAssignment&#34;, AppRoleAssignmentArgs.builder()        
+ *             .appRoleId(internalServicePrincipal.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getAdmin.All()))
+ *             .principalObjectId(exampleGroup.getObjectId())
+ *             .resourceObjectId(internalServicePrincipal.getObjectId())
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .displayName(&#34;D. Duck&#34;)
+ *             .password(&#34;SecretP@sswd99!&#34;)
+ *             .userPrincipalName(String.format(&#34;d.duck@%s&#34;, exampleDomains.apply(getDomainsResult -&gt; getDomainsResult.getDomains()[0].getDomainName())))
+ *             .build());
+ * 
+ *         var exampleIndex_appRoleAssignmentAppRoleAssignment = new AppRoleAssignment(&#34;exampleIndex/appRoleAssignmentAppRoleAssignment&#34;, AppRoleAssignmentArgs.builder()        
+ *             .appRoleId(internalServicePrincipal.getAppRoleIds().apply(appRoleIds -&gt; appRoleIds.getAdmin.All()))
+ *             .principalObjectId(exampleUser.getObjectId())
+ *             .resourceObjectId(internalServicePrincipal.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * App role assignments can be imported using the object ID of the service principal representing the resource and the ID of the app role assignment (note_not_ the ID of the app role), e.g.

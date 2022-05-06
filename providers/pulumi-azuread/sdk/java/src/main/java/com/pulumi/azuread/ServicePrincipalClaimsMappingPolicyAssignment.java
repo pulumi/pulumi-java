@@ -25,6 +25,28 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Application Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var app = new ServicePrincipalClaimsMappingPolicyAssignment(&#34;app&#34;, ServicePrincipalClaimsMappingPolicyAssignmentArgs.builder()        
+ *             .claimsMappingPolicyId(azuread_claims_mapping_policy.getMy_policy().getId())
+ *             .servicePrincipalId(azuread_service_principal.getMy_principal().getId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

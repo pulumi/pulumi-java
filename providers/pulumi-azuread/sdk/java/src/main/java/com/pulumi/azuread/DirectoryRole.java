@@ -30,6 +30,52 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * *Activate a directory role by its template ID*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DirectoryRole(&#34;example&#34;, DirectoryRoleArgs.builder()        
+ *             .templateId(&#34;00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Activate a directory role by display name*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new DirectoryRole(&#34;example&#34;, DirectoryRoleArgs.builder()        
+ *             .displayName(&#34;Printer administrator&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * This resource does not support importing.

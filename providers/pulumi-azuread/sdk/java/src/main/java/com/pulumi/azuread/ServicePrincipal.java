@@ -37,6 +37,133 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * *Create a service principal for an application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .appRoleAssignmentRequired(false)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Create a service principal for an enterprise application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .appRoleAssignmentRequired(false)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .featureTags(ServicePrincipalFeatureTag.builder()
+ *                 .enterprise(true)
+ *                 .gallery(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Manage a service principal for a first-party Microsoft application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+ * 
+ *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Create a service principal for an application created from a gallery template*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleApplicationTemplate = Output.of(AzureadFunctions.getApplicationTemplate(GetApplicationTemplateArgs.builder()
+ *             .displayName(&#34;Marketo&#34;)
+ *             .build()));
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .templateId(exampleApplicationTemplate.apply(getApplicationTemplateResult -&gt; getApplicationTemplateResult.getTemplateId()))
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Service principals can be imported using their object ID, e.g.

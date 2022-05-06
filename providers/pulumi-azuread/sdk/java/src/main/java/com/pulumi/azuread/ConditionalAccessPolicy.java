@@ -29,6 +29,71 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Conditional Access Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ConditionalAccessPolicy(&#34;example&#34;, ConditionalAccessPolicyArgs.builder()        
+ *             .conditions(ConditionalAccessPolicyConditions.builder()
+ *                 .applications(ConditionalAccessPolicyConditionsApplications.builder()
+ *                     .excludedApplications(&#34;00000004-0000-0ff1-ce00-000000000000&#34;)
+ *                     .includedApplications(&#34;All&#34;)
+ *                     .build())
+ *                 .clientAppTypes(&#34;all&#34;)
+ *                 .devices(ConditionalAccessPolicyConditionsDevices.builder()
+ *                     .filter(ConditionalAccessPolicyConditionsDevicesFilter.builder()
+ *                         .mode(&#34;exclude&#34;)
+ *                         .rule(&#34;device.operatingSystem eq \&#34;Doors\&#34;&#34;)
+ *                         .build())
+ *                     .build())
+ *                 .locations(ConditionalAccessPolicyConditionsLocations.builder()
+ *                     .excludedLocations(&#34;AllTrusted&#34;)
+ *                     .includedLocations(&#34;All&#34;)
+ *                     .build())
+ *                 .platforms(ConditionalAccessPolicyConditionsPlatforms.builder()
+ *                     .excludedPlatforms(&#34;iOS&#34;)
+ *                     .includedPlatforms(&#34;android&#34;)
+ *                     .build())
+ *                 .signInRiskLevels(&#34;medium&#34;)
+ *                 .userRiskLevels(&#34;medium&#34;)
+ *                 .users(ConditionalAccessPolicyConditionsUsers.builder()
+ *                     .excludedUsers(&#34;GuestsOrExternalUsers&#34;)
+ *                     .includedUsers(&#34;All&#34;)
+ *                     .build())
+ *                 .build())
+ *             .displayName(&#34;example policy&#34;)
+ *             .grantControls(ConditionalAccessPolicyGrantControls.builder()
+ *                 .builtInControls(&#34;mfa&#34;)
+ *                 .operator(&#34;OR&#34;)
+ *                 .build())
+ *             .sessionControls(ConditionalAccessPolicySessionControls.builder()
+ *                 .applicationEnforcedRestrictions(Map.of(&#34;enabled&#34;, true))
+ *                 .cloudAppSecurity(Map.ofEntries(
+ *                     Map.entry(&#34;cloudAppSecurityType&#34;, &#34;monitorOnly&#34;),
+ *                     Map.entry(&#34;enabled&#34;, true)
+ *                 ))
+ *                 .signInFrequency(Map.ofEntries(
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;type&#34;, &#34;hours&#34;),
+ *                     Map.entry(&#34;value&#34;, 10)
+ *                 ))
+ *                 .build())
+ *             .state(&#34;disabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

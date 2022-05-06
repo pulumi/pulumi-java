@@ -26,6 +26,36 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Privileged Role Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleUser = Output.of(AzureadFunctions.getUser(GetUserArgs.builder()
+ *             .userPrincipalName(&#34;jdoe@hashicorp.com&#34;)
+ *             .build()));
+ * 
+ *         var exampleDirectoryRole = new DirectoryRole(&#34;exampleDirectoryRole&#34;, DirectoryRoleArgs.builder()        
+ *             .displayName(&#34;Security administrator&#34;)
+ *             .build());
+ * 
+ *         var exampleDirectoryRoleMember = new DirectoryRoleMember(&#34;exampleDirectoryRoleMember&#34;, DirectoryRoleMemberArgs.builder()        
+ *             .roleObjectId(exampleDirectoryRole.getObjectId())
+ *             .memberObjectId(exampleUser.apply(getUserResult -&gt; getUserResult.getObjectId()))
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

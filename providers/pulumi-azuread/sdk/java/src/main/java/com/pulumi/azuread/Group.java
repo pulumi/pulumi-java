@@ -34,6 +34,142 @@ import javax.annotation.Nullable;
  * 
  * The `external_senders_allowed`, `auto_subscribe_new_members`, `hide_from_address_lists` and `hide_from_outlook_clients` properties can only be configured when authenticating as a user and cannot be configured when authenticating as a service principal. Additionally, the user being used for authentication must be a Member of the tenant where the group is being managed and _not_ a Guest. This is a known API issue; please see the [Microsoft Graph Known Issues](https://docs.microsoft.com/en-us/graph/known-issues#groups) official documentation.
  * 
+ * ## Example Usage
+ * 
+ * *Basic example*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var example = new Group(&#34;example&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .securityEnabled(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Microsoft 365 group*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var groupOwner = new User(&#34;groupOwner&#34;, UserArgs.builder()        
+ *             .userPrincipalName(&#34;example-group-owner@hashicorp.com&#34;)
+ *             .displayName(&#34;Group Owner&#34;)
+ *             .mailNickname(&#34;example-group-owner&#34;)
+ *             .password(&#34;SecretP@sswd99!&#34;)
+ *             .build());
+ * 
+ *         var example = new Group(&#34;example&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .mailEnabled(true)
+ *             .mailNickname(&#34;ExampleGroup&#34;)
+ *             .securityEnabled(true)
+ *             .types(&#34;Unified&#34;)
+ *             .owners(            
+ *                 current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()),
+ *                 groupOwner.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Group with members*
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .displayName(&#34;J Doe&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .password(&#34;notSecure123&#34;)
+ *             .userPrincipalName(&#34;jdoe@hashicorp.com&#34;)
+ *             .build());
+ * 
+ *         var exampleGroup = new Group(&#34;exampleGroup&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;MyGroup&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .securityEnabled(true)
+ *             .members(exampleUser.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Group with dynamic membership*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var example = new Group(&#34;example&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;MyGroup&#34;)
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .securityEnabled(true)
+ *             .types(&#34;DynamicMembership&#34;)
+ *             .dynamicMembership(GroupDynamicMembership.builder()
+ *                 .enabled(true)
+ *                 .rule(&#34;user.department -eq \&#34;Sales\&#34;&#34;)
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Groups can be imported using their object ID, e.g.
