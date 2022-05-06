@@ -17,6 +17,36 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .build());
+ * 
+ *         var exampleApplicationFederatedIdentityCredential = new ApplicationFederatedIdentityCredential(&#34;exampleApplicationFederatedIdentityCredential&#34;, ApplicationFederatedIdentityCredentialArgs.builder()        
+ *             .applicationObjectId(exampleApplication.getObjectId())
+ *             .displayName(&#34;my-repo-deploy&#34;)
+ *             .description(&#34;Deployments for my-repo&#34;)
+ *             .audiences(&#34;api://AzureADTokenExchange&#34;)
+ *             .issuer(&#34;https://token.actions.githubusercontent.com&#34;)
+ *             .subject(&#34;repo:my-organization/my-repo:environment:prod&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

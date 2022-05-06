@@ -28,6 +28,122 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * *Delegated permission grant for all users*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+ * 
+ *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+ *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *                 .resourceAccesses(                
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getOpenid()))
+ *                         .type(&#34;Scope&#34;)
+ *                         .build(),
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.Read()))
+ *                         .type(&#34;Scope&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleServicePrincipalDelegatedPermissionGrant = new ServicePrincipalDelegatedPermissionGrant(&#34;exampleServicePrincipalDelegatedPermissionGrant&#34;, ServicePrincipalDelegatedPermissionGrantArgs.builder()        
+ *             .servicePrincipalObjectId(exampleServicePrincipal.getObjectId())
+ *             .resourceServicePrincipalObjectId(msgraph.getObjectId())
+ *             .claimValues(            
+ *                 &#34;openid&#34;,
+ *                 &#34;User.Read.All&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Delegated permission grant for a single user*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var wellKnown = Output.of(AzureadFunctions.getApplicationPublishedAppIds());
+ * 
+ *         var msgraph = new ServicePrincipal(&#34;msgraph&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .requiredResourceAccesses(ApplicationRequiredResourceAccess.builder()
+ *                 .resourceAppId(wellKnown.apply(getApplicationPublishedAppIdsResult -&gt; getApplicationPublishedAppIdsResult.getResult().getMicrosoftGraph()))
+ *                 .resourceAccesses(                
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getOpenid()))
+ *                         .type(&#34;Scope&#34;)
+ *                         .build(),
+ *                     ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(msgraph.getOauth2PermissionScopeIds().apply(oauth2PermissionScopeIds -&gt; oauth2PermissionScopeIds.getUser.Read()))
+ *                         .type(&#34;Scope&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .build());
+ * 
+ *         var exampleUser = new User(&#34;exampleUser&#34;, UserArgs.builder()        
+ *             .displayName(&#34;J. Doe&#34;)
+ *             .userPrincipalName(&#34;jdoe@hashicorp.com&#34;)
+ *             .mailNickname(&#34;jdoe&#34;)
+ *             .password(&#34;SecretP@sswd99!&#34;)
+ *             .build());
+ * 
+ *         var exampleServicePrincipalDelegatedPermissionGrant = new ServicePrincipalDelegatedPermissionGrant(&#34;exampleServicePrincipalDelegatedPermissionGrant&#34;, ServicePrincipalDelegatedPermissionGrantArgs.builder()        
+ *             .servicePrincipalObjectId(exampleServicePrincipal.getObjectId())
+ *             .resourceServicePrincipalObjectId(msgraph.getObjectId())
+ *             .claimValues(            
+ *                 &#34;openid&#34;,
+ *                 &#34;User.Read.All&#34;)
+ *             .userObjectId(exampleUser.getObjectId())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Delegated permission grants can be imported using their ID, e.g.

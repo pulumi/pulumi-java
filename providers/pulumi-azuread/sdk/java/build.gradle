@@ -6,7 +6,7 @@ plugins {
     id("maven-publish")
 }
 
-version = System.getenv("PULUMI_AZUREAD_PROVIDER_SDK_VERSION") ?: "5.21.0";
+version = System.getenv("PULUMI_AZUREAD_PROVIDER_SDK_VERSION") ?: "5.22.0";
 
 java {
     toolchain {

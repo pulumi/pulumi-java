@@ -28,6 +28,30 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `User Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new User(&#34;example&#34;, UserArgs.builder()        
+ *             .displayName(&#34;J. Doe&#34;)
+ *             .mailNickname(&#34;jdoe&#34;)
+ *             .password(&#34;SecretP@sswd99!&#34;)
+ *             .userPrincipalName(&#34;jdoe@hashicorp.com&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

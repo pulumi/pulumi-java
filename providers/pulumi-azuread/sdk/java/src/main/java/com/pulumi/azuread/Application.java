@@ -28,6 +28,164 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * *Create an application*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var current = Output.of(AzureadFunctions.getClientConfig());
+ * 
+ *         var example = new Application(&#34;example&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .identifierUris(&#34;api://example-app&#34;)
+ *             .logoImage(Base64.getEncoder().encodeToString(Files.readAllBytes(Paths.get(&#34;/path/to/logo.png&#34;))))
+ *             .owners(current.apply(getClientConfigResult -&gt; getClientConfigResult.getObjectId()))
+ *             .signInAudience(&#34;AzureADMultipleOrgs&#34;)
+ *             .api(ApplicationApi.builder()
+ *                 .mappedClaimsEnabled(true)
+ *                 .requestedAccessTokenVersion(2)
+ *                 .knownClientApplications(                
+ *                     azuread_application.getKnown1().getApplication_id(),
+ *                     azuread_application.getKnown2().getApplication_id())
+ *                 .oauth2PermissionScopes(                
+ *                     ApplicationApiOauth2PermissionScope.builder()
+ *                         .adminConsentDescription(&#34;Allow the application to access example on behalf of the signed-in user.&#34;)
+ *                         .adminConsentDisplayName(&#34;Access example&#34;)
+ *                         .enabled(true)
+ *                         .id(&#34;96183846-204b-4b43-82e1-5d2222eb4b9b&#34;)
+ *                         .type(&#34;User&#34;)
+ *                         .userConsentDescription(&#34;Allow the application to access example on your behalf.&#34;)
+ *                         .userConsentDisplayName(&#34;Access example&#34;)
+ *                         .value(&#34;user_impersonation&#34;)
+ *                         .build(),
+ *                     ApplicationApiOauth2PermissionScope.builder()
+ *                         .adminConsentDescription(&#34;Administer the example application&#34;)
+ *                         .adminConsentDisplayName(&#34;Administer&#34;)
+ *                         .enabled(true)
+ *                         .id(&#34;be98fa3e-ab5b-4b11-83d9-04ba2b7946bc&#34;)
+ *                         .type(&#34;Admin&#34;)
+ *                         .value(&#34;administer&#34;)
+ *                         .build())
+ *                 .build())
+ *             .appRoles(            
+ *                 ApplicationAppRole.builder()
+ *                     .allowedMemberTypes(                    
+ *                         &#34;User&#34;,
+ *                         &#34;Application&#34;)
+ *                     .description(&#34;Admins can manage roles and perform all task actions&#34;)
+ *                     .displayName(&#34;Admin&#34;)
+ *                     .enabled(true)
+ *                     .id(&#34;1b19509b-32b1-4e9f-b71d-4992aa991967&#34;)
+ *                     .value(&#34;admin&#34;)
+ *                     .build(),
+ *                 ApplicationAppRole.builder()
+ *                     .allowedMemberTypes(&#34;User&#34;)
+ *                     .description(&#34;ReadOnly roles have limited query access&#34;)
+ *                     .displayName(&#34;ReadOnly&#34;)
+ *                     .enabled(true)
+ *                     .id(&#34;497406e4-012a-4267-bf18-45a1cb148a01&#34;)
+ *                     .value(&#34;User&#34;)
+ *                     .build())
+ *             .featureTags(ApplicationFeatureTag.builder()
+ *                 .enterprise(true)
+ *                 .gallery(true)
+ *                 .build())
+ *             .optionalClaims(ApplicationOptionalClaims.builder()
+ *                 .accessTokens(                
+ *                     ApplicationOptionalClaimsAccessToken.builder()
+ *                         .name(&#34;myclaim&#34;)
+ *                         .build(),
+ *                     ApplicationOptionalClaimsAccessToken.builder()
+ *                         .name(&#34;otherclaim&#34;)
+ *                         .build())
+ *                 .idTokens(ApplicationOptionalClaimsIdToken.builder()
+ *                     .name(&#34;userclaim&#34;)
+ *                     .source(&#34;user&#34;)
+ *                     .essential(true)
+ *                     .additionalProperties(&#34;emit_as_roles&#34;)
+ *                     .build())
+ *                 .saml2Tokens(ApplicationOptionalClaimsSaml2Token.builder()
+ *                     .name(&#34;samlexample&#34;)
+ *                     .build())
+ *                 .build())
+ *             .requiredResourceAccesses(            
+ *                 ApplicationRequiredResourceAccess.builder()
+ *                     .resourceAppId(&#34;00000003-0000-0000-c000-000000000000&#34;)
+ *                     .resourceAccesses(                    
+ *                         ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                             .id(&#34;df021288-bdef-4463-88db-98f22de89214&#34;)
+ *                             .type(&#34;Role&#34;)
+ *                             .build(),
+ *                         ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                             .id(&#34;b4e74841-8e56-480b-be8b-910348b18b4c&#34;)
+ *                             .type(&#34;Scope&#34;)
+ *                             .build())
+ *                     .build(),
+ *                 ApplicationRequiredResourceAccess.builder()
+ *                     .resourceAppId(&#34;c5393580-f805-4401-95e8-94b7a6ef2fc2&#34;)
+ *                     .resourceAccesses(ApplicationRequiredResourceAccessResourceAccess.builder()
+ *                         .id(&#34;594c1fb6-4f81-4475-ae41-0c394909246c&#34;)
+ *                         .type(&#34;Role&#34;)
+ *                         .build())
+ *                     .build())
+ *             .web(ApplicationWeb.builder()
+ *                 .homepageUrl(&#34;https://app.example.net&#34;)
+ *                 .logoutUrl(&#34;https://app.example.net/logout&#34;)
+ *                 .redirectUris(&#34;https://app.example.net/account&#34;)
+ *                 .implicitGrant(ApplicationWebImplicitGrant.builder()
+ *                     .accessTokenIssuanceEnabled(true)
+ *                     .idTokenIssuanceEnabled(true)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
+ * *Create application from a gallery template*
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         final var exampleApplicationTemplate = Output.of(AzureadFunctions.getApplicationTemplate(GetApplicationTemplateArgs.builder()
+ *             .displayName(&#34;Marketo&#34;)
+ *             .build()));
+ * 
+ *         var exampleApplication = new Application(&#34;exampleApplication&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example&#34;)
+ *             .templateId(exampleApplicationTemplate.apply(getApplicationTemplateResult -&gt; getApplicationTemplateResult.getTemplateId()))
+ *             .build());
+ * 
+ *         var exampleServicePrincipal = new ServicePrincipal(&#34;exampleServicePrincipal&#34;, ServicePrincipalArgs.builder()        
+ *             .applicationId(exampleApplication.getApplicationId())
+ *             .useExisting(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
+ * 
  * ## Import
  * 
  * Applications can be imported using their object ID, e.g.

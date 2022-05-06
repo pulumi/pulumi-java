@@ -19,6 +19,45 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CustomDirectoryRole(&#34;example&#34;, CustomDirectoryRoleArgs.builder()        
+ *             .description(&#34;Allows reading applications and updating groups&#34;)
+ *             .displayName(&#34;My Custom Role&#34;)
+ *             .enabled(true)
+ *             .permissions(            
+ *                 CustomDirectoryRolePermission.builder()
+ *                     .allowedResourceActions(                    
+ *                         &#34;microsoft.directory/applications/basic/update&#34;,
+ *                         &#34;microsoft.directory/applications/create&#34;,
+ *                         &#34;microsoft.directory/applications/standard/read&#34;)
+ *                     .build(),
+ *                 CustomDirectoryRolePermission.builder()
+ *                     .allowedResourceActions(                    
+ *                         &#34;microsoft.directory/groups/allProperties/read&#34;,
+ *                         &#34;microsoft.directory/groups/allProperties/read&#34;,
+ *                         &#34;microsoft.directory/groups/basic/update&#34;,
+ *                         &#34;microsoft.directory/groups/create&#34;,
+ *                         &#34;microsoft.directory/groups/delete&#34;)
+ *                     .build())
+ *             .version(&#34;1.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

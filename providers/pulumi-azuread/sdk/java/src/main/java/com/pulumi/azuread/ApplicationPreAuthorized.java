@@ -16,6 +16,60 @@ import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var authorized = new Application(&#34;authorized&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example-authorized-app&#34;)
+ *             .build());
+ * 
+ *         var authorizer = new Application(&#34;authorizer&#34;, ApplicationArgs.builder()        
+ *             .displayName(&#34;example-authorizing-app&#34;)
+ *             .api(ApplicationApi.builder()
+ *                 .oauth2PermissionScopes(                
+ *                     ApplicationApiOauth2PermissionScope.builder()
+ *                         .adminConsentDescription(&#34;Administer the application&#34;)
+ *                         .adminConsentDisplayName(&#34;Administer&#34;)
+ *                         .enabled(true)
+ *                         .id(&#34;ced9c4c3-c273-4f0f-ac71-a20377b90f9c&#34;)
+ *                         .type(&#34;Admin&#34;)
+ *                         .value(&#34;administer&#34;)
+ *                         .build(),
+ *                     ApplicationApiOauth2PermissionScope.builder()
+ *                         .adminConsentDescription(&#34;Access the application&#34;)
+ *                         .adminConsentDisplayName(&#34;Access&#34;)
+ *                         .enabled(true)
+ *                         .id(&#34;2d5e07ca-664d-4d9b-ad61-ec07fd215213&#34;)
+ *                         .type(&#34;User&#34;)
+ *                         .userConsentDescription(&#34;Access the application&#34;)
+ *                         .userConsentDisplayName(&#34;Access&#34;)
+ *                         .value(&#34;user_impersonation&#34;)
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var example = new ApplicationPreAuthorized(&#34;example&#34;, ApplicationPreAuthorizedArgs.builder()        
+ *             .applicationObjectId(authorizer.getObjectId())
+ *             .authorizedAppId(authorized.getApplicationId())
+ *             .permissionIds(            
+ *                 &#34;ced9c4c3-c273-4f0f-ac71-a20377b90f9c&#34;,
+ *                 &#34;2d5e07ca-664d-4d9b-ad61-ec07fd215213&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

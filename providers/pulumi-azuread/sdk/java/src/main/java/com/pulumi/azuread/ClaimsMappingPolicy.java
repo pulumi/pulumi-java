@@ -26,6 +26,49 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Application Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * import static com.pulumi.codegen.internal.Serialization.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myPolicy = new ClaimsMappingPolicy(&#34;myPolicy&#34;, ClaimsMappingPolicyArgs.builder()        
+ *             .definitions(serializeJson(
+ *                 jsonObject(
+ *                     jsonProperty(&#34;ClaimsMappingPolicy&#34;, jsonObject(
+ *                         jsonProperty(&#34;ClaimsSchema&#34;, jsonArray(
+ *                             jsonObject(
+ *                                 jsonProperty(&#34;ID&#34;, &#34;employeeid&#34;),
+ *                                 jsonProperty(&#34;JwtClaimType&#34;, &#34;name&#34;),
+ *                                 jsonProperty(&#34;SamlClaimType&#34;, &#34;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name&#34;),
+ *                                 jsonProperty(&#34;Source&#34;, &#34;user&#34;)
+ *                             ), 
+ *                             jsonObject(
+ *                                 jsonProperty(&#34;ID&#34;, &#34;tenantcountry&#34;),
+ *                                 jsonProperty(&#34;JwtClaimType&#34;, &#34;country&#34;),
+ *                                 jsonProperty(&#34;SamlClaimType&#34;, &#34;http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country&#34;),
+ *                                 jsonProperty(&#34;Source&#34;, &#34;company&#34;)
+ *                             )
+ *                         )),
+ *                         jsonProperty(&#34;IncludeBasicClaimSet&#34;, &#34;true&#34;),
+ *                         jsonProperty(&#34;Version&#34;, 1)
+ *                     ))
+ *                 )))
+ *             .displayName(&#34;My Policy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 

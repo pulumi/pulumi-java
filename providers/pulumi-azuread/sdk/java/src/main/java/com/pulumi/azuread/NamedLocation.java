@@ -28,6 +28,43 @@ import javax.annotation.Nullable;
  * When authenticated with a user principal, this resource requires one of the following directory roles: `Conditional Access Administrator` or `Global Administrator`
  * 
  * ## Example Usage
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example_ip = new NamedLocation(&#34;example-ip&#34;, NamedLocationArgs.builder()        
+ *             .displayName(&#34;IP Named Location&#34;)
+ *             .ip(NamedLocationIp.builder()
+ *                 .ipRanges(                
+ *                     &#34;1.1.1.1/32&#34;,
+ *                     &#34;2.2.2.2/32&#34;)
+ *                 .trusted(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var example_country = new NamedLocation(&#34;example-country&#34;, NamedLocationArgs.builder()        
+ *             .country(NamedLocationCountry.builder()
+ *                 .countriesAndRegions(                
+ *                     &#34;GB&#34;,
+ *                     &#34;US&#34;)
+ *                 .includeUnknownCountriesAndRegions(false)
+ *                 .build())
+ *             .displayName(&#34;Country Named Location&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * ```
  * 
  * ## Import
  * 
