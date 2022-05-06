@@ -3,7 +3,7 @@
 
 package com.pulumi.azurenative.network.inputs;
 
-import com.pulumi.azurenative.network.enums.IpAllocationMethod;
+import com.pulumi.azurenative.network.enums.IPAllocationMethod;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
@@ -43,13 +43,13 @@ public final class InboundEndpointIPConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="privateIpAllocationMethod")
-    private @Nullable Output<Either<String,IpAllocationMethod>> privateIpAllocationMethod;
+    private @Nullable Output<Either<String,IPAllocationMethod>> privateIpAllocationMethod;
 
     /**
      * @return Private IP address allocation method.
      * 
      */
-    public Optional<Output<Either<String,IpAllocationMethod>>> privateIpAllocationMethod() {
+    public Optional<Output<Either<String,IPAllocationMethod>>> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
@@ -121,7 +121,7 @@ public final class InboundEndpointIPConfigurationArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder privateIpAllocationMethod(@Nullable Output<Either<String,IpAllocationMethod>> privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIpAllocationMethod) {
             $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
@@ -132,7 +132,7 @@ public final class InboundEndpointIPConfigurationArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder privateIpAllocationMethod(Either<String,IpAllocationMethod> privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(Either<String,IPAllocationMethod> privateIpAllocationMethod) {
             return privateIpAllocationMethod(Output.of(privateIpAllocationMethod));
         }
 
@@ -152,7 +152,7 @@ public final class InboundEndpointIPConfigurationArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder privateIpAllocationMethod(IpAllocationMethod privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(IPAllocationMethod privateIpAllocationMethod) {
             return privateIpAllocationMethod(Either.ofRight(privateIpAllocationMethod));
         }
 
@@ -178,7 +178,7 @@ public final class InboundEndpointIPConfigurationArgs extends com.pulumi.resourc
         }
 
         public InboundEndpointIPConfigurationArgs build() {
-            $.privateIpAllocationMethod = Codegen.stringProp("privateIpAllocationMethod").left(IpAllocationMethod.class).output().arg($.privateIpAllocationMethod).def("Dynamic").getNullable();
+            $.privateIpAllocationMethod = Codegen.stringProp("privateIpAllocationMethod").left(IPAllocationMethod.class).output().arg($.privateIpAllocationMethod).def("Dynamic").getNullable();
             return $;
         }
     }
