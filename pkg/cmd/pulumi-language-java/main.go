@@ -35,6 +35,7 @@ func main() {
 	flag.StringVar(&root, "root", "", "Project root path to use")
 	flag.StringVar(&binary, "binary", "", "A relative or an absolute path to a JAR to execute")
 
+	logging.V(3).Infof("JBANG FTW!")
 	// You can use the below flag to request that the language host load a specific executor instead of probing the
 	// PATH.  This can be used during testing to override the default location.
 	var givenExecutor string
@@ -56,15 +57,35 @@ func main() {
 			cmdutil.Exit(err)
 		}
 	case binary != "":
-		logging.V(3).Infof("language host asked to use specific JAR: `%s`", binary)
-		cmd, err := lookupPath("java")
-		if err != nil {
-			cmdutil.Exit(err)
+		logging.V(3).Infof("language host asked to use specific file: `%s`", binary)
+
+		suffix := strings.ToLower(filepath.Ext(binary))
+
+		switch suffix {
+		case ".jar":
+			cmd, err := lookupPath("java")
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+			javaExec, err = newJarExecutor(cmd, binary)
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+		case ".java", ".kt", ".groovy":
+			cmd, err := probeJBangExecutor()
+			if err != nil {
+				cmdutil.Exit(err)
+			}
+        	javaExec, err = newJBangExecutor(cmd, binary)
+       		if err != nil {
+                cmdutil.Exit(err)
+            }
+		default:
+			cmdutil.Exit(fmt.Errorf("Could not find way to use binary: `%s` with `%s`", binary, suffix))
+
 		}
-		javaExec, err = newJarExecutor(cmd, binary)
-		if err != nil {
-			cmdutil.Exit(err)
-		}
+
+
 	default:
 		pathExec, err := probeExecutor()
 		if err != nil {
@@ -380,6 +401,25 @@ func (host *javaLanguageHost) InstallDependencies(req *pulumirpc.InstallDependen
 	return nil
 }
 
+func probeJBangExecutor() (string, error) {
+	pwd, err := os.Getwd()
+	if err != nil {
+		return "", errors.Wrap(err, "could not get the working directory")
+	}
+	files, err := ioutil.ReadDir(pwd)
+	if err != nil {
+		return "", errors.Wrap(err, "could not read the working directory")
+	}
+	jbang := "jbang"
+	// detect jbang wrapper
+	for _, file := range files {
+		if !file.IsDir() && file.Name() == "jbang" {
+			jbang = "./jbang"
+		}
+	}
+	return jbang, nil;
+}
+
 func probeExecutor() (string, error) {
 	pwd, err := os.Getwd()
 	if err != nil {
@@ -403,6 +443,15 @@ func probeExecutor() (string, error) {
 			gradle = "./gradlew"
 		}
 	}
+
+	jbang := "jbang"
+	// detect jbang wrapper
+	for _, file := range files {
+		if !file.IsDir() && file.Name() == "jbang" {
+			jbang = "./jbang"
+		}
+	}
+
 	// detect maven or gradle
 	for _, file := range files {
 		if !file.IsDir() {
@@ -411,6 +460,8 @@ func probeExecutor() (string, error) {
 				return mvn, nil
 			case "settings.gradle", "settings.gradle.kts":
 				return gradle, nil
+			case "jbang.properties":
+				return jbang, nil
 			}
 		}
 	}
@@ -418,6 +469,8 @@ func probeExecutor() (string, error) {
 }
 
 func resolveExecutor(exec string) (*javaExecutor, error) {
+	logging.V(3).Infof("Finding executor for: `%s`", exec)
+
 	switch exec {
 	case "gradle", "./gradlew":
 		cmd, err := lookupPath(exec)
@@ -431,9 +484,15 @@ func resolveExecutor(exec string) (*javaExecutor, error) {
 			return nil, err
 		}
 		return newMavenExecutor(cmd)
+	case "jbang", "./jbang":
+		cmd, err := lookupPath(exec)
+		if err != nil {
+			return nil, err
+		}
+		return newJBangExecutor(cmd, "src/main.java")
 	default:
 		return nil, errors.Errorf("did not recognize executor '%s', "+
-			"expected one of: gradle, mvn, gradlew, mvnw", exec)
+			"expected one of: gradle, mvn, gradlew, mvnw, jbang", exec)
 	}
 }
 
@@ -463,6 +522,22 @@ func newMavenExecutor(cmd string) (*javaExecutor, error) {
 			"--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=com.pulumi.bootstrap.internal.Main",
 			"-DmainArgs=packages",
+		},
+	}, nil
+}
+
+func newJBangExecutor(cmd string, script string) (*javaExecutor, error) {
+	logging.V(3).Infof("Making JBang executor for: `%s`", cmd)
+
+	return &javaExecutor{
+		cmd:       cmd,
+		buildArgs: []string{"--quiet", "build", script},
+		runArgs:   []string{"--quiet",  "run", script},
+		pluginArgs: []string{
+			"--quiet", "run",
+			"--main=com.pulumi.bootstrap.internal.Main",
+			script,
+			"packages",
 		},
 	}, nil
 }
