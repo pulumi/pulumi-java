@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateGateway
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gateway = new Gateway(&#34;gateway&#34;, GatewayArgs.builder()        
+ *             .description(&#34;my gateway 1&#34;)
+ *             .gatewayId(&#34;gw1&#34;)
+ *             .locationData(Map.of(&#34;name&#34;, &#34;my location&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

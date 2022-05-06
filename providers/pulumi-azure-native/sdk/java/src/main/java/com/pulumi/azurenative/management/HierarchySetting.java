@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### GetGroupSettings
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hierarchySetting = new HierarchySetting(&#34;hierarchySetting&#34;, HierarchySettingArgs.builder()        
+ *             .defaultManagementGroup(&#34;/providers/Microsoft.Management/managementGroups/DefaultGroup&#34;)
+ *             .groupId(&#34;root&#34;)
+ *             .requireAuthorizationForGroupCreation(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-20.
  * 
  * ## Example Usage
+ * ### WorkbookAdd
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var myWorkbook = new MyWorkbook(&#34;myWorkbook&#34;, MyWorkbookArgs.builder()        
+ *             .category(&#34;workbook&#34;)
+ *             .displayName(&#34;Blah Blah Blah&#34;)
+ *             .id(&#34;c0deea5e-3344-40f2-96f8-6f8e1c3b5722&#34;)
+ *             .kind(&#34;user&#34;)
+ *             .location(&#34;west us&#34;)
+ *             .name(&#34;deadb33f-8bee-4d3b-a059-9be8dac93960&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;deadb33f-8bee-4d3b-a059-9be8dac93960&#34;)
+ *             .serializedData(&#34;{\&#34;version\&#34;:\&#34;Notebook/1.0\&#34;,\&#34;items\&#34;:[{\&#34;type\&#34;:1,\&#34;content\&#34;:\&#34;{\&#34;json\&#34;:\&#34;## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe&#39;ve included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\&#34;}\&#34;,\&#34;halfWidth\&#34;:null,\&#34;conditionalVisibility\&#34;:null},{\&#34;type\&#34;:3,\&#34;content\&#34;:\&#34;{\&#34;version\&#34;:\&#34;KqlItem/1.0\&#34;,\&#34;query\&#34;:\&#34;union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\&#34;,\&#34;showQuery\&#34;:false,\&#34;size\&#34;:1,\&#34;aggregation\&#34;:0,\&#34;showAnnotations\&#34;:false}\&#34;,\&#34;halfWidth\&#34;:null,\&#34;conditionalVisibility\&#34;:null}],\&#34;isLocked\&#34;:false}&#34;)
+ *             .sourceId(&#34;/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup/providers/Microsoft.Web/sites/MyTestApp-CodeLens&#34;)
+ *             .tags(            
+ *                 &#34;TagSample01&#34;,
+ *                 &#34;TagSample02&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

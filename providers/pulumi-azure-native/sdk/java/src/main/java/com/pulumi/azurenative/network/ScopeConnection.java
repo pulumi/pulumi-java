@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2022-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or Update Network Manager Scope Connection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scopeConnection = new ScopeConnection(&#34;scopeConnection&#34;, ScopeConnectionArgs.builder()        
+ *             .description(&#34;This is a scope connection to a cross tenant subscription.&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceId(&#34;subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b&#34;)
+ *             .scopeConnectionName(&#34;TestScopeConnection&#34;)
+ *             .tenantId(&#34;6babcaad-604b-40ac-a9d7-9fd97c0b779f&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-17-preview.
  * 
  * ## Example Usage
+ * ### Addons_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var addon = new Addon(&#34;addon&#34;, AddonArgs.builder()        
+ *             .addonName(&#34;srm&#34;)
+ *             .addonType(&#34;SRM&#34;)
+ *             .licenseKey(&#34;41915178-A8FF-4A4D-B683-6D735AF5E3F5&#34;)
+ *             .privateCloudName(&#34;cloud1&#34;)
+ *             .resourceGroupName(&#34;group1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

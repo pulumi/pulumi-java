@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-05-01.
  * 
  * ## Example Usage
+ * ### CreateAccount
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;myMapsAccount&#34;)
+ *             .location(&#34;global&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;S0&#34;))
+ *             .tags(Map.of(&#34;test&#34;, &#34;true&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

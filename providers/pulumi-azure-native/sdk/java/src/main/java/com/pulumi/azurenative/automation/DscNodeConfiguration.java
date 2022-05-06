@@ -23,6 +23,75 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create node configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dscNodeConfiguration = new DscNodeConfiguration(&#34;dscNodeConfiguration&#34;, DscNodeConfigurationArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount20&#34;)
+ *             .configuration(Map.of(&#34;name&#34;, &#34;configName&#34;))
+ *             .incrementNodeConfigurationBuild(true)
+ *             .name(&#34;configName.nodeConfigName&#34;)
+ *             .nodeConfigurationName(&#34;configName.nodeConfigName&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;hash&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;algorithm&#34;, &#34;sha256&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;6DE256A57F01BFA29B88696D5E77A383D6E61484C7686E8DB955FA10ACE9FFE5&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;embeddedContent&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;&#34;&#34;
+ * 
+ * instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+ * {
+ * ResourceID = &#34;[WindowsFeature]IIS&#34;;
+ *  Ensure = &#34;Present&#34;;
+ *  SourceInfo = &#34;::3::32::WindowsFeature&#34;;
+ *  Name = &#34;Web-Server&#34;;
+ *  ModuleName = &#34;PsDesiredStateConfiguration&#34;;
+ * 
+ * ModuleVersion = &#34;1.0&#34;;
+ *  ConfigurationName = &#34;configName&#34;;
+ * };
+ * instance of OMI_ConfigurationDocument
+ * 
+ *                     {
+ *  Version=&#34;2.0.0&#34;;
+ *  
+ *                         MinimumCompatibleVersion = &#34;1.0.0&#34;;
+ *  
+ *                         CompatibleVersionAdditionalProperties= {&#34;Omi_BaseResource:ConfigurationName&#34;};
+ *  
+ *                         Author=&#34;weijiel&#34;;
+ *  
+ *                         GenerationDate=&#34;03/30/2017 13:40:25&#34;;
+ *  
+ *                         GenerationHost=&#34;TEST-BACKEND&#34;;
+ *  
+ *                         Name=&#34;configName&#34;;
+ * 
+ *                     };
+ *                 &#34;&#34;&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;1.0&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

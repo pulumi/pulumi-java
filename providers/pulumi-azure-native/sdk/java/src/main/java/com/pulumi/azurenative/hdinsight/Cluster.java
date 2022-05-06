@@ -23,6 +23,920 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create HDInsight cluster with Autoscale configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;componentVersion&#34;, Map.of(&#34;Hadoop&#34;, &#34;2.7&#34;)),
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;autoscaleConfiguration&#34;, Map.of(&#34;recurrence&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;schedule&#34;,                             
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;days&#34;,                                     
+ *                                         &#34;Monday&#34;,
+ *                                         &#34;Tuesday&#34;,
+ *                                         &#34;Wednesday&#34;,
+ *                                         &#34;Thursday&#34;,
+ *                                         &#34;Friday&#34;),
+ *                                     Map.entry(&#34;timeAndCapacity&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;maxInstanceCount&#34;, 3),
+ *                                         Map.entry(&#34;minInstanceCount&#34;, 3),
+ *                                         Map.entry(&#34;time&#34;, &#34;09:00&#34;)
+ *                                     ))
+ *                                 ),
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;days&#34;,                                     
+ *                                         &#34;Monday&#34;,
+ *                                         &#34;Tuesday&#34;,
+ *                                         &#34;Wednesday&#34;,
+ *                                         &#34;Thursday&#34;,
+ *                                         &#34;Friday&#34;),
+ *                                     Map.entry(&#34;timeAndCapacity&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;maxInstanceCount&#34;, 6),
+ *                                         Map.entry(&#34;minInstanceCount&#34;, 6),
+ *                                         Map.entry(&#34;time&#34;, &#34;18:00&#34;)
+ *                                     ))
+ *                                 ),
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;days&#34;,                                     
+ *                                         &#34;Saturday&#34;,
+ *                                         &#34;Sunday&#34;),
+ *                                     Map.entry(&#34;timeAndCapacity&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;maxInstanceCount&#34;, 2),
+ *                                         Map.entry(&#34;minInstanceCount&#34;, 2),
+ *                                         Map.entry(&#34;time&#34;, &#34;09:00&#34;)
+ *                                     ))
+ *                                 ),
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;days&#34;,                                     
+ *                                         &#34;Saturday&#34;,
+ *                                         &#34;Sunday&#34;),
+ *                                     Map.entry(&#34;timeAndCapacity&#34;, Map.ofEntries(
+ *                                         Map.entry(&#34;maxInstanceCount&#34;, 4),
+ *                                         Map.entry(&#34;minInstanceCount&#34;, 4),
+ *                                         Map.entry(&#34;time&#34;, &#34;18:00&#34;)
+ *                                     ))
+ *                                 )),
+ *                             Map.entry(&#34;timeZone&#34;, &#34;China Standard Time&#34;)
+ *                         ))),
+ *                         Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D4_V2&#34;)),
+ *                         Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                         Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                             Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                         ))),
+ *                         Map.entry(&#34;scriptActions&#34;, ),
+ *                         Map.entry(&#34;targetInstanceCount&#34;, 4)
+ *                     ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;hdinsight-autoscale-tes-2019-06-18t05-49-16-591z&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Hadoop cluster with Azure Data Lake Storage Gen 2
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 4)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;fileSystem&#34;, &#34;default&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.dfs.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Hadoop on Linux cluster with SSH password
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.5&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 4)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Hadoop on Linux cluster with SSH public key
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.5&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 4)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Kafka cluster with Kafka Rest Proxy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;componentVersion&#34;, Map.of(&#34;Kafka&#34;, &#34;2.1&#34;)),
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;kafka&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;4.0&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;dataDisksGroups&#34;, Map.of(&#34;disksPerNode&#34;, 8)),
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D4_v2&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;kafkamanagementnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;kafkauser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ))),
+ *                     Map.entry(&#34;kafkaRestProperties&#34;, Map.of(&#34;clientGroupInfo&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;groupId&#34;, &#34;00000000-0000-0000-0000-111111111111&#34;),
+ *                         Map.entry(&#34;groupName&#34;, &#34;Kafka security group name&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Secure Hadoop cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.5&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;scriptActions&#34;, ),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2),
+ *                             Map.entry(&#34;virtualNetworkProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname&#34;),
+ *                                 Map.entry(&#34;subnet&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D3_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;scriptActions&#34;, ),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 4),
+ *                             Map.entry(&#34;virtualNetworkProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname&#34;),
+ *                                 Map.entry(&#34;subnet&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;scriptActions&#34;, ),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3),
+ *                             Map.entry(&#34;virtualNetworkProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname&#34;),
+ *                                 Map.entry(&#34;subnet&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet&#34;)
+ *                             ))
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;securityProfile&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;clusterUsersGroupDNs&#34;, &#34;hdiusers&#34;),
+ *                         Map.entry(&#34;directoryType&#34;, &#34;ActiveDirectory&#34;),
+ *                         Map.entry(&#34;domain&#34;, &#34;DomainName&#34;),
+ *                         Map.entry(&#34;domainUserPassword&#34;, &#34;**********&#34;),
+ *                         Map.entry(&#34;domainUsername&#34;, &#34;DomainUsername&#34;),
+ *                         Map.entry(&#34;ldapsUrls&#34;, &#34;ldaps://10.10.0.4:636&#34;),
+ *                         Map.entry(&#34;organizationalUnitDN&#34;, &#34;OU=Hadoop,DC=hdinsight,DC=test&#34;)
+ *                     )),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storage account key&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Premium&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create Spark on Linux Cluster with SSH password
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;componentVersion&#34;, Map.of(&#34;Spark&#34;, &#34;2.0&#34;)),
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Spark&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.5&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D12_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_D4_V2&#34;)),
+ *                             Map.entry(&#34;minInstanceCount&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 4)
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storageapikey*&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .tags(Map.of(&#34;key1&#34;, &#34;val1&#34;))
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create cluster with TLS 1.2
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;minSupportedTlsVersion&#34;, &#34;1.2&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;default8525&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create cluster with compute isolation properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeIsolationProperties&#34;, Map.of(&#34;enableComputeIsolation&#34;, true)),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;standard_d3&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;standard_d3&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ))),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storage account key&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage&#34;)
+ *                     )))
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create cluster with encryption at host
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_DS14_v2&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_DS14_v2&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Standard_DS14_v2&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;diskEncryptionProperties&#34;, Map.of(&#34;encryptionAtHost&#34;, true)),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;default8525&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create cluster with encryption in transit
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;Hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Large&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;Small&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;zookeepernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 3)
+ *                         ))),
+ *                     Map.entry(&#34;encryptionInTransitProperties&#34;, Map.of(&#34;isEncryptionInTransitEnabled&#34;, true)),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;default8525&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storagekey&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage.blob.core.windows.net&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
+ * ### Create cluster with network properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;cluster1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;clusterDefinition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;configurations&#34;, Map.of(&#34;gateway&#34;, ClusterCreateProperties.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))),
+ *                         Map.entry(&#34;kind&#34;, &#34;hadoop&#34;)
+ *                     )),
+ *                     Map.entry(&#34;clusterVersion&#34;, &#34;3.6&#34;),
+ *                     Map.entry(&#34;computeProfile&#34;, Map.of(&#34;roles&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;standard_d3&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;headnode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2),
+ *                             Map.entry(&#34;virtualNetworkProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname&#34;),
+ *                                 Map.entry(&#34;subnet&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;hardwareProfile&#34;, Map.of(&#34;vmSize&#34;, &#34;standard_d3&#34;)),
+ *                             Map.entry(&#34;name&#34;, &#34;workernode&#34;),
+ *                             Map.entry(&#34;osProfile&#34;, Map.of(&#34;linuxOperatingSystemProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;password&#34;, &#34;**********&#34;),
+ *                                 Map.entry(&#34;sshProfile&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;certificateData&#34;, &#34;**********&#34;))),
+ *                                 Map.entry(&#34;username&#34;, &#34;sshuser&#34;)
+ *                             ))),
+ *                             Map.entry(&#34;targetInstanceCount&#34;, 2),
+ *                             Map.entry(&#34;virtualNetworkProfile&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname&#34;),
+ *                                 Map.entry(&#34;subnet&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/vnetsubnet&#34;)
+ *                             ))
+ *                         ))),
+ *                     Map.entry(&#34;networkProperties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;privateLink&#34;, &#34;Enabled&#34;),
+ *                         Map.entry(&#34;resourceProviderConnection&#34;, &#34;Outbound&#34;)
+ *                     )),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;storageProfile&#34;, Map.of(&#34;storageaccounts&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;container&#34;, &#34;containername&#34;),
+ *                         Map.entry(&#34;isDefault&#34;, true),
+ *                         Map.entry(&#34;key&#34;, &#34;storage account key&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;mystorage&#34;)
+ *                     )))
+ *                 ))
+ *                 .resourceGroupName(&#34;rg1&#34;)
+ *                 .build());
+ * 
+ *                 }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

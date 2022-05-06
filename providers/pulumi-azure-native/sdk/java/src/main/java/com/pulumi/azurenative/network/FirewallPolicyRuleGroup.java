@@ -24,13 +24,93 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-01.
  * 
  * ## Example Usage
+ * ### Create FirewallPolicyRuleGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleGroup = new FirewallPolicyRuleGroup(&#34;firewallPolicyRuleGroup&#34;, FirewallPolicyRuleGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(110)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleGroupName(&#34;ruleGroup1&#34;)
+ *             .rules(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Filter-Rule&#34;),
+ *                 Map.entry(&#34;ruleConditions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;destinationAddresses&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;destinationPorts&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;ipProtocols&#34;, &#34;TCP&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;network-condition1&#34;),
+ *                     Map.entry(&#34;ruleConditionType&#34;, &#34;NetworkRuleCondition&#34;),
+ *                     Map.entry(&#34;sourceAddresses&#34;, &#34;10.1.25.0/24&#34;)
+ *                 )),
+ *                 Map.entry(&#34;ruleType&#34;, &#34;FirewallPolicyFilterRule&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create FirewallPolicyRuleGroup With IpGroups
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallPolicyRuleGroup = new FirewallPolicyRuleGroup(&#34;firewallPolicyRuleGroup&#34;, FirewallPolicyRuleGroupArgs.builder()        
+ *             .firewallPolicyName(&#34;firewallPolicy&#34;)
+ *             .priority(110)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleGroupName(&#34;ruleGroup1&#34;)
+ *             .rules(Map.ofEntries(
+ *                 Map.entry(&#34;action&#34;, Map.of(&#34;type&#34;, &#34;Deny&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;Example-Filter-Rule&#34;),
+ *                 Map.entry(&#34;ruleConditions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;destinationIpGroups&#34;, &#34;/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2&#34;),
+ *                     Map.entry(&#34;destinationPorts&#34;, &#34;*&#34;),
+ *                     Map.entry(&#34;ipProtocols&#34;, &#34;TCP&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;network-condition1&#34;),
+ *                     Map.entry(&#34;ruleConditionType&#34;, &#34;NetworkRuleCondition&#34;),
+ *                     Map.entry(&#34;sourceIpGroups&#34;, &#34;/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;ruleType&#34;, &#34;FirewallPolicyFilterRule&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
  * An existing resource can be imported using its type token, name, and identifier, e.g.
  * 
  * ```sh
- * $ pulumi import azure-native:network:FirewallPolicyRuleGroup firewallPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy 
+ * $ pulumi import azure-native:network:FirewallPolicyRuleGroup ruleGroup1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleGroups/ruleGroup1 
  * ```
  * 
  */

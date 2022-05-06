@@ -23,6 +23,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create DDoS custom policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ddosCustomPolicy = new DdosCustomPolicy(&#34;ddosCustomPolicy&#34;, DdosCustomPolicyArgs.builder()        
+ *             .ddosCustomPolicyName(&#34;test-ddos-custom-policy&#34;)
+ *             .location(&#34;centraluseuap&#34;)
+ *             .protocolCustomSettings(Map.of(&#34;protocol&#34;, &#34;Tcp&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

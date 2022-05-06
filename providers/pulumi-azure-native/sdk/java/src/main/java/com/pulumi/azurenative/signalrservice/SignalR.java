@@ -28,6 +28,72 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### SignalR_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var signalR = new SignalR(&#34;signalR&#34;, SignalRArgs.builder()        
+ *             .cors(Map.of(&#34;allowedOrigins&#34;,             
+ *                 &#34;https://foo.com&#34;,
+ *                 &#34;https://bar.com&#34;))
+ *             .features(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;ServiceMode&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;Serverless&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;EnableConnectivityLogs&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;True&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;flag&#34;, &#34;EnableMessagingLogs&#34;),
+ *                     Map.entry(&#34;properties&#34;, ),
+ *                     Map.entry(&#34;value&#34;, &#34;False&#34;)
+ *                 ))
+ *             .kind(&#34;SignalR&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .networkACLs(Map.ofEntries(
+ *                 Map.entry(&#34;defaultAction&#34;, &#34;Deny&#34;),
+ *                 Map.entry(&#34;privateEndpoints&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;allow&#34;, &#34;ServerConnection&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e&#34;)
+ *                 )),
+ *                 Map.entry(&#34;publicNetwork&#34;, Map.of(&#34;allow&#34;, &#34;ClientConnection&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .resourceName(&#34;mySignalRService&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_S1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .upstream(Map.of(&#34;templates&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;categoryPattern&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;eventPattern&#34;, &#34;connect,disconnect&#34;),
+ *                 Map.entry(&#34;hubPattern&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;urlTemplate&#34;, &#34;https://example.com/chat/api/connect&#34;)
+ *             )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

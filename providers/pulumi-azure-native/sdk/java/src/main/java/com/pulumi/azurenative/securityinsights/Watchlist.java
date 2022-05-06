@@ -24,6 +24,76 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a watchlist and bulk creates watchlist items.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var watchlist = new Watchlist(&#34;watchlist&#34;, WatchlistArgs.builder()        
+ *             .contentType(&#34;text/csv&#34;)
+ *             .description(&#34;Watchlist from CSV content&#34;)
+ *             .displayName(&#34;High Value Assets Watchlist&#34;)
+ *             .itemsSearchKey(&#34;header1&#34;)
+ *             .numberOfLinesToSkip(1)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .provider(&#34;Microsoft&#34;)
+ *             .rawContent(&#34;&#34;&#34;
+ * This line will be skipped
+ * header1,header2
+ * value1,value2            &#34;&#34;&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .source(&#34;Local file&#34;)
+ *             .watchlistAlias(&#34;highValueAsset&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a watchlist.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var watchlist = new Watchlist(&#34;watchlist&#34;, WatchlistArgs.builder()        
+ *             .description(&#34;Watchlist from CSV content&#34;)
+ *             .displayName(&#34;High Value Assets Watchlist&#34;)
+ *             .itemsSearchKey(&#34;header1&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .provider(&#34;Microsoft&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .source(&#34;Local file&#34;)
+ *             .watchlistAlias(&#34;highValueAsset&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

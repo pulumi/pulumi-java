@@ -34,6 +34,189 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### Put a cluster with maximum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .addOnFeatures(            
+ *                 &#34;RepairManager&#34;,
+ *                 &#34;DnsService&#34;,
+ *                 &#34;BackupRestoreService&#34;,
+ *                 &#34;ResourceMonitorService&#34;)
+ *             .applicationTypeVersionsCleanupPolicy(Map.of(&#34;maxUnusedVersionsToKeep&#34;, 2))
+ *             .azureActiveDirectory(Map.ofEntries(
+ *                 Map.entry(&#34;clientApplication&#34;, &#34;d151ad89-4bce-4ae8-b3d1-1dc79679fa75&#34;),
+ *                 Map.entry(&#34;clusterApplication&#34;, &#34;5886372e-7bf4-4878-a497-8098aba608ae&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;6abcc6a0-8666-43f1-87b8-172cf86a9f9c&#34;)
+ *             ))
+ *             .certificateCommonNames(Map.ofEntries(
+ *                 Map.entry(&#34;commonNames&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;certificateCommonName&#34;, &#34;abc.com&#34;),
+ *                     Map.entry(&#34;certificateIssuerThumbprint&#34;, &#34;12599211F8F14C90AFA9532AD79A6F2CA1C00622&#34;)
+ *                 )),
+ *                 Map.entry(&#34;x509StoreName&#34;, &#34;My&#34;)
+ *             ))
+ *             .clientCertificateCommonNames(Map.ofEntries(
+ *                 Map.entry(&#34;certificateCommonName&#34;, &#34;abc.com&#34;),
+ *                 Map.entry(&#34;certificateIssuerThumbprint&#34;, &#34;5F3660C715EBBDA31DB1FFDCF508302348DE8E7A&#34;),
+ *                 Map.entry(&#34;isAdmin&#34;, true)
+ *             ))
+ *             .clientCertificateThumbprints(Map.ofEntries(
+ *                 Map.entry(&#34;certificateThumbprint&#34;, &#34;5F3660C715EBBDA31DB1FFDCF508302348DE8E7A&#34;),
+ *                 Map.entry(&#34;isAdmin&#34;, true)
+ *             ))
+ *             .clusterCodeVersion(&#34;7.0.470.9590&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .diagnosticsStorageAccountConfig(Map.ofEntries(
+ *                 Map.entry(&#34;blobEndpoint&#34;, &#34;https://diag.blob.core.windows.net/&#34;),
+ *                 Map.entry(&#34;protectedAccountKeyName&#34;, &#34;StorageAccountKey1&#34;),
+ *                 Map.entry(&#34;queueEndpoint&#34;, &#34;https://diag.queue.core.windows.net/&#34;),
+ *                 Map.entry(&#34;storageAccountName&#34;, &#34;diag&#34;),
+ *                 Map.entry(&#34;tableEndpoint&#34;, &#34;https://diag.table.core.windows.net/&#34;)
+ *             ))
+ *             .eventStoreServiceEnabled(true)
+ *             .fabricSettings(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;UpgradeService&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;AppPollIntervalInSeconds&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;60&#34;)
+ *                 ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .managementEndpoint(&#34;https://myCluster.eastus.cloudapp.azure.com:19080&#34;)
+ *             .nodeTypes(Map.ofEntries(
+ *                 Map.entry(&#34;applicationPorts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endPort&#34;, 30000),
+ *                     Map.entry(&#34;startPort&#34;, 20000)
+ *                 )),
+ *                 Map.entry(&#34;clientConnectionEndpointPort&#34;, 19000),
+ *                 Map.entry(&#34;durabilityLevel&#34;, &#34;Bronze&#34;),
+ *                 Map.entry(&#34;ephemeralPorts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endPort&#34;, 64000),
+ *                     Map.entry(&#34;startPort&#34;, 49000)
+ *                 )),
+ *                 Map.entry(&#34;httpGatewayEndpointPort&#34;, 19007),
+ *                 Map.entry(&#34;isPrimary&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;nt1vm&#34;),
+ *                 Map.entry(&#34;vmInstanceCount&#34;, 5)
+ *             ))
+ *             .reliabilityLevel(&#34;Silver&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .reverseProxyCertificateCommonNames(Map.ofEntries(
+ *                 Map.entry(&#34;commonNames&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;certificateCommonName&#34;, &#34;abc.com&#34;),
+ *                     Map.entry(&#34;certificateIssuerThumbprint&#34;, &#34;12599211F8F14C90AFA9532AD79A6F2CA1C00622&#34;)
+ *                 )),
+ *                 Map.entry(&#34;x509StoreName&#34;, &#34;My&#34;)
+ *             ))
+ *             .tags()
+ *             .upgradeDescription(Map.ofEntries(
+ *                 Map.entry(&#34;deltaHealthPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationDeltaHealthPolicies&#34;, Map.of(&#34;fabric:/myApp1&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;defaultServiceTypeDeltaHealthPolicy&#34;, Map.of(&#34;maxPercentDeltaUnhealthyServices&#34;, 0)),
+ *                         Map.entry(&#34;serviceTypeDeltaHealthPolicies&#34;, Map.of(&#34;myServiceType1&#34;, Map.of(&#34;maxPercentDeltaUnhealthyServices&#34;, 0)))
+ *                     ))),
+ *                     Map.entry(&#34;maxPercentDeltaUnhealthyApplications&#34;, 0),
+ *                     Map.entry(&#34;maxPercentDeltaUnhealthyNodes&#34;, 0),
+ *                     Map.entry(&#34;maxPercentUpgradeDomainDeltaUnhealthyNodes&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;forceRestart&#34;, false),
+ *                 Map.entry(&#34;healthCheckRetryTimeout&#34;, &#34;00:05:00&#34;),
+ *                 Map.entry(&#34;healthCheckStableDuration&#34;, &#34;00:00:30&#34;),
+ *                 Map.entry(&#34;healthCheckWaitDuration&#34;, &#34;00:00:30&#34;),
+ *                 Map.entry(&#34;healthPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;applicationHealthPolicies&#34;, Map.of(&#34;fabric:/myApp1&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;defaultServiceTypeHealthPolicy&#34;, Map.of(&#34;maxPercentUnhealthyServices&#34;, 0)),
+ *                         Map.entry(&#34;serviceTypeHealthPolicies&#34;, Map.of(&#34;myServiceType1&#34;, Map.of(&#34;maxPercentUnhealthyServices&#34;, 100)))
+ *                     ))),
+ *                     Map.entry(&#34;maxPercentUnhealthyApplications&#34;, 0),
+ *                     Map.entry(&#34;maxPercentUnhealthyNodes&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;upgradeDomainTimeout&#34;, &#34;00:15:00&#34;),
+ *                 Map.entry(&#34;upgradeReplicaSetCheckTimeout&#34;, &#34;00:10:00&#34;),
+ *                 Map.entry(&#34;upgradeTimeout&#34;, &#34;01:00:00&#34;)
+ *             ))
+ *             .upgradeMode(&#34;Manual&#34;)
+ *             .vmImage(&#34;Windows&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put a cluster with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cluster = new Cluster(&#34;cluster&#34;, ClusterArgs.builder()        
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .diagnosticsStorageAccountConfig(Map.ofEntries(
+ *                 Map.entry(&#34;blobEndpoint&#34;, &#34;https://diag.blob.core.windows.net/&#34;),
+ *                 Map.entry(&#34;protectedAccountKeyName&#34;, &#34;StorageAccountKey1&#34;),
+ *                 Map.entry(&#34;queueEndpoint&#34;, &#34;https://diag.queue.core.windows.net/&#34;),
+ *                 Map.entry(&#34;storageAccountName&#34;, &#34;diag&#34;),
+ *                 Map.entry(&#34;tableEndpoint&#34;, &#34;https://diag.table.core.windows.net/&#34;)
+ *             ))
+ *             .fabricSettings(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;UpgradeService&#34;),
+ *                 Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;AppPollIntervalInSeconds&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;60&#34;)
+ *                 ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .managementEndpoint(&#34;http://myCluster.eastus.cloudapp.azure.com:19080&#34;)
+ *             .nodeTypes(Map.ofEntries(
+ *                 Map.entry(&#34;applicationPorts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endPort&#34;, 30000),
+ *                     Map.entry(&#34;startPort&#34;, 20000)
+ *                 )),
+ *                 Map.entry(&#34;clientConnectionEndpointPort&#34;, 19000),
+ *                 Map.entry(&#34;durabilityLevel&#34;, &#34;Bronze&#34;),
+ *                 Map.entry(&#34;ephemeralPorts&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;endPort&#34;, 64000),
+ *                     Map.entry(&#34;startPort&#34;, 49000)
+ *                 )),
+ *                 Map.entry(&#34;httpGatewayEndpointPort&#34;, 19007),
+ *                 Map.entry(&#34;isPrimary&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;nt1vm&#34;),
+ *                 Map.entry(&#34;vmInstanceCount&#34;, 5)
+ *             ))
+ *             .reliabilityLevel(&#34;Silver&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .tags()
+ *             .upgradeMode(&#34;Automatic&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

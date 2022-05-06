@@ -32,6 +32,256 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### EventSubscriptions_CreateOrUpdateForCustomTopic_EventHubDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .deadLetterDestination(Map.ofEntries(
+ *                 Map.entry(&#34;blobContainerName&#34;, &#34;contosocontainer&#34;),
+ *                 Map.entry(&#34;endpointType&#34;, &#34;StorageBlob&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg&#34;)
+ *             ))
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;EventHub&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription1&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForCustomTopic_HybridConnectionDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .deadLetterDestination(Map.ofEntries(
+ *                 Map.entry(&#34;blobContainerName&#34;, &#34;contosocontainer&#34;),
+ *                 Map.entry(&#34;endpointType&#34;, &#34;StorageBlob&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg&#34;)
+ *             ))
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;HybridConnection&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Relay/namespaces/ContosoNamespace/hybridConnections/HC1&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription1&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForCustomTopic_StorageQueueDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .deadLetterDestination(Map.ofEntries(
+ *                 Map.entry(&#34;blobContainerName&#34;, &#34;contosocontainer&#34;),
+ *                 Map.entry(&#34;endpointType&#34;, &#34;StorageBlob&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg&#34;)
+ *             ))
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;StorageQueue&#34;),
+ *                 Map.entry(&#34;queueName&#34;, &#34;queue1&#34;),
+ *                 Map.entry(&#34;resourceId&#34;, &#34;/subscriptions/d33c5f7a-02ea-40f4-bf52-07f17e84d6a8/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/contosostg&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription1&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForCustomTopic_WebhookDestination
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;WebHook&#34;),
+ *                 Map.entry(&#34;endpointUrl&#34;, &#34;https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&amp;code=PASSWORDCODE&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription1&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForResource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;WebHook&#34;),
+ *                 Map.entry(&#34;endpointUrl&#34;, &#34;https://requestb.in/15ksip71&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription10&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventHub/namespaces/examplenamespace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForResourceGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;WebHook&#34;),
+ *                 Map.entry(&#34;endpointUrl&#34;, &#34;https://requestb.in/15ksip71&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription2&#34;)
+ *             .filter(Map.ofEntries(
+ *                 Map.entry(&#34;isSubjectCaseSensitive&#34;, false),
+ *                 Map.entry(&#34;subjectBeginsWith&#34;, &#34;ExamplePrefix&#34;),
+ *                 Map.entry(&#34;subjectEndsWith&#34;, &#34;ExampleSuffix&#34;)
+ *             ))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSubscriptions_CreateOrUpdateForSubscription
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventSubscription = new EventSubscription(&#34;eventSubscription&#34;, EventSubscriptionArgs.builder()        
+ *             .destination(Map.ofEntries(
+ *                 Map.entry(&#34;endpointType&#34;, &#34;WebHook&#34;),
+ *                 Map.entry(&#34;endpointUrl&#34;, &#34;https://requestb.in/15ksip71&#34;)
+ *             ))
+ *             .eventSubscriptionName(&#34;examplesubscription3&#34;)
+ *             .filter(Map.of(&#34;isSubjectCaseSensitive&#34;, false))
+ *             .scope(&#34;subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

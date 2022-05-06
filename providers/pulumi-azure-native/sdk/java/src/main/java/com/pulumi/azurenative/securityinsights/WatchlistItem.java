@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a watchlist item.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var watchlistItem = new WatchlistItem(&#34;watchlistItem&#34;, WatchlistItemArgs.builder()        
+ *             .itemsKeyValue(Map.ofEntries(
+ *                 Map.entry(&#34;Business tier&#34;, &#34;10.0.2.0/24&#34;),
+ *                 Map.entry(&#34;Data tier&#34;, &#34;10.0.2.0/24&#34;),
+ *                 Map.entry(&#34;Gateway subnet&#34;, &#34;10.0.255.224/27&#34;),
+ *                 Map.entry(&#34;Private DMZ in&#34;, &#34;10.0.0.0/27&#34;),
+ *                 Map.entry(&#34;Public DMZ out&#34;, &#34;10.0.0.96/27&#34;),
+ *                 Map.entry(&#34;Web Tier&#34;, &#34;10.0.1.0/24&#34;)
+ *             ))
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalInsights&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .watchlistAlias(&#34;highValueAsset&#34;)
+ *             .watchlistItemId(&#34;82ba292c-dc97-4dfc-969d-d4dd9e666842&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### DataBoxEdgeDevicePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var device = new Device(&#34;device&#34;, DeviceArgs.builder()        
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .location(&#34;WUS&#34;)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Edge&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,69 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a workload group with all properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadClassifier = new WorkloadClassifier(&#34;workloadClassifier&#34;, WorkloadClassifierArgs.builder()        
+ *             .context(&#34;test_context&#34;)
+ *             .databaseName(&#34;testdb&#34;)
+ *             .endTime(&#34;14:00&#34;)
+ *             .importance(&#34;high&#34;)
+ *             .label(&#34;test_label&#34;)
+ *             .memberName(&#34;dbo&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .startTime(&#34;12:00&#34;)
+ *             .workloadClassifierName(&#34;wlm_workloadclassifier&#34;)
+ *             .workloadGroupName(&#34;wlm_workloadgroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a workload group with the required properties specified.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workloadClassifier = new WorkloadClassifier(&#34;workloadClassifier&#34;, WorkloadClassifierArgs.builder()        
+ *             .databaseName(&#34;testdb&#34;)
+ *             .memberName(&#34;dbo&#34;)
+ *             .resourceGroupName(&#34;Default-SQL-SouthEastAsia&#34;)
+ *             .serverName(&#34;testsvr&#34;)
+ *             .workloadClassifierName(&#34;wlm_workloadclassifier&#34;)
+ *             .workloadGroupName(&#34;wlm_workloadgroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,94 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update data collection rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataCollectionRule = new DataCollectionRule(&#34;dataCollectionRule&#34;, DataCollectionRuleArgs.builder()        
+ *             .dataCollectionRuleName(&#34;myCollectionRule&#34;)
+ *             .dataFlows(Map.ofEntries(
+ *                 Map.entry(&#34;destinations&#34;, &#34;centralWorkspace&#34;),
+ *                 Map.entry(&#34;streams&#34;,                 
+ *                     &#34;Microsoft-Perf&#34;,
+ *                     &#34;Microsoft-Syslog&#34;,
+ *                     &#34;Microsoft-WindowsEvent&#34;)
+ *             ))
+ *             .dataSources(Map.ofEntries(
+ *                 Map.entry(&#34;performanceCounters&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;counterSpecifiers&#34;,                         
+ *                             &#34;\\Processor(_Total)\\% Processor Time&#34;,
+ *                             &#34;\\Memory\\Committed Bytes&#34;,
+ *                             &#34;\\LogicalDisk(_Total)\\Free Megabytes&#34;,
+ *                             &#34;\\PhysicalDisk(_Total)\\Avg. Disk Queue Length&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;cloudTeamCoreCounters&#34;),
+ *                         Map.entry(&#34;samplingFrequencyInSeconds&#34;, 15),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-Perf&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;counterSpecifiers&#34;, &#34;\\Process(_Total)\\Thread Count&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;appTeamExtraCounters&#34;),
+ *                         Map.entry(&#34;samplingFrequencyInSeconds&#34;, 30),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-Perf&#34;)
+ *                     )),
+ *                 Map.entry(&#34;syslog&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;facilityNames&#34;, &#34;cron&#34;),
+ *                         Map.entry(&#34;logLevels&#34;,                         
+ *                             &#34;Debug&#34;,
+ *                             &#34;Critical&#34;,
+ *                             &#34;Emergency&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;cronSyslog&#34;),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-Syslog&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;facilityNames&#34;, &#34;syslog&#34;),
+ *                         Map.entry(&#34;logLevels&#34;,                         
+ *                             &#34;Alert&#34;,
+ *                             &#34;Critical&#34;,
+ *                             &#34;Emergency&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;syslogBase&#34;),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-Syslog&#34;)
+ *                     )),
+ *                 Map.entry(&#34;windowsEventLogs&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;cloudSecurityTeamEvents&#34;),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-WindowsEvent&#34;),
+ *                         Map.entry(&#34;xPathQueries&#34;, &#34;Security!&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;appTeam1AppEvents&#34;),
+ *                         Map.entry(&#34;streams&#34;, &#34;Microsoft-WindowsEvent&#34;),
+ *                         Map.entry(&#34;xPathQueries&#34;,                         
+ *                             &#34;System![System[(Level = 1 or Level = 2 or Level = 3)]]&#34;,
+ *                             &#34;Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]&#34;)
+ *                     ))
+ *             ))
+ *             .destinations(Map.of(&#34;logAnalytics&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;centralWorkspace&#34;),
+ *                 Map.entry(&#34;workspaceResourceId&#34;, &#34;/subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.OperationalInsights/workspaces/centralTeamWorkspace&#34;)
+ *             )))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

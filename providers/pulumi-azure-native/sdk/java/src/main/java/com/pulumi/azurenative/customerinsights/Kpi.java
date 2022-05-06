@@ -26,6 +26,50 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Kpi_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var kpi = new Kpi(&#34;kpi&#34;, KpiArgs.builder()        
+ *             .aliases(Map.ofEntries(
+ *                 Map.entry(&#34;aliasName&#34;, &#34;alias&#34;),
+ *                 Map.entry(&#34;expression&#34;, &#34;Id+4&#34;)
+ *             ))
+ *             .calculationWindow(&#34;Day&#34;)
+ *             .description(Map.of(&#34;en-us&#34;, &#34;Kpi Description&#34;))
+ *             .displayName(Map.of(&#34;en-us&#34;, &#34;Kpi DisplayName&#34;))
+ *             .entityType(&#34;Profile&#34;)
+ *             .entityTypeName(&#34;testProfile2327128&#34;)
+ *             .expression(&#34;SavingAccountBalance&#34;)
+ *             .function(&#34;Sum&#34;)
+ *             .groupBy(&#34;SavingAccountBalance&#34;)
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .kpiName(&#34;kpiTest45453647&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .thresHolds(Map.ofEntries(
+ *                 Map.entry(&#34;increasingKpi&#34;, true),
+ *                 Map.entry(&#34;lowerLimit&#34;, 5),
+ *                 Map.entry(&#34;upperLimit&#34;, 50)
+ *             ))
+ *             .unit(&#34;unit&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

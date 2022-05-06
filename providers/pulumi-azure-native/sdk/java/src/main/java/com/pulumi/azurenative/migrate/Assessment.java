@@ -21,6 +21,68 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### Assessments_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assessment = new Assessment(&#34;assessment&#34;, AssessmentArgs.builder()        
+ *             .assessmentName(&#34;assessment_5_14_2019_16_48_47&#34;)
+ *             .eTag(&#34;\&#34;1e000c2c-0000-0d00-0000-5cdaa4190000\&#34;&#34;)
+ *             .groupName(&#34;Group2&#34;)
+ *             .projectName(&#34;abgoyalWEselfhostb72bproject&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;azureDiskType&#34;, &#34;StandardOrPremium&#34;),
+ *                 Map.entry(&#34;azureHybridUseBenefit&#34;, &#34;Yes&#34;),
+ *                 Map.entry(&#34;azureLocation&#34;, &#34;NorthEurope&#34;),
+ *                 Map.entry(&#34;azureOfferCode&#34;, &#34;MSAZR0003P&#34;),
+ *                 Map.entry(&#34;azurePricingTier&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;azureStorageRedundancy&#34;, &#34;LocallyRedundant&#34;),
+ *                 Map.entry(&#34;azureVmFamilies&#34;,                 
+ *                     &#34;Dv2_series&#34;,
+ *                     &#34;F_series&#34;,
+ *                     &#34;Dv3_series&#34;,
+ *                     &#34;DS_series&#34;,
+ *                     &#34;DSv2_series&#34;,
+ *                     &#34;Fs_series&#34;,
+ *                     &#34;Dsv3_series&#34;,
+ *                     &#34;Ev3_series&#34;,
+ *                     &#34;Esv3_series&#34;,
+ *                     &#34;D_series&#34;,
+ *                     &#34;M_series&#34;,
+ *                     &#34;Fsv2_series&#34;,
+ *                     &#34;H_series&#34;),
+ *                 Map.entry(&#34;currency&#34;, &#34;USD&#34;),
+ *                 Map.entry(&#34;discountPercentage&#34;, 100),
+ *                 Map.entry(&#34;percentile&#34;, &#34;Percentile95&#34;),
+ *                 Map.entry(&#34;reservedInstance&#34;, &#34;RI3Year&#34;),
+ *                 Map.entry(&#34;scalingFactor&#34;, 1),
+ *                 Map.entry(&#34;sizingCriterion&#34;, &#34;PerformanceBased&#34;),
+ *                 Map.entry(&#34;stage&#34;, &#34;InProgress&#34;),
+ *                 Map.entry(&#34;timeRange&#34;, &#34;Day&#34;),
+ *                 Map.entry(&#34;vmUptime&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;daysPerMonth&#34;, 31),
+ *                     Map.entry(&#34;hoursPerDay&#34;, 24)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;abgoyal-westEurope&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

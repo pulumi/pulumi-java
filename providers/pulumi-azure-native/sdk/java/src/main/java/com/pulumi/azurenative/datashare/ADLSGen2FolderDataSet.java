@@ -20,6 +20,168 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### DataSets_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_KustoCluster_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_KustoDatabase_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SqlDBTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SqlDWTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetName(&#34;Dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;Share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSets_SynapseWorkspaceSqlPoolTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adlsGen2FolderDataSet = new ADLSGen2FolderDataSet(&#34;adlsGen2FolderDataSet&#34;, ADLSGen2FolderDataSetArgs.builder()        
+ *             .accountName(&#34;sourceAccount&#34;)
+ *             .dataSetName(&#34;dataset1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareName(&#34;share1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

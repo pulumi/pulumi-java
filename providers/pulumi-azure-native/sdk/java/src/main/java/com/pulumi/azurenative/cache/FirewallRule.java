@@ -19,6 +19,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### RedisCacheFirewallRuleCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var firewallRule = new FirewallRule(&#34;firewallRule&#34;, FirewallRuleArgs.builder()        
+ *             .cacheName(&#34;cache1&#34;)
+ *             .endIP(&#34;192.168.1.4&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .ruleName(&#34;rule1&#34;)
+ *             .startIP(&#34;192.168.1.1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

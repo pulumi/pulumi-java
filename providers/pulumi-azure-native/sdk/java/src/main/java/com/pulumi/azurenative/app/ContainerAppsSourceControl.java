@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or Update Container App SourceControl
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var containerAppsSourceControl = new ContainerAppsSourceControl(&#34;containerAppsSourceControl&#34;, ContainerAppsSourceControlArgs.builder()        
+ *             .branch(&#34;master&#34;)
+ *             .containerAppName(&#34;testcanadacentral&#34;)
+ *             .githubActionConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;azureCredentials&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;clientId&#34;, &#34;&lt;clientid&gt;&#34;),
+ *                     Map.entry(&#34;clientSecret&#34;, &#34;&lt;clientsecret&gt;&#34;),
+ *                     Map.entry(&#34;tenantId&#34;, &#34;&lt;tenantid&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;contextPath&#34;, &#34;./&#34;),
+ *                 Map.entry(&#34;image&#34;, &#34;image/tag&#34;),
+ *                 Map.entry(&#34;registryInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;registryPassword&#34;, &#34;&lt;registrypassword&gt;&#34;),
+ *                     Map.entry(&#34;registryUrl&#34;, &#34;xwang971reg.azurecr.io&#34;),
+ *                     Map.entry(&#34;registryUserName&#34;, &#34;xwang971reg&#34;)
+ *                 ))
+ *             ))
+ *             .name(&#34;current&#34;)
+ *             .repoUrl(&#34;https://github.com/xwang971/ghatest&#34;)
+ *             .resourceGroupName(&#34;workerapps-rg-xj&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,49 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### AnalyticsItemPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var analyticsItem = new AnalyticsItem(&#34;analyticsItem&#34;, AnalyticsItemArgs.builder()        
+ *             .content(&#34;&#34;&#34;
+ * let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp &lt; ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp &gt;= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ *             &#34;&#34;&#34;)
+ *             .name(&#34;Exceptions - New in the last 24 hours&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .scope(&#34;shared&#34;)
+ *             .scopePath(&#34;analyticsItems&#34;)
+ *             .type(&#34;query&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

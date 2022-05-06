@@ -23,6 +23,73 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-01.
  * 
  * ## Example Usage
+ * ### VolumeGroups_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var volumeGroup = new VolumeGroup(&#34;volumeGroup&#34;, VolumeGroupArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .groupMetaData(Map.ofEntries(
+ *                 Map.entry(&#34;applicationIdentifier&#34;, &#34;DEV&#34;),
+ *                 Map.entry(&#34;applicationType&#34;, &#34;SAP-HANA&#34;),
+ *                 Map.entry(&#34;deploymentSpecId&#34;, &#34;fb04dbeb-005d-2703-197e-6208dfadb5d9&#34;),
+ *                 Map.entry(&#34;groupDescription&#34;, &#34;Volume group&#34;)
+ *             ))
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .volumeGroupName(&#34;group1&#34;)
+ *             .volumes(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;capacityPoolResourceId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1&#34;),
+ *                     Map.entry(&#34;creationToken&#34;, &#34;testVol1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;testVol1&#34;),
+ *                     Map.entry(&#34;proximityPlacementGroup&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/cys_sjain_fcp_rg/providers/Microsoft.Compute/proximityPlacementGroups/svlqa_sjain_multivolume_ppg&#34;),
+ *                     Map.entry(&#34;serviceLevel&#34;, &#34;Premium&#34;),
+ *                     Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3&#34;),
+ *                     Map.entry(&#34;throughputMibps&#34;, 10),
+ *                     Map.entry(&#34;usageThreshold&#34;, 107374182400),
+ *                     Map.entry(&#34;volumeSpecName&#34;, &#34;data&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;capacityPoolResourceId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1&#34;),
+ *                     Map.entry(&#34;creationToken&#34;, &#34;testVol2&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;testVol2&#34;),
+ *                     Map.entry(&#34;proximityPlacementGroup&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/cys_sjain_fcp_rg/providers/Microsoft.Compute/proximityPlacementGroups/svlqa_sjain_multivolume_ppg&#34;),
+ *                     Map.entry(&#34;serviceLevel&#34;, &#34;Premium&#34;),
+ *                     Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3&#34;),
+ *                     Map.entry(&#34;throughputMibps&#34;, 10),
+ *                     Map.entry(&#34;usageThreshold&#34;, 107374182400),
+ *                     Map.entry(&#34;volumeSpecName&#34;, &#34;log&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;capacityPoolResourceId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1&#34;),
+ *                     Map.entry(&#34;creationToken&#34;, &#34;testVol3&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;testVol3&#34;),
+ *                     Map.entry(&#34;proximityPlacementGroup&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/cys_sjain_fcp_rg/providers/Microsoft.Compute/proximityPlacementGroups/svlqa_sjain_multivolume_ppg&#34;),
+ *                     Map.entry(&#34;serviceLevel&#34;, &#34;Premium&#34;),
+ *                     Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/d633cc2e-722b-4ae1-b636-bbd9e4c60ed9/resourceGroups/myRP/providers/Microsoft.Network/virtualNetworks/testvnet3/subnets/testsubnet3&#34;),
+ *                     Map.entry(&#34;throughputMibps&#34;, 10),
+ *                     Map.entry(&#34;usageThreshold&#34;, 107374182400),
+ *                     Map.entry(&#34;volumeSpecName&#34;, &#34;shared&#34;)
+ *                 ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

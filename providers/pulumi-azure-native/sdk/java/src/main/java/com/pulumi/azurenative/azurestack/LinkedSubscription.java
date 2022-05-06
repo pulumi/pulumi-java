@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a Linked Subscription.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedSubscription = new LinkedSubscription(&#34;linkedSubscription&#34;, LinkedSubscriptionArgs.builder()        
+ *             .linkedSubscriptionId(&#34;104fbb77-2b0e-476a-83de-65ad8acd1f0b&#34;)
+ *             .linkedSubscriptionName(&#34;testLinkedSubscription&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .registrationResourceId(&#34;/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration&#34;)
+ *             .resourceGroup(&#34;azurestack&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

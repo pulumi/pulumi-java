@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### RelayHybridConnectionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hybridConnection = new HybridConnection(&#34;hybridConnection&#34;, HybridConnectionArgs.builder()        
+ *             .hybridConnectionName(&#34;example-Relay-Hybrid-01&#34;)
+ *             .namespaceName(&#34;example-RelayNamespace-01&#34;)
+ *             .requiresClientAuthorization(true)
+ *             .resourceGroupName(&#34;resourcegroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -167,7 +194,8 @@ public class HybridConnection extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:relay/v20160701:HybridConnection").build()),
-                Output.of(Alias.builder().type("azure-native:relay/v20170401:HybridConnection").build())
+                Output.of(Alias.builder().type("azure-native:relay/v20170401:HybridConnection").build()),
+                Output.of(Alias.builder().type("azure-native:relay/v20211101:HybridConnection").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

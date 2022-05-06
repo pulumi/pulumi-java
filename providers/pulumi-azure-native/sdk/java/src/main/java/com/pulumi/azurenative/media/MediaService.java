@@ -25,6 +25,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create a Media Services account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mediaService = new MediaService(&#34;mediaService&#34;, MediaServiceArgs.builder()        
+ *             .accountName(&#34;contososports&#34;)
+ *             .location(&#34;South Central US&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .storageAccounts(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Storage/storageAccounts/contososportsstore&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Primary&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

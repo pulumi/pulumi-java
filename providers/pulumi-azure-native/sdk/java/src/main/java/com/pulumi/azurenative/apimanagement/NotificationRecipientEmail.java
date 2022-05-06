@@ -20,6 +20,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateNotificationRecipientEmail
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var notificationRecipientEmail = new NotificationRecipientEmail(&#34;notificationRecipientEmail&#34;, NotificationRecipientEmailArgs.builder()        
+ *             .email(&#34;foobar@live.com&#34;)
+ *             .notificationName(&#34;RequestPublisherNotificationMessage&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

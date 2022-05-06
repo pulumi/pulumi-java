@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-01.
  * 
  * ## Example Usage
+ * ### PutCommitmentPlan
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var commitmentPlan = new CommitmentPlan(&#34;commitmentPlan&#34;, CommitmentPlanArgs.builder()        
+ *             .accountName(&#34;accountName&#34;)
+ *             .commitmentPlanName(&#34;commitmentPlanName&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;autoRenew&#34;, true),
+ *                 Map.entry(&#34;current&#34;, Map.of(&#34;tier&#34;, &#34;T1&#34;)),
+ *                 Map.entry(&#34;hostingModel&#34;, &#34;Web&#34;),
+ *                 Map.entry(&#34;planType&#34;, &#34;Speech2Text&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2018-01-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateDiagnosticLogger
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var diagnosticLogger = new DiagnosticLogger(&#34;diagnosticLogger&#34;, DiagnosticLoggerArgs.builder()        
+ *             .diagnosticId(&#34;default&#34;)
+ *             .loggerid(&#34;applicationinsights&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

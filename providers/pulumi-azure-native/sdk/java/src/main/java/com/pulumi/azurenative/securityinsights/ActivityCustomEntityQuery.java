@@ -24,6 +24,82 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates an Activity entity query.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var activityCustomEntityQuery = new ActivityCustomEntityQuery(&#34;activityCustomEntityQuery&#34;, ActivityCustomEntityQueryArgs.builder()        
+ *             .content(&#34;On &#39;{{Computer}}&#39; the account &#39;{{TargetAccount}}&#39; was deleted by &#39;{{AddedBy}}&#39;&#34;)
+ *             .description(&#34;Account deleted on host&#34;)
+ *             .enabled(true)
+ *             .entitiesFilter(Map.of(&#34;Host_OsFamily&#34;, &#34;Windows&#34;))
+ *             .entityQueryId(&#34;07da3cc8-c8ad-4710-a44e-334cdcb7882b&#34;)
+ *             .inputEntityType(&#34;Host&#34;)
+ *             .kind(&#34;Activity&#34;)
+ *             .operationalInsightsResourceProvider(&#34;Microsoft.OperationalIinsights&#34;)
+ *             .queryDefinitions(Map.of(&#34;query&#34;, &#34;&#34;&#34;
+ * let GetAccountActions = (v_Host_Name:string, v_Host_NTDomain:string, v_Host_DnsDomain:string, v_Host_AzureID:string, v_Host_OMSAgentID:string){
+ * SecurityEvent
+ * | where EventID in (4725, 4726, 4767, 4720, 4722, 4723, 4724)
+ * // parsing for Host to handle variety of conventions coming from data
+ * | extend Host_HostName = case(
+ * Computer has &#39;@&#39;, tostring(split(Computer, &#39;@&#39;)[0]),
+ * Computer has &#39;\\&#39;, tostring(split(Computer, &#39;\\&#39;)[1]),
+ * Computer has &#39;.&#39;, tostring(split(Computer, &#39;.&#39;)[0]),
+ * Computer
+ * )
+ * | extend Host_NTDomain = case(
+ * Computer has &#39;\\&#39;, tostring(split(Computer, &#39;\\&#39;)[0]), 
+ * Computer has &#39;.&#39;, tostring(split(Computer, &#39;.&#39;)[-2]), 
+ * Computer
+ * )
+ * | extend Host_DnsDomain = case(
+ * Computer has &#39;\\&#39;, tostring(split(Computer, &#39;\\&#39;)[0]), 
+ * Computer has &#39;.&#39;, strcat_array(array_slice(split(Computer,&#39;.&#39;),-2,-1),&#39;.&#39;), 
+ * Computer
+ * )
+ * | where (Host_HostName =~ v_Host_Name and Host_NTDomain =~ v_Host_NTDomain) 
+ * or (Host_HostName =~ v_Host_Name and Host_DnsDomain =~ v_Host_DnsDomain) 
+ * or v_Host_AzureID =~ _ResourceId 
+ * or v_Host_OMSAgentID == SourceComputerId
+ * | project TimeGenerated, EventID, Activity, Computer, TargetAccount, TargetUserName, TargetDomainName, TargetSid, SubjectUserName, SubjectUserSid, _ResourceId, SourceComputerId
+ * | extend AddedBy = SubjectUserName
+ * // Future support for Activities
+ * | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = TargetAccount
+ * };
+ * GetAccountActions(&#39;{{Host_HostName}}&#39;, &#39;{{Host_NTDomain}}&#39;, &#39;{{Host_DnsDomain}}&#39;, &#39;{{Host_AzureID}}&#39;, &#39;{{Host_OMSAgentID}}&#39;)
+ *  
+ * | where EventID == 4726             &#34;&#34;&#34;))
+ *             .requiredInputFieldsSets(            
+ *                                 
+ *                     &#34;Host_HostName&#34;,
+ *                     &#34;Host_NTDomain&#34;,
+ *                                 
+ *                     &#34;Host_HostName&#34;,
+ *                     &#34;Host_DnsDomain&#34;,
+ *                 &#34;Host_AzureID&#34;,
+ *                 &#34;Host_OMSAgentID&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .title(&#34;An account was deleted on this host&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

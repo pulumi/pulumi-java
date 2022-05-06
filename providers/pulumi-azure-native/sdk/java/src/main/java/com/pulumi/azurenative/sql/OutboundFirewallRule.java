@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Approve or reject a outbound firewall rule with a given name.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var outboundFirewallRule = new OutboundFirewallRule(&#34;outboundFirewallRule&#34;, OutboundFirewallRuleArgs.builder()        
+ *             .outboundRuleFqdn(&#34;server.database.windows.net&#34;)
+ *             .resourceGroupName(&#34;sqlcrudtest-7398&#34;)
+ *             .serverName(&#34;sqlcrudtest-4645&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

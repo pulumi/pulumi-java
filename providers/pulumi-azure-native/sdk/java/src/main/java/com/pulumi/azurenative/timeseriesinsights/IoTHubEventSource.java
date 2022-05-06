@@ -22,6 +22,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-15.
  * 
  * ## Example Usage
+ * ### CreateEventHubEventSource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ioTHubEventSource = new IoTHubEventSource(&#34;ioTHubEventSource&#34;, IoTHubEventSourceArgs.builder()        
+ *             .environmentName(&#34;env1&#34;)
+ *             .eventSourceName(&#34;es1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### EventSourcesCreateEventHubWithCustomEnquedTime
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ioTHubEventSource = new IoTHubEventSource(&#34;ioTHubEventSource&#34;, IoTHubEventSourceArgs.builder()        
+ *             .environmentName(&#34;env1&#34;)
+ *             .eventSourceName(&#34;es1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

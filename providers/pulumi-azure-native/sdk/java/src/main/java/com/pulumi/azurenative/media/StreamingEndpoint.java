@@ -27,6 +27,58 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create a streaming endpoint
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var streamingEndpoint = new StreamingEndpoint(&#34;streamingEndpoint&#34;, StreamingEndpointArgs.builder()        
+ *             .accessControl(Map.ofEntries(
+ *                 Map.entry(&#34;akamai&#34;, Map.of(&#34;akamaiSignatureHeaderAuthenticationKeyList&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;base64Key&#34;, &#34;dGVzdGlkMQ==&#34;),
+ *                         Map.entry(&#34;expiration&#34;, &#34;2029-12-31T16:00:00-08:00&#34;),
+ *                         Map.entry(&#34;identifier&#34;, &#34;id1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;base64Key&#34;, &#34;dGVzdGlkMQ==&#34;),
+ *                         Map.entry(&#34;expiration&#34;, &#34;2030-12-31T16:00:00-08:00&#34;),
+ *                         Map.entry(&#34;identifier&#34;, &#34;id2&#34;)
+ *                     ))),
+ *                 Map.entry(&#34;ip&#34;, Map.of(&#34;allow&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;address&#34;, &#34;192.168.1.1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;AllowedIp&#34;)
+ *                 )))
+ *             ))
+ *             .accountName(&#34;slitestmedia10&#34;)
+ *             .availabilitySetName(&#34;availableset&#34;)
+ *             .cdnEnabled(false)
+ *             .description(&#34;test event 1&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;mediaresources&#34;)
+ *             .scaleUnits(1)
+ *             .streamingEndpointName(&#34;myStreamingEndpoint1&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

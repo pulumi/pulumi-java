@@ -21,6 +21,36 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update a variable
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var variable = new Variable(&#34;variable&#34;, VariableArgs.builder()        
+ *             .automationAccountName(&#34;sampleAccount9&#34;)
+ *             .description(&#34;my description&#34;)
+ *             .isEncrypted(false)
+ *             .name(&#34;sampleVariable&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .value(&#34;\&#34;ComputerName.domain.com\&#34;&#34;)
+ *             .variableName(&#34;sampleVariable&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

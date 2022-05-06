@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### AFDEndpoints_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var afdEndpoint = new AFDEndpoint(&#34;afdEndpoint&#34;, AFDEndpointArgs.builder()        
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .endpointName(&#34;endpoint1&#34;)
+ *             .location(&#34;CentralUs&#34;)
+ *             .originResponseTimeoutSeconds(30)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,45 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### KustoPoolAttachedDatabaseConfigurationsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var kustoPoolAttachedDatabaseConfiguration = new KustoPoolAttachedDatabaseConfiguration(&#34;kustoPoolAttachedDatabaseConfiguration&#34;, KustoPoolAttachedDatabaseConfigurationArgs.builder()        
+ *             .attachedDatabaseConfigurationName(&#34;attachedDatabaseConfigurations1&#34;)
+ *             .databaseName(&#34;kustodatabase&#34;)
+ *             .defaultPrincipalsModificationKind(&#34;Union&#34;)
+ *             .kustoPoolName(&#34;kustoclusterrptest4&#34;)
+ *             .kustoPoolResourceId(&#34;/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/Workspaces/kustorptest/KustoPools/kustoclusterrptest4&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .tableLevelSharingProperties(Map.ofEntries(
+ *                 Map.entry(&#34;externalTablesToExclude&#34;, &#34;ExternalTable2&#34;),
+ *                 Map.entry(&#34;externalTablesToInclude&#34;, &#34;ExternalTable1&#34;),
+ *                 Map.entry(&#34;materializedViewsToExclude&#34;, &#34;MaterializedViewTable2&#34;),
+ *                 Map.entry(&#34;materializedViewsToInclude&#34;, &#34;MaterializedViewTable1&#34;),
+ *                 Map.entry(&#34;tablesToExclude&#34;, &#34;Table2&#34;),
+ *                 Map.entry(&#34;tablesToInclude&#34;, &#34;Table1&#34;)
+ *             ))
+ *             .workspaceName(&#34;kustorptest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

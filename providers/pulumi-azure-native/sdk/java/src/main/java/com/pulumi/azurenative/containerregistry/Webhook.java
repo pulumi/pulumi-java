@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### WebhookCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webhook = new Webhook(&#34;webhook&#34;, WebhookArgs.builder()        
+ *             .actions(&#34;push&#34;)
+ *             .customHeaders(Map.of(&#34;Authorization&#34;, &#34;Basic 000000000000000000000000000000000000000000000000000&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scope(&#34;myRepository&#34;)
+ *             .serviceUri(&#34;http://myservice.com&#34;)
+ *             .status(&#34;enabled&#34;)
+ *             .tags(Map.of(&#34;key&#34;, &#34;value&#34;))
+ *             .webhookName(&#34;myWebhook&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

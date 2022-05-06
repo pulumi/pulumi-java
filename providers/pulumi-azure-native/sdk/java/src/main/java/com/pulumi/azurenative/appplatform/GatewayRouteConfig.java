@@ -21,6 +21,44 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### GatewayRouteConfigs_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gatewayRouteConfig = new GatewayRouteConfig(&#34;gatewayRouteConfig&#34;, GatewayRouteConfigArgs.builder()        
+ *             .gatewayName(&#34;default&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;appResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myApp&#34;),
+ *                 Map.entry(&#34;routes&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;filters&#34;,                     
+ *                         &#34;StripPrefix=2&#34;,
+ *                         &#34;RateLimit=1,1s&#34;),
+ *                     Map.entry(&#34;predicates&#34;, &#34;Path=/api5/customer/**&#34;),
+ *                     Map.entry(&#34;ssoEnabled&#34;, true),
+ *                     Map.entry(&#34;title&#34;, &#34;myApp route config&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .routeConfigName(&#34;myRouteConfig&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

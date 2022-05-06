@@ -22,6 +22,66 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create attestation at subscription scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var attestationAtSubscription = new AttestationAtSubscription(&#34;attestationAtSubscription&#34;, AttestationAtSubscriptionArgs.builder()        
+ *             .attestationName(&#34;790996e6-9871-4b1f-9cd9-ec42cd6ced1e&#34;)
+ *             .complianceState(&#34;Compliant&#34;)
+ *             .policyAssignmentId(&#34;/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create attestation at subscription scope with all properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var attestationAtSubscription = new AttestationAtSubscription(&#34;attestationAtSubscription&#34;, AttestationAtSubscriptionArgs.builder()        
+ *             .attestationName(&#34;790996e6-9871-4b1f-9cd9-ec42cd6ced1e&#34;)
+ *             .comments(&#34;This subscription has passed a security audit.&#34;)
+ *             .complianceState(&#34;Compliant&#34;)
+ *             .evidence(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;The results of the security audit.&#34;),
+ *                 Map.entry(&#34;sourceUri&#34;, &#34;https://gist.github.com/contoso/9573e238762c60166c090ae16b814011&#34;)
+ *             ))
+ *             .expiresOn(&#34;2021-06-15T00:00:00Z&#34;)
+ *             .owner(&#34;55a32e28-3aa5-4eea-9b5a-4cd85153b966&#34;)
+ *             .policyAssignmentId(&#34;/subscriptions/35ee058e-5fa0-414c-8145-3ebb8d09b6e2/providers/microsoft.authorization/policyassignments/b101830944f246d8a14088c5&#34;)
+ *             .policyDefinitionReferenceId(&#34;0b158b46-ff42-4799-8e39-08a5c23b4551&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### CreateAlias
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var alias = new Alias(&#34;alias&#34;, AliasArgs.builder()        
+ *             .aliasName(&#34;aliasForNewSub&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;billingScope&#34;, &#34;/providers/Microsoft.Billing/billingAccounts/e879cf0f-2b4d-5431-109a-f72fc9868693:024cabf4-7321-4cf9-be59-df0c77ca51de_2019-05-31/billingProfiles/PE2Q-NOIT-BG7-TGB/invoiceSections/MTT4-OBS7-PJA-TGB&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;Contoso MCA subscription&#34;),
+ *                 Map.entry(&#34;workload&#34;, &#34;Production&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

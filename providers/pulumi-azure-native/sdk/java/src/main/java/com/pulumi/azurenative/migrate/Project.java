@@ -22,6 +22,38 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01.
  * 
  * ## Example Usage
+ * ### Projects_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var project = new Project(&#34;project&#34;, ProjectArgs.builder()        
+ *             .eTag(&#34;&#34;)
+ *             .location(&#34;West Europe&#34;)
+ *             .projectName(&#34;abGoyalProject2&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;assessmentSolutionId&#34;, &#34;/subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourcegroups/abgoyal-westeurope/providers/microsoft.migrate/migrateprojects/abgoyalweselfhost/Solutions/Servers-Assessment-ServerAssessment&#34;),
+ *                 Map.entry(&#34;projectStatus&#34;, &#34;Active&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;abgoyal-westEurope&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -28,6 +28,203 @@ import javax.annotation.Nullable;
  * API Version: 2017-03-01-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a SQL virtual machine and joins it to a SQL virtual machine group.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachine = new SqlVirtualMachine(&#34;sqlVirtualMachine&#34;, SqlVirtualMachineArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlVirtualMachineGroupResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup&#34;)
+ *             .sqlVirtualMachineName(&#34;testvm&#34;)
+ *             .virtualMachineResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm2&#34;)
+ *             .wsfcDomainCredentials(Map.ofEntries(
+ *                 Map.entry(&#34;clusterBootstrapAccountPassword&#34;, &#34;&lt;Password&gt;&#34;),
+ *                 Map.entry(&#34;clusterOperatorAccountPassword&#34;, &#34;&lt;Password&gt;&#34;),
+ *                 Map.entry(&#34;sqlServiceAccountPassword&#34;, &#34;&lt;Password&gt;&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a SQL virtual machine for Storage Configuration Settings to EXTEND Data, Log or TempDB storage pool.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachine = new SqlVirtualMachine(&#34;sqlVirtualMachine&#34;, SqlVirtualMachineArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlVirtualMachineName(&#34;testvm&#34;)
+ *             .storageConfigurationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;diskConfigurationType&#34;, &#34;EXTEND&#34;),
+ *                 Map.entry(&#34;sqlDataSettings&#34;, Map.of(&#34;luns&#34;, 2))
+ *             ))
+ *             .virtualMachineResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a SQL virtual machine for Storage Configuration Settings to NEW Data, Log and TempDB storage pool.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachine = new SqlVirtualMachine(&#34;sqlVirtualMachine&#34;, SqlVirtualMachineArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlVirtualMachineName(&#34;testvm&#34;)
+ *             .storageConfigurationSettings(Map.ofEntries(
+ *                 Map.entry(&#34;diskConfigurationType&#34;, &#34;NEW&#34;),
+ *                 Map.entry(&#34;sqlDataSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;defaultFilePath&#34;, &#34;F:\\folderpath\\&#34;),
+ *                     Map.entry(&#34;luns&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;sqlLogSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;defaultFilePath&#34;, &#34;G:\\folderpath\\&#34;),
+ *                     Map.entry(&#34;luns&#34;, 1)
+ *                 )),
+ *                 Map.entry(&#34;sqlTempDbSettings&#34;, Map.of(&#34;defaultFilePath&#34;, &#34;D:\\TEMP&#34;)),
+ *                 Map.entry(&#34;storageWorkloadType&#34;, &#34;OLTP&#34;)
+ *             ))
+ *             .virtualMachineResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a SQL virtual machine with max parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachine = new SqlVirtualMachine(&#34;sqlVirtualMachine&#34;, SqlVirtualMachineArgs.builder()        
+ *             .autoBackupSettings(Map.ofEntries(
+ *                 Map.entry(&#34;backupScheduleType&#34;, &#34;Manual&#34;),
+ *                 Map.entry(&#34;backupSystemDbs&#34;, true),
+ *                 Map.entry(&#34;enable&#34;, true),
+ *                 Map.entry(&#34;enableEncryption&#34;, true),
+ *                 Map.entry(&#34;fullBackupFrequency&#34;, &#34;Daily&#34;),
+ *                 Map.entry(&#34;fullBackupStartTime&#34;, 6),
+ *                 Map.entry(&#34;fullBackupWindowHours&#34;, 11),
+ *                 Map.entry(&#34;logBackupFrequency&#34;, 10),
+ *                 Map.entry(&#34;password&#34;, &#34;&lt;Password&gt;&#34;),
+ *                 Map.entry(&#34;retentionPeriod&#34;, 17),
+ *                 Map.entry(&#34;storageAccessKey&#34;, &#34;&lt;primary storage access key&gt;&#34;),
+ *                 Map.entry(&#34;storageAccountUrl&#34;, &#34;https://teststorage.blob.core.windows.net/&#34;)
+ *             ))
+ *             .autoPatchingSettings(Map.ofEntries(
+ *                 Map.entry(&#34;dayOfWeek&#34;, &#34;Sunday&#34;),
+ *                 Map.entry(&#34;enable&#34;, true),
+ *                 Map.entry(&#34;maintenanceWindowDuration&#34;, 60),
+ *                 Map.entry(&#34;maintenanceWindowStartingHour&#34;, 2)
+ *             ))
+ *             .keyVaultCredentialSettings(Map.of(&#34;enable&#34;, false))
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .serverConfigurationsManagementSettings(Map.ofEntries(
+ *                 Map.entry(&#34;additionalFeaturesServerConfigurations&#34;, Map.of(&#34;isRServicesEnabled&#34;, false)),
+ *                 Map.entry(&#34;sqlConnectivityUpdateSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;connectivityType&#34;, &#34;PRIVATE&#34;),
+ *                     Map.entry(&#34;port&#34;, 1433),
+ *                     Map.entry(&#34;sqlAuthUpdatePassword&#34;, &#34;&lt;password&gt;&#34;),
+ *                     Map.entry(&#34;sqlAuthUpdateUserName&#34;, &#34;sqllogin&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sqlStorageUpdateSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;diskConfigurationType&#34;, &#34;NEW&#34;),
+ *                     Map.entry(&#34;diskCount&#34;, 1),
+ *                     Map.entry(&#34;startingDeviceId&#34;, 2)
+ *                 )),
+ *                 Map.entry(&#34;sqlWorkloadTypeUpdateSettings&#34;, Map.of(&#34;sqlWorkloadType&#34;, &#34;OLTP&#34;))
+ *             ))
+ *             .sqlImageSku(&#34;Enterprise&#34;)
+ *             .sqlManagement(&#34;Full&#34;)
+ *             .sqlServerLicenseType(&#34;PAYG&#34;)
+ *             .sqlVirtualMachineName(&#34;testvm&#34;)
+ *             .virtualMachineResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates a SQL virtual machine with min parameters.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlVirtualMachine = new SqlVirtualMachine(&#34;sqlVirtualMachine&#34;, SqlVirtualMachineArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlVirtualMachineName(&#34;testvm&#34;)
+ *             .virtualMachineResourceId(&#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

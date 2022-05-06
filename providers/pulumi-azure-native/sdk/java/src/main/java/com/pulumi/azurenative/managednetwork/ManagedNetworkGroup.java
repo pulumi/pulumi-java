@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### ManagementNetworkGroupsPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedNetworkGroup = new ManagedNetworkGroup(&#34;managedNetworkGroup&#34;, ManagedNetworkGroupArgs.builder()        
+ *             .managedNetworkGroupName(&#34;myManagedNetworkGroup1&#34;)
+ *             .managedNetworkName(&#34;myManagedNetwork&#34;)
+ *             .managementGroups()
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .subnets(Map.of(&#34;id&#34;, &#34;/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA/subnets/subnetA&#34;))
+ *             .subscriptions()
+ *             .virtualNetworks(            
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA&#34;),
+ *                 Map.of(&#34;id&#34;, &#34;/subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

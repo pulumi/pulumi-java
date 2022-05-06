@@ -26,6 +26,162 @@ import javax.annotation.Nullable;
  * API Version: 2017-12-01.
  * 
  * ## Example Usage
+ * ### Create a database as a point in time restore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var server = new Server(&#34;server&#34;, ServerArgs.builder()        
+ *             .location(&#34;brazilsouth&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;createMode&#34;, &#34;PointInTimeRestore&#34;),
+ *                 Map.entry(&#34;restorePointInTime&#34;, &#34;2017-12-14T00:00:37.467Z&#34;),
+ *                 Map.entry(&#34;sourceServerId&#34;, &#34;/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;TargetResourceGroup&#34;)
+ *             .serverName(&#34;targetserver&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;B_Gen5_2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Basic&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;ElasticServer&#34;, &#34;1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a new server
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var server = new Server(&#34;server&#34;, ServerArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;administratorLogin&#34;, &#34;cloudsa&#34;),
+ *                 Map.entry(&#34;administratorLoginPassword&#34;, &#34;&lt;administratorLoginPassword&gt;&#34;),
+ *                 Map.entry(&#34;createMode&#34;, &#34;Default&#34;),
+ *                 Map.entry(&#34;minimalTlsVersion&#34;, &#34;TLS1_2&#34;),
+ *                 Map.entry(&#34;sslEnforcement&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;storageProfile&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;backupRetentionDays&#34;, 7),
+ *                     Map.entry(&#34;geoRedundantBackup&#34;, &#34;Disabled&#34;),
+ *                     Map.entry(&#34;storageMB&#34;, 128000)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;TestGroup&#34;)
+ *             .serverName(&#34;pgtestsvc4&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;B_Gen5_2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Basic&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;ElasticServer&#34;, &#34;1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a replica server
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var server = new Server(&#34;server&#34;, ServerArgs.builder()        
+ *             .location(&#34;westcentralus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;createMode&#34;, &#34;Replica&#34;),
+ *                 Map.entry(&#34;sourceServerId&#34;, &#34;/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;TestGroup_WestCentralUS&#34;)
+ *             .serverName(&#34;testserver-replica1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen5_2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a server as a geo restore
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var server = new Server(&#34;server&#34;, ServerArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;createMode&#34;, &#34;GeoRestore&#34;),
+ *                 Map.entry(&#34;sourceServerId&#34;, &#34;/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;TargetResourceGroup&#34;)
+ *             .serverName(&#34;targetserver&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;family&#34;, &#34;Gen5&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen5_2&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;ElasticServer&#34;, &#34;1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

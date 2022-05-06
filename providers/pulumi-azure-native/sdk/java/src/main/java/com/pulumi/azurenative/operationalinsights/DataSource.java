@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-01.
  * 
  * ## Example Usage
+ * ### DataSourcesCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataSource = new DataSource(&#34;dataSource&#34;, DataSourceArgs.builder()        
+ *             .dataSourceName(&#34;AzTestDS774&#34;)
+ *             .kind(&#34;AzureActivityLog&#34;)
+ *             .properties(Map.of(&#34;LinkedResourceId&#34;, &#34;/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management&#34;))
+ *             .resourceGroupName(&#34;OIAutoRest5123&#34;)
+ *             .workspaceName(&#34;AzTest9724&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

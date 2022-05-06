@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update device
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var device = new Device(&#34;device&#34;, DeviceArgs.builder()        
+ *             .deviceName(&#34;TestDevice&#34;)
+ *             .deviceType(&#34;AzureStackEdge&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

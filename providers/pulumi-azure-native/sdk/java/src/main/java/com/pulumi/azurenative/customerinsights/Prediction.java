@@ -25,6 +25,49 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-26.
  * 
  * ## Example Usage
+ * ### Predictions_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var prediction = new Prediction(&#34;prediction&#34;, PredictionArgs.builder()        
+ *             .autoAnalyze(true)
+ *             .description(Map.of(&#34;en-us&#34;, &#34;sdktest&#34;))
+ *             .displayName(Map.of(&#34;en-us&#34;, &#34;sdktest&#34;))
+ *             .grades()
+ *             .hubName(&#34;sdkTestHub&#34;)
+ *             .involvedInteractionTypes()
+ *             .involvedKpiTypes()
+ *             .involvedRelationships()
+ *             .mappings(Map.ofEntries(
+ *                 Map.entry(&#34;grade&#34;, &#34;sdktest_Grade&#34;),
+ *                 Map.entry(&#34;reason&#34;, &#34;sdktest_Reason&#34;),
+ *                 Map.entry(&#34;score&#34;, &#34;sdktest_Score&#34;)
+ *             ))
+ *             .negativeOutcomeExpression(&#34;Customers.FirstName = &#39;Mike&#39;&#34;)
+ *             .positiveOutcomeExpression(&#34;Customers.FirstName = &#39;David&#39;&#34;)
+ *             .predictionName(&#34;sdktest&#34;)
+ *             .primaryProfileType(&#34;Customers&#34;)
+ *             .resourceGroupName(&#34;TestHubRG&#34;)
+ *             .scopeExpression(&#34;*&#34;)
+ *             .scoreLabel(&#34;score label&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -19,6 +19,33 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates or updates the specified trusted identity provider. During update, the trusted identity provider with the specified name will be replaced with this new provider
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var trustedIdProvider = new TrustedIdProvider(&#34;trustedIdProvider&#34;, TrustedIdProviderArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .idProvider(&#34;https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1&#34;)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .trustedIdProviderName(&#34;test_trusted_id_provider_name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

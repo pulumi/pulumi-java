@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### CloudEndpoints_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudEndpoint = new CloudEndpoint(&#34;cloudEndpoint&#34;, CloudEndpointArgs.builder()        
+ *             .azureFileShareName(&#34;cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4&#34;)
+ *             .cloudEndpointName(&#34;SampleCloudEndpoint_1&#34;)
+ *             .friendlyName(&#34;ankushbsubscriptionmgmtmab&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup_1&#34;)
+ *             .storageAccountResourceId(&#34;/subscriptions/744f4d70-6d17-4921-8970-a765d14f763f/resourceGroups/tminienv59svc/providers/Microsoft.Storage/storageAccounts/tminienv59storage&#34;)
+ *             .storageAccountTenantId(&#34;\&#34;72f988bf-86f1-41af-91ab-2d7cd011db47\&#34;&#34;)
+ *             .storageSyncServiceName(&#34;SampleStorageSyncService_1&#34;)
+ *             .syncGroupName(&#34;SampleSyncGroup_1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

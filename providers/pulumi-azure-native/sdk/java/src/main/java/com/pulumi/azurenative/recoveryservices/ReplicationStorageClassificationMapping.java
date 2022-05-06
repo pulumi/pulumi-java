@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Create storage classification mapping.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationStorageClassificationMapping = new ReplicationStorageClassificationMapping(&#34;replicationStorageClassificationMapping&#34;, ReplicationStorageClassificationMappingArgs.builder()        
+ *             .fabricName(&#34;2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0&#34;)
+ *             .properties(Map.of(&#34;targetStorageClassificationId&#34;, &#34;/Subscriptions/9112a37f-0f3e-46ec-9c00-060c6edca071/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/2a48e3770ac08aa2be8bfbd94fcfb1cbf2dcc487b78fb9d3bd778304441b06a0/replicationStorageClassifications/8891569e-aaef-4a46-a4a0-78c14f2d7b09&#34;))
+ *             .resourceGroupName(&#34;resourceGroupPS1&#34;)
+ *             .resourceName(&#34;vault1&#34;)
+ *             .storageClassificationMappingName(&#34;testStorageMapping&#34;)
+ *             .storageClassificationName(&#34;8891569e-aaef-4a46-a4a0-78c14f2d7b09&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

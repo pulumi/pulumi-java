@@ -37,6 +37,158 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### NfsV3AccountCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccount = new StorageAccount(&#34;storageAccount&#34;, StorageAccountArgs.builder()        
+ *             .accountName(&#34;sto4445&#34;)
+ *             .enableHttpsTrafficOnly(false)
+ *             .enableNfsV3(true)
+ *             .isHnsEnabled(true)
+ *             .kind(&#34;BlockBlobStorage&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .networkRuleSet(Map.ofEntries(
+ *                 Map.entry(&#34;bypass&#34;, &#34;AzureServices&#34;),
+ *                 Map.entry(&#34;defaultAction&#34;, &#34;Allow&#34;),
+ *                 Map.entry(&#34;ipRules&#34;, ),
+ *                 Map.entry(&#34;virtualNetworkRules&#34;, Map.of(&#34;virtualNetworkResourceId&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Network/virtualNetworks/net123/subnets/subnet12&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;res9101&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Premium_LRS&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccount = new StorageAccount(&#34;storageAccount&#34;, StorageAccountArgs.builder()        
+ *             .accountName(&#34;sto4445&#34;)
+ *             .allowBlobPublicAccess(false)
+ *             .allowSharedKeyAccess(true)
+ *             .encryption(Map.ofEntries(
+ *                 Map.entry(&#34;keySource&#34;, &#34;Microsoft.Storage&#34;),
+ *                 Map.entry(&#34;requireInfrastructureEncryption&#34;, false),
+ *                 Map.entry(&#34;services&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;blob&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;enabled&#34;, true),
+ *                         Map.entry(&#34;keyType&#34;, &#34;Account&#34;)
+ *                     )),
+ *                     Map.entry(&#34;file&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;enabled&#34;, true),
+ *                         Map.entry(&#34;keyType&#34;, &#34;Account&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;losangeles001&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;EdgeZone&#34;)
+ *             ))
+ *             .isHnsEnabled(true)
+ *             .keyPolicy(Map.of(&#34;keyExpirationPeriodInDays&#34;, 20))
+ *             .kind(&#34;Storage&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .minimumTlsVersion(&#34;TLS1_2&#34;)
+ *             .resourceGroupName(&#34;res9101&#34;)
+ *             .routingPreference(Map.ofEntries(
+ *                 Map.entry(&#34;publishInternetEndpoints&#34;, true),
+ *                 Map.entry(&#34;publishMicrosoftEndpoints&#34;, true),
+ *                 Map.entry(&#34;routingChoice&#34;, &#34;MicrosoftRouting&#34;)
+ *             ))
+ *             .sasPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;expirationAction&#34;, &#34;Log&#34;),
+ *                 Map.entry(&#34;sasExpirationPeriod&#34;, &#34;1.15:59:59&#34;)
+ *             ))
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard_GRS&#34;))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountCreateUserAssignedEncryptionIdentityWithCMK
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var storageAccount = new StorageAccount(&#34;storageAccount&#34;, StorageAccountArgs.builder()        
+ *             .accountName(&#34;sto4445&#34;)
+ *             .encryption(Map.ofEntries(
+ *                 Map.entry(&#34;encryptionIdentity&#34;, Map.of(&#34;encryptionUserAssignedIdentity&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}&#34;)),
+ *                 Map.entry(&#34;keySource&#34;, &#34;Microsoft.Keyvault&#34;),
+ *                 Map.entry(&#34;keyVaultProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keyName&#34;, &#34;wrappingKey&#34;),
+ *                     Map.entry(&#34;keyVaultUri&#34;, &#34;https://myvault8569.vault.azure.net&#34;),
+ *                     Map.entry(&#34;keyVersion&#34;, &#34;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;services&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;blob&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;enabled&#34;, true),
+ *                         Map.entry(&#34;keyType&#34;, &#34;Account&#34;)
+ *                     )),
+ *                     Map.entry(&#34;file&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;enabled&#34;, true),
+ *                         Map.entry(&#34;keyType&#34;, &#34;Account&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}&#34;, ))
+ *             ))
+ *             .kind(&#34;Storage&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;res9101&#34;)
+ *             .sku(Map.of(&#34;name&#34;, &#34;Standard_LRS&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

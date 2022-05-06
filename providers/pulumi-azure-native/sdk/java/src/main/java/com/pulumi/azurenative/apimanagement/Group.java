@@ -21,6 +21,63 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateGroup
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var group = new Group(&#34;group&#34;, GroupArgs.builder()        
+ *             .displayName(&#34;temp group&#34;)
+ *             .groupId(&#34;tempgroup&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateGroupExternal
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var group = new Group(&#34;group&#34;, GroupArgs.builder()        
+ *             .description(&#34;new group to test&#34;)
+ *             .displayName(&#34;NewGroup (samiraad.onmicrosoft.com)&#34;)
+ *             .externalId(&#34;aad://samiraad.onmicrosoft.com/groups/83cf2753-5831-4675-bc0e-2f8dc067c58d&#34;)
+ *             .groupId(&#34;aadGroup&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .type(&#34;external&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

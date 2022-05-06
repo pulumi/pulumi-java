@@ -28,6 +28,79 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### Put a service with maximum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .applicationName(&#34;myApp&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .correlationScheme(Map.ofEntries(
+ *                 Map.entry(&#34;scheme&#34;, &#34;Affinity&#34;),
+ *                 Map.entry(&#34;serviceName&#34;, &#34;fabric:/app1/app1~svc1&#34;)
+ *             ))
+ *             .defaultMoveCost(&#34;Medium&#34;)
+ *             .partitionDescription(Map.of(&#34;partitionScheme&#34;, &#34;Singleton&#34;))
+ *             .placementConstraints(&#34;NodeType==frontend&#34;)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .serviceDnsName(&#34;my.service.dns&#34;)
+ *             .serviceKind(&#34;Stateless&#34;)
+ *             .serviceLoadMetrics(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;metric1&#34;),
+ *                 Map.entry(&#34;weight&#34;, &#34;Low&#34;)
+ *             ))
+ *             .serviceName(&#34;myService&#34;)
+ *             .servicePackageActivationMode(&#34;SharedProcess&#34;)
+ *             .servicePlacementPolicies()
+ *             .serviceTypeName(&#34;myServiceType&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put a service with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var service = new Service(&#34;service&#34;, ServiceArgs.builder()        
+ *             .applicationName(&#34;myApp&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .partitionDescription(Map.of(&#34;partitionScheme&#34;, &#34;Singleton&#34;))
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .serviceKind(&#34;Stateless&#34;)
+ *             .serviceName(&#34;myService&#34;)
+ *             .serviceTypeName(&#34;myServiceType&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

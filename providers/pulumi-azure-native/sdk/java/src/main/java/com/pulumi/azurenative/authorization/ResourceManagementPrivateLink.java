@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Create Resource Management Private Link.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var resourceManagementPrivateLink = new ResourceManagementPrivateLink(&#34;resourceManagementPrivateLink&#34;, ResourceManagementPrivateLinkArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .rmplName(&#34;my-rmplName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

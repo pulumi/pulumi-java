@@ -23,6 +23,148 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Command Job.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .id(&#34;testJob&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;codeId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1&#34;),
+ *                 Map.entry(&#34;command&#34;, &#34;python file.py test&#34;),
+ *                 Map.entry(&#34;compute&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;instanceCount&#34;, 1),
+ *                     Map.entry(&#34;target&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;distribution&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;distributionType&#34;, &#34;PyTorch&#34;),
+ *                     Map.entry(&#34;processCount&#34;, 2)
+ *                 )),
+ *                 Map.entry(&#34;environmentId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1&#34;),
+ *                 Map.entry(&#34;environmentVariables&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;MY_ENV_VAR1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;MY_ENV_VAR2&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;experimentName&#34;, &#34;myExperiment&#34;),
+ *                 Map.entry(&#34;identity&#34;, Map.of(&#34;identityType&#34;, &#34;AMLToken&#34;)),
+ *                 Map.entry(&#34;inputDataBindings&#34;, Map.of(&#34;test&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dataId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1&#34;),
+ *                     Map.entry(&#34;pathOnCompute&#34;, &#34;path/on/compute&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;jobType&#34;, &#34;Command&#34;),
+ *                 Map.entry(&#34;outputDataBindings&#34;, Map.of(&#34;test&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;datastoreId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore&#34;),
+ *                     Map.entry(&#34;pathOnCompute&#34;, &#34;path/on/compute&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreateOrUpdate Sweep Job.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var job = new Job(&#34;job&#34;, JobArgs.builder()        
+ *             .id(&#34;testJob&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;algorithm&#34;, &#34;Grid&#34;),
+ *                 Map.entry(&#34;compute&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;instanceCount&#34;, 1),
+ *                     Map.entry(&#34;target&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;identity&#34;, Map.of(&#34;identityType&#34;, &#34;AMLToken&#34;)),
+ *                 Map.entry(&#34;jobType&#34;, &#34;Sweep&#34;),
+ *                 Map.entry(&#34;maxConcurrentTrials&#34;, 1),
+ *                 Map.entry(&#34;maxTotalTrials&#34;, 1),
+ *                 Map.entry(&#34;objective&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;goal&#34;, &#34;Minimize&#34;),
+ *                     Map.entry(&#34;primaryMetric&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;searchSpace&#34;, Map.of(&#34;name&#34;, )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;),
+ *                 Map.entry(&#34;trial&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;codeId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1&#34;),
+ *                     Map.entry(&#34;command&#34;, &#34;python file.py test&#34;),
+ *                     Map.entry(&#34;distribution&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;distributionType&#34;, &#34;PyTorch&#34;),
+ *                         Map.entry(&#34;processCount&#34;, 2)
+ *                     )),
+ *                     Map.entry(&#34;environmentId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1&#34;),
+ *                     Map.entry(&#34;environmentVariables&#34;, CommandJob.builder()
+ *                         .mY_ENV_VAR1(&#34;string&#34;)
+ *                         .mY_ENV_VAR2(&#34;string&#34;)
+ *                         .build()),
+ *                     Map.entry(&#34;inputDataBindings&#34;, Map.of(&#34;test&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1&#34;),
+ *                         Map.entry(&#34;pathOnCompute&#34;, &#34;path/on/compute&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;outputDataBindings&#34;, Map.of(&#34;test&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;datastoreId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastore/mydatastore&#34;),
+ *                         Map.entry(&#34;pathOnCompute&#34;, &#34;path/on/compute&#34;)
+ *                     ))),
+ *                     Map.entry(&#34;timeout&#34;, &#34;PT1M&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01-preview.
  * 
  * ## Example Usage
+ * ### TransactionNodes_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var transactionNode = new TransactionNode(&#34;transactionNode&#34;, TransactionNodeArgs.builder()        
+ *             .blockchainMemberName(&#34;contosemember1&#34;)
+ *             .location(&#34;southeastasia&#34;)
+ *             .password(&#34;&lt;password&gt;&#34;)
+ *             .resourceGroupName(&#34;mygroup&#34;)
+ *             .transactionNodeName(&#34;txnode2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

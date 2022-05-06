@@ -34,6 +34,455 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### CreatePool - Custom Image
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1&#34;)),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 18.04&#34;)
+ *             )))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - Full CloudServiceConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .applicationLicenses(            
+ *                 &#34;app-license0&#34;,
+ *                 &#34;app-license1&#34;)
+ *             .applicationPackages(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;asdf&#34;)
+ *             ))
+ *             .certificates(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567&#34;),
+ *                 Map.entry(&#34;storeLocation&#34;, &#34;LocalMachine&#34;),
+ *                 Map.entry(&#34;storeName&#34;, &#34;MY&#34;),
+ *                 Map.entry(&#34;visibility&#34;, &#34;RemoteUser&#34;)
+ *             ))
+ *             .deploymentConfiguration(Map.of(&#34;cloudServiceConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;osFamily&#34;, &#34;4&#34;),
+ *                 Map.entry(&#34;osVersion&#34;, &#34;WA-GUEST-OS-4.45_201708-01&#34;)
+ *             )))
+ *             .displayName(&#34;my-pool-name&#34;)
+ *             .interNodeCommunication(&#34;Enabled&#34;)
+ *             .metadata(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;metadata-1&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value-1&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;metadata-2&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value-2&#34;)
+ *                 ))
+ *             .networkConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;publicIPAddressConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;ipAddressIds&#34;,                     
+ *                         &#34;/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135&#34;,
+ *                         &#34;/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268&#34;),
+ *                     Map.entry(&#34;provision&#34;, &#34;UserManaged&#34;)
+ *                 )),
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123&#34;)
+ *             ))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;fixedScale&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;nodeDeallocationOption&#34;, &#34;TaskCompletion&#34;),
+ *                 Map.entry(&#34;resizeTimeout&#34;, &#34;PT8M&#34;),
+ *                 Map.entry(&#34;targetDedicatedNodes&#34;, 6),
+ *                 Map.entry(&#34;targetLowPriorityNodes&#34;, 28)
+ *             )))
+ *             .startTask(Map.ofEntries(
+ *                 Map.entry(&#34;commandLine&#34;, &#34;cmd /c SET&#34;),
+ *                 Map.entry(&#34;environmentSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;MYSET&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;1234&#34;)
+ *                 )),
+ *                 Map.entry(&#34;maxTaskRetryCount&#34;, 6),
+ *                 Map.entry(&#34;resourceFiles&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;fileMode&#34;, &#34;777&#34;),
+ *                     Map.entry(&#34;filePath&#34;, &#34;c:\\temp\\gohere&#34;),
+ *                     Map.entry(&#34;httpUrl&#34;, &#34;https://testaccount.blob.core.windows.net/example-blob-file&#34;)
+ *                 )),
+ *                 Map.entry(&#34;userIdentity&#34;, Map.of(&#34;autoUser&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;elevationLevel&#34;, &#34;Admin&#34;),
+ *                     Map.entry(&#34;scope&#34;, &#34;Pool&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;waitForSuccess&#34;, true)
+ *             ))
+ *             .taskSchedulingPolicy(Map.of(&#34;nodeFillType&#34;, &#34;Pack&#34;))
+ *             .taskSlotsPerNode(13)
+ *             .userAccounts(Map.ofEntries(
+ *                 Map.entry(&#34;elevationLevel&#34;, &#34;Admin&#34;),
+ *                 Map.entry(&#34;linuxUserConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;gid&#34;, 4567),
+ *                     Map.entry(&#34;sshPrivateKey&#34;, &#34;sshprivatekeyvalue&#34;),
+ *                     Map.entry(&#34;uid&#34;, 1234)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;username1&#34;),
+ *                 Map.entry(&#34;password&#34;, &#34;&lt;ExamplePassword&gt;&#34;)
+ *             ))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - Full VirtualMachineConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;ReadWrite&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 30),
+ *                         Map.entry(&#34;lun&#34;, 0),
+ *                         Map.entry(&#34;storageAccountType&#34;, &#34;Premium_LRS&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;caching&#34;, &#34;None&#34;),
+ *                         Map.entry(&#34;diskSizeGB&#34;, 200),
+ *                         Map.entry(&#34;lun&#34;, 1),
+ *                         Map.entry(&#34;storageAccountType&#34;, &#34;Standard_LRS&#34;)
+ *                     )),
+ *                 Map.entry(&#34;diskEncryptionConfiguration&#34;, Map.of(&#34;targets&#34;,                 
+ *                     &#34;OsDisk&#34;,
+ *                     &#34;TemporaryDisk&#34;)),
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;WindowsServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;MicrosoftWindowsServer&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;2016-Datacenter-SmallDisk&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;licenseType&#34;, &#34;Windows_Server&#34;),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.windows amd64&#34;),
+ *                 Map.entry(&#34;nodePlacementConfiguration&#34;, Map.of(&#34;policy&#34;, &#34;Zonal&#34;)),
+ *                 Map.entry(&#34;windowsConfiguration&#34;, Map.of(&#34;enableAutomaticUpdates&#34;, false))
+ *             )))
+ *             .networkConfiguration(Map.of(&#34;endpointConfiguration&#34;, Map.of(&#34;inboundNatPools&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;backendPort&#34;, 12001),
+ *                 Map.entry(&#34;frontendPortRangeEnd&#34;, 15100),
+ *                 Map.entry(&#34;frontendPortRangeStart&#34;, 15000),
+ *                 Map.entry(&#34;name&#34;, &#34;testnat&#34;),
+ *                 Map.entry(&#34;networkSecurityGroupRules&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;access&#34;, &#34;Allow&#34;),
+ *                         Map.entry(&#34;priority&#34;, 150),
+ *                         Map.entry(&#34;sourceAddressPrefix&#34;, &#34;192.100.12.45&#34;),
+ *                         Map.entry(&#34;sourcePortRanges&#34;,                         
+ *                             &#34;1&#34;,
+ *                             &#34;2&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;access&#34;, &#34;Deny&#34;),
+ *                         Map.entry(&#34;priority&#34;, 3500),
+ *                         Map.entry(&#34;sourceAddressPrefix&#34;, &#34;*&#34;),
+ *                         Map.entry(&#34;sourcePortRanges&#34;, &#34;*&#34;)
+ *                     )),
+ *                 Map.entry(&#34;protocol&#34;, &#34;TCP&#34;)
+ *             ))))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;autoScale&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;evaluationInterval&#34;, &#34;PT5M&#34;),
+ *                 Map.entry(&#34;formula&#34;, &#34;$TargetDedicatedNodes=1&#34;)
+ *             )))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - Minimal CloudServiceConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;cloudServiceConfiguration&#34;, Map.of(&#34;osFamily&#34;, &#34;5&#34;)))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;fixedScale&#34;, Map.of(&#34;targetDedicatedNodes&#34;, 3)))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - Minimal VirtualMachineConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;18.04-LTS&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 18.04&#34;)
+ *             )))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;autoScale&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;evaluationInterval&#34;, &#34;PT5M&#34;),
+ *                 Map.entry(&#34;formula&#34;, &#34;$TargetDedicatedNodes=1&#34;)
+ *             )))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - No public IP
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1&#34;)),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 18.04&#34;)
+ *             )))
+ *             .networkConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;publicIPAddressConfiguration&#34;, Map.of(&#34;provision&#34;, &#34;NoPublicIPAddresses&#34;)),
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123&#34;)
+ *             ))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - Public IPs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1&#34;)),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 18.04&#34;)
+ *             )))
+ *             .networkConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;publicIPAddressConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;ipAddressIds&#34;, &#34;/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135&#34;),
+ *                     Map.entry(&#34;provision&#34;, &#34;UserManaged&#34;)
+ *                 )),
+ *                 Map.entry(&#34;subnetId&#34;, &#34;/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123&#34;)
+ *             ))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - UserAssignedIdentities
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;18.04-LTS&#34;),
+ *                     Map.entry(&#34;version&#34;, &#34;latest&#34;)
+ *                 )),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 18.04&#34;)
+ *             )))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;, ),
+ *                     Map.entry(&#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2&#34;, )
+ *                 ))
+ *             ))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;autoScale&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;evaluationInterval&#34;, &#34;PT5M&#34;),
+ *                 Map.entry(&#34;formula&#34;, &#34;$TargetDedicatedNodes=1&#34;)
+ *             )))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CreatePool - VirtualMachineConfiguration Extensions
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pool = new Pool(&#34;pool&#34;, PoolArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .deploymentConfiguration(Map.of(&#34;virtualMachineConfiguration&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;extensions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;autoUpgradeMinorVersion&#34;, true),
+ *                     Map.entry(&#34;name&#34;, &#34;batchextension1&#34;),
+ *                     Map.entry(&#34;protectedSettings&#34;, Map.of(&#34;protectedSettingsKey&#34;, &#34;protectedSettingsValue&#34;)),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Microsoft.Azure.Security.Monitoring&#34;),
+ *                     Map.entry(&#34;settings&#34;, Map.of(&#34;settingsKey&#34;, &#34;settingsValue&#34;)),
+ *                     Map.entry(&#34;type&#34;, &#34;SecurityMonitoringForLinux&#34;),
+ *                     Map.entry(&#34;typeHandlerVersion&#34;, &#34;1.0&#34;)
+ *                 )),
+ *                 Map.entry(&#34;imageReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;offer&#34;, &#34;UbuntuServer&#34;),
+ *                     Map.entry(&#34;publisher&#34;, &#34;Canonical&#34;),
+ *                     Map.entry(&#34;sku&#34;, &#34;16.04.0-LTS&#34;)
+ *                 )),
+ *                 Map.entry(&#34;nodeAgentSkuId&#34;, &#34;batch.node.ubuntu 16.04&#34;)
+ *             )))
+ *             .poolName(&#34;testpool&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .scaleSettings(Map.of(&#34;autoScale&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;evaluationInterval&#34;, &#34;PT5M&#34;),
+ *                 Map.entry(&#34;formula&#34;, &#34;$TargetDedicatedNodes=1&#34;)
+ *             )))
+ *             .vmSize(&#34;STANDARD_D4&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

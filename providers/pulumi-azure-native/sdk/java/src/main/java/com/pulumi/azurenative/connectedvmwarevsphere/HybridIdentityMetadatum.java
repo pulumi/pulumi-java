@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
+ * ### CreateHybridIdentityMetadata
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hybridIdentityMetadatum = new HybridIdentityMetadatum(&#34;hybridIdentityMetadatum&#34;, HybridIdentityMetadatumArgs.builder()        
+ *             .metadataName(&#34;default&#34;)
+ *             .publicKey(&#34;8ec7d60c-9700-40b1-8e6e-e5b2f6f477f2&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .virtualMachineName(&#34;ContosoVm&#34;)
+ *             .vmId(&#34;f8b82dff-38ef-4220-99ef-d3a3f86ddc6c&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

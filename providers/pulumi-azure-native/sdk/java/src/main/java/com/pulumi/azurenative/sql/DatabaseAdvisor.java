@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Update database advisor
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseAdvisor = new DatabaseAdvisor(&#34;databaseAdvisor&#34;, DatabaseAdvisorArgs.builder()        
+ *             .advisorName(&#34;CreateIndex&#34;)
+ *             .autoExecuteStatus(&#34;Disabled&#34;)
+ *             .databaseName(&#34;IndexAdvisor_test_3&#34;)
+ *             .resourceGroupName(&#34;workloadinsight-demos&#34;)
+ *             .serverName(&#34;misosisvr&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

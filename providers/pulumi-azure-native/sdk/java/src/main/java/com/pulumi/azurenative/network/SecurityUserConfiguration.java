@@ -21,6 +21,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create network manager security user configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var securityUserConfiguration = new SecurityUserConfiguration(&#34;securityUserConfiguration&#34;, SecurityUserConfigurationArgs.builder()        
+ *             .configurationName(&#34;myTestSecurityConfig&#34;)
+ *             .deleteExistingNSGs(&#34;True&#34;)
+ *             .description(&#34;A sample policy&#34;)
+ *             .networkManagerName(&#34;testNetworkManager&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .securityType(&#34;UserPolicy&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

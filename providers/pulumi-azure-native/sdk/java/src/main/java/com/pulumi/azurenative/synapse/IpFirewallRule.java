@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create an IP firewall rule
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var ipFirewallRule = new IpFirewallRule(&#34;ipFirewallRule&#34;, IpFirewallRuleArgs.builder()        
+ *             .endIpAddress(&#34;10.0.0.254&#34;)
+ *             .resourceGroupName(&#34;ExampleResourceGroup&#34;)
+ *             .ruleName(&#34;ExampleIpFirewallRule&#34;)
+ *             .startIpAddress(&#34;10.0.0.0&#34;)
+ *             .workspaceName(&#34;ExampleWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create packet core control plane
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var packetCoreControlPlane = new PacketCoreControlPlane(&#34;packetCoreControlPlane&#34;, PacketCoreControlPlaneArgs.builder()        
+ *             .controlPlaneAccessInterface(Map.of(&#34;name&#34;, &#34;N2&#34;))
+ *             .coreNetworkTechnology(&#34;5GC&#34;)
+ *             .customLocation(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ExtendedLocation/customLocations/TestCustomLocation&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .mobileNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork&#34;))
+ *             .packetCoreControlPlaneName(&#34;TestPacketCoreCP&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .version(&#34;0.2.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

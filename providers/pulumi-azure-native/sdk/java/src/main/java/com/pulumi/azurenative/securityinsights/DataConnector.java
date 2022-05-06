@@ -20,6 +20,60 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates an Office365 data connector.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataConnector = new DataConnector(&#34;dataConnector&#34;, DataConnectorArgs.builder()        
+ *             .dataConnectorId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .kind(&#34;Office365&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates or updates an Threat Intelligence Platform data connector.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dataConnector = new DataConnector(&#34;dataConnector&#34;, DataConnectorArgs.builder()        
+ *             .dataConnectorId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .kind(&#34;ThreatIntelligence&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

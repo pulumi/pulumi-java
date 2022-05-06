@@ -27,6 +27,95 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### Put an application with maximum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .applicationName(&#34;myApp&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .maximumNodes(3)
+ *             .metrics(Map.ofEntries(
+ *                 Map.entry(&#34;maximumCapacity&#34;, 3),
+ *                 Map.entry(&#34;name&#34;, &#34;metric1&#34;),
+ *                 Map.entry(&#34;reservationCapacity&#34;, 1),
+ *                 Map.entry(&#34;totalApplicationCapacity&#34;, 5)
+ *             ))
+ *             .minimumNodes(1)
+ *             .parameters(Map.of(&#34;param1&#34;, &#34;value1&#34;))
+ *             .removeApplicationCapacity(false)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .typeName(&#34;myAppType&#34;)
+ *             .typeVersion(&#34;1.0&#34;)
+ *             .upgradePolicy(Map.ofEntries(
+ *                 Map.entry(&#34;applicationHealthPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;considerWarningAsError&#34;, true),
+ *                     Map.entry(&#34;defaultServiceTypeHealthPolicy&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;maxPercentUnhealthyPartitionsPerService&#34;, 0),
+ *                         Map.entry(&#34;maxPercentUnhealthyReplicasPerPartition&#34;, 0),
+ *                         Map.entry(&#34;maxPercentUnhealthyServices&#34;, 0)
+ *                     )),
+ *                     Map.entry(&#34;maxPercentUnhealthyDeployedApplications&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;forceRestart&#34;, false),
+ *                 Map.entry(&#34;rollingUpgradeMonitoringPolicy&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;failureAction&#34;, &#34;Rollback&#34;),
+ *                     Map.entry(&#34;healthCheckRetryTimeout&#34;, &#34;00:10:00&#34;),
+ *                     Map.entry(&#34;healthCheckStableDuration&#34;, &#34;00:05:00&#34;),
+ *                     Map.entry(&#34;healthCheckWaitDuration&#34;, &#34;00:02:00&#34;),
+ *                     Map.entry(&#34;upgradeDomainTimeout&#34;, &#34;1.06:00:00&#34;),
+ *                     Map.entry(&#34;upgradeTimeout&#34;, &#34;01:00:00&#34;)
+ *                 )),
+ *                 Map.entry(&#34;upgradeMode&#34;, &#34;Monitored&#34;),
+ *                 Map.entry(&#34;upgradeReplicaSetCheckTimeout&#34;, &#34;01:00:00&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Put an application with minimum parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .applicationName(&#34;myApp&#34;)
+ *             .clusterName(&#34;myCluster&#34;)
+ *             .removeApplicationCapacity(false)
+ *             .resourceGroupName(&#34;resRg&#34;)
+ *             .typeName(&#34;myAppType&#34;)
+ *             .typeVersion(&#34;1.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

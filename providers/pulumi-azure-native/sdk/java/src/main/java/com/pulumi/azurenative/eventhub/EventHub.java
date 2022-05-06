@@ -22,6 +22,47 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### EventHubCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventHub = new EventHub(&#34;eventHub&#34;, EventHubArgs.builder()        
+ *             .captureDescription(Map.ofEntries(
+ *                 Map.entry(&#34;destination&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;archiveNameFormat&#34;, &#34;{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}&#34;),
+ *                     Map.entry(&#34;blobContainer&#34;, &#34;container&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;EventHubArchive.AzureBlockBlob&#34;),
+ *                     Map.entry(&#34;storageAccountResourceId&#34;, &#34;/subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-Storage-SouthCentralUS/providers/Microsoft.ClassicStorage/storageAccounts/arjunteststorage&#34;)
+ *                 )),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;encoding&#34;, &#34;Avro&#34;),
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 120),
+ *                 Map.entry(&#34;sizeLimitInBytes&#34;, 10485763)
+ *             ))
+ *             .eventHubName(&#34;sdk-EventHub-6547&#34;)
+ *             .messageRetentionInDays(4)
+ *             .namespaceName(&#34;sdk-Namespace-5357&#34;)
+ *             .partitionCount(4)
+ *             .resourceGroupName(&#34;Default-NotificationHubs-AustraliaEast&#34;)
+ *             .status(&#34;Active&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

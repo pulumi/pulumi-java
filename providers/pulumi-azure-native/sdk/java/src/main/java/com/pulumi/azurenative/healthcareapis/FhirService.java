@@ -30,6 +30,63 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-01.
  * 
  * ## Example Usage
+ * ### Create or update a Fhir Service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var fhirService = new FhirService(&#34;fhirService&#34;, FhirServiceArgs.builder()        
+ *             .accessPolicies(            
+ *                 Map.of(&#34;objectId&#34;, &#34;c487e7d1-3210-41a3-8ccc-e9372b78da47&#34;),
+ *                 Map.of(&#34;objectId&#34;, &#34;5b307da8-43d4-492b-8b66-b0294ade872f&#34;))
+ *             .acrConfiguration(Map.of(&#34;loginServers&#34;, &#34;test1.azurecr.io&#34;))
+ *             .authenticationConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;audience&#34;, &#34;https://azurehealthcareapis.com&#34;),
+ *                 Map.entry(&#34;authority&#34;, &#34;https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc&#34;),
+ *                 Map.entry(&#34;smartProxyEnabled&#34;, true)
+ *             ))
+ *             .corsConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;allowCredentials&#34;, false),
+ *                 Map.entry(&#34;headers&#34;, &#34;*&#34;),
+ *                 Map.entry(&#34;maxAge&#34;, 1440),
+ *                 Map.entry(&#34;methods&#34;,                 
+ *                     &#34;DELETE&#34;,
+ *                     &#34;GET&#34;,
+ *                     &#34;OPTIONS&#34;,
+ *                     &#34;PATCH&#34;,
+ *                     &#34;POST&#34;,
+ *                     &#34;PUT&#34;),
+ *                 Map.entry(&#34;origins&#34;, &#34;*&#34;)
+ *             ))
+ *             .exportConfiguration(Map.of(&#34;storageAccountName&#34;, &#34;existingStorageAccount&#34;))
+ *             .fhirServiceName(&#34;fhirservice1&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .kind(&#34;fhir-R4&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;testRG&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *             ))
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -329,7 +386,8 @@ public class FhirService extends com.pulumi.resources.CustomResource {
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:healthcareapis/v20210601preview:FhirService").build()),
-                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:FhirService").build())
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20211101:FhirService").build()),
+                Output.of(Alias.builder().type("azure-native:healthcareapis/v20220131preview:FhirService").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

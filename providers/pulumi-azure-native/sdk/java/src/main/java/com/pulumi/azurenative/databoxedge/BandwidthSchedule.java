@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### BandwidthSchedulePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bandwidthSchedule = new BandwidthSchedule(&#34;bandwidthSchedule&#34;, BandwidthScheduleArgs.builder()        
+ *             .days(            
+ *                 &#34;Sunday&#34;,
+ *                 &#34;Monday&#34;)
+ *             .deviceName(&#34;testedgedevice&#34;)
+ *             .name(&#34;bandwidth-1&#34;)
+ *             .rateInMbps(100)
+ *             .resourceGroupName(&#34;GroupForEdgeAutomation&#34;)
+ *             .start(&#34;0:0:0&#34;)
+ *             .stop(&#34;13:59:0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

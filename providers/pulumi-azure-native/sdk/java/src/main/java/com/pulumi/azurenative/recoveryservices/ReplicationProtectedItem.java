@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2018-07-10.
  * 
  * ## Example Usage
+ * ### Enables protection.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var replicationProtectedItem = new ReplicationProtectedItem(&#34;replicationProtectedItem&#34;, ReplicationProtectedItemArgs.builder()        
+ *             .fabricName(&#34;cloud1&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;policyId&#34;, &#34;/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1&#34;),
+ *                 Map.entry(&#34;protectableItemId&#34;, &#34;/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b&#34;),
+ *                 Map.entry(&#34;providerSpecificDetails&#34;, Map.of(&#34;instanceType&#34;, &#34;HyperVReplicaAzure&#34;))
+ *             ))
+ *             .protectionContainerName(&#34;cloud_6d224fc6-f326-5d35-96de-fbf51efb3179&#34;)
+ *             .replicatedProtectedItemName(&#34;f8491e4f-817a-40dd-a90c-af773978c75b&#34;)
+ *             .resourceGroupName(&#34;resourceGroupPS1&#34;)
+ *             .resourceName(&#34;vault1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

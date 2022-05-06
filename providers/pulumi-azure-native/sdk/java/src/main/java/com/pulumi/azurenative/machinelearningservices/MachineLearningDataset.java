@@ -24,6 +24,42 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create Dataset
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machineLearningDataset = new MachineLearningDataset(&#34;machineLearningDataset&#34;, MachineLearningDatasetArgs.builder()        
+ *             .datasetName(&#34;datasetName123&#34;)
+ *             .datasetType(&#34;file&#34;)
+ *             .parameters(Map.of(&#34;path&#34;, Map.of(&#34;dataPath&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;datastoreName&#34;, &#34;testblobfromarm&#34;),
+ *                 Map.entry(&#34;relativePath&#34;, &#34;UI/03-26-2020_083359_UTC/latin1encoding.csv&#34;)
+ *             ))))
+ *             .registration(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;test description&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;datasetName123&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;acjain-mleastUS2&#34;)
+ *             .skipValidation(false)
+ *             .workspaceName(&#34;acjain-mleastUS2&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

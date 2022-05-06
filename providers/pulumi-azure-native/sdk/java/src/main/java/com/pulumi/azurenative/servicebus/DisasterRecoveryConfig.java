@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### SBAliasCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var disasterRecoveryConfig = new DisasterRecoveryConfig(&#34;disasterRecoveryConfig&#34;, DisasterRecoveryConfigArgs.builder()        
+ *             .alias(&#34;sdk-Namespace-8860&#34;)
+ *             .alternateName(&#34;alternameforAlias-Namespace-8860&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-8860&#34;)
+ *             .partnerNamespace(&#34;sdk-Namespace-37&#34;)
+ *             .resourceGroupName(&#34;ardsouzatestRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

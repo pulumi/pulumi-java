@@ -20,6 +20,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### KustoDataConnectionsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var eventHubDataConnection = new EventHubDataConnection(&#34;eventHubDataConnection&#34;, EventHubDataConnectionArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .consumerGroup(&#34;testConsumerGroup1&#34;)
+ *             .dataConnectionName(&#34;DataConnections8&#34;)
+ *             .databaseName(&#34;KustoDatabase8&#34;)
+ *             .eventHubResourceId(&#34;/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1&#34;)
+ *             .kind(&#34;EventHub&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .managedIdentityResourceId(&#34;/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedidentityTest1&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

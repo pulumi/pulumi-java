@@ -20,6 +20,223 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01.
  * 
  * ## Example Usage
+ * ### StorageAccountSetManagementPolicies
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementPolicy = new ManagementPolicy(&#34;managementPolicy&#34;, ManagementPolicyArgs.builder()        
+ *             .accountName(&#34;sto9699&#34;)
+ *             .managementPolicyName(&#34;default&#34;)
+ *             .policy(Map.of(&#34;rules&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;definition&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;actions&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;baseBlob&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 1000)),
+ *                                 Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 90)),
+ *                                 Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 30))
+ *                             )),
+ *                             Map.entry(&#34;snapshot&#34;, Map.of(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 30)))
+ *                         )),
+ *                         Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;blobTypes&#34;, &#34;blockBlob&#34;),
+ *                             Map.entry(&#34;prefixMatch&#34;, &#34;olcmtestcontainer1&#34;)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;name&#34;, &#34;olcmtest1&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Lifecycle&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;definition&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;actions&#34;, Map.of(&#34;baseBlob&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 1000)),
+ *                             Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 90)),
+ *                             Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 30))
+ *                         ))),
+ *                         Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;blobIndexMatch&#34;,                             
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;name&#34;, &#34;tag1&#34;),
+ *                                     Map.entry(&#34;op&#34;, &#34;==&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;val1&#34;)
+ *                                 ),
+ *                                 Map.ofEntries(
+ *                                     Map.entry(&#34;name&#34;, &#34;tag2&#34;),
+ *                                     Map.entry(&#34;op&#34;, &#34;==&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;val2&#34;)
+ *                                 )),
+ *                             Map.entry(&#34;blobTypes&#34;, &#34;blockBlob&#34;),
+ *                             Map.entry(&#34;prefixMatch&#34;, &#34;olcmtestcontainer2&#34;)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;enabled&#34;, true),
+ *                     Map.entry(&#34;name&#34;, &#34;olcmtest2&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Lifecycle&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountSetManagementPolicyForBlockAndAppendBlobs
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementPolicy = new ManagementPolicy(&#34;managementPolicy&#34;, ManagementPolicyArgs.builder()        
+ *             .accountName(&#34;sto9699&#34;)
+ *             .managementPolicyName(&#34;default&#34;)
+ *             .policy(Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;definition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;baseBlob&#34;, Map.of(&#34;delete&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 90))),
+ *                         Map.entry(&#34;snapshot&#34;, Map.of(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 90))),
+ *                         Map.entry(&#34;version&#34;, Map.of(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 90)))
+ *                     )),
+ *                     Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;blobTypes&#34;,                         
+ *                             &#34;blockBlob&#34;,
+ *                             &#34;appendBlob&#34;),
+ *                         Map.entry(&#34;prefixMatch&#34;, &#34;olcmtestcontainer1&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;olcmtest1&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Lifecycle&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountSetManagementPolicyWithSnapshotAndVersion
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementPolicy = new ManagementPolicy(&#34;managementPolicy&#34;, ManagementPolicyArgs.builder()        
+ *             .accountName(&#34;sto9699&#34;)
+ *             .managementPolicyName(&#34;default&#34;)
+ *             .policy(Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;definition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;baseBlob&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 1000)),
+ *                             Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 90)),
+ *                             Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterModificationGreaterThan&#34;, 30))
+ *                         )),
+ *                         Map.entry(&#34;snapshot&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 1000)),
+ *                             Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 90)),
+ *                             Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 30))
+ *                         )),
+ *                         Map.entry(&#34;version&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 1000)),
+ *                             Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 90)),
+ *                             Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 30))
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;blobTypes&#34;, &#34;blockBlob&#34;),
+ *                         Map.entry(&#34;prefixMatch&#34;, &#34;olcmtestcontainer1&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;olcmtest1&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Lifecycle&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### StorageAccountSetManagementPolicy_LastAccessTimeBasedBlobActions
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managementPolicy = new ManagementPolicy(&#34;managementPolicy&#34;, ManagementPolicyArgs.builder()        
+ *             .accountName(&#34;sto9699&#34;)
+ *             .managementPolicyName(&#34;default&#34;)
+ *             .policy(Map.of(&#34;rules&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;definition&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actions&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;baseBlob&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;delete&#34;, Map.of(&#34;daysAfterLastAccessTimeGreaterThan&#34;, 1000)),
+ *                             Map.entry(&#34;enableAutoTierToHotFromCool&#34;, true),
+ *                             Map.entry(&#34;tierToArchive&#34;, Map.of(&#34;daysAfterLastAccessTimeGreaterThan&#34;, 90)),
+ *                             Map.entry(&#34;tierToCool&#34;, Map.of(&#34;daysAfterLastAccessTimeGreaterThan&#34;, 30))
+ *                         )),
+ *                         Map.entry(&#34;snapshot&#34;, Map.of(&#34;delete&#34;, Map.of(&#34;daysAfterCreationGreaterThan&#34;, 30)))
+ *                     )),
+ *                     Map.entry(&#34;filters&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;blobTypes&#34;, &#34;blockBlob&#34;),
+ *                         Map.entry(&#34;prefixMatch&#34;, &#34;olcmtestcontainer&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;enabled&#34;, true),
+ *                 Map.entry(&#34;name&#34;, &#34;olcmtest&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Lifecycle&#34;)
+ *             )))
+ *             .resourceGroupName(&#34;res7687&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

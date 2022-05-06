@@ -24,6 +24,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create spatial anchor account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var spatialAnchorsAccount = new SpatialAnchorsAccount(&#34;spatialAnchorsAccount&#34;, SpatialAnchorsAccountArgs.builder()        
+ *             .accountName(&#34;MyAccount&#34;)
+ *             .location(&#34;eastus2euap&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

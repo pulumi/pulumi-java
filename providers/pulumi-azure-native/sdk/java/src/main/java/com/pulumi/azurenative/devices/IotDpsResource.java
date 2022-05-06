@@ -23,6 +23,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-03-01.
  * 
  * ## Example Usage
+ * ### DPSCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var iotDpsResource = new IotDpsResource(&#34;iotDpsResource&#34;, IotDpsResourceArgs.builder()        
+ *             .location(&#34;East US&#34;)
+ *             .properties()
+ *             .provisioningServiceName(&#34;myFirstProvisioningService&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;S1&#34;)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -173,7 +205,8 @@ public class IotDpsResource extends com.pulumi.resources.CustomResource {
                 Output.of(Alias.builder().type("azure-native:devices/v20200101:IotDpsResource").build()),
                 Output.of(Alias.builder().type("azure-native:devices/v20200301:IotDpsResource").build()),
                 Output.of(Alias.builder().type("azure-native:devices/v20200901preview:IotDpsResource").build()),
-                Output.of(Alias.builder().type("azure-native:devices/v20211015:IotDpsResource").build())
+                Output.of(Alias.builder().type("azure-native:devices/v20211015:IotDpsResource").build()),
+                Output.of(Alias.builder().type("azure-native:devices/v20220205:IotDpsResource").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

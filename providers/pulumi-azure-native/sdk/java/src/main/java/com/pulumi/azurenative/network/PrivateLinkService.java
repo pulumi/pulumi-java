@@ -29,6 +29,51 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create private link service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateLinkService = new PrivateLinkService(&#34;privateLinkService&#34;, PrivateLinkServiceArgs.builder()        
+ *             .autoApproval(Map.of(&#34;subscriptions&#34;,             
+ *                 &#34;subscription1&#34;,
+ *                 &#34;subscription2&#34;))
+ *             .fqdns(            
+ *                 &#34;fqdn1&#34;,
+ *                 &#34;fqdn2&#34;,
+ *                 &#34;fqdn3&#34;)
+ *             .ipConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;fe-lb&#34;),
+ *                 Map.entry(&#34;privateIPAddress&#34;, &#34;10.0.1.4&#34;),
+ *                 Map.entry(&#34;privateIPAddressVersion&#34;, &#34;IPv4&#34;),
+ *                 Map.entry(&#34;privateIPAllocationMethod&#34;, &#34;Static&#34;),
+ *                 Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb&#34;))
+ *             ))
+ *             .loadBalancerFrontendIpConfigurations(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;testPls&#34;)
+ *             .visibility(Map.of(&#34;subscriptions&#34;,             
+ *                 &#34;subscription1&#34;,
+ *                 &#34;subscription2&#34;,
+ *                 &#34;subscription3&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

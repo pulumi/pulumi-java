@@ -21,6 +21,61 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create a topology with Artifact Source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceTopology = new ServiceTopology(&#34;serviceTopology&#34;, ServiceTopologyArgs.builder()        
+ *             .artifactSourceId(&#34;Microsoft.DeploymentManager/artifactSources/myArtifactSource&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceTopologyName(&#34;myTopology&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a topology without Artifact Source
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serviceTopology = new ServiceTopology(&#34;serviceTopology&#34;, ServiceTopologyArgs.builder()        
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceTopologyName(&#34;myTopology&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

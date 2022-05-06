@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### VirtualNetworkGatewayNatRulePut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkGatewayNatRule = new VirtualNetworkGatewayNatRule(&#34;virtualNetworkGatewayNatRule&#34;, VirtualNetworkGatewayNatRuleArgs.builder()        
+ *             .externalMappings(Map.of(&#34;addressSpace&#34;, &#34;192.168.21.0/24&#34;))
+ *             .internalMappings(Map.of(&#34;addressSpace&#34;, &#34;10.4.0.0/24&#34;))
+ *             .ipConfigurationId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/gateway1/ipConfigurations/default&#34;)
+ *             .mode(&#34;EgressSnat&#34;)
+ *             .natRuleName(&#34;natRule1&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .type(&#34;Static&#34;)
+ *             .virtualNetworkGatewayName(&#34;gateway1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

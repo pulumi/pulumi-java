@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateOpenIdConnectProvider
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var openIdConnectProvider = new OpenIdConnectProvider(&#34;openIdConnectProvider&#34;, OpenIdConnectProviderArgs.builder()        
+ *             .clientId(&#34;oidprovidertemplate3&#34;)
+ *             .clientSecret(&#34;x&#34;)
+ *             .displayName(&#34;templateoidprovider3&#34;)
+ *             .metadataEndpoint(&#34;https://oidprovider-template3.net&#34;)
+ *             .opid(&#34;templateOpenIdConnect3&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

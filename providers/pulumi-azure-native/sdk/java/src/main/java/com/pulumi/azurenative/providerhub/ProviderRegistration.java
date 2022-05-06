@@ -19,6 +19,48 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-20.
  * 
  * ## Example Usage
+ * ### ProviderRegistrations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var providerRegistration = new ProviderRegistration(&#34;providerRegistration&#34;, ProviderRegistrationArgs.builder()        
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;capabilities&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;effect&#34;, &#34;Allow&#34;),
+ *                         Map.entry(&#34;quotaId&#34;, &#34;CSP_2015-05-01&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;effect&#34;, &#34;Allow&#34;),
+ *                         Map.entry(&#34;quotaId&#34;, &#34;CSP_MG_2017-12-01&#34;)
+ *                     )),
+ *                 Map.entry(&#34;management&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;incidentContactEmail&#34;, &#34;helpme@contoso.com&#34;),
+ *                     Map.entry(&#34;incidentRoutingService&#34;, &#34;Contoso Resource Provider&#34;),
+ *                     Map.entry(&#34;incidentRoutingTeam&#34;, &#34;Contoso Triage&#34;)
+ *                 )),
+ *                 Map.entry(&#34;providerType&#34;, &#34;Internal&#34;),
+ *                 Map.entry(&#34;providerVersion&#34;, &#34;2.0&#34;)
+ *             ))
+ *             .providerNamespace(&#34;Microsoft.Contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

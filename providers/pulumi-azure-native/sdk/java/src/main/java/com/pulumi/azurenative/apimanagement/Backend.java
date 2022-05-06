@@ -24,6 +24,95 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateBackendProxyBackend
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backend = new Backend(&#34;backend&#34;, BackendArgs.builder()        
+ *             .backendId(&#34;proxybackend&#34;)
+ *             .credentials(Map.ofEntries(
+ *                 Map.entry(&#34;authorization&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;parameter&#34;, &#34;opensesma&#34;),
+ *                     Map.entry(&#34;scheme&#34;, &#34;Basic&#34;)
+ *                 )),
+ *                 Map.entry(&#34;header&#34;, Map.of(&#34;x-my-1&#34;,                 
+ *                     &#34;val1&#34;,
+ *                     &#34;val2&#34;)),
+ *                 Map.entry(&#34;query&#34;, Map.of(&#34;sv&#34;,                 
+ *                     &#34;xx&#34;,
+ *                     &#34;bb&#34;,
+ *                     &#34;cc&#34;))
+ *             ))
+ *             .description(&#34;description5308&#34;)
+ *             .protocol(&#34;http&#34;)
+ *             .proxy(Map.ofEntries(
+ *                 Map.entry(&#34;password&#34;, &#34;&lt;password&gt;&#34;),
+ *                 Map.entry(&#34;url&#34;, &#34;http://192.168.1.1:8080&#34;),
+ *                 Map.entry(&#34;username&#34;, &#34;Contoso\\admin&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .tls(Map.ofEntries(
+ *                 Map.entry(&#34;validateCertificateChain&#34;, true),
+ *                 Map.entry(&#34;validateCertificateName&#34;, true)
+ *             ))
+ *             .url(&#34;https://backendname2644/&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateBackendServiceFabric
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backend = new Backend(&#34;backend&#34;, BackendArgs.builder()        
+ *             .backendId(&#34;sfbackend&#34;)
+ *             .description(&#34;Service Fabric Test App 1&#34;)
+ *             .properties(Map.of(&#34;serviceFabricCluster&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;clientCertificateId&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1&#34;),
+ *                 Map.entry(&#34;managementEndpoints&#34;, &#34;https://somecluster.com&#34;),
+ *                 Map.entry(&#34;maxPartitionResolutionRetries&#34;, 5),
+ *                 Map.entry(&#34;serverX509Names&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;issuerCertificateThumbprint&#34;, &#34;IssuerCertificateThumbprint1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;ServerCommonName1&#34;)
+ *                 ))
+ *             )))
+ *             .protocol(&#34;http&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .url(&#34;fabric:/mytestapp/mytestservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

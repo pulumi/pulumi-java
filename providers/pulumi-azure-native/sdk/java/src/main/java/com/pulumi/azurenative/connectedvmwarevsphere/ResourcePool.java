@@ -25,6 +25,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-10-01-preview.
  * 
  * ## Example Usage
+ * ### CreateResourcePool
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var resourcePool = new ResourcePool(&#34;resourcePool&#34;, ResourcePoolArgs.builder()        
+ *             .extendedLocation(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;/subscriptions/a5015e1c-867f-4533-8541-85cd470d0cfb/resourceGroups/demoRG/providers/Microsoft.ExtendedLocation/customLocations/contoso&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;customLocation&#34;)
+ *             ))
+ *             .location(&#34;East US&#34;)
+ *             .moRefId(&#34;aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .resourcePoolName(&#34;HRPool&#34;)
+ *             .vCenterId(&#34;/subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/testrg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/ContosoVCenter&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

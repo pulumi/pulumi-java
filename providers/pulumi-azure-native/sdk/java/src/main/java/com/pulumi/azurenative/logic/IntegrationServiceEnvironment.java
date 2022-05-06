@@ -24,6 +24,51 @@ import javax.annotation.Nullable;
  * API Version: 2019-05-01.
  * 
  * ## Example Usage
+ * ### Create or update an integration service environment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var integrationServiceEnvironment = new IntegrationServiceEnvironment(&#34;integrationServiceEnvironment&#34;, IntegrationServiceEnvironmentArgs.builder()        
+ *             .integrationServiceEnvironmentName(&#34;testIntegrationServiceEnvironment&#34;)
+ *             .location(&#34;brazilsouth&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;encryptionConfiguration&#34;, Map.of(&#34;encryptionKeyReference&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;keyName&#34;, &#34;testKeyName&#34;),
+ *                     Map.entry(&#34;keyVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.KeyVault/vaults/testKeyVault&#34;)),
+ *                     Map.entry(&#34;keyVersion&#34;, &#34;13b261d30b984753869902d7f47f4d55&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;networkConfiguration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;accessEndpoint&#34;, Map.of(&#34;type&#34;, &#34;Internal&#34;)),
+ *                     Map.entry(&#34;subnets&#34;,                     
+ *                         Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s1&#34;),
+ *                         Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s2&#34;),
+ *                         Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s3&#34;),
+ *                         Map.of(&#34;id&#34;, &#34;/subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Network/virtualNetworks/testVNET/subnets/s4&#34;))
+ *                 ))
+ *             ))
+ *             .resourceGroup(&#34;testResourceGroup&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 2),
+ *                 Map.entry(&#34;name&#34;, &#34;Premium&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

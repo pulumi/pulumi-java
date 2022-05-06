@@ -21,6 +21,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Triggers_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledTrigger = new ScheduledTrigger(&#34;scheduledTrigger&#34;, ScheduledTriggerArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .kind(&#34;ScheduleBased&#34;)
+ *             .recurrenceInterval(&#34;Day&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .synchronizationMode(&#34;Incremental&#34;)
+ *             .synchronizationTime(&#34;2018-11-14T04:47:52.9614956Z&#34;)
+ *             .triggerName(&#34;Trigger1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

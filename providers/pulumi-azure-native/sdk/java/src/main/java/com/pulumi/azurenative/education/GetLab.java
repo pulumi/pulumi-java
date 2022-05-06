@@ -23,6 +23,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01-preview.
  * 
  * ## Example Usage
+ * ### CreateLab
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var getLab = new GetLab(&#34;getLab&#34;, GetLabArgs.builder()        
+ *             .billingAccountName(&#34;{billingAccountName}&#34;)
+ *             .billingProfileName(&#34;{billingProfileName}&#34;)
+ *             .budgetPerStudent(Map.ofEntries(
+ *                 Map.entry(&#34;currency&#34;, &#34;USD&#34;),
+ *                 Map.entry(&#34;value&#34;, 100)
+ *             ))
+ *             .description(&#34;example lab description&#34;)
+ *             .displayName(&#34;example lab&#34;)
+ *             .expirationDate(&#34;2021-12-09T22:11:29.422Z&#34;)
+ *             .invoiceSectionName(&#34;{invoiceSectionName}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

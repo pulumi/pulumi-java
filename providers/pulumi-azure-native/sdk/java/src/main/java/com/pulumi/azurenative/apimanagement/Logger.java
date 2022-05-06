@@ -22,6 +22,67 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateAILogger
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var logger = new Logger(&#34;logger&#34;, LoggerArgs.builder()        
+ *             .credentials(Map.of(&#34;instrumentationKey&#34;, &#34;11................a1&#34;))
+ *             .description(&#34;adding a new logger&#34;)
+ *             .loggerId(&#34;loggerId&#34;)
+ *             .loggerType(&#34;applicationInsights&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### ApiManagementCreateEHLogger
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var logger = new Logger(&#34;logger&#34;, LoggerArgs.builder()        
+ *             .credentials(Map.ofEntries(
+ *                 Map.entry(&#34;connectionString&#34;, &#34;Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;hydraeventhub&#34;)
+ *             ))
+ *             .description(&#34;adding a new logger&#34;)
+ *             .loggerId(&#34;eh1&#34;)
+ *             .loggerType(&#34;azureEventHub&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

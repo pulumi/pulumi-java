@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### Create or update a registered ASN for the peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var registeredAsn = new RegisteredAsn(&#34;registeredAsn&#34;, RegisteredAsnArgs.builder()        
+ *             .asn(65000)
+ *             .peeringName(&#34;peeringName&#34;)
+ *             .registeredAsnName(&#34;registeredAsnName&#34;)
+ *             .resourceGroupName(&#34;rgName&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

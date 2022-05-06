@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### CreateWorkspaceConnection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspaceConnection = new WorkspaceConnection(&#34;workspaceConnection&#34;, WorkspaceConnectionArgs.builder()        
+ *             .authType(&#34;PAT&#34;)
+ *             .category(&#34;ACR&#34;)
+ *             .connectionName(&#34;connection-1&#34;)
+ *             .name(&#34;connection-1&#34;)
+ *             .resourceGroupName(&#34;resourceGroup-1&#34;)
+ *             .target(&#34;www.facebook.com&#34;)
+ *             .value(&#34;secrets&#34;)
+ *             .workspaceName(&#34;workspace-1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create route
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var route = new Route(&#34;route&#34;, RouteArgs.builder()        
+ *             .addressPrefix(&#34;10.0.3.0/24&#34;)
+ *             .nextHopType(&#34;VirtualNetworkGateway&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routeName(&#34;route1&#34;)
+ *             .routeTableName(&#34;testrt&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

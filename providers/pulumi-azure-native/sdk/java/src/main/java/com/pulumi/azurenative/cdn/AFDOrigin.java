@@ -24,6 +24,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### AFDOrigins_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var afdOrigin = new AFDOrigin(&#34;afdOrigin&#34;, AFDOriginArgs.builder()        
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .hostName(&#34;host1.blob.core.windows.net&#34;)
+ *             .httpPort(80)
+ *             .httpsPort(443)
+ *             .originGroupName(&#34;origingroup1&#34;)
+ *             .originHostHeader(&#34;host1.foo.com&#34;)
+ *             .originName(&#34;origin1&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

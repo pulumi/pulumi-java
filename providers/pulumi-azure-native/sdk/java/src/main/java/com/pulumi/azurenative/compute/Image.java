@@ -24,6 +24,345 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create a virtual machine image from a blob with DiskEncryptionSet resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;osDisk&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;blobUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;),
+ *                 Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                 Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *             )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from a blob.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;blobUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;),
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, true)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from a managed disk with DiskEncryptionSet resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;osDisk&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                 Map.entry(&#34;managedDisk&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk&#34;)),
+ *                 Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *             )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from a managed disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk&#34;)),
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, true)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from a snapshot with DiskEncryptionSet resource.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;osDisk&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;diskEncryptionSet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}&#34;)),
+ *                 Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;snapshot&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot&#34;))
+ *             )))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from a snapshot.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;snapshot&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot&#34;))
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, false)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image from an existing virtual machine.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .sourceVirtualMachine(Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image that includes a data disk from a blob.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;blobUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/dataimages/dataimage.vhd&#34;),
+ *                     Map.entry(&#34;lun&#34;, 1)
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;blobUri&#34;, &#34;https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd&#34;),
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, false)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image that includes a data disk from a managed disk.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;lun&#34;, 1),
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk2&#34;))
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;managedDisk&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myManagedDisk&#34;)),
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;)
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, false)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create a virtual machine image that includes a data disk from a snapshot.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var image = new Image(&#34;image&#34;, ImageArgs.builder()        
+ *             .imageName(&#34;myImage&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDisks&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;lun&#34;, 1),
+ *                     Map.entry(&#34;snapshot&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot2&#34;))
+ *                 )),
+ *                 Map.entry(&#34;osDisk&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;osState&#34;, &#34;Generalized&#34;),
+ *                     Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                     Map.entry(&#34;snapshot&#34;, Map.of(&#34;id&#34;, &#34;subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot&#34;))
+ *                 )),
+ *                 Map.entry(&#34;zoneResilient&#34;, true)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

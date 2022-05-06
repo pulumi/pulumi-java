@@ -21,6 +21,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Updates the sensitivity label of a given column with all parameters
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolSensitivityLabel = new SqlPoolSensitivityLabel(&#34;sqlPoolSensitivityLabel&#34;, SqlPoolSensitivityLabelArgs.builder()        
+ *             .columnName(&#34;myColumn&#34;)
+ *             .informationType(&#34;PhoneNumber&#34;)
+ *             .informationTypeId(&#34;d22fa6e9-5ee4-3bde-4c2b-a409604c4646&#34;)
+ *             .labelId(&#34;bf91e08c-f4f0-478a-b016-25164b2a65ff&#34;)
+ *             .labelName(&#34;PII&#34;)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .schemaName(&#34;dbo&#34;)
+ *             .sensitivityLabelSource(&#34;current&#34;)
+ *             .sqlPoolName(&#34;myDatabase&#34;)
+ *             .tableName(&#34;myTable&#34;)
+ *             .workspaceName(&#34;myServer&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

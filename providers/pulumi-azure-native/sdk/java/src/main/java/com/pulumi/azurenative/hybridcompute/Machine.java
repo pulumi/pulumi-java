@@ -26,6 +26,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-08-02.
  * 
  * ## Example Usage
+ * ### Create or Update a Machine
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var machine = new Machine(&#34;machine&#34;, MachineArgs.builder()        
+ *             .clientPublicKey(&#34;string&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus2euap&#34;)
+ *             .locationData(Map.of(&#34;name&#34;, &#34;Redmond&#34;))
+ *             .name(&#34;myMachine&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .vmId(&#34;b7a098cc-b0b8-46e8-a205-62f301a62a8f&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

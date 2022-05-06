@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create security contact data
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var securityContact = new SecurityContact(&#34;securityContact&#34;, SecurityContactArgs.builder()        
+ *             .alertNotifications(Map.ofEntries(
+ *                 Map.entry(&#34;minimalSeverity&#34;, &#34;Low&#34;),
+ *                 Map.entry(&#34;state&#34;, &#34;On&#34;)
+ *             ))
+ *             .emails(&#34;john@contoso.com;jane@contoso.com&#34;)
+ *             .notificationsByRole(Map.ofEntries(
+ *                 Map.entry(&#34;roles&#34;, &#34;Owner&#34;),
+ *                 Map.entry(&#34;state&#34;, &#34;On&#34;)
+ *             ))
+ *             .phone(&#34;(214)275-4038&#34;)
+ *             .securityContactName(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2015-05-01.
  * 
  * ## Example Usage
+ * ### ProactiveDetectionConfigurationUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var proactiveDetectionConfiguration = new ProactiveDetectionConfiguration(&#34;proactiveDetectionConfiguration&#34;, ProactiveDetectionConfigurationArgs.builder()        
+ *             .configurationId(&#34;slowpageloadtime&#34;)
+ *             .customEmails(            
+ *                 &#34;foo@microsoft.com&#34;,
+ *                 &#34;foo2@microsoft.com&#34;)
+ *             .enabled(true)
+ *             .name(&#34;slowpageloadtime&#34;)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;my-component&#34;)
+ *             .ruleDefinitions(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;Smart Detection rules notify you of performance anomaly issues.&#34;),
+ *                 Map.entry(&#34;displayName&#34;, &#34;Slow page load time&#34;),
+ *                 Map.entry(&#34;helpUrl&#34;, &#34;https://docs.microsoft.com/en-us/azure/application-insights/app-insights-proactive-performance-diagnostics&#34;),
+ *                 Map.entry(&#34;isEnabledByDefault&#34;, true),
+ *                 Map.entry(&#34;isHidden&#34;, false),
+ *                 Map.entry(&#34;isInPreview&#34;, false),
+ *                 Map.entry(&#34;name&#34;, &#34;slowpageloadtime&#34;),
+ *                 Map.entry(&#34;supportsEmailNotifications&#34;, true)
+ *             ))
+ *             .sendEmailsToSubscriptionOwners(true)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

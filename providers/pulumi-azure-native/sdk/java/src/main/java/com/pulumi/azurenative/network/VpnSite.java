@@ -28,6 +28,54 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VpnSiteCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vpnSite = new VpnSite(&#34;vpnSite&#34;, VpnSiteArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .isSecuritySite(false)
+ *             .location(&#34;West US&#34;)
+ *             .o365Policy(Map.of(&#34;breakOutCategories&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;allow&#34;, true),
+ *                 Map.entry(&#34;default&#34;, false),
+ *                 Map.entry(&#34;optimize&#34;, true)
+ *             )))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualWan(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1&#34;))
+ *             .vpnSiteLinks(Map.ofEntries(
+ *                 Map.entry(&#34;bgpProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;asn&#34;, 1234),
+ *                     Map.entry(&#34;bgpPeeringAddress&#34;, &#34;192.168.0.0&#34;)
+ *                 )),
+ *                 Map.entry(&#34;fqdn&#34;, &#34;link1.vpnsite1.contoso.com&#34;),
+ *                 Map.entry(&#34;ipAddress&#34;, &#34;50.50.50.56&#34;),
+ *                 Map.entry(&#34;linkProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;linkProviderName&#34;, &#34;vendor1&#34;),
+ *                     Map.entry(&#34;linkSpeedInMbps&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;vpnSiteLink1&#34;)
+ *             ))
+ *             .vpnSiteName(&#34;vpnSite1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

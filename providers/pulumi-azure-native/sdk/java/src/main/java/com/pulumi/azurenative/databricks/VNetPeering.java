@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-01.
  * 
  * ## Example Usage
+ * ### Create vNet Peering for Workspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var vNetPeering = new VNetPeering(&#34;vNetPeering&#34;, VNetPeeringArgs.builder()        
+ *             .allowForwardedTraffic(false)
+ *             .allowGatewayTransit(false)
+ *             .allowVirtualNetworkAccess(true)
+ *             .peeringName(&#34;vNetPeeringTest&#34;)
+ *             .remoteVirtualNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Network/virtualNetworks/subramanvnet&#34;))
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .useRemoteGateways(false)
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

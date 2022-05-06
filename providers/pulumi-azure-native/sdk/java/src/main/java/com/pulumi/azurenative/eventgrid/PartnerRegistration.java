@@ -22,6 +22,44 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### PartnerRegistrations_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var partnerRegistration = new PartnerRegistration(&#34;partnerRegistration&#34;, PartnerRegistrationArgs.builder()        
+ *             .authorizedAzureSubscriptionIds(&#34;d48566a8-2428-4a6c-8347-9675d09fb851&#34;)
+ *             .location(&#34;global&#34;)
+ *             .logoUri(&#34;https://www.example.com/logo.png&#34;)
+ *             .partnerName(&#34;ContosoCorp&#34;)
+ *             .partnerRegistrationName(&#34;examplePartnerRegistrationName1&#34;)
+ *             .partnerResourceTypeDescription(&#34;ContocoCorp Accounts Description Text&#34;)
+ *             .partnerResourceTypeDisplayName(&#34;ContocoCorp Accounts DisplayName Text&#34;)
+ *             .partnerResourceTypeName(&#34;ContosoCorp.Accounts&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .setupUri(&#34;https://www.example.com/setup.html&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;Value2&#34;),
+ *                 Map.entry(&#34;key3&#34;, &#34;Value3&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

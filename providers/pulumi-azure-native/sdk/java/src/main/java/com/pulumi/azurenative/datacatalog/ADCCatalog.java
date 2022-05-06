@@ -24,6 +24,47 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-30.
  * 
  * ## Example Usage
+ * ### Create Azure Data Catalog Service
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var adcCatalog = new ADCCatalog(&#34;adcCatalog&#34;, ADCCatalogArgs.builder()        
+ *             .admins(Map.ofEntries(
+ *                 Map.entry(&#34;objectId&#34;, &#34;99999999-9999-9999-999999999999&#34;),
+ *                 Map.entry(&#34;upn&#34;, &#34;myupn@microsoft.com&#34;)
+ *             ))
+ *             .catalogName(&#34;exampleCatalog&#34;)
+ *             .enableAutomaticUnitAdjustment(false)
+ *             .location(&#34;North US&#34;)
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .sku(&#34;Standard&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;mykey&#34;, &#34;myvalue&#34;),
+ *                 Map.entry(&#34;mykey2&#34;, &#34;myvalue2&#34;)
+ *             ))
+ *             .units(1)
+ *             .users(Map.ofEntries(
+ *                 Map.entry(&#34;objectId&#34;, &#34;99999999-9999-9999-999999999999&#34;),
+ *                 Map.entry(&#34;upn&#34;, &#34;myupn@microsoft.com&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

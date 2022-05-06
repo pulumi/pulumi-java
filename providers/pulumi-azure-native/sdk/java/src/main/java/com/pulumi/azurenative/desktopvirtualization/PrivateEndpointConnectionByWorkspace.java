@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-04-01-preview.
  * 
  * ## Example Usage
+ * ### PrivateEndpointConnection_UpdateByWorkspace
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var privateEndpointConnectionByWorkspace = new PrivateEndpointConnectionByWorkspace(&#34;privateEndpointConnectionByWorkspace&#34;, PrivateEndpointConnectionByWorkspaceArgs.builder()        
+ *             .privateEndpointConnectionName(&#34;workspace1.377103f1-5179-4bdf-8556-4cdd3207cc5b&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;actionsRequired&#34;, &#34;None&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;Approved by admin@consoto.com&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

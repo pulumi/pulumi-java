@@ -25,6 +25,57 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create sim policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var simPolicy = new SimPolicy(&#34;simPolicy&#34;, SimPolicyArgs.builder()        
+ *             .defaultSlice(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/slices/testSlice&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .mobileNetworkName(&#34;testMobileNetwork&#34;)
+ *             .registrationTimer(3240)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .simPolicyName(&#34;testPolicy&#34;)
+ *             .sliceConfigurations(Map.ofEntries(
+ *                 Map.entry(&#34;dataNetworkConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalAllowedSessionTypes&#34;, ),
+ *                     Map.entry(&#34;allocationAndRetentionPriorityLevel&#34;, 9),
+ *                     Map.entry(&#34;allowedServices&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/services/testService&#34;)),
+ *                     Map.entry(&#34;dataNetwork&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/dataNetworks/testdataNetwork&#34;)),
+ *                     Map.entry(&#34;defaultSessionType&#34;, &#34;IPv4&#34;),
+ *                     Map.entry(&#34;fiveQi&#34;, 9),
+ *                     Map.entry(&#34;preemptionCapability&#34;, &#34;NotPreempt&#34;),
+ *                     Map.entry(&#34;preemptionVulnerability&#34;, &#34;Preemptable&#34;),
+ *                     Map.entry(&#34;sessionAmbr&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;downlink&#34;, &#34;1 Gbps&#34;),
+ *                         Map.entry(&#34;uplink&#34;, &#34;500 Mbps&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;defaultDataNetwork&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/dataNetworks/testdataNetwork&#34;)),
+ *                 Map.entry(&#34;slice&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.MobileNetwork/mobileNetworks/testMobileNetwork/slices/testSlice&#34;))
+ *             ))
+ *             .ueAmbr(Map.ofEntries(
+ *                 Map.entry(&#34;downlink&#34;, &#34;1 Gbps&#34;),
+ *                 Map.entry(&#34;uplink&#34;, &#34;500 Mbps&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

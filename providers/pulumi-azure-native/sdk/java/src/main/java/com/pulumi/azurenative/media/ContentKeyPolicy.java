@@ -22,6 +22,194 @@ import javax.annotation.Nullable;
  * API Version: 2020-05-01.
  * 
  * ## Example Usage
+ * ### Creates a Content Key Policy with ClearKey option and Token Restriction
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contentKeyPolicy = new ContentKeyPolicy(&#34;contentKeyPolicy&#34;, ContentKeyPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .contentKeyPolicyName(&#34;PolicyWithClearKeyOptionAndSwtTokenRestriction&#34;)
+ *             .description(&#34;ArmPolicyDescription&#34;)
+ *             .options(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, Map.of(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;ClearKeyOption&#34;),
+ *                 Map.entry(&#34;restriction&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;audience&#34;, &#34;urn:audience&#34;),
+ *                     Map.entry(&#34;issuer&#34;, &#34;urn:issuer&#34;),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#34;),
+ *                     Map.entry(&#34;primaryVerificationKey&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;keyValue&#34;, &#34;AAAAAAAAAAAAAAAAAAAAAA==&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#34;)
+ *                     )),
+ *                     Map.entry(&#34;restrictionTokenType&#34;, &#34;Swt&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Content Key Policy with PlayReady option and Open Restriction
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contentKeyPolicy = new ContentKeyPolicy(&#34;contentKeyPolicy&#34;, ContentKeyPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .contentKeyPolicyName(&#34;PolicyWithPlayReadyOptionAndOpenRestriction&#34;)
+ *             .description(&#34;ArmPolicyDescription&#34;)
+ *             .options(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;licenses&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;allowTestDevices&#34;, true),
+ *                         Map.entry(&#34;beginDate&#34;, &#34;2017-10-16T18:22:53.46Z&#34;),
+ *                         Map.entry(&#34;contentKeyLocation&#34;, Map.of(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeader&#34;)),
+ *                         Map.entry(&#34;contentType&#34;, &#34;UltraVioletDownload&#34;),
+ *                         Map.entry(&#34;licenseType&#34;, &#34;Persistent&#34;),
+ *                         Map.entry(&#34;playRight&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;allowPassingVideoContentToUnknownOutput&#34;, &#34;NotAllowed&#34;),
+ *                             Map.entry(&#34;digitalVideoOnlyContentRestriction&#34;, false),
+ *                             Map.entry(&#34;imageConstraintForAnalogComponentVideoRestriction&#34;, true),
+ *                             Map.entry(&#34;imageConstraintForAnalogComputerMonitorRestriction&#34;, false),
+ *                             Map.entry(&#34;scmsRestriction&#34;, 2)
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;ArmPolicyOptionName&#34;),
+ *                 Map.entry(&#34;restriction&#34;, Map.of(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#34;))
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Content Key Policy with Widevine option and Token Restriction
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contentKeyPolicy = new ContentKeyPolicy(&#34;contentKeyPolicy&#34;, ContentKeyPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .contentKeyPolicyName(&#34;PolicyWithWidevineOptionAndJwtTokenRestriction&#34;)
+ *             .description(&#34;ArmPolicyDescription&#34;)
+ *             .options(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#34;),
+ *                     Map.entry(&#34;widevineTemplate&#34;, &#34;{\&#34;allowed_track_types\&#34;:\&#34;SD_HD\&#34;,\&#34;content_key_specs\&#34;:[{\&#34;track_type\&#34;:\&#34;SD\&#34;,\&#34;security_level\&#34;:1,\&#34;required_output_protection\&#34;:{\&#34;hdcp\&#34;:\&#34;HDCP_V2\&#34;}}],\&#34;policy_overrides\&#34;:{\&#34;can_play\&#34;:true,\&#34;can_persist\&#34;:true,\&#34;can_renew\&#34;:false}}&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;widevineoption&#34;),
+ *                 Map.entry(&#34;restriction&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;alternateVerificationKeys&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;keyValue&#34;, &#34;AAAAAAAAAAAAAAAAAAAAAA==&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#34;)
+ *                     )),
+ *                     Map.entry(&#34;audience&#34;, &#34;urn:audience&#34;),
+ *                     Map.entry(&#34;issuer&#34;, &#34;urn:issuer&#34;),
+ *                     Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#34;),
+ *                     Map.entry(&#34;primaryVerificationKey&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;exponent&#34;, &#34;AQAB&#34;),
+ *                         Map.entry(&#34;modulus&#34;, &#34;AQAD&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyRsaTokenKey&#34;)
+ *                     )),
+ *                     Map.entry(&#34;restrictionTokenType&#34;, &#34;Jwt&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Creates a Content Key Policy with multiple options
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var contentKeyPolicy = new ContentKeyPolicy(&#34;contentKeyPolicy&#34;, ContentKeyPolicyArgs.builder()        
+ *             .accountName(&#34;contosomedia&#34;)
+ *             .contentKeyPolicyName(&#34;PolicyCreatedWithMultipleOptions&#34;)
+ *             .description(&#34;ArmPolicyDescription&#34;)
+ *             .options(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.of(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyClearKeyConfiguration&#34;)),
+ *                     Map.entry(&#34;name&#34;, &#34;ClearKeyOption&#34;),
+ *                     Map.entry(&#34;restriction&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;audience&#34;, &#34;urn:audience&#34;),
+ *                         Map.entry(&#34;issuer&#34;, &#34;urn:issuer&#34;),
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#34;),
+ *                         Map.entry(&#34;primaryVerificationKey&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;keyValue&#34;, &#34;AAAAAAAAAAAAAAAAAAAAAA==&#34;),
+ *                             Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#34;)
+ *                         )),
+ *                         Map.entry(&#34;restrictionTokenType&#34;, &#34;Swt&#34;)
+ *                     ))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;configuration&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#34;),
+ *                         Map.entry(&#34;widevineTemplate&#34;, &#34;{\&#34;allowed_track_types\&#34;:\&#34;SD_HD\&#34;,\&#34;content_key_specs\&#34;:[{\&#34;track_type\&#34;:\&#34;SD\&#34;,\&#34;security_level\&#34;:1,\&#34;required_output_protection\&#34;:{\&#34;hdcp\&#34;:\&#34;HDCP_V2\&#34;}}],\&#34;policy_overrides\&#34;:{\&#34;can_play\&#34;:true,\&#34;can_persist\&#34;:true,\&#34;can_renew\&#34;:false}}&#34;)
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;widevineoption&#34;),
+ *                     Map.entry(&#34;restriction&#34;, Map.of(&#34;odataType&#34;, &#34;#Microsoft.Media.ContentKeyPolicyOpenRestriction&#34;))
+ *                 ))
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

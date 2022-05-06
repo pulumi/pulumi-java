@@ -23,6 +23,48 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### Updates a SQL Server Instance tags.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlServerInstance = new SqlServerInstance(&#34;sqlServerInstance&#34;, SqlServerInstanceArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;collation&#34;, &#34;collation&#34;),
+ *                 Map.entry(&#34;containerResourceId&#34;, &#34;Arc Machine Name&#34;),
+ *                 Map.entry(&#34;currentVersion&#34;, &#34;2008 R2&#34;),
+ *                 Map.entry(&#34;edition&#34;, &#34;Developer&#34;),
+ *                 Map.entry(&#34;instanceName&#34;, &#34;name of instance&#34;),
+ *                 Map.entry(&#34;licenseType&#34;, &#34;Free&#34;),
+ *                 Map.entry(&#34;patchLevel&#34;, &#34;patchlevel&#34;),
+ *                 Map.entry(&#34;productId&#34;, &#34;sql id&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Connected&#34;),
+ *                 Map.entry(&#34;tcpDynamicPorts&#34;, &#34;1433&#34;),
+ *                 Map.entry(&#34;tcpStaticPorts&#34;, &#34;1433&#34;),
+ *                 Map.entry(&#34;vCore&#34;, &#34;4&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;SQL Server 2017&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlServerInstanceName(&#34;testsqlServerInstance&#34;)
+ *             .tags(Map.of(&#34;mytag&#34;, &#34;myval&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

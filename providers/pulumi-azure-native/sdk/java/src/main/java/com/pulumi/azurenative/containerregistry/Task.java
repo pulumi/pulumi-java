@@ -34,6 +34,365 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### Tasks_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .agentConfiguration(Map.of(&#34;cpu&#34;, 2))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .isSystemTask(false)
+ *             .location(&#34;eastus&#34;)
+ *             .logTemplate(&#34;acr/tasks:{{.Run.OS}}&#34;)
+ *             .platform(Map.ofEntries(
+ *                 Map.entry(&#34;architecture&#34;, &#34;amd64&#34;),
+ *                 Map.entry(&#34;os&#34;, &#34;Linux&#34;)
+ *             ))
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .step(Map.ofEntries(
+ *                 Map.entry(&#34;arguments&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, false),
+ *                         Map.entry(&#34;name&#34;, &#34;mytestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mytestvalue&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, true),
+ *                         Map.entry(&#34;name&#34;, &#34;mysecrettestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mysecrettestvalue&#34;)
+ *                     )),
+ *                 Map.entry(&#34;contextPath&#34;, &#34;src&#34;),
+ *                 Map.entry(&#34;dockerFilePath&#34;, &#34;src/DockerFile&#34;),
+ *                 Map.entry(&#34;imageNames&#34;, &#34;azurerest:testtag&#34;),
+ *                 Map.entry(&#34;isPushEnabled&#34;, true),
+ *                 Map.entry(&#34;noCache&#34;, false),
+ *                 Map.entry(&#34;type&#34;, &#34;Docker&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testkey&#34;, &#34;value&#34;))
+ *             .taskName(&#34;mytTask&#34;)
+ *             .trigger(Map.ofEntries(
+ *                 Map.entry(&#34;baseImageTrigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;baseImageTriggerType&#34;, &#34;Runtime&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;myBaseImageTrigger&#34;),
+ *                     Map.entry(&#34;updateTriggerEndpoint&#34;, &#34;https://user:pass@mycicd.webhook.com?token=foo&#34;),
+ *                     Map.entry(&#34;updateTriggerPayloadType&#34;, &#34;Token&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sourceTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;mySourceTrigger&#34;),
+ *                     Map.entry(&#34;sourceRepository&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;branch&#34;, &#34;master&#34;),
+ *                         Map.entry(&#34;repositoryUrl&#34;, &#34;https://github.com/Azure/azure-rest-api-specs&#34;),
+ *                         Map.entry(&#34;sourceControlAuthProperties&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;token&#34;, &#34;xxxxx&#34;),
+ *                             Map.entry(&#34;tokenType&#34;, &#34;PAT&#34;)
+ *                         )),
+ *                         Map.entry(&#34;sourceControlType&#34;, &#34;Github&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceTriggerEvents&#34;, &#34;commit&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timerTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myTimerTrigger&#34;),
+ *                     Map.entry(&#34;schedule&#34;, &#34;30 9 * * 1-5&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Tasks_Create_QuickTask
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .isSystemTask(true)
+ *             .location(&#34;eastus&#34;)
+ *             .logTemplate(&#34;acr/tasks:{{.Run.OS}}&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .tags(Map.of(&#34;testkey&#34;, &#34;value&#34;))
+ *             .taskName(&#34;quicktask&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Tasks_Create_WithSystemAndUserIdentities
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .agentConfiguration(Map.of(&#34;cpu&#34;, 2))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;SystemAssigned, UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2&#34;, ))
+ *             ))
+ *             .isSystemTask(false)
+ *             .location(&#34;eastus&#34;)
+ *             .platform(Map.ofEntries(
+ *                 Map.entry(&#34;architecture&#34;, &#34;amd64&#34;),
+ *                 Map.entry(&#34;os&#34;, &#34;Linux&#34;)
+ *             ))
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .step(Map.ofEntries(
+ *                 Map.entry(&#34;arguments&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, false),
+ *                         Map.entry(&#34;name&#34;, &#34;mytestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mytestvalue&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, true),
+ *                         Map.entry(&#34;name&#34;, &#34;mysecrettestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mysecrettestvalue&#34;)
+ *                     )),
+ *                 Map.entry(&#34;contextPath&#34;, &#34;src&#34;),
+ *                 Map.entry(&#34;dockerFilePath&#34;, &#34;src/DockerFile&#34;),
+ *                 Map.entry(&#34;imageNames&#34;, &#34;azurerest:testtag&#34;),
+ *                 Map.entry(&#34;isPushEnabled&#34;, true),
+ *                 Map.entry(&#34;noCache&#34;, false),
+ *                 Map.entry(&#34;type&#34;, &#34;Docker&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testkey&#34;, &#34;value&#34;))
+ *             .taskName(&#34;mytTask&#34;)
+ *             .trigger(Map.ofEntries(
+ *                 Map.entry(&#34;baseImageTrigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;baseImageTriggerType&#34;, &#34;Runtime&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;myBaseImageTrigger&#34;),
+ *                     Map.entry(&#34;updateTriggerEndpoint&#34;, &#34;https://user:pass@mycicd.webhook.com?token=foo&#34;),
+ *                     Map.entry(&#34;updateTriggerPayloadType&#34;, &#34;Default&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sourceTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;mySourceTrigger&#34;),
+ *                     Map.entry(&#34;sourceRepository&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;branch&#34;, &#34;master&#34;),
+ *                         Map.entry(&#34;repositoryUrl&#34;, &#34;https://github.com/Azure/azure-rest-api-specs&#34;),
+ *                         Map.entry(&#34;sourceControlAuthProperties&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;token&#34;, &#34;xxxxx&#34;),
+ *                             Map.entry(&#34;tokenType&#34;, &#34;PAT&#34;)
+ *                         )),
+ *                         Map.entry(&#34;sourceControlType&#34;, &#34;Github&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceTriggerEvents&#34;, &#34;commit&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timerTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myTimerTrigger&#34;),
+ *                     Map.entry(&#34;schedule&#34;, &#34;30 9 * * 1-5&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Tasks_Create_WithUserIdentities
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .agentConfiguration(Map.of(&#34;cpu&#34;, 2))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1&#34;, ),
+ *                     Map.entry(&#34;/subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourcegroups/myResourceGroup1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity2&#34;, )
+ *                 ))
+ *             ))
+ *             .isSystemTask(false)
+ *             .location(&#34;eastus&#34;)
+ *             .platform(Map.ofEntries(
+ *                 Map.entry(&#34;architecture&#34;, &#34;amd64&#34;),
+ *                 Map.entry(&#34;os&#34;, &#34;Linux&#34;)
+ *             ))
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .step(Map.ofEntries(
+ *                 Map.entry(&#34;arguments&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, false),
+ *                         Map.entry(&#34;name&#34;, &#34;mytestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mytestvalue&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, true),
+ *                         Map.entry(&#34;name&#34;, &#34;mysecrettestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mysecrettestvalue&#34;)
+ *                     )),
+ *                 Map.entry(&#34;contextPath&#34;, &#34;src&#34;),
+ *                 Map.entry(&#34;dockerFilePath&#34;, &#34;src/DockerFile&#34;),
+ *                 Map.entry(&#34;imageNames&#34;, &#34;azurerest:testtag&#34;),
+ *                 Map.entry(&#34;isPushEnabled&#34;, true),
+ *                 Map.entry(&#34;noCache&#34;, false),
+ *                 Map.entry(&#34;type&#34;, &#34;Docker&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testkey&#34;, &#34;value&#34;))
+ *             .taskName(&#34;mytTask&#34;)
+ *             .trigger(Map.ofEntries(
+ *                 Map.entry(&#34;baseImageTrigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;baseImageTriggerType&#34;, &#34;Runtime&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;myBaseImageTrigger&#34;),
+ *                     Map.entry(&#34;updateTriggerEndpoint&#34;, &#34;https://user:pass@mycicd.webhook.com?token=foo&#34;),
+ *                     Map.entry(&#34;updateTriggerPayloadType&#34;, &#34;Default&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sourceTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;mySourceTrigger&#34;),
+ *                     Map.entry(&#34;sourceRepository&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;branch&#34;, &#34;master&#34;),
+ *                         Map.entry(&#34;repositoryUrl&#34;, &#34;https://github.com/Azure/azure-rest-api-specs&#34;),
+ *                         Map.entry(&#34;sourceControlAuthProperties&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;token&#34;, &#34;xxxxx&#34;),
+ *                             Map.entry(&#34;tokenType&#34;, &#34;PAT&#34;)
+ *                         )),
+ *                         Map.entry(&#34;sourceControlType&#34;, &#34;Github&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceTriggerEvents&#34;, &#34;commit&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timerTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myTimerTrigger&#34;),
+ *                     Map.entry(&#34;schedule&#34;, &#34;30 9 * * 1-5&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Tasks_Create_WithUserIdentities_WithSystemIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .agentConfiguration(Map.of(&#34;cpu&#34;, 2))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .isSystemTask(false)
+ *             .location(&#34;eastus&#34;)
+ *             .platform(Map.ofEntries(
+ *                 Map.entry(&#34;architecture&#34;, &#34;amd64&#34;),
+ *                 Map.entry(&#34;os&#34;, &#34;Linux&#34;)
+ *             ))
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .step(Map.ofEntries(
+ *                 Map.entry(&#34;arguments&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, false),
+ *                         Map.entry(&#34;name&#34;, &#34;mytestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mytestvalue&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;isSecret&#34;, true),
+ *                         Map.entry(&#34;name&#34;, &#34;mysecrettestargument&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;mysecrettestvalue&#34;)
+ *                     )),
+ *                 Map.entry(&#34;contextPath&#34;, &#34;src&#34;),
+ *                 Map.entry(&#34;dockerFilePath&#34;, &#34;src/DockerFile&#34;),
+ *                 Map.entry(&#34;imageNames&#34;, &#34;azurerest:testtag&#34;),
+ *                 Map.entry(&#34;isPushEnabled&#34;, true),
+ *                 Map.entry(&#34;noCache&#34;, false),
+ *                 Map.entry(&#34;type&#34;, &#34;Docker&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testkey&#34;, &#34;value&#34;))
+ *             .taskName(&#34;mytTask&#34;)
+ *             .trigger(Map.ofEntries(
+ *                 Map.entry(&#34;baseImageTrigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;baseImageTriggerType&#34;, &#34;Runtime&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;myBaseImageTrigger&#34;)
+ *                 )),
+ *                 Map.entry(&#34;sourceTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;mySourceTrigger&#34;),
+ *                     Map.entry(&#34;sourceRepository&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;branch&#34;, &#34;master&#34;),
+ *                         Map.entry(&#34;repositoryUrl&#34;, &#34;https://github.com/Azure/azure-rest-api-specs&#34;),
+ *                         Map.entry(&#34;sourceControlAuthProperties&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;token&#34;, &#34;xxxxx&#34;),
+ *                             Map.entry(&#34;tokenType&#34;, &#34;PAT&#34;)
+ *                         )),
+ *                         Map.entry(&#34;sourceControlType&#34;, &#34;Github&#34;)
+ *                     )),
+ *                     Map.entry(&#34;sourceTriggerEvents&#34;, &#34;commit&#34;)
+ *                 )),
+ *                 Map.entry(&#34;timerTriggers&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myTimerTrigger&#34;),
+ *                     Map.entry(&#34;schedule&#34;, &#34;30 9 * * 1-5&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

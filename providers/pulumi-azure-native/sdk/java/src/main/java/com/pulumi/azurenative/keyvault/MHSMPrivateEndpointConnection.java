@@ -25,6 +25,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-01-preview.
  * 
  * ## Example Usage
+ * ### ManagedHsmPutPrivateEndpointConnection
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var mhsmPrivateEndpointConnection = new MHSMPrivateEndpointConnection(&#34;mhsmPrivateEndpointConnection&#34;, MHSMPrivateEndpointConnectionArgs.builder()        
+ *             .name(&#34;sample-mhsm&#34;)
+ *             .privateEndpointConnectionName(&#34;sample-pec&#34;)
+ *             .privateLinkServiceConnectionState(Map.ofEntries(
+ *                 Map.entry(&#34;description&#34;, &#34;My name is Joe and I&#39;m approving this.&#34;),
+ *                 Map.entry(&#34;status&#34;, &#34;Approved&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sample-group&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

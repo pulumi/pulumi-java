@@ -24,6 +24,40 @@ import javax.annotation.Nullable;
  * API Version: 2022-02-01.
  * 
  * ## Example Usage
+ * ### TemplateSpecVersionsCreateUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var templateSpecVersion = new TemplateSpecVersion(&#34;templateSpecVersion&#34;, TemplateSpecVersionArgs.builder()        
+ *             .description(&#34;This is version v1.0 of our template content&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .mainTemplate(Map.ofEntries(
+ *                 Map.entry(&#34;$schema&#34;, &#34;http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#&#34;),
+ *                 Map.entry(&#34;contentVersion&#34;, &#34;1.0.0.0&#34;),
+ *                 Map.entry(&#34;parameters&#34;, ),
+ *                 Map.entry(&#34;resources&#34;, )
+ *             ))
+ *             .resourceGroupName(&#34;templateSpecRG&#34;)
+ *             .templateSpecName(&#34;simpleTemplateSpec&#34;)
+ *             .templateSpecVersion(&#34;v1.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

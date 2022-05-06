@@ -130,6 +130,73 @@ import javax.annotation.Nullable;
  * API Version: 2018-06-01.
  * 
  * ## Example Usage
+ * ### LinkedServices_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedService = new LinkedService(&#34;linkedService&#34;, LinkedServiceArgs.builder()        
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .linkedServiceName(&#34;exampleLinkedService&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;connectionString&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;SecureString&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=&lt;storage key&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureStorage&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### LinkedServices_Update
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var linkedService = new LinkedService(&#34;linkedService&#34;, LinkedServiceArgs.builder()        
+ *             .factoryName(&#34;exampleFactoryName&#34;)
+ *             .linkedServiceName(&#34;exampleLinkedService&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;connectionString&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;type&#34;, &#34;SecureString&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;DefaultEndpointsProtocol=https;AccountName=examplestorageaccount;AccountKey=&lt;storage key&gt;&#34;)
+ *                 )),
+ *                 Map.entry(&#34;description&#34;, &#34;Example description&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureStorage&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

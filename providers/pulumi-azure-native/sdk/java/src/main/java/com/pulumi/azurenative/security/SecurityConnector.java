@@ -28,6 +28,39 @@ import javax.annotation.Nullable;
  * API Version: 2021-07-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a security connector
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var securityConnector = new SecurityConnector(&#34;securityConnector&#34;, SecurityConnectorArgs.builder()        
+ *             .cloudName(&#34;AWS&#34;)
+ *             .hierarchyIdentifier(&#34;exampleHierarchyId&#34;)
+ *             .location(&#34;Central US&#34;)
+ *             .offerings(Map.ofEntries(
+ *                 Map.entry(&#34;nativeCloudConnection&#34;, Map.of(&#34;cloudRoleArn&#34;, &#34;arn:aws:iam::00000000:role/ASCMonitor&#34;)),
+ *                 Map.entry(&#34;offeringType&#34;, &#34;CspmMonitorAws&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;exampleResourceGroup&#34;)
+ *             .securityConnectorName(&#34;exampleSecurityConnectorName&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

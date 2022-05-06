@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### ExpressRouteConnectionCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRouteConnection = new ExpressRouteConnection(&#34;expressRouteConnection&#34;, ExpressRouteConnectionArgs.builder()        
+ *             .authorizationKey(&#34;authorizationKey&#34;)
+ *             .connectionName(&#34;connectionName&#34;)
+ *             .expressRouteCircuitPeering(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering&#34;))
+ *             .expressRouteGatewayName(&#34;gateway-2&#34;)
+ *             .id(&#34;/subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.Network/expressRouteGateways/gateway-2/expressRouteConnections/connectionName&#34;)
+ *             .name(&#34;connectionName&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .routingWeight(2)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

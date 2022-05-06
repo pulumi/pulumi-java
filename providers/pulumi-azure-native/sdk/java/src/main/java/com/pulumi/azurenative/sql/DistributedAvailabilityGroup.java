@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create a distributed availability group.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var distributedAvailabilityGroup = new DistributedAvailabilityGroup(&#34;distributedAvailabilityGroup&#34;, DistributedAvailabilityGroupArgs.builder()        
+ *             .distributedAvailabilityGroupName(&#34;dag&#34;)
+ *             .managedInstanceName(&#34;testcl&#34;)
+ *             .primaryAvailabilityGroupName(&#34;BoxLocalAg1&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .secondaryAvailabilityGroupName(&#34;testcl&#34;)
+ *             .sourceEndpoint(&#34;TCP://SERVER:7022&#34;)
+ *             .targetDatabase(&#34;testdb&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

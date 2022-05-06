@@ -25,6 +25,310 @@ import javax.annotation.Nullable;
  * API Version: 2018-08-01.
  * 
  * ## Example Usage
+ * ### Profile-PUT-MultiValue
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;azsmnet6386&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .location(&#34;global&#34;)
+ *             .maxReturn(2)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;)
+ *             ))
+ *             .profileName(&#34;azsmnet6386&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager1421&#34;)
+ *             .trafficRoutingMethod(&#34;MultiValue&#34;)
+ *             .trafficViewEnrollmentStatus(&#34;Disabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Profile-PUT-NoEndpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;azsmnet6386&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .location(&#34;global&#34;)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;)
+ *             ))
+ *             .profileName(&#34;azsmnet6386&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager1421&#34;)
+ *             .trafficRoutingMethod(&#34;Performance&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Profile-PUT-WithAliasing
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .allowedEndpointRecordTypes(&#34;DomainName&#34;)
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;azuresdkfornetautoresttrafficmanager6192&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .endpoints(Map.ofEntries(
+ *                 Map.entry(&#34;endpointLocation&#34;, &#34;North Europe&#34;),
+ *                 Map.entry(&#34;endpointStatus&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;My external endpoint&#34;),
+ *                 Map.entry(&#34;target&#34;, &#34;foobar.contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             ))
+ *             .location(&#34;global&#34;)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;),
+ *                 Map.entry(&#34;timeoutInSeconds&#34;, 5),
+ *                 Map.entry(&#34;toleratedNumberOfFailures&#34;, 2)
+ *             ))
+ *             .profileName(&#34;azuresdkfornetautoresttrafficmanager6192&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager2583&#34;)
+ *             .trafficRoutingMethod(&#34;Performance&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Profile-PUT-WithCustomHeaders
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;azuresdkfornetautoresttrafficmanager6192&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .endpoints(Map.ofEntries(
+ *                 Map.entry(&#34;customHeaders&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;header-2&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;value-2-overridden&#34;)
+ *                 )),
+ *                 Map.entry(&#34;endpointLocation&#34;, &#34;North Europe&#34;),
+ *                 Map.entry(&#34;endpointStatus&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;My external endpoint&#34;),
+ *                 Map.entry(&#34;target&#34;, &#34;foobar.contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             ))
+ *             .location(&#34;global&#34;)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;customHeaders&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;header-1&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;value-1&#34;)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;header-2&#34;),
+ *                         Map.entry(&#34;value&#34;, &#34;value-2&#34;)
+ *                     )),
+ *                 Map.entry(&#34;expectedStatusCodeRanges&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;max&#34;, 205),
+ *                         Map.entry(&#34;min&#34;, 200)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;max&#34;, 410),
+ *                         Map.entry(&#34;min&#34;, 400)
+ *                     )),
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;),
+ *                 Map.entry(&#34;timeoutInSeconds&#34;, 5),
+ *                 Map.entry(&#34;toleratedNumberOfFailures&#34;, 2)
+ *             ))
+ *             .profileName(&#34;azuresdkfornetautoresttrafficmanager6192&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager2583&#34;)
+ *             .trafficRoutingMethod(&#34;Performance&#34;)
+ *             .trafficViewEnrollmentStatus(&#34;Disabled&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Profile-PUT-WithEndpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;azuresdkfornetautoresttrafficmanager6192&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .endpoints(Map.ofEntries(
+ *                 Map.entry(&#34;endpointLocation&#34;, &#34;North Europe&#34;),
+ *                 Map.entry(&#34;endpointStatus&#34;, &#34;Enabled&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;My external endpoint&#34;),
+ *                 Map.entry(&#34;target&#34;, &#34;foobar.contoso.com&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;Microsoft.network/TrafficManagerProfiles/ExternalEndpoints&#34;)
+ *             ))
+ *             .location(&#34;global&#34;)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;),
+ *                 Map.entry(&#34;timeoutInSeconds&#34;, 5),
+ *                 Map.entry(&#34;toleratedNumberOfFailures&#34;, 2)
+ *             ))
+ *             .profileName(&#34;azuresdkfornetautoresttrafficmanager6192&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;azuresdkfornetautoresttrafficmanager2583&#34;)
+ *             .trafficRoutingMethod(&#34;Performance&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Profile-PUT-WithNestedEndpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var profile = new Profile(&#34;profile&#34;, ProfileArgs.builder()        
+ *             .dnsConfig(Map.ofEntries(
+ *                 Map.entry(&#34;relativeName&#34;, &#34;parentprofile&#34;),
+ *                 Map.entry(&#34;ttl&#34;, 35)
+ *             ))
+ *             .endpoints(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endpointStatus&#34;, &#34;Enabled&#34;),
+ *                     Map.entry(&#34;minChildEndpoints&#34;, 2),
+ *                     Map.entry(&#34;minChildEndpointsIPv4&#34;, 1),
+ *                     Map.entry(&#34;minChildEndpointsIPv6&#34;, 2),
+ *                     Map.entry(&#34;name&#34;, &#34;MyFirstNestedEndpoint&#34;),
+ *                     Map.entry(&#34;priority&#34;, 1),
+ *                     Map.entry(&#34;target&#34;, &#34;firstnestedprofile.tmpreview.watmtest.azure-test.net&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Network/trafficManagerProfiles/nestedEndpoints&#34;),
+ *                     Map.entry(&#34;weight&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;endpointStatus&#34;, &#34;Enabled&#34;),
+ *                     Map.entry(&#34;minChildEndpoints&#34;, 2),
+ *                     Map.entry(&#34;minChildEndpointsIPv4&#34;, 2),
+ *                     Map.entry(&#34;minChildEndpointsIPv6&#34;, 1),
+ *                     Map.entry(&#34;name&#34;, &#34;MySecondNestedEndpoint&#34;),
+ *                     Map.entry(&#34;priority&#34;, 2),
+ *                     Map.entry(&#34;target&#34;, &#34;secondnestedprofile.tmpreview.watmtest.azure-test.net&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.Network/trafficManagerProfiles/nestedEndpoints&#34;),
+ *                     Map.entry(&#34;weight&#34;, 1)
+ *                 ))
+ *             .location(&#34;global&#34;)
+ *             .monitorConfig(Map.ofEntries(
+ *                 Map.entry(&#34;intervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;path&#34;, &#34;/testpath.aspx&#34;),
+ *                 Map.entry(&#34;port&#34;, 80),
+ *                 Map.entry(&#34;protocol&#34;, &#34;HTTP&#34;),
+ *                 Map.entry(&#34;timeoutInSeconds&#34;, 5),
+ *                 Map.entry(&#34;toleratedNumberOfFailures&#34;, 2)
+ *             ))
+ *             .profileName(&#34;parentprofile&#34;)
+ *             .profileStatus(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;myresourcegroup&#34;)
+ *             .trafficRoutingMethod(&#34;Priority&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

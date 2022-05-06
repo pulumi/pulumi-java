@@ -23,6 +23,58 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update rollout
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rollout = new Rollout(&#34;rollout&#34;, RolloutArgs.builder()        
+ *             .artifactSourceId(&#34;/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource&#34;)
+ *             .buildVersion(&#34;1.0.0.1&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;identityIds&#34;, &#34;/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;userAssigned&#34;)
+ *             ))
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .rolloutName(&#34;myRollout&#34;)
+ *             .stepGroups(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;deploymentTargetId&#34;, &#34;Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1&#39;&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;FirstRegion&#34;),
+ *                     Map.entry(&#34;postDeploymentSteps&#34;, Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/postDeployStep1&#34;)),
+ *                     Map.entry(&#34;preDeploymentSteps&#34;,                     
+ *                         Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/preDeployStep1&#34;),
+ *                         Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/preDeployStep2&#34;))
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;dependsOnStepGroups&#34;, &#34;FirstRegion&#34;),
+ *                     Map.entry(&#34;deploymentTargetId&#34;, &#34;Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2&#39;&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;SecondRegion&#34;),
+ *                     Map.entry(&#34;postDeploymentSteps&#34;, Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/postDeployStep5&#34;)),
+ *                     Map.entry(&#34;preDeploymentSteps&#34;,                     
+ *                         Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/preDeployStep3&#34;),
+ *                         Map.of(&#34;stepId&#34;, &#34;Microsoft.DeploymentManager/steps/preDeployStep4&#34;))
+ *                 ))
+ *             .tags()
+ *             .targetServiceTopologyId(&#34;/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

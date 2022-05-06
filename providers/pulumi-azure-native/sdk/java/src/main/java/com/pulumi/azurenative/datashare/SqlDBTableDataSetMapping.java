@@ -20,6 +20,147 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### DataSetMappings_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlDBTableDataSetMapping = new SqlDBTableDataSetMapping(&#34;sqlDBTableDataSetMapping&#34;, SqlDBTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDB_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlDBTableDataSetMapping = new SqlDBTableDataSetMapping(&#34;sqlDBTableDataSetMapping&#34;, SqlDBTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetId(&#34;a08f184b-0567-4b11-ba22-a1199336d226&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .databaseName(&#34;Database1&#34;)
+ *             .kind(&#34;SqlDBTable&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .schemaName(&#34;dbo&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .sqlServerResourceId(&#34;/subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1&#34;)
+ *             .tableName(&#34;Table1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlDBTableDataSetMapping = new SqlDBTableDataSetMapping(&#34;sqlDBTableDataSetMapping&#34;, SqlDBTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SqlDW_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlDBTableDataSetMapping = new SqlDBTableDataSetMapping(&#34;sqlDBTableDataSetMapping&#34;, SqlDBTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;Account1&#34;)
+ *             .dataSetMappingName(&#34;DatasetMapping1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlDBTableDataSetMapping = new SqlDBTableDataSetMapping(&#34;sqlDBTableDataSetMapping&#34;, SqlDBTableDataSetMappingArgs.builder()        
+ *             .accountName(&#34;consumerAccount&#34;)
+ *             .dataSetMappingName(&#34;datasetMappingName1&#34;)
+ *             .resourceGroupName(&#34;SampleResourceGroup&#34;)
+ *             .shareSubscriptionName(&#34;ShareSubscription1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

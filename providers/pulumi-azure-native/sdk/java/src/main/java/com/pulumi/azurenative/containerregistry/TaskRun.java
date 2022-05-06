@@ -29,6 +29,44 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### TaskRuns_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var taskRun = new TaskRun(&#34;taskRun&#34;, TaskRunArgs.builder()        
+ *             .forceUpdateTag(&#34;test&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .runRequest(Map.ofEntries(
+ *                 Map.entry(&#34;credentials&#34;, ),
+ *                 Map.entry(&#34;encodedTaskContent&#34;, &#34;c3RlcHM6IAogIC0gY21kOiB7eyAuVmFsdWVzLmNvbW1hbmQgfX0K&#34;),
+ *                 Map.entry(&#34;encodedValuesContent&#34;, &#34;Y29tbWFuZDogYmFzaCBlY2hvIHt7LlJ1bi5SZWdpc3RyeX19Cg==&#34;),
+ *                 Map.entry(&#34;platform&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;architecture&#34;, &#34;amd64&#34;),
+ *                     Map.entry(&#34;os&#34;, &#34;Linux&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;EncodedTaskRunRequest&#34;),
+ *                 Map.entry(&#34;values&#34;, )
+ *             ))
+ *             .taskRunName(&#34;myRun&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-06-22.
  * 
  * ## Example Usage
+ * ### Create a V2 hybrid runbook worker
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var hybridRunbookWorker = new HybridRunbookWorker(&#34;hybridRunbookWorker&#34;, HybridRunbookWorkerArgs.builder()        
+ *             .automationAccountName(&#34;testaccount&#34;)
+ *             .hybridRunbookWorkerGroupName(&#34;TestHybridGroup&#34;)
+ *             .hybridRunbookWorkerId(&#34;c010ad12-ef14-4a2a-aa9e-ef22c4745ddd&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .vmResourceId(&#34;/subscriptions/vmsubid/resourceGroups/vmrg/providers/Microsoft.Compute/virtualMachines/vmname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

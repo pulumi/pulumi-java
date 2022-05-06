@@ -33,6 +33,77 @@ import javax.annotation.Nullable;
  *     API Version: 2021-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update a pipeline topology with an Rtsp source and video sink.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var pipelineTopology = new PipelineTopology(&#34;pipelineTopology&#34;, PipelineTopologyArgs.builder()        
+ *             .accountName(&#34;testaccount2&#34;)
+ *             .description(&#34;Pipeline Topology 1 Description&#34;)
+ *             .kind(&#34;Live&#34;)
+ *             .parameters(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;default&#34;, &#34;rtsp://microsoft.com/video.mp4&#34;),
+ *                     Map.entry(&#34;description&#34;, &#34;rtsp source url parameter&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rtspUrlParameter&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;String&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;default&#34;, &#34;password&#34;),
+ *                     Map.entry(&#34;description&#34;, &#34;rtsp source password parameter&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;rtspPasswordParameter&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;SecretString&#34;)
+ *                 ))
+ *             .pipelineTopologyName(&#34;pipelineTopology1&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sinks(Map.ofEntries(
+ *                 Map.entry(&#34;inputs&#34;, Map.of(&#34;nodeName&#34;, &#34;rtspSource&#34;)),
+ *                 Map.entry(&#34;name&#34;, &#34;videoSink&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.VideoSink&#34;),
+ *                 Map.entry(&#34;videoCreationProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Parking lot south entrance&#34;),
+ *                     Map.entry(&#34;segmentLength&#34;, &#34;PT30S&#34;),
+ *                     Map.entry(&#34;title&#34;, &#34;Parking Lot (Camera 1)&#34;)
+ *                 )),
+ *                 Map.entry(&#34;videoName&#34;, &#34;camera001&#34;),
+ *                 Map.entry(&#34;videoPublishingOptions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;disableArchive&#34;, &#34;false&#34;),
+ *                     Map.entry(&#34;disableRtspPublishing&#34;, &#34;true&#34;)
+ *                 ))
+ *             ))
+ *             .sku(Map.of(&#34;name&#34;, &#34;Live_S1&#34;))
+ *             .sources(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;credentials&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;password&#34;, rtspPasswordParameter),
+ *                         Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#34;),
+ *                         Map.entry(&#34;username&#34;, &#34;username&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.UnsecuredEndpoint&#34;),
+ *                     Map.entry(&#34;url&#34;, rtspUrlParameter)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;rtspSource&#34;),
+ *                 Map.entry(&#34;transport&#34;, &#34;Http&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;#Microsoft.VideoAnalyzer.RtspSource&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

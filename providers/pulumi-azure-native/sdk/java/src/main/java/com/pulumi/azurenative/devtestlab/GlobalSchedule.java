@@ -25,6 +25,44 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### GlobalSchedules_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var globalSchedule = new GlobalSchedule(&#34;globalSchedule&#34;, GlobalScheduleArgs.builder()        
+ *             .name(&#34;labvmautostart&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .taskType(&#34;LabVmsStartupTask&#34;)
+ *             .timeZoneId(&#34;Hawaiian Standard Time&#34;)
+ *             .weeklyRecurrence(Map.ofEntries(
+ *                 Map.entry(&#34;time&#34;, &#34;0700&#34;),
+ *                 Map.entry(&#34;weekdays&#34;,                 
+ *                     &#34;Monday&#34;,
+ *                     &#34;Tuesday&#34;,
+ *                     &#34;Wednesday&#34;,
+ *                     &#34;Thursday&#34;,
+ *                     &#34;Friday&#34;,
+ *                     &#34;Saturday&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

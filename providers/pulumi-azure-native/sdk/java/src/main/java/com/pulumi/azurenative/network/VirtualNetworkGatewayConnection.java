@@ -30,6 +30,74 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### CreateVirtualNetworkGatewayConnection_S2S
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkGatewayConnection = new VirtualNetworkGatewayConnection(&#34;virtualNetworkGatewayConnection&#34;, VirtualNetworkGatewayConnectionArgs.builder()        
+ *             .connectionMode(&#34;Default&#34;)
+ *             .connectionProtocol(&#34;IKEv2&#34;)
+ *             .connectionType(&#34;IPsec&#34;)
+ *             .dpdTimeoutSeconds(30)
+ *             .enableBgp(false)
+ *             .ipsecPolicies()
+ *             .localNetworkGateway2(Map.ofEntries(
+ *                 Map.entry(&#34;gatewayIpAddress&#34;, &#34;x.x.x.x&#34;),
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw&#34;),
+ *                 Map.entry(&#34;localNetworkAddressSpace&#34;, Map.of(&#34;addressPrefixes&#34;, &#34;10.1.0.0/16&#34;)),
+ *                 Map.entry(&#34;location&#34;, &#34;centralus&#34;),
+ *                 Map.entry(&#34;tags&#34;, )
+ *             ))
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .routingWeight(0)
+ *             .sharedKey(&#34;Abc123&#34;)
+ *             .trafficSelectorPolicies()
+ *             .usePolicyBasedTrafficSelectors(false)
+ *             .virtualNetworkGateway1(Map.ofEntries(
+ *                 Map.entry(&#34;activeActive&#34;, false),
+ *                 Map.entry(&#34;bgpSettings&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;asn&#34;, 65514),
+ *                     Map.entry(&#34;bgpPeeringAddress&#34;, &#34;10.0.1.30&#34;),
+ *                     Map.entry(&#34;peerWeight&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;enableBgp&#34;, false),
+ *                 Map.entry(&#34;gatewayType&#34;, &#34;Vpn&#34;),
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw&#34;),
+ *                 Map.entry(&#34;ipConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw/ipConfigurations/gwipconfig1&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;gwipconfig1&#34;),
+ *                     Map.entry(&#34;privateIPAllocationMethod&#34;, &#34;Dynamic&#34;),
+ *                     Map.entry(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip&#34;)),
+ *                     Map.entry(&#34;subnet&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet&#34;))
+ *                 )),
+ *                 Map.entry(&#34;location&#34;, &#34;centralus&#34;),
+ *                 Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;VpnGw1&#34;),
+ *                     Map.entry(&#34;tier&#34;, &#34;VpnGw1&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, ),
+ *                 Map.entry(&#34;vpnType&#34;, &#34;RouteBased&#34;)
+ *             ))
+ *             .virtualNetworkGatewayConnectionName(&#34;connS2S&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

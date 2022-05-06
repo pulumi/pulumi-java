@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create peering
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkPeering = new VirtualNetworkPeering(&#34;virtualNetworkPeering&#34;, VirtualNetworkPeeringArgs.builder()        
+ *             .allowForwardedTraffic(true)
+ *             .allowGatewayTransit(false)
+ *             .allowVirtualNetworkAccess(true)
+ *             .remoteVirtualNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2&#34;))
+ *             .resourceGroupName(&#34;peerTest&#34;)
+ *             .useRemoteGateways(false)
+ *             .virtualNetworkName(&#34;vnet1&#34;)
+ *             .virtualNetworkPeeringName(&#34;peer&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

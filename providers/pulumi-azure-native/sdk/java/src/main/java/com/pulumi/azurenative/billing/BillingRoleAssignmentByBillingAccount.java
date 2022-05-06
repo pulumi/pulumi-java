@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-01-preview.
  * 
  * ## Example Usage
+ * ### PutEnrollmentAdministratorRoleAssignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var billingRoleAssignmentByBillingAccount = new BillingRoleAssignmentByBillingAccount(&#34;billingRoleAssignmentByBillingAccount&#34;, BillingRoleAssignmentByBillingAccountArgs.builder()        
+ *             .billingAccountName(&#34;{billingAccountName}&#34;)
+ *             .billingRoleAssignmentName(&#34;{billingRoleAssignmentName}&#34;)
+ *             .principalId(&#34;99a1a759-30dd-42c2-828c-db398826bb67&#34;)
+ *             .principalTenantId(&#34;7ca289b9-c32d-4f01-8566-7ff93261d76f&#34;)
+ *             .roleDefinitionId(&#34;/providers/Microsoft.Billing/billingAccounts/7898901/billingRoleDefinitions/9f1983cb-2574-400c-87e9-34cf8e2280db&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-06-01.
  * 
  * ## Example Usage
+ * ### PUT Private DNS Zone Virtual Network Link
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetworkLink = new VirtualNetworkLink(&#34;virtualNetworkLink&#34;, VirtualNetworkLinkArgs.builder()        
+ *             .location(&#34;Global&#34;)
+ *             .privateZoneName(&#34;privatezone1.com&#34;)
+ *             .registrationEnabled(false)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/virtualNetworkSubscriptionId/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/virtualNetworkName&#34;))
+ *             .virtualNetworkLinkName(&#34;virtualNetworkLink1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

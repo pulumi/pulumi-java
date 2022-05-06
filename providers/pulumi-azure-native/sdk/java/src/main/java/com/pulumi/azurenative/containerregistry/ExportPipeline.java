@@ -23,6 +23,40 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### ExportPipelineCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exportPipeline = new ExportPipeline(&#34;exportPipeline&#34;, ExportPipelineArgs.builder()        
+ *             .exportPipelineName(&#34;myExportPipeline&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;westus&#34;)
+ *             .options(&#34;OverwriteBlobs&#34;)
+ *             .registryName(&#34;myRegistry&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .target(Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultUri&#34;, &#34;https://myvault.vault.azure.net/secrets/acrexportsas&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;AzureStorageBlobContainer&#34;),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://accountname.blob.core.windows.net/containername&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

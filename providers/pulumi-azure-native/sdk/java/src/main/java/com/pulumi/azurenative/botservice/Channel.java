@@ -36,6 +36,144 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Alexa Bot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var channel = new Channel(&#34;channel&#34;, ChannelArgs.builder()        
+ *             .channelName(&#34;AlexaChannel&#34;)
+ *             .location(&#34;global&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;channelName&#34;, &#34;AlexaChannel&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;alexaSkillId&#34;, &#34;XAlexaSkillIdX&#34;),
+ *                     Map.entry(&#34;isEnabled&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Bot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var channel = new Channel(&#34;channel&#34;, ChannelArgs.builder()        
+ *             .channelName(&#34;EmailChannel&#34;)
+ *             .location(&#34;global&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;channelName&#34;, &#34;EmailChannel&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;emailAddress&#34;, &#34;a@b.com&#34;),
+ *                     Map.entry(&#34;isEnabled&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;pwd&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create DirectLine Speech Bot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var channel = new Channel(&#34;channel&#34;, ChannelArgs.builder()        
+ *             .channelName(&#34;DirectLineSpeechChannel&#34;)
+ *             .location(&#34;global&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;channelName&#34;, &#34;DirectLineSpeechChannel&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;cognitiveServiceRegion&#34;, &#34;XcognitiveServiceRegionX&#34;),
+ *                     Map.entry(&#34;cognitiveServiceSubscriptionKey&#34;, &#34;XcognitiveServiceSubscriptionKeyX&#34;),
+ *                     Map.entry(&#34;isEnabled&#34;, true)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Line Bot
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var channel = new Channel(&#34;channel&#34;, ChannelArgs.builder()        
+ *             .channelName(&#34;LineChannel&#34;)
+ *             .location(&#34;global&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;channelName&#34;, &#34;LineChannel&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.of(&#34;lineRegistrations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;channelAccessToken&#34;, &#34;channelAccessToken&#34;),
+ *                     Map.entry(&#34;channelSecret&#34;, &#34;channelSecret&#34;)
+ *                 )))
+ *             ))
+ *             .resourceGroupName(&#34;OneResourceGroupName&#34;)
+ *             .resourceName(&#34;samplebotname&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

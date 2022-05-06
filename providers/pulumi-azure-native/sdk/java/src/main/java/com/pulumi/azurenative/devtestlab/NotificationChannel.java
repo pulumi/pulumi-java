@@ -22,6 +22,37 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### NotificationChannels_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var notificationChannel = new NotificationChannel(&#34;notificationChannel&#34;, NotificationChannelArgs.builder()        
+ *             .description(&#34;Integration configured for auto-shutdown&#34;)
+ *             .emailRecipient(&#34;{email}&#34;)
+ *             .events(Map.of(&#34;eventName&#34;, &#34;AutoShutdown&#34;))
+ *             .labName(&#34;{labName}&#34;)
+ *             .name(&#34;{notificationChannelName}&#34;)
+ *             .notificationLocale(&#34;en&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .webHookUrl(&#34;{webhookUrl}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

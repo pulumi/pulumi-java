@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2020-04-01-preview.
  * 
  * ## Example Usage
+ * ### Upsert DNS resolver
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var dnsResolver = new DnsResolver(&#34;dnsResolver&#34;, DnsResolverArgs.builder()        
+ *             .dnsResolverName(&#34;sampleDnsResolver&#34;)
+ *             .location(&#34;westus2&#34;)
+ *             .resourceGroupName(&#34;sampleResourceGroup&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .virtualNetwork(Map.of(&#34;id&#34;, &#34;/subscriptions/cbb1387e-4b03-44f2-ad41-58d4677b9873/resourceGroups/virtualNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/sampleVirtualNetwork&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

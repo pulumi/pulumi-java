@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2021-10-15-preview.
  * 
  * ## Example Usage
+ * ### PartnerTopics_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var partnerTopic = new PartnerTopic(&#34;partnerTopic&#34;, PartnerTopicArgs.builder()        
+ *             .expirationTimeIfNotActivatedUtc(&#34;2022-03-23T23:06:13.109Z&#34;)
+ *             .location(&#34;westus2&#34;)
+ *             .messageForActivation(&#34;Example message for activation&#34;)
+ *             .partnerRegistrationImmutableId(&#34;6f541064-031d-4cc8-9ec3-a3b4fc0f7185&#34;)
+ *             .partnerTopicFriendlyDescription(&#34;Example description&#34;)
+ *             .partnerTopicName(&#34;examplePartnerTopicName1&#34;)
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .source(&#34;ContosoCorp.Accounts.User1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

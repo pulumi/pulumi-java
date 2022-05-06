@@ -29,6 +29,229 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### Create virtual network
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .virtualNetworkName(&#34;test-vnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with Bgp Communities
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .bgpCommunities(Map.of(&#34;virtualNetworkCommunity&#34;, &#34;12076:20000&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.0.0/24&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test-1&#34;)
+ *             ))
+ *             .virtualNetworkName(&#34;test-vnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with delegated subnets
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;westcentralus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.0.0/24&#34;),
+ *                 Map.entry(&#34;delegations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myDelegation&#34;),
+ *                     Map.entry(&#34;serviceName&#34;, &#34;Microsoft.Sql/managedInstances&#34;)
+ *                 )),
+ *                 Map.entry(&#34;name&#34;, &#34;test-1&#34;)
+ *             ))
+ *             .virtualNetworkName(&#34;test-vnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with service endpoints
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;vnetTest&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.0.0/16&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test-1&#34;),
+ *                 Map.entry(&#34;serviceEndpoints&#34;, Map.of(&#34;service&#34;, &#34;Microsoft.Storage&#34;))
+ *             ))
+ *             .virtualNetworkName(&#34;vnet1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with service endpoints and service endpoint policy
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;eastus2euap&#34;)
+ *             .resourceGroupName(&#34;vnetTest&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.0.0/16&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test-1&#34;),
+ *                 Map.entry(&#34;serviceEndpointPolicies&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/vnetTest/providers/Microsoft.Network/serviceEndpointPolicies/ServiceEndpointPolicy1&#34;)),
+ *                 Map.entry(&#34;serviceEndpoints&#34;, Map.of(&#34;service&#34;, &#34;Microsoft.Storage&#34;))
+ *             ))
+ *             .virtualNetworkName(&#34;vnet1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with subnet
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefix&#34;, &#34;10.0.0.0/24&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test-1&#34;)
+ *             ))
+ *             .virtualNetworkName(&#34;test-vnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create virtual network with subnet containing address prefixes
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualNetwork = new VirtualNetwork(&#34;virtualNetwork&#34;, VirtualNetworkArgs.builder()        
+ *             .addressSpace(Map.of(&#34;addressPrefixes&#34;, &#34;10.0.0.0/16&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .subnets(Map.ofEntries(
+ *                 Map.entry(&#34;addressPrefixes&#34;,                 
+ *                     &#34;10.0.0.0/28&#34;,
+ *                     &#34;10.0.1.0/28&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test-2&#34;)
+ *             ))
+ *             .virtualNetworkName(&#34;test-vnet&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

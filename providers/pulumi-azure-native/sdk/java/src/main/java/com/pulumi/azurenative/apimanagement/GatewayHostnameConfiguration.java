@@ -21,6 +21,39 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateGatewayHostnameConfiguration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var gatewayHostnameConfiguration = new GatewayHostnameConfiguration(&#34;gatewayHostnameConfiguration&#34;, GatewayHostnameConfigurationArgs.builder()        
+ *             .certificateId(&#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/certificates/cert1&#34;)
+ *             .gatewayId(&#34;gw1&#34;)
+ *             .hcId(&#34;default&#34;)
+ *             .hostname(&#34;*&#34;)
+ *             .http2Enabled(true)
+ *             .negotiateClientCertificate(false)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .tls10Enabled(false)
+ *             .tls11Enabled(false)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

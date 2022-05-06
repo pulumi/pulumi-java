@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2014-04-01-preview.
  * 
  * ## Example Usage
+ * ### Create an extension resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var extension = new Extension(&#34;extension&#34;, ExtensionArgs.builder()        
+ *             .accountResourceName(&#34;ExampleAccount&#34;)
+ *             .extensionResourceName(&#34;ms.example&#34;)
+ *             .location(&#34;Central US&#34;)
+ *             .plan(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;ExamplePlan&#34;),
+ *                 Map.entry(&#34;product&#34;, &#34;ExampleExtensionName&#34;),
+ *                 Map.entry(&#34;promotionCode&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;publisher&#34;, &#34;ExampleExtensionPublisher&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;1.0&#34;)
+ *             ))
+ *             .properties()
+ *             .resourceGroupName(&#34;VS-Example-Group&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### MigrationConfigurationsStartMigration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var migrationConfig = new MigrationConfig(&#34;migrationConfig&#34;, MigrationConfigArgs.builder()        
+ *             .configName(&#34;$default&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-41&#34;)
+ *             .postMigrationName(&#34;sdk-PostMigration-5919&#34;)
+ *             .resourceGroupName(&#34;ResourceGroup&#34;)
+ *             .targetNamespace(&#34;/subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-4028&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

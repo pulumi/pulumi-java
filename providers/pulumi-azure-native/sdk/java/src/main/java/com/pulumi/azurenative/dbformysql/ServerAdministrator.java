@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2017-12-01.
  * 
  * ## Example Usage
+ * ### ServerAdministratorCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverAdministrator = new ServerAdministrator(&#34;serverAdministrator&#34;, ServerAdministratorArgs.builder()        
+ *             .administratorType(&#34;ActiveDirectory&#34;)
+ *             .login(&#34;bob@contoso.com&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .serverName(&#34;mysqltestsvc4&#34;)
+ *             .sid(&#34;c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c&#34;)
+ *             .tenantId(&#34;c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

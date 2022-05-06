@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01.
  * 
  * ## Example Usage
+ * ### Creates an Experiment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var experiment = new Experiment(&#34;experiment&#34;, ExperimentArgs.builder()        
+ *             .description(&#34;this is my first experiment!&#34;)
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .endpointA(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, &#34;endpointA.net&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;endpoint A&#34;)
+ *             ))
+ *             .endpointB(Map.ofEntries(
+ *                 Map.entry(&#34;endpoint&#34;, &#34;endpointB.net&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;endpoint B&#34;)
+ *             ))
+ *             .experimentName(&#34;MyExperiment&#34;)
+ *             .profileName(&#34;MyProfile&#34;)
+ *             .resourceGroupName(&#34;MyResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

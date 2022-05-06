@@ -21,6 +21,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### ApplicationCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var application = new Application(&#34;application&#34;, ApplicationArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .allowUpdates(false)
+ *             .applicationName(&#34;app1&#34;)
+ *             .displayName(&#34;myAppName&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

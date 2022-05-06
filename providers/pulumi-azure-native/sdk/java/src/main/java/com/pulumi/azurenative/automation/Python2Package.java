@@ -26,6 +26,41 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create or update a python 2 package
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var python2Package = new Python2Package(&#34;python2Package&#34;, Python2PackageArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount33&#34;)
+ *             .contentLink(Map.ofEntries(
+ *                 Map.entry(&#34;contentHash&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;algorithm&#34;, &#34;sha265&#34;),
+ *                     Map.entry(&#34;value&#34;, &#34;07E108A962B81DD9C9BAA89BB47C0F6EE52B29E83758B07795E408D258B2B87A&#34;)
+ *                 )),
+ *                 Map.entry(&#34;uri&#34;, &#34;https://teststorage.blob.core.windows.net/dsccomposite/OmsCompositeResources.zip&#34;),
+ *                 Map.entry(&#34;version&#34;, &#34;1.0.0.0&#34;)
+ *             ))
+ *             .packageName(&#34;OmsCompositeResources&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

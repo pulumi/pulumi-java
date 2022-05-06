@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2017-12-01.
  * 
  * ## Example Usage
+ * ### DatabaseCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var database = new Database(&#34;database&#34;, DatabaseArgs.builder()        
+ *             .charset(&#34;UTF8&#34;)
+ *             .collation(&#34;English_United States.1252&#34;)
+ *             .databaseName(&#34;db1&#34;)
+ *             .resourceGroupName(&#34;TestGroup&#34;)
+ *             .serverName(&#34;testserver&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

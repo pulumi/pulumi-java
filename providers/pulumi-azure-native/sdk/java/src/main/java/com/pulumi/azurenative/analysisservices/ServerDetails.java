@@ -26,6 +26,41 @@ import javax.annotation.Nullable;
  * API Version: 2017-08-01.
  * 
  * ## Example Usage
+ * ### Create a server.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var serverDetails = new ServerDetails(&#34;serverDetails&#34;, ServerDetailsArgs.builder()        
+ *             .asAdministrators(Map.of(&#34;members&#34;,             
+ *                 &#34;azsdktest@microsoft.com&#34;,
+ *                 &#34;azsdktest2@microsoft.com&#34;))
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;TestRG&#34;)
+ *             .serverName(&#34;azsdktest&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;capacity&#34;, 1),
+ *                 Map.entry(&#34;name&#34;, &#34;S1&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;testKey&#34;, &#34;testValue&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

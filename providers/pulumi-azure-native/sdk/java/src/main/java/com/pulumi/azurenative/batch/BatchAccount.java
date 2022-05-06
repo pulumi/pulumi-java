@@ -29,6 +29,156 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### BatchAccountCreate_BYOS
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchAccount = new BatchAccount(&#34;batchAccount&#34;, BatchAccountArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .autoStorage(Map.of(&#34;storageAccountId&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage&#34;))
+ *             .keyVaultReference(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample&#34;),
+ *                 Map.entry(&#34;url&#34;, &#34;http://sample.vault.azure.net/&#34;)
+ *             ))
+ *             .location(&#34;japaneast&#34;)
+ *             .poolAllocationMode(&#34;UserSubscription&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### BatchAccountCreate_Default
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchAccount = new BatchAccount(&#34;batchAccount&#34;, BatchAccountArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .autoStorage(Map.of(&#34;storageAccountId&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage&#34;))
+ *             .location(&#34;japaneast&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### BatchAccountCreate_SystemAssignedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchAccount = new BatchAccount(&#34;batchAccount&#34;, BatchAccountArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .autoStorage(Map.of(&#34;storageAccountId&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage&#34;))
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;japaneast&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### BatchAccountCreate_UserAssignedIdentity
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchAccount = new BatchAccount(&#34;batchAccount&#34;, BatchAccountArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .autoStorage(Map.of(&#34;storageAccountId&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage&#34;))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;, ))
+ *             ))
+ *             .location(&#34;japaneast&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### PrivateBatchAccountCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var batchAccount = new BatchAccount(&#34;batchAccount&#34;, BatchAccountArgs.builder()        
+ *             .accountName(&#34;sampleacct&#34;)
+ *             .autoStorage(Map.of(&#34;storageAccountId&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage&#34;))
+ *             .keyVaultReference(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.KeyVault/vaults/sample&#34;),
+ *                 Map.entry(&#34;url&#34;, &#34;http://sample.vault.azure.net/&#34;)
+ *             ))
+ *             .location(&#34;japaneast&#34;)
+ *             .publicNetworkAccess(&#34;Disabled&#34;)
+ *             .resourceGroupName(&#34;default-azurebatch-japaneast&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

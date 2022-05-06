@@ -24,6 +24,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### BackupPolicies_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var backupPolicy = new BackupPolicy(&#34;backupPolicy&#34;, BackupPolicyArgs.builder()        
+ *             .accountName(&#34;account1&#34;)
+ *             .backupPolicyName(&#34;backupPolicyName&#34;)
+ *             .dailyBackupsToKeep(10)
+ *             .enabled(true)
+ *             .location(&#34;westus&#34;)
+ *             .monthlyBackupsToKeep(10)
+ *             .resourceGroupName(&#34;myRG&#34;)
+ *             .weeklyBackupsToKeep(10)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

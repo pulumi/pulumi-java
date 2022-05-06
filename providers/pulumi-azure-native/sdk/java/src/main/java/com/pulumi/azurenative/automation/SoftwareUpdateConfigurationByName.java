@@ -24,6 +24,99 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01.
  * 
  * ## Example Usage
+ * ### Create software update configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var softwareUpdateConfigurationByName = new SoftwareUpdateConfigurationByName(&#34;softwareUpdateConfigurationByName&#34;, SoftwareUpdateConfigurationByNameArgs.builder()        
+ *             .automationAccountName(&#34;myaccount&#34;)
+ *             .resourceGroupName(&#34;mygroup&#34;)
+ *             .scheduleInfo(Map.ofEntries(
+ *                 Map.entry(&#34;advancedSchedule&#34;, Map.of(&#34;weekDays&#34;,                 
+ *                     &#34;Monday&#34;,
+ *                     &#34;Thursday&#34;)),
+ *                 Map.entry(&#34;expiryTime&#34;, &#34;2018-11-09T11:22:57+00:00&#34;),
+ *                 Map.entry(&#34;frequency&#34;, &#34;Hour&#34;),
+ *                 Map.entry(&#34;interval&#34;, 1),
+ *                 Map.entry(&#34;startTime&#34;, &#34;2017-10-19T12:22:57+00:00&#34;),
+ *                 Map.entry(&#34;timeZone&#34;, &#34;America/Los_Angeles&#34;)
+ *             ))
+ *             .softwareUpdateConfigurationName(&#34;testpatch&#34;)
+ *             .tasks(Map.ofEntries(
+ *                 Map.entry(&#34;postTask&#34;, Map.of(&#34;source&#34;, &#34;GetCache&#34;)),
+ *                 Map.entry(&#34;preTask&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;parameters&#34;, Map.of(&#34;COMPUTERNAME&#34;, &#34;Computer1&#34;)),
+ *                     Map.entry(&#34;source&#34;, &#34;HelloWorld&#34;)
+ *                 ))
+ *             ))
+ *             .updateConfiguration(Map.ofEntries(
+ *                 Map.entry(&#34;azureVirtualMachines&#34;,                 
+ *                     &#34;/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01&#34;,
+ *                     &#34;/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02&#34;,
+ *                     &#34;/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03&#34;),
+ *                 Map.entry(&#34;duration&#34;, &#34;PT2H0M&#34;),
+ *                 Map.entry(&#34;nonAzureComputerNames&#34;,                 
+ *                     &#34;box1.contoso.com&#34;,
+ *                     &#34;box2.contoso.com&#34;),
+ *                 Map.entry(&#34;operatingSystem&#34;, &#34;Windows&#34;),
+ *                 Map.entry(&#34;targets&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;azureQueries&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;locations&#34;,                         
+ *                             &#34;Japan East&#34;,
+ *                             &#34;UK South&#34;),
+ *                         Map.entry(&#34;scope&#34;,                         
+ *                             &#34;/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources&#34;,
+ *                             &#34;/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067&#34;),
+ *                         Map.entry(&#34;tagSettings&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;filterOperator&#34;, &#34;All&#34;),
+ *                             Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;tag1&#34;,                                 
+ *                                     &#34;tag1Value1&#34;,
+ *                                     &#34;tag1Value2&#34;,
+ *                                     &#34;tag1Value3&#34;),
+ *                                 Map.entry(&#34;tag2&#34;,                                 
+ *                                     &#34;tag2Value1&#34;,
+ *                                     &#34;tag2Value2&#34;,
+ *                                     &#34;tag2Value3&#34;)
+ *                             ))
+ *                         ))
+ *                     )),
+ *                     Map.entry(&#34;nonAzureQueries&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;functionAlias&#34;, &#34;SavedSearch1&#34;),
+ *                             Map.entry(&#34;workspaceId&#34;, &#34;WorkspaceId1&#34;)
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;functionAlias&#34;, &#34;SavedSearch2&#34;),
+ *                             Map.entry(&#34;workspaceId&#34;, &#34;WorkspaceId2&#34;)
+ *                         ))
+ *                 )),
+ *                 Map.entry(&#34;windows&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;excludedKbNumbers&#34;,                     
+ *                         &#34;168934&#34;,
+ *                         &#34;168973&#34;),
+ *                     Map.entry(&#34;includedUpdateClassifications&#34;, &#34;Critical&#34;),
+ *                     Map.entry(&#34;rebootSetting&#34;, &#34;IfRequired&#34;)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

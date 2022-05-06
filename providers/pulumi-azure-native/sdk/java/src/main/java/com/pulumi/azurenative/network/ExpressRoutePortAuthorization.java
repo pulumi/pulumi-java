@@ -20,6 +20,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-08-01.
  * 
  * ## Example Usage
+ * ### Create ExpressRoutePort Authorization
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var expressRoutePortAuthorization = new ExpressRoutePortAuthorization(&#34;expressRoutePortAuthorization&#34;, ExpressRoutePortAuthorizationArgs.builder()        
+ *             .authorizationName(&#34;authorizatinName&#34;)
+ *             .expressRoutePortName(&#34;expressRoutePortName&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

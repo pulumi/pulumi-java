@@ -42,6 +42,45 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-19.
  * 
  * ## Example Usage
+ * ### Tasks_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var task = new Task(&#34;task&#34;, TaskArgs.builder()        
+ *             .groupName(&#34;DmsSdkRg&#34;)
+ *             .projectName(&#34;DmsSdkProject&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;input&#34;, Map.of(&#34;targetConnectionInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;authentication&#34;, &#34;SqlAuthentication&#34;),
+ *                     Map.entry(&#34;dataSource&#34;, &#34;ssma-test-server.database.windows.net&#34;),
+ *                     Map.entry(&#34;encryptConnection&#34;, true),
+ *                     Map.entry(&#34;password&#34;, &#34;testpassword&#34;),
+ *                     Map.entry(&#34;trustServerCertificate&#34;, true),
+ *                     Map.entry(&#34;type&#34;, &#34;SqlConnectionInfo&#34;),
+ *                     Map.entry(&#34;userName&#34;, &#34;testuser&#34;)
+ *                 ))),
+ *                 Map.entry(&#34;taskType&#34;, &#34;ConnectToTarget.SqlDb&#34;)
+ *             ))
+ *             .serviceName(&#34;DmsSdkService&#34;)
+ *             .taskName(&#34;DmsSdkTask&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -25,6 +25,107 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Create or update a policy set definition at management group level
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policySetDefinitionAtManagementGroup = new PolicySetDefinitionAtManagementGroup(&#34;policySetDefinitionAtManagementGroup&#34;, PolicySetDefinitionAtManagementGroupArgs.builder()        
+ *             .description(&#34;Policies to enforce low cost storage SKUs&#34;)
+ *             .displayName(&#34;Cost Management&#34;)
+ *             .managementGroupId(&#34;MyManagementGroup&#34;)
+ *             .metadata(Map.of(&#34;category&#34;, &#34;Cost Management&#34;))
+ *             .policyDefinitions(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;parameters&#34;, Map.of(&#34;listOfAllowedSKUs&#34;, Map.of(&#34;value&#34;,                     
+ *                         &#34;Standard_GRS&#34;,
+ *                         &#34;Standard_LRS&#34;))),
+ *                     Map.entry(&#34;policyDefinitionId&#34;, &#34;/providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;Limit_Skus&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;prefix&#34;, Map.of(&#34;value&#34;, &#34;DeptA&#34;)),
+ *                         Map.entry(&#34;suffix&#34;, Map.of(&#34;value&#34;, &#34;-LC&#34;))
+ *                     )),
+ *                     Map.entry(&#34;policyDefinitionId&#34;, &#34;/providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;Resource_Naming&#34;)
+ *                 ))
+ *             .policySetDefinitionName(&#34;CostManagement&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a policy set definition with groups at management group level
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var policySetDefinitionAtManagementGroup = new PolicySetDefinitionAtManagementGroup(&#34;policySetDefinitionAtManagementGroup&#34;, PolicySetDefinitionAtManagementGroupArgs.builder()        
+ *             .description(&#34;Policies to enforce low cost storage SKUs&#34;)
+ *             .displayName(&#34;Cost Management&#34;)
+ *             .managementGroupId(&#34;MyManagementGroup&#34;)
+ *             .metadata(Map.of(&#34;category&#34;, &#34;Cost Management&#34;))
+ *             .policyDefinitionGroups(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Policies designed to control spend within a subscription.&#34;),
+ *                     Map.entry(&#34;displayName&#34;, &#34;Cost Management Policies&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;CostSaving&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;description&#34;, &#34;Policies that help enforce resource organization standards within a subscription.&#34;),
+ *                     Map.entry(&#34;displayName&#34;, &#34;Organizational Policies&#34;),
+ *                     Map.entry(&#34;name&#34;, &#34;Organizational&#34;)
+ *                 ))
+ *             .policyDefinitions(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;groupNames&#34;, &#34;CostSaving&#34;),
+ *                     Map.entry(&#34;parameters&#34;, Map.of(&#34;listOfAllowedSKUs&#34;, Map.of(&#34;value&#34;,                     
+ *                         &#34;Standard_GRS&#34;,
+ *                         &#34;Standard_LRS&#34;))),
+ *                     Map.entry(&#34;policyDefinitionId&#34;, &#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/7433c107-6db4-4ad1-b57a-a76dce0154a1&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;Limit_Skus&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;groupNames&#34;, &#34;Organizational&#34;),
+ *                     Map.entry(&#34;parameters&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;prefix&#34;, Map.of(&#34;value&#34;, &#34;DeptA&#34;)),
+ *                         Map.entry(&#34;suffix&#34;, Map.of(&#34;value&#34;, &#34;-LC&#34;))
+ *                     )),
+ *                     Map.entry(&#34;policyDefinitionId&#34;, &#34;/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming&#34;),
+ *                     Map.entry(&#34;policyDefinitionReferenceId&#34;, &#34;Resource_Naming&#34;)
+ *                 ))
+ *             .policySetDefinitionName(&#34;CostManagement&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

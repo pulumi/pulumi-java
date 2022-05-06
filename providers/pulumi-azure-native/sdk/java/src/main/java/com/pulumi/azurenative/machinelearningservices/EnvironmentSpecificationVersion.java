@@ -21,6 +21,56 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Environment Specification Version.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var environmentSpecificationVersion = new EnvironmentSpecificationVersion(&#34;environmentSpecificationVersion&#34;, EnvironmentSpecificationVersionArgs.builder()        
+ *             .name(&#34;testEnvironment&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;condaFile&#34;, &#34;&#34;&#34;
+ * channels:
+ * - defaults
+ * dependencies:
+ * - python=3.7.7
+ * name: my-env                &#34;&#34;&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;string&#34;),
+ *                 Map.entry(&#34;docker&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dockerSpecificationType&#34;, &#34;Build&#34;),
+ *                     Map.entry(&#34;dockerfile&#34;, &#34;FROM myimage&#34;)
+ *                 )),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;additionalProp1&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp2&#34;, &#34;string&#34;),
+ *                     Map.entry(&#34;additionalProp3&#34;, &#34;string&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .version(&#34;1&#34;)
+ *             .workspaceName(&#34;testworkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

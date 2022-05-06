@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateCache
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cache = new Cache(&#34;cache&#34;, CacheArgs.builder()        
+ *             .cacheId(&#34;c1&#34;)
+ *             .connectionString(&#34;apim.redis.cache.windows.net:6380,password=xc,ssl=True,abortConnect=False&#34;)
+ *             .description(&#34;Redis cache instances in West India&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceId(&#34;https://management.azure.com/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redis/apimservice1&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .useFromLocation(&#34;default&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

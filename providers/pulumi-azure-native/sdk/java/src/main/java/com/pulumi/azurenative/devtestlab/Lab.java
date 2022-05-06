@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  * API Version: 2018-09-15.
  * 
  * ## Example Usage
+ * ### Labs_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var lab = new Lab(&#34;lab&#34;, LabArgs.builder()        
+ *             .labStorageType(&#34;{Standard|Premium}&#34;)
+ *             .location(&#34;{location}&#34;)
+ *             .name(&#34;{labName}&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .tags(Map.of(&#34;tagName1&#34;, &#34;tagValue1&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -24,6 +24,320 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-30.
  * 
  * ## Example Usage
+ * ### Create or update a simple Gallery Image Version using VM as source.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryImageVersion = new GalleryImageVersion(&#34;galleryImageVersion&#34;, GalleryImageVersionArgs.builder()        
+ *             .galleryImageName(&#34;myGalleryImageName&#34;)
+ *             .galleryImageVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.of(&#34;targetRegions&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;East US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 2),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_ZRS&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;source&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/virtualMachines/{vmName}&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a simple Gallery Image Version using managed image as source.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryImageVersion = new GalleryImageVersion(&#34;galleryImageVersion&#34;, GalleryImageVersionArgs.builder()        
+ *             .galleryImageName(&#34;myGalleryImageName&#34;)
+ *             .galleryImageVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.of(&#34;targetRegions&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;East US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 2),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_ZRS&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;source&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a simple Gallery Image Version using mix of disks and snapshots as a source.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryImageVersion = new GalleryImageVersion(&#34;galleryImageVersion&#34;, GalleryImageVersionArgs.builder()        
+ *             .galleryImageName(&#34;myGalleryImageName&#34;)
+ *             .galleryImageVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.of(&#34;targetRegions&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;),
+ *                             Map.entry(&#34;lun&#34;, 1)
+ *                         )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;),
+ *                             Map.entry(&#34;lun&#34;, 1)
+ *                         )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;East US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 2),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_ZRS&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDiskImages&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hostCaching&#34;, &#34;None&#34;),
+ *                     Map.entry(&#34;lun&#34;, 1),
+ *                     Map.entry(&#34;source&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/disks/{dataDiskName}&#34;))
+ *                 )),
+ *                 Map.entry(&#34;osDiskImage&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hostCaching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;source&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/snapshots/{osSnapshotName}&#34;))
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a simple Gallery Image Version using shared image as source.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryImageVersion = new GalleryImageVersion(&#34;galleryImageVersion&#34;, GalleryImageVersionArgs.builder()        
+ *             .galleryImageName(&#34;myGalleryImageName&#34;)
+ *             .galleryImageVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.of(&#34;targetRegions&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myWestUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;,                         
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 0)
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;),
+ *                                 Map.entry(&#34;lun&#34;, 1)
+ *                             )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myEastUSDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;East US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 2),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_ZRS&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.of(&#34;source&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{versionName}&#34;)))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or update a simple Gallery Image Version using vhd as a source.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryImageVersion = new GalleryImageVersion(&#34;galleryImageVersion&#34;, GalleryImageVersionArgs.builder()        
+ *             .galleryImageName(&#34;myGalleryImageName&#34;)
+ *             .galleryImageVersionName(&#34;1.0.0&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .publishingProfile(Map.of(&#34;targetRegions&#34;,             
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;encryption&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataDiskImages&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myOtherDiskEncryptionSet&#34;),
+ *                             Map.entry(&#34;lun&#34;, 1)
+ *                         )),
+ *                         Map.entry(&#34;osDiskImage&#34;, Map.of(&#34;diskEncryptionSetId&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSet/myDiskEncryptionSet&#34;))
+ *                     )),
+ *                     Map.entry(&#34;name&#34;, &#34;West US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 1)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;East US&#34;),
+ *                     Map.entry(&#34;regionalReplicaCount&#34;, 2),
+ *                     Map.entry(&#34;storageAccountType&#34;, &#34;Standard_ZRS&#34;)
+ *                 )))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .storageProfile(Map.ofEntries(
+ *                 Map.entry(&#34;dataDiskImages&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hostCaching&#34;, &#34;None&#34;),
+ *                     Map.entry(&#34;lun&#34;, 1),
+ *                     Map.entry(&#34;source&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}&#34;),
+ *                         Map.entry(&#34;uri&#34;, &#34;https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd&#34;)
+ *                     ))
+ *                 )),
+ *                 Map.entry(&#34;osDiskImage&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hostCaching&#34;, &#34;ReadOnly&#34;),
+ *                     Map.entry(&#34;source&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;id&#34;, &#34;/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/{storageAccount}&#34;),
+ *                         Map.entry(&#34;uri&#34;, &#34;https://gallerysourcencus.blob.core.windows.net/myvhds/Windows-Server-2012-R2-20171216-en.us-128GB.vhd&#34;)
+ *                     ))
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

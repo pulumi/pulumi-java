@@ -21,6 +21,38 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-30.
  * 
  * ## Example Usage
+ * ### Create or update a simple gallery Application.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var galleryApplication = new GalleryApplication(&#34;galleryApplication&#34;, GalleryApplicationArgs.builder()        
+ *             .description(&#34;This is the gallery application description.&#34;)
+ *             .eula(&#34;This is the gallery application EULA.&#34;)
+ *             .galleryApplicationName(&#34;myGalleryApplicationName&#34;)
+ *             .galleryName(&#34;myGalleryName&#34;)
+ *             .location(&#34;West US&#34;)
+ *             .privacyStatementUri(&#34;myPrivacyStatementUri}&#34;)
+ *             .releaseNoteUri(&#34;myReleaseNoteUri&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .supportedOSType(&#34;Windows&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

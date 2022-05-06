@@ -23,6 +23,36 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-16-preview.
  * 
  * ## Example Usage
+ * ### TestBaseAccountCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testBaseAccount = new TestBaseAccount(&#34;testBaseAccount&#34;, TestBaseAccountArgs.builder()        
+ *             .location(&#34;westus&#34;)
+ *             .resourceGroupName(&#34;contoso-rg1&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;S0&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .testBaseAccountName(&#34;contoso-testBaseAccount1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

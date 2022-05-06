@@ -41,6 +41,987 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create Managed Cluster with Azure KeyVault Secrets Provider Addon
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles(Map.of(&#34;azureKeyvaultSecretsProvider&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;config&#34;, Map.of(&#34;enableSecretRotation&#34;, &#34;true&#34;)),
+ *                 Map.entry(&#34;enabled&#34;, true)
+ *             )))
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with EncryptionAtHost enabled
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableEncryptionAtHost&#34;, true),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with FIPS enabled OS
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableFIPS&#34;, true),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(false)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with GPUMIG
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;gpuInstanceProfile&#34;, &#34;MIG3g&#34;),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_ND96asr_v4&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .httpProxyConfig(Map.ofEntries(
+ *                 Map.entry(&#34;httpProxy&#34;, &#34;http://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;httpsProxy&#34;, &#34;https://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;noProxy&#34;,                 
+ *                     &#34;localhost&#34;,
+ *                     &#34;127.0.0.1&#34;),
+ *                 Map.entry(&#34;trustedCa&#34;, &#34;Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=&#34;)
+ *             ))
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with HTTP proxy configured
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .httpProxyConfig(Map.ofEntries(
+ *                 Map.entry(&#34;httpProxy&#34;, &#34;http://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;httpsProxy&#34;, &#34;https://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;noProxy&#34;,                 
+ *                     &#34;localhost&#34;,
+ *                     &#34;127.0.0.1&#34;),
+ *                 Map.entry(&#34;trustedCa&#34;, &#34;Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=&#34;)
+ *             ))
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with Node Public IP Prefix
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;nodePublicIPPrefixID&#34;, &#34;/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.Network/publicIPPrefixes/public-ip-prefix&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with OSSKU
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osSKU&#34;, &#34;CBLMariner&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .httpProxyConfig(Map.ofEntries(
+ *                 Map.entry(&#34;httpProxy&#34;, &#34;http://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;httpsProxy&#34;, &#34;https://myproxy.server.com:8080&#34;),
+ *                 Map.entry(&#34;noProxy&#34;,                 
+ *                     &#34;localhost&#34;,
+ *                     &#34;127.0.0.1&#34;),
+ *                 Map.entry(&#34;trustedCa&#34;, &#34;Q29uZ3JhdHMhIFlvdSBoYXZlIGZvdW5kIGEgaGlkZGVuIG1lc3NhZ2U=&#34;)
+ *             ))
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with PPG
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;proximityPlacementGroupID&#34;, &#34;/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Cluster with PodIdentity enabled
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .podIdentityProfile(Map.ofEntries(
+ *                 Map.entry(&#34;allowNetworkPluginKubenet&#34;, true),
+ *                 Map.entry(&#34;enabled&#34;, true)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create Managed Private Cluster with fqdn subdomain specified
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableEncryptionAtHost&#34;, true),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS2_v2&#34;)
+ *             ))
+ *             .apiServerAccessProfile(Map.ofEntries(
+ *                 Map.entry(&#34;enablePrivateCluster&#34;, true),
+ *                 Map.entry(&#34;privateDNSZone&#34;, &#34;/subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.Network/privateDnsZones/privatelink.location1.azmk8s.io&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .fqdnSubdomain(&#34;domain1&#34;)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create/Update AAD Managed Cluster with EnableAzureRBAC
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .aadProfile(Map.ofEntries(
+ *                 Map.entry(&#34;enableAzureRBAC&#34;, true),
+ *                 Map.entry(&#34;managed&#34;, true)
+ *             ))
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;availabilityZones&#34;,                 
+ *                     &#34;1&#34;,
+ *                     &#34;2&#34;,
+ *                     &#34;3&#34;),
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create/Update Managed Cluster
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;availabilityZones&#34;,                 
+ *                     &#34;1&#34;,
+ *                     &#34;2&#34;,
+ *                     &#34;3&#34;),
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;balanceSimilarNodeGroups&#34;, &#34;true&#34;),
+ *                 Map.entry(&#34;expander&#34;, &#34;priority&#34;),
+ *                 Map.entry(&#34;maxNodeProvisionTime&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;newPodScaleUpDelay&#34;, &#34;1m&#34;),
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;),
+ *                 Map.entry(&#34;skipNodesWithSystemPods&#34;, &#34;false&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1&#34;, ))
+ *             ))
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create/Update Managed Cluster with EnableAHUB
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedCluster = new ManagedCluster(&#34;managedCluster&#34;, ManagedClusterArgs.builder()        
+ *             .addonProfiles()
+ *             .agentPoolProfiles(Map.ofEntries(
+ *                 Map.entry(&#34;availabilityZones&#34;,                 
+ *                     &#34;1&#34;,
+ *                     &#34;2&#34;,
+ *                     &#34;3&#34;),
+ *                 Map.entry(&#34;count&#34;, 3),
+ *                 Map.entry(&#34;enableNodePublicIP&#34;, true),
+ *                 Map.entry(&#34;mode&#34;, &#34;System&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;nodepool1&#34;),
+ *                 Map.entry(&#34;osType&#34;, &#34;Linux&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;VirtualMachineScaleSets&#34;),
+ *                 Map.entry(&#34;vmSize&#34;, &#34;Standard_DS1_v2&#34;)
+ *             ))
+ *             .autoScalerProfile(Map.ofEntries(
+ *                 Map.entry(&#34;scaleDownDelayAfterAdd&#34;, &#34;15m&#34;),
+ *                 Map.entry(&#34;scanInterval&#34;, &#34;20s&#34;)
+ *             ))
+ *             .diskEncryptionSetID(&#34;/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des&#34;)
+ *             .dnsPrefix(&#34;dnsprefix1&#34;)
+ *             .enablePodSecurityPolicy(true)
+ *             .enableRBAC(true)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1&#34;, ))
+ *             ))
+ *             .kubernetesVersion(&#34;&#34;)
+ *             .linuxProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;ssh&#34;, Map.of(&#34;publicKeys&#34;, Map.of(&#34;keyData&#34;, &#34;keydata&#34;)))
+ *             ))
+ *             .location(&#34;location1&#34;)
+ *             .networkProfile(Map.ofEntries(
+ *                 Map.entry(&#34;loadBalancerProfile&#34;, Map.of(&#34;managedOutboundIPs&#34;, Map.of(&#34;count&#34;, 2))),
+ *                 Map.entry(&#34;loadBalancerSku&#34;, &#34;standard&#34;),
+ *                 Map.entry(&#34;outboundType&#34;, &#34;loadBalancer&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceName(&#34;clustername1&#34;)
+ *             .servicePrincipalProfile(Map.ofEntries(
+ *                 Map.entry(&#34;clientId&#34;, &#34;clientid&#34;),
+ *                 Map.entry(&#34;secret&#34;, &#34;secret&#34;)
+ *             ))
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Free&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;archv2&#34;, &#34;&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;production&#34;)
+ *             ))
+ *             .windowsProfile(Map.ofEntries(
+ *                 Map.entry(&#34;adminPassword&#34;, &#34;replacePassword1234$&#34;),
+ *                 Map.entry(&#34;adminUsername&#34;, &#34;azureuser&#34;),
+ *                 Map.entry(&#34;licenseType&#34;, &#34;Windows_Server&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

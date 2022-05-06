@@ -19,6 +19,35 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### RelayNameSpaceAuthorizationRuleCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespaceAuthorizationRule = new NamespaceAuthorizationRule(&#34;namespaceAuthorizationRule&#34;, NamespaceAuthorizationRuleArgs.builder()        
+ *             .authorizationRuleName(&#34;example-RelayAuthRules-01&#34;)
+ *             .namespaceName(&#34;example-RelayNamespace-01&#34;)
+ *             .resourceGroupName(&#34;resourcegroup&#34;)
+ *             .rights(            
+ *                 &#34;Listen&#34;,
+ *                 &#34;Send&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
@@ -108,7 +137,8 @@ public class NamespaceAuthorizationRule extends com.pulumi.resources.CustomResou
             .version(Utilities.getVersion())
             .aliases(List.of(
                 Output.of(Alias.builder().type("azure-native:relay/v20160701:NamespaceAuthorizationRule").build()),
-                Output.of(Alias.builder().type("azure-native:relay/v20170401:NamespaceAuthorizationRule").build())
+                Output.of(Alias.builder().type("azure-native:relay/v20170401:NamespaceAuthorizationRule").build()),
+                Output.of(Alias.builder().type("azure-native:relay/v20211101:NamespaceAuthorizationRule").build())
             ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

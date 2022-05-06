@@ -25,6 +25,38 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Workspace_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workspace = new Workspace(&#34;workspace&#34;, WorkspaceArgs.builder()        
+ *             .description(&#34;des1&#34;)
+ *             .friendlyName(&#34;friendly&#34;)
+ *             .location(&#34;centralus&#34;)
+ *             .resourceGroupName(&#34;resourceGroup1&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .workspaceName(&#34;workspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

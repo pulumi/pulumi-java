@@ -26,6 +26,174 @@ import javax.annotation.Nullable;
  * API Version: 2018-11-01-preview.
  * 
  * ## Example Usage
+ * ### Assignment with system-assigned managed identity at management group scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .assignmentName(&#34;assignSimpleBlueprint&#34;)
+ *             .blueprintId(&#34;/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint&#34;)
+ *             .description(&#34;enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.of(&#34;value&#34;, &#34;Contoso/Online/Shopping/Production&#34;)),
+ *                 Map.entry(&#34;owners&#34;, Map.of(&#34;value&#34;,                 
+ *                     &#34;johnDoe@contoso.com&#34;,
+ *                     &#34;johnsteam@contoso.com&#34;)),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;Standard_LRS&#34;))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;location&#34;, &#34;eastus&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;defaultRG&#34;)
+ *             )))
+ *             .resourceScope(&#34;managementGroups/ContosoOnlineGroup&#34;)
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Assignment with system-assigned managed identity at subscription scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .assignmentName(&#34;assignSimpleBlueprint&#34;)
+ *             .blueprintId(&#34;/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint&#34;)
+ *             .description(&#34;enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.of(&#34;value&#34;, &#34;Contoso/Online/Shopping/Production&#34;)),
+ *                 Map.entry(&#34;owners&#34;, Map.of(&#34;value&#34;,                 
+ *                     &#34;johnDoe@contoso.com&#34;,
+ *                     &#34;johnsteam@contoso.com&#34;)),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;Standard_LRS&#34;))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;location&#34;, &#34;eastus&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;defaultRG&#34;)
+ *             )))
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Assignment with user-assigned managed identity at management group scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .assignmentName(&#34;assignSimpleBlueprint&#34;)
+ *             .blueprintId(&#34;/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint&#34;)
+ *             .description(&#34;enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity&#34;, ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.of(&#34;value&#34;, &#34;Contoso/Online/Shopping/Production&#34;)),
+ *                 Map.entry(&#34;owners&#34;, Map.of(&#34;value&#34;,                 
+ *                     &#34;johnDoe@contoso.com&#34;,
+ *                     &#34;johnsteam@contoso.com&#34;)),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;Standard_LRS&#34;))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;location&#34;, &#34;eastus&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;defaultRG&#34;)
+ *             )))
+ *             .resourceScope(&#34;managementGroups/ContosoOnlineGroup&#34;)
+ *             .scope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Assignment with user-assigned managed identity at subscription scope
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var assignment = new Assignment(&#34;assignment&#34;, AssignmentArgs.builder()        
+ *             .assignmentName(&#34;assignSimpleBlueprint&#34;)
+ *             .blueprintId(&#34;/providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint&#34;)
+ *             .description(&#34;enforce pre-defined simpleBlueprint to this XXXXXXXX subscription.&#34;)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso-resource-group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-identity&#34;, ))
+ *             ))
+ *             .location(&#34;eastus&#34;)
+ *             .parameters(Map.ofEntries(
+ *                 Map.entry(&#34;costCenter&#34;, Map.of(&#34;value&#34;, &#34;Contoso/Online/Shopping/Production&#34;)),
+ *                 Map.entry(&#34;owners&#34;, Map.of(&#34;value&#34;,                 
+ *                     &#34;johnDoe@contoso.com&#34;,
+ *                     &#34;johnsteam@contoso.com&#34;)),
+ *                 Map.entry(&#34;storageAccountType&#34;, Map.of(&#34;value&#34;, &#34;Standard_LRS&#34;))
+ *             ))
+ *             .resourceGroups(Map.of(&#34;storageRG&#34;, Map.ofEntries(
+ *                 Map.entry(&#34;location&#34;, &#34;eastus&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;defaultRG&#34;)
+ *             )))
+ *             .resourceScope(&#34;subscriptions/00000000-0000-0000-0000-000000000000&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,43 @@ import javax.annotation.Nullable;
  * API Version: 2020-01-01.
  * 
  * ## Example Usage
+ * ### Creates or updates a bookmark.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bookmark = new Bookmark(&#34;bookmark&#34;, BookmarkArgs.builder()        
+ *             .bookmarkId(&#34;73e01a99-5cd7-4139-a149-9f2736ff2ab5&#34;)
+ *             .created(&#34;2019-01-01T13:15:30Z&#34;)
+ *             .createdBy(Map.of(&#34;objectId&#34;, &#34;2046feea-040d-4a46-9e2b-91c2941bfa70&#34;))
+ *             .displayName(&#34;My bookmark&#34;)
+ *             .labels(            
+ *                 &#34;Tag1&#34;,
+ *                 &#34;Tag2&#34;)
+ *             .notes(&#34;Found a suspicious activity&#34;)
+ *             .query(&#34;SecurityEvent | where TimeGenerated &gt; ago(1d) and TimeGenerated &lt; ago(2d)&#34;)
+ *             .queryResult(&#34;Security Event query result&#34;)
+ *             .resourceGroupName(&#34;myRg&#34;)
+ *             .updated(&#34;2019-01-01T13:15:30Z&#34;)
+ *             .updatedBy(Map.of(&#34;objectId&#34;, &#34;2046feea-040d-4a46-9e2b-91c2941bfa70&#34;))
+ *             .workspaceName(&#34;myWorkspace&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

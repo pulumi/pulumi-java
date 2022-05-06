@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2017-06-01.
  * 
  * ## Example Usage
+ * ### BandwidthSettingsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var bandwidthSetting = new BandwidthSetting(&#34;bandwidthSetting&#34;, BandwidthSettingArgs.builder()        
+ *             .bandwidthSettingName(&#34;BWSForTest&#34;)
+ *             .managerName(&#34;ManagerForSDKTest1&#34;)
+ *             .resourceGroupName(&#34;ResourceGroupForSDKTest&#34;)
+ *             .schedules(Map.ofEntries(
+ *                 Map.entry(&#34;days&#34;,                 
+ *                     &#34;Saturday&#34;,
+ *                     &#34;Sunday&#34;),
+ *                 Map.entry(&#34;rateInMbps&#34;, 10),
+ *                 Map.entry(&#34;start&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hours&#34;, 10),
+ *                     Map.entry(&#34;minutes&#34;, 0),
+ *                     Map.entry(&#34;seconds&#34;, 0)
+ *                 )),
+ *                 Map.entry(&#34;stop&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;hours&#34;, 20),
+ *                     Map.entry(&#34;minutes&#34;, 0),
+ *                     Map.entry(&#34;seconds&#34;, 0)
+ *                 ))
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

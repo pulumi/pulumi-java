@@ -20,6 +20,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create or update a Sql pool&#39;s transparent data encryption configuration
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlPoolTransparentDataEncryption = new SqlPoolTransparentDataEncryption(&#34;sqlPoolTransparentDataEncryption&#34;, SqlPoolTransparentDataEncryptionArgs.builder()        
+ *             .resourceGroupName(&#34;sqlcrudtest-6852&#34;)
+ *             .sqlPoolName(&#34;sqlcrudtest-9187&#34;)
+ *             .status(&#34;Enabled&#34;)
+ *             .transparentDataEncryptionName(&#34;current&#34;)
+ *             .workspaceName(&#34;sqlcrudtest-2080&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

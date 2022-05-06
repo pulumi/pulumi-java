@@ -22,6 +22,35 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update IoT site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var site = new Site(&#34;site&#34;, SiteArgs.builder()        
+ *             .displayName(&#34;IoT site name&#34;)
+ *             .scope(&#34;subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;key1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;key2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

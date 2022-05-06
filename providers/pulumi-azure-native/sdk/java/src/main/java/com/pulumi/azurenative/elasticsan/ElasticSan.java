@@ -24,6 +24,40 @@ import javax.annotation.Nullable;
  * API Version: 2021-11-20-preview.
  * 
  * ## Example Usage
+ * ### ElasticSans_Create_MaximumSet_Gen
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var elasticSan = new ElasticSan(&#34;elasticSan&#34;, ElasticSanArgs.builder()        
+ *             .availabilityZones(&#34;aaaaaaaaaaaaaaaaaaaaaaaaa&#34;)
+ *             .baseSizeTiB(26)
+ *             .elasticSanName(&#34;33zg-7s_4_7L2_65o&#34;)
+ *             .extendedCapacitySizeTiB(4)
+ *             .location(&#34;aaaaaaaaaaaaaaaaaaaaaaaaa&#34;)
+ *             .resourceGroupName(&#34;rgelasticsan&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Standard_LRS&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.of(&#34;key3875&#34;, &#34;aaaaaaaaa&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2015-10-31.
  * 
  * ## Example Usage
+ * ### Create or update webhook
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var webhook = new Webhook(&#34;webhook&#34;, WebhookArgs.builder()        
+ *             .automationAccountName(&#34;myAutomationAccount33&#34;)
+ *             .expiryTime(&#34;2018-03-29T22:18:13.7002872Z&#34;)
+ *             .isEnabled(true)
+ *             .name(&#34;TestWebhook&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .runbook(Map.of(&#34;name&#34;, &#34;TestRunbook&#34;))
+ *             .uri(&#34;&lt;uri&gt;&#34;)
+ *             .webhookName(&#34;TestWebhook&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

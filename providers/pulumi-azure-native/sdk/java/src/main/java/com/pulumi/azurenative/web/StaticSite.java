@@ -28,6 +28,44 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### Create or update a static site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var staticSite = new StaticSite(&#34;staticSite&#34;, StaticSiteArgs.builder()        
+ *             .branch(&#34;master&#34;)
+ *             .buildProperties(Map.ofEntries(
+ *                 Map.entry(&#34;apiLocation&#34;, &#34;api&#34;),
+ *                 Map.entry(&#34;appArtifactLocation&#34;, &#34;build&#34;),
+ *                 Map.entry(&#34;appLocation&#34;, &#34;app&#34;)
+ *             ))
+ *             .location(&#34;West US 2&#34;)
+ *             .name(&#34;testStaticSite0&#34;)
+ *             .repositoryToken(&#34;repoToken123&#34;)
+ *             .repositoryUrl(&#34;https://github.com/username/RepoName&#34;)
+ *             .resourceGroupName(&#34;rg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Basic&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Basic&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,48 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-01.
  * 
  * ## Example Usage
+ * ### ApiManagementCreateAuthorizationServer
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var authorizationServer = new AuthorizationServer(&#34;authorizationServer&#34;, AuthorizationServerArgs.builder()        
+ *             .authorizationEndpoint(&#34;https://www.contoso.com/oauth2/auth&#34;)
+ *             .authorizationMethods(&#34;GET&#34;)
+ *             .authsid(&#34;newauthServer&#34;)
+ *             .bearerTokenSendingMethods(&#34;authorizationHeader&#34;)
+ *             .clientId(&#34;1&#34;)
+ *             .clientRegistrationEndpoint(&#34;https://www.contoso.com/apps&#34;)
+ *             .clientSecret(&#34;2&#34;)
+ *             .defaultScope(&#34;read write&#34;)
+ *             .description(&#34;test server&#34;)
+ *             .displayName(&#34;test2&#34;)
+ *             .grantTypes(            
+ *                 &#34;authorizationCode&#34;,
+ *                 &#34;implicit&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .resourceOwnerPassword(&#34;pwd&#34;)
+ *             .resourceOwnerUsername(&#34;un&#34;)
+ *             .serviceName(&#34;apimService1&#34;)
+ *             .supportState(true)
+ *             .tokenEndpoint(&#34;https://www.contoso.com/oauth2/token&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

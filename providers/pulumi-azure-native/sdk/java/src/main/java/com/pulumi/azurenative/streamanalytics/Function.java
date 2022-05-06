@@ -21,6 +21,90 @@ import javax.annotation.Nullable;
  * API Version: 2016-03-01.
  * 
  * ## Example Usage
+ * ### Create a JavaScript function
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var function = new Function(&#34;function&#34;, FunctionArgs.builder()        
+ *             .functionName(&#34;function8197&#34;)
+ *             .jobName(&#34;sj8653&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;binding&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;script&#34;, &#34;function (x, y) { return x + y; }&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.StreamAnalytics/JavascriptUdf&#34;)
+ *                 )),
+ *                 Map.entry(&#34;inputs&#34;, Map.of(&#34;dataType&#34;, &#34;Any&#34;)),
+ *                 Map.entry(&#34;output&#34;, Map.of(&#34;dataType&#34;, &#34;Any&#34;)),
+ *                 Map.entry(&#34;type&#34;, &#34;Scalar&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg1637&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create an Azure ML function
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var function = new Function(&#34;function&#34;, FunctionArgs.builder()        
+ *             .functionName(&#34;function588&#34;)
+ *             .jobName(&#34;sj9093&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;binding&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;apiKey&#34;, &#34;someApiKey==&#34;),
+ *                     Map.entry(&#34;batchSize&#34;, 1000),
+ *                     Map.entry(&#34;endpoint&#34;, &#34;someAzureMLEndpointURL&#34;),
+ *                     Map.entry(&#34;inputs&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;columnNames&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;dataType&#34;, &#34;string&#34;),
+ *                             Map.entry(&#34;mapTo&#34;, 0),
+ *                             Map.entry(&#34;name&#34;, &#34;tweet&#34;)
+ *                         )),
+ *                         Map.entry(&#34;name&#34;, &#34;input1&#34;)
+ *                     )),
+ *                     Map.entry(&#34;outputs&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;dataType&#34;, &#34;string&#34;),
+ *                         Map.entry(&#34;name&#34;, &#34;Sentiment&#34;)
+ *                     )),
+ *                     Map.entry(&#34;type&#34;, &#34;Microsoft.MachineLearning/WebService&#34;)
+ *                 )),
+ *                 Map.entry(&#34;inputs&#34;, Map.of(&#34;dataType&#34;, &#34;nvarchar(max)&#34;)),
+ *                 Map.entry(&#34;output&#34;, Map.of(&#34;dataType&#34;, &#34;nvarchar(max)&#34;)),
+ *                 Map.entry(&#34;type&#34;, &#34;Scalar&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;sjrg7&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

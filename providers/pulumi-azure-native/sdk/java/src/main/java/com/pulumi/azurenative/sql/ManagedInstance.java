@@ -27,6 +27,95 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create managed instance with all properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstance = new ManagedInstance(&#34;managedInstance&#34;, ManagedInstanceArgs.builder()        
+ *             .administratorLogin(&#34;dummylogin&#34;)
+ *             .administratorLoginPassword(&#34;PLACEHOLDER&#34;)
+ *             .administrators(Map.ofEntries(
+ *                 Map.entry(&#34;azureADOnlyAuthentication&#34;, true),
+ *                 Map.entry(&#34;login&#34;, &#34;bob@contoso.com&#34;),
+ *                 Map.entry(&#34;principalType&#34;, &#34;User&#34;),
+ *                 Map.entry(&#34;sid&#34;, &#34;00000011-1111-2222-2222-123456789111&#34;),
+ *                 Map.entry(&#34;tenantId&#34;, &#34;00000011-1111-2222-2222-123456789111&#34;)
+ *             ))
+ *             .collation(&#34;SQL_Latin1_General_CP1_CI_AS&#34;)
+ *             .dnsZonePartner(&#34;/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance&#34;)
+ *             .instancePoolId(&#34;/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Sql/instancePools/pool1&#34;)
+ *             .licenseType(&#34;LicenseIncluded&#34;)
+ *             .location(&#34;Japan East&#34;)
+ *             .maintenanceConfigurationId(&#34;/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_JapanEast_MI_1&#34;)
+ *             .managedInstanceName(&#34;testinstance&#34;)
+ *             .minimalTlsVersion(&#34;1.2&#34;)
+ *             .proxyOverride(&#34;Redirect&#34;)
+ *             .publicDataEndpointEnabled(false)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen5&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .storageAccountType(&#34;GRS&#34;)
+ *             .storageSizeInGB(1024)
+ *             .subnetId(&#34;/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1&#34;)
+ *             .tags(Map.of(&#34;tagKey1&#34;, &#34;TagValue1&#34;))
+ *             .timezoneId(&#34;UTC&#34;)
+ *             .vCores(8)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create managed instance with minimal properties
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedInstance = new ManagedInstance(&#34;managedInstance&#34;, ManagedInstanceArgs.builder()        
+ *             .administratorLogin(&#34;dummylogin&#34;)
+ *             .administratorLoginPassword(&#34;PLACEHOLDER&#34;)
+ *             .licenseType(&#34;LicenseIncluded&#34;)
+ *             .location(&#34;Japan East&#34;)
+ *             .managedInstanceName(&#34;testinstance&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;GP_Gen4&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;GeneralPurpose&#34;)
+ *             ))
+ *             .storageSizeInGB(1024)
+ *             .subnetId(&#34;/subscriptions/20D7082A-0FC7-4468-82BD-542694D5042B/resourceGroups/testrg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1&#34;)
+ *             .vCores(8)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -27,6 +27,153 @@ import javax.annotation.Nullable;
  * API Version: 2018-04-16.
  * 
  * ## Example Usage
+ * ### Create or Update rule - AlertingAction
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledQueryRule = new ScheduledQueryRule(&#34;scheduledQueryRule&#34;, ScheduledQueryRuleArgs.builder()        
+ *             .action(Map.ofEntries(
+ *                 Map.entry(&#34;aznsAction&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actionGroup&#34;, ),
+ *                     Map.entry(&#34;customWebhookPayload&#34;, &#34;{}&#34;),
+ *                     Map.entry(&#34;emailSubject&#34;, &#34;Email Header&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#34;),
+ *                 Map.entry(&#34;severity&#34;, &#34;1&#34;),
+ *                 Map.entry(&#34;trigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;metricTrigger&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;metricColumn&#34;, &#34;Computer&#34;),
+ *                         Map.entry(&#34;metricTriggerType&#34;, &#34;Consecutive&#34;),
+ *                         Map.entry(&#34;threshold&#34;, 5),
+ *                         Map.entry(&#34;thresholdOperator&#34;, &#34;GreaterThan&#34;)
+ *                     )),
+ *                     Map.entry(&#34;threshold&#34;, 3),
+ *                     Map.entry(&#34;thresholdOperator&#34;, &#34;GreaterThan&#34;)
+ *                 ))
+ *             ))
+ *             .description(&#34;log alert description&#34;)
+ *             .enabled(&#34;true&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;Rac46PostSwapRG&#34;)
+ *             .ruleName(&#34;logalertfoo&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;frequencyInMinutes&#34;, 15),
+ *                 Map.entry(&#34;timeWindowInMinutes&#34;, 15)
+ *             ))
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;dataSourceId&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;Heartbeat | summarize AggregatedValue = count() by bin(TimeGenerated, 5m)&#34;),
+ *                 Map.entry(&#34;queryType&#34;, &#34;ResultCount&#34;)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update rule - AlertingAction with Cross-Resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledQueryRule = new ScheduledQueryRule(&#34;scheduledQueryRule&#34;, ScheduledQueryRuleArgs.builder()        
+ *             .action(Map.ofEntries(
+ *                 Map.entry(&#34;aznsAction&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;actionGroup&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/actiongroups/test-ag&#34;),
+ *                     Map.entry(&#34;emailSubject&#34;, &#34;Cross Resource Mail!!&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction&#34;),
+ *                 Map.entry(&#34;severity&#34;, &#34;3&#34;),
+ *                 Map.entry(&#34;trigger&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;threshold&#34;, 5000),
+ *                     Map.entry(&#34;thresholdOperator&#34;, &#34;GreaterThan&#34;)
+ *                 ))
+ *             ))
+ *             .description(&#34;Sample Cross Resource alert&#34;)
+ *             .enabled(&#34;true&#34;)
+ *             .location(&#34;eastus&#34;)
+ *             .resourceGroupName(&#34;Rac46PostSwapRG&#34;)
+ *             .ruleName(&#34;SampleCrossResourceAlert&#34;)
+ *             .schedule(Map.ofEntries(
+ *                 Map.entry(&#34;frequencyInMinutes&#34;, 60),
+ *                 Map.entry(&#34;timeWindowInMinutes&#34;, 60)
+ *             ))
+ *             .source(Map.ofEntries(
+ *                 Map.entry(&#34;authorizedResources&#34;,                 
+ *                     &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.OperationalInsights/workspaces/sampleWorkspace&#34;,
+ *                     &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI&#34;),
+ *                 Map.entry(&#34;dataSourceId&#34;, &#34;/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/components/sampleAI&#34;),
+ *                 Map.entry(&#34;query&#34;, &#34;union requests, workspace(\&#34;sampleWorkspace\&#34;).Update&#34;),
+ *                 Map.entry(&#34;queryType&#34;, &#34;ResultCount&#34;)
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create or Update rule - LogToMetricAction
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scheduledQueryRule = new ScheduledQueryRule(&#34;scheduledQueryRule&#34;, ScheduledQueryRuleArgs.builder()        
+ *             .action(Map.ofEntries(
+ *                 Map.entry(&#34;criteria&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;dimensions&#34;, ),
+ *                     Map.entry(&#34;metricName&#34;, &#34;Average_% Idle Time&#34;)
+ *                 )),
+ *                 Map.entry(&#34;odataType&#34;, &#34;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#34;)
+ *             ))
+ *             .description(&#34;log to metric description&#34;)
+ *             .enabled(&#34;true&#34;)
+ *             .location(&#34;West Europe&#34;)
+ *             .resourceGroupName(&#34;alertsweu&#34;)
+ *             .ruleName(&#34;logtometricfoo&#34;)
+ *             .source(Map.of(&#34;dataSourceId&#34;, &#34;/subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/Microsoft.OperationalInsights/workspaces/alertsweu&#34;))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

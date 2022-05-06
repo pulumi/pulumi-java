@@ -25,6 +25,42 @@ import javax.annotation.Nullable;
  * API Version: 2019-10-17-preview.
  * 
  * ## Example Usage
+ * ### WorkbookTemplateAdd
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var workbookTemplate = new WorkbookTemplate(&#34;workbookTemplate&#34;, WorkbookTemplateArgs.builder()        
+ *             .author(&#34;Contoso&#34;)
+ *             .galleries(Map.ofEntries(
+ *                 Map.entry(&#34;category&#34;, &#34;Failures&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;Simple Template&#34;),
+ *                 Map.entry(&#34;order&#34;, 100),
+ *                 Map.entry(&#34;resourceType&#34;, &#34;microsoft.insights/components&#34;),
+ *                 Map.entry(&#34;type&#34;, &#34;tsg&#34;)
+ *             ))
+ *             .location(&#34;west us&#34;)
+ *             .priority(1)
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .resourceName(&#34;testtemplate2&#34;)
+ *             .templateData()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

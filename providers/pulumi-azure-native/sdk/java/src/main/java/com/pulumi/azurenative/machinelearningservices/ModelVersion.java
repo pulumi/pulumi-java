@@ -21,6 +21,47 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01-preview.
  * 
  * ## Example Usage
+ * ### CreateOrUpdate Model Version.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var modelVersion = new ModelVersion(&#34;modelVersion&#34;, ModelVersionArgs.builder()        
+ *             .name(&#34;testContainer&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;datastoreId&#34;, &#34;/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123&#34;),
+ *                 Map.entry(&#34;description&#34;, &#34;Model version description&#34;),
+ *                 Map.entry(&#34;flavors&#34;, Map.of(&#34;python_function&#34;, Map.of(&#34;data&#34;, Map.of(&#34;loader_module&#34;, &#34;myLoaderModule&#34;)))),
+ *                 Map.entry(&#34;path&#34;, &#34;path/in/datastore&#34;),
+ *                 Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;prop1&#34;, &#34;value1&#34;),
+ *                     Map.entry(&#34;prop2&#34;, &#34;value2&#34;)
+ *                 )),
+ *                 Map.entry(&#34;tags&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                     Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *                 ))
+ *             ))
+ *             .resourceGroupName(&#34;testrg123&#34;)
+ *             .version(&#34;1&#34;)
+ *             .workspaceName(&#34;workspace123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

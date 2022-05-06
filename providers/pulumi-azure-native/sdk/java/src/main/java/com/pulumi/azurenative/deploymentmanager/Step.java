@@ -24,6 +24,123 @@ import javax.annotation.Nullable;
  * API Version: 2019-11-01-preview.
  * 
  * ## Example Usage
+ * ### Create health check step
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var step = new Step(&#34;step&#34;, StepArgs.builder()        
+ *             .location(&#34;centralus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;attributes&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;healthChecks&#34;,                     
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;appHealth&#34;),
+ *                             Map.entry(&#34;request&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;authentication&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;in&#34;, &#34;Query&#34;),
+ *                                     Map.entry(&#34;name&#34;, &#34;Code&#34;),
+ *                                     Map.entry(&#34;type&#34;, &#34;ApiKey&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;method&#34;, &#34;GET&#34;),
+ *                                 Map.entry(&#34;uri&#34;, &#34;https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus&#34;)
+ *                             )),
+ *                             Map.entry(&#34;response&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;regex&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;matchQuantifier&#34;, &#34;All&#34;),
+ *                                     Map.entry(&#34;matches&#34;,                                     
+ *                                         &#34;(?i)Contoso-App&#34;,
+ *                                         &#34;&#34;&#34;
+ * (?i)&#34;health_status&#34;:((.|
+ * )*)&#34;(green|yellow)&#34;                                        &#34;&#34;&#34;,
+ *                                         &#34;(?mi)^(\&#34;application_host\&#34;: 94781052)$&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;successStatusCodes&#34;, &#34;OK&#34;)
+ *                             ))
+ *                         ),
+ *                         Map.ofEntries(
+ *                             Map.entry(&#34;name&#34;, &#34;serviceHealth&#34;),
+ *                             Map.entry(&#34;request&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;authentication&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;in&#34;, &#34;Header&#34;),
+ *                                     Map.entry(&#34;name&#34;, &#34;code&#34;),
+ *                                     Map.entry(&#34;type&#34;, &#34;ApiKey&#34;),
+ *                                     Map.entry(&#34;value&#34;, &#34;NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;method&#34;, &#34;GET&#34;),
+ *                                 Map.entry(&#34;uri&#34;, &#34;https://resthealth.healthservice.com/api/services/contosoService/healthStatus&#34;)
+ *                             )),
+ *                             Map.entry(&#34;response&#34;, Map.ofEntries(
+ *                                 Map.entry(&#34;regex&#34;, Map.ofEntries(
+ *                                     Map.entry(&#34;matchQuantifier&#34;, &#34;All&#34;),
+ *                                     Map.entry(&#34;matches&#34;,                                     
+ *                                         &#34;(?i)Contoso-Service-EndToEnd&#34;,
+ *                                         &#34;&#34;&#34;
+ * (?i)&#34;health_status&#34;:((.|
+ * )*)&#34;(green)&#34;                                        &#34;&#34;&#34;)
+ *                                 )),
+ *                                 Map.entry(&#34;successStatusCodes&#34;, &#34;OK&#34;)
+ *                             ))
+ *                         )),
+ *                     Map.entry(&#34;healthyStateDuration&#34;, &#34;PT2H&#34;),
+ *                     Map.entry(&#34;maxElasticDuration&#34;, &#34;PT30M&#34;),
+ *                     Map.entry(&#34;type&#34;, &#34;REST&#34;),
+ *                     Map.entry(&#34;waitDuration&#34;, &#34;PT15M&#34;)
+ *                 )),
+ *                 Map.entry(&#34;stepType&#34;, &#34;HealthCheck&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .stepName(&#34;healthCheckStep&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create wait step
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var step = new Step(&#34;step&#34;, StepArgs.builder()        
+ *             .location(&#34;centralus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;attributes&#34;, Map.of(&#34;duration&#34;, &#34;PT20M&#34;)),
+ *                 Map.entry(&#34;stepType&#34;, &#34;Wait&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .stepName(&#34;waitStep&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

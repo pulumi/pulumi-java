@@ -20,6 +20,36 @@ import javax.annotation.Nullable;
  * API Version: 2021-01-01.
  * 
  * ## Example Usage
+ * ### KustoClusterPrincipalAssignmentsCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var clusterPrincipalAssignment = new ClusterPrincipalAssignment(&#34;clusterPrincipalAssignment&#34;, ClusterPrincipalAssignmentArgs.builder()        
+ *             .clusterName(&#34;kustoclusterrptest4&#34;)
+ *             .principalAssignmentName(&#34;kustoprincipal1&#34;)
+ *             .principalId(&#34;87654321-1234-1234-1234-123456789123&#34;)
+ *             .principalType(&#34;App&#34;)
+ *             .resourceGroupName(&#34;kustorptest&#34;)
+ *             .role(&#34;AllDatabasesAdmin&#34;)
+ *             .tenantId(&#34;12345678-1234-1234-1234-123456789123&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

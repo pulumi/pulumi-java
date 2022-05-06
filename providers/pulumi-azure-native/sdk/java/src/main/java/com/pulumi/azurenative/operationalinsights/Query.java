@@ -24,6 +24,53 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### QueryPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var query = new Query(&#34;query&#34;, QueryArgs.builder()        
+ *             .body(&#34;&#34;&#34;
+ * let newExceptionsTimeRange = 1d;
+ * let timeRangeToCheckBefore = 7d;
+ * exceptions
+ * | where timestamp &lt; ago(timeRangeToCheckBefore)
+ * | summarize count() by problemId
+ * | join kind= rightanti (
+ * exceptions
+ * | where timestamp &gt;= ago(newExceptionsTimeRange)
+ * | extend stack = tostring(details[0].rawStack)
+ * | summarize count(), dcount(user_AuthenticatedId), min(timestamp), max(timestamp), any(stack) by problemId  
+ * ) on problemId 
+ * | order by  count_ desc
+ *             &#34;&#34;&#34;)
+ *             .description(&#34;my description&#34;)
+ *             .displayName(&#34;Exceptions - New in the last 24 hours&#34;)
+ *             .id(&#34;a449f8af-8e64-4b3a-9b16-5a7165ff98c4&#34;)
+ *             .queryPackName(&#34;my-querypack&#34;)
+ *             .related(Map.of(&#34;categories&#34;, &#34;analytics&#34;))
+ *             .resourceGroupName(&#34;my-resource-group&#34;)
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;my-label&#34;, &#34;label1&#34;),
+ *                 Map.entry(&#34;my-other-label&#34;, &#34;label2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

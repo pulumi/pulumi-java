@@ -23,6 +23,37 @@ import javax.annotation.Nullable;
  * API Version: 2022-03-01.
  * 
  * ## Example Usage
+ * ### Create or Update Certificate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .location(&#34;East US&#34;)
+ *             .managedEnvironmentName(&#34;testcontainerenv&#34;)
+ *             .name(&#34;certificate-firendly-name&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;password&#34;, &#34;private key password&#34;),
+ *                 Map.entry(&#34;value&#34;, &#34;PFX-or-PEM-blob&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;examplerg&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

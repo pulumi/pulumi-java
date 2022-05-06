@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-09-01.
  * 
  * ## Example Usage
+ * ### Create a secret
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var secret = new Secret(&#34;secret&#34;, SecretArgs.builder()        
+ *             .properties(Map.of(&#34;value&#34;, &#34;secret-value&#34;))
+ *             .resourceGroupName(&#34;sample-group&#34;)
+ *             .secretName(&#34;secret-name&#34;)
+ *             .vaultName(&#34;sample-vault&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

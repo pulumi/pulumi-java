@@ -19,6 +19,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### CosmosDBNotebookWorkspaceCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var notebookWorkspace = new NotebookWorkspace(&#34;notebookWorkspace&#34;, NotebookWorkspaceArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .notebookWorkspaceName(&#34;default&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

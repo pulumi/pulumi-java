@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2022-01-01-preview.
  * 
  * ## Example Usage
+ * ### Create mobile network site
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var site = new Site(&#34;site&#34;, SiteArgs.builder()        
+ *             .location(&#34;testLocation&#34;)
+ *             .mobileNetworkName(&#34;testMobileNetwork&#34;)
+ *             .networkFunctions(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HybridNetwork/networkFunctions/testNf&#34;))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .siteName(&#34;testSite&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

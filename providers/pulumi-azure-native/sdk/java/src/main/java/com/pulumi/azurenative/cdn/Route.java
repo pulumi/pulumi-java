@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * API Version: 2020-09-01.
  * 
  * ## Example Usage
+ * ### Routes_Create
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var route = new Route(&#34;route&#34;, RouteArgs.builder()        
+ *             .compressionSettings(Map.ofEntries(
+ *                 Map.entry(&#34;contentTypesToCompress&#34;,                 
+ *                     &#34;text/html&#34;,
+ *                     &#34;application/octet-stream&#34;),
+ *                 Map.entry(&#34;isCompressionEnabled&#34;, true)
+ *             ))
+ *             .customDomains(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/customDomains/domain1&#34;))
+ *             .enabledState(&#34;Enabled&#34;)
+ *             .endpointName(&#34;endpoint1&#34;)
+ *             .forwardingProtocol(&#34;MatchRequest&#34;)
+ *             .httpsRedirect(&#34;Enabled&#34;)
+ *             .linkToDefaultDomain(&#34;Enabled&#34;)
+ *             .originGroup(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/originGroups/originGroup1&#34;))
+ *             .patternsToMatch(&#34;/*&#34;)
+ *             .profileName(&#34;profile1&#34;)
+ *             .queryStringCachingBehavior(&#34;IgnoreQueryString&#34;)
+ *             .resourceGroupName(&#34;RG&#34;)
+ *             .routeName(&#34;route1&#34;)
+ *             .ruleSets(Map.of(&#34;id&#34;, &#34;/subscriptions/subid/resourceGroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1&#34;))
+ *             .supportedProtocols(            
+ *                 &#34;Https&#34;,
+ *                 &#34;Http&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

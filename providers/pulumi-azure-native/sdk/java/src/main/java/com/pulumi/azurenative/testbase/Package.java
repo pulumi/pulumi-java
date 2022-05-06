@@ -26,6 +26,97 @@ import javax.annotation.Nullable;
  * API Version: 2020-12-16-preview.
  * 
  * ## Example Usage
+ * ### PackageCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var package_ = new Package(&#34;package&#34;, PackageArgs.builder()        
+ *             .applicationName(&#34;contoso-package2&#34;)
+ *             .blobPath(&#34;storageAccountPath/package.zip&#34;)
+ *             .flightingRing(&#34;Insider Beta Channel&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .packageName(&#34;contoso-package2&#34;)
+ *             .resourceGroupName(&#34;contoso-rg1&#34;)
+ *             .tags()
+ *             .targetOSList(Map.ofEntries(
+ *                 Map.entry(&#34;osUpdateType&#34;, &#34;Security updates&#34;),
+ *                 Map.entry(&#34;targetOSs&#34;,                 
+ *                     &#34;Windows 10 2004&#34;,
+ *                     &#34;Windows 10 1903&#34;)
+ *             ))
+ *             .testBaseAccountName(&#34;contoso-testBaseAccount1&#34;)
+ *             .tests(Map.ofEntries(
+ *                 Map.entry(&#34;commands&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;action&#34;, &#34;Install&#34;),
+ *                         Map.entry(&#34;alwaysRun&#34;, true),
+ *                         Map.entry(&#34;applyUpdateBefore&#34;, false),
+ *                         Map.entry(&#34;content&#34;, &#34;app/scripts/install/job.ps1&#34;),
+ *                         Map.entry(&#34;contentType&#34;, &#34;Path&#34;),
+ *                         Map.entry(&#34;maxRunTime&#34;, 1800),
+ *                         Map.entry(&#34;name&#34;, &#34;Install&#34;),
+ *                         Map.entry(&#34;restartAfter&#34;, true),
+ *                         Map.entry(&#34;runAsInteractive&#34;, true),
+ *                         Map.entry(&#34;runElevated&#34;, true)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;action&#34;, &#34;Launch&#34;),
+ *                         Map.entry(&#34;alwaysRun&#34;, false),
+ *                         Map.entry(&#34;applyUpdateBefore&#34;, true),
+ *                         Map.entry(&#34;content&#34;, &#34;app/scripts/launch/job.ps1&#34;),
+ *                         Map.entry(&#34;contentType&#34;, &#34;Path&#34;),
+ *                         Map.entry(&#34;maxRunTime&#34;, 1800),
+ *                         Map.entry(&#34;name&#34;, &#34;Launch&#34;),
+ *                         Map.entry(&#34;restartAfter&#34;, false),
+ *                         Map.entry(&#34;runAsInteractive&#34;, true),
+ *                         Map.entry(&#34;runElevated&#34;, true)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;action&#34;, &#34;Close&#34;),
+ *                         Map.entry(&#34;alwaysRun&#34;, false),
+ *                         Map.entry(&#34;applyUpdateBefore&#34;, false),
+ *                         Map.entry(&#34;content&#34;, &#34;app/scripts/close/job.ps1&#34;),
+ *                         Map.entry(&#34;contentType&#34;, &#34;Path&#34;),
+ *                         Map.entry(&#34;maxRunTime&#34;, 1800),
+ *                         Map.entry(&#34;name&#34;, &#34;Close&#34;),
+ *                         Map.entry(&#34;restartAfter&#34;, false),
+ *                         Map.entry(&#34;runAsInteractive&#34;, true),
+ *                         Map.entry(&#34;runElevated&#34;, true)
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;action&#34;, &#34;Uninstall&#34;),
+ *                         Map.entry(&#34;alwaysRun&#34;, true),
+ *                         Map.entry(&#34;applyUpdateBefore&#34;, false),
+ *                         Map.entry(&#34;content&#34;, &#34;app/scripts/uninstall/job.ps1&#34;),
+ *                         Map.entry(&#34;contentType&#34;, &#34;Path&#34;),
+ *                         Map.entry(&#34;maxRunTime&#34;, 1800),
+ *                         Map.entry(&#34;name&#34;, &#34;Uninstall&#34;),
+ *                         Map.entry(&#34;restartAfter&#34;, false),
+ *                         Map.entry(&#34;runAsInteractive&#34;, true),
+ *                         Map.entry(&#34;runElevated&#34;, true)
+ *                     )),
+ *                 Map.entry(&#34;isActive&#34;, true),
+ *                 Map.entry(&#34;testType&#34;, &#34;OutOfBoxTest&#34;)
+ *             ))
+ *             .version(&#34;1.0.0&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

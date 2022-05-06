@@ -26,6 +26,49 @@ import javax.annotation.Nullable;
  * API Version: 2021-05-01-preview.
  * 
  * ## Example Usage
+ * ### Create a Video Analyzer account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var videoAnalyzer = new VideoAnalyzer(&#34;videoAnalyzer&#34;, VideoAnalyzerArgs.builder()        
+ *             .accountName(&#34;contosotv&#34;)
+ *             .encryption(Map.of(&#34;type&#34;, &#34;SystemKey&#34;))
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;, ),
+ *                     Map.entry(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2&#34;, ),
+ *                     Map.entry(&#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id3&#34;, )
+ *                 ))
+ *             ))
+ *             .location(&#34;South Central US&#34;)
+ *             .resourceGroupName(&#34;contoso&#34;)
+ *             .storageAccounts(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/storage1&#34;),
+ *                 Map.entry(&#34;identity&#34;, Map.of(&#34;userAssignedIdentity&#34;, &#34;/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2&#34;))
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -22,6 +22,42 @@ import javax.annotation.Nullable;
  * API Version: 2021-12-01-preview.
  * 
  * ## Example Usage
+ * ### Student
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var getStudent = new GetStudent(&#34;getStudent&#34;, GetStudentArgs.builder()        
+ *             .billingAccountName(&#34;{billingAccountName}&#34;)
+ *             .billingProfileName(&#34;{billingProfileName}&#34;)
+ *             .budget(Map.ofEntries(
+ *                 Map.entry(&#34;currency&#34;, &#34;USD&#34;),
+ *                 Map.entry(&#34;value&#34;, 100)
+ *             ))
+ *             .email(&#34;test@contoso.com&#34;)
+ *             .expirationDate(&#34;2021-11-09T22:13:21.795Z&#34;)
+ *             .firstName(&#34;test&#34;)
+ *             .invoiceSectionName(&#34;{invoiceSectionName}&#34;)
+ *             .lastName(&#34;user&#34;)
+ *             .role(&#34;Student&#34;)
+ *             .studentAlias(&#34;{studentAlias}&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

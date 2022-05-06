@@ -23,6 +23,47 @@ import javax.annotation.Nullable;
  * API Version: 2019-06-01-preview.
  * 
  * ## Example Usage
+ * ### ManagedNetworksPut
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var managedNetwork = new ManagedNetwork(&#34;managedNetwork&#34;, ManagedNetworkArgs.builder()        
+ *             .location(&#34;eastus&#34;)
+ *             .managedNetworkName(&#34;myManagedNetwork&#34;)
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .scope(Map.ofEntries(
+ *                 Map.entry(&#34;managementGroups&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;/providers/Microsoft.Management/managementGroups/20000000-0001-0000-0000-000000000000&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;/providers/Microsoft.Management/managementGroups/20000000-0002-0000-0000-000000000000&#34;)),
+ *                 Map.entry(&#34;subnets&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetA&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetC/subnets/subnetB&#34;)),
+ *                 Map.entry(&#34;subscriptions&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;subscriptionA&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;subscriptionB&#34;)),
+ *                 Map.entry(&#34;virtualNetworks&#34;,                 
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetA&#34;),
+ *                     Map.of(&#34;id&#34;, &#34;/subscriptions/subscriptionC/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/VnetB&#34;))
+ *             ))
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

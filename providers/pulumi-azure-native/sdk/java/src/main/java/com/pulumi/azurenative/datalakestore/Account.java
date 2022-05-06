@@ -25,6 +25,57 @@ import javax.annotation.Nullable;
  * API Version: 2016-11-01.
  * 
  * ## Example Usage
+ * ### Creates the specified Data Lake Store account
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;contosoadla&#34;)
+ *             .defaultGroup(&#34;test_default_group&#34;)
+ *             .encryptionConfig(Map.ofEntries(
+ *                 Map.entry(&#34;keyVaultMetaInfo&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;encryptionKeyName&#34;, &#34;test_encryption_key_name&#34;),
+ *                     Map.entry(&#34;encryptionKeyVersion&#34;, &#34;encryption_key_version&#34;),
+ *                     Map.entry(&#34;keyVaultResourceId&#34;, &#34;34adfa4f-cedf-4dc0-ba29-b6d1a69ab345&#34;)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;UserManaged&#34;)
+ *             ))
+ *             .encryptionState(&#34;Enabled&#34;)
+ *             .firewallAllowAzureIps(&#34;Enabled&#34;)
+ *             .firewallRules(Map.ofEntries(
+ *                 Map.entry(&#34;endIpAddress&#34;, &#34;2.2.2.2&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test_rule&#34;),
+ *                 Map.entry(&#34;startIpAddress&#34;, &#34;1.1.1.1&#34;)
+ *             ))
+ *             .firewallState(&#34;Enabled&#34;)
+ *             .identity(Map.of(&#34;type&#34;, &#34;SystemAssigned&#34;))
+ *             .location(&#34;eastus2&#34;)
+ *             .newTier(&#34;Consumption&#34;)
+ *             .resourceGroupName(&#34;contosorg&#34;)
+ *             .tags(Map.of(&#34;test_key&#34;, &#34;test_value&#34;))
+ *             .trustedIdProviderState(&#34;Enabled&#34;)
+ *             .trustedIdProviders(Map.ofEntries(
+ *                 Map.entry(&#34;idProvider&#34;, &#34;https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1&#34;),
+ *                 Map.entry(&#34;name&#34;, &#34;test_trusted_id_provider_name&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

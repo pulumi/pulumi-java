@@ -22,6 +22,214 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-01.
  * 
  * ## Example Usage
+ * ### Create New Cloud Service with Multiple Roles
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudService = new CloudService(&#34;cloudService&#34;, CloudServiceArgs.builder()        
+ *             .cloudServiceName(&#34;{cs-name}&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, &#34;{ServiceConfiguration}&#34;),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;loadBalancerConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;contosolb&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;frontendIPConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;contosofe&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.of(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip&#34;)))
+ *                     )))
+ *                 ))),
+ *                 Map.entry(&#34;packageUrl&#34;, &#34;{PackageUrl}&#34;),
+ *                 Map.entry(&#34;roleProfile&#34;, Map.of(&#34;roles&#34;,                 
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;ContosoFrontend&#34;),
+ *                         Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;capacity&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                             Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                         ))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;ContosoBackend&#34;),
+ *                         Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                             Map.entry(&#34;capacity&#34;, 1),
+ *                             Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                             Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                         ))
+ *                     ))),
+ *                 Map.entry(&#34;upgradeMode&#34;, &#34;Auto&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;ConstosoRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create New Cloud Service with Single Role
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudService = new CloudService(&#34;cloudService&#34;, CloudServiceArgs.builder()        
+ *             .cloudServiceName(&#34;{cs-name}&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, &#34;{ServiceConfiguration}&#34;),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;loadBalancerConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;myLoadBalancer&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;frontendIPConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;myfe&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.of(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/myPublicIP&#34;)))
+ *                     )))
+ *                 ))),
+ *                 Map.entry(&#34;packageUrl&#34;, &#34;{PackageUrl}&#34;),
+ *                 Map.entry(&#34;roleProfile&#34;, Map.of(&#34;roles&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;ContosoFrontend&#34;),
+ *                     Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;capacity&#34;, 1),
+ *                         Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                         Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                     ))
+ *                 ))),
+ *                 Map.entry(&#34;upgradeMode&#34;, &#34;Auto&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;ConstosoRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create New Cloud Service with Single Role and Certificate from Key Vault
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudService = new CloudService(&#34;cloudService&#34;, CloudServiceArgs.builder()        
+ *             .cloudServiceName(&#34;{cs-name}&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, &#34;{ServiceConfiguration}&#34;),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;loadBalancerConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;contosolb&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;frontendIPConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;contosofe&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.of(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip&#34;)))
+ *                     )))
+ *                 ))),
+ *                 Map.entry(&#34;osProfile&#34;, Map.of(&#34;secrets&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;sourceVault&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.KeyVault/vaults/{keyvault-name}&#34;)),
+ *                     Map.entry(&#34;vaultCertificates&#34;, Map.of(&#34;certificateUrl&#34;, &#34;https://{keyvault-name}.vault.azure.net:443/secrets/ContosoCertificate/{secret-id}&#34;))
+ *                 ))),
+ *                 Map.entry(&#34;packageUrl&#34;, &#34;{PackageUrl}&#34;),
+ *                 Map.entry(&#34;roleProfile&#34;, Map.of(&#34;roles&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;ContosoFrontend&#34;),
+ *                     Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;capacity&#34;, 1),
+ *                         Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                         Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                     ))
+ *                 ))),
+ *                 Map.entry(&#34;upgradeMode&#34;, &#34;Auto&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;ConstosoRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### Create New Cloud Service with Single Role and RDP Extension
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var cloudService = new CloudService(&#34;cloudService&#34;, CloudServiceArgs.builder()        
+ *             .cloudServiceName(&#34;{cs-name}&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;configuration&#34;, &#34;{ServiceConfiguration}&#34;),
+ *                 Map.entry(&#34;extensionProfile&#34;, Map.of(&#34;extensions&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;RDPExtension&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;autoUpgradeMinorVersion&#34;, false),
+ *                         Map.entry(&#34;protectedSettings&#34;, &#34;&lt;PrivateConfig&gt;&lt;Password&gt;{password}&lt;/Password&gt;&lt;/PrivateConfig&gt;&#34;),
+ *                         Map.entry(&#34;publisher&#34;, &#34;Microsoft.Windows.Azure.Extensions&#34;),
+ *                         Map.entry(&#34;settings&#34;, &#34;&lt;PublicConfig&gt;&lt;UserName&gt;UserAzure&lt;/UserName&gt;&lt;Expiration&gt;10/22/2021 15:05:45&lt;/Expiration&gt;&lt;/PublicConfig&gt;&#34;),
+ *                         Map.entry(&#34;type&#34;, &#34;RDP&#34;),
+ *                         Map.entry(&#34;typeHandlerVersion&#34;, &#34;1.2.1&#34;)
+ *                     ))
+ *                 ))),
+ *                 Map.entry(&#34;networkProfile&#34;, Map.of(&#34;loadBalancerConfigurations&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;contosolb&#34;),
+ *                     Map.entry(&#34;properties&#34;, Map.of(&#34;frontendIPConfigurations&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;name&#34;, &#34;contosofe&#34;),
+ *                         Map.entry(&#34;properties&#34;, Map.of(&#34;publicIPAddress&#34;, Map.of(&#34;id&#34;, &#34;/subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Network/publicIPAddresses/contosopublicip&#34;)))
+ *                     )))
+ *                 ))),
+ *                 Map.entry(&#34;packageUrl&#34;, &#34;{PackageUrl}&#34;),
+ *                 Map.entry(&#34;roleProfile&#34;, Map.of(&#34;roles&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;name&#34;, &#34;ContosoFrontend&#34;),
+ *                     Map.entry(&#34;sku&#34;, Map.ofEntries(
+ *                         Map.entry(&#34;capacity&#34;, 1),
+ *                         Map.entry(&#34;name&#34;, &#34;Standard_D1_v2&#34;),
+ *                         Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *                     ))
+ *                 ))),
+ *                 Map.entry(&#34;upgradeMode&#34;, &#34;Auto&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;ConstosoRG&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -20,6 +20,37 @@ import javax.annotation.Nullable;
  * API Version: 2020-07-01.
  * 
  * ## Example Usage
+ * ### Certificates_CreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var certificate = new Certificate(&#34;certificate&#34;, CertificateArgs.builder()        
+ *             .certificateName(&#34;mycertificate&#34;)
+ *             .properties(Map.ofEntries(
+ *                 Map.entry(&#34;certVersion&#34;, &#34;08a219d06d874795a96db47e06fbb01e&#34;),
+ *                 Map.entry(&#34;keyVaultCertName&#34;, &#34;mycert&#34;),
+ *                 Map.entry(&#34;vaultUri&#34;, &#34;https://myvault.vault.azure.net&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;myResourceGroup&#34;)
+ *             .serviceName(&#34;myservice&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

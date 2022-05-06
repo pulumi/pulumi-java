@@ -23,6 +23,94 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### RulesCreateCorrelationFilter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rule = new Rule(&#34;rule&#34;, RuleArgs.builder()        
+ *             .correlationFilter(Map.of(&#34;properties&#34;, Map.of(&#34;topicHint&#34;, &#34;Crop&#34;)))
+ *             .filterType(&#34;CorrelationFilter&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-1319&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .ruleName(&#34;sdk-Rules-6571&#34;)
+ *             .subscriptionName(&#34;sdk-Subscriptions-8691&#34;)
+ *             .topicName(&#34;sdk-Topics-2081&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### RulesCreateOrUpdate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rule = new Rule(&#34;rule&#34;, RuleArgs.builder()        
+ *             .namespaceName(&#34;sdk-Namespace-1319&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .ruleName(&#34;sdk-Rules-6571&#34;)
+ *             .subscriptionName(&#34;sdk-Subscriptions-8691&#34;)
+ *             .topicName(&#34;sdk-Topics-2081&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### RulesCreateSqlFilter
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var rule = new Rule(&#34;rule&#34;, RuleArgs.builder()        
+ *             .filterType(&#34;SqlFilter&#34;)
+ *             .namespaceName(&#34;sdk-Namespace-1319&#34;)
+ *             .resourceGroupName(&#34;resourceGroupName&#34;)
+ *             .ruleName(&#34;sdk-Rules-6571&#34;)
+ *             .sqlFilter(Map.of(&#34;sqlExpression&#34;, &#34;myproperty=test&#34;))
+ *             .subscriptionName(&#34;sdk-Subscriptions-8691&#34;)
+ *             .topicName(&#34;sdk-Topics-2081&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

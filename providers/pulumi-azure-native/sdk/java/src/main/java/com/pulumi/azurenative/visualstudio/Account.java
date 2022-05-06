@@ -21,6 +21,36 @@ import javax.annotation.Nullable;
  * API Version: 2014-04-01-preview.
  * 
  * ## Example Usage
+ * ### Create an account resource
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var account = new Account(&#34;account&#34;, AccountArgs.builder()        
+ *             .accountName(&#34;Example&#34;)
+ *             .location(&#34;Central US&#34;)
+ *             .operationType(&#34;create&#34;)
+ *             .properties()
+ *             .resourceGroupName(&#34;VS-Example-Group&#34;)
+ *             .resourceName(&#34;Example&#34;)
+ *             .tags()
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

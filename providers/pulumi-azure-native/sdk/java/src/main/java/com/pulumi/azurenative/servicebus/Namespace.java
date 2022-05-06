@@ -22,6 +22,40 @@ import javax.annotation.Nullable;
  * API Version: 2017-04-01.
  * 
  * ## Example Usage
+ * ### NameSpaceCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var namespace = new Namespace(&#34;namespace&#34;, NamespaceArgs.builder()        
+ *             .location(&#34;South Central US&#34;)
+ *             .namespaceName(&#34;sdk-Namespace2924&#34;)
+ *             .resourceGroupName(&#34;ArunMonocle&#34;)
+ *             .sku(Map.ofEntries(
+ *                 Map.entry(&#34;name&#34;, &#34;Standard&#34;),
+ *                 Map.entry(&#34;tier&#34;, &#34;Standard&#34;)
+ *             ))
+ *             .tags(Map.ofEntries(
+ *                 Map.entry(&#34;tag1&#34;, &#34;value1&#34;),
+ *                 Map.entry(&#34;tag2&#34;, &#34;value2&#34;)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

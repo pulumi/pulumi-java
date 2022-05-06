@@ -35,6 +35,111 @@ import javax.annotation.Nullable;
  * API Version: 2021-03-15.
  * 
  * ## Example Usage
+ * ### CosmosDBDatabaseAccountCreateMax
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseAccount = new DatabaseAccount(&#34;databaseAccount&#34;, DatabaseAccountArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .apiProperties(Map.of(&#34;serverVersion&#34;, &#34;3.2&#34;))
+ *             .backupPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;periodicModeProperties&#34;, Map.ofEntries(
+ *                     Map.entry(&#34;backupIntervalInMinutes&#34;, 240),
+ *                     Map.entry(&#34;backupRetentionIntervalInHours&#34;, 8)
+ *                 )),
+ *                 Map.entry(&#34;type&#34;, &#34;Periodic&#34;)
+ *             ))
+ *             .consistencyPolicy(Map.ofEntries(
+ *                 Map.entry(&#34;defaultConsistencyLevel&#34;, &#34;BoundedStaleness&#34;),
+ *                 Map.entry(&#34;maxIntervalInSeconds&#34;, 10),
+ *                 Map.entry(&#34;maxStalenessPrefix&#34;, 200)
+ *             ))
+ *             .cors(Map.of(&#34;allowedOrigins&#34;, &#34;https://test&#34;))
+ *             .databaseAccountOfferType(&#34;Standard&#34;)
+ *             .defaultIdentity(&#34;FirstPartyIdentity&#34;)
+ *             .enableAnalyticalStorage(true)
+ *             .enableFreeTier(false)
+ *             .identity(Map.ofEntries(
+ *                 Map.entry(&#34;type&#34;, &#34;SystemAssigned,UserAssigned&#34;),
+ *                 Map.entry(&#34;userAssignedIdentities&#34;, Map.of(&#34;/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1&#34;, ))
+ *             ))
+ *             .ipRules(            
+ *                 Map.of(&#34;ipAddressOrRange&#34;, &#34;23.43.230.120&#34;),
+ *                 Map.of(&#34;ipAddressOrRange&#34;, &#34;110.12.240.0/12&#34;))
+ *             .isVirtualNetworkFilterEnabled(true)
+ *             .keyVaultKeyUri(&#34;https://myKeyVault.vault.azure.net&#34;)
+ *             .kind(&#34;MongoDB&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .locations(            
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;failoverPriority&#34;, 0),
+ *                     Map.entry(&#34;isZoneRedundant&#34;, false),
+ *                     Map.entry(&#34;locationName&#34;, &#34;southcentralus&#34;)
+ *                 ),
+ *                 Map.ofEntries(
+ *                     Map.entry(&#34;failoverPriority&#34;, 1),
+ *                     Map.entry(&#34;isZoneRedundant&#34;, false),
+ *                     Map.entry(&#34;locationName&#34;, &#34;eastus&#34;)
+ *                 ))
+ *             .networkAclBypass(&#34;AzureServices&#34;)
+ *             .networkAclBypassResourceIds(&#34;/subscriptions/subId/resourcegroups/rgName/providers/Microsoft.Synapse/workspaces/workspaceName&#34;)
+ *             .publicNetworkAccess(&#34;Enabled&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags()
+ *             .virtualNetworkRules(Map.ofEntries(
+ *                 Map.entry(&#34;id&#34;, &#34;/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1&#34;),
+ *                 Map.entry(&#34;ignoreMissingVNetServiceEndpoint&#34;, false)
+ *             ))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
+ * ### CosmosDBDatabaseAccountCreateMin
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var databaseAccount = new DatabaseAccount(&#34;databaseAccount&#34;, DatabaseAccountArgs.builder()        
+ *             .accountName(&#34;ddb1&#34;)
+ *             .databaseAccountOfferType(&#34;Standard&#34;)
+ *             .location(&#34;westus&#34;)
+ *             .locations(Map.ofEntries(
+ *                 Map.entry(&#34;failoverPriority&#34;, 0),
+ *                 Map.entry(&#34;isZoneRedundant&#34;, false),
+ *                 Map.entry(&#34;locationName&#34;, &#34;southcentralus&#34;)
+ *             ))
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -23,6 +23,35 @@ import javax.annotation.Nullable;
  * API Version: 2020-11-01.
  * 
  * ## Example Usage
+ * ### VirtualWANCreate
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var virtualWan = new VirtualWan(&#34;virtualWan&#34;, VirtualWanArgs.builder()        
+ *             .disableVpnEncryption(false)
+ *             .location(&#34;West US&#34;)
+ *             .resourceGroupName(&#34;rg1&#34;)
+ *             .tags(Map.of(&#34;key1&#34;, &#34;value1&#34;))
+ *             .type(&#34;Basic&#34;)
+ *             .virtualWANName(&#34;wan1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

@@ -21,6 +21,33 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update IoT Defender settings
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var defenderSetting = new DefenderSetting(&#34;defenderSetting&#34;, DefenderSettingArgs.builder()        
+ *             .deviceQuota(2000)
+ *             .mdeIntegration(Map.of(&#34;status&#34;, &#34;Enabled&#34;))
+ *             .onboardingKind(&#34;Default&#34;)
+ *             .sentinelWorkspaceResourceIds(&#34;/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

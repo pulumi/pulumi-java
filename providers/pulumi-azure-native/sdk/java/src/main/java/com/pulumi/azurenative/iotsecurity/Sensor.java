@@ -22,6 +22,34 @@ import javax.annotation.Nullable;
  * API Version: 2021-02-01-preview.
  * 
  * ## Example Usage
+ * ### Create or update IoT sensor
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sensor = new Sensor(&#34;sensor&#34;, SensorArgs.builder()        
+ *             .scope(&#34;subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub&#34;)
+ *             .sensorName(&#34;mySensor&#34;)
+ *             .sensorType(&#34;Ot&#34;)
+ *             .tiAutomaticUpdates(true)
+ *             .zone(&#34;Zone Name&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

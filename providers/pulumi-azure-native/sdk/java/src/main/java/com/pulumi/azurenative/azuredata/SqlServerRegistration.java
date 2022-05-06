@@ -22,6 +22,33 @@ import javax.annotation.Nullable;
  * API Version: 2019-07-24-preview.
  * 
  * ## Example Usage
+ * ### Creates or updates a SQL Server registration.
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var sqlServerRegistration = new SqlServerRegistration(&#34;sqlServerRegistration&#34;, SqlServerRegistrationArgs.builder()        
+ *             .location(&#34;northeurope&#34;)
+ *             .resourceGroupName(&#34;testrg&#34;)
+ *             .sqlServerRegistrationName(&#34;testsqlregistration&#34;)
+ *             .tags(Map.of(&#34;mytag&#34;, &#34;myval&#34;))
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 

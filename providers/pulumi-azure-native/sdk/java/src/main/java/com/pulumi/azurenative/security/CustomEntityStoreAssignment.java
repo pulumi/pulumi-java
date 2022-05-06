@@ -21,6 +21,32 @@ import javax.annotation.Nullable;
  * API Version: 2021-07-01-preview.
  * 
  * ## Example Usage
+ * ### Create a custom entity store assignment
+ * 
+ * ```java
+ * package generated_program;
+ * 
+ * import java.util.*;
+ * import java.io.*;
+ * import java.nio.*;
+ * import com.pulumi.*;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var customEntityStoreAssignment = new CustomEntityStoreAssignment(&#34;customEntityStoreAssignment&#34;, CustomEntityStoreAssignmentArgs.builder()        
+ *             .customEntityStoreAssignmentName(&#34;33e7cc6e-a139-4723-a0e5-76993aee0771&#34;)
+ *             .principal(&#34;aaduser=f3923a3e-ad57-4752-b1a9-fbf3c8e5e082;72f988bf-86f1-41af-91ab-2d7cd011db47&#34;)
+ *             .resourceGroupName(&#34;TestResourceGroup&#34;)
+ *             .build());
+ * 
+ *         }
+ * }
+ * 
+ * ```
  * 
  * ## Import
  * 
