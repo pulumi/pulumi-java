@@ -49,9 +49,13 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 		return nil, err
 	}
 
-	types := rawSchema.(map[string]interface{})
+	types := rawSchema.(map[string]interface{})["types"].(map[string]interface{})
+
 	for oldToken, newToken := range renamedTypes {
-		eq := reflect.DeepEqual(types[oldToken], types[newToken])
+		eq := reflect.DeepEqual(
+			transformJsonTree(stripDescription, types[oldToken]),
+			transformJsonTree(stripDescription, types[newToken]),
+		)
 		if eq {
 			fmt.Printf("WARN renaming %s to %s in the schema\n",
 				oldToken, newToken)
@@ -118,4 +122,13 @@ func transformJsonTree(t func(interface{}) interface{}, tree interface{}) interf
 		return t(n)
 	}
 	return t(tree)
+}
+
+func stripDescription(v interface{}) interface{} {
+	m, isMap := v.(map[string]interface{})
+	if isMap {
+		delete(m, "description")
+		return m
+	}
+	return v
 }
