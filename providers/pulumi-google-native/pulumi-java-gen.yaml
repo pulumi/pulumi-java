@@ -3,6 +3,6 @@ out: sdk/java
 overlays:
 - ../build-templates
 pluginFile: src/main/resources/com/pulumi/google-native/plugin.json
-schema: https://raw.githubusercontent.com/pulumi/pulumi-google-native/v0.18.1/provider/cmd/pulumi-resource-google-native/schema.json
-version: 0.18.1
+schema: https://raw.githubusercontent.com/pulumi/pulumi-google-native/v0.18.2/provider/cmd/pulumi-resource-google-native/schema.json
+version: 0.18.2
 versionFile: src/main/resources/com/pulumi/google-native/version.txt
