@@ -49,7 +49,14 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 		return nil, err
 	}
 
-	types := rawSchema.(map[string]interface{})["types"].(map[string]interface{})
+	types := map[string]interface{}{}
+	if x, ok := rawSchema.(map[string]interface{}); ok {
+		if y, ok2 := x["types"]; ok2 {
+			if z, ok3 := y.(map[string]interface{}); ok3 {
+				types = z
+			}
+		}
+	}
 
 	for oldToken, newToken := range renamedTypes {
 		eq := reflect.DeepEqual(
