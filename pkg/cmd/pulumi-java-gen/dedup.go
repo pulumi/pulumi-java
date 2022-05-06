@@ -60,8 +60,8 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 
 	for oldToken, newToken := range renamedTypes {
 		eq := reflect.DeepEqual(
-			transformJsonTree(stripDescription, types[oldToken]),
-			transformJsonTree(stripDescription, types[newToken]),
+			transformJSONTree(stripDescription, types[oldToken]),
+			transformJSONTree(stripDescription, types[newToken]),
 		)
 		if eq {
 			fmt.Printf("WARN renaming %s to %s in the schema\n",
@@ -95,7 +95,7 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 		return node
 	}
 
-	rawSchema = transformJsonTree(rewriteRefs, rawSchema)
+	rawSchema = transformJSONTree(rewriteRefs, rawSchema)
 
 	buf.Reset()
 
@@ -111,12 +111,12 @@ func dedupTypes(spec *pschema.PackageSpec) (*pschema.PackageSpec, error) {
 	return &fixedSpec, nil
 }
 
-func transformJsonTree(t func(interface{}) interface{}, tree interface{}) interface{} {
+func transformJSONTree(t func(interface{}) interface{}, tree interface{}) interface{} {
 	m, isMap := tree.(map[string]interface{})
 	if isMap {
 		n := map[string]interface{}{}
 		for k, v := range m {
-			n[k] = transformJsonTree(t, v)
+			n[k] = transformJSONTree(t, v)
 		}
 		return t(n)
 	}
@@ -124,7 +124,7 @@ func transformJsonTree(t func(interface{}) interface{}, tree interface{}) interf
 	if isSlice {
 		n := []interface{}{}
 		for _, e := range s {
-			n = append(n, transformJsonTree(t, e))
+			n = append(n, transformJSONTree(t, e))
 		}
 		return t(n)
 	}
