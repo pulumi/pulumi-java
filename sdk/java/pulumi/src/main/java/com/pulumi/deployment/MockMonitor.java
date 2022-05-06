@@ -57,7 +57,7 @@ public class MockMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request) {
+    public CompletableFuture<InvokeResponse> invokeAsync(pulumirpc.Resource.ResourceInvokeRequest request) {
         var args = deserializeToMap(request.getArgs());
 
         CompletableFuture<Map<String, Object>> toBeSerialized;

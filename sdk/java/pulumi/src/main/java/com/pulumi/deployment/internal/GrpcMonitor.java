@@ -35,7 +35,7 @@ public class GrpcMonitor implements Monitor {
     }
 
     @Override
-    public CompletableFuture<InvokeResponse> invokeAsync(InvokeRequest request) {
+    public CompletableFuture<InvokeResponse> invokeAsync(ResourceInvokeRequest request) {
         return toCompletableFuture(this.monitor.invoke(request));
     }
 
