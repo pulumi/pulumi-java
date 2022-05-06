@@ -1,5 +1,6 @@
 ### Improvements
 
+- Support for using [jbang](https://jbang.dev)
 - Fix #534: StackReferenceArgs can now be instantiated using StackReferenceArgs.builder() and StackReferenceArgs.Builder, 
   also StackReferenceArgs.getName() was deprecated in favour of StackReferenceArgs.name()
 [#537](https://github.com/pulumi/pulumi-java/pull/537)
