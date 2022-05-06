@@ -117,9 +117,14 @@ func generateJava(configFile string) error {
 		return err
 	}
 
-	pkgSpec, err := readPackageSchema(cfg.Schema)
+	rawPkgSpec, err := readPackageSchema(cfg.Schema)
 	if err != nil {
 		return fmt.Errorf("failed to read schema from %s: %w", cfg.Schema, err)
+	}
+
+	pkgSpec, err := dedupTypes(rawPkgSpec)
+	if err != nil {
+		return fmt.Errorf("failed to dedup types in schema from %s: %w", cfg.Schema, err)
 	}
 
 	pkg, err := pschema.ImportSpec(*pkgSpec, nil)
