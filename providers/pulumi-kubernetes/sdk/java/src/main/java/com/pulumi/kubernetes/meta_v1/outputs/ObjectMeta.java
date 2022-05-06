@@ -22,7 +22,9 @@ public final class ObjectMeta {
      */
     private final @Nullable Map<String,String> annotations;
     /**
-     * @return The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+     * @return Deprecated: ClusterName is a legacy field that was always cleared by the system and never used; it will be removed completely in 1.25.
+     * 
+     * The name in the go struct is changed to help clients detect accidental use.
      * 
      */
     private final @Nullable String clusterName;
@@ -53,7 +55,7 @@ public final class ObjectMeta {
     /**
      * @return GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
      * 
-     * If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
+     * If this field is specified and the generated name exists, the server will return a 409.
      * 
      * Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
      * 
@@ -99,9 +101,7 @@ public final class ObjectMeta {
      */
     private final @Nullable String resourceVersion;
     /**
-     * @return SelfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * @return Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     private final @Nullable String selfLink;
@@ -157,7 +157,9 @@ public final class ObjectMeta {
         return this.annotations == null ? Map.of() : this.annotations;
     }
     /**
-     * @return The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.
+     * @return Deprecated: ClusterName is a legacy field that was always cleared by the system and never used; it will be removed completely in 1.25.
+     * 
+     * The name in the go struct is changed to help clients detect accidental use.
      * 
      */
     public Optional<String> clusterName() {
@@ -198,7 +200,7 @@ public final class ObjectMeta {
     /**
      * @return GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
      * 
-     * If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).
+     * If this field is specified and the generated name exists, the server will return a 409.
      * 
      * Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
      * 
@@ -260,9 +262,7 @@ public final class ObjectMeta {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
-     * @return SelfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * @return Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     public Optional<String> selfLink() {

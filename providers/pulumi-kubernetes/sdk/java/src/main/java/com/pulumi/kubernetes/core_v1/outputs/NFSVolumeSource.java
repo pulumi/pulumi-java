@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NFSVolumeSource {
     /**
-     * @return Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     private final String path;
     /**
-     * @return ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     private final String server;
@@ -39,21 +39,21 @@ public final class NFSVolumeSource {
     }
 
     /**
-     * @return Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public String path() {
         return this.path;
     }
     /**
-     * @return ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public String server() {

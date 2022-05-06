@@ -23,14 +23,14 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     public static final VolumeProjectionArgs Empty = new VolumeProjectionArgs();
 
     /**
-     * information about the configMap data to project
+     * configMap information about the configMap data to project
      * 
      */
     @Import(name="configMap")
     private @Nullable Output<ConfigMapProjectionArgs> configMap;
 
     /**
-     * @return information about the configMap data to project
+     * @return configMap information about the configMap data to project
      * 
      */
     public Optional<Output<ConfigMapProjectionArgs>> configMap() {
@@ -38,14 +38,14 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * information about the downwardAPI data to project
+     * downwardAPI information about the downwardAPI data to project
      * 
      */
     @Import(name="downwardAPI")
     private @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
 
     /**
-     * @return information about the downwardAPI data to project
+     * @return downwardAPI information about the downwardAPI data to project
      * 
      */
     public Optional<Output<DownwardAPIProjectionArgs>> downwardAPI() {
@@ -53,14 +53,14 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * information about the secret data to project
+     * secret information about the secret data to project
      * 
      */
     @Import(name="secret")
     private @Nullable Output<SecretProjectionArgs> secret;
 
     /**
-     * @return information about the secret data to project
+     * @return secret information about the secret data to project
      * 
      */
     public Optional<Output<SecretProjectionArgs>> secret() {
@@ -68,14 +68,14 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * information about the serviceAccountToken data to project
+     * serviceAccountToken is information about the serviceAccountToken data to project
      * 
      */
     @Import(name="serviceAccountToken")
     private @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
     /**
-     * @return information about the serviceAccountToken data to project
+     * @return serviceAccountToken is information about the serviceAccountToken data to project
      * 
      */
     public Optional<Output<ServiceAccountTokenProjectionArgs>> serviceAccountToken() {
@@ -110,7 +110,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param configMap information about the configMap data to project
+         * @param configMap configMap information about the configMap data to project
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param configMap information about the configMap data to project
+         * @param configMap configMap information about the configMap data to project
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param downwardAPI information about the downwardAPI data to project
+         * @param downwardAPI downwardAPI information about the downwardAPI data to project
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param downwardAPI information about the downwardAPI data to project
+         * @param downwardAPI downwardAPI information about the downwardAPI data to project
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param secret information about the secret data to project
+         * @param secret secret information about the secret data to project
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param secret information about the secret data to project
+         * @param secret secret information about the secret data to project
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param serviceAccountToken information about the serviceAccountToken data to project
+         * @param serviceAccountToken serviceAccountToken is information about the serviceAccountToken data to project
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param serviceAccountToken information about the serviceAccountToken data to project
+         * @param serviceAccountToken serviceAccountToken is information about the serviceAccountToken data to project
          * 
          * @return builder
          * 

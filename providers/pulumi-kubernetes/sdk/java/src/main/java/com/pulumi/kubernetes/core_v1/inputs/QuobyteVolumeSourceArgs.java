@@ -21,14 +21,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     public static final QuobyteVolumeSourceArgs Empty = new QuobyteVolumeSourceArgs();
 
     /**
-     * Group to map volume access to Default is no group
+     * group to map volume access to Default is no group
      * 
      */
     @Import(name="group")
     private @Nullable Output<String> group;
 
     /**
-     * @return Group to map volume access to Default is no group
+     * @return group to map volume access to Default is no group
      * 
      */
     public Optional<Output<String>> group() {
@@ -36,14 +36,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * @return readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -51,14 +51,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
      */
     @Import(name="registry", required=true)
     private Output<String> registry;
 
     /**
-     * @return Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * @return registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
      */
     public Output<String> registry() {
@@ -66,14 +66,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
      */
     @Import(name="tenant")
     private @Nullable Output<String> tenant;
 
     /**
-     * @return Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * @return tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
      */
     public Optional<Output<String>> tenant() {
@@ -81,14 +81,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * User to map volume access to Defaults to serivceaccount user
+     * user to map volume access to Defaults to serivceaccount user
      * 
      */
     @Import(name="user")
     private @Nullable Output<String> user;
 
     /**
-     * @return User to map volume access to Defaults to serivceaccount user
+     * @return user to map volume access to Defaults to serivceaccount user
      * 
      */
     public Optional<Output<String>> user() {
@@ -96,14 +96,14 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Volume is a string that references an already created Quobyte volume by name.
+     * volume is a string that references an already created Quobyte volume by name.
      * 
      */
     @Import(name="volume", required=true)
     private Output<String> volume;
 
     /**
-     * @return Volume is a string that references an already created Quobyte volume by name.
+     * @return volume is a string that references an already created Quobyte volume by name.
      * 
      */
     public Output<String> volume() {
@@ -140,7 +140,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param group Group to map volume access to Default is no group
+         * @param group group to map volume access to Default is no group
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param group Group to map volume access to Default is no group
+         * @param group group to map volume access to Default is no group
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param readOnly ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+         * @param readOnly readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param readOnly ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+         * @param readOnly readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param registry Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+         * @param registry registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param registry Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+         * @param registry registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param tenant Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+         * @param tenant tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param tenant Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+         * @param tenant tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param user User to map volume access to Defaults to serivceaccount user
+         * @param user user to map volume access to Defaults to serivceaccount user
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param user User to map volume access to Defaults to serivceaccount user
+         * @param user user to map volume access to Defaults to serivceaccount user
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param volume Volume is a string that references an already created Quobyte volume by name.
+         * @param volume volume is a string that references an already created Quobyte volume by name.
          * 
          * @return builder
          * 
@@ -256,7 +256,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param volume Volume is a string that references an already created Quobyte volume by name.
+         * @param volume volume is a string that references an already created Quobyte volume by name.
          * 
          * @return builder
          * 

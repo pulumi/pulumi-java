@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QuobyteVolumeSource {
     /**
-     * @return Group to map volume access to Default is no group
+     * @return group to map volume access to Default is no group
      * 
      */
     private final @Nullable String group;
     /**
-     * @return ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * @return readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * @return registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
      */
     private final String registry;
     /**
-     * @return Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * @return tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
      */
     private final @Nullable String tenant;
     /**
-     * @return User to map volume access to Defaults to serivceaccount user
+     * @return user to map volume access to Defaults to serivceaccount user
      * 
      */
     private final @Nullable String user;
     /**
-     * @return Volume is a string that references an already created Quobyte volume by name.
+     * @return volume is a string that references an already created Quobyte volume by name.
      * 
      */
     private final String volume;
@@ -60,42 +60,42 @@ public final class QuobyteVolumeSource {
     }
 
     /**
-     * @return Group to map volume access to Default is no group
+     * @return group to map volume access to Default is no group
      * 
      */
     public Optional<String> group() {
         return Optional.ofNullable(this.group);
     }
     /**
-     * @return ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
+     * @return readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
+     * @return registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
      */
     public String registry() {
         return this.registry;
     }
     /**
-     * @return Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
+     * @return tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
      */
     public Optional<String> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
-     * @return User to map volume access to Defaults to serivceaccount user
+     * @return user to map volume access to Defaults to serivceaccount user
      * 
      */
     public Optional<String> user() {
         return Optional.ofNullable(this.user);
     }
     /**
-     * @return Volume is a string that references an already created Quobyte volume by name.
+     * @return volume is a string that references an already created Quobyte volume by name.
      * 
      */
     public String volume() {

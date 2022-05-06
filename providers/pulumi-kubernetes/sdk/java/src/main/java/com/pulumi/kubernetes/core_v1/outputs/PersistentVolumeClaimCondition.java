@@ -12,34 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PersistentVolumeClaimCondition {
     /**
-     * @return Last time we probed the condition.
+     * @return lastProbeTime is the time we probed the condition.
      * 
      */
     private final @Nullable String lastProbeTime;
     /**
-     * @return Last time the condition transitioned from one status to another.
+     * @return lastTransitionTime is the time the condition transitioned from one status to another.
      * 
      */
     private final @Nullable String lastTransitionTime;
     /**
-     * @return Human-readable message indicating details about last transition.
+     * @return message is the human-readable message indicating details about last transition.
      * 
      */
     private final @Nullable String message;
     /**
-     * @return Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+     * @return reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     private final @Nullable String reason;
     private final String status;
-    /**
-     * @return
-     * 
-     * Possible enum values:
-     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-     * 
-     */
     private final String type;
 
     @CustomType.Constructor
@@ -59,28 +51,28 @@ public final class PersistentVolumeClaimCondition {
     }
 
     /**
-     * @return Last time we probed the condition.
+     * @return lastProbeTime is the time we probed the condition.
      * 
      */
     public Optional<String> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
-     * @return Last time the condition transitioned from one status to another.
+     * @return lastTransitionTime is the time the condition transitioned from one status to another.
      * 
      */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * @return Human-readable message indicating details about last transition.
+     * @return message is the human-readable message indicating details about last transition.
      * 
      */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * @return Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+     * @return reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     public Optional<String> reason() {
@@ -89,14 +81,6 @@ public final class PersistentVolumeClaimCondition {
     public String status() {
         return this.status;
     }
-    /**
-     * @return
-     * 
-     * Possible enum values:
-     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-     * 
-     */
     public String type() {
         return this.type;
     }

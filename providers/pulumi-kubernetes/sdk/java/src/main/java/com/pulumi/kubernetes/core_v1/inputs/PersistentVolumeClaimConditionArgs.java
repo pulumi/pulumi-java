@@ -20,14 +20,14 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     public static final PersistentVolumeClaimConditionArgs Empty = new PersistentVolumeClaimConditionArgs();
 
     /**
-     * Last time we probed the condition.
+     * lastProbeTime is the time we probed the condition.
      * 
      */
     @Import(name="lastProbeTime")
     private @Nullable Output<String> lastProbeTime;
 
     /**
-     * @return Last time we probed the condition.
+     * @return lastProbeTime is the time we probed the condition.
      * 
      */
     public Optional<Output<String>> lastProbeTime() {
@@ -35,14 +35,14 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     }
 
     /**
-     * Last time the condition transitioned from one status to another.
+     * lastTransitionTime is the time the condition transitioned from one status to another.
      * 
      */
     @Import(name="lastTransitionTime")
     private @Nullable Output<String> lastTransitionTime;
 
     /**
-     * @return Last time the condition transitioned from one status to another.
+     * @return lastTransitionTime is the time the condition transitioned from one status to another.
      * 
      */
     public Optional<Output<String>> lastTransitionTime() {
@@ -50,14 +50,14 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     }
 
     /**
-     * Human-readable message indicating details about last transition.
+     * message is the human-readable message indicating details about last transition.
      * 
      */
     @Import(name="message")
     private @Nullable Output<String> message;
 
     /**
-     * @return Human-readable message indicating details about last transition.
+     * @return message is the human-readable message indicating details about last transition.
      * 
      */
     public Optional<Output<String>> message() {
@@ -65,14 +65,14 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
     }
 
     /**
-     * Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+     * reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
     /**
-     * @return Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+     * @return reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
      * 
      */
     public Optional<Output<String>> reason() {
@@ -86,23 +86,9 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         return this.status;
     }
 
-    /**
-     * Possible enum values:
-     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-     * 
-     */
     @Import(name="type", required=true)
     private Output<String> type;
 
-    /**
-     * @return
-     * 
-     * Possible enum values:
-     *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-     *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-     * 
-     */
     public Output<String> type() {
         return this.type;
     }
@@ -137,7 +123,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param lastProbeTime Last time we probed the condition.
+         * @param lastProbeTime lastProbeTime is the time we probed the condition.
          * 
          * @return builder
          * 
@@ -148,7 +134,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param lastProbeTime Last time we probed the condition.
+         * @param lastProbeTime lastProbeTime is the time we probed the condition.
          * 
          * @return builder
          * 
@@ -158,7 +144,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * @param lastTransitionTime lastTransitionTime is the time the condition transitioned from one status to another.
          * 
          * @return builder
          * 
@@ -169,7 +155,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param lastTransitionTime Last time the condition transitioned from one status to another.
+         * @param lastTransitionTime lastTransitionTime is the time the condition transitioned from one status to another.
          * 
          * @return builder
          * 
@@ -179,7 +165,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param message Human-readable message indicating details about last transition.
+         * @param message message is the human-readable message indicating details about last transition.
          * 
          * @return builder
          * 
@@ -190,7 +176,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param message Human-readable message indicating details about last transition.
+         * @param message message is the human-readable message indicating details about last transition.
          * 
          * @return builder
          * 
@@ -200,7 +186,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param reason Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+         * @param reason reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
          * 
          * @return builder
          * 
@@ -211,7 +197,7 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param reason Unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
+         * @param reason reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports &#34;ResizeStarted&#34; that means the underlying persistent volume is being resized.
          * 
          * @return builder
          * 
@@ -229,31 +215,11 @@ public final class PersistentVolumeClaimConditionArgs extends com.pulumi.resourc
             return status(Output.of(status));
         }
 
-        /**
-         * @param type
-         * 
-         * Possible enum values:
-         *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-         *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-         * 
-         * @return builder
-         * 
-         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
-        /**
-         * @param type
-         * 
-         * Possible enum values:
-         *  - `&#34;FileSystemResizePending&#34;` - controller resize is finished and a file system resize is pending on node
-         *  - `&#34;Resizing&#34;` - a user trigger resize of pvc has been started
-         * 
-         * @return builder
-         * 
-         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

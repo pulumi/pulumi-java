@@ -141,14 +141,14 @@ public class Release extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.devel);
     }
     /**
-     * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     * Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
     @Export(name="disableCRDHooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableCRDHooks;
 
     /**
-     * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     * @return Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
     public Output<Optional<Boolean>> disableCRDHooks() {

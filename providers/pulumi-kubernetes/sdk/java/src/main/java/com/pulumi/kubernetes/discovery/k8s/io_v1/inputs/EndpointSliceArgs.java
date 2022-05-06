@@ -27,22 +27,12 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
      * 
-     * Possible enum values:
-     *  - `&#34;FQDN&#34;` represents a FQDN.
-     *  - `&#34;IPv4&#34;` represents an IPv4 Address.
-     *  - `&#34;IPv6&#34;` represents an IPv6 Address.
-     * 
      */
     @Import(name="addressType", required=true)
     private Output<String> addressType;
 
     /**
      * @return addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
-     * 
-     * Possible enum values:
-     *  - `&#34;FQDN&#34;` represents a FQDN.
-     *  - `&#34;IPv4&#34;` represents an IPv4 Address.
-     *  - `&#34;IPv6&#34;` represents an IPv6 Address.
      * 
      */
     public Output<String> addressType() {
@@ -156,11 +146,6 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param addressType addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
          * 
-         * Possible enum values:
-         *  - `&#34;FQDN&#34;` represents a FQDN.
-         *  - `&#34;IPv4&#34;` represents an IPv4 Address.
-         *  - `&#34;IPv6&#34;` represents an IPv6 Address.
-         * 
          * @return builder
          * 
          */
@@ -171,11 +156,6 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param addressType addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
-         * 
-         * Possible enum values:
-         *  - `&#34;FQDN&#34;` represents a FQDN.
-         *  - `&#34;IPv4&#34;` represents an IPv4 Address.
-         *  - `&#34;IPv6&#34;` represents an IPv6 Address.
          * 
          * @return builder
          * 

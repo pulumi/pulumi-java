@@ -24,14 +24,14 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     public static final NodeSpecArgs Empty = new NodeSpecArgs();
 
     /**
-     * Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
      * 
      */
     @Import(name="configSource")
     private @Nullable Output<NodeConfigSourceArgs> configSource;
 
     /**
-     * @return Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * @return Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
      * 
      */
     public Optional<Output<NodeConfigSourceArgs>> configSource() {
@@ -159,7 +159,7 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param configSource Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+         * @param configSource Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
          * 
          * @return builder
          * 
@@ -170,7 +170,7 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param configSource Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+         * @param configSource Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
          * 
          * @return builder
          * 

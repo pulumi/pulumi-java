@@ -65,28 +65,28 @@ public class PersistentVolume extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.metadata);
     }
     /**
-     * Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     @Export(name="spec", type=PersistentVolumeSpec.class, parameters={})
     private Output</* @Nullable */ PersistentVolumeSpec> spec;
 
     /**
-     * @return Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     public Output<Optional<PersistentVolumeSpec>> spec() {
         return Codegen.optional(this.spec);
     }
     /**
-     * Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     @Export(name="status", type=PersistentVolumeStatus.class, parameters={})
     private Output</* @Nullable */ PersistentVolumeStatus> status;
 
     /**
-     * @return Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     public Output<Optional<PersistentVolumeStatus>> status() {

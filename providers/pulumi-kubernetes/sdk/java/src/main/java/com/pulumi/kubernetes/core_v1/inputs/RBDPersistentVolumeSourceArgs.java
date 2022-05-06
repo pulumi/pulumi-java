@@ -23,14 +23,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     public static final RBDPersistentVolumeSourceArgs Empty = new RBDPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+     * @return fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -38,14 +38,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="image", required=true)
     private Output<String> image;
 
     /**
-     * @return The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Output<String> image() {
@@ -53,14 +53,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="keyring")
     private @Nullable Output<String> keyring;
 
     /**
-     * @return Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Optional<Output<String>> keyring() {
@@ -68,14 +68,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="monitors", required=true)
     private Output<List<String>> monitors;
 
     /**
-     * @return A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Output<List<String>> monitors() {
@@ -83,14 +83,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="pool")
     private @Nullable Output<String> pool;
 
     /**
-     * @return The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Optional<Output<String>> pool() {
@@ -98,14 +98,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -113,14 +113,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<SecretReferenceArgs> secretRef;
 
     /**
-     * @return SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Optional<Output<SecretReferenceArgs>> secretRef() {
@@ -128,14 +128,14 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     @Import(name="user")
     private @Nullable Output<String> user;
 
     /**
-     * @return The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+     * @return user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
     public Optional<Output<String>> user() {
@@ -174,7 +174,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param image The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param image image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param image The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param image image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param keyring Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param keyring keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param keyring Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param keyring keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param monitors A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param monitors monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -248,7 +248,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param monitors A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param monitors monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param monitors A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param monitors monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pool The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param pool pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pool The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param pool pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param readOnly readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param readOnly readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secretRef SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param secretRef secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secretRef SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param secretRef secretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param user The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param user user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class RBDPersistentVolumeSourceArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param user The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
+         * @param user user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
          * 
          * @return builder
          * 

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePort {
     /**
-     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
      * 
      */
     private final @Nullable String appProtocol;
@@ -35,11 +35,6 @@ public final class ServicePort {
     private final Integer port;
     /**
      * @return The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     private final @Nullable String protocol;
@@ -66,7 +61,7 @@ public final class ServicePort {
     }
 
     /**
-     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
      * 
      */
     public Optional<String> appProtocol() {
@@ -95,11 +90,6 @@ public final class ServicePort {
     }
     /**
      * @return The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     public Optional<String> protocol() {

@@ -20,14 +20,14 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
     public static final PhotonPersistentDiskVolumeSourceArgs Empty = new PhotonPersistentDiskVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -35,14 +35,14 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
     }
 
     /**
-     * ID that identifies Photon Controller persistent disk
+     * pdID is the ID that identifies Photon Controller persistent disk
      * 
      */
     @Import(name="pdID", required=true)
     private Output<String> pdID;
 
     /**
-     * @return ID that identifies Photon Controller persistent disk
+     * @return pdID is the ID that identifies Photon Controller persistent disk
      * 
      */
     public Output<String> pdID() {
@@ -75,7 +75,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param pdID ID that identifies Photon Controller persistent disk
+         * @param pdID pdID is the ID that identifies Photon Controller persistent disk
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param pdID ID that identifies Photon Controller persistent disk
+         * @param pdID pdID is the ID that identifies Photon Controller persistent disk
          * 
          * @return builder
          * 

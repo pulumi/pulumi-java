@@ -97,26 +97,12 @@ public final class NodeConditionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Type of node condition.
      * 
-     * Possible enum values:
-     *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
-     *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
-     *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
-     *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
-     *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
-     * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
      * @return Type of node condition.
-     * 
-     * Possible enum values:
-     *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
-     *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
-     *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
-     *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
-     *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
      * 
      */
     public Output<String> type() {
@@ -260,13 +246,6 @@ public final class NodeConditionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param type Type of node condition.
          * 
-         * Possible enum values:
-         *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
-         *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
-         *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
-         *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
-         *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
-         * 
          * @return builder
          * 
          */
@@ -277,13 +256,6 @@ public final class NodeConditionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param type Type of node condition.
-         * 
-         * Possible enum values:
-         *  - `&#34;DiskPressure&#34;` means the kubelet is under pressure due to insufficient available disk.
-         *  - `&#34;MemoryPressure&#34;` means the kubelet is under pressure due to insufficient available memory.
-         *  - `&#34;NetworkUnavailable&#34;` means that network for the node is not correctly configured.
-         *  - `&#34;PIDPressure&#34;` means the kubelet is under pressure due to insufficient available PID.
-         *  - `&#34;Ready&#34;` means kubelet is healthy and ready to accept pods.
          * 
          * @return builder
          * 

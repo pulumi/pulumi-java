@@ -20,14 +20,14 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
     public static final SecretReferenceArgs Empty = new SecretReferenceArgs();
 
     /**
-     * Name is unique within a namespace to reference a secret resource.
+     * name is unique within a namespace to reference a secret resource.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name is unique within a namespace to reference a secret resource.
+     * @return name is unique within a namespace to reference a secret resource.
      * 
      */
     public Optional<Output<String>> name() {
@@ -35,14 +35,14 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Namespace defines the space within which the secret name must be unique.
+     * namespace defines the space within which the secret name must be unique.
      * 
      */
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
     /**
-     * @return Namespace defines the space within which the secret name must be unique.
+     * @return namespace defines the space within which the secret name must be unique.
      * 
      */
     public Optional<Output<String>> namespace() {
@@ -75,7 +75,7 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param name Name is unique within a namespace to reference a secret resource.
+         * @param name name is unique within a namespace to reference a secret resource.
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param name Name is unique within a namespace to reference a secret resource.
+         * @param name name is unique within a namespace to reference a secret resource.
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param namespace Namespace defines the space within which the secret name must be unique.
+         * @param namespace namespace defines the space within which the secret name must be unique.
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param namespace Namespace defines the space within which the secret name must be unique.
+         * @param namespace namespace defines the space within which the secret name must be unique.
          * 
          * @return builder
          * 

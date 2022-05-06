@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeSpec {
     /**
-     * @return Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * @return Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
      * 
      */
     private final @Nullable NodeConfigSource configSource;
@@ -70,7 +70,7 @@ public final class NodeSpec {
     }
 
     /**
-     * @return Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * @return Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed from Kubelets as of 1.24 and will be fully removed in 1.26.
      * 
      */
     public Optional<NodeConfigSource> configSource() {

@@ -18,7 +18,7 @@ public final class StatefulSetStatus {
      * @return Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
      * 
      */
-    private final Integer availableReplicas;
+    private final @Nullable Integer availableReplicas;
     /**
      * @return collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
@@ -67,7 +67,7 @@ public final class StatefulSetStatus {
 
     @CustomType.Constructor
     private StatefulSetStatus(
-        @CustomType.Parameter("availableReplicas") Integer availableReplicas,
+        @CustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
         @CustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
         @CustomType.Parameter("conditions") @Nullable List<StatefulSetCondition> conditions,
         @CustomType.Parameter("currentReplicas") @Nullable Integer currentReplicas,
@@ -93,8 +93,8 @@ public final class StatefulSetStatus {
      * @return Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
      * 
      */
-    public Integer availableReplicas() {
-        return this.availableReplicas;
+    public Optional<Integer> availableReplicas() {
+        return Optional.ofNullable(this.availableReplicas);
     }
     /**
      * @return collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
@@ -169,7 +169,7 @@ public final class StatefulSetStatus {
     }
 
     public static final class Builder {
-        private Integer availableReplicas;
+        private @Nullable Integer availableReplicas;
         private @Nullable Integer collisionCount;
         private @Nullable List<StatefulSetCondition> conditions;
         private @Nullable Integer currentReplicas;
@@ -198,8 +198,8 @@ public final class StatefulSetStatus {
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder availableReplicas(Integer availableReplicas) {
-            this.availableReplicas = Objects.requireNonNull(availableReplicas);
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
+            this.availableReplicas = availableReplicas;
             return this;
         }
         public Builder collisionCount(@Nullable Integer collisionCount) {

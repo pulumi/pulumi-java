@@ -23,14 +23,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     public static final CephFSVolumeSourceArgs Empty = new CephFSVolumeSourceArgs();
 
     /**
-     * Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     @Import(name="monitors", required=true)
     private Output<List<String>> monitors;
 
     /**
-     * @return Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * @return monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     public Output<List<String>> monitors() {
@@ -38,14 +38,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+     * path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
      * 
      */
     @Import(name="path")
     private @Nullable Output<String> path;
 
     /**
-     * @return Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+     * @return path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
      * 
      */
     public Optional<Output<String>> path() {
@@ -53,14 +53,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * @return readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -68,14 +68,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     @Import(name="secretFile")
     private @Nullable Output<String> secretFile;
 
     /**
-     * @return Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * @return secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     public Optional<Output<String>> secretFile() {
@@ -83,14 +83,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
     /**
-     * @return Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * @return secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     public Optional<Output<LocalObjectReferenceArgs>> secretRef() {
@@ -98,14 +98,14 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     @Import(name="user")
     private @Nullable Output<String> user;
 
     /**
-     * @return Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * @return user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
      * 
      */
     public Optional<Output<String>> user() {
@@ -142,7 +142,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param monitors monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param monitors monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param monitors monitors is Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param path Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+         * @param path path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param path Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+         * @param path path is Optional: Used as the mounted root, rather than the full Ceph tree, default is /
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretFile Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param secretFile secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretFile Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param secretFile secretFile is Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretRef Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param secretRef secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretRef Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param secretRef secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -257,7 +257,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param user Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param user user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param user Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * @param user user is optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
          * 
          * @return builder
          * 

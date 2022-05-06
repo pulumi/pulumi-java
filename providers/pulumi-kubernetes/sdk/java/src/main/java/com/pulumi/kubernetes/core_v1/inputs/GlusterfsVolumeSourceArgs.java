@@ -21,14 +21,14 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     public static final GlusterfsVolumeSourceArgs Empty = new GlusterfsVolumeSourceArgs();
 
     /**
-     * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     @Import(name="endpoints", required=true)
     private Output<String> endpoints;
 
     /**
-     * @return EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * @return endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     public Output<String> endpoints() {
@@ -36,14 +36,14 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * @return path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     public Output<String> path() {
@@ -51,14 +51,14 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+     * @return readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -92,7 +92,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param endpoints EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param endpoints endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param endpoints EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param endpoints endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param path Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param path path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param path Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param path path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param readOnly readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class GlusterfsVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
+         * @param readOnly readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
          * 
          * @return builder
          * 

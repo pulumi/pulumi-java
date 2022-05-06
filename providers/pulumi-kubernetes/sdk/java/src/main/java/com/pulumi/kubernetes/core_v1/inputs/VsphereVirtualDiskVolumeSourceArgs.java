@@ -20,14 +20,14 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     public static final VsphereVirtualDiskVolumeSourceArgs Empty = new VsphereVirtualDiskVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -35,14 +35,14 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     }
 
     /**
-     * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+     * storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
      */
     @Import(name="storagePolicyID")
     private @Nullable Output<String> storagePolicyID;
 
     /**
-     * @return Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+     * @return storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
      */
     public Optional<Output<String>> storagePolicyID() {
@@ -50,14 +50,14 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     }
 
     /**
-     * Storage Policy Based Management (SPBM) profile name.
+     * storagePolicyName is the storage Policy Based Management (SPBM) profile name.
      * 
      */
     @Import(name="storagePolicyName")
     private @Nullable Output<String> storagePolicyName;
 
     /**
-     * @return Storage Policy Based Management (SPBM) profile name.
+     * @return storagePolicyName is the storage Policy Based Management (SPBM) profile name.
      * 
      */
     public Optional<Output<String>> storagePolicyName() {
@@ -65,14 +65,14 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
     }
 
     /**
-     * Path that identifies vSphere volume vmdk
+     * volumePath is the path that identifies vSphere volume vmdk
      * 
      */
     @Import(name="volumePath", required=true)
     private Output<String> volumePath;
 
     /**
-     * @return Path that identifies vSphere volume vmdk
+     * @return volumePath is the path that identifies vSphere volume vmdk
      * 
      */
     public Output<String> volumePath() {
@@ -107,7 +107,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -118,7 +118,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -128,7 +128,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param storagePolicyID Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+         * @param storagePolicyID storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param storagePolicyID Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+         * @param storagePolicyID storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param storagePolicyName Storage Policy Based Management (SPBM) profile name.
+         * @param storagePolicyName storagePolicyName is the storage Policy Based Management (SPBM) profile name.
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param storagePolicyName Storage Policy Based Management (SPBM) profile name.
+         * @param storagePolicyName storagePolicyName is the storage Policy Based Management (SPBM) profile name.
          * 
          * @return builder
          * 
@@ -170,7 +170,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param volumePath Path that identifies vSphere volume vmdk
+         * @param volumePath volumePath is the path that identifies vSphere volume vmdk
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param volumePath Path that identifies vSphere volume vmdk
+         * @param volumePath volumePath is the path that identifies vSphere volume vmdk
          * 
          * @return builder
          * 

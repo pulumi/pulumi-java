@@ -38,20 +38,12 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
     /**
      * Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
      * 
-     * Possible enum values:
-     *  - `&#34;Recreate&#34;` Kill all existing pods before creating new ones.
-     *  - `&#34;RollingUpdate&#34;` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
-     * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
      * @return Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
-     * 
-     * Possible enum values:
-     *  - `&#34;Recreate&#34;` Kill all existing pods before creating new ones.
-     *  - `&#34;RollingUpdate&#34;` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
      * 
      */
     public Optional<Output<String>> type() {
@@ -107,10 +99,6 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
         /**
          * @param type Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
          * 
-         * Possible enum values:
-         *  - `&#34;Recreate&#34;` Kill all existing pods before creating new ones.
-         *  - `&#34;RollingUpdate&#34;` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
-         * 
          * @return builder
          * 
          */
@@ -121,10 +109,6 @@ public final class DeploymentStrategyArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param type Type of deployment. Can be &#34;Recreate&#34; or &#34;RollingUpdate&#34;. Default is RollingUpdate.
-         * 
-         * Possible enum values:
-         *  - `&#34;Recreate&#34;` Kill all existing pods before creating new ones.
-         *  - `&#34;RollingUpdate&#34;` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
          * 
          * @return builder
          * 

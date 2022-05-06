@@ -97,22 +97,12 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Type of job condition, Complete or Failed.
      * 
-     * Possible enum values:
-     *  - `&#34;Complete&#34;` means the job has completed its execution.
-     *  - `&#34;Failed&#34;` means the job has failed its execution.
-     *  - `&#34;Suspended&#34;` means the job has been suspended.
-     * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
      * @return Type of job condition, Complete or Failed.
-     * 
-     * Possible enum values:
-     *  - `&#34;Complete&#34;` means the job has completed its execution.
-     *  - `&#34;Failed&#34;` means the job has failed its execution.
-     *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
      */
     public Output<String> type() {
@@ -256,11 +246,6 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param type Type of job condition, Complete or Failed.
          * 
-         * Possible enum values:
-         *  - `&#34;Complete&#34;` means the job has completed its execution.
-         *  - `&#34;Failed&#34;` means the job has failed its execution.
-         *  - `&#34;Suspended&#34;` means the job has been suspended.
-         * 
          * @return builder
          * 
          */
@@ -271,11 +256,6 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param type Type of job condition, Complete or Failed.
-         * 
-         * Possible enum values:
-         *  - `&#34;Complete&#34;` means the job has completed its execution.
-         *  - `&#34;Failed&#34;` means the job has failed its execution.
-         *  - `&#34;Suspended&#34;` means the job has been suspended.
          * 
          * @return builder
          * 

@@ -35,14 +35,14 @@ public final class PersistentVolumeClaimListArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     @Import(name="items", required=true)
     private Output<List<PersistentVolumeClaimArgs>> items;
 
     /**
-     * @return A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Output<List<PersistentVolumeClaimArgs>> items() {
@@ -128,7 +128,7 @@ public final class PersistentVolumeClaimListArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param items A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param items items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class PersistentVolumeClaimListArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param items A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param items items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class PersistentVolumeClaimListArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param items A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param items items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 

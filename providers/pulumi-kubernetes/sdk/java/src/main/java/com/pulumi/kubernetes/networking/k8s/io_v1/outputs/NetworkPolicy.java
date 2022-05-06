@@ -6,6 +6,7 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import com.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicySpec;
+import com.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyStatus;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,17 +34,24 @@ public final class NetworkPolicy {
      * 
      */
     private final @Nullable NetworkPolicySpec spec;
+    /**
+     * @return Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    private final @Nullable NetworkPolicyStatus status;
 
     @CustomType.Constructor
     private NetworkPolicy(
         @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
         @CustomType.Parameter("kind") @Nullable String kind,
         @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @CustomType.Parameter("spec") @Nullable NetworkPolicySpec spec) {
+        @CustomType.Parameter("spec") @Nullable NetworkPolicySpec spec,
+        @CustomType.Parameter("status") @Nullable NetworkPolicyStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
         this.spec = spec;
+        this.status = status;
     }
 
     /**
@@ -74,6 +82,13 @@ public final class NetworkPolicy {
     public Optional<NetworkPolicySpec> spec() {
         return Optional.ofNullable(this.spec);
     }
+    /**
+     * @return Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    public Optional<NetworkPolicyStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -88,6 +103,7 @@ public final class NetworkPolicy {
         private @Nullable String kind;
         private @Nullable ObjectMeta metadata;
         private @Nullable NetworkPolicySpec spec;
+        private @Nullable NetworkPolicyStatus status;
 
         public Builder() {
     	      // Empty
@@ -99,6 +115,7 @@ public final class NetworkPolicy {
     	      this.kind = defaults.kind;
     	      this.metadata = defaults.metadata;
     	      this.spec = defaults.spec;
+    	      this.status = defaults.status;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
@@ -116,8 +133,12 @@ public final class NetworkPolicy {
         public Builder spec(@Nullable NetworkPolicySpec spec) {
             this.spec = spec;
             return this;
+        }
+        public Builder status(@Nullable NetworkPolicyStatus status) {
+            this.status = status;
+            return this;
         }        public NetworkPolicy build() {
-            return new NetworkPolicy(apiVersion, kind, metadata, spec);
+            return new NetworkPolicy(apiVersion, kind, metadata, spec, status);
         }
     }
 }

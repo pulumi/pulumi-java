@@ -21,14 +21,14 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     public static final AzureFilePersistentVolumeSourceArgs Empty = new AzureFilePersistentVolumeSourceArgs();
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -36,14 +36,14 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * the name of secret that contains Azure Storage Account Name and Key
+     * secretName is the name of secret that contains Azure Storage Account Name and Key
      * 
      */
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the name of secret that contains Azure Storage Account Name and Key
      * 
      */
     public Output<String> secretName() {
@@ -51,14 +51,14 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
      */
     @Import(name="secretNamespace")
     private @Nullable Output<String> secretNamespace;
 
     /**
-     * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * @return secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
      */
     public Optional<Output<String>> secretNamespace() {
@@ -66,14 +66,14 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * Share Name
+     * shareName is the azure Share Name
      * 
      */
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
     /**
-     * @return Share Name
+     * @return shareName is the azure Share Name
      * 
      */
     public Output<String> shareName() {
@@ -108,7 +108,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * @param secretName secretName is the name of secret that contains Azure Storage Account Name and Key
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * @param secretName secretName is the name of secret that contains Azure Storage Account Name and Key
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretNamespace the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+         * @param secretNamespace secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretNamespace the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+         * @param secretNamespace secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shareName Share Name
+         * @param shareName shareName is the azure Share Name
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shareName Share Name
+         * @param shareName shareName is the azure Share Name
          * 
          * @return builder
          * 

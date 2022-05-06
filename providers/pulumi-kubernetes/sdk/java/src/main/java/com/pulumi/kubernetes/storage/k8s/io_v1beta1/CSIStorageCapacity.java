@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  * The producer of these objects can decide which approach is more suitable.
  * 
- * They are consumed by the kube-scheduler if the CSIStorageCapacity beta feature gate is enabled there and a CSI driver opts into capacity-aware scheduling with CSIDriver.StorageCapacity.
+ * They are consumed by the kube-scheduler when a CSI driver opts into capacity-aware scheduling with CSIDriverSpec.StorageCapacity. The scheduler compares the MaximumVolumeSize against the requested size of pending volumes to filter out unsuitable nodes. If MaximumVolumeSize is unset, it falls back to a comparison against the less precise Capacity. If that is also unset, the scheduler assumes that capacity is insufficient and tries some other node.
  * 
  */
 @ResourceType(type="kubernetes:storage.k8s.io/v1beta1:CSIStorageCapacity")
@@ -48,7 +48,7 @@ public class CSIStorageCapacity extends com.pulumi.resources.CustomResource {
     /**
      * Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
      * 
-     * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
+     * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable.
      * 
      */
     @Export(name="capacity", type=String.class, parameters={})
@@ -57,7 +57,7 @@ public class CSIStorageCapacity extends com.pulumi.resources.CustomResource {
     /**
      * @return Capacity is the value reported by the CSI driver in its GetCapacityResponse for a GetCapacityRequest with topology and parameters that match the previous fields.
      * 
-     * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
+     * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable.
      * 
      */
     public Output<Optional<String>> capacity() {
@@ -187,6 +187,7 @@ public class CSIStorageCapacity extends com.pulumi.resources.CustomResource {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .aliases(List.of(
+                Output.of(Alias.builder().type("kubernetes:storage.k8s.io/v1:CSIStorageCapacity").build()),
                 Output.of(Alias.builder().type("kubernetes:storage.k8s.io/v1alpha1:CSIStorageCapacity").build())
             ))
             .build();

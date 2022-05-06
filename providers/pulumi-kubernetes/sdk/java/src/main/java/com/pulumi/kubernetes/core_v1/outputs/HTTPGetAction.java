@@ -38,10 +38,6 @@ public final class HTTPGetAction {
     /**
      * @return Scheme to use for connecting to the host. Defaults to HTTP.
      * 
-     * Possible enum values:
-     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
-     * 
      */
     private final @Nullable String scheme;
 
@@ -89,10 +85,6 @@ public final class HTTPGetAction {
     }
     /**
      * @return Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
-     * Possible enum values:
-     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
      * 
      */
     public Optional<String> scheme() {

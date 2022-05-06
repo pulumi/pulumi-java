@@ -35,11 +35,6 @@ public final class ContainerPort {
     /**
      * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
-     * 
      */
     private final @Nullable String protocol;
 
@@ -87,11 +82,6 @@ public final class ContainerPort {
     }
     /**
      * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     public Optional<String> protocol() {

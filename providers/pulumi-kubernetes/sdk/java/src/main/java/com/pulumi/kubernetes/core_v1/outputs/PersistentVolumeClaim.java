@@ -30,12 +30,12 @@ public final class PersistentVolumeClaim {
      */
     private final @Nullable ObjectMeta metadata;
     /**
-     * @return Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     private final @Nullable PersistentVolumeClaimSpec spec;
     /**
-     * @return Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     private final @Nullable PersistentVolumeClaimStatus status;
@@ -76,14 +76,14 @@ public final class PersistentVolumeClaim {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * @return Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Optional<PersistentVolumeClaimSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
-     * @return Status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return status represents the current information/status of a persistent volume claim. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Optional<PersistentVolumeClaimStatus> status() {

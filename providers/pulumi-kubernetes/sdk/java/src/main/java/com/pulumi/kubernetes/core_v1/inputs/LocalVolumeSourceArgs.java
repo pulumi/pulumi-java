@@ -20,14 +20,14 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     public static final LocalVolumeSourceArgs Empty = new LocalVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+     * fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+     * @return fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -35,14 +35,14 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+     * path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+     * @return path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
      * 
      */
     public Output<String> path() {
@@ -75,7 +75,7 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param fsType Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+         * @param fsType fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param fsType Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
+         * @param fsType fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default value is to auto-select a filesystem if unspecified.
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param path The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+         * @param path path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class LocalVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param path The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+         * @param path path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
          * 
          * @return builder
          * 

@@ -39,11 +39,6 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
      * 
-     * Possible enum values:
-     *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
-     *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
-     *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
-     * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
@@ -52,11 +47,6 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
      * @return type indicates which kind of seccomp profile will be applied. Valid options are:
      * 
      * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
-     * 
-     * Possible enum values:
-     *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
-     *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
-     *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
      * 
      */
     public Output<String> type() {
@@ -114,11 +104,6 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
          * 
          * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
          * 
-         * Possible enum values:
-         *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
-         *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
-         *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
-         * 
          * @return builder
          * 
          */
@@ -131,11 +116,6 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
          * @param type type indicates which kind of seccomp profile will be applied. Valid options are:
          * 
          * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
-         * 
-         * Possible enum values:
-         *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
-         *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
-         *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
          * 
          * @return builder
          * 

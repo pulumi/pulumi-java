@@ -23,24 +23,12 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     /**
      * Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
      * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;NotIn&#34;`
-     * 
      */
     @Import(name="operator", required=true)
     private Output<String> operator;
 
     /**
      * @return Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
-     * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;NotIn&#34;`
      * 
      */
     public Output<String> operator() {
@@ -50,28 +38,12 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
     /**
      * The name of the scope that the selector applies to.
      * 
-     * Possible enum values:
-     *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
-     *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-     *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
-     *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
-     *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
-     *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
-     * 
      */
     @Import(name="scopeName", required=true)
     private Output<String> scopeName;
 
     /**
      * @return The name of the scope that the selector applies to.
-     * 
-     * Possible enum values:
-     *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
-     *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-     *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
-     *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
-     *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
-     *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
      * 
      */
     public Output<String> scopeName() {
@@ -122,12 +94,6 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
         /**
          * @param operator Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
          * 
-         * Possible enum values:
-         *  - `&#34;DoesNotExist&#34;`
-         *  - `&#34;Exists&#34;`
-         *  - `&#34;In&#34;`
-         *  - `&#34;NotIn&#34;`
-         * 
          * @return builder
          * 
          */
@@ -139,12 +105,6 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
         /**
          * @param operator Represents a scope&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.
          * 
-         * Possible enum values:
-         *  - `&#34;DoesNotExist&#34;`
-         *  - `&#34;Exists&#34;`
-         *  - `&#34;In&#34;`
-         *  - `&#34;NotIn&#34;`
-         * 
          * @return builder
          * 
          */
@@ -154,14 +114,6 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
 
         /**
          * @param scopeName The name of the scope that the selector applies to.
-         * 
-         * Possible enum values:
-         *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
-         *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-         *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
-         *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
-         *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
-         *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
          * 
          * @return builder
          * 
@@ -173,14 +125,6 @@ public final class ScopedResourceSelectorRequirementArgs extends com.pulumi.reso
 
         /**
          * @param scopeName The name of the scope that the selector applies to.
-         * 
-         * Possible enum values:
-         *  - `&#34;BestEffort&#34;` Match all pod objects that have best effort quality of service
-         *  - `&#34;CrossNamespacePodAffinity&#34;` Match all pod objects that have cross-namespace pod (anti)affinity mentioned. This is a beta feature enabled by the PodAffinityNamespaceSelector feature flag.
-         *  - `&#34;NotBestEffort&#34;` Match all pod objects that do not have best effort quality of service
-         *  - `&#34;NotTerminating&#34;` Match all pod objects where spec.activeDeadlineSeconds is nil
-         *  - `&#34;PriorityClass&#34;` Match all pod objects that have priority class mentioned
-         *  - `&#34;Terminating&#34;` Match all pod objects where spec.activeDeadlineSeconds &gt;=0
          * 
          * @return builder
          * 

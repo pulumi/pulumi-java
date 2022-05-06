@@ -36,8 +36,6 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
      * 
-     * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
-     * 
      */
     @Import(name="expirationSeconds")
     private @Nullable Output<Integer> expirationSeconds;
@@ -55,8 +53,6 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      *   3. Signer whose configured minimum is longer than the requested duration
      * 
      * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
-     * 
-     * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
      * 
      */
     public Optional<Output<Integer>> expirationSeconds() {
@@ -279,8 +275,6 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
          * 
          * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
          * 
-         * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
-         * 
          * @return builder
          * 
          */
@@ -302,8 +296,6 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
          *   3. Signer whose configured minimum is longer than the requested duration
          * 
          * The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
-         * 
-         * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
          * 
          * @return builder
          * 

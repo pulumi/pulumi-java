@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerStateTerminated {
     /**
-     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+     * @return Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
      * 
      */
     private final @Nullable String containerID;
@@ -67,7 +67,7 @@ public final class ContainerStateTerminated {
     }
 
     /**
-     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+     * @return Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
      * 
      */
     public Optional<String> containerID() {

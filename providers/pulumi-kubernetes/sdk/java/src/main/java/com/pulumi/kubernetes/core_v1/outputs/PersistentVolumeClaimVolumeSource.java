@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PersistentVolumeClaimVolumeSource {
     /**
-     * @return ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     private final String claimName;
     /**
-     * @return Will force the ReadOnly setting in VolumeMounts. Default false.
+     * @return readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
      * 
      */
     private final @Nullable Boolean readOnly;
@@ -32,14 +32,14 @@ public final class PersistentVolumeClaimVolumeSource {
     }
 
     /**
-     * @return ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public String claimName() {
         return this.claimName;
     }
     /**
-     * @return Will force the ReadOnly setting in VolumeMounts. Default false.
+     * @return readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
      * 
      */
     public Optional<Boolean> readOnly() {

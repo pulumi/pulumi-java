@@ -55,22 +55,12 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
      * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
-     * 
      */
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
     /**
      * @return Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     public Output<String> protocol() {
@@ -154,11 +144,6 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param protocol Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
          * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
-         * 
          * @return builder
          * 
          */
@@ -169,11 +154,6 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param protocol Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
-         * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
          * 
          * @return builder
          * 

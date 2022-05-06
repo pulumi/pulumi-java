@@ -23,14 +23,14 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     public static final FlexPersistentVolumeSourceArgs Empty = new FlexPersistentVolumeSourceArgs();
 
     /**
-     * Driver is the name of the driver to use for this volume.
+     * driver is the name of the driver to use for this volume.
      * 
      */
     @Import(name="driver", required=true)
     private Output<String> driver;
 
     /**
-     * @return Driver is the name of the driver to use for this volume.
+     * @return driver is the name of the driver to use for this volume.
      * 
      */
     public Output<String> driver() {
@@ -38,14 +38,14 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+     * fsType is the Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+     * @return fsType is the Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -53,14 +53,14 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Optional: Extra command options if any.
+     * options is Optional: this field holds extra command options if any.
      * 
      */
     @Import(name="options")
     private @Nullable Output<Map<String,String>> options;
 
     /**
-     * @return Optional: Extra command options if any.
+     * @return options is Optional: this field holds extra command options if any.
      * 
      */
     public Optional<Output<Map<String,String>>> options() {
@@ -68,14 +68,14 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -83,14 +83,14 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+     * secretRef is Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<SecretReferenceArgs> secretRef;
 
     /**
-     * @return Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+     * @return secretRef is Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
      * 
      */
     public Optional<Output<SecretReferenceArgs>> secretRef() {
@@ -126,7 +126,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param driver Driver is the name of the driver to use for this volume.
+         * @param driver driver is the name of the driver to use for this volume.
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param driver Driver is the name of the driver to use for this volume.
+         * @param driver driver is the name of the driver to use for this volume.
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+         * @param fsType fsType is the Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
+         * @param fsType fsType is the Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. The default filesystem depends on FlexVolume script.
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param options Optional: Extra command options if any.
+         * @param options options is Optional: this field holds extra command options if any.
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param options Optional: Extra command options if any.
+         * @param options options is Optional: this field holds extra command options if any.
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param secretRef Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+         * @param secretRef secretRef is Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param secretRef Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
+         * @param secretRef secretRef is Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
          * 
          * @return builder
          * 

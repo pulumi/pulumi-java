@@ -20,7 +20,7 @@ public final class NodeSystemInfo {
      */
     private final String bootID;
     /**
-     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
      * 
      */
     private final String containerRuntimeVersion;
@@ -99,7 +99,7 @@ public final class NodeSystemInfo {
         return this.bootID;
     }
     /**
-     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
      * 
      */
     public String containerRuntimeVersion() {

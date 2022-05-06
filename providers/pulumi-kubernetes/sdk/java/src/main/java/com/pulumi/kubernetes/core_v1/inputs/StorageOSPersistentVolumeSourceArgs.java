@@ -22,14 +22,14 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
     public static final StorageOSPersistentVolumeSourceArgs Empty = new StorageOSPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -37,14 +37,14 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -52,14 +52,14 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+     * secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<ObjectReferenceArgs> secretRef;
 
     /**
-     * @return SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+     * @return secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
      * 
      */
     public Optional<Output<ObjectReferenceArgs>> secretRef() {
@@ -67,14 +67,14 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+     * volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
      * 
      */
     @Import(name="volumeName")
     private @Nullable Output<String> volumeName;
 
     /**
-     * @return VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+     * @return volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
      * 
      */
     public Optional<Output<String>> volumeName() {
@@ -82,14 +82,14 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
     }
 
     /**
-     * VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+     * volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
      * 
      */
     @Import(name="volumeNamespace")
     private @Nullable Output<String> volumeNamespace;
 
     /**
-     * @return VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+     * @return volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
      * 
      */
     public Optional<Output<String>> volumeNamespace() {
@@ -125,7 +125,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretRef SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+         * @param secretRef secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param secretRef SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+         * @param secretRef secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
          * 
          * @return builder
          * 
@@ -188,7 +188,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param volumeName VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+         * @param volumeName volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param volumeName VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+         * @param volumeName volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
          * 
          * @return builder
          * 
@@ -209,7 +209,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param volumeNamespace VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+         * @param volumeNamespace volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
         }
 
         /**
-         * @param volumeNamespace VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+         * @param volumeNamespace volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
          * 
          * @return builder
          * 

@@ -86,20 +86,12 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Scheme to use for connecting to the host. Defaults to HTTP.
      * 
-     * Possible enum values:
-     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
-     * 
      */
     @Import(name="scheme")
     private @Nullable Output<String> scheme;
 
     /**
      * @return Scheme to use for connecting to the host. Defaults to HTTP.
-     * 
-     * Possible enum values:
-     *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-     *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
      * 
      */
     public Optional<Output<String>> scheme() {
@@ -251,10 +243,6 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param scheme Scheme to use for connecting to the host. Defaults to HTTP.
          * 
-         * Possible enum values:
-         *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-         *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
-         * 
          * @return builder
          * 
          */
@@ -265,10 +253,6 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param scheme Scheme to use for connecting to the host. Defaults to HTTP.
-         * 
-         * Possible enum values:
-         *  - `&#34;HTTP&#34;` means that the scheme used will be http://
-         *  - `&#34;HTTPS&#34;` means that the scheme used will be https://
          * 
          * @return builder
          * 

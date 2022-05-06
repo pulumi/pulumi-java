@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScaleIOVolumeSource {
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * @return The host address of the ScaleIO API Gateway.
+     * @return gateway is the host address of the ScaleIO API Gateway.
      * 
      */
     private final String gateway;
     /**
-     * @return The name of the ScaleIO Protection Domain for the configured storage.
+     * @return protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
      * 
      */
     private final @Nullable String protectionDomain;
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * @return secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
      */
     private final LocalObjectReference secretRef;
     /**
-     * @return Flag to enable/disable SSL communication with Gateway, default false
+     * @return sslEnabled Flag enable/disable SSL communication with Gateway, default false
      * 
      */
     private final @Nullable Boolean sslEnabled;
     /**
-     * @return Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * @return storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
      */
     private final @Nullable String storageMode;
     /**
-     * @return The ScaleIO Storage Pool associated with the protection domain.
+     * @return storagePool is the ScaleIO Storage Pool associated with the protection domain.
      * 
      */
     private final @Nullable String storagePool;
     /**
-     * @return The name of the storage system as configured in ScaleIO.
+     * @return system is the name of the storage system as configured in ScaleIO.
      * 
      */
     private final String system;
     /**
-     * @return The name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * @return volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
      */
     private final @Nullable String volumeName;
@@ -89,70 +89,70 @@ public final class ScaleIOVolumeSource {
     }
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
      * 
      */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * @return The host address of the ScaleIO API Gateway.
+     * @return gateway is the host address of the ScaleIO API Gateway.
      * 
      */
     public String gateway() {
         return this.gateway;
     }
     /**
-     * @return The name of the ScaleIO Protection Domain for the configured storage.
+     * @return protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
      * 
      */
     public Optional<String> protectionDomain() {
         return Optional.ofNullable(this.protectionDomain);
     }
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * @return secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
      */
     public LocalObjectReference secretRef() {
         return this.secretRef;
     }
     /**
-     * @return Flag to enable/disable SSL communication with Gateway, default false
+     * @return sslEnabled Flag enable/disable SSL communication with Gateway, default false
      * 
      */
     public Optional<Boolean> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
     /**
-     * @return Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * @return storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
      */
     public Optional<String> storageMode() {
         return Optional.ofNullable(this.storageMode);
     }
     /**
-     * @return The ScaleIO Storage Pool associated with the protection domain.
+     * @return storagePool is the ScaleIO Storage Pool associated with the protection domain.
      * 
      */
     public Optional<String> storagePool() {
         return Optional.ofNullable(this.storagePool);
     }
     /**
-     * @return The name of the storage system as configured in ScaleIO.
+     * @return system is the name of the storage system as configured in ScaleIO.
      * 
      */
     public String system() {
         return this.system;
     }
     /**
-     * @return The name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * @return volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
      */
     public Optional<String> volumeName() {

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VsphereVirtualDiskVolumeSource {
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * @return Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+     * @return storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
      */
     private final @Nullable String storagePolicyID;
     /**
-     * @return Storage Policy Based Management (SPBM) profile name.
+     * @return storagePolicyName is the storage Policy Based Management (SPBM) profile name.
      * 
      */
     private final @Nullable String storagePolicyName;
     /**
-     * @return Path that identifies vSphere volume vmdk
+     * @return volumePath is the path that identifies vSphere volume vmdk
      * 
      */
     private final String volumePath;
@@ -45,28 +45,28 @@ public final class VsphereVirtualDiskVolumeSource {
     }
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * @return Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
+     * @return storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
      */
     public Optional<String> storagePolicyID() {
         return Optional.ofNullable(this.storagePolicyID);
     }
     /**
-     * @return Storage Policy Based Management (SPBM) profile name.
+     * @return storagePolicyName is the storage Policy Based Management (SPBM) profile name.
      * 
      */
     public Optional<String> storagePolicyName() {
         return Optional.ofNullable(this.storagePolicyName);
     }
     /**
-     * @return Path that identifies vSphere volume vmdk
+     * @return volumePath is the path that identifies vSphere volume vmdk
      * 
      */
     public String volumePath() {
