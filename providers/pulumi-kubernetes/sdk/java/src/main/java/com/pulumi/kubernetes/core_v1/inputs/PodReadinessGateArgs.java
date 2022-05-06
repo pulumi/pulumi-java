@@ -20,24 +20,12 @@ public final class PodReadinessGateArgs extends com.pulumi.resources.ResourceArg
     /**
      * ConditionType refers to a condition in the pod&#39;s condition list with matching type.
      * 
-     * Possible enum values:
-     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
      */
     @Import(name="conditionType", required=true)
     private Output<String> conditionType;
 
     /**
      * @return ConditionType refers to a condition in the pod&#39;s condition list with matching type.
-     * 
-     * Possible enum values:
-     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
      */
     public Output<String> conditionType() {
@@ -71,12 +59,6 @@ public final class PodReadinessGateArgs extends com.pulumi.resources.ResourceArg
         /**
          * @param conditionType ConditionType refers to a condition in the pod&#39;s condition list with matching type.
          * 
-         * Possible enum values:
-         *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-         *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-         *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-         *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-         * 
          * @return builder
          * 
          */
@@ -87,12 +69,6 @@ public final class PodReadinessGateArgs extends com.pulumi.resources.ResourceArg
 
         /**
          * @param conditionType ConditionType refers to a condition in the pod&#39;s condition list with matching type.
-         * 
-         * Possible enum values:
-         *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-         *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-         *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-         *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
          * 
          * @return builder
          * 

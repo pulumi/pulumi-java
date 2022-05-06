@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HostPathVolumeSource {
     /**
-     * @return Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     private final String path;
     /**
-     * @return Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     private final @Nullable String type;
@@ -31,14 +31,14 @@ public final class HostPathVolumeSource {
     }
 
     /**
-     * @return Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     public String path() {
         return this.path;
     }
     /**
-     * @return Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     public Optional<String> type() {

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicySpecArgs;
+import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyStatusArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,6 +83,21 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.spec);
     }
 
+    /**
+     * Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    @Import(name="status")
+    private @Nullable Output<NetworkPolicyStatusArgs> status;
+
+    /**
+     * @return Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    public Optional<Output<NetworkPolicyStatusArgs>> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     private NetworkPolicyArgs() {}
 
     private NetworkPolicyArgs(NetworkPolicyArgs $) {
@@ -89,6 +105,7 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
         this.kind = $.kind;
         this.metadata = $.metadata;
         this.spec = $.spec;
+        this.status = $.status;
     }
 
     public static Builder builder() {
@@ -191,6 +208,27 @@ public final class NetworkPolicyArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder spec(NetworkPolicySpecArgs spec) {
             return spec(Output.of(spec));
+        }
+
+        /**
+         * @param status Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(@Nullable Output<NetworkPolicyStatusArgs> status) {
+            $.status = status;
+            return this;
+        }
+
+        /**
+         * @param status Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+         * 
+         * @return builder
+         * 
+         */
+        public Builder status(NetworkPolicyStatusArgs status) {
+            return status(Output.of(status));
         }
 
         public NetworkPolicyArgs build() {

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFilePersistentVolumeSource {
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the name of secret that contains Azure Storage Account Name and Key
      * 
      */
     private final String secretName;
     /**
-     * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * @return secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
      */
     private final @Nullable String secretNamespace;
     /**
-     * @return Share Name
+     * @return shareName is the azure Share Name
      * 
      */
     private final String shareName;
@@ -46,28 +46,28 @@ public final class AzureFilePersistentVolumeSource {
     }
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the name of secret that contains Azure Storage Account Name and Key
      * 
      */
     public String secretName() {
         return this.secretName;
     }
     /**
-     * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * @return secretNamespace is the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
      */
     public Optional<String> secretNamespace() {
         return Optional.ofNullable(this.secretNamespace);
     }
     /**
-     * @return Share Name
+     * @return shareName is the azure Share Name
      * 
      */
     public String shareName() {

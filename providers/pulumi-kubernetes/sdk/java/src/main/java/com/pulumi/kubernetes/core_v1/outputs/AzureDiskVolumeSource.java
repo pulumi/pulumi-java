@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureDiskVolumeSource {
     /**
-     * @return Host Caching mode: None, Read Only, Read Write.
+     * @return cachingMode is the Host Caching mode: None, Read Only, Read Write.
      * 
      */
     private final @Nullable String cachingMode;
     /**
-     * @return The Name of the data disk in the blob storage
+     * @return diskName is the Name of the data disk in the blob storage
      * 
      */
     private final String diskName;
     /**
-     * @return The URI the data disk in the blob storage
+     * @return diskURI is the URI of data disk in the blob storage
      * 
      */
     private final String diskURI;
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * @return kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
     private final @Nullable String kind;
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
@@ -60,42 +60,42 @@ public final class AzureDiskVolumeSource {
     }
 
     /**
-     * @return Host Caching mode: None, Read Only, Read Write.
+     * @return cachingMode is the Host Caching mode: None, Read Only, Read Write.
      * 
      */
     public Optional<String> cachingMode() {
         return Optional.ofNullable(this.cachingMode);
     }
     /**
-     * @return The Name of the data disk in the blob storage
+     * @return diskName is the Name of the data disk in the blob storage
      * 
      */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * @return The URI the data disk in the blob storage
+     * @return diskURI is the URI of data disk in the blob storage
      * 
      */
     public String diskURI() {
         return this.diskURI;
     }
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * @return kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {

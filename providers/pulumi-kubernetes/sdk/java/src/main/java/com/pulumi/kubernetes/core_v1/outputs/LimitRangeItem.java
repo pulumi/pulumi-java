@@ -39,11 +39,6 @@ public final class LimitRangeItem {
     /**
      * @return Type of resource that this limit applies to.
      * 
-     * Possible enum values:
-     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
-     * 
      */
     private final String type;
 
@@ -100,11 +95,6 @@ public final class LimitRangeItem {
     }
     /**
      * @return Type of resource that this limit applies to.
-     * 
-     * Possible enum values:
-     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
      * 
      */
     public String type() {

@@ -86,7 +86,6 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see
      *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
-     * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
      * 
      */
     @Import(name="overhead")
@@ -95,7 +94,6 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * @return Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see
      *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
-     * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
      * 
      */
     public Optional<Output<OverheadArgs>> overhead() {
@@ -233,7 +231,6 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see
          *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
-         * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
          * 
          * @return builder
          * 
@@ -246,7 +243,6 @@ public final class RuntimeClassArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param overhead Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see
          *  https://kubernetes.io/docs/concepts/scheduling-eviction/pod-overhead/
-         * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
          * 
          * @return builder
          * 

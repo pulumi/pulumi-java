@@ -64,14 +64,14 @@ public final class PersistentVolumeClaimArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     @Import(name="spec")
     private @Nullable Output<PersistentVolumeClaimSpecArgs> spec;
 
     /**
-     * @return Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Optional<Output<PersistentVolumeClaimSpecArgs>> spec() {
@@ -169,7 +169,7 @@ public final class PersistentVolumeClaimArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param spec Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param spec spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class PersistentVolumeClaimArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param spec Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param spec spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 

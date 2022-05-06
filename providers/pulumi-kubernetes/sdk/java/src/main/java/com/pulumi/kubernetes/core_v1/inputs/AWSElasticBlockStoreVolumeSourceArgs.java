@@ -24,14 +24,14 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     public static final AWSElasticBlockStoreVolumeSourceArgs Empty = new AWSElasticBlockStoreVolumeSourceArgs();
 
     /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * @return fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -39,14 +39,14 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     }
 
     /**
-     * The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+     * partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
      * 
      */
     @Import(name="partition")
     private @Nullable Output<Integer> partition;
 
     /**
-     * @return The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+     * @return partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
      * 
      */
     public Optional<Output<Integer>> partition() {
@@ -54,14 +54,14 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     }
 
     /**
-     * Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * @return readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -69,14 +69,14 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
     }
 
     /**
-     * Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
     /**
-     * @return Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * @return volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     public Output<String> volumeID() {
@@ -111,7 +111,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param partition The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+         * @param partition partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param partition The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
+         * @param partition partition is the partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as &#34;1&#34;. Similarly, the volume partition for /dev/sda is &#34;0&#34; (or you can leave the property empty).
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param readOnly Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param readOnly readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param readOnly Specify &#34;true&#34; to force and set the ReadOnly property in VolumeMounts to &#34;true&#34;. If omitted, the default is &#34;false&#34;. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param readOnly readOnly value true will force the readOnly setting in VolumeMounts. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param volumeID Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param volumeID volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class AWSElasticBlockStoreVolumeSourceArgs extends com.pulumi.resou
         }
 
         /**
-         * @param volumeID Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+         * @param volumeID volumeID is unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
          * 
          * @return builder
          * 

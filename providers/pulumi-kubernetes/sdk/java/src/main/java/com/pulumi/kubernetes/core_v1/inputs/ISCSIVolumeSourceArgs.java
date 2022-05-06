@@ -24,14 +24,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     public static final ISCSIVolumeSourceArgs Empty = new ISCSIVolumeSourceArgs();
 
     /**
-     * whether support iSCSI Discovery CHAP authentication
+     * chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
      * 
      */
     @Import(name="chapAuthDiscovery")
     private @Nullable Output<Boolean> chapAuthDiscovery;
 
     /**
-     * @return whether support iSCSI Discovery CHAP authentication
+     * @return chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
      * 
      */
     public Optional<Output<Boolean>> chapAuthDiscovery() {
@@ -39,14 +39,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * whether support iSCSI Session CHAP authentication
+     * chapAuthSession defines whether support iSCSI Session CHAP authentication
      * 
      */
     @Import(name="chapAuthSession")
     private @Nullable Output<Boolean> chapAuthSession;
 
     /**
-     * @return whether support iSCSI Session CHAP authentication
+     * @return chapAuthSession defines whether support iSCSI Session CHAP authentication
      * 
      */
     public Optional<Output<Boolean>> chapAuthSession() {
@@ -54,14 +54,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+     * fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+     * @return fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -69,14 +69,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+     * initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
      * 
      */
     @Import(name="initiatorName")
     private @Nullable Output<String> initiatorName;
 
     /**
-     * @return Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+     * @return initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
      * 
      */
     public Optional<Output<String>> initiatorName() {
@@ -84,14 +84,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Target iSCSI Qualified Name.
+     * iqn is the target iSCSI Qualified Name.
      * 
      */
     @Import(name="iqn", required=true)
     private Output<String> iqn;
 
     /**
-     * @return Target iSCSI Qualified Name.
+     * @return iqn is the target iSCSI Qualified Name.
      * 
      */
     public Output<String> iqn() {
@@ -99,14 +99,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+     * iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
      * 
      */
     @Import(name="iscsiInterface")
     private @Nullable Output<String> iscsiInterface;
 
     /**
-     * @return iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+     * @return iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
      * 
      */
     public Optional<Output<String>> iscsiInterface() {
@@ -114,14 +114,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * iSCSI Target Lun number.
+     * lun represents iSCSI Target Lun number.
      * 
      */
     @Import(name="lun", required=true)
     private Output<Integer> lun;
 
     /**
-     * @return iSCSI Target Lun number.
+     * @return lun represents iSCSI Target Lun number.
      * 
      */
     public Output<Integer> lun() {
@@ -129,14 +129,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
     @Import(name="portals")
     private @Nullable Output<List<String>> portals;
 
     /**
-     * @return iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * @return portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
     public Optional<Output<List<String>>> portals() {
@@ -144,14 +144,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+     * readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+     * @return readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -159,14 +159,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * CHAP Secret for iSCSI target and initiator authentication
+     * secretRef is the CHAP Secret for iSCSI target and initiator authentication
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
     /**
-     * @return CHAP Secret for iSCSI target and initiator authentication
+     * @return secretRef is the CHAP Secret for iSCSI target and initiator authentication
      * 
      */
     public Optional<Output<LocalObjectReferenceArgs>> secretRef() {
@@ -174,14 +174,14 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
     @Import(name="targetPortal", required=true)
     private Output<String> targetPortal;
 
     /**
-     * @return iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+     * @return targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
     public Output<String> targetPortal() {
@@ -223,7 +223,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param chapAuthDiscovery whether support iSCSI Discovery CHAP authentication
+         * @param chapAuthDiscovery chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
          * 
          * @return builder
          * 
@@ -234,7 +234,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param chapAuthDiscovery whether support iSCSI Discovery CHAP authentication
+         * @param chapAuthDiscovery chapAuthDiscovery defines whether support iSCSI Discovery CHAP authentication
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param chapAuthSession whether support iSCSI Session CHAP authentication
+         * @param chapAuthSession chapAuthSession defines whether support iSCSI Session CHAP authentication
          * 
          * @return builder
          * 
@@ -255,7 +255,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param chapAuthSession whether support iSCSI Session CHAP authentication
+         * @param chapAuthSession chapAuthSession defines whether support iSCSI Session CHAP authentication
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
          * 
          * @return builder
          * 
@@ -276,7 +276,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param fsType Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+         * @param fsType fsType is the filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param initiatorName Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+         * @param initiatorName initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
          * 
          * @return builder
          * 
@@ -297,7 +297,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param initiatorName Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
+         * @param initiatorName initiatorName is the custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface &lt;target portal&gt;:&lt;volume name&gt; will be created for the connection.
          * 
          * @return builder
          * 
@@ -307,7 +307,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iqn Target iSCSI Qualified Name.
+         * @param iqn iqn is the target iSCSI Qualified Name.
          * 
          * @return builder
          * 
@@ -318,7 +318,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iqn Target iSCSI Qualified Name.
+         * @param iqn iqn is the target iSCSI Qualified Name.
          * 
          * @return builder
          * 
@@ -328,7 +328,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iscsiInterface iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+         * @param iscsiInterface iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
          * 
          * @return builder
          * 
@@ -339,7 +339,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param iscsiInterface iSCSI Interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
+         * @param iscsiInterface iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to &#39;default&#39; (tcp).
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param lun iSCSI Target Lun number.
+         * @param lun lun represents iSCSI Target Lun number.
          * 
          * @return builder
          * 
@@ -360,7 +360,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param lun iSCSI Target Lun number.
+         * @param lun lun represents iSCSI Target Lun number.
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param portals iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * @param portals portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
          * 
          * @return builder
          * 
@@ -381,7 +381,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param portals iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * @param portals portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
          * 
          * @return builder
          * 
@@ -391,7 +391,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param portals iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * @param portals portals is the iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
          * 
          * @return builder
          * 
@@ -401,7 +401,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+         * @param readOnly readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
          * 
          * @return builder
          * 
@@ -412,7 +412,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param readOnly ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+         * @param readOnly readOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param secretRef CHAP Secret for iSCSI target and initiator authentication
+         * @param secretRef secretRef is the CHAP Secret for iSCSI target and initiator authentication
          * 
          * @return builder
          * 
@@ -433,7 +433,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param secretRef CHAP Secret for iSCSI target and initiator authentication
+         * @param secretRef secretRef is the CHAP Secret for iSCSI target and initiator authentication
          * 
          * @return builder
          * 
@@ -443,7 +443,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param targetPortal iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * @param targetPortal targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
          * 
          * @return builder
          * 
@@ -454,7 +454,7 @@ public final class ISCSIVolumeSourceArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param targetPortal iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+         * @param targetPortal targetPortal is iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
          * 
          * @return builder
          * 

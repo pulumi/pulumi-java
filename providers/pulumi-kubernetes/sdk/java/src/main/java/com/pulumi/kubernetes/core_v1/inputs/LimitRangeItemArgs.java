@@ -98,22 +98,12 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
     /**
      * Type of resource that this limit applies to.
      * 
-     * Possible enum values:
-     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
-     * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
      * @return Type of resource that this limit applies to.
-     * 
-     * Possible enum values:
-     *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-     *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-     *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
      * 
      */
     public Output<String> type() {
@@ -257,11 +247,6 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
         /**
          * @param type Type of resource that this limit applies to.
          * 
-         * Possible enum values:
-         *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-         *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-         *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
-         * 
          * @return builder
          * 
          */
@@ -272,11 +257,6 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param type Type of resource that this limit applies to.
-         * 
-         * Possible enum values:
-         *  - `&#34;Container&#34;` Limit that applies to all containers in a namespace
-         *  - `&#34;PersistentVolumeClaim&#34;` Limit that applies to all persistent volume claims in a namespace
-         *  - `&#34;Pod&#34;` Limit that applies to all pods in a namespace
          * 
          * @return builder
          * 

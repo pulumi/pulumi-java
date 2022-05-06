@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PersistentVolumeClaimSpec {
     /**
-     * @return AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * @return accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
      */
     private final @Nullable List<String> accessModes;
     /**
-     * @return This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+     * @return dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
      * 
      */
     private final @Nullable TypedLocalObjectReference dataSource;
     /**
-     * @return Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+     * @return dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
      *   allows any non-core object, as well as PersistentVolumeClaim objects.
      * * While DataSource ignores disallowed values (dropping them), DataSourceRef
      *   preserves all values, and generates an error if a disallowed value is
      *   specified.
-     *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+     *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      * 
      */
     private final @Nullable TypedLocalObjectReference dataSourceRef;
     /**
-     * @return Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * @return resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
     private final @Nullable ResourceRequirements resources;
     /**
-     * @return A label query over volumes to consider for binding.
+     * @return selector is a label query over volumes to consider for binding.
      * 
      */
     private final @Nullable LabelSelector selector;
     /**
-     * @return Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+     * @return storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
      * 
      */
     private final @Nullable String storageClassName;
@@ -56,7 +56,7 @@ public final class PersistentVolumeClaimSpec {
      */
     private final @Nullable String volumeMode;
     /**
-     * @return VolumeName is the binding reference to the PersistentVolume backing this claim.
+     * @return volumeName is the binding reference to the PersistentVolume backing this claim.
      * 
      */
     private final @Nullable String volumeName;
@@ -82,47 +82,47 @@ public final class PersistentVolumeClaimSpec {
     }
 
     /**
-     * @return AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * @return accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
      */
     public List<String> accessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
     /**
-     * @return This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+     * @return dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
      * 
      */
     public Optional<TypedLocalObjectReference> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
-     * @return Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+     * @return dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
      *   allows any non-core object, as well as PersistentVolumeClaim objects.
      * * While DataSource ignores disallowed values (dropping them), DataSourceRef
      *   preserves all values, and generates an error if a disallowed value is
      *   specified.
-     *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+     *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      * 
      */
     public Optional<TypedLocalObjectReference> dataSourceRef() {
         return Optional.ofNullable(this.dataSourceRef);
     }
     /**
-     * @return Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * @return resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
     public Optional<ResourceRequirements> resources() {
         return Optional.ofNullable(this.resources);
     }
     /**
-     * @return A label query over volumes to consider for binding.
+     * @return selector is a label query over volumes to consider for binding.
      * 
      */
     public Optional<LabelSelector> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
-     * @return Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+     * @return storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
      * 
      */
     public Optional<String> storageClassName() {
@@ -136,7 +136,7 @@ public final class PersistentVolumeClaimSpec {
         return Optional.ofNullable(this.volumeMode);
     }
     /**
-     * @return VolumeName is the binding reference to the PersistentVolume backing this claim.
+     * @return volumeName is the binding reference to the PersistentVolume backing this claim.
      * 
      */
     public Optional<String> volumeName() {

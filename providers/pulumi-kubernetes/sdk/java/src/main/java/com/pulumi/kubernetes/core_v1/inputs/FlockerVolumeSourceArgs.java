@@ -20,14 +20,14 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
     public static final FlockerVolumeSourceArgs Empty = new FlockerVolumeSourceArgs();
 
     /**
-     * Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+     * datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
      * 
      */
     @Import(name="datasetName")
     private @Nullable Output<String> datasetName;
 
     /**
-     * @return Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+     * @return datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
      * 
      */
     public Optional<Output<String>> datasetName() {
@@ -35,14 +35,14 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * UUID of the dataset. This is unique identifier of a Flocker dataset
+     * datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
      */
     @Import(name="datasetUUID")
     private @Nullable Output<String> datasetUUID;
 
     /**
-     * @return UUID of the dataset. This is unique identifier of a Flocker dataset
+     * @return datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
      */
     public Optional<Output<String>> datasetUUID() {
@@ -75,7 +75,7 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param datasetName Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+         * @param datasetName datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param datasetName Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+         * @param datasetName datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param datasetUUID UUID of the dataset. This is unique identifier of a Flocker dataset
+         * @param datasetUUID datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param datasetUUID UUID of the dataset. This is unique identifier of a Flocker dataset
+         * @param datasetUUID datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
          * 
          * @return builder
          * 

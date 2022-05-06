@@ -41,52 +41,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Volume {
     /**
-     * @return AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * @return awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     private final @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore;
     /**
-     * @return AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+     * @return azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
      * 
      */
     private final @Nullable AzureDiskVolumeSource azureDisk;
     /**
-     * @return AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+     * @return azureFile represents an Azure File Service mount on the host and bind mount to the pod.
      * 
      */
     private final @Nullable AzureFileVolumeSource azureFile;
     /**
-     * @return CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
+     * @return cephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable CephFSVolumeSource cephfs;
     /**
-     * @return Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     private final @Nullable CinderVolumeSource cinder;
     /**
-     * @return ConfigMap represents a configMap that should populate this volume
+     * @return configMap represents a configMap that should populate this volume
      * 
      */
     private final @Nullable ConfigMapVolumeSource configMap;
     /**
-     * @return CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
+     * @return csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
      * 
      */
     private final @Nullable CSIVolumeSource csi;
     /**
-     * @return DownwardAPI represents downward API about the pod that should populate this volume
+     * @return downwardAPI represents downward API about the pod that should populate this volume
      * 
      */
     private final @Nullable DownwardAPIVolumeSource downwardAPI;
     /**
-     * @return EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * @return emptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
      */
     private final @Nullable EmptyDirVolumeSource emptyDir;
     /**
-     * @return Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * @return ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
      * 
      * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
      *    tracking are needed,
@@ -104,102 +104,102 @@ public final class Volume {
      */
     private final @Nullable EphemeralVolumeSource ephemeral;
     /**
-     * @return FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
+     * @return fc represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     private final @Nullable FCVolumeSource fc;
     /**
-     * @return FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+     * @return flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
      * 
      */
     private final @Nullable FlexVolumeSource flexVolume;
     /**
-     * @return Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
+     * @return flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
      * 
      */
     private final @Nullable FlockerVolumeSource flocker;
     /**
-     * @return GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * @return gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     private final @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk;
     /**
-     * @return GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
+     * @return gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
      * 
      */
     private final @Nullable GitRepoVolumeSource gitRepo;
     /**
-     * @return Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * @return glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
      * 
      */
     private final @Nullable GlusterfsVolumeSource glusterfs;
     /**
-     * @return HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     private final @Nullable HostPathVolumeSource hostPath;
     /**
-     * @return ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * @return iscsi represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
      * 
      */
     private final @Nullable ISCSIVolumeSource iscsi;
     /**
-     * @return Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
     private final String name;
     /**
-     * @return NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return nfs represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     private final @Nullable NFSVolumeSource nfs;
     /**
-     * @return PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     private final @Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim;
     /**
-     * @return PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
+     * @return photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
      * 
      */
     private final @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk;
     /**
-     * @return PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
+     * @return portworxVolume represents a portworx volume attached and mounted on kubelets host machine
      * 
      */
     private final @Nullable PortworxVolumeSource portworxVolume;
     /**
-     * @return Items for all in one resources secrets, configmaps, and downward API
+     * @return projected items for all in one resources secrets, configmaps, and downward API
      * 
      */
     private final @Nullable ProjectedVolumeSource projected;
     /**
-     * @return Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
+     * @return quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     private final @Nullable QuobyteVolumeSource quobyte;
     /**
-     * @return RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * @return rbd represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     private final @Nullable RBDVolumeSource rbd;
     /**
-     * @return ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
+     * @return scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
      * 
      */
     private final @Nullable ScaleIOVolumeSource scaleIO;
     /**
-     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * @return secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
     private final @Nullable SecretVolumeSource secret;
     /**
-     * @return StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
+     * @return storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
      * 
      */
     private final @Nullable StorageOSVolumeSource storageos;
     /**
-     * @return VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
+     * @return vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
      * 
      */
     private final @Nullable VsphereVirtualDiskVolumeSource vsphereVolume;
@@ -269,70 +269,70 @@ public final class Volume {
     }
 
     /**
-     * @return AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
+     * @return awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
      * 
      */
     public Optional<AWSElasticBlockStoreVolumeSource> awsElasticBlockStore() {
         return Optional.ofNullable(this.awsElasticBlockStore);
     }
     /**
-     * @return AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+     * @return azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
      * 
      */
     public Optional<AzureDiskVolumeSource> azureDisk() {
         return Optional.ofNullable(this.azureDisk);
     }
     /**
-     * @return AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+     * @return azureFile represents an Azure File Service mount on the host and bind mount to the pod.
      * 
      */
     public Optional<AzureFileVolumeSource> azureFile() {
         return Optional.ofNullable(this.azureFile);
     }
     /**
-     * @return CephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
+     * @return cephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime
      * 
      */
     public Optional<CephFSVolumeSource> cephfs() {
         return Optional.ofNullable(this.cephfs);
     }
     /**
-     * @return Cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     public Optional<CinderVolumeSource> cinder() {
         return Optional.ofNullable(this.cinder);
     }
     /**
-     * @return ConfigMap represents a configMap that should populate this volume
+     * @return configMap represents a configMap that should populate this volume
      * 
      */
     public Optional<ConfigMapVolumeSource> configMap() {
         return Optional.ofNullable(this.configMap);
     }
     /**
-     * @return CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
+     * @return csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
      * 
      */
     public Optional<CSIVolumeSource> csi() {
         return Optional.ofNullable(this.csi);
     }
     /**
-     * @return DownwardAPI represents downward API about the pod that should populate this volume
+     * @return downwardAPI represents downward API about the pod that should populate this volume
      * 
      */
     public Optional<DownwardAPIVolumeSource> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
-     * @return EmptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+     * @return emptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
      * 
      */
     public Optional<EmptyDirVolumeSource> emptyDir() {
         return Optional.ofNullable(this.emptyDir);
     }
     /**
-     * @return Ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+     * @return ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
      * 
      * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
      *    tracking are needed,
@@ -352,140 +352,140 @@ public final class Volume {
         return Optional.ofNullable(this.ephemeral);
     }
     /**
-     * @return FC represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
+     * @return fc represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod.
      * 
      */
     public Optional<FCVolumeSource> fc() {
         return Optional.ofNullable(this.fc);
     }
     /**
-     * @return FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
+     * @return flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.
      * 
      */
     public Optional<FlexVolumeSource> flexVolume() {
         return Optional.ofNullable(this.flexVolume);
     }
     /**
-     * @return Flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
+     * @return flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running
      * 
      */
     public Optional<FlockerVolumeSource> flocker() {
         return Optional.ofNullable(this.flocker);
     }
     /**
-     * @return GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
+     * @return gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
      * 
      */
     public Optional<GCEPersistentDiskVolumeSource> gcePersistentDisk() {
         return Optional.ofNullable(this.gcePersistentDisk);
     }
     /**
-     * @return GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
+     * @return gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container.
      * 
      */
     public Optional<GitRepoVolumeSource> gitRepo() {
         return Optional.ofNullable(this.gitRepo);
     }
     /**
-     * @return Glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
+     * @return glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md
      * 
      */
     public Optional<GlusterfsVolumeSource> glusterfs() {
         return Optional.ofNullable(this.glusterfs);
     }
     /**
-     * @return HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     public Optional<HostPathVolumeSource> hostPath() {
         return Optional.ofNullable(this.hostPath);
     }
     /**
-     * @return ISCSI represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
+     * @return iscsi represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md
      * 
      */
     public Optional<ISCSIVolumeSource> iscsi() {
         return Optional.ofNullable(this.iscsi);
     }
     /**
-     * @return Volume&#39;s name. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * @return name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return NFS represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return nfs represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public Optional<NFSVolumeSource> nfs() {
         return Optional.ofNullable(this.nfs);
     }
     /**
-     * @return PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Optional<PersistentVolumeClaimVolumeSource> persistentVolumeClaim() {
         return Optional.ofNullable(this.persistentVolumeClaim);
     }
     /**
-     * @return PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
+     * @return photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine
      * 
      */
     public Optional<PhotonPersistentDiskVolumeSource> photonPersistentDisk() {
         return Optional.ofNullable(this.photonPersistentDisk);
     }
     /**
-     * @return PortworxVolume represents a portworx volume attached and mounted on kubelets host machine
+     * @return portworxVolume represents a portworx volume attached and mounted on kubelets host machine
      * 
      */
     public Optional<PortworxVolumeSource> portworxVolume() {
         return Optional.ofNullable(this.portworxVolume);
     }
     /**
-     * @return Items for all in one resources secrets, configmaps, and downward API
+     * @return projected items for all in one resources secrets, configmaps, and downward API
      * 
      */
     public Optional<ProjectedVolumeSource> projected() {
         return Optional.ofNullable(this.projected);
     }
     /**
-     * @return Quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
+     * @return quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime
      * 
      */
     public Optional<QuobyteVolumeSource> quobyte() {
         return Optional.ofNullable(this.quobyte);
     }
     /**
-     * @return RBD represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
+     * @return rbd represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md
      * 
      */
     public Optional<RBDVolumeSource> rbd() {
         return Optional.ofNullable(this.rbd);
     }
     /**
-     * @return ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
+     * @return scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
      * 
      */
     public Optional<ScaleIOVolumeSource> scaleIO() {
         return Optional.ofNullable(this.scaleIO);
     }
     /**
-     * @return Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * @return secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
     public Optional<SecretVolumeSource> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * @return StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
+     * @return storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
      * 
      */
     public Optional<StorageOSVolumeSource> storageos() {
         return Optional.ofNullable(this.storageos);
     }
     /**
-     * @return VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
+     * @return vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
      * 
      */
     public Optional<VsphereVirtualDiskVolumeSource> vsphereVolume() {

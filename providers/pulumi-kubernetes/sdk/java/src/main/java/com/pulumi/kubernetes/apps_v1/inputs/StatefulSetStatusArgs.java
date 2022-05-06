@@ -26,15 +26,15 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
      * 
      */
-    @Import(name="availableReplicas", required=true)
-    private Output<Integer> availableReplicas;
+    @Import(name="availableReplicas")
+    private @Nullable Output<Integer> availableReplicas;
 
     /**
      * @return Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
      * 
      */
-    public Output<Integer> availableReplicas() {
-        return this.availableReplicas;
+    public Optional<Output<Integer>> availableReplicas() {
+        return Optional.ofNullable(this.availableReplicas);
     }
 
     /**
@@ -211,7 +211,7 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder availableReplicas(Output<Integer> availableReplicas) {
+        public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
             $.availableReplicas = availableReplicas;
             return this;
         }
@@ -426,7 +426,6 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
         }
 
         public StatefulSetStatusArgs build() {
-            $.availableReplicas = Objects.requireNonNull($.availableReplicas, "expected parameter 'availableReplicas' to be non-null");
             $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
             return $;
         }

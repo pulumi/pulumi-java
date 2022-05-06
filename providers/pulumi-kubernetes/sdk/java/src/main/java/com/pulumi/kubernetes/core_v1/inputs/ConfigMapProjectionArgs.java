@@ -25,14 +25,14 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
     public static final ConfigMapProjectionArgs Empty = new ConfigMapProjectionArgs();
 
     /**
-     * If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     @Import(name="items")
     private @Nullable Output<List<KeyToPathArgs>> items;
 
     /**
-     * @return If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * @return items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     public Optional<Output<List<KeyToPathArgs>>> items() {
@@ -55,14 +55,14 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Specify whether the ConfigMap or its keys must be defined
+     * optional specify whether the ConfigMap or its keys must be defined
      * 
      */
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
     /**
-     * @return Specify whether the ConfigMap or its keys must be defined
+     * @return optional specify whether the ConfigMap or its keys must be defined
      * 
      */
     public Optional<Output<Boolean>> optional() {
@@ -96,7 +96,7 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * @param optional optional specify whether the ConfigMap or its keys must be defined
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * @param optional optional specify whether the ConfigMap or its keys must be defined
          * 
          * @return builder
          * 

@@ -26,7 +26,7 @@ public final class Probe {
      */
     private final @Nullable Integer failureThreshold;
     /**
-     * @return GRPC specifies an action involving a GRPC port. This is an alpha field and requires enabling GRPCContainerProbe feature gate.
+     * @return GRPC specifies an action involving a GRPC port. This is a beta field and requires enabling GRPCContainerProbe feature gate.
      * 
      */
     private final @Nullable GRPCAction grpc;
@@ -105,7 +105,7 @@ public final class Probe {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
-     * @return GRPC specifies an action involving a GRPC port. This is an alpha field and requires enabling GRPCContainerProbe feature gate.
+     * @return GRPC specifies an action involving a GRPC port. This is a beta field and requires enabling GRPCContainerProbe feature gate.
      * 
      */
     public Optional<GRPCAction> grpc() {

@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GitRepoVolumeSource {
     /**
-     * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * @return directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     private final @Nullable String directory;
     /**
-     * @return Repository URL
+     * @return repository is the URL
      * 
      */
     private final String repository;
     /**
-     * @return Commit hash for the specified revision.
+     * @return revision is the commit hash for the specified revision.
      * 
      */
     private final @Nullable String revision;
@@ -38,21 +38,21 @@ public final class GitRepoVolumeSource {
     }
 
     /**
-     * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * @return directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     public Optional<String> directory() {
         return Optional.ofNullable(this.directory);
     }
     /**
-     * @return Repository URL
+     * @return repository is the URL
      * 
      */
     public String repository() {
         return this.repository;
     }
     /**
-     * @return Commit hash for the specified revision.
+     * @return revision is the commit hash for the specified revision.
      * 
      */
     public Optional<String> revision() {

@@ -12,24 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PersistentVolumeStatus {
     /**
-     * @return A human-readable message indicating details about why the volume is in this state.
+     * @return message is a human-readable message indicating details about why the volume is in this state.
      * 
      */
     private final @Nullable String message;
     /**
-     * @return Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
-     * 
-     * Possible enum values:
-     *  - `&#34;Available&#34;` used for PersistentVolumes that are not yet bound Available volumes are held by the binder and matched to PersistentVolumeClaims
-     *  - `&#34;Bound&#34;` used for PersistentVolumes that are bound
-     *  - `&#34;Failed&#34;` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
-     *  - `&#34;Pending&#34;` used for PersistentVolumes that are not available
-     *  - `&#34;Released&#34;` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
+     * @return phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
      * 
      */
     private final @Nullable String phase;
     /**
-     * @return Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
+     * @return reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
      * 
      */
     private final @Nullable String reason;
@@ -45,28 +38,21 @@ public final class PersistentVolumeStatus {
     }
 
     /**
-     * @return A human-readable message indicating details about why the volume is in this state.
+     * @return message is a human-readable message indicating details about why the volume is in this state.
      * 
      */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * @return Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
-     * 
-     * Possible enum values:
-     *  - `&#34;Available&#34;` used for PersistentVolumes that are not yet bound Available volumes are held by the binder and matched to PersistentVolumeClaims
-     *  - `&#34;Bound&#34;` used for PersistentVolumes that are bound
-     *  - `&#34;Failed&#34;` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
-     *  - `&#34;Pending&#34;` used for PersistentVolumes that are not available
-     *  - `&#34;Released&#34;` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
+     * @return phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
      * 
      */
     public Optional<String> phase() {
         return Optional.ofNullable(this.phase);
     }
     /**
-     * @return Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
+     * @return reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
      * 
      */
     public Optional<String> reason() {

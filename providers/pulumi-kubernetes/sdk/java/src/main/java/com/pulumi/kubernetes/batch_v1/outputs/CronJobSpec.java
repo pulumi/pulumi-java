@@ -17,11 +17,6 @@ public final class CronJobSpec {
     /**
      * @return Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
      * 
-     * Possible enum values:
-     *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
-     *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
-     *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
-     * 
      */
     private final @Nullable String concurrencyPolicy;
     /**
@@ -54,6 +49,11 @@ public final class CronJobSpec {
      * 
      */
     private final @Nullable Boolean suspend;
+    /**
+     * @return The time zone for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If not specified, this will rely on the time zone of the kube-controller-manager process. ALPHA: This field is in alpha and must be enabled via the `CronJobTimeZone` feature gate.
+     * 
+     */
+    private final @Nullable String timeZone;
 
     @CustomType.Constructor
     private CronJobSpec(
@@ -63,7 +63,8 @@ public final class CronJobSpec {
         @CustomType.Parameter("schedule") String schedule,
         @CustomType.Parameter("startingDeadlineSeconds") @Nullable Integer startingDeadlineSeconds,
         @CustomType.Parameter("successfulJobsHistoryLimit") @Nullable Integer successfulJobsHistoryLimit,
-        @CustomType.Parameter("suspend") @Nullable Boolean suspend) {
+        @CustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
         this.jobTemplate = jobTemplate;
@@ -71,15 +72,11 @@ public final class CronJobSpec {
         this.startingDeadlineSeconds = startingDeadlineSeconds;
         this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
         this.suspend = suspend;
+        this.timeZone = timeZone;
     }
 
     /**
      * @return Specifies how to treat concurrent executions of a Job. Valid values are: - &#34;Allow&#34; (default): allows CronJobs to run concurrently; - &#34;Forbid&#34;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - &#34;Replace&#34;: cancels currently running job and replaces it with a new one
-     * 
-     * Possible enum values:
-     *  - `&#34;Allow&#34;` allows CronJobs to run concurrently.
-     *  - `&#34;Forbid&#34;` forbids concurrent runs, skipping next run if previous hasn&#39;t finished yet.
-     *  - `&#34;Replace&#34;` cancels currently running job and replaces it with a new one.
      * 
      */
     public Optional<String> concurrencyPolicy() {
@@ -127,6 +124,13 @@ public final class CronJobSpec {
     public Optional<Boolean> suspend() {
         return Optional.ofNullable(this.suspend);
     }
+    /**
+     * @return The time zone for the given schedule, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones. If not specified, this will rely on the time zone of the kube-controller-manager process. ALPHA: This field is in alpha and must be enabled via the `CronJobTimeZone` feature gate.
+     * 
+     */
+    public Optional<String> timeZone() {
+        return Optional.ofNullable(this.timeZone);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -144,6 +148,7 @@ public final class CronJobSpec {
         private @Nullable Integer startingDeadlineSeconds;
         private @Nullable Integer successfulJobsHistoryLimit;
         private @Nullable Boolean suspend;
+        private @Nullable String timeZone;
 
         public Builder() {
     	      // Empty
@@ -158,6 +163,7 @@ public final class CronJobSpec {
     	      this.startingDeadlineSeconds = defaults.startingDeadlineSeconds;
     	      this.successfulJobsHistoryLimit = defaults.successfulJobsHistoryLimit;
     	      this.suspend = defaults.suspend;
+    	      this.timeZone = defaults.timeZone;
         }
 
         public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
@@ -187,8 +193,12 @@ public final class CronJobSpec {
         public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
+        }
+        public Builder timeZone(@Nullable String timeZone) {
+            this.timeZone = timeZone;
+            return this;
         }        public CronJobSpec build() {
-            return new CronJobSpec(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);
+            return new CronJobSpec(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend, timeZone);
         }
     }
 }

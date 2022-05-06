@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageOSVolumeSource {
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+     * @return secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
      * 
      */
     private final @Nullable LocalObjectReference secretRef;
     /**
-     * @return VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+     * @return volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
      * 
      */
     private final @Nullable String volumeName;
     /**
-     * @return VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+     * @return volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
      * 
      */
     private final @Nullable String volumeNamespace;
@@ -54,35 +54,35 @@ public final class StorageOSVolumeSource {
     }
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
+     * @return secretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
      * 
      */
     public Optional<LocalObjectReference> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * @return VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
+     * @return volumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
      * 
      */
     public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
     /**
-     * @return VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
+     * @return volumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod&#39;s namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to &#34;default&#34; if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
      * 
      */
     public Optional<String> volumeNamespace() {

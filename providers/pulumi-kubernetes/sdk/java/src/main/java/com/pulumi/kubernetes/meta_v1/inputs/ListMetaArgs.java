@@ -66,18 +66,14 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * selfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
     /**
-     * @return selfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * @return Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     public Optional<Output<String>> selfLink() {
@@ -175,9 +171,7 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param selfLink selfLink is a URL representing this object. Populated by the system. Read-only.
-         * 
-         * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+         * @param selfLink Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
          * 
          * @return builder
          * 
@@ -188,9 +182,7 @@ public final class ListMetaArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param selfLink selfLink is a URL representing this object. Populated by the system. Read-only.
-         * 
-         * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+         * @param selfLink Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
          * 
          * @return builder
          * 

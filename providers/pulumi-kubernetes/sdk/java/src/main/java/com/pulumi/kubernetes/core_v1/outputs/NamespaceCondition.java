@@ -22,13 +22,6 @@ public final class NamespaceCondition {
     /**
      * @return Type of namespace controller condition.
      * 
-     * Possible enum values:
-     *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
-     *  - `&#34;NamespaceDeletionContentFailure&#34;` contains information about namespace deleter errors during deletion of resources.
-     *  - `&#34;NamespaceDeletionDiscoveryFailure&#34;` contains information about namespace deleter errors during resource discovery.
-     *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
-     *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
-     * 
      */
     private final String type;
 
@@ -64,13 +57,6 @@ public final class NamespaceCondition {
     }
     /**
      * @return Type of namespace controller condition.
-     * 
-     * Possible enum values:
-     *  - `&#34;NamespaceContentRemaining&#34;` contains information about resources remaining in a namespace.
-     *  - `&#34;NamespaceDeletionContentFailure&#34;` contains information about namespace deleter errors during deletion of resources.
-     *  - `&#34;NamespaceDeletionDiscoveryFailure&#34;` contains information about namespace deleter errors during resource discovery.
-     *  - `&#34;NamespaceDeletionGroupVersionParsingFailure&#34;` contains information about namespace deleter errors parsing GV for legacy types.
-     *  - `&#34;NamespaceFinalizersRemaining&#34;` contains information about which finalizers are on resources remaining in a namespace.
      * 
      */
     public String type() {

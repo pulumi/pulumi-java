@@ -24,14 +24,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     public static final PersistentVolumeClaimSpecArgs Empty = new PersistentVolumeClaimSpecArgs();
 
     /**
-     * AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
      */
     @Import(name="accessModes")
     private @Nullable Output<List<String>> accessModes;
 
     /**
-     * @return AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     * @return accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
      */
     public Optional<Output<List<String>>> accessModes() {
@@ -39,14 +39,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+     * dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
      * 
      */
     @Import(name="dataSource")
     private @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
 
     /**
-     * @return This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+     * @return dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
      * 
      */
     public Optional<Output<TypedLocalObjectReferenceArgs>> dataSource() {
@@ -54,24 +54,24 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+     * dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
      *   allows any non-core object, as well as PersistentVolumeClaim objects.
      * * While DataSource ignores disallowed values (dropping them), DataSourceRef
      *   preserves all values, and generates an error if a disallowed value is
      *   specified.
-     *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+     *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      * 
      */
     @Import(name="dataSourceRef")
     private @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
 
     /**
-     * @return Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+     * @return dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
      *   allows any non-core object, as well as PersistentVolumeClaim objects.
      * * While DataSource ignores disallowed values (dropping them), DataSourceRef
      *   preserves all values, and generates an error if a disallowed value is
      *   specified.
-     *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+     *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      * 
      */
     public Optional<Output<TypedLocalObjectReferenceArgs>> dataSourceRef() {
@@ -79,14 +79,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
     @Import(name="resources")
     private @Nullable Output<ResourceRequirementsArgs> resources;
 
     /**
-     * @return Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+     * @return resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
     public Optional<Output<ResourceRequirementsArgs>> resources() {
@@ -94,14 +94,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * A label query over volumes to consider for binding.
+     * selector is a label query over volumes to consider for binding.
      * 
      */
     @Import(name="selector")
     private @Nullable Output<LabelSelectorArgs> selector;
 
     /**
-     * @return A label query over volumes to consider for binding.
+     * @return selector is a label query over volumes to consider for binding.
      * 
      */
     public Optional<Output<LabelSelectorArgs>> selector() {
@@ -109,14 +109,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+     * storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
      * 
      */
     @Import(name="storageClassName")
     private @Nullable Output<String> storageClassName;
 
     /**
-     * @return Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+     * @return storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
      * 
      */
     public Optional<Output<String>> storageClassName() {
@@ -139,14 +139,14 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * VolumeName is the binding reference to the PersistentVolume backing this claim.
+     * volumeName is the binding reference to the PersistentVolume backing this claim.
      * 
      */
     @Import(name="volumeName")
     private @Nullable Output<String> volumeName;
 
     /**
-     * @return VolumeName is the binding reference to the PersistentVolume backing this claim.
+     * @return volumeName is the binding reference to the PersistentVolume backing this claim.
      * 
      */
     public Optional<Output<String>> volumeName() {
@@ -185,7 +185,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param accessModes AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * @param accessModes accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param accessModes AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * @param accessModes accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param accessModes AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+         * @param accessModes accessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param dataSource This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+         * @param dataSource dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param dataSource This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
+         * @param dataSource dataSource field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
          * 
          * @return builder
          * 
@@ -237,12 +237,12 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param dataSourceRef Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+         * @param dataSourceRef dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
          *   allows any non-core object, as well as PersistentVolumeClaim objects.
          * * While DataSource ignores disallowed values (dropping them), DataSourceRef
          *   preserves all values, and generates an error if a disallowed value is
          *   specified.
-         *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+         *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
          * 
          * @return builder
          * 
@@ -253,12 +253,12 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param dataSourceRef Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+         * @param dataSourceRef dataSourceRef specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
          *   allows any non-core object, as well as PersistentVolumeClaim objects.
          * * While DataSource ignores disallowed values (dropping them), DataSourceRef
          *   preserves all values, and generates an error if a disallowed value is
          *   specified.
-         *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
+         *   (Beta) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param resources Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+         * @param resources resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param resources Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
+         * @param resources resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param selector A label query over volumes to consider for binding.
+         * @param selector selector is a label query over volumes to consider for binding.
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param selector A label query over volumes to consider for binding.
+         * @param selector selector is a label query over volumes to consider for binding.
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param storageClassName Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+         * @param storageClassName storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param storageClassName Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
+         * @param storageClassName storageClassName is the name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param volumeName VolumeName is the binding reference to the PersistentVolume backing this claim.
+         * @param volumeName volumeName is the binding reference to the PersistentVolume backing this claim.
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param volumeName VolumeName is the binding reference to the PersistentVolume backing this claim.
+         * @param volumeName volumeName is the binding reference to the PersistentVolume backing this claim.
          * 
          * @return builder
          * 

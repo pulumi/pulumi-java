@@ -22,14 +22,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     public static final ScaleIOPersistentVolumeSourceArgs Empty = new ScaleIOPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
+     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -37,14 +37,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * The host address of the ScaleIO API Gateway.
+     * gateway is the host address of the ScaleIO API Gateway.
      * 
      */
     @Import(name="gateway", required=true)
     private Output<String> gateway;
 
     /**
-     * @return The host address of the ScaleIO API Gateway.
+     * @return gateway is the host address of the ScaleIO API Gateway.
      * 
      */
     public Output<String> gateway() {
@@ -52,14 +52,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of the ScaleIO Protection Domain for the configured storage.
+     * protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
      * 
      */
     @Import(name="protectionDomain")
     private @Nullable Output<String> protectionDomain;
 
     /**
-     * @return The name of the ScaleIO Protection Domain for the configured storage.
+     * @return protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
      * 
      */
     public Optional<Output<String>> protectionDomain() {
@@ -67,14 +67,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -82,14 +82,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
      */
     @Import(name="secretRef", required=true)
     private Output<SecretReferenceArgs> secretRef;
 
     /**
-     * @return SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * @return secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
      */
     public Output<SecretReferenceArgs> secretRef() {
@@ -97,14 +97,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * Flag to enable/disable SSL communication with Gateway, default false
+     * sslEnabled is the flag to enable/disable SSL communication with Gateway, default false
      * 
      */
     @Import(name="sslEnabled")
     private @Nullable Output<Boolean> sslEnabled;
 
     /**
-     * @return Flag to enable/disable SSL communication with Gateway, default false
+     * @return sslEnabled is the flag to enable/disable SSL communication with Gateway, default false
      * 
      */
     public Optional<Output<Boolean>> sslEnabled() {
@@ -112,14 +112,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
      */
     @Import(name="storageMode")
     private @Nullable Output<String> storageMode;
 
     /**
-     * @return Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * @return storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
      */
     public Optional<Output<String>> storageMode() {
@@ -127,14 +127,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * The ScaleIO Storage Pool associated with the protection domain.
+     * storagePool is the ScaleIO Storage Pool associated with the protection domain.
      * 
      */
     @Import(name="storagePool")
     private @Nullable Output<String> storagePool;
 
     /**
-     * @return The ScaleIO Storage Pool associated with the protection domain.
+     * @return storagePool is the ScaleIO Storage Pool associated with the protection domain.
      * 
      */
     public Optional<Output<String>> storagePool() {
@@ -142,14 +142,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of the storage system as configured in ScaleIO.
+     * system is the name of the storage system as configured in ScaleIO.
      * 
      */
     @Import(name="system", required=true)
     private Output<String> system;
 
     /**
-     * @return The name of the storage system as configured in ScaleIO.
+     * @return system is the name of the storage system as configured in ScaleIO.
      * 
      */
     public Output<String> system() {
@@ -157,14 +157,14 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
     }
 
     /**
-     * The name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
      */
     @Import(name="volumeName")
     private @Nullable Output<String> volumeName;
 
     /**
-     * @return The name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * @return volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
      */
     public Optional<Output<String>> volumeName() {
@@ -205,7 +205,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param gateway The host address of the ScaleIO API Gateway.
+         * @param gateway gateway is the host address of the ScaleIO API Gateway.
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param gateway The host address of the ScaleIO API Gateway.
+         * @param gateway gateway is the host address of the ScaleIO API Gateway.
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param protectionDomain The name of the ScaleIO Protection Domain for the configured storage.
+         * @param protectionDomain protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param protectionDomain The name of the ScaleIO Protection Domain for the configured storage.
+         * @param protectionDomain protectionDomain is the name of the ScaleIO Protection Domain for the configured storage.
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param secretRef SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+         * @param secretRef secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param secretRef SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+         * @param secretRef secretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param sslEnabled Flag to enable/disable SSL communication with Gateway, default false
+         * @param sslEnabled sslEnabled is the flag to enable/disable SSL communication with Gateway, default false
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param sslEnabled Flag to enable/disable SSL communication with Gateway, default false
+         * @param sslEnabled sslEnabled is the flag to enable/disable SSL communication with Gateway, default false
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param storageMode Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+         * @param storageMode storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param storageMode Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+         * @param storageMode storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param storagePool The ScaleIO Storage Pool associated with the protection domain.
+         * @param storagePool storagePool is the ScaleIO Storage Pool associated with the protection domain.
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param storagePool The ScaleIO Storage Pool associated with the protection domain.
+         * @param storagePool storagePool is the ScaleIO Storage Pool associated with the protection domain.
          * 
          * @return builder
          * 
@@ -373,7 +373,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param system The name of the storage system as configured in ScaleIO.
+         * @param system system is the name of the storage system as configured in ScaleIO.
          * 
          * @return builder
          * 
@@ -384,7 +384,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param system The name of the storage system as configured in ScaleIO.
+         * @param system system is the name of the storage system as configured in ScaleIO.
          * 
          * @return builder
          * 
@@ -394,7 +394,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param volumeName The name of a volume already created in the ScaleIO system that is associated with this volume source.
+         * @param volumeName volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
          * 
          * @return builder
          * 
@@ -405,7 +405,7 @@ public final class ScaleIOPersistentVolumeSourceArgs extends com.pulumi.resource
         }
 
         /**
-         * @param volumeName The name of a volume already created in the ScaleIO system that is associated with this volume source.
+         * @param volumeName volumeName is the name of a volume already created in the ScaleIO system that is associated with this volume source.
          * 
          * @return builder
          * 

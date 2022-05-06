@@ -12,6 +12,7 @@ import com.pulumi.kubernetes.Utilities;
 import com.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import com.pulumi.kubernetes.networking.k8s.io_v1.NetworkPolicyArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicySpec;
+import com.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyStatus;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -78,6 +79,20 @@ public class NetworkPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<NetworkPolicySpec>> spec() {
         return Codegen.optional(this.spec);
+    }
+    /**
+     * Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    @Export(name="status", type=NetworkPolicyStatus.class, parameters={})
+    private Output</* @Nullable */ NetworkPolicyStatus> status;
+
+    /**
+     * @return Status is the current state of the NetworkPolicy. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     * 
+     */
+    public Output<Optional<NetworkPolicyStatus>> status() {
+        return Codegen.optional(this.status);
     }
 
     /**

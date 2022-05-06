@@ -21,14 +21,14 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
     public static final PersistentVolumeClaimVolumeSourceArgs Empty = new PersistentVolumeClaimVolumeSourceArgs();
 
     /**
-     * ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     @Import(name="claimName", required=true)
     private Output<String> claimName;
 
     /**
-     * @return ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Output<String> claimName() {
@@ -36,14 +36,14 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
     }
 
     /**
-     * Will force the ReadOnly setting in VolumeMounts. Default false.
+     * readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Will force the ReadOnly setting in VolumeMounts. Default false.
+     * @return readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -76,7 +76,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
         }
 
         /**
-         * @param claimName ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param claimName claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 
@@ -87,7 +87,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
         }
 
         /**
-         * @param claimName ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+         * @param claimName claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
          * 
          * @return builder
          * 
@@ -97,7 +97,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
         }
 
         /**
-         * @param readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
+         * @param readOnly readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
         }
 
         /**
-         * @param readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
+         * @param readOnly readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
          * 
          * @return builder
          * 

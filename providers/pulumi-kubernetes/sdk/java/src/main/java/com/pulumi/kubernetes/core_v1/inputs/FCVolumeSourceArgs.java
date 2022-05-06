@@ -23,14 +23,14 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
     public static final FCVolumeSourceArgs Empty = new FCVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -38,14 +38,14 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional: FC target lun number
+     * lun is Optional: FC target lun number
      * 
      */
     @Import(name="lun")
     private @Nullable Output<Integer> lun;
 
     /**
-     * @return Optional: FC target lun number
+     * @return lun is Optional: FC target lun number
      * 
      */
     public Optional<Output<Integer>> lun() {
@@ -53,14 +53,14 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -68,14 +68,14 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional: FC target worldwide names (WWNs)
+     * targetWWNs is Optional: FC target worldwide names (WWNs)
      * 
      */
     @Import(name="targetWWNs")
     private @Nullable Output<List<String>> targetWWNs;
 
     /**
-     * @return Optional: FC target worldwide names (WWNs)
+     * @return targetWWNs is Optional: FC target worldwide names (WWNs)
      * 
      */
     public Optional<Output<List<String>>> targetWWNs() {
@@ -83,14 +83,14 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+     * wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
      */
     @Import(name="wwids")
     private @Nullable Output<List<String>> wwids;
 
     /**
-     * @return Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+     * @return wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
      */
     public Optional<Output<List<String>>> wwids() {
@@ -126,7 +126,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param lun Optional: FC target lun number
+         * @param lun lun is Optional: FC target lun number
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param lun Optional: FC target lun number
+         * @param lun lun is Optional: FC target lun number
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param targetWWNs Optional: FC target worldwide names (WWNs)
+         * @param targetWWNs targetWWNs is Optional: FC target worldwide names (WWNs)
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param targetWWNs Optional: FC target worldwide names (WWNs)
+         * @param targetWWNs targetWWNs is Optional: FC target worldwide names (WWNs)
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param targetWWNs Optional: FC target worldwide names (WWNs)
+         * @param targetWWNs targetWWNs is Optional: FC target worldwide names (WWNs)
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+         * @param wwids wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+         * @param wwids wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+         * @param wwids wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
          * 
          * @return builder
          * 

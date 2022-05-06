@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VolumeNodeAffinity {
     /**
-     * @return Required specifies hard node constraints that must be met.
+     * @return required specifies hard node constraints that must be met.
      * 
      */
     private final @Nullable NodeSelector required;
@@ -23,7 +23,7 @@ public final class VolumeNodeAffinity {
     }
 
     /**
-     * @return Required specifies hard node constraints that must be met.
+     * @return required specifies hard node constraints that must be met.
      * 
      */
     public Optional<NodeSelector> required() {

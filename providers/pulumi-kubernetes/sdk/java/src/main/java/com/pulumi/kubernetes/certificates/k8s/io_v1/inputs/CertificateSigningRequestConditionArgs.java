@@ -107,11 +107,6 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
      * 
      * Only one condition of a given type is allowed.
      * 
-     * Possible enum values:
-     *  - `&#34;Approved&#34;` Approved indicates the request was approved and should be issued by the signer.
-     *  - `&#34;Denied&#34;` Denied indicates the request was denied and should not be issued by the signer.
-     *  - `&#34;Failed&#34;` Failed indicates the signer failed to issue the certificate.
-     * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
@@ -128,11 +123,6 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
      * Approved and Denied conditions are mutually exclusive. Approved, Denied, and Failed conditions cannot be removed once added.
      * 
      * Only one condition of a given type is allowed.
-     * 
-     * Possible enum values:
-     *  - `&#34;Approved&#34;` Approved indicates the request was approved and should be issued by the signer.
-     *  - `&#34;Denied&#34;` Denied indicates the request was denied and should not be issued by the signer.
-     *  - `&#34;Failed&#34;` Failed indicates the signer failed to issue the certificate.
      * 
      */
     public Output<String> type() {
@@ -286,11 +276,6 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
          * 
          * Only one condition of a given type is allowed.
          * 
-         * Possible enum values:
-         *  - `&#34;Approved&#34;` Approved indicates the request was approved and should be issued by the signer.
-         *  - `&#34;Denied&#34;` Denied indicates the request was denied and should not be issued by the signer.
-         *  - `&#34;Failed&#34;` Failed indicates the signer failed to issue the certificate.
-         * 
          * @return builder
          * 
          */
@@ -311,11 +296,6 @@ public final class CertificateSigningRequestConditionArgs extends com.pulumi.res
          * Approved and Denied conditions are mutually exclusive. Approved, Denied, and Failed conditions cannot be removed once added.
          * 
          * Only one condition of a given type is allowed.
-         * 
-         * Possible enum values:
-         *  - `&#34;Approved&#34;` Approved indicates the request was approved and should be issued by the signer.
-         *  - `&#34;Denied&#34;` Denied indicates the request was denied and should not be issued by the signer.
-         *  - `&#34;Failed&#34;` Failed indicates the signer failed to issue the certificate.
          * 
          * @return builder
          * 

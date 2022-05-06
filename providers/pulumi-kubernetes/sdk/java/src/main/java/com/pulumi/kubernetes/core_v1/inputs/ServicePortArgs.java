@@ -22,14 +22,14 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServicePortArgs Empty = new ServicePortArgs();
 
     /**
-     * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+     * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
      * 
      */
     @Import(name="appProtocol")
     private @Nullable Output<String> appProtocol;
 
     /**
-     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+     * @return The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
      * 
      */
     public Optional<Output<String>> appProtocol() {
@@ -84,22 +84,12 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
      * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
-     * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
      * @return The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -151,7 +141,7 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
          * 
          * @return builder
          * 
@@ -162,7 +152,7 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
+         * @param appProtocol The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and https://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
          * 
          * @return builder
          * 
@@ -237,11 +227,6 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param protocol The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
          * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
-         * 
          * @return builder
          * 
          */
@@ -252,11 +237,6 @@ public final class ServicePortArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param protocol The IP protocol for this port. Supports &#34;TCP&#34;, &#34;UDP&#34;, and &#34;SCTP&#34;. Default is TCP.
-         * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
          * 
          * @return builder
          * 

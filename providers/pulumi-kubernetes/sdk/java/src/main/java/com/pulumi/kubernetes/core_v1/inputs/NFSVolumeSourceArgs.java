@@ -21,14 +21,14 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     public static final NFSVolumeSourceArgs Empty = new NFSVolumeSourceArgs();
 
     /**
-     * Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public Output<String> path() {
@@ -36,14 +36,14 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -51,14 +51,14 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     @Import(name="server", required=true)
     private Output<String> server;
 
     /**
-     * @return Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+     * @return server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
     public Output<String> server() {
@@ -92,7 +92,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param path Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param path path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param path Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param path path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param readOnly ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param readOnly readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param readOnly ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param readOnly readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param server Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param server server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class NFSVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param server Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
+         * @param server server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
          * 
          * @return builder
          * 

@@ -39,12 +39,6 @@ public final class PodCondition {
     /**
      * @return Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
      * 
-     * Possible enum values:
-     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
-     * 
      */
     private final String type;
 
@@ -101,12 +95,6 @@ public final class PodCondition {
     }
     /**
      * @return Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
-     * 
-     * Possible enum values:
-     *  - `&#34;ContainersReady&#34;` indicates whether all containers in the pod are ready.
-     *  - `&#34;Initialized&#34;` means that all init containers in the pod have started successfully.
-     *  - `&#34;PodScheduled&#34;` represents status of the scheduling process for this pod.
-     *  - `&#34;Ready&#34;` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
      */
     public String type() {

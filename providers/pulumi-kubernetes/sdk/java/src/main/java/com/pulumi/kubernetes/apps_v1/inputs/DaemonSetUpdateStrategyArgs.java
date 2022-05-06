@@ -38,20 +38,12 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
     /**
      * Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
      * 
-     * Possible enum values:
-     *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
-     *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
-     * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
      * @return Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
-     * 
-     * Possible enum values:
-     *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
-     *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
      * 
      */
     public Optional<Output<String>> type() {
@@ -107,10 +99,6 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
         /**
          * @param type Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
          * 
-         * Possible enum values:
-         *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
-         *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
-         * 
          * @return builder
          * 
          */
@@ -121,10 +109,6 @@ public final class DaemonSetUpdateStrategyArgs extends com.pulumi.resources.Reso
 
         /**
          * @param type Type of daemon set update. Can be &#34;RollingUpdate&#34; or &#34;OnDelete&#34;. Default is RollingUpdate.
-         * 
-         * Possible enum values:
-         *  - `&#34;OnDelete&#34;` Replace the old daemons only when it&#39;s killed
-         *  - `&#34;RollingUpdate&#34;` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
          * 
          * @return builder
          * 

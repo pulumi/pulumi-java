@@ -21,14 +21,14 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
     public static final ContainerStateTerminatedArgs Empty = new ContainerStateTerminatedArgs();
 
     /**
-     * Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+     * Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
      * 
      */
     @Import(name="containerID")
     private @Nullable Output<String> containerID;
 
     /**
-     * @return Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+     * @return Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
      * 
      */
     public Optional<Output<String>> containerID() {
@@ -156,7 +156,7 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param containerID Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+         * @param containerID Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class ContainerStateTerminatedArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param containerID Container&#39;s ID in the format &#39;docker://&lt;container_id&gt;&#39;
+         * @param containerID Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39;
          * 
          * @return builder
          * 

@@ -26,14 +26,14 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
     public static final ConfigMapVolumeSourceArgs Empty = new ConfigMapVolumeSourceArgs();
 
     /**
-     * Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
     @Import(name="defaultMode")
     private @Nullable Output<Integer> defaultMode;
 
     /**
-     * @return Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * @return defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
     public Optional<Output<Integer>> defaultMode() {
@@ -41,14 +41,14 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     @Import(name="items")
     private @Nullable Output<List<KeyToPathArgs>> items;
 
     /**
-     * @return If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * @return items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     public Optional<Output<List<KeyToPathArgs>>> items() {
@@ -71,14 +71,14 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Specify whether the ConfigMap or its keys must be defined
+     * optional specify whether the ConfigMap or its keys must be defined
      * 
      */
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
     /**
-     * @return Specify whether the ConfigMap or its keys must be defined
+     * @return optional specify whether the ConfigMap or its keys must be defined
      * 
      */
     public Optional<Output<Boolean>> optional() {
@@ -113,7 +113,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param defaultMode Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * @param defaultMode defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param defaultMode Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * @param defaultMode defaultMode is optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items if unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * @param optional optional specify whether the ConfigMap or its keys must be defined
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class ConfigMapVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * @param optional optional specify whether the ConfigMap or its keys must be defined
          * 
          * @return builder
          * 

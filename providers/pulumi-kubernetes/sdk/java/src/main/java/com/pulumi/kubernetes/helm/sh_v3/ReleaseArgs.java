@@ -136,14 +136,14 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     * Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
     @Import(name="disableCRDHooks")
     private @Nullable Output<Boolean> disableCRDHooks;
 
     /**
-     * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     * @return Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
     public Optional<Output<Boolean>> disableCRDHooks() {
@@ -739,7 +739,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disableCRDHooks Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+         * @param disableCRDHooks Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
          * 
          * @return builder
          * 
@@ -750,7 +750,7 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disableCRDHooks Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+         * @param disableCRDHooks Prevent CRD hooks from running, but run other hooks.  See helm install --no-crd-hook
          * 
          * @return builder
          * 

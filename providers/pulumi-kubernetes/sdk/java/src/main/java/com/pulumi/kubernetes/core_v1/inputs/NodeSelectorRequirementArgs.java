@@ -38,28 +38,12 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
     /**
      * Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
      * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;Gt&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;Lt&#34;`
-     *  - `&#34;NotIn&#34;`
-     * 
      */
     @Import(name="operator", required=true)
     private Output<String> operator;
 
     /**
      * @return Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-     * 
-     * Possible enum values:
-     *  - `&#34;DoesNotExist&#34;`
-     *  - `&#34;Exists&#34;`
-     *  - `&#34;Gt&#34;`
-     *  - `&#34;In&#34;`
-     *  - `&#34;Lt&#34;`
-     *  - `&#34;NotIn&#34;`
      * 
      */
     public Output<String> operator() {
@@ -131,14 +115,6 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
         /**
          * @param operator Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
          * 
-         * Possible enum values:
-         *  - `&#34;DoesNotExist&#34;`
-         *  - `&#34;Exists&#34;`
-         *  - `&#34;Gt&#34;`
-         *  - `&#34;In&#34;`
-         *  - `&#34;Lt&#34;`
-         *  - `&#34;NotIn&#34;`
-         * 
          * @return builder
          * 
          */
@@ -149,14 +125,6 @@ public final class NodeSelectorRequirementArgs extends com.pulumi.resources.Reso
 
         /**
          * @param operator Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
-         * 
-         * Possible enum values:
-         *  - `&#34;DoesNotExist&#34;`
-         *  - `&#34;Exists&#34;`
-         *  - `&#34;Gt&#34;`
-         *  - `&#34;In&#34;`
-         *  - `&#34;Lt&#34;`
-         *  - `&#34;NotIn&#34;`
          * 
          * @return builder
          * 

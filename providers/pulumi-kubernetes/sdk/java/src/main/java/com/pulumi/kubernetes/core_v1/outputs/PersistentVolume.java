@@ -30,12 +30,12 @@ public final class PersistentVolume {
      */
     private final @Nullable ObjectMeta metadata;
     /**
-     * @return Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     private final @Nullable PersistentVolumeSpec spec;
     /**
-     * @return Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     private final @Nullable PersistentVolumeStatus status;
@@ -76,14 +76,14 @@ public final class PersistentVolume {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * @return Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     public Optional<PersistentVolumeSpec> spec() {
         return Optional.ofNullable(this.spec);
     }
     /**
-     * @return Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     public Optional<PersistentVolumeStatus> status() {

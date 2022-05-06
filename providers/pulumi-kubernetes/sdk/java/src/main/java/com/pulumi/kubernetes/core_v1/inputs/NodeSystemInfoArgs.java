@@ -48,14 +48,14 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
      * 
      */
     @Import(name="containerRuntimeVersion", required=true)
     private Output<String> containerRuntimeVersion;
 
     /**
-     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+     * @return ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
      * 
      */
     public Output<String> containerRuntimeVersion() {
@@ -243,7 +243,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. docker://1.5.0).
+         * @param containerRuntimeVersion ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2).
          * 
          * @return builder
          * 

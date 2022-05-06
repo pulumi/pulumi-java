@@ -21,14 +21,14 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
     public static final ServiceAccountTokenProjectionArgs Empty = new ServiceAccountTokenProjectionArgs();
 
     /**
-     * Audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
+     * audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
      * 
      */
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
     /**
-     * @return Audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
+     * @return audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
      * 
      */
     public Optional<Output<String>> audience() {
@@ -36,14 +36,14 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
     }
 
     /**
-     * ExpirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
+     * expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
      * 
      */
     @Import(name="expirationSeconds")
     private @Nullable Output<Integer> expirationSeconds;
 
     /**
-     * @return ExpirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
+     * @return expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
      * 
      */
     public Optional<Output<Integer>> expirationSeconds() {
@@ -51,14 +51,14 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
     }
 
     /**
-     * Path is the path relative to the mount point of the file to project the token into.
+     * path is the path relative to the mount point of the file to project the token into.
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return Path is the path relative to the mount point of the file to project the token into.
+     * @return path is the path relative to the mount point of the file to project the token into.
      * 
      */
     public Output<String> path() {
@@ -92,7 +92,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param audience Audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
+         * @param audience audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param audience Audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
+         * @param audience audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param expirationSeconds ExpirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
+         * @param expirationSeconds expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param expirationSeconds ExpirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
+         * @param expirationSeconds expirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param path Path is the path relative to the mount point of the file to project the token into.
+         * @param path path is the path relative to the mount point of the file to project the token into.
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
         }
 
         /**
-         * @param path Path is the path relative to the mount point of the file to project the token into.
+         * @param path path is the path relative to the mount point of the file to project the token into.
          * 
          * @return builder
          * 

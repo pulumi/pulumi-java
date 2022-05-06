@@ -37,14 +37,14 @@ public class PersistentVolumeClaimList extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.apiVersion);
     }
     /**
-     * A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     @Export(name="items", type=List.class, parameters={PersistentVolumeClaim.class})
     private Output<List<PersistentVolumeClaim>> items;
 
     /**
-     * @return A list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
+     * @return items is a list of persistent volume claims. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
      * 
      */
     public Output<List<PersistentVolumeClaim>> items() {

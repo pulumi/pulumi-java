@@ -39,11 +39,6 @@ public final class JobCondition {
     /**
      * @return Type of job condition, Complete or Failed.
      * 
-     * Possible enum values:
-     *  - `&#34;Complete&#34;` means the job has completed its execution.
-     *  - `&#34;Failed&#34;` means the job has failed its execution.
-     *  - `&#34;Suspended&#34;` means the job has been suspended.
-     * 
      */
     private final String type;
 
@@ -100,11 +95,6 @@ public final class JobCondition {
     }
     /**
      * @return Type of job condition, Complete or Failed.
-     * 
-     * Possible enum values:
-     *  - `&#34;Complete&#34;` means the job has completed its execution.
-     *  - `&#34;Failed&#34;` means the job has failed its execution.
-     *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
      */
     public String type() {

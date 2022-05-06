@@ -21,14 +21,14 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     public static final PortworxVolumeSourceArgs Empty = new PortworxVolumeSourceArgs();
 
     /**
-     * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -36,14 +36,14 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -51,14 +51,14 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * VolumeID uniquely identifies a Portworx volume
+     * volumeID uniquely identifies a Portworx volume
      * 
      */
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
     /**
-     * @return VolumeID uniquely identifies a Portworx volume
+     * @return volumeID uniquely identifies a Portworx volume
      * 
      */
     public Output<String> volumeID() {
@@ -92,7 +92,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fsType FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fsType FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param volumeID VolumeID uniquely identifies a Portworx volume
+         * @param volumeID volumeID uniquely identifies a Portworx volume
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param volumeID VolumeID uniquely identifies a Portworx volume
+         * @param volumeID volumeID uniquely identifies a Portworx volume
          * 
          * @return builder
          * 

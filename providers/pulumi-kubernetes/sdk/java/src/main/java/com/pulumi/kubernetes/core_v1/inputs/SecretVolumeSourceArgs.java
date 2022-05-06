@@ -26,14 +26,14 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
     public static final SecretVolumeSourceArgs Empty = new SecretVolumeSourceArgs();
 
     /**
-     * Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
     @Import(name="defaultMode")
     private @Nullable Output<Integer> defaultMode;
 
     /**
-     * @return Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * @return defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
     public Optional<Output<Integer>> defaultMode() {
@@ -41,14 +41,14 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     @Import(name="items")
     private @Nullable Output<List<KeyToPathArgs>> items;
 
     /**
-     * @return If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * @return items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
      * 
      */
     public Optional<Output<List<KeyToPathArgs>>> items() {
@@ -56,14 +56,14 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Specify whether the Secret or its keys must be defined
+     * optional field specify whether the Secret or its keys must be defined
      * 
      */
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
     /**
-     * @return Specify whether the Secret or its keys must be defined
+     * @return optional field specify whether the Secret or its keys must be defined
      * 
      */
     public Optional<Output<Boolean>> optional() {
@@ -71,14 +71,14 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * secretName is the name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
     @Import(name="secretName")
     private @Nullable Output<String> secretName;
 
     /**
-     * @return Name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+     * @return secretName is the name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
      * 
      */
     public Optional<Output<String>> secretName() {
@@ -113,7 +113,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param defaultMode Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * @param defaultMode defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param defaultMode Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * @param defaultMode defaultMode is Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * @param items items If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param optional Specify whether the Secret or its keys must be defined
+         * @param optional optional field specify whether the Secret or its keys must be defined
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param optional Specify whether the Secret or its keys must be defined
+         * @param optional optional field specify whether the Secret or its keys must be defined
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretName Name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * @param secretName secretName is the name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class SecretVolumeSourceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param secretName Name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
+         * @param secretName secretName is the name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
          * 
          * @return builder
          * 

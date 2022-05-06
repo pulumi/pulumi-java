@@ -43,7 +43,7 @@ public final class ManagedFieldsEntry {
      */
     private final @Nullable String subresource;
     /**
-     * @return Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+     * @return Time is the timestamp of when the ManagedFields entry was added. The timestamp will also be updated if a field is added, the manager changes any of the owned fields value or removes a field. The timestamp does not update when a field is removed from the entry because another manager took it over.
      * 
      */
     private final @Nullable String time;
@@ -109,7 +109,7 @@ public final class ManagedFieldsEntry {
         return Optional.ofNullable(this.subresource);
     }
     /**
-     * @return Time is timestamp of when these fields were set. It should always be empty if Operation is &#39;Apply&#39;
+     * @return Time is the timestamp of when the ManagedFields entry was added. The timestamp will also be updated if a field is added, the manager changes any of the owned fields value or removes a field. The timestamp does not update when a field is removed from the entry because another manager took it over.
      * 
      */
     public Optional<String> time() {

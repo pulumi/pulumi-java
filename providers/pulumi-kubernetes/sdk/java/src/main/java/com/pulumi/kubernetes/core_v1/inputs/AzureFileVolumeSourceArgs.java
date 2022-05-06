@@ -21,14 +21,14 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
     public static final AzureFileVolumeSourceArgs Empty = new AzureFileVolumeSourceArgs();
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -36,14 +36,14 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * the name of secret that contains Azure Storage Account Name and Key
+     * secretName is the  name of secret that contains Azure Storage Account Name and Key
      * 
      */
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the  name of secret that contains Azure Storage Account Name and Key
      * 
      */
     public Output<String> secretName() {
@@ -51,14 +51,14 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Share Name
+     * shareName is the azure share Name
      * 
      */
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
     /**
-     * @return Share Name
+     * @return shareName is the azure share Name
      * 
      */
     public Output<String> shareName() {
@@ -92,7 +92,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * @param secretName secretName is the  name of secret that contains Azure Storage Account Name and Key
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * @param secretName secretName is the  name of secret that contains Azure Storage Account Name and Key
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param shareName Share Name
+         * @param shareName shareName is the azure share Name
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class AzureFileVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param shareName Share Name
+         * @param shareName shareName is the azure share Name
          * 
          * @return builder
          * 

@@ -22,14 +22,14 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
     public static final CinderPersistentVolumeSourceArgs Empty = new CinderPersistentVolumeSourceArgs();
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -37,14 +37,14 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
     }
 
     /**
-     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -52,14 +52,14 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
     }
 
     /**
-     * Optional: points to a secret object containing parameters used to connect to OpenStack.
+     * secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.
      * 
      */
     @Import(name="secretRef")
     private @Nullable Output<SecretReferenceArgs> secretRef;
 
     /**
-     * @return Optional: points to a secret object containing parameters used to connect to OpenStack.
+     * @return secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.
      * 
      */
     public Optional<Output<SecretReferenceArgs>> secretRef() {
@@ -67,14 +67,14 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
     }
 
     /**
-     * volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     @Import(name="volumeID", required=true)
     private Output<String> volumeID;
 
     /**
-     * @return volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     * @return volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
      * 
      */
     public Output<String> volumeID() {
@@ -109,7 +109,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param fsType fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param fsType fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param readOnly readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param secretRef Optional: points to a secret object containing parameters used to connect to OpenStack.
+         * @param secretRef secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param secretRef Optional: points to a secret object containing parameters used to connect to OpenStack.
+         * @param secretRef secretRef is Optional: points to a secret object containing parameters used to connect to OpenStack.
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param volumeID volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param volumeID volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 
@@ -183,7 +183,7 @@ public final class CinderPersistentVolumeSourceArgs extends com.pulumi.resources
         }
 
         /**
-         * @param volumeID volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+         * @param volumeID volumeID used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
          * 
          * @return builder
          * 

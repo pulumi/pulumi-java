@@ -83,22 +83,12 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
      * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
-     * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
      * @return Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
-     * 
-     * Possible enum values:
-     *  - `&#34;SCTP&#34;` is the SCTP protocol.
-     *  - `&#34;TCP&#34;` is the TCP protocol.
-     *  - `&#34;UDP&#34;` is the UDP protocol.
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -220,11 +210,6 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param protocol Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
          * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
-         * 
          * @return builder
          * 
          */
@@ -235,11 +220,6 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param protocol Protocol for port. Must be UDP, TCP, or SCTP. Defaults to &#34;TCP&#34;.
-         * 
-         * Possible enum values:
-         *  - `&#34;SCTP&#34;` is the SCTP protocol.
-         *  - `&#34;TCP&#34;` is the TCP protocol.
-         *  - `&#34;UDP&#34;` is the UDP protocol.
          * 
          * @return builder
          * 

@@ -35,14 +35,14 @@ public final class PersistentVolumeListArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * List of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
+     * items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
      * 
      */
     @Import(name="items", required=true)
     private Output<List<PersistentVolumeArgs>> items;
 
     /**
-     * @return List of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
+     * @return items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
      * 
      */
     public Output<List<PersistentVolumeArgs>> items() {
@@ -128,7 +128,7 @@ public final class PersistentVolumeListArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param items List of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
+         * @param items items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class PersistentVolumeListArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param items List of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
+         * @param items items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class PersistentVolumeListArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param items List of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
+         * @param items items is a list of persistent volumes. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes
          * 
          * @return builder
          * 

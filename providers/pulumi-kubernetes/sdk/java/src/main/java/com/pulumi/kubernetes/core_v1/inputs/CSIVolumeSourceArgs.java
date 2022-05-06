@@ -23,14 +23,14 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     public static final CSIVolumeSourceArgs Empty = new CSIVolumeSourceArgs();
 
     /**
-     * Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+     * driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
      * 
      */
     @Import(name="driver", required=true)
     private Output<String> driver;
 
     /**
-     * @return Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+     * @return driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
      * 
      */
     public Output<String> driver() {
@@ -38,14 +38,14 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * fsType to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+     * @return fsType to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -53,14 +53,14 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+     * nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
      * 
      */
     @Import(name="nodePublishSecretRef")
     private @Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef;
 
     /**
-     * @return NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+     * @return nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
      * 
      */
     public Optional<Output<LocalObjectReferenceArgs>> nodePublishSecretRef() {
@@ -68,14 +68,14 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Specifies a read-only configuration for the volume. Defaults to false (read/write).
+     * readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Specifies a read-only configuration for the volume. Defaults to false (read/write).
+     * @return readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -83,14 +83,14 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+     * volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
      */
     @Import(name="volumeAttributes")
     private @Nullable Output<Map<String,String>> volumeAttributes;
 
     /**
-     * @return VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+     * @return volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
      * 
      */
     public Optional<Output<Map<String,String>>> volumeAttributes() {
@@ -126,7 +126,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param driver Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+         * @param driver driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param driver Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
+         * @param driver driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param fsType Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+         * @param fsType fsType to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param fsType Filesystem type to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
+         * @param fsType fsType to mount. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+         * @param nodePublishSecretRef nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param nodePublishSecretRef NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
+         * @param nodePublishSecretRef nodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param readOnly Specifies a read-only configuration for the volume. Defaults to false (read/write).
+         * @param readOnly readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param readOnly Specifies a read-only configuration for the volume. Defaults to false (read/write).
+         * @param readOnly readOnly specifies a read-only configuration for the volume. Defaults to false (read/write).
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param volumeAttributes VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+         * @param volumeAttributes volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class CSIVolumeSourceArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param volumeAttributes VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
+         * @param volumeAttributes volumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver&#39;s documentation for supported values.
          * 
          * @return builder
          * 

@@ -20,14 +20,14 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
     public static final HostPathVolumeSourceArgs Empty = new HostPathVolumeSourceArgs();
 
     /**
-     * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     @Import(name="path", required=true)
     private Output<String> path;
 
     /**
-     * @return Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     public Output<String> path() {
@@ -35,14 +35,14 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     @Import(name="type")
     private @Nullable Output<String> type;
 
     /**
-     * @return Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     * @return type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
      * 
      */
     public Optional<Output<String>> type() {
@@ -75,7 +75,7 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param path Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * @param path path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
          * 
          * @return builder
          * 
@@ -86,7 +86,7 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param path Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * @param path path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
          * 
          * @return builder
          * 
@@ -96,7 +96,7 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param type Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * @param type type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param type Type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+         * @param type type for HostPath Volume Defaults to &#34;&#34; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
          * 
          * @return builder
          * 

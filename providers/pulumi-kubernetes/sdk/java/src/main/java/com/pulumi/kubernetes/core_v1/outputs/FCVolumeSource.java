@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FCVolumeSource {
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     private final @Nullable String fsType;
     /**
-     * @return Optional: FC target lun number
+     * @return lun is Optional: FC target lun number
      * 
      */
     private final @Nullable Integer lun;
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return Optional: FC target worldwide names (WWNs)
+     * @return targetWWNs is Optional: FC target worldwide names (WWNs)
      * 
      */
     private final @Nullable List<String> targetWWNs;
     /**
-     * @return Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+     * @return wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
      */
     private final @Nullable List<String> wwids;
@@ -55,35 +55,35 @@ public final class FCVolumeSource {
     }
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<String> fsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
-     * @return Optional: FC target lun number
+     * @return lun is Optional: FC target lun number
      * 
      */
     public Optional<Integer> lun() {
         return Optional.ofNullable(this.lun);
     }
     /**
-     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly is Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return Optional: FC target worldwide names (WWNs)
+     * @return targetWWNs is Optional: FC target worldwide names (WWNs)
      * 
      */
     public List<String> targetWWNs() {
         return this.targetWWNs == null ? List.of() : this.targetWWNs;
     }
     /**
-     * @return Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+     * @return wwids Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
      */
     public List<String> wwids() {

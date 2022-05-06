@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VolumeProjection {
     /**
-     * @return information about the configMap data to project
+     * @return configMap information about the configMap data to project
      * 
      */
     private final @Nullable ConfigMapProjection configMap;
     /**
-     * @return information about the downwardAPI data to project
+     * @return downwardAPI information about the downwardAPI data to project
      * 
      */
     private final @Nullable DownwardAPIProjection downwardAPI;
     /**
-     * @return information about the secret data to project
+     * @return secret information about the secret data to project
      * 
      */
     private final @Nullable SecretProjection secret;
     /**
-     * @return information about the serviceAccountToken data to project
+     * @return serviceAccountToken is information about the serviceAccountToken data to project
      * 
      */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
@@ -48,28 +48,28 @@ public final class VolumeProjection {
     }
 
     /**
-     * @return information about the configMap data to project
+     * @return configMap information about the configMap data to project
      * 
      */
     public Optional<ConfigMapProjection> configMap() {
         return Optional.ofNullable(this.configMap);
     }
     /**
-     * @return information about the downwardAPI data to project
+     * @return downwardAPI information about the downwardAPI data to project
      * 
      */
     public Optional<DownwardAPIProjection> downwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
     /**
-     * @return information about the secret data to project
+     * @return secret information about the secret data to project
      * 
      */
     public Optional<SecretProjection> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * @return information about the serviceAccountToken data to project
+     * @return serviceAccountToken is information about the serviceAccountToken data to project
      * 
      */
     public Optional<ServiceAccountTokenProjection> serviceAccountToken() {

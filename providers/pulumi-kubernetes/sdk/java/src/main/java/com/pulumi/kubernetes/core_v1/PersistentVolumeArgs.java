@@ -64,14 +64,14 @@ public final class PersistentVolumeArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     @Import(name="spec")
     private @Nullable Output<PersistentVolumeSpecArgs> spec;
 
     /**
-     * @return Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+     * @return spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
     public Optional<Output<PersistentVolumeSpecArgs>> spec() {
@@ -169,7 +169,7 @@ public final class PersistentVolumeArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param spec Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+         * @param spec spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class PersistentVolumeArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param spec Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
+         * @param spec spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
          * 
          * @return builder
          * 

@@ -28,9 +28,7 @@ public final class ListMeta {
      */
     private final @Nullable String resourceVersion;
     /**
-     * @return selfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * @return Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     private final @Nullable String selfLink;
@@ -69,9 +67,7 @@ public final class ListMeta {
         return Optional.ofNullable(this.resourceVersion);
     }
     /**
-     * @return selfLink is a URL representing this object. Populated by the system. Read-only.
-     * 
-     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is planned to be removed in 1.21 release.
+     * @return Deprecated: selfLink is a legacy read-only field that is no longer populated by the system.
      * 
      */
     public Optional<String> selfLink() {

@@ -21,10 +21,6 @@ public final class NamespaceStatus {
     /**
      * @return Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
-     * Possible enum values:
-     *  - `&#34;Active&#34;` means the namespace is available for use in the system
-     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
-     * 
      */
     private final @Nullable String phase;
 
@@ -45,10 +41,6 @@ public final class NamespaceStatus {
     }
     /**
      * @return Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
-     * 
-     * Possible enum values:
-     *  - `&#34;Active&#34;` means the namespace is available for use in the system
-     *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
      * 
      */
     public Optional<String> phase() {

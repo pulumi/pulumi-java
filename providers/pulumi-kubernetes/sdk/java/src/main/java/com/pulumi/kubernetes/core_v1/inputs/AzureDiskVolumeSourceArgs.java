@@ -21,14 +21,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     public static final AzureDiskVolumeSourceArgs Empty = new AzureDiskVolumeSourceArgs();
 
     /**
-     * Host Caching mode: None, Read Only, Read Write.
+     * cachingMode is the Host Caching mode: None, Read Only, Read Write.
      * 
      */
     @Import(name="cachingMode")
     private @Nullable Output<String> cachingMode;
 
     /**
-     * @return Host Caching mode: None, Read Only, Read Write.
+     * @return cachingMode is the Host Caching mode: None, Read Only, Read Write.
      * 
      */
     public Optional<Output<String>> cachingMode() {
@@ -36,14 +36,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Name of the data disk in the blob storage
+     * diskName is the Name of the data disk in the blob storage
      * 
      */
     @Import(name="diskName", required=true)
     private Output<String> diskName;
 
     /**
-     * @return The Name of the data disk in the blob storage
+     * @return diskName is the Name of the data disk in the blob storage
      * 
      */
     public Output<String> diskName() {
@@ -51,14 +51,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The URI the data disk in the blob storage
+     * diskURI is the URI of data disk in the blob storage
      * 
      */
     @Import(name="diskURI", required=true)
     private Output<String> diskURI;
 
     /**
-     * @return The URI the data disk in the blob storage
+     * @return diskURI is the URI of data disk in the blob storage
      * 
      */
     public Output<String> diskURI() {
@@ -66,14 +66,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
     /**
-     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+     * @return fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
      * 
      */
     public Optional<Output<String>> fsType() {
@@ -81,14 +81,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
     /**
-     * @return Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+     * @return kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
     public Optional<Output<String>> kind() {
@@ -96,14 +96,14 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Output<Boolean>> readOnly() {
@@ -140,7 +140,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param cachingMode Host Caching mode: None, Read Only, Read Write.
+         * @param cachingMode cachingMode is the Host Caching mode: None, Read Only, Read Write.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param cachingMode Host Caching mode: None, Read Only, Read Write.
+         * @param cachingMode cachingMode is the Host Caching mode: None, Read Only, Read Write.
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param diskName The Name of the data disk in the blob storage
+         * @param diskName diskName is the Name of the data disk in the blob storage
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param diskName The Name of the data disk in the blob storage
+         * @param diskName diskName is the Name of the data disk in the blob storage
          * 
          * @return builder
          * 
@@ -182,7 +182,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param diskURI The URI the data disk in the blob storage
+         * @param diskURI diskURI is the URI of data disk in the blob storage
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param diskURI The URI the data disk in the blob storage
+         * @param diskURI diskURI is the URI of data disk in the blob storage
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
+         * @param fsType fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Implicitly inferred to be &#34;ext4&#34; if unspecified.
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param kind Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+         * @param kind kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param kind Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
+         * @param kind kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
          * 
          * @return builder
          * 
@@ -245,7 +245,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 
@@ -256,7 +256,7 @@ public final class AzureDiskVolumeSourceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * @param readOnly readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
          * 
          * @return builder
          * 

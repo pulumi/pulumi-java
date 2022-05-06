@@ -22,14 +22,14 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
     public static final GitRepoVolumeSourceArgs Empty = new GitRepoVolumeSourceArgs();
 
     /**
-     * Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     @Import(name="directory")
     private @Nullable Output<String> directory;
 
     /**
-     * @return Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+     * @return directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
     public Optional<Output<String>> directory() {
@@ -37,14 +37,14 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Repository URL
+     * repository is the URL
      * 
      */
     @Import(name="repository", required=true)
     private Output<String> repository;
 
     /**
-     * @return Repository URL
+     * @return repository is the URL
      * 
      */
     public Output<String> repository() {
@@ -52,14 +52,14 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Commit hash for the specified revision.
+     * revision is the commit hash for the specified revision.
      * 
      */
     @Import(name="revision")
     private @Nullable Output<String> revision;
 
     /**
-     * @return Commit hash for the specified revision.
+     * @return revision is the commit hash for the specified revision.
      * 
      */
     public Optional<Output<String>> revision() {
@@ -93,7 +93,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param directory Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+         * @param directory directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param directory Target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+         * @param directory directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param repository Repository URL
+         * @param repository repository is the URL
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param repository Repository URL
+         * @param repository repository is the URL
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param revision Commit hash for the specified revision.
+         * @param revision revision is the commit hash for the specified revision.
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class GitRepoVolumeSourceArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param revision Commit hash for the specified revision.
+         * @param revision revision is the commit hash for the specified revision.
          * 
          * @return builder
          * 

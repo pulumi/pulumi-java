@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureFileVolumeSource {
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     private final @Nullable Boolean readOnly;
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the  name of secret that contains Azure Storage Account Name and Key
      * 
      */
     private final String secretName;
     /**
-     * @return Share Name
+     * @return shareName is the azure share Name
      * 
      */
     private final String shareName;
@@ -39,21 +39,21 @@ public final class AzureFileVolumeSource {
     }
 
     /**
-     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * @return readOnly defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * @return the name of secret that contains Azure Storage Account Name and Key
+     * @return secretName is the  name of secret that contains Azure Storage Account Name and Key
      * 
      */
     public String secretName() {
         return this.secretName;
     }
     /**
-     * @return Share Name
+     * @return shareName is the azure share Name
      * 
      */
     public String shareName() {

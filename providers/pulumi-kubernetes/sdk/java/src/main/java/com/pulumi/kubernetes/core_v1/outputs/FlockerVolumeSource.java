@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlockerVolumeSource {
     /**
-     * @return Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+     * @return datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
      * 
      */
     private final @Nullable String datasetName;
     /**
-     * @return UUID of the dataset. This is unique identifier of a Flocker dataset
+     * @return datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
      */
     private final @Nullable String datasetUUID;
@@ -31,14 +31,14 @@ public final class FlockerVolumeSource {
     }
 
     /**
-     * @return Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
+     * @return datasetName is Name of the dataset stored as metadata -&gt; name on the dataset for Flocker should be considered as deprecated
      * 
      */
     public Optional<String> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
     /**
-     * @return UUID of the dataset. This is unique identifier of a Flocker dataset
+     * @return datasetUUID is the UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
      */
     public Optional<String> datasetUUID() {
