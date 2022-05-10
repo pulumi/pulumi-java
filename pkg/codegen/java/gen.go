@@ -1521,8 +1521,8 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		// Emit datasource inputs method
 		invokeOptions := ctx.ref(names.InvokeOptions)
 
-		printCommentFunction(ctx, fun, indent)
 		if hasAllOptionalInputs(fun) {
+			printCommentFunction(ctx, fun, indent)
 			// Add no args invoke
 			fprintf(w, "    public static %s<%s> %s() {\n",
 				ctx.ref(names.CompletableFuture), returnType, methodName)
