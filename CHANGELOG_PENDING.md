@@ -19,3 +19,4 @@
 - Programgen adapted to latest changes in SDK
 [#545](https://github.com/pulumi/pulumi-java/pull/545)
 - Fix #538: provide detailed compilation failure information from pulumi-language-java in pulumi CLI
+- Fix #552 - Output.all will preserve list length and retain null elements
