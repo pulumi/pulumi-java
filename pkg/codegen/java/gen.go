@@ -1532,7 +1532,9 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 			fprintf(w, "    }\n")
 
 		}
+
 		// Add args only invoke
+		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args) {\n",
 			ctx.ref(names.CompletableFuture), returnType, methodName, argsType)
 		fprintf(w,
@@ -1541,6 +1543,7 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 		fprintf(w, "    }\n")
 
 		// Add full invoke
+		printCommentFunction(ctx, fun, indent)
 		fprintf(w, "    public static %s<%s> %s(%s args, %s options) {\n",
 			ctx.ref(names.CompletableFuture), returnType, methodName, argsType, invokeOptions)
 		fprintf(w,
