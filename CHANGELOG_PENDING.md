@@ -9,6 +9,8 @@
 [#542](https://github.com/pulumi/pulumi-java/pull/542)
 - Fix #546: generated Java programs from PCL now also generate custom resource options
 [#558](https://github.com/pulumi/pulumi-java/pull/558)
+- [codegen] make sure all overloads of function invokes have doc comments
+[#581](https://github.com/pulumi/pulumi-java/pull/581)
 
 - GitHub Actions: JDK 'adopt' -> 'temurin'
 
