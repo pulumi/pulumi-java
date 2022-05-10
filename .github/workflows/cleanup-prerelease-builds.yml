@@ -22,6 +22,7 @@ jobs:
       matrix:
         provider:
         - aws
+        - aws-apigateway
         - aws-native
         - awsx
         - azure-native

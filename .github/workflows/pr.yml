@@ -10,6 +10,7 @@ on:
       - sdk/v*.*.*
       - aws-native/v*.*.*
       - aws/v*.*.*
+      - aws-apigateway/v*.*.*
       - awsx/v*.*.*
       - azure-native/v*.*.*
       - azuread/v*.*.*
@@ -177,6 +178,7 @@ jobs:
       matrix:
         provider:
         - aws
+        - aws-apigateway
         - aws-native
         - azure-native
         - azuread

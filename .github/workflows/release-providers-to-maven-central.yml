@@ -9,6 +9,7 @@ on:
       - aws-native/v*.*.*
       - aws/v*.*.*
       - awsx/v*.*.*
+      - aws-apigateway/v*.*.*
       - azure-native/v*.*.*
       - azuread/v*.*.*
       - docker/v*.*.*
@@ -52,6 +53,7 @@ jobs:
         provider:
         - aws
         - aws-native
+        - aws-apigateway
         - awsx
         - azure-native
         - azuread
