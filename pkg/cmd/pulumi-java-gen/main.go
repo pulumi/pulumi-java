@@ -85,11 +85,22 @@ func readPackageSchema(path string) (*pschema.PackageSpec, error) {
 		stream = jsonFile
 	}
 	defer stream.Close()
-	dec := json.NewDecoder(stream)
+
 	var result pschema.PackageSpec
-	if err := dec.Decode(&result); err != nil {
-		return nil, err
+	if strings.Contains(path, ".yaml") {
+		// this is a yaml based schema and need to use a different decoder
+		dec := yaml.NewDecoder(stream)
+		if err := dec.Decode(&result); err != nil {
+			return nil, err
+		}
+	} else {
+		// if it's not yaml then we can assume it's json
+		dec := json.NewDecoder(stream)
+		if err := dec.Decode(&result); err != nil {
+			return nil, err
+		}
 	}
+
 	return &result, nil
 }
 
