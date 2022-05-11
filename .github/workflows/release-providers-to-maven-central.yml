@@ -10,6 +10,7 @@ on:
       - aws/v*.*.*
       - awsx/v*.*.*
       - azure-native/v*.*.*
+      - azure/v*.*.*
       - azuread/v*.*.*
       - docker/v*.*.*
       - eks/v*.*.*
@@ -53,6 +54,7 @@ jobs:
         - aws
         - aws-native
         - awsx
+        - azure
         - azure-native
         - azuread
         - docker
