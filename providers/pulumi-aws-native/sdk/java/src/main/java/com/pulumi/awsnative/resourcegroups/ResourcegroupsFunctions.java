@@ -19,6 +19,10 @@ public final class ResourcegroupsFunctions {
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Schema for ResourceGroups::Group
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:resourcegroups:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }

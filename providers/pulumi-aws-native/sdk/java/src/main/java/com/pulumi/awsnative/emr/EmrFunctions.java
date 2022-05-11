@@ -21,6 +21,10 @@ public final class EmrFunctions {
     public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args) {
         return getStudio(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::EMR::Studio
+     * 
+     */
     public static CompletableFuture<GetStudioResult> getStudio(GetStudioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudio", TypeShape.of(GetStudioResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class EmrFunctions {
     public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(GetStudioSessionMappingArgs args) {
         return getStudioSessionMapping(args, InvokeOptions.Empty);
     }
+    /**
+     * An example resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetStudioSessionMappingResult> getStudioSessionMapping(GetStudioSessionMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emr:getStudioSessionMapping", TypeShape.of(GetStudioSessionMappingResult.class), args, Utilities.withVersion(options));
     }

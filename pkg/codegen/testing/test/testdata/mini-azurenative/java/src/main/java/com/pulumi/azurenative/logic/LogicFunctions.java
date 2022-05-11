@@ -20,6 +20,11 @@ public final class LogicFunctions {
     public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args) {
         return listIntegrationAccountKeyVaultKeys(args, InvokeOptions.Empty);
     }
+    /**
+     * Collection of key vault keys.
+     * API Version: 2019-05-01.
+     * 
+     */
     public static CompletableFuture<ListIntegrationAccountKeyVaultKeysResult> listIntegrationAccountKeyVaultKeys(ListIntegrationAccountKeyVaultKeysArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountKeyVaultKeys", TypeShape.of(ListIntegrationAccountKeyVaultKeysResult.class), args, Utilities.withVersion(options));
     }

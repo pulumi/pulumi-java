@@ -19,6 +19,10 @@ public final class KafkaconnectFunctions {
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
         return getConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::KafkaConnect::Connector
+     * 
+     */
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kafkaconnect:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }

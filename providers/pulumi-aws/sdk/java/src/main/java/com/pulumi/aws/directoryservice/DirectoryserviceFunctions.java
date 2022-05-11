@@ -42,6 +42,33 @@ public final class DirectoryserviceFunctions {
     public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args) {
         return getDirectory(args, InvokeOptions.Empty);
     }
+    /**
+     * Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It&#39;s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(DirectoryserviceFunctions.getDirectory(GetDirectoryArgs.builder()
+     *             .directoryId(aws_directory_service_directory.getMain().getId())
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetDirectoryResult> getDirectory(GetDirectoryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directoryservice/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args, Utilities.withVersion(options));
     }

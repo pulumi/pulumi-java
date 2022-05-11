@@ -70,6 +70,61 @@ public final class RamFunctions {
     public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args) {
         return getResourceShare(args, InvokeOptions.Empty);
     }
+    /**
+     * `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(RamFunctions.getResourceShare(GetResourceShareArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .resourceOwner(&#34;SELF&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * ## Search by filters
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var tagFilter = Output.of(RamFunctions.getResourceShare(GetResourceShareArgs.builder()
+     *             .filters(GetResourceShareFilter.builder()
+     *                 .name(&#34;NameOfTag&#34;)
+     *                 .values(&#34;exampleNameTagValue&#34;)
+     *                 .build())
+     *             .name(&#34;MyResourceName&#34;)
+     *             .resourceOwner(&#34;SELF&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetResourceShareResult> getResourceShare(GetResourceShareArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ram/getResourceShare:getResourceShare", TypeShape.of(GetResourceShareResult.class), args, Utilities.withVersion(options));
     }

@@ -52,6 +52,35 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args) {
         return getConstraint(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information on a Service Catalog Constraint.
+     * 
+     * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getConstraint(GetConstraintArgs.builder()
+     *             .acceptLanguage(&#34;en&#34;)
+     *             .id(&#34;cons-hrvy0335&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConstraintResult> getConstraint(GetConstraintArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getConstraint:getConstraint", TypeShape.of(GetConstraintResult.class), args, Utilities.withVersion(options));
     }
@@ -86,6 +115,34 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args) {
         return getLaunchPaths(args, InvokeOptions.Empty);
     }
+    /**
+     * Lists the paths to the specified product. A path is how the user has access to a specified product, and is necessary when provisioning a product. A path also determines the constraints put on the product.
+     * 
+     * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getLaunchPaths(GetLaunchPathsArgs.builder()
+     *             .productId(&#34;prod-yakog5pdriver&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetLaunchPathsResult> getLaunchPaths(GetLaunchPathsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getLaunchPaths:getLaunchPaths", TypeShape.of(GetLaunchPathsResult.class), args, Utilities.withVersion(options));
     }
@@ -119,6 +176,33 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args) {
         return getPortfolio(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information for a Service Catalog Portfolio.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var portfolio = Output.of(ServicecatalogFunctions.getPortfolio(GetPortfolioArgs.builder()
+     *             .id(&#34;port-07052002&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPortfolioResult> getPortfolio(GetPortfolioArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolio:getPortfolio", TypeShape.of(GetPortfolioResult.class), args, Utilities.withVersion(options));
     }
@@ -153,6 +237,34 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args) {
         return getPortfolioConstraints(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information on Service Catalog Portfolio Constraints.
+     * 
+     * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getPortfolioConstraints(GetPortfolioConstraintsArgs.builder()
+     *             .portfolioId(&#34;port-3lli3b3an&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetPortfolioConstraintsResult> getPortfolioConstraints(GetPortfolioConstraintsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolioConstraints:getPortfolioConstraints", TypeShape.of(GetPortfolioConstraintsResult.class), args, Utilities.withVersion(options));
     }
@@ -189,6 +301,36 @@ public final class ServicecatalogFunctions {
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args) {
         return getProduct(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information on a Service Catalog Product.
+     * 
+     * &gt; **Tip:** A &#34;provisioning artifact&#34; is also referred to as a &#34;version.&#34; A &#34;distributor&#34; is also referred to as a &#34;vendor.&#34;
+     * 
+     * ## Example Usage
+     * ### Basic Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(ServicecatalogFunctions.getProduct(GetProductArgs.builder()
+     *             .id(&#34;prod-dnigbtea24ste&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetProductResult> getProduct(GetProductArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getProduct:getProduct", TypeShape.of(GetProductResult.class), args, Utilities.withVersion(options));
     }

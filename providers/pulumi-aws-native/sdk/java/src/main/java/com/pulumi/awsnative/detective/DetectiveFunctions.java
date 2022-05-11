@@ -21,6 +21,10 @@ public final class DetectiveFunctions {
     public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args) {
         return getGraph(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Detective::Graph
+     * 
+     */
     public static CompletableFuture<GetGraphResult> getGraph(GetGraphArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getGraph", TypeShape.of(GetGraphResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class DetectiveFunctions {
     public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args) {
         return getMemberInvitation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Detective::MemberInvitation
+     * 
+     */
     public static CompletableFuture<GetMemberInvitationResult> getMemberInvitation(GetMemberInvitationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getMemberInvitation", TypeShape.of(GetMemberInvitationResult.class), args, Utilities.withVersion(options));
     }

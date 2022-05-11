@@ -21,6 +21,10 @@ public final class AppsyncFunctions {
     public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
         return getDomainName(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainName
+     * 
+     */
     public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class AppsyncFunctions {
     public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args) {
         return getDomainNameApiAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppSync::DomainNameApiAssociation
+     * 
+     */
     public static CompletableFuture<GetDomainNameApiAssociationResult> getDomainNameApiAssociation(GetDomainNameApiAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appsync:getDomainNameApiAssociation", TypeShape.of(GetDomainNameApiAssociationResult.class), args, Utilities.withVersion(options));
     }

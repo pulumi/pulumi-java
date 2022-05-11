@@ -21,6 +21,10 @@ public final class CassandraFunctions {
     public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args) {
         return getKeyspace(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Cassandra::Keyspace
+     * 
+     */
     public static CompletableFuture<GetKeyspaceResult> getKeyspace(GetKeyspaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getKeyspace", TypeShape.of(GetKeyspaceResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class CassandraFunctions {
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args) {
         return getTable(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Cassandra::Table
+     * 
+     */
     public static CompletableFuture<GetTableResult> getTable(GetTableArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getTable", TypeShape.of(GetTableResult.class), args, Utilities.withVersion(options));
     }

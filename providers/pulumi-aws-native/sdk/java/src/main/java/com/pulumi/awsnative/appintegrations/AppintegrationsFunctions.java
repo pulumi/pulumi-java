@@ -21,6 +21,10 @@ public final class AppintegrationsFunctions {
     public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args) {
         return getDataIntegration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppIntegrations::DataIntegration
+     * 
+     */
     public static CompletableFuture<GetDataIntegrationResult> getDataIntegration(GetDataIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getDataIntegration", TypeShape.of(GetDataIntegrationResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class AppintegrationsFunctions {
     public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args) {
         return getEventIntegration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppIntegrations::EventIntegration
+     * 
+     */
     public static CompletableFuture<GetEventIntegrationResult> getEventIntegration(GetEventIntegrationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getEventIntegration", TypeShape.of(GetEventIntegrationResult.class), args, Utilities.withVersion(options));
     }

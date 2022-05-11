@@ -44,6 +44,35 @@ public final class SqsFunctions {
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args) {
         return getQueue(args, InvokeOptions.Empty);
     }
+    /**
+     * Use this data source to get the ARN and URL of queue in AWS Simple Queue Service (SQS).
+     * By using this data source, you can reference SQS queues without having to hardcode
+     * the ARNs as input.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(SqsFunctions.getQueue(GetQueueArgs.builder()
+     *             .name(&#34;queue&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetQueueResult> getQueue(GetQueueArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sqs/getQueue:getQueue", TypeShape.of(GetQueueResult.class), args, Utilities.withVersion(options));
     }

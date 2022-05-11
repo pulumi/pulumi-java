@@ -25,6 +25,10 @@ public final class AthenaFunctions {
     public static CompletableFuture<GetDataCatalogResult> getDataCatalog(GetDataCatalogArgs args) {
         return getDataCatalog(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Athena::DataCatalog
+     * 
+     */
     public static CompletableFuture<GetDataCatalogResult> getDataCatalog(GetDataCatalogArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getDataCatalog", TypeShape.of(GetDataCatalogResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class AthenaFunctions {
     public static CompletableFuture<GetNamedQueryResult> getNamedQuery(GetNamedQueryArgs args) {
         return getNamedQuery(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Athena::NamedQuery
+     * 
+     */
     public static CompletableFuture<GetNamedQueryResult> getNamedQuery(GetNamedQueryArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getNamedQuery", TypeShape.of(GetNamedQueryResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class AthenaFunctions {
     public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(GetPreparedStatementArgs args) {
         return getPreparedStatement(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Athena::PreparedStatement
+     * 
+     */
     public static CompletableFuture<GetPreparedStatementResult> getPreparedStatement(GetPreparedStatementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getPreparedStatement", TypeShape.of(GetPreparedStatementResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class AthenaFunctions {
     public static CompletableFuture<GetWorkGroupResult> getWorkGroup(GetWorkGroupArgs args) {
         return getWorkGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Athena::WorkGroup
+     * 
+     */
     public static CompletableFuture<GetWorkGroupResult> getWorkGroup(GetWorkGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getWorkGroup", TypeShape.of(GetWorkGroupResult.class), args, Utilities.withVersion(options));
     }

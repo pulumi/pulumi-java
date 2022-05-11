@@ -47,6 +47,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args) {
         return getAccount(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Account
+     * 
+     */
     public static CompletableFuture<GetAccountResult> getAccount(GetAccountArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAccount", TypeShape.of(GetAccountResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +61,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetApiKeyResult> getApiKey(GetApiKeyArgs args) {
         return getApiKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::ApiKey
+     * 
+     */
     public static CompletableFuture<GetApiKeyResult> getApiKey(GetApiKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getApiKey", TypeShape.of(GetApiKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +75,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args) {
         return getAuthorizer(args, InvokeOptions.Empty);
     }
+    /**
+     * Represents an authorization layer for methods. If enabled on a method, API Gateway will activate the authorizer when a client calls the method.
+     * 
+     */
     public static CompletableFuture<GetAuthorizerResult> getAuthorizer(GetAuthorizerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getAuthorizer", TypeShape.of(GetAuthorizerResult.class), args, Utilities.withVersion(options));
     }
@@ -77,6 +89,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(GetBasePathMappingArgs args) {
         return getBasePathMapping(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::BasePathMapping
+     * 
+     */
     public static CompletableFuture<GetBasePathMappingResult> getBasePathMapping(GetBasePathMappingArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getBasePathMapping", TypeShape.of(GetBasePathMappingResult.class), args, Utilities.withVersion(options));
     }
@@ -87,6 +103,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetClientCertificateResult> getClientCertificate(GetClientCertificateArgs args) {
         return getClientCertificate(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::ClientCertificate
+     * 
+     */
     public static CompletableFuture<GetClientCertificateResult> getClientCertificate(GetClientCertificateArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getClientCertificate", TypeShape.of(GetClientCertificateResult.class), args, Utilities.withVersion(options));
     }
@@ -97,6 +117,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args) {
         return getDeployment(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Deployment
+     * 
+     */
     public static CompletableFuture<GetDeploymentResult> getDeployment(GetDeploymentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDeployment", TypeShape.of(GetDeploymentResult.class), args, Utilities.withVersion(options));
     }
@@ -107,6 +131,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(GetDocumentationVersionArgs args) {
         return getDocumentationVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * A snapshot of the documentation of an API.
+     * 
+     */
     public static CompletableFuture<GetDocumentationVersionResult> getDocumentationVersion(GetDocumentationVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDocumentationVersion", TypeShape.of(GetDocumentationVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -117,6 +145,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args) {
         return getDomainName(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::DomainName.
+     * 
+     */
     public static CompletableFuture<GetDomainNameResult> getDomainName(GetDomainNameArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getDomainName", TypeShape.of(GetDomainNameResult.class), args, Utilities.withVersion(options));
     }
@@ -127,6 +159,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetMethodResult> getMethod(GetMethodArgs args) {
         return getMethod(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Method
+     * 
+     */
     public static CompletableFuture<GetMethodResult> getMethod(GetMethodArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getMethod", TypeShape.of(GetMethodResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +173,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args) {
         return getModel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Model
+     * 
+     */
     public static CompletableFuture<GetModelResult> getModel(GetModelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getModel", TypeShape.of(GetModelResult.class), args, Utilities.withVersion(options));
     }
@@ -147,6 +187,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(GetRequestValidatorArgs args) {
         return getRequestValidator(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::RequestValidator
+     * 
+     */
     public static CompletableFuture<GetRequestValidatorResult> getRequestValidator(GetRequestValidatorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getRequestValidator", TypeShape.of(GetRequestValidatorResult.class), args, Utilities.withVersion(options));
     }
@@ -157,6 +201,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args) {
         return getResource(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Resource
+     * 
+     */
     public static CompletableFuture<GetResourceResult> getResource(GetResourceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getResource", TypeShape.of(GetResourceResult.class), args, Utilities.withVersion(options));
     }
@@ -167,6 +215,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetStageResult> getStage(GetStageArgs args) {
         return getStage(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Stage
+     * 
+     */
     public static CompletableFuture<GetStageResult> getStage(GetStageArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getStage", TypeShape.of(GetStageResult.class), args, Utilities.withVersion(options));
     }
@@ -177,6 +229,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetUsagePlanResult> getUsagePlan(GetUsagePlanArgs args) {
         return getUsagePlan(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::UsagePlan
+     * 
+     */
     public static CompletableFuture<GetUsagePlanResult> getUsagePlan(GetUsagePlanArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlan", TypeShape.of(GetUsagePlanResult.class), args, Utilities.withVersion(options));
     }
@@ -187,6 +243,10 @@ public final class ApigatewayFunctions {
     public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(GetUsagePlanKeyArgs args) {
         return getUsagePlanKey(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::ApiGateway::UsagePlanKey
+     * 
+     */
     public static CompletableFuture<GetUsagePlanKeyResult> getUsagePlanKey(GetUsagePlanKeyArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getUsagePlanKey", TypeShape.of(GetUsagePlanKeyResult.class), args, Utilities.withVersion(options));
     }

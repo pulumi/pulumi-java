@@ -23,6 +23,10 @@ public final class AmplifyFunctions {
     public static CompletableFuture<GetAppResult> getApp(GetAppArgs args) {
         return getApp(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Amplify::App resource creates Apps in the Amplify Console. An App is a collection of branches.
+     * 
+     */
     public static CompletableFuture<GetAppResult> getApp(GetAppArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getApp", TypeShape.of(GetAppResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class AmplifyFunctions {
     public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args) {
         return getBranch(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Amplify::Branch resource creates a new branch within an app.
+     * 
+     */
     public static CompletableFuture<GetBranchResult> getBranch(GetBranchArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getBranch", TypeShape.of(GetBranchResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class AmplifyFunctions {
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args) {
         return getDomain(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> getDomain(GetDomainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getDomain", TypeShape.of(GetDomainResult.class), args, Utilities.withVersion(options));
     }

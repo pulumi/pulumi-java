@@ -21,6 +21,10 @@ public final class XrayFunctions {
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args) {
         return getGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay Group resource parameters.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> getGroup(GetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getGroup", TypeShape.of(GetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class XrayFunctions {
     public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args) {
         return getSamplingRule(args, InvokeOptions.Empty);
     }
+    /**
+     * This schema provides construct and validation rules for AWS-XRay SamplingRule resource parameters.
+     * 
+     */
     public static CompletableFuture<GetSamplingRuleResult> getSamplingRule(GetSamplingRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:xray:getSamplingRule", TypeShape.of(GetSamplingRuleResult.class), args, Utilities.withVersion(options));
     }

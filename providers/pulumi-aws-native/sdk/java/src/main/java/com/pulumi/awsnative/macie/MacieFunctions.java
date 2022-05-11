@@ -23,6 +23,10 @@ public final class MacieFunctions {
     public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(GetCustomDataIdentifierArgs args) {
         return getCustomDataIdentifier(args, InvokeOptions.Empty);
     }
+    /**
+     * Macie CustomDataIdentifier resource schema
+     * 
+     */
     public static CompletableFuture<GetCustomDataIdentifierResult> getCustomDataIdentifier(GetCustomDataIdentifierArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getCustomDataIdentifier", TypeShape.of(GetCustomDataIdentifierResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class MacieFunctions {
     public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(GetFindingsFilterArgs args) {
         return getFindingsFilter(args, InvokeOptions.Empty);
     }
+    /**
+     * Macie FindingsFilter resource schema.
+     * 
+     */
     public static CompletableFuture<GetFindingsFilterResult> getFindingsFilter(GetFindingsFilterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getFindingsFilter", TypeShape.of(GetFindingsFilterResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class MacieFunctions {
     public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args) {
         return getSession(args, InvokeOptions.Empty);
     }
+    /**
+     * The AWS::Macie::Session resource specifies a new Amazon Macie session. A session is an object that represents the Amazon Macie service. A session is required for Amazon Macie to become operational.
+     * 
+     */
     public static CompletableFuture<GetSessionResult> getSession(GetSessionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:macie:getSession", TypeShape.of(GetSessionResult.class), args, Utilities.withVersion(options));
     }

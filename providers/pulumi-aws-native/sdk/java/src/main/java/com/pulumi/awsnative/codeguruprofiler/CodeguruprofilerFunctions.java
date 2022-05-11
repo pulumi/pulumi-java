@@ -19,6 +19,10 @@ public final class CodeguruprofilerFunctions {
     public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args) {
         return getProfilingGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * This resource schema represents the Profiling Group resource in the Amazon CodeGuru Profiler service.
+     * 
+     */
     public static CompletableFuture<GetProfilingGroupResult> getProfilingGroup(GetProfilingGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codeguruprofiler:getProfilingGroup", TypeShape.of(GetProfilingGroupResult.class), args, Utilities.withVersion(options));
     }

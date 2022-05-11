@@ -19,6 +19,10 @@ public final class MediatailorFunctions {
     public static CompletableFuture<GetPlaybackConfigurationResult> getPlaybackConfiguration(GetPlaybackConfigurationArgs args) {
         return getPlaybackConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::MediaTailor::PlaybackConfiguration
+     * 
+     */
     public static CompletableFuture<GetPlaybackConfigurationResult> getPlaybackConfiguration(GetPlaybackConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediatailor:getPlaybackConfiguration", TypeShape.of(GetPlaybackConfigurationResult.class), args, Utilities.withVersion(options));
     }

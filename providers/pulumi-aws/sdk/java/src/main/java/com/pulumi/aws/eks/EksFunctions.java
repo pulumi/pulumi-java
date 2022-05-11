@@ -56,6 +56,35 @@ public final class EksFunctions {
     public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args) {
         return getAddon(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about an EKS add-on.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(EksFunctions.getAddon(GetAddonArgs.builder()
+     *             .addonName(&#34;vpc-cni&#34;)
+     *             .clusterName(aws_eks_cluster.getExample().getName())
+     *             .build()));
+     * 
+     *         ctx.export(&#34;eksAddonOutputs&#34;, aws_eks_addon.getExample());
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAddonResult> getAddon(GetAddonArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getAddon:getAddon", TypeShape.of(GetAddonResult.class), args, Utilities.withVersion(options));
     }
@@ -104,6 +133,48 @@ public final class EksFunctions {
     public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args) {
         return getAddonVersion(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about a specific EKS add-on version compatible with an EKS cluster version.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var defaultAddonVersion = Output.of(EksFunctions.getAddonVersion(GetAddonVersionArgs.builder()
+     *             .addonName(&#34;vpc-cni&#34;)
+     *             .kubernetesVersion(aws_eks_cluster.getExample().getVersion())
+     *             .build()));
+     * 
+     *         final var latestAddonVersion = Output.of(EksFunctions.getAddonVersion(GetAddonVersionArgs.builder()
+     *             .addonName(&#34;vpc-cni&#34;)
+     *             .kubernetesVersion(aws_eks_cluster.getExample().getVersion())
+     *             .mostRecent(true)
+     *             .build()));
+     * 
+     *         var vpcCni = new Addon(&#34;vpcCni&#34;, AddonArgs.builder()        
+     *             .clusterName(aws_eks_cluster.getExample().getName())
+     *             .addonName(&#34;vpc-cni&#34;)
+     *             .addonVersion(latestAddonVersion.apply(getAddonVersionResult -&gt; getAddonVersionResult.getVersion()))
+     *             .build());
+     * 
+     *         ctx.export(&#34;default&#34;, defaultAddonVersion.apply(getAddonVersionResult -&gt; getAddonVersionResult.getVersion()));
+     *         ctx.export(&#34;latest&#34;, latestAddonVersion.apply(getAddonVersionResult -&gt; getAddonVersionResult.getVersion()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetAddonVersionResult> getAddonVersion(GetAddonVersionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getAddonVersion:getAddonVersion", TypeShape.of(GetAddonVersionResult.class), args, Utilities.withVersion(options));
     }
@@ -140,6 +211,36 @@ public final class EksFunctions {
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args) {
         return getCluster(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about an EKS Cluster.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(EksFunctions.getCluster(GetClusterArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         ctx.export(&#34;endpoint&#34;, example.apply(getClusterResult -&gt; getClusterResult.getEndpoint()));
+     *         ctx.export(&#34;kubeconfig-certificate-authority-data&#34;, example.apply(getClusterResult -&gt; getClusterResult.getCertificateAuthorities()[0].getData()));
+     *         ctx.export(&#34;identity-oidc-issuer&#34;, example.apply(getClusterResult -&gt; getClusterResult.getIdentities()[0].getOidcs()[0].getIssuer()));
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetClusterResult> getCluster(GetClusterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getCluster:getCluster", TypeShape.of(GetClusterResult.class), args, Utilities.withVersion(options));
     }
@@ -155,6 +256,15 @@ public final class EksFunctions {
     public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args) {
         return getClusterAuth(args, InvokeOptions.Empty);
     }
+    /**
+     * Get an authentication token to communicate with an EKS cluster.
+     * 
+     * Uses IAM credentials from the AWS provider to generate a temporary token that is compatible with
+     * [AWS IAM Authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator) authentication.
+     * This can be used to authenticate to an EKS cluster or to a cluster that has the AWS IAM Authenticator
+     * server configured.
+     * 
+     */
     public static CompletableFuture<GetClusterAuthResult> getClusterAuth(GetClusterAuthArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusterAuth:getClusterAuth", TypeShape.of(GetClusterAuthResult.class), args, Utilities.withVersion(options));
     }
@@ -165,9 +275,17 @@ public final class EksFunctions {
     public static CompletableFuture<GetClustersResult> getClusters() {
         return getClusters(InvokeArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve EKS Clusters list
+     * 
+     */
     public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args) {
         return getClusters(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve EKS Clusters list
+     * 
+     */
     public static CompletableFuture<GetClustersResult> getClusters(InvokeArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusters:getClusters", TypeShape.of(GetClustersResult.class), args, Utilities.withVersion(options));
     }
@@ -202,6 +320,34 @@ public final class EksFunctions {
     public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args) {
         return getNodeGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve information about an EKS Node Group.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(EksFunctions.getNodeGroup(GetNodeGroupArgs.builder()
+     *             .clusterName(&#34;example&#34;)
+     *             .nodeGroupName(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetNodeGroupResult> getNodeGroup(GetNodeGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroup:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -212,6 +358,10 @@ public final class EksFunctions {
     public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args) {
         return getNodeGroups(args, InvokeOptions.Empty);
     }
+    /**
+     * Retrieve the EKS Node Groups associated with a named EKS cluster. This will allow you to pass a list of Node Group names to other resources.
+     * 
+     */
     public static CompletableFuture<GetNodeGroupsResult> getNodeGroups(GetNodeGroupsArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroups:getNodeGroups", TypeShape.of(GetNodeGroupsResult.class), args, Utilities.withVersion(options));
     }

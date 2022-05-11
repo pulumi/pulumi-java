@@ -49,9 +49,77 @@ public final class MqFunctions {
     public static CompletableFuture<GetBrokerResult> getBroker() {
         return getBroker(GetBrokerArgs.Empty, InvokeOptions.Empty);
     }
+    /**
+     * Provides information about a MQ Broker.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var brokerId = config.get(&#34;brokerId&#34;).orElse(&#34;&#34;);
+     *         final var brokerName = config.get(&#34;brokerName&#34;).orElse(&#34;&#34;);
+     *         final var byId = Output.of(MqFunctions.getBroker(GetBrokerArgs.builder()
+     *             .brokerId(brokerId)
+     *             .build()));
+     * 
+     *         final var byName = Output.of(MqFunctions.getBroker(GetBrokerArgs.builder()
+     *             .brokerName(brokerName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args) {
         return getBroker(args, InvokeOptions.Empty);
     }
+    /**
+     * Provides information about a MQ Broker.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = Config.of();
+     *         final var brokerId = config.get(&#34;brokerId&#34;).orElse(&#34;&#34;);
+     *         final var brokerName = config.get(&#34;brokerName&#34;).orElse(&#34;&#34;);
+     *         final var byId = Output.of(MqFunctions.getBroker(GetBrokerArgs.builder()
+     *             .brokerId(brokerId)
+     *             .build()));
+     * 
+     *         final var byName = Output.of(MqFunctions.getBroker(GetBrokerArgs.builder()
+     *             .brokerName(brokerName)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetBrokerResult> getBroker(GetBrokerArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mq/getBroker:getBroker", TypeShape.of(GetBrokerResult.class), args, Utilities.withVersion(options));
     }

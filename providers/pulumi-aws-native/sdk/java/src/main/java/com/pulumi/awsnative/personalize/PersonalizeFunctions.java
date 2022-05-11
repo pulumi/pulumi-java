@@ -25,6 +25,10 @@ public final class PersonalizeFunctions {
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args) {
         return getDataset(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Personalize::Dataset.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> getDataset(GetDatasetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:personalize:getDataset", TypeShape.of(GetDatasetResult.class), args, Utilities.withVersion(options));
     }
@@ -35,6 +39,10 @@ public final class PersonalizeFunctions {
     public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args) {
         return getDatasetGroup(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Schema for AWS::Personalize::DatasetGroup.
+     * 
+     */
     public static CompletableFuture<GetDatasetGroupResult> getDatasetGroup(GetDatasetGroupArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:personalize:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args, Utilities.withVersion(options));
     }
@@ -45,6 +53,10 @@ public final class PersonalizeFunctions {
     public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args) {
         return getSchema(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Personalize::Schema.
+     * 
+     */
     public static CompletableFuture<GetSchemaResult> getSchema(GetSchemaArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:personalize:getSchema", TypeShape.of(GetSchemaResult.class), args, Utilities.withVersion(options));
     }
@@ -55,6 +67,10 @@ public final class PersonalizeFunctions {
     public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args) {
         return getSolution(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource schema for AWS::Personalize::Solution.
+     * 
+     */
     public static CompletableFuture<GetSolutionResult> getSolution(GetSolutionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:personalize:getSolution", TypeShape.of(GetSolutionResult.class), args, Utilities.withVersion(options));
     }

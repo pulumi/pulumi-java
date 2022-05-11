@@ -46,6 +46,33 @@ public final class MskconnectFunctions {
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args) {
         return getConnector(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information on an Amazon MSK Connect Connector.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskconnectFunctions.getConnector(GetConnectorArgs.builder()
+     *             .name(&#34;example-mskconnector&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetConnectorResult> getConnector(GetConnectorArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getConnector:getConnector", TypeShape.of(GetConnectorResult.class), args, Utilities.withVersion(options));
     }
@@ -79,6 +106,33 @@ public final class MskconnectFunctions {
     public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(GetCustomPluginArgs args) {
         return getCustomPlugin(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information on an Amazon MSK Connect custom plugin.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskconnectFunctions.getCustomPlugin(GetCustomPluginArgs.builder()
+     *             .name(&#34;example-debezium-1&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetCustomPluginResult> getCustomPlugin(GetCustomPluginArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getCustomPlugin:getCustomPlugin", TypeShape.of(GetCustomPluginResult.class), args, Utilities.withVersion(options));
     }
@@ -112,6 +166,33 @@ public final class MskconnectFunctions {
     public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(GetWorkerConfigurationArgs args) {
         return getWorkerConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Get information on an Amazon MSK Connect Worker Configuration.
+     * 
+     * ## Example Usage
+     * ```java
+     * package generated_program;
+     * 
+     * import java.util.*;
+     * import java.io.*;
+     * import java.nio.*;
+     * import com.pulumi.*;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = Output.of(MskconnectFunctions.getWorkerConfiguration(GetWorkerConfigurationArgs.builder()
+     *             .name(&#34;example&#34;)
+     *             .build()));
+     * 
+     *         }
+     * }
+     * ```
+     * 
+     */
     public static CompletableFuture<GetWorkerConfigurationResult> getWorkerConfiguration(GetWorkerConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getWorkerConfiguration:getWorkerConfiguration", TypeShape.of(GetWorkerConfigurationResult.class), args, Utilities.withVersion(options));
     }

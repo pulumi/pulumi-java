@@ -27,6 +27,10 @@ public final class AppstreamFunctions {
     public static CompletableFuture<GetAppBlockResult> getAppBlock(GetAppBlockArgs args) {
         return getAppBlock(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppStream::AppBlock
+     * 
+     */
     public static CompletableFuture<GetAppBlockResult> getAppBlock(GetAppBlockArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getAppBlock", TypeShape.of(GetAppBlockResult.class), args, Utilities.withVersion(options));
     }
@@ -37,6 +41,10 @@ public final class AppstreamFunctions {
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args) {
         return getApplication(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppStream::Application
+     * 
+     */
     public static CompletableFuture<GetApplicationResult> getApplication(GetApplicationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplication", TypeShape.of(GetApplicationResult.class), args, Utilities.withVersion(options));
     }
@@ -47,6 +55,10 @@ public final class AppstreamFunctions {
     public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(GetApplicationEntitlementAssociationArgs args) {
         return getApplicationEntitlementAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppStream::ApplicationEntitlementAssociation
+     * 
+     */
     public static CompletableFuture<GetApplicationEntitlementAssociationResult> getApplicationEntitlementAssociation(GetApplicationEntitlementAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationEntitlementAssociation", TypeShape.of(GetApplicationEntitlementAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -57,6 +69,10 @@ public final class AppstreamFunctions {
     public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(GetApplicationFleetAssociationArgs args) {
         return getApplicationFleetAssociation(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppStream::ApplicationFleetAssociation
+     * 
+     */
     public static CompletableFuture<GetApplicationFleetAssociationResult> getApplicationFleetAssociation(GetApplicationFleetAssociationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getApplicationFleetAssociation", TypeShape.of(GetApplicationFleetAssociationResult.class), args, Utilities.withVersion(options));
     }
@@ -67,6 +83,10 @@ public final class AppstreamFunctions {
     public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args) {
         return getEntitlement(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::AppStream::Entitlement
+     * 
+     */
     public static CompletableFuture<GetEntitlementResult> getEntitlement(GetEntitlementArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getEntitlement", TypeShape.of(GetEntitlementResult.class), args, Utilities.withVersion(options));
     }

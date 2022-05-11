@@ -21,6 +21,10 @@ public final class SsmcontactsFunctions {
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args) {
         return getContact(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SSMContacts::Contact
+     * 
+     */
     public static CompletableFuture<GetContactResult> getContact(GetContactArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContact", TypeShape.of(GetContactResult.class), args, Utilities.withVersion(options));
     }
@@ -31,6 +35,10 @@ public final class SsmcontactsFunctions {
     public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args) {
         return getContactChannel(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::SSMContacts::ContactChannel
+     * 
+     */
     public static CompletableFuture<GetContactChannelResult> getContactChannel(GetContactChannelArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssmcontacts:getContactChannel", TypeShape.of(GetContactChannelResult.class), args, Utilities.withVersion(options));
     }

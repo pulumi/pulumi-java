@@ -23,6 +23,10 @@ public final class SsoFunctions {
     public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args) {
         return getAssignment(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for SSO assignmet
+     * 
+     */
     public static CompletableFuture<GetAssignmentResult> getAssignment(GetAssignmentArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getAssignment", TypeShape.of(GetAssignmentResult.class), args, Utilities.withVersion(options));
     }
@@ -33,6 +37,10 @@ public final class SsoFunctions {
     public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args) {
         return getInstanceAccessControlAttributeConfiguration(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for SSO InstanceAccessControlAttributeConfiguration
+     * 
+     */
     public static CompletableFuture<GetInstanceAccessControlAttributeConfigurationResult> getInstanceAccessControlAttributeConfiguration(GetInstanceAccessControlAttributeConfigurationArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getInstanceAccessControlAttributeConfiguration", TypeShape.of(GetInstanceAccessControlAttributeConfigurationResult.class), args, Utilities.withVersion(options));
     }
@@ -43,6 +51,10 @@ public final class SsoFunctions {
     public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args) {
         return getPermissionSet(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for SSO PermissionSet
+     * 
+     */
     public static CompletableFuture<GetPermissionSetResult> getPermissionSet(GetPermissionSetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sso:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args, Utilities.withVersion(options));
     }

@@ -19,6 +19,10 @@ public final class CodestarnotificationsFunctions {
     public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(GetNotificationRuleArgs args) {
         return getNotificationRule(args, InvokeOptions.Empty);
     }
+    /**
+     * Resource Type definition for AWS::CodeStarNotifications::NotificationRule
+     * 
+     */
     public static CompletableFuture<GetNotificationRuleResult> getNotificationRule(GetNotificationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:codestarnotifications:getNotificationRule", TypeShape.of(GetNotificationRuleResult.class), args, Utilities.withVersion(options));
     }
