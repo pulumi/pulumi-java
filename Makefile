@@ -47,6 +47,7 @@ provider.%.build:	provider.%.generate
 
 # Example: make provider.random.generate
 provider.%.generate:	bin/pulumi-java-gen
+	rm -rf providers/pulumi-$*/sdk/
 	./bin/pulumi-java-gen -config providers/pulumi-$*/pulumi-java-gen.yaml
 
 .PHONY: lint_pkg

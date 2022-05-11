@@ -8,6 +8,7 @@ on:
     tags:
       - aws-native/v*.*.*
       - aws/v*.*.*
+      - aws-apigateway/v*.*.*
       - awsx/v*.*.*
       - azure-native/v*.*.*
       - azure/v*.*.*
@@ -53,6 +54,7 @@ jobs:
         provider:
         - aws
         - aws-native
+        - aws-apigateway
         - awsx
         - azure
         - azure-native
